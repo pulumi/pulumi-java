@@ -65,17 +65,14 @@ public final class BotIntentConfirmationSetting {
             this.declinationResponse = Objects.requireNonNull(declinationResponse);
             return this;
         }
-
         public Builder isActive(@Nullable Boolean isActive) {
             this.isActive = isActive;
             return this;
         }
-
         public Builder promptSpecification(BotPromptSpecification promptSpecification) {
             this.promptSpecification = Objects.requireNonNull(promptSpecification);
             return this;
-        }
-        public BotIntentConfirmationSetting build() {
+        }        public BotIntentConfirmationSetting build() {
             return new BotIntentConfirmationSetting(declinationResponse, isActive, promptSpecification);
         }
     }

@@ -163,72 +163,64 @@ public final class UpdateConfigurationArgs extends io.pulumi.resources.ResourceA
             this.azureVirtualMachines = azureVirtualMachines;
             return this;
         }
-
         public Builder azureVirtualMachines(@Nullable List<String> azureVirtualMachines) {
             this.azureVirtualMachines = Output.ofNullable(azureVirtualMachines);
             return this;
         }
-
+        public Builder azureVirtualMachines(String... azureVirtualMachines) {
+            return azureVirtualMachines(List.of(azureVirtualMachines));
+        }
         public Builder duration(@Nullable Output<String> duration) {
             this.duration = duration;
             return this;
         }
-
         public Builder duration(@Nullable String duration) {
             this.duration = Output.ofNullable(duration);
             return this;
         }
-
         public Builder linux(@Nullable Output<LinuxPropertiesArgs> linux) {
             this.linux = linux;
             return this;
         }
-
         public Builder linux(@Nullable LinuxPropertiesArgs linux) {
             this.linux = Output.ofNullable(linux);
             return this;
         }
-
         public Builder nonAzureComputerNames(@Nullable Output<List<String>> nonAzureComputerNames) {
             this.nonAzureComputerNames = nonAzureComputerNames;
             return this;
         }
-
         public Builder nonAzureComputerNames(@Nullable List<String> nonAzureComputerNames) {
             this.nonAzureComputerNames = Output.ofNullable(nonAzureComputerNames);
             return this;
         }
-
+        public Builder nonAzureComputerNames(String... nonAzureComputerNames) {
+            return nonAzureComputerNames(List.of(nonAzureComputerNames));
+        }
         public Builder operatingSystem(Output<OperatingSystemType> operatingSystem) {
             this.operatingSystem = Objects.requireNonNull(operatingSystem);
             return this;
         }
-
         public Builder operatingSystem(OperatingSystemType operatingSystem) {
             this.operatingSystem = Output.of(Objects.requireNonNull(operatingSystem));
             return this;
         }
-
         public Builder targets(@Nullable Output<TargetPropertiesArgs> targets) {
             this.targets = targets;
             return this;
         }
-
         public Builder targets(@Nullable TargetPropertiesArgs targets) {
             this.targets = Output.ofNullable(targets);
             return this;
         }
-
         public Builder windows(@Nullable Output<WindowsPropertiesArgs> windows) {
             this.windows = windows;
             return this;
         }
-
         public Builder windows(@Nullable WindowsPropertiesArgs windows) {
             this.windows = Output.ofNullable(windows);
             return this;
-        }
-        public UpdateConfigurationArgs build() {
+        }        public UpdateConfigurationArgs build() {
             return new UpdateConfigurationArgs(azureVirtualMachines, duration, linux, nonAzureComputerNames, operatingSystem, targets, windows);
         }
     }

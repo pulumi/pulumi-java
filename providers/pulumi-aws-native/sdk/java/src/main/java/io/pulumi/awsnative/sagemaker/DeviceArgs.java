@@ -92,32 +92,29 @@ public final class DeviceArgs extends io.pulumi.resources.ResourceArgs {
             this.device = device;
             return this;
         }
-
         public Builder device(@Nullable io.pulumi.awsnative.sagemaker.inputs.DeviceArgs device) {
             this.device = Output.ofNullable(device);
             return this;
         }
-
         public Builder deviceFleetName(Output<String> deviceFleetName) {
             this.deviceFleetName = Objects.requireNonNull(deviceFleetName);
             return this;
         }
-
         public Builder deviceFleetName(String deviceFleetName) {
             this.deviceFleetName = Output.of(Objects.requireNonNull(deviceFleetName));
             return this;
         }
-
         public Builder tags(@Nullable Output<List<DeviceTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable List<DeviceTagArgs> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-        public DeviceArgs build() {
+        public Builder tags(DeviceTagArgs... tags) {
+            return tags(List.of(tags));
+        }        public DeviceArgs build() {
             return new DeviceArgs(device, deviceFleetName, tags);
         }
     }

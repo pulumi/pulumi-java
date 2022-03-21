@@ -81,22 +81,18 @@ public final class ImageTemplateIdentityArgs extends io.pulumi.resources.Resourc
             this.type = type;
             return this;
         }
-
         public Builder type(@Nullable ResourceIdentityType type) {
             this.type = Output.ofNullable(type);
             return this;
         }
-
         public Builder userAssignedIdentities(@Nullable Output<Map<String,Object>> userAssignedIdentities) {
             this.userAssignedIdentities = userAssignedIdentities;
             return this;
         }
-
         public Builder userAssignedIdentities(@Nullable Map<String,Object> userAssignedIdentities) {
             this.userAssignedIdentities = Output.ofNullable(userAssignedIdentities);
             return this;
-        }
-        public ImageTemplateIdentityArgs build() {
+        }        public ImageTemplateIdentityArgs build() {
             return new ImageTemplateIdentityArgs(type, userAssignedIdentities);
         }
     }

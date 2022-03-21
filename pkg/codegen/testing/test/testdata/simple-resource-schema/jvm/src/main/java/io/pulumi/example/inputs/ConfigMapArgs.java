@@ -53,12 +53,10 @@ public final class ConfigMapArgs extends io.pulumi.resources.ResourceArgs {
             this.config = config;
             return this;
         }
-
         public Builder config(@Nullable String config) {
             this.config = Output.ofNullable(config);
             return this;
-        }
-        public ConfigMapArgs build() {
+        }        public ConfigMapArgs build() {
             return new ConfigMapArgs(config);
         }
     }

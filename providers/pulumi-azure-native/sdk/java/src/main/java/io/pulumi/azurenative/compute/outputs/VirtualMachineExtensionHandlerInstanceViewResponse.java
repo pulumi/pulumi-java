@@ -88,17 +88,14 @@ public final class VirtualMachineExtensionHandlerInstanceViewResponse {
             this.status = status;
             return this;
         }
-
         public Builder type(@Nullable String type) {
             this.type = type;
             return this;
         }
-
         public Builder typeHandlerVersion(@Nullable String typeHandlerVersion) {
             this.typeHandlerVersion = typeHandlerVersion;
             return this;
-        }
-        public VirtualMachineExtensionHandlerInstanceViewResponse build() {
+        }        public VirtualMachineExtensionHandlerInstanceViewResponse build() {
             return new VirtualMachineExtensionHandlerInstanceViewResponse(status, type, typeHandlerVersion);
         }
     }

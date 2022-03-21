@@ -58,8 +58,7 @@ public final class TcpCheckResponse extends io.pulumi.resources.InvokeArgs {
         public Builder port(Integer port) {
             this.port = Objects.requireNonNull(port);
             return this;
-        }
-        public TcpCheckResponse build() {
+        }        public TcpCheckResponse build() {
             return new TcpCheckResponse(port);
         }
     }

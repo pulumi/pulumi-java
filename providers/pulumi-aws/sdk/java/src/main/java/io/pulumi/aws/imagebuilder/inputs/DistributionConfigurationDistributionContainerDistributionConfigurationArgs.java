@@ -92,32 +92,29 @@ public final class DistributionConfigurationDistributionContainerDistributionCon
             this.containerTags = containerTags;
             return this;
         }
-
         public Builder containerTags(@Nullable List<String> containerTags) {
             this.containerTags = Output.ofNullable(containerTags);
             return this;
         }
-
+        public Builder containerTags(String... containerTags) {
+            return containerTags(List.of(containerTags));
+        }
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder targetRepository(Output<DistributionConfigurationDistributionContainerDistributionConfigurationTargetRepositoryArgs> targetRepository) {
             this.targetRepository = Objects.requireNonNull(targetRepository);
             return this;
         }
-
         public Builder targetRepository(DistributionConfigurationDistributionContainerDistributionConfigurationTargetRepositoryArgs targetRepository) {
             this.targetRepository = Output.of(Objects.requireNonNull(targetRepository));
             return this;
-        }
-        public DistributionConfigurationDistributionContainerDistributionConfigurationArgs build() {
+        }        public DistributionConfigurationDistributionContainerDistributionConfigurationArgs build() {
             return new DistributionConfigurationDistributionContainerDistributionConfigurationArgs(containerTags, description, targetRepository);
         }
     }

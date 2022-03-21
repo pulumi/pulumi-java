@@ -193,52 +193,45 @@ public final class GetAuthorizerResult {
             this.authType = authType;
             return this;
         }
-
         public Builder authorizerCredentials(@Nullable String authorizerCredentials) {
             this.authorizerCredentials = authorizerCredentials;
             return this;
         }
-
         public Builder authorizerId(@Nullable String authorizerId) {
             this.authorizerId = authorizerId;
             return this;
         }
-
         public Builder authorizerResultTtlInSeconds(@Nullable Integer authorizerResultTtlInSeconds) {
             this.authorizerResultTtlInSeconds = authorizerResultTtlInSeconds;
             return this;
         }
-
         public Builder authorizerUri(@Nullable String authorizerUri) {
             this.authorizerUri = authorizerUri;
             return this;
         }
-
         public Builder identitySource(@Nullable String identitySource) {
             this.identitySource = identitySource;
             return this;
         }
-
         public Builder identityValidationExpression(@Nullable String identityValidationExpression) {
             this.identityValidationExpression = identityValidationExpression;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
-
         public Builder providerARNs(@Nullable List<String> providerARNs) {
             this.providerARNs = providerARNs;
             return this;
         }
-
+        public Builder providerARNs(String... providerARNs) {
+            return providerARNs(List.of(providerARNs));
+        }
         public Builder type(@Nullable String type) {
             this.type = type;
             return this;
-        }
-        public GetAuthorizerResult build() {
+        }        public GetAuthorizerResult build() {
             return new GetAuthorizerResult(authType, authorizerCredentials, authorizerId, authorizerResultTtlInSeconds, authorizerUri, identitySource, identityValidationExpression, name, providerARNs, type);
         }
     }

@@ -69,12 +69,10 @@ public final class UsagePlanTag {
             this.key = Objects.requireNonNull(key);
             return this;
         }
-
         public Builder value(String value) {
             this.value = Objects.requireNonNull(value);
             return this;
-        }
-        public UsagePlanTag build() {
+        }        public UsagePlanTag build() {
             return new UsagePlanTag(key, value);
         }
     }

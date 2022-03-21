@@ -127,52 +127,42 @@ public final class MigratePostgreSqlAzureDbForPostgreSqlSyncDatabaseInputArgs ex
             this.migrationSetting = migrationSetting;
             return this;
         }
-
         public Builder migrationSetting(@Nullable Map<String,String> migrationSetting) {
             this.migrationSetting = Output.ofNullable(migrationSetting);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder sourceSetting(@Nullable Output<Map<String,String>> sourceSetting) {
             this.sourceSetting = sourceSetting;
             return this;
         }
-
         public Builder sourceSetting(@Nullable Map<String,String> sourceSetting) {
             this.sourceSetting = Output.ofNullable(sourceSetting);
             return this;
         }
-
         public Builder targetDatabaseName(@Nullable Output<String> targetDatabaseName) {
             this.targetDatabaseName = targetDatabaseName;
             return this;
         }
-
         public Builder targetDatabaseName(@Nullable String targetDatabaseName) {
             this.targetDatabaseName = Output.ofNullable(targetDatabaseName);
             return this;
         }
-
         public Builder targetSetting(@Nullable Output<Map<String,String>> targetSetting) {
             this.targetSetting = targetSetting;
             return this;
         }
-
         public Builder targetSetting(@Nullable Map<String,String> targetSetting) {
             this.targetSetting = Output.ofNullable(targetSetting);
             return this;
-        }
-        public MigratePostgreSqlAzureDbForPostgreSqlSyncDatabaseInputArgs build() {
+        }        public MigratePostgreSqlAzureDbForPostgreSqlSyncDatabaseInputArgs build() {
             return new MigratePostgreSqlAzureDbForPostgreSqlSyncDatabaseInputArgs(migrationSetting, name, sourceSetting, targetDatabaseName, targetSetting);
         }
     }

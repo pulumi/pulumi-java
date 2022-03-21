@@ -147,32 +147,32 @@ public final class LoadBalancerResourceSettingsResponse extends io.pulumi.resour
             this.backendAddressPools = backendAddressPools;
             return this;
         }
-
+        public Builder backendAddressPools(LBBackendAddressPoolResourceSettingsResponse... backendAddressPools) {
+            return backendAddressPools(List.of(backendAddressPools));
+        }
         public Builder frontendIPConfigurations(@Nullable List<LBFrontendIPConfigurationResourceSettingsResponse> frontendIPConfigurations) {
             this.frontendIPConfigurations = frontendIPConfigurations;
             return this;
         }
-
+        public Builder frontendIPConfigurations(LBFrontendIPConfigurationResourceSettingsResponse... frontendIPConfigurations) {
+            return frontendIPConfigurations(List.of(frontendIPConfigurations));
+        }
         public Builder resourceType(String resourceType) {
             this.resourceType = Objects.requireNonNull(resourceType);
             return this;
         }
-
         public Builder sku(@Nullable String sku) {
             this.sku = sku;
             return this;
         }
-
         public Builder targetResourceName(String targetResourceName) {
             this.targetResourceName = Objects.requireNonNull(targetResourceName);
             return this;
         }
-
         public Builder zones(@Nullable String zones) {
             this.zones = zones;
             return this;
-        }
-        public LoadBalancerResourceSettingsResponse build() {
+        }        public LoadBalancerResourceSettingsResponse build() {
             return new LoadBalancerResourceSettingsResponse(backendAddressPools, frontendIPConfigurations, resourceType, sku, targetResourceName, zones);
         }
     }

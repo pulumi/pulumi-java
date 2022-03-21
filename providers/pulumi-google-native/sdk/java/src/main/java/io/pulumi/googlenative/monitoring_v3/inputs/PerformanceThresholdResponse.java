@@ -94,17 +94,14 @@ public final class PerformanceThresholdResponse extends io.pulumi.resources.Invo
             this.basicSliPerformance = Objects.requireNonNull(basicSliPerformance);
             return this;
         }
-
         public Builder performance(RequestBasedSliResponse performance) {
             this.performance = Objects.requireNonNull(performance);
             return this;
         }
-
         public Builder threshold(Double threshold) {
             this.threshold = Objects.requireNonNull(threshold);
             return this;
-        }
-        public PerformanceThresholdResponse build() {
+        }        public PerformanceThresholdResponse build() {
             return new PerformanceThresholdResponse(basicSliPerformance, performance, threshold);
         }
     }

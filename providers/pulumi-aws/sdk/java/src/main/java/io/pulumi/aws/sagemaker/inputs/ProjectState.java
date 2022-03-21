@@ -156,72 +156,58 @@ public final class ProjectState extends io.pulumi.resources.ResourceArgs {
             this.arn = arn;
             return this;
         }
-
         public Builder arn(@Nullable String arn) {
             this.arn = Output.ofNullable(arn);
             return this;
         }
-
         public Builder projectDescription(@Nullable Output<String> projectDescription) {
             this.projectDescription = projectDescription;
             return this;
         }
-
         public Builder projectDescription(@Nullable String projectDescription) {
             this.projectDescription = Output.ofNullable(projectDescription);
             return this;
         }
-
         public Builder projectId(@Nullable Output<String> projectId) {
             this.projectId = projectId;
             return this;
         }
-
         public Builder projectId(@Nullable String projectId) {
             this.projectId = Output.ofNullable(projectId);
             return this;
         }
-
         public Builder projectName(@Nullable Output<String> projectName) {
             this.projectName = projectName;
             return this;
         }
-
         public Builder projectName(@Nullable String projectName) {
             this.projectName = Output.ofNullable(projectName);
             return this;
         }
-
         public Builder serviceCatalogProvisioningDetails(@Nullable Output<ProjectServiceCatalogProvisioningDetailsGetArgs> serviceCatalogProvisioningDetails) {
             this.serviceCatalogProvisioningDetails = serviceCatalogProvisioningDetails;
             return this;
         }
-
         public Builder serviceCatalogProvisioningDetails(@Nullable ProjectServiceCatalogProvisioningDetailsGetArgs serviceCatalogProvisioningDetails) {
             this.serviceCatalogProvisioningDetails = Output.ofNullable(serviceCatalogProvisioningDetails);
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
             this.tagsAll = tagsAll;
             return this;
         }
-
         public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
             this.tagsAll = Output.ofNullable(tagsAll);
             return this;
-        }
-        public ProjectState build() {
+        }        public ProjectState build() {
             return new ProjectState(arn, projectDescription, projectId, projectName, serviceCatalogProvisioningDetails, tags, tagsAll);
         }
     }

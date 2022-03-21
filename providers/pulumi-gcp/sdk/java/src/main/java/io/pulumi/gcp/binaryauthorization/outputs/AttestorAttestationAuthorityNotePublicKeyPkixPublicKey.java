@@ -81,12 +81,10 @@ public final class AttestorAttestationAuthorityNotePublicKeyPkixPublicKey {
             this.publicKeyPem = publicKeyPem;
             return this;
         }
-
         public Builder signatureAlgorithm(@Nullable String signatureAlgorithm) {
             this.signatureAlgorithm = signatureAlgorithm;
             return this;
-        }
-        public AttestorAttestationAuthorityNotePublicKeyPkixPublicKey build() {
+        }        public AttestorAttestationAuthorityNotePublicKeyPkixPublicKey build() {
             return new AttestorAttestationAuthorityNotePublicKeyPkixPublicKey(publicKeyPem, signatureAlgorithm);
         }
     }

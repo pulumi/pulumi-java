@@ -186,47 +186,41 @@ public final class GetEmailTemplateResult {
             this.body = Objects.requireNonNull(body);
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder isDefault(Boolean isDefault) {
             this.isDefault = Objects.requireNonNull(isDefault);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder parameters(@Nullable List<EmailTemplateParametersContractPropertiesResponse> parameters) {
             this.parameters = parameters;
             return this;
         }
-
+        public Builder parameters(EmailTemplateParametersContractPropertiesResponse... parameters) {
+            return parameters(List.of(parameters));
+        }
         public Builder subject(String subject) {
             this.subject = Objects.requireNonNull(subject);
             return this;
         }
-
         public Builder title(@Nullable String title) {
             this.title = title;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public GetEmailTemplateResult build() {
+        }        public GetEmailTemplateResult build() {
             return new GetEmailTemplateResult(body, description, id, isDefault, name, parameters, subject, title, type);
         }
     }

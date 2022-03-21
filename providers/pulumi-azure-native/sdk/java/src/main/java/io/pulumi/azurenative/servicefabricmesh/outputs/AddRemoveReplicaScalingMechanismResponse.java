@@ -104,22 +104,18 @@ public final class AddRemoveReplicaScalingMechanismResponse {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
-
         public Builder maxCount(Integer maxCount) {
             this.maxCount = Objects.requireNonNull(maxCount);
             return this;
         }
-
         public Builder minCount(Integer minCount) {
             this.minCount = Objects.requireNonNull(minCount);
             return this;
         }
-
         public Builder scaleIncrement(Integer scaleIncrement) {
             this.scaleIncrement = Objects.requireNonNull(scaleIncrement);
             return this;
-        }
-        public AddRemoveReplicaScalingMechanismResponse build() {
+        }        public AddRemoveReplicaScalingMechanismResponse build() {
             return new AddRemoveReplicaScalingMechanismResponse(kind, maxCount, minCount, scaleIncrement);
         }
     }

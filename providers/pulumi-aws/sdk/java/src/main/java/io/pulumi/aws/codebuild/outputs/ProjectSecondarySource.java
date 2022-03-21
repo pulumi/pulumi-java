@@ -212,52 +212,42 @@ public final class ProjectSecondarySource {
             this.auth = auth;
             return this;
         }
-
         public Builder buildStatusConfig(@Nullable ProjectSecondarySourceBuildStatusConfig buildStatusConfig) {
             this.buildStatusConfig = buildStatusConfig;
             return this;
         }
-
         public Builder buildspec(@Nullable String buildspec) {
             this.buildspec = buildspec;
             return this;
         }
-
         public Builder gitCloneDepth(@Nullable Integer gitCloneDepth) {
             this.gitCloneDepth = gitCloneDepth;
             return this;
         }
-
         public Builder gitSubmodulesConfig(@Nullable ProjectSecondarySourceGitSubmodulesConfig gitSubmodulesConfig) {
             this.gitSubmodulesConfig = gitSubmodulesConfig;
             return this;
         }
-
         public Builder insecureSsl(@Nullable Boolean insecureSsl) {
             this.insecureSsl = insecureSsl;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = location;
             return this;
         }
-
         public Builder reportBuildStatus(@Nullable Boolean reportBuildStatus) {
             this.reportBuildStatus = reportBuildStatus;
             return this;
         }
-
         public Builder sourceIdentifier(String sourceIdentifier) {
             this.sourceIdentifier = Objects.requireNonNull(sourceIdentifier);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public ProjectSecondarySource build() {
+        }        public ProjectSecondarySource build() {
             return new ProjectSecondarySource(auth, buildStatusConfig, buildspec, gitCloneDepth, gitSubmodulesConfig, insecureSsl, location, reportBuildStatus, sourceIdentifier, type);
         }
     }

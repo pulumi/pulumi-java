@@ -81,22 +81,18 @@ public final class SecurityContactPropertiesAlertNotificationsArgs extends io.pu
             this.minimalSeverity = minimalSeverity;
             return this;
         }
-
         public Builder minimalSeverity(@Nullable Either<String,MinimalSeverity> minimalSeverity) {
             this.minimalSeverity = Output.ofNullable(minimalSeverity);
             return this;
         }
-
         public Builder state(@Nullable Output<Either<String,State>> state) {
             this.state = state;
             return this;
         }
-
         public Builder state(@Nullable Either<String,State> state) {
             this.state = Output.ofNullable(state);
             return this;
-        }
-        public SecurityContactPropertiesAlertNotificationsArgs build() {
+        }        public SecurityContactPropertiesAlertNotificationsArgs build() {
             return new SecurityContactPropertiesAlertNotificationsArgs(minimalSeverity, state);
         }
     }

@@ -157,72 +157,61 @@ public final class ConnectionGatewayDefinitionPropertiesArgs extends io.pulumi.r
             this.backendUri = backendUri;
             return this;
         }
-
         public Builder backendUri(@Nullable String backendUri) {
             this.backendUri = Output.ofNullable(backendUri);
             return this;
         }
-
         public Builder connectionGatewayInstallation(@Nullable Output<ConnectionGatewayReferenceArgs> connectionGatewayInstallation) {
             this.connectionGatewayInstallation = connectionGatewayInstallation;
             return this;
         }
-
         public Builder connectionGatewayInstallation(@Nullable ConnectionGatewayReferenceArgs connectionGatewayInstallation) {
             this.connectionGatewayInstallation = Output.ofNullable(connectionGatewayInstallation);
             return this;
         }
-
         public Builder contactInformation(@Nullable Output<List<String>> contactInformation) {
             this.contactInformation = contactInformation;
             return this;
         }
-
         public Builder contactInformation(@Nullable List<String> contactInformation) {
             this.contactInformation = Output.ofNullable(contactInformation);
             return this;
         }
-
+        public Builder contactInformation(String... contactInformation) {
+            return contactInformation(List.of(contactInformation));
+        }
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder displayName(@Nullable Output<String> displayName) {
             this.displayName = displayName;
             return this;
         }
-
         public Builder displayName(@Nullable String displayName) {
             this.displayName = Output.ofNullable(displayName);
             return this;
         }
-
         public Builder machineName(@Nullable Output<String> machineName) {
             this.machineName = machineName;
             return this;
         }
-
         public Builder machineName(@Nullable String machineName) {
             this.machineName = Output.ofNullable(machineName);
             return this;
         }
-
         public Builder status(@Nullable Output<Object> status) {
             this.status = status;
             return this;
         }
-
         public Builder status(@Nullable Object status) {
             this.status = Output.ofNullable(status);
             return this;
-        }
-        public ConnectionGatewayDefinitionPropertiesArgs build() {
+        }        public ConnectionGatewayDefinitionPropertiesArgs build() {
             return new ConnectionGatewayDefinitionPropertiesArgs(backendUri, connectionGatewayInstallation, contactInformation, description, displayName, machineName, status);
         }
     }

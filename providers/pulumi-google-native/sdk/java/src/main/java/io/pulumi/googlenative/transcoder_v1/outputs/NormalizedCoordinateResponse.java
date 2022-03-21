@@ -69,12 +69,10 @@ public final class NormalizedCoordinateResponse {
             this.x = Objects.requireNonNull(x);
             return this;
         }
-
         public Builder y(Double y) {
             this.y = Objects.requireNonNull(y);
             return this;
-        }
-        public NormalizedCoordinateResponse build() {
+        }        public NormalizedCoordinateResponse build() {
             return new NormalizedCoordinateResponse(x, y);
         }
     }

@@ -57,12 +57,10 @@ public final class NoteAttestationAuthorityHintArgs extends io.pulumi.resources.
             this.humanReadableName = Objects.requireNonNull(humanReadableName);
             return this;
         }
-
         public Builder humanReadableName(String humanReadableName) {
             this.humanReadableName = Output.of(Objects.requireNonNull(humanReadableName));
             return this;
-        }
-        public NoteAttestationAuthorityHintArgs build() {
+        }        public NoteAttestationAuthorityHintArgs build() {
             return new NoteAttestationAuthorityHintArgs(humanReadableName);
         }
     }

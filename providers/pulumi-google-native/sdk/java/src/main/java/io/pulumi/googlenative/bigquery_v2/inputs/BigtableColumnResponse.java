@@ -133,32 +133,26 @@ public final class BigtableColumnResponse extends io.pulumi.resources.InvokeArgs
             this.encoding = Objects.requireNonNull(encoding);
             return this;
         }
-
         public Builder fieldName(String fieldName) {
             this.fieldName = Objects.requireNonNull(fieldName);
             return this;
         }
-
         public Builder onlyReadLatest(Boolean onlyReadLatest) {
             this.onlyReadLatest = Objects.requireNonNull(onlyReadLatest);
             return this;
         }
-
         public Builder qualifierEncoded(String qualifierEncoded) {
             this.qualifierEncoded = Objects.requireNonNull(qualifierEncoded);
             return this;
         }
-
         public Builder qualifierString(String qualifierString) {
             this.qualifierString = Objects.requireNonNull(qualifierString);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public BigtableColumnResponse build() {
+        }        public BigtableColumnResponse build() {
             return new BigtableColumnResponse(encoding, fieldName, onlyReadLatest, qualifierEncoded, qualifierString, type);
         }
     }

@@ -147,62 +147,50 @@ public final class IamPolicyAnalysisQueryArgs extends io.pulumi.resources.Resour
             this.accessSelector = accessSelector;
             return this;
         }
-
         public Builder accessSelector(@Nullable AccessSelectorArgs accessSelector) {
             this.accessSelector = Output.ofNullable(accessSelector);
             return this;
         }
-
         public Builder conditionContext(@Nullable Output<ConditionContextArgs> conditionContext) {
             this.conditionContext = conditionContext;
             return this;
         }
-
         public Builder conditionContext(@Nullable ConditionContextArgs conditionContext) {
             this.conditionContext = Output.ofNullable(conditionContext);
             return this;
         }
-
         public Builder identitySelector(@Nullable Output<IdentitySelectorArgs> identitySelector) {
             this.identitySelector = identitySelector;
             return this;
         }
-
         public Builder identitySelector(@Nullable IdentitySelectorArgs identitySelector) {
             this.identitySelector = Output.ofNullable(identitySelector);
             return this;
         }
-
         public Builder options(@Nullable Output<OptionsArgs> options) {
             this.options = options;
             return this;
         }
-
         public Builder options(@Nullable OptionsArgs options) {
             this.options = Output.ofNullable(options);
             return this;
         }
-
         public Builder resourceSelector(@Nullable Output<ResourceSelectorArgs> resourceSelector) {
             this.resourceSelector = resourceSelector;
             return this;
         }
-
         public Builder resourceSelector(@Nullable ResourceSelectorArgs resourceSelector) {
             this.resourceSelector = Output.ofNullable(resourceSelector);
             return this;
         }
-
         public Builder scope(Output<String> scope) {
             this.scope = Objects.requireNonNull(scope);
             return this;
         }
-
         public Builder scope(String scope) {
             this.scope = Output.of(Objects.requireNonNull(scope));
             return this;
-        }
-        public IamPolicyAnalysisQueryArgs build() {
+        }        public IamPolicyAnalysisQueryArgs build() {
             return new IamPolicyAnalysisQueryArgs(accessSelector, conditionContext, identitySelector, options, resourceSelector, scope);
         }
     }

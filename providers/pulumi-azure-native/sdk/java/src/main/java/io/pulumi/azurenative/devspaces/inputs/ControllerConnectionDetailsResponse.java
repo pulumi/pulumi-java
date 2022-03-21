@@ -56,8 +56,7 @@ public final class ControllerConnectionDetailsResponse extends io.pulumi.resourc
         public Builder orchestratorSpecificConnectionDetails(@Nullable KubernetesConnectionDetailsResponse orchestratorSpecificConnectionDetails) {
             this.orchestratorSpecificConnectionDetails = orchestratorSpecificConnectionDetails;
             return this;
-        }
-        public ControllerConnectionDetailsResponse build() {
+        }        public ControllerConnectionDetailsResponse build() {
             return new ControllerConnectionDetailsResponse(orchestratorSpecificConnectionDetails);
         }
     }

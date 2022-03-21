@@ -73,12 +73,13 @@ public final class GetParameterGroupResult {
             this.aRN = aRN;
             return this;
         }
-
         public Builder tags(@Nullable List<ParameterGroupTag> tags) {
             this.tags = tags;
             return this;
         }
-        public GetParameterGroupResult build() {
+        public Builder tags(ParameterGroupTag... tags) {
+            return tags(List.of(tags));
+        }        public GetParameterGroupResult build() {
             return new GetParameterGroupResult(aRN, tags);
         }
     }

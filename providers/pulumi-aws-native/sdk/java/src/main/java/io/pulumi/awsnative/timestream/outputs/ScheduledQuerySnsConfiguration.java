@@ -43,8 +43,7 @@ public final class ScheduledQuerySnsConfiguration {
         public Builder topicArn(String topicArn) {
             this.topicArn = Objects.requireNonNull(topicArn);
             return this;
-        }
-        public ScheduledQuerySnsConfiguration build() {
+        }        public ScheduledQuerySnsConfiguration build() {
             return new ScheduledQuerySnsConfiguration(topicArn);
         }
     }

@@ -181,47 +181,38 @@ public final class GetHmacKeyResult {
             this.accessId = Objects.requireNonNull(accessId);
             return this;
         }
-
         public Builder etag(String etag) {
             this.etag = Objects.requireNonNull(etag);
             return this;
         }
-
         public Builder kind(String kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
-
         public Builder project(String project) {
             this.project = Objects.requireNonNull(project);
             return this;
         }
-
         public Builder selfLink(String selfLink) {
             this.selfLink = Objects.requireNonNull(selfLink);
             return this;
         }
-
         public Builder serviceAccountEmail(String serviceAccountEmail) {
             this.serviceAccountEmail = Objects.requireNonNull(serviceAccountEmail);
             return this;
         }
-
         public Builder state(String state) {
             this.state = Objects.requireNonNull(state);
             return this;
         }
-
         public Builder timeCreated(String timeCreated) {
             this.timeCreated = Objects.requireNonNull(timeCreated);
             return this;
         }
-
         public Builder updated(String updated) {
             this.updated = Objects.requireNonNull(updated);
             return this;
-        }
-        public GetHmacKeyResult build() {
+        }        public GetHmacKeyResult build() {
             return new GetHmacKeyResult(accessId, etag, kind, project, selfLink, serviceAccountEmail, state, timeCreated, updated);
         }
     }

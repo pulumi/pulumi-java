@@ -88,17 +88,14 @@ public final class LoadBalancerFrontendIPConfigurationPropertiesResponse {
             this.privateIPAddress = privateIPAddress;
             return this;
         }
-
         public Builder publicIPAddress(@Nullable SubResourceResponse publicIPAddress) {
             this.publicIPAddress = publicIPAddress;
             return this;
         }
-
         public Builder subnet(@Nullable SubResourceResponse subnet) {
             this.subnet = subnet;
             return this;
-        }
-        public LoadBalancerFrontendIPConfigurationPropertiesResponse build() {
+        }        public LoadBalancerFrontendIPConfigurationPropertiesResponse build() {
             return new LoadBalancerFrontendIPConfigurationPropertiesResponse(privateIPAddress, publicIPAddress, subnet);
         }
     }

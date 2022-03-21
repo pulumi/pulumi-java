@@ -88,17 +88,14 @@ public final class GetArcSettingArgs extends io.pulumi.resources.InvokeArgs {
             this.arcSettingName = Objects.requireNonNull(arcSettingName);
             return this;
         }
-
         public Builder clusterName(String clusterName) {
             this.clusterName = Objects.requireNonNull(clusterName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
-        }
-        public GetArcSettingArgs build() {
+        }        public GetArcSettingArgs build() {
             return new GetArcSettingArgs(arcSettingName, clusterName, resourceGroupName);
         }
     }

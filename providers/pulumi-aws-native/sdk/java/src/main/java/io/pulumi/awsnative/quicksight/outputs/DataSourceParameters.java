@@ -191,87 +191,70 @@ public final class DataSourceParameters {
             this.amazonElasticsearchParameters = amazonElasticsearchParameters;
             return this;
         }
-
         public Builder amazonOpenSearchParameters(@Nullable DataSourceAmazonOpenSearchParameters amazonOpenSearchParameters) {
             this.amazonOpenSearchParameters = amazonOpenSearchParameters;
             return this;
         }
-
         public Builder athenaParameters(@Nullable DataSourceAthenaParameters athenaParameters) {
             this.athenaParameters = athenaParameters;
             return this;
         }
-
         public Builder auroraParameters(@Nullable DataSourceAuroraParameters auroraParameters) {
             this.auroraParameters = auroraParameters;
             return this;
         }
-
         public Builder auroraPostgreSqlParameters(@Nullable DataSourceAuroraPostgreSqlParameters auroraPostgreSqlParameters) {
             this.auroraPostgreSqlParameters = auroraPostgreSqlParameters;
             return this;
         }
-
         public Builder mariaDbParameters(@Nullable DataSourceMariaDbParameters mariaDbParameters) {
             this.mariaDbParameters = mariaDbParameters;
             return this;
         }
-
         public Builder mySqlParameters(@Nullable DataSourceMySqlParameters mySqlParameters) {
             this.mySqlParameters = mySqlParameters;
             return this;
         }
-
         public Builder oracleParameters(@Nullable DataSourceOracleParameters oracleParameters) {
             this.oracleParameters = oracleParameters;
             return this;
         }
-
         public Builder postgreSqlParameters(@Nullable DataSourcePostgreSqlParameters postgreSqlParameters) {
             this.postgreSqlParameters = postgreSqlParameters;
             return this;
         }
-
         public Builder prestoParameters(@Nullable DataSourcePrestoParameters prestoParameters) {
             this.prestoParameters = prestoParameters;
             return this;
         }
-
         public Builder rdsParameters(@Nullable DataSourceRdsParameters rdsParameters) {
             this.rdsParameters = rdsParameters;
             return this;
         }
-
         public Builder redshiftParameters(@Nullable DataSourceRedshiftParameters redshiftParameters) {
             this.redshiftParameters = redshiftParameters;
             return this;
         }
-
         public Builder s3Parameters(@Nullable DataSourceS3Parameters s3Parameters) {
             this.s3Parameters = s3Parameters;
             return this;
         }
-
         public Builder snowflakeParameters(@Nullable DataSourceSnowflakeParameters snowflakeParameters) {
             this.snowflakeParameters = snowflakeParameters;
             return this;
         }
-
         public Builder sparkParameters(@Nullable DataSourceSparkParameters sparkParameters) {
             this.sparkParameters = sparkParameters;
             return this;
         }
-
         public Builder sqlServerParameters(@Nullable DataSourceSqlServerParameters sqlServerParameters) {
             this.sqlServerParameters = sqlServerParameters;
             return this;
         }
-
         public Builder teradataParameters(@Nullable DataSourceTeradataParameters teradataParameters) {
             this.teradataParameters = teradataParameters;
             return this;
-        }
-        public DataSourceParameters build() {
+        }        public DataSourceParameters build() {
             return new DataSourceParameters(amazonElasticsearchParameters, amazonOpenSearchParameters, athenaParameters, auroraParameters, auroraPostgreSqlParameters, mariaDbParameters, mySqlParameters, oracleParameters, postgreSqlParameters, prestoParameters, rdsParameters, redshiftParameters, s3Parameters, snowflakeParameters, sparkParameters, sqlServerParameters, teradataParameters);
         }
     }

@@ -85,17 +85,14 @@ public final class SlsaCompletenessResponse {
             this.arguments = Objects.requireNonNull(arguments);
             return this;
         }
-
         public Builder environment(Boolean environment) {
             this.environment = Objects.requireNonNull(environment);
             return this;
         }
-
         public Builder materials(Boolean materials) {
             this.materials = Objects.requireNonNull(materials);
             return this;
-        }
-        public SlsaCompletenessResponse build() {
+        }        public SlsaCompletenessResponse build() {
             return new SlsaCompletenessResponse(arguments, environment, materials);
         }
     }

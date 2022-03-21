@@ -263,132 +263,106 @@ public final class ManagedOnlineDeploymentArgs extends io.pulumi.resources.Resou
             this.appInsightsEnabled = appInsightsEnabled;
             return this;
         }
-
         public Builder appInsightsEnabled(@Nullable Boolean appInsightsEnabled) {
             this.appInsightsEnabled = Output.ofNullable(appInsightsEnabled);
             return this;
         }
-
         public Builder codeConfiguration(@Nullable Output<CodeConfigurationArgs> codeConfiguration) {
             this.codeConfiguration = codeConfiguration;
             return this;
         }
-
         public Builder codeConfiguration(@Nullable CodeConfigurationArgs codeConfiguration) {
             this.codeConfiguration = Output.ofNullable(codeConfiguration);
             return this;
         }
-
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder endpointComputeType(Output<String> endpointComputeType) {
             this.endpointComputeType = Objects.requireNonNull(endpointComputeType);
             return this;
         }
-
         public Builder endpointComputeType(String endpointComputeType) {
             this.endpointComputeType = Output.of(Objects.requireNonNull(endpointComputeType));
             return this;
         }
-
         public Builder environmentId(@Nullable Output<String> environmentId) {
             this.environmentId = environmentId;
             return this;
         }
-
         public Builder environmentId(@Nullable String environmentId) {
             this.environmentId = Output.ofNullable(environmentId);
             return this;
         }
-
         public Builder environmentVariables(@Nullable Output<Map<String,String>> environmentVariables) {
             this.environmentVariables = environmentVariables;
             return this;
         }
-
         public Builder environmentVariables(@Nullable Map<String,String> environmentVariables) {
             this.environmentVariables = Output.ofNullable(environmentVariables);
             return this;
         }
-
         public Builder instanceType(@Nullable Output<String> instanceType) {
             this.instanceType = instanceType;
             return this;
         }
-
         public Builder instanceType(@Nullable String instanceType) {
             this.instanceType = Output.ofNullable(instanceType);
             return this;
         }
-
         public Builder livenessProbe(@Nullable Output<ProbeSettingsArgs> livenessProbe) {
             this.livenessProbe = livenessProbe;
             return this;
         }
-
         public Builder livenessProbe(@Nullable ProbeSettingsArgs livenessProbe) {
             this.livenessProbe = Output.ofNullable(livenessProbe);
             return this;
         }
-
         public Builder model(@Nullable Output<Object> model) {
             this.model = model;
             return this;
         }
-
         public Builder model(@Nullable Object model) {
             this.model = Output.ofNullable(model);
             return this;
         }
-
         public Builder properties(@Nullable Output<Map<String,String>> properties) {
             this.properties = properties;
             return this;
         }
-
         public Builder properties(@Nullable Map<String,String> properties) {
             this.properties = Output.ofNullable(properties);
             return this;
         }
-
         public Builder readinessProbe(@Nullable Output<ProbeSettingsArgs> readinessProbe) {
             this.readinessProbe = readinessProbe;
             return this;
         }
-
         public Builder readinessProbe(@Nullable ProbeSettingsArgs readinessProbe) {
             this.readinessProbe = Output.ofNullable(readinessProbe);
             return this;
         }
-
         public Builder requestSettings(@Nullable Output<OnlineRequestSettingsArgs> requestSettings) {
             this.requestSettings = requestSettings;
             return this;
         }
-
         public Builder requestSettings(@Nullable OnlineRequestSettingsArgs requestSettings) {
             this.requestSettings = Output.ofNullable(requestSettings);
             return this;
         }
-
         public Builder scaleSettings(@Nullable Output<Either<AutoScaleSettingsArgs,ManualScaleSettingsArgs>> scaleSettings) {
             this.scaleSettings = scaleSettings;
             return this;
         }
-
         public Builder scaleSettings(@Nullable Either<AutoScaleSettingsArgs,ManualScaleSettingsArgs> scaleSettings) {
             this.scaleSettings = Output.ofNullable(scaleSettings);
             return this;
-        }
-        public ManagedOnlineDeploymentArgs build() {
+        }        public ManagedOnlineDeploymentArgs build() {
             return new ManagedOnlineDeploymentArgs(appInsightsEnabled, codeConfiguration, description, endpointComputeType, environmentId, environmentVariables, instanceType, livenessProbe, model, properties, readinessProbe, requestSettings, scaleSettings);
         }
     }

@@ -132,52 +132,45 @@ public final class GameServerDeploymentRolloutState extends io.pulumi.resources.
             this.defaultGameServerConfig = defaultGameServerConfig;
             return this;
         }
-
         public Builder defaultGameServerConfig(@Nullable String defaultGameServerConfig) {
             this.defaultGameServerConfig = Output.ofNullable(defaultGameServerConfig);
             return this;
         }
-
         public Builder deploymentId(@Nullable Output<String> deploymentId) {
             this.deploymentId = deploymentId;
             return this;
         }
-
         public Builder deploymentId(@Nullable String deploymentId) {
             this.deploymentId = Output.ofNullable(deploymentId);
             return this;
         }
-
         public Builder gameServerConfigOverrides(@Nullable Output<List<GameServerDeploymentRolloutGameServerConfigOverrideGetArgs>> gameServerConfigOverrides) {
             this.gameServerConfigOverrides = gameServerConfigOverrides;
             return this;
         }
-
         public Builder gameServerConfigOverrides(@Nullable List<GameServerDeploymentRolloutGameServerConfigOverrideGetArgs> gameServerConfigOverrides) {
             this.gameServerConfigOverrides = Output.ofNullable(gameServerConfigOverrides);
             return this;
         }
-
+        public Builder gameServerConfigOverrides(GameServerDeploymentRolloutGameServerConfigOverrideGetArgs... gameServerConfigOverrides) {
+            return gameServerConfigOverrides(List.of(gameServerConfigOverrides));
+        }
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
-        }
-        public GameServerDeploymentRolloutState build() {
+        }        public GameServerDeploymentRolloutState build() {
             return new GameServerDeploymentRolloutState(defaultGameServerConfig, deploymentId, gameServerConfigOverrides, name, project);
         }
     }

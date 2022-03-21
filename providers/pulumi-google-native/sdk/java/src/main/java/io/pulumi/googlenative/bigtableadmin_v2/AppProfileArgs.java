@@ -172,92 +172,74 @@ public final class AppProfileArgs extends io.pulumi.resources.ResourceArgs {
             this.appProfileId = Objects.requireNonNull(appProfileId);
             return this;
         }
-
         public Builder appProfileId(String appProfileId) {
             this.appProfileId = Output.of(Objects.requireNonNull(appProfileId));
             return this;
         }
-
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder etag(@Nullable Output<String> etag) {
             this.etag = etag;
             return this;
         }
-
         public Builder etag(@Nullable String etag) {
             this.etag = Output.ofNullable(etag);
             return this;
         }
-
         public Builder ignoreWarnings(@Nullable Output<String> ignoreWarnings) {
             this.ignoreWarnings = ignoreWarnings;
             return this;
         }
-
         public Builder ignoreWarnings(@Nullable String ignoreWarnings) {
             this.ignoreWarnings = Output.ofNullable(ignoreWarnings);
             return this;
         }
-
         public Builder instanceId(Output<String> instanceId) {
             this.instanceId = Objects.requireNonNull(instanceId);
             return this;
         }
-
         public Builder instanceId(String instanceId) {
             this.instanceId = Output.of(Objects.requireNonNull(instanceId));
             return this;
         }
-
         public Builder multiClusterRoutingUseAny(@Nullable Output<MultiClusterRoutingUseAnyArgs> multiClusterRoutingUseAny) {
             this.multiClusterRoutingUseAny = multiClusterRoutingUseAny;
             return this;
         }
-
         public Builder multiClusterRoutingUseAny(@Nullable MultiClusterRoutingUseAnyArgs multiClusterRoutingUseAny) {
             this.multiClusterRoutingUseAny = Output.ofNullable(multiClusterRoutingUseAny);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
         }
-
         public Builder singleClusterRouting(@Nullable Output<SingleClusterRoutingArgs> singleClusterRouting) {
             this.singleClusterRouting = singleClusterRouting;
             return this;
         }
-
         public Builder singleClusterRouting(@Nullable SingleClusterRoutingArgs singleClusterRouting) {
             this.singleClusterRouting = Output.ofNullable(singleClusterRouting);
             return this;
-        }
-        public AppProfileArgs build() {
+        }        public AppProfileArgs build() {
             return new AppProfileArgs(appProfileId, description, etag, ignoreWarnings, instanceId, multiClusterRoutingUseAny, name, project, singleClusterRouting);
         }
     }

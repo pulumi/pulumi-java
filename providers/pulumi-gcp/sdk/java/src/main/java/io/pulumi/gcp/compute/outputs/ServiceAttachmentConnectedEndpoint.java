@@ -55,12 +55,10 @@ public final class ServiceAttachmentConnectedEndpoint {
             this.endpoint = endpoint;
             return this;
         }
-
         public Builder status(@Nullable String status) {
             this.status = status;
             return this;
-        }
-        public ServiceAttachmentConnectedEndpoint build() {
+        }        public ServiceAttachmentConnectedEndpoint build() {
             return new ServiceAttachmentConnectedEndpoint(endpoint, status);
         }
     }

@@ -69,12 +69,10 @@ public final class IssuingOptionsResponse {
             this.includeCaCertUrl = Objects.requireNonNull(includeCaCertUrl);
             return this;
         }
-
         public Builder includeCrlAccessUrl(Boolean includeCrlAccessUrl) {
             this.includeCrlAccessUrl = Objects.requireNonNull(includeCrlAccessUrl);
             return this;
-        }
-        public IssuingOptionsResponse build() {
+        }        public IssuingOptionsResponse build() {
             return new IssuingOptionsResponse(includeCaCertUrl, includeCrlAccessUrl);
         }
     }

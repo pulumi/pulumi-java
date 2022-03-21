@@ -56,12 +56,10 @@ public final class PacketMirroringMirroredResourcesSubnetworkArgs extends io.pul
             this.url = Objects.requireNonNull(url);
             return this;
         }
-
         public Builder url(String url) {
             this.url = Output.of(Objects.requireNonNull(url));
             return this;
-        }
-        public PacketMirroringMirroredResourcesSubnetworkArgs build() {
+        }        public PacketMirroringMirroredResourcesSubnetworkArgs build() {
             return new PacketMirroringMirroredResourcesSubnetworkArgs(url);
         }
     }

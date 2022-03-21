@@ -95,17 +95,14 @@ public final class FieldDefinitionResponse extends io.pulumi.resources.InvokeArg
             this.isEncrypted = isEncrypted;
             return this;
         }
-
         public Builder isOptional(@Nullable Boolean isOptional) {
             this.isOptional = isOptional;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public FieldDefinitionResponse build() {
+        }        public FieldDefinitionResponse build() {
             return new FieldDefinitionResponse(isEncrypted, isOptional, type);
         }
     }

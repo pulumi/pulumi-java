@@ -119,12 +119,10 @@ public final class ValidationRule {
             this.message = message;
             return this;
         }
-
         public Builder rule(String rule) {
             this.rule = Objects.requireNonNull(rule);
             return this;
-        }
-        public ValidationRule build() {
+        }        public ValidationRule build() {
             return new ValidationRule(message, rule);
         }
     }

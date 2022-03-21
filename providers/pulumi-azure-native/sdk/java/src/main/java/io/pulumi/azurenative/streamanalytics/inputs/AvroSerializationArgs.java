@@ -61,12 +61,10 @@ public final class AvroSerializationArgs extends io.pulumi.resources.ResourceArg
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Output.of(Objects.requireNonNull(type));
             return this;
-        }
-        public AvroSerializationArgs build() {
+        }        public AvroSerializationArgs build() {
             return new AvroSerializationArgs(type);
         }
     }

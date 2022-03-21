@@ -103,22 +103,18 @@ public final class GetTagTemplateResult {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
-
         public Builder fields(Map<String,String> fields) {
             this.fields = Objects.requireNonNull(fields);
             return this;
         }
-
         public Builder isPubliclyReadable(Boolean isPubliclyReadable) {
             this.isPubliclyReadable = Objects.requireNonNull(isPubliclyReadable);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
-        }
-        public GetTagTemplateResult build() {
+        }        public GetTagTemplateResult build() {
             return new GetTagTemplateResult(displayName, fields, isPubliclyReadable, name);
         }
     }

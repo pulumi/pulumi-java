@@ -58,8 +58,7 @@ public final class SoftwareRecipeStepInstallRpmResponse extends io.pulumi.resour
         public Builder artifactId(String artifactId) {
             this.artifactId = Objects.requireNonNull(artifactId);
             return this;
-        }
-        public SoftwareRecipeStepInstallRpmResponse build() {
+        }        public SoftwareRecipeStepInstallRpmResponse build() {
             return new SoftwareRecipeStepInstallRpmResponse(artifactId);
         }
     }

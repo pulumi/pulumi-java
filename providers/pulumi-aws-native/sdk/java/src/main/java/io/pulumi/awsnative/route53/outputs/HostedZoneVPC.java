@@ -69,12 +69,10 @@ public final class HostedZoneVPC {
             this.vPCId = Objects.requireNonNull(vPCId);
             return this;
         }
-
         public Builder vPCRegion(String vPCRegion) {
             this.vPCRegion = Objects.requireNonNull(vPCRegion);
             return this;
-        }
-        public HostedZoneVPC build() {
+        }        public HostedZoneVPC build() {
             return new HostedZoneVPC(vPCId, vPCRegion);
         }
     }

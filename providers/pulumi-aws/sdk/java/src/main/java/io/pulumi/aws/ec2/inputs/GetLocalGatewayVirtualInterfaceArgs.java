@@ -93,17 +93,17 @@ public final class GetLocalGatewayVirtualInterfaceArgs extends io.pulumi.resourc
             this.filters = filters;
             return this;
         }
-
+        public Builder filters(GetLocalGatewayVirtualInterfaceFilter... filters) {
+            return filters(List.of(filters));
+        }
         public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
-        }
-        public GetLocalGatewayVirtualInterfaceArgs build() {
+        }        public GetLocalGatewayVirtualInterfaceArgs build() {
             return new GetLocalGatewayVirtualInterfaceArgs(filters, id, tags);
         }
     }

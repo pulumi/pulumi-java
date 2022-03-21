@@ -71,12 +71,10 @@ public final class AppleRegistrationResponse {
             this.clientId = clientId;
             return this;
         }
-
         public Builder clientSecretSettingName(@Nullable String clientSecretSettingName) {
             this.clientSecretSettingName = clientSecretSettingName;
             return this;
-        }
-        public AppleRegistrationResponse build() {
+        }        public AppleRegistrationResponse build() {
             return new AppleRegistrationResponse(clientId, clientSecretSettingName);
         }
     }

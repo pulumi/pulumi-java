@@ -88,17 +88,14 @@ public final class GetQueueArgs extends io.pulumi.resources.InvokeArgs {
             this.accountName = Objects.requireNonNull(accountName);
             return this;
         }
-
         public Builder queueName(String queueName) {
             this.queueName = Objects.requireNonNull(queueName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
-        }
-        public GetQueueArgs build() {
+        }        public GetQueueArgs build() {
             return new GetQueueArgs(accountName, queueName, resourceGroupName);
         }
     }

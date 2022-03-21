@@ -287,142 +287,117 @@ public final class SecretState extends io.pulumi.resources.ResourceArgs {
             this.arn = arn;
             return this;
         }
-
         public Builder arn(@Nullable String arn) {
             this.arn = Output.ofNullable(arn);
             return this;
         }
-
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder forceOverwriteReplicaSecret(@Nullable Output<Boolean> forceOverwriteReplicaSecret) {
             this.forceOverwriteReplicaSecret = forceOverwriteReplicaSecret;
             return this;
         }
-
         public Builder forceOverwriteReplicaSecret(@Nullable Boolean forceOverwriteReplicaSecret) {
             this.forceOverwriteReplicaSecret = Output.ofNullable(forceOverwriteReplicaSecret);
             return this;
         }
-
         public Builder kmsKeyId(@Nullable Output<String> kmsKeyId) {
             this.kmsKeyId = kmsKeyId;
             return this;
         }
-
         public Builder kmsKeyId(@Nullable String kmsKeyId) {
             this.kmsKeyId = Output.ofNullable(kmsKeyId);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder namePrefix(@Nullable Output<String> namePrefix) {
             this.namePrefix = namePrefix;
             return this;
         }
-
         public Builder namePrefix(@Nullable String namePrefix) {
             this.namePrefix = Output.ofNullable(namePrefix);
             return this;
         }
-
         public Builder policy(@Nullable Output<String> policy) {
             this.policy = policy;
             return this;
         }
-
         public Builder policy(@Nullable String policy) {
             this.policy = Output.ofNullable(policy);
             return this;
         }
-
         public Builder recoveryWindowInDays(@Nullable Output<Integer> recoveryWindowInDays) {
             this.recoveryWindowInDays = recoveryWindowInDays;
             return this;
         }
-
         public Builder recoveryWindowInDays(@Nullable Integer recoveryWindowInDays) {
             this.recoveryWindowInDays = Output.ofNullable(recoveryWindowInDays);
             return this;
         }
-
         public Builder replicas(@Nullable Output<List<SecretReplicaGetArgs>> replicas) {
             this.replicas = replicas;
             return this;
         }
-
         public Builder replicas(@Nullable List<SecretReplicaGetArgs> replicas) {
             this.replicas = Output.ofNullable(replicas);
             return this;
         }
-
+        public Builder replicas(SecretReplicaGetArgs... replicas) {
+            return replicas(List.of(replicas));
+        }
         public Builder rotationEnabled(@Nullable Output<Boolean> rotationEnabled) {
             this.rotationEnabled = rotationEnabled;
             return this;
         }
-
         public Builder rotationEnabled(@Nullable Boolean rotationEnabled) {
             this.rotationEnabled = Output.ofNullable(rotationEnabled);
             return this;
         }
-
         public Builder rotationLambdaArn(@Nullable Output<String> rotationLambdaArn) {
             this.rotationLambdaArn = rotationLambdaArn;
             return this;
         }
-
         public Builder rotationLambdaArn(@Nullable String rotationLambdaArn) {
             this.rotationLambdaArn = Output.ofNullable(rotationLambdaArn);
             return this;
         }
-
         public Builder rotationRules(@Nullable Output<SecretRotationRulesGetArgs> rotationRules) {
             this.rotationRules = rotationRules;
             return this;
         }
-
         public Builder rotationRules(@Nullable SecretRotationRulesGetArgs rotationRules) {
             this.rotationRules = Output.ofNullable(rotationRules);
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
             this.tagsAll = tagsAll;
             return this;
         }
-
         public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
             this.tagsAll = Output.ofNullable(tagsAll);
             return this;
-        }
-        public SecretState build() {
+        }        public SecretState build() {
             return new SecretState(arn, description, forceOverwriteReplicaSecret, kmsKeyId, name, namePrefix, policy, recoveryWindowInDays, replicas, rotationEnabled, rotationLambdaArn, rotationRules, tags, tagsAll);
         }
     }

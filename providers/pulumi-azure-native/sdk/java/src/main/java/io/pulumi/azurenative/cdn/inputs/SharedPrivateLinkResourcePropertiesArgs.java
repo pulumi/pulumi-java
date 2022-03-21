@@ -128,52 +128,42 @@ public final class SharedPrivateLinkResourcePropertiesArgs extends io.pulumi.res
             this.groupId = groupId;
             return this;
         }
-
         public Builder groupId(@Nullable String groupId) {
             this.groupId = Output.ofNullable(groupId);
             return this;
         }
-
         public Builder privateLink(@Nullable Output<ResourceReferenceArgs> privateLink) {
             this.privateLink = privateLink;
             return this;
         }
-
         public Builder privateLink(@Nullable ResourceReferenceArgs privateLink) {
             this.privateLink = Output.ofNullable(privateLink);
             return this;
         }
-
         public Builder privateLinkLocation(@Nullable Output<String> privateLinkLocation) {
             this.privateLinkLocation = privateLinkLocation;
             return this;
         }
-
         public Builder privateLinkLocation(@Nullable String privateLinkLocation) {
             this.privateLinkLocation = Output.ofNullable(privateLinkLocation);
             return this;
         }
-
         public Builder requestMessage(@Nullable Output<String> requestMessage) {
             this.requestMessage = requestMessage;
             return this;
         }
-
         public Builder requestMessage(@Nullable String requestMessage) {
             this.requestMessage = Output.ofNullable(requestMessage);
             return this;
         }
-
         public Builder status(@Nullable Output<SharedPrivateLinkResourceStatus> status) {
             this.status = status;
             return this;
         }
-
         public Builder status(@Nullable SharedPrivateLinkResourceStatus status) {
             this.status = Output.ofNullable(status);
             return this;
-        }
-        public SharedPrivateLinkResourcePropertiesArgs build() {
+        }        public SharedPrivateLinkResourcePropertiesArgs build() {
             return new SharedPrivateLinkResourcePropertiesArgs(groupId, privateLink, privateLinkLocation, requestMessage, status);
         }
     }

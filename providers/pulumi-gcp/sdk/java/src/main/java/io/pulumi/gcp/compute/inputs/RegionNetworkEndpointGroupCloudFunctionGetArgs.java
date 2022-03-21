@@ -81,22 +81,18 @@ public final class RegionNetworkEndpointGroupCloudFunctionGetArgs extends io.pul
             this.function = function;
             return this;
         }
-
         public Builder function(@Nullable String function) {
             this.function = Output.ofNullable(function);
             return this;
         }
-
         public Builder urlMask(@Nullable Output<String> urlMask) {
             this.urlMask = urlMask;
             return this;
         }
-
         public Builder urlMask(@Nullable String urlMask) {
             this.urlMask = Output.ofNullable(urlMask);
             return this;
-        }
-        public RegionNetworkEndpointGroupCloudFunctionGetArgs build() {
+        }        public RegionNetworkEndpointGroupCloudFunctionGetArgs build() {
             return new RegionNetworkEndpointGroupCloudFunctionGetArgs(function, urlMask);
         }
     }

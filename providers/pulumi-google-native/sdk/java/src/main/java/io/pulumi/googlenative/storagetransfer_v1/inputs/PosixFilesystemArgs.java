@@ -61,12 +61,10 @@ public final class PosixFilesystemArgs extends io.pulumi.resources.ResourceArgs 
             this.rootDirectory = rootDirectory;
             return this;
         }
-
         public Builder rootDirectory(@Nullable String rootDirectory) {
             this.rootDirectory = Output.ofNullable(rootDirectory);
             return this;
-        }
-        public PosixFilesystemArgs build() {
+        }        public PosixFilesystemArgs build() {
             return new PosixFilesystemArgs(rootDirectory);
         }
     }

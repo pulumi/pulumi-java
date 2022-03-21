@@ -106,42 +106,34 @@ public final class ServerCommunicationLinkArgs extends io.pulumi.resources.Resou
             this.communicationLinkName = communicationLinkName;
             return this;
         }
-
         public Builder communicationLinkName(@Nullable String communicationLinkName) {
             this.communicationLinkName = Output.ofNullable(communicationLinkName);
             return this;
         }
-
         public Builder partnerServer(Output<String> partnerServer) {
             this.partnerServer = Objects.requireNonNull(partnerServer);
             return this;
         }
-
         public Builder partnerServer(String partnerServer) {
             this.partnerServer = Output.of(Objects.requireNonNull(partnerServer));
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder serverName(Output<String> serverName) {
             this.serverName = Objects.requireNonNull(serverName);
             return this;
         }
-
         public Builder serverName(String serverName) {
             this.serverName = Output.of(Objects.requireNonNull(serverName));
             return this;
-        }
-        public ServerCommunicationLinkArgs build() {
+        }        public ServerCommunicationLinkArgs build() {
             return new ServerCommunicationLinkArgs(communicationLinkName, partnerServer, resourceGroupName, serverName);
         }
     }

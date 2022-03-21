@@ -216,57 +216,46 @@ public final class ServerEndpointSyncStatusResponse {
             this.combinedHealth = Objects.requireNonNull(combinedHealth);
             return this;
         }
-
         public Builder downloadActivity(ServerEndpointSyncActivityStatusResponse downloadActivity) {
             this.downloadActivity = Objects.requireNonNull(downloadActivity);
             return this;
         }
-
         public Builder downloadHealth(String downloadHealth) {
             this.downloadHealth = Objects.requireNonNull(downloadHealth);
             return this;
         }
-
         public Builder downloadStatus(ServerEndpointSyncSessionStatusResponse downloadStatus) {
             this.downloadStatus = Objects.requireNonNull(downloadStatus);
             return this;
         }
-
         public Builder lastUpdatedTimestamp(String lastUpdatedTimestamp) {
             this.lastUpdatedTimestamp = Objects.requireNonNull(lastUpdatedTimestamp);
             return this;
         }
-
         public Builder offlineDataTransferStatus(String offlineDataTransferStatus) {
             this.offlineDataTransferStatus = Objects.requireNonNull(offlineDataTransferStatus);
             return this;
         }
-
         public Builder syncActivity(String syncActivity) {
             this.syncActivity = Objects.requireNonNull(syncActivity);
             return this;
         }
-
         public Builder totalPersistentFilesNotSyncingCount(Double totalPersistentFilesNotSyncingCount) {
             this.totalPersistentFilesNotSyncingCount = Objects.requireNonNull(totalPersistentFilesNotSyncingCount);
             return this;
         }
-
         public Builder uploadActivity(ServerEndpointSyncActivityStatusResponse uploadActivity) {
             this.uploadActivity = Objects.requireNonNull(uploadActivity);
             return this;
         }
-
         public Builder uploadHealth(String uploadHealth) {
             this.uploadHealth = Objects.requireNonNull(uploadHealth);
             return this;
         }
-
         public Builder uploadStatus(ServerEndpointSyncSessionStatusResponse uploadStatus) {
             this.uploadStatus = Objects.requireNonNull(uploadStatus);
             return this;
-        }
-        public ServerEndpointSyncStatusResponse build() {
+        }        public ServerEndpointSyncStatusResponse build() {
             return new ServerEndpointSyncStatusResponse(combinedHealth, downloadActivity, downloadHealth, downloadStatus, lastUpdatedTimestamp, offlineDataTransferStatus, syncActivity, totalPersistentFilesNotSyncingCount, uploadActivity, uploadHealth, uploadStatus);
         }
     }

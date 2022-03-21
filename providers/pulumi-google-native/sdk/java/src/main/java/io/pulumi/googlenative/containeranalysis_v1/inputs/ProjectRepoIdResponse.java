@@ -76,12 +76,10 @@ public final class ProjectRepoIdResponse extends io.pulumi.resources.InvokeArgs 
             this.project = Objects.requireNonNull(project);
             return this;
         }
-
         public Builder repoName(String repoName) {
             this.repoName = Objects.requireNonNull(repoName);
             return this;
-        }
-        public ProjectRepoIdResponse build() {
+        }        public ProjectRepoIdResponse build() {
             return new ProjectRepoIdResponse(project, repoName);
         }
     }

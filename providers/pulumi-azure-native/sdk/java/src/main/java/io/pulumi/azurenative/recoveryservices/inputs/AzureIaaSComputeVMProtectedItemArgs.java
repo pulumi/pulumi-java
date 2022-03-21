@@ -458,252 +458,202 @@ public final class AzureIaaSComputeVMProtectedItemArgs extends io.pulumi.resourc
             this.backupManagementType = backupManagementType;
             return this;
         }
-
         public Builder backupManagementType(@Nullable Either<String,BackupManagementType> backupManagementType) {
             this.backupManagementType = Output.ofNullable(backupManagementType);
             return this;
         }
-
         public Builder backupSetName(@Nullable Output<String> backupSetName) {
             this.backupSetName = backupSetName;
             return this;
         }
-
         public Builder backupSetName(@Nullable String backupSetName) {
             this.backupSetName = Output.ofNullable(backupSetName);
             return this;
         }
-
         public Builder containerName(@Nullable Output<String> containerName) {
             this.containerName = containerName;
             return this;
         }
-
         public Builder containerName(@Nullable String containerName) {
             this.containerName = Output.ofNullable(containerName);
             return this;
         }
-
         public Builder createMode(@Nullable Output<Either<String,CreateMode>> createMode) {
             this.createMode = createMode;
             return this;
         }
-
         public Builder createMode(@Nullable Either<String,CreateMode> createMode) {
             this.createMode = Output.ofNullable(createMode);
             return this;
         }
-
         public Builder deferredDeleteTimeInUTC(@Nullable Output<String> deferredDeleteTimeInUTC) {
             this.deferredDeleteTimeInUTC = deferredDeleteTimeInUTC;
             return this;
         }
-
         public Builder deferredDeleteTimeInUTC(@Nullable String deferredDeleteTimeInUTC) {
             this.deferredDeleteTimeInUTC = Output.ofNullable(deferredDeleteTimeInUTC);
             return this;
         }
-
         public Builder deferredDeleteTimeRemaining(@Nullable Output<String> deferredDeleteTimeRemaining) {
             this.deferredDeleteTimeRemaining = deferredDeleteTimeRemaining;
             return this;
         }
-
         public Builder deferredDeleteTimeRemaining(@Nullable String deferredDeleteTimeRemaining) {
             this.deferredDeleteTimeRemaining = Output.ofNullable(deferredDeleteTimeRemaining);
             return this;
         }
-
         public Builder extendedInfo(@Nullable Output<AzureIaaSVMProtectedItemExtendedInfoArgs> extendedInfo) {
             this.extendedInfo = extendedInfo;
             return this;
         }
-
         public Builder extendedInfo(@Nullable AzureIaaSVMProtectedItemExtendedInfoArgs extendedInfo) {
             this.extendedInfo = Output.ofNullable(extendedInfo);
             return this;
         }
-
         public Builder extendedProperties(@Nullable Output<ExtendedPropertiesArgs> extendedProperties) {
             this.extendedProperties = extendedProperties;
             return this;
         }
-
         public Builder extendedProperties(@Nullable ExtendedPropertiesArgs extendedProperties) {
             this.extendedProperties = Output.ofNullable(extendedProperties);
             return this;
         }
-
         public Builder friendlyName(@Nullable Output<String> friendlyName) {
             this.friendlyName = friendlyName;
             return this;
         }
-
         public Builder friendlyName(@Nullable String friendlyName) {
             this.friendlyName = Output.ofNullable(friendlyName);
             return this;
         }
-
         public Builder healthStatus(@Nullable Output<Either<String,HealthStatus>> healthStatus) {
             this.healthStatus = healthStatus;
             return this;
         }
-
         public Builder healthStatus(@Nullable Either<String,HealthStatus> healthStatus) {
             this.healthStatus = Output.ofNullable(healthStatus);
             return this;
         }
-
         public Builder isDeferredDeleteScheduleUpcoming(@Nullable Output<Boolean> isDeferredDeleteScheduleUpcoming) {
             this.isDeferredDeleteScheduleUpcoming = isDeferredDeleteScheduleUpcoming;
             return this;
         }
-
         public Builder isDeferredDeleteScheduleUpcoming(@Nullable Boolean isDeferredDeleteScheduleUpcoming) {
             this.isDeferredDeleteScheduleUpcoming = Output.ofNullable(isDeferredDeleteScheduleUpcoming);
             return this;
         }
-
         public Builder isRehydrate(@Nullable Output<Boolean> isRehydrate) {
             this.isRehydrate = isRehydrate;
             return this;
         }
-
         public Builder isRehydrate(@Nullable Boolean isRehydrate) {
             this.isRehydrate = Output.ofNullable(isRehydrate);
             return this;
         }
-
         public Builder isScheduledForDeferredDelete(@Nullable Output<Boolean> isScheduledForDeferredDelete) {
             this.isScheduledForDeferredDelete = isScheduledForDeferredDelete;
             return this;
         }
-
         public Builder isScheduledForDeferredDelete(@Nullable Boolean isScheduledForDeferredDelete) {
             this.isScheduledForDeferredDelete = Output.ofNullable(isScheduledForDeferredDelete);
             return this;
         }
-
         public Builder kpisHealths(@Nullable Output<Map<String,KPIResourceHealthDetailsArgs>> kpisHealths) {
             this.kpisHealths = kpisHealths;
             return this;
         }
-
         public Builder kpisHealths(@Nullable Map<String,KPIResourceHealthDetailsArgs> kpisHealths) {
             this.kpisHealths = Output.ofNullable(kpisHealths);
             return this;
         }
-
         public Builder lastBackupStatus(@Nullable Output<String> lastBackupStatus) {
             this.lastBackupStatus = lastBackupStatus;
             return this;
         }
-
         public Builder lastBackupStatus(@Nullable String lastBackupStatus) {
             this.lastBackupStatus = Output.ofNullable(lastBackupStatus);
             return this;
         }
-
         public Builder lastBackupTime(@Nullable Output<String> lastBackupTime) {
             this.lastBackupTime = lastBackupTime;
             return this;
         }
-
         public Builder lastBackupTime(@Nullable String lastBackupTime) {
             this.lastBackupTime = Output.ofNullable(lastBackupTime);
             return this;
         }
-
         public Builder lastRecoveryPoint(@Nullable Output<String> lastRecoveryPoint) {
             this.lastRecoveryPoint = lastRecoveryPoint;
             return this;
         }
-
         public Builder lastRecoveryPoint(@Nullable String lastRecoveryPoint) {
             this.lastRecoveryPoint = Output.ofNullable(lastRecoveryPoint);
             return this;
         }
-
         public Builder policyId(@Nullable Output<String> policyId) {
             this.policyId = policyId;
             return this;
         }
-
         public Builder policyId(@Nullable String policyId) {
             this.policyId = Output.ofNullable(policyId);
             return this;
         }
-
         public Builder protectedItemDataId(@Nullable Output<String> protectedItemDataId) {
             this.protectedItemDataId = protectedItemDataId;
             return this;
         }
-
         public Builder protectedItemDataId(@Nullable String protectedItemDataId) {
             this.protectedItemDataId = Output.ofNullable(protectedItemDataId);
             return this;
         }
-
         public Builder protectedItemType(Output<String> protectedItemType) {
             this.protectedItemType = Objects.requireNonNull(protectedItemType);
             return this;
         }
-
         public Builder protectedItemType(String protectedItemType) {
             this.protectedItemType = Output.of(Objects.requireNonNull(protectedItemType));
             return this;
         }
-
         public Builder protectionState(@Nullable Output<Either<String,ProtectionState>> protectionState) {
             this.protectionState = protectionState;
             return this;
         }
-
         public Builder protectionState(@Nullable Either<String,ProtectionState> protectionState) {
             this.protectionState = Output.ofNullable(protectionState);
             return this;
         }
-
         public Builder protectionStatus(@Nullable Output<String> protectionStatus) {
             this.protectionStatus = protectionStatus;
             return this;
         }
-
         public Builder protectionStatus(@Nullable String protectionStatus) {
             this.protectionStatus = Output.ofNullable(protectionStatus);
             return this;
         }
-
         public Builder sourceResourceId(@Nullable Output<String> sourceResourceId) {
             this.sourceResourceId = sourceResourceId;
             return this;
         }
-
         public Builder sourceResourceId(@Nullable String sourceResourceId) {
             this.sourceResourceId = Output.ofNullable(sourceResourceId);
             return this;
         }
-
         public Builder virtualMachineId(@Nullable Output<String> virtualMachineId) {
             this.virtualMachineId = virtualMachineId;
             return this;
         }
-
         public Builder virtualMachineId(@Nullable String virtualMachineId) {
             this.virtualMachineId = Output.ofNullable(virtualMachineId);
             return this;
         }
-
         public Builder workloadType(@Nullable Output<Either<String,DataSourceType>> workloadType) {
             this.workloadType = workloadType;
             return this;
         }
-
         public Builder workloadType(@Nullable Either<String,DataSourceType> workloadType) {
             this.workloadType = Output.ofNullable(workloadType);
             return this;
-        }
-        public AzureIaaSComputeVMProtectedItemArgs build() {
+        }        public AzureIaaSComputeVMProtectedItemArgs build() {
             return new AzureIaaSComputeVMProtectedItemArgs(backupManagementType, backupSetName, containerName, createMode, deferredDeleteTimeInUTC, deferredDeleteTimeRemaining, extendedInfo, extendedProperties, friendlyName, healthStatus, isDeferredDeleteScheduleUpcoming, isRehydrate, isScheduledForDeferredDelete, kpisHealths, lastBackupStatus, lastBackupTime, lastRecoveryPoint, policyId, protectedItemDataId, protectedItemType, protectionState, protectionStatus, sourceResourceId, virtualMachineId, workloadType);
         }
     }

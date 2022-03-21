@@ -207,52 +207,48 @@ public final class CustomResourceDefinitionSpec {
             this.additionalPrinterColumns = additionalPrinterColumns;
             return this;
         }
-
+        public Builder additionalPrinterColumns(CustomResourceColumnDefinition... additionalPrinterColumns) {
+            return additionalPrinterColumns(List.of(additionalPrinterColumns));
+        }
         public Builder conversion(@Nullable CustomResourceConversion conversion) {
             this.conversion = conversion;
             return this;
         }
-
         public Builder group(String group) {
             this.group = Objects.requireNonNull(group);
             return this;
         }
-
         public Builder names(CustomResourceDefinitionNames names) {
             this.names = Objects.requireNonNull(names);
             return this;
         }
-
         public Builder preserveUnknownFields(@Nullable Boolean preserveUnknownFields) {
             this.preserveUnknownFields = preserveUnknownFields;
             return this;
         }
-
         public Builder scope(String scope) {
             this.scope = Objects.requireNonNull(scope);
             return this;
         }
-
         public Builder subresources(@Nullable CustomResourceSubresources subresources) {
             this.subresources = subresources;
             return this;
         }
-
         public Builder validation(@Nullable CustomResourceValidation validation) {
             this.validation = validation;
             return this;
         }
-
         public Builder version(@Nullable String version) {
             this.version = version;
             return this;
         }
-
         public Builder versions(@Nullable List<CustomResourceDefinitionVersion> versions) {
             this.versions = versions;
             return this;
         }
-        public CustomResourceDefinitionSpec build() {
+        public Builder versions(CustomResourceDefinitionVersion... versions) {
+            return versions(List.of(versions));
+        }        public CustomResourceDefinitionSpec build() {
             return new CustomResourceDefinitionSpec(additionalPrinterColumns, conversion, group, names, preserveUnknownFields, scope, subresources, validation, version, versions);
         }
     }

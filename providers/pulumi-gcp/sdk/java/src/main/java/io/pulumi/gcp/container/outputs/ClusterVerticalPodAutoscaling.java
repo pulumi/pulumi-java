@@ -53,8 +53,7 @@ public final class ClusterVerticalPodAutoscaling {
         public Builder enabled(Boolean enabled) {
             this.enabled = Objects.requireNonNull(enabled);
             return this;
-        }
-        public ClusterVerticalPodAutoscaling build() {
+        }        public ClusterVerticalPodAutoscaling build() {
             return new ClusterVerticalPodAutoscaling(enabled);
         }
     }

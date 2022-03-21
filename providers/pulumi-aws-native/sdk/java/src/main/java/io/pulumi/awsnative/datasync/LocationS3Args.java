@@ -122,52 +122,45 @@ public final class LocationS3Args extends io.pulumi.resources.ResourceArgs {
             this.s3BucketArn = Objects.requireNonNull(s3BucketArn);
             return this;
         }
-
         public Builder s3BucketArn(String s3BucketArn) {
             this.s3BucketArn = Output.of(Objects.requireNonNull(s3BucketArn));
             return this;
         }
-
         public Builder s3Config(Output<LocationS3S3ConfigArgs> s3Config) {
             this.s3Config = Objects.requireNonNull(s3Config);
             return this;
         }
-
         public Builder s3Config(LocationS3S3ConfigArgs s3Config) {
             this.s3Config = Output.of(Objects.requireNonNull(s3Config));
             return this;
         }
-
         public Builder s3StorageClass(@Nullable Output<LocationS3S3StorageClass> s3StorageClass) {
             this.s3StorageClass = s3StorageClass;
             return this;
         }
-
         public Builder s3StorageClass(@Nullable LocationS3S3StorageClass s3StorageClass) {
             this.s3StorageClass = Output.ofNullable(s3StorageClass);
             return this;
         }
-
         public Builder subdirectory(@Nullable Output<String> subdirectory) {
             this.subdirectory = subdirectory;
             return this;
         }
-
         public Builder subdirectory(@Nullable String subdirectory) {
             this.subdirectory = Output.ofNullable(subdirectory);
             return this;
         }
-
         public Builder tags(@Nullable Output<List<LocationS3TagArgs>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable List<LocationS3TagArgs> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-        public LocationS3Args build() {
+        public Builder tags(LocationS3TagArgs... tags) {
+            return tags(List.of(tags));
+        }        public LocationS3Args build() {
             return new LocationS3Args(s3BucketArn, s3Config, s3StorageClass, subdirectory, tags);
         }
     }

@@ -54,12 +54,10 @@ public final class InstanceFromTemplateGuestAccelerator {
             this.count = Objects.requireNonNull(count);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public InstanceFromTemplateGuestAccelerator build() {
+        }        public InstanceFromTemplateGuestAccelerator build() {
             return new InstanceFromTemplateGuestAccelerator(count, type);
         }
     }

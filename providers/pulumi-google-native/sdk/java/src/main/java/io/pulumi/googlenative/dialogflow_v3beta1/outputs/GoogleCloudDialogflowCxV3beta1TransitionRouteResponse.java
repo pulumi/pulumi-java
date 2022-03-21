@@ -134,32 +134,26 @@ public final class GoogleCloudDialogflowCxV3beta1TransitionRouteResponse {
             this.condition = Objects.requireNonNull(condition);
             return this;
         }
-
         public Builder intent(String intent) {
             this.intent = Objects.requireNonNull(intent);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder targetFlow(String targetFlow) {
             this.targetFlow = Objects.requireNonNull(targetFlow);
             return this;
         }
-
         public Builder targetPage(String targetPage) {
             this.targetPage = Objects.requireNonNull(targetPage);
             return this;
         }
-
         public Builder triggerFulfillment(GoogleCloudDialogflowCxV3beta1FulfillmentResponse triggerFulfillment) {
             this.triggerFulfillment = Objects.requireNonNull(triggerFulfillment);
             return this;
-        }
-        public GoogleCloudDialogflowCxV3beta1TransitionRouteResponse build() {
+        }        public GoogleCloudDialogflowCxV3beta1TransitionRouteResponse build() {
             return new GoogleCloudDialogflowCxV3beta1TransitionRouteResponse(condition, intent, name, targetFlow, targetPage, triggerFulfillment);
         }
     }

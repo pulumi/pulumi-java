@@ -58,8 +58,7 @@ public final class AppSkuInfoResponse extends io.pulumi.resources.InvokeArgs {
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
-        }
-        public AppSkuInfoResponse build() {
+        }        public AppSkuInfoResponse build() {
             return new AppSkuInfoResponse(name);
         }
     }

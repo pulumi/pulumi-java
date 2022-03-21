@@ -85,17 +85,14 @@ public final class InsightFiltersProductField {
             this.comparison = Objects.requireNonNull(comparison);
             return this;
         }
-
         public Builder key(String key) {
             this.key = Objects.requireNonNull(key);
             return this;
         }
-
         public Builder value(String value) {
             this.value = Objects.requireNonNull(value);
             return this;
-        }
-        public InsightFiltersProductField build() {
+        }        public InsightFiltersProductField build() {
             return new InsightFiltersProductField(comparison, key, value);
         }
     }

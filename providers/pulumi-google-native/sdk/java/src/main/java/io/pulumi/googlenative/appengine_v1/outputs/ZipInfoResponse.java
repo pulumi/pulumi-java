@@ -70,12 +70,10 @@ public final class ZipInfoResponse {
             this.filesCount = Objects.requireNonNull(filesCount);
             return this;
         }
-
         public Builder sourceUrl(String sourceUrl) {
             this.sourceUrl = Objects.requireNonNull(sourceUrl);
             return this;
-        }
-        public ZipInfoResponse build() {
+        }        public ZipInfoResponse build() {
             return new ZipInfoResponse(filesCount, sourceUrl);
         }
     }

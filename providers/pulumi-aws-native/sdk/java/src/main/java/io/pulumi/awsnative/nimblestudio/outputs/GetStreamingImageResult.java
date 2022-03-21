@@ -137,37 +137,33 @@ public final class GetStreamingImageResult {
             this.description = description;
             return this;
         }
-
         public Builder encryptionConfiguration(@Nullable StreamingImageEncryptionConfiguration encryptionConfiguration) {
             this.encryptionConfiguration = encryptionConfiguration;
             return this;
         }
-
         public Builder eulaIds(@Nullable List<String> eulaIds) {
             this.eulaIds = eulaIds;
             return this;
         }
-
+        public Builder eulaIds(String... eulaIds) {
+            return eulaIds(List.of(eulaIds));
+        }
         public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
-
         public Builder owner(@Nullable String owner) {
             this.owner = owner;
             return this;
         }
-
         public Builder platform(@Nullable String platform) {
             this.platform = platform;
             return this;
         }
-
         public Builder streamingImageId(@Nullable String streamingImageId) {
             this.streamingImageId = streamingImageId;
             return this;
-        }
-        public GetStreamingImageResult build() {
+        }        public GetStreamingImageResult build() {
             return new GetStreamingImageResult(description, encryptionConfiguration, eulaIds, name, owner, platform, streamingImageId);
         }
     }

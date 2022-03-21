@@ -107,42 +107,34 @@ public final class UrlRewriteActionParametersArgs extends io.pulumi.resources.Re
             this.destination = Objects.requireNonNull(destination);
             return this;
         }
-
         public Builder destination(String destination) {
             this.destination = Output.of(Objects.requireNonNull(destination));
             return this;
         }
-
         public Builder odataType(Output<String> odataType) {
             this.odataType = Objects.requireNonNull(odataType);
             return this;
         }
-
         public Builder odataType(String odataType) {
             this.odataType = Output.of(Objects.requireNonNull(odataType));
             return this;
         }
-
         public Builder preserveUnmatchedPath(@Nullable Output<Boolean> preserveUnmatchedPath) {
             this.preserveUnmatchedPath = preserveUnmatchedPath;
             return this;
         }
-
         public Builder preserveUnmatchedPath(@Nullable Boolean preserveUnmatchedPath) {
             this.preserveUnmatchedPath = Output.ofNullable(preserveUnmatchedPath);
             return this;
         }
-
         public Builder sourcePattern(Output<String> sourcePattern) {
             this.sourcePattern = Objects.requireNonNull(sourcePattern);
             return this;
         }
-
         public Builder sourcePattern(String sourcePattern) {
             this.sourcePattern = Output.of(Objects.requireNonNull(sourcePattern));
             return this;
-        }
-        public UrlRewriteActionParametersArgs build() {
+        }        public UrlRewriteActionParametersArgs build() {
             return new UrlRewriteActionParametersArgs(destination, odataType, preserveUnmatchedPath, sourcePattern);
         }
     }

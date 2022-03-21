@@ -77,12 +77,10 @@ public final class ContainerServiceLinuxProfileResponse extends io.pulumi.resour
             this.adminUsername = Objects.requireNonNull(adminUsername);
             return this;
         }
-
         public Builder ssh(ContainerServiceSshConfigurationResponse ssh) {
             this.ssh = Objects.requireNonNull(ssh);
             return this;
-        }
-        public ContainerServiceLinuxProfileResponse build() {
+        }        public ContainerServiceLinuxProfileResponse build() {
             return new ContainerServiceLinuxProfileResponse(adminUsername, ssh);
         }
     }

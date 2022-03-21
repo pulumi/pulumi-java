@@ -92,42 +92,34 @@ public final class NetworkIpamConfigArgs extends io.pulumi.resources.ResourceArg
             this.auxAddress = auxAddress;
             return this;
         }
-
         public Builder auxAddress(@Nullable Map<String,Object> auxAddress) {
             this.auxAddress = Output.ofNullable(auxAddress);
             return this;
         }
-
         public Builder gateway(@Nullable Output<String> gateway) {
             this.gateway = gateway;
             return this;
         }
-
         public Builder gateway(@Nullable String gateway) {
             this.gateway = Output.ofNullable(gateway);
             return this;
         }
-
         public Builder ipRange(@Nullable Output<String> ipRange) {
             this.ipRange = ipRange;
             return this;
         }
-
         public Builder ipRange(@Nullable String ipRange) {
             this.ipRange = Output.ofNullable(ipRange);
             return this;
         }
-
         public Builder subnet(@Nullable Output<String> subnet) {
             this.subnet = subnet;
             return this;
         }
-
         public Builder subnet(@Nullable String subnet) {
             this.subnet = Output.ofNullable(subnet);
             return this;
-        }
-        public NetworkIpamConfigArgs build() {
+        }        public NetworkIpamConfigArgs build() {
             return new NetworkIpamConfigArgs(auxAddress, gateway, ipRange, subnet);
         }
     }

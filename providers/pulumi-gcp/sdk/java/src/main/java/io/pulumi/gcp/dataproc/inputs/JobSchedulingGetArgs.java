@@ -65,22 +65,18 @@ public final class JobSchedulingGetArgs extends io.pulumi.resources.ResourceArgs
             this.maxFailuresPerHour = Objects.requireNonNull(maxFailuresPerHour);
             return this;
         }
-
         public Builder maxFailuresPerHour(Integer maxFailuresPerHour) {
             this.maxFailuresPerHour = Output.of(Objects.requireNonNull(maxFailuresPerHour));
             return this;
         }
-
         public Builder maxFailuresTotal(Output<Integer> maxFailuresTotal) {
             this.maxFailuresTotal = Objects.requireNonNull(maxFailuresTotal);
             return this;
         }
-
         public Builder maxFailuresTotal(Integer maxFailuresTotal) {
             this.maxFailuresTotal = Output.of(Objects.requireNonNull(maxFailuresTotal));
             return this;
-        }
-        public JobSchedulingGetArgs build() {
+        }        public JobSchedulingGetArgs build() {
             return new JobSchedulingGetArgs(maxFailuresPerHour, maxFailuresTotal);
         }
     }

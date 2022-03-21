@@ -56,12 +56,10 @@ public final class ModelPrimaryContainerImageConfigGetArgs extends io.pulumi.res
             this.repositoryAccessMode = Objects.requireNonNull(repositoryAccessMode);
             return this;
         }
-
         public Builder repositoryAccessMode(String repositoryAccessMode) {
             this.repositoryAccessMode = Output.of(Objects.requireNonNull(repositoryAccessMode));
             return this;
-        }
-        public ModelPrimaryContainerImageConfigGetArgs build() {
+        }        public ModelPrimaryContainerImageConfigGetArgs build() {
             return new ModelPrimaryContainerImageConfigGetArgs(repositoryAccessMode);
         }
     }

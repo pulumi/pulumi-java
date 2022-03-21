@@ -71,12 +71,10 @@ public final class PlanRuleLifecycle {
             this.coldStorageAfter = coldStorageAfter;
             return this;
         }
-
         public Builder deleteAfter(@Nullable Integer deleteAfter) {
             this.deleteAfter = deleteAfter;
             return this;
-        }
-        public PlanRuleLifecycle build() {
+        }        public PlanRuleLifecycle build() {
             return new PlanRuleLifecycle(coldStorageAfter, deleteAfter);
         }
     }

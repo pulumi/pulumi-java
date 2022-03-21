@@ -76,22 +76,21 @@ public final class FirehoseDeliveryStreamRedshiftConfigurationProcessingConfigur
             this.enabled = enabled;
             return this;
         }
-
         public Builder enabled(@Nullable Boolean enabled) {
             this.enabled = Output.ofNullable(enabled);
             return this;
         }
-
         public Builder processors(@Nullable Output<List<FirehoseDeliveryStreamRedshiftConfigurationProcessingConfigurationProcessorGetArgs>> processors) {
             this.processors = processors;
             return this;
         }
-
         public Builder processors(@Nullable List<FirehoseDeliveryStreamRedshiftConfigurationProcessingConfigurationProcessorGetArgs> processors) {
             this.processors = Output.ofNullable(processors);
             return this;
         }
-        public FirehoseDeliveryStreamRedshiftConfigurationProcessingConfigurationGetArgs build() {
+        public Builder processors(FirehoseDeliveryStreamRedshiftConfigurationProcessingConfigurationProcessorGetArgs... processors) {
+            return processors(List.of(processors));
+        }        public FirehoseDeliveryStreamRedshiftConfigurationProcessingConfigurationGetArgs build() {
             return new FirehoseDeliveryStreamRedshiftConfigurationProcessingConfigurationGetArgs(enabled, processors);
         }
     }

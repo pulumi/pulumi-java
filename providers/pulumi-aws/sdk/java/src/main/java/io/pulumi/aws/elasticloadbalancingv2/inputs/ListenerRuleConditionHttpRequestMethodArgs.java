@@ -57,12 +57,13 @@ public final class ListenerRuleConditionHttpRequestMethodArgs extends io.pulumi.
             this.values = Objects.requireNonNull(values);
             return this;
         }
-
         public Builder values(List<String> values) {
             this.values = Output.of(Objects.requireNonNull(values));
             return this;
         }
-        public ListenerRuleConditionHttpRequestMethodArgs build() {
+        public Builder values(String... values) {
+            return values(List.of(values));
+        }        public ListenerRuleConditionHttpRequestMethodArgs build() {
             return new ListenerRuleConditionHttpRequestMethodArgs(values);
         }
     }

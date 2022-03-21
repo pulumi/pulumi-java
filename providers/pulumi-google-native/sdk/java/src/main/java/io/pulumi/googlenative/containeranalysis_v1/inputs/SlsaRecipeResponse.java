@@ -125,27 +125,22 @@ public final class SlsaRecipeResponse extends io.pulumi.resources.InvokeArgs {
             this.arguments = Objects.requireNonNull(arguments);
             return this;
         }
-
         public Builder definedInMaterial(String definedInMaterial) {
             this.definedInMaterial = Objects.requireNonNull(definedInMaterial);
             return this;
         }
-
         public Builder entryPoint(String entryPoint) {
             this.entryPoint = Objects.requireNonNull(entryPoint);
             return this;
         }
-
         public Builder environment(Map<String,String> environment) {
             this.environment = Objects.requireNonNull(environment);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public SlsaRecipeResponse build() {
+        }        public SlsaRecipeResponse build() {
             return new SlsaRecipeResponse(arguments, definedInMaterial, entryPoint, environment, type);
         }
     }

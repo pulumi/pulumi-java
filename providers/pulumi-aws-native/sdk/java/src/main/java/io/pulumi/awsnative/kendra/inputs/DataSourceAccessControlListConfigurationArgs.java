@@ -53,12 +53,10 @@ public final class DataSourceAccessControlListConfigurationArgs extends io.pulum
             this.keyPath = keyPath;
             return this;
         }
-
         public Builder keyPath(@Nullable String keyPath) {
             this.keyPath = Output.ofNullable(keyPath);
             return this;
-        }
-        public DataSourceAccessControlListConfigurationArgs build() {
+        }        public DataSourceAccessControlListConfigurationArgs build() {
             return new DataSourceAccessControlListConfigurationArgs(keyPath);
         }
     }

@@ -155,72 +155,58 @@ public final class HostedConfigurationVersionState extends io.pulumi.resources.R
             this.applicationId = applicationId;
             return this;
         }
-
         public Builder applicationId(@Nullable String applicationId) {
             this.applicationId = Output.ofNullable(applicationId);
             return this;
         }
-
         public Builder arn(@Nullable Output<String> arn) {
             this.arn = arn;
             return this;
         }
-
         public Builder arn(@Nullable String arn) {
             this.arn = Output.ofNullable(arn);
             return this;
         }
-
         public Builder configurationProfileId(@Nullable Output<String> configurationProfileId) {
             this.configurationProfileId = configurationProfileId;
             return this;
         }
-
         public Builder configurationProfileId(@Nullable String configurationProfileId) {
             this.configurationProfileId = Output.ofNullable(configurationProfileId);
             return this;
         }
-
         public Builder content(@Nullable Output<String> content) {
             this.content = content;
             return this;
         }
-
         public Builder content(@Nullable String content) {
             this.content = Output.ofNullable(content);
             return this;
         }
-
         public Builder contentType(@Nullable Output<String> contentType) {
             this.contentType = contentType;
             return this;
         }
-
         public Builder contentType(@Nullable String contentType) {
             this.contentType = Output.ofNullable(contentType);
             return this;
         }
-
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder versionNumber(@Nullable Output<Integer> versionNumber) {
             this.versionNumber = versionNumber;
             return this;
         }
-
         public Builder versionNumber(@Nullable Integer versionNumber) {
             this.versionNumber = Output.ofNullable(versionNumber);
             return this;
-        }
-        public HostedConfigurationVersionState build() {
+        }        public HostedConfigurationVersionState build() {
             return new HostedConfigurationVersionState(applicationId, arn, configurationProfileId, content, contentType, description, versionNumber);
         }
     }

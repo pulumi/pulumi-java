@@ -155,37 +155,36 @@ public final class GetLocationObjectStorageResult {
             this.accessKey = accessKey;
             return this;
         }
-
         public Builder agentArns(@Nullable List<String> agentArns) {
             this.agentArns = agentArns;
             return this;
         }
-
+        public Builder agentArns(String... agentArns) {
+            return agentArns(List.of(agentArns));
+        }
         public Builder locationArn(@Nullable String locationArn) {
             this.locationArn = locationArn;
             return this;
         }
-
         public Builder locationUri(@Nullable String locationUri) {
             this.locationUri = locationUri;
             return this;
         }
-
         public Builder serverPort(@Nullable Integer serverPort) {
             this.serverPort = serverPort;
             return this;
         }
-
         public Builder serverProtocol(@Nullable LocationObjectStorageServerProtocol serverProtocol) {
             this.serverProtocol = serverProtocol;
             return this;
         }
-
         public Builder tags(@Nullable List<LocationObjectStorageTag> tags) {
             this.tags = tags;
             return this;
         }
-        public GetLocationObjectStorageResult build() {
+        public Builder tags(LocationObjectStorageTag... tags) {
+            return tags(List.of(tags));
+        }        public GetLocationObjectStorageResult build() {
             return new GetLocationObjectStorageResult(accessKey, agentArns, locationArn, locationUri, serverPort, serverProtocol, tags);
         }
     }

@@ -58,8 +58,7 @@ public final class HttpDataResponse extends io.pulumi.resources.InvokeArgs {
         public Builder listUrl(String listUrl) {
             this.listUrl = Objects.requireNonNull(listUrl);
             return this;
-        }
-        public HttpDataResponse build() {
+        }        public HttpDataResponse build() {
             return new HttpDataResponse(listUrl);
         }
     }

@@ -108,22 +108,18 @@ public final class VirtualDiskControllerResponse extends io.pulumi.resources.Inv
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder subType(String subType) {
             this.subType = Objects.requireNonNull(subType);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public VirtualDiskControllerResponse build() {
+        }        public VirtualDiskControllerResponse build() {
             return new VirtualDiskControllerResponse(id, name, subType, type);
         }
     }

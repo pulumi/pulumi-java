@@ -97,17 +97,14 @@ public final class SnowflakeImportCopyCommandResponse extends io.pulumi.resource
             this.additionalCopyOptions = additionalCopyOptions;
             return this;
         }
-
         public Builder additionalFormatOptions(@Nullable Map<String,Object> additionalFormatOptions) {
             this.additionalFormatOptions = additionalFormatOptions;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public SnowflakeImportCopyCommandResponse build() {
+        }        public SnowflakeImportCopyCommandResponse build() {
             return new SnowflakeImportCopyCommandResponse(additionalCopyOptions, additionalFormatOptions, type);
         }
     }

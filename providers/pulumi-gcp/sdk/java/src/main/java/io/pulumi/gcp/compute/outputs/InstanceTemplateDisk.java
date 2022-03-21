@@ -309,72 +309,58 @@ public final class InstanceTemplateDisk {
             this.autoDelete = autoDelete;
             return this;
         }
-
         public Builder boot(@Nullable Boolean boot) {
             this.boot = boot;
             return this;
         }
-
         public Builder deviceName(@Nullable String deviceName) {
             this.deviceName = deviceName;
             return this;
         }
-
         public Builder diskEncryptionKey(@Nullable InstanceTemplateDiskDiskEncryptionKey diskEncryptionKey) {
             this.diskEncryptionKey = diskEncryptionKey;
             return this;
         }
-
         public Builder diskName(@Nullable String diskName) {
             this.diskName = diskName;
             return this;
         }
-
         public Builder diskSizeGb(@Nullable Integer diskSizeGb) {
             this.diskSizeGb = diskSizeGb;
             return this;
         }
-
         public Builder diskType(@Nullable String diskType) {
             this.diskType = diskType;
             return this;
         }
-
         public Builder $interface(@Nullable String $interface) {
             this.$interface = $interface;
             return this;
         }
-
         public Builder labels(@Nullable Map<String,String> labels) {
             this.labels = labels;
             return this;
         }
-
         public Builder mode(@Nullable String mode) {
             this.mode = mode;
             return this;
         }
-
         public Builder resourcePolicies(@Nullable String resourcePolicies) {
             this.resourcePolicies = resourcePolicies;
             return this;
         }
-
         public Builder source(@Nullable String source) {
             this.source = source;
             return this;
         }
-
         public Builder sourceImage(@Nullable String sourceImage) {
             this.sourceImage = sourceImage;
             return this;
         }
-
         public Builder type(@Nullable String type) {
             this.type = type;
             return this;
-        }
-        public InstanceTemplateDisk build() {
+        }        public InstanceTemplateDisk build() {
             return new InstanceTemplateDisk(autoDelete, boot, deviceName, diskEncryptionKey, diskName, diskSizeGb, diskType, $interface, labels, mode, resourcePolicies, source, sourceImage, type);
         }
     }

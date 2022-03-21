@@ -232,57 +232,49 @@ public final class AzureFunctionLinkedServiceResponse extends io.pulumi.resource
             this.annotations = annotations;
             return this;
         }
-
+        public Builder annotations(Object... annotations) {
+            return annotations(List.of(annotations));
+        }
         public Builder authentication(@Nullable Object authentication) {
             this.authentication = authentication;
             return this;
         }
-
         public Builder connectVia(@Nullable IntegrationRuntimeReferenceResponse connectVia) {
             this.connectVia = connectVia;
             return this;
         }
-
         public Builder credential(@Nullable CredentialReferenceResponse credential) {
             this.credential = credential;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
-
         public Builder encryptedCredential(@Nullable Object encryptedCredential) {
             this.encryptedCredential = encryptedCredential;
             return this;
         }
-
         public Builder functionAppUrl(Object functionAppUrl) {
             this.functionAppUrl = Objects.requireNonNull(functionAppUrl);
             return this;
         }
-
         public Builder functionKey(@Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> functionKey) {
             this.functionKey = functionKey;
             return this;
         }
-
         public Builder parameters(@Nullable Map<String,ParameterSpecificationResponse> parameters) {
             this.parameters = parameters;
             return this;
         }
-
         public Builder resourceId(@Nullable Object resourceId) {
             this.resourceId = resourceId;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public AzureFunctionLinkedServiceResponse build() {
+        }        public AzureFunctionLinkedServiceResponse build() {
             return new AzureFunctionLinkedServiceResponse(annotations, authentication, connectVia, credential, description, encryptedCredential, functionAppUrl, functionKey, parameters, resourceId, type);
         }
     }

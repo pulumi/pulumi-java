@@ -80,22 +80,21 @@ public final class ServiceStatusArgs extends io.pulumi.resources.ResourceArgs {
             this.conditions = conditions;
             return this;
         }
-
         public Builder conditions(@Nullable List<ConditionArgs> conditions) {
             this.conditions = Output.ofNullable(conditions);
             return this;
         }
-
+        public Builder conditions(ConditionArgs... conditions) {
+            return conditions(List.of(conditions));
+        }
         public Builder loadBalancer(@Nullable Output<LoadBalancerStatusArgs> loadBalancer) {
             this.loadBalancer = loadBalancer;
             return this;
         }
-
         public Builder loadBalancer(@Nullable LoadBalancerStatusArgs loadBalancer) {
             this.loadBalancer = Output.ofNullable(loadBalancer);
             return this;
-        }
-        public ServiceStatusArgs build() {
+        }        public ServiceStatusArgs build() {
             return new ServiceStatusArgs(conditions, loadBalancer);
         }
     }

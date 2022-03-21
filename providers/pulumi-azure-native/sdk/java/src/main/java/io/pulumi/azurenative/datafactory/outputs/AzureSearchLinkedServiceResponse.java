@@ -177,42 +177,37 @@ public final class AzureSearchLinkedServiceResponse {
             this.annotations = annotations;
             return this;
         }
-
+        public Builder annotations(Object... annotations) {
+            return annotations(List.of(annotations));
+        }
         public Builder connectVia(@Nullable IntegrationRuntimeReferenceResponse connectVia) {
             this.connectVia = connectVia;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
-
         public Builder encryptedCredential(@Nullable Object encryptedCredential) {
             this.encryptedCredential = encryptedCredential;
             return this;
         }
-
         public Builder key(@Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> key) {
             this.key = key;
             return this;
         }
-
         public Builder parameters(@Nullable Map<String,ParameterSpecificationResponse> parameters) {
             this.parameters = parameters;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder url(Object url) {
             this.url = Objects.requireNonNull(url);
             return this;
-        }
-        public AzureSearchLinkedServiceResponse build() {
+        }        public AzureSearchLinkedServiceResponse build() {
             return new AzureSearchLinkedServiceResponse(annotations, connectVia, description, encryptedCredential, key, parameters, type, url);
         }
     }

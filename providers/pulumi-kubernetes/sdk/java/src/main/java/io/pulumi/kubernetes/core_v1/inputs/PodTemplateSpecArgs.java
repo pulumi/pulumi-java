@@ -79,22 +79,18 @@ public final class PodTemplateSpecArgs extends io.pulumi.resources.ResourceArgs 
             this.metadata = metadata;
             return this;
         }
-
         public Builder metadata(@Nullable ObjectMetaArgs metadata) {
             this.metadata = Output.ofNullable(metadata);
             return this;
         }
-
         public Builder spec(@Nullable Output<PodSpecArgs> spec) {
             this.spec = spec;
             return this;
         }
-
         public Builder spec(@Nullable PodSpecArgs spec) {
             this.spec = Output.ofNullable(spec);
             return this;
-        }
-        public PodTemplateSpecArgs build() {
+        }        public PodTemplateSpecArgs build() {
             return new PodTemplateSpecArgs(metadata, spec);
         }
     }

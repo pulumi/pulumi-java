@@ -88,17 +88,14 @@ public final class DiskResponse {
             this.diskSizeGB = diskSizeGB;
             return this;
         }
-
         public Builder lun(Integer lun) {
             this.lun = Objects.requireNonNull(lun);
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = name;
             return this;
-        }
-        public DiskResponse build() {
+        }        public DiskResponse build() {
             return new DiskResponse(diskSizeGB, lun, name);
         }
     }

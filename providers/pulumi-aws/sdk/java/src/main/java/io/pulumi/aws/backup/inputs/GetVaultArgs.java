@@ -75,12 +75,10 @@ public final class GetVaultArgs extends io.pulumi.resources.InvokeArgs {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
-        }
-        public GetVaultArgs build() {
+        }        public GetVaultArgs build() {
             return new GetVaultArgs(name, tags);
         }
     }

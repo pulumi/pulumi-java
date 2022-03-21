@@ -341,192 +341,160 @@ public final class StepArgs extends io.pulumi.resources.ResourceArgs {
             this.completionTime = completionTime;
             return this;
         }
-
         public Builder completionTime(@Nullable TimestampArgs completionTime) {
             this.completionTime = Output.ofNullable(completionTime);
             return this;
         }
-
         public Builder creationTime(@Nullable Output<TimestampArgs> creationTime) {
             this.creationTime = creationTime;
             return this;
         }
-
         public Builder creationTime(@Nullable TimestampArgs creationTime) {
             this.creationTime = Output.ofNullable(creationTime);
             return this;
         }
-
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder deviceUsageDuration(@Nullable Output<DurationArgs> deviceUsageDuration) {
             this.deviceUsageDuration = deviceUsageDuration;
             return this;
         }
-
         public Builder deviceUsageDuration(@Nullable DurationArgs deviceUsageDuration) {
             this.deviceUsageDuration = Output.ofNullable(deviceUsageDuration);
             return this;
         }
-
         public Builder dimensionValue(@Nullable Output<List<StepDimensionValueEntryArgs>> dimensionValue) {
             this.dimensionValue = dimensionValue;
             return this;
         }
-
         public Builder dimensionValue(@Nullable List<StepDimensionValueEntryArgs> dimensionValue) {
             this.dimensionValue = Output.ofNullable(dimensionValue);
             return this;
         }
-
+        public Builder dimensionValue(StepDimensionValueEntryArgs... dimensionValue) {
+            return dimensionValue(List.of(dimensionValue));
+        }
         public Builder executionId(Output<String> executionId) {
             this.executionId = Objects.requireNonNull(executionId);
             return this;
         }
-
         public Builder executionId(String executionId) {
             this.executionId = Output.of(Objects.requireNonNull(executionId));
             return this;
         }
-
         public Builder hasImages(@Nullable Output<Boolean> hasImages) {
             this.hasImages = hasImages;
             return this;
         }
-
         public Builder hasImages(@Nullable Boolean hasImages) {
             this.hasImages = Output.ofNullable(hasImages);
             return this;
         }
-
         public Builder historyId(Output<String> historyId) {
             this.historyId = Objects.requireNonNull(historyId);
             return this;
         }
-
         public Builder historyId(String historyId) {
             this.historyId = Output.of(Objects.requireNonNull(historyId));
             return this;
         }
-
         public Builder labels(@Nullable Output<List<StepLabelsEntryArgs>> labels) {
             this.labels = labels;
             return this;
         }
-
         public Builder labels(@Nullable List<StepLabelsEntryArgs> labels) {
             this.labels = Output.ofNullable(labels);
             return this;
         }
-
+        public Builder labels(StepLabelsEntryArgs... labels) {
+            return labels(List.of(labels));
+        }
         public Builder multiStep(@Nullable Output<MultiStepArgs> multiStep) {
             this.multiStep = multiStep;
             return this;
         }
-
         public Builder multiStep(@Nullable MultiStepArgs multiStep) {
             this.multiStep = Output.ofNullable(multiStep);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder outcome(@Nullable Output<OutcomeArgs> outcome) {
             this.outcome = outcome;
             return this;
         }
-
         public Builder outcome(@Nullable OutcomeArgs outcome) {
             this.outcome = Output.ofNullable(outcome);
             return this;
         }
-
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
         }
-
         public Builder requestId(@Nullable Output<String> requestId) {
             this.requestId = requestId;
             return this;
         }
-
         public Builder requestId(@Nullable String requestId) {
             this.requestId = Output.ofNullable(requestId);
             return this;
         }
-
         public Builder runDuration(@Nullable Output<DurationArgs> runDuration) {
             this.runDuration = runDuration;
             return this;
         }
-
         public Builder runDuration(@Nullable DurationArgs runDuration) {
             this.runDuration = Output.ofNullable(runDuration);
             return this;
         }
-
         public Builder state(@Nullable Output<StepState> state) {
             this.state = state;
             return this;
         }
-
         public Builder state(@Nullable StepState state) {
             this.state = Output.ofNullable(state);
             return this;
         }
-
         public Builder stepId(@Nullable Output<String> stepId) {
             this.stepId = stepId;
             return this;
         }
-
         public Builder stepId(@Nullable String stepId) {
             this.stepId = Output.ofNullable(stepId);
             return this;
         }
-
         public Builder testExecutionStep(@Nullable Output<TestExecutionStepArgs> testExecutionStep) {
             this.testExecutionStep = testExecutionStep;
             return this;
         }
-
         public Builder testExecutionStep(@Nullable TestExecutionStepArgs testExecutionStep) {
             this.testExecutionStep = Output.ofNullable(testExecutionStep);
             return this;
         }
-
         public Builder toolExecutionStep(@Nullable Output<ToolExecutionStepArgs> toolExecutionStep) {
             this.toolExecutionStep = toolExecutionStep;
             return this;
         }
-
         public Builder toolExecutionStep(@Nullable ToolExecutionStepArgs toolExecutionStep) {
             this.toolExecutionStep = Output.ofNullable(toolExecutionStep);
             return this;
-        }
-        public StepArgs build() {
+        }        public StepArgs build() {
             return new StepArgs(completionTime, creationTime, description, deviceUsageDuration, dimensionValue, executionId, hasImages, historyId, labels, multiStep, name, outcome, project, requestId, runDuration, state, stepId, testExecutionStep, toolExecutionStep);
         }
     }

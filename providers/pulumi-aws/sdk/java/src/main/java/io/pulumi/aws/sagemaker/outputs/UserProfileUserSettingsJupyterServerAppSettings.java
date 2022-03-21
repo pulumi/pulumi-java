@@ -72,12 +72,13 @@ public final class UserProfileUserSettingsJupyterServerAppSettings {
             this.defaultResourceSpec = Objects.requireNonNull(defaultResourceSpec);
             return this;
         }
-
         public Builder lifecycleConfigArns(@Nullable List<String> lifecycleConfigArns) {
             this.lifecycleConfigArns = lifecycleConfigArns;
             return this;
         }
-        public UserProfileUserSettingsJupyterServerAppSettings build() {
+        public Builder lifecycleConfigArns(String... lifecycleConfigArns) {
+            return lifecycleConfigArns(List.of(lifecycleConfigArns));
+        }        public UserProfileUserSettingsJupyterServerAppSettings build() {
             return new UserProfileUserSettingsJupyterServerAppSettings(defaultResourceSpec, lifecycleConfigArns);
         }
     }

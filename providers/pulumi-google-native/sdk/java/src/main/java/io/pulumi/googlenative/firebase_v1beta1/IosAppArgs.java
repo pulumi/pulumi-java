@@ -154,72 +154,58 @@ public final class IosAppArgs extends io.pulumi.resources.ResourceArgs {
             this.appId = appId;
             return this;
         }
-
         public Builder appId(@Nullable String appId) {
             this.appId = Output.ofNullable(appId);
             return this;
         }
-
         public Builder appStoreId(@Nullable Output<String> appStoreId) {
             this.appStoreId = appStoreId;
             return this;
         }
-
         public Builder appStoreId(@Nullable String appStoreId) {
             this.appStoreId = Output.ofNullable(appStoreId);
             return this;
         }
-
         public Builder bundleId(@Nullable Output<String> bundleId) {
             this.bundleId = bundleId;
             return this;
         }
-
         public Builder bundleId(@Nullable String bundleId) {
             this.bundleId = Output.ofNullable(bundleId);
             return this;
         }
-
         public Builder displayName(@Nullable Output<String> displayName) {
             this.displayName = displayName;
             return this;
         }
-
         public Builder displayName(@Nullable String displayName) {
             this.displayName = Output.ofNullable(displayName);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
         }
-
         public Builder teamId(@Nullable Output<String> teamId) {
             this.teamId = teamId;
             return this;
         }
-
         public Builder teamId(@Nullable String teamId) {
             this.teamId = Output.ofNullable(teamId);
             return this;
-        }
-        public IosAppArgs build() {
+        }        public IosAppArgs build() {
             return new IosAppArgs(appId, appStoreId, bundleId, displayName, name, project, teamId);
         }
     }

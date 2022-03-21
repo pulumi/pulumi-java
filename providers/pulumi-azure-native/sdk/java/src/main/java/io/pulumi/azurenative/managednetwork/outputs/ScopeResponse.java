@@ -103,22 +103,30 @@ public final class ScopeResponse {
             this.managementGroups = managementGroups;
             return this;
         }
-
+        public Builder managementGroups(ResourceIdResponse... managementGroups) {
+            return managementGroups(List.of(managementGroups));
+        }
         public Builder subnets(@Nullable List<ResourceIdResponse> subnets) {
             this.subnets = subnets;
             return this;
         }
-
+        public Builder subnets(ResourceIdResponse... subnets) {
+            return subnets(List.of(subnets));
+        }
         public Builder subscriptions(@Nullable List<ResourceIdResponse> subscriptions) {
             this.subscriptions = subscriptions;
             return this;
         }
-
+        public Builder subscriptions(ResourceIdResponse... subscriptions) {
+            return subscriptions(List.of(subscriptions));
+        }
         public Builder virtualNetworks(@Nullable List<ResourceIdResponse> virtualNetworks) {
             this.virtualNetworks = virtualNetworks;
             return this;
         }
-        public ScopeResponse build() {
+        public Builder virtualNetworks(ResourceIdResponse... virtualNetworks) {
+            return virtualNetworks(List.of(virtualNetworks));
+        }        public ScopeResponse build() {
             return new ScopeResponse(managementGroups, subnets, subscriptions, virtualNetworks);
         }
     }

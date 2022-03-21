@@ -118,52 +118,42 @@ public final class ResourceArgs extends io.pulumi.resources.ResourceArgs {
             this.desiredState = Objects.requireNonNull(desiredState);
             return this;
         }
-
         public Builder desiredState(String desiredState) {
             this.desiredState = Output.of(Objects.requireNonNull(desiredState));
             return this;
         }
-
         public Builder roleArn(@Nullable Output<String> roleArn) {
             this.roleArn = roleArn;
             return this;
         }
-
         public Builder roleArn(@Nullable String roleArn) {
             this.roleArn = Output.ofNullable(roleArn);
             return this;
         }
-
         public Builder schema(@Nullable Output<String> schema) {
             this.schema = schema;
             return this;
         }
-
         public Builder schema(@Nullable String schema) {
             this.schema = Output.ofNullable(schema);
             return this;
         }
-
         public Builder typeName(Output<String> typeName) {
             this.typeName = Objects.requireNonNull(typeName);
             return this;
         }
-
         public Builder typeName(String typeName) {
             this.typeName = Output.of(Objects.requireNonNull(typeName));
             return this;
         }
-
         public Builder typeVersionId(@Nullable Output<String> typeVersionId) {
             this.typeVersionId = typeVersionId;
             return this;
         }
-
         public Builder typeVersionId(@Nullable String typeVersionId) {
             this.typeVersionId = Output.ofNullable(typeVersionId);
             return this;
-        }
-        public ResourceArgs build() {
+        }        public ResourceArgs build() {
             return new ResourceArgs(desiredState, roleArn, schema, typeName, typeVersionId);
         }
     }

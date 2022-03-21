@@ -88,17 +88,14 @@ public final class GetRemediationAtManagementGroupArgs extends io.pulumi.resourc
             this.managementGroupId = Objects.requireNonNull(managementGroupId);
             return this;
         }
-
         public Builder managementGroupsNamespace(String managementGroupsNamespace) {
             this.managementGroupsNamespace = Objects.requireNonNull(managementGroupsNamespace);
             return this;
         }
-
         public Builder remediationName(String remediationName) {
             this.remediationName = Objects.requireNonNull(remediationName);
             return this;
-        }
-        public GetRemediationAtManagementGroupArgs build() {
+        }        public GetRemediationAtManagementGroupArgs build() {
             return new GetRemediationAtManagementGroupArgs(managementGroupId, managementGroupsNamespace, remediationName);
         }
     }

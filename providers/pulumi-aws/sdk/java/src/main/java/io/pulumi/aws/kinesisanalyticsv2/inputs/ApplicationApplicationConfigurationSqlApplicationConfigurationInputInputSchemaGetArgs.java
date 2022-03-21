@@ -93,32 +93,29 @@ public final class ApplicationApplicationConfigurationSqlApplicationConfiguratio
             this.recordColumns = Objects.requireNonNull(recordColumns);
             return this;
         }
-
         public Builder recordColumns(List<ApplicationApplicationConfigurationSqlApplicationConfigurationInputInputSchemaRecordColumnGetArgs> recordColumns) {
             this.recordColumns = Output.of(Objects.requireNonNull(recordColumns));
             return this;
         }
-
+        public Builder recordColumns(ApplicationApplicationConfigurationSqlApplicationConfigurationInputInputSchemaRecordColumnGetArgs... recordColumns) {
+            return recordColumns(List.of(recordColumns));
+        }
         public Builder recordEncoding(@Nullable Output<String> recordEncoding) {
             this.recordEncoding = recordEncoding;
             return this;
         }
-
         public Builder recordEncoding(@Nullable String recordEncoding) {
             this.recordEncoding = Output.ofNullable(recordEncoding);
             return this;
         }
-
         public Builder recordFormat(Output<ApplicationApplicationConfigurationSqlApplicationConfigurationInputInputSchemaRecordFormatGetArgs> recordFormat) {
             this.recordFormat = Objects.requireNonNull(recordFormat);
             return this;
         }
-
         public Builder recordFormat(ApplicationApplicationConfigurationSqlApplicationConfigurationInputInputSchemaRecordFormatGetArgs recordFormat) {
             this.recordFormat = Output.of(Objects.requireNonNull(recordFormat));
             return this;
-        }
-        public ApplicationApplicationConfigurationSqlApplicationConfigurationInputInputSchemaGetArgs build() {
+        }        public ApplicationApplicationConfigurationSqlApplicationConfigurationInputInputSchemaGetArgs build() {
             return new ApplicationApplicationConfigurationSqlApplicationConfigurationInputInputSchemaGetArgs(recordColumns, recordEncoding, recordFormat);
         }
     }

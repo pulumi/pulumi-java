@@ -53,7 +53,9 @@ public final class ListStorageAccountKeysResult {
             this.keys = Objects.requireNonNull(keys);
             return this;
         }
-        public ListStorageAccountKeysResult build() {
+        public Builder keys(StorageAccountKeyResponse... keys) {
+            return keys(List.of(keys));
+        }        public ListStorageAccountKeysResult build() {
             return new ListStorageAccountKeysResult(keys);
         }
     }

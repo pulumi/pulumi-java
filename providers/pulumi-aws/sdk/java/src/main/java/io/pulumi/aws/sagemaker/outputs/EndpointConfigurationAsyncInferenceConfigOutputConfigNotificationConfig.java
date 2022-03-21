@@ -71,12 +71,10 @@ public final class EndpointConfigurationAsyncInferenceConfigOutputConfigNotifica
             this.errorTopic = errorTopic;
             return this;
         }
-
         public Builder successTopic(@Nullable String successTopic) {
             this.successTopic = successTopic;
             return this;
-        }
-        public EndpointConfigurationAsyncInferenceConfigOutputConfigNotificationConfig build() {
+        }        public EndpointConfigurationAsyncInferenceConfigOutputConfigNotificationConfig build() {
             return new EndpointConfigurationAsyncInferenceConfigOutputConfigNotificationConfig(errorTopic, successTopic);
         }
     }

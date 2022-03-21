@@ -89,17 +89,14 @@ public final class TrafficWeightResponse {
             this.latestRevision = latestRevision;
             return this;
         }
-
         public Builder revisionName(@Nullable String revisionName) {
             this.revisionName = revisionName;
             return this;
         }
-
         public Builder weight(@Nullable Integer weight) {
             this.weight = weight;
             return this;
-        }
-        public TrafficWeightResponse build() {
+        }        public TrafficWeightResponse build() {
             return new TrafficWeightResponse(latestRevision, revisionName, weight);
         }
     }

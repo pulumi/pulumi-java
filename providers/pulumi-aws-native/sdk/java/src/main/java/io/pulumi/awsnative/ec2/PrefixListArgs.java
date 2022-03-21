@@ -127,52 +127,48 @@ public final class PrefixListArgs extends io.pulumi.resources.ResourceArgs {
             this.addressFamily = Objects.requireNonNull(addressFamily);
             return this;
         }
-
         public Builder addressFamily(PrefixListAddressFamily addressFamily) {
             this.addressFamily = Output.of(Objects.requireNonNull(addressFamily));
             return this;
         }
-
         public Builder entries(@Nullable Output<List<PrefixListEntryArgs>> entries) {
             this.entries = entries;
             return this;
         }
-
         public Builder entries(@Nullable List<PrefixListEntryArgs> entries) {
             this.entries = Output.ofNullable(entries);
             return this;
         }
-
+        public Builder entries(PrefixListEntryArgs... entries) {
+            return entries(List.of(entries));
+        }
         public Builder maxEntries(Output<Integer> maxEntries) {
             this.maxEntries = Objects.requireNonNull(maxEntries);
             return this;
         }
-
         public Builder maxEntries(Integer maxEntries) {
             this.maxEntries = Output.of(Objects.requireNonNull(maxEntries));
             return this;
         }
-
         public Builder prefixListName(@Nullable Output<String> prefixListName) {
             this.prefixListName = prefixListName;
             return this;
         }
-
         public Builder prefixListName(@Nullable String prefixListName) {
             this.prefixListName = Output.ofNullable(prefixListName);
             return this;
         }
-
         public Builder tags(@Nullable Output<List<PrefixListTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable List<PrefixListTagArgs> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-        public PrefixListArgs build() {
+        public Builder tags(PrefixListTagArgs... tags) {
+            return tags(List.of(tags));
+        }        public PrefixListArgs build() {
             return new PrefixListArgs(addressFamily, entries, maxEntries, prefixListName, tags);
         }
     }

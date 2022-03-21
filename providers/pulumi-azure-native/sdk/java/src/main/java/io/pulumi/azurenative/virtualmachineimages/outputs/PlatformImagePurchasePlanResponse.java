@@ -85,17 +85,14 @@ public final class PlatformImagePurchasePlanResponse {
             this.planName = Objects.requireNonNull(planName);
             return this;
         }
-
         public Builder planProduct(String planProduct) {
             this.planProduct = Objects.requireNonNull(planProduct);
             return this;
         }
-
         public Builder planPublisher(String planPublisher) {
             this.planPublisher = Objects.requireNonNull(planPublisher);
             return this;
-        }
-        public PlatformImagePurchasePlanResponse build() {
+        }        public PlatformImagePurchasePlanResponse build() {
             return new PlatformImagePurchasePlanResponse(planName, planProduct, planPublisher);
         }
     }

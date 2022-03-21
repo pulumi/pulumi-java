@@ -93,17 +93,23 @@ public final class PacketMirroringMirroredResources {
             this.instances = instances;
             return this;
         }
-
+        public Builder instances(PacketMirroringMirroredResourcesInstance... instances) {
+            return instances(List.of(instances));
+        }
         public Builder subnetworks(@Nullable List<PacketMirroringMirroredResourcesSubnetwork> subnetworks) {
             this.subnetworks = subnetworks;
             return this;
         }
-
+        public Builder subnetworks(PacketMirroringMirroredResourcesSubnetwork... subnetworks) {
+            return subnetworks(List.of(subnetworks));
+        }
         public Builder tags(@Nullable List<String> tags) {
             this.tags = tags;
             return this;
         }
-        public PacketMirroringMirroredResources build() {
+        public Builder tags(String... tags) {
+            return tags(List.of(tags));
+        }        public PacketMirroringMirroredResources build() {
             return new PacketMirroringMirroredResources(instances, subnetworks, tags);
         }
     }

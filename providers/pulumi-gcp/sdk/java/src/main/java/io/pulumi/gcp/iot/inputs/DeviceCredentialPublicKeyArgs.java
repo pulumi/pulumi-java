@@ -74,22 +74,18 @@ public final class DeviceCredentialPublicKeyArgs extends io.pulumi.resources.Res
             this.format = Objects.requireNonNull(format);
             return this;
         }
-
         public Builder format(String format) {
             this.format = Output.of(Objects.requireNonNull(format));
             return this;
         }
-
         public Builder key(Output<String> key) {
             this.key = Objects.requireNonNull(key);
             return this;
         }
-
         public Builder key(String key) {
             this.key = Output.of(Objects.requireNonNull(key));
             return this;
-        }
-        public DeviceCredentialPublicKeyArgs build() {
+        }        public DeviceCredentialPublicKeyArgs build() {
             return new DeviceCredentialPublicKeyArgs(format, key);
         }
     }

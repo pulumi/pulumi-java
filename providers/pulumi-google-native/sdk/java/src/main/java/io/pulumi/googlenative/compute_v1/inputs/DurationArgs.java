@@ -79,22 +79,18 @@ public final class DurationArgs extends io.pulumi.resources.ResourceArgs {
             this.nanos = nanos;
             return this;
         }
-
         public Builder nanos(@Nullable Integer nanos) {
             this.nanos = Output.ofNullable(nanos);
             return this;
         }
-
         public Builder seconds(@Nullable Output<String> seconds) {
             this.seconds = seconds;
             return this;
         }
-
         public Builder seconds(@Nullable String seconds) {
             this.seconds = Output.ofNullable(seconds);
             return this;
-        }
-        public DurationArgs build() {
+        }        public DurationArgs build() {
             return new DurationArgs(nanos, seconds);
         }
     }

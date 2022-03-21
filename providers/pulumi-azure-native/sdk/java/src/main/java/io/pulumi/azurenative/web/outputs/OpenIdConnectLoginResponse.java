@@ -72,12 +72,13 @@ public final class OpenIdConnectLoginResponse {
             this.nameClaimType = nameClaimType;
             return this;
         }
-
         public Builder scopes(@Nullable List<String> scopes) {
             this.scopes = scopes;
             return this;
         }
-        public OpenIdConnectLoginResponse build() {
+        public Builder scopes(String... scopes) {
+            return scopes(List.of(scopes));
+        }        public OpenIdConnectLoginResponse build() {
             return new OpenIdConnectLoginResponse(nameClaimType, scopes);
         }
     }

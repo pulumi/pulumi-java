@@ -78,22 +78,24 @@ public final class TrafficSelectorPolicyArgs extends io.pulumi.resources.Resourc
             this.localAddressRanges = Objects.requireNonNull(localAddressRanges);
             return this;
         }
-
         public Builder localAddressRanges(List<String> localAddressRanges) {
             this.localAddressRanges = Output.of(Objects.requireNonNull(localAddressRanges));
             return this;
         }
-
+        public Builder localAddressRanges(String... localAddressRanges) {
+            return localAddressRanges(List.of(localAddressRanges));
+        }
         public Builder remoteAddressRanges(Output<List<String>> remoteAddressRanges) {
             this.remoteAddressRanges = Objects.requireNonNull(remoteAddressRanges);
             return this;
         }
-
         public Builder remoteAddressRanges(List<String> remoteAddressRanges) {
             this.remoteAddressRanges = Output.of(Objects.requireNonNull(remoteAddressRanges));
             return this;
         }
-        public TrafficSelectorPolicyArgs build() {
+        public Builder remoteAddressRanges(String... remoteAddressRanges) {
+            return remoteAddressRanges(List.of(remoteAddressRanges));
+        }        public TrafficSelectorPolicyArgs build() {
             return new TrafficSelectorPolicyArgs(localAddressRanges, remoteAddressRanges);
         }
     }

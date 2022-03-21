@@ -79,22 +79,18 @@ public final class AudioEncoderAacArgs extends io.pulumi.resources.ResourceArgs 
             this.bitrateKbps = bitrateKbps;
             return this;
         }
-
         public Builder bitrateKbps(@Nullable String bitrateKbps) {
             this.bitrateKbps = Output.ofNullable(bitrateKbps);
             return this;
         }
-
         public Builder type(Output<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Output.of(Objects.requireNonNull(type));
             return this;
-        }
-        public AudioEncoderAacArgs build() {
+        }        public AudioEncoderAacArgs build() {
             return new AudioEncoderAacArgs(bitrateKbps, type);
         }
     }

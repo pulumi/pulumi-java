@@ -89,17 +89,20 @@ public final class WeeklyRetentionScheduleResponse {
             this.daysOfTheWeek = daysOfTheWeek;
             return this;
         }
-
+        public Builder daysOfTheWeek(String... daysOfTheWeek) {
+            return daysOfTheWeek(List.of(daysOfTheWeek));
+        }
         public Builder retentionDuration(@Nullable RetentionDurationResponse retentionDuration) {
             this.retentionDuration = retentionDuration;
             return this;
         }
-
         public Builder retentionTimes(@Nullable List<String> retentionTimes) {
             this.retentionTimes = retentionTimes;
             return this;
         }
-        public WeeklyRetentionScheduleResponse build() {
+        public Builder retentionTimes(String... retentionTimes) {
+            return retentionTimes(List.of(retentionTimes));
+        }        public WeeklyRetentionScheduleResponse build() {
             return new WeeklyRetentionScheduleResponse(daysOfTheWeek, retentionDuration, retentionTimes);
         }
     }

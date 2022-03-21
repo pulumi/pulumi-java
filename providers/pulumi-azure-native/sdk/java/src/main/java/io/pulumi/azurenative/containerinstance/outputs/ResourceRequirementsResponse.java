@@ -72,12 +72,10 @@ public final class ResourceRequirementsResponse {
             this.limits = limits;
             return this;
         }
-
         public Builder requests(ResourceRequestsResponse requests) {
             this.requests = Objects.requireNonNull(requests);
             return this;
-        }
-        public ResourceRequirementsResponse build() {
+        }        public ResourceRequirementsResponse build() {
             return new ResourceRequirementsResponse(limits, requests);
         }
     }

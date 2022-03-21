@@ -106,22 +106,18 @@ public final class GetLabArgs extends io.pulumi.resources.InvokeArgs {
             this.expand = expand;
             return this;
         }
-
         public Builder labAccountName(String labAccountName) {
             this.labAccountName = Objects.requireNonNull(labAccountName);
             return this;
         }
-
         public Builder labName(String labName) {
             this.labName = Objects.requireNonNull(labName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
-        }
-        public GetLabArgs build() {
+        }        public GetLabArgs build() {
             return new GetLabArgs(expand, labAccountName, labName, resourceGroupName);
         }
     }

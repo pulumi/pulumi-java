@@ -146,82 +146,81 @@ public final class DatasetArgs extends io.pulumi.resources.ResourceArgs {
             this.actions = Objects.requireNonNull(actions);
             return this;
         }
-
         public Builder actions(List<DatasetActionArgs> actions) {
             this.actions = Output.of(Objects.requireNonNull(actions));
             return this;
         }
-
+        public Builder actions(DatasetActionArgs... actions) {
+            return actions(List.of(actions));
+        }
         public Builder contentDeliveryRules(@Nullable Output<List<DatasetContentDeliveryRuleArgs>> contentDeliveryRules) {
             this.contentDeliveryRules = contentDeliveryRules;
             return this;
         }
-
         public Builder contentDeliveryRules(@Nullable List<DatasetContentDeliveryRuleArgs> contentDeliveryRules) {
             this.contentDeliveryRules = Output.ofNullable(contentDeliveryRules);
             return this;
         }
-
+        public Builder contentDeliveryRules(DatasetContentDeliveryRuleArgs... contentDeliveryRules) {
+            return contentDeliveryRules(List.of(contentDeliveryRules));
+        }
         public Builder datasetName(@Nullable Output<String> datasetName) {
             this.datasetName = datasetName;
             return this;
         }
-
         public Builder datasetName(@Nullable String datasetName) {
             this.datasetName = Output.ofNullable(datasetName);
             return this;
         }
-
         public Builder lateDataRules(@Nullable Output<List<DatasetLateDataRuleArgs>> lateDataRules) {
             this.lateDataRules = lateDataRules;
             return this;
         }
-
         public Builder lateDataRules(@Nullable List<DatasetLateDataRuleArgs> lateDataRules) {
             this.lateDataRules = Output.ofNullable(lateDataRules);
             return this;
         }
-
+        public Builder lateDataRules(DatasetLateDataRuleArgs... lateDataRules) {
+            return lateDataRules(List.of(lateDataRules));
+        }
         public Builder retentionPeriod(@Nullable Output<DatasetRetentionPeriodArgs> retentionPeriod) {
             this.retentionPeriod = retentionPeriod;
             return this;
         }
-
         public Builder retentionPeriod(@Nullable DatasetRetentionPeriodArgs retentionPeriod) {
             this.retentionPeriod = Output.ofNullable(retentionPeriod);
             return this;
         }
-
         public Builder tags(@Nullable Output<List<DatasetTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable List<DatasetTagArgs> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
+        public Builder tags(DatasetTagArgs... tags) {
+            return tags(List.of(tags));
+        }
         public Builder triggers(@Nullable Output<List<DatasetTriggerArgs>> triggers) {
             this.triggers = triggers;
             return this;
         }
-
         public Builder triggers(@Nullable List<DatasetTriggerArgs> triggers) {
             this.triggers = Output.ofNullable(triggers);
             return this;
         }
-
+        public Builder triggers(DatasetTriggerArgs... triggers) {
+            return triggers(List.of(triggers));
+        }
         public Builder versioningConfiguration(@Nullable Output<DatasetVersioningConfigurationArgs> versioningConfiguration) {
             this.versioningConfiguration = versioningConfiguration;
             return this;
         }
-
         public Builder versioningConfiguration(@Nullable DatasetVersioningConfigurationArgs versioningConfiguration) {
             this.versioningConfiguration = Output.ofNullable(versioningConfiguration);
             return this;
-        }
-        public DatasetArgs build() {
+        }        public DatasetArgs build() {
             return new DatasetArgs(actions, contentDeliveryRules, datasetName, lateDataRules, retentionPeriod, tags, triggers, versioningConfiguration);
         }
     }

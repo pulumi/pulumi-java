@@ -66,22 +66,18 @@ public final class EnvironmentLastUpdatedErrorGetArgs extends io.pulumi.resource
             this.errorCode = errorCode;
             return this;
         }
-
         public Builder errorCode(@Nullable String errorCode) {
             this.errorCode = Output.ofNullable(errorCode);
             return this;
         }
-
         public Builder errorMessage(@Nullable Output<String> errorMessage) {
             this.errorMessage = errorMessage;
             return this;
         }
-
         public Builder errorMessage(@Nullable String errorMessage) {
             this.errorMessage = Output.ofNullable(errorMessage);
             return this;
-        }
-        public EnvironmentLastUpdatedErrorGetArgs build() {
+        }        public EnvironmentLastUpdatedErrorGetArgs build() {
             return new EnvironmentLastUpdatedErrorGetArgs(errorCode, errorMessage);
         }
     }

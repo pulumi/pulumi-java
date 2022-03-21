@@ -60,8 +60,7 @@ public final class IntegrationServiceEnvironmenEncryptionConfigurationResponse e
         public Builder encryptionKeyReference(@Nullable IntegrationServiceEnvironmenEncryptionKeyReferenceResponse encryptionKeyReference) {
             this.encryptionKeyReference = encryptionKeyReference;
             return this;
-        }
-        public IntegrationServiceEnvironmenEncryptionConfigurationResponse build() {
+        }        public IntegrationServiceEnvironmenEncryptionConfigurationResponse build() {
             return new IntegrationServiceEnvironmenEncryptionConfigurationResponse(encryptionKeyReference);
         }
     }

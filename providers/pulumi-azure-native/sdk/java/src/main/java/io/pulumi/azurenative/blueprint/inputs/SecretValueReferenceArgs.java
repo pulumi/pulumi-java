@@ -95,32 +95,26 @@ public final class SecretValueReferenceArgs extends io.pulumi.resources.Resource
             this.keyVault = Objects.requireNonNull(keyVault);
             return this;
         }
-
         public Builder keyVault(KeyVaultReferenceArgs keyVault) {
             this.keyVault = Output.of(Objects.requireNonNull(keyVault));
             return this;
         }
-
         public Builder secretName(Output<String> secretName) {
             this.secretName = Objects.requireNonNull(secretName);
             return this;
         }
-
         public Builder secretName(String secretName) {
             this.secretName = Output.of(Objects.requireNonNull(secretName));
             return this;
         }
-
         public Builder secretVersion(@Nullable Output<String> secretVersion) {
             this.secretVersion = secretVersion;
             return this;
         }
-
         public Builder secretVersion(@Nullable String secretVersion) {
             this.secretVersion = Output.ofNullable(secretVersion);
             return this;
-        }
-        public SecretValueReferenceArgs build() {
+        }        public SecretValueReferenceArgs build() {
             return new SecretValueReferenceArgs(keyVault, secretName, secretVersion);
         }
     }

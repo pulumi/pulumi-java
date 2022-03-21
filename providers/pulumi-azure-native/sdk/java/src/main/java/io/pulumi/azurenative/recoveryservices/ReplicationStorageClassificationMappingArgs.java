@@ -139,62 +139,50 @@ public final class ReplicationStorageClassificationMappingArgs extends io.pulumi
             this.fabricName = Objects.requireNonNull(fabricName);
             return this;
         }
-
         public Builder fabricName(String fabricName) {
             this.fabricName = Output.of(Objects.requireNonNull(fabricName));
             return this;
         }
-
         public Builder properties(@Nullable Output<StorageMappingInputPropertiesArgs> properties) {
             this.properties = properties;
             return this;
         }
-
         public Builder properties(@Nullable StorageMappingInputPropertiesArgs properties) {
             this.properties = Output.ofNullable(properties);
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder resourceName(Output<String> resourceName) {
             this.resourceName = Objects.requireNonNull(resourceName);
             return this;
         }
-
         public Builder resourceName(String resourceName) {
             this.resourceName = Output.of(Objects.requireNonNull(resourceName));
             return this;
         }
-
         public Builder storageClassificationMappingName(@Nullable Output<String> storageClassificationMappingName) {
             this.storageClassificationMappingName = storageClassificationMappingName;
             return this;
         }
-
         public Builder storageClassificationMappingName(@Nullable String storageClassificationMappingName) {
             this.storageClassificationMappingName = Output.ofNullable(storageClassificationMappingName);
             return this;
         }
-
         public Builder storageClassificationName(Output<String> storageClassificationName) {
             this.storageClassificationName = Objects.requireNonNull(storageClassificationName);
             return this;
         }
-
         public Builder storageClassificationName(String storageClassificationName) {
             this.storageClassificationName = Output.of(Objects.requireNonNull(storageClassificationName));
             return this;
-        }
-        public ReplicationStorageClassificationMappingArgs build() {
+        }        public ReplicationStorageClassificationMappingArgs build() {
             return new ReplicationStorageClassificationMappingArgs(fabricName, properties, resourceGroupName, resourceName, storageClassificationMappingName, storageClassificationName);
         }
     }

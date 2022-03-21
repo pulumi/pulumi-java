@@ -190,47 +190,41 @@ public final class ListWebAppBackupStatusSecretsArgs extends io.pulumi.resources
             this.backupId = Objects.requireNonNull(backupId);
             return this;
         }
-
         public Builder backupName(@Nullable String backupName) {
             this.backupName = backupName;
             return this;
         }
-
         public Builder backupSchedule(@Nullable BackupSchedule backupSchedule) {
             this.backupSchedule = backupSchedule;
             return this;
         }
-
         public Builder databases(@Nullable List<DatabaseBackupSetting> databases) {
             this.databases = databases;
             return this;
         }
-
+        public Builder databases(DatabaseBackupSetting... databases) {
+            return databases(List.of(databases));
+        }
         public Builder enabled(@Nullable Boolean enabled) {
             this.enabled = enabled;
             return this;
         }
-
         public Builder kind(@Nullable String kind) {
             this.kind = kind;
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder storageAccountUrl(String storageAccountUrl) {
             this.storageAccountUrl = Objects.requireNonNull(storageAccountUrl);
             return this;
-        }
-        public ListWebAppBackupStatusSecretsArgs build() {
+        }        public ListWebAppBackupStatusSecretsArgs build() {
             return new ListWebAppBackupStatusSecretsArgs(backupId, backupName, backupSchedule, databases, enabled, kind, name, resourceGroupName, storageAccountUrl);
         }
     }

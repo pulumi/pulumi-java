@@ -110,42 +110,43 @@ public final class PipelineDefinitionArgs extends io.pulumi.resources.ResourceAr
             this.parameterObjects = parameterObjects;
             return this;
         }
-
         public Builder parameterObjects(@Nullable List<PipelineDefinitionParameterObjectArgs> parameterObjects) {
             this.parameterObjects = Output.ofNullable(parameterObjects);
             return this;
         }
-
+        public Builder parameterObjects(PipelineDefinitionParameterObjectArgs... parameterObjects) {
+            return parameterObjects(List.of(parameterObjects));
+        }
         public Builder parameterValues(@Nullable Output<List<PipelineDefinitionParameterValueArgs>> parameterValues) {
             this.parameterValues = parameterValues;
             return this;
         }
-
         public Builder parameterValues(@Nullable List<PipelineDefinitionParameterValueArgs> parameterValues) {
             this.parameterValues = Output.ofNullable(parameterValues);
             return this;
         }
-
+        public Builder parameterValues(PipelineDefinitionParameterValueArgs... parameterValues) {
+            return parameterValues(List.of(parameterValues));
+        }
         public Builder pipelineId(Output<String> pipelineId) {
             this.pipelineId = Objects.requireNonNull(pipelineId);
             return this;
         }
-
         public Builder pipelineId(String pipelineId) {
             this.pipelineId = Output.of(Objects.requireNonNull(pipelineId));
             return this;
         }
-
         public Builder pipelineObjects(Output<List<PipelineDefinitionPipelineObjectArgs>> pipelineObjects) {
             this.pipelineObjects = Objects.requireNonNull(pipelineObjects);
             return this;
         }
-
         public Builder pipelineObjects(List<PipelineDefinitionPipelineObjectArgs> pipelineObjects) {
             this.pipelineObjects = Output.of(Objects.requireNonNull(pipelineObjects));
             return this;
         }
-        public PipelineDefinitionArgs build() {
+        public Builder pipelineObjects(PipelineDefinitionPipelineObjectArgs... pipelineObjects) {
+            return pipelineObjects(List.of(pipelineObjects));
+        }        public PipelineDefinitionArgs build() {
             return new PipelineDefinitionArgs(parameterObjects, parameterValues, pipelineId, pipelineObjects);
         }
     }

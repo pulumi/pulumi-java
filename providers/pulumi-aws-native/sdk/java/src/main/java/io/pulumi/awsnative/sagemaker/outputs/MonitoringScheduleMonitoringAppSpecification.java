@@ -120,27 +120,28 @@ public final class MonitoringScheduleMonitoringAppSpecification {
             this.containerArguments = containerArguments;
             return this;
         }
-
+        public Builder containerArguments(String... containerArguments) {
+            return containerArguments(List.of(containerArguments));
+        }
         public Builder containerEntrypoint(@Nullable List<String> containerEntrypoint) {
             this.containerEntrypoint = containerEntrypoint;
             return this;
         }
-
+        public Builder containerEntrypoint(String... containerEntrypoint) {
+            return containerEntrypoint(List.of(containerEntrypoint));
+        }
         public Builder imageUri(String imageUri) {
             this.imageUri = Objects.requireNonNull(imageUri);
             return this;
         }
-
         public Builder postAnalyticsProcessorSourceUri(@Nullable String postAnalyticsProcessorSourceUri) {
             this.postAnalyticsProcessorSourceUri = postAnalyticsProcessorSourceUri;
             return this;
         }
-
         public Builder recordPreprocessorSourceUri(@Nullable String recordPreprocessorSourceUri) {
             this.recordPreprocessorSourceUri = recordPreprocessorSourceUri;
             return this;
-        }
-        public MonitoringScheduleMonitoringAppSpecification build() {
+        }        public MonitoringScheduleMonitoringAppSpecification build() {
             return new MonitoringScheduleMonitoringAppSpecification(containerArguments, containerEntrypoint, imageUri, postAnalyticsProcessorSourceUri, recordPreprocessorSourceUri);
         }
     }

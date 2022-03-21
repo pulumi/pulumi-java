@@ -52,12 +52,10 @@ public final class ServiceLambdaEndpointInputArgs extends io.pulumi.resources.Re
             this.arn = Objects.requireNonNull(arn);
             return this;
         }
-
         public Builder arn(String arn) {
             this.arn = Output.of(Objects.requireNonNull(arn));
             return this;
-        }
-        public ServiceLambdaEndpointInputArgs build() {
+        }        public ServiceLambdaEndpointInputArgs build() {
             return new ServiceLambdaEndpointInputArgs(arn);
         }
     }

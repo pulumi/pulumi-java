@@ -95,17 +95,23 @@ public final class AzureFileFilterDetailsResponse extends io.pulumi.resources.In
             this.filePathList = filePathList;
             return this;
         }
-
+        public Builder filePathList(String... filePathList) {
+            return filePathList(List.of(filePathList));
+        }
         public Builder filePrefixList(@Nullable List<String> filePrefixList) {
             this.filePrefixList = filePrefixList;
             return this;
         }
-
+        public Builder filePrefixList(String... filePrefixList) {
+            return filePrefixList(List.of(filePrefixList));
+        }
         public Builder fileShareList(@Nullable List<String> fileShareList) {
             this.fileShareList = fileShareList;
             return this;
         }
-        public AzureFileFilterDetailsResponse build() {
+        public Builder fileShareList(String... fileShareList) {
+            return fileShareList(List.of(fileShareList));
+        }        public AzureFileFilterDetailsResponse build() {
             return new AzureFileFilterDetailsResponse(filePathList, filePrefixList, fileShareList);
         }
     }

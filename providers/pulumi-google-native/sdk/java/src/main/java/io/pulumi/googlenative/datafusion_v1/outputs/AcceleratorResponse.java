@@ -69,12 +69,10 @@ public final class AcceleratorResponse {
             this.acceleratorType = Objects.requireNonNull(acceleratorType);
             return this;
         }
-
         public Builder state(String state) {
             this.state = Objects.requireNonNull(state);
             return this;
-        }
-        public AcceleratorResponse build() {
+        }        public AcceleratorResponse build() {
             return new AcceleratorResponse(acceleratorType, state);
         }
     }

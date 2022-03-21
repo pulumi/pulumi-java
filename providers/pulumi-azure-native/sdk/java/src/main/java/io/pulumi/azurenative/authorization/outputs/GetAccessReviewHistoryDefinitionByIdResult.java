@@ -347,97 +347,87 @@ public final class GetAccessReviewHistoryDefinitionByIdResult {
             this.createdDateTime = Objects.requireNonNull(createdDateTime);
             return this;
         }
-
         public Builder decisions(@Nullable List<String> decisions) {
             this.decisions = decisions;
             return this;
         }
-
+        public Builder decisions(String... decisions) {
+            return decisions(List.of(decisions));
+        }
         public Builder displayName(@Nullable String displayName) {
             this.displayName = displayName;
             return this;
         }
-
         public Builder endDate(@Nullable String endDate) {
             this.endDate = endDate;
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder instances(@Nullable List<AccessReviewHistoryInstanceResponse> instances) {
             this.instances = instances;
             return this;
         }
-
+        public Builder instances(AccessReviewHistoryInstanceResponse... instances) {
+            return instances(List.of(instances));
+        }
         public Builder interval(@Nullable Integer interval) {
             this.interval = interval;
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder numberOfOccurrences(@Nullable Integer numberOfOccurrences) {
             this.numberOfOccurrences = numberOfOccurrences;
             return this;
         }
-
         public Builder principalId(String principalId) {
             this.principalId = Objects.requireNonNull(principalId);
             return this;
         }
-
         public Builder principalName(String principalName) {
             this.principalName = Objects.requireNonNull(principalName);
             return this;
         }
-
         public Builder principalType(String principalType) {
             this.principalType = Objects.requireNonNull(principalType);
             return this;
         }
-
         public Builder reviewHistoryPeriodEndDateTime(String reviewHistoryPeriodEndDateTime) {
             this.reviewHistoryPeriodEndDateTime = Objects.requireNonNull(reviewHistoryPeriodEndDateTime);
             return this;
         }
-
         public Builder reviewHistoryPeriodStartDateTime(String reviewHistoryPeriodStartDateTime) {
             this.reviewHistoryPeriodStartDateTime = Objects.requireNonNull(reviewHistoryPeriodStartDateTime);
             return this;
         }
-
         public Builder scopes(@Nullable List<AccessReviewScopeResponse> scopes) {
             this.scopes = scopes;
             return this;
         }
-
+        public Builder scopes(AccessReviewScopeResponse... scopes) {
+            return scopes(List.of(scopes));
+        }
         public Builder startDate(@Nullable String startDate) {
             this.startDate = startDate;
             return this;
         }
-
         public Builder status(String status) {
             this.status = Objects.requireNonNull(status);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder userPrincipalName(String userPrincipalName) {
             this.userPrincipalName = Objects.requireNonNull(userPrincipalName);
             return this;
-        }
-        public GetAccessReviewHistoryDefinitionByIdResult build() {
+        }        public GetAccessReviewHistoryDefinitionByIdResult build() {
             return new GetAccessReviewHistoryDefinitionByIdResult(createdDateTime, decisions, displayName, endDate, id, instances, interval, name, numberOfOccurrences, principalId, principalName, principalType, reviewHistoryPeriodEndDateTime, reviewHistoryPeriodStartDateTime, scopes, startDate, status, type, userPrincipalName);
         }
     }

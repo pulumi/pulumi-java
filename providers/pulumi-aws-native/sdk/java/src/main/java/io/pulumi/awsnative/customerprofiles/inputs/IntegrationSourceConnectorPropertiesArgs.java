@@ -106,52 +106,42 @@ public final class IntegrationSourceConnectorPropertiesArgs extends io.pulumi.re
             this.marketo = marketo;
             return this;
         }
-
         public Builder marketo(@Nullable IntegrationMarketoSourcePropertiesArgs marketo) {
             this.marketo = Output.ofNullable(marketo);
             return this;
         }
-
         public Builder s3(@Nullable Output<IntegrationS3SourcePropertiesArgs> s3) {
             this.s3 = s3;
             return this;
         }
-
         public Builder s3(@Nullable IntegrationS3SourcePropertiesArgs s3) {
             this.s3 = Output.ofNullable(s3);
             return this;
         }
-
         public Builder salesforce(@Nullable Output<IntegrationSalesforceSourcePropertiesArgs> salesforce) {
             this.salesforce = salesforce;
             return this;
         }
-
         public Builder salesforce(@Nullable IntegrationSalesforceSourcePropertiesArgs salesforce) {
             this.salesforce = Output.ofNullable(salesforce);
             return this;
         }
-
         public Builder serviceNow(@Nullable Output<IntegrationServiceNowSourcePropertiesArgs> serviceNow) {
             this.serviceNow = serviceNow;
             return this;
         }
-
         public Builder serviceNow(@Nullable IntegrationServiceNowSourcePropertiesArgs serviceNow) {
             this.serviceNow = Output.ofNullable(serviceNow);
             return this;
         }
-
         public Builder zendesk(@Nullable Output<IntegrationZendeskSourcePropertiesArgs> zendesk) {
             this.zendesk = zendesk;
             return this;
         }
-
         public Builder zendesk(@Nullable IntegrationZendeskSourcePropertiesArgs zendesk) {
             this.zendesk = Output.ofNullable(zendesk);
             return this;
-        }
-        public IntegrationSourceConnectorPropertiesArgs build() {
+        }        public IntegrationSourceConnectorPropertiesArgs build() {
             return new IntegrationSourceConnectorPropertiesArgs(marketo, s3, salesforce, serviceNow, zendesk);
         }
     }

@@ -75,22 +75,18 @@ public final class DomainSamlOptionsState extends io.pulumi.resources.ResourceAr
             this.domainName = domainName;
             return this;
         }
-
         public Builder domainName(@Nullable String domainName) {
             this.domainName = Output.ofNullable(domainName);
             return this;
         }
-
         public Builder samlOptions(@Nullable Output<DomainSamlOptionsSamlOptionsGetArgs> samlOptions) {
             this.samlOptions = samlOptions;
             return this;
         }
-
         public Builder samlOptions(@Nullable DomainSamlOptionsSamlOptionsGetArgs samlOptions) {
             this.samlOptions = Output.ofNullable(samlOptions);
             return this;
-        }
-        public DomainSamlOptionsState build() {
+        }        public DomainSamlOptionsState build() {
             return new DomainSamlOptionsState(domainName, samlOptions);
         }
     }

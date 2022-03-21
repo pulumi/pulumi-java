@@ -144,27 +144,25 @@ public final class CaPoolIssuancePolicy {
             this.allowedIssuanceModes = allowedIssuanceModes;
             return this;
         }
-
         public Builder allowedKeyTypes(@Nullable List<CaPoolIssuancePolicyAllowedKeyType> allowedKeyTypes) {
             this.allowedKeyTypes = allowedKeyTypes;
             return this;
         }
-
+        public Builder allowedKeyTypes(CaPoolIssuancePolicyAllowedKeyType... allowedKeyTypes) {
+            return allowedKeyTypes(List.of(allowedKeyTypes));
+        }
         public Builder baselineValues(@Nullable CaPoolIssuancePolicyBaselineValues baselineValues) {
             this.baselineValues = baselineValues;
             return this;
         }
-
         public Builder identityConstraints(@Nullable CaPoolIssuancePolicyIdentityConstraints identityConstraints) {
             this.identityConstraints = identityConstraints;
             return this;
         }
-
         public Builder maximumLifetime(@Nullable String maximumLifetime) {
             this.maximumLifetime = maximumLifetime;
             return this;
-        }
-        public CaPoolIssuancePolicy build() {
+        }        public CaPoolIssuancePolicy build() {
             return new CaPoolIssuancePolicy(allowedIssuanceModes, allowedKeyTypes, baselineValues, identityConstraints, maximumLifetime);
         }
     }

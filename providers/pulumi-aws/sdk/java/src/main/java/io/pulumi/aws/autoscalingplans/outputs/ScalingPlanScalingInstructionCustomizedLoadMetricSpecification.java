@@ -120,27 +120,22 @@ public final class ScalingPlanScalingInstructionCustomizedLoadMetricSpecificatio
             this.dimensions = dimensions;
             return this;
         }
-
         public Builder metricName(String metricName) {
             this.metricName = Objects.requireNonNull(metricName);
             return this;
         }
-
         public Builder namespace(String namespace) {
             this.namespace = Objects.requireNonNull(namespace);
             return this;
         }
-
         public Builder statistic(String statistic) {
             this.statistic = Objects.requireNonNull(statistic);
             return this;
         }
-
         public Builder unit(@Nullable String unit) {
             this.unit = unit;
             return this;
-        }
-        public ScalingPlanScalingInstructionCustomizedLoadMetricSpecification build() {
+        }        public ScalingPlanScalingInstructionCustomizedLoadMetricSpecification build() {
             return new ScalingPlanScalingInstructionCustomizedLoadMetricSpecification(dimensions, metricName, namespace, statistic, unit);
         }
     }

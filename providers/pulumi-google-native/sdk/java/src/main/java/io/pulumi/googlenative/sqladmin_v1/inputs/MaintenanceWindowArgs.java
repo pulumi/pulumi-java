@@ -112,42 +112,34 @@ public final class MaintenanceWindowArgs extends io.pulumi.resources.ResourceArg
             this.day = day;
             return this;
         }
-
         public Builder day(@Nullable Integer day) {
             this.day = Output.ofNullable(day);
             return this;
         }
-
         public Builder hour(@Nullable Output<Integer> hour) {
             this.hour = hour;
             return this;
         }
-
         public Builder hour(@Nullable Integer hour) {
             this.hour = Output.ofNullable(hour);
             return this;
         }
-
         public Builder kind(@Nullable Output<String> kind) {
             this.kind = kind;
             return this;
         }
-
         public Builder kind(@Nullable String kind) {
             this.kind = Output.ofNullable(kind);
             return this;
         }
-
         public Builder updateTrack(@Nullable Output<MaintenanceWindowUpdateTrack> updateTrack) {
             this.updateTrack = updateTrack;
             return this;
         }
-
         public Builder updateTrack(@Nullable MaintenanceWindowUpdateTrack updateTrack) {
             this.updateTrack = Output.ofNullable(updateTrack);
             return this;
-        }
-        public MaintenanceWindowArgs build() {
+        }        public MaintenanceWindowArgs build() {
             return new MaintenanceWindowArgs(day, hour, kind, updateTrack);
         }
     }

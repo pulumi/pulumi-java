@@ -103,22 +103,18 @@ public final class LocationDataResponse {
             this.city = city;
             return this;
         }
-
         public Builder countryOrRegion(@Nullable String countryOrRegion) {
             this.countryOrRegion = countryOrRegion;
             return this;
         }
-
         public Builder district(@Nullable String district) {
             this.district = district;
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
-        }
-        public LocationDataResponse build() {
+        }        public LocationDataResponse build() {
             return new LocationDataResponse(city, countryOrRegion, district, name);
         }
     }

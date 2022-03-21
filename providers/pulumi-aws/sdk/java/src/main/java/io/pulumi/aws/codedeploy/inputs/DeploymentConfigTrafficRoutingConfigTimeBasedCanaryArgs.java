@@ -74,22 +74,18 @@ public final class DeploymentConfigTrafficRoutingConfigTimeBasedCanaryArgs exten
             this.interval = interval;
             return this;
         }
-
         public Builder interval(@Nullable Integer interval) {
             this.interval = Output.ofNullable(interval);
             return this;
         }
-
         public Builder percentage(@Nullable Output<Integer> percentage) {
             this.percentage = percentage;
             return this;
         }
-
         public Builder percentage(@Nullable Integer percentage) {
             this.percentage = Output.ofNullable(percentage);
             return this;
-        }
-        public DeploymentConfigTrafficRoutingConfigTimeBasedCanaryArgs build() {
+        }        public DeploymentConfigTrafficRoutingConfigTimeBasedCanaryArgs build() {
             return new DeploymentConfigTrafficRoutingConfigTimeBasedCanaryArgs(interval, percentage);
         }
     }

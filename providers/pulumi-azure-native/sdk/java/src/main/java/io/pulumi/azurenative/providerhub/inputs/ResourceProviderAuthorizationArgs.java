@@ -78,32 +78,26 @@ public final class ResourceProviderAuthorizationArgs extends io.pulumi.resources
             this.applicationId = applicationId;
             return this;
         }
-
         public Builder applicationId(@Nullable String applicationId) {
             this.applicationId = Output.ofNullable(applicationId);
             return this;
         }
-
         public Builder managedByRoleDefinitionId(@Nullable Output<String> managedByRoleDefinitionId) {
             this.managedByRoleDefinitionId = managedByRoleDefinitionId;
             return this;
         }
-
         public Builder managedByRoleDefinitionId(@Nullable String managedByRoleDefinitionId) {
             this.managedByRoleDefinitionId = Output.ofNullable(managedByRoleDefinitionId);
             return this;
         }
-
         public Builder roleDefinitionId(@Nullable Output<String> roleDefinitionId) {
             this.roleDefinitionId = roleDefinitionId;
             return this;
         }
-
         public Builder roleDefinitionId(@Nullable String roleDefinitionId) {
             this.roleDefinitionId = Output.ofNullable(roleDefinitionId);
             return this;
-        }
-        public ResourceProviderAuthorizationArgs build() {
+        }        public ResourceProviderAuthorizationArgs build() {
             return new ResourceProviderAuthorizationArgs(applicationId, managedByRoleDefinitionId, roleDefinitionId);
         }
     }

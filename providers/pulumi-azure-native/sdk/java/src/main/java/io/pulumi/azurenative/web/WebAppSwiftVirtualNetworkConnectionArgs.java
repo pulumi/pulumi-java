@@ -123,52 +123,42 @@ public final class WebAppSwiftVirtualNetworkConnectionArgs extends io.pulumi.res
             this.kind = kind;
             return this;
         }
-
         public Builder kind(@Nullable String kind) {
             this.kind = Output.ofNullable(kind);
             return this;
         }
-
         public Builder name(Output<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder subnetResourceId(@Nullable Output<String> subnetResourceId) {
             this.subnetResourceId = subnetResourceId;
             return this;
         }
-
         public Builder subnetResourceId(@Nullable String subnetResourceId) {
             this.subnetResourceId = Output.ofNullable(subnetResourceId);
             return this;
         }
-
         public Builder swiftSupported(@Nullable Output<Boolean> swiftSupported) {
             this.swiftSupported = swiftSupported;
             return this;
         }
-
         public Builder swiftSupported(@Nullable Boolean swiftSupported) {
             this.swiftSupported = Output.ofNullable(swiftSupported);
             return this;
-        }
-        public WebAppSwiftVirtualNetworkConnectionArgs build() {
+        }        public WebAppSwiftVirtualNetworkConnectionArgs build() {
             return new WebAppSwiftVirtualNetworkConnectionArgs(kind, name, resourceGroupName, subnetResourceId, swiftSupported);
         }
     }

@@ -184,47 +184,41 @@ public final class GetSecuritySettingResult {
             this.deidentifyTemplate = Objects.requireNonNull(deidentifyTemplate);
             return this;
         }
-
         public Builder displayName(String displayName) {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
-
         public Builder insightsExportSettings(GoogleCloudDialogflowCxV3SecuritySettingsInsightsExportSettingsResponse insightsExportSettings) {
             this.insightsExportSettings = Objects.requireNonNull(insightsExportSettings);
             return this;
         }
-
         public Builder inspectTemplate(String inspectTemplate) {
             this.inspectTemplate = Objects.requireNonNull(inspectTemplate);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder purgeDataTypes(List<String> purgeDataTypes) {
             this.purgeDataTypes = Objects.requireNonNull(purgeDataTypes);
             return this;
         }
-
+        public Builder purgeDataTypes(String... purgeDataTypes) {
+            return purgeDataTypes(List.of(purgeDataTypes));
+        }
         public Builder redactionScope(String redactionScope) {
             this.redactionScope = Objects.requireNonNull(redactionScope);
             return this;
         }
-
         public Builder redactionStrategy(String redactionStrategy) {
             this.redactionStrategy = Objects.requireNonNull(redactionStrategy);
             return this;
         }
-
         public Builder retentionWindowDays(Integer retentionWindowDays) {
             this.retentionWindowDays = Objects.requireNonNull(retentionWindowDays);
             return this;
-        }
-        public GetSecuritySettingResult build() {
+        }        public GetSecuritySettingResult build() {
             return new GetSecuritySettingResult(deidentifyTemplate, displayName, insightsExportSettings, inspectTemplate, name, purgeDataTypes, redactionScope, redactionStrategy, retentionWindowDays);
         }
     }

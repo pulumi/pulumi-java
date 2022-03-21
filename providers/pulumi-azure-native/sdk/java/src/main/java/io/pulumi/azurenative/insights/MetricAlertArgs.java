@@ -291,152 +291,128 @@ public final class MetricAlertArgs extends io.pulumi.resources.ResourceArgs {
             this.actions = actions;
             return this;
         }
-
         public Builder actions(@Nullable List<MetricAlertActionArgs> actions) {
             this.actions = Output.ofNullable(actions);
             return this;
         }
-
+        public Builder actions(MetricAlertActionArgs... actions) {
+            return actions(List.of(actions));
+        }
         public Builder autoMitigate(@Nullable Output<Boolean> autoMitigate) {
             this.autoMitigate = autoMitigate;
             return this;
         }
-
         public Builder autoMitigate(@Nullable Boolean autoMitigate) {
             this.autoMitigate = Output.ofNullable(autoMitigate);
             return this;
         }
-
         public Builder criteria(Output<Object> criteria) {
             this.criteria = Objects.requireNonNull(criteria);
             return this;
         }
-
         public Builder criteria(Object criteria) {
             this.criteria = Output.of(Objects.requireNonNull(criteria));
             return this;
         }
-
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder enabled(Output<Boolean> enabled) {
             this.enabled = Objects.requireNonNull(enabled);
             return this;
         }
-
         public Builder enabled(Boolean enabled) {
             this.enabled = Output.of(Objects.requireNonNull(enabled));
             return this;
         }
-
         public Builder evaluationFrequency(Output<String> evaluationFrequency) {
             this.evaluationFrequency = Objects.requireNonNull(evaluationFrequency);
             return this;
         }
-
         public Builder evaluationFrequency(String evaluationFrequency) {
             this.evaluationFrequency = Output.of(Objects.requireNonNull(evaluationFrequency));
             return this;
         }
-
         public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder ruleName(@Nullable Output<String> ruleName) {
             this.ruleName = ruleName;
             return this;
         }
-
         public Builder ruleName(@Nullable String ruleName) {
             this.ruleName = Output.ofNullable(ruleName);
             return this;
         }
-
         public Builder scopes(Output<List<String>> scopes) {
             this.scopes = Objects.requireNonNull(scopes);
             return this;
         }
-
         public Builder scopes(List<String> scopes) {
             this.scopes = Output.of(Objects.requireNonNull(scopes));
             return this;
         }
-
+        public Builder scopes(String... scopes) {
+            return scopes(List.of(scopes));
+        }
         public Builder severity(Output<Integer> severity) {
             this.severity = Objects.requireNonNull(severity);
             return this;
         }
-
         public Builder severity(Integer severity) {
             this.severity = Output.of(Objects.requireNonNull(severity));
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
         public Builder targetResourceRegion(@Nullable Output<String> targetResourceRegion) {
             this.targetResourceRegion = targetResourceRegion;
             return this;
         }
-
         public Builder targetResourceRegion(@Nullable String targetResourceRegion) {
             this.targetResourceRegion = Output.ofNullable(targetResourceRegion);
             return this;
         }
-
         public Builder targetResourceType(@Nullable Output<String> targetResourceType) {
             this.targetResourceType = targetResourceType;
             return this;
         }
-
         public Builder targetResourceType(@Nullable String targetResourceType) {
             this.targetResourceType = Output.ofNullable(targetResourceType);
             return this;
         }
-
         public Builder windowSize(Output<String> windowSize) {
             this.windowSize = Objects.requireNonNull(windowSize);
             return this;
         }
-
         public Builder windowSize(String windowSize) {
             this.windowSize = Output.of(Objects.requireNonNull(windowSize));
             return this;
-        }
-        public MetricAlertArgs build() {
+        }        public MetricAlertArgs build() {
             return new MetricAlertArgs(actions, autoMitigate, criteria, description, enabled, evaluationFrequency, location, resourceGroupName, ruleName, scopes, severity, tags, targetResourceRegion, targetResourceType, windowSize);
         }
     }

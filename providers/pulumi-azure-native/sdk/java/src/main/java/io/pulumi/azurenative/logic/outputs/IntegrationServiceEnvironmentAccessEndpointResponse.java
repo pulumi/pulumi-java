@@ -53,8 +53,7 @@ public final class IntegrationServiceEnvironmentAccessEndpointResponse {
         public Builder type(@Nullable String type) {
             this.type = type;
             return this;
-        }
-        public IntegrationServiceEnvironmentAccessEndpointResponse build() {
+        }        public IntegrationServiceEnvironmentAccessEndpointResponse build() {
             return new IntegrationServiceEnvironmentAccessEndpointResponse(type);
         }
     }

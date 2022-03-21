@@ -61,12 +61,10 @@ public final class Ipv6CircuitConnectionConfigArgs extends io.pulumi.resources.R
             this.addressPrefix = addressPrefix;
             return this;
         }
-
         public Builder addressPrefix(@Nullable String addressPrefix) {
             this.addressPrefix = Output.ofNullable(addressPrefix);
             return this;
-        }
-        public Ipv6CircuitConnectionConfigArgs build() {
+        }        public Ipv6CircuitConnectionConfigArgs build() {
             return new Ipv6CircuitConnectionConfigArgs(addressPrefix);
         }
     }

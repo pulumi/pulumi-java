@@ -60,8 +60,7 @@ public final class SecretResponse extends io.pulumi.resources.InvokeArgs {
         public Builder name(@Nullable String name) {
             this.name = name;
             return this;
-        }
-        public SecretResponse build() {
+        }        public SecretResponse build() {
             return new SecretResponse(name);
         }
     }

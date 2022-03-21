@@ -127,27 +127,28 @@ public final class ReportFilterResponse extends io.pulumi.resources.InvokeArgs {
             this.and = and;
             return this;
         }
-
+        public Builder and(ReportFilterResponse... and) {
+            return and(List.of(and));
+        }
         public Builder dimension(@Nullable ReportComparisonExpressionResponse dimension) {
             this.dimension = dimension;
             return this;
         }
-
         public Builder not(@Nullable ReportFilterResponse not) {
             this.not = not;
             return this;
         }
-
         public Builder or(@Nullable List<ReportFilterResponse> or) {
             this.or = or;
             return this;
         }
-
+        public Builder or(ReportFilterResponse... or) {
+            return or(List.of(or));
+        }
         public Builder tag(@Nullable ReportComparisonExpressionResponse tag) {
             this.tag = tag;
             return this;
-        }
-        public ReportFilterResponse build() {
+        }        public ReportFilterResponse build() {
             return new ReportFilterResponse(and, dimension, not, or, tag);
         }
     }

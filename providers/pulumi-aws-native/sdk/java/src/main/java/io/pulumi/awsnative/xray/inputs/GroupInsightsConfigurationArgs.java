@@ -74,22 +74,18 @@ public final class GroupInsightsConfigurationArgs extends io.pulumi.resources.Re
             this.insightsEnabled = insightsEnabled;
             return this;
         }
-
         public Builder insightsEnabled(@Nullable Boolean insightsEnabled) {
             this.insightsEnabled = Output.ofNullable(insightsEnabled);
             return this;
         }
-
         public Builder notificationsEnabled(@Nullable Output<Boolean> notificationsEnabled) {
             this.notificationsEnabled = notificationsEnabled;
             return this;
         }
-
         public Builder notificationsEnabled(@Nullable Boolean notificationsEnabled) {
             this.notificationsEnabled = Output.ofNullable(notificationsEnabled);
             return this;
-        }
-        public GroupInsightsConfigurationArgs build() {
+        }        public GroupInsightsConfigurationArgs build() {
             return new GroupInsightsConfigurationArgs(insightsEnabled, notificationsEnabled);
         }
     }

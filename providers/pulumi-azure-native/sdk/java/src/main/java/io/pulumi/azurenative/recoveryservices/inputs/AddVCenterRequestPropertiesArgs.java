@@ -126,52 +126,42 @@ public final class AddVCenterRequestPropertiesArgs extends io.pulumi.resources.R
             this.friendlyName = friendlyName;
             return this;
         }
-
         public Builder friendlyName(@Nullable String friendlyName) {
             this.friendlyName = Output.ofNullable(friendlyName);
             return this;
         }
-
         public Builder ipAddress(@Nullable Output<String> ipAddress) {
             this.ipAddress = ipAddress;
             return this;
         }
-
         public Builder ipAddress(@Nullable String ipAddress) {
             this.ipAddress = Output.ofNullable(ipAddress);
             return this;
         }
-
         public Builder port(@Nullable Output<String> port) {
             this.port = port;
             return this;
         }
-
         public Builder port(@Nullable String port) {
             this.port = Output.ofNullable(port);
             return this;
         }
-
         public Builder processServerId(@Nullable Output<String> processServerId) {
             this.processServerId = processServerId;
             return this;
         }
-
         public Builder processServerId(@Nullable String processServerId) {
             this.processServerId = Output.ofNullable(processServerId);
             return this;
         }
-
         public Builder runAsAccountId(@Nullable Output<String> runAsAccountId) {
             this.runAsAccountId = runAsAccountId;
             return this;
         }
-
         public Builder runAsAccountId(@Nullable String runAsAccountId) {
             this.runAsAccountId = Output.ofNullable(runAsAccountId);
             return this;
-        }
-        public AddVCenterRequestPropertiesArgs build() {
+        }        public AddVCenterRequestPropertiesArgs build() {
             return new AddVCenterRequestPropertiesArgs(friendlyName, ipAddress, port, processServerId, runAsAccountId);
         }
     }

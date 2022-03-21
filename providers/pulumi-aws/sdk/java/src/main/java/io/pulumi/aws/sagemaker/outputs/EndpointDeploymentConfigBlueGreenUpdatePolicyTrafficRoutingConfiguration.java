@@ -106,22 +106,18 @@ public final class EndpointDeploymentConfigBlueGreenUpdatePolicyTrafficRoutingCo
             this.canarySize = canarySize;
             return this;
         }
-
         public Builder linearStepSize(@Nullable EndpointDeploymentConfigBlueGreenUpdatePolicyTrafficRoutingConfigurationLinearStepSize linearStepSize) {
             this.linearStepSize = linearStepSize;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder waitIntervalInSeconds(Integer waitIntervalInSeconds) {
             this.waitIntervalInSeconds = Objects.requireNonNull(waitIntervalInSeconds);
             return this;
-        }
-        public EndpointDeploymentConfigBlueGreenUpdatePolicyTrafficRoutingConfiguration build() {
+        }        public EndpointDeploymentConfigBlueGreenUpdatePolicyTrafficRoutingConfiguration build() {
             return new EndpointDeploymentConfigBlueGreenUpdatePolicyTrafficRoutingConfiguration(canarySize, linearStepSize, type, waitIntervalInSeconds);
         }
     }

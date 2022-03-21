@@ -125,52 +125,42 @@ public final class SensorArgs extends io.pulumi.resources.ResourceArgs {
             this.scope = Objects.requireNonNull(scope);
             return this;
         }
-
         public Builder scope(String scope) {
             this.scope = Output.of(Objects.requireNonNull(scope));
             return this;
         }
-
         public Builder sensorName(@Nullable Output<String> sensorName) {
             this.sensorName = sensorName;
             return this;
         }
-
         public Builder sensorName(@Nullable String sensorName) {
             this.sensorName = Output.ofNullable(sensorName);
             return this;
         }
-
         public Builder sensorType(@Nullable Output<Either<String,SensorType>> sensorType) {
             this.sensorType = sensorType;
             return this;
         }
-
         public Builder sensorType(@Nullable Either<String,SensorType> sensorType) {
             this.sensorType = Output.ofNullable(sensorType);
             return this;
         }
-
         public Builder tiAutomaticUpdates(@Nullable Output<Boolean> tiAutomaticUpdates) {
             this.tiAutomaticUpdates = tiAutomaticUpdates;
             return this;
         }
-
         public Builder tiAutomaticUpdates(@Nullable Boolean tiAutomaticUpdates) {
             this.tiAutomaticUpdates = Output.ofNullable(tiAutomaticUpdates);
             return this;
         }
-
         public Builder zone(@Nullable Output<String> zone) {
             this.zone = zone;
             return this;
         }
-
         public Builder zone(@Nullable String zone) {
             this.zone = Output.ofNullable(zone);
             return this;
-        }
-        public SensorArgs build() {
+        }        public SensorArgs build() {
             return new SensorArgs(scope, sensorName, sensorType, tiAutomaticUpdates, zone);
         }
     }

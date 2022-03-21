@@ -67,22 +67,18 @@ public final class ConfigFrequencyArgs extends io.pulumi.resources.ResourceArgs 
             this.units = units;
             return this;
         }
-
         public Builder units(@Nullable ConfigFrequencyUnits units) {
             this.units = Output.ofNullable(units);
             return this;
         }
-
         public Builder value(@Nullable Output<Double> value) {
             this.value = value;
             return this;
         }
-
         public Builder value(@Nullable Double value) {
             this.value = Output.ofNullable(value);
             return this;
-        }
-        public ConfigFrequencyArgs build() {
+        }        public ConfigFrequencyArgs build() {
             return new ConfigFrequencyArgs(units, value);
         }
     }

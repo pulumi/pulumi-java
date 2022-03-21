@@ -108,42 +108,34 @@ public final class ApplicationApplicationConfigurationFlinkApplicationConfigurat
             this.autoScalingEnabled = autoScalingEnabled;
             return this;
         }
-
         public Builder autoScalingEnabled(@Nullable Boolean autoScalingEnabled) {
             this.autoScalingEnabled = Output.ofNullable(autoScalingEnabled);
             return this;
         }
-
         public Builder configurationType(Output<String> configurationType) {
             this.configurationType = Objects.requireNonNull(configurationType);
             return this;
         }
-
         public Builder configurationType(String configurationType) {
             this.configurationType = Output.of(Objects.requireNonNull(configurationType));
             return this;
         }
-
         public Builder parallelism(@Nullable Output<Integer> parallelism) {
             this.parallelism = parallelism;
             return this;
         }
-
         public Builder parallelism(@Nullable Integer parallelism) {
             this.parallelism = Output.ofNullable(parallelism);
             return this;
         }
-
         public Builder parallelismPerKpu(@Nullable Output<Integer> parallelismPerKpu) {
             this.parallelismPerKpu = parallelismPerKpu;
             return this;
         }
-
         public Builder parallelismPerKpu(@Nullable Integer parallelismPerKpu) {
             this.parallelismPerKpu = Output.ofNullable(parallelismPerKpu);
             return this;
-        }
-        public ApplicationApplicationConfigurationFlinkApplicationConfigurationParallelismConfigurationArgs build() {
+        }        public ApplicationApplicationConfigurationFlinkApplicationConfigurationParallelismConfigurationArgs build() {
             return new ApplicationApplicationConfigurationFlinkApplicationConfigurationParallelismConfigurationArgs(autoScalingEnabled, configurationType, parallelism, parallelismPerKpu);
         }
     }

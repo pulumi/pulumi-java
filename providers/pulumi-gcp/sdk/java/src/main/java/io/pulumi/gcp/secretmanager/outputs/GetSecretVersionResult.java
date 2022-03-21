@@ -160,47 +160,38 @@ public final class GetSecretVersionResult {
             this.createTime = Objects.requireNonNull(createTime);
             return this;
         }
-
         public Builder destroyTime(String destroyTime) {
             this.destroyTime = Objects.requireNonNull(destroyTime);
             return this;
         }
-
         public Builder enabled(Boolean enabled) {
             this.enabled = Objects.requireNonNull(enabled);
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder project(String project) {
             this.project = Objects.requireNonNull(project);
             return this;
         }
-
         public Builder secret(String secret) {
             this.secret = Objects.requireNonNull(secret);
             return this;
         }
-
         public Builder secretData(String secretData) {
             this.secretData = Objects.requireNonNull(secretData);
             return this;
         }
-
         public Builder version(String version) {
             this.version = Objects.requireNonNull(version);
             return this;
-        }
-        public GetSecretVersionResult build() {
+        }        public GetSecretVersionResult build() {
             return new GetSecretVersionResult(createTime, destroyTime, enabled, id, name, project, secret, secretData, version);
         }
     }

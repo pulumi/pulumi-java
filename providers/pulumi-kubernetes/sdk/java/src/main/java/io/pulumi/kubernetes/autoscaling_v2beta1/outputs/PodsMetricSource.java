@@ -88,17 +88,14 @@ public final class PodsMetricSource {
             this.metricName = Objects.requireNonNull(metricName);
             return this;
         }
-
         public Builder selector(@Nullable LabelSelector selector) {
             this.selector = selector;
             return this;
         }
-
         public Builder targetAverageValue(String targetAverageValue) {
             this.targetAverageValue = Objects.requireNonNull(targetAverageValue);
             return this;
-        }
-        public PodsMetricSource build() {
+        }        public PodsMetricSource build() {
             return new PodsMetricSource(metricName, selector, targetAverageValue);
         }
     }

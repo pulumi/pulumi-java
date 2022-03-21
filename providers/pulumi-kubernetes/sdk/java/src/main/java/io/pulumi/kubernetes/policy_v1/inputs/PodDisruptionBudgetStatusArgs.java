@@ -170,72 +170,61 @@ public final class PodDisruptionBudgetStatusArgs extends io.pulumi.resources.Res
             this.conditions = conditions;
             return this;
         }
-
         public Builder conditions(@Nullable List<ConditionArgs> conditions) {
             this.conditions = Output.ofNullable(conditions);
             return this;
         }
-
+        public Builder conditions(ConditionArgs... conditions) {
+            return conditions(List.of(conditions));
+        }
         public Builder currentHealthy(Output<Integer> currentHealthy) {
             this.currentHealthy = Objects.requireNonNull(currentHealthy);
             return this;
         }
-
         public Builder currentHealthy(Integer currentHealthy) {
             this.currentHealthy = Output.of(Objects.requireNonNull(currentHealthy));
             return this;
         }
-
         public Builder desiredHealthy(Output<Integer> desiredHealthy) {
             this.desiredHealthy = Objects.requireNonNull(desiredHealthy);
             return this;
         }
-
         public Builder desiredHealthy(Integer desiredHealthy) {
             this.desiredHealthy = Output.of(Objects.requireNonNull(desiredHealthy));
             return this;
         }
-
         public Builder disruptedPods(@Nullable Output<Map<String,String>> disruptedPods) {
             this.disruptedPods = disruptedPods;
             return this;
         }
-
         public Builder disruptedPods(@Nullable Map<String,String> disruptedPods) {
             this.disruptedPods = Output.ofNullable(disruptedPods);
             return this;
         }
-
         public Builder disruptionsAllowed(Output<Integer> disruptionsAllowed) {
             this.disruptionsAllowed = Objects.requireNonNull(disruptionsAllowed);
             return this;
         }
-
         public Builder disruptionsAllowed(Integer disruptionsAllowed) {
             this.disruptionsAllowed = Output.of(Objects.requireNonNull(disruptionsAllowed));
             return this;
         }
-
         public Builder expectedPods(Output<Integer> expectedPods) {
             this.expectedPods = Objects.requireNonNull(expectedPods);
             return this;
         }
-
         public Builder expectedPods(Integer expectedPods) {
             this.expectedPods = Output.of(Objects.requireNonNull(expectedPods));
             return this;
         }
-
         public Builder observedGeneration(@Nullable Output<Integer> observedGeneration) {
             this.observedGeneration = observedGeneration;
             return this;
         }
-
         public Builder observedGeneration(@Nullable Integer observedGeneration) {
             this.observedGeneration = Output.ofNullable(observedGeneration);
             return this;
-        }
-        public PodDisruptionBudgetStatusArgs build() {
+        }        public PodDisruptionBudgetStatusArgs build() {
             return new PodDisruptionBudgetStatusArgs(conditions, currentHealthy, desiredHealthy, disruptedPods, disruptionsAllowed, expectedPods, observedGeneration);
         }
     }

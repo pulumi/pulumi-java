@@ -61,12 +61,10 @@ public final class LocalTimestampTimeZoneOffsetArgs extends io.pulumi.resources.
             this.propertyName = propertyName;
             return this;
         }
-
         public Builder propertyName(@Nullable String propertyName) {
             this.propertyName = Output.ofNullable(propertyName);
             return this;
-        }
-        public LocalTimestampTimeZoneOffsetArgs build() {
+        }        public LocalTimestampTimeZoneOffsetArgs build() {
             return new LocalTimestampTimeZoneOffsetArgs(propertyName);
         }
     }

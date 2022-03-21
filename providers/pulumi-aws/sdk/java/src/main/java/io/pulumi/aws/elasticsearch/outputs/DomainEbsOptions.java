@@ -105,22 +105,18 @@ public final class DomainEbsOptions {
             this.ebsEnabled = Objects.requireNonNull(ebsEnabled);
             return this;
         }
-
         public Builder iops(@Nullable Integer iops) {
             this.iops = iops;
             return this;
         }
-
         public Builder volumeSize(@Nullable Integer volumeSize) {
             this.volumeSize = volumeSize;
             return this;
         }
-
         public Builder volumeType(@Nullable String volumeType) {
             this.volumeType = volumeType;
             return this;
-        }
-        public DomainEbsOptions build() {
+        }        public DomainEbsOptions build() {
             return new DomainEbsOptions(ebsEnabled, iops, volumeSize, volumeType);
         }
     }

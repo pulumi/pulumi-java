@@ -156,72 +156,58 @@ public final class FileSystemAssociationArgs extends io.pulumi.resources.Resourc
             this.auditDestinationArn = auditDestinationArn;
             return this;
         }
-
         public Builder auditDestinationArn(@Nullable String auditDestinationArn) {
             this.auditDestinationArn = Output.ofNullable(auditDestinationArn);
             return this;
         }
-
         public Builder cacheAttributes(@Nullable Output<FileSystemAssociationCacheAttributesArgs> cacheAttributes) {
             this.cacheAttributes = cacheAttributes;
             return this;
         }
-
         public Builder cacheAttributes(@Nullable FileSystemAssociationCacheAttributesArgs cacheAttributes) {
             this.cacheAttributes = Output.ofNullable(cacheAttributes);
             return this;
         }
-
         public Builder gatewayArn(Output<String> gatewayArn) {
             this.gatewayArn = Objects.requireNonNull(gatewayArn);
             return this;
         }
-
         public Builder gatewayArn(String gatewayArn) {
             this.gatewayArn = Output.of(Objects.requireNonNull(gatewayArn));
             return this;
         }
-
         public Builder locationArn(Output<String> locationArn) {
             this.locationArn = Objects.requireNonNull(locationArn);
             return this;
         }
-
         public Builder locationArn(String locationArn) {
             this.locationArn = Output.of(Objects.requireNonNull(locationArn));
             return this;
         }
-
         public Builder password(Output<String> password) {
             this.password = Objects.requireNonNull(password);
             return this;
         }
-
         public Builder password(String password) {
             this.password = Output.of(Objects.requireNonNull(password));
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
         public Builder username(Output<String> username) {
             this.username = Objects.requireNonNull(username);
             return this;
         }
-
         public Builder username(String username) {
             this.username = Output.of(Objects.requireNonNull(username));
             return this;
-        }
-        public FileSystemAssociationArgs build() {
+        }        public FileSystemAssociationArgs build() {
             return new FileSystemAssociationArgs(auditDestinationArn, cacheAttributes, gatewayArn, locationArn, password, tags, username);
         }
     }

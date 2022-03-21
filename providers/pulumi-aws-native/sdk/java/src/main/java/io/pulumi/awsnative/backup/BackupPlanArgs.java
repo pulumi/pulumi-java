@@ -67,22 +67,18 @@ public final class BackupPlanArgs extends io.pulumi.resources.ResourceArgs {
             this.backupPlan = Objects.requireNonNull(backupPlan);
             return this;
         }
-
         public Builder backupPlan(BackupPlanResourceTypeArgs backupPlan) {
             this.backupPlan = Output.of(Objects.requireNonNull(backupPlan));
             return this;
         }
-
         public Builder backupPlanTags(@Nullable Output<Object> backupPlanTags) {
             this.backupPlanTags = backupPlanTags;
             return this;
         }
-
         public Builder backupPlanTags(@Nullable Object backupPlanTags) {
             this.backupPlanTags = Output.ofNullable(backupPlanTags);
             return this;
-        }
-        public BackupPlanArgs build() {
+        }        public BackupPlanArgs build() {
             return new BackupPlanArgs(backupPlan, backupPlanTags);
         }
     }

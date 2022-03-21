@@ -56,12 +56,10 @@ public final class AccountAliasArgs extends io.pulumi.resources.ResourceArgs {
             this.accountAlias = Objects.requireNonNull(accountAlias);
             return this;
         }
-
         public Builder accountAlias(String accountAlias) {
             this.accountAlias = Output.of(Objects.requireNonNull(accountAlias));
             return this;
-        }
-        public AccountAliasArgs build() {
+        }        public AccountAliasArgs build() {
             return new AccountAliasArgs(accountAlias);
         }
     }

@@ -100,27 +100,22 @@ public final class GetLoadBalancerSubnetMapping extends io.pulumi.resources.Invo
             this.allocationId = Objects.requireNonNull(allocationId);
             return this;
         }
-
         public Builder ipv6Address(String ipv6Address) {
             this.ipv6Address = Objects.requireNonNull(ipv6Address);
             return this;
         }
-
         public Builder outpostId(String outpostId) {
             this.outpostId = Objects.requireNonNull(outpostId);
             return this;
         }
-
         public Builder privateIpv4Address(String privateIpv4Address) {
             this.privateIpv4Address = Objects.requireNonNull(privateIpv4Address);
             return this;
         }
-
         public Builder subnetId(String subnetId) {
             this.subnetId = Objects.requireNonNull(subnetId);
             return this;
-        }
-        public GetLoadBalancerSubnetMapping build() {
+        }        public GetLoadBalancerSubnetMapping build() {
             return new GetLoadBalancerSubnetMapping(allocationId, ipv6Address, outpostId, privateIpv4Address, subnetId);
         }
     }

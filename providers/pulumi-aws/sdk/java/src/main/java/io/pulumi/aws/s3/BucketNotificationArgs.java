@@ -127,52 +127,51 @@ public final class BucketNotificationArgs extends io.pulumi.resources.ResourceAr
             this.bucket = Objects.requireNonNull(bucket);
             return this;
         }
-
         public Builder bucket(String bucket) {
             this.bucket = Output.of(Objects.requireNonNull(bucket));
             return this;
         }
-
         public Builder eventbridge(@Nullable Output<Boolean> eventbridge) {
             this.eventbridge = eventbridge;
             return this;
         }
-
         public Builder eventbridge(@Nullable Boolean eventbridge) {
             this.eventbridge = Output.ofNullable(eventbridge);
             return this;
         }
-
         public Builder lambdaFunctions(@Nullable Output<List<BucketNotificationLambdaFunctionArgs>> lambdaFunctions) {
             this.lambdaFunctions = lambdaFunctions;
             return this;
         }
-
         public Builder lambdaFunctions(@Nullable List<BucketNotificationLambdaFunctionArgs> lambdaFunctions) {
             this.lambdaFunctions = Output.ofNullable(lambdaFunctions);
             return this;
         }
-
+        public Builder lambdaFunctions(BucketNotificationLambdaFunctionArgs... lambdaFunctions) {
+            return lambdaFunctions(List.of(lambdaFunctions));
+        }
         public Builder queues(@Nullable Output<List<BucketNotificationQueueArgs>> queues) {
             this.queues = queues;
             return this;
         }
-
         public Builder queues(@Nullable List<BucketNotificationQueueArgs> queues) {
             this.queues = Output.ofNullable(queues);
             return this;
         }
-
+        public Builder queues(BucketNotificationQueueArgs... queues) {
+            return queues(List.of(queues));
+        }
         public Builder topics(@Nullable Output<List<BucketNotificationTopicArgs>> topics) {
             this.topics = topics;
             return this;
         }
-
         public Builder topics(@Nullable List<BucketNotificationTopicArgs> topics) {
             this.topics = Output.ofNullable(topics);
             return this;
         }
-        public BucketNotificationArgs build() {
+        public Builder topics(BucketNotificationTopicArgs... topics) {
+            return topics(List.of(topics));
+        }        public BucketNotificationArgs build() {
             return new BucketNotificationArgs(bucket, eventbridge, lambdaFunctions, queues, topics);
         }
     }

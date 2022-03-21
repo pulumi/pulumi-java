@@ -91,32 +91,26 @@ public final class SnapshotArgs extends io.pulumi.resources.ResourceArgs {
             this.dbInstanceIdentifier = Objects.requireNonNull(dbInstanceIdentifier);
             return this;
         }
-
         public Builder dbInstanceIdentifier(String dbInstanceIdentifier) {
             this.dbInstanceIdentifier = Output.of(Objects.requireNonNull(dbInstanceIdentifier));
             return this;
         }
-
         public Builder dbSnapshotIdentifier(Output<String> dbSnapshotIdentifier) {
             this.dbSnapshotIdentifier = Objects.requireNonNull(dbSnapshotIdentifier);
             return this;
         }
-
         public Builder dbSnapshotIdentifier(String dbSnapshotIdentifier) {
             this.dbSnapshotIdentifier = Output.of(Objects.requireNonNull(dbSnapshotIdentifier));
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
-        }
-        public SnapshotArgs build() {
+        }        public SnapshotArgs build() {
             return new SnapshotArgs(dbInstanceIdentifier, dbSnapshotIdentifier, tags);
         }
     }

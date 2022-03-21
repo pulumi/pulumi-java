@@ -60,8 +60,7 @@ public final class ActivityEntityQueriesPropertiesResponseQueryDefinitions exten
         public Builder query(@Nullable String query) {
             this.query = query;
             return this;
-        }
-        public ActivityEntityQueriesPropertiesResponseQueryDefinitions build() {
+        }        public ActivityEntityQueriesPropertiesResponseQueryDefinitions build() {
             return new ActivityEntityQueriesPropertiesResponseQueryDefinitions(query);
         }
     }

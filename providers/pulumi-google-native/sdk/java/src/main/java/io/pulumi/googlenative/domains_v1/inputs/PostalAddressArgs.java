@@ -224,112 +224,96 @@ public final class PostalAddressArgs extends io.pulumi.resources.ResourceArgs {
             this.addressLines = addressLines;
             return this;
         }
-
         public Builder addressLines(@Nullable List<String> addressLines) {
             this.addressLines = Output.ofNullable(addressLines);
             return this;
         }
-
+        public Builder addressLines(String... addressLines) {
+            return addressLines(List.of(addressLines));
+        }
         public Builder administrativeArea(@Nullable Output<String> administrativeArea) {
             this.administrativeArea = administrativeArea;
             return this;
         }
-
         public Builder administrativeArea(@Nullable String administrativeArea) {
             this.administrativeArea = Output.ofNullable(administrativeArea);
             return this;
         }
-
         public Builder languageCode(@Nullable Output<String> languageCode) {
             this.languageCode = languageCode;
             return this;
         }
-
         public Builder languageCode(@Nullable String languageCode) {
             this.languageCode = Output.ofNullable(languageCode);
             return this;
         }
-
         public Builder locality(@Nullable Output<String> locality) {
             this.locality = locality;
             return this;
         }
-
         public Builder locality(@Nullable String locality) {
             this.locality = Output.ofNullable(locality);
             return this;
         }
-
         public Builder organization(@Nullable Output<String> organization) {
             this.organization = organization;
             return this;
         }
-
         public Builder organization(@Nullable String organization) {
             this.organization = Output.ofNullable(organization);
             return this;
         }
-
         public Builder postalCode(@Nullable Output<String> postalCode) {
             this.postalCode = postalCode;
             return this;
         }
-
         public Builder postalCode(@Nullable String postalCode) {
             this.postalCode = Output.ofNullable(postalCode);
             return this;
         }
-
         public Builder recipients(@Nullable Output<List<String>> recipients) {
             this.recipients = recipients;
             return this;
         }
-
         public Builder recipients(@Nullable List<String> recipients) {
             this.recipients = Output.ofNullable(recipients);
             return this;
         }
-
+        public Builder recipients(String... recipients) {
+            return recipients(List.of(recipients));
+        }
         public Builder regionCode(Output<String> regionCode) {
             this.regionCode = Objects.requireNonNull(regionCode);
             return this;
         }
-
         public Builder regionCode(String regionCode) {
             this.regionCode = Output.of(Objects.requireNonNull(regionCode));
             return this;
         }
-
         public Builder revision(@Nullable Output<Integer> revision) {
             this.revision = revision;
             return this;
         }
-
         public Builder revision(@Nullable Integer revision) {
             this.revision = Output.ofNullable(revision);
             return this;
         }
-
         public Builder sortingCode(@Nullable Output<String> sortingCode) {
             this.sortingCode = sortingCode;
             return this;
         }
-
         public Builder sortingCode(@Nullable String sortingCode) {
             this.sortingCode = Output.ofNullable(sortingCode);
             return this;
         }
-
         public Builder sublocality(@Nullable Output<String> sublocality) {
             this.sublocality = sublocality;
             return this;
         }
-
         public Builder sublocality(@Nullable String sublocality) {
             this.sublocality = Output.ofNullable(sublocality);
             return this;
-        }
-        public PostalAddressArgs build() {
+        }        public PostalAddressArgs build() {
             return new PostalAddressArgs(addressLines, administrativeArea, languageCode, locality, organization, postalCode, recipients, regionCode, revision, sortingCode, sublocality);
         }
     }

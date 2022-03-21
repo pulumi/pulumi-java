@@ -157,37 +157,30 @@ public final class ShareSubscriptionSynchronizationResponse extends io.pulumi.re
             this.durationMs = Objects.requireNonNull(durationMs);
             return this;
         }
-
         public Builder endTime(String endTime) {
             this.endTime = Objects.requireNonNull(endTime);
             return this;
         }
-
         public Builder message(String message) {
             this.message = Objects.requireNonNull(message);
             return this;
         }
-
         public Builder startTime(String startTime) {
             this.startTime = Objects.requireNonNull(startTime);
             return this;
         }
-
         public Builder status(String status) {
             this.status = Objects.requireNonNull(status);
             return this;
         }
-
         public Builder synchronizationId(String synchronizationId) {
             this.synchronizationId = Objects.requireNonNull(synchronizationId);
             return this;
         }
-
         public Builder synchronizationMode(String synchronizationMode) {
             this.synchronizationMode = Objects.requireNonNull(synchronizationMode);
             return this;
-        }
-        public ShareSubscriptionSynchronizationResponse build() {
+        }        public ShareSubscriptionSynchronizationResponse build() {
             return new ShareSubscriptionSynchronizationResponse(durationMs, endTime, message, startTime, status, synchronizationId, synchronizationMode);
         }
     }

@@ -51,8 +51,7 @@ public final class ClusterCoreInstanceFleetLaunchSpecificationsOnDemandSpecifica
         public Builder allocationStrategy(String allocationStrategy) {
             this.allocationStrategy = Objects.requireNonNull(allocationStrategy);
             return this;
-        }
-        public ClusterCoreInstanceFleetLaunchSpecificationsOnDemandSpecification build() {
+        }        public ClusterCoreInstanceFleetLaunchSpecificationsOnDemandSpecification build() {
             return new ClusterCoreInstanceFleetLaunchSpecificationsOnDemandSpecification(allocationStrategy);
         }
     }

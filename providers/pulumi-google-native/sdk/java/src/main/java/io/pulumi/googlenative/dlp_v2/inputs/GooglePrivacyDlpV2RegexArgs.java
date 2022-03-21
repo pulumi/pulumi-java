@@ -80,22 +80,21 @@ public final class GooglePrivacyDlpV2RegexArgs extends io.pulumi.resources.Resou
             this.groupIndexes = groupIndexes;
             return this;
         }
-
         public Builder groupIndexes(@Nullable List<Integer> groupIndexes) {
             this.groupIndexes = Output.ofNullable(groupIndexes);
             return this;
         }
-
+        public Builder groupIndexes(Integer... groupIndexes) {
+            return groupIndexes(List.of(groupIndexes));
+        }
         public Builder pattern(@Nullable Output<String> pattern) {
             this.pattern = pattern;
             return this;
         }
-
         public Builder pattern(@Nullable String pattern) {
             this.pattern = Output.ofNullable(pattern);
             return this;
-        }
-        public GooglePrivacyDlpV2RegexArgs build() {
+        }        public GooglePrivacyDlpV2RegexArgs build() {
             return new GooglePrivacyDlpV2RegexArgs(groupIndexes, pattern);
         }
     }

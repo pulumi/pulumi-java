@@ -287,152 +287,125 @@ public final class QueueArgs extends io.pulumi.resources.ResourceArgs {
             this.contentBasedDeduplication = contentBasedDeduplication;
             return this;
         }
-
         public Builder contentBasedDeduplication(@Nullable Boolean contentBasedDeduplication) {
             this.contentBasedDeduplication = Output.ofNullable(contentBasedDeduplication);
             return this;
         }
-
         public Builder deduplicationScope(@Nullable Output<String> deduplicationScope) {
             this.deduplicationScope = deduplicationScope;
             return this;
         }
-
         public Builder deduplicationScope(@Nullable String deduplicationScope) {
             this.deduplicationScope = Output.ofNullable(deduplicationScope);
             return this;
         }
-
         public Builder delaySeconds(@Nullable Output<Integer> delaySeconds) {
             this.delaySeconds = delaySeconds;
             return this;
         }
-
         public Builder delaySeconds(@Nullable Integer delaySeconds) {
             this.delaySeconds = Output.ofNullable(delaySeconds);
             return this;
         }
-
         public Builder fifoQueue(@Nullable Output<Boolean> fifoQueue) {
             this.fifoQueue = fifoQueue;
             return this;
         }
-
         public Builder fifoQueue(@Nullable Boolean fifoQueue) {
             this.fifoQueue = Output.ofNullable(fifoQueue);
             return this;
         }
-
         public Builder fifoThroughputLimit(@Nullable Output<String> fifoThroughputLimit) {
             this.fifoThroughputLimit = fifoThroughputLimit;
             return this;
         }
-
         public Builder fifoThroughputLimit(@Nullable String fifoThroughputLimit) {
             this.fifoThroughputLimit = Output.ofNullable(fifoThroughputLimit);
             return this;
         }
-
         public Builder kmsDataKeyReusePeriodSeconds(@Nullable Output<Integer> kmsDataKeyReusePeriodSeconds) {
             this.kmsDataKeyReusePeriodSeconds = kmsDataKeyReusePeriodSeconds;
             return this;
         }
-
         public Builder kmsDataKeyReusePeriodSeconds(@Nullable Integer kmsDataKeyReusePeriodSeconds) {
             this.kmsDataKeyReusePeriodSeconds = Output.ofNullable(kmsDataKeyReusePeriodSeconds);
             return this;
         }
-
         public Builder kmsMasterKeyId(@Nullable Output<String> kmsMasterKeyId) {
             this.kmsMasterKeyId = kmsMasterKeyId;
             return this;
         }
-
         public Builder kmsMasterKeyId(@Nullable String kmsMasterKeyId) {
             this.kmsMasterKeyId = Output.ofNullable(kmsMasterKeyId);
             return this;
         }
-
         public Builder maximumMessageSize(@Nullable Output<Integer> maximumMessageSize) {
             this.maximumMessageSize = maximumMessageSize;
             return this;
         }
-
         public Builder maximumMessageSize(@Nullable Integer maximumMessageSize) {
             this.maximumMessageSize = Output.ofNullable(maximumMessageSize);
             return this;
         }
-
         public Builder messageRetentionPeriod(@Nullable Output<Integer> messageRetentionPeriod) {
             this.messageRetentionPeriod = messageRetentionPeriod;
             return this;
         }
-
         public Builder messageRetentionPeriod(@Nullable Integer messageRetentionPeriod) {
             this.messageRetentionPeriod = Output.ofNullable(messageRetentionPeriod);
             return this;
         }
-
         public Builder queueName(@Nullable Output<String> queueName) {
             this.queueName = queueName;
             return this;
         }
-
         public Builder queueName(@Nullable String queueName) {
             this.queueName = Output.ofNullable(queueName);
             return this;
         }
-
         public Builder receiveMessageWaitTimeSeconds(@Nullable Output<Integer> receiveMessageWaitTimeSeconds) {
             this.receiveMessageWaitTimeSeconds = receiveMessageWaitTimeSeconds;
             return this;
         }
-
         public Builder receiveMessageWaitTimeSeconds(@Nullable Integer receiveMessageWaitTimeSeconds) {
             this.receiveMessageWaitTimeSeconds = Output.ofNullable(receiveMessageWaitTimeSeconds);
             return this;
         }
-
         public Builder redriveAllowPolicy(@Nullable Output<Object> redriveAllowPolicy) {
             this.redriveAllowPolicy = redriveAllowPolicy;
             return this;
         }
-
         public Builder redriveAllowPolicy(@Nullable Object redriveAllowPolicy) {
             this.redriveAllowPolicy = Output.ofNullable(redriveAllowPolicy);
             return this;
         }
-
         public Builder redrivePolicy(@Nullable Output<Object> redrivePolicy) {
             this.redrivePolicy = redrivePolicy;
             return this;
         }
-
         public Builder redrivePolicy(@Nullable Object redrivePolicy) {
             this.redrivePolicy = Output.ofNullable(redrivePolicy);
             return this;
         }
-
         public Builder tags(@Nullable Output<List<QueueTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable List<QueueTagArgs> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
+        public Builder tags(QueueTagArgs... tags) {
+            return tags(List.of(tags));
+        }
         public Builder visibilityTimeout(@Nullable Output<Integer> visibilityTimeout) {
             this.visibilityTimeout = visibilityTimeout;
             return this;
         }
-
         public Builder visibilityTimeout(@Nullable Integer visibilityTimeout) {
             this.visibilityTimeout = Output.ofNullable(visibilityTimeout);
             return this;
-        }
-        public QueueArgs build() {
+        }        public QueueArgs build() {
             return new QueueArgs(contentBasedDeduplication, deduplicationScope, delaySeconds, fifoQueue, fifoThroughputLimit, kmsDataKeyReusePeriodSeconds, kmsMasterKeyId, maximumMessageSize, messageRetentionPeriod, queueName, receiveMessageWaitTimeSeconds, redriveAllowPolicy, redrivePolicy, tags, visibilityTimeout);
         }
     }

@@ -104,22 +104,18 @@ public final class ConnectorCollectionInfoResponse {
             this.error = error;
             return this;
         }
-
         public Builder lastChecked(String lastChecked) {
             this.lastChecked = Objects.requireNonNull(lastChecked);
             return this;
         }
-
         public Builder lastUpdated(String lastUpdated) {
             this.lastUpdated = Objects.requireNonNull(lastUpdated);
             return this;
         }
-
         public Builder sourceLastUpdated(String sourceLastUpdated) {
             this.sourceLastUpdated = Objects.requireNonNull(sourceLastUpdated);
             return this;
-        }
-        public ConnectorCollectionInfoResponse build() {
+        }        public ConnectorCollectionInfoResponse build() {
             return new ConnectorCollectionInfoResponse(error, lastChecked, lastUpdated, sourceLastUpdated);
         }
     }

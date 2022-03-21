@@ -50,8 +50,7 @@ public final class GetSimulationApplicationArgs extends io.pulumi.resources.Invo
         public Builder arn(String arn) {
             this.arn = Objects.requireNonNull(arn);
             return this;
-        }
-        public GetSimulationApplicationArgs build() {
+        }        public GetSimulationApplicationArgs build() {
             return new GetSimulationApplicationArgs(arn);
         }
     }

@@ -71,12 +71,10 @@ public final class XssMatchSetXssMatchTupleFieldToMatch {
             this.data = data;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public XssMatchSetXssMatchTupleFieldToMatch build() {
+        }        public XssMatchSetXssMatchTupleFieldToMatch build() {
             return new XssMatchSetXssMatchTupleFieldToMatch(data, type);
         }
     }

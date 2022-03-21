@@ -169,42 +169,34 @@ public final class MigrateMySqlAzureDbForMySqlSyncTaskOutputMigrationLevelRespon
             this.endedOn = Objects.requireNonNull(endedOn);
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder resultType(String resultType) {
             this.resultType = Objects.requireNonNull(resultType);
             return this;
         }
-
         public Builder sourceServer(String sourceServer) {
             this.sourceServer = Objects.requireNonNull(sourceServer);
             return this;
         }
-
         public Builder sourceServerVersion(String sourceServerVersion) {
             this.sourceServerVersion = Objects.requireNonNull(sourceServerVersion);
             return this;
         }
-
         public Builder startedOn(String startedOn) {
             this.startedOn = Objects.requireNonNull(startedOn);
             return this;
         }
-
         public Builder targetServer(String targetServer) {
             this.targetServer = Objects.requireNonNull(targetServer);
             return this;
         }
-
         public Builder targetServerVersion(String targetServerVersion) {
             this.targetServerVersion = Objects.requireNonNull(targetServerVersion);
             return this;
-        }
-        public MigrateMySqlAzureDbForMySqlSyncTaskOutputMigrationLevelResponse build() {
+        }        public MigrateMySqlAzureDbForMySqlSyncTaskOutputMigrationLevelResponse build() {
             return new MigrateMySqlAzureDbForMySqlSyncTaskOutputMigrationLevelResponse(endedOn, id, resultType, sourceServer, sourceServerVersion, startedOn, targetServer, targetServerVersion);
         }
     }

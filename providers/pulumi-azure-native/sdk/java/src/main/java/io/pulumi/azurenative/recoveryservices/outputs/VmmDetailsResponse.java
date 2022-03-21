@@ -53,8 +53,7 @@ public final class VmmDetailsResponse {
         public Builder instanceType(String instanceType) {
             this.instanceType = Objects.requireNonNull(instanceType);
             return this;
-        }
-        public VmmDetailsResponse build() {
+        }        public VmmDetailsResponse build() {
             return new VmmDetailsResponse(instanceType);
         }
     }

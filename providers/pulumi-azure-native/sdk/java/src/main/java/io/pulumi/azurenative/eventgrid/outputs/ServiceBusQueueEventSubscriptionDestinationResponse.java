@@ -73,12 +73,10 @@ public final class ServiceBusQueueEventSubscriptionDestinationResponse {
             this.endpointType = Objects.requireNonNull(endpointType);
             return this;
         }
-
         public Builder resourceId(@Nullable String resourceId) {
             this.resourceId = resourceId;
             return this;
-        }
-        public ServiceBusQueueEventSubscriptionDestinationResponse build() {
+        }        public ServiceBusQueueEventSubscriptionDestinationResponse build() {
             return new ServiceBusQueueEventSubscriptionDestinationResponse(endpointType, resourceId);
         }
     }

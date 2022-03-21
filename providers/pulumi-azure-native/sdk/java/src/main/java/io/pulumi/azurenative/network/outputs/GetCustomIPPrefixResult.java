@@ -251,67 +251,60 @@ public final class GetCustomIPPrefixResult {
             this.cidr = cidr;
             return this;
         }
-
         public Builder commissionedState(@Nullable String commissionedState) {
             this.commissionedState = commissionedState;
             return this;
         }
-
         public Builder etag(String etag) {
             this.etag = Objects.requireNonNull(etag);
             return this;
         }
-
         public Builder extendedLocation(@Nullable ExtendedLocationResponse extendedLocation) {
             this.extendedLocation = extendedLocation;
             return this;
         }
-
         public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = location;
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
-
         public Builder publicIpPrefixes(List<SubResourceResponse> publicIpPrefixes) {
             this.publicIpPrefixes = Objects.requireNonNull(publicIpPrefixes);
             return this;
         }
-
+        public Builder publicIpPrefixes(SubResourceResponse... publicIpPrefixes) {
+            return publicIpPrefixes(List.of(publicIpPrefixes));
+        }
         public Builder resourceGuid(String resourceGuid) {
             this.resourceGuid = Objects.requireNonNull(resourceGuid);
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder zones(@Nullable List<String> zones) {
             this.zones = zones;
             return this;
         }
-        public GetCustomIPPrefixResult build() {
+        public Builder zones(String... zones) {
+            return zones(List.of(zones));
+        }        public GetCustomIPPrefixResult build() {
             return new GetCustomIPPrefixResult(cidr, commissionedState, etag, extendedLocation, id, location, name, provisioningState, publicIpPrefixes, resourceGuid, tags, type, zones);
         }
     }

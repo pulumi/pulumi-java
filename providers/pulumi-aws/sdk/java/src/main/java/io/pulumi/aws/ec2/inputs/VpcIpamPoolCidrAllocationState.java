@@ -184,92 +184,77 @@ public final class VpcIpamPoolCidrAllocationState extends io.pulumi.resources.Re
             this.cidr = cidr;
             return this;
         }
-
         public Builder cidr(@Nullable String cidr) {
             this.cidr = Output.ofNullable(cidr);
             return this;
         }
-
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder disallowedCidrs(@Nullable Output<List<String>> disallowedCidrs) {
             this.disallowedCidrs = disallowedCidrs;
             return this;
         }
-
         public Builder disallowedCidrs(@Nullable List<String> disallowedCidrs) {
             this.disallowedCidrs = Output.ofNullable(disallowedCidrs);
             return this;
         }
-
+        public Builder disallowedCidrs(String... disallowedCidrs) {
+            return disallowedCidrs(List.of(disallowedCidrs));
+        }
         public Builder ipamPoolAllocationId(@Nullable Output<String> ipamPoolAllocationId) {
             this.ipamPoolAllocationId = ipamPoolAllocationId;
             return this;
         }
-
         public Builder ipamPoolAllocationId(@Nullable String ipamPoolAllocationId) {
             this.ipamPoolAllocationId = Output.ofNullable(ipamPoolAllocationId);
             return this;
         }
-
         public Builder ipamPoolId(@Nullable Output<String> ipamPoolId) {
             this.ipamPoolId = ipamPoolId;
             return this;
         }
-
         public Builder ipamPoolId(@Nullable String ipamPoolId) {
             this.ipamPoolId = Output.ofNullable(ipamPoolId);
             return this;
         }
-
         public Builder netmaskLength(@Nullable Output<Integer> netmaskLength) {
             this.netmaskLength = netmaskLength;
             return this;
         }
-
         public Builder netmaskLength(@Nullable Integer netmaskLength) {
             this.netmaskLength = Output.ofNullable(netmaskLength);
             return this;
         }
-
         public Builder resourceId(@Nullable Output<String> resourceId) {
             this.resourceId = resourceId;
             return this;
         }
-
         public Builder resourceId(@Nullable String resourceId) {
             this.resourceId = Output.ofNullable(resourceId);
             return this;
         }
-
         public Builder resourceOwner(@Nullable Output<String> resourceOwner) {
             this.resourceOwner = resourceOwner;
             return this;
         }
-
         public Builder resourceOwner(@Nullable String resourceOwner) {
             this.resourceOwner = Output.ofNullable(resourceOwner);
             return this;
         }
-
         public Builder resourceType(@Nullable Output<String> resourceType) {
             this.resourceType = resourceType;
             return this;
         }
-
         public Builder resourceType(@Nullable String resourceType) {
             this.resourceType = Output.ofNullable(resourceType);
             return this;
-        }
-        public VpcIpamPoolCidrAllocationState build() {
+        }        public VpcIpamPoolCidrAllocationState build() {
             return new VpcIpamPoolCidrAllocationState(cidr, description, disallowedCidrs, ipamPoolAllocationId, ipamPoolId, netmaskLength, resourceId, resourceOwner, resourceType);
         }
     }

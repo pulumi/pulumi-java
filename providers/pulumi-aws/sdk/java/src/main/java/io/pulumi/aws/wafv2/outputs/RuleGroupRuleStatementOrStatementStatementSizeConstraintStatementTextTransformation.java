@@ -70,12 +70,10 @@ public final class RuleGroupRuleStatementOrStatementStatementSizeConstraintState
             this.priority = Objects.requireNonNull(priority);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public RuleGroupRuleStatementOrStatementStatementSizeConstraintStatementTextTransformation build() {
+        }        public RuleGroupRuleStatementOrStatementStatementSizeConstraintStatementTextTransformation build() {
             return new RuleGroupRuleStatementOrStatementStatementSizeConstraintStatementTextTransformation(priority, type);
         }
     }

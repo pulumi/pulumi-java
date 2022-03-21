@@ -114,42 +114,37 @@ public final class UpgradeNoteArgs extends io.pulumi.resources.ResourceArgs {
             this.distributions = distributions;
             return this;
         }
-
         public Builder distributions(@Nullable List<UpgradeDistributionArgs> distributions) {
             this.distributions = Output.ofNullable(distributions);
             return this;
         }
-
+        public Builder distributions(UpgradeDistributionArgs... distributions) {
+            return distributions(List.of(distributions));
+        }
         public Builder $package(@Nullable Output<String> $package) {
             this.$package = $package;
             return this;
         }
-
         public Builder $package(@Nullable String $package) {
             this.$package = Output.ofNullable($package);
             return this;
         }
-
         public Builder version(@Nullable Output<VersionArgs> version) {
             this.version = version;
             return this;
         }
-
         public Builder version(@Nullable VersionArgs version) {
             this.version = Output.ofNullable(version);
             return this;
         }
-
         public Builder windowsUpdate(@Nullable Output<WindowsUpdateArgs> windowsUpdate) {
             this.windowsUpdate = windowsUpdate;
             return this;
         }
-
         public Builder windowsUpdate(@Nullable WindowsUpdateArgs windowsUpdate) {
             this.windowsUpdate = Output.ofNullable(windowsUpdate);
             return this;
-        }
-        public UpgradeNoteArgs build() {
+        }        public UpgradeNoteArgs build() {
             return new UpgradeNoteArgs(distributions, $package, version, windowsUpdate);
         }
     }

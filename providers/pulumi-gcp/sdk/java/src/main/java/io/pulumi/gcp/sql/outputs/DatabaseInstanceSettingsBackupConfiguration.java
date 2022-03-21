@@ -158,37 +158,30 @@ public final class DatabaseInstanceSettingsBackupConfiguration {
             this.backupRetentionSettings = backupRetentionSettings;
             return this;
         }
-
         public Builder binaryLogEnabled(@Nullable Boolean binaryLogEnabled) {
             this.binaryLogEnabled = binaryLogEnabled;
             return this;
         }
-
         public Builder enabled(@Nullable Boolean enabled) {
             this.enabled = enabled;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = location;
             return this;
         }
-
         public Builder pointInTimeRecoveryEnabled(@Nullable Boolean pointInTimeRecoveryEnabled) {
             this.pointInTimeRecoveryEnabled = pointInTimeRecoveryEnabled;
             return this;
         }
-
         public Builder startTime(@Nullable String startTime) {
             this.startTime = startTime;
             return this;
         }
-
         public Builder transactionLogRetentionDays(@Nullable Integer transactionLogRetentionDays) {
             this.transactionLogRetentionDays = transactionLogRetentionDays;
             return this;
-        }
-        public DatabaseInstanceSettingsBackupConfiguration build() {
+        }        public DatabaseInstanceSettingsBackupConfiguration build() {
             return new DatabaseInstanceSettingsBackupConfiguration(backupRetentionSettings, binaryLogEnabled, enabled, location, pointInTimeRecoveryEnabled, startTime, transactionLogRetentionDays);
         }
     }

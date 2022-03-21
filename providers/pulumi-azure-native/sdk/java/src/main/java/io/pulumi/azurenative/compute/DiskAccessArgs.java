@@ -107,42 +107,34 @@ public final class DiskAccessArgs extends io.pulumi.resources.ResourceArgs {
             this.diskAccessName = diskAccessName;
             return this;
         }
-
         public Builder diskAccessName(@Nullable String diskAccessName) {
             this.diskAccessName = Output.ofNullable(diskAccessName);
             return this;
         }
-
         public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
-        }
-        public DiskAccessArgs build() {
+        }        public DiskAccessArgs build() {
             return new DiskAccessArgs(diskAccessName, location, resourceGroupName, tags);
         }
     }

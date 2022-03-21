@@ -128,52 +128,42 @@ public final class AvroWriteSettingsArgs extends io.pulumi.resources.ResourceArg
             this.fileNamePrefix = fileNamePrefix;
             return this;
         }
-
         public Builder fileNamePrefix(@Nullable Object fileNamePrefix) {
             this.fileNamePrefix = Output.ofNullable(fileNamePrefix);
             return this;
         }
-
         public Builder maxRowsPerFile(@Nullable Output<Object> maxRowsPerFile) {
             this.maxRowsPerFile = maxRowsPerFile;
             return this;
         }
-
         public Builder maxRowsPerFile(@Nullable Object maxRowsPerFile) {
             this.maxRowsPerFile = Output.ofNullable(maxRowsPerFile);
             return this;
         }
-
         public Builder recordName(@Nullable Output<String> recordName) {
             this.recordName = recordName;
             return this;
         }
-
         public Builder recordName(@Nullable String recordName) {
             this.recordName = Output.ofNullable(recordName);
             return this;
         }
-
         public Builder recordNamespace(@Nullable Output<String> recordNamespace) {
             this.recordNamespace = recordNamespace;
             return this;
         }
-
         public Builder recordNamespace(@Nullable String recordNamespace) {
             this.recordNamespace = Output.ofNullable(recordNamespace);
             return this;
         }
-
         public Builder type(Output<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Output.of(Objects.requireNonNull(type));
             return this;
-        }
-        public AvroWriteSettingsArgs build() {
+        }        public AvroWriteSettingsArgs build() {
             return new AvroWriteSettingsArgs(fileNamePrefix, maxRowsPerFile, recordName, recordNamespace, type);
         }
     }

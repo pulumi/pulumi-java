@@ -72,12 +72,10 @@ public final class GetConnectedClusterArgs extends io.pulumi.resources.InvokeArg
             this.clusterName = Objects.requireNonNull(clusterName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
-        }
-        public GetConnectedClusterArgs build() {
+        }        public GetConnectedClusterArgs build() {
             return new GetConnectedClusterArgs(clusterName, resourceGroupName);
         }
     }

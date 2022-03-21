@@ -103,22 +103,18 @@ public final class HybridRunbookWorkerLegacyResponse {
             this.ip = ip;
             return this;
         }
-
         public Builder lastSeenDateTime(@Nullable String lastSeenDateTime) {
             this.lastSeenDateTime = lastSeenDateTime;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
-
         public Builder registrationTime(@Nullable String registrationTime) {
             this.registrationTime = registrationTime;
             return this;
-        }
-        public HybridRunbookWorkerLegacyResponse build() {
+        }        public HybridRunbookWorkerLegacyResponse build() {
             return new HybridRunbookWorkerLegacyResponse(ip, lastSeenDateTime, name, registrationTime);
         }
     }

@@ -70,12 +70,10 @@ public final class ValueFilterResponse {
             this.operatorName = Objects.requireNonNull(operatorName);
             return this;
         }
-
         public Builder value(ValueResponse value) {
             this.value = Objects.requireNonNull(value);
             return this;
-        }
-        public ValueFilterResponse build() {
+        }        public ValueFilterResponse build() {
             return new ValueFilterResponse(operatorName, value);
         }
     }

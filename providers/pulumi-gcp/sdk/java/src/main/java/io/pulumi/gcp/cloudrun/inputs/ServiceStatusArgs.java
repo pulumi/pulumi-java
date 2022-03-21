@@ -105,52 +105,45 @@ public final class ServiceStatusArgs extends io.pulumi.resources.ResourceArgs {
             this.conditions = conditions;
             return this;
         }
-
         public Builder conditions(@Nullable List<ServiceStatusConditionArgs> conditions) {
             this.conditions = Output.ofNullable(conditions);
             return this;
         }
-
+        public Builder conditions(ServiceStatusConditionArgs... conditions) {
+            return conditions(List.of(conditions));
+        }
         public Builder latestCreatedRevisionName(@Nullable Output<String> latestCreatedRevisionName) {
             this.latestCreatedRevisionName = latestCreatedRevisionName;
             return this;
         }
-
         public Builder latestCreatedRevisionName(@Nullable String latestCreatedRevisionName) {
             this.latestCreatedRevisionName = Output.ofNullable(latestCreatedRevisionName);
             return this;
         }
-
         public Builder latestReadyRevisionName(@Nullable Output<String> latestReadyRevisionName) {
             this.latestReadyRevisionName = latestReadyRevisionName;
             return this;
         }
-
         public Builder latestReadyRevisionName(@Nullable String latestReadyRevisionName) {
             this.latestReadyRevisionName = Output.ofNullable(latestReadyRevisionName);
             return this;
         }
-
         public Builder observedGeneration(@Nullable Output<Integer> observedGeneration) {
             this.observedGeneration = observedGeneration;
             return this;
         }
-
         public Builder observedGeneration(@Nullable Integer observedGeneration) {
             this.observedGeneration = Output.ofNullable(observedGeneration);
             return this;
         }
-
         public Builder url(@Nullable Output<String> url) {
             this.url = url;
             return this;
         }
-
         public Builder url(@Nullable String url) {
             this.url = Output.ofNullable(url);
             return this;
-        }
-        public ServiceStatusArgs build() {
+        }        public ServiceStatusArgs build() {
             return new ServiceStatusArgs(conditions, latestCreatedRevisionName, latestReadyRevisionName, observedGeneration, url);
         }
     }

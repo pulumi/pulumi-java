@@ -107,22 +107,24 @@ public final class GetProfilingGroupResult {
             this.agentPermissions = agentPermissions;
             return this;
         }
-
         public Builder anomalyDetectionNotificationConfiguration(@Nullable List<ProfilingGroupChannel> anomalyDetectionNotificationConfiguration) {
             this.anomalyDetectionNotificationConfiguration = anomalyDetectionNotificationConfiguration;
             return this;
         }
-
+        public Builder anomalyDetectionNotificationConfiguration(ProfilingGroupChannel... anomalyDetectionNotificationConfiguration) {
+            return anomalyDetectionNotificationConfiguration(List.of(anomalyDetectionNotificationConfiguration));
+        }
         public Builder arn(@Nullable String arn) {
             this.arn = arn;
             return this;
         }
-
         public Builder tags(@Nullable List<ProfilingGroupTag> tags) {
             this.tags = tags;
             return this;
         }
-        public GetProfilingGroupResult build() {
+        public Builder tags(ProfilingGroupTag... tags) {
+            return tags(List.of(tags));
+        }        public GetProfilingGroupResult build() {
             return new GetProfilingGroupResult(agentPermissions, anomalyDetectionNotificationConfiguration, arn, tags);
         }
     }

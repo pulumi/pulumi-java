@@ -167,42 +167,40 @@ public final class GetDatasetResult {
             this.blockingResources = Objects.requireNonNull(blockingResources);
             return this;
         }
-
+        public Builder blockingResources(String... blockingResources) {
+            return blockingResources(List.of(blockingResources));
+        }
         public Builder createTime(String createTime) {
             this.createTime = Objects.requireNonNull(createTime);
             return this;
         }
-
         public Builder dataItemCount(String dataItemCount) {
             this.dataItemCount = Objects.requireNonNull(dataItemCount);
             return this;
         }
-
         public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
-
         public Builder displayName(String displayName) {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
-
         public Builder inputConfigs(List<GoogleCloudDatalabelingV1beta1InputConfigResponse> inputConfigs) {
             this.inputConfigs = Objects.requireNonNull(inputConfigs);
             return this;
         }
-
+        public Builder inputConfigs(GoogleCloudDatalabelingV1beta1InputConfigResponse... inputConfigs) {
+            return inputConfigs(List.of(inputConfigs));
+        }
         public Builder lastMigrateTime(String lastMigrateTime) {
             this.lastMigrateTime = Objects.requireNonNull(lastMigrateTime);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
-        }
-        public GetDatasetResult build() {
+        }        public GetDatasetResult build() {
             return new GetDatasetResult(blockingResources, createTime, dataItemCount, description, displayName, inputConfigs, lastMigrateTime, name);
         }
     }

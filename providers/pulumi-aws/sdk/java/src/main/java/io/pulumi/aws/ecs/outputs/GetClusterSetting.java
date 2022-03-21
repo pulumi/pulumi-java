@@ -53,12 +53,10 @@ public final class GetClusterSetting {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder value(String value) {
             this.value = Objects.requireNonNull(value);
             return this;
-        }
-        public GetClusterSetting build() {
+        }        public GetClusterSetting build() {
             return new GetClusterSetting(name, value);
         }
     }

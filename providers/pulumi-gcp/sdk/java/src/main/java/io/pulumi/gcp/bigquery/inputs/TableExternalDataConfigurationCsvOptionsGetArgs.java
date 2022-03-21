@@ -152,62 +152,50 @@ public final class TableExternalDataConfigurationCsvOptionsGetArgs extends io.pu
             this.allowJaggedRows = allowJaggedRows;
             return this;
         }
-
         public Builder allowJaggedRows(@Nullable Boolean allowJaggedRows) {
             this.allowJaggedRows = Output.ofNullable(allowJaggedRows);
             return this;
         }
-
         public Builder allowQuotedNewlines(@Nullable Output<Boolean> allowQuotedNewlines) {
             this.allowQuotedNewlines = allowQuotedNewlines;
             return this;
         }
-
         public Builder allowQuotedNewlines(@Nullable Boolean allowQuotedNewlines) {
             this.allowQuotedNewlines = Output.ofNullable(allowQuotedNewlines);
             return this;
         }
-
         public Builder encoding(@Nullable Output<String> encoding) {
             this.encoding = encoding;
             return this;
         }
-
         public Builder encoding(@Nullable String encoding) {
             this.encoding = Output.ofNullable(encoding);
             return this;
         }
-
         public Builder fieldDelimiter(@Nullable Output<String> fieldDelimiter) {
             this.fieldDelimiter = fieldDelimiter;
             return this;
         }
-
         public Builder fieldDelimiter(@Nullable String fieldDelimiter) {
             this.fieldDelimiter = Output.ofNullable(fieldDelimiter);
             return this;
         }
-
         public Builder quote(Output<String> quote) {
             this.quote = Objects.requireNonNull(quote);
             return this;
         }
-
         public Builder quote(String quote) {
             this.quote = Output.of(Objects.requireNonNull(quote));
             return this;
         }
-
         public Builder skipLeadingRows(@Nullable Output<Integer> skipLeadingRows) {
             this.skipLeadingRows = skipLeadingRows;
             return this;
         }
-
         public Builder skipLeadingRows(@Nullable Integer skipLeadingRows) {
             this.skipLeadingRows = Output.ofNullable(skipLeadingRows);
             return this;
-        }
-        public TableExternalDataConfigurationCsvOptionsGetArgs build() {
+        }        public TableExternalDataConfigurationCsvOptionsGetArgs build() {
             return new TableExternalDataConfigurationCsvOptionsGetArgs(allowJaggedRows, allowQuotedNewlines, encoding, fieldDelimiter, quote, skipLeadingRows);
         }
     }

@@ -118,27 +118,22 @@ public final class GetFavoriteProcessResult {
             this.actualProcessName = Objects.requireNonNull(actualProcessName);
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder systemData(SystemDataResponse systemData) {
             this.systemData = Objects.requireNonNull(systemData);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public GetFavoriteProcessResult build() {
+        }        public GetFavoriteProcessResult build() {
             return new GetFavoriteProcessResult(actualProcessName, id, name, systemData, type);
         }
     }

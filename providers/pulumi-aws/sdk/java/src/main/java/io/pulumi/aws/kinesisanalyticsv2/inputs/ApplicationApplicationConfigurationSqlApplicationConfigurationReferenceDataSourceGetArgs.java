@@ -104,42 +104,34 @@ public final class ApplicationApplicationConfigurationSqlApplicationConfiguratio
             this.referenceId = referenceId;
             return this;
         }
-
         public Builder referenceId(@Nullable String referenceId) {
             this.referenceId = Output.ofNullable(referenceId);
             return this;
         }
-
         public Builder referenceSchema(Output<ApplicationApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceReferenceSchemaGetArgs> referenceSchema) {
             this.referenceSchema = Objects.requireNonNull(referenceSchema);
             return this;
         }
-
         public Builder referenceSchema(ApplicationApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceReferenceSchemaGetArgs referenceSchema) {
             this.referenceSchema = Output.of(Objects.requireNonNull(referenceSchema));
             return this;
         }
-
         public Builder s3ReferenceDataSource(Output<ApplicationApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceS3ReferenceDataSourceGetArgs> s3ReferenceDataSource) {
             this.s3ReferenceDataSource = Objects.requireNonNull(s3ReferenceDataSource);
             return this;
         }
-
         public Builder s3ReferenceDataSource(ApplicationApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceS3ReferenceDataSourceGetArgs s3ReferenceDataSource) {
             this.s3ReferenceDataSource = Output.of(Objects.requireNonNull(s3ReferenceDataSource));
             return this;
         }
-
         public Builder tableName(Output<String> tableName) {
             this.tableName = Objects.requireNonNull(tableName);
             return this;
         }
-
         public Builder tableName(String tableName) {
             this.tableName = Output.of(Objects.requireNonNull(tableName));
             return this;
-        }
-        public ApplicationApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceGetArgs build() {
+        }        public ApplicationApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceGetArgs build() {
             return new ApplicationApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceGetArgs(referenceId, referenceSchema, s3ReferenceDataSource, tableName);
         }
     }

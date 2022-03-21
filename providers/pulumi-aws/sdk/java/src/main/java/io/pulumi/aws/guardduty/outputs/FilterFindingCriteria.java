@@ -45,7 +45,9 @@ public final class FilterFindingCriteria {
             this.criterions = Objects.requireNonNull(criterions);
             return this;
         }
-        public FilterFindingCriteria build() {
+        public Builder criterions(FilterFindingCriteriaCriterion... criterions) {
+            return criterions(List.of(criterions));
+        }        public FilterFindingCriteria build() {
             return new FilterFindingCriteria(criterions);
         }
     }

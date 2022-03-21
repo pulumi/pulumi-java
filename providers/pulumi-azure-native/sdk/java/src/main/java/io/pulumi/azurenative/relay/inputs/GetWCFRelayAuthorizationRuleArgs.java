@@ -104,22 +104,18 @@ public final class GetWCFRelayAuthorizationRuleArgs extends io.pulumi.resources.
             this.authorizationRuleName = Objects.requireNonNull(authorizationRuleName);
             return this;
         }
-
         public Builder namespaceName(String namespaceName) {
             this.namespaceName = Objects.requireNonNull(namespaceName);
             return this;
         }
-
         public Builder relayName(String relayName) {
             this.relayName = Objects.requireNonNull(relayName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
-        }
-        public GetWCFRelayAuthorizationRuleArgs build() {
+        }        public GetWCFRelayAuthorizationRuleArgs build() {
             return new GetWCFRelayAuthorizationRuleArgs(authorizationRuleName, namespaceName, relayName, resourceGroupName);
         }
     }

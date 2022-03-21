@@ -78,22 +78,18 @@ public final class SecretReferenceArgs extends io.pulumi.resources.ResourceArgs 
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder namespace(@Nullable Output<String> namespace) {
             this.namespace = namespace;
             return this;
         }
-
         public Builder namespace(@Nullable String namespace) {
             this.namespace = Output.ofNullable(namespace);
             return this;
-        }
-        public SecretReferenceArgs build() {
+        }        public SecretReferenceArgs build() {
             return new SecretReferenceArgs(name, namespace);
         }
     }

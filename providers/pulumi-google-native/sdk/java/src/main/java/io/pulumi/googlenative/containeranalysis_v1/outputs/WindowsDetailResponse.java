@@ -103,22 +103,21 @@ public final class WindowsDetailResponse {
             this.cpeUri = Objects.requireNonNull(cpeUri);
             return this;
         }
-
         public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
-
         public Builder fixingKbs(List<KnowledgeBaseResponse> fixingKbs) {
             this.fixingKbs = Objects.requireNonNull(fixingKbs);
             return this;
         }
-
+        public Builder fixingKbs(KnowledgeBaseResponse... fixingKbs) {
+            return fixingKbs(List.of(fixingKbs));
+        }
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
-        }
-        public WindowsDetailResponse build() {
+        }        public WindowsDetailResponse build() {
             return new WindowsDetailResponse(cpeUri, description, fixingKbs, name);
         }
     }

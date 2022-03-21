@@ -53,8 +53,7 @@ public final class GroupMembersItemResponse {
         public Builder resourceId(@Nullable String resourceId) {
             this.resourceId = resourceId;
             return this;
-        }
-        public GroupMembersItemResponse build() {
+        }        public GroupMembersItemResponse build() {
             return new GroupMembersItemResponse(resourceId);
         }
     }

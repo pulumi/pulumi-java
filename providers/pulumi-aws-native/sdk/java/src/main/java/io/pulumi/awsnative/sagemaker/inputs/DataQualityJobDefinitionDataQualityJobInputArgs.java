@@ -56,12 +56,10 @@ public final class DataQualityJobDefinitionDataQualityJobInputArgs extends io.pu
             this.endpointInput = Objects.requireNonNull(endpointInput);
             return this;
         }
-
         public Builder endpointInput(DataQualityJobDefinitionEndpointInputArgs endpointInput) {
             this.endpointInput = Output.of(Objects.requireNonNull(endpointInput));
             return this;
-        }
-        public DataQualityJobDefinitionDataQualityJobInputArgs build() {
+        }        public DataQualityJobDefinitionDataQualityJobInputArgs build() {
             return new DataQualityJobDefinitionDataQualityJobInputArgs(endpointInput);
         }
     }

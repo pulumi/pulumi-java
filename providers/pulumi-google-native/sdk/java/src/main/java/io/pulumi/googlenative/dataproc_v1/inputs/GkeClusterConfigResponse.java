@@ -58,8 +58,7 @@ public final class GkeClusterConfigResponse extends io.pulumi.resources.InvokeAr
         public Builder namespacedGkeDeploymentTarget(NamespacedGkeDeploymentTargetResponse namespacedGkeDeploymentTarget) {
             this.namespacedGkeDeploymentTarget = Objects.requireNonNull(namespacedGkeDeploymentTarget);
             return this;
-        }
-        public GkeClusterConfigResponse build() {
+        }        public GkeClusterConfigResponse build() {
             return new GkeClusterConfigResponse(namespacedGkeDeploymentTarget);
         }
     }

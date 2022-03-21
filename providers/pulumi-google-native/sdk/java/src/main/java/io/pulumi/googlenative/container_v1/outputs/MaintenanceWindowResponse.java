@@ -88,17 +88,14 @@ public final class MaintenanceWindowResponse {
             this.dailyMaintenanceWindow = Objects.requireNonNull(dailyMaintenanceWindow);
             return this;
         }
-
         public Builder maintenanceExclusions(Map<String,String> maintenanceExclusions) {
             this.maintenanceExclusions = Objects.requireNonNull(maintenanceExclusions);
             return this;
         }
-
         public Builder recurringWindow(RecurringTimeWindowResponse recurringWindow) {
             this.recurringWindow = Objects.requireNonNull(recurringWindow);
             return this;
-        }
-        public MaintenanceWindowResponse build() {
+        }        public MaintenanceWindowResponse build() {
             return new MaintenanceWindowResponse(dailyMaintenanceWindow, maintenanceExclusions, recurringWindow);
         }
     }

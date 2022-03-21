@@ -61,12 +61,10 @@ public final class ManagedIdentityArgs extends io.pulumi.resources.ResourceArgs 
             this.type = type;
             return this;
         }
-
         public Builder type(@Nullable ResourceIdentityType type) {
             this.type = Output.ofNullable(type);
             return this;
-        }
-        public ManagedIdentityArgs build() {
+        }        public ManagedIdentityArgs build() {
             return new ManagedIdentityArgs(type);
         }
     }

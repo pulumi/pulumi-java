@@ -113,27 +113,22 @@ public final class BatchConfigurationPropertiesResponse {
             this.batchGroupName = Objects.requireNonNull(batchGroupName);
             return this;
         }
-
         public Builder changedTime(@Nullable String changedTime) {
             this.changedTime = changedTime;
             return this;
         }
-
         public Builder createdTime(@Nullable String createdTime) {
             this.createdTime = createdTime;
             return this;
         }
-
         public Builder metadata(@Nullable Object metadata) {
             this.metadata = metadata;
             return this;
         }
-
         public Builder releaseCriteria(BatchReleaseCriteriaResponse releaseCriteria) {
             this.releaseCriteria = Objects.requireNonNull(releaseCriteria);
             return this;
-        }
-        public BatchConfigurationPropertiesResponse build() {
+        }        public BatchConfigurationPropertiesResponse build() {
             return new BatchConfigurationPropertiesResponse(batchGroupName, changedTime, createdTime, metadata, releaseCriteria);
         }
     }

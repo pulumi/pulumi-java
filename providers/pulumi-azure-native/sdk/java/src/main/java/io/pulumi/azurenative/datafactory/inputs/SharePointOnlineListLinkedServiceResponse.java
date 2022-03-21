@@ -215,52 +215,45 @@ public final class SharePointOnlineListLinkedServiceResponse extends io.pulumi.r
             this.annotations = annotations;
             return this;
         }
-
+        public Builder annotations(Object... annotations) {
+            return annotations(List.of(annotations));
+        }
         public Builder connectVia(@Nullable IntegrationRuntimeReferenceResponse connectVia) {
             this.connectVia = connectVia;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
-
         public Builder encryptedCredential(@Nullable Object encryptedCredential) {
             this.encryptedCredential = encryptedCredential;
             return this;
         }
-
         public Builder parameters(@Nullable Map<String,ParameterSpecificationResponse> parameters) {
             this.parameters = parameters;
             return this;
         }
-
         public Builder servicePrincipalId(Object servicePrincipalId) {
             this.servicePrincipalId = Objects.requireNonNull(servicePrincipalId);
             return this;
         }
-
         public Builder servicePrincipalKey(Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> servicePrincipalKey) {
             this.servicePrincipalKey = Objects.requireNonNull(servicePrincipalKey);
             return this;
         }
-
         public Builder siteUrl(Object siteUrl) {
             this.siteUrl = Objects.requireNonNull(siteUrl);
             return this;
         }
-
         public Builder tenantId(Object tenantId) {
             this.tenantId = Objects.requireNonNull(tenantId);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public SharePointOnlineListLinkedServiceResponse build() {
+        }        public SharePointOnlineListLinkedServiceResponse build() {
             return new SharePointOnlineListLinkedServiceResponse(annotations, connectVia, description, encryptedCredential, parameters, servicePrincipalId, servicePrincipalKey, siteUrl, tenantId, type);
         }
     }

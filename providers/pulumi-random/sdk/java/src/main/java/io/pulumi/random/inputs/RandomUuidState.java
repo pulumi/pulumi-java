@@ -76,22 +76,18 @@ public final class RandomUuidState extends io.pulumi.resources.ResourceArgs {
             this.keepers = keepers;
             return this;
         }
-
         public Builder keepers(@Nullable Map<String,Object> keepers) {
             this.keepers = Output.ofNullable(keepers);
             return this;
         }
-
         public Builder result(@Nullable Output<String> result) {
             this.result = result;
             return this;
         }
-
         public Builder result(@Nullable String result) {
             this.result = Output.ofNullable(result);
             return this;
-        }
-        public RandomUuidState build() {
+        }        public RandomUuidState build() {
             return new RandomUuidState(keepers, result);
         }
     }

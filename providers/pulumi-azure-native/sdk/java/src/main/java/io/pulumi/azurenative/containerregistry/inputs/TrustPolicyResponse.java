@@ -78,12 +78,10 @@ public final class TrustPolicyResponse extends io.pulumi.resources.InvokeArgs {
             this.status = status;
             return this;
         }
-
         public Builder type(@Nullable String type) {
             this.type = type;
             return this;
-        }
-        public TrustPolicyResponse build() {
+        }        public TrustPolicyResponse build() {
             return new TrustPolicyResponse(status, type);
         }
     }

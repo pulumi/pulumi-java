@@ -56,12 +56,10 @@ public final class DetectorDatasourcesS3LogsGetArgs extends io.pulumi.resources.
             this.enable = Objects.requireNonNull(enable);
             return this;
         }
-
         public Builder enable(Boolean enable) {
             this.enable = Output.of(Objects.requireNonNull(enable));
             return this;
-        }
-        public DetectorDatasourcesS3LogsGetArgs build() {
+        }        public DetectorDatasourcesS3LogsGetArgs build() {
             return new DetectorDatasourcesS3LogsGetArgs(enable);
         }
     }

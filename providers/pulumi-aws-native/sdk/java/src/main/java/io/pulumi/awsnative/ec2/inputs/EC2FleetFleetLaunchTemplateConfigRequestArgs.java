@@ -68,22 +68,21 @@ public final class EC2FleetFleetLaunchTemplateConfigRequestArgs extends io.pulum
             this.launchTemplateSpecification = launchTemplateSpecification;
             return this;
         }
-
         public Builder launchTemplateSpecification(@Nullable EC2FleetFleetLaunchTemplateSpecificationRequestArgs launchTemplateSpecification) {
             this.launchTemplateSpecification = Output.ofNullable(launchTemplateSpecification);
             return this;
         }
-
         public Builder overrides(@Nullable Output<List<EC2FleetFleetLaunchTemplateOverridesRequestArgs>> overrides) {
             this.overrides = overrides;
             return this;
         }
-
         public Builder overrides(@Nullable List<EC2FleetFleetLaunchTemplateOverridesRequestArgs> overrides) {
             this.overrides = Output.ofNullable(overrides);
             return this;
         }
-        public EC2FleetFleetLaunchTemplateConfigRequestArgs build() {
+        public Builder overrides(EC2FleetFleetLaunchTemplateOverridesRequestArgs... overrides) {
+            return overrides(List.of(overrides));
+        }        public EC2FleetFleetLaunchTemplateConfigRequestArgs build() {
             return new EC2FleetFleetLaunchTemplateConfigRequestArgs(launchTemplateSpecification, overrides);
         }
     }

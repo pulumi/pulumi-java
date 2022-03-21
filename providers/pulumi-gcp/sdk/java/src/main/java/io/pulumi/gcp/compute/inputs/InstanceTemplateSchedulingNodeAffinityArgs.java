@@ -91,32 +91,29 @@ public final class InstanceTemplateSchedulingNodeAffinityArgs extends io.pulumi.
             this.key = Objects.requireNonNull(key);
             return this;
         }
-
         public Builder key(String key) {
             this.key = Output.of(Objects.requireNonNull(key));
             return this;
         }
-
         public Builder operator(Output<String> operator) {
             this.operator = Objects.requireNonNull(operator);
             return this;
         }
-
         public Builder operator(String operator) {
             this.operator = Output.of(Objects.requireNonNull(operator));
             return this;
         }
-
         public Builder values(Output<List<String>> values) {
             this.values = Objects.requireNonNull(values);
             return this;
         }
-
         public Builder values(List<String> values) {
             this.values = Output.of(Objects.requireNonNull(values));
             return this;
         }
-        public InstanceTemplateSchedulingNodeAffinityArgs build() {
+        public Builder values(String... values) {
+            return values(List.of(values));
+        }        public InstanceTemplateSchedulingNodeAffinityArgs build() {
             return new InstanceTemplateSchedulingNodeAffinityArgs(key, operator, values);
         }
     }

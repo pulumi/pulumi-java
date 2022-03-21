@@ -105,22 +105,21 @@ public final class SecretVolumeSourceResponse {
             this.defaultMode = Objects.requireNonNull(defaultMode);
             return this;
         }
-
         public Builder items(List<KeyToPathResponse> items) {
             this.items = Objects.requireNonNull(items);
             return this;
         }
-
+        public Builder items(KeyToPathResponse... items) {
+            return items(List.of(items));
+        }
         public Builder optional(Boolean optional) {
             this.optional = Objects.requireNonNull(optional);
             return this;
         }
-
         public Builder secretName(String secretName) {
             this.secretName = Objects.requireNonNull(secretName);
             return this;
-        }
-        public SecretVolumeSourceResponse build() {
+        }        public SecretVolumeSourceResponse build() {
             return new SecretVolumeSourceResponse(defaultMode, items, optional, secretName);
         }
     }

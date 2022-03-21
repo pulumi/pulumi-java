@@ -135,32 +135,26 @@ public final class GetProviderInstanceResult {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder metadata(@Nullable String metadata) {
             this.metadata = metadata;
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder properties(String properties) {
             this.properties = Objects.requireNonNull(properties);
             return this;
         }
-
         public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public GetProviderInstanceResult build() {
+        }        public GetProviderInstanceResult build() {
             return new GetProviderInstanceResult(id, metadata, name, properties, provisioningState, type);
         }
     }

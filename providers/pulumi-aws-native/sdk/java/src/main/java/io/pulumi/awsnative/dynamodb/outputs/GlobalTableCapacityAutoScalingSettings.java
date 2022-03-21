@@ -72,22 +72,18 @@ public final class GlobalTableCapacityAutoScalingSettings {
             this.maxCapacity = Objects.requireNonNull(maxCapacity);
             return this;
         }
-
         public Builder minCapacity(Integer minCapacity) {
             this.minCapacity = Objects.requireNonNull(minCapacity);
             return this;
         }
-
         public Builder seedCapacity(@Nullable Integer seedCapacity) {
             this.seedCapacity = seedCapacity;
             return this;
         }
-
         public Builder targetTrackingScalingPolicyConfiguration(GlobalTableTargetTrackingScalingPolicyConfiguration targetTrackingScalingPolicyConfiguration) {
             this.targetTrackingScalingPolicyConfiguration = Objects.requireNonNull(targetTrackingScalingPolicyConfiguration);
             return this;
-        }
-        public GlobalTableCapacityAutoScalingSettings build() {
+        }        public GlobalTableCapacityAutoScalingSettings build() {
             return new GlobalTableCapacityAutoScalingSettings(maxCapacity, minCapacity, seedCapacity, targetTrackingScalingPolicyConfiguration);
         }
     }

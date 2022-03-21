@@ -78,12 +78,10 @@ public final class ServicePrincipalPropertiesResponse extends io.pulumi.resource
             this.applicationId = applicationId;
             return this;
         }
-
         public Builder secret(@Nullable String secret) {
             this.secret = secret;
             return this;
-        }
-        public ServicePrincipalPropertiesResponse build() {
+        }        public ServicePrincipalPropertiesResponse build() {
             return new ServicePrincipalPropertiesResponse(applicationId, secret);
         }
     }

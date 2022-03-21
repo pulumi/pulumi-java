@@ -145,62 +145,50 @@ public final class IntegrationRuntimeComputePropertiesArgs extends io.pulumi.res
             this.dataFlowProperties = dataFlowProperties;
             return this;
         }
-
         public Builder dataFlowProperties(@Nullable IntegrationRuntimeDataFlowPropertiesArgs dataFlowProperties) {
             this.dataFlowProperties = Output.ofNullable(dataFlowProperties);
             return this;
         }
-
         public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder maxParallelExecutionsPerNode(@Nullable Output<Integer> maxParallelExecutionsPerNode) {
             this.maxParallelExecutionsPerNode = maxParallelExecutionsPerNode;
             return this;
         }
-
         public Builder maxParallelExecutionsPerNode(@Nullable Integer maxParallelExecutionsPerNode) {
             this.maxParallelExecutionsPerNode = Output.ofNullable(maxParallelExecutionsPerNode);
             return this;
         }
-
         public Builder nodeSize(@Nullable Output<String> nodeSize) {
             this.nodeSize = nodeSize;
             return this;
         }
-
         public Builder nodeSize(@Nullable String nodeSize) {
             this.nodeSize = Output.ofNullable(nodeSize);
             return this;
         }
-
         public Builder numberOfNodes(@Nullable Output<Integer> numberOfNodes) {
             this.numberOfNodes = numberOfNodes;
             return this;
         }
-
         public Builder numberOfNodes(@Nullable Integer numberOfNodes) {
             this.numberOfNodes = Output.ofNullable(numberOfNodes);
             return this;
         }
-
         public Builder vNetProperties(@Nullable Output<IntegrationRuntimeVNetPropertiesArgs> vNetProperties) {
             this.vNetProperties = vNetProperties;
             return this;
         }
-
         public Builder vNetProperties(@Nullable IntegrationRuntimeVNetPropertiesArgs vNetProperties) {
             this.vNetProperties = Output.ofNullable(vNetProperties);
             return this;
-        }
-        public IntegrationRuntimeComputePropertiesArgs build() {
+        }        public IntegrationRuntimeComputePropertiesArgs build() {
             return new IntegrationRuntimeComputePropertiesArgs(dataFlowProperties, location, maxParallelExecutionsPerNode, nodeSize, numberOfNodes, vNetProperties);
         }
     }

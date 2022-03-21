@@ -78,12 +78,13 @@ public final class TextStreamResponse extends io.pulumi.resources.InvokeArgs {
             this.codec = Objects.requireNonNull(codec);
             return this;
         }
-
         public Builder mapping(List<TextMappingResponse> mapping) {
             this.mapping = Objects.requireNonNull(mapping);
             return this;
         }
-        public TextStreamResponse build() {
+        public Builder mapping(TextMappingResponse... mapping) {
+            return mapping(List.of(mapping));
+        }        public TextStreamResponse build() {
             return new TextStreamResponse(codec, mapping);
         }
     }

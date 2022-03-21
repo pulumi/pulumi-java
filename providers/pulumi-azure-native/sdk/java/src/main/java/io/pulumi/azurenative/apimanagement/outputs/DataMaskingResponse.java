@@ -71,12 +71,16 @@ public final class DataMaskingResponse {
             this.headers = headers;
             return this;
         }
-
+        public Builder headers(DataMaskingEntityResponse... headers) {
+            return headers(List.of(headers));
+        }
         public Builder queryParams(@Nullable List<DataMaskingEntityResponse> queryParams) {
             this.queryParams = queryParams;
             return this;
         }
-        public DataMaskingResponse build() {
+        public Builder queryParams(DataMaskingEntityResponse... queryParams) {
+            return queryParams(List.of(queryParams));
+        }        public DataMaskingResponse build() {
             return new DataMaskingResponse(headers, queryParams);
         }
     }

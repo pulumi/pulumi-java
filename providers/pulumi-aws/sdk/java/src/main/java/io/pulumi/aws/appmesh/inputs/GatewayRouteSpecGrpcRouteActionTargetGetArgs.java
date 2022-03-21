@@ -56,12 +56,10 @@ public final class GatewayRouteSpecGrpcRouteActionTargetGetArgs extends io.pulum
             this.virtualService = Objects.requireNonNull(virtualService);
             return this;
         }
-
         public Builder virtualService(GatewayRouteSpecGrpcRouteActionTargetVirtualServiceGetArgs virtualService) {
             this.virtualService = Output.of(Objects.requireNonNull(virtualService));
             return this;
-        }
-        public GatewayRouteSpecGrpcRouteActionTargetGetArgs build() {
+        }        public GatewayRouteSpecGrpcRouteActionTargetGetArgs build() {
             return new GatewayRouteSpecGrpcRouteActionTargetGetArgs(virtualService);
         }
     }

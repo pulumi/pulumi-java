@@ -81,22 +81,18 @@ public final class BatchPoolIdentityArgs extends io.pulumi.resources.ResourceArg
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder type(PoolIdentityType type) {
             this.type = Output.of(Objects.requireNonNull(type));
             return this;
         }
-
         public Builder userAssignedIdentities(@Nullable Output<Map<String,Object>> userAssignedIdentities) {
             this.userAssignedIdentities = userAssignedIdentities;
             return this;
         }
-
         public Builder userAssignedIdentities(@Nullable Map<String,Object> userAssignedIdentities) {
             this.userAssignedIdentities = Output.ofNullable(userAssignedIdentities);
             return this;
-        }
-        public BatchPoolIdentityArgs build() {
+        }        public BatchPoolIdentityArgs build() {
             return new BatchPoolIdentityArgs(type, userAssignedIdentities);
         }
     }

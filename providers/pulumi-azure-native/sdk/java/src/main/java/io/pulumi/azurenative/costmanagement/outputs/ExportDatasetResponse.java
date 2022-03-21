@@ -72,12 +72,10 @@ public final class ExportDatasetResponse {
             this.configuration = configuration;
             return this;
         }
-
         public Builder granularity(@Nullable String granularity) {
             this.granularity = granularity;
             return this;
-        }
-        public ExportDatasetResponse build() {
+        }        public ExportDatasetResponse build() {
             return new ExportDatasetResponse(configuration, granularity);
         }
     }

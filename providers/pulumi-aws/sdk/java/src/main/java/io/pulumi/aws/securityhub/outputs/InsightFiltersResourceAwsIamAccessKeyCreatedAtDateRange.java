@@ -70,12 +70,10 @@ public final class InsightFiltersResourceAwsIamAccessKeyCreatedAtDateRange {
             this.unit = Objects.requireNonNull(unit);
             return this;
         }
-
         public Builder value(Integer value) {
             this.value = Objects.requireNonNull(value);
             return this;
-        }
-        public InsightFiltersResourceAwsIamAccessKeyCreatedAtDateRange build() {
+        }        public InsightFiltersResourceAwsIamAccessKeyCreatedAtDateRange build() {
             return new InsightFiltersResourceAwsIamAccessKeyCreatedAtDateRange(unit, value);
         }
     }

@@ -54,8 +54,7 @@ public final class GetWebAclArgs extends io.pulumi.resources.InvokeArgs {
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
-        }
-        public GetWebAclArgs build() {
+        }        public GetWebAclArgs build() {
             return new GetWebAclArgs(name);
         }
     }

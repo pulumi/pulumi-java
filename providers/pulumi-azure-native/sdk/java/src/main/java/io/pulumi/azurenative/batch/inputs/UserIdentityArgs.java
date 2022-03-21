@@ -79,22 +79,18 @@ public final class UserIdentityArgs extends io.pulumi.resources.ResourceArgs {
             this.autoUser = autoUser;
             return this;
         }
-
         public Builder autoUser(@Nullable AutoUserSpecificationArgs autoUser) {
             this.autoUser = Output.ofNullable(autoUser);
             return this;
         }
-
         public Builder userName(@Nullable Output<String> userName) {
             this.userName = userName;
             return this;
         }
-
         public Builder userName(@Nullable String userName) {
             this.userName = Output.ofNullable(userName);
             return this;
-        }
-        public UserIdentityArgs build() {
+        }        public UserIdentityArgs build() {
             return new UserIdentityArgs(autoUser, userName);
         }
     }

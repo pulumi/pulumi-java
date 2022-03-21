@@ -122,52 +122,42 @@ public final class NamedQueryArgs extends io.pulumi.resources.ResourceArgs {
             this.database = Objects.requireNonNull(database);
             return this;
         }
-
         public Builder database(String database) {
             this.database = Output.of(Objects.requireNonNull(database));
             return this;
         }
-
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder queryString(Output<String> queryString) {
             this.queryString = Objects.requireNonNull(queryString);
             return this;
         }
-
         public Builder queryString(String queryString) {
             this.queryString = Output.of(Objects.requireNonNull(queryString));
             return this;
         }
-
         public Builder workGroup(@Nullable Output<String> workGroup) {
             this.workGroup = workGroup;
             return this;
         }
-
         public Builder workGroup(@Nullable String workGroup) {
             this.workGroup = Output.ofNullable(workGroup);
             return this;
-        }
-        public NamedQueryArgs build() {
+        }        public NamedQueryArgs build() {
             return new NamedQueryArgs(database, description, name, queryString, workGroup);
         }
     }

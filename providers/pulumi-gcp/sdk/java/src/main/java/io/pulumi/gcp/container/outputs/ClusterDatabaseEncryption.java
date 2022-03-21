@@ -71,12 +71,10 @@ public final class ClusterDatabaseEncryption {
             this.keyName = keyName;
             return this;
         }
-
         public Builder state(String state) {
             this.state = Objects.requireNonNull(state);
             return this;
-        }
-        public ClusterDatabaseEncryption build() {
+        }        public ClusterDatabaseEncryption build() {
             return new ClusterDatabaseEncryption(keyName, state);
         }
     }

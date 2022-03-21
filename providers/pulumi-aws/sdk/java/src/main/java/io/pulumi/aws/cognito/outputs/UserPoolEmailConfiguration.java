@@ -119,27 +119,22 @@ public final class UserPoolEmailConfiguration {
             this.configurationSet = configurationSet;
             return this;
         }
-
         public Builder emailSendingAccount(@Nullable String emailSendingAccount) {
             this.emailSendingAccount = emailSendingAccount;
             return this;
         }
-
         public Builder fromEmailAddress(@Nullable String fromEmailAddress) {
             this.fromEmailAddress = fromEmailAddress;
             return this;
         }
-
         public Builder replyToEmailAddress(@Nullable String replyToEmailAddress) {
             this.replyToEmailAddress = replyToEmailAddress;
             return this;
         }
-
         public Builder sourceArn(@Nullable String sourceArn) {
             this.sourceArn = sourceArn;
             return this;
-        }
-        public UserPoolEmailConfiguration build() {
+        }        public UserPoolEmailConfiguration build() {
             return new UserPoolEmailConfiguration(configurationSet, emailSendingAccount, fromEmailAddress, replyToEmailAddress, sourceArn);
         }
     }

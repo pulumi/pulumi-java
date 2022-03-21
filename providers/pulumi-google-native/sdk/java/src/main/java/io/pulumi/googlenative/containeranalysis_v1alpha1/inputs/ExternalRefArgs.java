@@ -111,42 +111,34 @@ public final class ExternalRefArgs extends io.pulumi.resources.ResourceArgs {
             this.category = category;
             return this;
         }
-
         public Builder category(@Nullable ExternalRefCategory category) {
             this.category = Output.ofNullable(category);
             return this;
         }
-
         public Builder comment(@Nullable Output<String> comment) {
             this.comment = comment;
             return this;
         }
-
         public Builder comment(@Nullable String comment) {
             this.comment = Output.ofNullable(comment);
             return this;
         }
-
         public Builder locator(@Nullable Output<String> locator) {
             this.locator = locator;
             return this;
         }
-
         public Builder locator(@Nullable String locator) {
             this.locator = Output.ofNullable(locator);
             return this;
         }
-
         public Builder type(@Nullable Output<String> type) {
             this.type = type;
             return this;
         }
-
         public Builder type(@Nullable String type) {
             this.type = Output.ofNullable(type);
             return this;
-        }
-        public ExternalRefArgs build() {
+        }        public ExternalRefArgs build() {
             return new ExternalRefArgs(category, comment, locator, type);
         }
     }

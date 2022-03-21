@@ -77,22 +77,18 @@ public final class RegionUrlMapPathMatcherPathRuleRouteActionFaultInjectionPolic
             this.httpStatus = Objects.requireNonNull(httpStatus);
             return this;
         }
-
         public Builder httpStatus(Integer httpStatus) {
             this.httpStatus = Output.of(Objects.requireNonNull(httpStatus));
             return this;
         }
-
         public Builder percentage(Output<Double> percentage) {
             this.percentage = Objects.requireNonNull(percentage);
             return this;
         }
-
         public Builder percentage(Double percentage) {
             this.percentage = Output.of(Objects.requireNonNull(percentage));
             return this;
-        }
-        public RegionUrlMapPathMatcherPathRuleRouteActionFaultInjectionPolicyAbortArgs build() {
+        }        public RegionUrlMapPathMatcherPathRuleRouteActionFaultInjectionPolicyAbortArgs build() {
             return new RegionUrlMapPathMatcherPathRuleRouteActionFaultInjectionPolicyAbortArgs(httpStatus, percentage);
         }
     }

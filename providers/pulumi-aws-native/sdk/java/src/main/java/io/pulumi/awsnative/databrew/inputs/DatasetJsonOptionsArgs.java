@@ -57,12 +57,10 @@ public final class DatasetJsonOptionsArgs extends io.pulumi.resources.ResourceAr
             this.multiLine = multiLine;
             return this;
         }
-
         public Builder multiLine(@Nullable Boolean multiLine) {
             this.multiLine = Output.ofNullable(multiLine);
             return this;
-        }
-        public DatasetJsonOptionsArgs build() {
+        }        public DatasetJsonOptionsArgs build() {
             return new DatasetJsonOptionsArgs(multiLine);
         }
     }

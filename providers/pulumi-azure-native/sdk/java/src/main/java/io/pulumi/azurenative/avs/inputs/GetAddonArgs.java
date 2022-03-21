@@ -88,17 +88,14 @@ public final class GetAddonArgs extends io.pulumi.resources.InvokeArgs {
             this.addonName = Objects.requireNonNull(addonName);
             return this;
         }
-
         public Builder privateCloudName(String privateCloudName) {
             this.privateCloudName = Objects.requireNonNull(privateCloudName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
-        }
-        public GetAddonArgs build() {
+        }        public GetAddonArgs build() {
             return new GetAddonArgs(addonName, privateCloudName, resourceGroupName);
         }
     }

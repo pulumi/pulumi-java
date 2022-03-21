@@ -69,12 +69,10 @@ public final class AcceleratorTag {
             this.key = Objects.requireNonNull(key);
             return this;
         }
-
         public Builder value(String value) {
             this.value = Objects.requireNonNull(value);
             return this;
-        }
-        public AcceleratorTag build() {
+        }        public AcceleratorTag build() {
             return new AcceleratorTag(key, value);
         }
     }

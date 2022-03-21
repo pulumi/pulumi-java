@@ -74,22 +74,18 @@ public final class NodeGroupUpdateConfigArgs extends io.pulumi.resources.Resourc
             this.maxUnavailable = maxUnavailable;
             return this;
         }
-
         public Builder maxUnavailable(@Nullable Integer maxUnavailable) {
             this.maxUnavailable = Output.ofNullable(maxUnavailable);
             return this;
         }
-
         public Builder maxUnavailablePercentage(@Nullable Output<Integer> maxUnavailablePercentage) {
             this.maxUnavailablePercentage = maxUnavailablePercentage;
             return this;
         }
-
         public Builder maxUnavailablePercentage(@Nullable Integer maxUnavailablePercentage) {
             this.maxUnavailablePercentage = Output.ofNullable(maxUnavailablePercentage);
             return this;
-        }
-        public NodeGroupUpdateConfigArgs build() {
+        }        public NodeGroupUpdateConfigArgs build() {
             return new NodeGroupUpdateConfigArgs(maxUnavailable, maxUnavailablePercentage);
         }
     }

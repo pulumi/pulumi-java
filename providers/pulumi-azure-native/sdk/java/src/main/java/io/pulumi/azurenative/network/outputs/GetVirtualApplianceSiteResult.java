@@ -152,37 +152,30 @@ public final class GetVirtualApplianceSiteResult {
             this.addressPrefix = addressPrefix;
             return this;
         }
-
         public Builder etag(String etag) {
             this.etag = Objects.requireNonNull(etag);
             return this;
         }
-
         public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
-
         public Builder o365Policy(@Nullable Office365PolicyPropertiesResponse o365Policy) {
             this.o365Policy = o365Policy;
             return this;
         }
-
         public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public GetVirtualApplianceSiteResult build() {
+        }        public GetVirtualApplianceSiteResult build() {
             return new GetVirtualApplianceSiteResult(addressPrefix, etag, id, name, o365Policy, provisioningState, type);
         }
     }

@@ -404,222 +404,181 @@ public final class JobState extends io.pulumi.resources.ResourceArgs {
             this.additionalExperiments = additionalExperiments;
             return this;
         }
-
         public Builder additionalExperiments(@Nullable List<String> additionalExperiments) {
             this.additionalExperiments = Output.ofNullable(additionalExperiments);
             return this;
         }
-
+        public Builder additionalExperiments(String... additionalExperiments) {
+            return additionalExperiments(List.of(additionalExperiments));
+        }
         public Builder enableStreamingEngine(@Nullable Output<Boolean> enableStreamingEngine) {
             this.enableStreamingEngine = enableStreamingEngine;
             return this;
         }
-
         public Builder enableStreamingEngine(@Nullable Boolean enableStreamingEngine) {
             this.enableStreamingEngine = Output.ofNullable(enableStreamingEngine);
             return this;
         }
-
         public Builder ipConfiguration(@Nullable Output<String> ipConfiguration) {
             this.ipConfiguration = ipConfiguration;
             return this;
         }
-
         public Builder ipConfiguration(@Nullable String ipConfiguration) {
             this.ipConfiguration = Output.ofNullable(ipConfiguration);
             return this;
         }
-
         public Builder jobId(@Nullable Output<String> jobId) {
             this.jobId = jobId;
             return this;
         }
-
         public Builder jobId(@Nullable String jobId) {
             this.jobId = Output.ofNullable(jobId);
             return this;
         }
-
         public Builder kmsKeyName(@Nullable Output<String> kmsKeyName) {
             this.kmsKeyName = kmsKeyName;
             return this;
         }
-
         public Builder kmsKeyName(@Nullable String kmsKeyName) {
             this.kmsKeyName = Output.ofNullable(kmsKeyName);
             return this;
         }
-
         public Builder labels(@Nullable Output<Map<String,Object>> labels) {
             this.labels = labels;
             return this;
         }
-
         public Builder labels(@Nullable Map<String,Object> labels) {
             this.labels = Output.ofNullable(labels);
             return this;
         }
-
         public Builder machineType(@Nullable Output<String> machineType) {
             this.machineType = machineType;
             return this;
         }
-
         public Builder machineType(@Nullable String machineType) {
             this.machineType = Output.ofNullable(machineType);
             return this;
         }
-
         public Builder maxWorkers(@Nullable Output<Integer> maxWorkers) {
             this.maxWorkers = maxWorkers;
             return this;
         }
-
         public Builder maxWorkers(@Nullable Integer maxWorkers) {
             this.maxWorkers = Output.ofNullable(maxWorkers);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder network(@Nullable Output<String> network) {
             this.network = network;
             return this;
         }
-
         public Builder network(@Nullable String network) {
             this.network = Output.ofNullable(network);
             return this;
         }
-
         public Builder onDelete(@Nullable Output<String> onDelete) {
             this.onDelete = onDelete;
             return this;
         }
-
         public Builder onDelete(@Nullable String onDelete) {
             this.onDelete = Output.ofNullable(onDelete);
             return this;
         }
-
         public Builder parameters(@Nullable Output<Map<String,Object>> parameters) {
             this.parameters = parameters;
             return this;
         }
-
         public Builder parameters(@Nullable Map<String,Object> parameters) {
             this.parameters = Output.ofNullable(parameters);
             return this;
         }
-
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
         }
-
         public Builder region(@Nullable Output<String> region) {
             this.region = region;
             return this;
         }
-
         public Builder region(@Nullable String region) {
             this.region = Output.ofNullable(region);
             return this;
         }
-
         public Builder serviceAccountEmail(@Nullable Output<String> serviceAccountEmail) {
             this.serviceAccountEmail = serviceAccountEmail;
             return this;
         }
-
         public Builder serviceAccountEmail(@Nullable String serviceAccountEmail) {
             this.serviceAccountEmail = Output.ofNullable(serviceAccountEmail);
             return this;
         }
-
         public Builder state(@Nullable Output<String> state) {
             this.state = state;
             return this;
         }
-
         public Builder state(@Nullable String state) {
             this.state = Output.ofNullable(state);
             return this;
         }
-
         public Builder subnetwork(@Nullable Output<String> subnetwork) {
             this.subnetwork = subnetwork;
             return this;
         }
-
         public Builder subnetwork(@Nullable String subnetwork) {
             this.subnetwork = Output.ofNullable(subnetwork);
             return this;
         }
-
         public Builder tempGcsLocation(@Nullable Output<String> tempGcsLocation) {
             this.tempGcsLocation = tempGcsLocation;
             return this;
         }
-
         public Builder tempGcsLocation(@Nullable String tempGcsLocation) {
             this.tempGcsLocation = Output.ofNullable(tempGcsLocation);
             return this;
         }
-
         public Builder templateGcsPath(@Nullable Output<String> templateGcsPath) {
             this.templateGcsPath = templateGcsPath;
             return this;
         }
-
         public Builder templateGcsPath(@Nullable String templateGcsPath) {
             this.templateGcsPath = Output.ofNullable(templateGcsPath);
             return this;
         }
-
         public Builder transformNameMapping(@Nullable Output<Map<String,Object>> transformNameMapping) {
             this.transformNameMapping = transformNameMapping;
             return this;
         }
-
         public Builder transformNameMapping(@Nullable Map<String,Object> transformNameMapping) {
             this.transformNameMapping = Output.ofNullable(transformNameMapping);
             return this;
         }
-
         public Builder type(@Nullable Output<String> type) {
             this.type = type;
             return this;
         }
-
         public Builder type(@Nullable String type) {
             this.type = Output.ofNullable(type);
             return this;
         }
-
         public Builder zone(@Nullable Output<String> zone) {
             this.zone = zone;
             return this;
         }
-
         public Builder zone(@Nullable String zone) {
             this.zone = Output.ofNullable(zone);
             return this;
-        }
-        public JobState build() {
+        }        public JobState build() {
             return new JobState(additionalExperiments, enableStreamingEngine, ipConfiguration, jobId, kmsKeyName, labels, machineType, maxWorkers, name, network, onDelete, parameters, project, region, serviceAccountEmail, state, subnetwork, tempGcsLocation, templateGcsPath, transformNameMapping, type, zone);
         }
     }

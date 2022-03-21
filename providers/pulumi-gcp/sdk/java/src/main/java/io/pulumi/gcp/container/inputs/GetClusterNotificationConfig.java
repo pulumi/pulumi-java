@@ -52,7 +52,9 @@ public final class GetClusterNotificationConfig extends io.pulumi.resources.Invo
             this.pubsubs = Objects.requireNonNull(pubsubs);
             return this;
         }
-        public GetClusterNotificationConfig build() {
+        public Builder pubsubs(GetClusterNotificationConfigPubsub... pubsubs) {
+            return pubsubs(List.of(pubsubs));
+        }        public GetClusterNotificationConfig build() {
             return new GetClusterNotificationConfig(pubsubs);
         }
     }

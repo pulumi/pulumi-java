@@ -53,12 +53,10 @@ public final class InstanceEphemeralBlockDevice {
             this.deviceName = Objects.requireNonNull(deviceName);
             return this;
         }
-
         public Builder virtualName(String virtualName) {
             this.virtualName = Objects.requireNonNull(virtualName);
             return this;
-        }
-        public InstanceEphemeralBlockDevice build() {
+        }        public InstanceEphemeralBlockDevice build() {
             return new InstanceEphemeralBlockDevice(deviceName, virtualName);
         }
     }

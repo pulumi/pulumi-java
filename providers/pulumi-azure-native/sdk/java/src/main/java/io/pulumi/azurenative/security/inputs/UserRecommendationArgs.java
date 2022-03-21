@@ -78,22 +78,18 @@ public final class UserRecommendationArgs extends io.pulumi.resources.ResourceAr
             this.recommendationAction = recommendationAction;
             return this;
         }
-
         public Builder recommendationAction(@Nullable String recommendationAction) {
             this.recommendationAction = Output.ofNullable(recommendationAction);
             return this;
         }
-
         public Builder username(@Nullable Output<String> username) {
             this.username = username;
             return this;
         }
-
         public Builder username(@Nullable String username) {
             this.username = Output.ofNullable(username);
             return this;
-        }
-        public UserRecommendationArgs build() {
+        }        public UserRecommendationArgs build() {
             return new UserRecommendationArgs(recommendationAction, username);
         }
     }

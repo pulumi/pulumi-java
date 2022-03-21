@@ -57,12 +57,10 @@ public final class DomainDefaultUserSettingsTensorBoardAppSettingsArgs extends i
             this.defaultResourceSpec = defaultResourceSpec;
             return this;
         }
-
         public Builder defaultResourceSpec(@Nullable DomainDefaultUserSettingsTensorBoardAppSettingsDefaultResourceSpecArgs defaultResourceSpec) {
             this.defaultResourceSpec = Output.ofNullable(defaultResourceSpec);
             return this;
-        }
-        public DomainDefaultUserSettingsTensorBoardAppSettingsArgs build() {
+        }        public DomainDefaultUserSettingsTensorBoardAppSettingsArgs build() {
             return new DomainDefaultUserSettingsTensorBoardAppSettingsArgs(defaultResourceSpec);
         }
     }

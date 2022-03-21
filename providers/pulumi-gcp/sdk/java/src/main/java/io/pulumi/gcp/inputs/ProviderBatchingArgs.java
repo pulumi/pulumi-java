@@ -67,22 +67,18 @@ public final class ProviderBatchingArgs extends io.pulumi.resources.ResourceArgs
             this.enableBatching = enableBatching;
             return this;
         }
-
         public Builder enableBatching(@Nullable Boolean enableBatching) {
             this.enableBatching = Output.ofNullable(enableBatching);
             return this;
         }
-
         public Builder sendAfter(@Nullable Output<String> sendAfter) {
             this.sendAfter = sendAfter;
             return this;
         }
-
         public Builder sendAfter(@Nullable String sendAfter) {
             this.sendAfter = Output.ofNullable(sendAfter);
             return this;
-        }
-        public ProviderBatchingArgs build() {
+        }        public ProviderBatchingArgs build() {
             return new ProviderBatchingArgs(enableBatching, sendAfter);
         }
     }

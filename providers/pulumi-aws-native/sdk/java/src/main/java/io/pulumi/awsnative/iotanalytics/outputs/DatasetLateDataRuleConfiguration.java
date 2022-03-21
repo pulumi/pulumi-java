@@ -45,8 +45,7 @@ public final class DatasetLateDataRuleConfiguration {
         public Builder deltaTimeSessionWindowConfiguration(@Nullable DatasetDeltaTimeSessionWindowConfiguration deltaTimeSessionWindowConfiguration) {
             this.deltaTimeSessionWindowConfiguration = deltaTimeSessionWindowConfiguration;
             return this;
-        }
-        public DatasetLateDataRuleConfiguration build() {
+        }        public DatasetLateDataRuleConfiguration build() {
             return new DatasetLateDataRuleConfiguration(deltaTimeSessionWindowConfiguration);
         }
     }

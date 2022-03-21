@@ -208,102 +208,85 @@ public final class HttpRuleArgs extends io.pulumi.resources.ResourceArgs {
             this.additionalBindings = additionalBindings;
             return this;
         }
-
         public Builder additionalBindings(@Nullable List<HttpRuleArgs> additionalBindings) {
             this.additionalBindings = Output.ofNullable(additionalBindings);
             return this;
         }
-
+        public Builder additionalBindings(HttpRuleArgs... additionalBindings) {
+            return additionalBindings(List.of(additionalBindings));
+        }
         public Builder body(@Nullable Output<String> body) {
             this.body = body;
             return this;
         }
-
         public Builder body(@Nullable String body) {
             this.body = Output.ofNullable(body);
             return this;
         }
-
         public Builder custom(@Nullable Output<CustomHttpPatternArgs> custom) {
             this.custom = custom;
             return this;
         }
-
         public Builder custom(@Nullable CustomHttpPatternArgs custom) {
             this.custom = Output.ofNullable(custom);
             return this;
         }
-
         public Builder delete(@Nullable Output<String> delete) {
             this.delete = delete;
             return this;
         }
-
         public Builder delete(@Nullable String delete) {
             this.delete = Output.ofNullable(delete);
             return this;
         }
-
         public Builder get(@Nullable Output<String> get) {
             this.get = get;
             return this;
         }
-
         public Builder get(@Nullable String get) {
             this.get = Output.ofNullable(get);
             return this;
         }
-
         public Builder patch(@Nullable Output<String> patch) {
             this.patch = patch;
             return this;
         }
-
         public Builder patch(@Nullable String patch) {
             this.patch = Output.ofNullable(patch);
             return this;
         }
-
         public Builder post(@Nullable Output<String> post) {
             this.post = post;
             return this;
         }
-
         public Builder post(@Nullable String post) {
             this.post = Output.ofNullable(post);
             return this;
         }
-
         public Builder put(@Nullable Output<String> put) {
             this.put = put;
             return this;
         }
-
         public Builder put(@Nullable String put) {
             this.put = Output.ofNullable(put);
             return this;
         }
-
         public Builder responseBody(@Nullable Output<String> responseBody) {
             this.responseBody = responseBody;
             return this;
         }
-
         public Builder responseBody(@Nullable String responseBody) {
             this.responseBody = Output.ofNullable(responseBody);
             return this;
         }
-
         public Builder selector(@Nullable Output<String> selector) {
             this.selector = selector;
             return this;
         }
-
         public Builder selector(@Nullable String selector) {
             this.selector = Output.ofNullable(selector);
             return this;
-        }
-        public HttpRuleArgs build() {
+        }        public HttpRuleArgs build() {
             return new HttpRuleArgs(additionalBindings, body, custom, delete, get, patch, post, put, responseBody, selector);
         }
     }

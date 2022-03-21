@@ -61,12 +61,13 @@ public final class AlertRuleAllOfConditionArgs extends io.pulumi.resources.Resou
             this.allOf = Objects.requireNonNull(allOf);
             return this;
         }
-
         public Builder allOf(List<AlertRuleAnyOfOrLeafConditionArgs> allOf) {
             this.allOf = Output.of(Objects.requireNonNull(allOf));
             return this;
         }
-        public AlertRuleAllOfConditionArgs build() {
+        public Builder allOf(AlertRuleAnyOfOrLeafConditionArgs... allOf) {
+            return allOf(List.of(allOf));
+        }        public AlertRuleAllOfConditionArgs build() {
             return new AlertRuleAllOfConditionArgs(allOf);
         }
     }

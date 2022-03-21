@@ -58,8 +58,7 @@ public final class ResourceAnnotationResponse extends io.pulumi.resources.Invoke
         public Builder label(String label) {
             this.label = Objects.requireNonNull(label);
             return this;
-        }
-        public ResourceAnnotationResponse build() {
+        }        public ResourceAnnotationResponse build() {
             return new ResourceAnnotationResponse(label);
         }
     }

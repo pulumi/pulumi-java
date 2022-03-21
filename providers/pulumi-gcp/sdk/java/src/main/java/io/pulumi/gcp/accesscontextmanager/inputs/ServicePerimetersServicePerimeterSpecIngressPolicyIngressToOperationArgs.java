@@ -82,22 +82,21 @@ public final class ServicePerimetersServicePerimeterSpecIngressPolicyIngressToOp
             this.methodSelectors = methodSelectors;
             return this;
         }
-
         public Builder methodSelectors(@Nullable List<ServicePerimetersServicePerimeterSpecIngressPolicyIngressToOperationMethodSelectorArgs> methodSelectors) {
             this.methodSelectors = Output.ofNullable(methodSelectors);
             return this;
         }
-
+        public Builder methodSelectors(ServicePerimetersServicePerimeterSpecIngressPolicyIngressToOperationMethodSelectorArgs... methodSelectors) {
+            return methodSelectors(List.of(methodSelectors));
+        }
         public Builder serviceName(@Nullable Output<String> serviceName) {
             this.serviceName = serviceName;
             return this;
         }
-
         public Builder serviceName(@Nullable String serviceName) {
             this.serviceName = Output.ofNullable(serviceName);
             return this;
-        }
-        public ServicePerimetersServicePerimeterSpecIngressPolicyIngressToOperationArgs build() {
+        }        public ServicePerimetersServicePerimeterSpecIngressPolicyIngressToOperationArgs build() {
             return new ServicePerimetersServicePerimeterSpecIngressPolicyIngressToOperationArgs(methodSelectors, serviceName);
         }
     }

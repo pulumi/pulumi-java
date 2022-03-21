@@ -93,17 +93,20 @@ public final class GooglePrivacyDlpV2CloudStorageRegexFileSetResponse extends io
             this.bucketName = Objects.requireNonNull(bucketName);
             return this;
         }
-
         public Builder excludeRegex(List<String> excludeRegex) {
             this.excludeRegex = Objects.requireNonNull(excludeRegex);
             return this;
         }
-
+        public Builder excludeRegex(String... excludeRegex) {
+            return excludeRegex(List.of(excludeRegex));
+        }
         public Builder includeRegex(List<String> includeRegex) {
             this.includeRegex = Objects.requireNonNull(includeRegex);
             return this;
         }
-        public GooglePrivacyDlpV2CloudStorageRegexFileSetResponse build() {
+        public Builder includeRegex(String... includeRegex) {
+            return includeRegex(List.of(includeRegex));
+        }        public GooglePrivacyDlpV2CloudStorageRegexFileSetResponse build() {
             return new GooglePrivacyDlpV2CloudStorageRegexFileSetResponse(bucketName, excludeRegex, includeRegex);
         }
     }

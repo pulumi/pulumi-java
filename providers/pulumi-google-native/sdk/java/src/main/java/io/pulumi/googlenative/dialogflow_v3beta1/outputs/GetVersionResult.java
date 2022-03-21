@@ -134,32 +134,26 @@ public final class GetVersionResult {
             this.createTime = Objects.requireNonNull(createTime);
             return this;
         }
-
         public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
-
         public Builder displayName(String displayName) {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder nluSettings(GoogleCloudDialogflowCxV3beta1NluSettingsResponse nluSettings) {
             this.nluSettings = Objects.requireNonNull(nluSettings);
             return this;
         }
-
         public Builder state(String state) {
             this.state = Objects.requireNonNull(state);
             return this;
-        }
-        public GetVersionResult build() {
+        }        public GetVersionResult build() {
             return new GetVersionResult(createTime, description, displayName, name, nluSettings, state);
         }
     }

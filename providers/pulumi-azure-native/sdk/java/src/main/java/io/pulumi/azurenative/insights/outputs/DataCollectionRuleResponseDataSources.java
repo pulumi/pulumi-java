@@ -106,22 +106,30 @@ public final class DataCollectionRuleResponseDataSources {
             this.extensions = extensions;
             return this;
         }
-
+        public Builder extensions(ExtensionDataSourceResponse... extensions) {
+            return extensions(List.of(extensions));
+        }
         public Builder performanceCounters(@Nullable List<PerfCounterDataSourceResponse> performanceCounters) {
             this.performanceCounters = performanceCounters;
             return this;
         }
-
+        public Builder performanceCounters(PerfCounterDataSourceResponse... performanceCounters) {
+            return performanceCounters(List.of(performanceCounters));
+        }
         public Builder syslog(@Nullable List<SyslogDataSourceResponse> syslog) {
             this.syslog = syslog;
             return this;
         }
-
+        public Builder syslog(SyslogDataSourceResponse... syslog) {
+            return syslog(List.of(syslog));
+        }
         public Builder windowsEventLogs(@Nullable List<WindowsEventLogDataSourceResponse> windowsEventLogs) {
             this.windowsEventLogs = windowsEventLogs;
             return this;
         }
-        public DataCollectionRuleResponseDataSources build() {
+        public Builder windowsEventLogs(WindowsEventLogDataSourceResponse... windowsEventLogs) {
+            return windowsEventLogs(List.of(windowsEventLogs));
+        }        public DataCollectionRuleResponseDataSources build() {
             return new DataCollectionRuleResponseDataSources(extensions, performanceCounters, syslog, windowsEventLogs);
         }
     }

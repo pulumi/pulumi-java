@@ -51,8 +51,7 @@ public final class ChartOptionsResponse {
         public Builder mode(String mode) {
             this.mode = Objects.requireNonNull(mode);
             return this;
-        }
-        public ChartOptionsResponse build() {
+        }        public ChartOptionsResponse build() {
             return new ChartOptionsResponse(mode);
         }
     }

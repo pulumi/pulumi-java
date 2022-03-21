@@ -222,112 +222,93 @@ public final class MaintenanceWindowTaskArgs extends io.pulumi.resources.Resourc
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder maxConcurrency(Output<String> maxConcurrency) {
             this.maxConcurrency = Objects.requireNonNull(maxConcurrency);
             return this;
         }
-
         public Builder maxConcurrency(String maxConcurrency) {
             this.maxConcurrency = Output.of(Objects.requireNonNull(maxConcurrency));
             return this;
         }
-
         public Builder maxErrors(Output<String> maxErrors) {
             this.maxErrors = Objects.requireNonNull(maxErrors);
             return this;
         }
-
         public Builder maxErrors(String maxErrors) {
             this.maxErrors = Output.of(Objects.requireNonNull(maxErrors));
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder priority(@Nullable Output<Integer> priority) {
             this.priority = priority;
             return this;
         }
-
         public Builder priority(@Nullable Integer priority) {
             this.priority = Output.ofNullable(priority);
             return this;
         }
-
         public Builder serviceRoleArn(@Nullable Output<String> serviceRoleArn) {
             this.serviceRoleArn = serviceRoleArn;
             return this;
         }
-
         public Builder serviceRoleArn(@Nullable String serviceRoleArn) {
             this.serviceRoleArn = Output.ofNullable(serviceRoleArn);
             return this;
         }
-
         public Builder targets(@Nullable Output<List<MaintenanceWindowTaskTargetArgs>> targets) {
             this.targets = targets;
             return this;
         }
-
         public Builder targets(@Nullable List<MaintenanceWindowTaskTargetArgs> targets) {
             this.targets = Output.ofNullable(targets);
             return this;
         }
-
+        public Builder targets(MaintenanceWindowTaskTargetArgs... targets) {
+            return targets(List.of(targets));
+        }
         public Builder taskArn(Output<String> taskArn) {
             this.taskArn = Objects.requireNonNull(taskArn);
             return this;
         }
-
         public Builder taskArn(String taskArn) {
             this.taskArn = Output.of(Objects.requireNonNull(taskArn));
             return this;
         }
-
         public Builder taskInvocationParameters(@Nullable Output<MaintenanceWindowTaskTaskInvocationParametersArgs> taskInvocationParameters) {
             this.taskInvocationParameters = taskInvocationParameters;
             return this;
         }
-
         public Builder taskInvocationParameters(@Nullable MaintenanceWindowTaskTaskInvocationParametersArgs taskInvocationParameters) {
             this.taskInvocationParameters = Output.ofNullable(taskInvocationParameters);
             return this;
         }
-
         public Builder taskType(Output<String> taskType) {
             this.taskType = Objects.requireNonNull(taskType);
             return this;
         }
-
         public Builder taskType(String taskType) {
             this.taskType = Output.of(Objects.requireNonNull(taskType));
             return this;
         }
-
         public Builder windowId(Output<String> windowId) {
             this.windowId = Objects.requireNonNull(windowId);
             return this;
         }
-
         public Builder windowId(String windowId) {
             this.windowId = Output.of(Objects.requireNonNull(windowId));
             return this;
-        }
-        public MaintenanceWindowTaskArgs build() {
+        }        public MaintenanceWindowTaskArgs build() {
             return new MaintenanceWindowTaskArgs(description, maxConcurrency, maxErrors, name, priority, serviceRoleArn, targets, taskArn, taskInvocationParameters, taskType, windowId);
         }
     }

@@ -78,17 +78,14 @@ public final class GetPacketMirroringArgs extends io.pulumi.resources.InvokeArgs
             this.packetMirroring = Objects.requireNonNull(packetMirroring);
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = project;
             return this;
         }
-
         public Builder region(String region) {
             this.region = Objects.requireNonNull(region);
             return this;
-        }
-        public GetPacketMirroringArgs build() {
+        }        public GetPacketMirroringArgs build() {
             return new GetPacketMirroringArgs(packetMirroring, project, region);
         }
     }

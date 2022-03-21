@@ -111,22 +111,21 @@ public final class ReachabilityDetailsResponse extends io.pulumi.resources.Invok
             this.error = Objects.requireNonNull(error);
             return this;
         }
-
         public Builder result(String result) {
             this.result = Objects.requireNonNull(result);
             return this;
         }
-
         public Builder traces(List<TraceResponse> traces) {
             this.traces = Objects.requireNonNull(traces);
             return this;
         }
-
+        public Builder traces(TraceResponse... traces) {
+            return traces(List.of(traces));
+        }
         public Builder verifyTime(String verifyTime) {
             this.verifyTime = Objects.requireNonNull(verifyTime);
             return this;
-        }
-        public ReachabilityDetailsResponse build() {
+        }        public ReachabilityDetailsResponse build() {
             return new ReachabilityDetailsResponse(error, result, traces, verifyTime);
         }
     }

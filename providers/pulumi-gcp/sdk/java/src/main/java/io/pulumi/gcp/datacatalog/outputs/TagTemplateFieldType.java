@@ -80,12 +80,10 @@ public final class TagTemplateFieldType {
             this.enumType = enumType;
             return this;
         }
-
         public Builder primitiveType(@Nullable String primitiveType) {
             this.primitiveType = primitiveType;
             return this;
-        }
-        public TagTemplateFieldType build() {
+        }        public TagTemplateFieldType build() {
             return new TagTemplateFieldType(enumType, primitiveType);
         }
     }

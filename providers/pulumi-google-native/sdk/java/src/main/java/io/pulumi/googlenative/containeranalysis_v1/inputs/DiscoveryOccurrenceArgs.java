@@ -129,52 +129,42 @@ public final class DiscoveryOccurrenceArgs extends io.pulumi.resources.ResourceA
             this.analysisStatus = analysisStatus;
             return this;
         }
-
         public Builder analysisStatus(@Nullable DiscoveryOccurrenceAnalysisStatus analysisStatus) {
             this.analysisStatus = Output.ofNullable(analysisStatus);
             return this;
         }
-
         public Builder analysisStatusError(@Nullable Output<StatusArgs> analysisStatusError) {
             this.analysisStatusError = analysisStatusError;
             return this;
         }
-
         public Builder analysisStatusError(@Nullable StatusArgs analysisStatusError) {
             this.analysisStatusError = Output.ofNullable(analysisStatusError);
             return this;
         }
-
         public Builder continuousAnalysis(@Nullable Output<DiscoveryOccurrenceContinuousAnalysis> continuousAnalysis) {
             this.continuousAnalysis = continuousAnalysis;
             return this;
         }
-
         public Builder continuousAnalysis(@Nullable DiscoveryOccurrenceContinuousAnalysis continuousAnalysis) {
             this.continuousAnalysis = Output.ofNullable(continuousAnalysis);
             return this;
         }
-
         public Builder cpe(@Nullable Output<String> cpe) {
             this.cpe = cpe;
             return this;
         }
-
         public Builder cpe(@Nullable String cpe) {
             this.cpe = Output.ofNullable(cpe);
             return this;
         }
-
         public Builder lastScanTime(@Nullable Output<String> lastScanTime) {
             this.lastScanTime = lastScanTime;
             return this;
         }
-
         public Builder lastScanTime(@Nullable String lastScanTime) {
             this.lastScanTime = Output.ofNullable(lastScanTime);
             return this;
-        }
-        public DiscoveryOccurrenceArgs build() {
+        }        public DiscoveryOccurrenceArgs build() {
             return new DiscoveryOccurrenceArgs(analysisStatus, analysisStatusError, continuousAnalysis, cpe, lastScanTime);
         }
     }

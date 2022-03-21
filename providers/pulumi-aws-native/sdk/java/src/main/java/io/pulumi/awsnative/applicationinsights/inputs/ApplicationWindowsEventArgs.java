@@ -112,42 +112,37 @@ public final class ApplicationWindowsEventArgs extends io.pulumi.resources.Resou
             this.eventLevels = Objects.requireNonNull(eventLevels);
             return this;
         }
-
         public Builder eventLevels(List<ApplicationEventLevel> eventLevels) {
             this.eventLevels = Output.of(Objects.requireNonNull(eventLevels));
             return this;
         }
-
+        public Builder eventLevels(ApplicationEventLevel... eventLevels) {
+            return eventLevels(List.of(eventLevels));
+        }
         public Builder eventName(Output<String> eventName) {
             this.eventName = Objects.requireNonNull(eventName);
             return this;
         }
-
         public Builder eventName(String eventName) {
             this.eventName = Output.of(Objects.requireNonNull(eventName));
             return this;
         }
-
         public Builder logGroupName(Output<String> logGroupName) {
             this.logGroupName = Objects.requireNonNull(logGroupName);
             return this;
         }
-
         public Builder logGroupName(String logGroupName) {
             this.logGroupName = Output.of(Objects.requireNonNull(logGroupName));
             return this;
         }
-
         public Builder patternSet(@Nullable Output<String> patternSet) {
             this.patternSet = patternSet;
             return this;
         }
-
         public Builder patternSet(@Nullable String patternSet) {
             this.patternSet = Output.ofNullable(patternSet);
             return this;
-        }
-        public ApplicationWindowsEventArgs build() {
+        }        public ApplicationWindowsEventArgs build() {
             return new ApplicationWindowsEventArgs(eventLevels, eventName, logGroupName, patternSet);
         }
     }

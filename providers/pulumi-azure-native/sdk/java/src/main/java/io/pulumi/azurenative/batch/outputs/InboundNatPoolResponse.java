@@ -129,32 +129,29 @@ public final class InboundNatPoolResponse {
             this.backendPort = Objects.requireNonNull(backendPort);
             return this;
         }
-
         public Builder frontendPortRangeEnd(Integer frontendPortRangeEnd) {
             this.frontendPortRangeEnd = Objects.requireNonNull(frontendPortRangeEnd);
             return this;
         }
-
         public Builder frontendPortRangeStart(Integer frontendPortRangeStart) {
             this.frontendPortRangeStart = Objects.requireNonNull(frontendPortRangeStart);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder networkSecurityGroupRules(@Nullable List<NetworkSecurityGroupRuleResponse> networkSecurityGroupRules) {
             this.networkSecurityGroupRules = networkSecurityGroupRules;
             return this;
         }
-
+        public Builder networkSecurityGroupRules(NetworkSecurityGroupRuleResponse... networkSecurityGroupRules) {
+            return networkSecurityGroupRules(List.of(networkSecurityGroupRules));
+        }
         public Builder protocol(String protocol) {
             this.protocol = Objects.requireNonNull(protocol);
             return this;
-        }
-        public InboundNatPoolResponse build() {
+        }        public InboundNatPoolResponse build() {
             return new InboundNatPoolResponse(backendPort, frontendPortRangeEnd, frontendPortRangeStart, name, networkSecurityGroupRules, protocol);
         }
     }

@@ -121,27 +121,28 @@ public final class VirtualMachineExtensionInstanceViewResponse {
             this.name = name;
             return this;
         }
-
         public Builder statuses(@Nullable List<InstanceViewStatusResponse> statuses) {
             this.statuses = statuses;
             return this;
         }
-
+        public Builder statuses(InstanceViewStatusResponse... statuses) {
+            return statuses(List.of(statuses));
+        }
         public Builder substatuses(@Nullable List<InstanceViewStatusResponse> substatuses) {
             this.substatuses = substatuses;
             return this;
         }
-
+        public Builder substatuses(InstanceViewStatusResponse... substatuses) {
+            return substatuses(List.of(substatuses));
+        }
         public Builder type(@Nullable String type) {
             this.type = type;
             return this;
         }
-
         public Builder typeHandlerVersion(@Nullable String typeHandlerVersion) {
             this.typeHandlerVersion = typeHandlerVersion;
             return this;
-        }
-        public VirtualMachineExtensionInstanceViewResponse build() {
+        }        public VirtualMachineExtensionInstanceViewResponse build() {
             return new VirtualMachineExtensionInstanceViewResponse(name, statuses, substatuses, type, typeHandlerVersion);
         }
     }

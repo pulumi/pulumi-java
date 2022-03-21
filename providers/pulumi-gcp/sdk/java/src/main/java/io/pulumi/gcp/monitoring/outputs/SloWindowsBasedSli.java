@@ -170,27 +170,22 @@ public final class SloWindowsBasedSli {
             this.goodBadMetricFilter = goodBadMetricFilter;
             return this;
         }
-
         public Builder goodTotalRatioThreshold(@Nullable SloWindowsBasedSliGoodTotalRatioThreshold goodTotalRatioThreshold) {
             this.goodTotalRatioThreshold = goodTotalRatioThreshold;
             return this;
         }
-
         public Builder metricMeanInRange(@Nullable SloWindowsBasedSliMetricMeanInRange metricMeanInRange) {
             this.metricMeanInRange = metricMeanInRange;
             return this;
         }
-
         public Builder metricSumInRange(@Nullable SloWindowsBasedSliMetricSumInRange metricSumInRange) {
             this.metricSumInRange = metricSumInRange;
             return this;
         }
-
         public Builder windowPeriod(@Nullable String windowPeriod) {
             this.windowPeriod = windowPeriod;
             return this;
-        }
-        public SloWindowsBasedSli build() {
+        }        public SloWindowsBasedSli build() {
             return new SloWindowsBasedSli(goodBadMetricFilter, goodTotalRatioThreshold, metricMeanInRange, metricSumInRange, windowPeriod);
         }
     }

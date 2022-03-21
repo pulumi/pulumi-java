@@ -182,82 +182,66 @@ public final class ConnectorProfileCredentials {
             this.amplitude = amplitude;
             return this;
         }
-
         public Builder datadog(@Nullable ConnectorProfileDatadogConnectorProfileCredentials datadog) {
             this.datadog = datadog;
             return this;
         }
-
         public Builder dynatrace(@Nullable ConnectorProfileDynatraceConnectorProfileCredentials dynatrace) {
             this.dynatrace = dynatrace;
             return this;
         }
-
         public Builder googleAnalytics(@Nullable ConnectorProfileGoogleAnalyticsConnectorProfileCredentials googleAnalytics) {
             this.googleAnalytics = googleAnalytics;
             return this;
         }
-
         public Builder inforNexus(@Nullable ConnectorProfileInforNexusConnectorProfileCredentials inforNexus) {
             this.inforNexus = inforNexus;
             return this;
         }
-
         public Builder marketo(@Nullable ConnectorProfileMarketoConnectorProfileCredentials marketo) {
             this.marketo = marketo;
             return this;
         }
-
         public Builder redshift(@Nullable ConnectorProfileRedshiftConnectorProfileCredentials redshift) {
             this.redshift = redshift;
             return this;
         }
-
         public Builder sAPOData(@Nullable ConnectorProfileSAPODataConnectorProfileCredentials sAPOData) {
             this.sAPOData = sAPOData;
             return this;
         }
-
         public Builder salesforce(@Nullable ConnectorProfileSalesforceConnectorProfileCredentials salesforce) {
             this.salesforce = salesforce;
             return this;
         }
-
         public Builder serviceNow(@Nullable ConnectorProfileServiceNowConnectorProfileCredentials serviceNow) {
             this.serviceNow = serviceNow;
             return this;
         }
-
         public Builder singular(@Nullable ConnectorProfileSingularConnectorProfileCredentials singular) {
             this.singular = singular;
             return this;
         }
-
         public Builder slack(@Nullable ConnectorProfileSlackConnectorProfileCredentials slack) {
             this.slack = slack;
             return this;
         }
-
         public Builder snowflake(@Nullable ConnectorProfileSnowflakeConnectorProfileCredentials snowflake) {
             this.snowflake = snowflake;
             return this;
         }
-
         public Builder trendmicro(@Nullable ConnectorProfileTrendmicroConnectorProfileCredentials trendmicro) {
             this.trendmicro = trendmicro;
             return this;
         }
-
         public Builder veeva(@Nullable ConnectorProfileVeevaConnectorProfileCredentials veeva) {
             this.veeva = veeva;
             return this;
         }
-
         public Builder zendesk(@Nullable ConnectorProfileZendeskConnectorProfileCredentials zendesk) {
             this.zendesk = zendesk;
             return this;
-        }
-        public ConnectorProfileCredentials build() {
+        }        public ConnectorProfileCredentials build() {
             return new ConnectorProfileCredentials(amplitude, datadog, dynatrace, googleAnalytics, inforNexus, marketo, redshift, sAPOData, salesforce, serviceNow, singular, slack, snowflake, trendmicro, veeva, zendesk);
         }
     }

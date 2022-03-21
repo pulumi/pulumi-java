@@ -53,12 +53,10 @@ public final class IndexJsonTokenTypeConfiguration {
             this.groupAttributeField = Objects.requireNonNull(groupAttributeField);
             return this;
         }
-
         public Builder userNameAttributeField(String userNameAttributeField) {
             this.userNameAttributeField = Objects.requireNonNull(userNameAttributeField);
             return this;
-        }
-        public IndexJsonTokenTypeConfiguration build() {
+        }        public IndexJsonTokenTypeConfiguration build() {
             return new IndexJsonTokenTypeConfiguration(groupAttributeField, userNameAttributeField);
         }
     }

@@ -88,17 +88,14 @@ public final class GetIntegrationRuntimeArgs extends io.pulumi.resources.InvokeA
             this.integrationRuntimeName = Objects.requireNonNull(integrationRuntimeName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder workspaceName(String workspaceName) {
             this.workspaceName = Objects.requireNonNull(workspaceName);
             return this;
-        }
-        public GetIntegrationRuntimeArgs build() {
+        }        public GetIntegrationRuntimeArgs build() {
             return new GetIntegrationRuntimeArgs(integrationRuntimeName, resourceGroupName, workspaceName);
         }
     }

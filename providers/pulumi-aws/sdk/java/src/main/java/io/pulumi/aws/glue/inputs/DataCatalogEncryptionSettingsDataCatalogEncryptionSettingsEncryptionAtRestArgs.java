@@ -74,22 +74,18 @@ public final class DataCatalogEncryptionSettingsDataCatalogEncryptionSettingsEnc
             this.catalogEncryptionMode = Objects.requireNonNull(catalogEncryptionMode);
             return this;
         }
-
         public Builder catalogEncryptionMode(String catalogEncryptionMode) {
             this.catalogEncryptionMode = Output.of(Objects.requireNonNull(catalogEncryptionMode));
             return this;
         }
-
         public Builder sseAwsKmsKeyId(@Nullable Output<String> sseAwsKmsKeyId) {
             this.sseAwsKmsKeyId = sseAwsKmsKeyId;
             return this;
         }
-
         public Builder sseAwsKmsKeyId(@Nullable String sseAwsKmsKeyId) {
             this.sseAwsKmsKeyId = Output.ofNullable(sseAwsKmsKeyId);
             return this;
-        }
-        public DataCatalogEncryptionSettingsDataCatalogEncryptionSettingsEncryptionAtRestArgs build() {
+        }        public DataCatalogEncryptionSettingsDataCatalogEncryptionSettingsEncryptionAtRestArgs build() {
             return new DataCatalogEncryptionSettingsDataCatalogEncryptionSettingsEncryptionAtRestArgs(catalogEncryptionMode, sseAwsKmsKeyId);
         }
     }

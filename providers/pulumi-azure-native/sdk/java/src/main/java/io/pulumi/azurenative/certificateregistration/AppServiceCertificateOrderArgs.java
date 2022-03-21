@@ -239,122 +239,98 @@ public final class AppServiceCertificateOrderArgs extends io.pulumi.resources.Re
             this.autoRenew = autoRenew;
             return this;
         }
-
         public Builder autoRenew(@Nullable Boolean autoRenew) {
             this.autoRenew = Output.ofNullable(autoRenew);
             return this;
         }
-
         public Builder certificateOrderName(@Nullable Output<String> certificateOrderName) {
             this.certificateOrderName = certificateOrderName;
             return this;
         }
-
         public Builder certificateOrderName(@Nullable String certificateOrderName) {
             this.certificateOrderName = Output.ofNullable(certificateOrderName);
             return this;
         }
-
         public Builder certificates(@Nullable Output<Map<String,AppServiceCertificateArgs>> certificates) {
             this.certificates = certificates;
             return this;
         }
-
         public Builder certificates(@Nullable Map<String,AppServiceCertificateArgs> certificates) {
             this.certificates = Output.ofNullable(certificates);
             return this;
         }
-
         public Builder csr(@Nullable Output<String> csr) {
             this.csr = csr;
             return this;
         }
-
         public Builder csr(@Nullable String csr) {
             this.csr = Output.ofNullable(csr);
             return this;
         }
-
         public Builder distinguishedName(@Nullable Output<String> distinguishedName) {
             this.distinguishedName = distinguishedName;
             return this;
         }
-
         public Builder distinguishedName(@Nullable String distinguishedName) {
             this.distinguishedName = Output.ofNullable(distinguishedName);
             return this;
         }
-
         public Builder keySize(@Nullable Output<Integer> keySize) {
             this.keySize = keySize;
             return this;
         }
-
         public Builder keySize(@Nullable Integer keySize) {
             this.keySize = Output.ofNullable(keySize);
             return this;
         }
-
         public Builder kind(@Nullable Output<String> kind) {
             this.kind = kind;
             return this;
         }
-
         public Builder kind(@Nullable String kind) {
             this.kind = Output.ofNullable(kind);
             return this;
         }
-
         public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder productType(Output<CertificateProductType> productType) {
             this.productType = Objects.requireNonNull(productType);
             return this;
         }
-
         public Builder productType(CertificateProductType productType) {
             this.productType = Output.of(Objects.requireNonNull(productType));
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
         public Builder validityInYears(@Nullable Output<Integer> validityInYears) {
             this.validityInYears = validityInYears;
             return this;
         }
-
         public Builder validityInYears(@Nullable Integer validityInYears) {
             this.validityInYears = Output.ofNullable(validityInYears);
             return this;
-        }
-        public AppServiceCertificateOrderArgs build() {
+        }        public AppServiceCertificateOrderArgs build() {
             return new AppServiceCertificateOrderArgs(autoRenew, certificateOrderName, certificates, csr, distinguishedName, keySize, kind, location, productType, resourceGroupName, tags, validityInYears);
         }
     }

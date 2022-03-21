@@ -78,12 +78,10 @@ public final class NWRuleSetIpRulesResponse extends io.pulumi.resources.InvokeAr
             this.action = action;
             return this;
         }
-
         public Builder ipMask(@Nullable String ipMask) {
             this.ipMask = ipMask;
             return this;
-        }
-        public NWRuleSetIpRulesResponse build() {
+        }        public NWRuleSetIpRulesResponse build() {
             return new NWRuleSetIpRulesResponse(action, ipMask);
         }
     }

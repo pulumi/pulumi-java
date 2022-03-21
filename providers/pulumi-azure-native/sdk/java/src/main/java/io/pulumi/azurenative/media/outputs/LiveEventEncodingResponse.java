@@ -103,22 +103,18 @@ public final class LiveEventEncodingResponse {
             this.encodingType = encodingType;
             return this;
         }
-
         public Builder keyFrameInterval(@Nullable String keyFrameInterval) {
             this.keyFrameInterval = keyFrameInterval;
             return this;
         }
-
         public Builder presetName(@Nullable String presetName) {
             this.presetName = presetName;
             return this;
         }
-
         public Builder stretchMode(@Nullable String stretchMode) {
             this.stretchMode = stretchMode;
             return this;
-        }
-        public LiveEventEncodingResponse build() {
+        }        public LiveEventEncodingResponse build() {
             return new LiveEventEncodingResponse(encodingType, keyFrameInterval, presetName, stretchMode);
         }
     }

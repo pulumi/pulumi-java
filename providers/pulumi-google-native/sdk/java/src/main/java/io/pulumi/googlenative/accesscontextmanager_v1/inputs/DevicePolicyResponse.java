@@ -143,32 +143,35 @@ public final class DevicePolicyResponse extends io.pulumi.resources.InvokeArgs {
             this.allowedDeviceManagementLevels = Objects.requireNonNull(allowedDeviceManagementLevels);
             return this;
         }
-
+        public Builder allowedDeviceManagementLevels(String... allowedDeviceManagementLevels) {
+            return allowedDeviceManagementLevels(List.of(allowedDeviceManagementLevels));
+        }
         public Builder allowedEncryptionStatuses(List<String> allowedEncryptionStatuses) {
             this.allowedEncryptionStatuses = Objects.requireNonNull(allowedEncryptionStatuses);
             return this;
         }
-
+        public Builder allowedEncryptionStatuses(String... allowedEncryptionStatuses) {
+            return allowedEncryptionStatuses(List.of(allowedEncryptionStatuses));
+        }
         public Builder osConstraints(List<OsConstraintResponse> osConstraints) {
             this.osConstraints = Objects.requireNonNull(osConstraints);
             return this;
         }
-
+        public Builder osConstraints(OsConstraintResponse... osConstraints) {
+            return osConstraints(List.of(osConstraints));
+        }
         public Builder requireAdminApproval(Boolean requireAdminApproval) {
             this.requireAdminApproval = Objects.requireNonNull(requireAdminApproval);
             return this;
         }
-
         public Builder requireCorpOwned(Boolean requireCorpOwned) {
             this.requireCorpOwned = Objects.requireNonNull(requireCorpOwned);
             return this;
         }
-
         public Builder requireScreenlock(Boolean requireScreenlock) {
             this.requireScreenlock = Objects.requireNonNull(requireScreenlock);
             return this;
-        }
-        public DevicePolicyResponse build() {
+        }        public DevicePolicyResponse build() {
             return new DevicePolicyResponse(allowedDeviceManagementLevels, allowedEncryptionStatuses, osConstraints, requireAdminApproval, requireCorpOwned, requireScreenlock);
         }
     }

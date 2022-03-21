@@ -63,17 +63,14 @@ public final class UserIdentityInfo {
             this.email = email;
             return this;
         }
-
         public Builder firstName(@Nullable String firstName) {
             this.firstName = firstName;
             return this;
         }
-
         public Builder lastName(@Nullable String lastName) {
             this.lastName = lastName;
             return this;
-        }
-        public UserIdentityInfo build() {
+        }        public UserIdentityInfo build() {
             return new UserIdentityInfo(email, firstName, lastName);
         }
     }

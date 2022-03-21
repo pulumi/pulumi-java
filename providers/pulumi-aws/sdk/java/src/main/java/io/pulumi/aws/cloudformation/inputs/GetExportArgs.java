@@ -54,8 +54,7 @@ public final class GetExportArgs extends io.pulumi.resources.InvokeArgs {
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
-        }
-        public GetExportArgs build() {
+        }        public GetExportArgs build() {
             return new GetExportArgs(name);
         }
     }

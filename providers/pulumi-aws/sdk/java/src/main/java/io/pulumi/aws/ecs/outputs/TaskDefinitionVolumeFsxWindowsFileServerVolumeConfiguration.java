@@ -86,17 +86,14 @@ public final class TaskDefinitionVolumeFsxWindowsFileServerVolumeConfiguration {
             this.authorizationConfig = Objects.requireNonNull(authorizationConfig);
             return this;
         }
-
         public Builder fileSystemId(String fileSystemId) {
             this.fileSystemId = Objects.requireNonNull(fileSystemId);
             return this;
         }
-
         public Builder rootDirectory(String rootDirectory) {
             this.rootDirectory = Objects.requireNonNull(rootDirectory);
             return this;
-        }
-        public TaskDefinitionVolumeFsxWindowsFileServerVolumeConfiguration build() {
+        }        public TaskDefinitionVolumeFsxWindowsFileServerVolumeConfiguration build() {
             return new TaskDefinitionVolumeFsxWindowsFileServerVolumeConfiguration(authorizationConfig, fileSystemId, rootDirectory);
         }
     }

@@ -80,12 +80,16 @@ public final class SecurityPolicyWebApplicationFirewallAssociationResponse exten
             this.domains = domains;
             return this;
         }
-
+        public Builder domains(ResourceReferenceResponse... domains) {
+            return domains(List.of(domains));
+        }
         public Builder patternsToMatch(@Nullable List<String> patternsToMatch) {
             this.patternsToMatch = patternsToMatch;
             return this;
         }
-        public SecurityPolicyWebApplicationFirewallAssociationResponse build() {
+        public Builder patternsToMatch(String... patternsToMatch) {
+            return patternsToMatch(List.of(patternsToMatch));
+        }        public SecurityPolicyWebApplicationFirewallAssociationResponse build() {
             return new SecurityPolicyWebApplicationFirewallAssociationResponse(domains, patternsToMatch);
         }
     }

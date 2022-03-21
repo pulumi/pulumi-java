@@ -105,22 +105,18 @@ public final class RouterBgpPeerBfdResponse extends io.pulumi.resources.InvokeAr
             this.minReceiveInterval = Objects.requireNonNull(minReceiveInterval);
             return this;
         }
-
         public Builder minTransmitInterval(Integer minTransmitInterval) {
             this.minTransmitInterval = Objects.requireNonNull(minTransmitInterval);
             return this;
         }
-
         public Builder multiplier(Integer multiplier) {
             this.multiplier = Objects.requireNonNull(multiplier);
             return this;
         }
-
         public Builder sessionInitializationMode(String sessionInitializationMode) {
             this.sessionInitializationMode = Objects.requireNonNull(sessionInitializationMode);
             return this;
-        }
-        public RouterBgpPeerBfdResponse build() {
+        }        public RouterBgpPeerBfdResponse build() {
             return new RouterBgpPeerBfdResponse(minReceiveInterval, minTransmitInterval, multiplier, sessionInitializationMode);
         }
     }

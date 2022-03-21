@@ -71,12 +71,13 @@ public final class DynamicGroupMetadataResponse {
             this.queries = Objects.requireNonNull(queries);
             return this;
         }
-
+        public Builder queries(DynamicGroupQueryResponse... queries) {
+            return queries(List.of(queries));
+        }
         public Builder status(DynamicGroupStatusResponse status) {
             this.status = Objects.requireNonNull(status);
             return this;
-        }
-        public DynamicGroupMetadataResponse build() {
+        }        public DynamicGroupMetadataResponse build() {
             return new DynamicGroupMetadataResponse(queries, status);
         }
     }

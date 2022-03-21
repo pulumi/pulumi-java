@@ -170,82 +170,66 @@ public final class DirectoryWorkspaceAccessPropertiesArgs extends io.pulumi.reso
             this.deviceTypeAndroid = deviceTypeAndroid;
             return this;
         }
-
         public Builder deviceTypeAndroid(@Nullable String deviceTypeAndroid) {
             this.deviceTypeAndroid = Output.ofNullable(deviceTypeAndroid);
             return this;
         }
-
         public Builder deviceTypeChromeos(@Nullable Output<String> deviceTypeChromeos) {
             this.deviceTypeChromeos = deviceTypeChromeos;
             return this;
         }
-
         public Builder deviceTypeChromeos(@Nullable String deviceTypeChromeos) {
             this.deviceTypeChromeos = Output.ofNullable(deviceTypeChromeos);
             return this;
         }
-
         public Builder deviceTypeIos(@Nullable Output<String> deviceTypeIos) {
             this.deviceTypeIos = deviceTypeIos;
             return this;
         }
-
         public Builder deviceTypeIos(@Nullable String deviceTypeIos) {
             this.deviceTypeIos = Output.ofNullable(deviceTypeIos);
             return this;
         }
-
         public Builder deviceTypeLinux(@Nullable Output<String> deviceTypeLinux) {
             this.deviceTypeLinux = deviceTypeLinux;
             return this;
         }
-
         public Builder deviceTypeLinux(@Nullable String deviceTypeLinux) {
             this.deviceTypeLinux = Output.ofNullable(deviceTypeLinux);
             return this;
         }
-
         public Builder deviceTypeOsx(@Nullable Output<String> deviceTypeOsx) {
             this.deviceTypeOsx = deviceTypeOsx;
             return this;
         }
-
         public Builder deviceTypeOsx(@Nullable String deviceTypeOsx) {
             this.deviceTypeOsx = Output.ofNullable(deviceTypeOsx);
             return this;
         }
-
         public Builder deviceTypeWeb(@Nullable Output<String> deviceTypeWeb) {
             this.deviceTypeWeb = deviceTypeWeb;
             return this;
         }
-
         public Builder deviceTypeWeb(@Nullable String deviceTypeWeb) {
             this.deviceTypeWeb = Output.ofNullable(deviceTypeWeb);
             return this;
         }
-
         public Builder deviceTypeWindows(@Nullable Output<String> deviceTypeWindows) {
             this.deviceTypeWindows = deviceTypeWindows;
             return this;
         }
-
         public Builder deviceTypeWindows(@Nullable String deviceTypeWindows) {
             this.deviceTypeWindows = Output.ofNullable(deviceTypeWindows);
             return this;
         }
-
         public Builder deviceTypeZeroclient(@Nullable Output<String> deviceTypeZeroclient) {
             this.deviceTypeZeroclient = deviceTypeZeroclient;
             return this;
         }
-
         public Builder deviceTypeZeroclient(@Nullable String deviceTypeZeroclient) {
             this.deviceTypeZeroclient = Output.ofNullable(deviceTypeZeroclient);
             return this;
-        }
-        public DirectoryWorkspaceAccessPropertiesArgs build() {
+        }        public DirectoryWorkspaceAccessPropertiesArgs build() {
             return new DirectoryWorkspaceAccessPropertiesArgs(deviceTypeAndroid, deviceTypeChromeos, deviceTypeIos, deviceTypeLinux, deviceTypeOsx, deviceTypeWeb, deviceTypeWindows, deviceTypeZeroclient);
         }
     }

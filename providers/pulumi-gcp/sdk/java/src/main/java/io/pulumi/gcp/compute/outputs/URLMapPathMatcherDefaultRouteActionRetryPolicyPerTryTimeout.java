@@ -76,12 +76,10 @@ public final class URLMapPathMatcherDefaultRouteActionRetryPolicyPerTryTimeout {
             this.nanos = nanos;
             return this;
         }
-
         public Builder seconds(@Nullable String seconds) {
             this.seconds = seconds;
             return this;
-        }
-        public URLMapPathMatcherDefaultRouteActionRetryPolicyPerTryTimeout build() {
+        }        public URLMapPathMatcherDefaultRouteActionRetryPolicyPerTryTimeout build() {
             return new URLMapPathMatcherDefaultRouteActionRetryPolicyPerTryTimeout(nanos, seconds);
         }
     }

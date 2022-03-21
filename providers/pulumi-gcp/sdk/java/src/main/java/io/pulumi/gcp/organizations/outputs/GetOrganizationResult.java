@@ -151,42 +151,34 @@ public final class GetOrganizationResult {
             this.createTime = Objects.requireNonNull(createTime);
             return this;
         }
-
         public Builder directoryCustomerId(String directoryCustomerId) {
             this.directoryCustomerId = Objects.requireNonNull(directoryCustomerId);
             return this;
         }
-
         public Builder domain(String domain) {
             this.domain = Objects.requireNonNull(domain);
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder lifecycleState(String lifecycleState) {
             this.lifecycleState = Objects.requireNonNull(lifecycleState);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder orgId(String orgId) {
             this.orgId = Objects.requireNonNull(orgId);
             return this;
         }
-
         public Builder organization(@Nullable String organization) {
             this.organization = organization;
             return this;
-        }
-        public GetOrganizationResult build() {
+        }        public GetOrganizationResult build() {
             return new GetOrganizationResult(createTime, directoryCustomerId, domain, id, lifecycleState, name, orgId, organization);
         }
     }

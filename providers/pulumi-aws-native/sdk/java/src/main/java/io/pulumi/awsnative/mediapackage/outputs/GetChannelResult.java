@@ -121,27 +121,22 @@ public final class GetChannelResult {
             this.arn = arn;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
-
         public Builder egressAccessLogs(@Nullable ChannelLogConfiguration egressAccessLogs) {
             this.egressAccessLogs = egressAccessLogs;
             return this;
         }
-
         public Builder hlsIngest(@Nullable ChannelHlsIngest hlsIngest) {
             this.hlsIngest = hlsIngest;
             return this;
         }
-
         public Builder ingressAccessLogs(@Nullable ChannelLogConfiguration ingressAccessLogs) {
             this.ingressAccessLogs = ingressAccessLogs;
             return this;
-        }
-        public GetChannelResult build() {
+        }        public GetChannelResult build() {
             return new GetChannelResult(arn, description, egressAccessLogs, hlsIngest, ingressAccessLogs);
         }
     }

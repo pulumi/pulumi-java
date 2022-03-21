@@ -72,12 +72,10 @@ public final class AccessPointRootDirectory {
             this.creationInfo = creationInfo;
             return this;
         }
-
         public Builder path(@Nullable String path) {
             this.path = path;
             return this;
-        }
-        public AccessPointRootDirectory build() {
+        }        public AccessPointRootDirectory build() {
             return new AccessPointRootDirectory(creationInfo, path);
         }
     }

@@ -78,22 +78,18 @@ public final class VertexArgs extends io.pulumi.resources.ResourceArgs {
             this.x = x;
             return this;
         }
-
         public Builder x(@Nullable Integer x) {
             this.x = Output.ofNullable(x);
             return this;
         }
-
         public Builder y(@Nullable Output<Integer> y) {
             this.y = y;
             return this;
         }
-
         public Builder y(@Nullable Integer y) {
             this.y = Output.ofNullable(y);
             return this;
-        }
-        public VertexArgs build() {
+        }        public VertexArgs build() {
             return new VertexArgs(x, y);
         }
     }

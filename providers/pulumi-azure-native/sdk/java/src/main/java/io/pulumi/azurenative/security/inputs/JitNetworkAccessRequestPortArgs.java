@@ -155,72 +155,61 @@ public final class JitNetworkAccessRequestPortArgs extends io.pulumi.resources.R
             this.allowedSourceAddressPrefix = allowedSourceAddressPrefix;
             return this;
         }
-
         public Builder allowedSourceAddressPrefix(@Nullable String allowedSourceAddressPrefix) {
             this.allowedSourceAddressPrefix = Output.ofNullable(allowedSourceAddressPrefix);
             return this;
         }
-
         public Builder allowedSourceAddressPrefixes(@Nullable Output<List<String>> allowedSourceAddressPrefixes) {
             this.allowedSourceAddressPrefixes = allowedSourceAddressPrefixes;
             return this;
         }
-
         public Builder allowedSourceAddressPrefixes(@Nullable List<String> allowedSourceAddressPrefixes) {
             this.allowedSourceAddressPrefixes = Output.ofNullable(allowedSourceAddressPrefixes);
             return this;
         }
-
+        public Builder allowedSourceAddressPrefixes(String... allowedSourceAddressPrefixes) {
+            return allowedSourceAddressPrefixes(List.of(allowedSourceAddressPrefixes));
+        }
         public Builder endTimeUtc(Output<String> endTimeUtc) {
             this.endTimeUtc = Objects.requireNonNull(endTimeUtc);
             return this;
         }
-
         public Builder endTimeUtc(String endTimeUtc) {
             this.endTimeUtc = Output.of(Objects.requireNonNull(endTimeUtc));
             return this;
         }
-
         public Builder mappedPort(@Nullable Output<Integer> mappedPort) {
             this.mappedPort = mappedPort;
             return this;
         }
-
         public Builder mappedPort(@Nullable Integer mappedPort) {
             this.mappedPort = Output.ofNullable(mappedPort);
             return this;
         }
-
         public Builder number(Output<Integer> number) {
             this.number = Objects.requireNonNull(number);
             return this;
         }
-
         public Builder number(Integer number) {
             this.number = Output.of(Objects.requireNonNull(number));
             return this;
         }
-
         public Builder status(Output<Either<String,Status>> status) {
             this.status = Objects.requireNonNull(status);
             return this;
         }
-
         public Builder status(Either<String,Status> status) {
             this.status = Output.of(Objects.requireNonNull(status));
             return this;
         }
-
         public Builder statusReason(Output<Either<String,StatusReason>> statusReason) {
             this.statusReason = Objects.requireNonNull(statusReason);
             return this;
         }
-
         public Builder statusReason(Either<String,StatusReason> statusReason) {
             this.statusReason = Output.of(Objects.requireNonNull(statusReason));
             return this;
-        }
-        public JitNetworkAccessRequestPortArgs build() {
+        }        public JitNetworkAccessRequestPortArgs build() {
             return new JitNetworkAccessRequestPortArgs(allowedSourceAddressPrefix, allowedSourceAddressPrefixes, endTimeUtc, mappedPort, number, status, statusReason);
         }
     }

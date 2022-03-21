@@ -67,12 +67,13 @@ public final class SwaggerSpecificationResponse extends io.pulumi.resources.Invo
             this.apiVersions = apiVersions;
             return this;
         }
-
+        public Builder apiVersions(String... apiVersions) {
+            return apiVersions(List.of(apiVersions));
+        }
         public Builder swaggerSpecFolderUri(@Nullable String swaggerSpecFolderUri) {
             this.swaggerSpecFolderUri = swaggerSpecFolderUri;
             return this;
-        }
-        public SwaggerSpecificationResponse build() {
+        }        public SwaggerSpecificationResponse build() {
             return new SwaggerSpecificationResponse(apiVersions, swaggerSpecFolderUri);
         }
     }

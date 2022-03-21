@@ -97,27 +97,28 @@ public final class GetSubnetIdsResult {
             this.filters = filters;
             return this;
         }
-
+        public Builder filters(GetSubnetIdsFilter... filters) {
+            return filters(List.of(filters));
+        }
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder ids(List<String> ids) {
             this.ids = Objects.requireNonNull(ids);
             return this;
         }
-
+        public Builder ids(String... ids) {
+            return ids(List.of(ids));
+        }
         public Builder tags(Map<String,String> tags) {
             this.tags = Objects.requireNonNull(tags);
             return this;
         }
-
         public Builder vpcId(String vpcId) {
             this.vpcId = Objects.requireNonNull(vpcId);
             return this;
-        }
-        public GetSubnetIdsResult build() {
+        }        public GetSubnetIdsResult build() {
             return new GetSubnetIdsResult(filters, id, ids, tags, vpcId);
         }
     }

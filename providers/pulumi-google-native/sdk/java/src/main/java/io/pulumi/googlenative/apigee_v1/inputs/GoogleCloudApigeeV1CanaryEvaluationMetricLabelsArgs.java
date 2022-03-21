@@ -94,32 +94,26 @@ public final class GoogleCloudApigeeV1CanaryEvaluationMetricLabelsArgs extends i
             this.env = env;
             return this;
         }
-
         public Builder env(@Nullable String env) {
             this.env = Output.ofNullable(env);
             return this;
         }
-
         public Builder instanceId(Output<String> instanceId) {
             this.instanceId = Objects.requireNonNull(instanceId);
             return this;
         }
-
         public Builder instanceId(String instanceId) {
             this.instanceId = Output.of(Objects.requireNonNull(instanceId));
             return this;
         }
-
         public Builder location(Output<String> location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
-
         public Builder location(String location) {
             this.location = Output.of(Objects.requireNonNull(location));
             return this;
-        }
-        public GoogleCloudApigeeV1CanaryEvaluationMetricLabelsArgs build() {
+        }        public GoogleCloudApigeeV1CanaryEvaluationMetricLabelsArgs build() {
             return new GoogleCloudApigeeV1CanaryEvaluationMetricLabelsArgs(env, instanceId, location);
         }
     }

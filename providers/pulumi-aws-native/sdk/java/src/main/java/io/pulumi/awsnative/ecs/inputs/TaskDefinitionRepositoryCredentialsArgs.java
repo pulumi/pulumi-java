@@ -53,12 +53,10 @@ public final class TaskDefinitionRepositoryCredentialsArgs extends io.pulumi.res
             this.credentialsParameter = credentialsParameter;
             return this;
         }
-
         public Builder credentialsParameter(@Nullable String credentialsParameter) {
             this.credentialsParameter = Output.ofNullable(credentialsParameter);
             return this;
-        }
-        public TaskDefinitionRepositoryCredentialsArgs build() {
+        }        public TaskDefinitionRepositoryCredentialsArgs build() {
             return new TaskDefinitionRepositoryCredentialsArgs(credentialsParameter);
         }
     }

@@ -202,52 +202,45 @@ public final class StatefulSetStatus {
             this.availableReplicas = Objects.requireNonNull(availableReplicas);
             return this;
         }
-
         public Builder collisionCount(@Nullable Integer collisionCount) {
             this.collisionCount = collisionCount;
             return this;
         }
-
         public Builder conditions(@Nullable List<StatefulSetCondition> conditions) {
             this.conditions = conditions;
             return this;
         }
-
+        public Builder conditions(StatefulSetCondition... conditions) {
+            return conditions(List.of(conditions));
+        }
         public Builder currentReplicas(@Nullable Integer currentReplicas) {
             this.currentReplicas = currentReplicas;
             return this;
         }
-
         public Builder currentRevision(@Nullable String currentRevision) {
             this.currentRevision = currentRevision;
             return this;
         }
-
         public Builder observedGeneration(@Nullable Integer observedGeneration) {
             this.observedGeneration = observedGeneration;
             return this;
         }
-
         public Builder readyReplicas(@Nullable Integer readyReplicas) {
             this.readyReplicas = readyReplicas;
             return this;
         }
-
         public Builder replicas(Integer replicas) {
             this.replicas = Objects.requireNonNull(replicas);
             return this;
         }
-
         public Builder updateRevision(@Nullable String updateRevision) {
             this.updateRevision = updateRevision;
             return this;
         }
-
         public Builder updatedReplicas(@Nullable Integer updatedReplicas) {
             this.updatedReplicas = updatedReplicas;
             return this;
-        }
-        public StatefulSetStatus build() {
+        }        public StatefulSetStatus build() {
             return new StatefulSetStatus(availableReplicas, collisionCount, conditions, currentReplicas, currentRevision, observedGeneration, readyReplicas, replicas, updateRevision, updatedReplicas);
         }
     }

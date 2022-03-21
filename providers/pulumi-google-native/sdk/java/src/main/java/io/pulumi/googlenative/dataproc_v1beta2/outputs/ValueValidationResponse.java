@@ -53,7 +53,9 @@ public final class ValueValidationResponse {
             this.values = Objects.requireNonNull(values);
             return this;
         }
-        public ValueValidationResponse build() {
+        public Builder values(String... values) {
+            return values(List.of(values));
+        }        public ValueValidationResponse build() {
             return new ValueValidationResponse(values);
         }
     }

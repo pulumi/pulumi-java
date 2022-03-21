@@ -105,22 +105,18 @@ public final class GetTypeActivationResult {
             this.arn = arn;
             return this;
         }
-
         public Builder autoUpdate(@Nullable Boolean autoUpdate) {
             this.autoUpdate = autoUpdate;
             return this;
         }
-
         public Builder majorVersion(@Nullable String majorVersion) {
             this.majorVersion = majorVersion;
             return this;
         }
-
         public Builder versionBump(@Nullable TypeActivationVersionBump versionBump) {
             this.versionBump = versionBump;
             return this;
-        }
-        public GetTypeActivationResult build() {
+        }        public GetTypeActivationResult build() {
             return new GetTypeActivationResult(arn, autoUpdate, majorVersion, versionBump);
         }
     }

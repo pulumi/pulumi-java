@@ -167,42 +167,34 @@ public final class InstanceStatusResponse {
             this.completionTime = Objects.requireNonNull(completionTime);
             return this;
         }
-
         public Builder failed(Integer failed) {
             this.failed = Objects.requireNonNull(failed);
             return this;
         }
-
         public Builder index(Integer index) {
             this.index = Objects.requireNonNull(index);
             return this;
         }
-
         public Builder lastAttemptResult(InstanceAttemptResultResponse lastAttemptResult) {
             this.lastAttemptResult = Objects.requireNonNull(lastAttemptResult);
             return this;
         }
-
         public Builder lastExitCode(Integer lastExitCode) {
             this.lastExitCode = Objects.requireNonNull(lastExitCode);
             return this;
         }
-
         public Builder restarted(Integer restarted) {
             this.restarted = Objects.requireNonNull(restarted);
             return this;
         }
-
         public Builder startTime(String startTime) {
             this.startTime = Objects.requireNonNull(startTime);
             return this;
         }
-
         public Builder succeeded(Integer succeeded) {
             this.succeeded = Objects.requireNonNull(succeeded);
             return this;
-        }
-        public InstanceStatusResponse build() {
+        }        public InstanceStatusResponse build() {
             return new InstanceStatusResponse(completionTime, failed, index, lastAttemptResult, lastExitCode, restarted, startTime, succeeded);
         }
     }

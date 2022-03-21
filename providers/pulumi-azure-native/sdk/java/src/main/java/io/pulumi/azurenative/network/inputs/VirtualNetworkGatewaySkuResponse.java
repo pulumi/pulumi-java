@@ -95,17 +95,14 @@ public final class VirtualNetworkGatewaySkuResponse extends io.pulumi.resources.
             this.capacity = Objects.requireNonNull(capacity);
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
-
         public Builder tier(@Nullable String tier) {
             this.tier = tier;
             return this;
-        }
-        public VirtualNetworkGatewaySkuResponse build() {
+        }        public VirtualNetworkGatewaySkuResponse build() {
             return new VirtualNetworkGatewaySkuResponse(capacity, name, tier);
         }
     }

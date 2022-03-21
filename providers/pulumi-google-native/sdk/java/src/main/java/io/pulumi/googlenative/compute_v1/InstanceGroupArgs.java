@@ -128,62 +128,53 @@ public final class InstanceGroupArgs extends io.pulumi.resources.ResourceArgs {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder namedPorts(@Nullable Output<List<NamedPortArgs>> namedPorts) {
             this.namedPorts = namedPorts;
             return this;
         }
-
         public Builder namedPorts(@Nullable List<NamedPortArgs> namedPorts) {
             this.namedPorts = Output.ofNullable(namedPorts);
             return this;
         }
-
+        public Builder namedPorts(NamedPortArgs... namedPorts) {
+            return namedPorts(List.of(namedPorts));
+        }
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
         }
-
         public Builder requestId(@Nullable Output<String> requestId) {
             this.requestId = requestId;
             return this;
         }
-
         public Builder requestId(@Nullable String requestId) {
             this.requestId = Output.ofNullable(requestId);
             return this;
         }
-
         public Builder zone(@Nullable Output<String> zone) {
             this.zone = zone;
             return this;
         }
-
         public Builder zone(@Nullable String zone) {
             this.zone = Output.ofNullable(zone);
             return this;
-        }
-        public InstanceGroupArgs build() {
+        }        public InstanceGroupArgs build() {
             return new InstanceGroupArgs(description, name, namedPorts, project, requestId, zone);
         }
     }

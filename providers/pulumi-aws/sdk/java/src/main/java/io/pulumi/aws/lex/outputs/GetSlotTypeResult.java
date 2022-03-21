@@ -197,47 +197,41 @@ public final class GetSlotTypeResult {
             this.checksum = Objects.requireNonNull(checksum);
             return this;
         }
-
         public Builder createdDate(String createdDate) {
             this.createdDate = Objects.requireNonNull(createdDate);
             return this;
         }
-
         public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
-
         public Builder enumerationValues(List<GetSlotTypeEnumerationValue> enumerationValues) {
             this.enumerationValues = Objects.requireNonNull(enumerationValues);
             return this;
         }
-
+        public Builder enumerationValues(GetSlotTypeEnumerationValue... enumerationValues) {
+            return enumerationValues(List.of(enumerationValues));
+        }
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder lastUpdatedDate(String lastUpdatedDate) {
             this.lastUpdatedDate = Objects.requireNonNull(lastUpdatedDate);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder valueSelectionStrategy(String valueSelectionStrategy) {
             this.valueSelectionStrategy = Objects.requireNonNull(valueSelectionStrategy);
             return this;
         }
-
         public Builder version(@Nullable String version) {
             this.version = version;
             return this;
-        }
-        public GetSlotTypeResult build() {
+        }        public GetSlotTypeResult build() {
             return new GetSlotTypeResult(checksum, createdDate, description, enumerationValues, id, lastUpdatedDate, name, valueSelectionStrategy, version);
         }
     }

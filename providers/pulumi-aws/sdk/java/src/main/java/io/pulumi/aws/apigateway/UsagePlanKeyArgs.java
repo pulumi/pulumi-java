@@ -89,32 +89,26 @@ public final class UsagePlanKeyArgs extends io.pulumi.resources.ResourceArgs {
             this.keyId = Objects.requireNonNull(keyId);
             return this;
         }
-
         public Builder keyId(String keyId) {
             this.keyId = Output.of(Objects.requireNonNull(keyId));
             return this;
         }
-
         public Builder keyType(Output<String> keyType) {
             this.keyType = Objects.requireNonNull(keyType);
             return this;
         }
-
         public Builder keyType(String keyType) {
             this.keyType = Output.of(Objects.requireNonNull(keyType));
             return this;
         }
-
         public Builder usagePlanId(Output<String> usagePlanId) {
             this.usagePlanId = Objects.requireNonNull(usagePlanId);
             return this;
         }
-
         public Builder usagePlanId(String usagePlanId) {
             this.usagePlanId = Output.of(Objects.requireNonNull(usagePlanId));
             return this;
-        }
-        public UsagePlanKeyArgs build() {
+        }        public UsagePlanKeyArgs build() {
             return new UsagePlanKeyArgs(keyId, keyType, usagePlanId);
         }
     }

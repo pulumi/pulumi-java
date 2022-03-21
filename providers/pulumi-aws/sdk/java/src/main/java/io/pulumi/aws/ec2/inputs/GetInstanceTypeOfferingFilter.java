@@ -73,12 +73,13 @@ public final class GetInstanceTypeOfferingFilter extends io.pulumi.resources.Inv
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder values(List<String> values) {
             this.values = Objects.requireNonNull(values);
             return this;
         }
-        public GetInstanceTypeOfferingFilter build() {
+        public Builder values(String... values) {
+            return values(List.of(values));
+        }        public GetInstanceTypeOfferingFilter build() {
             return new GetInstanceTypeOfferingFilter(name, values);
         }
     }

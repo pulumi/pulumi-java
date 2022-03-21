@@ -96,32 +96,26 @@ public final class ClusterClusterConfigWorkerConfigDiskConfigArgs extends io.pul
             this.bootDiskSizeGb = bootDiskSizeGb;
             return this;
         }
-
         public Builder bootDiskSizeGb(@Nullable Integer bootDiskSizeGb) {
             this.bootDiskSizeGb = Output.ofNullable(bootDiskSizeGb);
             return this;
         }
-
         public Builder bootDiskType(@Nullable Output<String> bootDiskType) {
             this.bootDiskType = bootDiskType;
             return this;
         }
-
         public Builder bootDiskType(@Nullable String bootDiskType) {
             this.bootDiskType = Output.ofNullable(bootDiskType);
             return this;
         }
-
         public Builder numLocalSsds(@Nullable Output<Integer> numLocalSsds) {
             this.numLocalSsds = numLocalSsds;
             return this;
         }
-
         public Builder numLocalSsds(@Nullable Integer numLocalSsds) {
             this.numLocalSsds = Output.ofNullable(numLocalSsds);
             return this;
-        }
-        public ClusterClusterConfigWorkerConfigDiskConfigArgs build() {
+        }        public ClusterClusterConfigWorkerConfigDiskConfigArgs build() {
             return new ClusterClusterConfigWorkerConfigDiskConfigArgs(bootDiskSizeGb, bootDiskType, numLocalSsds);
         }
     }

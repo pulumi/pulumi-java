@@ -72,12 +72,10 @@ public final class VolumeAttachmentSource {
             this.inlineVolumeSpec = inlineVolumeSpec;
             return this;
         }
-
         public Builder persistentVolumeName(@Nullable String persistentVolumeName) {
             this.persistentVolumeName = persistentVolumeName;
             return this;
-        }
-        public VolumeAttachmentSource build() {
+        }        public VolumeAttachmentSource build() {
             return new VolumeAttachmentSource(inlineVolumeSpec, persistentVolumeName);
         }
     }

@@ -54,8 +54,7 @@ public final class GetPartnerArgs extends io.pulumi.resources.InvokeArgs {
         public Builder partnerId(String partnerId) {
             this.partnerId = Objects.requireNonNull(partnerId);
             return this;
-        }
-        public GetPartnerArgs build() {
+        }        public GetPartnerArgs build() {
             return new GetPartnerArgs(partnerId);
         }
     }

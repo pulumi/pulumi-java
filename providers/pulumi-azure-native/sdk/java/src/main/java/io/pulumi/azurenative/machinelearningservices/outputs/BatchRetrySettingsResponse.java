@@ -72,12 +72,10 @@ public final class BatchRetrySettingsResponse {
             this.maxRetries = maxRetries;
             return this;
         }
-
         public Builder timeout(@Nullable String timeout) {
             this.timeout = timeout;
             return this;
-        }
-        public BatchRetrySettingsResponse build() {
+        }        public BatchRetrySettingsResponse build() {
             return new BatchRetrySettingsResponse(maxRetries, timeout);
         }
     }

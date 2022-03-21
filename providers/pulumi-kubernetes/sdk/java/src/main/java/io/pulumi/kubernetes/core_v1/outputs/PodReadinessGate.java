@@ -63,8 +63,7 @@ public final class PodReadinessGate {
         public Builder conditionType(String conditionType) {
             this.conditionType = Objects.requireNonNull(conditionType);
             return this;
-        }
-        public PodReadinessGate build() {
+        }        public PodReadinessGate build() {
             return new PodReadinessGate(conditionType);
         }
     }

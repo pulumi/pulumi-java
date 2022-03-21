@@ -70,12 +70,10 @@ public final class BucketTiering {
             this.accessTier = Objects.requireNonNull(accessTier);
             return this;
         }
-
         public Builder days(Integer days) {
             this.days = Objects.requireNonNull(days);
             return this;
-        }
-        public BucketTiering build() {
+        }        public BucketTiering build() {
             return new BucketTiering(accessTier, days);
         }
     }

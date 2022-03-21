@@ -174,82 +174,66 @@ public final class DscNodeConfigurationArgs extends io.pulumi.resources.Resource
             this.automationAccountName = Objects.requireNonNull(automationAccountName);
             return this;
         }
-
         public Builder automationAccountName(String automationAccountName) {
             this.automationAccountName = Output.of(Objects.requireNonNull(automationAccountName));
             return this;
         }
-
         public Builder configuration(Output<DscConfigurationAssociationPropertyArgs> configuration) {
             this.configuration = Objects.requireNonNull(configuration);
             return this;
         }
-
         public Builder configuration(DscConfigurationAssociationPropertyArgs configuration) {
             this.configuration = Output.of(Objects.requireNonNull(configuration));
             return this;
         }
-
         public Builder incrementNodeConfigurationBuild(@Nullable Output<Boolean> incrementNodeConfigurationBuild) {
             this.incrementNodeConfigurationBuild = incrementNodeConfigurationBuild;
             return this;
         }
-
         public Builder incrementNodeConfigurationBuild(@Nullable Boolean incrementNodeConfigurationBuild) {
             this.incrementNodeConfigurationBuild = Output.ofNullable(incrementNodeConfigurationBuild);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder nodeConfigurationName(@Nullable Output<String> nodeConfigurationName) {
             this.nodeConfigurationName = nodeConfigurationName;
             return this;
         }
-
         public Builder nodeConfigurationName(@Nullable String nodeConfigurationName) {
             this.nodeConfigurationName = Output.ofNullable(nodeConfigurationName);
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder source(Output<ContentSourceArgs> source) {
             this.source = Objects.requireNonNull(source);
             return this;
         }
-
         public Builder source(ContentSourceArgs source) {
             this.source = Output.of(Objects.requireNonNull(source));
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
-        }
-        public DscNodeConfigurationArgs build() {
+        }        public DscNodeConfigurationArgs build() {
             return new DscNodeConfigurationArgs(automationAccountName, configuration, incrementNodeConfigurationBuild, name, nodeConfigurationName, resourceGroupName, source, tags);
         }
     }

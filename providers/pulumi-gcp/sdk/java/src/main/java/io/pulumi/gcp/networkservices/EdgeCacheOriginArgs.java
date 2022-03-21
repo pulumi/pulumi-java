@@ -254,112 +254,93 @@ public final class EdgeCacheOriginArgs extends io.pulumi.resources.ResourceArgs 
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder failoverOrigin(@Nullable Output<String> failoverOrigin) {
             this.failoverOrigin = failoverOrigin;
             return this;
         }
-
         public Builder failoverOrigin(@Nullable String failoverOrigin) {
             this.failoverOrigin = Output.ofNullable(failoverOrigin);
             return this;
         }
-
         public Builder labels(@Nullable Output<Map<String,String>> labels) {
             this.labels = labels;
             return this;
         }
-
         public Builder labels(@Nullable Map<String,String> labels) {
             this.labels = Output.ofNullable(labels);
             return this;
         }
-
         public Builder maxAttempts(@Nullable Output<Integer> maxAttempts) {
             this.maxAttempts = maxAttempts;
             return this;
         }
-
         public Builder maxAttempts(@Nullable Integer maxAttempts) {
             this.maxAttempts = Output.ofNullable(maxAttempts);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder originAddress(Output<String> originAddress) {
             this.originAddress = Objects.requireNonNull(originAddress);
             return this;
         }
-
         public Builder originAddress(String originAddress) {
             this.originAddress = Output.of(Objects.requireNonNull(originAddress));
             return this;
         }
-
         public Builder port(@Nullable Output<Integer> port) {
             this.port = port;
             return this;
         }
-
         public Builder port(@Nullable Integer port) {
             this.port = Output.ofNullable(port);
             return this;
         }
-
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
         }
-
         public Builder protocol(@Nullable Output<String> protocol) {
             this.protocol = protocol;
             return this;
         }
-
         public Builder protocol(@Nullable String protocol) {
             this.protocol = Output.ofNullable(protocol);
             return this;
         }
-
         public Builder retryConditions(@Nullable Output<List<String>> retryConditions) {
             this.retryConditions = retryConditions;
             return this;
         }
-
         public Builder retryConditions(@Nullable List<String> retryConditions) {
             this.retryConditions = Output.ofNullable(retryConditions);
             return this;
         }
-
+        public Builder retryConditions(String... retryConditions) {
+            return retryConditions(List.of(retryConditions));
+        }
         public Builder timeout(@Nullable Output<EdgeCacheOriginTimeoutArgs> timeout) {
             this.timeout = timeout;
             return this;
         }
-
         public Builder timeout(@Nullable EdgeCacheOriginTimeoutArgs timeout) {
             this.timeout = Output.ofNullable(timeout);
             return this;
-        }
-        public EdgeCacheOriginArgs build() {
+        }        public EdgeCacheOriginArgs build() {
             return new EdgeCacheOriginArgs(description, failoverOrigin, labels, maxAttempts, name, originAddress, port, project, protocol, retryConditions, timeout);
         }
     }

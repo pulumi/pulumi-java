@@ -529,282 +529,232 @@ public final class FlexibleAppVersionArgs extends io.pulumi.resources.ResourceAr
             this.apiConfig = apiConfig;
             return this;
         }
-
         public Builder apiConfig(@Nullable FlexibleAppVersionApiConfigArgs apiConfig) {
             this.apiConfig = Output.ofNullable(apiConfig);
             return this;
         }
-
         public Builder automaticScaling(@Nullable Output<FlexibleAppVersionAutomaticScalingArgs> automaticScaling) {
             this.automaticScaling = automaticScaling;
             return this;
         }
-
         public Builder automaticScaling(@Nullable FlexibleAppVersionAutomaticScalingArgs automaticScaling) {
             this.automaticScaling = Output.ofNullable(automaticScaling);
             return this;
         }
-
         public Builder betaSettings(@Nullable Output<Map<String,String>> betaSettings) {
             this.betaSettings = betaSettings;
             return this;
         }
-
         public Builder betaSettings(@Nullable Map<String,String> betaSettings) {
             this.betaSettings = Output.ofNullable(betaSettings);
             return this;
         }
-
         public Builder defaultExpiration(@Nullable Output<String> defaultExpiration) {
             this.defaultExpiration = defaultExpiration;
             return this;
         }
-
         public Builder defaultExpiration(@Nullable String defaultExpiration) {
             this.defaultExpiration = Output.ofNullable(defaultExpiration);
             return this;
         }
-
         public Builder deleteServiceOnDestroy(@Nullable Output<Boolean> deleteServiceOnDestroy) {
             this.deleteServiceOnDestroy = deleteServiceOnDestroy;
             return this;
         }
-
         public Builder deleteServiceOnDestroy(@Nullable Boolean deleteServiceOnDestroy) {
             this.deleteServiceOnDestroy = Output.ofNullable(deleteServiceOnDestroy);
             return this;
         }
-
         public Builder deployment(@Nullable Output<FlexibleAppVersionDeploymentArgs> deployment) {
             this.deployment = deployment;
             return this;
         }
-
         public Builder deployment(@Nullable FlexibleAppVersionDeploymentArgs deployment) {
             this.deployment = Output.ofNullable(deployment);
             return this;
         }
-
         public Builder endpointsApiService(@Nullable Output<FlexibleAppVersionEndpointsApiServiceArgs> endpointsApiService) {
             this.endpointsApiService = endpointsApiService;
             return this;
         }
-
         public Builder endpointsApiService(@Nullable FlexibleAppVersionEndpointsApiServiceArgs endpointsApiService) {
             this.endpointsApiService = Output.ofNullable(endpointsApiService);
             return this;
         }
-
         public Builder entrypoint(@Nullable Output<FlexibleAppVersionEntrypointArgs> entrypoint) {
             this.entrypoint = entrypoint;
             return this;
         }
-
         public Builder entrypoint(@Nullable FlexibleAppVersionEntrypointArgs entrypoint) {
             this.entrypoint = Output.ofNullable(entrypoint);
             return this;
         }
-
         public Builder envVariables(@Nullable Output<Map<String,String>> envVariables) {
             this.envVariables = envVariables;
             return this;
         }
-
         public Builder envVariables(@Nullable Map<String,String> envVariables) {
             this.envVariables = Output.ofNullable(envVariables);
             return this;
         }
-
         public Builder handlers(@Nullable Output<List<FlexibleAppVersionHandlerArgs>> handlers) {
             this.handlers = handlers;
             return this;
         }
-
         public Builder handlers(@Nullable List<FlexibleAppVersionHandlerArgs> handlers) {
             this.handlers = Output.ofNullable(handlers);
             return this;
         }
-
+        public Builder handlers(FlexibleAppVersionHandlerArgs... handlers) {
+            return handlers(List.of(handlers));
+        }
         public Builder inboundServices(@Nullable Output<List<String>> inboundServices) {
             this.inboundServices = inboundServices;
             return this;
         }
-
         public Builder inboundServices(@Nullable List<String> inboundServices) {
             this.inboundServices = Output.ofNullable(inboundServices);
             return this;
         }
-
+        public Builder inboundServices(String... inboundServices) {
+            return inboundServices(List.of(inboundServices));
+        }
         public Builder instanceClass(@Nullable Output<String> instanceClass) {
             this.instanceClass = instanceClass;
             return this;
         }
-
         public Builder instanceClass(@Nullable String instanceClass) {
             this.instanceClass = Output.ofNullable(instanceClass);
             return this;
         }
-
         public Builder livenessCheck(Output<FlexibleAppVersionLivenessCheckArgs> livenessCheck) {
             this.livenessCheck = Objects.requireNonNull(livenessCheck);
             return this;
         }
-
         public Builder livenessCheck(FlexibleAppVersionLivenessCheckArgs livenessCheck) {
             this.livenessCheck = Output.of(Objects.requireNonNull(livenessCheck));
             return this;
         }
-
         public Builder manualScaling(@Nullable Output<FlexibleAppVersionManualScalingArgs> manualScaling) {
             this.manualScaling = manualScaling;
             return this;
         }
-
         public Builder manualScaling(@Nullable FlexibleAppVersionManualScalingArgs manualScaling) {
             this.manualScaling = Output.ofNullable(manualScaling);
             return this;
         }
-
         public Builder network(@Nullable Output<FlexibleAppVersionNetworkArgs> network) {
             this.network = network;
             return this;
         }
-
         public Builder network(@Nullable FlexibleAppVersionNetworkArgs network) {
             this.network = Output.ofNullable(network);
             return this;
         }
-
         public Builder nobuildFilesRegex(@Nullable Output<String> nobuildFilesRegex) {
             this.nobuildFilesRegex = nobuildFilesRegex;
             return this;
         }
-
         public Builder nobuildFilesRegex(@Nullable String nobuildFilesRegex) {
             this.nobuildFilesRegex = Output.ofNullable(nobuildFilesRegex);
             return this;
         }
-
         public Builder noopOnDestroy(@Nullable Output<Boolean> noopOnDestroy) {
             this.noopOnDestroy = noopOnDestroy;
             return this;
         }
-
         public Builder noopOnDestroy(@Nullable Boolean noopOnDestroy) {
             this.noopOnDestroy = Output.ofNullable(noopOnDestroy);
             return this;
         }
-
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
         }
-
         public Builder readinessCheck(Output<FlexibleAppVersionReadinessCheckArgs> readinessCheck) {
             this.readinessCheck = Objects.requireNonNull(readinessCheck);
             return this;
         }
-
         public Builder readinessCheck(FlexibleAppVersionReadinessCheckArgs readinessCheck) {
             this.readinessCheck = Output.of(Objects.requireNonNull(readinessCheck));
             return this;
         }
-
         public Builder resources(@Nullable Output<FlexibleAppVersionResourcesArgs> resources) {
             this.resources = resources;
             return this;
         }
-
         public Builder resources(@Nullable FlexibleAppVersionResourcesArgs resources) {
             this.resources = Output.ofNullable(resources);
             return this;
         }
-
         public Builder runtime(Output<String> runtime) {
             this.runtime = Objects.requireNonNull(runtime);
             return this;
         }
-
         public Builder runtime(String runtime) {
             this.runtime = Output.of(Objects.requireNonNull(runtime));
             return this;
         }
-
         public Builder runtimeApiVersion(@Nullable Output<String> runtimeApiVersion) {
             this.runtimeApiVersion = runtimeApiVersion;
             return this;
         }
-
         public Builder runtimeApiVersion(@Nullable String runtimeApiVersion) {
             this.runtimeApiVersion = Output.ofNullable(runtimeApiVersion);
             return this;
         }
-
         public Builder runtimeChannel(@Nullable Output<String> runtimeChannel) {
             this.runtimeChannel = runtimeChannel;
             return this;
         }
-
         public Builder runtimeChannel(@Nullable String runtimeChannel) {
             this.runtimeChannel = Output.ofNullable(runtimeChannel);
             return this;
         }
-
         public Builder runtimeMainExecutablePath(@Nullable Output<String> runtimeMainExecutablePath) {
             this.runtimeMainExecutablePath = runtimeMainExecutablePath;
             return this;
         }
-
         public Builder runtimeMainExecutablePath(@Nullable String runtimeMainExecutablePath) {
             this.runtimeMainExecutablePath = Output.ofNullable(runtimeMainExecutablePath);
             return this;
         }
-
         public Builder service(Output<String> service) {
             this.service = Objects.requireNonNull(service);
             return this;
         }
-
         public Builder service(String service) {
             this.service = Output.of(Objects.requireNonNull(service));
             return this;
         }
-
         public Builder servingStatus(@Nullable Output<String> servingStatus) {
             this.servingStatus = servingStatus;
             return this;
         }
-
         public Builder servingStatus(@Nullable String servingStatus) {
             this.servingStatus = Output.ofNullable(servingStatus);
             return this;
         }
-
         public Builder versionId(@Nullable Output<String> versionId) {
             this.versionId = versionId;
             return this;
         }
-
         public Builder versionId(@Nullable String versionId) {
             this.versionId = Output.ofNullable(versionId);
             return this;
         }
-
         public Builder vpcAccessConnector(@Nullable Output<FlexibleAppVersionVpcAccessConnectorArgs> vpcAccessConnector) {
             this.vpcAccessConnector = vpcAccessConnector;
             return this;
         }
-
         public Builder vpcAccessConnector(@Nullable FlexibleAppVersionVpcAccessConnectorArgs vpcAccessConnector) {
             this.vpcAccessConnector = Output.ofNullable(vpcAccessConnector);
             return this;
-        }
-        public FlexibleAppVersionArgs build() {
+        }        public FlexibleAppVersionArgs build() {
             return new FlexibleAppVersionArgs(apiConfig, automaticScaling, betaSettings, defaultExpiration, deleteServiceOnDestroy, deployment, endpointsApiService, entrypoint, envVariables, handlers, inboundServices, instanceClass, livenessCheck, manualScaling, network, nobuildFilesRegex, noopOnDestroy, project, readinessCheck, resources, runtime, runtimeApiVersion, runtimeChannel, runtimeMainExecutablePath, service, servingStatus, versionId, vpcAccessConnector);
         }
     }

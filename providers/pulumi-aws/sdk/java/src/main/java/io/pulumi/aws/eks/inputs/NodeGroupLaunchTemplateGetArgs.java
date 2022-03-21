@@ -90,32 +90,26 @@ public final class NodeGroupLaunchTemplateGetArgs extends io.pulumi.resources.Re
             this.id = id;
             return this;
         }
-
         public Builder id(@Nullable String id) {
             this.id = Output.ofNullable(id);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder version(Output<String> version) {
             this.version = Objects.requireNonNull(version);
             return this;
         }
-
         public Builder version(String version) {
             this.version = Output.of(Objects.requireNonNull(version));
             return this;
-        }
-        public NodeGroupLaunchTemplateGetArgs build() {
+        }        public NodeGroupLaunchTemplateGetArgs build() {
             return new NodeGroupLaunchTemplateGetArgs(id, name, version);
         }
     }

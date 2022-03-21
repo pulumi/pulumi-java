@@ -57,12 +57,10 @@ public final class PreventionJobTriggerInspectJobStorageConfigBigQueryOptionsGet
             this.tableReference = Objects.requireNonNull(tableReference);
             return this;
         }
-
         public Builder tableReference(PreventionJobTriggerInspectJobStorageConfigBigQueryOptionsTableReferenceGetArgs tableReference) {
             this.tableReference = Output.of(Objects.requireNonNull(tableReference));
             return this;
-        }
-        public PreventionJobTriggerInspectJobStorageConfigBigQueryOptionsGetArgs build() {
+        }        public PreventionJobTriggerInspectJobStorageConfigBigQueryOptionsGetArgs build() {
             return new PreventionJobTriggerInspectJobStorageConfigBigQueryOptionsGetArgs(tableReference);
         }
     }

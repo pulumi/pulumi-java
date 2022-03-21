@@ -72,12 +72,10 @@ public final class LimitResponse {
             this.queuing = queuing;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public LimitResponse build() {
+        }        public LimitResponse build() {
             return new LimitResponse(queuing, type);
         }
     }

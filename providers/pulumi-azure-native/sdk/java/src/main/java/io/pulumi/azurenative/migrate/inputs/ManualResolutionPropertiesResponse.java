@@ -60,8 +60,7 @@ public final class ManualResolutionPropertiesResponse extends io.pulumi.resource
         public Builder targetId(@Nullable String targetId) {
             this.targetId = targetId;
             return this;
-        }
-        public ManualResolutionPropertiesResponse build() {
+        }        public ManualResolutionPropertiesResponse build() {
             return new ManualResolutionPropertiesResponse(targetId);
         }
     }

@@ -54,8 +54,7 @@ public final class GetLogProfileArgs extends io.pulumi.resources.InvokeArgs {
         public Builder logProfileName(String logProfileName) {
             this.logProfileName = Objects.requireNonNull(logProfileName);
             return this;
-        }
-        public GetLogProfileArgs build() {
+        }        public GetLogProfileArgs build() {
             return new GetLogProfileArgs(logProfileName);
         }
     }

@@ -93,32 +93,26 @@ public final class DatabaseInstanceSettingsIpConfigurationAuthorizedNetworkGetAr
             this.expirationTime = expirationTime;
             return this;
         }
-
         public Builder expirationTime(@Nullable String expirationTime) {
             this.expirationTime = Output.ofNullable(expirationTime);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder value(Output<String> value) {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public Builder value(String value) {
             this.value = Output.of(Objects.requireNonNull(value));
             return this;
-        }
-        public DatabaseInstanceSettingsIpConfigurationAuthorizedNetworkGetArgs build() {
+        }        public DatabaseInstanceSettingsIpConfigurationAuthorizedNetworkGetArgs build() {
             return new DatabaseInstanceSettingsIpConfigurationAuthorizedNetworkGetArgs(expirationTime, name, value);
         }
     }

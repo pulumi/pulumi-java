@@ -123,52 +123,42 @@ public final class ManagedNetworkPeeringPolicyArgs extends io.pulumi.resources.R
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder managedNetworkName(Output<String> managedNetworkName) {
             this.managedNetworkName = Objects.requireNonNull(managedNetworkName);
             return this;
         }
-
         public Builder managedNetworkName(String managedNetworkName) {
             this.managedNetworkName = Output.of(Objects.requireNonNull(managedNetworkName));
             return this;
         }
-
         public Builder managedNetworkPeeringPolicyName(@Nullable Output<String> managedNetworkPeeringPolicyName) {
             this.managedNetworkPeeringPolicyName = managedNetworkPeeringPolicyName;
             return this;
         }
-
         public Builder managedNetworkPeeringPolicyName(@Nullable String managedNetworkPeeringPolicyName) {
             this.managedNetworkPeeringPolicyName = Output.ofNullable(managedNetworkPeeringPolicyName);
             return this;
         }
-
         public Builder properties(@Nullable Output<ManagedNetworkPeeringPolicyPropertiesArgs> properties) {
             this.properties = properties;
             return this;
         }
-
         public Builder properties(@Nullable ManagedNetworkPeeringPolicyPropertiesArgs properties) {
             this.properties = Output.ofNullable(properties);
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
-        }
-        public ManagedNetworkPeeringPolicyArgs build() {
+        }        public ManagedNetworkPeeringPolicyArgs build() {
             return new ManagedNetworkPeeringPolicyArgs(location, managedNetworkName, managedNetworkPeeringPolicyName, properties, resourceGroupName);
         }
     }

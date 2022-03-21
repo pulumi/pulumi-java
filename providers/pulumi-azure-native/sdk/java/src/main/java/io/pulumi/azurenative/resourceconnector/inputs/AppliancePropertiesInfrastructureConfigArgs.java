@@ -63,12 +63,10 @@ public final class AppliancePropertiesInfrastructureConfigArgs extends io.pulumi
             this.provider = provider;
             return this;
         }
-
         public Builder provider(@Nullable Either<String,Provider> provider) {
             this.provider = Output.ofNullable(provider);
             return this;
-        }
-        public AppliancePropertiesInfrastructureConfigArgs build() {
+        }        public AppliancePropertiesInfrastructureConfigArgs build() {
             return new AppliancePropertiesInfrastructureConfigArgs(provider);
         }
     }

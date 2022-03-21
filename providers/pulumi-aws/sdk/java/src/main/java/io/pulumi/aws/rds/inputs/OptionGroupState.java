@@ -189,92 +189,77 @@ public final class OptionGroupState extends io.pulumi.resources.ResourceArgs {
             this.arn = arn;
             return this;
         }
-
         public Builder arn(@Nullable String arn) {
             this.arn = Output.ofNullable(arn);
             return this;
         }
-
         public Builder engineName(@Nullable Output<String> engineName) {
             this.engineName = engineName;
             return this;
         }
-
         public Builder engineName(@Nullable String engineName) {
             this.engineName = Output.ofNullable(engineName);
             return this;
         }
-
         public Builder majorEngineVersion(@Nullable Output<String> majorEngineVersion) {
             this.majorEngineVersion = majorEngineVersion;
             return this;
         }
-
         public Builder majorEngineVersion(@Nullable String majorEngineVersion) {
             this.majorEngineVersion = Output.ofNullable(majorEngineVersion);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder namePrefix(@Nullable Output<String> namePrefix) {
             this.namePrefix = namePrefix;
             return this;
         }
-
         public Builder namePrefix(@Nullable String namePrefix) {
             this.namePrefix = Output.ofNullable(namePrefix);
             return this;
         }
-
         public Builder optionGroupDescription(@Nullable Output<String> optionGroupDescription) {
             this.optionGroupDescription = optionGroupDescription;
             return this;
         }
-
         public Builder optionGroupDescription(@Nullable String optionGroupDescription) {
             this.optionGroupDescription = Output.ofNullable(optionGroupDescription);
             return this;
         }
-
         public Builder options(@Nullable Output<List<OptionGroupOptionGetArgs>> options) {
             this.options = options;
             return this;
         }
-
         public Builder options(@Nullable List<OptionGroupOptionGetArgs> options) {
             this.options = Output.ofNullable(options);
             return this;
         }
-
+        public Builder options(OptionGroupOptionGetArgs... options) {
+            return options(List.of(options));
+        }
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
             this.tagsAll = tagsAll;
             return this;
         }
-
         public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
             this.tagsAll = Output.ofNullable(tagsAll);
             return this;
-        }
-        public OptionGroupState build() {
+        }        public OptionGroupState build() {
             return new OptionGroupState(arn, engineName, majorEngineVersion, name, namePrefix, optionGroupDescription, options, tags, tagsAll);
         }
     }

@@ -54,12 +54,10 @@ public final class IntegrationTaskPropertiesMap {
             this.operatorPropertyKey = Objects.requireNonNull(operatorPropertyKey);
             return this;
         }
-
         public Builder property(String property) {
             this.property = Objects.requireNonNull(property);
             return this;
-        }
-        public IntegrationTaskPropertiesMap build() {
+        }        public IntegrationTaskPropertiesMap build() {
             return new IntegrationTaskPropertiesMap(operatorPropertyKey, property);
         }
     }

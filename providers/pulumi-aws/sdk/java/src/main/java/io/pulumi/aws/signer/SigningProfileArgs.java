@@ -124,52 +124,42 @@ public final class SigningProfileArgs extends io.pulumi.resources.ResourceArgs {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder namePrefix(@Nullable Output<String> namePrefix) {
             this.namePrefix = namePrefix;
             return this;
         }
-
         public Builder namePrefix(@Nullable String namePrefix) {
             this.namePrefix = Output.ofNullable(namePrefix);
             return this;
         }
-
         public Builder platformId(Output<String> platformId) {
             this.platformId = Objects.requireNonNull(platformId);
             return this;
         }
-
         public Builder platformId(String platformId) {
             this.platformId = Output.of(Objects.requireNonNull(platformId));
             return this;
         }
-
         public Builder signatureValidityPeriod(@Nullable Output<SigningProfileSignatureValidityPeriodArgs> signatureValidityPeriod) {
             this.signatureValidityPeriod = signatureValidityPeriod;
             return this;
         }
-
         public Builder signatureValidityPeriod(@Nullable SigningProfileSignatureValidityPeriodArgs signatureValidityPeriod) {
             this.signatureValidityPeriod = Output.ofNullable(signatureValidityPeriod);
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
-        }
-        public SigningProfileArgs build() {
+        }        public SigningProfileArgs build() {
             return new SigningProfileArgs(name, namePrefix, platformId, signatureValidityPeriod, tags);
         }
     }

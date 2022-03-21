@@ -60,12 +60,10 @@ public final class GoogleCloudNetworksecurityV1GrpcEndpointArgs extends io.pulum
             this.targetUri = Objects.requireNonNull(targetUri);
             return this;
         }
-
         public Builder targetUri(String targetUri) {
             this.targetUri = Output.of(Objects.requireNonNull(targetUri));
             return this;
-        }
-        public GoogleCloudNetworksecurityV1GrpcEndpointArgs build() {
+        }        public GoogleCloudNetworksecurityV1GrpcEndpointArgs build() {
             return new GoogleCloudNetworksecurityV1GrpcEndpointArgs(targetUri);
         }
     }

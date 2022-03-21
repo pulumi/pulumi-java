@@ -71,12 +71,10 @@ public final class DataSourceElasticsearchConfig {
             this.endpoint = Objects.requireNonNull(endpoint);
             return this;
         }
-
         public Builder region(@Nullable String region) {
             this.region = region;
             return this;
-        }
-        public DataSourceElasticsearchConfig build() {
+        }        public DataSourceElasticsearchConfig build() {
             return new DataSourceElasticsearchConfig(endpoint, region);
         }
     }

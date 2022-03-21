@@ -289,77 +289,62 @@ public final class ApplicationGatewayProbeResponse extends io.pulumi.resources.I
             this.etag = Objects.requireNonNull(etag);
             return this;
         }
-
         public Builder host(@Nullable String host) {
             this.host = host;
             return this;
         }
-
         public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
-
         public Builder interval(@Nullable Integer interval) {
             this.interval = interval;
             return this;
         }
-
         public Builder match(@Nullable ApplicationGatewayProbeHealthResponseMatchResponse match) {
             this.match = match;
             return this;
         }
-
         public Builder minServers(@Nullable Integer minServers) {
             this.minServers = minServers;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
-
         public Builder path(@Nullable String path) {
             this.path = path;
             return this;
         }
-
         public Builder pickHostNameFromBackendHttpSettings(@Nullable Boolean pickHostNameFromBackendHttpSettings) {
             this.pickHostNameFromBackendHttpSettings = pickHostNameFromBackendHttpSettings;
             return this;
         }
-
         public Builder port(@Nullable Integer port) {
             this.port = port;
             return this;
         }
-
         public Builder protocol(@Nullable String protocol) {
             this.protocol = protocol;
             return this;
         }
-
         public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
-
         public Builder timeout(@Nullable Integer timeout) {
             this.timeout = timeout;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder unhealthyThreshold(@Nullable Integer unhealthyThreshold) {
             this.unhealthyThreshold = unhealthyThreshold;
             return this;
-        }
-        public ApplicationGatewayProbeResponse build() {
+        }        public ApplicationGatewayProbeResponse build() {
             return new ApplicationGatewayProbeResponse(etag, host, id, interval, match, minServers, name, path, pickHostNameFromBackendHttpSettings, port, protocol, provisioningState, timeout, type, unhealthyThreshold);
         }
     }

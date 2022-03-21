@@ -136,32 +136,26 @@ public final class DataSourcePrecedenceResponse {
             this.dataSourceReferenceId = Objects.requireNonNull(dataSourceReferenceId);
             return this;
         }
-
         public Builder dataSourceType(String dataSourceType) {
             this.dataSourceType = Objects.requireNonNull(dataSourceType);
             return this;
         }
-
         public Builder id(Integer id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder precedence(@Nullable Integer precedence) {
             this.precedence = precedence;
             return this;
         }
-
         public Builder status(String status) {
             this.status = Objects.requireNonNull(status);
             return this;
-        }
-        public DataSourcePrecedenceResponse build() {
+        }        public DataSourcePrecedenceResponse build() {
             return new DataSourcePrecedenceResponse(dataSourceReferenceId, dataSourceType, id, name, precedence, status);
         }
     }

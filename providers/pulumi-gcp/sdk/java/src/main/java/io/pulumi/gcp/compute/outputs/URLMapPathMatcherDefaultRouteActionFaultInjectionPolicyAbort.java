@@ -76,12 +76,10 @@ public final class URLMapPathMatcherDefaultRouteActionFaultInjectionPolicyAbort 
             this.httpStatus = httpStatus;
             return this;
         }
-
         public Builder percentage(@Nullable Double percentage) {
             this.percentage = percentage;
             return this;
-        }
-        public URLMapPathMatcherDefaultRouteActionFaultInjectionPolicyAbort build() {
+        }        public URLMapPathMatcherDefaultRouteActionFaultInjectionPolicyAbort build() {
             return new URLMapPathMatcherDefaultRouteActionFaultInjectionPolicyAbort(httpStatus, percentage);
         }
     }

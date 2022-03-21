@@ -217,102 +217,85 @@ public final class StatefulSetSpecArgs extends io.pulumi.resources.ResourceArgs 
             this.minReadySeconds = minReadySeconds;
             return this;
         }
-
         public Builder minReadySeconds(@Nullable Integer minReadySeconds) {
             this.minReadySeconds = Output.ofNullable(minReadySeconds);
             return this;
         }
-
         public Builder persistentVolumeClaimRetentionPolicy(@Nullable Output<StatefulSetPersistentVolumeClaimRetentionPolicyArgs> persistentVolumeClaimRetentionPolicy) {
             this.persistentVolumeClaimRetentionPolicy = persistentVolumeClaimRetentionPolicy;
             return this;
         }
-
         public Builder persistentVolumeClaimRetentionPolicy(@Nullable StatefulSetPersistentVolumeClaimRetentionPolicyArgs persistentVolumeClaimRetentionPolicy) {
             this.persistentVolumeClaimRetentionPolicy = Output.ofNullable(persistentVolumeClaimRetentionPolicy);
             return this;
         }
-
         public Builder podManagementPolicy(@Nullable Output<String> podManagementPolicy) {
             this.podManagementPolicy = podManagementPolicy;
             return this;
         }
-
         public Builder podManagementPolicy(@Nullable String podManagementPolicy) {
             this.podManagementPolicy = Output.ofNullable(podManagementPolicy);
             return this;
         }
-
         public Builder replicas(@Nullable Output<Integer> replicas) {
             this.replicas = replicas;
             return this;
         }
-
         public Builder replicas(@Nullable Integer replicas) {
             this.replicas = Output.ofNullable(replicas);
             return this;
         }
-
         public Builder revisionHistoryLimit(@Nullable Output<Integer> revisionHistoryLimit) {
             this.revisionHistoryLimit = revisionHistoryLimit;
             return this;
         }
-
         public Builder revisionHistoryLimit(@Nullable Integer revisionHistoryLimit) {
             this.revisionHistoryLimit = Output.ofNullable(revisionHistoryLimit);
             return this;
         }
-
         public Builder selector(Output<LabelSelectorArgs> selector) {
             this.selector = Objects.requireNonNull(selector);
             return this;
         }
-
         public Builder selector(LabelSelectorArgs selector) {
             this.selector = Output.of(Objects.requireNonNull(selector));
             return this;
         }
-
         public Builder serviceName(Output<String> serviceName) {
             this.serviceName = Objects.requireNonNull(serviceName);
             return this;
         }
-
         public Builder serviceName(String serviceName) {
             this.serviceName = Output.of(Objects.requireNonNull(serviceName));
             return this;
         }
-
         public Builder template(Output<PodTemplateSpecArgs> template) {
             this.template = Objects.requireNonNull(template);
             return this;
         }
-
         public Builder template(PodTemplateSpecArgs template) {
             this.template = Output.of(Objects.requireNonNull(template));
             return this;
         }
-
         public Builder updateStrategy(@Nullable Output<StatefulSetUpdateStrategyArgs> updateStrategy) {
             this.updateStrategy = updateStrategy;
             return this;
         }
-
         public Builder updateStrategy(@Nullable StatefulSetUpdateStrategyArgs updateStrategy) {
             this.updateStrategy = Output.ofNullable(updateStrategy);
             return this;
         }
-
         public Builder volumeClaimTemplates(@Nullable Output<List<PersistentVolumeClaimArgs>> volumeClaimTemplates) {
             this.volumeClaimTemplates = volumeClaimTemplates;
             return this;
         }
-
         public Builder volumeClaimTemplates(@Nullable List<PersistentVolumeClaimArgs> volumeClaimTemplates) {
             this.volumeClaimTemplates = Output.ofNullable(volumeClaimTemplates);
             return this;
         }
-        public StatefulSetSpecArgs build() {
+        public Builder volumeClaimTemplates(PersistentVolumeClaimArgs... volumeClaimTemplates) {
+            return volumeClaimTemplates(List.of(volumeClaimTemplates));
+        }        public StatefulSetSpecArgs build() {
             return new StatefulSetSpecArgs(minReadySeconds, persistentVolumeClaimRetentionPolicy, podManagementPolicy, replicas, revisionHistoryLimit, selector, serviceName, template, updateStrategy, volumeClaimTemplates);
         }
     }

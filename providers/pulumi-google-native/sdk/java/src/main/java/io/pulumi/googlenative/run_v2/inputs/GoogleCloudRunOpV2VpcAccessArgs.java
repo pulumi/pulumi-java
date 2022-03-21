@@ -79,22 +79,18 @@ public final class GoogleCloudRunOpV2VpcAccessArgs extends io.pulumi.resources.R
             this.connector = connector;
             return this;
         }
-
         public Builder connector(@Nullable String connector) {
             this.connector = Output.ofNullable(connector);
             return this;
         }
-
         public Builder egress(@Nullable Output<GoogleCloudRunOpV2VpcAccessEgress> egress) {
             this.egress = egress;
             return this;
         }
-
         public Builder egress(@Nullable GoogleCloudRunOpV2VpcAccessEgress egress) {
             this.egress = Output.ofNullable(egress);
             return this;
-        }
-        public GoogleCloudRunOpV2VpcAccessArgs build() {
+        }        public GoogleCloudRunOpV2VpcAccessArgs build() {
             return new GoogleCloudRunOpV2VpcAccessArgs(connector, egress);
         }
     }

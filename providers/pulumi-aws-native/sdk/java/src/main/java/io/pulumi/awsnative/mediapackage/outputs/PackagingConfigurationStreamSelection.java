@@ -88,17 +88,14 @@ public final class PackagingConfigurationStreamSelection {
             this.maxVideoBitsPerSecond = maxVideoBitsPerSecond;
             return this;
         }
-
         public Builder minVideoBitsPerSecond(@Nullable Integer minVideoBitsPerSecond) {
             this.minVideoBitsPerSecond = minVideoBitsPerSecond;
             return this;
         }
-
         public Builder streamOrder(@Nullable PackagingConfigurationStreamSelectionStreamOrder streamOrder) {
             this.streamOrder = streamOrder;
             return this;
-        }
-        public PackagingConfigurationStreamSelection build() {
+        }        public PackagingConfigurationStreamSelection build() {
             return new PackagingConfigurationStreamSelection(maxVideoBitsPerSecond, minVideoBitsPerSecond, streamOrder);
         }
     }

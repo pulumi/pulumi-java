@@ -131,72 +131,64 @@ public final class TaskDefinitionLinuxParametersArgs extends io.pulumi.resources
             this.capabilities = capabilities;
             return this;
         }
-
         public Builder capabilities(@Nullable TaskDefinitionKernelCapabilitiesArgs capabilities) {
             this.capabilities = Output.ofNullable(capabilities);
             return this;
         }
-
         public Builder devices(@Nullable Output<List<TaskDefinitionDeviceArgs>> devices) {
             this.devices = devices;
             return this;
         }
-
         public Builder devices(@Nullable List<TaskDefinitionDeviceArgs> devices) {
             this.devices = Output.ofNullable(devices);
             return this;
         }
-
+        public Builder devices(TaskDefinitionDeviceArgs... devices) {
+            return devices(List.of(devices));
+        }
         public Builder initProcessEnabled(@Nullable Output<Boolean> initProcessEnabled) {
             this.initProcessEnabled = initProcessEnabled;
             return this;
         }
-
         public Builder initProcessEnabled(@Nullable Boolean initProcessEnabled) {
             this.initProcessEnabled = Output.ofNullable(initProcessEnabled);
             return this;
         }
-
         public Builder maxSwap(@Nullable Output<Integer> maxSwap) {
             this.maxSwap = maxSwap;
             return this;
         }
-
         public Builder maxSwap(@Nullable Integer maxSwap) {
             this.maxSwap = Output.ofNullable(maxSwap);
             return this;
         }
-
         public Builder sharedMemorySize(@Nullable Output<Integer> sharedMemorySize) {
             this.sharedMemorySize = sharedMemorySize;
             return this;
         }
-
         public Builder sharedMemorySize(@Nullable Integer sharedMemorySize) {
             this.sharedMemorySize = Output.ofNullable(sharedMemorySize);
             return this;
         }
-
         public Builder swappiness(@Nullable Output<Integer> swappiness) {
             this.swappiness = swappiness;
             return this;
         }
-
         public Builder swappiness(@Nullable Integer swappiness) {
             this.swappiness = Output.ofNullable(swappiness);
             return this;
         }
-
         public Builder tmpfs(@Nullable Output<List<TaskDefinitionTmpfsArgs>> tmpfs) {
             this.tmpfs = tmpfs;
             return this;
         }
-
         public Builder tmpfs(@Nullable List<TaskDefinitionTmpfsArgs> tmpfs) {
             this.tmpfs = Output.ofNullable(tmpfs);
             return this;
         }
-        public TaskDefinitionLinuxParametersArgs build() {
+        public Builder tmpfs(TaskDefinitionTmpfsArgs... tmpfs) {
+            return tmpfs(List.of(tmpfs));
+        }        public TaskDefinitionLinuxParametersArgs build() {
             return new TaskDefinitionLinuxParametersArgs(capabilities, devices, initProcessEnabled, maxSwap, sharedMemorySize, swappiness, tmpfs);
         }
     }

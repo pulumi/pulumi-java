@@ -104,22 +104,18 @@ public final class GetAliasResult {
             this.aliasId = aliasId;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
-
         public Builder routingStrategy(@Nullable AliasRoutingStrategy routingStrategy) {
             this.routingStrategy = routingStrategy;
             return this;
-        }
-        public GetAliasResult build() {
+        }        public GetAliasResult build() {
             return new GetAliasResult(aliasId, description, name, routingStrategy);
         }
     }

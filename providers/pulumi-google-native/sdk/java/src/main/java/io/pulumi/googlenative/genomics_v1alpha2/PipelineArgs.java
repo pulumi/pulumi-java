@@ -174,82 +174,72 @@ public final class PipelineArgs extends io.pulumi.resources.ResourceArgs {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder docker(@Nullable Output<DockerExecutorArgs> docker) {
             this.docker = docker;
             return this;
         }
-
         public Builder docker(@Nullable DockerExecutorArgs docker) {
             this.docker = Output.ofNullable(docker);
             return this;
         }
-
         public Builder inputParameters(@Nullable Output<List<PipelineParameterArgs>> inputParameters) {
             this.inputParameters = inputParameters;
             return this;
         }
-
         public Builder inputParameters(@Nullable List<PipelineParameterArgs> inputParameters) {
             this.inputParameters = Output.ofNullable(inputParameters);
             return this;
         }
-
+        public Builder inputParameters(PipelineParameterArgs... inputParameters) {
+            return inputParameters(List.of(inputParameters));
+        }
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder outputParameters(@Nullable Output<List<PipelineParameterArgs>> outputParameters) {
             this.outputParameters = outputParameters;
             return this;
         }
-
         public Builder outputParameters(@Nullable List<PipelineParameterArgs> outputParameters) {
             this.outputParameters = Output.ofNullable(outputParameters);
             return this;
         }
-
+        public Builder outputParameters(PipelineParameterArgs... outputParameters) {
+            return outputParameters(List.of(outputParameters));
+        }
         public Builder pipelineId(@Nullable Output<String> pipelineId) {
             this.pipelineId = pipelineId;
             return this;
         }
-
         public Builder pipelineId(@Nullable String pipelineId) {
             this.pipelineId = Output.ofNullable(pipelineId);
             return this;
         }
-
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
         }
-
         public Builder resources(Output<PipelineResourcesArgs> resources) {
             this.resources = Objects.requireNonNull(resources);
             return this;
         }
-
         public Builder resources(PipelineResourcesArgs resources) {
             this.resources = Output.of(Objects.requireNonNull(resources));
             return this;
-        }
-        public PipelineArgs build() {
+        }        public PipelineArgs build() {
             return new PipelineArgs(description, docker, inputParameters, name, outputParameters, pipelineId, project, resources);
         }
     }

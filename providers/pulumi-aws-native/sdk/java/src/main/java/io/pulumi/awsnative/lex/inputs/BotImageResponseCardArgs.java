@@ -112,42 +112,37 @@ public final class BotImageResponseCardArgs extends io.pulumi.resources.Resource
             this.buttons = buttons;
             return this;
         }
-
         public Builder buttons(@Nullable List<BotButtonArgs> buttons) {
             this.buttons = Output.ofNullable(buttons);
             return this;
         }
-
+        public Builder buttons(BotButtonArgs... buttons) {
+            return buttons(List.of(buttons));
+        }
         public Builder imageUrl(@Nullable Output<String> imageUrl) {
             this.imageUrl = imageUrl;
             return this;
         }
-
         public Builder imageUrl(@Nullable String imageUrl) {
             this.imageUrl = Output.ofNullable(imageUrl);
             return this;
         }
-
         public Builder subtitle(@Nullable Output<String> subtitle) {
             this.subtitle = subtitle;
             return this;
         }
-
         public Builder subtitle(@Nullable String subtitle) {
             this.subtitle = Output.ofNullable(subtitle);
             return this;
         }
-
         public Builder title(Output<String> title) {
             this.title = Objects.requireNonNull(title);
             return this;
         }
-
         public Builder title(String title) {
             this.title = Output.of(Objects.requireNonNull(title));
             return this;
-        }
-        public BotImageResponseCardArgs build() {
+        }        public BotImageResponseCardArgs build() {
             return new BotImageResponseCardArgs(buttons, imageUrl, subtitle, title);
         }
     }

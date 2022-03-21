@@ -241,132 +241,109 @@ public final class FhirStoreArgs extends io.pulumi.resources.ResourceArgs {
             this.datasetId = Objects.requireNonNull(datasetId);
             return this;
         }
-
         public Builder datasetId(String datasetId) {
             this.datasetId = Output.of(Objects.requireNonNull(datasetId));
             return this;
         }
-
         public Builder defaultSearchHandlingStrict(@Nullable Output<Boolean> defaultSearchHandlingStrict) {
             this.defaultSearchHandlingStrict = defaultSearchHandlingStrict;
             return this;
         }
-
         public Builder defaultSearchHandlingStrict(@Nullable Boolean defaultSearchHandlingStrict) {
             this.defaultSearchHandlingStrict = Output.ofNullable(defaultSearchHandlingStrict);
             return this;
         }
-
         public Builder disableReferentialIntegrity(@Nullable Output<Boolean> disableReferentialIntegrity) {
             this.disableReferentialIntegrity = disableReferentialIntegrity;
             return this;
         }
-
         public Builder disableReferentialIntegrity(@Nullable Boolean disableReferentialIntegrity) {
             this.disableReferentialIntegrity = Output.ofNullable(disableReferentialIntegrity);
             return this;
         }
-
         public Builder disableResourceVersioning(@Nullable Output<Boolean> disableResourceVersioning) {
             this.disableResourceVersioning = disableResourceVersioning;
             return this;
         }
-
         public Builder disableResourceVersioning(@Nullable Boolean disableResourceVersioning) {
             this.disableResourceVersioning = Output.ofNullable(disableResourceVersioning);
             return this;
         }
-
         public Builder enableUpdateCreate(@Nullable Output<Boolean> enableUpdateCreate) {
             this.enableUpdateCreate = enableUpdateCreate;
             return this;
         }
-
         public Builder enableUpdateCreate(@Nullable Boolean enableUpdateCreate) {
             this.enableUpdateCreate = Output.ofNullable(enableUpdateCreate);
             return this;
         }
-
         public Builder fhirStoreId(@Nullable Output<String> fhirStoreId) {
             this.fhirStoreId = fhirStoreId;
             return this;
         }
-
         public Builder fhirStoreId(@Nullable String fhirStoreId) {
             this.fhirStoreId = Output.ofNullable(fhirStoreId);
             return this;
         }
-
         public Builder labels(@Nullable Output<Map<String,String>> labels) {
             this.labels = labels;
             return this;
         }
-
         public Builder labels(@Nullable Map<String,String> labels) {
             this.labels = Output.ofNullable(labels);
             return this;
         }
-
         public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder notificationConfig(@Nullable Output<NotificationConfigArgs> notificationConfig) {
             this.notificationConfig = notificationConfig;
             return this;
         }
-
         public Builder notificationConfig(@Nullable NotificationConfigArgs notificationConfig) {
             this.notificationConfig = Output.ofNullable(notificationConfig);
             return this;
         }
-
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
         }
-
         public Builder streamConfigs(@Nullable Output<List<StreamConfigArgs>> streamConfigs) {
             this.streamConfigs = streamConfigs;
             return this;
         }
-
         public Builder streamConfigs(@Nullable List<StreamConfigArgs> streamConfigs) {
             this.streamConfigs = Output.ofNullable(streamConfigs);
             return this;
         }
-
+        public Builder streamConfigs(StreamConfigArgs... streamConfigs) {
+            return streamConfigs(List.of(streamConfigs));
+        }
         public Builder validationConfig(@Nullable Output<ValidationConfigArgs> validationConfig) {
             this.validationConfig = validationConfig;
             return this;
         }
-
         public Builder validationConfig(@Nullable ValidationConfigArgs validationConfig) {
             this.validationConfig = Output.ofNullable(validationConfig);
             return this;
         }
-
         public Builder version(@Nullable Output<FhirStoreVersion> version) {
             this.version = version;
             return this;
         }
-
         public Builder version(@Nullable FhirStoreVersion version) {
             this.version = Output.ofNullable(version);
             return this;
-        }
-        public FhirStoreArgs build() {
+        }        public FhirStoreArgs build() {
             return new FhirStoreArgs(datasetId, defaultSearchHandlingStrict, disableReferentialIntegrity, disableResourceVersioning, enableUpdateCreate, fhirStoreId, labels, location, notificationConfig, project, streamConfigs, validationConfig, version);
         }
     }

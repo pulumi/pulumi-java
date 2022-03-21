@@ -72,12 +72,10 @@ public final class StoredProcedureParameterResponse {
             this.type = type;
             return this;
         }
-
         public Builder value(@Nullable Object value) {
             this.value = value;
             return this;
-        }
-        public StoredProcedureParameterResponse build() {
+        }        public StoredProcedureParameterResponse build() {
             return new StoredProcedureParameterResponse(type, value);
         }
     }

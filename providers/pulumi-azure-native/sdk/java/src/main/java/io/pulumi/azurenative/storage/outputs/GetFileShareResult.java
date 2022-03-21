@@ -331,92 +331,74 @@ public final class GetFileShareResult {
             this.accessTier = accessTier;
             return this;
         }
-
         public Builder accessTierChangeTime(String accessTierChangeTime) {
             this.accessTierChangeTime = Objects.requireNonNull(accessTierChangeTime);
             return this;
         }
-
         public Builder accessTierStatus(String accessTierStatus) {
             this.accessTierStatus = Objects.requireNonNull(accessTierStatus);
             return this;
         }
-
         public Builder deleted(Boolean deleted) {
             this.deleted = Objects.requireNonNull(deleted);
             return this;
         }
-
         public Builder deletedTime(String deletedTime) {
             this.deletedTime = Objects.requireNonNull(deletedTime);
             return this;
         }
-
         public Builder enabledProtocols(@Nullable String enabledProtocols) {
             this.enabledProtocols = enabledProtocols;
             return this;
         }
-
         public Builder etag(String etag) {
             this.etag = Objects.requireNonNull(etag);
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder lastModifiedTime(String lastModifiedTime) {
             this.lastModifiedTime = Objects.requireNonNull(lastModifiedTime);
             return this;
         }
-
         public Builder metadata(@Nullable Map<String,String> metadata) {
             this.metadata = metadata;
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder remainingRetentionDays(Integer remainingRetentionDays) {
             this.remainingRetentionDays = Objects.requireNonNull(remainingRetentionDays);
             return this;
         }
-
         public Builder rootSquash(@Nullable String rootSquash) {
             this.rootSquash = rootSquash;
             return this;
         }
-
         public Builder shareQuota(@Nullable Integer shareQuota) {
             this.shareQuota = shareQuota;
             return this;
         }
-
         public Builder shareUsageBytes(Double shareUsageBytes) {
             this.shareUsageBytes = Objects.requireNonNull(shareUsageBytes);
             return this;
         }
-
         public Builder snapshotTime(String snapshotTime) {
             this.snapshotTime = Objects.requireNonNull(snapshotTime);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder version(String version) {
             this.version = Objects.requireNonNull(version);
             return this;
-        }
-        public GetFileShareResult build() {
+        }        public GetFileShareResult build() {
             return new GetFileShareResult(accessTier, accessTierChangeTime, accessTierStatus, deleted, deletedTime, enabledProtocols, etag, id, lastModifiedTime, metadata, name, remainingRetentionDays, rootSquash, shareQuota, shareUsageBytes, snapshotTime, type, version);
         }
     }

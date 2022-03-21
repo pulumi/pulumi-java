@@ -92,32 +92,26 @@ public final class SourceControlSecurityTokenPropertiesArgs extends io.pulumi.re
             this.accessToken = accessToken;
             return this;
         }
-
         public Builder accessToken(@Nullable String accessToken) {
             this.accessToken = Output.ofNullable(accessToken);
             return this;
         }
-
         public Builder refreshToken(@Nullable Output<String> refreshToken) {
             this.refreshToken = refreshToken;
             return this;
         }
-
         public Builder refreshToken(@Nullable String refreshToken) {
             this.refreshToken = Output.ofNullable(refreshToken);
             return this;
         }
-
         public Builder tokenType(@Nullable Output<Either<String,TokenType>> tokenType) {
             this.tokenType = tokenType;
             return this;
         }
-
         public Builder tokenType(@Nullable Either<String,TokenType> tokenType) {
             this.tokenType = Output.ofNullable(tokenType);
             return this;
-        }
-        public SourceControlSecurityTokenPropertiesArgs build() {
+        }        public SourceControlSecurityTokenPropertiesArgs build() {
             return new SourceControlSecurityTokenPropertiesArgs(accessToken, refreshToken, tokenType);
         }
     }

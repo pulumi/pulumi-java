@@ -87,17 +87,17 @@ public final class GetCustomClassResult {
             this.customClassId = Objects.requireNonNull(customClassId);
             return this;
         }
-
         public Builder items(List<ClassItemResponse> items) {
             this.items = Objects.requireNonNull(items);
             return this;
         }
-
+        public Builder items(ClassItemResponse... items) {
+            return items(List.of(items));
+        }
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
-        }
-        public GetCustomClassResult build() {
+        }        public GetCustomClassResult build() {
             return new GetCustomClassResult(customClassId, items, name);
         }
     }

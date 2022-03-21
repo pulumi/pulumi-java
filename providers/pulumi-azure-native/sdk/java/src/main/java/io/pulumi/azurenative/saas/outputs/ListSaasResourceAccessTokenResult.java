@@ -71,12 +71,10 @@ public final class ListSaasResourceAccessTokenResult {
             this.publisherOfferBaseUri = publisherOfferBaseUri;
             return this;
         }
-
         public Builder token(@Nullable String token) {
             this.token = token;
             return this;
-        }
-        public ListSaasResourceAccessTokenResult build() {
+        }        public ListSaasResourceAccessTokenResult build() {
             return new ListSaasResourceAccessTokenResult(publisherOfferBaseUri, token);
         }
     }

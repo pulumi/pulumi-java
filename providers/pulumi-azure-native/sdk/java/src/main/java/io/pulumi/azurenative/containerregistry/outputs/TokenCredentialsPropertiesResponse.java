@@ -56,12 +56,16 @@ public final class TokenCredentialsPropertiesResponse {
             this.certificates = certificates;
             return this;
         }
-
+        public Builder certificates(TokenCertificateResponse... certificates) {
+            return certificates(List.of(certificates));
+        }
         public Builder passwords(@Nullable List<TokenPasswordResponse> passwords) {
             this.passwords = passwords;
             return this;
         }
-        public TokenCredentialsPropertiesResponse build() {
+        public Builder passwords(TokenPasswordResponse... passwords) {
+            return passwords(List.of(passwords));
+        }        public TokenCredentialsPropertiesResponse build() {
             return new TokenCredentialsPropertiesResponse(certificates, passwords);
         }
     }

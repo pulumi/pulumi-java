@@ -201,52 +201,42 @@ public final class GetAppResult {
             this.applicationId = Objects.requireNonNull(applicationId);
             return this;
         }
-
         public Builder displayName(@Nullable String displayName) {
             this.displayName = displayName;
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder location(String location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder sku(AppSkuInfoResponse sku) {
             this.sku = Objects.requireNonNull(sku);
             return this;
         }
-
         public Builder subdomain(@Nullable String subdomain) {
             this.subdomain = subdomain;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder template(@Nullable String template) {
             this.template = template;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public GetAppResult build() {
+        }        public GetAppResult build() {
             return new GetAppResult(applicationId, displayName, id, location, name, sku, subdomain, tags, template, type);
         }
     }

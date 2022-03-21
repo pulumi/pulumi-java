@@ -303,162 +303,139 @@ public final class ComputeEnvironmentComputeResourcesGetArgs extends io.pulumi.r
             this.allocationStrategy = allocationStrategy;
             return this;
         }
-
         public Builder allocationStrategy(@Nullable String allocationStrategy) {
             this.allocationStrategy = Output.ofNullable(allocationStrategy);
             return this;
         }
-
         public Builder bidPercentage(@Nullable Output<Integer> bidPercentage) {
             this.bidPercentage = bidPercentage;
             return this;
         }
-
         public Builder bidPercentage(@Nullable Integer bidPercentage) {
             this.bidPercentage = Output.ofNullable(bidPercentage);
             return this;
         }
-
         public Builder desiredVcpus(@Nullable Output<Integer> desiredVcpus) {
             this.desiredVcpus = desiredVcpus;
             return this;
         }
-
         public Builder desiredVcpus(@Nullable Integer desiredVcpus) {
             this.desiredVcpus = Output.ofNullable(desiredVcpus);
             return this;
         }
-
         public Builder ec2Configuration(@Nullable Output<ComputeEnvironmentComputeResourcesEc2ConfigurationGetArgs> ec2Configuration) {
             this.ec2Configuration = ec2Configuration;
             return this;
         }
-
         public Builder ec2Configuration(@Nullable ComputeEnvironmentComputeResourcesEc2ConfigurationGetArgs ec2Configuration) {
             this.ec2Configuration = Output.ofNullable(ec2Configuration);
             return this;
         }
-
         public Builder ec2KeyPair(@Nullable Output<String> ec2KeyPair) {
             this.ec2KeyPair = ec2KeyPair;
             return this;
         }
-
         public Builder ec2KeyPair(@Nullable String ec2KeyPair) {
             this.ec2KeyPair = Output.ofNullable(ec2KeyPair);
             return this;
         }
-
         public Builder imageId(@Nullable Output<String> imageId) {
             this.imageId = imageId;
             return this;
         }
-
         public Builder imageId(@Nullable String imageId) {
             this.imageId = Output.ofNullable(imageId);
             return this;
         }
-
         public Builder instanceRole(@Nullable Output<String> instanceRole) {
             this.instanceRole = instanceRole;
             return this;
         }
-
         public Builder instanceRole(@Nullable String instanceRole) {
             this.instanceRole = Output.ofNullable(instanceRole);
             return this;
         }
-
         public Builder instanceTypes(@Nullable Output<List<String>> instanceTypes) {
             this.instanceTypes = instanceTypes;
             return this;
         }
-
         public Builder instanceTypes(@Nullable List<String> instanceTypes) {
             this.instanceTypes = Output.ofNullable(instanceTypes);
             return this;
         }
-
+        public Builder instanceTypes(String... instanceTypes) {
+            return instanceTypes(List.of(instanceTypes));
+        }
         public Builder launchTemplate(@Nullable Output<ComputeEnvironmentComputeResourcesLaunchTemplateGetArgs> launchTemplate) {
             this.launchTemplate = launchTemplate;
             return this;
         }
-
         public Builder launchTemplate(@Nullable ComputeEnvironmentComputeResourcesLaunchTemplateGetArgs launchTemplate) {
             this.launchTemplate = Output.ofNullable(launchTemplate);
             return this;
         }
-
         public Builder maxVcpus(Output<Integer> maxVcpus) {
             this.maxVcpus = Objects.requireNonNull(maxVcpus);
             return this;
         }
-
         public Builder maxVcpus(Integer maxVcpus) {
             this.maxVcpus = Output.of(Objects.requireNonNull(maxVcpus));
             return this;
         }
-
         public Builder minVcpus(@Nullable Output<Integer> minVcpus) {
             this.minVcpus = minVcpus;
             return this;
         }
-
         public Builder minVcpus(@Nullable Integer minVcpus) {
             this.minVcpus = Output.ofNullable(minVcpus);
             return this;
         }
-
         public Builder securityGroupIds(Output<List<String>> securityGroupIds) {
             this.securityGroupIds = Objects.requireNonNull(securityGroupIds);
             return this;
         }
-
         public Builder securityGroupIds(List<String> securityGroupIds) {
             this.securityGroupIds = Output.of(Objects.requireNonNull(securityGroupIds));
             return this;
         }
-
+        public Builder securityGroupIds(String... securityGroupIds) {
+            return securityGroupIds(List.of(securityGroupIds));
+        }
         public Builder spotIamFleetRole(@Nullable Output<String> spotIamFleetRole) {
             this.spotIamFleetRole = spotIamFleetRole;
             return this;
         }
-
         public Builder spotIamFleetRole(@Nullable String spotIamFleetRole) {
             this.spotIamFleetRole = Output.ofNullable(spotIamFleetRole);
             return this;
         }
-
         public Builder subnets(Output<List<String>> subnets) {
             this.subnets = Objects.requireNonNull(subnets);
             return this;
         }
-
         public Builder subnets(List<String> subnets) {
             this.subnets = Output.of(Objects.requireNonNull(subnets));
             return this;
         }
-
+        public Builder subnets(String... subnets) {
+            return subnets(List.of(subnets));
+        }
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
         public Builder type(Output<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Output.of(Objects.requireNonNull(type));
             return this;
-        }
-        public ComputeEnvironmentComputeResourcesGetArgs build() {
+        }        public ComputeEnvironmentComputeResourcesGetArgs build() {
             return new ComputeEnvironmentComputeResourcesGetArgs(allocationStrategy, bidPercentage, desiredVcpus, ec2Configuration, ec2KeyPair, imageId, instanceRole, instanceTypes, launchTemplate, maxVcpus, minVcpus, securityGroupIds, spotIamFleetRole, subnets, tags, type);
         }
     }

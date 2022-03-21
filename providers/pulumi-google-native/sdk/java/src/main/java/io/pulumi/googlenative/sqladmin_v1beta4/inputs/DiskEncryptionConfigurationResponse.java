@@ -76,12 +76,10 @@ public final class DiskEncryptionConfigurationResponse extends io.pulumi.resourc
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
-
         public Builder kmsKeyName(String kmsKeyName) {
             this.kmsKeyName = Objects.requireNonNull(kmsKeyName);
             return this;
-        }
-        public DiskEncryptionConfigurationResponse build() {
+        }        public DiskEncryptionConfigurationResponse build() {
             return new DiskEncryptionConfigurationResponse(kind, kmsKeyName);
         }
     }

@@ -147,72 +147,61 @@ public final class EntryGroupIamBindingState extends io.pulumi.resources.Resourc
             this.condition = condition;
             return this;
         }
-
         public Builder condition(@Nullable EntryGroupIamBindingConditionGetArgs condition) {
             this.condition = Output.ofNullable(condition);
             return this;
         }
-
         public Builder entryGroup(@Nullable Output<String> entryGroup) {
             this.entryGroup = entryGroup;
             return this;
         }
-
         public Builder entryGroup(@Nullable String entryGroup) {
             this.entryGroup = Output.ofNullable(entryGroup);
             return this;
         }
-
         public Builder etag(@Nullable Output<String> etag) {
             this.etag = etag;
             return this;
         }
-
         public Builder etag(@Nullable String etag) {
             this.etag = Output.ofNullable(etag);
             return this;
         }
-
         public Builder members(@Nullable Output<List<String>> members) {
             this.members = members;
             return this;
         }
-
         public Builder members(@Nullable List<String> members) {
             this.members = Output.ofNullable(members);
             return this;
         }
-
+        public Builder members(String... members) {
+            return members(List.of(members));
+        }
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
         }
-
         public Builder region(@Nullable Output<String> region) {
             this.region = region;
             return this;
         }
-
         public Builder region(@Nullable String region) {
             this.region = Output.ofNullable(region);
             return this;
         }
-
         public Builder role(@Nullable Output<String> role) {
             this.role = role;
             return this;
         }
-
         public Builder role(@Nullable String role) {
             this.role = Output.ofNullable(role);
             return this;
-        }
-        public EntryGroupIamBindingState build() {
+        }        public EntryGroupIamBindingState build() {
             return new EntryGroupIamBindingState(condition, entryGroup, etag, members, project, region, role);
         }
     }

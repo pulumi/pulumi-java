@@ -189,92 +189,77 @@ public final class SecurityProfileState extends io.pulumi.resources.ResourceArgs
             this.arn = arn;
             return this;
         }
-
         public Builder arn(@Nullable String arn) {
             this.arn = Output.ofNullable(arn);
             return this;
         }
-
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder instanceId(@Nullable Output<String> instanceId) {
             this.instanceId = instanceId;
             return this;
         }
-
         public Builder instanceId(@Nullable String instanceId) {
             this.instanceId = Output.ofNullable(instanceId);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder organizationResourceId(@Nullable Output<String> organizationResourceId) {
             this.organizationResourceId = organizationResourceId;
             return this;
         }
-
         public Builder organizationResourceId(@Nullable String organizationResourceId) {
             this.organizationResourceId = Output.ofNullable(organizationResourceId);
             return this;
         }
-
         public Builder permissions(@Nullable Output<List<String>> permissions) {
             this.permissions = permissions;
             return this;
         }
-
         public Builder permissions(@Nullable List<String> permissions) {
             this.permissions = Output.ofNullable(permissions);
             return this;
         }
-
+        public Builder permissions(String... permissions) {
+            return permissions(List.of(permissions));
+        }
         public Builder securityProfileId(@Nullable Output<String> securityProfileId) {
             this.securityProfileId = securityProfileId;
             return this;
         }
-
         public Builder securityProfileId(@Nullable String securityProfileId) {
             this.securityProfileId = Output.ofNullable(securityProfileId);
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
             this.tagsAll = tagsAll;
             return this;
         }
-
         public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
             this.tagsAll = Output.ofNullable(tagsAll);
             return this;
-        }
-        public SecurityProfileState build() {
+        }        public SecurityProfileState build() {
             return new SecurityProfileState(arn, description, instanceId, name, organizationResourceId, permissions, securityProfileId, tags, tagsAll);
         }
     }

@@ -108,42 +108,37 @@ public final class ClusterStepHadoopJarStepGetArgs extends io.pulumi.resources.R
             this.args = args;
             return this;
         }
-
         public Builder args(@Nullable List<String> args) {
             this.args = Output.ofNullable(args);
             return this;
         }
-
+        public Builder args(String... args) {
+            return args(List.of(args));
+        }
         public Builder jar(Output<String> jar) {
             this.jar = Objects.requireNonNull(jar);
             return this;
         }
-
         public Builder jar(String jar) {
             this.jar = Output.of(Objects.requireNonNull(jar));
             return this;
         }
-
         public Builder mainClass(@Nullable Output<String> mainClass) {
             this.mainClass = mainClass;
             return this;
         }
-
         public Builder mainClass(@Nullable String mainClass) {
             this.mainClass = Output.ofNullable(mainClass);
             return this;
         }
-
         public Builder properties(@Nullable Output<Map<String,String>> properties) {
             this.properties = properties;
             return this;
         }
-
         public Builder properties(@Nullable Map<String,String> properties) {
             this.properties = Output.ofNullable(properties);
             return this;
-        }
-        public ClusterStepHadoopJarStepGetArgs build() {
+        }        public ClusterStepHadoopJarStepGetArgs build() {
             return new ClusterStepHadoopJarStepGetArgs(args, jar, mainClass, properties);
         }
     }

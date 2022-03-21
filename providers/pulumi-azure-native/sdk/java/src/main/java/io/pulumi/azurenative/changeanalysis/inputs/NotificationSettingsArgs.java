@@ -81,22 +81,18 @@ public final class NotificationSettingsArgs extends io.pulumi.resources.Resource
             this.activationState = activationState;
             return this;
         }
-
         public Builder activationState(@Nullable Either<String,NotificationsState> activationState) {
             this.activationState = Output.ofNullable(activationState);
             return this;
         }
-
         public Builder azureMonitorWorkspaceProperties(@Nullable Output<AzureMonitorWorkspacePropertiesArgs> azureMonitorWorkspaceProperties) {
             this.azureMonitorWorkspaceProperties = azureMonitorWorkspaceProperties;
             return this;
         }
-
         public Builder azureMonitorWorkspaceProperties(@Nullable AzureMonitorWorkspacePropertiesArgs azureMonitorWorkspaceProperties) {
             this.azureMonitorWorkspaceProperties = Output.ofNullable(azureMonitorWorkspaceProperties);
             return this;
-        }
-        public NotificationSettingsArgs build() {
+        }        public NotificationSettingsArgs build() {
             return new NotificationSettingsArgs(activationState, azureMonitorWorkspaceProperties);
         }
     }

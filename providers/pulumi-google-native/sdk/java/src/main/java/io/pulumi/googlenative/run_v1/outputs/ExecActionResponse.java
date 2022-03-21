@@ -53,7 +53,9 @@ public final class ExecActionResponse {
             this.command = Objects.requireNonNull(command);
             return this;
         }
-        public ExecActionResponse build() {
+        public Builder command(String... command) {
+            return command(List.of(command));
+        }        public ExecActionResponse build() {
             return new ExecActionResponse(command);
         }
     }

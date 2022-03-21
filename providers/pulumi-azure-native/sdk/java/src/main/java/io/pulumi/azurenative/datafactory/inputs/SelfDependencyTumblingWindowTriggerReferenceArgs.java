@@ -95,32 +95,26 @@ public final class SelfDependencyTumblingWindowTriggerReferenceArgs extends io.p
             this.offset = Objects.requireNonNull(offset);
             return this;
         }
-
         public Builder offset(String offset) {
             this.offset = Output.of(Objects.requireNonNull(offset));
             return this;
         }
-
         public Builder size(@Nullable Output<String> size) {
             this.size = size;
             return this;
         }
-
         public Builder size(@Nullable String size) {
             this.size = Output.ofNullable(size);
             return this;
         }
-
         public Builder type(Output<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Output.of(Objects.requireNonNull(type));
             return this;
-        }
-        public SelfDependencyTumblingWindowTriggerReferenceArgs build() {
+        }        public SelfDependencyTumblingWindowTriggerReferenceArgs build() {
             return new SelfDependencyTumblingWindowTriggerReferenceArgs(offset, size, type);
         }
     }

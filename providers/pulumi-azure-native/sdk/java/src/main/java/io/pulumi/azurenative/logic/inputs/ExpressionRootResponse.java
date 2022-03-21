@@ -126,27 +126,25 @@ public final class ExpressionRootResponse extends io.pulumi.resources.InvokeArgs
             this.error = error;
             return this;
         }
-
         public Builder path(@Nullable String path) {
             this.path = path;
             return this;
         }
-
         public Builder subexpressions(@Nullable List<ExpressionResponse> subexpressions) {
             this.subexpressions = subexpressions;
             return this;
         }
-
+        public Builder subexpressions(ExpressionResponse... subexpressions) {
+            return subexpressions(List.of(subexpressions));
+        }
         public Builder text(@Nullable String text) {
             this.text = text;
             return this;
         }
-
         public Builder value(@Nullable Object value) {
             this.value = value;
             return this;
-        }
-        public ExpressionRootResponse build() {
+        }        public ExpressionRootResponse build() {
             return new ExpressionRootResponse(error, path, subexpressions, text, value);
         }
     }

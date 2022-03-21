@@ -101,22 +101,18 @@ public final class TopicRuleCloudwatchAlarm {
             this.alarmName = Objects.requireNonNull(alarmName);
             return this;
         }
-
         public Builder roleArn(String roleArn) {
             this.roleArn = Objects.requireNonNull(roleArn);
             return this;
         }
-
         public Builder stateReason(String stateReason) {
             this.stateReason = Objects.requireNonNull(stateReason);
             return this;
         }
-
         public Builder stateValue(String stateValue) {
             this.stateValue = Objects.requireNonNull(stateValue);
             return this;
-        }
-        public TopicRuleCloudwatchAlarm build() {
+        }        public TopicRuleCloudwatchAlarm build() {
             return new TopicRuleCloudwatchAlarm(alarmName, roleArn, stateReason, stateValue);
         }
     }

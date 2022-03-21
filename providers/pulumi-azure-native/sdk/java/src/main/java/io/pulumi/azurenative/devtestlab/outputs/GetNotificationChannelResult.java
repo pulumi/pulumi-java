@@ -250,67 +250,57 @@ public final class GetNotificationChannelResult {
             this.createdDate = Objects.requireNonNull(createdDate);
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
-
         public Builder emailRecipient(@Nullable String emailRecipient) {
             this.emailRecipient = emailRecipient;
             return this;
         }
-
         public Builder events(@Nullable List<EventResponse> events) {
             this.events = events;
             return this;
         }
-
+        public Builder events(EventResponse... events) {
+            return events(List.of(events));
+        }
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = location;
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder notificationLocale(@Nullable String notificationLocale) {
             this.notificationLocale = notificationLocale;
             return this;
         }
-
         public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder uniqueIdentifier(String uniqueIdentifier) {
             this.uniqueIdentifier = Objects.requireNonNull(uniqueIdentifier);
             return this;
         }
-
         public Builder webHookUrl(@Nullable String webHookUrl) {
             this.webHookUrl = webHookUrl;
             return this;
-        }
-        public GetNotificationChannelResult build() {
+        }        public GetNotificationChannelResult build() {
             return new GetNotificationChannelResult(createdDate, description, emailRecipient, events, id, location, name, notificationLocale, provisioningState, tags, type, uniqueIdentifier, webHookUrl);
         }
     }

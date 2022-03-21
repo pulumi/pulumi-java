@@ -108,42 +108,37 @@ public final class VpcIpamPreviewNextCidrState extends io.pulumi.resources.Resou
             this.cidr = cidr;
             return this;
         }
-
         public Builder cidr(@Nullable String cidr) {
             this.cidr = Output.ofNullable(cidr);
             return this;
         }
-
         public Builder disallowedCidrs(@Nullable Output<List<String>> disallowedCidrs) {
             this.disallowedCidrs = disallowedCidrs;
             return this;
         }
-
         public Builder disallowedCidrs(@Nullable List<String> disallowedCidrs) {
             this.disallowedCidrs = Output.ofNullable(disallowedCidrs);
             return this;
         }
-
+        public Builder disallowedCidrs(String... disallowedCidrs) {
+            return disallowedCidrs(List.of(disallowedCidrs));
+        }
         public Builder ipamPoolId(@Nullable Output<String> ipamPoolId) {
             this.ipamPoolId = ipamPoolId;
             return this;
         }
-
         public Builder ipamPoolId(@Nullable String ipamPoolId) {
             this.ipamPoolId = Output.ofNullable(ipamPoolId);
             return this;
         }
-
         public Builder netmaskLength(@Nullable Output<Integer> netmaskLength) {
             this.netmaskLength = netmaskLength;
             return this;
         }
-
         public Builder netmaskLength(@Nullable Integer netmaskLength) {
             this.netmaskLength = Output.ofNullable(netmaskLength);
             return this;
-        }
-        public VpcIpamPreviewNextCidrState build() {
+        }        public VpcIpamPreviewNextCidrState build() {
             return new VpcIpamPreviewNextCidrState(cidr, disallowedCidrs, ipamPoolId, netmaskLength);
         }
     }

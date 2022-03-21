@@ -60,8 +60,7 @@ public final class ApplicationHAClusterPrometheusExporter extends io.pulumi.reso
         public Builder prometheusPort(@Nullable String prometheusPort) {
             this.prometheusPort = prometheusPort;
             return this;
-        }
-        public ApplicationHAClusterPrometheusExporter build() {
+        }        public ApplicationHAClusterPrometheusExporter build() {
             return new ApplicationHAClusterPrometheusExporter(prometheusPort);
         }
     }

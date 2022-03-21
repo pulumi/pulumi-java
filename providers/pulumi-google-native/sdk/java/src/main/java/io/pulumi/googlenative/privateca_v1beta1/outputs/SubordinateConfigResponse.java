@@ -70,12 +70,10 @@ public final class SubordinateConfigResponse {
             this.certificateAuthority = Objects.requireNonNull(certificateAuthority);
             return this;
         }
-
         public Builder pemIssuerChain(SubordinateConfigChainResponse pemIssuerChain) {
             this.pemIssuerChain = Objects.requireNonNull(pemIssuerChain);
             return this;
-        }
-        public SubordinateConfigResponse build() {
+        }        public SubordinateConfigResponse build() {
             return new SubordinateConfigResponse(certificateAuthority, pemIssuerChain);
         }
     }

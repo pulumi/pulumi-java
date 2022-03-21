@@ -73,17 +73,17 @@ public final class GetServiceResult {
             this.arn = arn;
             return this;
         }
-
         public Builder serviceIdentifier(@Nullable String serviceIdentifier) {
             this.serviceIdentifier = serviceIdentifier;
             return this;
         }
-
         public Builder tags(@Nullable List<ServiceTag> tags) {
             this.tags = tags;
             return this;
         }
-        public GetServiceResult build() {
+        public Builder tags(ServiceTag... tags) {
+            return tags(List.of(tags));
+        }        public GetServiceResult build() {
             return new GetServiceResult(arn, serviceIdentifier, tags);
         }
     }

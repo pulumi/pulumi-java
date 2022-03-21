@@ -58,8 +58,7 @@ public final class IapCredentialResponse extends io.pulumi.resources.InvokeArgs 
         public Builder iapTestServiceAccountInfo(IapTestServiceAccountInfoResponse iapTestServiceAccountInfo) {
             this.iapTestServiceAccountInfo = Objects.requireNonNull(iapTestServiceAccountInfo);
             return this;
-        }
-        public IapCredentialResponse build() {
+        }        public IapCredentialResponse build() {
             return new IapCredentialResponse(iapTestServiceAccountInfo);
         }
     }

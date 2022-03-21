@@ -87,17 +87,14 @@ public final class DatasetDatetimeOptions {
             this.format = Objects.requireNonNull(format);
             return this;
         }
-
         public Builder localeCode(@Nullable String localeCode) {
             this.localeCode = localeCode;
             return this;
         }
-
         public Builder timezoneOffset(@Nullable String timezoneOffset) {
             this.timezoneOffset = timezoneOffset;
             return this;
-        }
-        public DatasetDatetimeOptions build() {
+        }        public DatasetDatetimeOptions build() {
             return new DatasetDatetimeOptions(format, localeCode, timezoneOffset);
         }
     }

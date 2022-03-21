@@ -217,57 +217,46 @@ public final class GetWCFRelayResult {
             this.createdAt = Objects.requireNonNull(createdAt);
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder isDynamic(Boolean isDynamic) {
             this.isDynamic = Objects.requireNonNull(isDynamic);
             return this;
         }
-
         public Builder listenerCount(Integer listenerCount) {
             this.listenerCount = Objects.requireNonNull(listenerCount);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder relayType(@Nullable String relayType) {
             this.relayType = relayType;
             return this;
         }
-
         public Builder requiresClientAuthorization(@Nullable Boolean requiresClientAuthorization) {
             this.requiresClientAuthorization = requiresClientAuthorization;
             return this;
         }
-
         public Builder requiresTransportSecurity(@Nullable Boolean requiresTransportSecurity) {
             this.requiresTransportSecurity = requiresTransportSecurity;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder updatedAt(String updatedAt) {
             this.updatedAt = Objects.requireNonNull(updatedAt);
             return this;
         }
-
         public Builder userMetadata(@Nullable String userMetadata) {
             this.userMetadata = userMetadata;
             return this;
-        }
-        public GetWCFRelayResult build() {
+        }        public GetWCFRelayResult build() {
             return new GetWCFRelayResult(createdAt, id, isDynamic, listenerCount, name, relayType, requiresClientAuthorization, requiresTransportSecurity, type, updatedAt, userMetadata);
         }
     }

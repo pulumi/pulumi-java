@@ -306,162 +306,142 @@ public final class ManagedClusterArgs extends io.pulumi.resources.ResourceArgs {
             this.addonFeatures = addonFeatures;
             return this;
         }
-
         public Builder addonFeatures(@Nullable List<String> addonFeatures) {
             this.addonFeatures = Output.ofNullable(addonFeatures);
             return this;
         }
-
+        public Builder addonFeatures(String... addonFeatures) {
+            return addonFeatures(List.of(addonFeatures));
+        }
         public Builder adminPassword(@Nullable Output<String> adminPassword) {
             this.adminPassword = adminPassword;
             return this;
         }
-
         public Builder adminPassword(@Nullable String adminPassword) {
             this.adminPassword = Output.ofNullable(adminPassword);
             return this;
         }
-
         public Builder adminUserName(Output<String> adminUserName) {
             this.adminUserName = Objects.requireNonNull(adminUserName);
             return this;
         }
-
         public Builder adminUserName(String adminUserName) {
             this.adminUserName = Output.of(Objects.requireNonNull(adminUserName));
             return this;
         }
-
         public Builder azureActiveDirectory(@Nullable Output<AzureActiveDirectoryArgs> azureActiveDirectory) {
             this.azureActiveDirectory = azureActiveDirectory;
             return this;
         }
-
         public Builder azureActiveDirectory(@Nullable AzureActiveDirectoryArgs azureActiveDirectory) {
             this.azureActiveDirectory = Output.ofNullable(azureActiveDirectory);
             return this;
         }
-
         public Builder clientConnectionPort(@Nullable Output<Integer> clientConnectionPort) {
             this.clientConnectionPort = clientConnectionPort;
             return this;
         }
-
         public Builder clientConnectionPort(@Nullable Integer clientConnectionPort) {
             this.clientConnectionPort = Output.ofNullable(clientConnectionPort);
             return this;
         }
-
         public Builder clients(@Nullable Output<List<ClientCertificateArgs>> clients) {
             this.clients = clients;
             return this;
         }
-
         public Builder clients(@Nullable List<ClientCertificateArgs> clients) {
             this.clients = Output.ofNullable(clients);
             return this;
         }
-
+        public Builder clients(ClientCertificateArgs... clients) {
+            return clients(List.of(clients));
+        }
         public Builder clusterCodeVersion(@Nullable Output<String> clusterCodeVersion) {
             this.clusterCodeVersion = clusterCodeVersion;
             return this;
         }
-
         public Builder clusterCodeVersion(@Nullable String clusterCodeVersion) {
             this.clusterCodeVersion = Output.ofNullable(clusterCodeVersion);
             return this;
         }
-
         public Builder clusterName(@Nullable Output<String> clusterName) {
             this.clusterName = clusterName;
             return this;
         }
-
         public Builder clusterName(@Nullable String clusterName) {
             this.clusterName = Output.ofNullable(clusterName);
             return this;
         }
-
         public Builder dnsName(Output<String> dnsName) {
             this.dnsName = Objects.requireNonNull(dnsName);
             return this;
         }
-
         public Builder dnsName(String dnsName) {
             this.dnsName = Output.of(Objects.requireNonNull(dnsName));
             return this;
         }
-
         public Builder fabricSettings(@Nullable Output<List<SettingsSectionDescriptionArgs>> fabricSettings) {
             this.fabricSettings = fabricSettings;
             return this;
         }
-
         public Builder fabricSettings(@Nullable List<SettingsSectionDescriptionArgs> fabricSettings) {
             this.fabricSettings = Output.ofNullable(fabricSettings);
             return this;
         }
-
+        public Builder fabricSettings(SettingsSectionDescriptionArgs... fabricSettings) {
+            return fabricSettings(List.of(fabricSettings));
+        }
         public Builder httpGatewayConnectionPort(@Nullable Output<Integer> httpGatewayConnectionPort) {
             this.httpGatewayConnectionPort = httpGatewayConnectionPort;
             return this;
         }
-
         public Builder httpGatewayConnectionPort(@Nullable Integer httpGatewayConnectionPort) {
             this.httpGatewayConnectionPort = Output.ofNullable(httpGatewayConnectionPort);
             return this;
         }
-
         public Builder loadBalancingRules(@Nullable Output<List<LoadBalancingRuleArgs>> loadBalancingRules) {
             this.loadBalancingRules = loadBalancingRules;
             return this;
         }
-
         public Builder loadBalancingRules(@Nullable List<LoadBalancingRuleArgs> loadBalancingRules) {
             this.loadBalancingRules = Output.ofNullable(loadBalancingRules);
             return this;
         }
-
+        public Builder loadBalancingRules(LoadBalancingRuleArgs... loadBalancingRules) {
+            return loadBalancingRules(List.of(loadBalancingRules));
+        }
         public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder sku(@Nullable Output<SkuArgs> sku) {
             this.sku = sku;
             return this;
         }
-
         public Builder sku(@Nullable SkuArgs sku) {
             this.sku = Output.ofNullable(sku);
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
-        }
-        public ManagedClusterArgs build() {
+        }        public ManagedClusterArgs build() {
             return new ManagedClusterArgs(addonFeatures, adminPassword, adminUserName, azureActiveDirectory, clientConnectionPort, clients, clusterCodeVersion, clusterName, dnsName, fabricSettings, httpGatewayConnectionPort, loadBalancingRules, location, resourceGroupName, sku, tags);
         }
     }

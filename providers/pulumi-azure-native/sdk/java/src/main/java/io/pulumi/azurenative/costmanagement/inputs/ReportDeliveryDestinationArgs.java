@@ -94,32 +94,26 @@ public final class ReportDeliveryDestinationArgs extends io.pulumi.resources.Res
             this.container = Objects.requireNonNull(container);
             return this;
         }
-
         public Builder container(String container) {
             this.container = Output.of(Objects.requireNonNull(container));
             return this;
         }
-
         public Builder resourceId(Output<String> resourceId) {
             this.resourceId = Objects.requireNonNull(resourceId);
             return this;
         }
-
         public Builder resourceId(String resourceId) {
             this.resourceId = Output.of(Objects.requireNonNull(resourceId));
             return this;
         }
-
         public Builder rootFolderPath(@Nullable Output<String> rootFolderPath) {
             this.rootFolderPath = rootFolderPath;
             return this;
         }
-
         public Builder rootFolderPath(@Nullable String rootFolderPath) {
             this.rootFolderPath = Output.ofNullable(rootFolderPath);
             return this;
-        }
-        public ReportDeliveryDestinationArgs build() {
+        }        public ReportDeliveryDestinationArgs build() {
             return new ReportDeliveryDestinationArgs(container, resourceId, rootFolderPath);
         }
     }

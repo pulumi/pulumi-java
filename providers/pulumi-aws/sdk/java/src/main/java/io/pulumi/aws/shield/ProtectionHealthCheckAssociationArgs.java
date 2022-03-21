@@ -73,22 +73,18 @@ public final class ProtectionHealthCheckAssociationArgs extends io.pulumi.resour
             this.healthCheckArn = Objects.requireNonNull(healthCheckArn);
             return this;
         }
-
         public Builder healthCheckArn(String healthCheckArn) {
             this.healthCheckArn = Output.of(Objects.requireNonNull(healthCheckArn));
             return this;
         }
-
         public Builder shieldProtectionId(Output<String> shieldProtectionId) {
             this.shieldProtectionId = Objects.requireNonNull(shieldProtectionId);
             return this;
         }
-
         public Builder shieldProtectionId(String shieldProtectionId) {
             this.shieldProtectionId = Output.of(Objects.requireNonNull(shieldProtectionId));
             return this;
-        }
-        public ProtectionHealthCheckAssociationArgs build() {
+        }        public ProtectionHealthCheckAssociationArgs build() {
             return new ProtectionHealthCheckAssociationArgs(healthCheckArn, shieldProtectionId);
         }
     }

@@ -90,17 +90,14 @@ public final class FtpServerLocationResponse {
             this.fileName = fileName;
             return this;
         }
-
         public Builder folderPath(@Nullable Object folderPath) {
             this.folderPath = folderPath;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public FtpServerLocationResponse build() {
+        }        public FtpServerLocationResponse build() {
             return new FtpServerLocationResponse(fileName, folderPath, type);
         }
     }

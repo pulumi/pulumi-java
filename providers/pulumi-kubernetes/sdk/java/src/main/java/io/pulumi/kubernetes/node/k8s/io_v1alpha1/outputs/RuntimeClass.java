@@ -105,22 +105,18 @@ public final class RuntimeClass {
             this.apiVersion = apiVersion;
             return this;
         }
-
         public Builder kind(@Nullable String kind) {
             this.kind = kind;
             return this;
         }
-
         public Builder metadata(@Nullable ObjectMeta metadata) {
             this.metadata = metadata;
             return this;
         }
-
         public Builder spec(RuntimeClassSpec spec) {
             this.spec = Objects.requireNonNull(spec);
             return this;
-        }
-        public RuntimeClass build() {
+        }        public RuntimeClass build() {
             return new RuntimeClass(apiVersion, kind, metadata, spec);
         }
     }

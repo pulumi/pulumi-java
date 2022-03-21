@@ -197,92 +197,74 @@ public final class VirtualMachineScaleSetDataDiskArgs extends io.pulumi.resource
             this.caching = caching;
             return this;
         }
-
         public Builder caching(@Nullable CachingTypes caching) {
             this.caching = Output.ofNullable(caching);
             return this;
         }
-
         public Builder createOption(Output<Either<String,DiskCreateOptionTypes>> createOption) {
             this.createOption = Objects.requireNonNull(createOption);
             return this;
         }
-
         public Builder createOption(Either<String,DiskCreateOptionTypes> createOption) {
             this.createOption = Output.of(Objects.requireNonNull(createOption));
             return this;
         }
-
         public Builder diskIOPSReadWrite(@Nullable Output<Double> diskIOPSReadWrite) {
             this.diskIOPSReadWrite = diskIOPSReadWrite;
             return this;
         }
-
         public Builder diskIOPSReadWrite(@Nullable Double diskIOPSReadWrite) {
             this.diskIOPSReadWrite = Output.ofNullable(diskIOPSReadWrite);
             return this;
         }
-
         public Builder diskMBpsReadWrite(@Nullable Output<Double> diskMBpsReadWrite) {
             this.diskMBpsReadWrite = diskMBpsReadWrite;
             return this;
         }
-
         public Builder diskMBpsReadWrite(@Nullable Double diskMBpsReadWrite) {
             this.diskMBpsReadWrite = Output.ofNullable(diskMBpsReadWrite);
             return this;
         }
-
         public Builder diskSizeGB(@Nullable Output<Integer> diskSizeGB) {
             this.diskSizeGB = diskSizeGB;
             return this;
         }
-
         public Builder diskSizeGB(@Nullable Integer diskSizeGB) {
             this.diskSizeGB = Output.ofNullable(diskSizeGB);
             return this;
         }
-
         public Builder lun(Output<Integer> lun) {
             this.lun = Objects.requireNonNull(lun);
             return this;
         }
-
         public Builder lun(Integer lun) {
             this.lun = Output.of(Objects.requireNonNull(lun));
             return this;
         }
-
         public Builder managedDisk(@Nullable Output<VirtualMachineScaleSetManagedDiskParametersArgs> managedDisk) {
             this.managedDisk = managedDisk;
             return this;
         }
-
         public Builder managedDisk(@Nullable VirtualMachineScaleSetManagedDiskParametersArgs managedDisk) {
             this.managedDisk = Output.ofNullable(managedDisk);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder writeAcceleratorEnabled(@Nullable Output<Boolean> writeAcceleratorEnabled) {
             this.writeAcceleratorEnabled = writeAcceleratorEnabled;
             return this;
         }
-
         public Builder writeAcceleratorEnabled(@Nullable Boolean writeAcceleratorEnabled) {
             this.writeAcceleratorEnabled = Output.ofNullable(writeAcceleratorEnabled);
             return this;
-        }
-        public VirtualMachineScaleSetDataDiskArgs build() {
+        }        public VirtualMachineScaleSetDataDiskArgs build() {
             return new VirtualMachineScaleSetDataDiskArgs(caching, createOption, diskIOPSReadWrite, diskMBpsReadWrite, diskSizeGB, lun, managedDisk, name, writeAcceleratorEnabled);
         }
     }

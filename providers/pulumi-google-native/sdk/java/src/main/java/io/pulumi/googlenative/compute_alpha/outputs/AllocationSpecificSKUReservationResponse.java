@@ -102,22 +102,18 @@ public final class AllocationSpecificSKUReservationResponse {
             this.assuredCount = Objects.requireNonNull(assuredCount);
             return this;
         }
-
         public Builder count(String count) {
             this.count = Objects.requireNonNull(count);
             return this;
         }
-
         public Builder inUseCount(String inUseCount) {
             this.inUseCount = Objects.requireNonNull(inUseCount);
             return this;
         }
-
         public Builder instanceProperties(AllocationSpecificSKUAllocationReservedInstancePropertiesResponse instanceProperties) {
             this.instanceProperties = Objects.requireNonNull(instanceProperties);
             return this;
-        }
-        public AllocationSpecificSKUReservationResponse build() {
+        }        public AllocationSpecificSKUReservationResponse build() {
             return new AllocationSpecificSKUReservationResponse(assuredCount, count, inUseCount, instanceProperties);
         }
     }

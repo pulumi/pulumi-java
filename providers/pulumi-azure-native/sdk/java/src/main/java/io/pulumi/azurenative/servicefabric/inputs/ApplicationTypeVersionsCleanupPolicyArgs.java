@@ -56,12 +56,10 @@ public final class ApplicationTypeVersionsCleanupPolicyArgs extends io.pulumi.re
             this.maxUnusedVersionsToKeep = Objects.requireNonNull(maxUnusedVersionsToKeep);
             return this;
         }
-
         public Builder maxUnusedVersionsToKeep(Double maxUnusedVersionsToKeep) {
             this.maxUnusedVersionsToKeep = Output.of(Objects.requireNonNull(maxUnusedVersionsToKeep));
             return this;
-        }
-        public ApplicationTypeVersionsCleanupPolicyArgs build() {
+        }        public ApplicationTypeVersionsCleanupPolicyArgs build() {
             return new ApplicationTypeVersionsCleanupPolicyArgs(maxUnusedVersionsToKeep);
         }
     }

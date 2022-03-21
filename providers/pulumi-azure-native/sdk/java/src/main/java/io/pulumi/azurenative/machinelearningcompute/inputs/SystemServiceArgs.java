@@ -62,12 +62,10 @@ public final class SystemServiceArgs extends io.pulumi.resources.ResourceArgs {
             this.systemServiceType = Objects.requireNonNull(systemServiceType);
             return this;
         }
-
         public Builder systemServiceType(Either<String,SystemServiceType> systemServiceType) {
             this.systemServiceType = Output.of(Objects.requireNonNull(systemServiceType));
             return this;
-        }
-        public SystemServiceArgs build() {
+        }        public SystemServiceArgs build() {
             return new SystemServiceArgs(systemServiceType);
         }
     }

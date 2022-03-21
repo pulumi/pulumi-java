@@ -71,12 +71,10 @@ public final class SourceConfigurationResponse {
             this.name = name;
             return this;
         }
-
         public Builder value(@Nullable String value) {
             this.value = value;
             return this;
-        }
-        public SourceConfigurationResponse build() {
+        }        public SourceConfigurationResponse build() {
             return new SourceConfigurationResponse(name, value);
         }
     }

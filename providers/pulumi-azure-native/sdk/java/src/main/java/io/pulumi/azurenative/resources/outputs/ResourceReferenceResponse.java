@@ -51,8 +51,7 @@ public final class ResourceReferenceResponse {
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
-        }
-        public ResourceReferenceResponse build() {
+        }        public ResourceReferenceResponse build() {
             return new ResourceReferenceResponse(id);
         }
     }

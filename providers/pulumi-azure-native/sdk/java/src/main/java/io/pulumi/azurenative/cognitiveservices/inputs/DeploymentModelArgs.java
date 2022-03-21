@@ -94,32 +94,26 @@ public final class DeploymentModelArgs extends io.pulumi.resources.ResourceArgs 
             this.format = format;
             return this;
         }
-
         public Builder format(@Nullable String format) {
             this.format = Output.ofNullable(format);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder version(@Nullable Output<String> version) {
             this.version = version;
             return this;
         }
-
         public Builder version(@Nullable String version) {
             this.version = Output.ofNullable(version);
             return this;
-        }
-        public DeploymentModelArgs build() {
+        }        public DeploymentModelArgs build() {
             return new DeploymentModelArgs(format, name, version);
         }
     }

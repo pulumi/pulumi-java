@@ -61,12 +61,10 @@ public final class RoutingRuleUpdateParametersWebApplicationFirewallPolicyLinkAr
             this.id = id;
             return this;
         }
-
         public Builder id(@Nullable String id) {
             this.id = Output.ofNullable(id);
             return this;
-        }
-        public RoutingRuleUpdateParametersWebApplicationFirewallPolicyLinkArgs build() {
+        }        public RoutingRuleUpdateParametersWebApplicationFirewallPolicyLinkArgs build() {
             return new RoutingRuleUpdateParametersWebApplicationFirewallPolicyLinkArgs(id);
         }
     }

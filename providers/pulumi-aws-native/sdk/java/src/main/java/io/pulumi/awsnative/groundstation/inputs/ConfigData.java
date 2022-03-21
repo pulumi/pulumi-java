@@ -132,37 +132,30 @@ public final class ConfigData extends io.pulumi.resources.InvokeArgs {
             this.antennaDownlinkConfig = antennaDownlinkConfig;
             return this;
         }
-
         public Builder antennaDownlinkDemodDecodeConfig(@Nullable ConfigAntennaDownlinkDemodDecodeConfig antennaDownlinkDemodDecodeConfig) {
             this.antennaDownlinkDemodDecodeConfig = antennaDownlinkDemodDecodeConfig;
             return this;
         }
-
         public Builder antennaUplinkConfig(@Nullable ConfigAntennaUplinkConfig antennaUplinkConfig) {
             this.antennaUplinkConfig = antennaUplinkConfig;
             return this;
         }
-
         public Builder dataflowEndpointConfig(@Nullable ConfigDataflowEndpointConfig dataflowEndpointConfig) {
             this.dataflowEndpointConfig = dataflowEndpointConfig;
             return this;
         }
-
         public Builder s3RecordingConfig(@Nullable ConfigS3RecordingConfig s3RecordingConfig) {
             this.s3RecordingConfig = s3RecordingConfig;
             return this;
         }
-
         public Builder trackingConfig(@Nullable ConfigTrackingConfig trackingConfig) {
             this.trackingConfig = trackingConfig;
             return this;
         }
-
         public Builder uplinkEchoConfig(@Nullable ConfigUplinkEchoConfig uplinkEchoConfig) {
             this.uplinkEchoConfig = uplinkEchoConfig;
             return this;
-        }
-        public ConfigData build() {
+        }        public ConfigData build() {
             return new ConfigData(antennaDownlinkConfig, antennaDownlinkDemodDecodeConfig, antennaUplinkConfig, dataflowEndpointConfig, s3RecordingConfig, trackingConfig, uplinkEchoConfig);
         }
     }

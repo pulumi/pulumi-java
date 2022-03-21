@@ -73,22 +73,18 @@ public final class ClusterSnapshotArgs extends io.pulumi.resources.ResourceArgs 
             this.dbClusterIdentifier = Objects.requireNonNull(dbClusterIdentifier);
             return this;
         }
-
         public Builder dbClusterIdentifier(String dbClusterIdentifier) {
             this.dbClusterIdentifier = Output.of(Objects.requireNonNull(dbClusterIdentifier));
             return this;
         }
-
         public Builder dbClusterSnapshotIdentifier(Output<String> dbClusterSnapshotIdentifier) {
             this.dbClusterSnapshotIdentifier = Objects.requireNonNull(dbClusterSnapshotIdentifier);
             return this;
         }
-
         public Builder dbClusterSnapshotIdentifier(String dbClusterSnapshotIdentifier) {
             this.dbClusterSnapshotIdentifier = Output.of(Objects.requireNonNull(dbClusterSnapshotIdentifier));
             return this;
-        }
-        public ClusterSnapshotArgs build() {
+        }        public ClusterSnapshotArgs build() {
             return new ClusterSnapshotArgs(dbClusterIdentifier, dbClusterSnapshotIdentifier);
         }
     }

@@ -291,77 +291,86 @@ public final class ContainerCodePackagePropertiesResponse {
             this.commands = commands;
             return this;
         }
-
+        public Builder commands(String... commands) {
+            return commands(List.of(commands));
+        }
         public Builder diagnostics(@Nullable DiagnosticsRefResponse diagnostics) {
             this.diagnostics = diagnostics;
             return this;
         }
-
         public Builder endpoints(@Nullable List<EndpointPropertiesResponse> endpoints) {
             this.endpoints = endpoints;
             return this;
         }
-
+        public Builder endpoints(EndpointPropertiesResponse... endpoints) {
+            return endpoints(List.of(endpoints));
+        }
         public Builder entrypoint(@Nullable String entrypoint) {
             this.entrypoint = entrypoint;
             return this;
         }
-
         public Builder environmentVariables(@Nullable List<EnvironmentVariableResponse> environmentVariables) {
             this.environmentVariables = environmentVariables;
             return this;
         }
-
+        public Builder environmentVariables(EnvironmentVariableResponse... environmentVariables) {
+            return environmentVariables(List.of(environmentVariables));
+        }
         public Builder image(String image) {
             this.image = Objects.requireNonNull(image);
             return this;
         }
-
         public Builder imageRegistryCredential(@Nullable ImageRegistryCredentialResponse imageRegistryCredential) {
             this.imageRegistryCredential = imageRegistryCredential;
             return this;
         }
-
         public Builder instanceView(ContainerInstanceViewResponse instanceView) {
             this.instanceView = Objects.requireNonNull(instanceView);
             return this;
         }
-
         public Builder labels(@Nullable List<ContainerLabelResponse> labels) {
             this.labels = labels;
             return this;
         }
-
+        public Builder labels(ContainerLabelResponse... labels) {
+            return labels(List.of(labels));
+        }
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder reliableCollectionsRefs(@Nullable List<ReliableCollectionsRefResponse> reliableCollectionsRefs) {
             this.reliableCollectionsRefs = reliableCollectionsRefs;
             return this;
         }
-
+        public Builder reliableCollectionsRefs(ReliableCollectionsRefResponse... reliableCollectionsRefs) {
+            return reliableCollectionsRefs(List.of(reliableCollectionsRefs));
+        }
         public Builder resources(ResourceRequirementsResponse resources) {
             this.resources = Objects.requireNonNull(resources);
             return this;
         }
-
         public Builder settings(@Nullable List<SettingResponse> settings) {
             this.settings = settings;
             return this;
         }
-
+        public Builder settings(SettingResponse... settings) {
+            return settings(List.of(settings));
+        }
         public Builder volumeRefs(@Nullable List<VolumeReferenceResponse> volumeRefs) {
             this.volumeRefs = volumeRefs;
             return this;
         }
-
+        public Builder volumeRefs(VolumeReferenceResponse... volumeRefs) {
+            return volumeRefs(List.of(volumeRefs));
+        }
         public Builder volumes(@Nullable List<ApplicationScopedVolumeResponse> volumes) {
             this.volumes = volumes;
             return this;
         }
-        public ContainerCodePackagePropertiesResponse build() {
+        public Builder volumes(ApplicationScopedVolumeResponse... volumes) {
+            return volumes(List.of(volumes));
+        }        public ContainerCodePackagePropertiesResponse build() {
             return new ContainerCodePackagePropertiesResponse(commands, diagnostics, endpoints, entrypoint, environmentVariables, image, imageRegistryCredential, instanceView, labels, name, reliableCollectionsRefs, resources, settings, volumeRefs, volumes);
         }
     }

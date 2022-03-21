@@ -78,22 +78,18 @@ public final class PreventionInspectTemplateInspectConfigLimitsMaxFindingsPerInf
             this.infoType = Objects.requireNonNull(infoType);
             return this;
         }
-
         public Builder infoType(PreventionInspectTemplateInspectConfigLimitsMaxFindingsPerInfoTypeInfoTypeGetArgs infoType) {
             this.infoType = Output.of(Objects.requireNonNull(infoType));
             return this;
         }
-
         public Builder maxFindings(Output<Integer> maxFindings) {
             this.maxFindings = Objects.requireNonNull(maxFindings);
             return this;
         }
-
         public Builder maxFindings(Integer maxFindings) {
             this.maxFindings = Output.of(Objects.requireNonNull(maxFindings));
             return this;
-        }
-        public PreventionInspectTemplateInspectConfigLimitsMaxFindingsPerInfoTypeGetArgs build() {
+        }        public PreventionInspectTemplateInspectConfigLimitsMaxFindingsPerInfoTypeGetArgs build() {
             return new PreventionInspectTemplateInspectConfigLimitsMaxFindingsPerInfoTypeGetArgs(infoType, maxFindings);
         }
     }

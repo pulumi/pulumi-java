@@ -57,12 +57,13 @@ public final class DistributionOriginGroupFailoverCriteriaGetArgs extends io.pul
             this.statusCodes = Objects.requireNonNull(statusCodes);
             return this;
         }
-
         public Builder statusCodes(List<Integer> statusCodes) {
             this.statusCodes = Output.of(Objects.requireNonNull(statusCodes));
             return this;
         }
-        public DistributionOriginGroupFailoverCriteriaGetArgs build() {
+        public Builder statusCodes(Integer... statusCodes) {
+            return statusCodes(List.of(statusCodes));
+        }        public DistributionOriginGroupFailoverCriteriaGetArgs build() {
             return new DistributionOriginGroupFailoverCriteriaGetArgs(statusCodes);
         }
     }

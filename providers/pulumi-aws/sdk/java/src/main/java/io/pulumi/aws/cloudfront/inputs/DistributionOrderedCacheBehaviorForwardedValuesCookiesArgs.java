@@ -80,22 +80,21 @@ public final class DistributionOrderedCacheBehaviorForwardedValuesCookiesArgs ex
             this.forward = Objects.requireNonNull(forward);
             return this;
         }
-
         public Builder forward(String forward) {
             this.forward = Output.of(Objects.requireNonNull(forward));
             return this;
         }
-
         public Builder whitelistedNames(@Nullable Output<List<String>> whitelistedNames) {
             this.whitelistedNames = whitelistedNames;
             return this;
         }
-
         public Builder whitelistedNames(@Nullable List<String> whitelistedNames) {
             this.whitelistedNames = Output.ofNullable(whitelistedNames);
             return this;
         }
-        public DistributionOrderedCacheBehaviorForwardedValuesCookiesArgs build() {
+        public Builder whitelistedNames(String... whitelistedNames) {
+            return whitelistedNames(List.of(whitelistedNames));
+        }        public DistributionOrderedCacheBehaviorForwardedValuesCookiesArgs build() {
             return new DistributionOrderedCacheBehaviorForwardedValuesCookiesArgs(forward, whitelistedNames);
         }
     }

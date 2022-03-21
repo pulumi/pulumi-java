@@ -107,42 +107,34 @@ public final class ProxyDefaultTargetGroupState extends io.pulumi.resources.Reso
             this.arn = arn;
             return this;
         }
-
         public Builder arn(@Nullable String arn) {
             this.arn = Output.ofNullable(arn);
             return this;
         }
-
         public Builder connectionPoolConfig(@Nullable Output<ProxyDefaultTargetGroupConnectionPoolConfigGetArgs> connectionPoolConfig) {
             this.connectionPoolConfig = connectionPoolConfig;
             return this;
         }
-
         public Builder connectionPoolConfig(@Nullable ProxyDefaultTargetGroupConnectionPoolConfigGetArgs connectionPoolConfig) {
             this.connectionPoolConfig = Output.ofNullable(connectionPoolConfig);
             return this;
         }
-
         public Builder dbProxyName(@Nullable Output<String> dbProxyName) {
             this.dbProxyName = dbProxyName;
             return this;
         }
-
         public Builder dbProxyName(@Nullable String dbProxyName) {
             this.dbProxyName = Output.ofNullable(dbProxyName);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
-        }
-        public ProxyDefaultTargetGroupState build() {
+        }        public ProxyDefaultTargetGroupState build() {
             return new ProxyDefaultTargetGroupState(arn, connectionPoolConfig, dbProxyName, name);
         }
     }

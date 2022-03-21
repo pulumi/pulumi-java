@@ -250,132 +250,106 @@ public final class CertificateAuthorityCertificateAuthorityConfigurationSubjectA
             this.commonName = commonName;
             return this;
         }
-
         public Builder commonName(@Nullable String commonName) {
             this.commonName = Output.ofNullable(commonName);
             return this;
         }
-
         public Builder country(@Nullable Output<String> country) {
             this.country = country;
             return this;
         }
-
         public Builder country(@Nullable String country) {
             this.country = Output.ofNullable(country);
             return this;
         }
-
         public Builder distinguishedNameQualifier(@Nullable Output<String> distinguishedNameQualifier) {
             this.distinguishedNameQualifier = distinguishedNameQualifier;
             return this;
         }
-
         public Builder distinguishedNameQualifier(@Nullable String distinguishedNameQualifier) {
             this.distinguishedNameQualifier = Output.ofNullable(distinguishedNameQualifier);
             return this;
         }
-
         public Builder generationQualifier(@Nullable Output<String> generationQualifier) {
             this.generationQualifier = generationQualifier;
             return this;
         }
-
         public Builder generationQualifier(@Nullable String generationQualifier) {
             this.generationQualifier = Output.ofNullable(generationQualifier);
             return this;
         }
-
         public Builder givenName(@Nullable Output<String> givenName) {
             this.givenName = givenName;
             return this;
         }
-
         public Builder givenName(@Nullable String givenName) {
             this.givenName = Output.ofNullable(givenName);
             return this;
         }
-
         public Builder initials(@Nullable Output<String> initials) {
             this.initials = initials;
             return this;
         }
-
         public Builder initials(@Nullable String initials) {
             this.initials = Output.ofNullable(initials);
             return this;
         }
-
         public Builder locality(@Nullable Output<String> locality) {
             this.locality = locality;
             return this;
         }
-
         public Builder locality(@Nullable String locality) {
             this.locality = Output.ofNullable(locality);
             return this;
         }
-
         public Builder organization(@Nullable Output<String> organization) {
             this.organization = organization;
             return this;
         }
-
         public Builder organization(@Nullable String organization) {
             this.organization = Output.ofNullable(organization);
             return this;
         }
-
         public Builder organizationalUnit(@Nullable Output<String> organizationalUnit) {
             this.organizationalUnit = organizationalUnit;
             return this;
         }
-
         public Builder organizationalUnit(@Nullable String organizationalUnit) {
             this.organizationalUnit = Output.ofNullable(organizationalUnit);
             return this;
         }
-
         public Builder pseudonym(@Nullable Output<String> pseudonym) {
             this.pseudonym = pseudonym;
             return this;
         }
-
         public Builder pseudonym(@Nullable String pseudonym) {
             this.pseudonym = Output.ofNullable(pseudonym);
             return this;
         }
-
         public Builder state(@Nullable Output<String> state) {
             this.state = state;
             return this;
         }
-
         public Builder state(@Nullable String state) {
             this.state = Output.ofNullable(state);
             return this;
         }
-
         public Builder surname(@Nullable Output<String> surname) {
             this.surname = surname;
             return this;
         }
-
         public Builder surname(@Nullable String surname) {
             this.surname = Output.ofNullable(surname);
             return this;
         }
-
         public Builder title(@Nullable Output<String> title) {
             this.title = title;
             return this;
         }
-
         public Builder title(@Nullable String title) {
             this.title = Output.ofNullable(title);
             return this;
-        }
-        public CertificateAuthorityCertificateAuthorityConfigurationSubjectArgs build() {
+        }        public CertificateAuthorityCertificateAuthorityConfigurationSubjectArgs build() {
             return new CertificateAuthorityCertificateAuthorityConfigurationSubjectArgs(commonName, country, distinguishedNameQualifier, generationQualifier, givenName, initials, locality, organization, organizationalUnit, pseudonym, state, surname, title);
         }
     }

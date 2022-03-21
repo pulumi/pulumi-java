@@ -78,17 +78,14 @@ public final class GetConversationProfileArgs extends io.pulumi.resources.Invoke
             this.conversationProfileId = Objects.requireNonNull(conversationProfileId);
             return this;
         }
-
         public Builder location(String location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = project;
             return this;
-        }
-        public GetConversationProfileArgs build() {
+        }        public GetConversationProfileArgs build() {
             return new GetConversationProfileArgs(conversationProfileId, location, project);
         }
     }

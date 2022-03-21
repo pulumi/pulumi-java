@@ -106,42 +106,34 @@ public final class TagByApiArgs extends io.pulumi.resources.ResourceArgs {
             this.apiId = Objects.requireNonNull(apiId);
             return this;
         }
-
         public Builder apiId(String apiId) {
             this.apiId = Output.of(Objects.requireNonNull(apiId));
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder serviceName(Output<String> serviceName) {
             this.serviceName = Objects.requireNonNull(serviceName);
             return this;
         }
-
         public Builder serviceName(String serviceName) {
             this.serviceName = Output.of(Objects.requireNonNull(serviceName));
             return this;
         }
-
         public Builder tagId(@Nullable Output<String> tagId) {
             this.tagId = tagId;
             return this;
         }
-
         public Builder tagId(@Nullable String tagId) {
             this.tagId = Output.ofNullable(tagId);
             return this;
-        }
-        public TagByApiArgs build() {
+        }        public TagByApiArgs build() {
             return new TagByApiArgs(apiId, resourceGroupName, serviceName, tagId);
         }
     }

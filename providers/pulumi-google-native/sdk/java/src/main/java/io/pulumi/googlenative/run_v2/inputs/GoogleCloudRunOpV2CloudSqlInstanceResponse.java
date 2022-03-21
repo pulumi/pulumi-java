@@ -60,7 +60,9 @@ public final class GoogleCloudRunOpV2CloudSqlInstanceResponse extends io.pulumi.
             this.connections = Objects.requireNonNull(connections);
             return this;
         }
-        public GoogleCloudRunOpV2CloudSqlInstanceResponse build() {
+        public Builder connections(String... connections) {
+            return connections(List.of(connections));
+        }        public GoogleCloudRunOpV2CloudSqlInstanceResponse build() {
             return new GoogleCloudRunOpV2CloudSqlInstanceResponse(connections);
         }
     }

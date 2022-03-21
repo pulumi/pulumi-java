@@ -114,42 +114,34 @@ public final class GuestPoliciesRecipeArtifactGetArgs extends io.pulumi.resource
             this.allowInsecure = allowInsecure;
             return this;
         }
-
         public Builder allowInsecure(@Nullable Boolean allowInsecure) {
             this.allowInsecure = Output.ofNullable(allowInsecure);
             return this;
         }
-
         public Builder gcs(@Nullable Output<GuestPoliciesRecipeArtifactGcsGetArgs> gcs) {
             this.gcs = gcs;
             return this;
         }
-
         public Builder gcs(@Nullable GuestPoliciesRecipeArtifactGcsGetArgs gcs) {
             this.gcs = Output.ofNullable(gcs);
             return this;
         }
-
         public Builder id(Output<String> id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder id(String id) {
             this.id = Output.of(Objects.requireNonNull(id));
             return this;
         }
-
         public Builder remote(@Nullable Output<GuestPoliciesRecipeArtifactRemoteGetArgs> remote) {
             this.remote = remote;
             return this;
         }
-
         public Builder remote(@Nullable GuestPoliciesRecipeArtifactRemoteGetArgs remote) {
             this.remote = Output.ofNullable(remote);
             return this;
-        }
-        public GuestPoliciesRecipeArtifactGetArgs build() {
+        }        public GuestPoliciesRecipeArtifactGetArgs build() {
             return new GuestPoliciesRecipeArtifactGetArgs(allowInsecure, gcs, id, remote);
         }
     }

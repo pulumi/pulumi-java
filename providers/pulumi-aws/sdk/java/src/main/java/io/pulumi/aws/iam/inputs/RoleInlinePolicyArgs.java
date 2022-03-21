@@ -74,22 +74,18 @@ public final class RoleInlinePolicyArgs extends io.pulumi.resources.ResourceArgs
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder policy(@Nullable Output<String> policy) {
             this.policy = policy;
             return this;
         }
-
         public Builder policy(@Nullable String policy) {
             this.policy = Output.ofNullable(policy);
             return this;
-        }
-        public RoleInlinePolicyArgs build() {
+        }        public RoleInlinePolicyArgs build() {
             return new RoleInlinePolicyArgs(name, policy);
         }
     }

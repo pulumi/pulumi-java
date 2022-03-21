@@ -45,8 +45,7 @@ public final class StateMachineLogDestination {
         public Builder cloudWatchLogsLogGroup(@Nullable StateMachineCloudWatchLogsLogGroup cloudWatchLogsLogGroup) {
             this.cloudWatchLogsLogGroup = cloudWatchLogsLogGroup;
             return this;
-        }
-        public StateMachineLogDestination build() {
+        }        public StateMachineLogDestination build() {
             return new StateMachineLogDestination(cloudWatchLogsLogGroup);
         }
     }

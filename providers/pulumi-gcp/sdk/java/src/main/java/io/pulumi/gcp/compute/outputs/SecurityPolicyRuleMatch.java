@@ -101,17 +101,14 @@ public final class SecurityPolicyRuleMatch {
             this.config = config;
             return this;
         }
-
         public Builder expr(@Nullable SecurityPolicyRuleMatchExpr expr) {
             this.expr = expr;
             return this;
         }
-
         public Builder versionedExpr(@Nullable String versionedExpr) {
             this.versionedExpr = versionedExpr;
             return this;
-        }
-        public SecurityPolicyRuleMatch build() {
+        }        public SecurityPolicyRuleMatch build() {
             return new SecurityPolicyRuleMatch(config, expr, versionedExpr);
         }
     }

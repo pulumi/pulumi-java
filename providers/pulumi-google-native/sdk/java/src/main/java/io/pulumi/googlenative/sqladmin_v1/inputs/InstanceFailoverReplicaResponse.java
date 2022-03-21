@@ -77,12 +77,10 @@ public final class InstanceFailoverReplicaResponse extends io.pulumi.resources.I
             this.available = Objects.requireNonNull(available);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
-        }
-        public InstanceFailoverReplicaResponse build() {
+        }        public InstanceFailoverReplicaResponse build() {
             return new InstanceFailoverReplicaResponse(available, name);
         }
     }

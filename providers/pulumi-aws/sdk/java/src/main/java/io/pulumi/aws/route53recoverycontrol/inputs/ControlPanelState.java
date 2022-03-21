@@ -140,62 +140,50 @@ public final class ControlPanelState extends io.pulumi.resources.ResourceArgs {
             this.arn = arn;
             return this;
         }
-
         public Builder arn(@Nullable String arn) {
             this.arn = Output.ofNullable(arn);
             return this;
         }
-
         public Builder clusterArn(@Nullable Output<String> clusterArn) {
             this.clusterArn = clusterArn;
             return this;
         }
-
         public Builder clusterArn(@Nullable String clusterArn) {
             this.clusterArn = Output.ofNullable(clusterArn);
             return this;
         }
-
         public Builder defaultControlPanel(@Nullable Output<Boolean> defaultControlPanel) {
             this.defaultControlPanel = defaultControlPanel;
             return this;
         }
-
         public Builder defaultControlPanel(@Nullable Boolean defaultControlPanel) {
             this.defaultControlPanel = Output.ofNullable(defaultControlPanel);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder routingControlCount(@Nullable Output<Integer> routingControlCount) {
             this.routingControlCount = routingControlCount;
             return this;
         }
-
         public Builder routingControlCount(@Nullable Integer routingControlCount) {
             this.routingControlCount = Output.ofNullable(routingControlCount);
             return this;
         }
-
         public Builder status(@Nullable Output<String> status) {
             this.status = status;
             return this;
         }
-
         public Builder status(@Nullable String status) {
             this.status = Output.ofNullable(status);
             return this;
-        }
-        public ControlPanelState build() {
+        }        public ControlPanelState build() {
             return new ControlPanelState(arn, clusterArn, defaultControlPanel, name, routingControlCount, status);
         }
     }

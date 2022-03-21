@@ -102,32 +102,26 @@ public final class DataTransferConfigScheduleOptionsArgs extends io.pulumi.resou
             this.disableAutoScheduling = disableAutoScheduling;
             return this;
         }
-
         public Builder disableAutoScheduling(@Nullable Boolean disableAutoScheduling) {
             this.disableAutoScheduling = Output.ofNullable(disableAutoScheduling);
             return this;
         }
-
         public Builder endTime(@Nullable Output<String> endTime) {
             this.endTime = endTime;
             return this;
         }
-
         public Builder endTime(@Nullable String endTime) {
             this.endTime = Output.ofNullable(endTime);
             return this;
         }
-
         public Builder startTime(@Nullable Output<String> startTime) {
             this.startTime = startTime;
             return this;
         }
-
         public Builder startTime(@Nullable String startTime) {
             this.startTime = Output.ofNullable(startTime);
             return this;
-        }
-        public DataTransferConfigScheduleOptionsArgs build() {
+        }        public DataTransferConfigScheduleOptionsArgs build() {
             return new DataTransferConfigScheduleOptionsArgs(disableAutoScheduling, endTime, startTime);
         }
     }

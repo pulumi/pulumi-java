@@ -105,22 +105,18 @@ public final class ApplicationApplicationConfigurationFlinkApplicationConfigurat
             this.autoScalingEnabled = autoScalingEnabled;
             return this;
         }
-
         public Builder configurationType(String configurationType) {
             this.configurationType = Objects.requireNonNull(configurationType);
             return this;
         }
-
         public Builder parallelism(@Nullable Integer parallelism) {
             this.parallelism = parallelism;
             return this;
         }
-
         public Builder parallelismPerKpu(@Nullable Integer parallelismPerKpu) {
             this.parallelismPerKpu = parallelismPerKpu;
             return this;
-        }
-        public ApplicationApplicationConfigurationFlinkApplicationConfigurationParallelismConfiguration build() {
+        }        public ApplicationApplicationConfigurationFlinkApplicationConfigurationParallelismConfiguration build() {
             return new ApplicationApplicationConfigurationFlinkApplicationConfigurationParallelismConfiguration(autoScalingEnabled, configurationType, parallelism, parallelismPerKpu);
         }
     }

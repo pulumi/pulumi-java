@@ -64,17 +64,14 @@ public final class GetResponseHeadersPolicyResult {
             this.id = id;
             return this;
         }
-
         public Builder lastModifiedTime(@Nullable String lastModifiedTime) {
             this.lastModifiedTime = lastModifiedTime;
             return this;
         }
-
         public Builder responseHeadersPolicyConfig(@Nullable ResponseHeadersPolicyConfig responseHeadersPolicyConfig) {
             this.responseHeadersPolicyConfig = responseHeadersPolicyConfig;
             return this;
-        }
-        public GetResponseHeadersPolicyResult build() {
+        }        public GetResponseHeadersPolicyResult build() {
             return new GetResponseHeadersPolicyResult(id, lastModifiedTime, responseHeadersPolicyConfig);
         }
     }

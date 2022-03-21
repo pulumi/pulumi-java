@@ -209,52 +209,45 @@ public final class BackupSetInfoResponse extends io.pulumi.resources.InvokeArgs 
             this.backupFinishedDate = backupFinishedDate;
             return this;
         }
-
         public Builder backupSetId(@Nullable String backupSetId) {
             this.backupSetId = backupSetId;
             return this;
         }
-
         public Builder backupStartDate(@Nullable String backupStartDate) {
             this.backupStartDate = backupStartDate;
             return this;
         }
-
         public Builder backupType(@Nullable String backupType) {
             this.backupType = backupType;
             return this;
         }
-
         public Builder databaseName(@Nullable String databaseName) {
             this.databaseName = databaseName;
             return this;
         }
-
         public Builder firstLsn(@Nullable String firstLsn) {
             this.firstLsn = firstLsn;
             return this;
         }
-
         public Builder isBackupRestored(@Nullable Boolean isBackupRestored) {
             this.isBackupRestored = isBackupRestored;
             return this;
         }
-
         public Builder lastLsn(@Nullable String lastLsn) {
             this.lastLsn = lastLsn;
             return this;
         }
-
         public Builder lastModifiedTime(@Nullable String lastModifiedTime) {
             this.lastModifiedTime = lastModifiedTime;
             return this;
         }
-
         public Builder listOfBackupFiles(@Nullable List<BackupFileInfoResponse> listOfBackupFiles) {
             this.listOfBackupFiles = listOfBackupFiles;
             return this;
         }
-        public BackupSetInfoResponse build() {
+        public Builder listOfBackupFiles(BackupFileInfoResponse... listOfBackupFiles) {
+            return listOfBackupFiles(List.of(listOfBackupFiles));
+        }        public BackupSetInfoResponse build() {
             return new BackupSetInfoResponse(backupFinishedDate, backupSetId, backupStartDate, backupType, databaseName, firstLsn, isBackupRestored, lastLsn, lastModifiedTime, listOfBackupFiles);
         }
     }

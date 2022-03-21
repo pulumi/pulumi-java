@@ -113,42 +113,34 @@ public final class ContentSourceArgs extends io.pulumi.resources.ResourceArgs {
             this.hash = hash;
             return this;
         }
-
         public Builder hash(@Nullable ContentHashArgs hash) {
             this.hash = Output.ofNullable(hash);
             return this;
         }
-
         public Builder type(@Nullable Output<Either<String,ContentSourceType>> type) {
             this.type = type;
             return this;
         }
-
         public Builder type(@Nullable Either<String,ContentSourceType> type) {
             this.type = Output.ofNullable(type);
             return this;
         }
-
         public Builder value(@Nullable Output<String> value) {
             this.value = value;
             return this;
         }
-
         public Builder value(@Nullable String value) {
             this.value = Output.ofNullable(value);
             return this;
         }
-
         public Builder version(@Nullable Output<String> version) {
             this.version = version;
             return this;
         }
-
         public Builder version(@Nullable String version) {
             this.version = Output.ofNullable(version);
             return this;
-        }
-        public ContentSourceArgs build() {
+        }        public ContentSourceArgs build() {
             return new ContentSourceArgs(hash, type, value, version);
         }
     }

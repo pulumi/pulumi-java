@@ -114,42 +114,34 @@ public final class WebBasicAuthenticationArgs extends io.pulumi.resources.Resour
             this.authenticationType = Objects.requireNonNull(authenticationType);
             return this;
         }
-
         public Builder authenticationType(String authenticationType) {
             this.authenticationType = Output.of(Objects.requireNonNull(authenticationType));
             return this;
         }
-
         public Builder password(Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> password) {
             this.password = Objects.requireNonNull(password);
             return this;
         }
-
         public Builder password(Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs> password) {
             this.password = Output.of(Objects.requireNonNull(password));
             return this;
         }
-
         public Builder url(Output<Object> url) {
             this.url = Objects.requireNonNull(url);
             return this;
         }
-
         public Builder url(Object url) {
             this.url = Output.of(Objects.requireNonNull(url));
             return this;
         }
-
         public Builder username(Output<Object> username) {
             this.username = Objects.requireNonNull(username);
             return this;
         }
-
         public Builder username(Object username) {
             this.username = Output.of(Objects.requireNonNull(username));
             return this;
-        }
-        public WebBasicAuthenticationArgs build() {
+        }        public WebBasicAuthenticationArgs build() {
             return new WebBasicAuthenticationArgs(authenticationType, password, url, username);
         }
     }

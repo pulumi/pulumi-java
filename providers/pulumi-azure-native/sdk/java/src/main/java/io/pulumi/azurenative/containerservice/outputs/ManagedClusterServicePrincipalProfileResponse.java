@@ -71,12 +71,10 @@ public final class ManagedClusterServicePrincipalProfileResponse {
             this.clientId = Objects.requireNonNull(clientId);
             return this;
         }
-
         public Builder secret(@Nullable String secret) {
             this.secret = secret;
             return this;
-        }
-        public ManagedClusterServicePrincipalProfileResponse build() {
+        }        public ManagedClusterServicePrincipalProfileResponse build() {
             return new ManagedClusterServicePrincipalProfileResponse(clientId, secret);
         }
     }

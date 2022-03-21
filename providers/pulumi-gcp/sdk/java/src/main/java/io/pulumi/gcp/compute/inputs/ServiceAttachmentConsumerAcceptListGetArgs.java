@@ -75,22 +75,18 @@ public final class ServiceAttachmentConsumerAcceptListGetArgs extends io.pulumi.
             this.connectionLimit = Objects.requireNonNull(connectionLimit);
             return this;
         }
-
         public Builder connectionLimit(Integer connectionLimit) {
             this.connectionLimit = Output.of(Objects.requireNonNull(connectionLimit));
             return this;
         }
-
         public Builder projectIdOrNum(Output<String> projectIdOrNum) {
             this.projectIdOrNum = Objects.requireNonNull(projectIdOrNum);
             return this;
         }
-
         public Builder projectIdOrNum(String projectIdOrNum) {
             this.projectIdOrNum = Output.of(Objects.requireNonNull(projectIdOrNum));
             return this;
-        }
-        public ServiceAttachmentConsumerAcceptListGetArgs build() {
+        }        public ServiceAttachmentConsumerAcceptListGetArgs build() {
             return new ServiceAttachmentConsumerAcceptListGetArgs(connectionLimit, projectIdOrNum);
         }
     }

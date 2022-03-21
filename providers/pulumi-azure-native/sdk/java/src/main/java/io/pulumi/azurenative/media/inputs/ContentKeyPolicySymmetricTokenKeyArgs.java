@@ -78,22 +78,18 @@ public final class ContentKeyPolicySymmetricTokenKeyArgs extends io.pulumi.resou
             this.keyValue = Objects.requireNonNull(keyValue);
             return this;
         }
-
         public Builder keyValue(String keyValue) {
             this.keyValue = Output.of(Objects.requireNonNull(keyValue));
             return this;
         }
-
         public Builder odataType(Output<String> odataType) {
             this.odataType = Objects.requireNonNull(odataType);
             return this;
         }
-
         public Builder odataType(String odataType) {
             this.odataType = Output.of(Objects.requireNonNull(odataType));
             return this;
-        }
-        public ContentKeyPolicySymmetricTokenKeyArgs build() {
+        }        public ContentKeyPolicySymmetricTokenKeyArgs build() {
             return new ContentKeyPolicySymmetricTokenKeyArgs(keyValue, odataType);
         }
     }

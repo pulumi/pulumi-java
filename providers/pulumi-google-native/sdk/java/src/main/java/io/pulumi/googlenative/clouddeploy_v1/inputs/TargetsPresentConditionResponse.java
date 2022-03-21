@@ -94,17 +94,17 @@ public final class TargetsPresentConditionResponse extends io.pulumi.resources.I
             this.missingTargets = Objects.requireNonNull(missingTargets);
             return this;
         }
-
+        public Builder missingTargets(String... missingTargets) {
+            return missingTargets(List.of(missingTargets));
+        }
         public Builder status(Boolean status) {
             this.status = Objects.requireNonNull(status);
             return this;
         }
-
         public Builder updateTime(String updateTime) {
             this.updateTime = Objects.requireNonNull(updateTime);
             return this;
-        }
-        public TargetsPresentConditionResponse build() {
+        }        public TargetsPresentConditionResponse build() {
             return new TargetsPresentConditionResponse(missingTargets, status, updateTime);
         }
     }

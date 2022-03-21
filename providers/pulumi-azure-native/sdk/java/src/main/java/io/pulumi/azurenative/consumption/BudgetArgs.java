@@ -194,92 +194,74 @@ public final class BudgetArgs extends io.pulumi.resources.ResourceArgs {
             this.amount = Objects.requireNonNull(amount);
             return this;
         }
-
         public Builder amount(Double amount) {
             this.amount = Output.of(Objects.requireNonNull(amount));
             return this;
         }
-
         public Builder budgetName(@Nullable Output<String> budgetName) {
             this.budgetName = budgetName;
             return this;
         }
-
         public Builder budgetName(@Nullable String budgetName) {
             this.budgetName = Output.ofNullable(budgetName);
             return this;
         }
-
         public Builder category(Output<Either<String,CategoryType>> category) {
             this.category = Objects.requireNonNull(category);
             return this;
         }
-
         public Builder category(Either<String,CategoryType> category) {
             this.category = Output.of(Objects.requireNonNull(category));
             return this;
         }
-
         public Builder eTag(@Nullable Output<String> eTag) {
             this.eTag = eTag;
             return this;
         }
-
         public Builder eTag(@Nullable String eTag) {
             this.eTag = Output.ofNullable(eTag);
             return this;
         }
-
         public Builder filter(@Nullable Output<BudgetFilterArgs> filter) {
             this.filter = filter;
             return this;
         }
-
         public Builder filter(@Nullable BudgetFilterArgs filter) {
             this.filter = Output.ofNullable(filter);
             return this;
         }
-
         public Builder notifications(@Nullable Output<Map<String,NotificationArgs>> notifications) {
             this.notifications = notifications;
             return this;
         }
-
         public Builder notifications(@Nullable Map<String,NotificationArgs> notifications) {
             this.notifications = Output.ofNullable(notifications);
             return this;
         }
-
         public Builder scope(Output<String> scope) {
             this.scope = Objects.requireNonNull(scope);
             return this;
         }
-
         public Builder scope(String scope) {
             this.scope = Output.of(Objects.requireNonNull(scope));
             return this;
         }
-
         public Builder timeGrain(Output<Either<String,TimeGrainType>> timeGrain) {
             this.timeGrain = Objects.requireNonNull(timeGrain);
             return this;
         }
-
         public Builder timeGrain(Either<String,TimeGrainType> timeGrain) {
             this.timeGrain = Output.of(Objects.requireNonNull(timeGrain));
             return this;
         }
-
         public Builder timePeriod(Output<BudgetTimePeriodArgs> timePeriod) {
             this.timePeriod = Objects.requireNonNull(timePeriod);
             return this;
         }
-
         public Builder timePeriod(BudgetTimePeriodArgs timePeriod) {
             this.timePeriod = Output.of(Objects.requireNonNull(timePeriod));
             return this;
-        }
-        public BudgetArgs build() {
+        }        public BudgetArgs build() {
             return new BudgetArgs(amount, budgetName, category, eTag, filter, notifications, scope, timeGrain, timePeriod);
         }
     }

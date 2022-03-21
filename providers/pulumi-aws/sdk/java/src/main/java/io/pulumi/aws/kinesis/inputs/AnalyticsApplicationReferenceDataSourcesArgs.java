@@ -108,42 +108,34 @@ public final class AnalyticsApplicationReferenceDataSourcesArgs extends io.pulum
             this.id = id;
             return this;
         }
-
         public Builder id(@Nullable String id) {
             this.id = Output.ofNullable(id);
             return this;
         }
-
         public Builder s3(Output<AnalyticsApplicationReferenceDataSourcesS3Args> s3) {
             this.s3 = Objects.requireNonNull(s3);
             return this;
         }
-
         public Builder s3(AnalyticsApplicationReferenceDataSourcesS3Args s3) {
             this.s3 = Output.of(Objects.requireNonNull(s3));
             return this;
         }
-
         public Builder schema(Output<AnalyticsApplicationReferenceDataSourcesSchemaArgs> schema) {
             this.schema = Objects.requireNonNull(schema);
             return this;
         }
-
         public Builder schema(AnalyticsApplicationReferenceDataSourcesSchemaArgs schema) {
             this.schema = Output.of(Objects.requireNonNull(schema));
             return this;
         }
-
         public Builder tableName(Output<String> tableName) {
             this.tableName = Objects.requireNonNull(tableName);
             return this;
         }
-
         public Builder tableName(String tableName) {
             this.tableName = Output.of(Objects.requireNonNull(tableName));
             return this;
-        }
-        public AnalyticsApplicationReferenceDataSourcesArgs build() {
+        }        public AnalyticsApplicationReferenceDataSourcesArgs build() {
             return new AnalyticsApplicationReferenceDataSourcesArgs(id, s3, schema, tableName);
         }
     }

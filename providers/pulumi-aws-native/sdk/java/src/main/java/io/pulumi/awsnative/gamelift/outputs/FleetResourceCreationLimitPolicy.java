@@ -71,12 +71,10 @@ public final class FleetResourceCreationLimitPolicy {
             this.newGameSessionsPerCreator = newGameSessionsPerCreator;
             return this;
         }
-
         public Builder policyPeriodInMinutes(@Nullable Integer policyPeriodInMinutes) {
             this.policyPeriodInMinutes = policyPeriodInMinutes;
             return this;
-        }
-        public FleetResourceCreationLimitPolicy build() {
+        }        public FleetResourceCreationLimitPolicy build() {
             return new FleetResourceCreationLimitPolicy(newGameSessionsPerCreator, policyPeriodInMinutes);
         }
     }

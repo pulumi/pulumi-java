@@ -97,32 +97,29 @@ public final class HttpMessageDiagnosticArgs extends io.pulumi.resources.Resourc
             this.body = body;
             return this;
         }
-
         public Builder body(@Nullable BodyDiagnosticSettingsArgs body) {
             this.body = Output.ofNullable(body);
             return this;
         }
-
         public Builder dataMasking(@Nullable Output<DataMaskingArgs> dataMasking) {
             this.dataMasking = dataMasking;
             return this;
         }
-
         public Builder dataMasking(@Nullable DataMaskingArgs dataMasking) {
             this.dataMasking = Output.ofNullable(dataMasking);
             return this;
         }
-
         public Builder headers(@Nullable Output<List<String>> headers) {
             this.headers = headers;
             return this;
         }
-
         public Builder headers(@Nullable List<String> headers) {
             this.headers = Output.ofNullable(headers);
             return this;
         }
-        public HttpMessageDiagnosticArgs build() {
+        public Builder headers(String... headers) {
+            return headers(List.of(headers));
+        }        public HttpMessageDiagnosticArgs build() {
             return new HttpMessageDiagnosticArgs(body, dataMasking, headers);
         }
     }

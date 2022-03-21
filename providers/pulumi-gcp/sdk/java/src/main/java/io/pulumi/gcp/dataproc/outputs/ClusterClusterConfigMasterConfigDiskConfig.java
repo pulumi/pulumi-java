@@ -98,17 +98,14 @@ public final class ClusterClusterConfigMasterConfigDiskConfig {
             this.bootDiskSizeGb = bootDiskSizeGb;
             return this;
         }
-
         public Builder bootDiskType(@Nullable String bootDiskType) {
             this.bootDiskType = bootDiskType;
             return this;
         }
-
         public Builder numLocalSsds(@Nullable Integer numLocalSsds) {
             this.numLocalSsds = numLocalSsds;
             return this;
-        }
-        public ClusterClusterConfigMasterConfigDiskConfig build() {
+        }        public ClusterClusterConfigMasterConfigDiskConfig build() {
             return new ClusterClusterConfigMasterConfigDiskConfig(bootDiskSizeGb, bootDiskType, numLocalSsds);
         }
     }

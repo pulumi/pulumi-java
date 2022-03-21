@@ -54,8 +54,7 @@ public final class GetResolverQueryLoggingConfigAssociationArgs extends io.pulum
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
-        }
-        public GetResolverQueryLoggingConfigAssociationArgs build() {
+        }        public GetResolverQueryLoggingConfigAssociationArgs build() {
             return new GetResolverQueryLoggingConfigAssociationArgs(id);
         }
     }

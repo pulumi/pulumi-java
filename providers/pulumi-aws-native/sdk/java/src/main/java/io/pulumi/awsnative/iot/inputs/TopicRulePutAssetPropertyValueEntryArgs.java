@@ -104,52 +104,45 @@ public final class TopicRulePutAssetPropertyValueEntryArgs extends io.pulumi.res
             this.assetId = assetId;
             return this;
         }
-
         public Builder assetId(@Nullable String assetId) {
             this.assetId = Output.ofNullable(assetId);
             return this;
         }
-
         public Builder entryId(@Nullable Output<String> entryId) {
             this.entryId = entryId;
             return this;
         }
-
         public Builder entryId(@Nullable String entryId) {
             this.entryId = Output.ofNullable(entryId);
             return this;
         }
-
         public Builder propertyAlias(@Nullable Output<String> propertyAlias) {
             this.propertyAlias = propertyAlias;
             return this;
         }
-
         public Builder propertyAlias(@Nullable String propertyAlias) {
             this.propertyAlias = Output.ofNullable(propertyAlias);
             return this;
         }
-
         public Builder propertyId(@Nullable Output<String> propertyId) {
             this.propertyId = propertyId;
             return this;
         }
-
         public Builder propertyId(@Nullable String propertyId) {
             this.propertyId = Output.ofNullable(propertyId);
             return this;
         }
-
         public Builder propertyValues(Output<List<TopicRuleAssetPropertyValueArgs>> propertyValues) {
             this.propertyValues = Objects.requireNonNull(propertyValues);
             return this;
         }
-
         public Builder propertyValues(List<TopicRuleAssetPropertyValueArgs> propertyValues) {
             this.propertyValues = Output.of(Objects.requireNonNull(propertyValues));
             return this;
         }
-        public TopicRulePutAssetPropertyValueEntryArgs build() {
+        public Builder propertyValues(TopicRuleAssetPropertyValueArgs... propertyValues) {
+            return propertyValues(List.of(propertyValues));
+        }        public TopicRulePutAssetPropertyValueEntryArgs build() {
             return new TopicRulePutAssetPropertyValueEntryArgs(assetId, entryId, propertyAlias, propertyId, propertyValues);
         }
     }

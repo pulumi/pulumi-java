@@ -66,22 +66,18 @@ public final class NodePoolNodeConfigShieldedInstanceConfigGetArgs extends io.pu
             this.enableIntegrityMonitoring = enableIntegrityMonitoring;
             return this;
         }
-
         public Builder enableIntegrityMonitoring(@Nullable Boolean enableIntegrityMonitoring) {
             this.enableIntegrityMonitoring = Output.ofNullable(enableIntegrityMonitoring);
             return this;
         }
-
         public Builder enableSecureBoot(@Nullable Output<Boolean> enableSecureBoot) {
             this.enableSecureBoot = enableSecureBoot;
             return this;
         }
-
         public Builder enableSecureBoot(@Nullable Boolean enableSecureBoot) {
             this.enableSecureBoot = Output.ofNullable(enableSecureBoot);
             return this;
-        }
-        public NodePoolNodeConfigShieldedInstanceConfigGetArgs build() {
+        }        public NodePoolNodeConfigShieldedInstanceConfigGetArgs build() {
             return new NodePoolNodeConfigShieldedInstanceConfigGetArgs(enableIntegrityMonitoring, enableSecureBoot);
         }
     }

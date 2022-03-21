@@ -80,22 +80,21 @@ public final class WebPubSubHubPropertiesArgs extends io.pulumi.resources.Resour
             this.anonymousConnectPolicy = anonymousConnectPolicy;
             return this;
         }
-
         public Builder anonymousConnectPolicy(@Nullable String anonymousConnectPolicy) {
             this.anonymousConnectPolicy = Output.ofNullable(anonymousConnectPolicy);
             return this;
         }
-
         public Builder eventHandlers(@Nullable Output<List<EventHandlerArgs>> eventHandlers) {
             this.eventHandlers = eventHandlers;
             return this;
         }
-
         public Builder eventHandlers(@Nullable List<EventHandlerArgs> eventHandlers) {
             this.eventHandlers = Output.ofNullable(eventHandlers);
             return this;
         }
-        public WebPubSubHubPropertiesArgs build() {
+        public Builder eventHandlers(EventHandlerArgs... eventHandlers) {
+            return eventHandlers(List.of(eventHandlers));
+        }        public WebPubSubHubPropertiesArgs build() {
             return new WebPubSubHubPropertiesArgs(anonymousConnectPolicy, eventHandlers);
         }
     }

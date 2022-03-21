@@ -54,8 +54,7 @@ public final class GetBundleRootStorage extends io.pulumi.resources.InvokeArgs {
         public Builder capacity(String capacity) {
             this.capacity = Objects.requireNonNull(capacity);
             return this;
-        }
-        public GetBundleRootStorage build() {
+        }        public GetBundleRootStorage build() {
             return new GetBundleRootStorage(capacity);
         }
     }

@@ -58,12 +58,10 @@ public final class FulfillmentFeatureGetArgs extends io.pulumi.resources.Resourc
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Output.of(Objects.requireNonNull(type));
             return this;
-        }
-        public FulfillmentFeatureGetArgs build() {
+        }        public FulfillmentFeatureGetArgs build() {
             return new FulfillmentFeatureGetArgs(type);
         }
     }

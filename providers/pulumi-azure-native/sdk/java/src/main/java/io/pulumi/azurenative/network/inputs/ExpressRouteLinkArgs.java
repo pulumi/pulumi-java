@@ -113,42 +113,34 @@ public final class ExpressRouteLinkArgs extends io.pulumi.resources.ResourceArgs
             this.adminState = adminState;
             return this;
         }
-
         public Builder adminState(@Nullable Either<String,ExpressRouteLinkAdminState> adminState) {
             this.adminState = Output.ofNullable(adminState);
             return this;
         }
-
         public Builder id(@Nullable Output<String> id) {
             this.id = id;
             return this;
         }
-
         public Builder id(@Nullable String id) {
             this.id = Output.ofNullable(id);
             return this;
         }
-
         public Builder macSecConfig(@Nullable Output<ExpressRouteLinkMacSecConfigArgs> macSecConfig) {
             this.macSecConfig = macSecConfig;
             return this;
         }
-
         public Builder macSecConfig(@Nullable ExpressRouteLinkMacSecConfigArgs macSecConfig) {
             this.macSecConfig = Output.ofNullable(macSecConfig);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
-        }
-        public ExpressRouteLinkArgs build() {
+        }        public ExpressRouteLinkArgs build() {
             return new ExpressRouteLinkArgs(adminState, id, macSecConfig, name);
         }
     }

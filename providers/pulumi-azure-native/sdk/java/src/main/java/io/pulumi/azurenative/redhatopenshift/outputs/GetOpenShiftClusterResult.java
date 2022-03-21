@@ -273,72 +273,64 @@ public final class GetOpenShiftClusterResult {
             this.apiserverProfile = apiserverProfile;
             return this;
         }
-
         public Builder clusterProfile(@Nullable ClusterProfileResponse clusterProfile) {
             this.clusterProfile = clusterProfile;
             return this;
         }
-
         public Builder consoleProfile(@Nullable ConsoleProfileResponse consoleProfile) {
             this.consoleProfile = consoleProfile;
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder ingressProfiles(@Nullable List<IngressProfileResponse> ingressProfiles) {
             this.ingressProfiles = ingressProfiles;
             return this;
         }
-
+        public Builder ingressProfiles(IngressProfileResponse... ingressProfiles) {
+            return ingressProfiles(List.of(ingressProfiles));
+        }
         public Builder location(String location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
-
         public Builder masterProfile(@Nullable MasterProfileResponse masterProfile) {
             this.masterProfile = masterProfile;
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder networkProfile(@Nullable NetworkProfileResponse networkProfile) {
             this.networkProfile = networkProfile;
             return this;
         }
-
         public Builder provisioningState(@Nullable String provisioningState) {
             this.provisioningState = provisioningState;
             return this;
         }
-
         public Builder servicePrincipalProfile(@Nullable ServicePrincipalProfileResponse servicePrincipalProfile) {
             this.servicePrincipalProfile = servicePrincipalProfile;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder workerProfiles(@Nullable List<WorkerProfileResponse> workerProfiles) {
             this.workerProfiles = workerProfiles;
             return this;
         }
-        public GetOpenShiftClusterResult build() {
+        public Builder workerProfiles(WorkerProfileResponse... workerProfiles) {
+            return workerProfiles(List.of(workerProfiles));
+        }        public GetOpenShiftClusterResult build() {
             return new GetOpenShiftClusterResult(apiserverProfile, clusterProfile, consoleProfile, id, ingressProfiles, location, masterProfile, name, networkProfile, provisioningState, servicePrincipalProfile, tags, type, workerProfiles);
         }
     }

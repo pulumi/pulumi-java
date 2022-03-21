@@ -56,8 +56,7 @@ public final class BotAliasAudioLogDestination extends io.pulumi.resources.Invok
         public Builder s3Bucket(@Nullable BotAliasS3BucketLogDestination s3Bucket) {
             this.s3Bucket = s3Bucket;
             return this;
-        }
-        public BotAliasAudioLogDestination build() {
+        }        public BotAliasAudioLogDestination build() {
             return new BotAliasAudioLogDestination(s3Bucket);
         }
     }

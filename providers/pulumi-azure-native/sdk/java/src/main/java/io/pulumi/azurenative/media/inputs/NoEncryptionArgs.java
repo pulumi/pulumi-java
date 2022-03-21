@@ -61,12 +61,10 @@ public final class NoEncryptionArgs extends io.pulumi.resources.ResourceArgs {
             this.enabledProtocols = enabledProtocols;
             return this;
         }
-
         public Builder enabledProtocols(@Nullable EnabledProtocolsArgs enabledProtocols) {
             this.enabledProtocols = Output.ofNullable(enabledProtocols);
             return this;
-        }
-        public NoEncryptionArgs build() {
+        }        public NoEncryptionArgs build() {
             return new NoEncryptionArgs(enabledProtocols);
         }
     }

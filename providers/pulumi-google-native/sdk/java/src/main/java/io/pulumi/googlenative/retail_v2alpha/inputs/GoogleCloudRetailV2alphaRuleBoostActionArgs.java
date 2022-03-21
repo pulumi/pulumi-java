@@ -79,22 +79,18 @@ public final class GoogleCloudRetailV2alphaRuleBoostActionArgs extends io.pulumi
             this.boost = boost;
             return this;
         }
-
         public Builder boost(@Nullable Double boost) {
             this.boost = Output.ofNullable(boost);
             return this;
         }
-
         public Builder productsFilter(@Nullable Output<String> productsFilter) {
             this.productsFilter = productsFilter;
             return this;
         }
-
         public Builder productsFilter(@Nullable String productsFilter) {
             this.productsFilter = Output.ofNullable(productsFilter);
             return this;
-        }
-        public GoogleCloudRetailV2alphaRuleBoostActionArgs build() {
+        }        public GoogleCloudRetailV2alphaRuleBoostActionArgs build() {
             return new GoogleCloudRetailV2alphaRuleBoostActionArgs(boost, productsFilter);
         }
     }

@@ -123,52 +123,42 @@ public final class SshPublicKeyArgs extends io.pulumi.resources.ResourceArgs {
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder publicKey(@Nullable Output<String> publicKey) {
             this.publicKey = publicKey;
             return this;
         }
-
         public Builder publicKey(@Nullable String publicKey) {
             this.publicKey = Output.ofNullable(publicKey);
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder sshPublicKeyName(@Nullable Output<String> sshPublicKeyName) {
             this.sshPublicKeyName = sshPublicKeyName;
             return this;
         }
-
         public Builder sshPublicKeyName(@Nullable String sshPublicKeyName) {
             this.sshPublicKeyName = Output.ofNullable(sshPublicKeyName);
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
-        }
-        public SshPublicKeyArgs build() {
+        }        public SshPublicKeyArgs build() {
             return new SshPublicKeyArgs(location, publicKey, resourceGroupName, sshPublicKeyName, tags);
         }
     }

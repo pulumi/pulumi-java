@@ -101,22 +101,18 @@ public final class AndroidDeviceResponse {
             this.androidModelId = Objects.requireNonNull(androidModelId);
             return this;
         }
-
         public Builder androidVersionId(String androidVersionId) {
             this.androidVersionId = Objects.requireNonNull(androidVersionId);
             return this;
         }
-
         public Builder locale(String locale) {
             this.locale = Objects.requireNonNull(locale);
             return this;
         }
-
         public Builder orientation(String orientation) {
             this.orientation = Objects.requireNonNull(orientation);
             return this;
-        }
-        public AndroidDeviceResponse build() {
+        }        public AndroidDeviceResponse build() {
             return new AndroidDeviceResponse(androidModelId, androidVersionId, locale, orientation);
         }
     }

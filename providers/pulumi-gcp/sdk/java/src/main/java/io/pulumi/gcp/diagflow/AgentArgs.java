@@ -262,122 +262,101 @@ public final class AgentArgs extends io.pulumi.resources.ResourceArgs {
             this.apiVersion = apiVersion;
             return this;
         }
-
         public Builder apiVersion(@Nullable String apiVersion) {
             this.apiVersion = Output.ofNullable(apiVersion);
             return this;
         }
-
         public Builder avatarUri(@Nullable Output<String> avatarUri) {
             this.avatarUri = avatarUri;
             return this;
         }
-
         public Builder avatarUri(@Nullable String avatarUri) {
             this.avatarUri = Output.ofNullable(avatarUri);
             return this;
         }
-
         public Builder classificationThreshold(@Nullable Output<Double> classificationThreshold) {
             this.classificationThreshold = classificationThreshold;
             return this;
         }
-
         public Builder classificationThreshold(@Nullable Double classificationThreshold) {
             this.classificationThreshold = Output.ofNullable(classificationThreshold);
             return this;
         }
-
         public Builder defaultLanguageCode(Output<String> defaultLanguageCode) {
             this.defaultLanguageCode = Objects.requireNonNull(defaultLanguageCode);
             return this;
         }
-
         public Builder defaultLanguageCode(String defaultLanguageCode) {
             this.defaultLanguageCode = Output.of(Objects.requireNonNull(defaultLanguageCode));
             return this;
         }
-
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder displayName(Output<String> displayName) {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
-
         public Builder displayName(String displayName) {
             this.displayName = Output.of(Objects.requireNonNull(displayName));
             return this;
         }
-
         public Builder enableLogging(@Nullable Output<Boolean> enableLogging) {
             this.enableLogging = enableLogging;
             return this;
         }
-
         public Builder enableLogging(@Nullable Boolean enableLogging) {
             this.enableLogging = Output.ofNullable(enableLogging);
             return this;
         }
-
         public Builder matchMode(@Nullable Output<String> matchMode) {
             this.matchMode = matchMode;
             return this;
         }
-
         public Builder matchMode(@Nullable String matchMode) {
             this.matchMode = Output.ofNullable(matchMode);
             return this;
         }
-
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
         }
-
         public Builder supportedLanguageCodes(@Nullable Output<List<String>> supportedLanguageCodes) {
             this.supportedLanguageCodes = supportedLanguageCodes;
             return this;
         }
-
         public Builder supportedLanguageCodes(@Nullable List<String> supportedLanguageCodes) {
             this.supportedLanguageCodes = Output.ofNullable(supportedLanguageCodes);
             return this;
         }
-
+        public Builder supportedLanguageCodes(String... supportedLanguageCodes) {
+            return supportedLanguageCodes(List.of(supportedLanguageCodes));
+        }
         public Builder tier(@Nullable Output<String> tier) {
             this.tier = tier;
             return this;
         }
-
         public Builder tier(@Nullable String tier) {
             this.tier = Output.ofNullable(tier);
             return this;
         }
-
         public Builder timeZone(Output<String> timeZone) {
             this.timeZone = Objects.requireNonNull(timeZone);
             return this;
         }
-
         public Builder timeZone(String timeZone) {
             this.timeZone = Output.of(Objects.requireNonNull(timeZone));
             return this;
-        }
-        public AgentArgs build() {
+        }        public AgentArgs build() {
             return new AgentArgs(apiVersion, avatarUri, classificationThreshold, defaultLanguageCode, description, displayName, enableLogging, matchMode, project, supportedLanguageCodes, tier, timeZone);
         }
     }

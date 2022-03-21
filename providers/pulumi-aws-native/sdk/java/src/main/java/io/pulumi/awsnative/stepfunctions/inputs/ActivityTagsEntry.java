@@ -64,12 +64,10 @@ public final class ActivityTagsEntry extends io.pulumi.resources.InvokeArgs {
             this.key = Objects.requireNonNull(key);
             return this;
         }
-
         public Builder value(String value) {
             this.value = Objects.requireNonNull(value);
             return this;
-        }
-        public ActivityTagsEntry build() {
+        }        public ActivityTagsEntry build() {
             return new ActivityTagsEntry(key, value);
         }
     }

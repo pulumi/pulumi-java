@@ -66,12 +66,10 @@ public final class DatastoreCustomerManagedS3Storage extends io.pulumi.resources
             this.bucket = Objects.requireNonNull(bucket);
             return this;
         }
-
         public Builder keyPrefix(@Nullable String keyPrefix) {
             this.keyPrefix = keyPrefix;
             return this;
-        }
-        public DatastoreCustomerManagedS3Storage build() {
+        }        public DatastoreCustomerManagedS3Storage build() {
             return new DatastoreCustomerManagedS3Storage(bucket, keyPrefix);
         }
     }

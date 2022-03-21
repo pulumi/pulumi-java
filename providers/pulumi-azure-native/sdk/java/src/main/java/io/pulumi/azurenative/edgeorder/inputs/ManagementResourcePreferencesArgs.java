@@ -61,12 +61,10 @@ public final class ManagementResourcePreferencesArgs extends io.pulumi.resources
             this.preferredManagementResourceId = preferredManagementResourceId;
             return this;
         }
-
         public Builder preferredManagementResourceId(@Nullable String preferredManagementResourceId) {
             this.preferredManagementResourceId = Output.ofNullable(preferredManagementResourceId);
             return this;
-        }
-        public ManagementResourcePreferencesArgs build() {
+        }        public ManagementResourcePreferencesArgs build() {
             return new ManagementResourcePreferencesArgs(preferredManagementResourceId);
         }
     }

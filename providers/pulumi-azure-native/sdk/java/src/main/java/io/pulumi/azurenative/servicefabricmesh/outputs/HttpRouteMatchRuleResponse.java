@@ -72,12 +72,13 @@ public final class HttpRouteMatchRuleResponse {
             this.headers = headers;
             return this;
         }
-
+        public Builder headers(HttpRouteMatchHeaderResponse... headers) {
+            return headers(List.of(headers));
+        }
         public Builder path(HttpRouteMatchPathResponse path) {
             this.path = Objects.requireNonNull(path);
             return this;
-        }
-        public HttpRouteMatchRuleResponse build() {
+        }        public HttpRouteMatchRuleResponse build() {
             return new HttpRouteMatchRuleResponse(headers, path);
         }
     }

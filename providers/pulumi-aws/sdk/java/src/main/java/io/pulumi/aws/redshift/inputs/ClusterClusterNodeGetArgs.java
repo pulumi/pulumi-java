@@ -90,32 +90,26 @@ public final class ClusterClusterNodeGetArgs extends io.pulumi.resources.Resourc
             this.nodeRole = nodeRole;
             return this;
         }
-
         public Builder nodeRole(@Nullable String nodeRole) {
             this.nodeRole = Output.ofNullable(nodeRole);
             return this;
         }
-
         public Builder privateIpAddress(@Nullable Output<String> privateIpAddress) {
             this.privateIpAddress = privateIpAddress;
             return this;
         }
-
         public Builder privateIpAddress(@Nullable String privateIpAddress) {
             this.privateIpAddress = Output.ofNullable(privateIpAddress);
             return this;
         }
-
         public Builder publicIpAddress(@Nullable Output<String> publicIpAddress) {
             this.publicIpAddress = publicIpAddress;
             return this;
         }
-
         public Builder publicIpAddress(@Nullable String publicIpAddress) {
             this.publicIpAddress = Output.ofNullable(publicIpAddress);
             return this;
-        }
-        public ClusterClusterNodeGetArgs build() {
+        }        public ClusterClusterNodeGetArgs build() {
             return new ClusterClusterNodeGetArgs(nodeRole, privateIpAddress, publicIpAddress);
         }
     }

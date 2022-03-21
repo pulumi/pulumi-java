@@ -96,17 +96,20 @@ public final class PacketMirroringFilter {
             this.cidrRanges = cidrRanges;
             return this;
         }
-
+        public Builder cidrRanges(String... cidrRanges) {
+            return cidrRanges(List.of(cidrRanges));
+        }
         public Builder direction(@Nullable String direction) {
             this.direction = direction;
             return this;
         }
-
         public Builder ipProtocols(@Nullable List<String> ipProtocols) {
             this.ipProtocols = ipProtocols;
             return this;
         }
-        public PacketMirroringFilter build() {
+        public Builder ipProtocols(String... ipProtocols) {
+            return ipProtocols(List.of(ipProtocols));
+        }        public PacketMirroringFilter build() {
             return new PacketMirroringFilter(cidrRanges, direction, ipProtocols);
         }
     }

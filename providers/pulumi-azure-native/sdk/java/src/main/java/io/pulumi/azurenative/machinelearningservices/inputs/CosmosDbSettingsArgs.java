@@ -57,12 +57,10 @@ public final class CosmosDbSettingsArgs extends io.pulumi.resources.ResourceArgs
             this.collectionsThroughput = collectionsThroughput;
             return this;
         }
-
         public Builder collectionsThroughput(@Nullable Integer collectionsThroughput) {
             this.collectionsThroughput = Output.ofNullable(collectionsThroughput);
             return this;
-        }
-        public CosmosDbSettingsArgs build() {
+        }        public CosmosDbSettingsArgs build() {
             return new CosmosDbSettingsArgs(collectionsThroughput);
         }
     }

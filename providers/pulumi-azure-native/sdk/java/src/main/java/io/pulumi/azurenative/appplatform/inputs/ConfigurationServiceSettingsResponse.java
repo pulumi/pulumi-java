@@ -60,8 +60,7 @@ public final class ConfigurationServiceSettingsResponse extends io.pulumi.resour
         public Builder gitProperty(@Nullable ConfigurationServiceGitPropertyResponse gitProperty) {
             this.gitProperty = gitProperty;
             return this;
-        }
-        public ConfigurationServiceSettingsResponse build() {
+        }        public ConfigurationServiceSettingsResponse build() {
             return new ConfigurationServiceSettingsResponse(gitProperty);
         }
     }

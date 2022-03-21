@@ -105,22 +105,21 @@ public final class GetRuleGroupsNamespaceResult {
             this.arn = arn;
             return this;
         }
-
         public Builder data(@Nullable String data) {
             this.data = data;
             return this;
         }
-
         public Builder tags(@Nullable List<RuleGroupsNamespaceTag> tags) {
             this.tags = tags;
             return this;
         }
-
+        public Builder tags(RuleGroupsNamespaceTag... tags) {
+            return tags(List.of(tags));
+        }
         public Builder workspace(@Nullable String workspace) {
             this.workspace = workspace;
             return this;
-        }
-        public GetRuleGroupsNamespaceResult build() {
+        }        public GetRuleGroupsNamespaceResult build() {
             return new GetRuleGroupsNamespaceResult(arn, data, tags, workspace);
         }
     }

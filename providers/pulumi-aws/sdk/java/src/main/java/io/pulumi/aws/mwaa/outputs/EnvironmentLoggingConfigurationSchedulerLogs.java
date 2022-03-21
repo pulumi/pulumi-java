@@ -80,17 +80,14 @@ public final class EnvironmentLoggingConfigurationSchedulerLogs {
             this.cloudWatchLogGroupArn = cloudWatchLogGroupArn;
             return this;
         }
-
         public Builder enabled(@Nullable Boolean enabled) {
             this.enabled = enabled;
             return this;
         }
-
         public Builder logLevel(@Nullable String logLevel) {
             this.logLevel = logLevel;
             return this;
-        }
-        public EnvironmentLoggingConfigurationSchedulerLogs build() {
+        }        public EnvironmentLoggingConfigurationSchedulerLogs build() {
             return new EnvironmentLoggingConfigurationSchedulerLogs(cloudWatchLogGroupArn, enabled, logLevel);
         }
     }

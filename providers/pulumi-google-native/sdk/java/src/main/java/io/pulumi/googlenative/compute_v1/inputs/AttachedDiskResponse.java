@@ -291,77 +291,68 @@ public final class AttachedDiskResponse extends io.pulumi.resources.InvokeArgs {
             this.autoDelete = Objects.requireNonNull(autoDelete);
             return this;
         }
-
         public Builder boot(Boolean boot) {
             this.boot = Objects.requireNonNull(boot);
             return this;
         }
-
         public Builder deviceName(String deviceName) {
             this.deviceName = Objects.requireNonNull(deviceName);
             return this;
         }
-
         public Builder diskEncryptionKey(CustomerEncryptionKeyResponse diskEncryptionKey) {
             this.diskEncryptionKey = Objects.requireNonNull(diskEncryptionKey);
             return this;
         }
-
         public Builder diskSizeGb(String diskSizeGb) {
             this.diskSizeGb = Objects.requireNonNull(diskSizeGb);
             return this;
         }
-
         public Builder guestOsFeatures(List<GuestOsFeatureResponse> guestOsFeatures) {
             this.guestOsFeatures = Objects.requireNonNull(guestOsFeatures);
             return this;
         }
-
+        public Builder guestOsFeatures(GuestOsFeatureResponse... guestOsFeatures) {
+            return guestOsFeatures(List.of(guestOsFeatures));
+        }
         public Builder index(Integer index) {
             this.index = Objects.requireNonNull(index);
             return this;
         }
-
         public Builder initializeParams(AttachedDiskInitializeParamsResponse initializeParams) {
             this.initializeParams = Objects.requireNonNull(initializeParams);
             return this;
         }
-
         public Builder $interface(String $interface) {
             this.$interface = Objects.requireNonNull($interface);
             return this;
         }
-
         public Builder kind(String kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
-
         public Builder licenses(List<String> licenses) {
             this.licenses = Objects.requireNonNull(licenses);
             return this;
         }
-
+        public Builder licenses(String... licenses) {
+            return licenses(List.of(licenses));
+        }
         public Builder mode(String mode) {
             this.mode = Objects.requireNonNull(mode);
             return this;
         }
-
         public Builder shieldedInstanceInitialState(InitialStateConfigResponse shieldedInstanceInitialState) {
             this.shieldedInstanceInitialState = Objects.requireNonNull(shieldedInstanceInitialState);
             return this;
         }
-
         public Builder source(String source) {
             this.source = Objects.requireNonNull(source);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public AttachedDiskResponse build() {
+        }        public AttachedDiskResponse build() {
             return new AttachedDiskResponse(autoDelete, boot, deviceName, diskEncryptionKey, diskSizeGb, guestOsFeatures, index, initializeParams, $interface, kind, licenses, mode, shieldedInstanceInitialState, source, type);
         }
     }

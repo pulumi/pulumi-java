@@ -79,12 +79,10 @@ public final class AutoHealRulesResponse extends io.pulumi.resources.InvokeArgs 
             this.actions = actions;
             return this;
         }
-
         public Builder triggers(@Nullable AutoHealTriggersResponse triggers) {
             this.triggers = triggers;
             return this;
-        }
-        public AutoHealRulesResponse build() {
+        }        public AutoHealRulesResponse build() {
             return new AutoHealRulesResponse(actions, triggers);
         }
     }

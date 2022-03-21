@@ -53,7 +53,9 @@ public final class GoogleCloudDatacatalogV1BigQueryRoutineSpecResponse {
             this.importedLibraries = Objects.requireNonNull(importedLibraries);
             return this;
         }
-        public GoogleCloudDatacatalogV1BigQueryRoutineSpecResponse build() {
+        public Builder importedLibraries(String... importedLibraries) {
+            return importedLibraries(List.of(importedLibraries));
+        }        public GoogleCloudDatacatalogV1BigQueryRoutineSpecResponse build() {
             return new GoogleCloudDatacatalogV1BigQueryRoutineSpecResponse(importedLibraries);
         }
     }

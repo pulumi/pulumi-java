@@ -303,162 +303,130 @@ public final class EventHubEventSourceArgs extends io.pulumi.resources.ResourceA
             this.consumerGroupName = Objects.requireNonNull(consumerGroupName);
             return this;
         }
-
         public Builder consumerGroupName(String consumerGroupName) {
             this.consumerGroupName = Output.of(Objects.requireNonNull(consumerGroupName));
             return this;
         }
-
         public Builder environmentName(Output<String> environmentName) {
             this.environmentName = Objects.requireNonNull(environmentName);
             return this;
         }
-
         public Builder environmentName(String environmentName) {
             this.environmentName = Output.of(Objects.requireNonNull(environmentName));
             return this;
         }
-
         public Builder eventHubName(Output<String> eventHubName) {
             this.eventHubName = Objects.requireNonNull(eventHubName);
             return this;
         }
-
         public Builder eventHubName(String eventHubName) {
             this.eventHubName = Output.of(Objects.requireNonNull(eventHubName));
             return this;
         }
-
         public Builder eventSourceName(@Nullable Output<String> eventSourceName) {
             this.eventSourceName = eventSourceName;
             return this;
         }
-
         public Builder eventSourceName(@Nullable String eventSourceName) {
             this.eventSourceName = Output.ofNullable(eventSourceName);
             return this;
         }
-
         public Builder eventSourceResourceId(Output<String> eventSourceResourceId) {
             this.eventSourceResourceId = Objects.requireNonNull(eventSourceResourceId);
             return this;
         }
-
         public Builder eventSourceResourceId(String eventSourceResourceId) {
             this.eventSourceResourceId = Output.of(Objects.requireNonNull(eventSourceResourceId));
             return this;
         }
-
         public Builder keyName(Output<String> keyName) {
             this.keyName = Objects.requireNonNull(keyName);
             return this;
         }
-
         public Builder keyName(String keyName) {
             this.keyName = Output.of(Objects.requireNonNull(keyName));
             return this;
         }
-
         public Builder kind(Output<String> kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
-
         public Builder kind(String kind) {
             this.kind = Output.of(Objects.requireNonNull(kind));
             return this;
         }
-
         public Builder localTimestamp(@Nullable Output<LocalTimestampArgs> localTimestamp) {
             this.localTimestamp = localTimestamp;
             return this;
         }
-
         public Builder localTimestamp(@Nullable LocalTimestampArgs localTimestamp) {
             this.localTimestamp = Output.ofNullable(localTimestamp);
             return this;
         }
-
         public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder serviceBusNamespace(Output<String> serviceBusNamespace) {
             this.serviceBusNamespace = Objects.requireNonNull(serviceBusNamespace);
             return this;
         }
-
         public Builder serviceBusNamespace(String serviceBusNamespace) {
             this.serviceBusNamespace = Output.of(Objects.requireNonNull(serviceBusNamespace));
             return this;
         }
-
         public Builder sharedAccessKey(Output<String> sharedAccessKey) {
             this.sharedAccessKey = Objects.requireNonNull(sharedAccessKey);
             return this;
         }
-
         public Builder sharedAccessKey(String sharedAccessKey) {
             this.sharedAccessKey = Output.of(Objects.requireNonNull(sharedAccessKey));
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
         public Builder time(@Nullable Output<String> time) {
             this.time = time;
             return this;
         }
-
         public Builder time(@Nullable String time) {
             this.time = Output.ofNullable(time);
             return this;
         }
-
         public Builder timestampPropertyName(@Nullable Output<String> timestampPropertyName) {
             this.timestampPropertyName = timestampPropertyName;
             return this;
         }
-
         public Builder timestampPropertyName(@Nullable String timestampPropertyName) {
             this.timestampPropertyName = Output.ofNullable(timestampPropertyName);
             return this;
         }
-
         public Builder type(@Nullable Output<Either<String,IngressStartAtType>> type) {
             this.type = type;
             return this;
         }
-
         public Builder type(@Nullable Either<String,IngressStartAtType> type) {
             this.type = Output.ofNullable(type);
             return this;
-        }
-        public EventHubEventSourceArgs build() {
+        }        public EventHubEventSourceArgs build() {
             return new EventHubEventSourceArgs(consumerGroupName, environmentName, eventHubName, eventSourceName, eventSourceResourceId, keyName, kind, localTimestamp, location, resourceGroupName, serviceBusNamespace, sharedAccessKey, tags, time, timestampPropertyName, type);
         }
     }

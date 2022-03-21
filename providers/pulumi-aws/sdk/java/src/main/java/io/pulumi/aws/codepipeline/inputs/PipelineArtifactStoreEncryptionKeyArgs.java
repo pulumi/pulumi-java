@@ -73,22 +73,18 @@ public final class PipelineArtifactStoreEncryptionKeyArgs extends io.pulumi.reso
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder id(String id) {
             this.id = Output.of(Objects.requireNonNull(id));
             return this;
         }
-
         public Builder type(Output<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Output.of(Objects.requireNonNull(type));
             return this;
-        }
-        public PipelineArtifactStoreEncryptionKeyArgs build() {
+        }        public PipelineArtifactStoreEncryptionKeyArgs build() {
             return new PipelineArtifactStoreEncryptionKeyArgs(id, type);
         }
     }

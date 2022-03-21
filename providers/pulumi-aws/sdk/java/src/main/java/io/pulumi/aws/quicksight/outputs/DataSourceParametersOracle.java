@@ -86,17 +86,14 @@ public final class DataSourceParametersOracle {
             this.database = Objects.requireNonNull(database);
             return this;
         }
-
         public Builder host(String host) {
             this.host = Objects.requireNonNull(host);
             return this;
         }
-
         public Builder port(Integer port) {
             this.port = Objects.requireNonNull(port);
             return this;
-        }
-        public DataSourceParametersOracle build() {
+        }        public DataSourceParametersOracle build() {
             return new DataSourceParametersOracle(database, host, port);
         }
     }

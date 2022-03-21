@@ -71,12 +71,10 @@ public final class DataDiskStorageTypeInfoResponse {
             this.lun = lun;
             return this;
         }
-
         public Builder storageType(@Nullable String storageType) {
             this.storageType = storageType;
             return this;
-        }
-        public DataDiskStorageTypeInfoResponse build() {
+        }        public DataDiskStorageTypeInfoResponse build() {
             return new DataDiskStorageTypeInfoResponse(lun, storageType);
         }
     }

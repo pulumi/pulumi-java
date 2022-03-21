@@ -113,32 +113,29 @@ public final class GetBillingAccountResult {
             this.billingAccount = billingAccount;
             return this;
         }
-
         public Builder displayName(String displayName) {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder open(Boolean open) {
             this.open = Objects.requireNonNull(open);
             return this;
         }
-
         public Builder projectIds(List<String> projectIds) {
             this.projectIds = Objects.requireNonNull(projectIds);
             return this;
         }
-        public GetBillingAccountResult build() {
+        public Builder projectIds(String... projectIds) {
+            return projectIds(List.of(projectIds));
+        }        public GetBillingAccountResult build() {
             return new GetBillingAccountResult(billingAccount, displayName, id, name, open, projectIds);
         }
     }

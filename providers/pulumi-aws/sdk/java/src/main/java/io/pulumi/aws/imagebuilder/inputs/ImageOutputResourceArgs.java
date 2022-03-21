@@ -58,12 +58,13 @@ public final class ImageOutputResourceArgs extends io.pulumi.resources.ResourceA
             this.amis = amis;
             return this;
         }
-
         public Builder amis(@Nullable List<ImageOutputResourceAmiArgs> amis) {
             this.amis = Output.ofNullable(amis);
             return this;
         }
-        public ImageOutputResourceArgs build() {
+        public Builder amis(ImageOutputResourceAmiArgs... amis) {
+            return amis(List.of(amis));
+        }        public ImageOutputResourceArgs build() {
             return new ImageOutputResourceArgs(amis);
         }
     }

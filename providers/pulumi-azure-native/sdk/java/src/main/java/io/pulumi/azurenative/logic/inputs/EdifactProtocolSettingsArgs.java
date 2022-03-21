@@ -233,112 +233,105 @@ public final class EdifactProtocolSettingsArgs extends io.pulumi.resources.Resou
             this.acknowledgementSettings = Objects.requireNonNull(acknowledgementSettings);
             return this;
         }
-
         public Builder acknowledgementSettings(EdifactAcknowledgementSettingsArgs acknowledgementSettings) {
             this.acknowledgementSettings = Output.of(Objects.requireNonNull(acknowledgementSettings));
             return this;
         }
-
         public Builder edifactDelimiterOverrides(@Nullable Output<List<EdifactDelimiterOverrideArgs>> edifactDelimiterOverrides) {
             this.edifactDelimiterOverrides = edifactDelimiterOverrides;
             return this;
         }
-
         public Builder edifactDelimiterOverrides(@Nullable List<EdifactDelimiterOverrideArgs> edifactDelimiterOverrides) {
             this.edifactDelimiterOverrides = Output.ofNullable(edifactDelimiterOverrides);
             return this;
         }
-
+        public Builder edifactDelimiterOverrides(EdifactDelimiterOverrideArgs... edifactDelimiterOverrides) {
+            return edifactDelimiterOverrides(List.of(edifactDelimiterOverrides));
+        }
         public Builder envelopeOverrides(@Nullable Output<List<EdifactEnvelopeOverrideArgs>> envelopeOverrides) {
             this.envelopeOverrides = envelopeOverrides;
             return this;
         }
-
         public Builder envelopeOverrides(@Nullable List<EdifactEnvelopeOverrideArgs> envelopeOverrides) {
             this.envelopeOverrides = Output.ofNullable(envelopeOverrides);
             return this;
         }
-
+        public Builder envelopeOverrides(EdifactEnvelopeOverrideArgs... envelopeOverrides) {
+            return envelopeOverrides(List.of(envelopeOverrides));
+        }
         public Builder envelopeSettings(Output<EdifactEnvelopeSettingsArgs> envelopeSettings) {
             this.envelopeSettings = Objects.requireNonNull(envelopeSettings);
             return this;
         }
-
         public Builder envelopeSettings(EdifactEnvelopeSettingsArgs envelopeSettings) {
             this.envelopeSettings = Output.of(Objects.requireNonNull(envelopeSettings));
             return this;
         }
-
         public Builder framingSettings(Output<EdifactFramingSettingsArgs> framingSettings) {
             this.framingSettings = Objects.requireNonNull(framingSettings);
             return this;
         }
-
         public Builder framingSettings(EdifactFramingSettingsArgs framingSettings) {
             this.framingSettings = Output.of(Objects.requireNonNull(framingSettings));
             return this;
         }
-
         public Builder messageFilter(Output<EdifactMessageFilterArgs> messageFilter) {
             this.messageFilter = Objects.requireNonNull(messageFilter);
             return this;
         }
-
         public Builder messageFilter(EdifactMessageFilterArgs messageFilter) {
             this.messageFilter = Output.of(Objects.requireNonNull(messageFilter));
             return this;
         }
-
         public Builder messageFilterList(@Nullable Output<List<EdifactMessageIdentifierArgs>> messageFilterList) {
             this.messageFilterList = messageFilterList;
             return this;
         }
-
         public Builder messageFilterList(@Nullable List<EdifactMessageIdentifierArgs> messageFilterList) {
             this.messageFilterList = Output.ofNullable(messageFilterList);
             return this;
         }
-
+        public Builder messageFilterList(EdifactMessageIdentifierArgs... messageFilterList) {
+            return messageFilterList(List.of(messageFilterList));
+        }
         public Builder processingSettings(Output<EdifactProcessingSettingsArgs> processingSettings) {
             this.processingSettings = Objects.requireNonNull(processingSettings);
             return this;
         }
-
         public Builder processingSettings(EdifactProcessingSettingsArgs processingSettings) {
             this.processingSettings = Output.of(Objects.requireNonNull(processingSettings));
             return this;
         }
-
         public Builder schemaReferences(Output<List<EdifactSchemaReferenceArgs>> schemaReferences) {
             this.schemaReferences = Objects.requireNonNull(schemaReferences);
             return this;
         }
-
         public Builder schemaReferences(List<EdifactSchemaReferenceArgs> schemaReferences) {
             this.schemaReferences = Output.of(Objects.requireNonNull(schemaReferences));
             return this;
         }
-
+        public Builder schemaReferences(EdifactSchemaReferenceArgs... schemaReferences) {
+            return schemaReferences(List.of(schemaReferences));
+        }
         public Builder validationOverrides(@Nullable Output<List<EdifactValidationOverrideArgs>> validationOverrides) {
             this.validationOverrides = validationOverrides;
             return this;
         }
-
         public Builder validationOverrides(@Nullable List<EdifactValidationOverrideArgs> validationOverrides) {
             this.validationOverrides = Output.ofNullable(validationOverrides);
             return this;
         }
-
+        public Builder validationOverrides(EdifactValidationOverrideArgs... validationOverrides) {
+            return validationOverrides(List.of(validationOverrides));
+        }
         public Builder validationSettings(Output<EdifactValidationSettingsArgs> validationSettings) {
             this.validationSettings = Objects.requireNonNull(validationSettings);
             return this;
         }
-
         public Builder validationSettings(EdifactValidationSettingsArgs validationSettings) {
             this.validationSettings = Output.of(Objects.requireNonNull(validationSettings));
             return this;
-        }
-        public EdifactProtocolSettingsArgs build() {
+        }        public EdifactProtocolSettingsArgs build() {
             return new EdifactProtocolSettingsArgs(acknowledgementSettings, edifactDelimiterOverrides, envelopeOverrides, envelopeSettings, framingSettings, messageFilter, messageFilterList, processingSettings, schemaReferences, validationOverrides, validationSettings);
         }
     }

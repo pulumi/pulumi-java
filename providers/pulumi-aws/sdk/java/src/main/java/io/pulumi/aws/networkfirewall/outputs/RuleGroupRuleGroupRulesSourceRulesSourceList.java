@@ -86,17 +86,20 @@ public final class RuleGroupRuleGroupRulesSourceRulesSourceList {
             this.generatedRulesType = Objects.requireNonNull(generatedRulesType);
             return this;
         }
-
         public Builder targetTypes(List<String> targetTypes) {
             this.targetTypes = Objects.requireNonNull(targetTypes);
             return this;
         }
-
+        public Builder targetTypes(String... targetTypes) {
+            return targetTypes(List.of(targetTypes));
+        }
         public Builder targets(List<String> targets) {
             this.targets = Objects.requireNonNull(targets);
             return this;
         }
-        public RuleGroupRuleGroupRulesSourceRulesSourceList build() {
+        public Builder targets(String... targets) {
+            return targets(List.of(targets));
+        }        public RuleGroupRuleGroupRulesSourceRulesSourceList build() {
             return new RuleGroupRuleGroupRulesSourceRulesSourceList(generatedRulesType, targetTypes, targets);
         }
     }

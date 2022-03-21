@@ -87,17 +87,20 @@ public final class GoogleDomainsDnsResponse {
             this.dsRecords = Objects.requireNonNull(dsRecords);
             return this;
         }
-
+        public Builder dsRecords(DsRecordResponse... dsRecords) {
+            return dsRecords(List.of(dsRecords));
+        }
         public Builder dsState(String dsState) {
             this.dsState = Objects.requireNonNull(dsState);
             return this;
         }
-
         public Builder nameServers(List<String> nameServers) {
             this.nameServers = Objects.requireNonNull(nameServers);
             return this;
         }
-        public GoogleDomainsDnsResponse build() {
+        public Builder nameServers(String... nameServers) {
+            return nameServers(List.of(nameServers));
+        }        public GoogleDomainsDnsResponse build() {
             return new GoogleDomainsDnsResponse(dsRecords, dsState, nameServers);
         }
     }

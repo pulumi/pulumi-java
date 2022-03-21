@@ -157,72 +157,58 @@ public final class ManagerArgs extends io.pulumi.resources.ResourceArgs {
             this.cisIntrinsicSettings = cisIntrinsicSettings;
             return this;
         }
-
         public Builder cisIntrinsicSettings(@Nullable ManagerIntrinsicSettingsArgs cisIntrinsicSettings) {
             this.cisIntrinsicSettings = Output.ofNullable(cisIntrinsicSettings);
             return this;
         }
-
         public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder managerName(@Nullable Output<String> managerName) {
             this.managerName = managerName;
             return this;
         }
-
         public Builder managerName(@Nullable String managerName) {
             this.managerName = Output.ofNullable(managerName);
             return this;
         }
-
         public Builder provisioningState(@Nullable Output<String> provisioningState) {
             this.provisioningState = provisioningState;
             return this;
         }
-
         public Builder provisioningState(@Nullable String provisioningState) {
             this.provisioningState = Output.ofNullable(provisioningState);
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder sku(@Nullable Output<ManagerSkuArgs> sku) {
             this.sku = sku;
             return this;
         }
-
         public Builder sku(@Nullable ManagerSkuArgs sku) {
             this.sku = Output.ofNullable(sku);
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
-        }
-        public ManagerArgs build() {
+        }        public ManagerArgs build() {
             return new ManagerArgs(cisIntrinsicSettings, location, managerName, provisioningState, resourceGroupName, sku, tags);
         }
     }

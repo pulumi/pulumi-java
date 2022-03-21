@@ -103,42 +103,34 @@ public final class ObjectLambdaAccessPointPolicyState extends io.pulumi.resource
             this.accountId = accountId;
             return this;
         }
-
         public Builder accountId(@Nullable String accountId) {
             this.accountId = Output.ofNullable(accountId);
             return this;
         }
-
         public Builder hasPublicAccessPolicy(@Nullable Output<Boolean> hasPublicAccessPolicy) {
             this.hasPublicAccessPolicy = hasPublicAccessPolicy;
             return this;
         }
-
         public Builder hasPublicAccessPolicy(@Nullable Boolean hasPublicAccessPolicy) {
             this.hasPublicAccessPolicy = Output.ofNullable(hasPublicAccessPolicy);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder policy(@Nullable Output<String> policy) {
             this.policy = policy;
             return this;
         }
-
         public Builder policy(@Nullable String policy) {
             this.policy = Output.ofNullable(policy);
             return this;
-        }
-        public ObjectLambdaAccessPointPolicyState build() {
+        }        public ObjectLambdaAccessPointPolicyState build() {
             return new ObjectLambdaAccessPointPolicyState(accountId, hasPublicAccessPolicy, name, policy);
         }
     }

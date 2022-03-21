@@ -189,92 +189,74 @@ public final class KustoPoolAttachedDatabaseConfigurationArgs extends io.pulumi.
             this.attachedDatabaseConfigurationName = attachedDatabaseConfigurationName;
             return this;
         }
-
         public Builder attachedDatabaseConfigurationName(@Nullable String attachedDatabaseConfigurationName) {
             this.attachedDatabaseConfigurationName = Output.ofNullable(attachedDatabaseConfigurationName);
             return this;
         }
-
         public Builder databaseName(Output<String> databaseName) {
             this.databaseName = Objects.requireNonNull(databaseName);
             return this;
         }
-
         public Builder databaseName(String databaseName) {
             this.databaseName = Output.of(Objects.requireNonNull(databaseName));
             return this;
         }
-
         public Builder defaultPrincipalsModificationKind(Output<Either<String,DefaultPrincipalsModificationKind>> defaultPrincipalsModificationKind) {
             this.defaultPrincipalsModificationKind = Objects.requireNonNull(defaultPrincipalsModificationKind);
             return this;
         }
-
         public Builder defaultPrincipalsModificationKind(Either<String,DefaultPrincipalsModificationKind> defaultPrincipalsModificationKind) {
             this.defaultPrincipalsModificationKind = Output.of(Objects.requireNonNull(defaultPrincipalsModificationKind));
             return this;
         }
-
         public Builder kustoPoolName(Output<String> kustoPoolName) {
             this.kustoPoolName = Objects.requireNonNull(kustoPoolName);
             return this;
         }
-
         public Builder kustoPoolName(String kustoPoolName) {
             this.kustoPoolName = Output.of(Objects.requireNonNull(kustoPoolName));
             return this;
         }
-
         public Builder kustoPoolResourceId(Output<String> kustoPoolResourceId) {
             this.kustoPoolResourceId = Objects.requireNonNull(kustoPoolResourceId);
             return this;
         }
-
         public Builder kustoPoolResourceId(String kustoPoolResourceId) {
             this.kustoPoolResourceId = Output.of(Objects.requireNonNull(kustoPoolResourceId));
             return this;
         }
-
         public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder tableLevelSharingProperties(@Nullable Output<TableLevelSharingPropertiesArgs> tableLevelSharingProperties) {
             this.tableLevelSharingProperties = tableLevelSharingProperties;
             return this;
         }
-
         public Builder tableLevelSharingProperties(@Nullable TableLevelSharingPropertiesArgs tableLevelSharingProperties) {
             this.tableLevelSharingProperties = Output.ofNullable(tableLevelSharingProperties);
             return this;
         }
-
         public Builder workspaceName(Output<String> workspaceName) {
             this.workspaceName = Objects.requireNonNull(workspaceName);
             return this;
         }
-
         public Builder workspaceName(String workspaceName) {
             this.workspaceName = Output.of(Objects.requireNonNull(workspaceName));
             return this;
-        }
-        public KustoPoolAttachedDatabaseConfigurationArgs build() {
+        }        public KustoPoolAttachedDatabaseConfigurationArgs build() {
             return new KustoPoolAttachedDatabaseConfigurationArgs(attachedDatabaseConfigurationName, databaseName, defaultPrincipalsModificationKind, kustoPoolName, kustoPoolResourceId, location, resourceGroupName, tableLevelSharingProperties, workspaceName);
         }
     }

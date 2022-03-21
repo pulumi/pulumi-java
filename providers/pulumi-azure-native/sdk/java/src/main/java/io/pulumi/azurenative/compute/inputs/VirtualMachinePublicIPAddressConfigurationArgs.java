@@ -200,92 +200,77 @@ public final class VirtualMachinePublicIPAddressConfigurationArgs extends io.pul
             this.deleteOption = deleteOption;
             return this;
         }
-
         public Builder deleteOption(@Nullable Either<String,DeleteOptions> deleteOption) {
             this.deleteOption = Output.ofNullable(deleteOption);
             return this;
         }
-
         public Builder dnsSettings(@Nullable Output<VirtualMachinePublicIPAddressDnsSettingsConfigurationArgs> dnsSettings) {
             this.dnsSettings = dnsSettings;
             return this;
         }
-
         public Builder dnsSettings(@Nullable VirtualMachinePublicIPAddressDnsSettingsConfigurationArgs dnsSettings) {
             this.dnsSettings = Output.ofNullable(dnsSettings);
             return this;
         }
-
         public Builder idleTimeoutInMinutes(@Nullable Output<Integer> idleTimeoutInMinutes) {
             this.idleTimeoutInMinutes = idleTimeoutInMinutes;
             return this;
         }
-
         public Builder idleTimeoutInMinutes(@Nullable Integer idleTimeoutInMinutes) {
             this.idleTimeoutInMinutes = Output.ofNullable(idleTimeoutInMinutes);
             return this;
         }
-
         public Builder ipTags(@Nullable Output<List<VirtualMachineIpTagArgs>> ipTags) {
             this.ipTags = ipTags;
             return this;
         }
-
         public Builder ipTags(@Nullable List<VirtualMachineIpTagArgs> ipTags) {
             this.ipTags = Output.ofNullable(ipTags);
             return this;
         }
-
+        public Builder ipTags(VirtualMachineIpTagArgs... ipTags) {
+            return ipTags(List.of(ipTags));
+        }
         public Builder name(Output<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
-
         public Builder publicIPAddressVersion(@Nullable Output<Either<String,IPVersions>> publicIPAddressVersion) {
             this.publicIPAddressVersion = publicIPAddressVersion;
             return this;
         }
-
         public Builder publicIPAddressVersion(@Nullable Either<String,IPVersions> publicIPAddressVersion) {
             this.publicIPAddressVersion = Output.ofNullable(publicIPAddressVersion);
             return this;
         }
-
         public Builder publicIPAllocationMethod(@Nullable Output<Either<String,PublicIPAllocationMethod>> publicIPAllocationMethod) {
             this.publicIPAllocationMethod = publicIPAllocationMethod;
             return this;
         }
-
         public Builder publicIPAllocationMethod(@Nullable Either<String,PublicIPAllocationMethod> publicIPAllocationMethod) {
             this.publicIPAllocationMethod = Output.ofNullable(publicIPAllocationMethod);
             return this;
         }
-
         public Builder publicIPPrefix(@Nullable Output<SubResourceArgs> publicIPPrefix) {
             this.publicIPPrefix = publicIPPrefix;
             return this;
         }
-
         public Builder publicIPPrefix(@Nullable SubResourceArgs publicIPPrefix) {
             this.publicIPPrefix = Output.ofNullable(publicIPPrefix);
             return this;
         }
-
         public Builder sku(@Nullable Output<PublicIPAddressSkuArgs> sku) {
             this.sku = sku;
             return this;
         }
-
         public Builder sku(@Nullable PublicIPAddressSkuArgs sku) {
             this.sku = Output.ofNullable(sku);
             return this;
-        }
-        public VirtualMachinePublicIPAddressConfigurationArgs build() {
+        }        public VirtualMachinePublicIPAddressConfigurationArgs build() {
             return new VirtualMachinePublicIPAddressConfigurationArgs(deleteOption, dnsSettings, idleTimeoutInMinutes, ipTags, name, publicIPAddressVersion, publicIPAllocationMethod, publicIPPrefix, sku);
         }
     }

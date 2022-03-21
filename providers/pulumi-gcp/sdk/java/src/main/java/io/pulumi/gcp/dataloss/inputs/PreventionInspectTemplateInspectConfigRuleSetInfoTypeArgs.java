@@ -57,12 +57,10 @@ public final class PreventionInspectTemplateInspectConfigRuleSetInfoTypeArgs ext
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Output.of(Objects.requireNonNull(name));
             return this;
-        }
-        public PreventionInspectTemplateInspectConfigRuleSetInfoTypeArgs build() {
+        }        public PreventionInspectTemplateInspectConfigRuleSetInfoTypeArgs build() {
             return new PreventionInspectTemplateInspectConfigRuleSetInfoTypeArgs(name);
         }
     }

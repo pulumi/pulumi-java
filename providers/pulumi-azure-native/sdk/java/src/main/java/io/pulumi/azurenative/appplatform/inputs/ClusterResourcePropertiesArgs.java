@@ -61,12 +61,10 @@ public final class ClusterResourcePropertiesArgs extends io.pulumi.resources.Res
             this.networkProfile = networkProfile;
             return this;
         }
-
         public Builder networkProfile(@Nullable NetworkProfileArgs networkProfile) {
             this.networkProfile = Output.ofNullable(networkProfile);
             return this;
-        }
-        public ClusterResourcePropertiesArgs build() {
+        }        public ClusterResourcePropertiesArgs build() {
             return new ClusterResourcePropertiesArgs(networkProfile);
         }
     }

@@ -115,22 +115,18 @@ public final class SqlAlwaysEncryptedPropertiesResponse extends io.pulumi.resour
             this.alwaysEncryptedAkvAuthType = Objects.requireNonNull(alwaysEncryptedAkvAuthType);
             return this;
         }
-
         public Builder credential(@Nullable CredentialReferenceResponse credential) {
             this.credential = credential;
             return this;
         }
-
         public Builder servicePrincipalId(@Nullable Object servicePrincipalId) {
             this.servicePrincipalId = servicePrincipalId;
             return this;
         }
-
         public Builder servicePrincipalKey(@Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> servicePrincipalKey) {
             this.servicePrincipalKey = servicePrincipalKey;
             return this;
-        }
-        public SqlAlwaysEncryptedPropertiesResponse build() {
+        }        public SqlAlwaysEncryptedPropertiesResponse build() {
             return new SqlAlwaysEncryptedPropertiesResponse(alwaysEncryptedAkvAuthType, credential, servicePrincipalId, servicePrincipalKey);
         }
     }

@@ -54,8 +54,7 @@ public final class GetDomainArgs extends io.pulumi.resources.InvokeArgs {
         public Builder domainId(String domainId) {
             this.domainId = Objects.requireNonNull(domainId);
             return this;
-        }
-        public GetDomainArgs build() {
+        }        public GetDomainArgs build() {
             return new GetDomainArgs(domainId);
         }
     }

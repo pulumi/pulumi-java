@@ -273,72 +273,58 @@ public final class H265LayerResponse extends io.pulumi.resources.InvokeArgs {
             this.adaptiveBFrame = adaptiveBFrame;
             return this;
         }
-
         public Builder bFrames(@Nullable Integer bFrames) {
             this.bFrames = bFrames;
             return this;
         }
-
         public Builder bitrate(Integer bitrate) {
             this.bitrate = Objects.requireNonNull(bitrate);
             return this;
         }
-
         public Builder bufferWindow(@Nullable String bufferWindow) {
             this.bufferWindow = bufferWindow;
             return this;
         }
-
         public Builder frameRate(@Nullable String frameRate) {
             this.frameRate = frameRate;
             return this;
         }
-
         public Builder height(@Nullable String height) {
             this.height = height;
             return this;
         }
-
         public Builder label(@Nullable String label) {
             this.label = label;
             return this;
         }
-
         public Builder level(@Nullable String level) {
             this.level = level;
             return this;
         }
-
         public Builder maxBitrate(@Nullable Integer maxBitrate) {
             this.maxBitrate = maxBitrate;
             return this;
         }
-
         public Builder odataType(String odataType) {
             this.odataType = Objects.requireNonNull(odataType);
             return this;
         }
-
         public Builder profile(@Nullable String profile) {
             this.profile = profile;
             return this;
         }
-
         public Builder referenceFrames(@Nullable Integer referenceFrames) {
             this.referenceFrames = referenceFrames;
             return this;
         }
-
         public Builder slices(@Nullable Integer slices) {
             this.slices = slices;
             return this;
         }
-
         public Builder width(@Nullable String width) {
             this.width = width;
             return this;
-        }
-        public H265LayerResponse build() {
+        }        public H265LayerResponse build() {
             return new H265LayerResponse(adaptiveBFrame, bFrames, bitrate, bufferWindow, frameRate, height, label, level, maxBitrate, odataType, profile, referenceFrames, slices, width);
         }
     }

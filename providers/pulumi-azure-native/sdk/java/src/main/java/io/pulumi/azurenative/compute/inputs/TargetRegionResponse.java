@@ -112,22 +112,18 @@ public final class TargetRegionResponse extends io.pulumi.resources.InvokeArgs {
             this.encryption = encryption;
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder regionalReplicaCount(@Nullable Integer regionalReplicaCount) {
             this.regionalReplicaCount = regionalReplicaCount;
             return this;
         }
-
         public Builder storageAccountType(@Nullable String storageAccountType) {
             this.storageAccountType = storageAccountType;
             return this;
-        }
-        public TargetRegionResponse build() {
+        }        public TargetRegionResponse build() {
             return new TargetRegionResponse(encryption, name, regionalReplicaCount, storageAccountType);
         }
     }

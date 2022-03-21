@@ -105,22 +105,18 @@ public final class VirtualNodeSpecListenerOutlierDetection {
             this.baseEjectionDuration = Objects.requireNonNull(baseEjectionDuration);
             return this;
         }
-
         public Builder interval(VirtualNodeSpecListenerOutlierDetectionInterval interval) {
             this.interval = Objects.requireNonNull(interval);
             return this;
         }
-
         public Builder maxEjectionPercent(Integer maxEjectionPercent) {
             this.maxEjectionPercent = Objects.requireNonNull(maxEjectionPercent);
             return this;
         }
-
         public Builder maxServerErrors(Integer maxServerErrors) {
             this.maxServerErrors = Objects.requireNonNull(maxServerErrors);
             return this;
-        }
-        public VirtualNodeSpecListenerOutlierDetection build() {
+        }        public VirtualNodeSpecListenerOutlierDetection build() {
             return new VirtualNodeSpecListenerOutlierDetection(baseEjectionDuration, interval, maxEjectionPercent, maxServerErrors);
         }
     }

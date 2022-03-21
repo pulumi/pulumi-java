@@ -67,22 +67,18 @@ public final class JobDatabaseTableOutputOptionsArgs extends io.pulumi.resources
             this.tableName = Objects.requireNonNull(tableName);
             return this;
         }
-
         public Builder tableName(String tableName) {
             this.tableName = Output.of(Objects.requireNonNull(tableName));
             return this;
         }
-
         public Builder tempDirectory(@Nullable Output<JobS3LocationArgs> tempDirectory) {
             this.tempDirectory = tempDirectory;
             return this;
         }
-
         public Builder tempDirectory(@Nullable JobS3LocationArgs tempDirectory) {
             this.tempDirectory = Output.ofNullable(tempDirectory);
             return this;
-        }
-        public JobDatabaseTableOutputOptionsArgs build() {
+        }        public JobDatabaseTableOutputOptionsArgs build() {
             return new JobDatabaseTableOutputOptionsArgs(tableName, tempDirectory);
         }
     }

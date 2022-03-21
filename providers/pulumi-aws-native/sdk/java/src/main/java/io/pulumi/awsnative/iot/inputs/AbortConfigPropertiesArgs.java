@@ -57,12 +57,13 @@ public final class AbortConfigPropertiesArgs extends io.pulumi.resources.Resourc
             this.criteriaList = Objects.requireNonNull(criteriaList);
             return this;
         }
-
         public Builder criteriaList(List<JobTemplateAbortCriteriaArgs> criteriaList) {
             this.criteriaList = Output.of(Objects.requireNonNull(criteriaList));
             return this;
         }
-        public AbortConfigPropertiesArgs build() {
+        public Builder criteriaList(JobTemplateAbortCriteriaArgs... criteriaList) {
+            return criteriaList(List.of(criteriaList));
+        }        public AbortConfigPropertiesArgs build() {
             return new AbortConfigPropertiesArgs(criteriaList);
         }
     }

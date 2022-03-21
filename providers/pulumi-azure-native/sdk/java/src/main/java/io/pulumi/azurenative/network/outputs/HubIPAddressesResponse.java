@@ -72,12 +72,10 @@ public final class HubIPAddressesResponse {
             this.privateIPAddress = privateIPAddress;
             return this;
         }
-
         public Builder publicIPs(@Nullable HubPublicIPAddressesResponse publicIPs) {
             this.publicIPs = publicIPs;
             return this;
-        }
-        public HubIPAddressesResponse build() {
+        }        public HubIPAddressesResponse build() {
             return new HubIPAddressesResponse(privateIPAddress, publicIPs);
         }
     }

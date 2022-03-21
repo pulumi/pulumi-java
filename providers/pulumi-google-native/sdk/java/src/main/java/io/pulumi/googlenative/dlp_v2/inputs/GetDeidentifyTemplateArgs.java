@@ -78,17 +78,14 @@ public final class GetDeidentifyTemplateArgs extends io.pulumi.resources.InvokeA
             this.deidentifyTemplateId = Objects.requireNonNull(deidentifyTemplateId);
             return this;
         }
-
         public Builder location(String location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = project;
             return this;
-        }
-        public GetDeidentifyTemplateArgs build() {
+        }        public GetDeidentifyTemplateArgs build() {
             return new GetDeidentifyTemplateArgs(deidentifyTemplateId, location, project);
         }
     }

@@ -101,22 +101,18 @@ public final class CircuitResponse {
             this.expressRouteID = Objects.requireNonNull(expressRouteID);
             return this;
         }
-
         public Builder expressRoutePrivatePeeringID(String expressRoutePrivatePeeringID) {
             this.expressRoutePrivatePeeringID = Objects.requireNonNull(expressRoutePrivatePeeringID);
             return this;
         }
-
         public Builder primarySubnet(String primarySubnet) {
             this.primarySubnet = Objects.requireNonNull(primarySubnet);
             return this;
         }
-
         public Builder secondarySubnet(String secondarySubnet) {
             this.secondarySubnet = Objects.requireNonNull(secondarySubnet);
             return this;
-        }
-        public CircuitResponse build() {
+        }        public CircuitResponse build() {
             return new CircuitResponse(expressRouteID, expressRoutePrivatePeeringID, primarySubnet, secondarySubnet);
         }
     }

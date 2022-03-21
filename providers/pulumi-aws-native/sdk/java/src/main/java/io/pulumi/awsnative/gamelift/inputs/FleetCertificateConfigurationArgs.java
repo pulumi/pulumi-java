@@ -56,12 +56,10 @@ public final class FleetCertificateConfigurationArgs extends io.pulumi.resources
             this.certificateType = Objects.requireNonNull(certificateType);
             return this;
         }
-
         public Builder certificateType(FleetCertificateConfigurationCertificateType certificateType) {
             this.certificateType = Output.of(Objects.requireNonNull(certificateType));
             return this;
-        }
-        public FleetCertificateConfigurationArgs build() {
+        }        public FleetCertificateConfigurationArgs build() {
             return new FleetCertificateConfigurationArgs(certificateType);
         }
     }

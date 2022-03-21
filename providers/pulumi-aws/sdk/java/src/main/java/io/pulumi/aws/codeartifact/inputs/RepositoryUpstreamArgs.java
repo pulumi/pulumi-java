@@ -56,12 +56,10 @@ public final class RepositoryUpstreamArgs extends io.pulumi.resources.ResourceAr
             this.repositoryName = Objects.requireNonNull(repositoryName);
             return this;
         }
-
         public Builder repositoryName(String repositoryName) {
             this.repositoryName = Output.of(Objects.requireNonNull(repositoryName));
             return this;
-        }
-        public RepositoryUpstreamArgs build() {
+        }        public RepositoryUpstreamArgs build() {
             return new RepositoryUpstreamArgs(repositoryName);
         }
     }

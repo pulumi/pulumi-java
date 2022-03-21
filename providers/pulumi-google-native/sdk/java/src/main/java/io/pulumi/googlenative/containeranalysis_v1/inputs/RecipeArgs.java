@@ -128,52 +128,42 @@ public final class RecipeArgs extends io.pulumi.resources.ResourceArgs {
             this.arguments = arguments;
             return this;
         }
-
         public Builder arguments(@Nullable List<Map<String,String>> arguments) {
             this.arguments = Output.ofNullable(arguments);
             return this;
         }
-
         public Builder definedInMaterial(@Nullable Output<String> definedInMaterial) {
             this.definedInMaterial = definedInMaterial;
             return this;
         }
-
         public Builder definedInMaterial(@Nullable String definedInMaterial) {
             this.definedInMaterial = Output.ofNullable(definedInMaterial);
             return this;
         }
-
         public Builder entryPoint(@Nullable Output<String> entryPoint) {
             this.entryPoint = entryPoint;
             return this;
         }
-
         public Builder entryPoint(@Nullable String entryPoint) {
             this.entryPoint = Output.ofNullable(entryPoint);
             return this;
         }
-
         public Builder environment(@Nullable Output<List<Map<String,String>>> environment) {
             this.environment = environment;
             return this;
         }
-
         public Builder environment(@Nullable List<Map<String,String>> environment) {
             this.environment = Output.ofNullable(environment);
             return this;
         }
-
         public Builder type(@Nullable Output<String> type) {
             this.type = type;
             return this;
         }
-
         public Builder type(@Nullable String type) {
             this.type = Output.ofNullable(type);
             return this;
-        }
-        public RecipeArgs build() {
+        }        public RecipeArgs build() {
             return new RecipeArgs(arguments, definedInMaterial, entryPoint, environment, type);
         }
     }

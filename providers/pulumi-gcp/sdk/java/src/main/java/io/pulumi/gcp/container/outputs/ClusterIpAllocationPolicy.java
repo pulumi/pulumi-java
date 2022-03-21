@@ -129,22 +129,18 @@ public final class ClusterIpAllocationPolicy {
             this.clusterIpv4CidrBlock = clusterIpv4CidrBlock;
             return this;
         }
-
         public Builder clusterSecondaryRangeName(@Nullable String clusterSecondaryRangeName) {
             this.clusterSecondaryRangeName = clusterSecondaryRangeName;
             return this;
         }
-
         public Builder servicesIpv4CidrBlock(@Nullable String servicesIpv4CidrBlock) {
             this.servicesIpv4CidrBlock = servicesIpv4CidrBlock;
             return this;
         }
-
         public Builder servicesSecondaryRangeName(@Nullable String servicesSecondaryRangeName) {
             this.servicesSecondaryRangeName = servicesSecondaryRangeName;
             return this;
-        }
-        public ClusterIpAllocationPolicy build() {
+        }        public ClusterIpAllocationPolicy build() {
             return new ClusterIpAllocationPolicy(clusterIpv4CidrBlock, clusterSecondaryRangeName, servicesIpv4CidrBlock, servicesSecondaryRangeName);
         }
     }

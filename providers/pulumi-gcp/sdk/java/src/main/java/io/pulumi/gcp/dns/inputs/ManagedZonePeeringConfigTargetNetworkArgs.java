@@ -58,12 +58,10 @@ public final class ManagedZonePeeringConfigTargetNetworkArgs extends io.pulumi.r
             this.networkUrl = Objects.requireNonNull(networkUrl);
             return this;
         }
-
         public Builder networkUrl(String networkUrl) {
             this.networkUrl = Output.of(Objects.requireNonNull(networkUrl));
             return this;
-        }
-        public ManagedZonePeeringConfigTargetNetworkArgs build() {
+        }        public ManagedZonePeeringConfigTargetNetworkArgs build() {
             return new ManagedZonePeeringConfigTargetNetworkArgs(networkUrl);
         }
     }

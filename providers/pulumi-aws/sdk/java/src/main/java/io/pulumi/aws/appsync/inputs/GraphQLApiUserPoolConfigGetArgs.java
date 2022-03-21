@@ -106,42 +106,34 @@ public final class GraphQLApiUserPoolConfigGetArgs extends io.pulumi.resources.R
             this.appIdClientRegex = appIdClientRegex;
             return this;
         }
-
         public Builder appIdClientRegex(@Nullable String appIdClientRegex) {
             this.appIdClientRegex = Output.ofNullable(appIdClientRegex);
             return this;
         }
-
         public Builder awsRegion(@Nullable Output<String> awsRegion) {
             this.awsRegion = awsRegion;
             return this;
         }
-
         public Builder awsRegion(@Nullable String awsRegion) {
             this.awsRegion = Output.ofNullable(awsRegion);
             return this;
         }
-
         public Builder defaultAction(Output<String> defaultAction) {
             this.defaultAction = Objects.requireNonNull(defaultAction);
             return this;
         }
-
         public Builder defaultAction(String defaultAction) {
             this.defaultAction = Output.of(Objects.requireNonNull(defaultAction));
             return this;
         }
-
         public Builder userPoolId(Output<String> userPoolId) {
             this.userPoolId = Objects.requireNonNull(userPoolId);
             return this;
         }
-
         public Builder userPoolId(String userPoolId) {
             this.userPoolId = Output.of(Objects.requireNonNull(userPoolId));
             return this;
-        }
-        public GraphQLApiUserPoolConfigGetArgs build() {
+        }        public GraphQLApiUserPoolConfigGetArgs build() {
             return new GraphQLApiUserPoolConfigGetArgs(appIdClientRegex, awsRegion, defaultAction, userPoolId);
         }
     }

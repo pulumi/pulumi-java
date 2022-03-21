@@ -61,12 +61,10 @@ public final class GetDatabaseInstanceSettingDatabaseFlag {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder value(String value) {
             this.value = Objects.requireNonNull(value);
             return this;
-        }
-        public GetDatabaseInstanceSettingDatabaseFlag build() {
+        }        public GetDatabaseInstanceSettingDatabaseFlag build() {
             return new GetDatabaseInstanceSettingDatabaseFlag(name, value);
         }
     }

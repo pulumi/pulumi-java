@@ -110,42 +110,34 @@ public final class VmRecommendationArgs extends io.pulumi.resources.ResourceArgs
             this.configurationStatus = configurationStatus;
             return this;
         }
-
         public Builder configurationStatus(@Nullable String configurationStatus) {
             this.configurationStatus = Output.ofNullable(configurationStatus);
             return this;
         }
-
         public Builder enforcementSupport(@Nullable Output<String> enforcementSupport) {
             this.enforcementSupport = enforcementSupport;
             return this;
         }
-
         public Builder enforcementSupport(@Nullable String enforcementSupport) {
             this.enforcementSupport = Output.ofNullable(enforcementSupport);
             return this;
         }
-
         public Builder recommendationAction(@Nullable Output<String> recommendationAction) {
             this.recommendationAction = recommendationAction;
             return this;
         }
-
         public Builder recommendationAction(@Nullable String recommendationAction) {
             this.recommendationAction = Output.ofNullable(recommendationAction);
             return this;
         }
-
         public Builder resourceId(@Nullable Output<String> resourceId) {
             this.resourceId = resourceId;
             return this;
         }
-
         public Builder resourceId(@Nullable String resourceId) {
             this.resourceId = Output.ofNullable(resourceId);
             return this;
-        }
-        public VmRecommendationArgs build() {
+        }        public VmRecommendationArgs build() {
             return new VmRecommendationArgs(configurationStatus, enforcementSupport, recommendationAction, resourceId);
         }
     }

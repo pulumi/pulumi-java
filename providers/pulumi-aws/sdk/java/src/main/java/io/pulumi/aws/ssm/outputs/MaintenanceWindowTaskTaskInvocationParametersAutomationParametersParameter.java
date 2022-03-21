@@ -70,12 +70,13 @@ public final class MaintenanceWindowTaskTaskInvocationParametersAutomationParame
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder values(List<String> values) {
             this.values = Objects.requireNonNull(values);
             return this;
         }
-        public MaintenanceWindowTaskTaskInvocationParametersAutomationParametersParameter build() {
+        public Builder values(String... values) {
+            return values(List.of(values));
+        }        public MaintenanceWindowTaskTaskInvocationParametersAutomationParametersParameter build() {
             return new MaintenanceWindowTaskTaskInvocationParametersAutomationParametersParameter(name, values);
         }
     }

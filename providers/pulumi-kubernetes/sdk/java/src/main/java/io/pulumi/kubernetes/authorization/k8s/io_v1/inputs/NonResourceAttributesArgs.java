@@ -78,22 +78,18 @@ public final class NonResourceAttributesArgs extends io.pulumi.resources.Resourc
             this.path = path;
             return this;
         }
-
         public Builder path(@Nullable String path) {
             this.path = Output.ofNullable(path);
             return this;
         }
-
         public Builder verb(@Nullable Output<String> verb) {
             this.verb = verb;
             return this;
         }
-
         public Builder verb(@Nullable String verb) {
             this.verb = Output.ofNullable(verb);
             return this;
-        }
-        public NonResourceAttributesArgs build() {
+        }        public NonResourceAttributesArgs build() {
             return new NonResourceAttributesArgs(path, verb);
         }
     }

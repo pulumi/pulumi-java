@@ -113,42 +113,34 @@ public final class AdditionalUnattendContentArgs extends io.pulumi.resources.Res
             this.componentName = componentName;
             return this;
         }
-
         public Builder componentName(@Nullable ComponentNames componentName) {
             this.componentName = Output.ofNullable(componentName);
             return this;
         }
-
         public Builder content(@Nullable Output<String> content) {
             this.content = content;
             return this;
         }
-
         public Builder content(@Nullable String content) {
             this.content = Output.ofNullable(content);
             return this;
         }
-
         public Builder passName(@Nullable Output<PassNames> passName) {
             this.passName = passName;
             return this;
         }
-
         public Builder passName(@Nullable PassNames passName) {
             this.passName = Output.ofNullable(passName);
             return this;
         }
-
         public Builder settingName(@Nullable Output<SettingNames> settingName) {
             this.settingName = settingName;
             return this;
         }
-
         public Builder settingName(@Nullable SettingNames settingName) {
             this.settingName = Output.ofNullable(settingName);
             return this;
-        }
-        public AdditionalUnattendContentArgs build() {
+        }        public AdditionalUnattendContentArgs build() {
             return new AdditionalUnattendContentArgs(componentName, content, passName, settingName);
         }
     }

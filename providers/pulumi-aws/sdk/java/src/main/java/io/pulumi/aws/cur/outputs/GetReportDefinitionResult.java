@@ -223,62 +223,56 @@ public final class GetReportDefinitionResult {
             this.additionalArtifacts = Objects.requireNonNull(additionalArtifacts);
             return this;
         }
-
+        public Builder additionalArtifacts(String... additionalArtifacts) {
+            return additionalArtifacts(List.of(additionalArtifacts));
+        }
         public Builder additionalSchemaElements(List<String> additionalSchemaElements) {
             this.additionalSchemaElements = Objects.requireNonNull(additionalSchemaElements);
             return this;
         }
-
+        public Builder additionalSchemaElements(String... additionalSchemaElements) {
+            return additionalSchemaElements(List.of(additionalSchemaElements));
+        }
         public Builder compression(String compression) {
             this.compression = Objects.requireNonNull(compression);
             return this;
         }
-
         public Builder format(String format) {
             this.format = Objects.requireNonNull(format);
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder refreshClosedReports(Boolean refreshClosedReports) {
             this.refreshClosedReports = Objects.requireNonNull(refreshClosedReports);
             return this;
         }
-
         public Builder reportName(String reportName) {
             this.reportName = Objects.requireNonNull(reportName);
             return this;
         }
-
         public Builder reportVersioning(String reportVersioning) {
             this.reportVersioning = Objects.requireNonNull(reportVersioning);
             return this;
         }
-
         public Builder s3Bucket(String s3Bucket) {
             this.s3Bucket = Objects.requireNonNull(s3Bucket);
             return this;
         }
-
         public Builder s3Prefix(String s3Prefix) {
             this.s3Prefix = Objects.requireNonNull(s3Prefix);
             return this;
         }
-
         public Builder s3Region(String s3Region) {
             this.s3Region = Objects.requireNonNull(s3Region);
             return this;
         }
-
         public Builder timeUnit(String timeUnit) {
             this.timeUnit = Objects.requireNonNull(timeUnit);
             return this;
-        }
-        public GetReportDefinitionResult build() {
+        }        public GetReportDefinitionResult build() {
             return new GetReportDefinitionResult(additionalArtifacts, additionalSchemaElements, compression, format, id, refreshClosedReports, reportName, reportVersioning, s3Bucket, s3Prefix, s3Region, timeUnit);
         }
     }

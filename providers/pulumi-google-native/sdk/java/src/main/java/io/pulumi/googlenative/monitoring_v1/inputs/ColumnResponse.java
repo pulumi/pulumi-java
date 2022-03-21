@@ -78,12 +78,13 @@ public final class ColumnResponse extends io.pulumi.resources.InvokeArgs {
             this.weight = Objects.requireNonNull(weight);
             return this;
         }
-
         public Builder widgets(List<WidgetResponse> widgets) {
             this.widgets = Objects.requireNonNull(widgets);
             return this;
         }
-        public ColumnResponse build() {
+        public Builder widgets(WidgetResponse... widgets) {
+            return widgets(List.of(widgets));
+        }        public ColumnResponse build() {
             return new ColumnResponse(weight, widgets);
         }
     }

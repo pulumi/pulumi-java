@@ -103,22 +103,18 @@ public final class GetOrganizationReplayResult {
             this.config = Objects.requireNonNull(config);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder resultsSummary(GoogleCloudPolicysimulatorV1ReplayResultsSummaryResponse resultsSummary) {
             this.resultsSummary = Objects.requireNonNull(resultsSummary);
             return this;
         }
-
         public Builder state(String state) {
             this.state = Objects.requireNonNull(state);
             return this;
-        }
-        public GetOrganizationReplayResult build() {
+        }        public GetOrganizationReplayResult build() {
             return new GetOrganizationReplayResult(config, name, resultsSummary, state);
         }
     }

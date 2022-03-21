@@ -118,32 +118,29 @@ public final class GetSelectionResult {
             this.iamRoleArn = Objects.requireNonNull(iamRoleArn);
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder planId(String planId) {
             this.planId = Objects.requireNonNull(planId);
             return this;
         }
-
         public Builder resources(List<String> resources) {
             this.resources = Objects.requireNonNull(resources);
             return this;
         }
-
+        public Builder resources(String... resources) {
+            return resources(List.of(resources));
+        }
         public Builder selectionId(String selectionId) {
             this.selectionId = Objects.requireNonNull(selectionId);
             return this;
-        }
-        public GetSelectionResult build() {
+        }        public GetSelectionResult build() {
             return new GetSelectionResult(iamRoleArn, id, name, planId, resources, selectionId);
         }
     }

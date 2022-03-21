@@ -70,12 +70,10 @@ public final class GooglePrivacyDlpV2InfoTypeLimitResponse {
             this.infoType = Objects.requireNonNull(infoType);
             return this;
         }
-
         public Builder maxFindings(Integer maxFindings) {
             this.maxFindings = Objects.requireNonNull(maxFindings);
             return this;
-        }
-        public GooglePrivacyDlpV2InfoTypeLimitResponse build() {
+        }        public GooglePrivacyDlpV2InfoTypeLimitResponse build() {
             return new GooglePrivacyDlpV2InfoTypeLimitResponse(infoType, maxFindings);
         }
     }

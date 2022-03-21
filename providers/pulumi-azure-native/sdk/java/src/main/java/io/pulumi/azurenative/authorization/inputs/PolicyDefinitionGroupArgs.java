@@ -126,52 +126,42 @@ public final class PolicyDefinitionGroupArgs extends io.pulumi.resources.Resourc
             this.additionalMetadataId = additionalMetadataId;
             return this;
         }
-
         public Builder additionalMetadataId(@Nullable String additionalMetadataId) {
             this.additionalMetadataId = Output.ofNullable(additionalMetadataId);
             return this;
         }
-
         public Builder category(@Nullable Output<String> category) {
             this.category = category;
             return this;
         }
-
         public Builder category(@Nullable String category) {
             this.category = Output.ofNullable(category);
             return this;
         }
-
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder displayName(@Nullable Output<String> displayName) {
             this.displayName = displayName;
             return this;
         }
-
         public Builder displayName(@Nullable String displayName) {
             this.displayName = Output.ofNullable(displayName);
             return this;
         }
-
         public Builder name(Output<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Output.of(Objects.requireNonNull(name));
             return this;
-        }
-        public PolicyDefinitionGroupArgs build() {
+        }        public PolicyDefinitionGroupArgs build() {
             return new PolicyDefinitionGroupArgs(additionalMetadataId, category, description, displayName, name);
         }
     }

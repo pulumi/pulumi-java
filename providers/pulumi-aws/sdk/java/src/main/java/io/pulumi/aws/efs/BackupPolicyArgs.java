@@ -74,22 +74,18 @@ public final class BackupPolicyArgs extends io.pulumi.resources.ResourceArgs {
             this.backupPolicy = Objects.requireNonNull(backupPolicy);
             return this;
         }
-
         public Builder backupPolicy(BackupPolicyBackupPolicyArgs backupPolicy) {
             this.backupPolicy = Output.of(Objects.requireNonNull(backupPolicy));
             return this;
         }
-
         public Builder fileSystemId(Output<String> fileSystemId) {
             this.fileSystemId = Objects.requireNonNull(fileSystemId);
             return this;
         }
-
         public Builder fileSystemId(String fileSystemId) {
             this.fileSystemId = Output.of(Objects.requireNonNull(fileSystemId));
             return this;
-        }
-        public BackupPolicyArgs build() {
+        }        public BackupPolicyArgs build() {
             return new BackupPolicyArgs(backupPolicy, fileSystemId);
         }
     }

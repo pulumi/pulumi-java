@@ -74,22 +74,21 @@ public final class TrailEventSelectorDataResourceGetArgs extends io.pulumi.resou
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Output.of(Objects.requireNonNull(type));
             return this;
         }
-
         public Builder values(Output<List<String>> values) {
             this.values = Objects.requireNonNull(values);
             return this;
         }
-
         public Builder values(List<String> values) {
             this.values = Output.of(Objects.requireNonNull(values));
             return this;
         }
-        public TrailEventSelectorDataResourceGetArgs build() {
+        public Builder values(String... values) {
+            return values(List.of(values));
+        }        public TrailEventSelectorDataResourceGetArgs build() {
             return new TrailEventSelectorDataResourceGetArgs(type, values);
         }
     }

@@ -157,37 +157,30 @@ public final class EdifactValidationOverrideResponse extends io.pulumi.resources
             this.allowLeadingAndTrailingSpacesAndZeroes = Objects.requireNonNull(allowLeadingAndTrailingSpacesAndZeroes);
             return this;
         }
-
         public Builder enforceCharacterSet(Boolean enforceCharacterSet) {
             this.enforceCharacterSet = Objects.requireNonNull(enforceCharacterSet);
             return this;
         }
-
         public Builder messageId(String messageId) {
             this.messageId = Objects.requireNonNull(messageId);
             return this;
         }
-
         public Builder trailingSeparatorPolicy(String trailingSeparatorPolicy) {
             this.trailingSeparatorPolicy = Objects.requireNonNull(trailingSeparatorPolicy);
             return this;
         }
-
         public Builder trimLeadingAndTrailingSpacesAndZeroes(Boolean trimLeadingAndTrailingSpacesAndZeroes) {
             this.trimLeadingAndTrailingSpacesAndZeroes = Objects.requireNonNull(trimLeadingAndTrailingSpacesAndZeroes);
             return this;
         }
-
         public Builder validateEDITypes(Boolean validateEDITypes) {
             this.validateEDITypes = Objects.requireNonNull(validateEDITypes);
             return this;
         }
-
         public Builder validateXSDTypes(Boolean validateXSDTypes) {
             this.validateXSDTypes = Objects.requireNonNull(validateXSDTypes);
             return this;
-        }
-        public EdifactValidationOverrideResponse build() {
+        }        public EdifactValidationOverrideResponse build() {
             return new EdifactValidationOverrideResponse(allowLeadingAndTrailingSpacesAndZeroes, enforceCharacterSet, messageId, trailingSeparatorPolicy, trimLeadingAndTrailingSpacesAndZeroes, validateEDITypes, validateXSDTypes);
         }
     }

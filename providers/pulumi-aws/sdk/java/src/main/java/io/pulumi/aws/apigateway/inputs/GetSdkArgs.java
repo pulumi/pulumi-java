@@ -107,22 +107,18 @@ public final class GetSdkArgs extends io.pulumi.resources.InvokeArgs {
             this.parameters = parameters;
             return this;
         }
-
         public Builder restApiId(String restApiId) {
             this.restApiId = Objects.requireNonNull(restApiId);
             return this;
         }
-
         public Builder sdkType(String sdkType) {
             this.sdkType = Objects.requireNonNull(sdkType);
             return this;
         }
-
         public Builder stageName(String stageName) {
             this.stageName = Objects.requireNonNull(stageName);
             return this;
-        }
-        public GetSdkArgs build() {
+        }        public GetSdkArgs build() {
             return new GetSdkArgs(parameters, restApiId, sdkType, stageName);
         }
     }

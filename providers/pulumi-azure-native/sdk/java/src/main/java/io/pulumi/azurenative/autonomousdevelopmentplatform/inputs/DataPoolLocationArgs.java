@@ -79,22 +79,18 @@ public final class DataPoolLocationArgs extends io.pulumi.resources.ResourceArgs
             this.encryption = encryption;
             return this;
         }
-
         public Builder encryption(@Nullable DataPoolEncryptionArgs encryption) {
             this.encryption = Output.ofNullable(encryption);
             return this;
         }
-
         public Builder name(Output<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Output.of(Objects.requireNonNull(name));
             return this;
-        }
-        public DataPoolLocationArgs build() {
+        }        public DataPoolLocationArgs build() {
             return new DataPoolLocationArgs(encryption, name);
         }
     }

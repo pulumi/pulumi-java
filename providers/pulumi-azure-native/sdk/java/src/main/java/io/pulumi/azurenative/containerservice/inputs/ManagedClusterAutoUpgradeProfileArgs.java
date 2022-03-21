@@ -63,12 +63,10 @@ public final class ManagedClusterAutoUpgradeProfileArgs extends io.pulumi.resour
             this.upgradeChannel = upgradeChannel;
             return this;
         }
-
         public Builder upgradeChannel(@Nullable Either<String,UpgradeChannel> upgradeChannel) {
             this.upgradeChannel = Output.ofNullable(upgradeChannel);
             return this;
-        }
-        public ManagedClusterAutoUpgradeProfileArgs build() {
+        }        public ManagedClusterAutoUpgradeProfileArgs build() {
             return new ManagedClusterAutoUpgradeProfileArgs(upgradeChannel);
         }
     }

@@ -45,8 +45,7 @@ public final class LogAnalyticsConfigurationResponse {
         public Builder customerId(@Nullable String customerId) {
             this.customerId = customerId;
             return this;
-        }
-        public LogAnalyticsConfigurationResponse build() {
+        }        public LogAnalyticsConfigurationResponse build() {
             return new LogAnalyticsConfigurationResponse(customerId);
         }
     }

@@ -209,52 +209,48 @@ public final class GuestConfigurationNavigationResponse extends io.pulumi.resour
             this.assignmentType = assignmentType;
             return this;
         }
-
         public Builder configurationParameter(@Nullable List<ConfigurationParameterResponse> configurationParameter) {
             this.configurationParameter = configurationParameter;
             return this;
         }
-
+        public Builder configurationParameter(ConfigurationParameterResponse... configurationParameter) {
+            return configurationParameter(List.of(configurationParameter));
+        }
         public Builder configurationProtectedParameter(@Nullable List<ConfigurationParameterResponse> configurationProtectedParameter) {
             this.configurationProtectedParameter = configurationProtectedParameter;
             return this;
         }
-
+        public Builder configurationProtectedParameter(ConfigurationParameterResponse... configurationProtectedParameter) {
+            return configurationProtectedParameter(List.of(configurationProtectedParameter));
+        }
         public Builder configurationSetting(@Nullable ConfigurationSettingResponse configurationSetting) {
             this.configurationSetting = configurationSetting;
             return this;
         }
-
         public Builder contentHash(@Nullable String contentHash) {
             this.contentHash = contentHash;
             return this;
         }
-
         public Builder contentType(String contentType) {
             this.contentType = Objects.requireNonNull(contentType);
             return this;
         }
-
         public Builder contentUri(@Nullable String contentUri) {
             this.contentUri = contentUri;
             return this;
         }
-
         public Builder kind(@Nullable String kind) {
             this.kind = kind;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
-
         public Builder version(@Nullable String version) {
             this.version = version;
             return this;
-        }
-        public GuestConfigurationNavigationResponse build() {
+        }        public GuestConfigurationNavigationResponse build() {
             return new GuestConfigurationNavigationResponse(assignmentType, configurationParameter, configurationProtectedParameter, configurationSetting, contentHash, contentType, contentUri, kind, name, version);
         }
     }

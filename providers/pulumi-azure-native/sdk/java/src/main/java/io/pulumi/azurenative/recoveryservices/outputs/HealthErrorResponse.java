@@ -281,77 +281,65 @@ public final class HealthErrorResponse {
             this.creationTimeUtc = creationTimeUtc;
             return this;
         }
-
         public Builder customerResolvability(@Nullable String customerResolvability) {
             this.customerResolvability = customerResolvability;
             return this;
         }
-
         public Builder entityId(@Nullable String entityId) {
             this.entityId = entityId;
             return this;
         }
-
         public Builder errorCategory(@Nullable String errorCategory) {
             this.errorCategory = errorCategory;
             return this;
         }
-
         public Builder errorCode(@Nullable String errorCode) {
             this.errorCode = errorCode;
             return this;
         }
-
         public Builder errorId(@Nullable String errorId) {
             this.errorId = errorId;
             return this;
         }
-
         public Builder errorLevel(@Nullable String errorLevel) {
             this.errorLevel = errorLevel;
             return this;
         }
-
         public Builder errorMessage(@Nullable String errorMessage) {
             this.errorMessage = errorMessage;
             return this;
         }
-
         public Builder errorSource(@Nullable String errorSource) {
             this.errorSource = errorSource;
             return this;
         }
-
         public Builder errorType(@Nullable String errorType) {
             this.errorType = errorType;
             return this;
         }
-
         public Builder innerHealthErrors(@Nullable List<InnerHealthErrorResponse> innerHealthErrors) {
             this.innerHealthErrors = innerHealthErrors;
             return this;
         }
-
+        public Builder innerHealthErrors(InnerHealthErrorResponse... innerHealthErrors) {
+            return innerHealthErrors(List.of(innerHealthErrors));
+        }
         public Builder possibleCauses(@Nullable String possibleCauses) {
             this.possibleCauses = possibleCauses;
             return this;
         }
-
         public Builder recommendedAction(@Nullable String recommendedAction) {
             this.recommendedAction = recommendedAction;
             return this;
         }
-
         public Builder recoveryProviderErrorMessage(@Nullable String recoveryProviderErrorMessage) {
             this.recoveryProviderErrorMessage = recoveryProviderErrorMessage;
             return this;
         }
-
         public Builder summaryMessage(@Nullable String summaryMessage) {
             this.summaryMessage = summaryMessage;
             return this;
-        }
-        public HealthErrorResponse build() {
+        }        public HealthErrorResponse build() {
             return new HealthErrorResponse(creationTimeUtc, customerResolvability, entityId, errorCategory, errorCode, errorId, errorLevel, errorMessage, errorSource, errorType, innerHealthErrors, possibleCauses, recommendedAction, recoveryProviderErrorMessage, summaryMessage);
         }
     }

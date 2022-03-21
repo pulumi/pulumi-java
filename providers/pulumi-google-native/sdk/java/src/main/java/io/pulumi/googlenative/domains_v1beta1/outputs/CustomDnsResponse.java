@@ -71,12 +71,16 @@ public final class CustomDnsResponse {
             this.dsRecords = Objects.requireNonNull(dsRecords);
             return this;
         }
-
+        public Builder dsRecords(DsRecordResponse... dsRecords) {
+            return dsRecords(List.of(dsRecords));
+        }
         public Builder nameServers(List<String> nameServers) {
             this.nameServers = Objects.requireNonNull(nameServers);
             return this;
         }
-        public CustomDnsResponse build() {
+        public Builder nameServers(String... nameServers) {
+            return nameServers(List.of(nameServers));
+        }        public CustomDnsResponse build() {
             return new CustomDnsResponse(dsRecords, nameServers);
         }
     }

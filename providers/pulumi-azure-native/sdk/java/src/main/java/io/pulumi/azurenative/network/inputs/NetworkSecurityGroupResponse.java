@@ -260,67 +260,69 @@ public final class NetworkSecurityGroupResponse extends io.pulumi.resources.Invo
             this.defaultSecurityRules = Objects.requireNonNull(defaultSecurityRules);
             return this;
         }
-
+        public Builder defaultSecurityRules(SecurityRuleResponse... defaultSecurityRules) {
+            return defaultSecurityRules(List.of(defaultSecurityRules));
+        }
         public Builder etag(String etag) {
             this.etag = Objects.requireNonNull(etag);
             return this;
         }
-
         public Builder flowLogs(List<FlowLogResponse> flowLogs) {
             this.flowLogs = Objects.requireNonNull(flowLogs);
             return this;
         }
-
+        public Builder flowLogs(FlowLogResponse... flowLogs) {
+            return flowLogs(List.of(flowLogs));
+        }
         public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = location;
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder networkInterfaces(List<NetworkInterfaceResponse> networkInterfaces) {
             this.networkInterfaces = Objects.requireNonNull(networkInterfaces);
             return this;
         }
-
+        public Builder networkInterfaces(NetworkInterfaceResponse... networkInterfaces) {
+            return networkInterfaces(List.of(networkInterfaces));
+        }
         public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
-
         public Builder resourceGuid(String resourceGuid) {
             this.resourceGuid = Objects.requireNonNull(resourceGuid);
             return this;
         }
-
         public Builder securityRules(@Nullable List<SecurityRuleResponse> securityRules) {
             this.securityRules = securityRules;
             return this;
         }
-
+        public Builder securityRules(SecurityRuleResponse... securityRules) {
+            return securityRules(List.of(securityRules));
+        }
         public Builder subnets(List<SubnetResponse> subnets) {
             this.subnets = Objects.requireNonNull(subnets);
             return this;
         }
-
+        public Builder subnets(SubnetResponse... subnets) {
+            return subnets(List.of(subnets));
+        }
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public NetworkSecurityGroupResponse build() {
+        }        public NetworkSecurityGroupResponse build() {
             return new NetworkSecurityGroupResponse(defaultSecurityRules, etag, flowLogs, id, location, name, networkInterfaces, provisioningState, resourceGuid, securityRules, subnets, tags, type);
         }
     }

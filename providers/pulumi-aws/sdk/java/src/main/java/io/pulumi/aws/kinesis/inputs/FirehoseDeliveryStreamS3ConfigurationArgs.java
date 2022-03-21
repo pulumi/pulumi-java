@@ -190,92 +190,74 @@ public final class FirehoseDeliveryStreamS3ConfigurationArgs extends io.pulumi.r
             this.bucketArn = Objects.requireNonNull(bucketArn);
             return this;
         }
-
         public Builder bucketArn(String bucketArn) {
             this.bucketArn = Output.of(Objects.requireNonNull(bucketArn));
             return this;
         }
-
         public Builder bufferInterval(@Nullable Output<Integer> bufferInterval) {
             this.bufferInterval = bufferInterval;
             return this;
         }
-
         public Builder bufferInterval(@Nullable Integer bufferInterval) {
             this.bufferInterval = Output.ofNullable(bufferInterval);
             return this;
         }
-
         public Builder bufferSize(@Nullable Output<Integer> bufferSize) {
             this.bufferSize = bufferSize;
             return this;
         }
-
         public Builder bufferSize(@Nullable Integer bufferSize) {
             this.bufferSize = Output.ofNullable(bufferSize);
             return this;
         }
-
         public Builder cloudwatchLoggingOptions(@Nullable Output<FirehoseDeliveryStreamS3ConfigurationCloudwatchLoggingOptionsArgs> cloudwatchLoggingOptions) {
             this.cloudwatchLoggingOptions = cloudwatchLoggingOptions;
             return this;
         }
-
         public Builder cloudwatchLoggingOptions(@Nullable FirehoseDeliveryStreamS3ConfigurationCloudwatchLoggingOptionsArgs cloudwatchLoggingOptions) {
             this.cloudwatchLoggingOptions = Output.ofNullable(cloudwatchLoggingOptions);
             return this;
         }
-
         public Builder compressionFormat(@Nullable Output<String> compressionFormat) {
             this.compressionFormat = compressionFormat;
             return this;
         }
-
         public Builder compressionFormat(@Nullable String compressionFormat) {
             this.compressionFormat = Output.ofNullable(compressionFormat);
             return this;
         }
-
         public Builder errorOutputPrefix(@Nullable Output<String> errorOutputPrefix) {
             this.errorOutputPrefix = errorOutputPrefix;
             return this;
         }
-
         public Builder errorOutputPrefix(@Nullable String errorOutputPrefix) {
             this.errorOutputPrefix = Output.ofNullable(errorOutputPrefix);
             return this;
         }
-
         public Builder kmsKeyArn(@Nullable Output<String> kmsKeyArn) {
             this.kmsKeyArn = kmsKeyArn;
             return this;
         }
-
         public Builder kmsKeyArn(@Nullable String kmsKeyArn) {
             this.kmsKeyArn = Output.ofNullable(kmsKeyArn);
             return this;
         }
-
         public Builder prefix(@Nullable Output<String> prefix) {
             this.prefix = prefix;
             return this;
         }
-
         public Builder prefix(@Nullable String prefix) {
             this.prefix = Output.ofNullable(prefix);
             return this;
         }
-
         public Builder roleArn(Output<String> roleArn) {
             this.roleArn = Objects.requireNonNull(roleArn);
             return this;
         }
-
         public Builder roleArn(String roleArn) {
             this.roleArn = Output.of(Objects.requireNonNull(roleArn));
             return this;
-        }
-        public FirehoseDeliveryStreamS3ConfigurationArgs build() {
+        }        public FirehoseDeliveryStreamS3ConfigurationArgs build() {
             return new FirehoseDeliveryStreamS3ConfigurationArgs(bucketArn, bufferInterval, bufferSize, cloudwatchLoggingOptions, compressionFormat, errorOutputPrefix, kmsKeyArn, prefix, roleArn);
         }
     }

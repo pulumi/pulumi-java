@@ -68,12 +68,10 @@ public final class ResponsePolicyNetworkResponse extends io.pulumi.resources.Inv
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
-
         public Builder networkUrl(String networkUrl) {
             this.networkUrl = Objects.requireNonNull(networkUrl);
             return this;
-        }
-        public ResponsePolicyNetworkResponse build() {
+        }        public ResponsePolicyNetworkResponse build() {
             return new ResponsePolicyNetworkResponse(kind, networkUrl);
         }
     }

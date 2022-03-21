@@ -119,27 +119,25 @@ public final class GooglePrivacyDlpV2KAnonymityHistogramBucketResponse {
             this.bucketSize = Objects.requireNonNull(bucketSize);
             return this;
         }
-
         public Builder bucketValueCount(String bucketValueCount) {
             this.bucketValueCount = Objects.requireNonNull(bucketValueCount);
             return this;
         }
-
         public Builder bucketValues(List<GooglePrivacyDlpV2KAnonymityEquivalenceClassResponse> bucketValues) {
             this.bucketValues = Objects.requireNonNull(bucketValues);
             return this;
         }
-
+        public Builder bucketValues(GooglePrivacyDlpV2KAnonymityEquivalenceClassResponse... bucketValues) {
+            return bucketValues(List.of(bucketValues));
+        }
         public Builder equivalenceClassSizeLowerBound(String equivalenceClassSizeLowerBound) {
             this.equivalenceClassSizeLowerBound = Objects.requireNonNull(equivalenceClassSizeLowerBound);
             return this;
         }
-
         public Builder equivalenceClassSizeUpperBound(String equivalenceClassSizeUpperBound) {
             this.equivalenceClassSizeUpperBound = Objects.requireNonNull(equivalenceClassSizeUpperBound);
             return this;
-        }
-        public GooglePrivacyDlpV2KAnonymityHistogramBucketResponse build() {
+        }        public GooglePrivacyDlpV2KAnonymityHistogramBucketResponse build() {
             return new GooglePrivacyDlpV2KAnonymityHistogramBucketResponse(bucketSize, bucketValueCount, bucketValues, equivalenceClassSizeLowerBound, equivalenceClassSizeUpperBound);
         }
     }

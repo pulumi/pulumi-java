@@ -77,12 +77,10 @@ public final class GoogleCloudDialogflowCxV3beta1FulfillmentSetParameterActionRe
             this.parameter = Objects.requireNonNull(parameter);
             return this;
         }
-
         public Builder value(Object value) {
             this.value = Objects.requireNonNull(value);
             return this;
-        }
-        public GoogleCloudDialogflowCxV3beta1FulfillmentSetParameterActionResponse build() {
+        }        public GoogleCloudDialogflowCxV3beta1FulfillmentSetParameterActionResponse build() {
             return new GoogleCloudDialogflowCxV3beta1FulfillmentSetParameterActionResponse(parameter, value);
         }
     }

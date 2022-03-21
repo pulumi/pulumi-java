@@ -71,12 +71,10 @@ public final class ManagedClusterSKUResponse {
             this.name = name;
             return this;
         }
-
         public Builder tier(@Nullable String tier) {
             this.tier = tier;
             return this;
-        }
-        public ManagedClusterSKUResponse build() {
+        }        public ManagedClusterSKUResponse build() {
             return new ManagedClusterSKUResponse(name, tier);
         }
     }

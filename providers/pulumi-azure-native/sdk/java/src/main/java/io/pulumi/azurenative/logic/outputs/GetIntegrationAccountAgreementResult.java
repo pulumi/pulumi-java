@@ -267,72 +267,58 @@ public final class GetIntegrationAccountAgreementResult {
             this.agreementType = Objects.requireNonNull(agreementType);
             return this;
         }
-
         public Builder changedTime(String changedTime) {
             this.changedTime = Objects.requireNonNull(changedTime);
             return this;
         }
-
         public Builder content(AgreementContentResponse content) {
             this.content = Objects.requireNonNull(content);
             return this;
         }
-
         public Builder createdTime(String createdTime) {
             this.createdTime = Objects.requireNonNull(createdTime);
             return this;
         }
-
         public Builder guestIdentity(BusinessIdentityResponse guestIdentity) {
             this.guestIdentity = Objects.requireNonNull(guestIdentity);
             return this;
         }
-
         public Builder guestPartner(String guestPartner) {
             this.guestPartner = Objects.requireNonNull(guestPartner);
             return this;
         }
-
         public Builder hostIdentity(BusinessIdentityResponse hostIdentity) {
             this.hostIdentity = Objects.requireNonNull(hostIdentity);
             return this;
         }
-
         public Builder hostPartner(String hostPartner) {
             this.hostPartner = Objects.requireNonNull(hostPartner);
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = location;
             return this;
         }
-
         public Builder metadata(@Nullable Object metadata) {
             this.metadata = metadata;
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public GetIntegrationAccountAgreementResult build() {
+        }        public GetIntegrationAccountAgreementResult build() {
             return new GetIntegrationAccountAgreementResult(agreementType, changedTime, content, createdTime, guestIdentity, guestPartner, hostIdentity, hostPartner, id, location, metadata, name, tags, type);
         }
     }

@@ -91,17 +91,14 @@ public final class GetInstanceEphemeralBlockDevice extends io.pulumi.resources.I
             this.deviceName = Objects.requireNonNull(deviceName);
             return this;
         }
-
         public Builder noDevice(@Nullable Boolean noDevice) {
             this.noDevice = noDevice;
             return this;
         }
-
         public Builder virtualName(@Nullable String virtualName) {
             this.virtualName = virtualName;
             return this;
-        }
-        public GetInstanceEphemeralBlockDevice build() {
+        }        public GetInstanceEphemeralBlockDevice build() {
             return new GetInstanceEphemeralBlockDevice(deviceName, noDevice, virtualName);
         }
     }

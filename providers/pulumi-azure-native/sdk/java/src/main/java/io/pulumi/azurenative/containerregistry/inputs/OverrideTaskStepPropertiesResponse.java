@@ -142,32 +142,32 @@ public final class OverrideTaskStepPropertiesResponse extends io.pulumi.resource
             this.arguments = arguments;
             return this;
         }
-
+        public Builder arguments(ArgumentResponse... arguments) {
+            return arguments(List.of(arguments));
+        }
         public Builder contextPath(@Nullable String contextPath) {
             this.contextPath = contextPath;
             return this;
         }
-
         public Builder file(@Nullable String file) {
             this.file = file;
             return this;
         }
-
         public Builder target(@Nullable String target) {
             this.target = target;
             return this;
         }
-
         public Builder updateTriggerToken(@Nullable String updateTriggerToken) {
             this.updateTriggerToken = updateTriggerToken;
             return this;
         }
-
         public Builder values(@Nullable List<SetValueResponse> values) {
             this.values = values;
             return this;
         }
-        public OverrideTaskStepPropertiesResponse build() {
+        public Builder values(SetValueResponse... values) {
+            return values(List.of(values));
+        }        public OverrideTaskStepPropertiesResponse build() {
             return new OverrideTaskStepPropertiesResponse(arguments, contextPath, file, target, updateTriggerToken, values);
         }
     }

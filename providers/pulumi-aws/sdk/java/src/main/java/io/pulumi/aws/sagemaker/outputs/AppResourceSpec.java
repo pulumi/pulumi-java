@@ -103,22 +103,18 @@ public final class AppResourceSpec {
             this.instanceType = instanceType;
             return this;
         }
-
         public Builder lifecycleConfigArn(@Nullable String lifecycleConfigArn) {
             this.lifecycleConfigArn = lifecycleConfigArn;
             return this;
         }
-
         public Builder sagemakerImageArn(@Nullable String sagemakerImageArn) {
             this.sagemakerImageArn = sagemakerImageArn;
             return this;
         }
-
         public Builder sagemakerImageVersionArn(@Nullable String sagemakerImageVersionArn) {
             this.sagemakerImageVersionArn = sagemakerImageVersionArn;
             return this;
-        }
-        public AppResourceSpec build() {
+        }        public AppResourceSpec build() {
             return new AppResourceSpec(instanceType, lifecycleConfigArn, sagemakerImageArn, sagemakerImageVersionArn);
         }
     }

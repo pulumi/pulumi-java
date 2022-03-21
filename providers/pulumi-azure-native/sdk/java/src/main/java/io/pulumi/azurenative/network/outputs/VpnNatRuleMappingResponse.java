@@ -53,8 +53,7 @@ public final class VpnNatRuleMappingResponse {
         public Builder addressSpace(@Nullable String addressSpace) {
             this.addressSpace = addressSpace;
             return this;
-        }
-        public VpnNatRuleMappingResponse build() {
+        }        public VpnNatRuleMappingResponse build() {
             return new VpnNatRuleMappingResponse(addressSpace);
         }
     }

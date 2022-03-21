@@ -51,8 +51,7 @@ public final class SandboxConfigResponse {
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public SandboxConfigResponse build() {
+        }        public SandboxConfigResponse build() {
             return new SandboxConfigResponse(type);
         }
     }

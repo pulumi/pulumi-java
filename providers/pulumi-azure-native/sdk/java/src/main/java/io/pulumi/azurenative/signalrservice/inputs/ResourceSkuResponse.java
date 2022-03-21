@@ -135,27 +135,22 @@ public final class ResourceSkuResponse extends io.pulumi.resources.InvokeArgs {
             this.capacity = capacity;
             return this;
         }
-
         public Builder family(String family) {
             this.family = Objects.requireNonNull(family);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder size(String size) {
             this.size = Objects.requireNonNull(size);
             return this;
         }
-
         public Builder tier(@Nullable String tier) {
             this.tier = tier;
             return this;
-        }
-        public ResourceSkuResponse build() {
+        }        public ResourceSkuResponse build() {
             return new ResourceSkuResponse(capacity, family, name, size, tier);
         }
     }

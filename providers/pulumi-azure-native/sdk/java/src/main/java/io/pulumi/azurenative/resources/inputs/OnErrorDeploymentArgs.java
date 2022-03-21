@@ -79,22 +79,18 @@ public final class OnErrorDeploymentArgs extends io.pulumi.resources.ResourceArg
             this.deploymentName = deploymentName;
             return this;
         }
-
         public Builder deploymentName(@Nullable String deploymentName) {
             this.deploymentName = Output.ofNullable(deploymentName);
             return this;
         }
-
         public Builder type(@Nullable Output<OnErrorDeploymentType> type) {
             this.type = type;
             return this;
         }
-
         public Builder type(@Nullable OnErrorDeploymentType type) {
             this.type = Output.ofNullable(type);
             return this;
-        }
-        public OnErrorDeploymentArgs build() {
+        }        public OnErrorDeploymentArgs build() {
             return new OnErrorDeploymentArgs(deploymentName, type);
         }
     }

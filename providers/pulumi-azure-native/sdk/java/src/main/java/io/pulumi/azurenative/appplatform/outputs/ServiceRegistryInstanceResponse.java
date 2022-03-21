@@ -69,12 +69,10 @@ public final class ServiceRegistryInstanceResponse {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder status(String status) {
             this.status = Objects.requireNonNull(status);
             return this;
-        }
-        public ServiceRegistryInstanceResponse build() {
+        }        public ServiceRegistryInstanceResponse build() {
             return new ServiceRegistryInstanceResponse(name, status);
         }
     }

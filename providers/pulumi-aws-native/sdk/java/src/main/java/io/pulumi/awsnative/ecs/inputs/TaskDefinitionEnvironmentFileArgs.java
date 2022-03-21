@@ -66,22 +66,18 @@ public final class TaskDefinitionEnvironmentFileArgs extends io.pulumi.resources
             this.type = type;
             return this;
         }
-
         public Builder type(@Nullable String type) {
             this.type = Output.ofNullable(type);
             return this;
         }
-
         public Builder value(@Nullable Output<String> value) {
             this.value = value;
             return this;
         }
-
         public Builder value(@Nullable String value) {
             this.value = Output.ofNullable(value);
             return this;
-        }
-        public TaskDefinitionEnvironmentFileArgs build() {
+        }        public TaskDefinitionEnvironmentFileArgs build() {
             return new TaskDefinitionEnvironmentFileArgs(type, value);
         }
     }

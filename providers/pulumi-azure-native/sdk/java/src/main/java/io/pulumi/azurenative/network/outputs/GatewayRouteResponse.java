@@ -150,37 +150,30 @@ public final class GatewayRouteResponse {
             this.asPath = Objects.requireNonNull(asPath);
             return this;
         }
-
         public Builder localAddress(String localAddress) {
             this.localAddress = Objects.requireNonNull(localAddress);
             return this;
         }
-
         public Builder network(String network) {
             this.network = Objects.requireNonNull(network);
             return this;
         }
-
         public Builder nextHop(String nextHop) {
             this.nextHop = Objects.requireNonNull(nextHop);
             return this;
         }
-
         public Builder origin(String origin) {
             this.origin = Objects.requireNonNull(origin);
             return this;
         }
-
         public Builder sourcePeer(String sourcePeer) {
             this.sourcePeer = Objects.requireNonNull(sourcePeer);
             return this;
         }
-
         public Builder weight(Integer weight) {
             this.weight = Objects.requireNonNull(weight);
             return this;
-        }
-        public GatewayRouteResponse build() {
+        }        public GatewayRouteResponse build() {
             return new GatewayRouteResponse(asPath, localAddress, network, nextHop, origin, sourcePeer, weight);
         }
     }

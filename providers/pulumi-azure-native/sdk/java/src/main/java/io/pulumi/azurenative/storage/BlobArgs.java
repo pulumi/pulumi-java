@@ -206,102 +206,82 @@ public final class BlobArgs extends io.pulumi.resources.ResourceArgs {
             this.accessTier = accessTier;
             return this;
         }
-
         public Builder accessTier(@Nullable BlobAccessTier accessTier) {
             this.accessTier = Output.ofNullable(accessTier);
             return this;
         }
-
         public Builder accountName(Output<String> accountName) {
             this.accountName = Objects.requireNonNull(accountName);
             return this;
         }
-
         public Builder accountName(String accountName) {
             this.accountName = Output.of(Objects.requireNonNull(accountName));
             return this;
         }
-
         public Builder blobName(@Nullable Output<String> blobName) {
             this.blobName = blobName;
             return this;
         }
-
         public Builder blobName(@Nullable String blobName) {
             this.blobName = Output.ofNullable(blobName);
             return this;
         }
-
         public Builder containerName(Output<String> containerName) {
             this.containerName = Objects.requireNonNull(containerName);
             return this;
         }
-
         public Builder containerName(String containerName) {
             this.containerName = Output.of(Objects.requireNonNull(containerName));
             return this;
         }
-
         public Builder contentMd5(@Nullable Output<String> contentMd5) {
             this.contentMd5 = contentMd5;
             return this;
         }
-
         public Builder contentMd5(@Nullable String contentMd5) {
             this.contentMd5 = Output.ofNullable(contentMd5);
             return this;
         }
-
         public Builder contentType(@Nullable Output<String> contentType) {
             this.contentType = contentType;
             return this;
         }
-
         public Builder contentType(@Nullable String contentType) {
             this.contentType = Output.ofNullable(contentType);
             return this;
         }
-
         public Builder metadata(@Nullable Output<Map<String,String>> metadata) {
             this.metadata = metadata;
             return this;
         }
-
         public Builder metadata(@Nullable Map<String,String> metadata) {
             this.metadata = Output.ofNullable(metadata);
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder source(@Nullable Output<AssetOrArchive> source) {
             this.source = source;
             return this;
         }
-
         public Builder source(@Nullable AssetOrArchive source) {
             this.source = Output.ofNullable(source);
             return this;
         }
-
         public Builder type(@Nullable Output<BlobType> type) {
             this.type = type;
             return this;
         }
-
         public Builder type(@Nullable BlobType type) {
             this.type = Output.ofNullable(type);
             return this;
-        }
-        public BlobArgs build() {
+        }        public BlobArgs build() {
             return new BlobArgs(accessTier, accountName, blobName, containerName, contentMd5, contentType, metadata, resourceGroupName, source, type);
         }
     }

@@ -107,42 +107,34 @@ public final class RoleAliasState extends io.pulumi.resources.ResourceArgs {
             this.alias = alias;
             return this;
         }
-
         public Builder alias(@Nullable String alias) {
             this.alias = Output.ofNullable(alias);
             return this;
         }
-
         public Builder arn(@Nullable Output<String> arn) {
             this.arn = arn;
             return this;
         }
-
         public Builder arn(@Nullable String arn) {
             this.arn = Output.ofNullable(arn);
             return this;
         }
-
         public Builder credentialDuration(@Nullable Output<Integer> credentialDuration) {
             this.credentialDuration = credentialDuration;
             return this;
         }
-
         public Builder credentialDuration(@Nullable Integer credentialDuration) {
             this.credentialDuration = Output.ofNullable(credentialDuration);
             return this;
         }
-
         public Builder roleArn(@Nullable Output<String> roleArn) {
             this.roleArn = roleArn;
             return this;
         }
-
         public Builder roleArn(@Nullable String roleArn) {
             this.roleArn = Output.ofNullable(roleArn);
             return this;
-        }
-        public RoleAliasState build() {
+        }        public RoleAliasState build() {
             return new RoleAliasState(alias, arn, credentialDuration, roleArn);
         }
     }

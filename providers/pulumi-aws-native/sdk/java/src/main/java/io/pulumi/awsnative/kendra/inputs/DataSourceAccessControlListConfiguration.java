@@ -52,8 +52,7 @@ public final class DataSourceAccessControlListConfiguration extends io.pulumi.re
         public Builder keyPath(@Nullable String keyPath) {
             this.keyPath = keyPath;
             return this;
-        }
-        public DataSourceAccessControlListConfiguration build() {
+        }        public DataSourceAccessControlListConfiguration build() {
             return new DataSourceAccessControlListConfiguration(keyPath);
         }
     }

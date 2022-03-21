@@ -70,12 +70,10 @@ public final class ReplicationCycleResponse {
             this.progressPercent = Objects.requireNonNull(progressPercent);
             return this;
         }
-
         public Builder startTime(String startTime) {
             this.startTime = Objects.requireNonNull(startTime);
             return this;
-        }
-        public ReplicationCycleResponse build() {
+        }        public ReplicationCycleResponse build() {
             return new ReplicationCycleResponse(progressPercent, startTime);
         }
     }

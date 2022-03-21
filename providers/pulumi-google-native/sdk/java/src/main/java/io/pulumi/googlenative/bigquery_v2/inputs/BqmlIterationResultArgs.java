@@ -124,52 +124,42 @@ public final class BqmlIterationResultArgs extends io.pulumi.resources.ResourceA
             this.durationMs = durationMs;
             return this;
         }
-
         public Builder durationMs(@Nullable String durationMs) {
             this.durationMs = Output.ofNullable(durationMs);
             return this;
         }
-
         public Builder evalLoss(@Nullable Output<Double> evalLoss) {
             this.evalLoss = evalLoss;
             return this;
         }
-
         public Builder evalLoss(@Nullable Double evalLoss) {
             this.evalLoss = Output.ofNullable(evalLoss);
             return this;
         }
-
         public Builder index(@Nullable Output<Integer> index) {
             this.index = index;
             return this;
         }
-
         public Builder index(@Nullable Integer index) {
             this.index = Output.ofNullable(index);
             return this;
         }
-
         public Builder learnRate(@Nullable Output<Double> learnRate) {
             this.learnRate = learnRate;
             return this;
         }
-
         public Builder learnRate(@Nullable Double learnRate) {
             this.learnRate = Output.ofNullable(learnRate);
             return this;
         }
-
         public Builder trainingLoss(@Nullable Output<Double> trainingLoss) {
             this.trainingLoss = trainingLoss;
             return this;
         }
-
         public Builder trainingLoss(@Nullable Double trainingLoss) {
             this.trainingLoss = Output.ofNullable(trainingLoss);
             return this;
-        }
-        public BqmlIterationResultArgs build() {
+        }        public BqmlIterationResultArgs build() {
             return new BqmlIterationResultArgs(durationMs, evalLoss, index, learnRate, trainingLoss);
         }
     }

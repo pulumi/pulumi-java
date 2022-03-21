@@ -68,22 +68,21 @@ public final class PhpAppLayerCloudwatchConfigurationArgs extends io.pulumi.reso
             this.enabled = enabled;
             return this;
         }
-
         public Builder enabled(@Nullable Boolean enabled) {
             this.enabled = Output.ofNullable(enabled);
             return this;
         }
-
         public Builder logStreams(@Nullable Output<List<PhpAppLayerCloudwatchConfigurationLogStreamArgs>> logStreams) {
             this.logStreams = logStreams;
             return this;
         }
-
         public Builder logStreams(@Nullable List<PhpAppLayerCloudwatchConfigurationLogStreamArgs> logStreams) {
             this.logStreams = Output.ofNullable(logStreams);
             return this;
         }
-        public PhpAppLayerCloudwatchConfigurationArgs build() {
+        public Builder logStreams(PhpAppLayerCloudwatchConfigurationLogStreamArgs... logStreams) {
+            return logStreams(List.of(logStreams));
+        }        public PhpAppLayerCloudwatchConfigurationArgs build() {
             return new PhpAppLayerCloudwatchConfigurationArgs(enabled, logStreams);
         }
     }

@@ -69,12 +69,10 @@ public final class ConnectorProfileRedshiftConnectorProfileCredentials {
             this.password = Objects.requireNonNull(password);
             return this;
         }
-
         public Builder username(String username) {
             this.username = Objects.requireNonNull(username);
             return this;
-        }
-        public ConnectorProfileRedshiftConnectorProfileCredentials build() {
+        }        public ConnectorProfileRedshiftConnectorProfileCredentials build() {
             return new ConnectorProfileRedshiftConnectorProfileCredentials(password, username);
         }
     }

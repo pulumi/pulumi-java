@@ -130,27 +130,25 @@ public final class ManagementGroupDetailsResponse extends io.pulumi.resources.In
             this.parent = parent;
             return this;
         }
-
         public Builder path(@Nullable List<ManagementGroupPathElementResponse> path) {
             this.path = path;
             return this;
         }
-
+        public Builder path(ManagementGroupPathElementResponse... path) {
+            return path(List.of(path));
+        }
         public Builder updatedBy(@Nullable String updatedBy) {
             this.updatedBy = updatedBy;
             return this;
         }
-
         public Builder updatedTime(@Nullable String updatedTime) {
             this.updatedTime = updatedTime;
             return this;
         }
-
         public Builder version(@Nullable Double version) {
             this.version = version;
             return this;
-        }
-        public ManagementGroupDetailsResponse build() {
+        }        public ManagementGroupDetailsResponse build() {
             return new ManagementGroupDetailsResponse(parent, path, updatedBy, updatedTime, version);
         }
     }

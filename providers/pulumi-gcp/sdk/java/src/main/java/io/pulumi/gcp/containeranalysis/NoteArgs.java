@@ -184,82 +184,72 @@ public final class NoteArgs extends io.pulumi.resources.ResourceArgs {
             this.attestationAuthority = Objects.requireNonNull(attestationAuthority);
             return this;
         }
-
         public Builder attestationAuthority(NoteAttestationAuthorityArgs attestationAuthority) {
             this.attestationAuthority = Output.of(Objects.requireNonNull(attestationAuthority));
             return this;
         }
-
         public Builder expirationTime(@Nullable Output<String> expirationTime) {
             this.expirationTime = expirationTime;
             return this;
         }
-
         public Builder expirationTime(@Nullable String expirationTime) {
             this.expirationTime = Output.ofNullable(expirationTime);
             return this;
         }
-
         public Builder longDescription(@Nullable Output<String> longDescription) {
             this.longDescription = longDescription;
             return this;
         }
-
         public Builder longDescription(@Nullable String longDescription) {
             this.longDescription = Output.ofNullable(longDescription);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
         }
-
         public Builder relatedNoteNames(@Nullable Output<List<String>> relatedNoteNames) {
             this.relatedNoteNames = relatedNoteNames;
             return this;
         }
-
         public Builder relatedNoteNames(@Nullable List<String> relatedNoteNames) {
             this.relatedNoteNames = Output.ofNullable(relatedNoteNames);
             return this;
         }
-
+        public Builder relatedNoteNames(String... relatedNoteNames) {
+            return relatedNoteNames(List.of(relatedNoteNames));
+        }
         public Builder relatedUrls(@Nullable Output<List<NoteRelatedUrlArgs>> relatedUrls) {
             this.relatedUrls = relatedUrls;
             return this;
         }
-
         public Builder relatedUrls(@Nullable List<NoteRelatedUrlArgs> relatedUrls) {
             this.relatedUrls = Output.ofNullable(relatedUrls);
             return this;
         }
-
+        public Builder relatedUrls(NoteRelatedUrlArgs... relatedUrls) {
+            return relatedUrls(List.of(relatedUrls));
+        }
         public Builder shortDescription(@Nullable Output<String> shortDescription) {
             this.shortDescription = shortDescription;
             return this;
         }
-
         public Builder shortDescription(@Nullable String shortDescription) {
             this.shortDescription = Output.ofNullable(shortDescription);
             return this;
-        }
-        public NoteArgs build() {
+        }        public NoteArgs build() {
             return new NoteArgs(attestationAuthority, expirationTime, longDescription, name, project, relatedNoteNames, relatedUrls, shortDescription);
         }
     }

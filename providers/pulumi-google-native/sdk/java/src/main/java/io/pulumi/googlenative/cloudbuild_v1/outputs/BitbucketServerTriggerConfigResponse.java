@@ -136,32 +136,26 @@ public final class BitbucketServerTriggerConfigResponse {
             this.bitbucketServerConfig = Objects.requireNonNull(bitbucketServerConfig);
             return this;
         }
-
         public Builder bitbucketServerConfigResource(String bitbucketServerConfigResource) {
             this.bitbucketServerConfigResource = Objects.requireNonNull(bitbucketServerConfigResource);
             return this;
         }
-
         public Builder projectKey(String projectKey) {
             this.projectKey = Objects.requireNonNull(projectKey);
             return this;
         }
-
         public Builder pullRequest(PullRequestFilterResponse pullRequest) {
             this.pullRequest = Objects.requireNonNull(pullRequest);
             return this;
         }
-
         public Builder push(PushFilterResponse push) {
             this.push = Objects.requireNonNull(push);
             return this;
         }
-
         public Builder repoSlug(String repoSlug) {
             this.repoSlug = Objects.requireNonNull(repoSlug);
             return this;
-        }
-        public BitbucketServerTriggerConfigResponse build() {
+        }        public BitbucketServerTriggerConfigResponse build() {
             return new BitbucketServerTriggerConfigResponse(bitbucketServerConfig, bitbucketServerConfigResource, projectKey, pullRequest, push, repoSlug);
         }
     }

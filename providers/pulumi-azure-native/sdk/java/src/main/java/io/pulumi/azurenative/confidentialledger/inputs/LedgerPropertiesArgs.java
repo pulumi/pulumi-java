@@ -115,42 +115,40 @@ public final class LedgerPropertiesArgs extends io.pulumi.resources.ResourceArgs
             this.aadBasedSecurityPrincipals = aadBasedSecurityPrincipals;
             return this;
         }
-
         public Builder aadBasedSecurityPrincipals(@Nullable List<AADBasedSecurityPrincipalArgs> aadBasedSecurityPrincipals) {
             this.aadBasedSecurityPrincipals = Output.ofNullable(aadBasedSecurityPrincipals);
             return this;
         }
-
+        public Builder aadBasedSecurityPrincipals(AADBasedSecurityPrincipalArgs... aadBasedSecurityPrincipals) {
+            return aadBasedSecurityPrincipals(List.of(aadBasedSecurityPrincipals));
+        }
         public Builder certBasedSecurityPrincipals(@Nullable Output<List<CertBasedSecurityPrincipalArgs>> certBasedSecurityPrincipals) {
             this.certBasedSecurityPrincipals = certBasedSecurityPrincipals;
             return this;
         }
-
         public Builder certBasedSecurityPrincipals(@Nullable List<CertBasedSecurityPrincipalArgs> certBasedSecurityPrincipals) {
             this.certBasedSecurityPrincipals = Output.ofNullable(certBasedSecurityPrincipals);
             return this;
         }
-
+        public Builder certBasedSecurityPrincipals(CertBasedSecurityPrincipalArgs... certBasedSecurityPrincipals) {
+            return certBasedSecurityPrincipals(List.of(certBasedSecurityPrincipals));
+        }
         public Builder ledgerStorageAccount(@Nullable Output<String> ledgerStorageAccount) {
             this.ledgerStorageAccount = ledgerStorageAccount;
             return this;
         }
-
         public Builder ledgerStorageAccount(@Nullable String ledgerStorageAccount) {
             this.ledgerStorageAccount = Output.ofNullable(ledgerStorageAccount);
             return this;
         }
-
         public Builder ledgerType(@Nullable Output<Either<String,LedgerType>> ledgerType) {
             this.ledgerType = ledgerType;
             return this;
         }
-
         public Builder ledgerType(@Nullable Either<String,LedgerType> ledgerType) {
             this.ledgerType = Output.ofNullable(ledgerType);
             return this;
-        }
-        public LedgerPropertiesArgs build() {
+        }        public LedgerPropertiesArgs build() {
             return new LedgerPropertiesArgs(aadBasedSecurityPrincipals, certBasedSecurityPrincipals, ledgerStorageAccount, ledgerType);
         }
     }

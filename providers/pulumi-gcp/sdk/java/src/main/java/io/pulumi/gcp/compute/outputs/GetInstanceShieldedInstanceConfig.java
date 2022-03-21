@@ -61,17 +61,14 @@ public final class GetInstanceShieldedInstanceConfig {
             this.enableIntegrityMonitoring = Objects.requireNonNull(enableIntegrityMonitoring);
             return this;
         }
-
         public Builder enableSecureBoot(Boolean enableSecureBoot) {
             this.enableSecureBoot = Objects.requireNonNull(enableSecureBoot);
             return this;
         }
-
         public Builder enableVtpm(Boolean enableVtpm) {
             this.enableVtpm = Objects.requireNonNull(enableVtpm);
             return this;
-        }
-        public GetInstanceShieldedInstanceConfig build() {
+        }        public GetInstanceShieldedInstanceConfig build() {
             return new GetInstanceShieldedInstanceConfig(enableIntegrityMonitoring, enableSecureBoot, enableVtpm);
         }
     }

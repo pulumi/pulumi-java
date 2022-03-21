@@ -71,17 +71,14 @@ public final class RepositoryExternalConnections {
             this.externalConnectionName = Objects.requireNonNull(externalConnectionName);
             return this;
         }
-
         public Builder packageFormat(@Nullable String packageFormat) {
             this.packageFormat = packageFormat;
             return this;
         }
-
         public Builder status(@Nullable String status) {
             this.status = status;
             return this;
-        }
-        public RepositoryExternalConnections build() {
+        }        public RepositoryExternalConnections build() {
             return new RepositoryExternalConnections(externalConnectionName, packageFormat, status);
         }
     }

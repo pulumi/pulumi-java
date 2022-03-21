@@ -200,52 +200,42 @@ public final class GetInventoryItemResult {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder inventoryType(String inventoryType) {
             this.inventoryType = Objects.requireNonNull(inventoryType);
             return this;
         }
-
         public Builder kind(@Nullable String kind) {
             this.kind = kind;
             return this;
         }
-
         public Builder managedResourceId(@Nullable String managedResourceId) {
             this.managedResourceId = managedResourceId;
             return this;
         }
-
         public Builder moName(@Nullable String moName) {
             this.moName = moName;
             return this;
         }
-
         public Builder moRefId(@Nullable String moRefId) {
             this.moRefId = moRefId;
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
-
         public Builder systemData(SystemDataResponse systemData) {
             this.systemData = Objects.requireNonNull(systemData);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public GetInventoryItemResult build() {
+        }        public GetInventoryItemResult build() {
             return new GetInventoryItemResult(id, inventoryType, kind, managedResourceId, moName, moRefId, name, provisioningState, systemData, type);
         }
     }

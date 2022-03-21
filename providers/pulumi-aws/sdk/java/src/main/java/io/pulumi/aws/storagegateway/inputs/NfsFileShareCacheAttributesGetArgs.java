@@ -59,12 +59,10 @@ public final class NfsFileShareCacheAttributesGetArgs extends io.pulumi.resource
             this.cacheStaleTimeoutInSeconds = cacheStaleTimeoutInSeconds;
             return this;
         }
-
         public Builder cacheStaleTimeoutInSeconds(@Nullable Integer cacheStaleTimeoutInSeconds) {
             this.cacheStaleTimeoutInSeconds = Output.ofNullable(cacheStaleTimeoutInSeconds);
             return this;
-        }
-        public NfsFileShareCacheAttributesGetArgs build() {
+        }        public NfsFileShareCacheAttributesGetArgs build() {
             return new NfsFileShareCacheAttributesGetArgs(cacheStaleTimeoutInSeconds);
         }
     }

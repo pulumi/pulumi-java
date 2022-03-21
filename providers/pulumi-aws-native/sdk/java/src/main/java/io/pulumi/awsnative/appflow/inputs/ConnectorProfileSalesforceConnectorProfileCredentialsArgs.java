@@ -107,42 +107,34 @@ public final class ConnectorProfileSalesforceConnectorProfileCredentialsArgs ext
             this.accessToken = accessToken;
             return this;
         }
-
         public Builder accessToken(@Nullable String accessToken) {
             this.accessToken = Output.ofNullable(accessToken);
             return this;
         }
-
         public Builder clientCredentialsArn(@Nullable Output<String> clientCredentialsArn) {
             this.clientCredentialsArn = clientCredentialsArn;
             return this;
         }
-
         public Builder clientCredentialsArn(@Nullable String clientCredentialsArn) {
             this.clientCredentialsArn = Output.ofNullable(clientCredentialsArn);
             return this;
         }
-
         public Builder connectorOAuthRequest(@Nullable Output<ConnectorProfileConnectorOAuthRequestArgs> connectorOAuthRequest) {
             this.connectorOAuthRequest = connectorOAuthRequest;
             return this;
         }
-
         public Builder connectorOAuthRequest(@Nullable ConnectorProfileConnectorOAuthRequestArgs connectorOAuthRequest) {
             this.connectorOAuthRequest = Output.ofNullable(connectorOAuthRequest);
             return this;
         }
-
         public Builder refreshToken(@Nullable Output<String> refreshToken) {
             this.refreshToken = refreshToken;
             return this;
         }
-
         public Builder refreshToken(@Nullable String refreshToken) {
             this.refreshToken = Output.ofNullable(refreshToken);
             return this;
-        }
-        public ConnectorProfileSalesforceConnectorProfileCredentialsArgs build() {
+        }        public ConnectorProfileSalesforceConnectorProfileCredentialsArgs build() {
             return new ConnectorProfileSalesforceConnectorProfileCredentialsArgs(accessToken, clientCredentialsArn, connectorOAuthRequest, refreshToken);
         }
     }

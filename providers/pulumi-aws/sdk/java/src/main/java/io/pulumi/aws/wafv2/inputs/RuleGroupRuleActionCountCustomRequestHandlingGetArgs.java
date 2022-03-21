@@ -57,12 +57,13 @@ public final class RuleGroupRuleActionCountCustomRequestHandlingGetArgs extends 
             this.insertHeaders = Objects.requireNonNull(insertHeaders);
             return this;
         }
-
         public Builder insertHeaders(List<RuleGroupRuleActionCountCustomRequestHandlingInsertHeaderGetArgs> insertHeaders) {
             this.insertHeaders = Output.of(Objects.requireNonNull(insertHeaders));
             return this;
         }
-        public RuleGroupRuleActionCountCustomRequestHandlingGetArgs build() {
+        public Builder insertHeaders(RuleGroupRuleActionCountCustomRequestHandlingInsertHeaderGetArgs... insertHeaders) {
+            return insertHeaders(List.of(insertHeaders));
+        }        public RuleGroupRuleActionCountCustomRequestHandlingGetArgs build() {
             return new RuleGroupRuleActionCountCustomRequestHandlingGetArgs(insertHeaders);
         }
     }

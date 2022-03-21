@@ -70,12 +70,10 @@ public final class SimulationApplicationRenderingEngine {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder version(String version) {
             this.version = Objects.requireNonNull(version);
             return this;
-        }
-        public SimulationApplicationRenderingEngine build() {
+        }        public SimulationApplicationRenderingEngine build() {
             return new SimulationApplicationRenderingEngine(name, version);
         }
     }

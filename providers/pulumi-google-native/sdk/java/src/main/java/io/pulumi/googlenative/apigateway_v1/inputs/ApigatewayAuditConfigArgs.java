@@ -80,22 +80,21 @@ public final class ApigatewayAuditConfigArgs extends io.pulumi.resources.Resourc
             this.auditLogConfigs = auditLogConfigs;
             return this;
         }
-
         public Builder auditLogConfigs(@Nullable List<ApigatewayAuditLogConfigArgs> auditLogConfigs) {
             this.auditLogConfigs = Output.ofNullable(auditLogConfigs);
             return this;
         }
-
+        public Builder auditLogConfigs(ApigatewayAuditLogConfigArgs... auditLogConfigs) {
+            return auditLogConfigs(List.of(auditLogConfigs));
+        }
         public Builder service(@Nullable Output<String> service) {
             this.service = service;
             return this;
         }
-
         public Builder service(@Nullable String service) {
             this.service = Output.ofNullable(service);
             return this;
-        }
-        public ApigatewayAuditConfigArgs build() {
+        }        public ApigatewayAuditConfigArgs build() {
             return new ApigatewayAuditConfigArgs(auditLogConfigs, service);
         }
     }

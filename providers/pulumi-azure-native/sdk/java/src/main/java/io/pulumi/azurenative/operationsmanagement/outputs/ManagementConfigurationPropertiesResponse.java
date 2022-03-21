@@ -122,27 +122,25 @@ public final class ManagementConfigurationPropertiesResponse {
             this.applicationId = applicationId;
             return this;
         }
-
         public Builder parameters(List<ArmTemplateParameterResponse> parameters) {
             this.parameters = Objects.requireNonNull(parameters);
             return this;
         }
-
+        public Builder parameters(ArmTemplateParameterResponse... parameters) {
+            return parameters(List.of(parameters));
+        }
         public Builder parentResourceType(String parentResourceType) {
             this.parentResourceType = Objects.requireNonNull(parentResourceType);
             return this;
         }
-
         public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
-
         public Builder template(Object template) {
             this.template = Objects.requireNonNull(template);
             return this;
-        }
-        public ManagementConfigurationPropertiesResponse build() {
+        }        public ManagementConfigurationPropertiesResponse build() {
             return new ManagementConfigurationPropertiesResponse(applicationId, parameters, parentResourceType, provisioningState, template);
         }
     }

@@ -91,32 +91,26 @@ public final class MainRouteTableAssociationState extends io.pulumi.resources.Re
             this.originalRouteTableId = originalRouteTableId;
             return this;
         }
-
         public Builder originalRouteTableId(@Nullable String originalRouteTableId) {
             this.originalRouteTableId = Output.ofNullable(originalRouteTableId);
             return this;
         }
-
         public Builder routeTableId(@Nullable Output<String> routeTableId) {
             this.routeTableId = routeTableId;
             return this;
         }
-
         public Builder routeTableId(@Nullable String routeTableId) {
             this.routeTableId = Output.ofNullable(routeTableId);
             return this;
         }
-
         public Builder vpcId(@Nullable Output<String> vpcId) {
             this.vpcId = vpcId;
             return this;
         }
-
         public Builder vpcId(@Nullable String vpcId) {
             this.vpcId = Output.ofNullable(vpcId);
             return this;
-        }
-        public MainRouteTableAssociationState build() {
+        }        public MainRouteTableAssociationState build() {
             return new MainRouteTableAssociationState(originalRouteTableId, routeTableId, vpcId);
         }
     }

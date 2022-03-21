@@ -78,12 +78,10 @@ public final class DeliveryRuleQueryStringConditionResponse extends io.pulumi.re
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder parameters(QueryStringMatchConditionParametersResponse parameters) {
             this.parameters = Objects.requireNonNull(parameters);
             return this;
-        }
-        public DeliveryRuleQueryStringConditionResponse build() {
+        }        public DeliveryRuleQueryStringConditionResponse build() {
             return new DeliveryRuleQueryStringConditionResponse(name, parameters);
         }
     }

@@ -78,17 +78,14 @@ public final class GetApiArgs extends io.pulumi.resources.InvokeArgs {
             this.apiId = Objects.requireNonNull(apiId);
             return this;
         }
-
         public Builder location(String location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = project;
             return this;
-        }
-        public GetApiArgs build() {
+        }        public GetApiArgs build() {
             return new GetApiArgs(apiId, location, project);
         }
     }

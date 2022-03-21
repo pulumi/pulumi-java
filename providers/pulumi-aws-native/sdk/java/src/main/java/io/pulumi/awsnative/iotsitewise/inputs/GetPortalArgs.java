@@ -54,8 +54,7 @@ public final class GetPortalArgs extends io.pulumi.resources.InvokeArgs {
         public Builder portalId(String portalId) {
             this.portalId = Objects.requireNonNull(portalId);
             return this;
-        }
-        public GetPortalArgs build() {
+        }        public GetPortalArgs build() {
             return new GetPortalArgs(portalId);
         }
     }

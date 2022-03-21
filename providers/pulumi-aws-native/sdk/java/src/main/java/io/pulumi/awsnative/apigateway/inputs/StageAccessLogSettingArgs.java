@@ -78,22 +78,18 @@ public final class StageAccessLogSettingArgs extends io.pulumi.resources.Resourc
             this.destinationArn = destinationArn;
             return this;
         }
-
         public Builder destinationArn(@Nullable String destinationArn) {
             this.destinationArn = Output.ofNullable(destinationArn);
             return this;
         }
-
         public Builder format(@Nullable Output<String> format) {
             this.format = format;
             return this;
         }
-
         public Builder format(@Nullable String format) {
             this.format = Output.ofNullable(format);
             return this;
-        }
-        public StageAccessLogSettingArgs build() {
+        }        public StageAccessLogSettingArgs build() {
             return new StageAccessLogSettingArgs(destinationArn, format);
         }
     }

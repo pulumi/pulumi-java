@@ -353,102 +353,88 @@ public final class GetBatchAccountResult {
             this.accountEndpoint = Objects.requireNonNull(accountEndpoint);
             return this;
         }
-
         public Builder activeJobAndJobScheduleQuota(Integer activeJobAndJobScheduleQuota) {
             this.activeJobAndJobScheduleQuota = Objects.requireNonNull(activeJobAndJobScheduleQuota);
             return this;
         }
-
         public Builder autoStorage(AutoStoragePropertiesResponse autoStorage) {
             this.autoStorage = Objects.requireNonNull(autoStorage);
             return this;
         }
-
         public Builder dedicatedCoreQuota(Integer dedicatedCoreQuota) {
             this.dedicatedCoreQuota = Objects.requireNonNull(dedicatedCoreQuota);
             return this;
         }
-
         public Builder dedicatedCoreQuotaPerVMFamily(List<VirtualMachineFamilyCoreQuotaResponse> dedicatedCoreQuotaPerVMFamily) {
             this.dedicatedCoreQuotaPerVMFamily = Objects.requireNonNull(dedicatedCoreQuotaPerVMFamily);
             return this;
         }
-
+        public Builder dedicatedCoreQuotaPerVMFamily(VirtualMachineFamilyCoreQuotaResponse... dedicatedCoreQuotaPerVMFamily) {
+            return dedicatedCoreQuotaPerVMFamily(List.of(dedicatedCoreQuotaPerVMFamily));
+        }
         public Builder dedicatedCoreQuotaPerVMFamilyEnforced(Boolean dedicatedCoreQuotaPerVMFamilyEnforced) {
             this.dedicatedCoreQuotaPerVMFamilyEnforced = Objects.requireNonNull(dedicatedCoreQuotaPerVMFamilyEnforced);
             return this;
         }
-
         public Builder encryption(EncryptionPropertiesResponse encryption) {
             this.encryption = Objects.requireNonNull(encryption);
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder identity(@Nullable BatchAccountIdentityResponse identity) {
             this.identity = identity;
             return this;
         }
-
         public Builder keyVaultReference(KeyVaultReferenceResponse keyVaultReference) {
             this.keyVaultReference = Objects.requireNonNull(keyVaultReference);
             return this;
         }
-
         public Builder location(String location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
-
         public Builder lowPriorityCoreQuota(Integer lowPriorityCoreQuota) {
             this.lowPriorityCoreQuota = Objects.requireNonNull(lowPriorityCoreQuota);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder poolAllocationMode(String poolAllocationMode) {
             this.poolAllocationMode = Objects.requireNonNull(poolAllocationMode);
             return this;
         }
-
         public Builder poolQuota(Integer poolQuota) {
             this.poolQuota = Objects.requireNonNull(poolQuota);
             return this;
         }
-
         public Builder privateEndpointConnections(List<PrivateEndpointConnectionResponse> privateEndpointConnections) {
             this.privateEndpointConnections = Objects.requireNonNull(privateEndpointConnections);
             return this;
         }
-
+        public Builder privateEndpointConnections(PrivateEndpointConnectionResponse... privateEndpointConnections) {
+            return privateEndpointConnections(List.of(privateEndpointConnections));
+        }
         public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
-
         public Builder publicNetworkAccess(String publicNetworkAccess) {
             this.publicNetworkAccess = Objects.requireNonNull(publicNetworkAccess);
             return this;
         }
-
         public Builder tags(Map<String,String> tags) {
             this.tags = Objects.requireNonNull(tags);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public GetBatchAccountResult build() {
+        }        public GetBatchAccountResult build() {
             return new GetBatchAccountResult(accountEndpoint, activeJobAndJobScheduleQuota, autoStorage, dedicatedCoreQuota, dedicatedCoreQuotaPerVMFamily, dedicatedCoreQuotaPerVMFamilyEnforced, encryption, id, identity, keyVaultReference, location, lowPriorityCoreQuota, name, poolAllocationMode, poolQuota, privateEndpointConnections, provisioningState, publicNetworkAccess, tags, type);
         }
     }

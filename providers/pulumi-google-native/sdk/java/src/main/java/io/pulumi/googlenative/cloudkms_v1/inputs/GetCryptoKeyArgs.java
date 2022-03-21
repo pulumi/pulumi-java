@@ -90,22 +90,18 @@ public final class GetCryptoKeyArgs extends io.pulumi.resources.InvokeArgs {
             this.cryptoKeyId = Objects.requireNonNull(cryptoKeyId);
             return this;
         }
-
         public Builder keyRingId(String keyRingId) {
             this.keyRingId = Objects.requireNonNull(keyRingId);
             return this;
         }
-
         public Builder location(String location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = project;
             return this;
-        }
-        public GetCryptoKeyArgs build() {
+        }        public GetCryptoKeyArgs build() {
             return new GetCryptoKeyArgs(cryptoKeyId, keyRingId, location, project);
         }
     }

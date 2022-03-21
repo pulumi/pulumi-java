@@ -69,12 +69,10 @@ public final class GoogleCloudDatacatalogV1DataSourceResponse {
             this.resource = Objects.requireNonNull(resource);
             return this;
         }
-
         public Builder service(String service) {
             this.service = Objects.requireNonNull(service);
             return this;
-        }
-        public GoogleCloudDatacatalogV1DataSourceResponse build() {
+        }        public GoogleCloudDatacatalogV1DataSourceResponse build() {
             return new GoogleCloudDatacatalogV1DataSourceResponse(resource, service);
         }
     }

@@ -62,12 +62,10 @@ public final class PodIPArgs extends io.pulumi.resources.ResourceArgs {
             this.ip = ip;
             return this;
         }
-
         public Builder ip(@Nullable String ip) {
             this.ip = Output.ofNullable(ip);
             return this;
-        }
-        public PodIPArgs build() {
+        }        public PodIPArgs build() {
             return new PodIPArgs(ip);
         }
     }

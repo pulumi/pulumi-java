@@ -157,72 +157,58 @@ public final class EventHubArgs extends io.pulumi.resources.ResourceArgs {
             this.captureDescription = captureDescription;
             return this;
         }
-
         public Builder captureDescription(@Nullable CaptureDescriptionArgs captureDescription) {
             this.captureDescription = Output.ofNullable(captureDescription);
             return this;
         }
-
         public Builder eventHubName(@Nullable Output<String> eventHubName) {
             this.eventHubName = eventHubName;
             return this;
         }
-
         public Builder eventHubName(@Nullable String eventHubName) {
             this.eventHubName = Output.ofNullable(eventHubName);
             return this;
         }
-
         public Builder messageRetentionInDays(@Nullable Output<Double> messageRetentionInDays) {
             this.messageRetentionInDays = messageRetentionInDays;
             return this;
         }
-
         public Builder messageRetentionInDays(@Nullable Double messageRetentionInDays) {
             this.messageRetentionInDays = Output.ofNullable(messageRetentionInDays);
             return this;
         }
-
         public Builder namespaceName(Output<String> namespaceName) {
             this.namespaceName = Objects.requireNonNull(namespaceName);
             return this;
         }
-
         public Builder namespaceName(String namespaceName) {
             this.namespaceName = Output.of(Objects.requireNonNull(namespaceName));
             return this;
         }
-
         public Builder partitionCount(@Nullable Output<Double> partitionCount) {
             this.partitionCount = partitionCount;
             return this;
         }
-
         public Builder partitionCount(@Nullable Double partitionCount) {
             this.partitionCount = Output.ofNullable(partitionCount);
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder status(@Nullable Output<EntityStatus> status) {
             this.status = status;
             return this;
         }
-
         public Builder status(@Nullable EntityStatus status) {
             this.status = Output.ofNullable(status);
             return this;
-        }
-        public EventHubArgs build() {
+        }        public EventHubArgs build() {
             return new EventHubArgs(captureDescription, eventHubName, messageRetentionInDays, namespaceName, partitionCount, resourceGroupName, status);
         }
     }

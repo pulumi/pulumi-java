@@ -107,42 +107,34 @@ public final class RegisteredAsnArgs extends io.pulumi.resources.ResourceArgs {
             this.asn = asn;
             return this;
         }
-
         public Builder asn(@Nullable Integer asn) {
             this.asn = Output.ofNullable(asn);
             return this;
         }
-
         public Builder peeringName(Output<String> peeringName) {
             this.peeringName = Objects.requireNonNull(peeringName);
             return this;
         }
-
         public Builder peeringName(String peeringName) {
             this.peeringName = Output.of(Objects.requireNonNull(peeringName));
             return this;
         }
-
         public Builder registeredAsnName(@Nullable Output<String> registeredAsnName) {
             this.registeredAsnName = registeredAsnName;
             return this;
         }
-
         public Builder registeredAsnName(@Nullable String registeredAsnName) {
             this.registeredAsnName = Output.ofNullable(registeredAsnName);
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
-        }
-        public RegisteredAsnArgs build() {
+        }        public RegisteredAsnArgs build() {
             return new RegisteredAsnArgs(asn, peeringName, registeredAsnName, resourceGroupName);
         }
     }

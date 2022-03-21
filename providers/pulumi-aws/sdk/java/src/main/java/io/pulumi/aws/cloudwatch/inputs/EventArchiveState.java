@@ -139,62 +139,50 @@ public final class EventArchiveState extends io.pulumi.resources.ResourceArgs {
             this.arn = arn;
             return this;
         }
-
         public Builder arn(@Nullable String arn) {
             this.arn = Output.ofNullable(arn);
             return this;
         }
-
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder eventPattern(@Nullable Output<String> eventPattern) {
             this.eventPattern = eventPattern;
             return this;
         }
-
         public Builder eventPattern(@Nullable String eventPattern) {
             this.eventPattern = Output.ofNullable(eventPattern);
             return this;
         }
-
         public Builder eventSourceArn(@Nullable Output<String> eventSourceArn) {
             this.eventSourceArn = eventSourceArn;
             return this;
         }
-
         public Builder eventSourceArn(@Nullable String eventSourceArn) {
             this.eventSourceArn = Output.ofNullable(eventSourceArn);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder retentionDays(@Nullable Output<Integer> retentionDays) {
             this.retentionDays = retentionDays;
             return this;
         }
-
         public Builder retentionDays(@Nullable Integer retentionDays) {
             this.retentionDays = Output.ofNullable(retentionDays);
             return this;
-        }
-        public EventArchiveState build() {
+        }        public EventArchiveState build() {
             return new EventArchiveState(arn, description, eventPattern, eventSourceArn, name, retentionDays);
         }
     }

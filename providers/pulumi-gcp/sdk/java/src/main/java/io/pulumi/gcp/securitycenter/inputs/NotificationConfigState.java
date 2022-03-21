@@ -159,72 +159,58 @@ public final class NotificationConfigState extends io.pulumi.resources.ResourceA
             this.configId = configId;
             return this;
         }
-
         public Builder configId(@Nullable String configId) {
             this.configId = Output.ofNullable(configId);
             return this;
         }
-
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder organization(@Nullable Output<String> organization) {
             this.organization = organization;
             return this;
         }
-
         public Builder organization(@Nullable String organization) {
             this.organization = Output.ofNullable(organization);
             return this;
         }
-
         public Builder pubsubTopic(@Nullable Output<String> pubsubTopic) {
             this.pubsubTopic = pubsubTopic;
             return this;
         }
-
         public Builder pubsubTopic(@Nullable String pubsubTopic) {
             this.pubsubTopic = Output.ofNullable(pubsubTopic);
             return this;
         }
-
         public Builder serviceAccount(@Nullable Output<String> serviceAccount) {
             this.serviceAccount = serviceAccount;
             return this;
         }
-
         public Builder serviceAccount(@Nullable String serviceAccount) {
             this.serviceAccount = Output.ofNullable(serviceAccount);
             return this;
         }
-
         public Builder streamingConfig(@Nullable Output<NotificationConfigStreamingConfigGetArgs> streamingConfig) {
             this.streamingConfig = streamingConfig;
             return this;
         }
-
         public Builder streamingConfig(@Nullable NotificationConfigStreamingConfigGetArgs streamingConfig) {
             this.streamingConfig = Output.ofNullable(streamingConfig);
             return this;
-        }
-        public NotificationConfigState build() {
+        }        public NotificationConfigState build() {
             return new NotificationConfigState(configId, description, name, organization, pubsubTopic, serviceAccount, streamingConfig);
         }
     }

@@ -90,17 +90,14 @@ public final class IntentFollowUpPromptRejectionStatementMessage {
             this.content = Objects.requireNonNull(content);
             return this;
         }
-
         public Builder contentType(String contentType) {
             this.contentType = Objects.requireNonNull(contentType);
             return this;
         }
-
         public Builder groupNumber(@Nullable Integer groupNumber) {
             this.groupNumber = groupNumber;
             return this;
-        }
-        public IntentFollowUpPromptRejectionStatementMessage build() {
+        }        public IntentFollowUpPromptRejectionStatementMessage build() {
             return new IntentFollowUpPromptRejectionStatementMessage(content, contentType, groupNumber);
         }
     }

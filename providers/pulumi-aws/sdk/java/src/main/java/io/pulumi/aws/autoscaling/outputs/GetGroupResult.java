@@ -337,102 +337,97 @@ public final class GetGroupResult {
             this.arn = Objects.requireNonNull(arn);
             return this;
         }
-
         public Builder availabilityZones(List<String> availabilityZones) {
             this.availabilityZones = Objects.requireNonNull(availabilityZones);
             return this;
         }
-
+        public Builder availabilityZones(String... availabilityZones) {
+            return availabilityZones(List.of(availabilityZones));
+        }
         public Builder defaultCooldown(Integer defaultCooldown) {
             this.defaultCooldown = Objects.requireNonNull(defaultCooldown);
             return this;
         }
-
         public Builder desiredCapacity(Integer desiredCapacity) {
             this.desiredCapacity = Objects.requireNonNull(desiredCapacity);
             return this;
         }
-
         public Builder healthCheckGracePeriod(Integer healthCheckGracePeriod) {
             this.healthCheckGracePeriod = Objects.requireNonNull(healthCheckGracePeriod);
             return this;
         }
-
         public Builder healthCheckType(String healthCheckType) {
             this.healthCheckType = Objects.requireNonNull(healthCheckType);
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder launchConfiguration(String launchConfiguration) {
             this.launchConfiguration = Objects.requireNonNull(launchConfiguration);
             return this;
         }
-
         public Builder launchTemplates(List<GetGroupLaunchTemplate> launchTemplates) {
             this.launchTemplates = Objects.requireNonNull(launchTemplates);
             return this;
         }
-
+        public Builder launchTemplates(GetGroupLaunchTemplate... launchTemplates) {
+            return launchTemplates(List.of(launchTemplates));
+        }
         public Builder loadBalancers(List<String> loadBalancers) {
             this.loadBalancers = Objects.requireNonNull(loadBalancers);
             return this;
         }
-
+        public Builder loadBalancers(String... loadBalancers) {
+            return loadBalancers(List.of(loadBalancers));
+        }
         public Builder maxSize(Integer maxSize) {
             this.maxSize = Objects.requireNonNull(maxSize);
             return this;
         }
-
         public Builder minSize(Integer minSize) {
             this.minSize = Objects.requireNonNull(minSize);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder newInstancesProtectedFromScaleIn(Boolean newInstancesProtectedFromScaleIn) {
             this.newInstancesProtectedFromScaleIn = Objects.requireNonNull(newInstancesProtectedFromScaleIn);
             return this;
         }
-
         public Builder placementGroup(String placementGroup) {
             this.placementGroup = Objects.requireNonNull(placementGroup);
             return this;
         }
-
         public Builder serviceLinkedRoleArn(String serviceLinkedRoleArn) {
             this.serviceLinkedRoleArn = Objects.requireNonNull(serviceLinkedRoleArn);
             return this;
         }
-
         public Builder status(String status) {
             this.status = Objects.requireNonNull(status);
             return this;
         }
-
         public Builder targetGroupArns(List<String> targetGroupArns) {
             this.targetGroupArns = Objects.requireNonNull(targetGroupArns);
             return this;
         }
-
+        public Builder targetGroupArns(String... targetGroupArns) {
+            return targetGroupArns(List.of(targetGroupArns));
+        }
         public Builder terminationPolicies(List<String> terminationPolicies) {
             this.terminationPolicies = Objects.requireNonNull(terminationPolicies);
             return this;
         }
-
+        public Builder terminationPolicies(String... terminationPolicies) {
+            return terminationPolicies(List.of(terminationPolicies));
+        }
         public Builder vpcZoneIdentifier(String vpcZoneIdentifier) {
             this.vpcZoneIdentifier = Objects.requireNonNull(vpcZoneIdentifier);
             return this;
-        }
-        public GetGroupResult build() {
+        }        public GetGroupResult build() {
             return new GetGroupResult(arn, availabilityZones, defaultCooldown, desiredCapacity, healthCheckGracePeriod, healthCheckType, id, launchConfiguration, launchTemplates, loadBalancers, maxSize, minSize, name, newInstancesProtectedFromScaleIn, placementGroup, serviceLinkedRoleArn, status, targetGroupArns, terminationPolicies, vpcZoneIdentifier);
         }
     }

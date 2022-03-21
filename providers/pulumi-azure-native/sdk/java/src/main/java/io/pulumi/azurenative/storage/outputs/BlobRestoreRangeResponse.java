@@ -69,12 +69,10 @@ public final class BlobRestoreRangeResponse {
             this.endRange = Objects.requireNonNull(endRange);
             return this;
         }
-
         public Builder startRange(String startRange) {
             this.startRange = Objects.requireNonNull(startRange);
             return this;
-        }
-        public BlobRestoreRangeResponse build() {
+        }        public BlobRestoreRangeResponse build() {
             return new BlobRestoreRangeResponse(endRange, startRange);
         }
     }

@@ -119,27 +119,22 @@ public final class GetIPv6FirewallRuleResult {
             this.endIPv6Address = endIPv6Address;
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
-
         public Builder startIPv6Address(@Nullable String startIPv6Address) {
             this.startIPv6Address = startIPv6Address;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public GetIPv6FirewallRuleResult build() {
+        }        public GetIPv6FirewallRuleResult build() {
             return new GetIPv6FirewallRuleResult(endIPv6Address, id, name, startIPv6Address, type);
         }
     }

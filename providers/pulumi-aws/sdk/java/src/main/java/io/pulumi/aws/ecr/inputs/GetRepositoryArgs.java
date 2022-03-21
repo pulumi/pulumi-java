@@ -91,17 +91,14 @@ public final class GetRepositoryArgs extends io.pulumi.resources.InvokeArgs {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder registryId(@Nullable String registryId) {
             this.registryId = registryId;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
-        }
-        public GetRepositoryArgs build() {
+        }        public GetRepositoryArgs build() {
             return new GetRepositoryArgs(name, registryId, tags);
         }
     }

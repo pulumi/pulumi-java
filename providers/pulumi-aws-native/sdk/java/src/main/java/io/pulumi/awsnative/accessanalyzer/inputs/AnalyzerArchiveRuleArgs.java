@@ -75,22 +75,21 @@ public final class AnalyzerArchiveRuleArgs extends io.pulumi.resources.ResourceA
             this.filter = Objects.requireNonNull(filter);
             return this;
         }
-
         public Builder filter(List<AnalyzerFilterArgs> filter) {
             this.filter = Output.of(Objects.requireNonNull(filter));
             return this;
         }
-
+        public Builder filter(AnalyzerFilterArgs... filter) {
+            return filter(List.of(filter));
+        }
         public Builder ruleName(Output<String> ruleName) {
             this.ruleName = Objects.requireNonNull(ruleName);
             return this;
         }
-
         public Builder ruleName(String ruleName) {
             this.ruleName = Output.of(Objects.requireNonNull(ruleName));
             return this;
-        }
-        public AnalyzerArchiveRuleArgs build() {
+        }        public AnalyzerArchiveRuleArgs build() {
             return new AnalyzerArchiveRuleArgs(filter, ruleName);
         }
     }

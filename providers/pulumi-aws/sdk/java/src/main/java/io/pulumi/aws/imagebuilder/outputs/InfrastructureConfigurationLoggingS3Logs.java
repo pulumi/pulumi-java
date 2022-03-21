@@ -71,12 +71,10 @@ public final class InfrastructureConfigurationLoggingS3Logs {
             this.s3BucketName = Objects.requireNonNull(s3BucketName);
             return this;
         }
-
         public Builder s3KeyPrefix(@Nullable String s3KeyPrefix) {
             this.s3KeyPrefix = s3KeyPrefix;
             return this;
-        }
-        public InfrastructureConfigurationLoggingS3Logs build() {
+        }        public InfrastructureConfigurationLoggingS3Logs build() {
             return new InfrastructureConfigurationLoggingS3Logs(s3BucketName, s3KeyPrefix);
         }
     }

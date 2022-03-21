@@ -72,12 +72,13 @@ public final class BotAliasConversationLogs {
             this.iamRoleArn = Objects.requireNonNull(iamRoleArn);
             return this;
         }
-
         public Builder logSettings(@Nullable List<BotAliasConversationLogsLogSetting> logSettings) {
             this.logSettings = logSettings;
             return this;
         }
-        public BotAliasConversationLogs build() {
+        public Builder logSettings(BotAliasConversationLogsLogSetting... logSettings) {
+            return logSettings(List.of(logSettings));
+        }        public BotAliasConversationLogs build() {
             return new BotAliasConversationLogs(iamRoleArn, logSettings);
         }
     }

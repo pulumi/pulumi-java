@@ -76,12 +76,10 @@ public final class FilterFileDetailsResponse extends io.pulumi.resources.InvokeA
             this.filterFilePath = Objects.requireNonNull(filterFilePath);
             return this;
         }
-
         public Builder filterFileType(String filterFileType) {
             this.filterFileType = Objects.requireNonNull(filterFileType);
             return this;
-        }
-        public FilterFileDetailsResponse build() {
+        }        public FilterFileDetailsResponse build() {
             return new FilterFileDetailsResponse(filterFilePath, filterFileType);
         }
     }

@@ -217,42 +217,34 @@ public final class ServiceTemplateMetadata {
             this.annotations = annotations;
             return this;
         }
-
         public Builder generation(@Nullable Integer generation) {
             this.generation = generation;
             return this;
         }
-
         public Builder labels(@Nullable Map<String,String> labels) {
             this.labels = labels;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
-
         public Builder namespace(@Nullable String namespace) {
             this.namespace = namespace;
             return this;
         }
-
         public Builder resourceVersion(@Nullable String resourceVersion) {
             this.resourceVersion = resourceVersion;
             return this;
         }
-
         public Builder selfLink(@Nullable String selfLink) {
             this.selfLink = selfLink;
             return this;
         }
-
         public Builder uid(@Nullable String uid) {
             this.uid = uid;
             return this;
-        }
-        public ServiceTemplateMetadata build() {
+        }        public ServiceTemplateMetadata build() {
             return new ServiceTemplateMetadata(annotations, generation, labels, name, namespace, resourceVersion, selfLink, uid);
         }
     }

@@ -336,92 +336,74 @@ public final class GetOccurrenceResult {
             this.attestation = Objects.requireNonNull(attestation);
             return this;
         }
-
         public Builder build(BuildOccurrenceResponse build) {
             this.build = Objects.requireNonNull(build);
             return this;
         }
-
         public Builder compliance(ComplianceOccurrenceResponse compliance) {
             this.compliance = Objects.requireNonNull(compliance);
             return this;
         }
-
         public Builder createTime(String createTime) {
             this.createTime = Objects.requireNonNull(createTime);
             return this;
         }
-
         public Builder deployment(DeploymentOccurrenceResponse deployment) {
             this.deployment = Objects.requireNonNull(deployment);
             return this;
         }
-
         public Builder discovery(DiscoveryOccurrenceResponse discovery) {
             this.discovery = Objects.requireNonNull(discovery);
             return this;
         }
-
         public Builder dsseAttestation(DSSEAttestationOccurrenceResponse dsseAttestation) {
             this.dsseAttestation = Objects.requireNonNull(dsseAttestation);
             return this;
         }
-
         public Builder envelope(EnvelopeResponse envelope) {
             this.envelope = Objects.requireNonNull(envelope);
             return this;
         }
-
         public Builder image(ImageOccurrenceResponse image) {
             this.image = Objects.requireNonNull(image);
             return this;
         }
-
         public Builder kind(String kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder noteName(String noteName) {
             this.noteName = Objects.requireNonNull(noteName);
             return this;
         }
-
         public Builder $package(PackageOccurrenceResponse $package) {
             this.$package = Objects.requireNonNull($package);
             return this;
         }
-
         public Builder remediation(String remediation) {
             this.remediation = Objects.requireNonNull(remediation);
             return this;
         }
-
         public Builder resourceUri(String resourceUri) {
             this.resourceUri = Objects.requireNonNull(resourceUri);
             return this;
         }
-
         public Builder updateTime(String updateTime) {
             this.updateTime = Objects.requireNonNull(updateTime);
             return this;
         }
-
         public Builder upgrade(UpgradeOccurrenceResponse upgrade) {
             this.upgrade = Objects.requireNonNull(upgrade);
             return this;
         }
-
         public Builder vulnerability(VulnerabilityOccurrenceResponse vulnerability) {
             this.vulnerability = Objects.requireNonNull(vulnerability);
             return this;
-        }
-        public GetOccurrenceResult build() {
+        }        public GetOccurrenceResult build() {
             return new GetOccurrenceResult(attestation, build, compliance, createTime, deployment, discovery, dsseAttestation, envelope, image, kind, name, noteName, $package, remediation, resourceUri, updateTime, upgrade, vulnerability);
         }
     }

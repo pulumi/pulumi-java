@@ -52,12 +52,10 @@ public final class FileSystemBackupPolicyArgs extends io.pulumi.resources.Resour
             this.status = Objects.requireNonNull(status);
             return this;
         }
-
         public Builder status(String status) {
             this.status = Output.of(Objects.requireNonNull(status));
             return this;
-        }
-        public FileSystemBackupPolicyArgs build() {
+        }        public FileSystemBackupPolicyArgs build() {
             return new FileSystemBackupPolicyArgs(status);
         }
     }

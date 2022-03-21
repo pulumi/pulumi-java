@@ -104,22 +104,21 @@ public final class IntegrationRuntimeVNetPropertiesResponse {
             this.publicIPs = publicIPs;
             return this;
         }
-
+        public Builder publicIPs(String... publicIPs) {
+            return publicIPs(List.of(publicIPs));
+        }
         public Builder subnet(@Nullable String subnet) {
             this.subnet = subnet;
             return this;
         }
-
         public Builder subnetId(@Nullable String subnetId) {
             this.subnetId = subnetId;
             return this;
         }
-
         public Builder vNetId(@Nullable String vNetId) {
             this.vNetId = vNetId;
             return this;
-        }
-        public IntegrationRuntimeVNetPropertiesResponse build() {
+        }        public IntegrationRuntimeVNetPropertiesResponse build() {
             return new IntegrationRuntimeVNetPropertiesResponse(publicIPs, subnet, subnetId, vNetId);
         }
     }

@@ -55,8 +55,7 @@ public final class MeshSpecEgressFilter {
         public Builder type(@Nullable String type) {
             this.type = type;
             return this;
-        }
-        public MeshSpecEgressFilter build() {
+        }        public MeshSpecEgressFilter build() {
             return new MeshSpecEgressFilter(type);
         }
     }

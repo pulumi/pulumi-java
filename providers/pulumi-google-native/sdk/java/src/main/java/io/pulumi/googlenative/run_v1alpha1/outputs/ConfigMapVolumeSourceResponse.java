@@ -105,22 +105,21 @@ public final class ConfigMapVolumeSourceResponse {
             this.defaultMode = Objects.requireNonNull(defaultMode);
             return this;
         }
-
         public Builder items(List<KeyToPathResponse> items) {
             this.items = Objects.requireNonNull(items);
             return this;
         }
-
+        public Builder items(KeyToPathResponse... items) {
+            return items(List.of(items));
+        }
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder optional(Boolean optional) {
             this.optional = Objects.requireNonNull(optional);
             return this;
-        }
-        public ConfigMapVolumeSourceResponse build() {
+        }        public ConfigMapVolumeSourceResponse build() {
             return new ConfigMapVolumeSourceResponse(defaultMode, items, name, optional);
         }
     }

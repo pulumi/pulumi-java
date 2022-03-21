@@ -121,27 +121,25 @@ public final class SuppressionScheduleResponse {
             this.endDate = endDate;
             return this;
         }
-
         public Builder endTime(@Nullable String endTime) {
             this.endTime = endTime;
             return this;
         }
-
         public Builder recurrenceValues(@Nullable List<Integer> recurrenceValues) {
             this.recurrenceValues = recurrenceValues;
             return this;
         }
-
+        public Builder recurrenceValues(Integer... recurrenceValues) {
+            return recurrenceValues(List.of(recurrenceValues));
+        }
         public Builder startDate(@Nullable String startDate) {
             this.startDate = startDate;
             return this;
         }
-
         public Builder startTime(@Nullable String startTime) {
             this.startTime = startTime;
             return this;
-        }
-        public SuppressionScheduleResponse build() {
+        }        public SuppressionScheduleResponse build() {
             return new SuppressionScheduleResponse(endDate, endTime, recurrenceValues, startDate, startTime);
         }
     }

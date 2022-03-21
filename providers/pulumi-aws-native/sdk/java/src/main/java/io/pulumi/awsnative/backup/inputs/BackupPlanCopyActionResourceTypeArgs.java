@@ -67,22 +67,18 @@ public final class BackupPlanCopyActionResourceTypeArgs extends io.pulumi.resour
             this.destinationBackupVaultArn = Objects.requireNonNull(destinationBackupVaultArn);
             return this;
         }
-
         public Builder destinationBackupVaultArn(String destinationBackupVaultArn) {
             this.destinationBackupVaultArn = Output.of(Objects.requireNonNull(destinationBackupVaultArn));
             return this;
         }
-
         public Builder lifecycle(@Nullable Output<BackupPlanLifecycleResourceTypeArgs> lifecycle) {
             this.lifecycle = lifecycle;
             return this;
         }
-
         public Builder lifecycle(@Nullable BackupPlanLifecycleResourceTypeArgs lifecycle) {
             this.lifecycle = Output.ofNullable(lifecycle);
             return this;
-        }
-        public BackupPlanCopyActionResourceTypeArgs build() {
+        }        public BackupPlanCopyActionResourceTypeArgs build() {
             return new BackupPlanCopyActionResourceTypeArgs(destinationBackupVaultArn, lifecycle);
         }
     }

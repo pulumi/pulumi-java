@@ -162,37 +162,30 @@ public final class SolutionPropertiesResponse extends io.pulumi.resources.Invoke
             this.cleanupState = cleanupState;
             return this;
         }
-
         public Builder details(@Nullable SolutionDetailsResponse details) {
             this.details = details;
             return this;
         }
-
         public Builder goal(@Nullable String goal) {
             this.goal = goal;
             return this;
         }
-
         public Builder purpose(@Nullable String purpose) {
             this.purpose = purpose;
             return this;
         }
-
         public Builder status(@Nullable String status) {
             this.status = status;
             return this;
         }
-
         public Builder summary(@Nullable Either<DatabasesSolutionSummaryResponse,ServersSolutionSummaryResponse> summary) {
             this.summary = summary;
             return this;
         }
-
         public Builder tool(@Nullable String tool) {
             this.tool = tool;
             return this;
-        }
-        public SolutionPropertiesResponse build() {
+        }        public SolutionPropertiesResponse build() {
             return new SolutionPropertiesResponse(cleanupState, details, goal, purpose, status, summary, tool);
         }
     }

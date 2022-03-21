@@ -94,17 +94,14 @@ public final class CertificateConfigResponse extends io.pulumi.resources.InvokeA
             this.publicKey = Objects.requireNonNull(publicKey);
             return this;
         }
-
         public Builder subjectConfig(SubjectConfigResponse subjectConfig) {
             this.subjectConfig = Objects.requireNonNull(subjectConfig);
             return this;
         }
-
         public Builder x509Config(X509ParametersResponse x509Config) {
             this.x509Config = Objects.requireNonNull(x509Config);
             return this;
-        }
-        public CertificateConfigResponse build() {
+        }        public CertificateConfigResponse build() {
             return new CertificateConfigResponse(publicKey, subjectConfig, x509Config);
         }
     }

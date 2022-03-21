@@ -62,7 +62,9 @@ public final class UserObjectReceiverValueResponse extends io.pulumi.resources.I
             this.userObjectIds = userObjectIds;
             return this;
         }
-        public UserObjectReceiverValueResponse build() {
+        public Builder userObjectIds(String... userObjectIds) {
+            return userObjectIds(List.of(userObjectIds));
+        }        public UserObjectReceiverValueResponse build() {
             return new UserObjectReceiverValueResponse(userObjectIds);
         }
     }

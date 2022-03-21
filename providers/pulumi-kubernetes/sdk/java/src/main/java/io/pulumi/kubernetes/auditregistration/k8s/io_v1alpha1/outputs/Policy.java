@@ -71,12 +71,13 @@ public final class Policy {
             this.level = Objects.requireNonNull(level);
             return this;
         }
-
         public Builder stages(@Nullable List<String> stages) {
             this.stages = stages;
             return this;
         }
-        public Policy build() {
+        public Builder stages(String... stages) {
+            return stages(List.of(stages));
+        }        public Policy build() {
             return new Policy(level, stages);
         }
     }

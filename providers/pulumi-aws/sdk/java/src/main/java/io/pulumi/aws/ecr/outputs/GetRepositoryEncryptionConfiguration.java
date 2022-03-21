@@ -69,12 +69,10 @@ public final class GetRepositoryEncryptionConfiguration {
             this.encryptionType = Objects.requireNonNull(encryptionType);
             return this;
         }
-
         public Builder kmsKey(String kmsKey) {
             this.kmsKey = Objects.requireNonNull(kmsKey);
             return this;
-        }
-        public GetRepositoryEncryptionConfiguration build() {
+        }        public GetRepositoryEncryptionConfiguration build() {
             return new GetRepositoryEncryptionConfiguration(encryptionType, kmsKey);
         }
     }

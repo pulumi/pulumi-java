@@ -53,8 +53,7 @@ public final class DetectorDatasources {
         public Builder s3Logs(@Nullable DetectorDatasourcesS3Logs s3Logs) {
             this.s3Logs = s3Logs;
             return this;
-        }
-        public DetectorDatasources build() {
+        }        public DetectorDatasources build() {
             return new DetectorDatasources(s3Logs);
         }
     }

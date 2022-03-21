@@ -217,57 +217,46 @@ public final class ExpressRouteCircuitConnectionResponse {
             this.addressPrefix = addressPrefix;
             return this;
         }
-
         public Builder authorizationKey(@Nullable String authorizationKey) {
             this.authorizationKey = authorizationKey;
             return this;
         }
-
         public Builder circuitConnectionStatus(String circuitConnectionStatus) {
             this.circuitConnectionStatus = Objects.requireNonNull(circuitConnectionStatus);
             return this;
         }
-
         public Builder etag(String etag) {
             this.etag = Objects.requireNonNull(etag);
             return this;
         }
-
         public Builder expressRouteCircuitPeering(@Nullable SubResourceResponse expressRouteCircuitPeering) {
             this.expressRouteCircuitPeering = expressRouteCircuitPeering;
             return this;
         }
-
         public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
-
         public Builder ipv6CircuitConnectionConfig(@Nullable Ipv6CircuitConnectionConfigResponse ipv6CircuitConnectionConfig) {
             this.ipv6CircuitConnectionConfig = ipv6CircuitConnectionConfig;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
-
         public Builder peerExpressRouteCircuitPeering(@Nullable SubResourceResponse peerExpressRouteCircuitPeering) {
             this.peerExpressRouteCircuitPeering = peerExpressRouteCircuitPeering;
             return this;
         }
-
         public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public ExpressRouteCircuitConnectionResponse build() {
+        }        public ExpressRouteCircuitConnectionResponse build() {
             return new ExpressRouteCircuitConnectionResponse(addressPrefix, authorizationKey, circuitConnectionStatus, etag, expressRouteCircuitPeering, id, ipv6CircuitConnectionConfig, name, peerExpressRouteCircuitPeering, provisioningState, type);
         }
     }

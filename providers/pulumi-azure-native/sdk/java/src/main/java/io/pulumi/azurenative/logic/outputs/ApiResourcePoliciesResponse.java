@@ -71,12 +71,10 @@ public final class ApiResourcePoliciesResponse {
             this.content = content;
             return this;
         }
-
         public Builder contentLink(@Nullable String contentLink) {
             this.contentLink = contentLink;
             return this;
-        }
-        public ApiResourcePoliciesResponse build() {
+        }        public ApiResourcePoliciesResponse build() {
             return new ApiResourcePoliciesResponse(content, contentLink);
         }
     }

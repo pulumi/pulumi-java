@@ -204,52 +204,45 @@ public final class GetExpressRouteGatewayResult {
             this.autoScaleConfiguration = autoScaleConfiguration;
             return this;
         }
-
         public Builder etag(String etag) {
             this.etag = Objects.requireNonNull(etag);
             return this;
         }
-
         public Builder expressRouteConnections(List<ExpressRouteConnectionResponse> expressRouteConnections) {
             this.expressRouteConnections = Objects.requireNonNull(expressRouteConnections);
             return this;
         }
-
+        public Builder expressRouteConnections(ExpressRouteConnectionResponse... expressRouteConnections) {
+            return expressRouteConnections(List.of(expressRouteConnections));
+        }
         public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = location;
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder virtualHub(VirtualHubIdResponse virtualHub) {
             this.virtualHub = Objects.requireNonNull(virtualHub);
             return this;
-        }
-        public GetExpressRouteGatewayResult build() {
+        }        public GetExpressRouteGatewayResult build() {
             return new GetExpressRouteGatewayResult(autoScaleConfiguration, etag, expressRouteConnections, id, location, name, provisioningState, tags, type, virtualHub);
         }
     }

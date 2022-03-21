@@ -157,72 +157,70 @@ public final class SelectionState extends io.pulumi.resources.ResourceArgs {
             this.conditions = conditions;
             return this;
         }
-
         public Builder conditions(@Nullable List<SelectionConditionGetArgs> conditions) {
             this.conditions = Output.ofNullable(conditions);
             return this;
         }
-
+        public Builder conditions(SelectionConditionGetArgs... conditions) {
+            return conditions(List.of(conditions));
+        }
         public Builder iamRoleArn(@Nullable Output<String> iamRoleArn) {
             this.iamRoleArn = iamRoleArn;
             return this;
         }
-
         public Builder iamRoleArn(@Nullable String iamRoleArn) {
             this.iamRoleArn = Output.ofNullable(iamRoleArn);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder notResources(@Nullable Output<List<String>> notResources) {
             this.notResources = notResources;
             return this;
         }
-
         public Builder notResources(@Nullable List<String> notResources) {
             this.notResources = Output.ofNullable(notResources);
             return this;
         }
-
+        public Builder notResources(String... notResources) {
+            return notResources(List.of(notResources));
+        }
         public Builder planId(@Nullable Output<String> planId) {
             this.planId = planId;
             return this;
         }
-
         public Builder planId(@Nullable String planId) {
             this.planId = Output.ofNullable(planId);
             return this;
         }
-
         public Builder resources(@Nullable Output<List<String>> resources) {
             this.resources = resources;
             return this;
         }
-
         public Builder resources(@Nullable List<String> resources) {
             this.resources = Output.ofNullable(resources);
             return this;
         }
-
+        public Builder resources(String... resources) {
+            return resources(List.of(resources));
+        }
         public Builder selectionTags(@Nullable Output<List<SelectionSelectionTagGetArgs>> selectionTags) {
             this.selectionTags = selectionTags;
             return this;
         }
-
         public Builder selectionTags(@Nullable List<SelectionSelectionTagGetArgs> selectionTags) {
             this.selectionTags = Output.ofNullable(selectionTags);
             return this;
         }
-        public SelectionState build() {
+        public Builder selectionTags(SelectionSelectionTagGetArgs... selectionTags) {
+            return selectionTags(List.of(selectionTags));
+        }        public SelectionState build() {
             return new SelectionState(conditions, iamRoleArn, name, notResources, planId, resources, selectionTags);
         }
     }

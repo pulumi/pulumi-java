@@ -105,22 +105,18 @@ public final class GetAppArgs extends io.pulumi.resources.InvokeArgs {
             this.appName = Objects.requireNonNull(appName);
             return this;
         }
-
         public Builder appType(AppType appType) {
             this.appType = Objects.requireNonNull(appType);
             return this;
         }
-
         public Builder domainId(String domainId) {
             this.domainId = Objects.requireNonNull(domainId);
             return this;
         }
-
         public Builder userProfileName(String userProfileName) {
             this.userProfileName = Objects.requireNonNull(userProfileName);
             return this;
-        }
-        public GetAppArgs build() {
+        }        public GetAppArgs build() {
             return new GetAppArgs(appName, appType, domainId, userProfileName);
         }
     }

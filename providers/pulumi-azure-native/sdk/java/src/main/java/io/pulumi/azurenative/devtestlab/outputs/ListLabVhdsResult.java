@@ -73,12 +73,13 @@ public final class ListLabVhdsResult {
             this.nextLink = nextLink;
             return this;
         }
-
         public Builder value(@Nullable List<LabVhdResponse> value) {
             this.value = value;
             return this;
         }
-        public ListLabVhdsResult build() {
+        public Builder value(LabVhdResponse... value) {
+            return value(List.of(value));
+        }        public ListLabVhdsResult build() {
             return new ListLabVhdsResult(nextLink, value);
         }
     }

@@ -78,22 +78,18 @@ public final class PublishingOptionsArgs extends io.pulumi.resources.ResourceArg
             this.publishCaCert = publishCaCert;
             return this;
         }
-
         public Builder publishCaCert(@Nullable Boolean publishCaCert) {
             this.publishCaCert = Output.ofNullable(publishCaCert);
             return this;
         }
-
         public Builder publishCrl(@Nullable Output<Boolean> publishCrl) {
             this.publishCrl = publishCrl;
             return this;
         }
-
         public Builder publishCrl(@Nullable Boolean publishCrl) {
             this.publishCrl = Output.ofNullable(publishCrl);
             return this;
-        }
-        public PublishingOptionsArgs build() {
+        }        public PublishingOptionsArgs build() {
             return new PublishingOptionsArgs(publishCaCert, publishCrl);
         }
     }

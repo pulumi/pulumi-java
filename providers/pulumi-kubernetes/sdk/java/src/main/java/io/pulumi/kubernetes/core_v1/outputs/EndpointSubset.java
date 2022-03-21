@@ -88,17 +88,23 @@ public final class EndpointSubset {
             this.addresses = addresses;
             return this;
         }
-
+        public Builder addresses(EndpointAddress... addresses) {
+            return addresses(List.of(addresses));
+        }
         public Builder notReadyAddresses(@Nullable List<EndpointAddress> notReadyAddresses) {
             this.notReadyAddresses = notReadyAddresses;
             return this;
         }
-
+        public Builder notReadyAddresses(EndpointAddress... notReadyAddresses) {
+            return notReadyAddresses(List.of(notReadyAddresses));
+        }
         public Builder ports(@Nullable List<EndpointPort> ports) {
             this.ports = ports;
             return this;
         }
-        public EndpointSubset build() {
+        public Builder ports(EndpointPort... ports) {
+            return ports(List.of(ports));
+        }        public EndpointSubset build() {
             return new EndpointSubset(addresses, notReadyAddresses, ports);
         }
     }

@@ -69,12 +69,10 @@ public final class CertificateValidity {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder value(String value) {
             this.value = Objects.requireNonNull(value);
             return this;
-        }
-        public CertificateValidity build() {
+        }        public CertificateValidity build() {
             return new CertificateValidity(type, value);
         }
     }

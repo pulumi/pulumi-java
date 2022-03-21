@@ -69,12 +69,10 @@ public final class DeploymentGroupEcsService {
             this.clusterName = Objects.requireNonNull(clusterName);
             return this;
         }
-
         public Builder serviceName(String serviceName) {
             this.serviceName = Objects.requireNonNull(serviceName);
             return this;
-        }
-        public DeploymentGroupEcsService build() {
+        }        public DeploymentGroupEcsService build() {
             return new DeploymentGroupEcsService(clusterName, serviceName);
         }
     }

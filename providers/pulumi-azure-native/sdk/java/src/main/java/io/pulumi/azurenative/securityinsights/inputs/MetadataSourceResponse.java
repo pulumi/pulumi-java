@@ -94,17 +94,14 @@ public final class MetadataSourceResponse extends io.pulumi.resources.InvokeArgs
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
-
         public Builder sourceId(@Nullable String sourceId) {
             this.sourceId = sourceId;
             return this;
-        }
-        public MetadataSourceResponse build() {
+        }        public MetadataSourceResponse build() {
             return new MetadataSourceResponse(kind, name, sourceId);
         }
     }

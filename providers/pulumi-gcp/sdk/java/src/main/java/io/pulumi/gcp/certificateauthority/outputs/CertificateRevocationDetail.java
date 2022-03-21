@@ -55,12 +55,10 @@ public final class CertificateRevocationDetail {
             this.revocationState = revocationState;
             return this;
         }
-
         public Builder revocationTime(@Nullable String revocationTime) {
             this.revocationTime = revocationTime;
             return this;
-        }
-        public CertificateRevocationDetail build() {
+        }        public CertificateRevocationDetail build() {
             return new CertificateRevocationDetail(revocationState, revocationTime);
         }
     }

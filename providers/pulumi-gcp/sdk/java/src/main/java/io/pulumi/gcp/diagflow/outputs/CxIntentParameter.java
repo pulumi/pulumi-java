@@ -108,22 +108,18 @@ public final class CxIntentParameter {
             this.entityType = Objects.requireNonNull(entityType);
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder isList(@Nullable Boolean isList) {
             this.isList = isList;
             return this;
         }
-
         public Builder redact(@Nullable Boolean redact) {
             this.redact = redact;
             return this;
-        }
-        public CxIntentParameter build() {
+        }        public CxIntentParameter build() {
             return new CxIntentParameter(entityType, id, isList, redact);
         }
     }

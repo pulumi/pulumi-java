@@ -87,17 +87,14 @@ public final class GetHostResult {
             this.autoPlacement = autoPlacement;
             return this;
         }
-
         public Builder hostId(@Nullable String hostId) {
             this.hostId = hostId;
             return this;
         }
-
         public Builder hostRecovery(@Nullable String hostRecovery) {
             this.hostRecovery = hostRecovery;
             return this;
-        }
-        public GetHostResult build() {
+        }        public GetHostResult build() {
             return new GetHostResult(autoPlacement, hostId, hostRecovery);
         }
     }

@@ -75,12 +75,10 @@ public final class GetAwsVersionsArgs extends io.pulumi.resources.InvokeArgs {
             this.location = location;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = project;
             return this;
-        }
-        public GetAwsVersionsArgs build() {
+        }        public GetAwsVersionsArgs build() {
             return new GetAwsVersionsArgs(location, project);
         }
     }

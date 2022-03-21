@@ -59,12 +59,10 @@ public final class RandomUuidArgs extends io.pulumi.resources.ResourceArgs {
             this.keepers = keepers;
             return this;
         }
-
         public Builder keepers(@Nullable Map<String,Object> keepers) {
             this.keepers = Output.ofNullable(keepers);
             return this;
-        }
-        public RandomUuidArgs build() {
+        }        public RandomUuidArgs build() {
             return new RandomUuidArgs(keepers);
         }
     }

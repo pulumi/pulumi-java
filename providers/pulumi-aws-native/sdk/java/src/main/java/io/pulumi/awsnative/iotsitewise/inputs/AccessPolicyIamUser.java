@@ -60,8 +60,7 @@ public final class AccessPolicyIamUser extends io.pulumi.resources.InvokeArgs {
         public Builder arn(@Nullable String arn) {
             this.arn = arn;
             return this;
-        }
-        public AccessPolicyIamUser build() {
+        }        public AccessPolicyIamUser build() {
             return new AccessPolicyIamUser(arn);
         }
     }

@@ -79,22 +79,21 @@ public final class GoogleCloudDialogflowV2IntentMessageQuickRepliesArgs extends 
             this.quickReplies = quickReplies;
             return this;
         }
-
         public Builder quickReplies(@Nullable List<String> quickReplies) {
             this.quickReplies = Output.ofNullable(quickReplies);
             return this;
         }
-
+        public Builder quickReplies(String... quickReplies) {
+            return quickReplies(List.of(quickReplies));
+        }
         public Builder title(@Nullable Output<String> title) {
             this.title = title;
             return this;
         }
-
         public Builder title(@Nullable String title) {
             this.title = Output.ofNullable(title);
             return this;
-        }
-        public GoogleCloudDialogflowV2IntentMessageQuickRepliesArgs build() {
+        }        public GoogleCloudDialogflowV2IntentMessageQuickRepliesArgs build() {
             return new GoogleCloudDialogflowV2IntentMessageQuickRepliesArgs(quickReplies, title);
         }
     }

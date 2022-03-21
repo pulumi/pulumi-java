@@ -128,52 +128,45 @@ public final class SuppressionScheduleArgs extends io.pulumi.resources.ResourceA
             this.endDate = endDate;
             return this;
         }
-
         public Builder endDate(@Nullable String endDate) {
             this.endDate = Output.ofNullable(endDate);
             return this;
         }
-
         public Builder endTime(@Nullable Output<String> endTime) {
             this.endTime = endTime;
             return this;
         }
-
         public Builder endTime(@Nullable String endTime) {
             this.endTime = Output.ofNullable(endTime);
             return this;
         }
-
         public Builder recurrenceValues(@Nullable Output<List<Integer>> recurrenceValues) {
             this.recurrenceValues = recurrenceValues;
             return this;
         }
-
         public Builder recurrenceValues(@Nullable List<Integer> recurrenceValues) {
             this.recurrenceValues = Output.ofNullable(recurrenceValues);
             return this;
         }
-
+        public Builder recurrenceValues(Integer... recurrenceValues) {
+            return recurrenceValues(List.of(recurrenceValues));
+        }
         public Builder startDate(@Nullable Output<String> startDate) {
             this.startDate = startDate;
             return this;
         }
-
         public Builder startDate(@Nullable String startDate) {
             this.startDate = Output.ofNullable(startDate);
             return this;
         }
-
         public Builder startTime(@Nullable Output<String> startTime) {
             this.startTime = startTime;
             return this;
         }
-
         public Builder startTime(@Nullable String startTime) {
             this.startTime = Output.ofNullable(startTime);
             return this;
-        }
-        public SuppressionScheduleArgs build() {
+        }        public SuppressionScheduleArgs build() {
             return new SuppressionScheduleArgs(endDate, endTime, recurrenceValues, startDate, startTime);
         }
     }

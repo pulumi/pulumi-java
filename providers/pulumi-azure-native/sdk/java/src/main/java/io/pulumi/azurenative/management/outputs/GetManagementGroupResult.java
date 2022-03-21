@@ -154,37 +154,33 @@ public final class GetManagementGroupResult {
             this.children = children;
             return this;
         }
-
+        public Builder children(ManagementGroupChildInfoResponse... children) {
+            return children(List.of(children));
+        }
         public Builder details(@Nullable ManagementGroupDetailsResponse details) {
             this.details = details;
             return this;
         }
-
         public Builder displayName(@Nullable String displayName) {
             this.displayName = displayName;
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder tenantId(@Nullable String tenantId) {
             this.tenantId = tenantId;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public GetManagementGroupResult build() {
+        }        public GetManagementGroupResult build() {
             return new GetManagementGroupResult(children, details, displayName, id, name, tenantId, type);
         }
     }

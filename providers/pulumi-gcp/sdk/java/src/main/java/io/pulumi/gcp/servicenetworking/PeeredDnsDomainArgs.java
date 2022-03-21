@@ -122,52 +122,42 @@ public final class PeeredDnsDomainArgs extends io.pulumi.resources.ResourceArgs 
             this.dnsSuffix = Objects.requireNonNull(dnsSuffix);
             return this;
         }
-
         public Builder dnsSuffix(String dnsSuffix) {
             this.dnsSuffix = Output.of(Objects.requireNonNull(dnsSuffix));
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder network(Output<String> network) {
             this.network = Objects.requireNonNull(network);
             return this;
         }
-
         public Builder network(String network) {
             this.network = Output.of(Objects.requireNonNull(network));
             return this;
         }
-
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
         }
-
         public Builder service(@Nullable Output<String> service) {
             this.service = service;
             return this;
         }
-
         public Builder service(@Nullable String service) {
             this.service = Output.ofNullable(service);
             return this;
-        }
-        public PeeredDnsDomainArgs build() {
+        }        public PeeredDnsDomainArgs build() {
             return new PeeredDnsDomainArgs(dnsSuffix, name, network, project, service);
         }
     }

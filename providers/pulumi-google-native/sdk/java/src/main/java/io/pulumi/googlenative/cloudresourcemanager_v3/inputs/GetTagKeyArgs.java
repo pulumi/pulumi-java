@@ -50,8 +50,7 @@ public final class GetTagKeyArgs extends io.pulumi.resources.InvokeArgs {
         public Builder tagKeyId(String tagKeyId) {
             this.tagKeyId = Objects.requireNonNull(tagKeyId);
             return this;
-        }
-        public GetTagKeyArgs build() {
+        }        public GetTagKeyArgs build() {
             return new GetTagKeyArgs(tagKeyId);
         }
     }

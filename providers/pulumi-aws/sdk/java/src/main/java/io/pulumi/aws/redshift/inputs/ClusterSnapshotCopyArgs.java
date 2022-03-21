@@ -91,32 +91,26 @@ public final class ClusterSnapshotCopyArgs extends io.pulumi.resources.ResourceA
             this.destinationRegion = Objects.requireNonNull(destinationRegion);
             return this;
         }
-
         public Builder destinationRegion(String destinationRegion) {
             this.destinationRegion = Output.of(Objects.requireNonNull(destinationRegion));
             return this;
         }
-
         public Builder grantName(@Nullable Output<String> grantName) {
             this.grantName = grantName;
             return this;
         }
-
         public Builder grantName(@Nullable String grantName) {
             this.grantName = Output.ofNullable(grantName);
             return this;
         }
-
         public Builder retentionPeriod(@Nullable Output<Integer> retentionPeriod) {
             this.retentionPeriod = retentionPeriod;
             return this;
         }
-
         public Builder retentionPeriod(@Nullable Integer retentionPeriod) {
             this.retentionPeriod = Output.ofNullable(retentionPeriod);
             return this;
-        }
-        public ClusterSnapshotCopyArgs build() {
+        }        public ClusterSnapshotCopyArgs build() {
             return new ClusterSnapshotCopyArgs(destinationRegion, grantName, retentionPeriod);
         }
     }

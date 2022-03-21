@@ -61,12 +61,10 @@ public final class GooglePrivacyDlpV2CloudStorageFileSetArgs extends io.pulumi.r
             this.url = url;
             return this;
         }
-
         public Builder url(@Nullable String url) {
             this.url = Output.ofNullable(url);
             return this;
-        }
-        public GooglePrivacyDlpV2CloudStorageFileSetArgs build() {
+        }        public GooglePrivacyDlpV2CloudStorageFileSetArgs build() {
             return new GooglePrivacyDlpV2CloudStorageFileSetArgs(url);
         }
     }

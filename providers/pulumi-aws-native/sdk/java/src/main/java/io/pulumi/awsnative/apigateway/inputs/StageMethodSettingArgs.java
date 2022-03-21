@@ -209,102 +209,82 @@ public final class StageMethodSettingArgs extends io.pulumi.resources.ResourceAr
             this.cacheDataEncrypted = cacheDataEncrypted;
             return this;
         }
-
         public Builder cacheDataEncrypted(@Nullable Boolean cacheDataEncrypted) {
             this.cacheDataEncrypted = Output.ofNullable(cacheDataEncrypted);
             return this;
         }
-
         public Builder cacheTtlInSeconds(@Nullable Output<Integer> cacheTtlInSeconds) {
             this.cacheTtlInSeconds = cacheTtlInSeconds;
             return this;
         }
-
         public Builder cacheTtlInSeconds(@Nullable Integer cacheTtlInSeconds) {
             this.cacheTtlInSeconds = Output.ofNullable(cacheTtlInSeconds);
             return this;
         }
-
         public Builder cachingEnabled(@Nullable Output<Boolean> cachingEnabled) {
             this.cachingEnabled = cachingEnabled;
             return this;
         }
-
         public Builder cachingEnabled(@Nullable Boolean cachingEnabled) {
             this.cachingEnabled = Output.ofNullable(cachingEnabled);
             return this;
         }
-
         public Builder dataTraceEnabled(@Nullable Output<Boolean> dataTraceEnabled) {
             this.dataTraceEnabled = dataTraceEnabled;
             return this;
         }
-
         public Builder dataTraceEnabled(@Nullable Boolean dataTraceEnabled) {
             this.dataTraceEnabled = Output.ofNullable(dataTraceEnabled);
             return this;
         }
-
         public Builder httpMethod(@Nullable Output<String> httpMethod) {
             this.httpMethod = httpMethod;
             return this;
         }
-
         public Builder httpMethod(@Nullable String httpMethod) {
             this.httpMethod = Output.ofNullable(httpMethod);
             return this;
         }
-
         public Builder loggingLevel(@Nullable Output<String> loggingLevel) {
             this.loggingLevel = loggingLevel;
             return this;
         }
-
         public Builder loggingLevel(@Nullable String loggingLevel) {
             this.loggingLevel = Output.ofNullable(loggingLevel);
             return this;
         }
-
         public Builder metricsEnabled(@Nullable Output<Boolean> metricsEnabled) {
             this.metricsEnabled = metricsEnabled;
             return this;
         }
-
         public Builder metricsEnabled(@Nullable Boolean metricsEnabled) {
             this.metricsEnabled = Output.ofNullable(metricsEnabled);
             return this;
         }
-
         public Builder resourcePath(@Nullable Output<String> resourcePath) {
             this.resourcePath = resourcePath;
             return this;
         }
-
         public Builder resourcePath(@Nullable String resourcePath) {
             this.resourcePath = Output.ofNullable(resourcePath);
             return this;
         }
-
         public Builder throttlingBurstLimit(@Nullable Output<Integer> throttlingBurstLimit) {
             this.throttlingBurstLimit = throttlingBurstLimit;
             return this;
         }
-
         public Builder throttlingBurstLimit(@Nullable Integer throttlingBurstLimit) {
             this.throttlingBurstLimit = Output.ofNullable(throttlingBurstLimit);
             return this;
         }
-
         public Builder throttlingRateLimit(@Nullable Output<Double> throttlingRateLimit) {
             this.throttlingRateLimit = throttlingRateLimit;
             return this;
         }
-
         public Builder throttlingRateLimit(@Nullable Double throttlingRateLimit) {
             this.throttlingRateLimit = Output.ofNullable(throttlingRateLimit);
             return this;
-        }
-        public StageMethodSettingArgs build() {
+        }        public StageMethodSettingArgs build() {
             return new StageMethodSettingArgs(cacheDataEncrypted, cacheTtlInSeconds, cachingEnabled, dataTraceEnabled, httpMethod, loggingLevel, metricsEnabled, resourcePath, throttlingBurstLimit, throttlingRateLimit);
         }
     }

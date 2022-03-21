@@ -110,42 +110,37 @@ public final class RequestMethodMatchConditionParametersArgs extends io.pulumi.r
             this.matchValues = matchValues;
             return this;
         }
-
         public Builder matchValues(@Nullable List<String> matchValues) {
             this.matchValues = Output.ofNullable(matchValues);
             return this;
         }
-
+        public Builder matchValues(String... matchValues) {
+            return matchValues(List.of(matchValues));
+        }
         public Builder negateCondition(@Nullable Output<Boolean> negateCondition) {
             this.negateCondition = negateCondition;
             return this;
         }
-
         public Builder negateCondition(@Nullable Boolean negateCondition) {
             this.negateCondition = Output.ofNullable(negateCondition);
             return this;
         }
-
         public Builder odataType(Output<String> odataType) {
             this.odataType = Objects.requireNonNull(odataType);
             return this;
         }
-
         public Builder odataType(String odataType) {
             this.odataType = Output.of(Objects.requireNonNull(odataType));
             return this;
         }
-
         public Builder operator(Output<Either<String,RequestMethodOperator>> operator) {
             this.operator = Objects.requireNonNull(operator);
             return this;
         }
-
         public Builder operator(Either<String,RequestMethodOperator> operator) {
             this.operator = Output.of(Objects.requireNonNull(operator));
             return this;
-        }
-        public RequestMethodMatchConditionParametersArgs build() {
+        }        public RequestMethodMatchConditionParametersArgs build() {
             return new RequestMethodMatchConditionParametersArgs(matchValues, negateCondition, odataType, operator);
         }
     }

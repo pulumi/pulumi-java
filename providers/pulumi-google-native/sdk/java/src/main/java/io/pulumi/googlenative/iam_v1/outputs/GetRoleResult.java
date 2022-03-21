@@ -151,37 +151,33 @@ public final class GetRoleResult {
             this.deleted = Objects.requireNonNull(deleted);
             return this;
         }
-
         public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
-
         public Builder etag(String etag) {
             this.etag = Objects.requireNonNull(etag);
             return this;
         }
-
         public Builder includedPermissions(List<String> includedPermissions) {
             this.includedPermissions = Objects.requireNonNull(includedPermissions);
             return this;
         }
-
+        public Builder includedPermissions(String... includedPermissions) {
+            return includedPermissions(List.of(includedPermissions));
+        }
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder stage(String stage) {
             this.stage = Objects.requireNonNull(stage);
             return this;
         }
-
         public Builder title(String title) {
             this.title = Objects.requireNonNull(title);
             return this;
-        }
-        public GetRoleResult build() {
+        }        public GetRoleResult build() {
             return new GetRoleResult(deleted, description, etag, includedPermissions, name, stage, title);
         }
     }

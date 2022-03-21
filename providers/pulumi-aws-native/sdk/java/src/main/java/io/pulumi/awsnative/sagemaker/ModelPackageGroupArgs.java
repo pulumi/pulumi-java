@@ -97,42 +97,37 @@ public final class ModelPackageGroupArgs extends io.pulumi.resources.ResourceArg
             this.modelPackageGroupDescription = modelPackageGroupDescription;
             return this;
         }
-
         public Builder modelPackageGroupDescription(@Nullable String modelPackageGroupDescription) {
             this.modelPackageGroupDescription = Output.ofNullable(modelPackageGroupDescription);
             return this;
         }
-
         public Builder modelPackageGroupName(@Nullable Output<String> modelPackageGroupName) {
             this.modelPackageGroupName = modelPackageGroupName;
             return this;
         }
-
         public Builder modelPackageGroupName(@Nullable String modelPackageGroupName) {
             this.modelPackageGroupName = Output.ofNullable(modelPackageGroupName);
             return this;
         }
-
         public Builder modelPackageGroupPolicy(@Nullable Output<Object> modelPackageGroupPolicy) {
             this.modelPackageGroupPolicy = modelPackageGroupPolicy;
             return this;
         }
-
         public Builder modelPackageGroupPolicy(@Nullable Object modelPackageGroupPolicy) {
             this.modelPackageGroupPolicy = Output.ofNullable(modelPackageGroupPolicy);
             return this;
         }
-
         public Builder tags(@Nullable Output<List<ModelPackageGroupTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable List<ModelPackageGroupTagArgs> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-        public ModelPackageGroupArgs build() {
+        public Builder tags(ModelPackageGroupTagArgs... tags) {
+            return tags(List.of(tags));
+        }        public ModelPackageGroupArgs build() {
             return new ModelPackageGroupArgs(modelPackageGroupDescription, modelPackageGroupName, modelPackageGroupPolicy, tags);
         }
     }

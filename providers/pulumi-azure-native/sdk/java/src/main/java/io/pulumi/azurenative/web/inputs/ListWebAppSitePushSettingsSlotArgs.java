@@ -88,17 +88,14 @@ public final class ListWebAppSitePushSettingsSlotArgs extends io.pulumi.resource
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder slot(String slot) {
             this.slot = Objects.requireNonNull(slot);
             return this;
-        }
-        public ListWebAppSitePushSettingsSlotArgs build() {
+        }        public ListWebAppSitePushSettingsSlotArgs build() {
             return new ListWebAppSitePushSettingsSlotArgs(name, resourceGroupName, slot);
         }
     }

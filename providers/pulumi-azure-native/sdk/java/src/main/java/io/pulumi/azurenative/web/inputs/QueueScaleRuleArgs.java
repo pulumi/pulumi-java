@@ -97,32 +97,29 @@ public final class QueueScaleRuleArgs extends io.pulumi.resources.ResourceArgs {
             this.auth = auth;
             return this;
         }
-
         public Builder auth(@Nullable List<ScaleRuleAuthArgs> auth) {
             this.auth = Output.ofNullable(auth);
             return this;
         }
-
+        public Builder auth(ScaleRuleAuthArgs... auth) {
+            return auth(List.of(auth));
+        }
         public Builder queueLength(@Nullable Output<Integer> queueLength) {
             this.queueLength = queueLength;
             return this;
         }
-
         public Builder queueLength(@Nullable Integer queueLength) {
             this.queueLength = Output.ofNullable(queueLength);
             return this;
         }
-
         public Builder queueName(@Nullable Output<String> queueName) {
             this.queueName = queueName;
             return this;
         }
-
         public Builder queueName(@Nullable String queueName) {
             this.queueName = Output.ofNullable(queueName);
             return this;
-        }
-        public QueueScaleRuleArgs build() {
+        }        public QueueScaleRuleArgs build() {
             return new QueueScaleRuleArgs(auth, queueLength, queueName);
         }
     }

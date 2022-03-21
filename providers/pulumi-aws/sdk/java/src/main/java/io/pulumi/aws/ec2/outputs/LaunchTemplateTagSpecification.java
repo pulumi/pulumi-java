@@ -72,12 +72,10 @@ public final class LaunchTemplateTagSpecification {
             this.resourceType = resourceType;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
-        }
-        public LaunchTemplateTagSpecification build() {
+        }        public LaunchTemplateTagSpecification build() {
             return new LaunchTemplateTagSpecification(resourceType, tags);
         }
     }

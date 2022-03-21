@@ -54,7 +54,9 @@ public final class ClusterIdentity {
             this.oidcs = oidcs;
             return this;
         }
-        public ClusterIdentity build() {
+        public Builder oidcs(ClusterIdentityOidc... oidcs) {
+            return oidcs(List.of(oidcs));
+        }        public ClusterIdentity build() {
             return new ClusterIdentity(oidcs);
         }
     }

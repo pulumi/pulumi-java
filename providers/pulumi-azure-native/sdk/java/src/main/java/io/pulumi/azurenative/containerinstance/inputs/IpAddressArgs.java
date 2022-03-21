@@ -114,42 +114,37 @@ public final class IpAddressArgs extends io.pulumi.resources.ResourceArgs {
             this.dnsNameLabel = dnsNameLabel;
             return this;
         }
-
         public Builder dnsNameLabel(@Nullable String dnsNameLabel) {
             this.dnsNameLabel = Output.ofNullable(dnsNameLabel);
             return this;
         }
-
         public Builder ip(@Nullable Output<String> ip) {
             this.ip = ip;
             return this;
         }
-
         public Builder ip(@Nullable String ip) {
             this.ip = Output.ofNullable(ip);
             return this;
         }
-
         public Builder ports(Output<List<PortArgs>> ports) {
             this.ports = Objects.requireNonNull(ports);
             return this;
         }
-
         public Builder ports(List<PortArgs> ports) {
             this.ports = Output.of(Objects.requireNonNull(ports));
             return this;
         }
-
+        public Builder ports(PortArgs... ports) {
+            return ports(List.of(ports));
+        }
         public Builder type(Output<Either<String,ContainerGroupIpAddressType>> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder type(Either<String,ContainerGroupIpAddressType> type) {
             this.type = Output.of(Objects.requireNonNull(type));
             return this;
-        }
-        public IpAddressArgs build() {
+        }        public IpAddressArgs build() {
             return new IpAddressArgs(dnsNameLabel, ip, ports, type);
         }
     }

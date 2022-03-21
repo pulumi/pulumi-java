@@ -234,62 +234,53 @@ public final class GetApplicationResult {
             this.applicationArn = applicationArn;
             return this;
         }
-
         public Builder applicationCreationDate(@Nullable Integer applicationCreationDate) {
             this.applicationCreationDate = applicationCreationDate;
             return this;
         }
-
         public Builder applicationDescription(@Nullable String applicationDescription) {
             this.applicationDescription = applicationDescription;
             return this;
         }
-
         public Builder applicationId(@Nullable String applicationId) {
             this.applicationId = applicationId;
             return this;
         }
-
         public Builder applicationLastUpdateDate(@Nullable Integer applicationLastUpdateDate) {
             this.applicationLastUpdateDate = applicationLastUpdateDate;
             return this;
         }
-
         public Builder applicationName(@Nullable String applicationName) {
             this.applicationName = applicationName;
             return this;
         }
-
         public Builder applicationState(@Nullable String applicationState) {
             this.applicationState = applicationState;
             return this;
         }
-
         public Builder applicationUrl(@Nullable String applicationUrl) {
             this.applicationUrl = applicationUrl;
             return this;
         }
-
         public Builder errorMessage(@Nullable String errorMessage) {
             this.errorMessage = errorMessage;
             return this;
         }
-
         public Builder roleArn(@Nullable String roleArn) {
             this.roleArn = roleArn;
             return this;
         }
-
         public Builder ssoClientId(@Nullable String ssoClientId) {
             this.ssoClientId = ssoClientId;
             return this;
         }
-
         public Builder tags(@Nullable List<ApplicationTag> tags) {
             this.tags = tags;
             return this;
         }
-        public GetApplicationResult build() {
+        public Builder tags(ApplicationTag... tags) {
+            return tags(List.of(tags));
+        }        public GetApplicationResult build() {
             return new GetApplicationResult(applicationArn, applicationCreationDate, applicationDescription, applicationId, applicationLastUpdateDate, applicationName, applicationState, applicationUrl, errorMessage, roleArn, ssoClientId, tags);
         }
     }

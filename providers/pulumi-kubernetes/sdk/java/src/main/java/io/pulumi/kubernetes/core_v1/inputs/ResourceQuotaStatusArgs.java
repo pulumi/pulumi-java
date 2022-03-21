@@ -79,22 +79,18 @@ public final class ResourceQuotaStatusArgs extends io.pulumi.resources.ResourceA
             this.hard = hard;
             return this;
         }
-
         public Builder hard(@Nullable Map<String,String> hard) {
             this.hard = Output.ofNullable(hard);
             return this;
         }
-
         public Builder used(@Nullable Output<Map<String,String>> used) {
             this.used = used;
             return this;
         }
-
         public Builder used(@Nullable Map<String,String> used) {
             this.used = Output.ofNullable(used);
             return this;
-        }
-        public ResourceQuotaStatusArgs build() {
+        }        public ResourceQuotaStatusArgs build() {
             return new ResourceQuotaStatusArgs(hard, used);
         }
     }

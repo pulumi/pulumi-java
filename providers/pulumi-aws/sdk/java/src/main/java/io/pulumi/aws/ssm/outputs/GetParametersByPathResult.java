@@ -113,42 +113,46 @@ public final class GetParametersByPathResult {
             this.arns = Objects.requireNonNull(arns);
             return this;
         }
-
+        public Builder arns(String... arns) {
+            return arns(List.of(arns));
+        }
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder names(List<String> names) {
             this.names = Objects.requireNonNull(names);
             return this;
         }
-
+        public Builder names(String... names) {
+            return names(List.of(names));
+        }
         public Builder path(String path) {
             this.path = Objects.requireNonNull(path);
             return this;
         }
-
         public Builder recursive(@Nullable Boolean recursive) {
             this.recursive = recursive;
             return this;
         }
-
         public Builder types(List<String> types) {
             this.types = Objects.requireNonNull(types);
             return this;
         }
-
+        public Builder types(String... types) {
+            return types(List.of(types));
+        }
         public Builder values(List<String> values) {
             this.values = Objects.requireNonNull(values);
             return this;
         }
-
+        public Builder values(String... values) {
+            return values(List.of(values));
+        }
         public Builder withDecryption(@Nullable Boolean withDecryption) {
             this.withDecryption = withDecryption;
             return this;
-        }
-        public GetParametersByPathResult build() {
+        }        public GetParametersByPathResult build() {
             return new GetParametersByPathResult(arns, id, names, path, recursive, types, values, withDecryption);
         }
     }

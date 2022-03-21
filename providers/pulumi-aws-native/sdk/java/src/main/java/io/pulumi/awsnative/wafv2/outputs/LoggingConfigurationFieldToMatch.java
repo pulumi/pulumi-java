@@ -121,27 +121,22 @@ public final class LoggingConfigurationFieldToMatch {
             this.jsonBody = jsonBody;
             return this;
         }
-
         public Builder method(@Nullable Object method) {
             this.method = method;
             return this;
         }
-
         public Builder queryString(@Nullable Object queryString) {
             this.queryString = queryString;
             return this;
         }
-
         public Builder singleHeader(@Nullable LoggingConfigurationFieldToMatchSingleHeaderProperties singleHeader) {
             this.singleHeader = singleHeader;
             return this;
         }
-
         public Builder uriPath(@Nullable Object uriPath) {
             this.uriPath = uriPath;
             return this;
-        }
-        public LoggingConfigurationFieldToMatch build() {
+        }        public LoggingConfigurationFieldToMatch build() {
             return new LoggingConfigurationFieldToMatch(jsonBody, method, queryString, singleHeader, uriPath);
         }
     }

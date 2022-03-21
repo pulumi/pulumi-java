@@ -125,52 +125,42 @@ public final class NfsLocationArgs extends io.pulumi.resources.ResourceArgs {
             this.mountOptions = mountOptions;
             return this;
         }
-
         public Builder mountOptions(@Nullable NfsLocationMountOptionsArgs mountOptions) {
             this.mountOptions = Output.ofNullable(mountOptions);
             return this;
         }
-
         public Builder onPremConfig(Output<NfsLocationOnPremConfigArgs> onPremConfig) {
             this.onPremConfig = Objects.requireNonNull(onPremConfig);
             return this;
         }
-
         public Builder onPremConfig(NfsLocationOnPremConfigArgs onPremConfig) {
             this.onPremConfig = Output.of(Objects.requireNonNull(onPremConfig));
             return this;
         }
-
         public Builder serverHostname(Output<String> serverHostname) {
             this.serverHostname = Objects.requireNonNull(serverHostname);
             return this;
         }
-
         public Builder serverHostname(String serverHostname) {
             this.serverHostname = Output.of(Objects.requireNonNull(serverHostname));
             return this;
         }
-
         public Builder subdirectory(Output<String> subdirectory) {
             this.subdirectory = Objects.requireNonNull(subdirectory);
             return this;
         }
-
         public Builder subdirectory(String subdirectory) {
             this.subdirectory = Output.of(Objects.requireNonNull(subdirectory));
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
-        }
-        public NfsLocationArgs build() {
+        }        public NfsLocationArgs build() {
             return new NfsLocationArgs(mountOptions, onPremConfig, serverHostname, subdirectory, tags);
         }
     }

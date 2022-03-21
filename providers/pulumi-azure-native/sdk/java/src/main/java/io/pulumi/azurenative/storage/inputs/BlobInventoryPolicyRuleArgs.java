@@ -95,32 +95,26 @@ public final class BlobInventoryPolicyRuleArgs extends io.pulumi.resources.Resou
             this.definition = Objects.requireNonNull(definition);
             return this;
         }
-
         public Builder definition(BlobInventoryPolicyDefinitionArgs definition) {
             this.definition = Output.of(Objects.requireNonNull(definition));
             return this;
         }
-
         public Builder enabled(Output<Boolean> enabled) {
             this.enabled = Objects.requireNonNull(enabled);
             return this;
         }
-
         public Builder enabled(Boolean enabled) {
             this.enabled = Output.of(Objects.requireNonNull(enabled));
             return this;
         }
-
         public Builder name(Output<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Output.of(Objects.requireNonNull(name));
             return this;
-        }
-        public BlobInventoryPolicyRuleArgs build() {
+        }        public BlobInventoryPolicyRuleArgs build() {
             return new BlobInventoryPolicyRuleArgs(definition, enabled, name);
         }
     }

@@ -90,32 +90,29 @@ public final class CertificateCertificateDescriptionSubjectDescriptionSubjectAlt
             this.critical = critical;
             return this;
         }
-
         public Builder critical(@Nullable Boolean critical) {
             this.critical = Output.ofNullable(critical);
             return this;
         }
-
         public Builder obectIds(@Nullable Output<List<CertificateCertificateDescriptionSubjectDescriptionSubjectAltNameCustomSanObectIdGetArgs>> obectIds) {
             this.obectIds = obectIds;
             return this;
         }
-
         public Builder obectIds(@Nullable List<CertificateCertificateDescriptionSubjectDescriptionSubjectAltNameCustomSanObectIdGetArgs> obectIds) {
             this.obectIds = Output.ofNullable(obectIds);
             return this;
         }
-
+        public Builder obectIds(CertificateCertificateDescriptionSubjectDescriptionSubjectAltNameCustomSanObectIdGetArgs... obectIds) {
+            return obectIds(List.of(obectIds));
+        }
         public Builder value(@Nullable Output<String> value) {
             this.value = value;
             return this;
         }
-
         public Builder value(@Nullable String value) {
             this.value = Output.ofNullable(value);
             return this;
-        }
-        public CertificateCertificateDescriptionSubjectDescriptionSubjectAltNameCustomSanGetArgs build() {
+        }        public CertificateCertificateDescriptionSubjectDescriptionSubjectAltNameCustomSanGetArgs build() {
             return new CertificateCertificateDescriptionSubjectDescriptionSubjectAltNameCustomSanGetArgs(critical, obectIds, value);
         }
     }

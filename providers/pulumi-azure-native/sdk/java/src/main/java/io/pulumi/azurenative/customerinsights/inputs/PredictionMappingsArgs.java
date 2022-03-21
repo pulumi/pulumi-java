@@ -93,32 +93,26 @@ public final class PredictionMappingsArgs extends io.pulumi.resources.ResourceAr
             this.grade = Objects.requireNonNull(grade);
             return this;
         }
-
         public Builder grade(String grade) {
             this.grade = Output.of(Objects.requireNonNull(grade));
             return this;
         }
-
         public Builder reason(Output<String> reason) {
             this.reason = Objects.requireNonNull(reason);
             return this;
         }
-
         public Builder reason(String reason) {
             this.reason = Output.of(Objects.requireNonNull(reason));
             return this;
         }
-
         public Builder score(Output<String> score) {
             this.score = Objects.requireNonNull(score);
             return this;
         }
-
         public Builder score(String score) {
             this.score = Output.of(Objects.requireNonNull(score));
             return this;
-        }
-        public PredictionMappingsArgs build() {
+        }        public PredictionMappingsArgs build() {
             return new PredictionMappingsArgs(grade, reason, score);
         }
     }

@@ -160,72 +160,61 @@ public final class DirectLineSiteArgs extends io.pulumi.resources.ResourceArgs {
             this.isBlockUserUploadEnabled = isBlockUserUploadEnabled;
             return this;
         }
-
         public Builder isBlockUserUploadEnabled(@Nullable Boolean isBlockUserUploadEnabled) {
             this.isBlockUserUploadEnabled = Output.ofNullable(isBlockUserUploadEnabled);
             return this;
         }
-
         public Builder isEnabled(Output<Boolean> isEnabled) {
             this.isEnabled = Objects.requireNonNull(isEnabled);
             return this;
         }
-
         public Builder isEnabled(Boolean isEnabled) {
             this.isEnabled = Output.of(Objects.requireNonNull(isEnabled));
             return this;
         }
-
         public Builder isSecureSiteEnabled(@Nullable Output<Boolean> isSecureSiteEnabled) {
             this.isSecureSiteEnabled = isSecureSiteEnabled;
             return this;
         }
-
         public Builder isSecureSiteEnabled(@Nullable Boolean isSecureSiteEnabled) {
             this.isSecureSiteEnabled = Output.ofNullable(isSecureSiteEnabled);
             return this;
         }
-
         public Builder isV1Enabled(Output<Boolean> isV1Enabled) {
             this.isV1Enabled = Objects.requireNonNull(isV1Enabled);
             return this;
         }
-
         public Builder isV1Enabled(Boolean isV1Enabled) {
             this.isV1Enabled = Output.of(Objects.requireNonNull(isV1Enabled));
             return this;
         }
-
         public Builder isV3Enabled(Output<Boolean> isV3Enabled) {
             this.isV3Enabled = Objects.requireNonNull(isV3Enabled);
             return this;
         }
-
         public Builder isV3Enabled(Boolean isV3Enabled) {
             this.isV3Enabled = Output.of(Objects.requireNonNull(isV3Enabled));
             return this;
         }
-
         public Builder siteName(Output<String> siteName) {
             this.siteName = Objects.requireNonNull(siteName);
             return this;
         }
-
         public Builder siteName(String siteName) {
             this.siteName = Output.of(Objects.requireNonNull(siteName));
             return this;
         }
-
         public Builder trustedOrigins(@Nullable Output<List<String>> trustedOrigins) {
             this.trustedOrigins = trustedOrigins;
             return this;
         }
-
         public Builder trustedOrigins(@Nullable List<String> trustedOrigins) {
             this.trustedOrigins = Output.ofNullable(trustedOrigins);
             return this;
         }
-        public DirectLineSiteArgs build() {
+        public Builder trustedOrigins(String... trustedOrigins) {
+            return trustedOrigins(List.of(trustedOrigins));
+        }        public DirectLineSiteArgs build() {
             return new DirectLineSiteArgs(isBlockUserUploadEnabled, isEnabled, isSecureSiteEnabled, isV1Enabled, isV3Enabled, siteName, trustedOrigins);
         }
     }

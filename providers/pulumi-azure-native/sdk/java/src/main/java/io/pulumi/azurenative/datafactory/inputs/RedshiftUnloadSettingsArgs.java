@@ -78,22 +78,18 @@ public final class RedshiftUnloadSettingsArgs extends io.pulumi.resources.Resour
             this.bucketName = Objects.requireNonNull(bucketName);
             return this;
         }
-
         public Builder bucketName(Object bucketName) {
             this.bucketName = Output.of(Objects.requireNonNull(bucketName));
             return this;
         }
-
         public Builder s3LinkedServiceName(Output<LinkedServiceReferenceArgs> s3LinkedServiceName) {
             this.s3LinkedServiceName = Objects.requireNonNull(s3LinkedServiceName);
             return this;
         }
-
         public Builder s3LinkedServiceName(LinkedServiceReferenceArgs s3LinkedServiceName) {
             this.s3LinkedServiceName = Output.of(Objects.requireNonNull(s3LinkedServiceName));
             return this;
-        }
-        public RedshiftUnloadSettingsArgs build() {
+        }        public RedshiftUnloadSettingsArgs build() {
             return new RedshiftUnloadSettingsArgs(bucketName, s3LinkedServiceName);
         }
     }

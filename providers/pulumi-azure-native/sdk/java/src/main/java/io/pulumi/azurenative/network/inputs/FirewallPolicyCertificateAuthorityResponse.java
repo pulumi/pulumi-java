@@ -78,12 +78,10 @@ public final class FirewallPolicyCertificateAuthorityResponse extends io.pulumi.
             this.keyVaultSecretId = keyVaultSecretId;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = name;
             return this;
-        }
-        public FirewallPolicyCertificateAuthorityResponse build() {
+        }        public FirewallPolicyCertificateAuthorityResponse build() {
             return new FirewallPolicyCertificateAuthorityResponse(keyVaultSecretId, name);
         }
     }

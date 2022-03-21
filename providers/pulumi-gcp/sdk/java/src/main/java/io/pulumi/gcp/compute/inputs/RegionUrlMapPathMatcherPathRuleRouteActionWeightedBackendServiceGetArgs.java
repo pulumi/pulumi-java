@@ -102,32 +102,26 @@ public final class RegionUrlMapPathMatcherPathRuleRouteActionWeightedBackendServ
             this.backendService = Objects.requireNonNull(backendService);
             return this;
         }
-
         public Builder backendService(String backendService) {
             this.backendService = Output.of(Objects.requireNonNull(backendService));
             return this;
         }
-
         public Builder headerAction(@Nullable Output<RegionUrlMapPathMatcherPathRuleRouteActionWeightedBackendServiceHeaderActionGetArgs> headerAction) {
             this.headerAction = headerAction;
             return this;
         }
-
         public Builder headerAction(@Nullable RegionUrlMapPathMatcherPathRuleRouteActionWeightedBackendServiceHeaderActionGetArgs headerAction) {
             this.headerAction = Output.ofNullable(headerAction);
             return this;
         }
-
         public Builder weight(Output<Integer> weight) {
             this.weight = Objects.requireNonNull(weight);
             return this;
         }
-
         public Builder weight(Integer weight) {
             this.weight = Output.of(Objects.requireNonNull(weight));
             return this;
-        }
-        public RegionUrlMapPathMatcherPathRuleRouteActionWeightedBackendServiceGetArgs build() {
+        }        public RegionUrlMapPathMatcherPathRuleRouteActionWeightedBackendServiceGetArgs build() {
             return new RegionUrlMapPathMatcherPathRuleRouteActionWeightedBackendServiceGetArgs(backendService, headerAction, weight);
         }
     }

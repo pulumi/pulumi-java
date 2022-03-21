@@ -96,22 +96,21 @@ public final class NetworkSecurityGroupRuleResponse {
             this.access = Objects.requireNonNull(access);
             return this;
         }
-
         public Builder priority(Integer priority) {
             this.priority = Objects.requireNonNull(priority);
             return this;
         }
-
         public Builder sourceAddressPrefix(String sourceAddressPrefix) {
             this.sourceAddressPrefix = Objects.requireNonNull(sourceAddressPrefix);
             return this;
         }
-
         public Builder sourcePortRanges(@Nullable List<String> sourcePortRanges) {
             this.sourcePortRanges = sourcePortRanges;
             return this;
         }
-        public NetworkSecurityGroupRuleResponse build() {
+        public Builder sourcePortRanges(String... sourcePortRanges) {
+            return sourcePortRanges(List.of(sourcePortRanges));
+        }        public NetworkSecurityGroupRuleResponse build() {
             return new NetworkSecurityGroupRuleResponse(access, priority, sourceAddressPrefix, sourcePortRanges);
         }
     }

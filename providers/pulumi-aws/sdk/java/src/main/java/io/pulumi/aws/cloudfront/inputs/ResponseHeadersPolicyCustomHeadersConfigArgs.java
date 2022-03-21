@@ -54,12 +54,13 @@ public final class ResponseHeadersPolicyCustomHeadersConfigArgs extends io.pulum
             this.items = items;
             return this;
         }
-
         public Builder items(@Nullable List<ResponseHeadersPolicyCustomHeadersConfigItemArgs> items) {
             this.items = Output.ofNullable(items);
             return this;
         }
-        public ResponseHeadersPolicyCustomHeadersConfigArgs build() {
+        public Builder items(ResponseHeadersPolicyCustomHeadersConfigItemArgs... items) {
+            return items(List.of(items));
+        }        public ResponseHeadersPolicyCustomHeadersConfigArgs build() {
             return new ResponseHeadersPolicyCustomHeadersConfigArgs(items);
         }
     }

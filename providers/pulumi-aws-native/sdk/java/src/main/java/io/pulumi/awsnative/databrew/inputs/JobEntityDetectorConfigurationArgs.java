@@ -68,22 +68,21 @@ public final class JobEntityDetectorConfigurationArgs extends io.pulumi.resource
             this.allowedStatistics = allowedStatistics;
             return this;
         }
-
         public Builder allowedStatistics(@Nullable JobAllowedStatisticsArgs allowedStatistics) {
             this.allowedStatistics = Output.ofNullable(allowedStatistics);
             return this;
         }
-
         public Builder entityTypes(Output<List<String>> entityTypes) {
             this.entityTypes = Objects.requireNonNull(entityTypes);
             return this;
         }
-
         public Builder entityTypes(List<String> entityTypes) {
             this.entityTypes = Output.of(Objects.requireNonNull(entityTypes));
             return this;
         }
-        public JobEntityDetectorConfigurationArgs build() {
+        public Builder entityTypes(String... entityTypes) {
+            return entityTypes(List.of(entityTypes));
+        }        public JobEntityDetectorConfigurationArgs build() {
             return new JobEntityDetectorConfigurationArgs(allowedStatistics, entityTypes);
         }
     }

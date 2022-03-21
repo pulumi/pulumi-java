@@ -93,32 +93,29 @@ public final class TransitGatewayConnectArgs extends io.pulumi.resources.Resourc
             this.options = Objects.requireNonNull(options);
             return this;
         }
-
         public Builder options(TransitGatewayConnectOptionsArgs options) {
             this.options = Output.of(Objects.requireNonNull(options));
             return this;
         }
-
         public Builder tags(@Nullable Output<List<TransitGatewayConnectTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable List<TransitGatewayConnectTagArgs> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
+        public Builder tags(TransitGatewayConnectTagArgs... tags) {
+            return tags(List.of(tags));
+        }
         public Builder transportTransitGatewayAttachmentId(Output<String> transportTransitGatewayAttachmentId) {
             this.transportTransitGatewayAttachmentId = Objects.requireNonNull(transportTransitGatewayAttachmentId);
             return this;
         }
-
         public Builder transportTransitGatewayAttachmentId(String transportTransitGatewayAttachmentId) {
             this.transportTransitGatewayAttachmentId = Output.of(Objects.requireNonNull(transportTransitGatewayAttachmentId));
             return this;
-        }
-        public TransitGatewayConnectArgs build() {
+        }        public TransitGatewayConnectArgs build() {
             return new TransitGatewayConnectArgs(options, tags, transportTransitGatewayAttachmentId);
         }
     }

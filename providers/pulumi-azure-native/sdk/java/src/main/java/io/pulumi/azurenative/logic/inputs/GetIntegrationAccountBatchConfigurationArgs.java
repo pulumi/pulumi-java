@@ -88,17 +88,14 @@ public final class GetIntegrationAccountBatchConfigurationArgs extends io.pulumi
             this.batchConfigurationName = Objects.requireNonNull(batchConfigurationName);
             return this;
         }
-
         public Builder integrationAccountName(String integrationAccountName) {
             this.integrationAccountName = Objects.requireNonNull(integrationAccountName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
-        }
-        public GetIntegrationAccountBatchConfigurationArgs build() {
+        }        public GetIntegrationAccountBatchConfigurationArgs build() {
             return new GetIntegrationAccountBatchConfigurationArgs(batchConfigurationName, integrationAccountName, resourceGroupName);
         }
     }

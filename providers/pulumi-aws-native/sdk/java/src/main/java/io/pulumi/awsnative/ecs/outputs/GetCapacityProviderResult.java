@@ -57,12 +57,13 @@ public final class GetCapacityProviderResult {
             this.autoScalingGroupProvider = autoScalingGroupProvider;
             return this;
         }
-
         public Builder tags(@Nullable List<CapacityProviderTag> tags) {
             this.tags = tags;
             return this;
         }
-        public GetCapacityProviderResult build() {
+        public Builder tags(CapacityProviderTag... tags) {
+            return tags(List.of(tags));
+        }        public GetCapacityProviderResult build() {
             return new GetCapacityProviderResult(autoScalingGroupProvider, tags);
         }
     }

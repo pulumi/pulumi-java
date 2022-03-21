@@ -54,7 +54,9 @@ public final class DeliveryStreamHiveJsonSerDe extends io.pulumi.resources.Invok
             this.timestampFormats = timestampFormats;
             return this;
         }
-        public DeliveryStreamHiveJsonSerDe build() {
+        public Builder timestampFormats(String... timestampFormats) {
+            return timestampFormats(List.of(timestampFormats));
+        }        public DeliveryStreamHiveJsonSerDe build() {
             return new DeliveryStreamHiveJsonSerDe(timestampFormats);
         }
     }

@@ -92,17 +92,14 @@ public final class GooglePrivacyDlpV2HybridInspectStatisticsResponse extends io.
             this.abortedCount = Objects.requireNonNull(abortedCount);
             return this;
         }
-
         public Builder pendingCount(String pendingCount) {
             this.pendingCount = Objects.requireNonNull(pendingCount);
             return this;
         }
-
         public Builder processedCount(String processedCount) {
             this.processedCount = Objects.requireNonNull(processedCount);
             return this;
-        }
-        public GooglePrivacyDlpV2HybridInspectStatisticsResponse build() {
+        }        public GooglePrivacyDlpV2HybridInspectStatisticsResponse build() {
             return new GooglePrivacyDlpV2HybridInspectStatisticsResponse(abortedCount, pendingCount, processedCount);
         }
     }

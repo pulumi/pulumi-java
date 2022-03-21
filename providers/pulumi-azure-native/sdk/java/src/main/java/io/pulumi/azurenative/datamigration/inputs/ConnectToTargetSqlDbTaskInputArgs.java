@@ -60,12 +60,10 @@ public final class ConnectToTargetSqlDbTaskInputArgs extends io.pulumi.resources
             this.targetConnectionInfo = Objects.requireNonNull(targetConnectionInfo);
             return this;
         }
-
         public Builder targetConnectionInfo(SqlConnectionInfoArgs targetConnectionInfo) {
             this.targetConnectionInfo = Output.of(Objects.requireNonNull(targetConnectionInfo));
             return this;
-        }
-        public ConnectToTargetSqlDbTaskInputArgs build() {
+        }        public ConnectToTargetSqlDbTaskInputArgs build() {
             return new ConnectToTargetSqlDbTaskInputArgs(targetConnectionInfo);
         }
     }

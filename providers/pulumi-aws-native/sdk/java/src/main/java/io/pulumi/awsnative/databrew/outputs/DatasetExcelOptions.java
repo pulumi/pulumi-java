@@ -66,17 +66,20 @@ public final class DatasetExcelOptions {
             this.headerRow = headerRow;
             return this;
         }
-
         public Builder sheetIndexes(@Nullable List<Integer> sheetIndexes) {
             this.sheetIndexes = sheetIndexes;
             return this;
         }
-
+        public Builder sheetIndexes(Integer... sheetIndexes) {
+            return sheetIndexes(List.of(sheetIndexes));
+        }
         public Builder sheetNames(@Nullable List<String> sheetNames) {
             this.sheetNames = sheetNames;
             return this;
         }
-        public DatasetExcelOptions build() {
+        public Builder sheetNames(String... sheetNames) {
+            return sheetNames(List.of(sheetNames));
+        }        public DatasetExcelOptions build() {
             return new DatasetExcelOptions(headerRow, sheetIndexes, sheetNames);
         }
     }

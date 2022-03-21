@@ -386,212 +386,182 @@ public final class FunctionArgs extends io.pulumi.resources.ResourceArgs {
             this.architectures = architectures;
             return this;
         }
-
         public Builder architectures(@Nullable List<FunctionArchitecturesItem> architectures) {
             this.architectures = Output.ofNullable(architectures);
             return this;
         }
-
+        public Builder architectures(FunctionArchitecturesItem... architectures) {
+            return architectures(List.of(architectures));
+        }
         public Builder code(Output<FunctionCodeArgs> code) {
             this.code = Objects.requireNonNull(code);
             return this;
         }
-
         public Builder code(FunctionCodeArgs code) {
             this.code = Output.of(Objects.requireNonNull(code));
             return this;
         }
-
         public Builder codeSigningConfigArn(@Nullable Output<String> codeSigningConfigArn) {
             this.codeSigningConfigArn = codeSigningConfigArn;
             return this;
         }
-
         public Builder codeSigningConfigArn(@Nullable String codeSigningConfigArn) {
             this.codeSigningConfigArn = Output.ofNullable(codeSigningConfigArn);
             return this;
         }
-
         public Builder deadLetterConfig(@Nullable Output<FunctionDeadLetterConfigArgs> deadLetterConfig) {
             this.deadLetterConfig = deadLetterConfig;
             return this;
         }
-
         public Builder deadLetterConfig(@Nullable FunctionDeadLetterConfigArgs deadLetterConfig) {
             this.deadLetterConfig = Output.ofNullable(deadLetterConfig);
             return this;
         }
-
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder environment(@Nullable Output<FunctionEnvironmentArgs> environment) {
             this.environment = environment;
             return this;
         }
-
         public Builder environment(@Nullable FunctionEnvironmentArgs environment) {
             this.environment = Output.ofNullable(environment);
             return this;
         }
-
         public Builder fileSystemConfigs(@Nullable Output<List<FunctionFileSystemConfigArgs>> fileSystemConfigs) {
             this.fileSystemConfigs = fileSystemConfigs;
             return this;
         }
-
         public Builder fileSystemConfigs(@Nullable List<FunctionFileSystemConfigArgs> fileSystemConfigs) {
             this.fileSystemConfigs = Output.ofNullable(fileSystemConfigs);
             return this;
         }
-
+        public Builder fileSystemConfigs(FunctionFileSystemConfigArgs... fileSystemConfigs) {
+            return fileSystemConfigs(List.of(fileSystemConfigs));
+        }
         public Builder functionName(@Nullable Output<String> functionName) {
             this.functionName = functionName;
             return this;
         }
-
         public Builder functionName(@Nullable String functionName) {
             this.functionName = Output.ofNullable(functionName);
             return this;
         }
-
         public Builder handler(@Nullable Output<String> handler) {
             this.handler = handler;
             return this;
         }
-
         public Builder handler(@Nullable String handler) {
             this.handler = Output.ofNullable(handler);
             return this;
         }
-
         public Builder imageConfig(@Nullable Output<FunctionImageConfigArgs> imageConfig) {
             this.imageConfig = imageConfig;
             return this;
         }
-
         public Builder imageConfig(@Nullable FunctionImageConfigArgs imageConfig) {
             this.imageConfig = Output.ofNullable(imageConfig);
             return this;
         }
-
         public Builder kmsKeyArn(@Nullable Output<String> kmsKeyArn) {
             this.kmsKeyArn = kmsKeyArn;
             return this;
         }
-
         public Builder kmsKeyArn(@Nullable String kmsKeyArn) {
             this.kmsKeyArn = Output.ofNullable(kmsKeyArn);
             return this;
         }
-
         public Builder layers(@Nullable Output<List<String>> layers) {
             this.layers = layers;
             return this;
         }
-
         public Builder layers(@Nullable List<String> layers) {
             this.layers = Output.ofNullable(layers);
             return this;
         }
-
+        public Builder layers(String... layers) {
+            return layers(List.of(layers));
+        }
         public Builder memorySize(@Nullable Output<Integer> memorySize) {
             this.memorySize = memorySize;
             return this;
         }
-
         public Builder memorySize(@Nullable Integer memorySize) {
             this.memorySize = Output.ofNullable(memorySize);
             return this;
         }
-
         public Builder packageType(@Nullable Output<FunctionPackageType> packageType) {
             this.packageType = packageType;
             return this;
         }
-
         public Builder packageType(@Nullable FunctionPackageType packageType) {
             this.packageType = Output.ofNullable(packageType);
             return this;
         }
-
         public Builder reservedConcurrentExecutions(@Nullable Output<Integer> reservedConcurrentExecutions) {
             this.reservedConcurrentExecutions = reservedConcurrentExecutions;
             return this;
         }
-
         public Builder reservedConcurrentExecutions(@Nullable Integer reservedConcurrentExecutions) {
             this.reservedConcurrentExecutions = Output.ofNullable(reservedConcurrentExecutions);
             return this;
         }
-
         public Builder role(Output<String> role) {
             this.role = Objects.requireNonNull(role);
             return this;
         }
-
         public Builder role(String role) {
             this.role = Output.of(Objects.requireNonNull(role));
             return this;
         }
-
         public Builder runtime(@Nullable Output<String> runtime) {
             this.runtime = runtime;
             return this;
         }
-
         public Builder runtime(@Nullable String runtime) {
             this.runtime = Output.ofNullable(runtime);
             return this;
         }
-
         public Builder tags(@Nullable Output<List<FunctionTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable List<FunctionTagArgs> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
+        public Builder tags(FunctionTagArgs... tags) {
+            return tags(List.of(tags));
+        }
         public Builder timeout(@Nullable Output<Integer> timeout) {
             this.timeout = timeout;
             return this;
         }
-
         public Builder timeout(@Nullable Integer timeout) {
             this.timeout = Output.ofNullable(timeout);
             return this;
         }
-
         public Builder tracingConfig(@Nullable Output<FunctionTracingConfigArgs> tracingConfig) {
             this.tracingConfig = tracingConfig;
             return this;
         }
-
         public Builder tracingConfig(@Nullable FunctionTracingConfigArgs tracingConfig) {
             this.tracingConfig = Output.ofNullable(tracingConfig);
             return this;
         }
-
         public Builder vpcConfig(@Nullable Output<FunctionVpcConfigArgs> vpcConfig) {
             this.vpcConfig = vpcConfig;
             return this;
         }
-
         public Builder vpcConfig(@Nullable FunctionVpcConfigArgs vpcConfig) {
             this.vpcConfig = Output.ofNullable(vpcConfig);
             return this;
-        }
-        public FunctionArgs build() {
+        }        public FunctionArgs build() {
             return new FunctionArgs(architectures, code, codeSigningConfigArn, deadLetterConfig, description, environment, fileSystemConfigs, functionName, handler, imageConfig, kmsKeyArn, layers, memorySize, packageType, reservedConcurrentExecutions, role, runtime, tags, timeout, tracingConfig, vpcConfig);
         }
     }

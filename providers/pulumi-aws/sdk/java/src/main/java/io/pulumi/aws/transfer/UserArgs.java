@@ -190,92 +190,77 @@ public final class UserArgs extends io.pulumi.resources.ResourceArgs {
             this.homeDirectory = homeDirectory;
             return this;
         }
-
         public Builder homeDirectory(@Nullable String homeDirectory) {
             this.homeDirectory = Output.ofNullable(homeDirectory);
             return this;
         }
-
         public Builder homeDirectoryMappings(@Nullable Output<List<UserHomeDirectoryMappingArgs>> homeDirectoryMappings) {
             this.homeDirectoryMappings = homeDirectoryMappings;
             return this;
         }
-
         public Builder homeDirectoryMappings(@Nullable List<UserHomeDirectoryMappingArgs> homeDirectoryMappings) {
             this.homeDirectoryMappings = Output.ofNullable(homeDirectoryMappings);
             return this;
         }
-
+        public Builder homeDirectoryMappings(UserHomeDirectoryMappingArgs... homeDirectoryMappings) {
+            return homeDirectoryMappings(List.of(homeDirectoryMappings));
+        }
         public Builder homeDirectoryType(@Nullable Output<String> homeDirectoryType) {
             this.homeDirectoryType = homeDirectoryType;
             return this;
         }
-
         public Builder homeDirectoryType(@Nullable String homeDirectoryType) {
             this.homeDirectoryType = Output.ofNullable(homeDirectoryType);
             return this;
         }
-
         public Builder policy(@Nullable Output<String> policy) {
             this.policy = policy;
             return this;
         }
-
         public Builder policy(@Nullable String policy) {
             this.policy = Output.ofNullable(policy);
             return this;
         }
-
         public Builder posixProfile(@Nullable Output<UserPosixProfileArgs> posixProfile) {
             this.posixProfile = posixProfile;
             return this;
         }
-
         public Builder posixProfile(@Nullable UserPosixProfileArgs posixProfile) {
             this.posixProfile = Output.ofNullable(posixProfile);
             return this;
         }
-
         public Builder role(Output<String> role) {
             this.role = Objects.requireNonNull(role);
             return this;
         }
-
         public Builder role(String role) {
             this.role = Output.of(Objects.requireNonNull(role));
             return this;
         }
-
         public Builder serverId(Output<String> serverId) {
             this.serverId = Objects.requireNonNull(serverId);
             return this;
         }
-
         public Builder serverId(String serverId) {
             this.serverId = Output.of(Objects.requireNonNull(serverId));
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
         public Builder userName(Output<String> userName) {
             this.userName = Objects.requireNonNull(userName);
             return this;
         }
-
         public Builder userName(String userName) {
             this.userName = Output.of(Objects.requireNonNull(userName));
             return this;
-        }
-        public UserArgs build() {
+        }        public UserArgs build() {
             return new UserArgs(homeDirectory, homeDirectoryMappings, homeDirectoryType, policy, posixProfile, role, serverId, tags, userName);
         }
     }

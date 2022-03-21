@@ -135,32 +135,26 @@ public final class EndpointMongodbSettings {
             this.authMechanism = authMechanism;
             return this;
         }
-
         public Builder authSource(@Nullable String authSource) {
             this.authSource = authSource;
             return this;
         }
-
         public Builder authType(@Nullable String authType) {
             this.authType = authType;
             return this;
         }
-
         public Builder docsToInvestigate(@Nullable String docsToInvestigate) {
             this.docsToInvestigate = docsToInvestigate;
             return this;
         }
-
         public Builder extractDocId(@Nullable String extractDocId) {
             this.extractDocId = extractDocId;
             return this;
         }
-
         public Builder nestingLevel(@Nullable String nestingLevel) {
             this.nestingLevel = nestingLevel;
             return this;
-        }
-        public EndpointMongodbSettings build() {
+        }        public EndpointMongodbSettings build() {
             return new EndpointMongodbSettings(authMechanism, authSource, authType, docsToInvestigate, extractDocId, nestingLevel);
         }
     }

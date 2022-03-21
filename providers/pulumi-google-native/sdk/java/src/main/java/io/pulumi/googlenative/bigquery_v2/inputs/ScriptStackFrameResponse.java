@@ -137,32 +137,26 @@ public final class ScriptStackFrameResponse extends io.pulumi.resources.InvokeAr
             this.endColumn = Objects.requireNonNull(endColumn);
             return this;
         }
-
         public Builder endLine(Integer endLine) {
             this.endLine = Objects.requireNonNull(endLine);
             return this;
         }
-
         public Builder procedureId(String procedureId) {
             this.procedureId = Objects.requireNonNull(procedureId);
             return this;
         }
-
         public Builder startColumn(Integer startColumn) {
             this.startColumn = Objects.requireNonNull(startColumn);
             return this;
         }
-
         public Builder startLine(Integer startLine) {
             this.startLine = Objects.requireNonNull(startLine);
             return this;
         }
-
         public Builder text(String text) {
             this.text = Objects.requireNonNull(text);
             return this;
-        }
-        public ScriptStackFrameResponse build() {
+        }        public ScriptStackFrameResponse build() {
             return new ScriptStackFrameResponse(endColumn, endLine, procedureId, startColumn, startLine, text);
         }
     }

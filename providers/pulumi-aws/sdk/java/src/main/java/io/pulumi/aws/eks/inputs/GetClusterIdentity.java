@@ -56,7 +56,9 @@ public final class GetClusterIdentity extends io.pulumi.resources.InvokeArgs {
             this.oidcs = Objects.requireNonNull(oidcs);
             return this;
         }
-        public GetClusterIdentity build() {
+        public Builder oidcs(GetClusterIdentityOidc... oidcs) {
+            return oidcs(List.of(oidcs));
+        }        public GetClusterIdentity build() {
             return new GetClusterIdentity(oidcs);
         }
     }

@@ -160,57 +160,46 @@ public final class GetWebAppRelayServiceConnectionResult {
             this.biztalkUri = biztalkUri;
             return this;
         }
-
         public Builder entityConnectionString(@Nullable String entityConnectionString) {
             this.entityConnectionString = entityConnectionString;
             return this;
         }
-
         public Builder entityName(@Nullable String entityName) {
             this.entityName = entityName;
             return this;
         }
-
         public Builder hostname(@Nullable String hostname) {
             this.hostname = hostname;
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder kind(@Nullable String kind) {
             this.kind = kind;
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder port(@Nullable Integer port) {
             this.port = port;
             return this;
         }
-
         public Builder resourceConnectionString(@Nullable String resourceConnectionString) {
             this.resourceConnectionString = resourceConnectionString;
             return this;
         }
-
         public Builder resourceType(@Nullable String resourceType) {
             this.resourceType = resourceType;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public GetWebAppRelayServiceConnectionResult build() {
+        }        public GetWebAppRelayServiceConnectionResult build() {
             return new GetWebAppRelayServiceConnectionResult(biztalkUri, entityConnectionString, entityName, hostname, id, kind, name, port, resourceConnectionString, resourceType, type);
         }
     }

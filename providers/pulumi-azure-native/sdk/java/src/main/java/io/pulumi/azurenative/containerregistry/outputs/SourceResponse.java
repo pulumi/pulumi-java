@@ -71,12 +71,10 @@ public final class SourceResponse {
             this.addr = addr;
             return this;
         }
-
         public Builder instanceID(@Nullable String instanceID) {
             this.instanceID = instanceID;
             return this;
-        }
-        public SourceResponse build() {
+        }        public SourceResponse build() {
             return new SourceResponse(addr, instanceID);
         }
     }

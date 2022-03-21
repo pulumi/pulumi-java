@@ -129,27 +129,28 @@ public final class SimpleSchedulePolicyResponse extends io.pulumi.resources.Invo
             this.schedulePolicyType = Objects.requireNonNull(schedulePolicyType);
             return this;
         }
-
         public Builder scheduleRunDays(@Nullable List<String> scheduleRunDays) {
             this.scheduleRunDays = scheduleRunDays;
             return this;
         }
-
+        public Builder scheduleRunDays(String... scheduleRunDays) {
+            return scheduleRunDays(List.of(scheduleRunDays));
+        }
         public Builder scheduleRunFrequency(@Nullable String scheduleRunFrequency) {
             this.scheduleRunFrequency = scheduleRunFrequency;
             return this;
         }
-
         public Builder scheduleRunTimes(@Nullable List<String> scheduleRunTimes) {
             this.scheduleRunTimes = scheduleRunTimes;
             return this;
         }
-
+        public Builder scheduleRunTimes(String... scheduleRunTimes) {
+            return scheduleRunTimes(List.of(scheduleRunTimes));
+        }
         public Builder scheduleWeeklyFrequency(@Nullable Integer scheduleWeeklyFrequency) {
             this.scheduleWeeklyFrequency = scheduleWeeklyFrequency;
             return this;
-        }
-        public SimpleSchedulePolicyResponse build() {
+        }        public SimpleSchedulePolicyResponse build() {
             return new SimpleSchedulePolicyResponse(schedulePolicyType, scheduleRunDays, scheduleRunFrequency, scheduleRunTimes, scheduleWeeklyFrequency);
         }
     }

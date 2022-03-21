@@ -85,17 +85,14 @@ public final class ApplicationDefinitionArtifactResponse {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder uri(String uri) {
             this.uri = Objects.requireNonNull(uri);
             return this;
-        }
-        public ApplicationDefinitionArtifactResponse build() {
+        }        public ApplicationDefinitionArtifactResponse build() {
             return new ApplicationDefinitionArtifactResponse(name, type, uri);
         }
     }

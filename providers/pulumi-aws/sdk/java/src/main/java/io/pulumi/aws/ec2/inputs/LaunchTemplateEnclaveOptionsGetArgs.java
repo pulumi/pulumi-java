@@ -57,12 +57,10 @@ public final class LaunchTemplateEnclaveOptionsGetArgs extends io.pulumi.resourc
             this.enabled = enabled;
             return this;
         }
-
         public Builder enabled(@Nullable Boolean enabled) {
             this.enabled = Output.ofNullable(enabled);
             return this;
-        }
-        public LaunchTemplateEnclaveOptionsGetArgs build() {
+        }        public LaunchTemplateEnclaveOptionsGetArgs build() {
             return new LaunchTemplateEnclaveOptionsGetArgs(enabled);
         }
     }

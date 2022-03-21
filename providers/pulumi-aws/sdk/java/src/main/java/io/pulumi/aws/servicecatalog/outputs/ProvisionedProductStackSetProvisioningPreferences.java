@@ -137,32 +137,32 @@ public final class ProvisionedProductStackSetProvisioningPreferences {
             this.accounts = accounts;
             return this;
         }
-
+        public Builder accounts(String... accounts) {
+            return accounts(List.of(accounts));
+        }
         public Builder failureToleranceCount(@Nullable Integer failureToleranceCount) {
             this.failureToleranceCount = failureToleranceCount;
             return this;
         }
-
         public Builder failureTolerancePercentage(@Nullable Integer failureTolerancePercentage) {
             this.failureTolerancePercentage = failureTolerancePercentage;
             return this;
         }
-
         public Builder maxConcurrencyCount(@Nullable Integer maxConcurrencyCount) {
             this.maxConcurrencyCount = maxConcurrencyCount;
             return this;
         }
-
         public Builder maxConcurrencyPercentage(@Nullable Integer maxConcurrencyPercentage) {
             this.maxConcurrencyPercentage = maxConcurrencyPercentage;
             return this;
         }
-
         public Builder regions(@Nullable List<String> regions) {
             this.regions = regions;
             return this;
         }
-        public ProvisionedProductStackSetProvisioningPreferences build() {
+        public Builder regions(String... regions) {
+            return regions(List.of(regions));
+        }        public ProvisionedProductStackSetProvisioningPreferences build() {
             return new ProvisionedProductStackSetProvisioningPreferences(accounts, failureToleranceCount, failureTolerancePercentage, maxConcurrencyCount, maxConcurrencyPercentage, regions);
         }
     }

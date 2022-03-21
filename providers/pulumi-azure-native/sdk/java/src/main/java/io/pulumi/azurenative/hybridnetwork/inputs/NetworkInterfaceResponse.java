@@ -112,22 +112,21 @@ public final class NetworkInterfaceResponse extends io.pulumi.resources.InvokeAr
             this.ipConfigurations = ipConfigurations;
             return this;
         }
-
+        public Builder ipConfigurations(NetworkInterfaceIPConfigurationResponse... ipConfigurations) {
+            return ipConfigurations(List.of(ipConfigurations));
+        }
         public Builder macAddress(@Nullable String macAddress) {
             this.macAddress = macAddress;
             return this;
         }
-
         public Builder networkInterfaceName(@Nullable String networkInterfaceName) {
             this.networkInterfaceName = networkInterfaceName;
             return this;
         }
-
         public Builder vmSwitchType(@Nullable String vmSwitchType) {
             this.vmSwitchType = vmSwitchType;
             return this;
-        }
-        public NetworkInterfaceResponse build() {
+        }        public NetworkInterfaceResponse build() {
             return new NetworkInterfaceResponse(ipConfigurations, macAddress, networkInterfaceName, vmSwitchType);
         }
     }

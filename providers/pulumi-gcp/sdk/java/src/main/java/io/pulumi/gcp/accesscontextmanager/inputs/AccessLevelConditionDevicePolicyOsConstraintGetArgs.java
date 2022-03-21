@@ -77,22 +77,18 @@ public final class AccessLevelConditionDevicePolicyOsConstraintGetArgs extends i
             this.minimumVersion = minimumVersion;
             return this;
         }
-
         public Builder minimumVersion(@Nullable String minimumVersion) {
             this.minimumVersion = Output.ofNullable(minimumVersion);
             return this;
         }
-
         public Builder osType(Output<String> osType) {
             this.osType = Objects.requireNonNull(osType);
             return this;
         }
-
         public Builder osType(String osType) {
             this.osType = Output.of(Objects.requireNonNull(osType));
             return this;
-        }
-        public AccessLevelConditionDevicePolicyOsConstraintGetArgs build() {
+        }        public AccessLevelConditionDevicePolicyOsConstraintGetArgs build() {
             return new AccessLevelConditionDevicePolicyOsConstraintGetArgs(minimumVersion, osType);
         }
     }

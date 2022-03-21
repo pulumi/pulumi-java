@@ -69,12 +69,10 @@ public final class Taint {
             this.effect = Objects.requireNonNull(effect);
             return this;
         }
-
         public Builder value(String value) {
             this.value = Objects.requireNonNull(value);
             return this;
-        }
-        public Taint build() {
+        }        public Taint build() {
             return new Taint(effect, value);
         }
     }

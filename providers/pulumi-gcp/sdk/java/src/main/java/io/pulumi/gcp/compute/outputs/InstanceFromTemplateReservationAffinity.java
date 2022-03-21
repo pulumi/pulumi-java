@@ -56,12 +56,10 @@ public final class InstanceFromTemplateReservationAffinity {
             this.specificReservation = specificReservation;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public InstanceFromTemplateReservationAffinity build() {
+        }        public InstanceFromTemplateReservationAffinity build() {
             return new InstanceFromTemplateReservationAffinity(specificReservation, type);
         }
     }

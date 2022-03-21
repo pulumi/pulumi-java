@@ -109,42 +109,37 @@ public final class RouteSpecGrpcRouteMatchGetArgs extends io.pulumi.resources.Re
             this.metadatas = metadatas;
             return this;
         }
-
         public Builder metadatas(@Nullable List<RouteSpecGrpcRouteMatchMetadataGetArgs> metadatas) {
             this.metadatas = Output.ofNullable(metadatas);
             return this;
         }
-
+        public Builder metadatas(RouteSpecGrpcRouteMatchMetadataGetArgs... metadatas) {
+            return metadatas(List.of(metadatas));
+        }
         public Builder methodName(@Nullable Output<String> methodName) {
             this.methodName = methodName;
             return this;
         }
-
         public Builder methodName(@Nullable String methodName) {
             this.methodName = Output.ofNullable(methodName);
             return this;
         }
-
         public Builder prefix(@Nullable Output<String> prefix) {
             this.prefix = prefix;
             return this;
         }
-
         public Builder prefix(@Nullable String prefix) {
             this.prefix = Output.ofNullable(prefix);
             return this;
         }
-
         public Builder serviceName(@Nullable Output<String> serviceName) {
             this.serviceName = serviceName;
             return this;
         }
-
         public Builder serviceName(@Nullable String serviceName) {
             this.serviceName = Output.ofNullable(serviceName);
             return this;
-        }
-        public RouteSpecGrpcRouteMatchGetArgs build() {
+        }        public RouteSpecGrpcRouteMatchGetArgs build() {
             return new RouteSpecGrpcRouteMatchGetArgs(metadatas, methodName, prefix, serviceName);
         }
     }

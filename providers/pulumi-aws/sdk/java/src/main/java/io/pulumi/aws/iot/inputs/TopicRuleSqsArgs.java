@@ -90,32 +90,26 @@ public final class TopicRuleSqsArgs extends io.pulumi.resources.ResourceArgs {
             this.queueUrl = Objects.requireNonNull(queueUrl);
             return this;
         }
-
         public Builder queueUrl(String queueUrl) {
             this.queueUrl = Output.of(Objects.requireNonNull(queueUrl));
             return this;
         }
-
         public Builder roleArn(Output<String> roleArn) {
             this.roleArn = Objects.requireNonNull(roleArn);
             return this;
         }
-
         public Builder roleArn(String roleArn) {
             this.roleArn = Output.of(Objects.requireNonNull(roleArn));
             return this;
         }
-
         public Builder useBase64(Output<Boolean> useBase64) {
             this.useBase64 = Objects.requireNonNull(useBase64);
             return this;
         }
-
         public Builder useBase64(Boolean useBase64) {
             this.useBase64 = Output.of(Objects.requireNonNull(useBase64));
             return this;
-        }
-        public TopicRuleSqsArgs build() {
+        }        public TopicRuleSqsArgs build() {
             return new TopicRuleSqsArgs(queueUrl, roleArn, useBase64);
         }
     }

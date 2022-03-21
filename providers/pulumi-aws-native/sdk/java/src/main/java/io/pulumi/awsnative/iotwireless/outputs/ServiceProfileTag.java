@@ -55,12 +55,10 @@ public final class ServiceProfileTag {
             this.key = key;
             return this;
         }
-
         public Builder value(@Nullable String value) {
             this.value = value;
             return this;
-        }
-        public ServiceProfileTag build() {
+        }        public ServiceProfileTag build() {
             return new ServiceProfileTag(key, value);
         }
     }

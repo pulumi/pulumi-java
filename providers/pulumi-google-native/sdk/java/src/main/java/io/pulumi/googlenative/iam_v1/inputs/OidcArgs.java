@@ -79,22 +79,21 @@ public final class OidcArgs extends io.pulumi.resources.ResourceArgs {
             this.allowedAudiences = allowedAudiences;
             return this;
         }
-
         public Builder allowedAudiences(@Nullable List<String> allowedAudiences) {
             this.allowedAudiences = Output.ofNullable(allowedAudiences);
             return this;
         }
-
+        public Builder allowedAudiences(String... allowedAudiences) {
+            return allowedAudiences(List.of(allowedAudiences));
+        }
         public Builder issuerUri(Output<String> issuerUri) {
             this.issuerUri = Objects.requireNonNull(issuerUri);
             return this;
         }
-
         public Builder issuerUri(String issuerUri) {
             this.issuerUri = Output.of(Objects.requireNonNull(issuerUri));
             return this;
-        }
-        public OidcArgs build() {
+        }        public OidcArgs build() {
             return new OidcArgs(allowedAudiences, issuerUri);
         }
     }

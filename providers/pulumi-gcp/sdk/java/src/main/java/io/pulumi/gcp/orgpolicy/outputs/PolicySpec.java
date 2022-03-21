@@ -126,27 +126,25 @@ public final class PolicySpec {
             this.etag = etag;
             return this;
         }
-
         public Builder inheritFromParent(@Nullable Boolean inheritFromParent) {
             this.inheritFromParent = inheritFromParent;
             return this;
         }
-
         public Builder reset(@Nullable Boolean reset) {
             this.reset = reset;
             return this;
         }
-
         public Builder rules(@Nullable List<PolicySpecRule> rules) {
             this.rules = rules;
             return this;
         }
-
+        public Builder rules(PolicySpecRule... rules) {
+            return rules(List.of(rules));
+        }
         public Builder updateTime(@Nullable String updateTime) {
             this.updateTime = updateTime;
             return this;
-        }
-        public PolicySpec build() {
+        }        public PolicySpec build() {
             return new PolicySpec(etag, inheritFromParent, reset, rules, updateTime);
         }
     }

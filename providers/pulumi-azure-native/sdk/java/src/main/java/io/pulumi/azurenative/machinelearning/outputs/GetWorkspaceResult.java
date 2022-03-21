@@ -248,67 +248,54 @@ public final class GetWorkspaceResult {
             this.creationTime = Objects.requireNonNull(creationTime);
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder keyVaultIdentifierId(@Nullable String keyVaultIdentifierId) {
             this.keyVaultIdentifierId = keyVaultIdentifierId;
             return this;
         }
-
         public Builder location(String location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder ownerEmail(String ownerEmail) {
             this.ownerEmail = Objects.requireNonNull(ownerEmail);
             return this;
         }
-
         public Builder studioEndpoint(String studioEndpoint) {
             this.studioEndpoint = Objects.requireNonNull(studioEndpoint);
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder userStorageAccountId(String userStorageAccountId) {
             this.userStorageAccountId = Objects.requireNonNull(userStorageAccountId);
             return this;
         }
-
         public Builder workspaceId(String workspaceId) {
             this.workspaceId = Objects.requireNonNull(workspaceId);
             return this;
         }
-
         public Builder workspaceState(String workspaceState) {
             this.workspaceState = Objects.requireNonNull(workspaceState);
             return this;
         }
-
         public Builder workspaceType(String workspaceType) {
             this.workspaceType = Objects.requireNonNull(workspaceType);
             return this;
-        }
-        public GetWorkspaceResult build() {
+        }        public GetWorkspaceResult build() {
             return new GetWorkspaceResult(creationTime, id, keyVaultIdentifierId, location, name, ownerEmail, studioEndpoint, tags, type, userStorageAccountId, workspaceId, workspaceState, workspaceType);
         }
     }

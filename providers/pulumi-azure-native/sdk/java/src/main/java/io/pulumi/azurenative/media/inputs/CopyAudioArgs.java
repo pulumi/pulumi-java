@@ -79,22 +79,18 @@ public final class CopyAudioArgs extends io.pulumi.resources.ResourceArgs {
             this.label = label;
             return this;
         }
-
         public Builder label(@Nullable String label) {
             this.label = Output.ofNullable(label);
             return this;
         }
-
         public Builder odataType(Output<String> odataType) {
             this.odataType = Objects.requireNonNull(odataType);
             return this;
         }
-
         public Builder odataType(String odataType) {
             this.odataType = Output.of(Objects.requireNonNull(odataType));
             return this;
-        }
-        public CopyAudioArgs build() {
+        }        public CopyAudioArgs build() {
             return new CopyAudioArgs(label, odataType);
         }
     }

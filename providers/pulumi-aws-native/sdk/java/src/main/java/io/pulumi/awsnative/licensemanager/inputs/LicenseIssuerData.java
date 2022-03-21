@@ -66,12 +66,10 @@ public final class LicenseIssuerData extends io.pulumi.resources.InvokeArgs {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder signKey(@Nullable String signKey) {
             this.signKey = signKey;
             return this;
-        }
-        public LicenseIssuerData build() {
+        }        public LicenseIssuerData build() {
             return new LicenseIssuerData(name, signKey);
         }
     }

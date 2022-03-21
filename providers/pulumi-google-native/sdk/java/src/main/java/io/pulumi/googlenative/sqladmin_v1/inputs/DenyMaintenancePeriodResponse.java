@@ -92,17 +92,14 @@ public final class DenyMaintenancePeriodResponse extends io.pulumi.resources.Inv
             this.endDate = Objects.requireNonNull(endDate);
             return this;
         }
-
         public Builder startDate(String startDate) {
             this.startDate = Objects.requireNonNull(startDate);
             return this;
         }
-
         public Builder time(String time) {
             this.time = Objects.requireNonNull(time);
             return this;
-        }
-        public DenyMaintenancePeriodResponse build() {
+        }        public DenyMaintenancePeriodResponse build() {
             return new DenyMaintenancePeriodResponse(endDate, startDate, time);
         }
     }

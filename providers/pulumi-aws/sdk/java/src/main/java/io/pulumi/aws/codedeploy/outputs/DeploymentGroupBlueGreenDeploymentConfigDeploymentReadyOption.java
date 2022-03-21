@@ -76,12 +76,10 @@ public final class DeploymentGroupBlueGreenDeploymentConfigDeploymentReadyOption
             this.actionOnTimeout = actionOnTimeout;
             return this;
         }
-
         public Builder waitTimeInMinutes(@Nullable Integer waitTimeInMinutes) {
             this.waitTimeInMinutes = waitTimeInMinutes;
             return this;
-        }
-        public DeploymentGroupBlueGreenDeploymentConfigDeploymentReadyOption build() {
+        }        public DeploymentGroupBlueGreenDeploymentConfigDeploymentReadyOption build() {
             return new DeploymentGroupBlueGreenDeploymentConfigDeploymentReadyOption(actionOnTimeout, waitTimeInMinutes);
         }
     }

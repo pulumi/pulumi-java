@@ -60,8 +60,7 @@ public final class ReferencedPublicIpAddressResponse extends io.pulumi.resources
         public Builder id(@Nullable String id) {
             this.id = id;
             return this;
-        }
-        public ReferencedPublicIpAddressResponse build() {
+        }        public ReferencedPublicIpAddressResponse build() {
             return new ReferencedPublicIpAddressResponse(id);
         }
     }

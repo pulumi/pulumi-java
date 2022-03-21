@@ -103,32 +103,26 @@ public final class AutoscalingPolicyWorkerConfigArgs extends io.pulumi.resources
             this.maxInstances = Objects.requireNonNull(maxInstances);
             return this;
         }
-
         public Builder maxInstances(Integer maxInstances) {
             this.maxInstances = Output.of(Objects.requireNonNull(maxInstances));
             return this;
         }
-
         public Builder minInstances(@Nullable Output<Integer> minInstances) {
             this.minInstances = minInstances;
             return this;
         }
-
         public Builder minInstances(@Nullable Integer minInstances) {
             this.minInstances = Output.ofNullable(minInstances);
             return this;
         }
-
         public Builder weight(@Nullable Output<Integer> weight) {
             this.weight = weight;
             return this;
         }
-
         public Builder weight(@Nullable Integer weight) {
             this.weight = Output.ofNullable(weight);
             return this;
-        }
-        public AutoscalingPolicyWorkerConfigArgs build() {
+        }        public AutoscalingPolicyWorkerConfigArgs build() {
             return new AutoscalingPolicyWorkerConfigArgs(maxInstances, minInstances, weight);
         }
     }

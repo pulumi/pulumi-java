@@ -62,17 +62,17 @@ public final class GetConnectionPhysicalConnectionRequirement {
             this.availabilityZone = Objects.requireNonNull(availabilityZone);
             return this;
         }
-
         public Builder securityGroupIdLists(List<String> securityGroupIdLists) {
             this.securityGroupIdLists = Objects.requireNonNull(securityGroupIdLists);
             return this;
         }
-
+        public Builder securityGroupIdLists(String... securityGroupIdLists) {
+            return securityGroupIdLists(List.of(securityGroupIdLists));
+        }
         public Builder subnetId(String subnetId) {
             this.subnetId = Objects.requireNonNull(subnetId);
             return this;
-        }
-        public GetConnectionPhysicalConnectionRequirement build() {
+        }        public GetConnectionPhysicalConnectionRequirement build() {
             return new GetConnectionPhysicalConnectionRequirement(availabilityZone, securityGroupIdLists, subnetId);
         }
     }

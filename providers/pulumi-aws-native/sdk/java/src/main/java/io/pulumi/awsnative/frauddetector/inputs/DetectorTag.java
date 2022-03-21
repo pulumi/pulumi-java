@@ -64,12 +64,10 @@ public final class DetectorTag extends io.pulumi.resources.InvokeArgs {
             this.key = Objects.requireNonNull(key);
             return this;
         }
-
         public Builder value(String value) {
             this.value = Objects.requireNonNull(value);
             return this;
-        }
-        public DetectorTag build() {
+        }        public DetectorTag build() {
             return new DetectorTag(key, value);
         }
     }

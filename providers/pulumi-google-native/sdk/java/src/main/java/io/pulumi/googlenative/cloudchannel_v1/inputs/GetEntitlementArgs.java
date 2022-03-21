@@ -76,17 +76,14 @@ public final class GetEntitlementArgs extends io.pulumi.resources.InvokeArgs {
             this.accountId = Objects.requireNonNull(accountId);
             return this;
         }
-
         public Builder customerId(String customerId) {
             this.customerId = Objects.requireNonNull(customerId);
             return this;
         }
-
         public Builder entitlementId(String entitlementId) {
             this.entitlementId = Objects.requireNonNull(entitlementId);
             return this;
-        }
-        public GetEntitlementArgs build() {
+        }        public GetEntitlementArgs build() {
             return new GetEntitlementArgs(accountId, customerId, entitlementId);
         }
     }

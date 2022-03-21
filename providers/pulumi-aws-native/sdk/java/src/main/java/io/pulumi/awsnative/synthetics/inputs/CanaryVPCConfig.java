@@ -79,17 +79,20 @@ public final class CanaryVPCConfig extends io.pulumi.resources.InvokeArgs {
             this.securityGroupIds = Objects.requireNonNull(securityGroupIds);
             return this;
         }
-
+        public Builder securityGroupIds(String... securityGroupIds) {
+            return securityGroupIds(List.of(securityGroupIds));
+        }
         public Builder subnetIds(List<String> subnetIds) {
             this.subnetIds = Objects.requireNonNull(subnetIds);
             return this;
         }
-
+        public Builder subnetIds(String... subnetIds) {
+            return subnetIds(List.of(subnetIds));
+        }
         public Builder vpcId(@Nullable String vpcId) {
             this.vpcId = vpcId;
             return this;
-        }
-        public CanaryVPCConfig build() {
+        }        public CanaryVPCConfig build() {
             return new CanaryVPCConfig(securityGroupIds, subnetIds, vpcId);
         }
     }

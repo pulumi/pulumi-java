@@ -70,12 +70,16 @@ public final class AccessSelectorResponse {
             this.permissions = Objects.requireNonNull(permissions);
             return this;
         }
-
+        public Builder permissions(String... permissions) {
+            return permissions(List.of(permissions));
+        }
         public Builder roles(List<String> roles) {
             this.roles = Objects.requireNonNull(roles);
             return this;
         }
-        public AccessSelectorResponse build() {
+        public Builder roles(String... roles) {
+            return roles(List.of(roles));
+        }        public AccessSelectorResponse build() {
             return new AccessSelectorResponse(permissions, roles);
         }
     }

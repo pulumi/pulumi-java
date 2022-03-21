@@ -106,22 +106,18 @@ public final class GetResourceArgs extends io.pulumi.resources.InvokeArgs {
             this.identifier = Objects.requireNonNull(identifier);
             return this;
         }
-
         public Builder roleArn(@Nullable String roleArn) {
             this.roleArn = roleArn;
             return this;
         }
-
         public Builder typeName(String typeName) {
             this.typeName = Objects.requireNonNull(typeName);
             return this;
         }
-
         public Builder typeVersionId(@Nullable String typeVersionId) {
             this.typeVersionId = typeVersionId;
             return this;
-        }
-        public GetResourceArgs build() {
+        }        public GetResourceArgs build() {
             return new GetResourceArgs(identifier, roleArn, typeName, typeVersionId);
         }
     }

@@ -107,42 +107,34 @@ public final class ManagedClusterPodIdentityArgs extends io.pulumi.resources.Res
             this.bindingSelector = bindingSelector;
             return this;
         }
-
         public Builder bindingSelector(@Nullable String bindingSelector) {
             this.bindingSelector = Output.ofNullable(bindingSelector);
             return this;
         }
-
         public Builder identity(Output<UserAssignedIdentityArgs> identity) {
             this.identity = Objects.requireNonNull(identity);
             return this;
         }
-
         public Builder identity(UserAssignedIdentityArgs identity) {
             this.identity = Output.of(Objects.requireNonNull(identity));
             return this;
         }
-
         public Builder name(Output<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
-
         public Builder namespace(Output<String> namespace) {
             this.namespace = Objects.requireNonNull(namespace);
             return this;
         }
-
         public Builder namespace(String namespace) {
             this.namespace = Output.of(Objects.requireNonNull(namespace));
             return this;
-        }
-        public ManagedClusterPodIdentityArgs build() {
+        }        public ManagedClusterPodIdentityArgs build() {
             return new ManagedClusterPodIdentityArgs(bindingSelector, identity, name, namespace);
         }
     }

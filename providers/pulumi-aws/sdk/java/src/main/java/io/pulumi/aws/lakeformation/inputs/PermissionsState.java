@@ -192,92 +192,80 @@ public final class PermissionsState extends io.pulumi.resources.ResourceArgs {
             this.catalogId = catalogId;
             return this;
         }
-
         public Builder catalogId(@Nullable String catalogId) {
             this.catalogId = Output.ofNullable(catalogId);
             return this;
         }
-
         public Builder catalogResource(@Nullable Output<Boolean> catalogResource) {
             this.catalogResource = catalogResource;
             return this;
         }
-
         public Builder catalogResource(@Nullable Boolean catalogResource) {
             this.catalogResource = Output.ofNullable(catalogResource);
             return this;
         }
-
         public Builder dataLocation(@Nullable Output<PermissionsDataLocationGetArgs> dataLocation) {
             this.dataLocation = dataLocation;
             return this;
         }
-
         public Builder dataLocation(@Nullable PermissionsDataLocationGetArgs dataLocation) {
             this.dataLocation = Output.ofNullable(dataLocation);
             return this;
         }
-
         public Builder database(@Nullable Output<PermissionsDatabaseGetArgs> database) {
             this.database = database;
             return this;
         }
-
         public Builder database(@Nullable PermissionsDatabaseGetArgs database) {
             this.database = Output.ofNullable(database);
             return this;
         }
-
         public Builder permissions(@Nullable Output<List<String>> permissions) {
             this.permissions = permissions;
             return this;
         }
-
         public Builder permissions(@Nullable List<String> permissions) {
             this.permissions = Output.ofNullable(permissions);
             return this;
         }
-
+        public Builder permissions(String... permissions) {
+            return permissions(List.of(permissions));
+        }
         public Builder permissionsWithGrantOptions(@Nullable Output<List<String>> permissionsWithGrantOptions) {
             this.permissionsWithGrantOptions = permissionsWithGrantOptions;
             return this;
         }
-
         public Builder permissionsWithGrantOptions(@Nullable List<String> permissionsWithGrantOptions) {
             this.permissionsWithGrantOptions = Output.ofNullable(permissionsWithGrantOptions);
             return this;
         }
-
+        public Builder permissionsWithGrantOptions(String... permissionsWithGrantOptions) {
+            return permissionsWithGrantOptions(List.of(permissionsWithGrantOptions));
+        }
         public Builder principal(@Nullable Output<String> principal) {
             this.principal = principal;
             return this;
         }
-
         public Builder principal(@Nullable String principal) {
             this.principal = Output.ofNullable(principal);
             return this;
         }
-
         public Builder table(@Nullable Output<PermissionsTableGetArgs> table) {
             this.table = table;
             return this;
         }
-
         public Builder table(@Nullable PermissionsTableGetArgs table) {
             this.table = Output.ofNullable(table);
             return this;
         }
-
         public Builder tableWithColumns(@Nullable Output<PermissionsTableWithColumnsGetArgs> tableWithColumns) {
             this.tableWithColumns = tableWithColumns;
             return this;
         }
-
         public Builder tableWithColumns(@Nullable PermissionsTableWithColumnsGetArgs tableWithColumns) {
             this.tableWithColumns = Output.ofNullable(tableWithColumns);
             return this;
-        }
-        public PermissionsState build() {
+        }        public PermissionsState build() {
             return new PermissionsState(catalogId, catalogResource, dataLocation, database, permissions, permissionsWithGrantOptions, principal, table, tableWithColumns);
         }
     }

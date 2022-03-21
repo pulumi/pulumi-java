@@ -62,12 +62,13 @@ public final class SerialPipelineArgs extends io.pulumi.resources.ResourceArgs {
             this.stages = stages;
             return this;
         }
-
         public Builder stages(@Nullable List<StageArgs> stages) {
             this.stages = Output.ofNullable(stages);
             return this;
         }
-        public SerialPipelineArgs build() {
+        public Builder stages(StageArgs... stages) {
+            return stages(List.of(stages));
+        }        public SerialPipelineArgs build() {
             return new SerialPipelineArgs(stages);
         }
     }

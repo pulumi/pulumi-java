@@ -138,32 +138,29 @@ public final class ServiceBusTopicOutputDataSourceResponse {
             this.propertyColumns = propertyColumns;
             return this;
         }
-
+        public Builder propertyColumns(String... propertyColumns) {
+            return propertyColumns(List.of(propertyColumns));
+        }
         public Builder serviceBusNamespace(@Nullable String serviceBusNamespace) {
             this.serviceBusNamespace = serviceBusNamespace;
             return this;
         }
-
         public Builder sharedAccessPolicyKey(@Nullable String sharedAccessPolicyKey) {
             this.sharedAccessPolicyKey = sharedAccessPolicyKey;
             return this;
         }
-
         public Builder sharedAccessPolicyName(@Nullable String sharedAccessPolicyName) {
             this.sharedAccessPolicyName = sharedAccessPolicyName;
             return this;
         }
-
         public Builder topicName(@Nullable String topicName) {
             this.topicName = topicName;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public ServiceBusTopicOutputDataSourceResponse build() {
+        }        public ServiceBusTopicOutputDataSourceResponse build() {
             return new ServiceBusTopicOutputDataSourceResponse(propertyColumns, serviceBusNamespace, sharedAccessPolicyKey, sharedAccessPolicyName, topicName, type);
         }
     }

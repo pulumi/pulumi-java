@@ -86,17 +86,17 @@ public final class HostRuleResponse {
             this.description = Objects.requireNonNull(description);
             return this;
         }
-
         public Builder hosts(List<String> hosts) {
             this.hosts = Objects.requireNonNull(hosts);
             return this;
         }
-
+        public Builder hosts(String... hosts) {
+            return hosts(List.of(hosts));
+        }
         public Builder pathMatcher(String pathMatcher) {
             this.pathMatcher = Objects.requireNonNull(pathMatcher);
             return this;
-        }
-        public HostRuleResponse build() {
+        }        public HostRuleResponse build() {
             return new HostRuleResponse(description, hosts, pathMatcher);
         }
     }

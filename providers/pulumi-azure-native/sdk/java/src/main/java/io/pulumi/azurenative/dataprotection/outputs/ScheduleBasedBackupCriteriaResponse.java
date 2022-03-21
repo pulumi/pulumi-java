@@ -156,37 +156,48 @@ public final class ScheduleBasedBackupCriteriaResponse {
             this.absoluteCriteria = absoluteCriteria;
             return this;
         }
-
+        public Builder absoluteCriteria(String... absoluteCriteria) {
+            return absoluteCriteria(List.of(absoluteCriteria));
+        }
         public Builder daysOfMonth(@Nullable List<DayResponse> daysOfMonth) {
             this.daysOfMonth = daysOfMonth;
             return this;
         }
-
+        public Builder daysOfMonth(DayResponse... daysOfMonth) {
+            return daysOfMonth(List.of(daysOfMonth));
+        }
         public Builder daysOfTheWeek(@Nullable List<String> daysOfTheWeek) {
             this.daysOfTheWeek = daysOfTheWeek;
             return this;
         }
-
+        public Builder daysOfTheWeek(String... daysOfTheWeek) {
+            return daysOfTheWeek(List.of(daysOfTheWeek));
+        }
         public Builder monthsOfYear(@Nullable List<String> monthsOfYear) {
             this.monthsOfYear = monthsOfYear;
             return this;
         }
-
+        public Builder monthsOfYear(String... monthsOfYear) {
+            return monthsOfYear(List.of(monthsOfYear));
+        }
         public Builder objectType(String objectType) {
             this.objectType = Objects.requireNonNull(objectType);
             return this;
         }
-
         public Builder scheduleTimes(@Nullable List<String> scheduleTimes) {
             this.scheduleTimes = scheduleTimes;
             return this;
         }
-
+        public Builder scheduleTimes(String... scheduleTimes) {
+            return scheduleTimes(List.of(scheduleTimes));
+        }
         public Builder weeksOfTheMonth(@Nullable List<String> weeksOfTheMonth) {
             this.weeksOfTheMonth = weeksOfTheMonth;
             return this;
         }
-        public ScheduleBasedBackupCriteriaResponse build() {
+        public Builder weeksOfTheMonth(String... weeksOfTheMonth) {
+            return weeksOfTheMonth(List.of(weeksOfTheMonth));
+        }        public ScheduleBasedBackupCriteriaResponse build() {
             return new ScheduleBasedBackupCriteriaResponse(absoluteCriteria, daysOfMonth, daysOfTheWeek, monthsOfYear, objectType, scheduleTimes, weeksOfTheMonth);
         }
     }

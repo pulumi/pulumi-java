@@ -69,12 +69,10 @@ public final class ValidationErrorResponse {
             this.severity = Objects.requireNonNull(severity);
             return this;
         }
-
         public Builder text(String text) {
             this.text = Objects.requireNonNull(text);
             return this;
-        }
-        public ValidationErrorResponse build() {
+        }        public ValidationErrorResponse build() {
             return new ValidationErrorResponse(severity, text);
         }
     }

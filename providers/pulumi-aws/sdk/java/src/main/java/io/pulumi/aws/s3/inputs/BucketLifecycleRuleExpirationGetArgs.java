@@ -92,32 +92,26 @@ public final class BucketLifecycleRuleExpirationGetArgs extends io.pulumi.resour
             this.date = date;
             return this;
         }
-
         public Builder date(@Nullable String date) {
             this.date = Output.ofNullable(date);
             return this;
         }
-
         public Builder days(@Nullable Output<Integer> days) {
             this.days = days;
             return this;
         }
-
         public Builder days(@Nullable Integer days) {
             this.days = Output.ofNullable(days);
             return this;
         }
-
         public Builder expiredObjectDeleteMarker(@Nullable Output<Boolean> expiredObjectDeleteMarker) {
             this.expiredObjectDeleteMarker = expiredObjectDeleteMarker;
             return this;
         }
-
         public Builder expiredObjectDeleteMarker(@Nullable Boolean expiredObjectDeleteMarker) {
             this.expiredObjectDeleteMarker = Output.ofNullable(expiredObjectDeleteMarker);
             return this;
-        }
-        public BucketLifecycleRuleExpirationGetArgs build() {
+        }        public BucketLifecycleRuleExpirationGetArgs build() {
             return new BucketLifecycleRuleExpirationGetArgs(date, days, expiredObjectDeleteMarker);
         }
     }

@@ -108,22 +108,18 @@ public final class GoogleCloudContactcenterinsightsV1ConversationParticipantResp
             this.dialogflowParticipantName = Objects.requireNonNull(dialogflowParticipantName);
             return this;
         }
-
         public Builder obfuscatedExternalUserId(String obfuscatedExternalUserId) {
             this.obfuscatedExternalUserId = Objects.requireNonNull(obfuscatedExternalUserId);
             return this;
         }
-
         public Builder role(String role) {
             this.role = Objects.requireNonNull(role);
             return this;
         }
-
         public Builder userId(String userId) {
             this.userId = Objects.requireNonNull(userId);
             return this;
-        }
-        public GoogleCloudContactcenterinsightsV1ConversationParticipantResponse build() {
+        }        public GoogleCloudContactcenterinsightsV1ConversationParticipantResponse build() {
             return new GoogleCloudContactcenterinsightsV1ConversationParticipantResponse(dialogflowParticipantName, obfuscatedExternalUserId, role, userId);
         }
     }

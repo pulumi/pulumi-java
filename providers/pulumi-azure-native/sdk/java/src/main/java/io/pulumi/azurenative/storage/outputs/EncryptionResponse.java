@@ -123,27 +123,22 @@ public final class EncryptionResponse {
             this.encryptionIdentity = encryptionIdentity;
             return this;
         }
-
         public Builder keySource(String keySource) {
             this.keySource = Objects.requireNonNull(keySource);
             return this;
         }
-
         public Builder keyVaultProperties(@Nullable KeyVaultPropertiesResponse keyVaultProperties) {
             this.keyVaultProperties = keyVaultProperties;
             return this;
         }
-
         public Builder requireInfrastructureEncryption(@Nullable Boolean requireInfrastructureEncryption) {
             this.requireInfrastructureEncryption = requireInfrastructureEncryption;
             return this;
         }
-
         public Builder services(@Nullable EncryptionServicesResponse services) {
             this.services = services;
             return this;
-        }
-        public EncryptionResponse build() {
+        }        public EncryptionResponse build() {
             return new EncryptionResponse(encryptionIdentity, keySource, keyVaultProperties, requireInfrastructureEncryption, services);
         }
     }

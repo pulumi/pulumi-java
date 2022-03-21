@@ -109,42 +109,34 @@ public final class MountConfigurationArgs extends io.pulumi.resources.ResourceAr
             this.azureBlobFileSystemConfiguration = azureBlobFileSystemConfiguration;
             return this;
         }
-
         public Builder azureBlobFileSystemConfiguration(@Nullable AzureBlobFileSystemConfigurationArgs azureBlobFileSystemConfiguration) {
             this.azureBlobFileSystemConfiguration = Output.ofNullable(azureBlobFileSystemConfiguration);
             return this;
         }
-
         public Builder azureFileShareConfiguration(@Nullable Output<AzureFileShareConfigurationArgs> azureFileShareConfiguration) {
             this.azureFileShareConfiguration = azureFileShareConfiguration;
             return this;
         }
-
         public Builder azureFileShareConfiguration(@Nullable AzureFileShareConfigurationArgs azureFileShareConfiguration) {
             this.azureFileShareConfiguration = Output.ofNullable(azureFileShareConfiguration);
             return this;
         }
-
         public Builder cifsMountConfiguration(@Nullable Output<CIFSMountConfigurationArgs> cifsMountConfiguration) {
             this.cifsMountConfiguration = cifsMountConfiguration;
             return this;
         }
-
         public Builder cifsMountConfiguration(@Nullable CIFSMountConfigurationArgs cifsMountConfiguration) {
             this.cifsMountConfiguration = Output.ofNullable(cifsMountConfiguration);
             return this;
         }
-
         public Builder nfsMountConfiguration(@Nullable Output<NFSMountConfigurationArgs> nfsMountConfiguration) {
             this.nfsMountConfiguration = nfsMountConfiguration;
             return this;
         }
-
         public Builder nfsMountConfiguration(@Nullable NFSMountConfigurationArgs nfsMountConfiguration) {
             this.nfsMountConfiguration = Output.ofNullable(nfsMountConfiguration);
             return this;
-        }
-        public MountConfigurationArgs build() {
+        }        public MountConfigurationArgs build() {
             return new MountConfigurationArgs(azureBlobFileSystemConfiguration, azureFileShareConfiguration, cifsMountConfiguration, nfsMountConfiguration);
         }
     }

@@ -98,42 +98,43 @@ public final class CertificateExtensionsArgs extends io.pulumi.resources.Resourc
             this.certificatePolicies = certificatePolicies;
             return this;
         }
-
         public Builder certificatePolicies(@Nullable List<CertificatePolicyInformationArgs> certificatePolicies) {
             this.certificatePolicies = Output.ofNullable(certificatePolicies);
             return this;
         }
-
+        public Builder certificatePolicies(CertificatePolicyInformationArgs... certificatePolicies) {
+            return certificatePolicies(List.of(certificatePolicies));
+        }
         public Builder extendedKeyUsage(@Nullable Output<List<CertificateExtendedKeyUsageArgs>> extendedKeyUsage) {
             this.extendedKeyUsage = extendedKeyUsage;
             return this;
         }
-
         public Builder extendedKeyUsage(@Nullable List<CertificateExtendedKeyUsageArgs> extendedKeyUsage) {
             this.extendedKeyUsage = Output.ofNullable(extendedKeyUsage);
             return this;
         }
-
+        public Builder extendedKeyUsage(CertificateExtendedKeyUsageArgs... extendedKeyUsage) {
+            return extendedKeyUsage(List.of(extendedKeyUsage));
+        }
         public Builder keyUsage(@Nullable Output<CertificateKeyUsageArgs> keyUsage) {
             this.keyUsage = keyUsage;
             return this;
         }
-
         public Builder keyUsage(@Nullable CertificateKeyUsageArgs keyUsage) {
             this.keyUsage = Output.ofNullable(keyUsage);
             return this;
         }
-
         public Builder subjectAlternativeNames(@Nullable Output<List<CertificateGeneralNameArgs>> subjectAlternativeNames) {
             this.subjectAlternativeNames = subjectAlternativeNames;
             return this;
         }
-
         public Builder subjectAlternativeNames(@Nullable List<CertificateGeneralNameArgs> subjectAlternativeNames) {
             this.subjectAlternativeNames = Output.ofNullable(subjectAlternativeNames);
             return this;
         }
-        public CertificateExtensionsArgs build() {
+        public Builder subjectAlternativeNames(CertificateGeneralNameArgs... subjectAlternativeNames) {
+            return subjectAlternativeNames(List.of(subjectAlternativeNames));
+        }        public CertificateExtensionsArgs build() {
             return new CertificateExtensionsArgs(certificatePolicies, extendedKeyUsage, keyUsage, subjectAlternativeNames);
         }
     }

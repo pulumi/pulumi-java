@@ -86,17 +86,14 @@ public final class RuntimeInfoResponse {
             this.diagnosticOutputUri = Objects.requireNonNull(diagnosticOutputUri);
             return this;
         }
-
         public Builder endpoints(Map<String,String> endpoints) {
             this.endpoints = Objects.requireNonNull(endpoints);
             return this;
         }
-
         public Builder outputUri(String outputUri) {
             this.outputUri = Objects.requireNonNull(outputUri);
             return this;
-        }
-        public RuntimeInfoResponse build() {
+        }        public RuntimeInfoResponse build() {
             return new RuntimeInfoResponse(diagnosticOutputUri, endpoints, outputUri);
         }
     }

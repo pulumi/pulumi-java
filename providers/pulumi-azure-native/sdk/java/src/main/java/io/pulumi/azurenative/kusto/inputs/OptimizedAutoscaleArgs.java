@@ -110,42 +110,34 @@ public final class OptimizedAutoscaleArgs extends io.pulumi.resources.ResourceAr
             this.isEnabled = Objects.requireNonNull(isEnabled);
             return this;
         }
-
         public Builder isEnabled(Boolean isEnabled) {
             this.isEnabled = Output.of(Objects.requireNonNull(isEnabled));
             return this;
         }
-
         public Builder maximum(Output<Integer> maximum) {
             this.maximum = Objects.requireNonNull(maximum);
             return this;
         }
-
         public Builder maximum(Integer maximum) {
             this.maximum = Output.of(Objects.requireNonNull(maximum));
             return this;
         }
-
         public Builder minimum(Output<Integer> minimum) {
             this.minimum = Objects.requireNonNull(minimum);
             return this;
         }
-
         public Builder minimum(Integer minimum) {
             this.minimum = Output.of(Objects.requireNonNull(minimum));
             return this;
         }
-
         public Builder version(Output<Integer> version) {
             this.version = Objects.requireNonNull(version);
             return this;
         }
-
         public Builder version(Integer version) {
             this.version = Output.of(Objects.requireNonNull(version));
             return this;
-        }
-        public OptimizedAutoscaleArgs build() {
+        }        public OptimizedAutoscaleArgs build() {
             return new OptimizedAutoscaleArgs(isEnabled, maximum, minimum, version);
         }
     }

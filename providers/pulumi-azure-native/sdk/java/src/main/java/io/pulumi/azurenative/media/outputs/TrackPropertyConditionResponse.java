@@ -87,17 +87,14 @@ public final class TrackPropertyConditionResponse {
             this.operation = Objects.requireNonNull(operation);
             return this;
         }
-
         public Builder property(String property) {
             this.property = Objects.requireNonNull(property);
             return this;
         }
-
         public Builder value(@Nullable String value) {
             this.value = value;
             return this;
-        }
-        public TrackPropertyConditionResponse build() {
+        }        public TrackPropertyConditionResponse build() {
             return new TrackPropertyConditionResponse(operation, property, value);
         }
     }

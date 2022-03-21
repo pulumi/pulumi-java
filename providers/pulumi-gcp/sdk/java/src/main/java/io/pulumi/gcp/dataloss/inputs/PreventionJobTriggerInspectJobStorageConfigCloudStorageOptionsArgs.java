@@ -150,62 +150,53 @@ public final class PreventionJobTriggerInspectJobStorageConfigCloudStorageOption
             this.bytesLimitPerFile = bytesLimitPerFile;
             return this;
         }
-
         public Builder bytesLimitPerFile(@Nullable Integer bytesLimitPerFile) {
             this.bytesLimitPerFile = Output.ofNullable(bytesLimitPerFile);
             return this;
         }
-
         public Builder bytesLimitPerFilePercent(@Nullable Output<Integer> bytesLimitPerFilePercent) {
             this.bytesLimitPerFilePercent = bytesLimitPerFilePercent;
             return this;
         }
-
         public Builder bytesLimitPerFilePercent(@Nullable Integer bytesLimitPerFilePercent) {
             this.bytesLimitPerFilePercent = Output.ofNullable(bytesLimitPerFilePercent);
             return this;
         }
-
         public Builder fileSet(Output<PreventionJobTriggerInspectJobStorageConfigCloudStorageOptionsFileSetArgs> fileSet) {
             this.fileSet = Objects.requireNonNull(fileSet);
             return this;
         }
-
         public Builder fileSet(PreventionJobTriggerInspectJobStorageConfigCloudStorageOptionsFileSetArgs fileSet) {
             this.fileSet = Output.of(Objects.requireNonNull(fileSet));
             return this;
         }
-
         public Builder fileTypes(@Nullable Output<List<String>> fileTypes) {
             this.fileTypes = fileTypes;
             return this;
         }
-
         public Builder fileTypes(@Nullable List<String> fileTypes) {
             this.fileTypes = Output.ofNullable(fileTypes);
             return this;
         }
-
+        public Builder fileTypes(String... fileTypes) {
+            return fileTypes(List.of(fileTypes));
+        }
         public Builder filesLimitPercent(@Nullable Output<Integer> filesLimitPercent) {
             this.filesLimitPercent = filesLimitPercent;
             return this;
         }
-
         public Builder filesLimitPercent(@Nullable Integer filesLimitPercent) {
             this.filesLimitPercent = Output.ofNullable(filesLimitPercent);
             return this;
         }
-
         public Builder sampleMethod(@Nullable Output<String> sampleMethod) {
             this.sampleMethod = sampleMethod;
             return this;
         }
-
         public Builder sampleMethod(@Nullable String sampleMethod) {
             this.sampleMethod = Output.ofNullable(sampleMethod);
             return this;
-        }
-        public PreventionJobTriggerInspectJobStorageConfigCloudStorageOptionsArgs build() {
+        }        public PreventionJobTriggerInspectJobStorageConfigCloudStorageOptionsArgs build() {
             return new PreventionJobTriggerInspectJobStorageConfigCloudStorageOptionsArgs(bytesLimitPerFile, bytesLimitPerFilePercent, fileSet, fileTypes, filesLimitPercent, sampleMethod);
         }
     }

@@ -55,12 +55,13 @@ public final class ResourceDataSyncAwsOrganizationsSource {
             this.organizationSourceType = Objects.requireNonNull(organizationSourceType);
             return this;
         }
-
         public Builder organizationalUnits(@Nullable List<String> organizationalUnits) {
             this.organizationalUnits = organizationalUnits;
             return this;
         }
-        public ResourceDataSyncAwsOrganizationsSource build() {
+        public Builder organizationalUnits(String... organizationalUnits) {
+            return organizationalUnits(List.of(organizationalUnits));
+        }        public ResourceDataSyncAwsOrganizationsSource build() {
             return new ResourceDataSyncAwsOrganizationsSource(organizationSourceType, organizationalUnits);
         }
     }

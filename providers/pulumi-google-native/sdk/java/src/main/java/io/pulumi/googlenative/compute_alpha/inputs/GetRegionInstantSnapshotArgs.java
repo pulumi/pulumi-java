@@ -78,17 +78,14 @@ public final class GetRegionInstantSnapshotArgs extends io.pulumi.resources.Invo
             this.instantSnapshot = Objects.requireNonNull(instantSnapshot);
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = project;
             return this;
         }
-
         public Builder region(String region) {
             this.region = Objects.requireNonNull(region);
             return this;
-        }
-        public GetRegionInstantSnapshotArgs build() {
+        }        public GetRegionInstantSnapshotArgs build() {
             return new GetRegionInstantSnapshotArgs(instantSnapshot, project, region);
         }
     }

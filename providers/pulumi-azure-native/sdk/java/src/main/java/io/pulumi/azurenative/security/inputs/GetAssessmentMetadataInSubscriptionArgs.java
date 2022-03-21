@@ -54,8 +54,7 @@ public final class GetAssessmentMetadataInSubscriptionArgs extends io.pulumi.res
         public Builder assessmentMetadataName(String assessmentMetadataName) {
             this.assessmentMetadataName = Objects.requireNonNull(assessmentMetadataName);
             return this;
-        }
-        public GetAssessmentMetadataInSubscriptionArgs build() {
+        }        public GetAssessmentMetadataInSubscriptionArgs build() {
             return new GetAssessmentMetadataInSubscriptionArgs(assessmentMetadataName);
         }
     }

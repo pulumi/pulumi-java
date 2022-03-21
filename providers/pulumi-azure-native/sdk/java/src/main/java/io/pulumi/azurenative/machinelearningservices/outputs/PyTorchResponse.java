@@ -74,12 +74,10 @@ public final class PyTorchResponse {
             this.distributionType = Objects.requireNonNull(distributionType);
             return this;
         }
-
         public Builder processCount(@Nullable Integer processCount) {
             this.processCount = processCount;
             return this;
-        }
-        public PyTorchResponse build() {
+        }        public PyTorchResponse build() {
             return new PyTorchResponse(distributionType, processCount);
         }
     }

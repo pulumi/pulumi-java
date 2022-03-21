@@ -71,12 +71,10 @@ public final class ObjectFieldSelector {
             this.apiVersion = apiVersion;
             return this;
         }
-
         public Builder fieldPath(String fieldPath) {
             this.fieldPath = Objects.requireNonNull(fieldPath);
             return this;
-        }
-        public ObjectFieldSelector build() {
+        }        public ObjectFieldSelector build() {
             return new ObjectFieldSelector(apiVersion, fieldPath);
         }
     }

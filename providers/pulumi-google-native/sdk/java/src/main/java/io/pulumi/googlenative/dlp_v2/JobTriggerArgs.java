@@ -182,92 +182,77 @@ public final class JobTriggerArgs extends io.pulumi.resources.ResourceArgs {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder displayName(@Nullable Output<String> displayName) {
             this.displayName = displayName;
             return this;
         }
-
         public Builder displayName(@Nullable String displayName) {
             this.displayName = Output.ofNullable(displayName);
             return this;
         }
-
         public Builder inspectJob(@Nullable Output<GooglePrivacyDlpV2InspectJobConfigArgs> inspectJob) {
             this.inspectJob = inspectJob;
             return this;
         }
-
         public Builder inspectJob(@Nullable GooglePrivacyDlpV2InspectJobConfigArgs inspectJob) {
             this.inspectJob = Output.ofNullable(inspectJob);
             return this;
         }
-
         public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
         }
-
         public Builder status(Output<JobTriggerStatus> status) {
             this.status = Objects.requireNonNull(status);
             return this;
         }
-
         public Builder status(JobTriggerStatus status) {
             this.status = Output.of(Objects.requireNonNull(status));
             return this;
         }
-
         public Builder triggerId(@Nullable Output<String> triggerId) {
             this.triggerId = triggerId;
             return this;
         }
-
         public Builder triggerId(@Nullable String triggerId) {
             this.triggerId = Output.ofNullable(triggerId);
             return this;
         }
-
         public Builder triggers(@Nullable Output<List<GooglePrivacyDlpV2TriggerArgs>> triggers) {
             this.triggers = triggers;
             return this;
         }
-
         public Builder triggers(@Nullable List<GooglePrivacyDlpV2TriggerArgs> triggers) {
             this.triggers = Output.ofNullable(triggers);
             return this;
         }
-        public JobTriggerArgs build() {
+        public Builder triggers(GooglePrivacyDlpV2TriggerArgs... triggers) {
+            return triggers(List.of(triggers));
+        }        public JobTriggerArgs build() {
             return new JobTriggerArgs(description, displayName, inspectJob, location, name, project, status, triggerId, triggers);
         }
     }

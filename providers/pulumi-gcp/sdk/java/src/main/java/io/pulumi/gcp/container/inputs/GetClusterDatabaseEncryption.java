@@ -64,12 +64,10 @@ public final class GetClusterDatabaseEncryption extends io.pulumi.resources.Invo
             this.keyName = Objects.requireNonNull(keyName);
             return this;
         }
-
         public Builder state(String state) {
             this.state = Objects.requireNonNull(state);
             return this;
-        }
-        public GetClusterDatabaseEncryption build() {
+        }        public GetClusterDatabaseEncryption build() {
             return new GetClusterDatabaseEncryption(keyName, state);
         }
     }

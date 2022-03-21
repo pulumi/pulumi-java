@@ -75,22 +75,18 @@ public final class BucketLoggingArgs extends io.pulumi.resources.ResourceArgs {
             this.logBucket = Objects.requireNonNull(logBucket);
             return this;
         }
-
         public Builder logBucket(String logBucket) {
             this.logBucket = Output.of(Objects.requireNonNull(logBucket));
             return this;
         }
-
         public Builder logObjectPrefix(@Nullable Output<String> logObjectPrefix) {
             this.logObjectPrefix = logObjectPrefix;
             return this;
         }
-
         public Builder logObjectPrefix(@Nullable String logObjectPrefix) {
             this.logObjectPrefix = Output.ofNullable(logObjectPrefix);
             return this;
-        }
-        public BucketLoggingArgs build() {
+        }        public BucketLoggingArgs build() {
             return new BucketLoggingArgs(logBucket, logObjectPrefix);
         }
     }

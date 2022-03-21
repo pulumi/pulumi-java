@@ -88,32 +88,29 @@ public final class SchedulingPolicyFairSharePolicyArgs extends io.pulumi.resourc
             this.computeReservation = computeReservation;
             return this;
         }
-
         public Builder computeReservation(@Nullable Integer computeReservation) {
             this.computeReservation = Output.ofNullable(computeReservation);
             return this;
         }
-
         public Builder shareDecaySeconds(@Nullable Output<Integer> shareDecaySeconds) {
             this.shareDecaySeconds = shareDecaySeconds;
             return this;
         }
-
         public Builder shareDecaySeconds(@Nullable Integer shareDecaySeconds) {
             this.shareDecaySeconds = Output.ofNullable(shareDecaySeconds);
             return this;
         }
-
         public Builder shareDistributions(@Nullable Output<List<SchedulingPolicyFairSharePolicyShareDistributionArgs>> shareDistributions) {
             this.shareDistributions = shareDistributions;
             return this;
         }
-
         public Builder shareDistributions(@Nullable List<SchedulingPolicyFairSharePolicyShareDistributionArgs> shareDistributions) {
             this.shareDistributions = Output.ofNullable(shareDistributions);
             return this;
         }
-        public SchedulingPolicyFairSharePolicyArgs build() {
+        public Builder shareDistributions(SchedulingPolicyFairSharePolicyShareDistributionArgs... shareDistributions) {
+            return shareDistributions(List.of(shareDistributions));
+        }        public SchedulingPolicyFairSharePolicyArgs build() {
             return new SchedulingPolicyFairSharePolicyArgs(computeReservation, shareDecaySeconds, shareDistributions);
         }
     }

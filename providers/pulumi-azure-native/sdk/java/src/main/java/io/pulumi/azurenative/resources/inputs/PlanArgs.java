@@ -126,52 +126,42 @@ public final class PlanArgs extends io.pulumi.resources.ResourceArgs {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder product(@Nullable Output<String> product) {
             this.product = product;
             return this;
         }
-
         public Builder product(@Nullable String product) {
             this.product = Output.ofNullable(product);
             return this;
         }
-
         public Builder promotionCode(@Nullable Output<String> promotionCode) {
             this.promotionCode = promotionCode;
             return this;
         }
-
         public Builder promotionCode(@Nullable String promotionCode) {
             this.promotionCode = Output.ofNullable(promotionCode);
             return this;
         }
-
         public Builder publisher(@Nullable Output<String> publisher) {
             this.publisher = publisher;
             return this;
         }
-
         public Builder publisher(@Nullable String publisher) {
             this.publisher = Output.ofNullable(publisher);
             return this;
         }
-
         public Builder version(@Nullable Output<String> version) {
             this.version = version;
             return this;
         }
-
         public Builder version(@Nullable String version) {
             this.version = Output.ofNullable(version);
             return this;
-        }
-        public PlanArgs build() {
+        }        public PlanArgs build() {
             return new PlanArgs(name, product, promotionCode, publisher, version);
         }
     }

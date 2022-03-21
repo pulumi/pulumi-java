@@ -53,8 +53,7 @@ public final class MonitoringScheduleConstraintsResource {
         public Builder s3Uri(@Nullable String s3Uri) {
             this.s3Uri = s3Uri;
             return this;
-        }
-        public MonitoringScheduleConstraintsResource build() {
+        }        public MonitoringScheduleConstraintsResource build() {
             return new MonitoringScheduleConstraintsResource(s3Uri);
         }
     }

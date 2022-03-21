@@ -105,42 +105,37 @@ public final class MembershipArgs extends io.pulumi.resources.ResourceArgs {
             this.groupId = Objects.requireNonNull(groupId);
             return this;
         }
-
         public Builder groupId(String groupId) {
             this.groupId = Output.of(Objects.requireNonNull(groupId));
             return this;
         }
-
         public Builder memberKey(@Nullable Output<EntityKeyArgs> memberKey) {
             this.memberKey = memberKey;
             return this;
         }
-
         public Builder memberKey(@Nullable EntityKeyArgs memberKey) {
             this.memberKey = Output.ofNullable(memberKey);
             return this;
         }
-
         public Builder preferredMemberKey(Output<EntityKeyArgs> preferredMemberKey) {
             this.preferredMemberKey = Objects.requireNonNull(preferredMemberKey);
             return this;
         }
-
         public Builder preferredMemberKey(EntityKeyArgs preferredMemberKey) {
             this.preferredMemberKey = Output.of(Objects.requireNonNull(preferredMemberKey));
             return this;
         }
-
         public Builder roles(@Nullable Output<List<MembershipRoleArgs>> roles) {
             this.roles = roles;
             return this;
         }
-
         public Builder roles(@Nullable List<MembershipRoleArgs> roles) {
             this.roles = Output.ofNullable(roles);
             return this;
         }
-        public MembershipArgs build() {
+        public Builder roles(MembershipRoleArgs... roles) {
+            return roles(List.of(roles));
+        }        public MembershipArgs build() {
             return new MembershipArgs(groupId, memberKey, preferredMemberKey, roles);
         }
     }

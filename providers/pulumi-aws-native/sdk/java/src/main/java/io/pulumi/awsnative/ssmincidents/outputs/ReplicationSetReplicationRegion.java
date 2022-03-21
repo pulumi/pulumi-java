@@ -56,12 +56,10 @@ public final class ReplicationSetReplicationRegion {
             this.regionConfiguration = regionConfiguration;
             return this;
         }
-
         public Builder regionName(@Nullable String regionName) {
             this.regionName = regionName;
             return this;
-        }
-        public ReplicationSetReplicationRegion build() {
+        }        public ReplicationSetReplicationRegion build() {
             return new ReplicationSetReplicationRegion(regionConfiguration, regionName);
         }
     }

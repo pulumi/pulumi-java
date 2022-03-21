@@ -56,12 +56,10 @@ public final class InstanceTemplateConfidentialInstanceConfigGetArgs extends io.
             this.enableConfidentialCompute = Objects.requireNonNull(enableConfidentialCompute);
             return this;
         }
-
         public Builder enableConfidentialCompute(Boolean enableConfidentialCompute) {
             this.enableConfidentialCompute = Output.of(Objects.requireNonNull(enableConfidentialCompute));
             return this;
-        }
-        public InstanceTemplateConfidentialInstanceConfigGetArgs build() {
+        }        public InstanceTemplateConfidentialInstanceConfigGetArgs build() {
             return new InstanceTemplateConfidentialInstanceConfigGetArgs(enableConfidentialCompute);
         }
     }

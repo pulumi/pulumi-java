@@ -69,12 +69,10 @@ public final class GetTriggerEventSubscriptionStatusResult {
             this.status = Objects.requireNonNull(status);
             return this;
         }
-
         public Builder triggerName(String triggerName) {
             this.triggerName = Objects.requireNonNull(triggerName);
             return this;
-        }
-        public GetTriggerEventSubscriptionStatusResult build() {
+        }        public GetTriggerEventSubscriptionStatusResult build() {
             return new GetTriggerEventSubscriptionStatusResult(status, triggerName);
         }
     }

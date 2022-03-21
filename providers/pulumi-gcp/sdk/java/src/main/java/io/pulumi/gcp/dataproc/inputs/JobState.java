@@ -315,162 +315,133 @@ public final class JobState extends io.pulumi.resources.ResourceArgs {
             this.driverControlsFilesUri = driverControlsFilesUri;
             return this;
         }
-
         public Builder driverControlsFilesUri(@Nullable String driverControlsFilesUri) {
             this.driverControlsFilesUri = Output.ofNullable(driverControlsFilesUri);
             return this;
         }
-
         public Builder driverOutputResourceUri(@Nullable Output<String> driverOutputResourceUri) {
             this.driverOutputResourceUri = driverOutputResourceUri;
             return this;
         }
-
         public Builder driverOutputResourceUri(@Nullable String driverOutputResourceUri) {
             this.driverOutputResourceUri = Output.ofNullable(driverOutputResourceUri);
             return this;
         }
-
         public Builder forceDelete(@Nullable Output<Boolean> forceDelete) {
             this.forceDelete = forceDelete;
             return this;
         }
-
         public Builder forceDelete(@Nullable Boolean forceDelete) {
             this.forceDelete = Output.ofNullable(forceDelete);
             return this;
         }
-
         public Builder hadoopConfig(@Nullable Output<JobHadoopConfigGetArgs> hadoopConfig) {
             this.hadoopConfig = hadoopConfig;
             return this;
         }
-
         public Builder hadoopConfig(@Nullable JobHadoopConfigGetArgs hadoopConfig) {
             this.hadoopConfig = Output.ofNullable(hadoopConfig);
             return this;
         }
-
         public Builder hiveConfig(@Nullable Output<JobHiveConfigGetArgs> hiveConfig) {
             this.hiveConfig = hiveConfig;
             return this;
         }
-
         public Builder hiveConfig(@Nullable JobHiveConfigGetArgs hiveConfig) {
             this.hiveConfig = Output.ofNullable(hiveConfig);
             return this;
         }
-
         public Builder labels(@Nullable Output<Map<String,String>> labels) {
             this.labels = labels;
             return this;
         }
-
         public Builder labels(@Nullable Map<String,String> labels) {
             this.labels = Output.ofNullable(labels);
             return this;
         }
-
         public Builder pigConfig(@Nullable Output<JobPigConfigGetArgs> pigConfig) {
             this.pigConfig = pigConfig;
             return this;
         }
-
         public Builder pigConfig(@Nullable JobPigConfigGetArgs pigConfig) {
             this.pigConfig = Output.ofNullable(pigConfig);
             return this;
         }
-
         public Builder placement(@Nullable Output<JobPlacementGetArgs> placement) {
             this.placement = placement;
             return this;
         }
-
         public Builder placement(@Nullable JobPlacementGetArgs placement) {
             this.placement = Output.ofNullable(placement);
             return this;
         }
-
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
         }
-
         public Builder pysparkConfig(@Nullable Output<JobPysparkConfigGetArgs> pysparkConfig) {
             this.pysparkConfig = pysparkConfig;
             return this;
         }
-
         public Builder pysparkConfig(@Nullable JobPysparkConfigGetArgs pysparkConfig) {
             this.pysparkConfig = Output.ofNullable(pysparkConfig);
             return this;
         }
-
         public Builder reference(@Nullable Output<JobReferenceGetArgs> reference) {
             this.reference = reference;
             return this;
         }
-
         public Builder reference(@Nullable JobReferenceGetArgs reference) {
             this.reference = Output.ofNullable(reference);
             return this;
         }
-
         public Builder region(@Nullable Output<String> region) {
             this.region = region;
             return this;
         }
-
         public Builder region(@Nullable String region) {
             this.region = Output.ofNullable(region);
             return this;
         }
-
         public Builder scheduling(@Nullable Output<JobSchedulingGetArgs> scheduling) {
             this.scheduling = scheduling;
             return this;
         }
-
         public Builder scheduling(@Nullable JobSchedulingGetArgs scheduling) {
             this.scheduling = Output.ofNullable(scheduling);
             return this;
         }
-
         public Builder sparkConfig(@Nullable Output<JobSparkConfigGetArgs> sparkConfig) {
             this.sparkConfig = sparkConfig;
             return this;
         }
-
         public Builder sparkConfig(@Nullable JobSparkConfigGetArgs sparkConfig) {
             this.sparkConfig = Output.ofNullable(sparkConfig);
             return this;
         }
-
         public Builder sparksqlConfig(@Nullable Output<JobSparksqlConfigGetArgs> sparksqlConfig) {
             this.sparksqlConfig = sparksqlConfig;
             return this;
         }
-
         public Builder sparksqlConfig(@Nullable JobSparksqlConfigGetArgs sparksqlConfig) {
             this.sparksqlConfig = Output.ofNullable(sparksqlConfig);
             return this;
         }
-
         public Builder statuses(@Nullable Output<List<JobStatusGetArgs>> statuses) {
             this.statuses = statuses;
             return this;
         }
-
         public Builder statuses(@Nullable List<JobStatusGetArgs> statuses) {
             this.statuses = Output.ofNullable(statuses);
             return this;
         }
-        public JobState build() {
+        public Builder statuses(JobStatusGetArgs... statuses) {
+            return statuses(List.of(statuses));
+        }        public JobState build() {
             return new JobState(driverControlsFilesUri, driverOutputResourceUri, forceDelete, hadoopConfig, hiveConfig, labels, pigConfig, placement, project, pysparkConfig, reference, region, scheduling, sparkConfig, sparksqlConfig, statuses);
         }
     }

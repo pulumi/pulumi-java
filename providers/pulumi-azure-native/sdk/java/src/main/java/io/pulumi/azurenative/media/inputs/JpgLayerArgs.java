@@ -128,52 +128,42 @@ public final class JpgLayerArgs extends io.pulumi.resources.ResourceArgs {
             this.height = height;
             return this;
         }
-
         public Builder height(@Nullable String height) {
             this.height = Output.ofNullable(height);
             return this;
         }
-
         public Builder label(@Nullable Output<String> label) {
             this.label = label;
             return this;
         }
-
         public Builder label(@Nullable String label) {
             this.label = Output.ofNullable(label);
             return this;
         }
-
         public Builder odataType(Output<String> odataType) {
             this.odataType = Objects.requireNonNull(odataType);
             return this;
         }
-
         public Builder odataType(String odataType) {
             this.odataType = Output.of(Objects.requireNonNull(odataType));
             return this;
         }
-
         public Builder quality(@Nullable Output<Integer> quality) {
             this.quality = quality;
             return this;
         }
-
         public Builder quality(@Nullable Integer quality) {
             this.quality = Output.ofNullable(quality);
             return this;
         }
-
         public Builder width(@Nullable Output<String> width) {
             this.width = width;
             return this;
         }
-
         public Builder width(@Nullable String width) {
             this.width = Output.ofNullable(width);
             return this;
-        }
-        public JpgLayerArgs build() {
+        }        public JpgLayerArgs build() {
             return new JpgLayerArgs(height, label, odataType, quality, width);
         }
     }

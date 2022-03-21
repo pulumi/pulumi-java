@@ -144,32 +144,26 @@ public final class ScheduleTriggerRecurrenceResponse extends io.pulumi.resources
             this.endTime = endTime;
             return this;
         }
-
         public Builder frequency(@Nullable String frequency) {
             this.frequency = frequency;
             return this;
         }
-
         public Builder interval(@Nullable Integer interval) {
             this.interval = interval;
             return this;
         }
-
         public Builder schedule(@Nullable RecurrenceScheduleResponse schedule) {
             this.schedule = schedule;
             return this;
         }
-
         public Builder startTime(@Nullable String startTime) {
             this.startTime = startTime;
             return this;
         }
-
         public Builder timeZone(@Nullable String timeZone) {
             this.timeZone = timeZone;
             return this;
-        }
-        public ScheduleTriggerRecurrenceResponse build() {
+        }        public ScheduleTriggerRecurrenceResponse build() {
             return new ScheduleTriggerRecurrenceResponse(endTime, frequency, interval, schedule, startTime, timeZone);
         }
     }

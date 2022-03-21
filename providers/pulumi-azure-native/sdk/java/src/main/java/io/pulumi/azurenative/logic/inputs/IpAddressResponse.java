@@ -60,8 +60,7 @@ public final class IpAddressResponse extends io.pulumi.resources.InvokeArgs {
         public Builder address(@Nullable String address) {
             this.address = address;
             return this;
-        }
-        public IpAddressResponse build() {
+        }        public IpAddressResponse build() {
             return new IpAddressResponse(address);
         }
     }

@@ -60,8 +60,7 @@ public final class DscConfigurationAssociationPropertyResponse extends io.pulumi
         public Builder name(@Nullable String name) {
             this.name = name;
             return this;
-        }
-        public DscConfigurationAssociationPropertyResponse build() {
+        }        public DscConfigurationAssociationPropertyResponse build() {
             return new DscConfigurationAssociationPropertyResponse(name);
         }
     }

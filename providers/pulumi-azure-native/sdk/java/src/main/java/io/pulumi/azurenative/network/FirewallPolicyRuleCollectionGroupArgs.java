@@ -159,72 +159,61 @@ public final class FirewallPolicyRuleCollectionGroupArgs extends io.pulumi.resou
             this.firewallPolicyName = Objects.requireNonNull(firewallPolicyName);
             return this;
         }
-
         public Builder firewallPolicyName(String firewallPolicyName) {
             this.firewallPolicyName = Output.of(Objects.requireNonNull(firewallPolicyName));
             return this;
         }
-
         public Builder id(@Nullable Output<String> id) {
             this.id = id;
             return this;
         }
-
         public Builder id(@Nullable String id) {
             this.id = Output.ofNullable(id);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder priority(@Nullable Output<Integer> priority) {
             this.priority = priority;
             return this;
         }
-
         public Builder priority(@Nullable Integer priority) {
             this.priority = Output.ofNullable(priority);
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder ruleCollectionGroupName(@Nullable Output<String> ruleCollectionGroupName) {
             this.ruleCollectionGroupName = ruleCollectionGroupName;
             return this;
         }
-
         public Builder ruleCollectionGroupName(@Nullable String ruleCollectionGroupName) {
             this.ruleCollectionGroupName = Output.ofNullable(ruleCollectionGroupName);
             return this;
         }
-
         public Builder ruleCollections(@Nullable Output<List<Either<FirewallPolicyFilterRuleCollectionArgs,FirewallPolicyNatRuleCollectionArgs>>> ruleCollections) {
             this.ruleCollections = ruleCollections;
             return this;
         }
-
         public Builder ruleCollections(@Nullable List<Either<FirewallPolicyFilterRuleCollectionArgs,FirewallPolicyNatRuleCollectionArgs>> ruleCollections) {
             this.ruleCollections = Output.ofNullable(ruleCollections);
             return this;
         }
-        public FirewallPolicyRuleCollectionGroupArgs build() {
+        public Builder ruleCollections(Either<FirewallPolicyFilterRuleCollectionArgs,FirewallPolicyNatRuleCollectionArgs>... ruleCollections) {
+            return ruleCollections(List.of(ruleCollections));
+        }        public FirewallPolicyRuleCollectionGroupArgs build() {
             return new FirewallPolicyRuleCollectionGroupArgs(firewallPolicyName, id, name, priority, resourceGroupName, ruleCollectionGroupName, ruleCollections);
         }
     }

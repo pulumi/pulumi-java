@@ -109,42 +109,34 @@ public final class RouteSpecHttpRouteArgs extends io.pulumi.resources.ResourceAr
             this.action = Objects.requireNonNull(action);
             return this;
         }
-
         public Builder action(RouteSpecHttpRouteActionArgs action) {
             this.action = Output.of(Objects.requireNonNull(action));
             return this;
         }
-
         public Builder match(Output<RouteSpecHttpRouteMatchArgs> match) {
             this.match = Objects.requireNonNull(match);
             return this;
         }
-
         public Builder match(RouteSpecHttpRouteMatchArgs match) {
             this.match = Output.of(Objects.requireNonNull(match));
             return this;
         }
-
         public Builder retryPolicy(@Nullable Output<RouteSpecHttpRouteRetryPolicyArgs> retryPolicy) {
             this.retryPolicy = retryPolicy;
             return this;
         }
-
         public Builder retryPolicy(@Nullable RouteSpecHttpRouteRetryPolicyArgs retryPolicy) {
             this.retryPolicy = Output.ofNullable(retryPolicy);
             return this;
         }
-
         public Builder timeout(@Nullable Output<RouteSpecHttpRouteTimeoutArgs> timeout) {
             this.timeout = timeout;
             return this;
         }
-
         public Builder timeout(@Nullable RouteSpecHttpRouteTimeoutArgs timeout) {
             this.timeout = Output.ofNullable(timeout);
             return this;
-        }
-        public RouteSpecHttpRouteArgs build() {
+        }        public RouteSpecHttpRouteArgs build() {
             return new RouteSpecHttpRouteArgs(action, match, retryPolicy, timeout);
         }
     }

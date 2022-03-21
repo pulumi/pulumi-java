@@ -78,12 +78,13 @@ public final class MasterAuthorizedNetworksConfigResponse extends io.pulumi.reso
             this.cidrBlocks = Objects.requireNonNull(cidrBlocks);
             return this;
         }
-
+        public Builder cidrBlocks(CidrBlockResponse... cidrBlocks) {
+            return cidrBlocks(List.of(cidrBlocks));
+        }
         public Builder enabled(Boolean enabled) {
             this.enabled = Objects.requireNonNull(enabled);
             return this;
-        }
-        public MasterAuthorizedNetworksConfigResponse build() {
+        }        public MasterAuthorizedNetworksConfigResponse build() {
             return new MasterAuthorizedNetworksConfigResponse(cidrBlocks, enabled);
         }
     }

@@ -71,12 +71,10 @@ public final class GetKeysKeySigningKeyDigest {
             this.digest = digest;
             return this;
         }
-
         public Builder type(@Nullable String type) {
             this.type = type;
             return this;
-        }
-        public GetKeysKeySigningKeyDigest build() {
+        }        public GetKeysKeySigningKeyDigest build() {
             return new GetKeysKeySigningKeyDigest(digest, type);
         }
     }

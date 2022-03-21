@@ -71,12 +71,10 @@ public final class BlobLocationResponse {
             this.credentials = credentials;
             return this;
         }
-
         public Builder uri(String uri) {
             this.uri = Objects.requireNonNull(uri);
             return this;
-        }
-        public BlobLocationResponse build() {
+        }        public BlobLocationResponse build() {
             return new BlobLocationResponse(credentials, uri);
         }
     }

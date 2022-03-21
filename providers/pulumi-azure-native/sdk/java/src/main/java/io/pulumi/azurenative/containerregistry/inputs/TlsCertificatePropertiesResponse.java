@@ -76,12 +76,10 @@ public final class TlsCertificatePropertiesResponse extends io.pulumi.resources.
             this.location = Objects.requireNonNull(location);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public TlsCertificatePropertiesResponse build() {
+        }        public TlsCertificatePropertiesResponse build() {
             return new TlsCertificatePropertiesResponse(location, type);
         }
     }

@@ -57,12 +57,10 @@ public final class DistributionPolicyZoneConfigurationArgs extends io.pulumi.res
             this.zone = zone;
             return this;
         }
-
         public Builder zone(@Nullable String zone) {
             this.zone = Output.ofNullable(zone);
             return this;
-        }
-        public DistributionPolicyZoneConfigurationArgs build() {
+        }        public DistributionPolicyZoneConfigurationArgs build() {
             return new DistributionPolicyZoneConfigurationArgs(zone);
         }
     }

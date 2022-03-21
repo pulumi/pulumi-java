@@ -56,12 +56,10 @@ public final class AnomalyDetectorConfigArgs extends io.pulumi.resources.Resourc
             this.anomalyDetectorFrequency = Objects.requireNonNull(anomalyDetectorFrequency);
             return this;
         }
-
         public Builder anomalyDetectorFrequency(AnomalyDetectorFrequency anomalyDetectorFrequency) {
             this.anomalyDetectorFrequency = Output.of(Objects.requireNonNull(anomalyDetectorFrequency));
             return this;
-        }
-        public AnomalyDetectorConfigArgs build() {
+        }        public AnomalyDetectorConfigArgs build() {
             return new AnomalyDetectorConfigArgs(anomalyDetectorFrequency);
         }
     }

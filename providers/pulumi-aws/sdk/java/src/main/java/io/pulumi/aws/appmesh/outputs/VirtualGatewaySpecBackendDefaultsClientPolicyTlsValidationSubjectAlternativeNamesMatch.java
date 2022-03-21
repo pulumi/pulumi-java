@@ -53,7 +53,9 @@ public final class VirtualGatewaySpecBackendDefaultsClientPolicyTlsValidationSub
             this.exacts = Objects.requireNonNull(exacts);
             return this;
         }
-        public VirtualGatewaySpecBackendDefaultsClientPolicyTlsValidationSubjectAlternativeNamesMatch build() {
+        public Builder exacts(String... exacts) {
+            return exacts(List.of(exacts));
+        }        public VirtualGatewaySpecBackendDefaultsClientPolicyTlsValidationSubjectAlternativeNamesMatch build() {
             return new VirtualGatewaySpecBackendDefaultsClientPolicyTlsValidationSubjectAlternativeNamesMatch(exacts);
         }
     }

@@ -138,62 +138,53 @@ public final class InboundNatPoolArgs extends io.pulumi.resources.ResourceArgs {
             this.backendPort = Objects.requireNonNull(backendPort);
             return this;
         }
-
         public Builder backendPort(Integer backendPort) {
             this.backendPort = Output.of(Objects.requireNonNull(backendPort));
             return this;
         }
-
         public Builder frontendPortRangeEnd(Output<Integer> frontendPortRangeEnd) {
             this.frontendPortRangeEnd = Objects.requireNonNull(frontendPortRangeEnd);
             return this;
         }
-
         public Builder frontendPortRangeEnd(Integer frontendPortRangeEnd) {
             this.frontendPortRangeEnd = Output.of(Objects.requireNonNull(frontendPortRangeEnd));
             return this;
         }
-
         public Builder frontendPortRangeStart(Output<Integer> frontendPortRangeStart) {
             this.frontendPortRangeStart = Objects.requireNonNull(frontendPortRangeStart);
             return this;
         }
-
         public Builder frontendPortRangeStart(Integer frontendPortRangeStart) {
             this.frontendPortRangeStart = Output.of(Objects.requireNonNull(frontendPortRangeStart));
             return this;
         }
-
         public Builder name(Output<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
-
         public Builder networkSecurityGroupRules(@Nullable Output<List<NetworkSecurityGroupRuleArgs>> networkSecurityGroupRules) {
             this.networkSecurityGroupRules = networkSecurityGroupRules;
             return this;
         }
-
         public Builder networkSecurityGroupRules(@Nullable List<NetworkSecurityGroupRuleArgs> networkSecurityGroupRules) {
             this.networkSecurityGroupRules = Output.ofNullable(networkSecurityGroupRules);
             return this;
         }
-
+        public Builder networkSecurityGroupRules(NetworkSecurityGroupRuleArgs... networkSecurityGroupRules) {
+            return networkSecurityGroupRules(List.of(networkSecurityGroupRules));
+        }
         public Builder protocol(Output<InboundEndpointProtocol> protocol) {
             this.protocol = Objects.requireNonNull(protocol);
             return this;
         }
-
         public Builder protocol(InboundEndpointProtocol protocol) {
             this.protocol = Output.of(Objects.requireNonNull(protocol));
             return this;
-        }
-        public InboundNatPoolArgs build() {
+        }        public InboundNatPoolArgs build() {
             return new InboundNatPoolArgs(backendPort, frontendPortRangeEnd, frontendPortRangeStart, name, networkSecurityGroupRules, protocol);
         }
     }

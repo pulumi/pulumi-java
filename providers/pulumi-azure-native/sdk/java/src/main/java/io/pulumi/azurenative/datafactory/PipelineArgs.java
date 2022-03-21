@@ -280,122 +280,104 @@ public final class PipelineArgs extends io.pulumi.resources.ResourceArgs {
             this.activities = activities;
             return this;
         }
-
         public Builder activities(@Nullable List<Object> activities) {
             this.activities = Output.ofNullable(activities);
             return this;
         }
-
+        public Builder activities(Object... activities) {
+            return activities(List.of(activities));
+        }
         public Builder annotations(@Nullable Output<List<Object>> annotations) {
             this.annotations = annotations;
             return this;
         }
-
         public Builder annotations(@Nullable List<Object> annotations) {
             this.annotations = Output.ofNullable(annotations);
             return this;
         }
-
+        public Builder annotations(Object... annotations) {
+            return annotations(List.of(annotations));
+        }
         public Builder concurrency(@Nullable Output<Integer> concurrency) {
             this.concurrency = concurrency;
             return this;
         }
-
         public Builder concurrency(@Nullable Integer concurrency) {
             this.concurrency = Output.ofNullable(concurrency);
             return this;
         }
-
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder factoryName(Output<String> factoryName) {
             this.factoryName = Objects.requireNonNull(factoryName);
             return this;
         }
-
         public Builder factoryName(String factoryName) {
             this.factoryName = Output.of(Objects.requireNonNull(factoryName));
             return this;
         }
-
         public Builder folder(@Nullable Output<PipelineFolderArgs> folder) {
             this.folder = folder;
             return this;
         }
-
         public Builder folder(@Nullable PipelineFolderArgs folder) {
             this.folder = Output.ofNullable(folder);
             return this;
         }
-
         public Builder parameters(@Nullable Output<Map<String,ParameterSpecificationArgs>> parameters) {
             this.parameters = parameters;
             return this;
         }
-
         public Builder parameters(@Nullable Map<String,ParameterSpecificationArgs> parameters) {
             this.parameters = Output.ofNullable(parameters);
             return this;
         }
-
         public Builder pipelineName(@Nullable Output<String> pipelineName) {
             this.pipelineName = pipelineName;
             return this;
         }
-
         public Builder pipelineName(@Nullable String pipelineName) {
             this.pipelineName = Output.ofNullable(pipelineName);
             return this;
         }
-
         public Builder policy(@Nullable Output<PipelinePolicyArgs> policy) {
             this.policy = policy;
             return this;
         }
-
         public Builder policy(@Nullable PipelinePolicyArgs policy) {
             this.policy = Output.ofNullable(policy);
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder runDimensions(@Nullable Output<Map<String,Object>> runDimensions) {
             this.runDimensions = runDimensions;
             return this;
         }
-
         public Builder runDimensions(@Nullable Map<String,Object> runDimensions) {
             this.runDimensions = Output.ofNullable(runDimensions);
             return this;
         }
-
         public Builder variables(@Nullable Output<Map<String,VariableSpecificationArgs>> variables) {
             this.variables = variables;
             return this;
         }
-
         public Builder variables(@Nullable Map<String,VariableSpecificationArgs> variables) {
             this.variables = Output.ofNullable(variables);
             return this;
-        }
-        public PipelineArgs build() {
+        }        public PipelineArgs build() {
             return new PipelineArgs(activities, annotations, concurrency, description, factoryName, folder, parameters, pipelineName, policy, resourceGroupName, runDimensions, variables);
         }
     }

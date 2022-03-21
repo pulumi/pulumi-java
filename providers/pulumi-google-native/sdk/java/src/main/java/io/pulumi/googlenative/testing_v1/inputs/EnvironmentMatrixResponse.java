@@ -94,17 +94,14 @@ public final class EnvironmentMatrixResponse extends io.pulumi.resources.InvokeA
             this.androidDeviceList = Objects.requireNonNull(androidDeviceList);
             return this;
         }
-
         public Builder androidMatrix(AndroidMatrixResponse androidMatrix) {
             this.androidMatrix = Objects.requireNonNull(androidMatrix);
             return this;
         }
-
         public Builder iosDeviceList(IosDeviceListResponse iosDeviceList) {
             this.iosDeviceList = Objects.requireNonNull(iosDeviceList);
             return this;
-        }
-        public EnvironmentMatrixResponse build() {
+        }        public EnvironmentMatrixResponse build() {
             return new EnvironmentMatrixResponse(androidDeviceList, androidMatrix, iosDeviceList);
         }
     }

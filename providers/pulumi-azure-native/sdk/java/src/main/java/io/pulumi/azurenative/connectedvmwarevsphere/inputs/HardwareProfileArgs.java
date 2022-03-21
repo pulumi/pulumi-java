@@ -94,32 +94,26 @@ public final class HardwareProfileArgs extends io.pulumi.resources.ResourceArgs 
             this.memorySizeMB = memorySizeMB;
             return this;
         }
-
         public Builder memorySizeMB(@Nullable Integer memorySizeMB) {
             this.memorySizeMB = Output.ofNullable(memorySizeMB);
             return this;
         }
-
         public Builder numCPUs(@Nullable Output<Integer> numCPUs) {
             this.numCPUs = numCPUs;
             return this;
         }
-
         public Builder numCPUs(@Nullable Integer numCPUs) {
             this.numCPUs = Output.ofNullable(numCPUs);
             return this;
         }
-
         public Builder numCoresPerSocket(@Nullable Output<Integer> numCoresPerSocket) {
             this.numCoresPerSocket = numCoresPerSocket;
             return this;
         }
-
         public Builder numCoresPerSocket(@Nullable Integer numCoresPerSocket) {
             this.numCoresPerSocket = Output.ofNullable(numCoresPerSocket);
             return this;
-        }
-        public HardwareProfileArgs build() {
+        }        public HardwareProfileArgs build() {
             return new HardwareProfileArgs(memorySizeMB, numCPUs, numCoresPerSocket);
         }
     }

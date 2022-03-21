@@ -144,47 +144,38 @@ public final class GetExportResult {
             this.accepts = accepts;
             return this;
         }
-
         public Builder body(String body) {
             this.body = Objects.requireNonNull(body);
             return this;
         }
-
         public Builder contentDisposition(String contentDisposition) {
             this.contentDisposition = Objects.requireNonNull(contentDisposition);
             return this;
         }
-
         public Builder contentType(String contentType) {
             this.contentType = Objects.requireNonNull(contentType);
             return this;
         }
-
         public Builder exportType(String exportType) {
             this.exportType = Objects.requireNonNull(exportType);
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder parameters(@Nullable Map<String,String> parameters) {
             this.parameters = parameters;
             return this;
         }
-
         public Builder restApiId(String restApiId) {
             this.restApiId = Objects.requireNonNull(restApiId);
             return this;
         }
-
         public Builder stageName(String stageName) {
             this.stageName = Objects.requireNonNull(stageName);
             return this;
-        }
-        public GetExportResult build() {
+        }        public GetExportResult build() {
             return new GetExportResult(accepts, body, contentDisposition, contentType, exportType, id, parameters, restApiId, stageName);
         }
     }

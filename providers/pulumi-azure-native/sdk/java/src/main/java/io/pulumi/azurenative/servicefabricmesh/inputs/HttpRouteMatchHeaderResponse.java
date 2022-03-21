@@ -94,17 +94,14 @@ public final class HttpRouteMatchHeaderResponse extends io.pulumi.resources.Invo
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder type(@Nullable String type) {
             this.type = type;
             return this;
         }
-
         public Builder value(@Nullable String value) {
             this.value = value;
             return this;
-        }
-        public HttpRouteMatchHeaderResponse build() {
+        }        public HttpRouteMatchHeaderResponse build() {
             return new HttpRouteMatchHeaderResponse(name, type, value);
         }
     }

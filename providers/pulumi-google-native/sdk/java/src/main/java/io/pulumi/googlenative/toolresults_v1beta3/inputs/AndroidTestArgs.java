@@ -130,52 +130,42 @@ public final class AndroidTestArgs extends io.pulumi.resources.ResourceArgs {
             this.androidAppInfo = androidAppInfo;
             return this;
         }
-
         public Builder androidAppInfo(@Nullable AndroidAppInfoArgs androidAppInfo) {
             this.androidAppInfo = Output.ofNullable(androidAppInfo);
             return this;
         }
-
         public Builder androidInstrumentationTest(@Nullable Output<AndroidInstrumentationTestArgs> androidInstrumentationTest) {
             this.androidInstrumentationTest = androidInstrumentationTest;
             return this;
         }
-
         public Builder androidInstrumentationTest(@Nullable AndroidInstrumentationTestArgs androidInstrumentationTest) {
             this.androidInstrumentationTest = Output.ofNullable(androidInstrumentationTest);
             return this;
         }
-
         public Builder androidRoboTest(@Nullable Output<AndroidRoboTestArgs> androidRoboTest) {
             this.androidRoboTest = androidRoboTest;
             return this;
         }
-
         public Builder androidRoboTest(@Nullable AndroidRoboTestArgs androidRoboTest) {
             this.androidRoboTest = Output.ofNullable(androidRoboTest);
             return this;
         }
-
         public Builder androidTestLoop(@Nullable Output<AndroidTestLoopArgs> androidTestLoop) {
             this.androidTestLoop = androidTestLoop;
             return this;
         }
-
         public Builder androidTestLoop(@Nullable AndroidTestLoopArgs androidTestLoop) {
             this.androidTestLoop = Output.ofNullable(androidTestLoop);
             return this;
         }
-
         public Builder testTimeout(@Nullable Output<DurationArgs> testTimeout) {
             this.testTimeout = testTimeout;
             return this;
         }
-
         public Builder testTimeout(@Nullable DurationArgs testTimeout) {
             this.testTimeout = Output.ofNullable(testTimeout);
             return this;
-        }
-        public AndroidTestArgs build() {
+        }        public AndroidTestArgs build() {
             return new AndroidTestArgs(androidAppInfo, androidInstrumentationTest, androidRoboTest, androidTestLoop, testTimeout);
         }
     }

@@ -103,22 +103,18 @@ public final class PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransform
             this.hours = hours;
             return this;
         }
-
         public Builder minutes(@Nullable Integer minutes) {
             this.minutes = minutes;
             return this;
         }
-
         public Builder nanos(@Nullable Integer nanos) {
             this.nanos = nanos;
             return this;
         }
-
         public Builder seconds(@Nullable Integer seconds) {
             this.seconds = seconds;
             return this;
-        }
-        public PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationReplaceConfigNewValueTimeValue build() {
+        }        public PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationReplaceConfigNewValueTimeValue build() {
             return new PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationReplaceConfigNewValueTimeValue(hours, minutes, nanos, seconds);
         }
     }

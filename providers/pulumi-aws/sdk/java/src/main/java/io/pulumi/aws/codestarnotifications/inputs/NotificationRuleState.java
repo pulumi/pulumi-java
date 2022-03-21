@@ -190,92 +190,80 @@ public final class NotificationRuleState extends io.pulumi.resources.ResourceArg
             this.arn = arn;
             return this;
         }
-
         public Builder arn(@Nullable String arn) {
             this.arn = Output.ofNullable(arn);
             return this;
         }
-
         public Builder detailType(@Nullable Output<String> detailType) {
             this.detailType = detailType;
             return this;
         }
-
         public Builder detailType(@Nullable String detailType) {
             this.detailType = Output.ofNullable(detailType);
             return this;
         }
-
         public Builder eventTypeIds(@Nullable Output<List<String>> eventTypeIds) {
             this.eventTypeIds = eventTypeIds;
             return this;
         }
-
         public Builder eventTypeIds(@Nullable List<String> eventTypeIds) {
             this.eventTypeIds = Output.ofNullable(eventTypeIds);
             return this;
         }
-
+        public Builder eventTypeIds(String... eventTypeIds) {
+            return eventTypeIds(List.of(eventTypeIds));
+        }
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder resource(@Nullable Output<String> resource) {
             this.resource = resource;
             return this;
         }
-
         public Builder resource(@Nullable String resource) {
             this.resource = Output.ofNullable(resource);
             return this;
         }
-
         public Builder status(@Nullable Output<String> status) {
             this.status = status;
             return this;
         }
-
         public Builder status(@Nullable String status) {
             this.status = Output.ofNullable(status);
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
             this.tagsAll = tagsAll;
             return this;
         }
-
         public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
             this.tagsAll = Output.ofNullable(tagsAll);
             return this;
         }
-
         public Builder targets(@Nullable Output<List<NotificationRuleTargetGetArgs>> targets) {
             this.targets = targets;
             return this;
         }
-
         public Builder targets(@Nullable List<NotificationRuleTargetGetArgs> targets) {
             this.targets = Output.ofNullable(targets);
             return this;
         }
-        public NotificationRuleState build() {
+        public Builder targets(NotificationRuleTargetGetArgs... targets) {
+            return targets(List.of(targets));
+        }        public NotificationRuleState build() {
             return new NotificationRuleState(arn, detailType, eventTypeIds, name, resource, status, tags, tagsAll, targets);
         }
     }

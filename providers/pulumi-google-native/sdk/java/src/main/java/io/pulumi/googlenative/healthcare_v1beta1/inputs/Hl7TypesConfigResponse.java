@@ -78,12 +78,16 @@ public final class Hl7TypesConfigResponse extends io.pulumi.resources.InvokeArgs
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
+        public Builder type(TypeResponse... type) {
+            return type(List.of(type));
+        }
         public Builder version(List<VersionSourceResponse> version) {
             this.version = Objects.requireNonNull(version);
             return this;
         }
-        public Hl7TypesConfigResponse build() {
+        public Builder version(VersionSourceResponse... version) {
+            return version(List.of(version));
+        }        public Hl7TypesConfigResponse build() {
             return new Hl7TypesConfigResponse(type, version);
         }
     }

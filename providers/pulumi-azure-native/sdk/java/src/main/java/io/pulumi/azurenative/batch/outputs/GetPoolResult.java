@@ -470,152 +470,140 @@ public final class GetPoolResult {
             this.allocationState = Objects.requireNonNull(allocationState);
             return this;
         }
-
         public Builder allocationStateTransitionTime(String allocationStateTransitionTime) {
             this.allocationStateTransitionTime = Objects.requireNonNull(allocationStateTransitionTime);
             return this;
         }
-
         public Builder applicationLicenses(@Nullable List<String> applicationLicenses) {
             this.applicationLicenses = applicationLicenses;
             return this;
         }
-
+        public Builder applicationLicenses(String... applicationLicenses) {
+            return applicationLicenses(List.of(applicationLicenses));
+        }
         public Builder applicationPackages(@Nullable List<ApplicationPackageReferenceResponse> applicationPackages) {
             this.applicationPackages = applicationPackages;
             return this;
         }
-
+        public Builder applicationPackages(ApplicationPackageReferenceResponse... applicationPackages) {
+            return applicationPackages(List.of(applicationPackages));
+        }
         public Builder autoScaleRun(AutoScaleRunResponse autoScaleRun) {
             this.autoScaleRun = Objects.requireNonNull(autoScaleRun);
             return this;
         }
-
         public Builder certificates(@Nullable List<CertificateReferenceResponse> certificates) {
             this.certificates = certificates;
             return this;
         }
-
+        public Builder certificates(CertificateReferenceResponse... certificates) {
+            return certificates(List.of(certificates));
+        }
         public Builder creationTime(String creationTime) {
             this.creationTime = Objects.requireNonNull(creationTime);
             return this;
         }
-
         public Builder currentDedicatedNodes(Integer currentDedicatedNodes) {
             this.currentDedicatedNodes = Objects.requireNonNull(currentDedicatedNodes);
             return this;
         }
-
         public Builder currentLowPriorityNodes(Integer currentLowPriorityNodes) {
             this.currentLowPriorityNodes = Objects.requireNonNull(currentLowPriorityNodes);
             return this;
         }
-
         public Builder deploymentConfiguration(@Nullable DeploymentConfigurationResponse deploymentConfiguration) {
             this.deploymentConfiguration = deploymentConfiguration;
             return this;
         }
-
         public Builder displayName(@Nullable String displayName) {
             this.displayName = displayName;
             return this;
         }
-
         public Builder etag(String etag) {
             this.etag = Objects.requireNonNull(etag);
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder identity(@Nullable BatchPoolIdentityResponse identity) {
             this.identity = identity;
             return this;
         }
-
         public Builder interNodeCommunication(@Nullable String interNodeCommunication) {
             this.interNodeCommunication = interNodeCommunication;
             return this;
         }
-
         public Builder lastModified(String lastModified) {
             this.lastModified = Objects.requireNonNull(lastModified);
             return this;
         }
-
         public Builder metadata(@Nullable List<MetadataItemResponse> metadata) {
             this.metadata = metadata;
             return this;
         }
-
+        public Builder metadata(MetadataItemResponse... metadata) {
+            return metadata(List.of(metadata));
+        }
         public Builder mountConfiguration(@Nullable List<MountConfigurationResponse> mountConfiguration) {
             this.mountConfiguration = mountConfiguration;
             return this;
         }
-
+        public Builder mountConfiguration(MountConfigurationResponse... mountConfiguration) {
+            return mountConfiguration(List.of(mountConfiguration));
+        }
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder networkConfiguration(@Nullable NetworkConfigurationResponse networkConfiguration) {
             this.networkConfiguration = networkConfiguration;
             return this;
         }
-
         public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
-
         public Builder provisioningStateTransitionTime(String provisioningStateTransitionTime) {
             this.provisioningStateTransitionTime = Objects.requireNonNull(provisioningStateTransitionTime);
             return this;
         }
-
         public Builder resizeOperationStatus(ResizeOperationStatusResponse resizeOperationStatus) {
             this.resizeOperationStatus = Objects.requireNonNull(resizeOperationStatus);
             return this;
         }
-
         public Builder scaleSettings(@Nullable ScaleSettingsResponse scaleSettings) {
             this.scaleSettings = scaleSettings;
             return this;
         }
-
         public Builder startTask(@Nullable StartTaskResponse startTask) {
             this.startTask = startTask;
             return this;
         }
-
         public Builder taskSchedulingPolicy(@Nullable TaskSchedulingPolicyResponse taskSchedulingPolicy) {
             this.taskSchedulingPolicy = taskSchedulingPolicy;
             return this;
         }
-
         public Builder taskSlotsPerNode(@Nullable Integer taskSlotsPerNode) {
             this.taskSlotsPerNode = taskSlotsPerNode;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder userAccounts(@Nullable List<UserAccountResponse> userAccounts) {
             this.userAccounts = userAccounts;
             return this;
         }
-
+        public Builder userAccounts(UserAccountResponse... userAccounts) {
+            return userAccounts(List.of(userAccounts));
+        }
         public Builder vmSize(@Nullable String vmSize) {
             this.vmSize = vmSize;
             return this;
-        }
-        public GetPoolResult build() {
+        }        public GetPoolResult build() {
             return new GetPoolResult(allocationState, allocationStateTransitionTime, applicationLicenses, applicationPackages, autoScaleRun, certificates, creationTime, currentDedicatedNodes, currentLowPriorityNodes, deploymentConfiguration, displayName, etag, id, identity, interNodeCommunication, lastModified, metadata, mountConfiguration, name, networkConfiguration, provisioningState, provisioningStateTransitionTime, resizeOperationStatus, scaleSettings, startTask, taskSchedulingPolicy, taskSlotsPerNode, type, userAccounts, vmSize);
         }
     }

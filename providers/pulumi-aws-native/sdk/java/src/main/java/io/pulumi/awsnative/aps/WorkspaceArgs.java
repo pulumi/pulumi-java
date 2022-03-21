@@ -92,32 +92,29 @@ public final class WorkspaceArgs extends io.pulumi.resources.ResourceArgs {
             this.alertManagerDefinition = alertManagerDefinition;
             return this;
         }
-
         public Builder alertManagerDefinition(@Nullable String alertManagerDefinition) {
             this.alertManagerDefinition = Output.ofNullable(alertManagerDefinition);
             return this;
         }
-
         public Builder alias(@Nullable Output<String> alias) {
             this.alias = alias;
             return this;
         }
-
         public Builder alias(@Nullable String alias) {
             this.alias = Output.ofNullable(alias);
             return this;
         }
-
         public Builder tags(@Nullable Output<List<WorkspaceTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable List<WorkspaceTagArgs> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-        public WorkspaceArgs build() {
+        public Builder tags(WorkspaceTagArgs... tags) {
+            return tags(List.of(tags));
+        }        public WorkspaceArgs build() {
             return new WorkspaceArgs(alertManagerDefinition, alias, tags);
         }
     }

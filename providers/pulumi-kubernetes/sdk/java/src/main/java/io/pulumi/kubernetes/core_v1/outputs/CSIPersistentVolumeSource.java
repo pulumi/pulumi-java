@@ -186,47 +186,38 @@ public final class CSIPersistentVolumeSource {
             this.controllerExpandSecretRef = controllerExpandSecretRef;
             return this;
         }
-
         public Builder controllerPublishSecretRef(@Nullable SecretReference controllerPublishSecretRef) {
             this.controllerPublishSecretRef = controllerPublishSecretRef;
             return this;
         }
-
         public Builder driver(String driver) {
             this.driver = Objects.requireNonNull(driver);
             return this;
         }
-
         public Builder fsType(@Nullable String fsType) {
             this.fsType = fsType;
             return this;
         }
-
         public Builder nodePublishSecretRef(@Nullable SecretReference nodePublishSecretRef) {
             this.nodePublishSecretRef = nodePublishSecretRef;
             return this;
         }
-
         public Builder nodeStageSecretRef(@Nullable SecretReference nodeStageSecretRef) {
             this.nodeStageSecretRef = nodeStageSecretRef;
             return this;
         }
-
         public Builder readOnly(@Nullable Boolean readOnly) {
             this.readOnly = readOnly;
             return this;
         }
-
         public Builder volumeAttributes(@Nullable Map<String,String> volumeAttributes) {
             this.volumeAttributes = volumeAttributes;
             return this;
         }
-
         public Builder volumeHandle(String volumeHandle) {
             this.volumeHandle = Objects.requireNonNull(volumeHandle);
             return this;
-        }
-        public CSIPersistentVolumeSource build() {
+        }        public CSIPersistentVolumeSource build() {
             return new CSIPersistentVolumeSource(controllerExpandSecretRef, controllerPublishSecretRef, driver, fsType, nodePublishSecretRef, nodeStageSecretRef, readOnly, volumeAttributes, volumeHandle);
         }
     }

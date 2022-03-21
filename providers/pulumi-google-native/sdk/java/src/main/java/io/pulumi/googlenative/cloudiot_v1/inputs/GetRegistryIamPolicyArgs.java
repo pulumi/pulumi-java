@@ -78,17 +78,14 @@ public final class GetRegistryIamPolicyArgs extends io.pulumi.resources.InvokeAr
             this.location = Objects.requireNonNull(location);
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = project;
             return this;
         }
-
         public Builder registryId(String registryId) {
             this.registryId = Objects.requireNonNull(registryId);
             return this;
-        }
-        public GetRegistryIamPolicyArgs build() {
+        }        public GetRegistryIamPolicyArgs build() {
             return new GetRegistryIamPolicyArgs(location, project, registryId);
         }
     }

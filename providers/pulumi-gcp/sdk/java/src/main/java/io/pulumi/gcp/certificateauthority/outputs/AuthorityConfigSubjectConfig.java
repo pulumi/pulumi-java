@@ -76,12 +76,10 @@ public final class AuthorityConfigSubjectConfig {
             this.subject = Objects.requireNonNull(subject);
             return this;
         }
-
         public Builder subjectAltName(@Nullable AuthorityConfigSubjectConfigSubjectAltName subjectAltName) {
             this.subjectAltName = subjectAltName;
             return this;
-        }
-        public AuthorityConfigSubjectConfig build() {
+        }        public AuthorityConfigSubjectConfig build() {
             return new AuthorityConfigSubjectConfig(subject, subjectAltName);
         }
     }

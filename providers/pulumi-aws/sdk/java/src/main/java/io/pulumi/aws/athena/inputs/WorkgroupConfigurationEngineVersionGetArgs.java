@@ -74,22 +74,18 @@ public final class WorkgroupConfigurationEngineVersionGetArgs extends io.pulumi.
             this.effectiveEngineVersion = effectiveEngineVersion;
             return this;
         }
-
         public Builder effectiveEngineVersion(@Nullable String effectiveEngineVersion) {
             this.effectiveEngineVersion = Output.ofNullable(effectiveEngineVersion);
             return this;
         }
-
         public Builder selectedEngineVersion(@Nullable Output<String> selectedEngineVersion) {
             this.selectedEngineVersion = selectedEngineVersion;
             return this;
         }
-
         public Builder selectedEngineVersion(@Nullable String selectedEngineVersion) {
             this.selectedEngineVersion = Output.ofNullable(selectedEngineVersion);
             return this;
-        }
-        public WorkgroupConfigurationEngineVersionGetArgs build() {
+        }        public WorkgroupConfigurationEngineVersionGetArgs build() {
             return new WorkgroupConfigurationEngineVersionGetArgs(effectiveEngineVersion, selectedEngineVersion);
         }
     }

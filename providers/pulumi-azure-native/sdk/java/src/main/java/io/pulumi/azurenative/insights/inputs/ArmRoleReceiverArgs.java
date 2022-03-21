@@ -95,32 +95,26 @@ public final class ArmRoleReceiverArgs extends io.pulumi.resources.ResourceArgs 
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
-
         public Builder roleId(Output<String> roleId) {
             this.roleId = Objects.requireNonNull(roleId);
             return this;
         }
-
         public Builder roleId(String roleId) {
             this.roleId = Output.of(Objects.requireNonNull(roleId));
             return this;
         }
-
         public Builder useCommonAlertSchema(@Nullable Output<Boolean> useCommonAlertSchema) {
             this.useCommonAlertSchema = useCommonAlertSchema;
             return this;
         }
-
         public Builder useCommonAlertSchema(@Nullable Boolean useCommonAlertSchema) {
             this.useCommonAlertSchema = Output.ofNullable(useCommonAlertSchema);
             return this;
-        }
-        public ArmRoleReceiverArgs build() {
+        }        public ArmRoleReceiverArgs build() {
             return new ArmRoleReceiverArgs(name, roleId, useCommonAlertSchema);
         }
     }

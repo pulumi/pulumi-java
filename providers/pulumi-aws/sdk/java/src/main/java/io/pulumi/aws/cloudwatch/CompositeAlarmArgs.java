@@ -173,82 +173,75 @@ public final class CompositeAlarmArgs extends io.pulumi.resources.ResourceArgs {
             this.actionsEnabled = actionsEnabled;
             return this;
         }
-
         public Builder actionsEnabled(@Nullable Boolean actionsEnabled) {
             this.actionsEnabled = Output.ofNullable(actionsEnabled);
             return this;
         }
-
         public Builder alarmActions(@Nullable Output<List<String>> alarmActions) {
             this.alarmActions = alarmActions;
             return this;
         }
-
         public Builder alarmActions(@Nullable List<String> alarmActions) {
             this.alarmActions = Output.ofNullable(alarmActions);
             return this;
         }
-
+        public Builder alarmActions(String... alarmActions) {
+            return alarmActions(List.of(alarmActions));
+        }
         public Builder alarmDescription(@Nullable Output<String> alarmDescription) {
             this.alarmDescription = alarmDescription;
             return this;
         }
-
         public Builder alarmDescription(@Nullable String alarmDescription) {
             this.alarmDescription = Output.ofNullable(alarmDescription);
             return this;
         }
-
         public Builder alarmName(Output<String> alarmName) {
             this.alarmName = Objects.requireNonNull(alarmName);
             return this;
         }
-
         public Builder alarmName(String alarmName) {
             this.alarmName = Output.of(Objects.requireNonNull(alarmName));
             return this;
         }
-
         public Builder alarmRule(Output<String> alarmRule) {
             this.alarmRule = Objects.requireNonNull(alarmRule);
             return this;
         }
-
         public Builder alarmRule(String alarmRule) {
             this.alarmRule = Output.of(Objects.requireNonNull(alarmRule));
             return this;
         }
-
         public Builder insufficientDataActions(@Nullable Output<List<String>> insufficientDataActions) {
             this.insufficientDataActions = insufficientDataActions;
             return this;
         }
-
         public Builder insufficientDataActions(@Nullable List<String> insufficientDataActions) {
             this.insufficientDataActions = Output.ofNullable(insufficientDataActions);
             return this;
         }
-
+        public Builder insufficientDataActions(String... insufficientDataActions) {
+            return insufficientDataActions(List.of(insufficientDataActions));
+        }
         public Builder okActions(@Nullable Output<List<String>> okActions) {
             this.okActions = okActions;
             return this;
         }
-
         public Builder okActions(@Nullable List<String> okActions) {
             this.okActions = Output.ofNullable(okActions);
             return this;
         }
-
+        public Builder okActions(String... okActions) {
+            return okActions(List.of(okActions));
+        }
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
-        }
-        public CompositeAlarmArgs build() {
+        }        public CompositeAlarmArgs build() {
             return new CompositeAlarmArgs(actionsEnabled, alarmActions, alarmDescription, alarmName, alarmRule, insufficientDataActions, okActions, tags);
         }
     }

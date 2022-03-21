@@ -60,7 +60,9 @@ public final class MetadataResponse extends io.pulumi.resources.InvokeArgs {
             this.services = Objects.requireNonNull(services);
             return this;
         }
-        public MetadataResponse build() {
+        public Builder services(String... services) {
+            return services(List.of(services));
+        }        public MetadataResponse build() {
             return new MetadataResponse(services);
         }
     }

@@ -96,32 +96,26 @@ public final class PersistenceConfigArgs extends io.pulumi.resources.ResourceArg
             this.persistenceMode = persistenceMode;
             return this;
         }
-
         public Builder persistenceMode(@Nullable PersistenceConfigPersistenceMode persistenceMode) {
             this.persistenceMode = Output.ofNullable(persistenceMode);
             return this;
         }
-
         public Builder rdbSnapshotPeriod(@Nullable Output<PersistenceConfigRdbSnapshotPeriod> rdbSnapshotPeriod) {
             this.rdbSnapshotPeriod = rdbSnapshotPeriod;
             return this;
         }
-
         public Builder rdbSnapshotPeriod(@Nullable PersistenceConfigRdbSnapshotPeriod rdbSnapshotPeriod) {
             this.rdbSnapshotPeriod = Output.ofNullable(rdbSnapshotPeriod);
             return this;
         }
-
         public Builder rdbSnapshotStartTime(@Nullable Output<String> rdbSnapshotStartTime) {
             this.rdbSnapshotStartTime = rdbSnapshotStartTime;
             return this;
         }
-
         public Builder rdbSnapshotStartTime(@Nullable String rdbSnapshotStartTime) {
             this.rdbSnapshotStartTime = Output.ofNullable(rdbSnapshotStartTime);
             return this;
-        }
-        public PersistenceConfigArgs build() {
+        }        public PersistenceConfigArgs build() {
             return new PersistenceConfigArgs(persistenceMode, rdbSnapshotPeriod, rdbSnapshotStartTime);
         }
     }

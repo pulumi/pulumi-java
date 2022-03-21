@@ -56,12 +56,10 @@ public final class FlowEventBridgeDestinationProperties {
             this.errorHandlingConfig = errorHandlingConfig;
             return this;
         }
-
         public Builder object(String object) {
             this.object = Objects.requireNonNull(object);
             return this;
-        }
-        public FlowEventBridgeDestinationProperties build() {
+        }        public FlowEventBridgeDestinationProperties build() {
             return new FlowEventBridgeDestinationProperties(errorHandlingConfig, object);
         }
     }

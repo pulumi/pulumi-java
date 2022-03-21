@@ -120,27 +120,22 @@ public final class ServiceSkuResponse {
             this.capacity = capacity;
             return this;
         }
-
         public Builder family(@Nullable String family) {
             this.family = family;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
-
         public Builder size(@Nullable String size) {
             this.size = size;
             return this;
         }
-
         public Builder tier(@Nullable String tier) {
             this.tier = tier;
             return this;
-        }
-        public ServiceSkuResponse build() {
+        }        public ServiceSkuResponse build() {
             return new ServiceSkuResponse(capacity, family, name, size, tier);
         }
     }

@@ -190,47 +190,47 @@ public final class ConfigurationResponse {
             this.availabilityInformation = Objects.requireNonNull(availabilityInformation);
             return this;
         }
-
         public Builder costInformation(CostInformationResponse costInformation) {
             this.costInformation = Objects.requireNonNull(costInformation);
             return this;
         }
-
         public Builder description(DescriptionResponse description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
-
         public Builder dimensions(DimensionsResponse dimensions) {
             this.dimensions = Objects.requireNonNull(dimensions);
             return this;
         }
-
         public Builder displayName(String displayName) {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
-
         public Builder filterableProperties(List<FilterablePropertyResponse> filterableProperties) {
             this.filterableProperties = Objects.requireNonNull(filterableProperties);
             return this;
         }
-
+        public Builder filterableProperties(FilterablePropertyResponse... filterableProperties) {
+            return filterableProperties(List.of(filterableProperties));
+        }
         public Builder hierarchyInformation(HierarchyInformationResponse hierarchyInformation) {
             this.hierarchyInformation = Objects.requireNonNull(hierarchyInformation);
             return this;
         }
-
         public Builder imageInformation(List<ImageInformationResponse> imageInformation) {
             this.imageInformation = Objects.requireNonNull(imageInformation);
             return this;
         }
-
+        public Builder imageInformation(ImageInformationResponse... imageInformation) {
+            return imageInformation(List.of(imageInformation));
+        }
         public Builder specifications(List<SpecificationResponse> specifications) {
             this.specifications = Objects.requireNonNull(specifications);
             return this;
         }
-        public ConfigurationResponse build() {
+        public Builder specifications(SpecificationResponse... specifications) {
+            return specifications(List.of(specifications));
+        }        public ConfigurationResponse build() {
             return new ConfigurationResponse(availabilityInformation, costInformation, description, dimensions, displayName, filterableProperties, hierarchyInformation, imageInformation, specifications);
         }
     }

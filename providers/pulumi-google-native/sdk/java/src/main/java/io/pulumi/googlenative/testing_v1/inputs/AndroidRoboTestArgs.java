@@ -180,82 +180,72 @@ public final class AndroidRoboTestArgs extends io.pulumi.resources.ResourceArgs 
             this.appApk = appApk;
             return this;
         }
-
         public Builder appApk(@Nullable FileReferenceArgs appApk) {
             this.appApk = Output.ofNullable(appApk);
             return this;
         }
-
         public Builder appBundle(@Nullable Output<AppBundleArgs> appBundle) {
             this.appBundle = appBundle;
             return this;
         }
-
         public Builder appBundle(@Nullable AppBundleArgs appBundle) {
             this.appBundle = Output.ofNullable(appBundle);
             return this;
         }
-
         public Builder appInitialActivity(@Nullable Output<String> appInitialActivity) {
             this.appInitialActivity = appInitialActivity;
             return this;
         }
-
         public Builder appInitialActivity(@Nullable String appInitialActivity) {
             this.appInitialActivity = Output.ofNullable(appInitialActivity);
             return this;
         }
-
         public Builder appPackageId(@Nullable Output<String> appPackageId) {
             this.appPackageId = appPackageId;
             return this;
         }
-
         public Builder appPackageId(@Nullable String appPackageId) {
             this.appPackageId = Output.ofNullable(appPackageId);
             return this;
         }
-
         public Builder roboDirectives(@Nullable Output<List<RoboDirectiveArgs>> roboDirectives) {
             this.roboDirectives = roboDirectives;
             return this;
         }
-
         public Builder roboDirectives(@Nullable List<RoboDirectiveArgs> roboDirectives) {
             this.roboDirectives = Output.ofNullable(roboDirectives);
             return this;
         }
-
+        public Builder roboDirectives(RoboDirectiveArgs... roboDirectives) {
+            return roboDirectives(List.of(roboDirectives));
+        }
         public Builder roboMode(@Nullable Output<AndroidRoboTestRoboMode> roboMode) {
             this.roboMode = roboMode;
             return this;
         }
-
         public Builder roboMode(@Nullable AndroidRoboTestRoboMode roboMode) {
             this.roboMode = Output.ofNullable(roboMode);
             return this;
         }
-
         public Builder roboScript(@Nullable Output<FileReferenceArgs> roboScript) {
             this.roboScript = roboScript;
             return this;
         }
-
         public Builder roboScript(@Nullable FileReferenceArgs roboScript) {
             this.roboScript = Output.ofNullable(roboScript);
             return this;
         }
-
         public Builder startingIntents(@Nullable Output<List<RoboStartingIntentArgs>> startingIntents) {
             this.startingIntents = startingIntents;
             return this;
         }
-
         public Builder startingIntents(@Nullable List<RoboStartingIntentArgs> startingIntents) {
             this.startingIntents = Output.ofNullable(startingIntents);
             return this;
         }
-        public AndroidRoboTestArgs build() {
+        public Builder startingIntents(RoboStartingIntentArgs... startingIntents) {
+            return startingIntents(List.of(startingIntents));
+        }        public AndroidRoboTestArgs build() {
             return new AndroidRoboTestArgs(appApk, appBundle, appInitialActivity, appPackageId, roboDirectives, roboMode, roboScript, startingIntents);
         }
     }

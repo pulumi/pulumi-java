@@ -74,12 +74,10 @@ public final class IntentFollowUpPrompt {
             this.prompt = Objects.requireNonNull(prompt);
             return this;
         }
-
         public Builder rejectionStatement(IntentFollowUpPromptRejectionStatement rejectionStatement) {
             this.rejectionStatement = Objects.requireNonNull(rejectionStatement);
             return this;
-        }
-        public IntentFollowUpPrompt build() {
+        }        public IntentFollowUpPrompt build() {
             return new IntentFollowUpPrompt(prompt, rejectionStatement);
         }
     }

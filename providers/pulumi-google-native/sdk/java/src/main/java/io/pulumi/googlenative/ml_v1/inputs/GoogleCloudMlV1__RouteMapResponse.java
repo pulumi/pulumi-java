@@ -76,12 +76,10 @@ public final class GoogleCloudMlV1__RouteMapResponse extends io.pulumi.resources
             this.health = Objects.requireNonNull(health);
             return this;
         }
-
         public Builder predict(String predict) {
             this.predict = Objects.requireNonNull(predict);
             return this;
-        }
-        public GoogleCloudMlV1__RouteMapResponse build() {
+        }        public GoogleCloudMlV1__RouteMapResponse build() {
             return new GoogleCloudMlV1__RouteMapResponse(health, predict);
         }
     }

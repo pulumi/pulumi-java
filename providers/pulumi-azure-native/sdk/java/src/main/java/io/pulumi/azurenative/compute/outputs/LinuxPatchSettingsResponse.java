@@ -71,12 +71,10 @@ public final class LinuxPatchSettingsResponse {
             this.assessmentMode = assessmentMode;
             return this;
         }
-
         public Builder patchMode(@Nullable String patchMode) {
             this.patchMode = patchMode;
             return this;
-        }
-        public LinuxPatchSettingsResponse build() {
+        }        public LinuxPatchSettingsResponse build() {
             return new LinuxPatchSettingsResponse(assessmentMode, patchMode);
         }
     }

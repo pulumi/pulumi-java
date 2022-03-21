@@ -88,17 +88,14 @@ public final class KeyVaultContractPropertiesResponse {
             this.identityClientId = identityClientId;
             return this;
         }
-
         public Builder lastStatus(@Nullable KeyVaultLastAccessStatusContractPropertiesResponse lastStatus) {
             this.lastStatus = lastStatus;
             return this;
         }
-
         public Builder secretIdentifier(@Nullable String secretIdentifier) {
             this.secretIdentifier = secretIdentifier;
             return this;
-        }
-        public KeyVaultContractPropertiesResponse build() {
+        }        public KeyVaultContractPropertiesResponse build() {
             return new KeyVaultContractPropertiesResponse(identityClientId, lastStatus, secretIdentifier);
         }
     }

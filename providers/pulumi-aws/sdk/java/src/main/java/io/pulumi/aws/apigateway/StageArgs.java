@@ -237,112 +237,90 @@ public final class StageArgs extends io.pulumi.resources.ResourceArgs {
             this.accessLogSettings = accessLogSettings;
             return this;
         }
-
         public Builder accessLogSettings(@Nullable StageAccessLogSettingsArgs accessLogSettings) {
             this.accessLogSettings = Output.ofNullable(accessLogSettings);
             return this;
         }
-
         public Builder cacheClusterEnabled(@Nullable Output<Boolean> cacheClusterEnabled) {
             this.cacheClusterEnabled = cacheClusterEnabled;
             return this;
         }
-
         public Builder cacheClusterEnabled(@Nullable Boolean cacheClusterEnabled) {
             this.cacheClusterEnabled = Output.ofNullable(cacheClusterEnabled);
             return this;
         }
-
         public Builder cacheClusterSize(@Nullable Output<String> cacheClusterSize) {
             this.cacheClusterSize = cacheClusterSize;
             return this;
         }
-
         public Builder cacheClusterSize(@Nullable String cacheClusterSize) {
             this.cacheClusterSize = Output.ofNullable(cacheClusterSize);
             return this;
         }
-
         public Builder clientCertificateId(@Nullable Output<String> clientCertificateId) {
             this.clientCertificateId = clientCertificateId;
             return this;
         }
-
         public Builder clientCertificateId(@Nullable String clientCertificateId) {
             this.clientCertificateId = Output.ofNullable(clientCertificateId);
             return this;
         }
-
         public Builder deployment(Output<String> deployment) {
             this.deployment = Objects.requireNonNull(deployment);
             return this;
         }
-
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder documentationVersion(@Nullable Output<String> documentationVersion) {
             this.documentationVersion = documentationVersion;
             return this;
         }
-
         public Builder documentationVersion(@Nullable String documentationVersion) {
             this.documentationVersion = Output.ofNullable(documentationVersion);
             return this;
         }
-
         public Builder restApi(Output<String> restApi) {
             this.restApi = Objects.requireNonNull(restApi);
             return this;
         }
-
         public Builder stageName(Output<String> stageName) {
             this.stageName = Objects.requireNonNull(stageName);
             return this;
         }
-
         public Builder stageName(String stageName) {
             this.stageName = Output.of(Objects.requireNonNull(stageName));
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
         public Builder variables(@Nullable Output<Map<String,String>> variables) {
             this.variables = variables;
             return this;
         }
-
         public Builder variables(@Nullable Map<String,String> variables) {
             this.variables = Output.ofNullable(variables);
             return this;
         }
-
         public Builder xrayTracingEnabled(@Nullable Output<Boolean> xrayTracingEnabled) {
             this.xrayTracingEnabled = xrayTracingEnabled;
             return this;
         }
-
         public Builder xrayTracingEnabled(@Nullable Boolean xrayTracingEnabled) {
             this.xrayTracingEnabled = Output.ofNullable(xrayTracingEnabled);
             return this;
-        }
-        public StageArgs build() {
+        }        public StageArgs build() {
             return new StageArgs(accessLogSettings, cacheClusterEnabled, cacheClusterSize, clientCertificateId, deployment, description, documentationVersion, restApi, stageName, tags, variables, xrayTracingEnabled);
         }
     }

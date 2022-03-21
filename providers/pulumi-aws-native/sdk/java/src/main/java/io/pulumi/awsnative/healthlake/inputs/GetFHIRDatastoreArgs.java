@@ -50,8 +50,7 @@ public final class GetFHIRDatastoreArgs extends io.pulumi.resources.InvokeArgs {
         public Builder datastoreId(String datastoreId) {
             this.datastoreId = Objects.requireNonNull(datastoreId);
             return this;
-        }
-        public GetFHIRDatastoreArgs build() {
+        }        public GetFHIRDatastoreArgs build() {
             return new GetFHIRDatastoreArgs(datastoreId);
         }
     }

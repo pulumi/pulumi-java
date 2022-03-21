@@ -80,12 +80,13 @@ public final class ApplicationGatewayBackendHealthHttpSettingsResponse extends i
             this.backendHttpSettings = backendHttpSettings;
             return this;
         }
-
         public Builder servers(@Nullable List<ApplicationGatewayBackendHealthServerResponse> servers) {
             this.servers = servers;
             return this;
         }
-        public ApplicationGatewayBackendHealthHttpSettingsResponse build() {
+        public Builder servers(ApplicationGatewayBackendHealthServerResponse... servers) {
+            return servers(List.of(servers));
+        }        public ApplicationGatewayBackendHealthHttpSettingsResponse build() {
             return new ApplicationGatewayBackendHealthHttpSettingsResponse(backendHttpSettings, servers);
         }
     }

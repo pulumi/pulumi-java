@@ -53,12 +53,10 @@ public final class SecretLabel {
             this.label = Objects.requireNonNull(label);
             return this;
         }
-
         public Builder value(String value) {
             this.value = Objects.requireNonNull(value);
             return this;
-        }
-        public SecretLabel build() {
+        }        public SecretLabel build() {
             return new SecretLabel(label, value);
         }
     }

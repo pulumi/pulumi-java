@@ -88,17 +88,14 @@ public final class ImageRepositoryCredentialResponse {
             this.imageRepositoryUrl = Objects.requireNonNull(imageRepositoryUrl);
             return this;
         }
-
         public Builder password(@Nullable AsymmetricEncryptedSecretResponse password) {
             this.password = password;
             return this;
         }
-
         public Builder userName(String userName) {
             this.userName = Objects.requireNonNull(userName);
             return this;
-        }
-        public ImageRepositoryCredentialResponse build() {
+        }        public ImageRepositoryCredentialResponse build() {
             return new ImageRepositoryCredentialResponse(imageRepositoryUrl, password, userName);
         }
     }

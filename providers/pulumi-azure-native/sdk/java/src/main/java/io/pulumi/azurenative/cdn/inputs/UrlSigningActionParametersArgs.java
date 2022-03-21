@@ -94,32 +94,29 @@ public final class UrlSigningActionParametersArgs extends io.pulumi.resources.Re
             this.algorithm = algorithm;
             return this;
         }
-
         public Builder algorithm(@Nullable Either<String,Algorithm> algorithm) {
             this.algorithm = Output.ofNullable(algorithm);
             return this;
         }
-
         public Builder odataType(Output<String> odataType) {
             this.odataType = Objects.requireNonNull(odataType);
             return this;
         }
-
         public Builder odataType(String odataType) {
             this.odataType = Output.of(Objects.requireNonNull(odataType));
             return this;
         }
-
         public Builder parameterNameOverride(@Nullable Output<List<UrlSigningParamIdentifierArgs>> parameterNameOverride) {
             this.parameterNameOverride = parameterNameOverride;
             return this;
         }
-
         public Builder parameterNameOverride(@Nullable List<UrlSigningParamIdentifierArgs> parameterNameOverride) {
             this.parameterNameOverride = Output.ofNullable(parameterNameOverride);
             return this;
         }
-        public UrlSigningActionParametersArgs build() {
+        public Builder parameterNameOverride(UrlSigningParamIdentifierArgs... parameterNameOverride) {
+            return parameterNameOverride(List.of(parameterNameOverride));
+        }        public UrlSigningActionParametersArgs build() {
             return new UrlSigningActionParametersArgs(algorithm, odataType, parameterNameOverride);
         }
     }

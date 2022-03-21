@@ -94,32 +94,26 @@ public final class SiteLimitsArgs extends io.pulumi.resources.ResourceArgs {
             this.maxDiskSizeInMb = maxDiskSizeInMb;
             return this;
         }
-
         public Builder maxDiskSizeInMb(@Nullable Double maxDiskSizeInMb) {
             this.maxDiskSizeInMb = Output.ofNullable(maxDiskSizeInMb);
             return this;
         }
-
         public Builder maxMemoryInMb(@Nullable Output<Double> maxMemoryInMb) {
             this.maxMemoryInMb = maxMemoryInMb;
             return this;
         }
-
         public Builder maxMemoryInMb(@Nullable Double maxMemoryInMb) {
             this.maxMemoryInMb = Output.ofNullable(maxMemoryInMb);
             return this;
         }
-
         public Builder maxPercentageCpu(@Nullable Output<Double> maxPercentageCpu) {
             this.maxPercentageCpu = maxPercentageCpu;
             return this;
         }
-
         public Builder maxPercentageCpu(@Nullable Double maxPercentageCpu) {
             this.maxPercentageCpu = Output.ofNullable(maxPercentageCpu);
             return this;
-        }
-        public SiteLimitsArgs build() {
+        }        public SiteLimitsArgs build() {
             return new SiteLimitsArgs(maxDiskSizeInMb, maxMemoryInMb, maxPercentageCpu);
         }
     }

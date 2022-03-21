@@ -128,27 +128,31 @@ public final class ClusterResourcesVpcConfig extends io.pulumi.resources.InvokeA
             this.endpointPrivateAccess = endpointPrivateAccess;
             return this;
         }
-
         public Builder endpointPublicAccess(@Nullable Boolean endpointPublicAccess) {
             this.endpointPublicAccess = endpointPublicAccess;
             return this;
         }
-
         public Builder publicAccessCidrs(@Nullable List<String> publicAccessCidrs) {
             this.publicAccessCidrs = publicAccessCidrs;
             return this;
         }
-
+        public Builder publicAccessCidrs(String... publicAccessCidrs) {
+            return publicAccessCidrs(List.of(publicAccessCidrs));
+        }
         public Builder securityGroupIds(@Nullable List<String> securityGroupIds) {
             this.securityGroupIds = securityGroupIds;
             return this;
         }
-
+        public Builder securityGroupIds(String... securityGroupIds) {
+            return securityGroupIds(List.of(securityGroupIds));
+        }
         public Builder subnetIds(List<String> subnetIds) {
             this.subnetIds = Objects.requireNonNull(subnetIds);
             return this;
         }
-        public ClusterResourcesVpcConfig build() {
+        public Builder subnetIds(String... subnetIds) {
+            return subnetIds(List.of(subnetIds));
+        }        public ClusterResourcesVpcConfig build() {
             return new ClusterResourcesVpcConfig(endpointPrivateAccess, endpointPublicAccess, publicAccessCidrs, securityGroupIds, subnetIds);
         }
     }

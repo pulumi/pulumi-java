@@ -152,37 +152,30 @@ public final class GetLongTermRetentionPolicyResult {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder monthlyRetention(@Nullable String monthlyRetention) {
             this.monthlyRetention = monthlyRetention;
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder weekOfYear(@Nullable Integer weekOfYear) {
             this.weekOfYear = weekOfYear;
             return this;
         }
-
         public Builder weeklyRetention(@Nullable String weeklyRetention) {
             this.weeklyRetention = weeklyRetention;
             return this;
         }
-
         public Builder yearlyRetention(@Nullable String yearlyRetention) {
             this.yearlyRetention = yearlyRetention;
             return this;
-        }
-        public GetLongTermRetentionPolicyResult build() {
+        }        public GetLongTermRetentionPolicyResult build() {
             return new GetLongTermRetentionPolicyResult(id, monthlyRetention, name, type, weekOfYear, weeklyRetention, yearlyRetention);
         }
     }

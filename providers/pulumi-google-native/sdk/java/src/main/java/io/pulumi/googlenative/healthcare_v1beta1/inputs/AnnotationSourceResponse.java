@@ -58,8 +58,7 @@ public final class AnnotationSourceResponse extends io.pulumi.resources.InvokeAr
         public Builder cloudHealthcareSource(CloudHealthcareSourceResponse cloudHealthcareSource) {
             this.cloudHealthcareSource = Objects.requireNonNull(cloudHealthcareSource);
             return this;
-        }
-        public AnnotationSourceResponse build() {
+        }        public AnnotationSourceResponse build() {
             return new AnnotationSourceResponse(cloudHealthcareSource);
         }
     }

@@ -106,22 +106,18 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourcePkgDebSource {
             this.allowInsecure = allowInsecure;
             return this;
         }
-
         public Builder gcs(@Nullable OsPolicyAssignmentOsPolicyResourceGroupResourcePkgDebSourceGcs gcs) {
             this.gcs = gcs;
             return this;
         }
-
         public Builder localPath(@Nullable String localPath) {
             this.localPath = localPath;
             return this;
         }
-
         public Builder remote(@Nullable OsPolicyAssignmentOsPolicyResourceGroupResourcePkgDebSourceRemote remote) {
             this.remote = remote;
             return this;
-        }
-        public OsPolicyAssignmentOsPolicyResourceGroupResourcePkgDebSource build() {
+        }        public OsPolicyAssignmentOsPolicyResourceGroupResourcePkgDebSource build() {
             return new OsPolicyAssignmentOsPolicyResourceGroupResourcePkgDebSource(allowInsecure, gcs, localPath, remote);
         }
     }

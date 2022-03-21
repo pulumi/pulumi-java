@@ -53,7 +53,9 @@ public final class ApplicationApplicationConfigurationEnvironmentProperties {
             this.propertyGroups = Objects.requireNonNull(propertyGroups);
             return this;
         }
-        public ApplicationApplicationConfigurationEnvironmentProperties build() {
+        public Builder propertyGroups(ApplicationApplicationConfigurationEnvironmentPropertiesPropertyGroup... propertyGroups) {
+            return propertyGroups(List.of(propertyGroups));
+        }        public ApplicationApplicationConfigurationEnvironmentProperties build() {
             return new ApplicationApplicationConfigurationEnvironmentProperties(propertyGroups);
         }
     }

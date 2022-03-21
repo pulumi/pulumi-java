@@ -61,12 +61,10 @@ public final class GkeBackupAgentConfigArgs extends io.pulumi.resources.Resource
             this.enabled = enabled;
             return this;
         }
-
         public Builder enabled(@Nullable Boolean enabled) {
             this.enabled = Output.ofNullable(enabled);
             return this;
-        }
-        public GkeBackupAgentConfigArgs build() {
+        }        public GkeBackupAgentConfigArgs build() {
             return new GkeBackupAgentConfigArgs(enabled);
         }
     }

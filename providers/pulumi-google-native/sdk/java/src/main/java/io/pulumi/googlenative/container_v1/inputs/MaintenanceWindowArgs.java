@@ -97,32 +97,26 @@ public final class MaintenanceWindowArgs extends io.pulumi.resources.ResourceArg
             this.dailyMaintenanceWindow = dailyMaintenanceWindow;
             return this;
         }
-
         public Builder dailyMaintenanceWindow(@Nullable DailyMaintenanceWindowArgs dailyMaintenanceWindow) {
             this.dailyMaintenanceWindow = Output.ofNullable(dailyMaintenanceWindow);
             return this;
         }
-
         public Builder maintenanceExclusions(@Nullable Output<Map<String,String>> maintenanceExclusions) {
             this.maintenanceExclusions = maintenanceExclusions;
             return this;
         }
-
         public Builder maintenanceExclusions(@Nullable Map<String,String> maintenanceExclusions) {
             this.maintenanceExclusions = Output.ofNullable(maintenanceExclusions);
             return this;
         }
-
         public Builder recurringWindow(@Nullable Output<RecurringTimeWindowArgs> recurringWindow) {
             this.recurringWindow = recurringWindow;
             return this;
         }
-
         public Builder recurringWindow(@Nullable RecurringTimeWindowArgs recurringWindow) {
             this.recurringWindow = Output.ofNullable(recurringWindow);
             return this;
-        }
-        public MaintenanceWindowArgs build() {
+        }        public MaintenanceWindowArgs build() {
             return new MaintenanceWindowArgs(dailyMaintenanceWindow, maintenanceExclusions, recurringWindow);
         }
     }

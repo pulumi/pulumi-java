@@ -107,42 +107,34 @@ public final class AwsNodePoolConfigRootVolumeArgs extends io.pulumi.resources.R
             this.iops = iops;
             return this;
         }
-
         public Builder iops(@Nullable Integer iops) {
             this.iops = Output.ofNullable(iops);
             return this;
         }
-
         public Builder kmsKeyArn(@Nullable Output<String> kmsKeyArn) {
             this.kmsKeyArn = kmsKeyArn;
             return this;
         }
-
         public Builder kmsKeyArn(@Nullable String kmsKeyArn) {
             this.kmsKeyArn = Output.ofNullable(kmsKeyArn);
             return this;
         }
-
         public Builder sizeGib(@Nullable Output<Integer> sizeGib) {
             this.sizeGib = sizeGib;
             return this;
         }
-
         public Builder sizeGib(@Nullable Integer sizeGib) {
             this.sizeGib = Output.ofNullable(sizeGib);
             return this;
         }
-
         public Builder volumeType(@Nullable Output<String> volumeType) {
             this.volumeType = volumeType;
             return this;
         }
-
         public Builder volumeType(@Nullable String volumeType) {
             this.volumeType = Output.ofNullable(volumeType);
             return this;
-        }
-        public AwsNodePoolConfigRootVolumeArgs build() {
+        }        public AwsNodePoolConfigRootVolumeArgs build() {
             return new AwsNodePoolConfigRootVolumeArgs(iops, kmsKeyArn, sizeGib, volumeType);
         }
     }

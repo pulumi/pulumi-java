@@ -73,22 +73,18 @@ public final class TopicRuleErrorActionIotAnalyticsGetArgs extends io.pulumi.res
             this.channelName = Objects.requireNonNull(channelName);
             return this;
         }
-
         public Builder channelName(String channelName) {
             this.channelName = Output.of(Objects.requireNonNull(channelName));
             return this;
         }
-
         public Builder roleArn(Output<String> roleArn) {
             this.roleArn = Objects.requireNonNull(roleArn);
             return this;
         }
-
         public Builder roleArn(String roleArn) {
             this.roleArn = Output.of(Objects.requireNonNull(roleArn));
             return this;
-        }
-        public TopicRuleErrorActionIotAnalyticsGetArgs build() {
+        }        public TopicRuleErrorActionIotAnalyticsGetArgs build() {
             return new TopicRuleErrorActionIotAnalyticsGetArgs(channelName, roleArn);
         }
     }

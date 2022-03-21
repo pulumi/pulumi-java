@@ -72,12 +72,13 @@ public final class ThingTypeProperties {
             this.description = description;
             return this;
         }
-
         public Builder searchableAttributes(@Nullable List<String> searchableAttributes) {
             this.searchableAttributes = searchableAttributes;
             return this;
         }
-        public ThingTypeProperties build() {
+        public Builder searchableAttributes(String... searchableAttributes) {
+            return searchableAttributes(List.of(searchableAttributes));
+        }        public ThingTypeProperties build() {
             return new ThingTypeProperties(description, searchableAttributes);
         }
     }

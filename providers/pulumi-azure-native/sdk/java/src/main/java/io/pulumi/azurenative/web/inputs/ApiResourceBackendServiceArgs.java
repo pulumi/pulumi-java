@@ -61,12 +61,10 @@ public final class ApiResourceBackendServiceArgs extends io.pulumi.resources.Res
             this.serviceUrl = serviceUrl;
             return this;
         }
-
         public Builder serviceUrl(@Nullable String serviceUrl) {
             this.serviceUrl = Output.ofNullable(serviceUrl);
             return this;
-        }
-        public ApiResourceBackendServiceArgs build() {
+        }        public ApiResourceBackendServiceArgs build() {
             return new ApiResourceBackendServiceArgs(serviceUrl);
         }
     }

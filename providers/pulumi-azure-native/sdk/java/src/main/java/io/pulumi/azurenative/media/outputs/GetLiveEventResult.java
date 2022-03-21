@@ -352,97 +352,84 @@ public final class GetLiveEventResult {
             this.created = Objects.requireNonNull(created);
             return this;
         }
-
         public Builder crossSiteAccessPolicies(@Nullable CrossSiteAccessPoliciesResponse crossSiteAccessPolicies) {
             this.crossSiteAccessPolicies = crossSiteAccessPolicies;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
-
         public Builder encoding(@Nullable LiveEventEncodingResponse encoding) {
             this.encoding = encoding;
             return this;
         }
-
         public Builder hostnamePrefix(@Nullable String hostnamePrefix) {
             this.hostnamePrefix = hostnamePrefix;
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder input(LiveEventInputResponse input) {
             this.input = Objects.requireNonNull(input);
             return this;
         }
-
         public Builder lastModified(String lastModified) {
             this.lastModified = Objects.requireNonNull(lastModified);
             return this;
         }
-
         public Builder location(String location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder preview(@Nullable LiveEventPreviewResponse preview) {
             this.preview = preview;
             return this;
         }
-
         public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
-
         public Builder resourceState(String resourceState) {
             this.resourceState = Objects.requireNonNull(resourceState);
             return this;
         }
-
         public Builder streamOptions(@Nullable List<String> streamOptions) {
             this.streamOptions = streamOptions;
             return this;
         }
-
+        public Builder streamOptions(String... streamOptions) {
+            return streamOptions(List.of(streamOptions));
+        }
         public Builder systemData(SystemDataResponse systemData) {
             this.systemData = Objects.requireNonNull(systemData);
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder transcriptions(@Nullable List<LiveEventTranscriptionResponse> transcriptions) {
             this.transcriptions = transcriptions;
             return this;
         }
-
+        public Builder transcriptions(LiveEventTranscriptionResponse... transcriptions) {
+            return transcriptions(List.of(transcriptions));
+        }
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder useStaticHostname(@Nullable Boolean useStaticHostname) {
             this.useStaticHostname = useStaticHostname;
             return this;
-        }
-        public GetLiveEventResult build() {
+        }        public GetLiveEventResult build() {
             return new GetLiveEventResult(created, crossSiteAccessPolicies, description, encoding, hostnamePrefix, id, input, lastModified, location, name, preview, provisioningState, resourceState, streamOptions, systemData, tags, transcriptions, type, useStaticHostname);
         }
     }

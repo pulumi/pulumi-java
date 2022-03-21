@@ -74,22 +74,18 @@ public final class SecurityConfigurationEncryptionConfigurationS3EncryptionGetAr
             this.kmsKeyArn = kmsKeyArn;
             return this;
         }
-
         public Builder kmsKeyArn(@Nullable String kmsKeyArn) {
             this.kmsKeyArn = Output.ofNullable(kmsKeyArn);
             return this;
         }
-
         public Builder s3EncryptionMode(@Nullable Output<String> s3EncryptionMode) {
             this.s3EncryptionMode = s3EncryptionMode;
             return this;
         }
-
         public Builder s3EncryptionMode(@Nullable String s3EncryptionMode) {
             this.s3EncryptionMode = Output.ofNullable(s3EncryptionMode);
             return this;
-        }
-        public SecurityConfigurationEncryptionConfigurationS3EncryptionGetArgs build() {
+        }        public SecurityConfigurationEncryptionConfigurationS3EncryptionGetArgs build() {
             return new SecurityConfigurationEncryptionConfigurationS3EncryptionGetArgs(kmsKeyArn, s3EncryptionMode);
         }
     }

@@ -71,12 +71,10 @@ public final class AppRegistrationResponse {
             this.appId = appId;
             return this;
         }
-
         public Builder appSecretSettingName(@Nullable String appSecretSettingName) {
             this.appSecretSettingName = appSecretSettingName;
             return this;
-        }
-        public AppRegistrationResponse build() {
+        }        public AppRegistrationResponse build() {
             return new AppRegistrationResponse(appId, appSecretSettingName);
         }
     }

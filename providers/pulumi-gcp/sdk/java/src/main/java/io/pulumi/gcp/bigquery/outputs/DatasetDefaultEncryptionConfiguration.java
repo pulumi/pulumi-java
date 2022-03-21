@@ -55,8 +55,7 @@ public final class DatasetDefaultEncryptionConfiguration {
         public Builder kmsKeyName(String kmsKeyName) {
             this.kmsKeyName = Objects.requireNonNull(kmsKeyName);
             return this;
-        }
-        public DatasetDefaultEncryptionConfiguration build() {
+        }        public DatasetDefaultEncryptionConfiguration build() {
             return new DatasetDefaultEncryptionConfiguration(kmsKeyName);
         }
     }

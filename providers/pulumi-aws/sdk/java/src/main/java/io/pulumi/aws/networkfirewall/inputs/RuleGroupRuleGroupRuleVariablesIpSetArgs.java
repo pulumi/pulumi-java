@@ -74,22 +74,18 @@ public final class RuleGroupRuleGroupRuleVariablesIpSetArgs extends io.pulumi.re
             this.ipSet = Objects.requireNonNull(ipSet);
             return this;
         }
-
         public Builder ipSet(RuleGroupRuleGroupRuleVariablesIpSetIpSetArgs ipSet) {
             this.ipSet = Output.of(Objects.requireNonNull(ipSet));
             return this;
         }
-
         public Builder key(Output<String> key) {
             this.key = Objects.requireNonNull(key);
             return this;
         }
-
         public Builder key(String key) {
             this.key = Output.of(Objects.requireNonNull(key));
             return this;
-        }
-        public RuleGroupRuleGroupRuleVariablesIpSetArgs build() {
+        }        public RuleGroupRuleGroupRuleVariablesIpSetArgs build() {
             return new RuleGroupRuleGroupRuleVariablesIpSetArgs(ipSet, key);
         }
     }

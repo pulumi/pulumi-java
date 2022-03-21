@@ -60,12 +60,10 @@ public final class MonitoringScheduleStoppingConditionArgs extends io.pulumi.res
             this.maxRuntimeInSeconds = Objects.requireNonNull(maxRuntimeInSeconds);
             return this;
         }
-
         public Builder maxRuntimeInSeconds(Integer maxRuntimeInSeconds) {
             this.maxRuntimeInSeconds = Output.of(Objects.requireNonNull(maxRuntimeInSeconds));
             return this;
-        }
-        public MonitoringScheduleStoppingConditionArgs build() {
+        }        public MonitoringScheduleStoppingConditionArgs build() {
             return new MonitoringScheduleStoppingConditionArgs(maxRuntimeInSeconds);
         }
     }

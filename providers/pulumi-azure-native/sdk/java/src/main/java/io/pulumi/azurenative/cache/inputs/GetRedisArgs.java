@@ -72,12 +72,10 @@ public final class GetRedisArgs extends io.pulumi.resources.InvokeArgs {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
-        }
-        public GetRedisArgs build() {
+        }        public GetRedisArgs build() {
             return new GetRedisArgs(name, resourceGroupName);
         }
     }

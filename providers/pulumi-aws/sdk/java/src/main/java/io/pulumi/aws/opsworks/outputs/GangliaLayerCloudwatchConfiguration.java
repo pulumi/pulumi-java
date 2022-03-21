@@ -57,12 +57,13 @@ public final class GangliaLayerCloudwatchConfiguration {
             this.enabled = enabled;
             return this;
         }
-
         public Builder logStreams(@Nullable List<GangliaLayerCloudwatchConfigurationLogStream> logStreams) {
             this.logStreams = logStreams;
             return this;
         }
-        public GangliaLayerCloudwatchConfiguration build() {
+        public Builder logStreams(GangliaLayerCloudwatchConfigurationLogStream... logStreams) {
+            return logStreams(List.of(logStreams));
+        }        public GangliaLayerCloudwatchConfiguration build() {
             return new GangliaLayerCloudwatchConfiguration(enabled, logStreams);
         }
     }

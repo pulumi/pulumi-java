@@ -90,17 +90,17 @@ public final class ResourceQuotaSpec {
             this.hard = hard;
             return this;
         }
-
         public Builder scopeSelector(@Nullable ScopeSelector scopeSelector) {
             this.scopeSelector = scopeSelector;
             return this;
         }
-
         public Builder scopes(@Nullable List<String> scopes) {
             this.scopes = scopes;
             return this;
         }
-        public ResourceQuotaSpec build() {
+        public Builder scopes(String... scopes) {
+            return scopes(List.of(scopes));
+        }        public ResourceQuotaSpec build() {
             return new ResourceQuotaSpec(hard, scopeSelector, scopes);
         }
     }

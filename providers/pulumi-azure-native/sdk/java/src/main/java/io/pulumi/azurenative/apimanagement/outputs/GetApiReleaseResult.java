@@ -151,37 +151,30 @@ public final class GetApiReleaseResult {
             this.apiId = apiId;
             return this;
         }
-
         public Builder createdDateTime(String createdDateTime) {
             this.createdDateTime = Objects.requireNonNull(createdDateTime);
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder notes(@Nullable String notes) {
             this.notes = notes;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder updatedDateTime(String updatedDateTime) {
             this.updatedDateTime = Objects.requireNonNull(updatedDateTime);
             return this;
-        }
-        public GetApiReleaseResult build() {
+        }        public GetApiReleaseResult build() {
             return new GetApiReleaseResult(apiId, createdDateTime, id, name, notes, type, updatedDateTime);
         }
     }

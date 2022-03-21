@@ -54,12 +54,13 @@ public final class GraphArgs extends io.pulumi.resources.ResourceArgs {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable List<GraphTagArgs> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-        public GraphArgs build() {
+        public Builder tags(GraphTagArgs... tags) {
+            return tags(List.of(tags));
+        }        public GraphArgs build() {
             return new GraphArgs(tags);
         }
     }

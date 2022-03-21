@@ -54,8 +54,7 @@ public final class SubResourceReadOnlyResponse extends io.pulumi.resources.Invok
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
-        }
-        public SubResourceReadOnlyResponse build() {
+        }        public SubResourceReadOnlyResponse build() {
             return new SubResourceReadOnlyResponse(id);
         }
     }

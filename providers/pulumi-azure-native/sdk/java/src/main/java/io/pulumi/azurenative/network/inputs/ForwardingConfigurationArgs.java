@@ -130,52 +130,42 @@ public final class ForwardingConfigurationArgs extends io.pulumi.resources.Resou
             this.backendPool = backendPool;
             return this;
         }
-
         public Builder backendPool(@Nullable SubResourceArgs backendPool) {
             this.backendPool = Output.ofNullable(backendPool);
             return this;
         }
-
         public Builder cacheConfiguration(@Nullable Output<CacheConfigurationArgs> cacheConfiguration) {
             this.cacheConfiguration = cacheConfiguration;
             return this;
         }
-
         public Builder cacheConfiguration(@Nullable CacheConfigurationArgs cacheConfiguration) {
             this.cacheConfiguration = Output.ofNullable(cacheConfiguration);
             return this;
         }
-
         public Builder customForwardingPath(@Nullable Output<String> customForwardingPath) {
             this.customForwardingPath = customForwardingPath;
             return this;
         }
-
         public Builder customForwardingPath(@Nullable String customForwardingPath) {
             this.customForwardingPath = Output.ofNullable(customForwardingPath);
             return this;
         }
-
         public Builder forwardingProtocol(@Nullable Output<Either<String,FrontDoorForwardingProtocol>> forwardingProtocol) {
             this.forwardingProtocol = forwardingProtocol;
             return this;
         }
-
         public Builder forwardingProtocol(@Nullable Either<String,FrontDoorForwardingProtocol> forwardingProtocol) {
             this.forwardingProtocol = Output.ofNullable(forwardingProtocol);
             return this;
         }
-
         public Builder odataType(Output<String> odataType) {
             this.odataType = Objects.requireNonNull(odataType);
             return this;
         }
-
         public Builder odataType(String odataType) {
             this.odataType = Output.of(Objects.requireNonNull(odataType));
             return this;
-        }
-        public ForwardingConfigurationArgs build() {
+        }        public ForwardingConfigurationArgs build() {
             return new ForwardingConfigurationArgs(backendPool, cacheConfiguration, customForwardingPath, forwardingProtocol, odataType);
         }
     }

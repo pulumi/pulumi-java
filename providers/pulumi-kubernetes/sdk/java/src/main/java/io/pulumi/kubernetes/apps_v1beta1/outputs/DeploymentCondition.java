@@ -135,32 +135,26 @@ public final class DeploymentCondition {
             this.lastTransitionTime = lastTransitionTime;
             return this;
         }
-
         public Builder lastUpdateTime(@Nullable String lastUpdateTime) {
             this.lastUpdateTime = lastUpdateTime;
             return this;
         }
-
         public Builder message(@Nullable String message) {
             this.message = message;
             return this;
         }
-
         public Builder reason(@Nullable String reason) {
             this.reason = reason;
             return this;
         }
-
         public Builder status(String status) {
             this.status = Objects.requireNonNull(status);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public DeploymentCondition build() {
+        }        public DeploymentCondition build() {
             return new DeploymentCondition(lastTransitionTime, lastUpdateTime, message, reason, status, type);
         }
     }

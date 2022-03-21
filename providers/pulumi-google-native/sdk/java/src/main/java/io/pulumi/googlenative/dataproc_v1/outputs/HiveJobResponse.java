@@ -137,32 +137,29 @@ public final class HiveJobResponse {
             this.continueOnFailure = Objects.requireNonNull(continueOnFailure);
             return this;
         }
-
         public Builder jarFileUris(List<String> jarFileUris) {
             this.jarFileUris = Objects.requireNonNull(jarFileUris);
             return this;
         }
-
+        public Builder jarFileUris(String... jarFileUris) {
+            return jarFileUris(List.of(jarFileUris));
+        }
         public Builder properties(Map<String,String> properties) {
             this.properties = Objects.requireNonNull(properties);
             return this;
         }
-
         public Builder queryFileUri(String queryFileUri) {
             this.queryFileUri = Objects.requireNonNull(queryFileUri);
             return this;
         }
-
         public Builder queryList(QueryListResponse queryList) {
             this.queryList = Objects.requireNonNull(queryList);
             return this;
         }
-
         public Builder scriptVariables(Map<String,String> scriptVariables) {
             this.scriptVariables = Objects.requireNonNull(scriptVariables);
             return this;
-        }
-        public HiveJobResponse build() {
+        }        public HiveJobResponse build() {
             return new HiveJobResponse(continueOnFailure, jarFileUris, properties, queryFileUri, queryList, scriptVariables);
         }
     }

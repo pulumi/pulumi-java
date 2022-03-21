@@ -72,12 +72,10 @@ public final class ListNotebookProxyCredentialsArgs extends io.pulumi.resources.
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceName(String resourceName) {
             this.resourceName = Objects.requireNonNull(resourceName);
             return this;
-        }
-        public ListNotebookProxyCredentialsArgs build() {
+        }        public ListNotebookProxyCredentialsArgs build() {
             return new ListNotebookProxyCredentialsArgs(resourceGroupName, resourceName);
         }
     }

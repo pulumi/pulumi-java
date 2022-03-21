@@ -91,32 +91,26 @@ public final class GlobalReplicationGroupMemberArgs extends io.pulumi.resources.
             this.replicationGroupId = replicationGroupId;
             return this;
         }
-
         public Builder replicationGroupId(@Nullable String replicationGroupId) {
             this.replicationGroupId = Output.ofNullable(replicationGroupId);
             return this;
         }
-
         public Builder replicationGroupRegion(@Nullable Output<String> replicationGroupRegion) {
             this.replicationGroupRegion = replicationGroupRegion;
             return this;
         }
-
         public Builder replicationGroupRegion(@Nullable String replicationGroupRegion) {
             this.replicationGroupRegion = Output.ofNullable(replicationGroupRegion);
             return this;
         }
-
         public Builder role(@Nullable Output<GlobalReplicationGroupMemberRole> role) {
             this.role = role;
             return this;
         }
-
         public Builder role(@Nullable GlobalReplicationGroupMemberRole role) {
             this.role = Output.ofNullable(role);
             return this;
-        }
-        public GlobalReplicationGroupMemberArgs build() {
+        }        public GlobalReplicationGroupMemberArgs build() {
             return new GlobalReplicationGroupMemberArgs(replicationGroupId, replicationGroupRegion, role);
         }
     }

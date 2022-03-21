@@ -89,17 +89,14 @@ public final class VirtualNodeSpecServiceDiscoveryAwsCloudMap {
             this.attributes = attributes;
             return this;
         }
-
         public Builder namespaceName(String namespaceName) {
             this.namespaceName = Objects.requireNonNull(namespaceName);
             return this;
         }
-
         public Builder serviceName(String serviceName) {
             this.serviceName = Objects.requireNonNull(serviceName);
             return this;
-        }
-        public VirtualNodeSpecServiceDiscoveryAwsCloudMap build() {
+        }        public VirtualNodeSpecServiceDiscoveryAwsCloudMap build() {
             return new VirtualNodeSpecServiceDiscoveryAwsCloudMap(attributes, namespaceName, serviceName);
         }
     }

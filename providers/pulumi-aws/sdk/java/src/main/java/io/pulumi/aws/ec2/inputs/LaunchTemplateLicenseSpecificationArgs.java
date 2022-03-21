@@ -56,12 +56,10 @@ public final class LaunchTemplateLicenseSpecificationArgs extends io.pulumi.reso
             this.licenseConfigurationArn = Objects.requireNonNull(licenseConfigurationArn);
             return this;
         }
-
         public Builder licenseConfigurationArn(String licenseConfigurationArn) {
             this.licenseConfigurationArn = Output.of(Objects.requireNonNull(licenseConfigurationArn));
             return this;
-        }
-        public LaunchTemplateLicenseSpecificationArgs build() {
+        }        public LaunchTemplateLicenseSpecificationArgs build() {
             return new LaunchTemplateLicenseSpecificationArgs(licenseConfigurationArn);
         }
     }

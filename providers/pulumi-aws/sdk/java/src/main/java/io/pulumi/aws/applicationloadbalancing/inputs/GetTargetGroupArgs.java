@@ -87,17 +87,14 @@ public final class GetTargetGroupArgs extends io.pulumi.resources.InvokeArgs {
             this.arn = arn;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
-        }
-        public GetTargetGroupArgs build() {
+        }        public GetTargetGroupArgs build() {
             return new GetTargetGroupArgs(arn, name, tags);
         }
     }

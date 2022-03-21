@@ -57,12 +57,10 @@ public final class AnalyticsApplicationInputsParallelismGetArgs extends io.pulum
             this.count = count;
             return this;
         }
-
         public Builder count(@Nullable Integer count) {
             this.count = Output.ofNullable(count);
             return this;
-        }
-        public AnalyticsApplicationInputsParallelismGetArgs build() {
+        }        public AnalyticsApplicationInputsParallelismGetArgs build() {
             return new AnalyticsApplicationInputsParallelismGetArgs(count);
         }
     }

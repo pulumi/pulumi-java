@@ -325,97 +325,78 @@ public final class GetApplicationGroupResult {
             this.applicationGroupType = Objects.requireNonNull(applicationGroupType);
             return this;
         }
-
         public Builder cloudPcResource(Boolean cloudPcResource) {
             this.cloudPcResource = Objects.requireNonNull(cloudPcResource);
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
-
         public Builder etag(String etag) {
             this.etag = Objects.requireNonNull(etag);
             return this;
         }
-
         public Builder friendlyName(@Nullable String friendlyName) {
             this.friendlyName = friendlyName;
             return this;
         }
-
         public Builder hostPoolArmPath(String hostPoolArmPath) {
             this.hostPoolArmPath = Objects.requireNonNull(hostPoolArmPath);
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder identity(@Nullable ResourceModelWithAllowedPropertySetResponseIdentity identity) {
             this.identity = identity;
             return this;
         }
-
         public Builder kind(@Nullable String kind) {
             this.kind = kind;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = location;
             return this;
         }
-
         public Builder managedBy(@Nullable String managedBy) {
             this.managedBy = managedBy;
             return this;
         }
-
         public Builder migrationRequest(@Nullable MigrationRequestPropertiesResponse migrationRequest) {
             this.migrationRequest = migrationRequest;
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder objectId(String objectId) {
             this.objectId = Objects.requireNonNull(objectId);
             return this;
         }
-
         public Builder plan(@Nullable ResourceModelWithAllowedPropertySetResponsePlan plan) {
             this.plan = plan;
             return this;
         }
-
         public Builder sku(@Nullable ResourceModelWithAllowedPropertySetResponseSku sku) {
             this.sku = sku;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder workspaceArmPath(String workspaceArmPath) {
             this.workspaceArmPath = Objects.requireNonNull(workspaceArmPath);
             return this;
-        }
-        public GetApplicationGroupResult build() {
+        }        public GetApplicationGroupResult build() {
             return new GetApplicationGroupResult(applicationGroupType, cloudPcResource, description, etag, friendlyName, hostPoolArmPath, id, identity, kind, location, managedBy, migrationRequest, name, objectId, plan, sku, tags, type, workspaceArmPath);
         }
     }

@@ -171,37 +171,36 @@ public final class GetFrameworkResult {
             this.creationTime = creationTime;
             return this;
         }
-
         public Builder deploymentStatus(@Nullable String deploymentStatus) {
             this.deploymentStatus = deploymentStatus;
             return this;
         }
-
         public Builder frameworkArn(@Nullable String frameworkArn) {
             this.frameworkArn = frameworkArn;
             return this;
         }
-
         public Builder frameworkControls(@Nullable List<FrameworkControl> frameworkControls) {
             this.frameworkControls = frameworkControls;
             return this;
         }
-
+        public Builder frameworkControls(FrameworkControl... frameworkControls) {
+            return frameworkControls(List.of(frameworkControls));
+        }
         public Builder frameworkDescription(@Nullable String frameworkDescription) {
             this.frameworkDescription = frameworkDescription;
             return this;
         }
-
         public Builder frameworkStatus(@Nullable String frameworkStatus) {
             this.frameworkStatus = frameworkStatus;
             return this;
         }
-
         public Builder frameworkTags(@Nullable List<FrameworkTag> frameworkTags) {
             this.frameworkTags = frameworkTags;
             return this;
         }
-        public GetFrameworkResult build() {
+        public Builder frameworkTags(FrameworkTag... frameworkTags) {
+            return frameworkTags(List.of(frameworkTags));
+        }        public GetFrameworkResult build() {
             return new GetFrameworkResult(creationTime, deploymentStatus, frameworkArn, frameworkControls, frameworkDescription, frameworkStatus, frameworkTags);
         }
     }

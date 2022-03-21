@@ -88,17 +88,14 @@ public final class GetIotConnectorArgs extends io.pulumi.resources.InvokeArgs {
             this.iotConnectorName = Objects.requireNonNull(iotConnectorName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder workspaceName(String workspaceName) {
             this.workspaceName = Objects.requireNonNull(workspaceName);
             return this;
-        }
-        public GetIotConnectorArgs build() {
+        }        public GetIotConnectorArgs build() {
             return new GetIotConnectorArgs(iotConnectorName, resourceGroupName, workspaceName);
         }
     }

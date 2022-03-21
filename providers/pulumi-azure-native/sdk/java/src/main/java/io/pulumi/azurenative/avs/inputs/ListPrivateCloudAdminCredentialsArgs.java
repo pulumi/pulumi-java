@@ -72,12 +72,10 @@ public final class ListPrivateCloudAdminCredentialsArgs extends io.pulumi.resour
             this.privateCloudName = Objects.requireNonNull(privateCloudName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
-        }
-        public ListPrivateCloudAdminCredentialsArgs build() {
+        }        public ListPrivateCloudAdminCredentialsArgs build() {
             return new ListPrivateCloudAdminCredentialsArgs(privateCloudName, resourceGroupName);
         }
     }

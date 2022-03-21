@@ -418,117 +418,97 @@ public final class GetWorkspaceResult {
             this.adlaResourceId = Objects.requireNonNull(adlaResourceId);
             return this;
         }
-
         public Builder connectivityEndpoints(@Nullable Map<String,String> connectivityEndpoints) {
             this.connectivityEndpoints = connectivityEndpoints;
             return this;
         }
-
         public Builder defaultDataLakeStorage(@Nullable DataLakeStorageAccountDetailsResponse defaultDataLakeStorage) {
             this.defaultDataLakeStorage = defaultDataLakeStorage;
             return this;
         }
-
         public Builder encryption(@Nullable EncryptionDetailsResponse encryption) {
             this.encryption = encryption;
             return this;
         }
-
         public Builder extraProperties(Map<String,Object> extraProperties) {
             this.extraProperties = Objects.requireNonNull(extraProperties);
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder identity(@Nullable ManagedIdentityResponse identity) {
             this.identity = identity;
             return this;
         }
-
         public Builder location(String location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
-
         public Builder managedResourceGroupName(@Nullable String managedResourceGroupName) {
             this.managedResourceGroupName = managedResourceGroupName;
             return this;
         }
-
         public Builder managedVirtualNetwork(@Nullable String managedVirtualNetwork) {
             this.managedVirtualNetwork = managedVirtualNetwork;
             return this;
         }
-
         public Builder managedVirtualNetworkSettings(@Nullable ManagedVirtualNetworkSettingsResponse managedVirtualNetworkSettings) {
             this.managedVirtualNetworkSettings = managedVirtualNetworkSettings;
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder privateEndpointConnections(@Nullable List<PrivateEndpointConnectionResponse> privateEndpointConnections) {
             this.privateEndpointConnections = privateEndpointConnections;
             return this;
         }
-
+        public Builder privateEndpointConnections(PrivateEndpointConnectionResponse... privateEndpointConnections) {
+            return privateEndpointConnections(List.of(privateEndpointConnections));
+        }
         public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
-
         public Builder publicNetworkAccess(@Nullable String publicNetworkAccess) {
             this.publicNetworkAccess = publicNetworkAccess;
             return this;
         }
-
         public Builder purviewConfiguration(@Nullable PurviewConfigurationResponse purviewConfiguration) {
             this.purviewConfiguration = purviewConfiguration;
             return this;
         }
-
         public Builder sqlAdministratorLogin(@Nullable String sqlAdministratorLogin) {
             this.sqlAdministratorLogin = sqlAdministratorLogin;
             return this;
         }
-
         public Builder sqlAdministratorLoginPassword(@Nullable String sqlAdministratorLoginPassword) {
             this.sqlAdministratorLoginPassword = sqlAdministratorLoginPassword;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder virtualNetworkProfile(@Nullable VirtualNetworkProfileResponse virtualNetworkProfile) {
             this.virtualNetworkProfile = virtualNetworkProfile;
             return this;
         }
-
         public Builder workspaceRepositoryConfiguration(@Nullable WorkspaceRepositoryConfigurationResponse workspaceRepositoryConfiguration) {
             this.workspaceRepositoryConfiguration = workspaceRepositoryConfiguration;
             return this;
         }
-
         public Builder workspaceUID(String workspaceUID) {
             this.workspaceUID = Objects.requireNonNull(workspaceUID);
             return this;
-        }
-        public GetWorkspaceResult build() {
+        }        public GetWorkspaceResult build() {
             return new GetWorkspaceResult(adlaResourceId, connectivityEndpoints, defaultDataLakeStorage, encryption, extraProperties, id, identity, location, managedResourceGroupName, managedVirtualNetwork, managedVirtualNetworkSettings, name, privateEndpointConnections, provisioningState, publicNetworkAccess, purviewConfiguration, sqlAdministratorLogin, sqlAdministratorLoginPassword, tags, type, virtualNetworkProfile, workspaceRepositoryConfiguration, workspaceUID);
         }
     }

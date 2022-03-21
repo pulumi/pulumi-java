@@ -104,52 +104,48 @@ public final class ExtendedErrorInfoArgs extends io.pulumi.resources.ResourceArg
             this.additionalInfo = additionalInfo;
             return this;
         }
-
         public Builder additionalInfo(@Nullable List<TypedErrorInfoArgs> additionalInfo) {
             this.additionalInfo = Output.ofNullable(additionalInfo);
             return this;
         }
-
+        public Builder additionalInfo(TypedErrorInfoArgs... additionalInfo) {
+            return additionalInfo(List.of(additionalInfo));
+        }
         public Builder code(@Nullable Output<String> code) {
             this.code = code;
             return this;
         }
-
         public Builder code(@Nullable String code) {
             this.code = Output.ofNullable(code);
             return this;
         }
-
         public Builder details(@Nullable Output<List<ExtendedErrorInfoArgs>> details) {
             this.details = details;
             return this;
         }
-
         public Builder details(@Nullable List<ExtendedErrorInfoArgs> details) {
             this.details = Output.ofNullable(details);
             return this;
         }
-
+        public Builder details(ExtendedErrorInfoArgs... details) {
+            return details(List.of(details));
+        }
         public Builder message(@Nullable Output<String> message) {
             this.message = message;
             return this;
         }
-
         public Builder message(@Nullable String message) {
             this.message = Output.ofNullable(message);
             return this;
         }
-
         public Builder target(@Nullable Output<String> target) {
             this.target = target;
             return this;
         }
-
         public Builder target(@Nullable String target) {
             this.target = Output.ofNullable(target);
             return this;
-        }
-        public ExtendedErrorInfoArgs build() {
+        }        public ExtendedErrorInfoArgs build() {
             return new ExtendedErrorInfoArgs(additionalInfo, code, details, message, target);
         }
     }

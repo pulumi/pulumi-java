@@ -141,62 +141,53 @@ public final class RuleState extends io.pulumi.resources.ResourceArgs {
             this.arn = arn;
             return this;
         }
-
         public Builder arn(@Nullable String arn) {
             this.arn = Output.ofNullable(arn);
             return this;
         }
-
         public Builder metricName(@Nullable Output<String> metricName) {
             this.metricName = metricName;
             return this;
         }
-
         public Builder metricName(@Nullable String metricName) {
             this.metricName = Output.ofNullable(metricName);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder predicates(@Nullable Output<List<RulePredicateGetArgs>> predicates) {
             this.predicates = predicates;
             return this;
         }
-
         public Builder predicates(@Nullable List<RulePredicateGetArgs> predicates) {
             this.predicates = Output.ofNullable(predicates);
             return this;
         }
-
+        public Builder predicates(RulePredicateGetArgs... predicates) {
+            return predicates(List.of(predicates));
+        }
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
             this.tagsAll = tagsAll;
             return this;
         }
-
         public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
             this.tagsAll = Output.ofNullable(tagsAll);
             return this;
-        }
-        public RuleState build() {
+        }        public RuleState build() {
             return new RuleState(arn, metricName, name, predicates, tags, tagsAll);
         }
     }

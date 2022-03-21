@@ -128,52 +128,51 @@ public final class ConnectionMonitorTestGroupArgs extends io.pulumi.resources.Re
             this.destinations = Objects.requireNonNull(destinations);
             return this;
         }
-
         public Builder destinations(List<String> destinations) {
             this.destinations = Output.of(Objects.requireNonNull(destinations));
             return this;
         }
-
+        public Builder destinations(String... destinations) {
+            return destinations(List.of(destinations));
+        }
         public Builder disable(@Nullable Output<Boolean> disable) {
             this.disable = disable;
             return this;
         }
-
         public Builder disable(@Nullable Boolean disable) {
             this.disable = Output.ofNullable(disable);
             return this;
         }
-
         public Builder name(Output<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
-
         public Builder sources(Output<List<String>> sources) {
             this.sources = Objects.requireNonNull(sources);
             return this;
         }
-
         public Builder sources(List<String> sources) {
             this.sources = Output.of(Objects.requireNonNull(sources));
             return this;
         }
-
+        public Builder sources(String... sources) {
+            return sources(List.of(sources));
+        }
         public Builder testConfigurations(Output<List<String>> testConfigurations) {
             this.testConfigurations = Objects.requireNonNull(testConfigurations);
             return this;
         }
-
         public Builder testConfigurations(List<String> testConfigurations) {
             this.testConfigurations = Output.of(Objects.requireNonNull(testConfigurations));
             return this;
         }
-        public ConnectionMonitorTestGroupArgs build() {
+        public Builder testConfigurations(String... testConfigurations) {
+            return testConfigurations(List.of(testConfigurations));
+        }        public ConnectionMonitorTestGroupArgs build() {
             return new ConnectionMonitorTestGroupArgs(destinations, disable, name, sources, testConfigurations);
         }
     }

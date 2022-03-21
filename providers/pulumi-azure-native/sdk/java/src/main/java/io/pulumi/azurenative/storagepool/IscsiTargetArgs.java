@@ -124,52 +124,45 @@ public final class IscsiTargetArgs extends io.pulumi.resources.ResourceArgs {
             this.diskPoolName = Objects.requireNonNull(diskPoolName);
             return this;
         }
-
         public Builder diskPoolName(String diskPoolName) {
             this.diskPoolName = Output.of(Objects.requireNonNull(diskPoolName));
             return this;
         }
-
         public Builder iscsiTargetName(@Nullable Output<String> iscsiTargetName) {
             this.iscsiTargetName = iscsiTargetName;
             return this;
         }
-
         public Builder iscsiTargetName(@Nullable String iscsiTargetName) {
             this.iscsiTargetName = Output.ofNullable(iscsiTargetName);
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder targetIqn(@Nullable Output<String> targetIqn) {
             this.targetIqn = targetIqn;
             return this;
         }
-
         public Builder targetIqn(@Nullable String targetIqn) {
             this.targetIqn = Output.ofNullable(targetIqn);
             return this;
         }
-
         public Builder tpgs(Output<List<TargetPortalGroupCreateArgs>> tpgs) {
             this.tpgs = Objects.requireNonNull(tpgs);
             return this;
         }
-
         public Builder tpgs(List<TargetPortalGroupCreateArgs> tpgs) {
             this.tpgs = Output.of(Objects.requireNonNull(tpgs));
             return this;
         }
-        public IscsiTargetArgs build() {
+        public Builder tpgs(TargetPortalGroupCreateArgs... tpgs) {
+            return tpgs(List.of(tpgs));
+        }        public IscsiTargetArgs build() {
             return new IscsiTargetArgs(diskPoolName, iscsiTargetName, resourceGroupName, targetIqn, tpgs);
         }
     }

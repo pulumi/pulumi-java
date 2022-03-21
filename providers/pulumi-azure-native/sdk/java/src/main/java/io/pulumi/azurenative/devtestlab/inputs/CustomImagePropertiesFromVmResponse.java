@@ -96,17 +96,14 @@ public final class CustomImagePropertiesFromVmResponse extends io.pulumi.resourc
             this.linuxOsInfo = linuxOsInfo;
             return this;
         }
-
         public Builder sourceVmId(@Nullable String sourceVmId) {
             this.sourceVmId = sourceVmId;
             return this;
         }
-
         public Builder windowsOsInfo(@Nullable WindowsOsInfoResponse windowsOsInfo) {
             this.windowsOsInfo = windowsOsInfo;
             return this;
-        }
-        public CustomImagePropertiesFromVmResponse build() {
+        }        public CustomImagePropertiesFromVmResponse build() {
             return new CustomImagePropertiesFromVmResponse(linuxOsInfo, sourceVmId, windowsOsInfo);
         }
     }

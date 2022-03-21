@@ -52,12 +52,10 @@ public final class FlowSlackSourcePropertiesArgs extends io.pulumi.resources.Res
             this.object = Objects.requireNonNull(object);
             return this;
         }
-
         public Builder object(String object) {
             this.object = Output.of(Objects.requireNonNull(object));
             return this;
-        }
-        public FlowSlackSourcePropertiesArgs build() {
+        }        public FlowSlackSourcePropertiesArgs build() {
             return new FlowSlackSourcePropertiesArgs(object);
         }
     }

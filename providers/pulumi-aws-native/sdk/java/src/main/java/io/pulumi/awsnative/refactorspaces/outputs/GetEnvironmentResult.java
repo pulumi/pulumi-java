@@ -81,22 +81,21 @@ public final class GetEnvironmentResult {
             this.arn = arn;
             return this;
         }
-
         public Builder environmentIdentifier(@Nullable String environmentIdentifier) {
             this.environmentIdentifier = environmentIdentifier;
             return this;
         }
-
         public Builder tags(@Nullable List<EnvironmentTag> tags) {
             this.tags = tags;
             return this;
         }
-
+        public Builder tags(EnvironmentTag... tags) {
+            return tags(List.of(tags));
+        }
         public Builder transitGatewayId(@Nullable String transitGatewayId) {
             this.transitGatewayId = transitGatewayId;
             return this;
-        }
-        public GetEnvironmentResult build() {
+        }        public GetEnvironmentResult build() {
             return new GetEnvironmentResult(arn, environmentIdentifier, tags, transitGatewayId);
         }
     }

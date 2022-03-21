@@ -56,12 +56,10 @@ public final class StandardAppVersionVpcAccessConnectorArgs extends io.pulumi.re
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Output.of(Objects.requireNonNull(name));
             return this;
-        }
-        public StandardAppVersionVpcAccessConnectorArgs build() {
+        }        public StandardAppVersionVpcAccessConnectorArgs build() {
             return new StandardAppVersionVpcAccessConnectorArgs(name);
         }
     }

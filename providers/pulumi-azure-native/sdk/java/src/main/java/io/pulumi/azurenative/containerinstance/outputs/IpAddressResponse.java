@@ -121,27 +121,25 @@ public final class IpAddressResponse {
             this.dnsNameLabel = dnsNameLabel;
             return this;
         }
-
         public Builder fqdn(String fqdn) {
             this.fqdn = Objects.requireNonNull(fqdn);
             return this;
         }
-
         public Builder ip(@Nullable String ip) {
             this.ip = ip;
             return this;
         }
-
         public Builder ports(List<PortResponse> ports) {
             this.ports = Objects.requireNonNull(ports);
             return this;
         }
-
+        public Builder ports(PortResponse... ports) {
+            return ports(List.of(ports));
+        }
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public IpAddressResponse build() {
+        }        public IpAddressResponse build() {
             return new IpAddressResponse(dnsNameLabel, fqdn, ip, ports, type);
         }
     }

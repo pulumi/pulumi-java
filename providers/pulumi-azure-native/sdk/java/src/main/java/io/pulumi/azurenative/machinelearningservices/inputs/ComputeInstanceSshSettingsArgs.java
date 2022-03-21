@@ -80,22 +80,18 @@ public final class ComputeInstanceSshSettingsArgs extends io.pulumi.resources.Re
             this.adminPublicKey = adminPublicKey;
             return this;
         }
-
         public Builder adminPublicKey(@Nullable String adminPublicKey) {
             this.adminPublicKey = Output.ofNullable(adminPublicKey);
             return this;
         }
-
         public Builder sshPublicAccess(@Nullable Output<Either<String,SshPublicAccess>> sshPublicAccess) {
             this.sshPublicAccess = sshPublicAccess;
             return this;
         }
-
         public Builder sshPublicAccess(@Nullable Either<String,SshPublicAccess> sshPublicAccess) {
             this.sshPublicAccess = Output.ofNullable(sshPublicAccess);
             return this;
-        }
-        public ComputeInstanceSshSettingsArgs build() {
+        }        public ComputeInstanceSshSettingsArgs build() {
             return new ComputeInstanceSshSettingsArgs(adminPublicKey, sshPublicAccess);
         }
     }

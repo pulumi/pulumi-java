@@ -96,32 +96,29 @@ public final class DnsSettingsArgs extends io.pulumi.resources.ResourceArgs {
             this.enableProxy = enableProxy;
             return this;
         }
-
         public Builder enableProxy(@Nullable Boolean enableProxy) {
             this.enableProxy = Output.ofNullable(enableProxy);
             return this;
         }
-
         public Builder requireProxyForNetworkRules(@Nullable Output<Boolean> requireProxyForNetworkRules) {
             this.requireProxyForNetworkRules = requireProxyForNetworkRules;
             return this;
         }
-
         public Builder requireProxyForNetworkRules(@Nullable Boolean requireProxyForNetworkRules) {
             this.requireProxyForNetworkRules = Output.ofNullable(requireProxyForNetworkRules);
             return this;
         }
-
         public Builder servers(@Nullable Output<List<String>> servers) {
             this.servers = servers;
             return this;
         }
-
         public Builder servers(@Nullable List<String> servers) {
             this.servers = Output.ofNullable(servers);
             return this;
         }
-        public DnsSettingsArgs build() {
+        public Builder servers(String... servers) {
+            return servers(List.of(servers));
+        }        public DnsSettingsArgs build() {
             return new DnsSettingsArgs(enableProxy, requireProxyForNetworkRules, servers);
         }
     }

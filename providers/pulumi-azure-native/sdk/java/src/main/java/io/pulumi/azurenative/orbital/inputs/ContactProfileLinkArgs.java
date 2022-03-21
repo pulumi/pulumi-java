@@ -132,52 +132,45 @@ public final class ContactProfileLinkArgs extends io.pulumi.resources.ResourceAr
             this.channels = Objects.requireNonNull(channels);
             return this;
         }
-
         public Builder channels(List<ContactProfileLinkChannelArgs> channels) {
             this.channels = Output.of(Objects.requireNonNull(channels));
             return this;
         }
-
+        public Builder channels(ContactProfileLinkChannelArgs... channels) {
+            return channels(List.of(channels));
+        }
         public Builder direction(Output<Either<String,Direction>> direction) {
             this.direction = Objects.requireNonNull(direction);
             return this;
         }
-
         public Builder direction(Either<String,Direction> direction) {
             this.direction = Output.of(Objects.requireNonNull(direction));
             return this;
         }
-
         public Builder eirpdBW(@Nullable Output<Double> eirpdBW) {
             this.eirpdBW = eirpdBW;
             return this;
         }
-
         public Builder eirpdBW(@Nullable Double eirpdBW) {
             this.eirpdBW = Output.ofNullable(eirpdBW);
             return this;
         }
-
         public Builder gainOverTemperature(@Nullable Output<Double> gainOverTemperature) {
             this.gainOverTemperature = gainOverTemperature;
             return this;
         }
-
         public Builder gainOverTemperature(@Nullable Double gainOverTemperature) {
             this.gainOverTemperature = Output.ofNullable(gainOverTemperature);
             return this;
         }
-
         public Builder polarization(Output<Either<String,Polarization>> polarization) {
             this.polarization = Objects.requireNonNull(polarization);
             return this;
         }
-
         public Builder polarization(Either<String,Polarization> polarization) {
             this.polarization = Output.of(Objects.requireNonNull(polarization));
             return this;
-        }
-        public ContactProfileLinkArgs build() {
+        }        public ContactProfileLinkArgs build() {
             return new ContactProfileLinkArgs(channels, direction, eirpdBW, gainOverTemperature, polarization);
         }
     }

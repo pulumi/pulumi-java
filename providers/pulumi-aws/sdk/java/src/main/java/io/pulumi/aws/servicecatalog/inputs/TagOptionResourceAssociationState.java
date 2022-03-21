@@ -138,62 +138,50 @@ public final class TagOptionResourceAssociationState extends io.pulumi.resources
             this.resourceArn = resourceArn;
             return this;
         }
-
         public Builder resourceArn(@Nullable String resourceArn) {
             this.resourceArn = Output.ofNullable(resourceArn);
             return this;
         }
-
         public Builder resourceCreatedTime(@Nullable Output<String> resourceCreatedTime) {
             this.resourceCreatedTime = resourceCreatedTime;
             return this;
         }
-
         public Builder resourceCreatedTime(@Nullable String resourceCreatedTime) {
             this.resourceCreatedTime = Output.ofNullable(resourceCreatedTime);
             return this;
         }
-
         public Builder resourceDescription(@Nullable Output<String> resourceDescription) {
             this.resourceDescription = resourceDescription;
             return this;
         }
-
         public Builder resourceDescription(@Nullable String resourceDescription) {
             this.resourceDescription = Output.ofNullable(resourceDescription);
             return this;
         }
-
         public Builder resourceId(@Nullable Output<String> resourceId) {
             this.resourceId = resourceId;
             return this;
         }
-
         public Builder resourceId(@Nullable String resourceId) {
             this.resourceId = Output.ofNullable(resourceId);
             return this;
         }
-
         public Builder resourceName(@Nullable Output<String> resourceName) {
             this.resourceName = resourceName;
             return this;
         }
-
         public Builder resourceName(@Nullable String resourceName) {
             this.resourceName = Output.ofNullable(resourceName);
             return this;
         }
-
         public Builder tagOptionId(@Nullable Output<String> tagOptionId) {
             this.tagOptionId = tagOptionId;
             return this;
         }
-
         public Builder tagOptionId(@Nullable String tagOptionId) {
             this.tagOptionId = Output.ofNullable(tagOptionId);
             return this;
-        }
-        public TagOptionResourceAssociationState build() {
+        }        public TagOptionResourceAssociationState build() {
             return new TagOptionResourceAssociationState(resourceArn, resourceCreatedTime, resourceDescription, resourceId, resourceName, tagOptionId);
         }
     }

@@ -57,12 +57,13 @@ public final class OpenZfsFileSystemRootVolumeConfigurationNfsExportsArgs extend
             this.clientConfigurations = Objects.requireNonNull(clientConfigurations);
             return this;
         }
-
         public Builder clientConfigurations(List<OpenZfsFileSystemRootVolumeConfigurationNfsExportsClientConfigurationArgs> clientConfigurations) {
             this.clientConfigurations = Output.of(Objects.requireNonNull(clientConfigurations));
             return this;
         }
-        public OpenZfsFileSystemRootVolumeConfigurationNfsExportsArgs build() {
+        public Builder clientConfigurations(OpenZfsFileSystemRootVolumeConfigurationNfsExportsClientConfigurationArgs... clientConfigurations) {
+            return clientConfigurations(List.of(clientConfigurations));
+        }        public OpenZfsFileSystemRootVolumeConfigurationNfsExportsArgs build() {
             return new OpenZfsFileSystemRootVolumeConfigurationNfsExportsArgs(clientConfigurations);
         }
     }

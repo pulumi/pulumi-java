@@ -103,22 +103,18 @@ public final class UserProfileUserSettingsJupyterServerAppSettingsDefaultResourc
             this.instanceType = instanceType;
             return this;
         }
-
         public Builder lifecycleConfigArn(@Nullable String lifecycleConfigArn) {
             this.lifecycleConfigArn = lifecycleConfigArn;
             return this;
         }
-
         public Builder sagemakerImageArn(@Nullable String sagemakerImageArn) {
             this.sagemakerImageArn = sagemakerImageArn;
             return this;
         }
-
         public Builder sagemakerImageVersionArn(@Nullable String sagemakerImageVersionArn) {
             this.sagemakerImageVersionArn = sagemakerImageVersionArn;
             return this;
-        }
-        public UserProfileUserSettingsJupyterServerAppSettingsDefaultResourceSpec build() {
+        }        public UserProfileUserSettingsJupyterServerAppSettingsDefaultResourceSpec build() {
             return new UserProfileUserSettingsJupyterServerAppSettingsDefaultResourceSpec(instanceType, lifecycleConfigArn, sagemakerImageArn, sagemakerImageVersionArn);
         }
     }

@@ -106,42 +106,40 @@ public final class GetDomainResult {
             this.arn = arn;
             return this;
         }
-
         public Builder autoSubDomainCreationPatterns(@Nullable List<String> autoSubDomainCreationPatterns) {
             this.autoSubDomainCreationPatterns = autoSubDomainCreationPatterns;
             return this;
         }
-
+        public Builder autoSubDomainCreationPatterns(String... autoSubDomainCreationPatterns) {
+            return autoSubDomainCreationPatterns(List.of(autoSubDomainCreationPatterns));
+        }
         public Builder autoSubDomainIAMRole(@Nullable String autoSubDomainIAMRole) {
             this.autoSubDomainIAMRole = autoSubDomainIAMRole;
             return this;
         }
-
         public Builder certificateRecord(@Nullable String certificateRecord) {
             this.certificateRecord = certificateRecord;
             return this;
         }
-
         public Builder domainStatus(@Nullable String domainStatus) {
             this.domainStatus = domainStatus;
             return this;
         }
-
         public Builder enableAutoSubDomain(@Nullable Boolean enableAutoSubDomain) {
             this.enableAutoSubDomain = enableAutoSubDomain;
             return this;
         }
-
         public Builder statusReason(@Nullable String statusReason) {
             this.statusReason = statusReason;
             return this;
         }
-
         public Builder subDomainSettings(@Nullable List<DomainSubDomainSetting> subDomainSettings) {
             this.subDomainSettings = subDomainSettings;
             return this;
         }
-        public GetDomainResult build() {
+        public Builder subDomainSettings(DomainSubDomainSetting... subDomainSettings) {
+            return subDomainSettings(List.of(subDomainSettings));
+        }        public GetDomainResult build() {
             return new GetDomainResult(arn, autoSubDomainCreationPatterns, autoSubDomainIAMRole, certificateRecord, domainStatus, enableAutoSubDomain, statusReason, subDomainSettings);
         }
     }

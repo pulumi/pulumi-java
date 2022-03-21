@@ -56,12 +56,10 @@ public final class VirtualNodeSpecListenerTlsCertificateSdsArgs extends io.pulum
             this.secretName = Objects.requireNonNull(secretName);
             return this;
         }
-
         public Builder secretName(String secretName) {
             this.secretName = Output.of(Objects.requireNonNull(secretName));
             return this;
-        }
-        public VirtualNodeSpecListenerTlsCertificateSdsArgs build() {
+        }        public VirtualNodeSpecListenerTlsCertificateSdsArgs build() {
             return new VirtualNodeSpecListenerTlsCertificateSdsArgs(secretName);
         }
     }

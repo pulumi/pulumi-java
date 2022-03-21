@@ -111,22 +111,18 @@ public final class AccessPolicyEntryResponse extends io.pulumi.resources.InvokeA
             this.applicationId = applicationId;
             return this;
         }
-
         public Builder objectId(String objectId) {
             this.objectId = Objects.requireNonNull(objectId);
             return this;
         }
-
         public Builder permissions(PermissionsResponse permissions) {
             this.permissions = Objects.requireNonNull(permissions);
             return this;
         }
-
         public Builder tenantId(String tenantId) {
             this.tenantId = Objects.requireNonNull(tenantId);
             return this;
-        }
-        public AccessPolicyEntryResponse build() {
+        }        public AccessPolicyEntryResponse build() {
             return new AccessPolicyEntryResponse(applicationId, objectId, permissions, tenantId);
         }
     }

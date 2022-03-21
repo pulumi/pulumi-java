@@ -76,12 +76,10 @@ public final class QueryKeyResponse extends io.pulumi.resources.InvokeArgs {
             this.key = Objects.requireNonNull(key);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
-        }
-        public QueryKeyResponse build() {
+        }        public QueryKeyResponse build() {
             return new QueryKeyResponse(key, name);
         }
     }

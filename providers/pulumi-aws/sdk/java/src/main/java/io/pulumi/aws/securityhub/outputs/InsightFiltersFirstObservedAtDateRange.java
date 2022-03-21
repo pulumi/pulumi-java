@@ -70,12 +70,10 @@ public final class InsightFiltersFirstObservedAtDateRange {
             this.unit = Objects.requireNonNull(unit);
             return this;
         }
-
         public Builder value(Integer value) {
             this.value = Objects.requireNonNull(value);
             return this;
-        }
-        public InsightFiltersFirstObservedAtDateRange build() {
+        }        public InsightFiltersFirstObservedAtDateRange build() {
             return new InsightFiltersFirstObservedAtDateRange(unit, value);
         }
     }

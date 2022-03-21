@@ -141,62 +141,62 @@ public final class PatchDeploymentPatchConfigZypperGetArgs extends io.pulumi.res
             this.categories = categories;
             return this;
         }
-
         public Builder categories(@Nullable List<String> categories) {
             this.categories = Output.ofNullable(categories);
             return this;
         }
-
+        public Builder categories(String... categories) {
+            return categories(List.of(categories));
+        }
         public Builder excludes(@Nullable Output<List<String>> excludes) {
             this.excludes = excludes;
             return this;
         }
-
         public Builder excludes(@Nullable List<String> excludes) {
             this.excludes = Output.ofNullable(excludes);
             return this;
         }
-
+        public Builder excludes(String... excludes) {
+            return excludes(List.of(excludes));
+        }
         public Builder exclusivePatches(@Nullable Output<List<String>> exclusivePatches) {
             this.exclusivePatches = exclusivePatches;
             return this;
         }
-
         public Builder exclusivePatches(@Nullable List<String> exclusivePatches) {
             this.exclusivePatches = Output.ofNullable(exclusivePatches);
             return this;
         }
-
+        public Builder exclusivePatches(String... exclusivePatches) {
+            return exclusivePatches(List.of(exclusivePatches));
+        }
         public Builder severities(@Nullable Output<List<String>> severities) {
             this.severities = severities;
             return this;
         }
-
         public Builder severities(@Nullable List<String> severities) {
             this.severities = Output.ofNullable(severities);
             return this;
         }
-
+        public Builder severities(String... severities) {
+            return severities(List.of(severities));
+        }
         public Builder withOptional(@Nullable Output<Boolean> withOptional) {
             this.withOptional = withOptional;
             return this;
         }
-
         public Builder withOptional(@Nullable Boolean withOptional) {
             this.withOptional = Output.ofNullable(withOptional);
             return this;
         }
-
         public Builder withUpdate(@Nullable Output<Boolean> withUpdate) {
             this.withUpdate = withUpdate;
             return this;
         }
-
         public Builder withUpdate(@Nullable Boolean withUpdate) {
             this.withUpdate = Output.ofNullable(withUpdate);
             return this;
-        }
-        public PatchDeploymentPatchConfigZypperGetArgs build() {
+        }        public PatchDeploymentPatchConfigZypperGetArgs build() {
             return new PatchDeploymentPatchConfigZypperGetArgs(categories, excludes, exclusivePatches, severities, withOptional, withUpdate);
         }
     }

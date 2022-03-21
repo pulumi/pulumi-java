@@ -194,47 +194,44 @@ public final class MonitorConfigResponse extends io.pulumi.resources.InvokeArgs 
             this.customHeaders = customHeaders;
             return this;
         }
-
+        public Builder customHeaders(MonitorConfigResponseCustomHeaders... customHeaders) {
+            return customHeaders(List.of(customHeaders));
+        }
         public Builder expectedStatusCodeRanges(@Nullable List<MonitorConfigResponseExpectedStatusCodeRanges> expectedStatusCodeRanges) {
             this.expectedStatusCodeRanges = expectedStatusCodeRanges;
             return this;
         }
-
+        public Builder expectedStatusCodeRanges(MonitorConfigResponseExpectedStatusCodeRanges... expectedStatusCodeRanges) {
+            return expectedStatusCodeRanges(List.of(expectedStatusCodeRanges));
+        }
         public Builder intervalInSeconds(@Nullable Double intervalInSeconds) {
             this.intervalInSeconds = intervalInSeconds;
             return this;
         }
-
         public Builder path(@Nullable String path) {
             this.path = path;
             return this;
         }
-
         public Builder port(@Nullable Double port) {
             this.port = port;
             return this;
         }
-
         public Builder profileMonitorStatus(@Nullable String profileMonitorStatus) {
             this.profileMonitorStatus = profileMonitorStatus;
             return this;
         }
-
         public Builder protocol(@Nullable String protocol) {
             this.protocol = protocol;
             return this;
         }
-
         public Builder timeoutInSeconds(@Nullable Double timeoutInSeconds) {
             this.timeoutInSeconds = timeoutInSeconds;
             return this;
         }
-
         public Builder toleratedNumberOfFailures(@Nullable Double toleratedNumberOfFailures) {
             this.toleratedNumberOfFailures = toleratedNumberOfFailures;
             return this;
-        }
-        public MonitorConfigResponse build() {
+        }        public MonitorConfigResponse build() {
             return new MonitorConfigResponse(customHeaders, expectedStatusCodeRanges, intervalInSeconds, path, port, profileMonitorStatus, protocol, timeoutInSeconds, toleratedNumberOfFailures);
         }
     }

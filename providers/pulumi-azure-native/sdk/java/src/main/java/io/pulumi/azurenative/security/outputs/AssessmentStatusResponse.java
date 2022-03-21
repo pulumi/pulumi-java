@@ -87,17 +87,14 @@ public final class AssessmentStatusResponse {
             this.cause = cause;
             return this;
         }
-
         public Builder code(String code) {
             this.code = Objects.requireNonNull(code);
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = description;
             return this;
-        }
-        public AssessmentStatusResponse build() {
+        }        public AssessmentStatusResponse build() {
             return new AssessmentStatusResponse(cause, code, description);
         }
     }

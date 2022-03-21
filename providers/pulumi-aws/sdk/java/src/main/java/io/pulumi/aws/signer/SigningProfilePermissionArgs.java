@@ -138,62 +138,50 @@ public final class SigningProfilePermissionArgs extends io.pulumi.resources.Reso
             this.action = Objects.requireNonNull(action);
             return this;
         }
-
         public Builder action(String action) {
             this.action = Output.of(Objects.requireNonNull(action));
             return this;
         }
-
         public Builder principal(Output<String> principal) {
             this.principal = Objects.requireNonNull(principal);
             return this;
         }
-
         public Builder principal(String principal) {
             this.principal = Output.of(Objects.requireNonNull(principal));
             return this;
         }
-
         public Builder profileName(Output<String> profileName) {
             this.profileName = Objects.requireNonNull(profileName);
             return this;
         }
-
         public Builder profileName(String profileName) {
             this.profileName = Output.of(Objects.requireNonNull(profileName));
             return this;
         }
-
         public Builder profileVersion(@Nullable Output<String> profileVersion) {
             this.profileVersion = profileVersion;
             return this;
         }
-
         public Builder profileVersion(@Nullable String profileVersion) {
             this.profileVersion = Output.ofNullable(profileVersion);
             return this;
         }
-
         public Builder statementId(@Nullable Output<String> statementId) {
             this.statementId = statementId;
             return this;
         }
-
         public Builder statementId(@Nullable String statementId) {
             this.statementId = Output.ofNullable(statementId);
             return this;
         }
-
         public Builder statementIdPrefix(@Nullable Output<String> statementIdPrefix) {
             this.statementIdPrefix = statementIdPrefix;
             return this;
         }
-
         public Builder statementIdPrefix(@Nullable String statementIdPrefix) {
             this.statementIdPrefix = Output.ofNullable(statementIdPrefix);
             return this;
-        }
-        public SigningProfilePermissionArgs build() {
+        }        public SigningProfilePermissionArgs build() {
             return new SigningProfilePermissionArgs(action, principal, profileName, profileVersion, statementId, statementIdPrefix);
         }
     }

@@ -60,7 +60,9 @@ public final class LoggingComponentConfigResponse extends io.pulumi.resources.In
             this.enableComponents = Objects.requireNonNull(enableComponents);
             return this;
         }
-        public LoggingComponentConfigResponse build() {
+        public Builder enableComponents(String... enableComponents) {
+            return enableComponents(List.of(enableComponents));
+        }        public LoggingComponentConfigResponse build() {
             return new LoggingComponentConfigResponse(enableComponents);
         }
     }

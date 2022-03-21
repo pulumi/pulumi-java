@@ -110,42 +110,34 @@ public final class DiskUtilizationArgs extends io.pulumi.resources.ResourceArgs 
             this.targetReadBytesPerSecond = targetReadBytesPerSecond;
             return this;
         }
-
         public Builder targetReadBytesPerSecond(@Nullable Integer targetReadBytesPerSecond) {
             this.targetReadBytesPerSecond = Output.ofNullable(targetReadBytesPerSecond);
             return this;
         }
-
         public Builder targetReadOpsPerSecond(@Nullable Output<Integer> targetReadOpsPerSecond) {
             this.targetReadOpsPerSecond = targetReadOpsPerSecond;
             return this;
         }
-
         public Builder targetReadOpsPerSecond(@Nullable Integer targetReadOpsPerSecond) {
             this.targetReadOpsPerSecond = Output.ofNullable(targetReadOpsPerSecond);
             return this;
         }
-
         public Builder targetWriteBytesPerSecond(@Nullable Output<Integer> targetWriteBytesPerSecond) {
             this.targetWriteBytesPerSecond = targetWriteBytesPerSecond;
             return this;
         }
-
         public Builder targetWriteBytesPerSecond(@Nullable Integer targetWriteBytesPerSecond) {
             this.targetWriteBytesPerSecond = Output.ofNullable(targetWriteBytesPerSecond);
             return this;
         }
-
         public Builder targetWriteOpsPerSecond(@Nullable Output<Integer> targetWriteOpsPerSecond) {
             this.targetWriteOpsPerSecond = targetWriteOpsPerSecond;
             return this;
         }
-
         public Builder targetWriteOpsPerSecond(@Nullable Integer targetWriteOpsPerSecond) {
             this.targetWriteOpsPerSecond = Output.ofNullable(targetWriteOpsPerSecond);
             return this;
-        }
-        public DiskUtilizationArgs build() {
+        }        public DiskUtilizationArgs build() {
             return new DiskUtilizationArgs(targetReadBytesPerSecond, targetReadOpsPerSecond, targetWriteBytesPerSecond, targetWriteOpsPerSecond);
         }
     }

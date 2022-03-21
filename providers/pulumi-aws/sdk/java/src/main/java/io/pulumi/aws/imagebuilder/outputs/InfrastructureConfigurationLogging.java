@@ -51,8 +51,7 @@ public final class InfrastructureConfigurationLogging {
         public Builder s3Logs(InfrastructureConfigurationLoggingS3Logs s3Logs) {
             this.s3Logs = Objects.requireNonNull(s3Logs);
             return this;
-        }
-        public InfrastructureConfigurationLogging build() {
+        }        public InfrastructureConfigurationLogging build() {
             return new InfrastructureConfigurationLogging(s3Logs);
         }
     }

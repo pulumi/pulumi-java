@@ -54,8 +54,7 @@ public final class ListIngestionSettingConnectionStringsArgs extends io.pulumi.r
         public Builder ingestionSettingName(String ingestionSettingName) {
             this.ingestionSettingName = Objects.requireNonNull(ingestionSettingName);
             return this;
-        }
-        public ListIngestionSettingConnectionStringsArgs build() {
+        }        public ListIngestionSettingConnectionStringsArgs build() {
             return new ListIngestionSettingConnectionStringsArgs(ingestionSettingName);
         }
     }

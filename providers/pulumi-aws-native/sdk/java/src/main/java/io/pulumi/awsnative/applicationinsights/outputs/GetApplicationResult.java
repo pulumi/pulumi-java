@@ -189,47 +189,50 @@ public final class GetApplicationResult {
             this.applicationARN = applicationARN;
             return this;
         }
-
         public Builder autoConfigurationEnabled(@Nullable Boolean autoConfigurationEnabled) {
             this.autoConfigurationEnabled = autoConfigurationEnabled;
             return this;
         }
-
         public Builder cWEMonitorEnabled(@Nullable Boolean cWEMonitorEnabled) {
             this.cWEMonitorEnabled = cWEMonitorEnabled;
             return this;
         }
-
         public Builder componentMonitoringSettings(@Nullable List<ApplicationComponentMonitoringSetting> componentMonitoringSettings) {
             this.componentMonitoringSettings = componentMonitoringSettings;
             return this;
         }
-
+        public Builder componentMonitoringSettings(ApplicationComponentMonitoringSetting... componentMonitoringSettings) {
+            return componentMonitoringSettings(List.of(componentMonitoringSettings));
+        }
         public Builder customComponents(@Nullable List<ApplicationCustomComponent> customComponents) {
             this.customComponents = customComponents;
             return this;
         }
-
+        public Builder customComponents(ApplicationCustomComponent... customComponents) {
+            return customComponents(List.of(customComponents));
+        }
         public Builder logPatternSets(@Nullable List<ApplicationLogPatternSet> logPatternSets) {
             this.logPatternSets = logPatternSets;
             return this;
         }
-
+        public Builder logPatternSets(ApplicationLogPatternSet... logPatternSets) {
+            return logPatternSets(List.of(logPatternSets));
+        }
         public Builder opsCenterEnabled(@Nullable Boolean opsCenterEnabled) {
             this.opsCenterEnabled = opsCenterEnabled;
             return this;
         }
-
         public Builder opsItemSNSTopicArn(@Nullable String opsItemSNSTopicArn) {
             this.opsItemSNSTopicArn = opsItemSNSTopicArn;
             return this;
         }
-
         public Builder tags(@Nullable List<ApplicationTag> tags) {
             this.tags = tags;
             return this;
         }
-        public GetApplicationResult build() {
+        public Builder tags(ApplicationTag... tags) {
+            return tags(List.of(tags));
+        }        public GetApplicationResult build() {
             return new GetApplicationResult(applicationARN, autoConfigurationEnabled, cWEMonitorEnabled, componentMonitoringSettings, customComponents, logPatternSets, opsCenterEnabled, opsItemSNSTopicArn, tags);
         }
     }

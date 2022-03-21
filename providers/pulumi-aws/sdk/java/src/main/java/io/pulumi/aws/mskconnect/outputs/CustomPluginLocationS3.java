@@ -87,17 +87,14 @@ public final class CustomPluginLocationS3 {
             this.bucketArn = Objects.requireNonNull(bucketArn);
             return this;
         }
-
         public Builder fileKey(String fileKey) {
             this.fileKey = Objects.requireNonNull(fileKey);
             return this;
         }
-
         public Builder objectVersion(@Nullable String objectVersion) {
             this.objectVersion = objectVersion;
             return this;
-        }
-        public CustomPluginLocationS3 build() {
+        }        public CustomPluginLocationS3 build() {
             return new CustomPluginLocationS3(bucketArn, fileKey, objectVersion);
         }
     }

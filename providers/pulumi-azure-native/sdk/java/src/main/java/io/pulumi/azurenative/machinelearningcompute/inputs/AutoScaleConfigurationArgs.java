@@ -130,52 +130,42 @@ public final class AutoScaleConfigurationArgs extends io.pulumi.resources.Resour
             this.maxReplicas = maxReplicas;
             return this;
         }
-
         public Builder maxReplicas(@Nullable Integer maxReplicas) {
             this.maxReplicas = Output.ofNullable(maxReplicas);
             return this;
         }
-
         public Builder minReplicas(@Nullable Output<Integer> minReplicas) {
             this.minReplicas = minReplicas;
             return this;
         }
-
         public Builder minReplicas(@Nullable Integer minReplicas) {
             this.minReplicas = Output.ofNullable(minReplicas);
             return this;
         }
-
         public Builder refreshPeriodInSeconds(@Nullable Output<Integer> refreshPeriodInSeconds) {
             this.refreshPeriodInSeconds = refreshPeriodInSeconds;
             return this;
         }
-
         public Builder refreshPeriodInSeconds(@Nullable Integer refreshPeriodInSeconds) {
             this.refreshPeriodInSeconds = Output.ofNullable(refreshPeriodInSeconds);
             return this;
         }
-
         public Builder status(@Nullable Output<Either<String,Status>> status) {
             this.status = status;
             return this;
         }
-
         public Builder status(@Nullable Either<String,Status> status) {
             this.status = Output.ofNullable(status);
             return this;
         }
-
         public Builder targetUtilization(@Nullable Output<Double> targetUtilization) {
             this.targetUtilization = targetUtilization;
             return this;
         }
-
         public Builder targetUtilization(@Nullable Double targetUtilization) {
             this.targetUtilization = Output.ofNullable(targetUtilization);
             return this;
-        }
-        public AutoScaleConfigurationArgs build() {
+        }        public AutoScaleConfigurationArgs build() {
             return new AutoScaleConfigurationArgs(maxReplicas, minReplicas, refreshPeriodInSeconds, status, targetUtilization);
         }
     }

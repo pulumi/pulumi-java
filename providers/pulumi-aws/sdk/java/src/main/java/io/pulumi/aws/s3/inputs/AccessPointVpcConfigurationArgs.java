@@ -56,12 +56,10 @@ public final class AccessPointVpcConfigurationArgs extends io.pulumi.resources.R
             this.vpcId = Objects.requireNonNull(vpcId);
             return this;
         }
-
         public Builder vpcId(String vpcId) {
             this.vpcId = Output.of(Objects.requireNonNull(vpcId));
             return this;
-        }
-        public AccessPointVpcConfigurationArgs build() {
+        }        public AccessPointVpcConfigurationArgs build() {
             return new AccessPointVpcConfigurationArgs(vpcId);
         }
     }

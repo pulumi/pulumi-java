@@ -141,62 +141,50 @@ public final class WorkloadNetworkDhcpArgs extends io.pulumi.resources.ResourceA
             this.dhcpId = dhcpId;
             return this;
         }
-
         public Builder dhcpId(@Nullable String dhcpId) {
             this.dhcpId = Output.ofNullable(dhcpId);
             return this;
         }
-
         public Builder dhcpType(Output<Either<String,DhcpTypeEnum>> dhcpType) {
             this.dhcpType = Objects.requireNonNull(dhcpType);
             return this;
         }
-
         public Builder dhcpType(Either<String,DhcpTypeEnum> dhcpType) {
             this.dhcpType = Output.of(Objects.requireNonNull(dhcpType));
             return this;
         }
-
         public Builder displayName(@Nullable Output<String> displayName) {
             this.displayName = displayName;
             return this;
         }
-
         public Builder displayName(@Nullable String displayName) {
             this.displayName = Output.ofNullable(displayName);
             return this;
         }
-
         public Builder privateCloudName(Output<String> privateCloudName) {
             this.privateCloudName = Objects.requireNonNull(privateCloudName);
             return this;
         }
-
         public Builder privateCloudName(String privateCloudName) {
             this.privateCloudName = Output.of(Objects.requireNonNull(privateCloudName));
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder revision(@Nullable Output<Double> revision) {
             this.revision = revision;
             return this;
         }
-
         public Builder revision(@Nullable Double revision) {
             this.revision = Output.ofNullable(revision);
             return this;
-        }
-        public WorkloadNetworkDhcpArgs build() {
+        }        public WorkloadNetworkDhcpArgs build() {
             return new WorkloadNetworkDhcpArgs(dhcpId, dhcpType, displayName, privateCloudName, resourceGroupName, revision);
         }
     }

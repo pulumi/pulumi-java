@@ -79,22 +79,18 @@ public final class TaskPropertiesArgs extends io.pulumi.resources.ResourceArgs {
             this.parameters = parameters;
             return this;
         }
-
         public Builder parameters(@Nullable Map<String,String> parameters) {
             this.parameters = Output.ofNullable(parameters);
             return this;
         }
-
         public Builder source(@Nullable Output<String> source) {
             this.source = source;
             return this;
         }
-
         public Builder source(@Nullable String source) {
             this.source = Output.ofNullable(source);
             return this;
-        }
-        public TaskPropertiesArgs build() {
+        }        public TaskPropertiesArgs build() {
             return new TaskPropertiesArgs(parameters, source);
         }
     }

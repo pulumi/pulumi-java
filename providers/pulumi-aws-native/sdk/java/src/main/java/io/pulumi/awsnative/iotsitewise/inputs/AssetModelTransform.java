@@ -74,12 +74,13 @@ public final class AssetModelTransform extends io.pulumi.resources.InvokeArgs {
             this.expression = Objects.requireNonNull(expression);
             return this;
         }
-
         public Builder variables(List<AssetModelExpressionVariable> variables) {
             this.variables = Objects.requireNonNull(variables);
             return this;
         }
-        public AssetModelTransform build() {
+        public Builder variables(AssetModelExpressionVariable... variables) {
+            return variables(List.of(variables));
+        }        public AssetModelTransform build() {
             return new AssetModelTransform(expression, variables);
         }
     }

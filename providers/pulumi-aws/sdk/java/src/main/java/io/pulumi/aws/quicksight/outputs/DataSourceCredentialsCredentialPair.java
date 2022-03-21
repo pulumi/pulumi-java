@@ -69,12 +69,10 @@ public final class DataSourceCredentialsCredentialPair {
             this.password = Objects.requireNonNull(password);
             return this;
         }
-
         public Builder username(String username) {
             this.username = Objects.requireNonNull(username);
             return this;
-        }
-        public DataSourceCredentialsCredentialPair build() {
+        }        public DataSourceCredentialsCredentialPair build() {
             return new DataSourceCredentialsCredentialPair(password, username);
         }
     }

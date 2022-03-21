@@ -88,17 +88,17 @@ public final class ScheduleRecurrenceResponse {
             this.recurrenceType = Objects.requireNonNull(recurrenceType);
             return this;
         }
-
         public Builder recurrenceValue(Integer recurrenceValue) {
             this.recurrenceValue = Objects.requireNonNull(recurrenceValue);
             return this;
         }
-
         public Builder weeklyDaysList(@Nullable List<String> weeklyDaysList) {
             this.weeklyDaysList = weeklyDaysList;
             return this;
         }
-        public ScheduleRecurrenceResponse build() {
+        public Builder weeklyDaysList(String... weeklyDaysList) {
+            return weeklyDaysList(List.of(weeklyDaysList));
+        }        public ScheduleRecurrenceResponse build() {
             return new ScheduleRecurrenceResponse(recurrenceType, recurrenceValue, weeklyDaysList);
         }
     }

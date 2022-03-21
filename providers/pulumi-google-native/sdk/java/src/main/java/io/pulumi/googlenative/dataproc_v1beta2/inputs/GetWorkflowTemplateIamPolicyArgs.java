@@ -90,22 +90,18 @@ public final class GetWorkflowTemplateIamPolicyArgs extends io.pulumi.resources.
             this.location = Objects.requireNonNull(location);
             return this;
         }
-
         public Builder optionsRequestedPolicyVersion(@Nullable String optionsRequestedPolicyVersion) {
             this.optionsRequestedPolicyVersion = optionsRequestedPolicyVersion;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = project;
             return this;
         }
-
         public Builder workflowTemplateId(String workflowTemplateId) {
             this.workflowTemplateId = Objects.requireNonNull(workflowTemplateId);
             return this;
-        }
-        public GetWorkflowTemplateIamPolicyArgs build() {
+        }        public GetWorkflowTemplateIamPolicyArgs build() {
             return new GetWorkflowTemplateIamPolicyArgs(location, optionsRequestedPolicyVersion, project, workflowTemplateId);
         }
     }

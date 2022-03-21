@@ -71,12 +71,10 @@ public final class FacebookPageResponse {
             this.accessToken = accessToken;
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
-        }
-        public FacebookPageResponse build() {
+        }        public FacebookPageResponse build() {
             return new FacebookPageResponse(accessToken, id);
         }
     }

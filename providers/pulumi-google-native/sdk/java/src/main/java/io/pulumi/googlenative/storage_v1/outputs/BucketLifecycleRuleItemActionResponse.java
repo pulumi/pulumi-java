@@ -69,12 +69,10 @@ public final class BucketLifecycleRuleItemActionResponse {
             this.storageClass = Objects.requireNonNull(storageClass);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public BucketLifecycleRuleItemActionResponse build() {
+        }        public BucketLifecycleRuleItemActionResponse build() {
             return new BucketLifecycleRuleItemActionResponse(storageClass, type);
         }
     }

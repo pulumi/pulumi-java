@@ -88,17 +88,14 @@ public final class GetMachineExtensionArgs extends io.pulumi.resources.InvokeArg
             this.extensionName = Objects.requireNonNull(extensionName);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
-        }
-        public GetMachineExtensionArgs build() {
+        }        public GetMachineExtensionArgs build() {
             return new GetMachineExtensionArgs(extensionName, name, resourceGroupName);
         }
     }

@@ -125,52 +125,42 @@ public final class CloudEdgeManagementRoleArgs extends io.pulumi.resources.Resou
             this.deviceName = Objects.requireNonNull(deviceName);
             return this;
         }
-
         public Builder deviceName(String deviceName) {
             this.deviceName = Output.of(Objects.requireNonNull(deviceName));
             return this;
         }
-
         public Builder kind(Output<String> kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
-
         public Builder kind(String kind) {
             this.kind = Output.of(Objects.requireNonNull(kind));
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder roleStatus(Output<Either<String,RoleStatus>> roleStatus) {
             this.roleStatus = Objects.requireNonNull(roleStatus);
             return this;
         }
-
         public Builder roleStatus(Either<String,RoleStatus> roleStatus) {
             this.roleStatus = Output.of(Objects.requireNonNull(roleStatus));
             return this;
-        }
-        public CloudEdgeManagementRoleArgs build() {
+        }        public CloudEdgeManagementRoleArgs build() {
             return new CloudEdgeManagementRoleArgs(deviceName, kind, name, resourceGroupName, roleStatus);
         }
     }

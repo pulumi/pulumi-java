@@ -103,22 +103,18 @@ public final class FlexibleAppVersionAutomaticScalingDiskUtilization {
             this.targetReadBytesPerSecond = targetReadBytesPerSecond;
             return this;
         }
-
         public Builder targetReadOpsPerSecond(@Nullable Integer targetReadOpsPerSecond) {
             this.targetReadOpsPerSecond = targetReadOpsPerSecond;
             return this;
         }
-
         public Builder targetWriteBytesPerSecond(@Nullable Integer targetWriteBytesPerSecond) {
             this.targetWriteBytesPerSecond = targetWriteBytesPerSecond;
             return this;
         }
-
         public Builder targetWriteOpsPerSecond(@Nullable Integer targetWriteOpsPerSecond) {
             this.targetWriteOpsPerSecond = targetWriteOpsPerSecond;
             return this;
-        }
-        public FlexibleAppVersionAutomaticScalingDiskUtilization build() {
+        }        public FlexibleAppVersionAutomaticScalingDiskUtilization build() {
             return new FlexibleAppVersionAutomaticScalingDiskUtilization(targetReadBytesPerSecond, targetReadOpsPerSecond, targetWriteBytesPerSecond, targetWriteOpsPerSecond);
         }
     }

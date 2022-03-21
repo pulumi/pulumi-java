@@ -142,62 +142,53 @@ public final class IAMCustomRoleArgs extends io.pulumi.resources.ResourceArgs {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder permissions(Output<List<String>> permissions) {
             this.permissions = Objects.requireNonNull(permissions);
             return this;
         }
-
         public Builder permissions(List<String> permissions) {
             this.permissions = Output.of(Objects.requireNonNull(permissions));
             return this;
         }
-
+        public Builder permissions(String... permissions) {
+            return permissions(List.of(permissions));
+        }
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
         }
-
         public Builder roleId(Output<String> roleId) {
             this.roleId = Objects.requireNonNull(roleId);
             return this;
         }
-
         public Builder roleId(String roleId) {
             this.roleId = Output.of(Objects.requireNonNull(roleId));
             return this;
         }
-
         public Builder stage(@Nullable Output<String> stage) {
             this.stage = stage;
             return this;
         }
-
         public Builder stage(@Nullable String stage) {
             this.stage = Output.ofNullable(stage);
             return this;
         }
-
         public Builder title(Output<String> title) {
             this.title = Objects.requireNonNull(title);
             return this;
         }
-
         public Builder title(String title) {
             this.title = Output.of(Objects.requireNonNull(title));
             return this;
-        }
-        public IAMCustomRoleArgs build() {
+        }        public IAMCustomRoleArgs build() {
             return new IAMCustomRoleArgs(description, permissions, project, roleId, stage, title);
         }
     }

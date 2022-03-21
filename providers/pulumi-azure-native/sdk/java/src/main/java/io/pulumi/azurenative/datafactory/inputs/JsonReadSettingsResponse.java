@@ -83,12 +83,10 @@ public final class JsonReadSettingsResponse extends io.pulumi.resources.InvokeAr
             this.compressionProperties = compressionProperties;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public JsonReadSettingsResponse build() {
+        }        public JsonReadSettingsResponse build() {
             return new JsonReadSettingsResponse(compressionProperties, type);
         }
     }

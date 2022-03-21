@@ -77,22 +77,18 @@ public final class IssuingOptionsArgs extends io.pulumi.resources.ResourceArgs {
             this.includeCaCertUrl = Objects.requireNonNull(includeCaCertUrl);
             return this;
         }
-
         public Builder includeCaCertUrl(Boolean includeCaCertUrl) {
             this.includeCaCertUrl = Output.of(Objects.requireNonNull(includeCaCertUrl));
             return this;
         }
-
         public Builder includeCrlAccessUrl(Output<Boolean> includeCrlAccessUrl) {
             this.includeCrlAccessUrl = Objects.requireNonNull(includeCrlAccessUrl);
             return this;
         }
-
         public Builder includeCrlAccessUrl(Boolean includeCrlAccessUrl) {
             this.includeCrlAccessUrl = Output.of(Objects.requireNonNull(includeCrlAccessUrl));
             return this;
-        }
-        public IssuingOptionsArgs build() {
+        }        public IssuingOptionsArgs build() {
             return new IssuingOptionsArgs(includeCaCertUrl, includeCrlAccessUrl);
         }
     }

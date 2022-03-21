@@ -92,17 +92,14 @@ public final class CertificateInformationResponse extends io.pulumi.resources.In
             this.expiry = Objects.requireNonNull(expiry);
             return this;
         }
-
         public Builder subject(String subject) {
             this.subject = Objects.requireNonNull(subject);
             return this;
         }
-
         public Builder thumbprint(String thumbprint) {
             this.thumbprint = Objects.requireNonNull(thumbprint);
             return this;
-        }
-        public CertificateInformationResponse build() {
+        }        public CertificateInformationResponse build() {
             return new CertificateInformationResponse(expiry, subject, thumbprint);
         }
     }

@@ -155,42 +155,37 @@ public final class ClusterMasterInstanceFleet {
             this.id = id;
             return this;
         }
-
         public Builder instanceTypeConfigs(@Nullable List<ClusterMasterInstanceFleetInstanceTypeConfig> instanceTypeConfigs) {
             this.instanceTypeConfigs = instanceTypeConfigs;
             return this;
         }
-
+        public Builder instanceTypeConfigs(ClusterMasterInstanceFleetInstanceTypeConfig... instanceTypeConfigs) {
+            return instanceTypeConfigs(List.of(instanceTypeConfigs));
+        }
         public Builder launchSpecifications(@Nullable ClusterMasterInstanceFleetLaunchSpecifications launchSpecifications) {
             this.launchSpecifications = launchSpecifications;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
-
         public Builder provisionedOnDemandCapacity(@Nullable Integer provisionedOnDemandCapacity) {
             this.provisionedOnDemandCapacity = provisionedOnDemandCapacity;
             return this;
         }
-
         public Builder provisionedSpotCapacity(@Nullable Integer provisionedSpotCapacity) {
             this.provisionedSpotCapacity = provisionedSpotCapacity;
             return this;
         }
-
         public Builder targetOnDemandCapacity(@Nullable Integer targetOnDemandCapacity) {
             this.targetOnDemandCapacity = targetOnDemandCapacity;
             return this;
         }
-
         public Builder targetSpotCapacity(@Nullable Integer targetSpotCapacity) {
             this.targetSpotCapacity = targetSpotCapacity;
             return this;
-        }
-        public ClusterMasterInstanceFleet build() {
+        }        public ClusterMasterInstanceFleet build() {
             return new ClusterMasterInstanceFleet(id, instanceTypeConfigs, launchSpecifications, name, provisionedOnDemandCapacity, provisionedSpotCapacity, targetOnDemandCapacity, targetSpotCapacity);
         }
     }

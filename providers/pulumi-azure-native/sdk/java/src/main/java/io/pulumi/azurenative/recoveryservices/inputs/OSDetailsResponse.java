@@ -142,32 +142,26 @@ public final class OSDetailsResponse extends io.pulumi.resources.InvokeArgs {
             this.oSMajorVersion = oSMajorVersion;
             return this;
         }
-
         public Builder oSMinorVersion(@Nullable String oSMinorVersion) {
             this.oSMinorVersion = oSMinorVersion;
             return this;
         }
-
         public Builder oSVersion(@Nullable String oSVersion) {
             this.oSVersion = oSVersion;
             return this;
         }
-
         public Builder osEdition(@Nullable String osEdition) {
             this.osEdition = osEdition;
             return this;
         }
-
         public Builder osType(@Nullable String osType) {
             this.osType = osType;
             return this;
         }
-
         public Builder productType(@Nullable String productType) {
             this.productType = productType;
             return this;
-        }
-        public OSDetailsResponse build() {
+        }        public OSDetailsResponse build() {
             return new OSDetailsResponse(oSMajorVersion, oSMinorVersion, oSVersion, osEdition, osType, productType);
         }
     }

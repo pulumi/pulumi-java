@@ -125,52 +125,42 @@ public final class BackupInstanceArgs extends io.pulumi.resources.ResourceArgs {
             this.dataSourceInfo = Objects.requireNonNull(dataSourceInfo);
             return this;
         }
-
         public Builder dataSourceInfo(DatasourceArgs dataSourceInfo) {
             this.dataSourceInfo = Output.of(Objects.requireNonNull(dataSourceInfo));
             return this;
         }
-
         public Builder dataSourceSetInfo(@Nullable Output<DatasourceSetArgs> dataSourceSetInfo) {
             this.dataSourceSetInfo = dataSourceSetInfo;
             return this;
         }
-
         public Builder dataSourceSetInfo(@Nullable DatasourceSetArgs dataSourceSetInfo) {
             this.dataSourceSetInfo = Output.ofNullable(dataSourceSetInfo);
             return this;
         }
-
         public Builder friendlyName(@Nullable Output<String> friendlyName) {
             this.friendlyName = friendlyName;
             return this;
         }
-
         public Builder friendlyName(@Nullable String friendlyName) {
             this.friendlyName = Output.ofNullable(friendlyName);
             return this;
         }
-
         public Builder objectType(Output<String> objectType) {
             this.objectType = Objects.requireNonNull(objectType);
             return this;
         }
-
         public Builder objectType(String objectType) {
             this.objectType = Output.of(Objects.requireNonNull(objectType));
             return this;
         }
-
         public Builder policyInfo(Output<PolicyInfoArgs> policyInfo) {
             this.policyInfo = Objects.requireNonNull(policyInfo);
             return this;
         }
-
         public Builder policyInfo(PolicyInfoArgs policyInfo) {
             this.policyInfo = Output.of(Objects.requireNonNull(policyInfo));
             return this;
-        }
-        public BackupInstanceArgs build() {
+        }        public BackupInstanceArgs build() {
             return new BackupInstanceArgs(dataSourceInfo, dataSourceSetInfo, friendlyName, objectType, policyInfo);
         }
     }

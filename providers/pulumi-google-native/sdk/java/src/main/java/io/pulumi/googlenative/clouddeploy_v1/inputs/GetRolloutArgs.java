@@ -102,27 +102,22 @@ public final class GetRolloutArgs extends io.pulumi.resources.InvokeArgs {
             this.deliveryPipelineId = Objects.requireNonNull(deliveryPipelineId);
             return this;
         }
-
         public Builder location(String location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = project;
             return this;
         }
-
         public Builder releaseId(String releaseId) {
             this.releaseId = Objects.requireNonNull(releaseId);
             return this;
         }
-
         public Builder rolloutId(String rolloutId) {
             this.rolloutId = Objects.requireNonNull(rolloutId);
             return this;
-        }
-        public GetRolloutArgs build() {
+        }        public GetRolloutArgs build() {
             return new GetRolloutArgs(deliveryPipelineId, location, project, releaseId, rolloutId);
         }
     }

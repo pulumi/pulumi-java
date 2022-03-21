@@ -240,122 +240,104 @@ public final class NetworkVirtualApplianceArgs extends io.pulumi.resources.Resou
             this.bootStrapConfigurationBlobs = bootStrapConfigurationBlobs;
             return this;
         }
-
         public Builder bootStrapConfigurationBlobs(@Nullable List<String> bootStrapConfigurationBlobs) {
             this.bootStrapConfigurationBlobs = Output.ofNullable(bootStrapConfigurationBlobs);
             return this;
         }
-
+        public Builder bootStrapConfigurationBlobs(String... bootStrapConfigurationBlobs) {
+            return bootStrapConfigurationBlobs(List.of(bootStrapConfigurationBlobs));
+        }
         public Builder cloudInitConfiguration(@Nullable Output<String> cloudInitConfiguration) {
             this.cloudInitConfiguration = cloudInitConfiguration;
             return this;
         }
-
         public Builder cloudInitConfiguration(@Nullable String cloudInitConfiguration) {
             this.cloudInitConfiguration = Output.ofNullable(cloudInitConfiguration);
             return this;
         }
-
         public Builder cloudInitConfigurationBlobs(@Nullable Output<List<String>> cloudInitConfigurationBlobs) {
             this.cloudInitConfigurationBlobs = cloudInitConfigurationBlobs;
             return this;
         }
-
         public Builder cloudInitConfigurationBlobs(@Nullable List<String> cloudInitConfigurationBlobs) {
             this.cloudInitConfigurationBlobs = Output.ofNullable(cloudInitConfigurationBlobs);
             return this;
         }
-
+        public Builder cloudInitConfigurationBlobs(String... cloudInitConfigurationBlobs) {
+            return cloudInitConfigurationBlobs(List.of(cloudInitConfigurationBlobs));
+        }
         public Builder id(@Nullable Output<String> id) {
             this.id = id;
             return this;
         }
-
         public Builder id(@Nullable String id) {
             this.id = Output.ofNullable(id);
             return this;
         }
-
         public Builder identity(@Nullable Output<ManagedServiceIdentityArgs> identity) {
             this.identity = identity;
             return this;
         }
-
         public Builder identity(@Nullable ManagedServiceIdentityArgs identity) {
             this.identity = Output.ofNullable(identity);
             return this;
         }
-
         public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder networkVirtualApplianceName(@Nullable Output<String> networkVirtualApplianceName) {
             this.networkVirtualApplianceName = networkVirtualApplianceName;
             return this;
         }
-
         public Builder networkVirtualApplianceName(@Nullable String networkVirtualApplianceName) {
             this.networkVirtualApplianceName = Output.ofNullable(networkVirtualApplianceName);
             return this;
         }
-
         public Builder nvaSku(@Nullable Output<VirtualApplianceSkuPropertiesArgs> nvaSku) {
             this.nvaSku = nvaSku;
             return this;
         }
-
         public Builder nvaSku(@Nullable VirtualApplianceSkuPropertiesArgs nvaSku) {
             this.nvaSku = Output.ofNullable(nvaSku);
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
         public Builder virtualApplianceAsn(@Nullable Output<Double> virtualApplianceAsn) {
             this.virtualApplianceAsn = virtualApplianceAsn;
             return this;
         }
-
         public Builder virtualApplianceAsn(@Nullable Double virtualApplianceAsn) {
             this.virtualApplianceAsn = Output.ofNullable(virtualApplianceAsn);
             return this;
         }
-
         public Builder virtualHub(@Nullable Output<SubResourceArgs> virtualHub) {
             this.virtualHub = virtualHub;
             return this;
         }
-
         public Builder virtualHub(@Nullable SubResourceArgs virtualHub) {
             this.virtualHub = Output.ofNullable(virtualHub);
             return this;
-        }
-        public NetworkVirtualApplianceArgs build() {
+        }        public NetworkVirtualApplianceArgs build() {
             return new NetworkVirtualApplianceArgs(bootStrapConfigurationBlobs, cloudInitConfiguration, cloudInitConfigurationBlobs, id, identity, location, networkVirtualApplianceName, nvaSku, resourceGroupName, tags, virtualApplianceAsn, virtualHub);
         }
     }

@@ -61,12 +61,10 @@ public final class PrivateClusterMasterGlobalAccessConfigArgs extends io.pulumi.
             this.enabled = enabled;
             return this;
         }
-
         public Builder enabled(@Nullable Boolean enabled) {
             this.enabled = Output.ofNullable(enabled);
             return this;
-        }
-        public PrivateClusterMasterGlobalAccessConfigArgs build() {
+        }        public PrivateClusterMasterGlobalAccessConfigArgs build() {
             return new PrivateClusterMasterGlobalAccessConfigArgs(enabled);
         }
     }

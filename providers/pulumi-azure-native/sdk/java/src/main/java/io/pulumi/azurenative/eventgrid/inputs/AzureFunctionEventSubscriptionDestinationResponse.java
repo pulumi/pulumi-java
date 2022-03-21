@@ -112,22 +112,18 @@ public final class AzureFunctionEventSubscriptionDestinationResponse extends io.
             this.endpointType = Objects.requireNonNull(endpointType);
             return this;
         }
-
         public Builder maxEventsPerBatch(@Nullable Integer maxEventsPerBatch) {
             this.maxEventsPerBatch = maxEventsPerBatch;
             return this;
         }
-
         public Builder preferredBatchSizeInKilobytes(@Nullable Integer preferredBatchSizeInKilobytes) {
             this.preferredBatchSizeInKilobytes = preferredBatchSizeInKilobytes;
             return this;
         }
-
         public Builder resourceId(@Nullable String resourceId) {
             this.resourceId = resourceId;
             return this;
-        }
-        public AzureFunctionEventSubscriptionDestinationResponse build() {
+        }        public AzureFunctionEventSubscriptionDestinationResponse build() {
             return new AzureFunctionEventSubscriptionDestinationResponse(endpointType, maxEventsPerBatch, preferredBatchSizeInKilobytes, resourceId);
         }
     }

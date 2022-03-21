@@ -88,17 +88,14 @@ public final class GetStorageInsightConfigArgs extends io.pulumi.resources.Invok
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder storageInsightName(String storageInsightName) {
             this.storageInsightName = Objects.requireNonNull(storageInsightName);
             return this;
         }
-
         public Builder workspaceName(String workspaceName) {
             this.workspaceName = Objects.requireNonNull(workspaceName);
             return this;
-        }
-        public GetStorageInsightConfigArgs build() {
+        }        public GetStorageInsightConfigArgs build() {
             return new GetStorageInsightConfigArgs(resourceGroupName, storageInsightName, workspaceName);
         }
     }

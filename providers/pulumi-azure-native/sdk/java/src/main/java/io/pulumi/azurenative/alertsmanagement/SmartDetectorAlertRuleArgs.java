@@ -242,122 +242,101 @@ public final class SmartDetectorAlertRuleArgs extends io.pulumi.resources.Resour
             this.actionGroups = Objects.requireNonNull(actionGroups);
             return this;
         }
-
         public Builder actionGroups(ActionGroupsInformationArgs actionGroups) {
             this.actionGroups = Output.of(Objects.requireNonNull(actionGroups));
             return this;
         }
-
         public Builder alertRuleName(@Nullable Output<String> alertRuleName) {
             this.alertRuleName = alertRuleName;
             return this;
         }
-
         public Builder alertRuleName(@Nullable String alertRuleName) {
             this.alertRuleName = Output.ofNullable(alertRuleName);
             return this;
         }
-
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder detector(Output<DetectorArgs> detector) {
             this.detector = Objects.requireNonNull(detector);
             return this;
         }
-
         public Builder detector(DetectorArgs detector) {
             this.detector = Output.of(Objects.requireNonNull(detector));
             return this;
         }
-
         public Builder frequency(Output<String> frequency) {
             this.frequency = Objects.requireNonNull(frequency);
             return this;
         }
-
         public Builder frequency(String frequency) {
             this.frequency = Output.of(Objects.requireNonNull(frequency));
             return this;
         }
-
         public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder scope(Output<List<String>> scope) {
             this.scope = Objects.requireNonNull(scope);
             return this;
         }
-
         public Builder scope(List<String> scope) {
             this.scope = Output.of(Objects.requireNonNull(scope));
             return this;
         }
-
+        public Builder scope(String... scope) {
+            return scope(List.of(scope));
+        }
         public Builder severity(Output<Either<String,Severity>> severity) {
             this.severity = Objects.requireNonNull(severity);
             return this;
         }
-
         public Builder severity(Either<String,Severity> severity) {
             this.severity = Output.of(Objects.requireNonNull(severity));
             return this;
         }
-
         public Builder state(Output<Either<String,AlertRuleState>> state) {
             this.state = Objects.requireNonNull(state);
             return this;
         }
-
         public Builder state(Either<String,AlertRuleState> state) {
             this.state = Output.of(Objects.requireNonNull(state));
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
         public Builder throttling(@Nullable Output<ThrottlingInformationArgs> throttling) {
             this.throttling = throttling;
             return this;
         }
-
         public Builder throttling(@Nullable ThrottlingInformationArgs throttling) {
             this.throttling = Output.ofNullable(throttling);
             return this;
-        }
-        public SmartDetectorAlertRuleArgs build() {
+        }        public SmartDetectorAlertRuleArgs build() {
             return new SmartDetectorAlertRuleArgs(actionGroups, alertRuleName, description, detector, frequency, location, resourceGroupName, scope, severity, state, tags, throttling);
         }
     }

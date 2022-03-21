@@ -60,12 +60,10 @@ public final class GcsSourceArgs extends io.pulumi.resources.ResourceArgs {
             this.inputUri = Objects.requireNonNull(inputUri);
             return this;
         }
-
         public Builder inputUri(String inputUri) {
             this.inputUri = Output.of(Objects.requireNonNull(inputUri));
             return this;
-        }
-        public GcsSourceArgs build() {
+        }        public GcsSourceArgs build() {
             return new GcsSourceArgs(inputUri);
         }
     }

@@ -78,22 +78,18 @@ public final class DeploymentConfigMinimumHealthyHostsArgs extends io.pulumi.res
             this.type = type;
             return this;
         }
-
         public Builder type(@Nullable String type) {
             this.type = Output.ofNullable(type);
             return this;
         }
-
         public Builder value(@Nullable Output<Integer> value) {
             this.value = value;
             return this;
         }
-
         public Builder value(@Nullable Integer value) {
             this.value = Output.ofNullable(value);
             return this;
-        }
-        public DeploymentConfigMinimumHealthyHostsArgs build() {
+        }        public DeploymentConfigMinimumHealthyHostsArgs build() {
             return new DeploymentConfigMinimumHealthyHostsArgs(type, value);
         }
     }

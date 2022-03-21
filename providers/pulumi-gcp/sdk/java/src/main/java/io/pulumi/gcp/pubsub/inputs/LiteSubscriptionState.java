@@ -141,62 +141,50 @@ public final class LiteSubscriptionState extends io.pulumi.resources.ResourceArg
             this.deliveryConfig = deliveryConfig;
             return this;
         }
-
         public Builder deliveryConfig(@Nullable LiteSubscriptionDeliveryConfigGetArgs deliveryConfig) {
             this.deliveryConfig = Output.ofNullable(deliveryConfig);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
         }
-
         public Builder region(@Nullable Output<String> region) {
             this.region = region;
             return this;
         }
-
         public Builder region(@Nullable String region) {
             this.region = Output.ofNullable(region);
             return this;
         }
-
         public Builder topic(@Nullable Output<String> topic) {
             this.topic = topic;
             return this;
         }
-
         public Builder topic(@Nullable String topic) {
             this.topic = Output.ofNullable(topic);
             return this;
         }
-
         public Builder zone(@Nullable Output<String> zone) {
             this.zone = zone;
             return this;
         }
-
         public Builder zone(@Nullable String zone) {
             this.zone = Output.ofNullable(zone);
             return this;
-        }
-        public LiteSubscriptionState build() {
+        }        public LiteSubscriptionState build() {
             return new LiteSubscriptionState(deliveryConfig, name, project, region, topic, zone);
         }
     }

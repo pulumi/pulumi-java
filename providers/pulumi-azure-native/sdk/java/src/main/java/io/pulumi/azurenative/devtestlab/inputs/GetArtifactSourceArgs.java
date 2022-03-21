@@ -106,22 +106,18 @@ public final class GetArtifactSourceArgs extends io.pulumi.resources.InvokeArgs 
             this.expand = expand;
             return this;
         }
-
         public Builder labName(String labName) {
             this.labName = Objects.requireNonNull(labName);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
-        }
-        public GetArtifactSourceArgs build() {
+        }        public GetArtifactSourceArgs build() {
             return new GetArtifactSourceArgs(expand, labName, name, resourceGroupName);
         }
     }

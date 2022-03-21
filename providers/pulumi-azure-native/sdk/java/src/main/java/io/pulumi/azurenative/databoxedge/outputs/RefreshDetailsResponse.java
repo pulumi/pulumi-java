@@ -103,22 +103,18 @@ public final class RefreshDetailsResponse {
             this.errorManifestFile = errorManifestFile;
             return this;
         }
-
         public Builder inProgressRefreshJobId(@Nullable String inProgressRefreshJobId) {
             this.inProgressRefreshJobId = inProgressRefreshJobId;
             return this;
         }
-
         public Builder lastCompletedRefreshJobTimeInUTC(@Nullable String lastCompletedRefreshJobTimeInUTC) {
             this.lastCompletedRefreshJobTimeInUTC = lastCompletedRefreshJobTimeInUTC;
             return this;
         }
-
         public Builder lastJob(@Nullable String lastJob) {
             this.lastJob = lastJob;
             return this;
-        }
-        public RefreshDetailsResponse build() {
+        }        public RefreshDetailsResponse build() {
             return new RefreshDetailsResponse(errorManifestFile, inProgressRefreshJobId, lastCompletedRefreshJobTimeInUTC, lastJob);
         }
     }

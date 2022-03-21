@@ -69,12 +69,10 @@ public final class ApiPortalInstanceResponse {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder status(String status) {
             this.status = Objects.requireNonNull(status);
             return this;
-        }
-        public ApiPortalInstanceResponse build() {
+        }        public ApiPortalInstanceResponse build() {
             return new ApiPortalInstanceResponse(name, status);
         }
     }

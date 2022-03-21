@@ -179,82 +179,66 @@ public final class GooglePrivacyDlpV2ValueArgs extends io.pulumi.resources.Resou
             this.booleanValue = booleanValue;
             return this;
         }
-
         public Builder booleanValue(@Nullable Boolean booleanValue) {
             this.booleanValue = Output.ofNullable(booleanValue);
             return this;
         }
-
         public Builder dateValue(@Nullable Output<GoogleTypeDateArgs> dateValue) {
             this.dateValue = dateValue;
             return this;
         }
-
         public Builder dateValue(@Nullable GoogleTypeDateArgs dateValue) {
             this.dateValue = Output.ofNullable(dateValue);
             return this;
         }
-
         public Builder dayOfWeekValue(@Nullable Output<GooglePrivacyDlpV2ValueDayOfWeekValue> dayOfWeekValue) {
             this.dayOfWeekValue = dayOfWeekValue;
             return this;
         }
-
         public Builder dayOfWeekValue(@Nullable GooglePrivacyDlpV2ValueDayOfWeekValue dayOfWeekValue) {
             this.dayOfWeekValue = Output.ofNullable(dayOfWeekValue);
             return this;
         }
-
         public Builder floatValue(@Nullable Output<Double> floatValue) {
             this.floatValue = floatValue;
             return this;
         }
-
         public Builder floatValue(@Nullable Double floatValue) {
             this.floatValue = Output.ofNullable(floatValue);
             return this;
         }
-
         public Builder integerValue(@Nullable Output<String> integerValue) {
             this.integerValue = integerValue;
             return this;
         }
-
         public Builder integerValue(@Nullable String integerValue) {
             this.integerValue = Output.ofNullable(integerValue);
             return this;
         }
-
         public Builder stringValue(@Nullable Output<String> stringValue) {
             this.stringValue = stringValue;
             return this;
         }
-
         public Builder stringValue(@Nullable String stringValue) {
             this.stringValue = Output.ofNullable(stringValue);
             return this;
         }
-
         public Builder timeValue(@Nullable Output<GoogleTypeTimeOfDayArgs> timeValue) {
             this.timeValue = timeValue;
             return this;
         }
-
         public Builder timeValue(@Nullable GoogleTypeTimeOfDayArgs timeValue) {
             this.timeValue = Output.ofNullable(timeValue);
             return this;
         }
-
         public Builder timestampValue(@Nullable Output<String> timestampValue) {
             this.timestampValue = timestampValue;
             return this;
         }
-
         public Builder timestampValue(@Nullable String timestampValue) {
             this.timestampValue = Output.ofNullable(timestampValue);
             return this;
-        }
-        public GooglePrivacyDlpV2ValueArgs build() {
+        }        public GooglePrivacyDlpV2ValueArgs build() {
             return new GooglePrivacyDlpV2ValueArgs(booleanValue, dateValue, dayOfWeekValue, floatValue, integerValue, stringValue, timeValue, timestampValue);
         }
     }

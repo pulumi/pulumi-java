@@ -56,12 +56,10 @@ public final class SecurityServicePolicyDataProperties {
             this.managedServiceData = managedServiceData;
             return this;
         }
-
         public Builder type(PolicySecurityServicePolicyDataPropertiesType type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public SecurityServicePolicyDataProperties build() {
+        }        public SecurityServicePolicyDataProperties build() {
             return new SecurityServicePolicyDataProperties(managedServiceData, type);
         }
     }

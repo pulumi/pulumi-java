@@ -53,12 +53,10 @@ public final class GetAmiProductCode {
             this.productCodeId = Objects.requireNonNull(productCodeId);
             return this;
         }
-
         public Builder productCodeType(String productCodeType) {
             this.productCodeType = Objects.requireNonNull(productCodeType);
             return this;
-        }
-        public GetAmiProductCode build() {
+        }        public GetAmiProductCode build() {
             return new GetAmiProductCode(productCodeId, productCodeType);
         }
     }

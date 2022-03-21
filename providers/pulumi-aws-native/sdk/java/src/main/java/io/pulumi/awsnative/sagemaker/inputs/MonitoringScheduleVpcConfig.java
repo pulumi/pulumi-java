@@ -77,12 +77,16 @@ public final class MonitoringScheduleVpcConfig extends io.pulumi.resources.Invok
             this.securityGroupIds = Objects.requireNonNull(securityGroupIds);
             return this;
         }
-
+        public Builder securityGroupIds(String... securityGroupIds) {
+            return securityGroupIds(List.of(securityGroupIds));
+        }
         public Builder subnets(List<String> subnets) {
             this.subnets = Objects.requireNonNull(subnets);
             return this;
         }
-        public MonitoringScheduleVpcConfig build() {
+        public Builder subnets(String... subnets) {
+            return subnets(List.of(subnets));
+        }        public MonitoringScheduleVpcConfig build() {
             return new MonitoringScheduleVpcConfig(securityGroupIds, subnets);
         }
     }

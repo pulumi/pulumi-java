@@ -69,12 +69,10 @@ public final class CustomHttpPatternResponse {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
-
         public Builder path(String path) {
             this.path = Objects.requireNonNull(path);
             return this;
-        }
-        public CustomHttpPatternResponse build() {
+        }        public CustomHttpPatternResponse build() {
             return new CustomHttpPatternResponse(kind, path);
         }
     }

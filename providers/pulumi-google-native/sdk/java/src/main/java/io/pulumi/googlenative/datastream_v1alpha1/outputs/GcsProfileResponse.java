@@ -69,12 +69,10 @@ public final class GcsProfileResponse {
             this.bucketName = Objects.requireNonNull(bucketName);
             return this;
         }
-
         public Builder rootPath(String rootPath) {
             this.rootPath = Objects.requireNonNull(rootPath);
             return this;
-        }
-        public GcsProfileResponse build() {
+        }        public GcsProfileResponse build() {
             return new GcsProfileResponse(bucketName, rootPath);
         }
     }

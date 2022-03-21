@@ -204,52 +204,45 @@ public final class VirtualMachineScaleSetNetworkConfigurationResponse {
             this.deleteOption = deleteOption;
             return this;
         }
-
         public Builder dnsSettings(@Nullable VirtualMachineScaleSetNetworkConfigurationDnsSettingsResponse dnsSettings) {
             this.dnsSettings = dnsSettings;
             return this;
         }
-
         public Builder enableAcceleratedNetworking(@Nullable Boolean enableAcceleratedNetworking) {
             this.enableAcceleratedNetworking = enableAcceleratedNetworking;
             return this;
         }
-
         public Builder enableFpga(@Nullable Boolean enableFpga) {
             this.enableFpga = enableFpga;
             return this;
         }
-
         public Builder enableIPForwarding(@Nullable Boolean enableIPForwarding) {
             this.enableIPForwarding = enableIPForwarding;
             return this;
         }
-
         public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
-
         public Builder ipConfigurations(List<VirtualMachineScaleSetIPConfigurationResponse> ipConfigurations) {
             this.ipConfigurations = Objects.requireNonNull(ipConfigurations);
             return this;
         }
-
+        public Builder ipConfigurations(VirtualMachineScaleSetIPConfigurationResponse... ipConfigurations) {
+            return ipConfigurations(List.of(ipConfigurations));
+        }
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder networkSecurityGroup(@Nullable SubResourceResponse networkSecurityGroup) {
             this.networkSecurityGroup = networkSecurityGroup;
             return this;
         }
-
         public Builder primary(@Nullable Boolean primary) {
             this.primary = primary;
             return this;
-        }
-        public VirtualMachineScaleSetNetworkConfigurationResponse build() {
+        }        public VirtualMachineScaleSetNetworkConfigurationResponse build() {
             return new VirtualMachineScaleSetNetworkConfigurationResponse(deleteOption, dnsSettings, enableAcceleratedNetworking, enableFpga, enableIPForwarding, id, ipConfigurations, name, networkSecurityGroup, primary);
         }
     }

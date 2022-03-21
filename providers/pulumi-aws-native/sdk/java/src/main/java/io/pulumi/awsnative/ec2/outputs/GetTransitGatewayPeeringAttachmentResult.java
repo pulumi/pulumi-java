@@ -122,27 +122,25 @@ public final class GetTransitGatewayPeeringAttachmentResult {
             this.creationTime = creationTime;
             return this;
         }
-
         public Builder state(@Nullable String state) {
             this.state = state;
             return this;
         }
-
         public Builder status(@Nullable TransitGatewayPeeringAttachmentPeeringAttachmentStatus status) {
             this.status = status;
             return this;
         }
-
         public Builder tags(@Nullable List<TransitGatewayPeeringAttachmentTag> tags) {
             this.tags = tags;
             return this;
         }
-
+        public Builder tags(TransitGatewayPeeringAttachmentTag... tags) {
+            return tags(List.of(tags));
+        }
         public Builder transitGatewayAttachmentId(@Nullable String transitGatewayAttachmentId) {
             this.transitGatewayAttachmentId = transitGatewayAttachmentId;
             return this;
-        }
-        public GetTransitGatewayPeeringAttachmentResult build() {
+        }        public GetTransitGatewayPeeringAttachmentResult build() {
             return new GetTransitGatewayPeeringAttachmentResult(creationTime, state, status, tags, transitGatewayAttachmentId);
         }
     }

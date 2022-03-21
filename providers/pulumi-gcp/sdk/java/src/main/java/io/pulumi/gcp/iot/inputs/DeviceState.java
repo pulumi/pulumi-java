@@ -326,172 +326,150 @@ public final class DeviceState extends io.pulumi.resources.ResourceArgs {
             this.blocked = blocked;
             return this;
         }
-
         public Builder blocked(@Nullable Boolean blocked) {
             this.blocked = Output.ofNullable(blocked);
             return this;
         }
-
         public Builder configs(@Nullable Output<List<DeviceConfigGetArgs>> configs) {
             this.configs = configs;
             return this;
         }
-
         public Builder configs(@Nullable List<DeviceConfigGetArgs> configs) {
             this.configs = Output.ofNullable(configs);
             return this;
         }
-
+        public Builder configs(DeviceConfigGetArgs... configs) {
+            return configs(List.of(configs));
+        }
         public Builder credentials(@Nullable Output<List<DeviceCredentialGetArgs>> credentials) {
             this.credentials = credentials;
             return this;
         }
-
         public Builder credentials(@Nullable List<DeviceCredentialGetArgs> credentials) {
             this.credentials = Output.ofNullable(credentials);
             return this;
         }
-
+        public Builder credentials(DeviceCredentialGetArgs... credentials) {
+            return credentials(List.of(credentials));
+        }
         public Builder gatewayConfig(@Nullable Output<DeviceGatewayConfigGetArgs> gatewayConfig) {
             this.gatewayConfig = gatewayConfig;
             return this;
         }
-
         public Builder gatewayConfig(@Nullable DeviceGatewayConfigGetArgs gatewayConfig) {
             this.gatewayConfig = Output.ofNullable(gatewayConfig);
             return this;
         }
-
         public Builder lastConfigAckTime(@Nullable Output<String> lastConfigAckTime) {
             this.lastConfigAckTime = lastConfigAckTime;
             return this;
         }
-
         public Builder lastConfigAckTime(@Nullable String lastConfigAckTime) {
             this.lastConfigAckTime = Output.ofNullable(lastConfigAckTime);
             return this;
         }
-
         public Builder lastConfigSendTime(@Nullable Output<String> lastConfigSendTime) {
             this.lastConfigSendTime = lastConfigSendTime;
             return this;
         }
-
         public Builder lastConfigSendTime(@Nullable String lastConfigSendTime) {
             this.lastConfigSendTime = Output.ofNullable(lastConfigSendTime);
             return this;
         }
-
         public Builder lastErrorStatuses(@Nullable Output<List<DeviceLastErrorStatusGetArgs>> lastErrorStatuses) {
             this.lastErrorStatuses = lastErrorStatuses;
             return this;
         }
-
         public Builder lastErrorStatuses(@Nullable List<DeviceLastErrorStatusGetArgs> lastErrorStatuses) {
             this.lastErrorStatuses = Output.ofNullable(lastErrorStatuses);
             return this;
         }
-
+        public Builder lastErrorStatuses(DeviceLastErrorStatusGetArgs... lastErrorStatuses) {
+            return lastErrorStatuses(List.of(lastErrorStatuses));
+        }
         public Builder lastErrorTime(@Nullable Output<String> lastErrorTime) {
             this.lastErrorTime = lastErrorTime;
             return this;
         }
-
         public Builder lastErrorTime(@Nullable String lastErrorTime) {
             this.lastErrorTime = Output.ofNullable(lastErrorTime);
             return this;
         }
-
         public Builder lastEventTime(@Nullable Output<String> lastEventTime) {
             this.lastEventTime = lastEventTime;
             return this;
         }
-
         public Builder lastEventTime(@Nullable String lastEventTime) {
             this.lastEventTime = Output.ofNullable(lastEventTime);
             return this;
         }
-
         public Builder lastHeartbeatTime(@Nullable Output<String> lastHeartbeatTime) {
             this.lastHeartbeatTime = lastHeartbeatTime;
             return this;
         }
-
         public Builder lastHeartbeatTime(@Nullable String lastHeartbeatTime) {
             this.lastHeartbeatTime = Output.ofNullable(lastHeartbeatTime);
             return this;
         }
-
         public Builder lastStateTime(@Nullable Output<String> lastStateTime) {
             this.lastStateTime = lastStateTime;
             return this;
         }
-
         public Builder lastStateTime(@Nullable String lastStateTime) {
             this.lastStateTime = Output.ofNullable(lastStateTime);
             return this;
         }
-
         public Builder logLevel(@Nullable Output<String> logLevel) {
             this.logLevel = logLevel;
             return this;
         }
-
         public Builder logLevel(@Nullable String logLevel) {
             this.logLevel = Output.ofNullable(logLevel);
             return this;
         }
-
         public Builder metadata(@Nullable Output<Map<String,String>> metadata) {
             this.metadata = metadata;
             return this;
         }
-
         public Builder metadata(@Nullable Map<String,String> metadata) {
             this.metadata = Output.ofNullable(metadata);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder numId(@Nullable Output<String> numId) {
             this.numId = numId;
             return this;
         }
-
         public Builder numId(@Nullable String numId) {
             this.numId = Output.ofNullable(numId);
             return this;
         }
-
         public Builder registry(@Nullable Output<String> registry) {
             this.registry = registry;
             return this;
         }
-
         public Builder registry(@Nullable String registry) {
             this.registry = Output.ofNullable(registry);
             return this;
         }
-
         public Builder states(@Nullable Output<List<DeviceStateGetArgs>> states) {
             this.states = states;
             return this;
         }
-
         public Builder states(@Nullable List<DeviceStateGetArgs> states) {
             this.states = Output.ofNullable(states);
             return this;
         }
-        public DeviceState build() {
+        public Builder states(DeviceStateGetArgs... states) {
+            return states(List.of(states));
+        }        public DeviceState build() {
             return new DeviceState(blocked, configs, credentials, gatewayConfig, lastConfigAckTime, lastConfigSendTime, lastErrorStatuses, lastErrorTime, lastEventTime, lastHeartbeatTime, lastStateTime, logLevel, metadata, name, numId, registry, states);
         }
     }

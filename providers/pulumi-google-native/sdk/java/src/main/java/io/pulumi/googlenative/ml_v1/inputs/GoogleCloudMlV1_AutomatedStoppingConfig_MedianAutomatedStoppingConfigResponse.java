@@ -58,8 +58,7 @@ public final class GoogleCloudMlV1_AutomatedStoppingConfig_MedianAutomatedStoppi
         public Builder useElapsedTime(Boolean useElapsedTime) {
             this.useElapsedTime = Objects.requireNonNull(useElapsedTime);
             return this;
-        }
-        public GoogleCloudMlV1_AutomatedStoppingConfig_MedianAutomatedStoppingConfigResponse build() {
+        }        public GoogleCloudMlV1_AutomatedStoppingConfig_MedianAutomatedStoppingConfigResponse build() {
             return new GoogleCloudMlV1_AutomatedStoppingConfig_MedianAutomatedStoppingConfigResponse(useElapsedTime);
         }
     }

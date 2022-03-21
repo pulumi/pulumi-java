@@ -76,22 +76,18 @@ public final class TableRangePartitioningArgs extends io.pulumi.resources.Resour
             this.field = Objects.requireNonNull(field);
             return this;
         }
-
         public Builder field(String field) {
             this.field = Output.of(Objects.requireNonNull(field));
             return this;
         }
-
         public Builder range(Output<TableRangePartitioningRangeArgs> range) {
             this.range = Objects.requireNonNull(range);
             return this;
         }
-
         public Builder range(TableRangePartitioningRangeArgs range) {
             this.range = Output.of(Objects.requireNonNull(range));
             return this;
-        }
-        public TableRangePartitioningArgs build() {
+        }        public TableRangePartitioningArgs build() {
             return new TableRangePartitioningArgs(field, range);
         }
     }

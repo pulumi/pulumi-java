@@ -108,42 +108,37 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
             this.hsmType = Objects.requireNonNull(hsmType);
             return this;
         }
-
         public Builder hsmType(String hsmType) {
             this.hsmType = Output.of(Objects.requireNonNull(hsmType));
             return this;
         }
-
         public Builder sourceBackupIdentifier(@Nullable Output<String> sourceBackupIdentifier) {
             this.sourceBackupIdentifier = sourceBackupIdentifier;
             return this;
         }
-
         public Builder sourceBackupIdentifier(@Nullable String sourceBackupIdentifier) {
             this.sourceBackupIdentifier = Output.ofNullable(sourceBackupIdentifier);
             return this;
         }
-
         public Builder subnetIds(Output<List<String>> subnetIds) {
             this.subnetIds = Objects.requireNonNull(subnetIds);
             return this;
         }
-
         public Builder subnetIds(List<String> subnetIds) {
             this.subnetIds = Output.of(Objects.requireNonNull(subnetIds));
             return this;
         }
-
+        public Builder subnetIds(String... subnetIds) {
+            return subnetIds(List.of(subnetIds));
+        }
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
-        }
-        public ClusterArgs build() {
+        }        public ClusterArgs build() {
             return new ClusterArgs(hsmType, sourceBackupIdentifier, subnetIds, tags);
         }
     }

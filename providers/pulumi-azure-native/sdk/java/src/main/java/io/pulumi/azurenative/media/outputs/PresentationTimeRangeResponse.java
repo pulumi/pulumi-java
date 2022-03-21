@@ -136,32 +136,26 @@ public final class PresentationTimeRangeResponse {
             this.endTimestamp = endTimestamp;
             return this;
         }
-
         public Builder forceEndTimestamp(@Nullable Boolean forceEndTimestamp) {
             this.forceEndTimestamp = forceEndTimestamp;
             return this;
         }
-
         public Builder liveBackoffDuration(@Nullable Double liveBackoffDuration) {
             this.liveBackoffDuration = liveBackoffDuration;
             return this;
         }
-
         public Builder presentationWindowDuration(@Nullable Double presentationWindowDuration) {
             this.presentationWindowDuration = presentationWindowDuration;
             return this;
         }
-
         public Builder startTimestamp(@Nullable Double startTimestamp) {
             this.startTimestamp = startTimestamp;
             return this;
         }
-
         public Builder timescale(@Nullable Double timescale) {
             this.timescale = timescale;
             return this;
-        }
-        public PresentationTimeRangeResponse build() {
+        }        public PresentationTimeRangeResponse build() {
             return new PresentationTimeRangeResponse(endTimestamp, forceEndTimestamp, liveBackoffDuration, presentationWindowDuration, startTimestamp, timescale);
         }
     }

@@ -90,17 +90,14 @@ public final class CspmMonitorAwsOfferingResponse {
             this.description = Objects.requireNonNull(description);
             return this;
         }
-
         public Builder nativeCloudConnection(@Nullable CspmMonitorAwsOfferingResponseNativeCloudConnection nativeCloudConnection) {
             this.nativeCloudConnection = nativeCloudConnection;
             return this;
         }
-
         public Builder offeringType(String offeringType) {
             this.offeringType = Objects.requireNonNull(offeringType);
             return this;
-        }
-        public CspmMonitorAwsOfferingResponse build() {
+        }        public CspmMonitorAwsOfferingResponse build() {
             return new CspmMonitorAwsOfferingResponse(description, nativeCloudConnection, offeringType);
         }
     }

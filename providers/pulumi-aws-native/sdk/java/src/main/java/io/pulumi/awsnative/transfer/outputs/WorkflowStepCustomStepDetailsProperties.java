@@ -88,17 +88,14 @@ public final class WorkflowStepCustomStepDetailsProperties {
             this.name = name;
             return this;
         }
-
         public Builder target(@Nullable String target) {
             this.target = target;
             return this;
         }
-
         public Builder timeoutSeconds(@Nullable Integer timeoutSeconds) {
             this.timeoutSeconds = timeoutSeconds;
             return this;
-        }
-        public WorkflowStepCustomStepDetailsProperties build() {
+        }        public WorkflowStepCustomStepDetailsProperties build() {
             return new WorkflowStepCustomStepDetailsProperties(name, target, timeoutSeconds);
         }
     }

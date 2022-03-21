@@ -92,32 +92,26 @@ public final class FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConver
             this.caseInsensitive = caseInsensitive;
             return this;
         }
-
         public Builder caseInsensitive(@Nullable Boolean caseInsensitive) {
             this.caseInsensitive = Output.ofNullable(caseInsensitive);
             return this;
         }
-
         public Builder columnToJsonKeyMappings(@Nullable Output<Map<String,String>> columnToJsonKeyMappings) {
             this.columnToJsonKeyMappings = columnToJsonKeyMappings;
             return this;
         }
-
         public Builder columnToJsonKeyMappings(@Nullable Map<String,String> columnToJsonKeyMappings) {
             this.columnToJsonKeyMappings = Output.ofNullable(columnToJsonKeyMappings);
             return this;
         }
-
         public Builder convertDotsInJsonKeysToUnderscores(@Nullable Output<Boolean> convertDotsInJsonKeysToUnderscores) {
             this.convertDotsInJsonKeysToUnderscores = convertDotsInJsonKeysToUnderscores;
             return this;
         }
-
         public Builder convertDotsInJsonKeysToUnderscores(@Nullable Boolean convertDotsInJsonKeysToUnderscores) {
             this.convertDotsInJsonKeysToUnderscores = Output.ofNullable(convertDotsInJsonKeysToUnderscores);
             return this;
-        }
-        public FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConversionConfigurationInputFormatConfigurationDeserializerOpenXJsonSerDeArgs build() {
+        }        public FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConversionConfigurationInputFormatConfigurationDeserializerOpenXJsonSerDeArgs build() {
             return new FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConversionConfigurationInputFormatConfigurationDeserializerOpenXJsonSerDeArgs(caseInsensitive, columnToJsonKeyMappings, convertDotsInJsonKeysToUnderscores);
         }
     }

@@ -69,12 +69,10 @@ public final class BucketWebsiteResponse {
             this.mainPageSuffix = Objects.requireNonNull(mainPageSuffix);
             return this;
         }
-
         public Builder notFoundPage(String notFoundPage) {
             this.notFoundPage = Objects.requireNonNull(notFoundPage);
             return this;
-        }
-        public BucketWebsiteResponse build() {
+        }        public BucketWebsiteResponse build() {
             return new BucketWebsiteResponse(mainPageSuffix, notFoundPage);
         }
     }

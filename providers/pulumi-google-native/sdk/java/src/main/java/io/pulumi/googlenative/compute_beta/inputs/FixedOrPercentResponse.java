@@ -92,17 +92,14 @@ public final class FixedOrPercentResponse extends io.pulumi.resources.InvokeArgs
             this.calculated = Objects.requireNonNull(calculated);
             return this;
         }
-
         public Builder fixed(Integer fixed) {
             this.fixed = Objects.requireNonNull(fixed);
             return this;
         }
-
         public Builder percent(Integer percent) {
             this.percent = Objects.requireNonNull(percent);
             return this;
-        }
-        public FixedOrPercentResponse build() {
+        }        public FixedOrPercentResponse build() {
             return new FixedOrPercentResponse(calculated, fixed, percent);
         }
     }

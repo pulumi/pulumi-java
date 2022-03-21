@@ -78,22 +78,18 @@ public final class ApplicationSubComponentTypeConfigurationArgs extends io.pulum
             this.subComponentConfigurationDetails = Objects.requireNonNull(subComponentConfigurationDetails);
             return this;
         }
-
         public Builder subComponentConfigurationDetails(ApplicationSubComponentConfigurationDetailsArgs subComponentConfigurationDetails) {
             this.subComponentConfigurationDetails = Output.of(Objects.requireNonNull(subComponentConfigurationDetails));
             return this;
         }
-
         public Builder subComponentType(Output<ApplicationSubComponentTypeConfigurationSubComponentType> subComponentType) {
             this.subComponentType = Objects.requireNonNull(subComponentType);
             return this;
         }
-
         public Builder subComponentType(ApplicationSubComponentTypeConfigurationSubComponentType subComponentType) {
             this.subComponentType = Output.of(Objects.requireNonNull(subComponentType));
             return this;
-        }
-        public ApplicationSubComponentTypeConfigurationArgs build() {
+        }        public ApplicationSubComponentTypeConfigurationArgs build() {
             return new ApplicationSubComponentTypeConfigurationArgs(subComponentConfigurationDetails, subComponentType);
         }
     }

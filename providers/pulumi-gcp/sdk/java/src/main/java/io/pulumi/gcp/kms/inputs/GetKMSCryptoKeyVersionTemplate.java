@@ -64,12 +64,10 @@ public final class GetKMSCryptoKeyVersionTemplate extends io.pulumi.resources.In
             this.algorithm = Objects.requireNonNull(algorithm);
             return this;
         }
-
         public Builder protectionLevel(String protectionLevel) {
             this.protectionLevel = Objects.requireNonNull(protectionLevel);
             return this;
-        }
-        public GetKMSCryptoKeyVersionTemplate build() {
+        }        public GetKMSCryptoKeyVersionTemplate build() {
             return new GetKMSCryptoKeyVersionTemplate(algorithm, protectionLevel);
         }
     }

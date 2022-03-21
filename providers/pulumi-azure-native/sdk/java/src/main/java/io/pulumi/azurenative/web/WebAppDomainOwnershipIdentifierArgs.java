@@ -122,52 +122,42 @@ public final class WebAppDomainOwnershipIdentifierArgs extends io.pulumi.resourc
             this.domainOwnershipIdentifierName = domainOwnershipIdentifierName;
             return this;
         }
-
         public Builder domainOwnershipIdentifierName(@Nullable String domainOwnershipIdentifierName) {
             this.domainOwnershipIdentifierName = Output.ofNullable(domainOwnershipIdentifierName);
             return this;
         }
-
         public Builder kind(@Nullable Output<String> kind) {
             this.kind = kind;
             return this;
         }
-
         public Builder kind(@Nullable String kind) {
             this.kind = Output.ofNullable(kind);
             return this;
         }
-
         public Builder name(Output<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder value(@Nullable Output<String> value) {
             this.value = value;
             return this;
         }
-
         public Builder value(@Nullable String value) {
             this.value = Output.ofNullable(value);
             return this;
-        }
-        public WebAppDomainOwnershipIdentifierArgs build() {
+        }        public WebAppDomainOwnershipIdentifierArgs build() {
             return new WebAppDomainOwnershipIdentifierArgs(domainOwnershipIdentifierName, kind, name, resourceGroupName, value);
         }
     }

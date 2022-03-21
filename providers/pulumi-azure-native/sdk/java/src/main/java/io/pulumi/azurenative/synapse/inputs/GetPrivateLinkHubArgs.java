@@ -72,12 +72,10 @@ public final class GetPrivateLinkHubArgs extends io.pulumi.resources.InvokeArgs 
             this.privateLinkHubName = Objects.requireNonNull(privateLinkHubName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
-        }
-        public GetPrivateLinkHubArgs build() {
+        }        public GetPrivateLinkHubArgs build() {
             return new GetPrivateLinkHubArgs(privateLinkHubName, resourceGroupName);
         }
     }

@@ -69,22 +69,18 @@ public final class TagsItemPropertiesArgs extends io.pulumi.resources.ResourceAr
             this.key = Objects.requireNonNull(key);
             return this;
         }
-
         public Builder key(String key) {
             this.key = Output.of(Objects.requireNonNull(key));
             return this;
         }
-
         public Builder value(Output<String> value) {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public Builder value(String value) {
             this.value = Output.of(Objects.requireNonNull(value));
             return this;
-        }
-        public TagsItemPropertiesArgs build() {
+        }        public TagsItemPropertiesArgs build() {
             return new TagsItemPropertiesArgs(key, value);
         }
     }

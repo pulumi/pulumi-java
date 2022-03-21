@@ -135,32 +135,26 @@ public final class DiskResponse {
             this.mountPoint = Objects.requireNonNull(mountPoint);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder readOnly(Boolean readOnly) {
             this.readOnly = Objects.requireNonNull(readOnly);
             return this;
         }
-
         public Builder sizeGb(Integer sizeGb) {
             this.sizeGb = Objects.requireNonNull(sizeGb);
             return this;
         }
-
         public Builder source(String source) {
             this.source = Objects.requireNonNull(source);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public DiskResponse build() {
+        }        public DiskResponse build() {
             return new DiskResponse(mountPoint, name, readOnly, sizeGb, source, type);
         }
     }

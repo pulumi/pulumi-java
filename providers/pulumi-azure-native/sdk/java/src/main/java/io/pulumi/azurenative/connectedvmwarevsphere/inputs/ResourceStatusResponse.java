@@ -140,32 +140,26 @@ public final class ResourceStatusResponse extends io.pulumi.resources.InvokeArgs
             this.lastUpdatedAt = Objects.requireNonNull(lastUpdatedAt);
             return this;
         }
-
         public Builder message(String message) {
             this.message = Objects.requireNonNull(message);
             return this;
         }
-
         public Builder reason(String reason) {
             this.reason = Objects.requireNonNull(reason);
             return this;
         }
-
         public Builder severity(String severity) {
             this.severity = Objects.requireNonNull(severity);
             return this;
         }
-
         public Builder status(String status) {
             this.status = Objects.requireNonNull(status);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public ResourceStatusResponse build() {
+        }        public ResourceStatusResponse build() {
             return new ResourceStatusResponse(lastUpdatedAt, message, reason, severity, status, type);
         }
     }

@@ -247,122 +247,104 @@ public final class CustomApiPropertiesDefinitionArgs extends io.pulumi.resources
             this.apiDefinitions = apiDefinitions;
             return this;
         }
-
         public Builder apiDefinitions(@Nullable ApiResourceDefinitionsArgs apiDefinitions) {
             this.apiDefinitions = Output.ofNullable(apiDefinitions);
             return this;
         }
-
         public Builder apiType(@Nullable Output<Either<String,ApiType>> apiType) {
             this.apiType = apiType;
             return this;
         }
-
         public Builder apiType(@Nullable Either<String,ApiType> apiType) {
             this.apiType = Output.ofNullable(apiType);
             return this;
         }
-
         public Builder backendService(@Nullable Output<ApiResourceBackendServiceArgs> backendService) {
             this.backendService = backendService;
             return this;
         }
-
         public Builder backendService(@Nullable ApiResourceBackendServiceArgs backendService) {
             this.backendService = Output.ofNullable(backendService);
             return this;
         }
-
         public Builder brandColor(@Nullable Output<String> brandColor) {
             this.brandColor = brandColor;
             return this;
         }
-
         public Builder brandColor(@Nullable String brandColor) {
             this.brandColor = Output.ofNullable(brandColor);
             return this;
         }
-
         public Builder capabilities(@Nullable Output<List<String>> capabilities) {
             this.capabilities = capabilities;
             return this;
         }
-
         public Builder capabilities(@Nullable List<String> capabilities) {
             this.capabilities = Output.ofNullable(capabilities);
             return this;
         }
-
+        public Builder capabilities(String... capabilities) {
+            return capabilities(List.of(capabilities));
+        }
         public Builder connectionParameters(@Nullable Output<Map<String,ConnectionParameterArgs>> connectionParameters) {
             this.connectionParameters = connectionParameters;
             return this;
         }
-
         public Builder connectionParameters(@Nullable Map<String,ConnectionParameterArgs> connectionParameters) {
             this.connectionParameters = Output.ofNullable(connectionParameters);
             return this;
         }
-
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder displayName(@Nullable Output<String> displayName) {
             this.displayName = displayName;
             return this;
         }
-
         public Builder displayName(@Nullable String displayName) {
             this.displayName = Output.ofNullable(displayName);
             return this;
         }
-
         public Builder iconUri(@Nullable Output<String> iconUri) {
             this.iconUri = iconUri;
             return this;
         }
-
         public Builder iconUri(@Nullable String iconUri) {
             this.iconUri = Output.ofNullable(iconUri);
             return this;
         }
-
         public Builder runtimeUrls(@Nullable Output<List<String>> runtimeUrls) {
             this.runtimeUrls = runtimeUrls;
             return this;
         }
-
         public Builder runtimeUrls(@Nullable List<String> runtimeUrls) {
             this.runtimeUrls = Output.ofNullable(runtimeUrls);
             return this;
         }
-
+        public Builder runtimeUrls(String... runtimeUrls) {
+            return runtimeUrls(List.of(runtimeUrls));
+        }
         public Builder swagger(@Nullable Output<Object> swagger) {
             this.swagger = swagger;
             return this;
         }
-
         public Builder swagger(@Nullable Object swagger) {
             this.swagger = Output.ofNullable(swagger);
             return this;
         }
-
         public Builder wsdlDefinition(@Nullable Output<WsdlDefinitionArgs> wsdlDefinition) {
             this.wsdlDefinition = wsdlDefinition;
             return this;
         }
-
         public Builder wsdlDefinition(@Nullable WsdlDefinitionArgs wsdlDefinition) {
             this.wsdlDefinition = Output.ofNullable(wsdlDefinition);
             return this;
-        }
-        public CustomApiPropertiesDefinitionArgs build() {
+        }        public CustomApiPropertiesDefinitionArgs build() {
             return new CustomApiPropertiesDefinitionArgs(apiDefinitions, apiType, backendService, brandColor, capabilities, connectionParameters, description, displayName, iconUri, runtimeUrls, swagger, wsdlDefinition);
         }
     }

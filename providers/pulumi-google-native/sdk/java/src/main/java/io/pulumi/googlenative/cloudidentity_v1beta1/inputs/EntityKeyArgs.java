@@ -78,22 +78,18 @@ public final class EntityKeyArgs extends io.pulumi.resources.ResourceArgs {
             this.id = id;
             return this;
         }
-
         public Builder id(@Nullable String id) {
             this.id = Output.ofNullable(id);
             return this;
         }
-
         public Builder namespace(@Nullable Output<String> namespace) {
             this.namespace = namespace;
             return this;
         }
-
         public Builder namespace(@Nullable String namespace) {
             this.namespace = Output.ofNullable(namespace);
             return this;
-        }
-        public EntityKeyArgs build() {
+        }        public EntityKeyArgs build() {
             return new EntityKeyArgs(id, namespace);
         }
     }

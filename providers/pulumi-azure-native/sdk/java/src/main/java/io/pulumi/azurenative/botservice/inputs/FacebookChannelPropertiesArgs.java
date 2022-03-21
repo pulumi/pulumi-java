@@ -113,42 +113,37 @@ public final class FacebookChannelPropertiesArgs extends io.pulumi.resources.Res
             this.appId = Objects.requireNonNull(appId);
             return this;
         }
-
         public Builder appId(String appId) {
             this.appId = Output.of(Objects.requireNonNull(appId));
             return this;
         }
-
         public Builder appSecret(@Nullable Output<String> appSecret) {
             this.appSecret = appSecret;
             return this;
         }
-
         public Builder appSecret(@Nullable String appSecret) {
             this.appSecret = Output.ofNullable(appSecret);
             return this;
         }
-
         public Builder isEnabled(Output<Boolean> isEnabled) {
             this.isEnabled = Objects.requireNonNull(isEnabled);
             return this;
         }
-
         public Builder isEnabled(Boolean isEnabled) {
             this.isEnabled = Output.of(Objects.requireNonNull(isEnabled));
             return this;
         }
-
         public Builder pages(@Nullable Output<List<FacebookPageArgs>> pages) {
             this.pages = pages;
             return this;
         }
-
         public Builder pages(@Nullable List<FacebookPageArgs> pages) {
             this.pages = Output.ofNullable(pages);
             return this;
         }
-        public FacebookChannelPropertiesArgs build() {
+        public Builder pages(FacebookPageArgs... pages) {
+            return pages(List.of(pages));
+        }        public FacebookChannelPropertiesArgs build() {
             return new FacebookChannelPropertiesArgs(appId, appSecret, isEnabled, pages);
         }
     }

@@ -119,27 +119,25 @@ public final class OSPolicyResourceExecResourceExecResponse {
             this.args = Objects.requireNonNull(args);
             return this;
         }
-
+        public Builder args(String... args) {
+            return args(List.of(args));
+        }
         public Builder file(OSPolicyResourceFileResponse file) {
             this.file = Objects.requireNonNull(file);
             return this;
         }
-
         public Builder interpreter(String interpreter) {
             this.interpreter = Objects.requireNonNull(interpreter);
             return this;
         }
-
         public Builder outputFilePath(String outputFilePath) {
             this.outputFilePath = Objects.requireNonNull(outputFilePath);
             return this;
         }
-
         public Builder script(String script) {
             this.script = Objects.requireNonNull(script);
             return this;
-        }
-        public OSPolicyResourceExecResourceExecResponse build() {
+        }        public OSPolicyResourceExecResourceExecResponse build() {
             return new OSPolicyResourceExecResourceExecResponse(args, file, interpreter, outputFilePath, script);
         }
     }

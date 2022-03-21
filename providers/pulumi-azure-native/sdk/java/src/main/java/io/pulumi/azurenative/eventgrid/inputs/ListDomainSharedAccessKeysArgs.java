@@ -72,12 +72,10 @@ public final class ListDomainSharedAccessKeysArgs extends io.pulumi.resources.In
             this.domainName = Objects.requireNonNull(domainName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
-        }
-        public ListDomainSharedAccessKeysArgs build() {
+        }        public ListDomainSharedAccessKeysArgs build() {
             return new ListDomainSharedAccessKeysArgs(domainName, resourceGroupName);
         }
     }

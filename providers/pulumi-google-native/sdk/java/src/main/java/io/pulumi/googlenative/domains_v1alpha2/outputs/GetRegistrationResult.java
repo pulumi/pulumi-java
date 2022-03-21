@@ -234,62 +234,56 @@ public final class GetRegistrationResult {
             this.contactSettings = Objects.requireNonNull(contactSettings);
             return this;
         }
-
         public Builder createTime(String createTime) {
             this.createTime = Objects.requireNonNull(createTime);
             return this;
         }
-
         public Builder dnsSettings(DnsSettingsResponse dnsSettings) {
             this.dnsSettings = Objects.requireNonNull(dnsSettings);
             return this;
         }
-
         public Builder domainName(String domainName) {
             this.domainName = Objects.requireNonNull(domainName);
             return this;
         }
-
         public Builder expireTime(String expireTime) {
             this.expireTime = Objects.requireNonNull(expireTime);
             return this;
         }
-
         public Builder issues(List<String> issues) {
             this.issues = Objects.requireNonNull(issues);
             return this;
         }
-
+        public Builder issues(String... issues) {
+            return issues(List.of(issues));
+        }
         public Builder labels(Map<String,String> labels) {
             this.labels = Objects.requireNonNull(labels);
             return this;
         }
-
         public Builder managementSettings(ManagementSettingsResponse managementSettings) {
             this.managementSettings = Objects.requireNonNull(managementSettings);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder pendingContactSettings(ContactSettingsResponse pendingContactSettings) {
             this.pendingContactSettings = Objects.requireNonNull(pendingContactSettings);
             return this;
         }
-
         public Builder state(String state) {
             this.state = Objects.requireNonNull(state);
             return this;
         }
-
         public Builder supportedPrivacy(List<String> supportedPrivacy) {
             this.supportedPrivacy = Objects.requireNonNull(supportedPrivacy);
             return this;
         }
-        public GetRegistrationResult build() {
+        public Builder supportedPrivacy(String... supportedPrivacy) {
+            return supportedPrivacy(List.of(supportedPrivacy));
+        }        public GetRegistrationResult build() {
             return new GetRegistrationResult(contactSettings, createTime, dnsSettings, domainName, expireTime, issues, labels, managementSettings, name, pendingContactSettings, state, supportedPrivacy);
         }
     }

@@ -53,8 +53,7 @@ public final class ScheduledEventsProfileResponse {
         public Builder terminateNotificationProfile(@Nullable TerminateNotificationProfileResponse terminateNotificationProfile) {
             this.terminateNotificationProfile = terminateNotificationProfile;
             return this;
-        }
-        public ScheduledEventsProfileResponse build() {
+        }        public ScheduledEventsProfileResponse build() {
             return new ScheduledEventsProfileResponse(terminateNotificationProfile);
         }
     }

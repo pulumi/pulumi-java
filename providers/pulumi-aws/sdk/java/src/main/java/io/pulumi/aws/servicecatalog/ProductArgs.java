@@ -220,112 +220,90 @@ public final class ProductArgs extends io.pulumi.resources.ResourceArgs {
             this.acceptLanguage = acceptLanguage;
             return this;
         }
-
         public Builder acceptLanguage(@Nullable String acceptLanguage) {
             this.acceptLanguage = Output.ofNullable(acceptLanguage);
             return this;
         }
-
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder distributor(@Nullable Output<String> distributor) {
             this.distributor = distributor;
             return this;
         }
-
         public Builder distributor(@Nullable String distributor) {
             this.distributor = Output.ofNullable(distributor);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder owner(Output<String> owner) {
             this.owner = Objects.requireNonNull(owner);
             return this;
         }
-
         public Builder owner(String owner) {
             this.owner = Output.of(Objects.requireNonNull(owner));
             return this;
         }
-
         public Builder provisioningArtifactParameters(Output<ProductProvisioningArtifactParametersArgs> provisioningArtifactParameters) {
             this.provisioningArtifactParameters = Objects.requireNonNull(provisioningArtifactParameters);
             return this;
         }
-
         public Builder provisioningArtifactParameters(ProductProvisioningArtifactParametersArgs provisioningArtifactParameters) {
             this.provisioningArtifactParameters = Output.of(Objects.requireNonNull(provisioningArtifactParameters));
             return this;
         }
-
         public Builder supportDescription(@Nullable Output<String> supportDescription) {
             this.supportDescription = supportDescription;
             return this;
         }
-
         public Builder supportDescription(@Nullable String supportDescription) {
             this.supportDescription = Output.ofNullable(supportDescription);
             return this;
         }
-
         public Builder supportEmail(@Nullable Output<String> supportEmail) {
             this.supportEmail = supportEmail;
             return this;
         }
-
         public Builder supportEmail(@Nullable String supportEmail) {
             this.supportEmail = Output.ofNullable(supportEmail);
             return this;
         }
-
         public Builder supportUrl(@Nullable Output<String> supportUrl) {
             this.supportUrl = supportUrl;
             return this;
         }
-
         public Builder supportUrl(@Nullable String supportUrl) {
             this.supportUrl = Output.ofNullable(supportUrl);
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
         public Builder type(Output<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Output.of(Objects.requireNonNull(type));
             return this;
-        }
-        public ProductArgs build() {
+        }        public ProductArgs build() {
             return new ProductArgs(acceptLanguage, description, distributor, name, owner, provisioningArtifactParameters, supportDescription, supportEmail, supportUrl, tags, type);
         }
     }

@@ -105,17 +105,17 @@ public final class PolicyDefaultAdmissionRule {
             this.enforcementMode = Objects.requireNonNull(enforcementMode);
             return this;
         }
-
         public Builder evaluationMode(String evaluationMode) {
             this.evaluationMode = Objects.requireNonNull(evaluationMode);
             return this;
         }
-
         public Builder requireAttestationsBies(@Nullable List<String> requireAttestationsBies) {
             this.requireAttestationsBies = requireAttestationsBies;
             return this;
         }
-        public PolicyDefaultAdmissionRule build() {
+        public Builder requireAttestationsBies(String... requireAttestationsBies) {
+            return requireAttestationsBies(List.of(requireAttestationsBies));
+        }        public PolicyDefaultAdmissionRule build() {
             return new PolicyDefaultAdmissionRule(enforcementMode, evaluationMode, requireAttestationsBies);
         }
     }

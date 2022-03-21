@@ -103,22 +103,18 @@ public final class TokenPasswordResponse {
             this.creationTime = creationTime;
             return this;
         }
-
         public Builder expiry(@Nullable String expiry) {
             this.expiry = expiry;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
-
         public Builder value(String value) {
             this.value = Objects.requireNonNull(value);
             return this;
-        }
-        public TokenPasswordResponse build() {
+        }        public TokenPasswordResponse build() {
             return new TokenPasswordResponse(creationTime, expiry, name, value);
         }
     }

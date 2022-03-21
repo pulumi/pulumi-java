@@ -75,12 +75,13 @@ public final class CxPageFormParameterFillBehaviorInitialPromptFulfillmentMessag
             this.allowPlaybackInterruption = allowPlaybackInterruption;
             return this;
         }
-
         public Builder texts(@Nullable List<String> texts) {
             this.texts = texts;
             return this;
         }
-        public CxPageFormParameterFillBehaviorInitialPromptFulfillmentMessageText build() {
+        public Builder texts(String... texts) {
+            return texts(List.of(texts));
+        }        public CxPageFormParameterFillBehaviorInitialPromptFulfillmentMessageText build() {
             return new CxPageFormParameterFillBehaviorInitialPromptFulfillmentMessageText(allowPlaybackInterruption, texts);
         }
     }

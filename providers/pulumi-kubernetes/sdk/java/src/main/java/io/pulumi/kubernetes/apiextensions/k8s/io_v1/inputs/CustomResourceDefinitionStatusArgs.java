@@ -97,32 +97,32 @@ public final class CustomResourceDefinitionStatusArgs extends io.pulumi.resource
             this.acceptedNames = Objects.requireNonNull(acceptedNames);
             return this;
         }
-
         public Builder acceptedNames(CustomResourceDefinitionNamesArgs acceptedNames) {
             this.acceptedNames = Output.of(Objects.requireNonNull(acceptedNames));
             return this;
         }
-
         public Builder conditions(@Nullable Output<List<CustomResourceDefinitionConditionArgs>> conditions) {
             this.conditions = conditions;
             return this;
         }
-
         public Builder conditions(@Nullable List<CustomResourceDefinitionConditionArgs> conditions) {
             this.conditions = Output.ofNullable(conditions);
             return this;
         }
-
+        public Builder conditions(CustomResourceDefinitionConditionArgs... conditions) {
+            return conditions(List.of(conditions));
+        }
         public Builder storedVersions(Output<List<String>> storedVersions) {
             this.storedVersions = Objects.requireNonNull(storedVersions);
             return this;
         }
-
         public Builder storedVersions(List<String> storedVersions) {
             this.storedVersions = Output.of(Objects.requireNonNull(storedVersions));
             return this;
         }
-        public CustomResourceDefinitionStatusArgs build() {
+        public Builder storedVersions(String... storedVersions) {
+            return storedVersions(List.of(storedVersions));
+        }        public CustomResourceDefinitionStatusArgs build() {
             return new CustomResourceDefinitionStatusArgs(acceptedNames, conditions, storedVersions);
         }
     }

@@ -75,22 +75,18 @@ public final class DSSEAttestationOccurrenceArgs extends io.pulumi.resources.Res
             this.envelope = envelope;
             return this;
         }
-
         public Builder envelope(@Nullable EnvelopeArgs envelope) {
             this.envelope = Output.ofNullable(envelope);
             return this;
         }
-
         public Builder statement(@Nullable Output<InTotoStatementArgs> statement) {
             this.statement = statement;
             return this;
         }
-
         public Builder statement(@Nullable InTotoStatementArgs statement) {
             this.statement = Output.ofNullable(statement);
             return this;
-        }
-        public DSSEAttestationOccurrenceArgs build() {
+        }        public DSSEAttestationOccurrenceArgs build() {
             return new DSSEAttestationOccurrenceArgs(envelope, statement);
         }
     }

@@ -74,22 +74,18 @@ public final class ListenerRuleConditionQueryStringGetArgs extends io.pulumi.res
             this.key = key;
             return this;
         }
-
         public Builder key(@Nullable String key) {
             this.key = Output.ofNullable(key);
             return this;
         }
-
         public Builder value(Output<String> value) {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public Builder value(String value) {
             this.value = Output.of(Objects.requireNonNull(value));
             return this;
-        }
-        public ListenerRuleConditionQueryStringGetArgs build() {
+        }        public ListenerRuleConditionQueryStringGetArgs build() {
             return new ListenerRuleConditionQueryStringGetArgs(key, value);
         }
     }

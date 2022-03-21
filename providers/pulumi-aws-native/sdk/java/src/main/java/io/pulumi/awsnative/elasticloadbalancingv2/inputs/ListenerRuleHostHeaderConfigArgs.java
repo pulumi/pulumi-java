@@ -54,12 +54,13 @@ public final class ListenerRuleHostHeaderConfigArgs extends io.pulumi.resources.
             this.values = values;
             return this;
         }
-
         public Builder values(@Nullable List<String> values) {
             this.values = Output.ofNullable(values);
             return this;
         }
-        public ListenerRuleHostHeaderConfigArgs build() {
+        public Builder values(String... values) {
+            return values(List.of(values));
+        }        public ListenerRuleHostHeaderConfigArgs build() {
             return new ListenerRuleHostHeaderConfigArgs(values);
         }
     }

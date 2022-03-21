@@ -143,32 +143,29 @@ public final class GoogleCloudDatacatalogV1RoutineSpecResponse extends io.pulumi
             this.bigqueryRoutineSpec = Objects.requireNonNull(bigqueryRoutineSpec);
             return this;
         }
-
         public Builder definitionBody(String definitionBody) {
             this.definitionBody = Objects.requireNonNull(definitionBody);
             return this;
         }
-
         public Builder language(String language) {
             this.language = Objects.requireNonNull(language);
             return this;
         }
-
         public Builder returnType(String returnType) {
             this.returnType = Objects.requireNonNull(returnType);
             return this;
         }
-
         public Builder routineArguments(List<GoogleCloudDatacatalogV1RoutineSpecArgumentResponse> routineArguments) {
             this.routineArguments = Objects.requireNonNull(routineArguments);
             return this;
         }
-
+        public Builder routineArguments(GoogleCloudDatacatalogV1RoutineSpecArgumentResponse... routineArguments) {
+            return routineArguments(List.of(routineArguments));
+        }
         public Builder routineType(String routineType) {
             this.routineType = Objects.requireNonNull(routineType);
             return this;
-        }
-        public GoogleCloudDatacatalogV1RoutineSpecResponse build() {
+        }        public GoogleCloudDatacatalogV1RoutineSpecResponse build() {
             return new GoogleCloudDatacatalogV1RoutineSpecResponse(bigqueryRoutineSpec, definitionBody, language, returnType, routineArguments, routineType);
         }
     }

@@ -148,72 +148,58 @@ public final class InstanceTemplateArgs extends io.pulumi.resources.ResourceArgs
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
         }
-
         public Builder properties(@Nullable Output<InstancePropertiesArgs> properties) {
             this.properties = properties;
             return this;
         }
-
         public Builder properties(@Nullable InstancePropertiesArgs properties) {
             this.properties = Output.ofNullable(properties);
             return this;
         }
-
         public Builder requestId(@Nullable Output<String> requestId) {
             this.requestId = requestId;
             return this;
         }
-
         public Builder requestId(@Nullable String requestId) {
             this.requestId = Output.ofNullable(requestId);
             return this;
         }
-
         public Builder sourceInstance(@Nullable Output<String> sourceInstance) {
             this.sourceInstance = sourceInstance;
             return this;
         }
-
         public Builder sourceInstance(@Nullable String sourceInstance) {
             this.sourceInstance = Output.ofNullable(sourceInstance);
             return this;
         }
-
         public Builder sourceInstanceParams(@Nullable Output<SourceInstanceParamsArgs> sourceInstanceParams) {
             this.sourceInstanceParams = sourceInstanceParams;
             return this;
         }
-
         public Builder sourceInstanceParams(@Nullable SourceInstanceParamsArgs sourceInstanceParams) {
             this.sourceInstanceParams = Output.ofNullable(sourceInstanceParams);
             return this;
-        }
-        public InstanceTemplateArgs build() {
+        }        public InstanceTemplateArgs build() {
             return new InstanceTemplateArgs(description, name, project, properties, requestId, sourceInstance, sourceInstanceParams);
         }
     }

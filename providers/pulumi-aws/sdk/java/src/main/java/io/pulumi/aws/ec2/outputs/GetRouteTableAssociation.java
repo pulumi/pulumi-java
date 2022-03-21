@@ -118,27 +118,22 @@ public final class GetRouteTableAssociation {
             this.gatewayId = Objects.requireNonNull(gatewayId);
             return this;
         }
-
         public Builder main(Boolean main) {
             this.main = Objects.requireNonNull(main);
             return this;
         }
-
         public Builder routeTableAssociationId(String routeTableAssociationId) {
             this.routeTableAssociationId = Objects.requireNonNull(routeTableAssociationId);
             return this;
         }
-
         public Builder routeTableId(String routeTableId) {
             this.routeTableId = Objects.requireNonNull(routeTableId);
             return this;
         }
-
         public Builder subnetId(String subnetId) {
             this.subnetId = Objects.requireNonNull(subnetId);
             return this;
-        }
-        public GetRouteTableAssociation build() {
+        }        public GetRouteTableAssociation build() {
             return new GetRouteTableAssociation(gatewayId, main, routeTableAssociationId, routeTableId, subnetId);
         }
     }

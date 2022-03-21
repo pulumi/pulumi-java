@@ -68,22 +68,21 @@ public final class GroupConfigurationItemArgs extends io.pulumi.resources.Resour
             this.parameters = parameters;
             return this;
         }
-
         public Builder parameters(@Nullable List<GroupConfigurationParameterArgs> parameters) {
             this.parameters = Output.ofNullable(parameters);
             return this;
         }
-
+        public Builder parameters(GroupConfigurationParameterArgs... parameters) {
+            return parameters(List.of(parameters));
+        }
         public Builder type(@Nullable Output<String> type) {
             this.type = type;
             return this;
         }
-
         public Builder type(@Nullable String type) {
             this.type = Output.ofNullable(type);
             return this;
-        }
-        public GroupConfigurationItemArgs build() {
+        }        public GroupConfigurationItemArgs build() {
             return new GroupConfigurationItemArgs(parameters, type);
         }
     }

@@ -43,8 +43,7 @@ public final class NodePoolNodeConfigWorkloadMetadataConfig {
         public Builder mode(String mode) {
             this.mode = Objects.requireNonNull(mode);
             return this;
-        }
-        public NodePoolNodeConfigWorkloadMetadataConfig build() {
+        }        public NodePoolNodeConfigWorkloadMetadataConfig build() {
             return new NodePoolNodeConfigWorkloadMetadataConfig(mode);
         }
     }

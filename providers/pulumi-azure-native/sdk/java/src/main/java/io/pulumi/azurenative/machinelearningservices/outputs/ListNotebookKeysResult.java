@@ -53,12 +53,10 @@ public final class ListNotebookKeysResult {
             this.primaryAccessKey = Objects.requireNonNull(primaryAccessKey);
             return this;
         }
-
         public Builder secondaryAccessKey(String secondaryAccessKey) {
             this.secondaryAccessKey = Objects.requireNonNull(secondaryAccessKey);
             return this;
-        }
-        public ListNotebookKeysResult build() {
+        }        public ListNotebookKeysResult build() {
             return new ListNotebookKeysResult(primaryAccessKey, secondaryAccessKey);
         }
     }

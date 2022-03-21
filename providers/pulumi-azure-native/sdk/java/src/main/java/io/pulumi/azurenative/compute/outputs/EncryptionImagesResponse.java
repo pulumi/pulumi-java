@@ -73,12 +73,13 @@ public final class EncryptionImagesResponse {
             this.dataDiskImages = dataDiskImages;
             return this;
         }
-
+        public Builder dataDiskImages(DataDiskImageEncryptionResponse... dataDiskImages) {
+            return dataDiskImages(List.of(dataDiskImages));
+        }
         public Builder osDiskImage(@Nullable OSDiskImageEncryptionResponse osDiskImage) {
             this.osDiskImage = osDiskImage;
             return this;
-        }
-        public EncryptionImagesResponse build() {
+        }        public EncryptionImagesResponse build() {
             return new EncryptionImagesResponse(dataDiskImages, osDiskImage);
         }
     }

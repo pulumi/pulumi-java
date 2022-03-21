@@ -78,12 +78,13 @@ public final class BucketReplicationConfiguration extends io.pulumi.resources.In
             this.role = Objects.requireNonNull(role);
             return this;
         }
-
         public Builder rules(List<BucketReplicationRule> rules) {
             this.rules = Objects.requireNonNull(rules);
             return this;
         }
-        public BucketReplicationConfiguration build() {
+        public Builder rules(BucketReplicationRule... rules) {
+            return rules(List.of(rules));
+        }        public BucketReplicationConfiguration build() {
             return new BucketReplicationConfiguration(role, rules);
         }
     }

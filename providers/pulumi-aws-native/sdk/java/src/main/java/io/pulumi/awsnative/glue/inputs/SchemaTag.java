@@ -72,12 +72,10 @@ public final class SchemaTag extends io.pulumi.resources.InvokeArgs {
             this.key = Objects.requireNonNull(key);
             return this;
         }
-
         public Builder value(String value) {
             this.value = Objects.requireNonNull(value);
             return this;
-        }
-        public SchemaTag build() {
+        }        public SchemaTag build() {
             return new SchemaTag(key, value);
         }
     }

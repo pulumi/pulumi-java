@@ -78,17 +78,14 @@ public final class GetJobTemplateArgs extends io.pulumi.resources.InvokeArgs {
             this.jobTemplateId = Objects.requireNonNull(jobTemplateId);
             return this;
         }
-
         public Builder location(String location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = project;
             return this;
-        }
-        public GetJobTemplateArgs build() {
+        }        public GetJobTemplateArgs build() {
             return new GetJobTemplateArgs(jobTemplateId, location, project);
         }
     }

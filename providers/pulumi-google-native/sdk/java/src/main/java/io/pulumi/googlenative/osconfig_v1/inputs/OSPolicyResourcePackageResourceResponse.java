@@ -179,42 +179,34 @@ public final class OSPolicyResourcePackageResourceResponse extends io.pulumi.res
             this.apt = Objects.requireNonNull(apt);
             return this;
         }
-
         public Builder deb(OSPolicyResourcePackageResourceDebResponse deb) {
             this.deb = Objects.requireNonNull(deb);
             return this;
         }
-
         public Builder desiredState(String desiredState) {
             this.desiredState = Objects.requireNonNull(desiredState);
             return this;
         }
-
         public Builder googet(OSPolicyResourcePackageResourceGooGetResponse googet) {
             this.googet = Objects.requireNonNull(googet);
             return this;
         }
-
         public Builder msi(OSPolicyResourcePackageResourceMSIResponse msi) {
             this.msi = Objects.requireNonNull(msi);
             return this;
         }
-
         public Builder rpm(OSPolicyResourcePackageResourceRPMResponse rpm) {
             this.rpm = Objects.requireNonNull(rpm);
             return this;
         }
-
         public Builder yum(OSPolicyResourcePackageResourceYUMResponse yum) {
             this.yum = Objects.requireNonNull(yum);
             return this;
         }
-
         public Builder zypper(OSPolicyResourcePackageResourceZypperResponse zypper) {
             this.zypper = Objects.requireNonNull(zypper);
             return this;
-        }
-        public OSPolicyResourcePackageResourceResponse build() {
+        }        public OSPolicyResourcePackageResourceResponse build() {
             return new OSPolicyResourcePackageResourceResponse(apt, deb, desiredState, googet, msi, rpm, yum, zypper);
         }
     }

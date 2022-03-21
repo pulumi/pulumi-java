@@ -107,42 +107,34 @@ public final class ReplicationRecoveryPlanArgs extends io.pulumi.resources.Resou
             this.properties = Objects.requireNonNull(properties);
             return this;
         }
-
         public Builder properties(CreateRecoveryPlanInputPropertiesArgs properties) {
             this.properties = Output.of(Objects.requireNonNull(properties));
             return this;
         }
-
         public Builder recoveryPlanName(@Nullable Output<String> recoveryPlanName) {
             this.recoveryPlanName = recoveryPlanName;
             return this;
         }
-
         public Builder recoveryPlanName(@Nullable String recoveryPlanName) {
             this.recoveryPlanName = Output.ofNullable(recoveryPlanName);
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder resourceName(Output<String> resourceName) {
             this.resourceName = Objects.requireNonNull(resourceName);
             return this;
         }
-
         public Builder resourceName(String resourceName) {
             this.resourceName = Output.of(Objects.requireNonNull(resourceName));
             return this;
-        }
-        public ReplicationRecoveryPlanArgs build() {
+        }        public ReplicationRecoveryPlanArgs build() {
             return new ReplicationRecoveryPlanArgs(properties, recoveryPlanName, resourceGroupName, resourceName);
         }
     }

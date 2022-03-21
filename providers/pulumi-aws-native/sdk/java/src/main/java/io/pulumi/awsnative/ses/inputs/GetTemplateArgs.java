@@ -50,8 +50,7 @@ public final class GetTemplateArgs extends io.pulumi.resources.InvokeArgs {
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
-        }
-        public GetTemplateArgs build() {
+        }        public GetTemplateArgs build() {
             return new GetTemplateArgs(id);
         }
     }

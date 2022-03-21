@@ -76,22 +76,21 @@ public final class RRSetRoutingPolicyGeoPolicyArgs extends io.pulumi.resources.R
             this.items = items;
             return this;
         }
-
         public Builder items(@Nullable List<RRSetRoutingPolicyGeoPolicyGeoPolicyItemArgs> items) {
             this.items = Output.ofNullable(items);
             return this;
         }
-
+        public Builder items(RRSetRoutingPolicyGeoPolicyGeoPolicyItemArgs... items) {
+            return items(List.of(items));
+        }
         public Builder kind(@Nullable Output<String> kind) {
             this.kind = kind;
             return this;
         }
-
         public Builder kind(@Nullable String kind) {
             this.kind = Output.ofNullable(kind);
             return this;
-        }
-        public RRSetRoutingPolicyGeoPolicyArgs build() {
+        }        public RRSetRoutingPolicyGeoPolicyArgs build() {
             return new RRSetRoutingPolicyGeoPolicyArgs(items, kind);
         }
     }

@@ -218,57 +218,49 @@ public final class GetPolicyExemptionResult {
             this.description = description;
             return this;
         }
-
         public Builder displayName(@Nullable String displayName) {
             this.displayName = displayName;
             return this;
         }
-
         public Builder exemptionCategory(String exemptionCategory) {
             this.exemptionCategory = Objects.requireNonNull(exemptionCategory);
             return this;
         }
-
         public Builder expiresOn(@Nullable String expiresOn) {
             this.expiresOn = expiresOn;
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder metadata(@Nullable Object metadata) {
             this.metadata = metadata;
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder policyAssignmentId(String policyAssignmentId) {
             this.policyAssignmentId = Objects.requireNonNull(policyAssignmentId);
             return this;
         }
-
         public Builder policyDefinitionReferenceIds(@Nullable List<String> policyDefinitionReferenceIds) {
             this.policyDefinitionReferenceIds = policyDefinitionReferenceIds;
             return this;
         }
-
+        public Builder policyDefinitionReferenceIds(String... policyDefinitionReferenceIds) {
+            return policyDefinitionReferenceIds(List.of(policyDefinitionReferenceIds));
+        }
         public Builder systemData(SystemDataResponse systemData) {
             this.systemData = Objects.requireNonNull(systemData);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public GetPolicyExemptionResult build() {
+        }        public GetPolicyExemptionResult build() {
             return new GetPolicyExemptionResult(description, displayName, exemptionCategory, expiresOn, id, metadata, name, policyAssignmentId, policyDefinitionReferenceIds, systemData, type);
         }
     }

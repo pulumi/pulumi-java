@@ -57,12 +57,10 @@ public final class BucketObjectLockRuleArgs extends io.pulumi.resources.Resource
             this.defaultRetention = defaultRetention;
             return this;
         }
-
         public Builder defaultRetention(@Nullable BucketDefaultRetentionArgs defaultRetention) {
             this.defaultRetention = Output.ofNullable(defaultRetention);
             return this;
-        }
-        public BucketObjectLockRuleArgs build() {
+        }        public BucketObjectLockRuleArgs build() {
             return new BucketObjectLockRuleArgs(defaultRetention);
         }
     }

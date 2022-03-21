@@ -242,62 +242,53 @@ public final class WorkflowTemplateJob {
             this.hadoopJob = hadoopJob;
             return this;
         }
-
         public Builder hiveJob(@Nullable WorkflowTemplateJobHiveJob hiveJob) {
             this.hiveJob = hiveJob;
             return this;
         }
-
         public Builder labels(@Nullable Map<String,String> labels) {
             this.labels = labels;
             return this;
         }
-
         public Builder pigJob(@Nullable WorkflowTemplateJobPigJob pigJob) {
             this.pigJob = pigJob;
             return this;
         }
-
         public Builder prerequisiteStepIds(@Nullable List<String> prerequisiteStepIds) {
             this.prerequisiteStepIds = prerequisiteStepIds;
             return this;
         }
-
+        public Builder prerequisiteStepIds(String... prerequisiteStepIds) {
+            return prerequisiteStepIds(List.of(prerequisiteStepIds));
+        }
         public Builder prestoJob(@Nullable WorkflowTemplateJobPrestoJob prestoJob) {
             this.prestoJob = prestoJob;
             return this;
         }
-
         public Builder pysparkJob(@Nullable WorkflowTemplateJobPysparkJob pysparkJob) {
             this.pysparkJob = pysparkJob;
             return this;
         }
-
         public Builder scheduling(@Nullable WorkflowTemplateJobScheduling scheduling) {
             this.scheduling = scheduling;
             return this;
         }
-
         public Builder sparkJob(@Nullable WorkflowTemplateJobSparkJob sparkJob) {
             this.sparkJob = sparkJob;
             return this;
         }
-
         public Builder sparkRJob(@Nullable WorkflowTemplateJobSparkRJob sparkRJob) {
             this.sparkRJob = sparkRJob;
             return this;
         }
-
         public Builder sparkSqlJob(@Nullable WorkflowTemplateJobSparkSqlJob sparkSqlJob) {
             this.sparkSqlJob = sparkSqlJob;
             return this;
         }
-
         public Builder stepId(String stepId) {
             this.stepId = Objects.requireNonNull(stepId);
             return this;
-        }
-        public WorkflowTemplateJob build() {
+        }        public WorkflowTemplateJob build() {
             return new WorkflowTemplateJob(hadoopJob, hiveJob, labels, pigJob, prerequisiteStepIds, prestoJob, pysparkJob, scheduling, sparkJob, sparkRJob, sparkSqlJob, stepId);
         }
     }

@@ -54,7 +54,9 @@ public final class CacheSecuritySettingsResponse {
             this.accessPolicies = accessPolicies;
             return this;
         }
-        public CacheSecuritySettingsResponse build() {
+        public Builder accessPolicies(NfsAccessPolicyResponse... accessPolicies) {
+            return accessPolicies(List.of(accessPolicies));
+        }        public CacheSecuritySettingsResponse build() {
             return new CacheSecuritySettingsResponse(accessPolicies);
         }
     }

@@ -143,62 +143,50 @@ public final class ContainerHealthCheckConfigArgs extends io.pulumi.resources.Re
             this.healthyThreshold = healthyThreshold;
             return this;
         }
-
         public Builder healthyThreshold(@Nullable Integer healthyThreshold) {
             this.healthyThreshold = Output.ofNullable(healthyThreshold);
             return this;
         }
-
         public Builder intervalSeconds(@Nullable Output<Integer> intervalSeconds) {
             this.intervalSeconds = intervalSeconds;
             return this;
         }
-
         public Builder intervalSeconds(@Nullable Integer intervalSeconds) {
             this.intervalSeconds = Output.ofNullable(intervalSeconds);
             return this;
         }
-
         public Builder path(@Nullable Output<String> path) {
             this.path = path;
             return this;
         }
-
         public Builder path(@Nullable String path) {
             this.path = Output.ofNullable(path);
             return this;
         }
-
         public Builder successCodes(@Nullable Output<String> successCodes) {
             this.successCodes = successCodes;
             return this;
         }
-
         public Builder successCodes(@Nullable String successCodes) {
             this.successCodes = Output.ofNullable(successCodes);
             return this;
         }
-
         public Builder timeoutSeconds(@Nullable Output<Integer> timeoutSeconds) {
             this.timeoutSeconds = timeoutSeconds;
             return this;
         }
-
         public Builder timeoutSeconds(@Nullable Integer timeoutSeconds) {
             this.timeoutSeconds = Output.ofNullable(timeoutSeconds);
             return this;
         }
-
         public Builder unhealthyThreshold(@Nullable Output<Integer> unhealthyThreshold) {
             this.unhealthyThreshold = unhealthyThreshold;
             return this;
         }
-
         public Builder unhealthyThreshold(@Nullable Integer unhealthyThreshold) {
             this.unhealthyThreshold = Output.ofNullable(unhealthyThreshold);
             return this;
-        }
-        public ContainerHealthCheckConfigArgs build() {
+        }        public ContainerHealthCheckConfigArgs build() {
             return new ContainerHealthCheckConfigArgs(healthyThreshold, intervalSeconds, path, successCodes, timeoutSeconds, unhealthyThreshold);
         }
     }

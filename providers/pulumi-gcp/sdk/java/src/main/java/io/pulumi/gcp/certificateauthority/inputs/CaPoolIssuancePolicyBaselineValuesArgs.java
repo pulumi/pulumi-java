@@ -132,52 +132,51 @@ public final class CaPoolIssuancePolicyBaselineValuesArgs extends io.pulumi.reso
             this.additionalExtensions = additionalExtensions;
             return this;
         }
-
         public Builder additionalExtensions(@Nullable List<CaPoolIssuancePolicyBaselineValuesAdditionalExtensionArgs> additionalExtensions) {
             this.additionalExtensions = Output.ofNullable(additionalExtensions);
             return this;
         }
-
+        public Builder additionalExtensions(CaPoolIssuancePolicyBaselineValuesAdditionalExtensionArgs... additionalExtensions) {
+            return additionalExtensions(List.of(additionalExtensions));
+        }
         public Builder aiaOcspServers(@Nullable Output<List<String>> aiaOcspServers) {
             this.aiaOcspServers = aiaOcspServers;
             return this;
         }
-
         public Builder aiaOcspServers(@Nullable List<String> aiaOcspServers) {
             this.aiaOcspServers = Output.ofNullable(aiaOcspServers);
             return this;
         }
-
+        public Builder aiaOcspServers(String... aiaOcspServers) {
+            return aiaOcspServers(List.of(aiaOcspServers));
+        }
         public Builder caOptions(Output<CaPoolIssuancePolicyBaselineValuesCaOptionsArgs> caOptions) {
             this.caOptions = Objects.requireNonNull(caOptions);
             return this;
         }
-
         public Builder caOptions(CaPoolIssuancePolicyBaselineValuesCaOptionsArgs caOptions) {
             this.caOptions = Output.of(Objects.requireNonNull(caOptions));
             return this;
         }
-
         public Builder keyUsage(Output<CaPoolIssuancePolicyBaselineValuesKeyUsageArgs> keyUsage) {
             this.keyUsage = Objects.requireNonNull(keyUsage);
             return this;
         }
-
         public Builder keyUsage(CaPoolIssuancePolicyBaselineValuesKeyUsageArgs keyUsage) {
             this.keyUsage = Output.of(Objects.requireNonNull(keyUsage));
             return this;
         }
-
         public Builder policyIds(@Nullable Output<List<CaPoolIssuancePolicyBaselineValuesPolicyIdArgs>> policyIds) {
             this.policyIds = policyIds;
             return this;
         }
-
         public Builder policyIds(@Nullable List<CaPoolIssuancePolicyBaselineValuesPolicyIdArgs> policyIds) {
             this.policyIds = Output.ofNullable(policyIds);
             return this;
         }
-        public CaPoolIssuancePolicyBaselineValuesArgs build() {
+        public Builder policyIds(CaPoolIssuancePolicyBaselineValuesPolicyIdArgs... policyIds) {
+            return policyIds(List.of(policyIds));
+        }        public CaPoolIssuancePolicyBaselineValuesArgs build() {
             return new CaPoolIssuancePolicyBaselineValuesArgs(additionalExtensions, aiaOcspServers, caOptions, keyUsage, policyIds);
         }
     }

@@ -77,22 +77,18 @@ public final class DeploymentGroupBlueGreenDeploymentConfigDeploymentReadyOption
             this.actionOnTimeout = actionOnTimeout;
             return this;
         }
-
         public Builder actionOnTimeout(@Nullable String actionOnTimeout) {
             this.actionOnTimeout = Output.ofNullable(actionOnTimeout);
             return this;
         }
-
         public Builder waitTimeInMinutes(@Nullable Output<Integer> waitTimeInMinutes) {
             this.waitTimeInMinutes = waitTimeInMinutes;
             return this;
         }
-
         public Builder waitTimeInMinutes(@Nullable Integer waitTimeInMinutes) {
             this.waitTimeInMinutes = Output.ofNullable(waitTimeInMinutes);
             return this;
-        }
-        public DeploymentGroupBlueGreenDeploymentConfigDeploymentReadyOptionArgs build() {
+        }        public DeploymentGroupBlueGreenDeploymentConfigDeploymentReadyOptionArgs build() {
             return new DeploymentGroupBlueGreenDeploymentConfigDeploymentReadyOptionArgs(actionOnTimeout, waitTimeInMinutes);
         }
     }

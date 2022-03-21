@@ -63,12 +63,13 @@ public final class ManagedZonePrivateVisibilityConfigResponse {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
-
         public Builder networks(List<ManagedZonePrivateVisibilityConfigNetworkResponse> networks) {
             this.networks = Objects.requireNonNull(networks);
             return this;
         }
-        public ManagedZonePrivateVisibilityConfigResponse build() {
+        public Builder networks(ManagedZonePrivateVisibilityConfigNetworkResponse... networks) {
+            return networks(List.of(networks));
+        }        public ManagedZonePrivateVisibilityConfigResponse build() {
             return new ManagedZonePrivateVisibilityConfigResponse(kind, networks);
         }
     }

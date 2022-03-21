@@ -171,42 +171,34 @@ public final class BucketReplicationConfigurationRule {
             this.deleteMarkerReplicationStatus = deleteMarkerReplicationStatus;
             return this;
         }
-
         public Builder destination(BucketReplicationConfigurationRuleDestination destination) {
             this.destination = Objects.requireNonNull(destination);
             return this;
         }
-
         public Builder filter(@Nullable BucketReplicationConfigurationRuleFilter filter) {
             this.filter = filter;
             return this;
         }
-
         public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
-
         public Builder prefix(@Nullable String prefix) {
             this.prefix = prefix;
             return this;
         }
-
         public Builder priority(@Nullable Integer priority) {
             this.priority = priority;
             return this;
         }
-
         public Builder sourceSelectionCriteria(@Nullable BucketReplicationConfigurationRuleSourceSelectionCriteria sourceSelectionCriteria) {
             this.sourceSelectionCriteria = sourceSelectionCriteria;
             return this;
         }
-
         public Builder status(String status) {
             this.status = Objects.requireNonNull(status);
             return this;
-        }
-        public BucketReplicationConfigurationRule build() {
+        }        public BucketReplicationConfigurationRule build() {
             return new BucketReplicationConfigurationRule(deleteMarkerReplicationStatus, destination, filter, id, prefix, priority, sourceSelectionCriteria, status);
         }
     }

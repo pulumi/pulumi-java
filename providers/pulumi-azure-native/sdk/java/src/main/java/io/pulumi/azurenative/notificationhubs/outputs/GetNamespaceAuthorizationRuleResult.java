@@ -283,77 +283,65 @@ public final class GetNamespaceAuthorizationRuleResult {
             this.claimType = Objects.requireNonNull(claimType);
             return this;
         }
-
         public Builder claimValue(String claimValue) {
             this.claimValue = Objects.requireNonNull(claimValue);
             return this;
         }
-
         public Builder createdTime(String createdTime) {
             this.createdTime = Objects.requireNonNull(createdTime);
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder keyName(String keyName) {
             this.keyName = Objects.requireNonNull(keyName);
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = location;
             return this;
         }
-
         public Builder modifiedTime(String modifiedTime) {
             this.modifiedTime = Objects.requireNonNull(modifiedTime);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder primaryKey(String primaryKey) {
             this.primaryKey = Objects.requireNonNull(primaryKey);
             return this;
         }
-
         public Builder revision(Integer revision) {
             this.revision = Objects.requireNonNull(revision);
             return this;
         }
-
         public Builder rights(@Nullable List<String> rights) {
             this.rights = rights;
             return this;
         }
-
+        public Builder rights(String... rights) {
+            return rights(List.of(rights));
+        }
         public Builder secondaryKey(String secondaryKey) {
             this.secondaryKey = Objects.requireNonNull(secondaryKey);
             return this;
         }
-
         public Builder sku(@Nullable SkuResponse sku) {
             this.sku = sku;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public GetNamespaceAuthorizationRuleResult build() {
+        }        public GetNamespaceAuthorizationRuleResult build() {
             return new GetNamespaceAuthorizationRuleResult(claimType, claimValue, createdTime, id, keyName, location, modifiedTime, name, primaryKey, revision, rights, secondaryKey, sku, tags, type);
         }
     }

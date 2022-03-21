@@ -51,8 +51,7 @@ public final class DeliveryConfigResponse {
         public Builder deliveryRequirement(String deliveryRequirement) {
             this.deliveryRequirement = Objects.requireNonNull(deliveryRequirement);
             return this;
-        }
-        public DeliveryConfigResponse build() {
+        }        public DeliveryConfigResponse build() {
             return new DeliveryConfigResponse(deliveryRequirement);
         }
     }

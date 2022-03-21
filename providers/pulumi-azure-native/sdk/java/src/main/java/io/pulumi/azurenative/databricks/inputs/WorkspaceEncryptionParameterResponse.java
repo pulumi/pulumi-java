@@ -79,12 +79,10 @@ public final class WorkspaceEncryptionParameterResponse extends io.pulumi.resour
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder value(@Nullable EncryptionResponse value) {
             this.value = value;
             return this;
-        }
-        public WorkspaceEncryptionParameterResponse build() {
+        }        public WorkspaceEncryptionParameterResponse build() {
             return new WorkspaceEncryptionParameterResponse(type, value);
         }
     }

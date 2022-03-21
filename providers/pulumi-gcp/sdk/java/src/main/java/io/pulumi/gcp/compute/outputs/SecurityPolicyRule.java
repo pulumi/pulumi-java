@@ -155,32 +155,26 @@ public final class SecurityPolicyRule {
             this.action = Objects.requireNonNull(action);
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
-
         public Builder match(SecurityPolicyRuleMatch match) {
             this.match = Objects.requireNonNull(match);
             return this;
         }
-
         public Builder preview(@Nullable Boolean preview) {
             this.preview = preview;
             return this;
         }
-
         public Builder priority(Integer priority) {
             this.priority = Objects.requireNonNull(priority);
             return this;
         }
-
         public Builder rateLimitOptions(@Nullable SecurityPolicyRuleRateLimitOptions rateLimitOptions) {
             this.rateLimitOptions = rateLimitOptions;
             return this;
-        }
-        public SecurityPolicyRule build() {
+        }        public SecurityPolicyRule build() {
             return new SecurityPolicyRule(action, description, match, preview, priority, rateLimitOptions);
         }
     }

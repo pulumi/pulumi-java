@@ -181,37 +181,30 @@ public final class WebAclLoggingConfigurationRedactedField {
             this.allQueryArguments = allQueryArguments;
             return this;
         }
-
         public Builder body(@Nullable WebAclLoggingConfigurationRedactedFieldBody body) {
             this.body = body;
             return this;
         }
-
         public Builder method(@Nullable WebAclLoggingConfigurationRedactedFieldMethod method) {
             this.method = method;
             return this;
         }
-
         public Builder queryString(@Nullable WebAclLoggingConfigurationRedactedFieldQueryString queryString) {
             this.queryString = queryString;
             return this;
         }
-
         public Builder singleHeader(@Nullable WebAclLoggingConfigurationRedactedFieldSingleHeader singleHeader) {
             this.singleHeader = singleHeader;
             return this;
         }
-
         public Builder singleQueryArgument(@Nullable WebAclLoggingConfigurationRedactedFieldSingleQueryArgument singleQueryArgument) {
             this.singleQueryArgument = singleQueryArgument;
             return this;
         }
-
         public Builder uriPath(@Nullable WebAclLoggingConfigurationRedactedFieldUriPath uriPath) {
             this.uriPath = uriPath;
             return this;
-        }
-        public WebAclLoggingConfigurationRedactedField build() {
+        }        public WebAclLoggingConfigurationRedactedField build() {
             return new WebAclLoggingConfigurationRedactedField(allQueryArguments, body, method, queryString, singleHeader, singleQueryArgument, uriPath);
         }
     }

@@ -75,12 +75,10 @@ public final class AutoscalerAutoscalingPolicyScaleDownControlMaxScaledDownRepli
             this.fixed = fixed;
             return this;
         }
-
         public Builder percent(@Nullable Integer percent) {
             this.percent = percent;
             return this;
-        }
-        public AutoscalerAutoscalingPolicyScaleDownControlMaxScaledDownReplicas build() {
+        }        public AutoscalerAutoscalingPolicyScaleDownControlMaxScaledDownReplicas build() {
             return new AutoscalerAutoscalingPolicyScaleDownControlMaxScaledDownReplicas(fixed, percent);
         }
     }

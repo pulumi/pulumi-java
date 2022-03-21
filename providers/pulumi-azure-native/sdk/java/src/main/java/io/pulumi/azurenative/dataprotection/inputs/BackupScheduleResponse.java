@@ -60,7 +60,9 @@ public final class BackupScheduleResponse extends io.pulumi.resources.InvokeArgs
             this.repeatingTimeIntervals = Objects.requireNonNull(repeatingTimeIntervals);
             return this;
         }
-        public BackupScheduleResponse build() {
+        public Builder repeatingTimeIntervals(String... repeatingTimeIntervals) {
+            return repeatingTimeIntervals(List.of(repeatingTimeIntervals));
+        }        public BackupScheduleResponse build() {
             return new BackupScheduleResponse(repeatingTimeIntervals);
         }
     }

@@ -52,8 +52,7 @@ public final class DatastoreParquetConfiguration extends io.pulumi.resources.Inv
         public Builder schemaDefinition(@Nullable DatastoreSchemaDefinition schemaDefinition) {
             this.schemaDefinition = schemaDefinition;
             return this;
-        }
-        public DatastoreParquetConfiguration build() {
+        }        public DatastoreParquetConfiguration build() {
             return new DatastoreParquetConfiguration(schemaDefinition);
         }
     }

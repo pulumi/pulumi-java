@@ -138,32 +138,26 @@ public final class GetProtectedItemArgs extends io.pulumi.resources.InvokeArgs {
             this.containerName = Objects.requireNonNull(containerName);
             return this;
         }
-
         public Builder fabricName(String fabricName) {
             this.fabricName = Objects.requireNonNull(fabricName);
             return this;
         }
-
         public Builder filter(@Nullable String filter) {
             this.filter = filter;
             return this;
         }
-
         public Builder protectedItemName(String protectedItemName) {
             this.protectedItemName = Objects.requireNonNull(protectedItemName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder vaultName(String vaultName) {
             this.vaultName = Objects.requireNonNull(vaultName);
             return this;
-        }
-        public GetProtectedItemArgs build() {
+        }        public GetProtectedItemArgs build() {
             return new GetProtectedItemArgs(containerName, fabricName, filter, protectedItemName, resourceGroupName, vaultName);
         }
     }

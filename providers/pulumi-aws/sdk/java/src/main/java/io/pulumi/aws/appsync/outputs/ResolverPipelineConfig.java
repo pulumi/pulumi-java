@@ -54,7 +54,9 @@ public final class ResolverPipelineConfig {
             this.functions = functions;
             return this;
         }
-        public ResolverPipelineConfig build() {
+        public Builder functions(String... functions) {
+            return functions(List.of(functions));
+        }        public ResolverPipelineConfig build() {
             return new ResolverPipelineConfig(functions);
         }
     }

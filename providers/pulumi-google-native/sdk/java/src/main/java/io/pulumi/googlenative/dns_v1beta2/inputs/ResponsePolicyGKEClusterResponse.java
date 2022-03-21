@@ -68,12 +68,10 @@ public final class ResponsePolicyGKEClusterResponse extends io.pulumi.resources.
             this.gkeClusterName = Objects.requireNonNull(gkeClusterName);
             return this;
         }
-
         public Builder kind(String kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
-        }
-        public ResponsePolicyGKEClusterResponse build() {
+        }        public ResponsePolicyGKEClusterResponse build() {
             return new ResponsePolicyGKEClusterResponse(gkeClusterName, kind);
         }
     }

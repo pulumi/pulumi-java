@@ -79,17 +79,17 @@ public final class GetFoldersResult {
             this.folders = Objects.requireNonNull(folders);
             return this;
         }
-
+        public Builder folders(GetFoldersFolder... folders) {
+            return folders(List.of(folders));
+        }
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder parentId(String parentId) {
             this.parentId = Objects.requireNonNull(parentId);
             return this;
-        }
-        public GetFoldersResult build() {
+        }        public GetFoldersResult build() {
             return new GetFoldersResult(folders, id, parentId);
         }
     }

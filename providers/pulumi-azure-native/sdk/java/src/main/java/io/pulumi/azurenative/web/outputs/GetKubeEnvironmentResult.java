@@ -284,77 +284,62 @@ public final class GetKubeEnvironmentResult {
             this.aksResourceID = aksResourceID;
             return this;
         }
-
         public Builder appLogsConfiguration(@Nullable AppLogsConfigurationResponse appLogsConfiguration) {
             this.appLogsConfiguration = appLogsConfiguration;
             return this;
         }
-
         public Builder arcConfiguration(@Nullable ArcConfigurationResponse arcConfiguration) {
             this.arcConfiguration = arcConfiguration;
             return this;
         }
-
         public Builder defaultDomain(String defaultDomain) {
             this.defaultDomain = Objects.requireNonNull(defaultDomain);
             return this;
         }
-
         public Builder deploymentErrors(String deploymentErrors) {
             this.deploymentErrors = Objects.requireNonNull(deploymentErrors);
             return this;
         }
-
         public Builder extendedLocation(@Nullable ExtendedLocationResponse extendedLocation) {
             this.extendedLocation = extendedLocation;
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder internalLoadBalancerEnabled(@Nullable Boolean internalLoadBalancerEnabled) {
             this.internalLoadBalancerEnabled = internalLoadBalancerEnabled;
             return this;
         }
-
         public Builder kind(@Nullable String kind) {
             this.kind = kind;
             return this;
         }
-
         public Builder location(String location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
-
         public Builder staticIp(@Nullable String staticIp) {
             this.staticIp = staticIp;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public GetKubeEnvironmentResult build() {
+        }        public GetKubeEnvironmentResult build() {
             return new GetKubeEnvironmentResult(aksResourceID, appLogsConfiguration, arcConfiguration, defaultDomain, deploymentErrors, extendedLocation, id, internalLoadBalancerEnabled, kind, location, name, provisioningState, staticIp, tags, type);
         }
     }

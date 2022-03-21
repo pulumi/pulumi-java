@@ -78,22 +78,18 @@ public final class ScaleRuleArgs extends io.pulumi.resources.ResourceArgs {
             this.metricTrigger = Objects.requireNonNull(metricTrigger);
             return this;
         }
-
         public Builder metricTrigger(MetricTriggerArgs metricTrigger) {
             this.metricTrigger = Output.of(Objects.requireNonNull(metricTrigger));
             return this;
         }
-
         public Builder scaleAction(Output<ScaleActionArgs> scaleAction) {
             this.scaleAction = Objects.requireNonNull(scaleAction);
             return this;
         }
-
         public Builder scaleAction(ScaleActionArgs scaleAction) {
             this.scaleAction = Output.of(Objects.requireNonNull(scaleAction));
             return this;
-        }
-        public ScaleRuleArgs build() {
+        }        public ScaleRuleArgs build() {
             return new ScaleRuleArgs(metricTrigger, scaleAction);
         }
     }

@@ -75,22 +75,18 @@ public final class PolicyInfoArgs extends io.pulumi.resources.ResourceArgs {
             this.policyId = Objects.requireNonNull(policyId);
             return this;
         }
-
         public Builder policyId(String policyId) {
             this.policyId = Output.of(Objects.requireNonNull(policyId));
             return this;
         }
-
         public Builder policyParameters(@Nullable Output<PolicyParametersArgs> policyParameters) {
             this.policyParameters = policyParameters;
             return this;
         }
-
         public Builder policyParameters(@Nullable PolicyParametersArgs policyParameters) {
             this.policyParameters = Output.ofNullable(policyParameters);
             return this;
-        }
-        public PolicyInfoArgs build() {
+        }        public PolicyInfoArgs build() {
             return new PolicyInfoArgs(policyId, policyParameters);
         }
     }

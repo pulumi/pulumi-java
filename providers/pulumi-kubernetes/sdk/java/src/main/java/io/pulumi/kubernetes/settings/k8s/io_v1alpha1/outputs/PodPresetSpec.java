@@ -124,27 +124,34 @@ public final class PodPresetSpec {
             this.env = env;
             return this;
         }
-
+        public Builder env(EnvVar... env) {
+            return env(List.of(env));
+        }
         public Builder envFrom(@Nullable List<EnvFromSource> envFrom) {
             this.envFrom = envFrom;
             return this;
         }
-
+        public Builder envFrom(EnvFromSource... envFrom) {
+            return envFrom(List.of(envFrom));
+        }
         public Builder selector(@Nullable LabelSelector selector) {
             this.selector = selector;
             return this;
         }
-
         public Builder volumeMounts(@Nullable List<VolumeMount> volumeMounts) {
             this.volumeMounts = volumeMounts;
             return this;
         }
-
+        public Builder volumeMounts(VolumeMount... volumeMounts) {
+            return volumeMounts(List.of(volumeMounts));
+        }
         public Builder volumes(@Nullable List<Volume> volumes) {
             this.volumes = volumes;
             return this;
         }
-        public PodPresetSpec build() {
+        public Builder volumes(Volume... volumes) {
+            return volumes(List.of(volumes));
+        }        public PodPresetSpec build() {
             return new PodPresetSpec(env, envFrom, selector, volumeMounts, volumes);
         }
     }

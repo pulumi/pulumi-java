@@ -202,52 +202,42 @@ public final class MethodSettingsSettings {
             this.cacheDataEncrypted = cacheDataEncrypted;
             return this;
         }
-
         public Builder cacheTtlInSeconds(@Nullable Integer cacheTtlInSeconds) {
             this.cacheTtlInSeconds = cacheTtlInSeconds;
             return this;
         }
-
         public Builder cachingEnabled(@Nullable Boolean cachingEnabled) {
             this.cachingEnabled = cachingEnabled;
             return this;
         }
-
         public Builder dataTraceEnabled(@Nullable Boolean dataTraceEnabled) {
             this.dataTraceEnabled = dataTraceEnabled;
             return this;
         }
-
         public Builder loggingLevel(@Nullable String loggingLevel) {
             this.loggingLevel = loggingLevel;
             return this;
         }
-
         public Builder metricsEnabled(@Nullable Boolean metricsEnabled) {
             this.metricsEnabled = metricsEnabled;
             return this;
         }
-
         public Builder requireAuthorizationForCacheControl(@Nullable Boolean requireAuthorizationForCacheControl) {
             this.requireAuthorizationForCacheControl = requireAuthorizationForCacheControl;
             return this;
         }
-
         public Builder throttlingBurstLimit(@Nullable Integer throttlingBurstLimit) {
             this.throttlingBurstLimit = throttlingBurstLimit;
             return this;
         }
-
         public Builder throttlingRateLimit(@Nullable Double throttlingRateLimit) {
             this.throttlingRateLimit = throttlingRateLimit;
             return this;
         }
-
         public Builder unauthorizedCacheControlHeaderStrategy(@Nullable String unauthorizedCacheControlHeaderStrategy) {
             this.unauthorizedCacheControlHeaderStrategy = unauthorizedCacheControlHeaderStrategy;
             return this;
-        }
-        public MethodSettingsSettings build() {
+        }        public MethodSettingsSettings build() {
             return new MethodSettingsSettings(cacheDataEncrypted, cacheTtlInSeconds, cachingEnabled, dataTraceEnabled, loggingLevel, metricsEnabled, requireAuthorizationForCacheControl, throttlingBurstLimit, throttlingRateLimit, unauthorizedCacheControlHeaderStrategy);
         }
     }

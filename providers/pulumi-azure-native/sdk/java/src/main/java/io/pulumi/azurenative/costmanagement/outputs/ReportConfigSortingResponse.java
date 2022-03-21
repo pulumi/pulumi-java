@@ -71,12 +71,10 @@ public final class ReportConfigSortingResponse {
             this.direction = direction;
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
-        }
-        public ReportConfigSortingResponse build() {
+        }        public ReportConfigSortingResponse build() {
             return new ReportConfigSortingResponse(direction, name);
         }
     }

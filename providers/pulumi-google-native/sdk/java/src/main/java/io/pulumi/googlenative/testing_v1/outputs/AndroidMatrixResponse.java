@@ -102,22 +102,30 @@ public final class AndroidMatrixResponse {
             this.androidModelIds = Objects.requireNonNull(androidModelIds);
             return this;
         }
-
+        public Builder androidModelIds(String... androidModelIds) {
+            return androidModelIds(List.of(androidModelIds));
+        }
         public Builder androidVersionIds(List<String> androidVersionIds) {
             this.androidVersionIds = Objects.requireNonNull(androidVersionIds);
             return this;
         }
-
+        public Builder androidVersionIds(String... androidVersionIds) {
+            return androidVersionIds(List.of(androidVersionIds));
+        }
         public Builder locales(List<String> locales) {
             this.locales = Objects.requireNonNull(locales);
             return this;
         }
-
+        public Builder locales(String... locales) {
+            return locales(List.of(locales));
+        }
         public Builder orientations(List<String> orientations) {
             this.orientations = Objects.requireNonNull(orientations);
             return this;
         }
-        public AndroidMatrixResponse build() {
+        public Builder orientations(String... orientations) {
+            return orientations(List.of(orientations));
+        }        public AndroidMatrixResponse build() {
             return new AndroidMatrixResponse(androidModelIds, androidVersionIds, locales, orientations);
         }
     }

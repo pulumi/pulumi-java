@@ -50,8 +50,7 @@ public final class GetMountTargetArgs extends io.pulumi.resources.InvokeArgs {
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
-        }
-        public GetMountTargetArgs build() {
+        }        public GetMountTargetArgs build() {
             return new GetMountTargetArgs(id);
         }
     }

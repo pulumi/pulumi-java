@@ -73,17 +73,14 @@ public final class PolicyAttachmentArgs extends io.pulumi.resources.ResourceArgs
             this.policy = Objects.requireNonNull(policy);
             return this;
         }
-
         public Builder target(Output<String> target) {
             this.target = Objects.requireNonNull(target);
             return this;
         }
-
         public Builder target(String target) {
             this.target = Output.of(Objects.requireNonNull(target));
             return this;
-        }
-        public PolicyAttachmentArgs build() {
+        }        public PolicyAttachmentArgs build() {
             return new PolicyAttachmentArgs(policy, target);
         }
     }

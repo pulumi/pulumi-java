@@ -106,42 +106,34 @@ public final class BackupPolicyArgs extends io.pulumi.resources.ResourceArgs {
             this.backupPolicyName = backupPolicyName;
             return this;
         }
-
         public Builder backupPolicyName(@Nullable String backupPolicyName) {
             this.backupPolicyName = Output.ofNullable(backupPolicyName);
             return this;
         }
-
         public Builder properties(@Nullable Output<io.pulumi.azurenative.dataprotection.inputs.BackupPolicyArgs> properties) {
             this.properties = properties;
             return this;
         }
-
         public Builder properties(@Nullable io.pulumi.azurenative.dataprotection.inputs.BackupPolicyArgs properties) {
             this.properties = Output.ofNullable(properties);
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder vaultName(Output<String> vaultName) {
             this.vaultName = Objects.requireNonNull(vaultName);
             return this;
         }
-
         public Builder vaultName(String vaultName) {
             this.vaultName = Output.of(Objects.requireNonNull(vaultName));
             return this;
-        }
-        public BackupPolicyArgs build() {
+        }        public BackupPolicyArgs build() {
             return new BackupPolicyArgs(backupPolicyName, properties, resourceGroupName, vaultName);
         }
     }

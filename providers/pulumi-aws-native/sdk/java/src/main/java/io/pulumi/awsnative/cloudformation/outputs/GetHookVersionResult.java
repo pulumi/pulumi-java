@@ -133,27 +133,22 @@ public final class GetHookVersionResult {
             this.arn = arn;
             return this;
         }
-
         public Builder isDefaultVersion(@Nullable Boolean isDefaultVersion) {
             this.isDefaultVersion = isDefaultVersion;
             return this;
         }
-
         public Builder typeArn(@Nullable String typeArn) {
             this.typeArn = typeArn;
             return this;
         }
-
         public Builder versionId(@Nullable String versionId) {
             this.versionId = versionId;
             return this;
         }
-
         public Builder visibility(@Nullable HookVersionVisibility visibility) {
             this.visibility = visibility;
             return this;
-        }
-        public GetHookVersionResult build() {
+        }        public GetHookVersionResult build() {
             return new GetHookVersionResult(arn, isDefaultVersion, typeArn, versionId, visibility);
         }
     }

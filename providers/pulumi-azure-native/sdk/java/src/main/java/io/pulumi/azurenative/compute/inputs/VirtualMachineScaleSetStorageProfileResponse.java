@@ -97,17 +97,17 @@ public final class VirtualMachineScaleSetStorageProfileResponse extends io.pulum
             this.dataDisks = dataDisks;
             return this;
         }
-
+        public Builder dataDisks(VirtualMachineScaleSetDataDiskResponse... dataDisks) {
+            return dataDisks(List.of(dataDisks));
+        }
         public Builder imageReference(@Nullable ImageReferenceResponse imageReference) {
             this.imageReference = imageReference;
             return this;
         }
-
         public Builder osDisk(@Nullable VirtualMachineScaleSetOSDiskResponse osDisk) {
             this.osDisk = osDisk;
             return this;
-        }
-        public VirtualMachineScaleSetStorageProfileResponse build() {
+        }        public VirtualMachineScaleSetStorageProfileResponse build() {
             return new VirtualMachineScaleSetStorageProfileResponse(dataDisks, imageReference, osDisk);
         }
     }

@@ -73,17 +73,17 @@ public final class SchedulingPolicyFairsharePolicy {
             this.computeReservation = computeReservation;
             return this;
         }
-
         public Builder shareDecaySeconds(@Nullable Double shareDecaySeconds) {
             this.shareDecaySeconds = shareDecaySeconds;
             return this;
         }
-
         public Builder shareDistribution(@Nullable List<SchedulingPolicyShareAttributes> shareDistribution) {
             this.shareDistribution = shareDistribution;
             return this;
         }
-        public SchedulingPolicyFairsharePolicy build() {
+        public Builder shareDistribution(SchedulingPolicyShareAttributes... shareDistribution) {
+            return shareDistribution(List.of(shareDistribution));
+        }        public SchedulingPolicyFairsharePolicy build() {
             return new SchedulingPolicyFairsharePolicy(computeReservation, shareDecaySeconds, shareDistribution);
         }
     }

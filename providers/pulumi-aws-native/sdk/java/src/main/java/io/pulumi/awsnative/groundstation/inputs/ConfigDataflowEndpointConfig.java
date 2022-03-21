@@ -66,12 +66,10 @@ public final class ConfigDataflowEndpointConfig extends io.pulumi.resources.Invo
             this.dataflowEndpointName = dataflowEndpointName;
             return this;
         }
-
         public Builder dataflowEndpointRegion(@Nullable String dataflowEndpointRegion) {
             this.dataflowEndpointRegion = dataflowEndpointRegion;
             return this;
-        }
-        public ConfigDataflowEndpointConfig build() {
+        }        public ConfigDataflowEndpointConfig build() {
             return new ConfigDataflowEndpointConfig(dataflowEndpointName, dataflowEndpointRegion);
         }
     }

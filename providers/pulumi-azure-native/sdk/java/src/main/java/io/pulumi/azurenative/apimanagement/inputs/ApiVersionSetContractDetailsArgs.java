@@ -142,62 +142,50 @@ public final class ApiVersionSetContractDetailsArgs extends io.pulumi.resources.
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder id(@Nullable Output<String> id) {
             this.id = id;
             return this;
         }
-
         public Builder id(@Nullable String id) {
             this.id = Output.ofNullable(id);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder versionHeaderName(@Nullable Output<String> versionHeaderName) {
             this.versionHeaderName = versionHeaderName;
             return this;
         }
-
         public Builder versionHeaderName(@Nullable String versionHeaderName) {
             this.versionHeaderName = Output.ofNullable(versionHeaderName);
             return this;
         }
-
         public Builder versionQueryName(@Nullable Output<String> versionQueryName) {
             this.versionQueryName = versionQueryName;
             return this;
         }
-
         public Builder versionQueryName(@Nullable String versionQueryName) {
             this.versionQueryName = Output.ofNullable(versionQueryName);
             return this;
         }
-
         public Builder versioningScheme(@Nullable Output<String> versioningScheme) {
             this.versioningScheme = versioningScheme;
             return this;
         }
-
         public Builder versioningScheme(@Nullable String versioningScheme) {
             this.versioningScheme = Output.ofNullable(versioningScheme);
             return this;
-        }
-        public ApiVersionSetContractDetailsArgs build() {
+        }        public ApiVersionSetContractDetailsArgs build() {
             return new ApiVersionSetContractDetailsArgs(description, id, name, versionHeaderName, versionQueryName, versioningScheme);
         }
     }

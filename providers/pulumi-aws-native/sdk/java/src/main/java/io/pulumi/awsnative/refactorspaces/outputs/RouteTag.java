@@ -69,12 +69,10 @@ public final class RouteTag {
             this.key = Objects.requireNonNull(key);
             return this;
         }
-
         public Builder value(String value) {
             this.value = Objects.requireNonNull(value);
             return this;
-        }
-        public RouteTag build() {
+        }        public RouteTag build() {
             return new RouteTag(key, value);
         }
     }

@@ -56,12 +56,10 @@ public final class AnalyticsConfigurationStorageClassAnalysisGetArgs extends io.
             this.dataExport = Objects.requireNonNull(dataExport);
             return this;
         }
-
         public Builder dataExport(AnalyticsConfigurationStorageClassAnalysisDataExportGetArgs dataExport) {
             this.dataExport = Output.of(Objects.requireNonNull(dataExport));
             return this;
-        }
-        public AnalyticsConfigurationStorageClassAnalysisGetArgs build() {
+        }        public AnalyticsConfigurationStorageClassAnalysisGetArgs build() {
             return new AnalyticsConfigurationStorageClassAnalysisGetArgs(dataExport);
         }
     }

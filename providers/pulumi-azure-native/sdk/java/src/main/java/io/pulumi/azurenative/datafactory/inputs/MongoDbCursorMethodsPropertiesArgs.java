@@ -110,42 +110,34 @@ public final class MongoDbCursorMethodsPropertiesArgs extends io.pulumi.resource
             this.limit = limit;
             return this;
         }
-
         public Builder limit(@Nullable Object limit) {
             this.limit = Output.ofNullable(limit);
             return this;
         }
-
         public Builder project(@Nullable Output<Object> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable Object project) {
             this.project = Output.ofNullable(project);
             return this;
         }
-
         public Builder skip(@Nullable Output<Object> skip) {
             this.skip = skip;
             return this;
         }
-
         public Builder skip(@Nullable Object skip) {
             this.skip = Output.ofNullable(skip);
             return this;
         }
-
         public Builder sort(@Nullable Output<Object> sort) {
             this.sort = sort;
             return this;
         }
-
         public Builder sort(@Nullable Object sort) {
             this.sort = Output.ofNullable(sort);
             return this;
-        }
-        public MongoDbCursorMethodsPropertiesArgs build() {
+        }        public MongoDbCursorMethodsPropertiesArgs build() {
             return new MongoDbCursorMethodsPropertiesArgs(limit, project, skip, sort);
         }
     }

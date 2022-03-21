@@ -180,42 +180,37 @@ public final class CosmosDbMongoDbApiLinkedServiceResponse extends io.pulumi.res
             this.annotations = annotations;
             return this;
         }
-
+        public Builder annotations(Object... annotations) {
+            return annotations(List.of(annotations));
+        }
         public Builder connectVia(@Nullable IntegrationRuntimeReferenceResponse connectVia) {
             this.connectVia = connectVia;
             return this;
         }
-
         public Builder connectionString(Object connectionString) {
             this.connectionString = Objects.requireNonNull(connectionString);
             return this;
         }
-
         public Builder database(Object database) {
             this.database = Objects.requireNonNull(database);
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
-
         public Builder isServerVersionAbove32(@Nullable Object isServerVersionAbove32) {
             this.isServerVersionAbove32 = isServerVersionAbove32;
             return this;
         }
-
         public Builder parameters(@Nullable Map<String,ParameterSpecificationResponse> parameters) {
             this.parameters = parameters;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public CosmosDbMongoDbApiLinkedServiceResponse build() {
+        }        public CosmosDbMongoDbApiLinkedServiceResponse build() {
             return new CosmosDbMongoDbApiLinkedServiceResponse(annotations, connectVia, connectionString, database, description, isServerVersionAbove32, parameters, type);
         }
     }

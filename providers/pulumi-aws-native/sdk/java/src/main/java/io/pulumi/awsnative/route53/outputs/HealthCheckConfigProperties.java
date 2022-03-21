@@ -181,87 +181,76 @@ public final class HealthCheckConfigProperties {
             this.alarmIdentifier = alarmIdentifier;
             return this;
         }
-
         public Builder childHealthChecks(@Nullable List<String> childHealthChecks) {
             this.childHealthChecks = childHealthChecks;
             return this;
         }
-
+        public Builder childHealthChecks(String... childHealthChecks) {
+            return childHealthChecks(List.of(childHealthChecks));
+        }
         public Builder enableSNI(@Nullable Boolean enableSNI) {
             this.enableSNI = enableSNI;
             return this;
         }
-
         public Builder failureThreshold(@Nullable Integer failureThreshold) {
             this.failureThreshold = failureThreshold;
             return this;
         }
-
         public Builder fullyQualifiedDomainName(@Nullable String fullyQualifiedDomainName) {
             this.fullyQualifiedDomainName = fullyQualifiedDomainName;
             return this;
         }
-
         public Builder healthThreshold(@Nullable Integer healthThreshold) {
             this.healthThreshold = healthThreshold;
             return this;
         }
-
         public Builder iPAddress(@Nullable String iPAddress) {
             this.iPAddress = iPAddress;
             return this;
         }
-
         public Builder insufficientDataHealthStatus(@Nullable HealthCheckConfigPropertiesInsufficientDataHealthStatus insufficientDataHealthStatus) {
             this.insufficientDataHealthStatus = insufficientDataHealthStatus;
             return this;
         }
-
         public Builder inverted(@Nullable Boolean inverted) {
             this.inverted = inverted;
             return this;
         }
-
         public Builder measureLatency(@Nullable Boolean measureLatency) {
             this.measureLatency = measureLatency;
             return this;
         }
-
         public Builder port(@Nullable Integer port) {
             this.port = port;
             return this;
         }
-
         public Builder regions(@Nullable List<String> regions) {
             this.regions = regions;
             return this;
         }
-
+        public Builder regions(String... regions) {
+            return regions(List.of(regions));
+        }
         public Builder requestInterval(@Nullable Integer requestInterval) {
             this.requestInterval = requestInterval;
             return this;
         }
-
         public Builder resourcePath(@Nullable String resourcePath) {
             this.resourcePath = resourcePath;
             return this;
         }
-
         public Builder routingControlArn(@Nullable String routingControlArn) {
             this.routingControlArn = routingControlArn;
             return this;
         }
-
         public Builder searchString(@Nullable String searchString) {
             this.searchString = searchString;
             return this;
         }
-
         public Builder type(HealthCheckConfigPropertiesType type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public HealthCheckConfigProperties build() {
+        }        public HealthCheckConfigProperties build() {
             return new HealthCheckConfigProperties(alarmIdentifier, childHealthChecks, enableSNI, failureThreshold, fullyQualifiedDomainName, healthThreshold, iPAddress, insufficientDataHealthStatus, inverted, measureLatency, port, regions, requestInterval, resourcePath, routingControlArn, searchString, type);
         }
     }

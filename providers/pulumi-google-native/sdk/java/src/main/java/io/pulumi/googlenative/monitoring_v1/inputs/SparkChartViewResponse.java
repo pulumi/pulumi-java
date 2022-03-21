@@ -76,12 +76,10 @@ public final class SparkChartViewResponse extends io.pulumi.resources.InvokeArgs
             this.minAlignmentPeriod = Objects.requireNonNull(minAlignmentPeriod);
             return this;
         }
-
         public Builder sparkChartType(String sparkChartType) {
             this.sparkChartType = Objects.requireNonNull(sparkChartType);
             return this;
-        }
-        public SparkChartViewResponse build() {
+        }        public SparkChartViewResponse build() {
             return new SparkChartViewResponse(minAlignmentPeriod, sparkChartType);
         }
     }

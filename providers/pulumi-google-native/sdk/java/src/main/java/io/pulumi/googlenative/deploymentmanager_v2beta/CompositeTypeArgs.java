@@ -146,72 +146,61 @@ public final class CompositeTypeArgs extends io.pulumi.resources.ResourceArgs {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder id(@Nullable Output<String> id) {
             this.id = id;
             return this;
         }
-
         public Builder id(@Nullable String id) {
             this.id = Output.ofNullable(id);
             return this;
         }
-
         public Builder labels(@Nullable Output<List<CompositeTypeLabelEntryArgs>> labels) {
             this.labels = labels;
             return this;
         }
-
         public Builder labels(@Nullable List<CompositeTypeLabelEntryArgs> labels) {
             this.labels = Output.ofNullable(labels);
             return this;
         }
-
+        public Builder labels(CompositeTypeLabelEntryArgs... labels) {
+            return labels(List.of(labels));
+        }
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
         }
-
         public Builder status(@Nullable Output<CompositeTypeStatus> status) {
             this.status = status;
             return this;
         }
-
         public Builder status(@Nullable CompositeTypeStatus status) {
             this.status = Output.ofNullable(status);
             return this;
         }
-
         public Builder templateContents(@Nullable Output<TemplateContentsArgs> templateContents) {
             this.templateContents = templateContents;
             return this;
         }
-
         public Builder templateContents(@Nullable TemplateContentsArgs templateContents) {
             this.templateContents = Output.ofNullable(templateContents);
             return this;
-        }
-        public CompositeTypeArgs build() {
+        }        public CompositeTypeArgs build() {
             return new CompositeTypeArgs(description, id, labels, name, project, status, templateContents);
         }
     }

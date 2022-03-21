@@ -55,12 +55,10 @@ public final class FilterNumberFilter {
             this.lowerInclusive = lowerInclusive;
             return this;
         }
-
         public Builder upperInclusive(@Nullable Double upperInclusive) {
             this.upperInclusive = upperInclusive;
             return this;
-        }
-        public FilterNumberFilter build() {
+        }        public FilterNumberFilter build() {
             return new FilterNumberFilter(lowerInclusive, upperInclusive);
         }
     }

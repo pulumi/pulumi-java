@@ -80,12 +80,13 @@ public final class UserProfileKernelGatewayAppSettings extends io.pulumi.resourc
             this.customImages = customImages;
             return this;
         }
-
+        public Builder customImages(UserProfileCustomImage... customImages) {
+            return customImages(List.of(customImages));
+        }
         public Builder defaultResourceSpec(@Nullable UserProfileResourceSpec defaultResourceSpec) {
             this.defaultResourceSpec = defaultResourceSpec;
             return this;
-        }
-        public UserProfileKernelGatewayAppSettings build() {
+        }        public UserProfileKernelGatewayAppSettings build() {
             return new UserProfileKernelGatewayAppSettings(customImages, defaultResourceSpec);
         }
     }

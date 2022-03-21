@@ -89,17 +89,14 @@ public final class AutomationRuleRunPlaybookActionResponse {
             this.actionConfiguration = Objects.requireNonNull(actionConfiguration);
             return this;
         }
-
         public Builder actionType(String actionType) {
             this.actionType = Objects.requireNonNull(actionType);
             return this;
         }
-
         public Builder order(Integer order) {
             this.order = Objects.requireNonNull(order);
             return this;
-        }
-        public AutomationRuleRunPlaybookActionResponse build() {
+        }        public AutomationRuleRunPlaybookActionResponse build() {
             return new AutomationRuleRunPlaybookActionResponse(actionConfiguration, actionType, order);
         }
     }

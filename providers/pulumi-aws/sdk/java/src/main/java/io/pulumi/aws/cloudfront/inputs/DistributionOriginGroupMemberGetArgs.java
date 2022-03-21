@@ -56,12 +56,10 @@ public final class DistributionOriginGroupMemberGetArgs extends io.pulumi.resour
             this.originId = Objects.requireNonNull(originId);
             return this;
         }
-
         public Builder originId(String originId) {
             this.originId = Output.of(Objects.requireNonNull(originId));
             return this;
-        }
-        public DistributionOriginGroupMemberGetArgs build() {
+        }        public DistributionOriginGroupMemberGetArgs build() {
             return new DistributionOriginGroupMemberGetArgs(originId);
         }
     }

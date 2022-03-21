@@ -183,47 +183,38 @@ public final class GetEventHubConnectionResult {
             this.consumerGroup = Objects.requireNonNull(consumerGroup);
             return this;
         }
-
         public Builder dataFormat(@Nullable String dataFormat) {
             this.dataFormat = dataFormat;
             return this;
         }
-
         public Builder eventHubResourceId(String eventHubResourceId) {
             this.eventHubResourceId = Objects.requireNonNull(eventHubResourceId);
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = location;
             return this;
         }
-
         public Builder mappingRuleName(@Nullable String mappingRuleName) {
             this.mappingRuleName = mappingRuleName;
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder tableName(@Nullable String tableName) {
             this.tableName = tableName;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public GetEventHubConnectionResult build() {
+        }        public GetEventHubConnectionResult build() {
             return new GetEventHubConnectionResult(consumerGroup, dataFormat, eventHubResourceId, id, location, mappingRuleName, name, tableName, type);
         }
     }

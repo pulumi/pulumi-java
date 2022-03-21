@@ -86,17 +86,14 @@ public final class VirtualMachineResponse {
             this.instanceId = Objects.requireNonNull(instanceId);
             return this;
         }
-
         public Builder instanceName(String instanceName) {
             this.instanceName = Objects.requireNonNull(instanceName);
             return this;
         }
-
         public Builder virtualMachineConfig(VirtualMachineConfigResponse virtualMachineConfig) {
             this.virtualMachineConfig = Objects.requireNonNull(virtualMachineConfig);
             return this;
-        }
-        public VirtualMachineResponse build() {
+        }        public VirtualMachineResponse build() {
             return new VirtualMachineResponse(instanceId, instanceName, virtualMachineConfig);
         }
     }

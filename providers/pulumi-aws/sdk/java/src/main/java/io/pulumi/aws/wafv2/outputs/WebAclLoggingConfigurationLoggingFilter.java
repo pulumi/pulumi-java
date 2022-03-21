@@ -71,12 +71,13 @@ public final class WebAclLoggingConfigurationLoggingFilter {
             this.defaultBehavior = Objects.requireNonNull(defaultBehavior);
             return this;
         }
-
         public Builder filters(List<WebAclLoggingConfigurationLoggingFilterFilter> filters) {
             this.filters = Objects.requireNonNull(filters);
             return this;
         }
-        public WebAclLoggingConfigurationLoggingFilter build() {
+        public Builder filters(WebAclLoggingConfigurationLoggingFilterFilter... filters) {
+            return filters(List.of(filters));
+        }        public WebAclLoggingConfigurationLoggingFilter build() {
             return new WebAclLoggingConfigurationLoggingFilter(defaultBehavior, filters);
         }
     }

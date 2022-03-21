@@ -114,52 +114,42 @@ public final class LaunchMetricDefinitionObjectArgs extends io.pulumi.resources.
             this.entityIdKey = Objects.requireNonNull(entityIdKey);
             return this;
         }
-
         public Builder entityIdKey(String entityIdKey) {
             this.entityIdKey = Output.of(Objects.requireNonNull(entityIdKey));
             return this;
         }
-
         public Builder eventPattern(Output<String> eventPattern) {
             this.eventPattern = Objects.requireNonNull(eventPattern);
             return this;
         }
-
         public Builder eventPattern(String eventPattern) {
             this.eventPattern = Output.of(Objects.requireNonNull(eventPattern));
             return this;
         }
-
         public Builder metricName(Output<String> metricName) {
             this.metricName = Objects.requireNonNull(metricName);
             return this;
         }
-
         public Builder metricName(String metricName) {
             this.metricName = Output.of(Objects.requireNonNull(metricName));
             return this;
         }
-
         public Builder unitLabel(@Nullable Output<String> unitLabel) {
             this.unitLabel = unitLabel;
             return this;
         }
-
         public Builder unitLabel(@Nullable String unitLabel) {
             this.unitLabel = Output.ofNullable(unitLabel);
             return this;
         }
-
         public Builder valueKey(Output<String> valueKey) {
             this.valueKey = Objects.requireNonNull(valueKey);
             return this;
         }
-
         public Builder valueKey(String valueKey) {
             this.valueKey = Output.of(Objects.requireNonNull(valueKey));
             return this;
-        }
-        public LaunchMetricDefinitionObjectArgs build() {
+        }        public LaunchMetricDefinitionObjectArgs build() {
             return new LaunchMetricDefinitionObjectArgs(entityIdKey, eventPattern, metricName, unitLabel, valueKey);
         }
     }

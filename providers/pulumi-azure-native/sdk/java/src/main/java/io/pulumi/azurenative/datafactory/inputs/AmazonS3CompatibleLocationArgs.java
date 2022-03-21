@@ -128,52 +128,42 @@ public final class AmazonS3CompatibleLocationArgs extends io.pulumi.resources.Re
             this.bucketName = bucketName;
             return this;
         }
-
         public Builder bucketName(@Nullable Object bucketName) {
             this.bucketName = Output.ofNullable(bucketName);
             return this;
         }
-
         public Builder fileName(@Nullable Output<Object> fileName) {
             this.fileName = fileName;
             return this;
         }
-
         public Builder fileName(@Nullable Object fileName) {
             this.fileName = Output.ofNullable(fileName);
             return this;
         }
-
         public Builder folderPath(@Nullable Output<Object> folderPath) {
             this.folderPath = folderPath;
             return this;
         }
-
         public Builder folderPath(@Nullable Object folderPath) {
             this.folderPath = Output.ofNullable(folderPath);
             return this;
         }
-
         public Builder type(Output<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Output.of(Objects.requireNonNull(type));
             return this;
         }
-
         public Builder version(@Nullable Output<Object> version) {
             this.version = version;
             return this;
         }
-
         public Builder version(@Nullable Object version) {
             this.version = Output.ofNullable(version);
             return this;
-        }
-        public AmazonS3CompatibleLocationArgs build() {
+        }        public AmazonS3CompatibleLocationArgs build() {
             return new AmazonS3CompatibleLocationArgs(bucketName, fileName, folderPath, type, version);
         }
     }

@@ -88,17 +88,23 @@ public final class PodDNSConfig {
             this.nameservers = nameservers;
             return this;
         }
-
+        public Builder nameservers(String... nameservers) {
+            return nameservers(List.of(nameservers));
+        }
         public Builder options(@Nullable List<PodDNSConfigOption> options) {
             this.options = options;
             return this;
         }
-
+        public Builder options(PodDNSConfigOption... options) {
+            return options(List.of(options));
+        }
         public Builder searches(@Nullable List<String> searches) {
             this.searches = searches;
             return this;
         }
-        public PodDNSConfig build() {
+        public Builder searches(String... searches) {
+            return searches(List.of(searches));
+        }        public PodDNSConfig build() {
             return new PodDNSConfig(nameservers, options, searches);
         }
     }

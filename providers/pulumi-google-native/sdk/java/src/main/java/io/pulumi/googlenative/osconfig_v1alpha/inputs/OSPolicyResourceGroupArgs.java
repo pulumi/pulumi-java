@@ -80,22 +80,24 @@ public final class OSPolicyResourceGroupArgs extends io.pulumi.resources.Resourc
             this.inventoryFilters = inventoryFilters;
             return this;
         }
-
         public Builder inventoryFilters(@Nullable List<OSPolicyInventoryFilterArgs> inventoryFilters) {
             this.inventoryFilters = Output.ofNullable(inventoryFilters);
             return this;
         }
-
+        public Builder inventoryFilters(OSPolicyInventoryFilterArgs... inventoryFilters) {
+            return inventoryFilters(List.of(inventoryFilters));
+        }
         public Builder resources(Output<List<OSPolicyResourceArgs>> resources) {
             this.resources = Objects.requireNonNull(resources);
             return this;
         }
-
         public Builder resources(List<OSPolicyResourceArgs> resources) {
             this.resources = Output.of(Objects.requireNonNull(resources));
             return this;
         }
-        public OSPolicyResourceGroupArgs build() {
+        public Builder resources(OSPolicyResourceArgs... resources) {
+            return resources(List.of(resources));
+        }        public OSPolicyResourceGroupArgs build() {
             return new OSPolicyResourceGroupArgs(inventoryFilters, resources);
         }
     }

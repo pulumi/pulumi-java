@@ -107,42 +107,34 @@ public final class KeyPairArgs extends io.pulumi.resources.ResourceArgs {
             this.keyName = keyName;
             return this;
         }
-
         public Builder keyName(@Nullable String keyName) {
             this.keyName = Output.ofNullable(keyName);
             return this;
         }
-
         public Builder keyNamePrefix(@Nullable Output<String> keyNamePrefix) {
             this.keyNamePrefix = keyNamePrefix;
             return this;
         }
-
         public Builder keyNamePrefix(@Nullable String keyNamePrefix) {
             this.keyNamePrefix = Output.ofNullable(keyNamePrefix);
             return this;
         }
-
         public Builder publicKey(Output<String> publicKey) {
             this.publicKey = Objects.requireNonNull(publicKey);
             return this;
         }
-
         public Builder publicKey(String publicKey) {
             this.publicKey = Output.of(Objects.requireNonNull(publicKey));
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
-        }
-        public KeyPairArgs build() {
+        }        public KeyPairArgs build() {
             return new KeyPairArgs(keyName, keyNamePrefix, publicKey, tags);
         }
     }

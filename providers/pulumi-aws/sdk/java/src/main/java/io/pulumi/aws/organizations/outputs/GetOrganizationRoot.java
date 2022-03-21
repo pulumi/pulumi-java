@@ -103,22 +103,21 @@ public final class GetOrganizationRoot {
             this.arn = Objects.requireNonNull(arn);
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder policyTypes(List<GetOrganizationRootPolicyType> policyTypes) {
             this.policyTypes = Objects.requireNonNull(policyTypes);
             return this;
         }
-        public GetOrganizationRoot build() {
+        public Builder policyTypes(GetOrganizationRootPolicyType... policyTypes) {
+            return policyTypes(List.of(policyTypes));
+        }        public GetOrganizationRoot build() {
             return new GetOrganizationRoot(arn, id, name, policyTypes);
         }
     }

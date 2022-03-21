@@ -61,12 +61,10 @@ public final class DefenderForContainersAwsOfferingKubernetesServiceArgs extends
             this.cloudRoleArn = cloudRoleArn;
             return this;
         }
-
         public Builder cloudRoleArn(@Nullable String cloudRoleArn) {
             this.cloudRoleArn = Output.ofNullable(cloudRoleArn);
             return this;
-        }
-        public DefenderForContainersAwsOfferingKubernetesServiceArgs build() {
+        }        public DefenderForContainersAwsOfferingKubernetesServiceArgs build() {
             return new DefenderForContainersAwsOfferingKubernetesServiceArgs(cloudRoleArn);
         }
     }

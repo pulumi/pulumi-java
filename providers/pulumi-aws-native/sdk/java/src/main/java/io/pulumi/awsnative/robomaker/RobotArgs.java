@@ -120,52 +120,42 @@ public final class RobotArgs extends io.pulumi.resources.ResourceArgs {
             this.architecture = Objects.requireNonNull(architecture);
             return this;
         }
-
         public Builder architecture(RobotArchitecture architecture) {
             this.architecture = Output.of(Objects.requireNonNull(architecture));
             return this;
         }
-
         public Builder fleet(@Nullable Output<String> fleet) {
             this.fleet = fleet;
             return this;
         }
-
         public Builder fleet(@Nullable String fleet) {
             this.fleet = Output.ofNullable(fleet);
             return this;
         }
-
         public Builder greengrassGroupId(Output<String> greengrassGroupId) {
             this.greengrassGroupId = Objects.requireNonNull(greengrassGroupId);
             return this;
         }
-
         public Builder greengrassGroupId(String greengrassGroupId) {
             this.greengrassGroupId = Output.of(Objects.requireNonNull(greengrassGroupId));
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder tags(@Nullable Output<RobotTagsArgs> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable RobotTagsArgs tags) {
             this.tags = Output.ofNullable(tags);
             return this;
-        }
-        public RobotArgs build() {
+        }        public RobotArgs build() {
             return new RobotArgs(architecture, fleet, greengrassGroupId, name, tags);
         }
     }

@@ -78,22 +78,18 @@ public final class ExecStepArgs extends io.pulumi.resources.ResourceArgs {
             this.linuxExecStepConfig = linuxExecStepConfig;
             return this;
         }
-
         public Builder linuxExecStepConfig(@Nullable ExecStepConfigArgs linuxExecStepConfig) {
             this.linuxExecStepConfig = Output.ofNullable(linuxExecStepConfig);
             return this;
         }
-
         public Builder windowsExecStepConfig(@Nullable Output<ExecStepConfigArgs> windowsExecStepConfig) {
             this.windowsExecStepConfig = windowsExecStepConfig;
             return this;
         }
-
         public Builder windowsExecStepConfig(@Nullable ExecStepConfigArgs windowsExecStepConfig) {
             this.windowsExecStepConfig = Output.ofNullable(windowsExecStepConfig);
             return this;
-        }
-        public ExecStepArgs build() {
+        }        public ExecStepArgs build() {
             return new ExecStepArgs(linuxExecStepConfig, windowsExecStepConfig);
         }
     }

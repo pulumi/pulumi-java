@@ -72,12 +72,13 @@ public final class SpotFleetRequestLaunchTemplateConfig {
             this.launchTemplateSpecification = Objects.requireNonNull(launchTemplateSpecification);
             return this;
         }
-
         public Builder overrides(@Nullable List<SpotFleetRequestLaunchTemplateConfigOverride> overrides) {
             this.overrides = overrides;
             return this;
         }
-        public SpotFleetRequestLaunchTemplateConfig build() {
+        public Builder overrides(SpotFleetRequestLaunchTemplateConfigOverride... overrides) {
+            return overrides(List.of(overrides));
+        }        public SpotFleetRequestLaunchTemplateConfig build() {
             return new SpotFleetRequestLaunchTemplateConfig(launchTemplateSpecification, overrides);
         }
     }

@@ -256,132 +256,106 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
             this.applicationDefinitionId = applicationDefinitionId;
             return this;
         }
-
         public Builder applicationDefinitionId(@Nullable String applicationDefinitionId) {
             this.applicationDefinitionId = Output.ofNullable(applicationDefinitionId);
             return this;
         }
-
         public Builder applicationName(@Nullable Output<String> applicationName) {
             this.applicationName = applicationName;
             return this;
         }
-
         public Builder applicationName(@Nullable String applicationName) {
             this.applicationName = Output.ofNullable(applicationName);
             return this;
         }
-
         public Builder identity(@Nullable Output<IdentityArgs> identity) {
             this.identity = identity;
             return this;
         }
-
         public Builder identity(@Nullable IdentityArgs identity) {
             this.identity = Output.ofNullable(identity);
             return this;
         }
-
         public Builder jitAccessPolicy(@Nullable Output<ApplicationJitAccessPolicyArgs> jitAccessPolicy) {
             this.jitAccessPolicy = jitAccessPolicy;
             return this;
         }
-
         public Builder jitAccessPolicy(@Nullable ApplicationJitAccessPolicyArgs jitAccessPolicy) {
             this.jitAccessPolicy = Output.ofNullable(jitAccessPolicy);
             return this;
         }
-
         public Builder kind(Output<String> kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
-
         public Builder kind(String kind) {
             this.kind = Output.of(Objects.requireNonNull(kind));
             return this;
         }
-
         public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder managedBy(@Nullable Output<String> managedBy) {
             this.managedBy = managedBy;
             return this;
         }
-
         public Builder managedBy(@Nullable String managedBy) {
             this.managedBy = Output.ofNullable(managedBy);
             return this;
         }
-
         public Builder managedResourceGroupId(@Nullable Output<String> managedResourceGroupId) {
             this.managedResourceGroupId = managedResourceGroupId;
             return this;
         }
-
         public Builder managedResourceGroupId(@Nullable String managedResourceGroupId) {
             this.managedResourceGroupId = Output.ofNullable(managedResourceGroupId);
             return this;
         }
-
         public Builder parameters(@Nullable Output<Object> parameters) {
             this.parameters = parameters;
             return this;
         }
-
         public Builder parameters(@Nullable Object parameters) {
             this.parameters = Output.ofNullable(parameters);
             return this;
         }
-
         public Builder plan(@Nullable Output<PlanArgs> plan) {
             this.plan = plan;
             return this;
         }
-
         public Builder plan(@Nullable PlanArgs plan) {
             this.plan = Output.ofNullable(plan);
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder sku(@Nullable Output<SkuArgs> sku) {
             this.sku = sku;
             return this;
         }
-
         public Builder sku(@Nullable SkuArgs sku) {
             this.sku = Output.ofNullable(sku);
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
-        }
-        public ApplicationArgs build() {
+        }        public ApplicationArgs build() {
             return new ApplicationArgs(applicationDefinitionId, applicationName, identity, jitAccessPolicy, kind, location, managedBy, managedResourceGroupId, parameters, plan, resourceGroupName, sku, tags);
         }
     }

@@ -231,112 +231,93 @@ public final class SapBWLinkedServiceArgs extends io.pulumi.resources.ResourceAr
             this.annotations = annotations;
             return this;
         }
-
         public Builder annotations(@Nullable List<Object> annotations) {
             this.annotations = Output.ofNullable(annotations);
             return this;
         }
-
+        public Builder annotations(Object... annotations) {
+            return annotations(List.of(annotations));
+        }
         public Builder clientId(Output<Object> clientId) {
             this.clientId = Objects.requireNonNull(clientId);
             return this;
         }
-
         public Builder clientId(Object clientId) {
             this.clientId = Output.of(Objects.requireNonNull(clientId));
             return this;
         }
-
         public Builder connectVia(@Nullable Output<IntegrationRuntimeReferenceArgs> connectVia) {
             this.connectVia = connectVia;
             return this;
         }
-
         public Builder connectVia(@Nullable IntegrationRuntimeReferenceArgs connectVia) {
             this.connectVia = Output.ofNullable(connectVia);
             return this;
         }
-
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder encryptedCredential(@Nullable Output<Object> encryptedCredential) {
             this.encryptedCredential = encryptedCredential;
             return this;
         }
-
         public Builder encryptedCredential(@Nullable Object encryptedCredential) {
             this.encryptedCredential = Output.ofNullable(encryptedCredential);
             return this;
         }
-
         public Builder parameters(@Nullable Output<Map<String,ParameterSpecificationArgs>> parameters) {
             this.parameters = parameters;
             return this;
         }
-
         public Builder parameters(@Nullable Map<String,ParameterSpecificationArgs> parameters) {
             this.parameters = Output.ofNullable(parameters);
             return this;
         }
-
         public Builder password(@Nullable Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> password) {
             this.password = password;
             return this;
         }
-
         public Builder password(@Nullable Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs> password) {
             this.password = Output.ofNullable(password);
             return this;
         }
-
         public Builder server(Output<Object> server) {
             this.server = Objects.requireNonNull(server);
             return this;
         }
-
         public Builder server(Object server) {
             this.server = Output.of(Objects.requireNonNull(server));
             return this;
         }
-
         public Builder systemNumber(Output<Object> systemNumber) {
             this.systemNumber = Objects.requireNonNull(systemNumber);
             return this;
         }
-
         public Builder systemNumber(Object systemNumber) {
             this.systemNumber = Output.of(Objects.requireNonNull(systemNumber));
             return this;
         }
-
         public Builder type(Output<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Output.of(Objects.requireNonNull(type));
             return this;
         }
-
         public Builder userName(@Nullable Output<Object> userName) {
             this.userName = userName;
             return this;
         }
-
         public Builder userName(@Nullable Object userName) {
             this.userName = Output.ofNullable(userName);
             return this;
-        }
-        public SapBWLinkedServiceArgs build() {
+        }        public SapBWLinkedServiceArgs build() {
             return new SapBWLinkedServiceArgs(annotations, clientId, connectVia, description, encryptedCredential, parameters, password, server, systemNumber, type, userName);
         }
     }

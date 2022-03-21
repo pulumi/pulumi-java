@@ -153,37 +153,30 @@ public final class ConnectorProfileSnowflakeConnectorProfileProperties {
             this.accountName = accountName;
             return this;
         }
-
         public Builder bucketName(String bucketName) {
             this.bucketName = Objects.requireNonNull(bucketName);
             return this;
         }
-
         public Builder bucketPrefix(@Nullable String bucketPrefix) {
             this.bucketPrefix = bucketPrefix;
             return this;
         }
-
         public Builder privateLinkServiceName(@Nullable String privateLinkServiceName) {
             this.privateLinkServiceName = privateLinkServiceName;
             return this;
         }
-
         public Builder region(@Nullable String region) {
             this.region = region;
             return this;
         }
-
         public Builder stage(String stage) {
             this.stage = Objects.requireNonNull(stage);
             return this;
         }
-
         public Builder warehouse(String warehouse) {
             this.warehouse = Objects.requireNonNull(warehouse);
             return this;
-        }
-        public ConnectorProfileSnowflakeConnectorProfileProperties build() {
+        }        public ConnectorProfileSnowflakeConnectorProfileProperties build() {
             return new ConnectorProfileSnowflakeConnectorProfileProperties(accountName, bucketName, bucketPrefix, privateLinkServiceName, region, stage, warehouse);
         }
     }

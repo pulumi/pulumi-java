@@ -73,12 +73,10 @@ public final class IntentFulfillmentActivityCodeHook {
             this.messageVersion = Objects.requireNonNull(messageVersion);
             return this;
         }
-
         public Builder uri(String uri) {
             this.uri = Objects.requireNonNull(uri);
             return this;
-        }
-        public IntentFulfillmentActivityCodeHook build() {
+        }        public IntentFulfillmentActivityCodeHook build() {
             return new IntentFulfillmentActivityCodeHook(messageVersion, uri);
         }
     }

@@ -530,157 +530,135 @@ public final class GetClusterResult {
             this.allowVersionUpgrade = Objects.requireNonNull(allowVersionUpgrade);
             return this;
         }
-
         public Builder automatedSnapshotRetentionPeriod(Integer automatedSnapshotRetentionPeriod) {
             this.automatedSnapshotRetentionPeriod = Objects.requireNonNull(automatedSnapshotRetentionPeriod);
             return this;
         }
-
         public Builder availabilityZone(String availabilityZone) {
             this.availabilityZone = Objects.requireNonNull(availabilityZone);
             return this;
         }
-
         public Builder bucketName(String bucketName) {
             this.bucketName = Objects.requireNonNull(bucketName);
             return this;
         }
-
         public Builder clusterIdentifier(String clusterIdentifier) {
             this.clusterIdentifier = Objects.requireNonNull(clusterIdentifier);
             return this;
         }
-
         public Builder clusterParameterGroupName(String clusterParameterGroupName) {
             this.clusterParameterGroupName = Objects.requireNonNull(clusterParameterGroupName);
             return this;
         }
-
         public Builder clusterPublicKey(String clusterPublicKey) {
             this.clusterPublicKey = Objects.requireNonNull(clusterPublicKey);
             return this;
         }
-
         public Builder clusterRevisionNumber(String clusterRevisionNumber) {
             this.clusterRevisionNumber = Objects.requireNonNull(clusterRevisionNumber);
             return this;
         }
-
         public Builder clusterSecurityGroups(List<String> clusterSecurityGroups) {
             this.clusterSecurityGroups = Objects.requireNonNull(clusterSecurityGroups);
             return this;
         }
-
+        public Builder clusterSecurityGroups(String... clusterSecurityGroups) {
+            return clusterSecurityGroups(List.of(clusterSecurityGroups));
+        }
         public Builder clusterSubnetGroupName(String clusterSubnetGroupName) {
             this.clusterSubnetGroupName = Objects.requireNonNull(clusterSubnetGroupName);
             return this;
         }
-
         public Builder clusterType(String clusterType) {
             this.clusterType = Objects.requireNonNull(clusterType);
             return this;
         }
-
         public Builder clusterVersion(String clusterVersion) {
             this.clusterVersion = Objects.requireNonNull(clusterVersion);
             return this;
         }
-
         public Builder databaseName(String databaseName) {
             this.databaseName = Objects.requireNonNull(databaseName);
             return this;
         }
-
         public Builder elasticIp(String elasticIp) {
             this.elasticIp = Objects.requireNonNull(elasticIp);
             return this;
         }
-
         public Builder enableLogging(Boolean enableLogging) {
             this.enableLogging = Objects.requireNonNull(enableLogging);
             return this;
         }
-
         public Builder encrypted(Boolean encrypted) {
             this.encrypted = Objects.requireNonNull(encrypted);
             return this;
         }
-
         public Builder endpoint(String endpoint) {
             this.endpoint = Objects.requireNonNull(endpoint);
             return this;
         }
-
         public Builder enhancedVpcRouting(Boolean enhancedVpcRouting) {
             this.enhancedVpcRouting = Objects.requireNonNull(enhancedVpcRouting);
             return this;
         }
-
         public Builder iamRoles(List<String> iamRoles) {
             this.iamRoles = Objects.requireNonNull(iamRoles);
             return this;
         }
-
+        public Builder iamRoles(String... iamRoles) {
+            return iamRoles(List.of(iamRoles));
+        }
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder kmsKeyId(String kmsKeyId) {
             this.kmsKeyId = Objects.requireNonNull(kmsKeyId);
             return this;
         }
-
         public Builder masterUsername(String masterUsername) {
             this.masterUsername = Objects.requireNonNull(masterUsername);
             return this;
         }
-
         public Builder nodeType(String nodeType) {
             this.nodeType = Objects.requireNonNull(nodeType);
             return this;
         }
-
         public Builder numberOfNodes(Integer numberOfNodes) {
             this.numberOfNodes = Objects.requireNonNull(numberOfNodes);
             return this;
         }
-
         public Builder port(Integer port) {
             this.port = Objects.requireNonNull(port);
             return this;
         }
-
         public Builder preferredMaintenanceWindow(String preferredMaintenanceWindow) {
             this.preferredMaintenanceWindow = Objects.requireNonNull(preferredMaintenanceWindow);
             return this;
         }
-
         public Builder publiclyAccessible(Boolean publiclyAccessible) {
             this.publiclyAccessible = Objects.requireNonNull(publiclyAccessible);
             return this;
         }
-
         public Builder s3KeyPrefix(String s3KeyPrefix) {
             this.s3KeyPrefix = Objects.requireNonNull(s3KeyPrefix);
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder vpcId(String vpcId) {
             this.vpcId = Objects.requireNonNull(vpcId);
             return this;
         }
-
         public Builder vpcSecurityGroupIds(List<String> vpcSecurityGroupIds) {
             this.vpcSecurityGroupIds = Objects.requireNonNull(vpcSecurityGroupIds);
             return this;
         }
-        public GetClusterResult build() {
+        public Builder vpcSecurityGroupIds(String... vpcSecurityGroupIds) {
+            return vpcSecurityGroupIds(List.of(vpcSecurityGroupIds));
+        }        public GetClusterResult build() {
             return new GetClusterResult(allowVersionUpgrade, automatedSnapshotRetentionPeriod, availabilityZone, bucketName, clusterIdentifier, clusterParameterGroupName, clusterPublicKey, clusterRevisionNumber, clusterSecurityGroups, clusterSubnetGroupName, clusterType, clusterVersion, databaseName, elasticIp, enableLogging, encrypted, endpoint, enhancedVpcRouting, iamRoles, id, kmsKeyId, masterUsername, nodeType, numberOfNodes, port, preferredMaintenanceWindow, publiclyAccessible, s3KeyPrefix, tags, vpcId, vpcSecurityGroupIds);
         }
     }

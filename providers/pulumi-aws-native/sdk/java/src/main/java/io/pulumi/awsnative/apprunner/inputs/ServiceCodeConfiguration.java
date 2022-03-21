@@ -75,12 +75,10 @@ public final class ServiceCodeConfiguration extends io.pulumi.resources.InvokeAr
             this.codeConfigurationValues = codeConfigurationValues;
             return this;
         }
-
         public Builder configurationSource(ServiceCodeConfigurationConfigurationSource configurationSource) {
             this.configurationSource = Objects.requireNonNull(configurationSource);
             return this;
-        }
-        public ServiceCodeConfiguration build() {
+        }        public ServiceCodeConfiguration build() {
             return new ServiceCodeConfiguration(codeConfigurationValues, configurationSource);
         }
     }

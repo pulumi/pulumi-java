@@ -53,12 +53,10 @@ public final class ApplicationTag {
             this.tagKey = Objects.requireNonNull(tagKey);
             return this;
         }
-
         public Builder tagValue(String tagValue) {
             this.tagValue = Objects.requireNonNull(tagValue);
             return this;
-        }
-        public ApplicationTag build() {
+        }        public ApplicationTag build() {
             return new ApplicationTag(tagKey, tagValue);
         }
     }

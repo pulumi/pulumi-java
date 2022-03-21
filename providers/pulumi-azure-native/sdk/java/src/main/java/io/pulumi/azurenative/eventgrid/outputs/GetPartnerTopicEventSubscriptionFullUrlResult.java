@@ -53,8 +53,7 @@ public final class GetPartnerTopicEventSubscriptionFullUrlResult {
         public Builder endpointUrl(@Nullable String endpointUrl) {
             this.endpointUrl = endpointUrl;
             return this;
-        }
-        public GetPartnerTopicEventSubscriptionFullUrlResult build() {
+        }        public GetPartnerTopicEventSubscriptionFullUrlResult build() {
             return new GetPartnerTopicEventSubscriptionFullUrlResult(endpointUrl);
         }
     }

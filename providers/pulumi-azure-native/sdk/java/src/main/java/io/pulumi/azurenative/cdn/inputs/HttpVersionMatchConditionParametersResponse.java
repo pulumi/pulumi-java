@@ -108,22 +108,21 @@ public final class HttpVersionMatchConditionParametersResponse extends io.pulumi
             this.matchValues = matchValues;
             return this;
         }
-
+        public Builder matchValues(String... matchValues) {
+            return matchValues(List.of(matchValues));
+        }
         public Builder negateCondition(@Nullable Boolean negateCondition) {
             this.negateCondition = negateCondition;
             return this;
         }
-
         public Builder odataType(String odataType) {
             this.odataType = Objects.requireNonNull(odataType);
             return this;
         }
-
         public Builder operator(String operator) {
             this.operator = Objects.requireNonNull(operator);
             return this;
-        }
-        public HttpVersionMatchConditionParametersResponse build() {
+        }        public HttpVersionMatchConditionParametersResponse build() {
             return new HttpVersionMatchConditionParametersResponse(matchValues, negateCondition, odataType, operator);
         }
     }

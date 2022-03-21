@@ -76,22 +76,24 @@ public final class ClusterMasterInstanceFleetLaunchSpecificationsGetArgs extends
             this.onDemandSpecifications = onDemandSpecifications;
             return this;
         }
-
         public Builder onDemandSpecifications(@Nullable List<ClusterMasterInstanceFleetLaunchSpecificationsOnDemandSpecificationGetArgs> onDemandSpecifications) {
             this.onDemandSpecifications = Output.ofNullable(onDemandSpecifications);
             return this;
         }
-
+        public Builder onDemandSpecifications(ClusterMasterInstanceFleetLaunchSpecificationsOnDemandSpecificationGetArgs... onDemandSpecifications) {
+            return onDemandSpecifications(List.of(onDemandSpecifications));
+        }
         public Builder spotSpecifications(@Nullable Output<List<ClusterMasterInstanceFleetLaunchSpecificationsSpotSpecificationGetArgs>> spotSpecifications) {
             this.spotSpecifications = spotSpecifications;
             return this;
         }
-
         public Builder spotSpecifications(@Nullable List<ClusterMasterInstanceFleetLaunchSpecificationsSpotSpecificationGetArgs> spotSpecifications) {
             this.spotSpecifications = Output.ofNullable(spotSpecifications);
             return this;
         }
-        public ClusterMasterInstanceFleetLaunchSpecificationsGetArgs build() {
+        public Builder spotSpecifications(ClusterMasterInstanceFleetLaunchSpecificationsSpotSpecificationGetArgs... spotSpecifications) {
+            return spotSpecifications(List.of(spotSpecifications));
+        }        public ClusterMasterInstanceFleetLaunchSpecificationsGetArgs build() {
             return new ClusterMasterInstanceFleetLaunchSpecificationsGetArgs(onDemandSpecifications, spotSpecifications);
         }
     }

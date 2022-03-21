@@ -82,32 +82,26 @@ public final class WebACLVisibilityConfigArgs extends io.pulumi.resources.Resour
             this.cloudWatchMetricsEnabled = Objects.requireNonNull(cloudWatchMetricsEnabled);
             return this;
         }
-
         public Builder cloudWatchMetricsEnabled(Boolean cloudWatchMetricsEnabled) {
             this.cloudWatchMetricsEnabled = Output.of(Objects.requireNonNull(cloudWatchMetricsEnabled));
             return this;
         }
-
         public Builder metricName(Output<String> metricName) {
             this.metricName = Objects.requireNonNull(metricName);
             return this;
         }
-
         public Builder metricName(String metricName) {
             this.metricName = Output.of(Objects.requireNonNull(metricName));
             return this;
         }
-
         public Builder sampledRequestsEnabled(Output<Boolean> sampledRequestsEnabled) {
             this.sampledRequestsEnabled = Objects.requireNonNull(sampledRequestsEnabled);
             return this;
         }
-
         public Builder sampledRequestsEnabled(Boolean sampledRequestsEnabled) {
             this.sampledRequestsEnabled = Output.of(Objects.requireNonNull(sampledRequestsEnabled));
             return this;
-        }
-        public WebACLVisibilityConfigArgs build() {
+        }        public WebACLVisibilityConfigArgs build() {
             return new WebACLVisibilityConfigArgs(cloudWatchMetricsEnabled, metricName, sampledRequestsEnabled);
         }
     }

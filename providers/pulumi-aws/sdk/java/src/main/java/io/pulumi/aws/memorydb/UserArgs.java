@@ -124,52 +124,42 @@ public final class UserArgs extends io.pulumi.resources.ResourceArgs {
             this.accessString = Objects.requireNonNull(accessString);
             return this;
         }
-
         public Builder accessString(String accessString) {
             this.accessString = Output.of(Objects.requireNonNull(accessString));
             return this;
         }
-
         public Builder authenticationMode(Output<UserAuthenticationModeArgs> authenticationMode) {
             this.authenticationMode = Objects.requireNonNull(authenticationMode);
             return this;
         }
-
         public Builder authenticationMode(UserAuthenticationModeArgs authenticationMode) {
             this.authenticationMode = Output.of(Objects.requireNonNull(authenticationMode));
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
             this.tagsAll = tagsAll;
             return this;
         }
-
         public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
             this.tagsAll = Output.ofNullable(tagsAll);
             return this;
         }
-
         public Builder userName(Output<String> userName) {
             this.userName = Objects.requireNonNull(userName);
             return this;
         }
-
         public Builder userName(String userName) {
             this.userName = Output.of(Objects.requireNonNull(userName));
             return this;
-        }
-        public UserArgs build() {
+        }        public UserArgs build() {
             return new UserArgs(accessString, authenticationMode, tags, tagsAll, userName);
         }
     }

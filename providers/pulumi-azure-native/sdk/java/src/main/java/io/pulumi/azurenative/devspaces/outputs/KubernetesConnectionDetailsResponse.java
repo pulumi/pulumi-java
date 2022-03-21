@@ -73,12 +73,10 @@ public final class KubernetesConnectionDetailsResponse {
             this.instanceType = Objects.requireNonNull(instanceType);
             return this;
         }
-
         public Builder kubeConfig(@Nullable String kubeConfig) {
             this.kubeConfig = kubeConfig;
             return this;
-        }
-        public KubernetesConnectionDetailsResponse build() {
+        }        public KubernetesConnectionDetailsResponse build() {
             return new KubernetesConnectionDetailsResponse(instanceType, kubeConfig);
         }
     }

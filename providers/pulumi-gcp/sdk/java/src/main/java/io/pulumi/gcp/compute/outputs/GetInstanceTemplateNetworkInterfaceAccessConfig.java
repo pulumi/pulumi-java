@@ -83,17 +83,14 @@ public final class GetInstanceTemplateNetworkInterfaceAccessConfig {
             this.natIp = Objects.requireNonNull(natIp);
             return this;
         }
-
         public Builder networkTier(String networkTier) {
             this.networkTier = Objects.requireNonNull(networkTier);
             return this;
         }
-
         public Builder publicPtrDomainName(String publicPtrDomainName) {
             this.publicPtrDomainName = Objects.requireNonNull(publicPtrDomainName);
             return this;
-        }
-        public GetInstanceTemplateNetworkInterfaceAccessConfig build() {
+        }        public GetInstanceTemplateNetworkInterfaceAccessConfig build() {
             return new GetInstanceTemplateNetworkInterfaceAccessConfig(natIp, networkTier, publicPtrDomainName);
         }
     }

@@ -102,22 +102,18 @@ public final class MaintenanceScheduleResponse {
             this.canReschedule = Objects.requireNonNull(canReschedule);
             return this;
         }
-
         public Builder endTime(String endTime) {
             this.endTime = Objects.requireNonNull(endTime);
             return this;
         }
-
         public Builder scheduleDeadlineTime(String scheduleDeadlineTime) {
             this.scheduleDeadlineTime = Objects.requireNonNull(scheduleDeadlineTime);
             return this;
         }
-
         public Builder startTime(String startTime) {
             this.startTime = Objects.requireNonNull(startTime);
             return this;
-        }
-        public MaintenanceScheduleResponse build() {
+        }        public MaintenanceScheduleResponse build() {
             return new MaintenanceScheduleResponse(canReschedule, endTime, scheduleDeadlineTime, startTime);
         }
     }

@@ -96,32 +96,26 @@ public final class MediaGraphClearEndpointArgs extends io.pulumi.resources.Resou
             this.credentials = credentials;
             return this;
         }
-
         public Builder credentials(@Nullable MediaGraphUsernamePasswordCredentialsArgs credentials) {
             this.credentials = Output.ofNullable(credentials);
             return this;
         }
-
         public Builder odataType(Output<String> odataType) {
             this.odataType = Objects.requireNonNull(odataType);
             return this;
         }
-
         public Builder odataType(String odataType) {
             this.odataType = Output.of(Objects.requireNonNull(odataType));
             return this;
         }
-
         public Builder url(Output<String> url) {
             this.url = Objects.requireNonNull(url);
             return this;
         }
-
         public Builder url(String url) {
             this.url = Output.of(Objects.requireNonNull(url));
             return this;
-        }
-        public MediaGraphClearEndpointArgs build() {
+        }        public MediaGraphClearEndpointArgs build() {
             return new MediaGraphClearEndpointArgs(credentials, odataType, url);
         }
     }

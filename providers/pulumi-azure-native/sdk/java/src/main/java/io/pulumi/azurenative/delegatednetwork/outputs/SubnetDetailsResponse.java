@@ -53,8 +53,7 @@ public final class SubnetDetailsResponse {
         public Builder id(@Nullable String id) {
             this.id = id;
             return this;
-        }
-        public SubnetDetailsResponse build() {
+        }        public SubnetDetailsResponse build() {
             return new SubnetDetailsResponse(id);
         }
     }

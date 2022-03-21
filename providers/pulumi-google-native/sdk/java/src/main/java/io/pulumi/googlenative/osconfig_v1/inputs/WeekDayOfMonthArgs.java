@@ -95,32 +95,26 @@ public final class WeekDayOfMonthArgs extends io.pulumi.resources.ResourceArgs {
             this.dayOfWeek = Objects.requireNonNull(dayOfWeek);
             return this;
         }
-
         public Builder dayOfWeek(WeekDayOfMonthDayOfWeek dayOfWeek) {
             this.dayOfWeek = Output.of(Objects.requireNonNull(dayOfWeek));
             return this;
         }
-
         public Builder dayOffset(@Nullable Output<Integer> dayOffset) {
             this.dayOffset = dayOffset;
             return this;
         }
-
         public Builder dayOffset(@Nullable Integer dayOffset) {
             this.dayOffset = Output.ofNullable(dayOffset);
             return this;
         }
-
         public Builder weekOrdinal(Output<Integer> weekOrdinal) {
             this.weekOrdinal = Objects.requireNonNull(weekOrdinal);
             return this;
         }
-
         public Builder weekOrdinal(Integer weekOrdinal) {
             this.weekOrdinal = Output.of(Objects.requireNonNull(weekOrdinal));
             return this;
-        }
-        public WeekDayOfMonthArgs build() {
+        }        public WeekDayOfMonthArgs build() {
             return new WeekDayOfMonthArgs(dayOfWeek, dayOffset, weekOrdinal);
         }
     }

@@ -137,62 +137,53 @@ public final class ProjectArgs extends io.pulumi.resources.ResourceArgs {
             this.datasetName = Objects.requireNonNull(datasetName);
             return this;
         }
-
         public Builder datasetName(String datasetName) {
             this.datasetName = Output.of(Objects.requireNonNull(datasetName));
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder recipeName(Output<String> recipeName) {
             this.recipeName = Objects.requireNonNull(recipeName);
             return this;
         }
-
         public Builder recipeName(String recipeName) {
             this.recipeName = Output.of(Objects.requireNonNull(recipeName));
             return this;
         }
-
         public Builder roleArn(Output<String> roleArn) {
             this.roleArn = Objects.requireNonNull(roleArn);
             return this;
         }
-
         public Builder roleArn(String roleArn) {
             this.roleArn = Output.of(Objects.requireNonNull(roleArn));
             return this;
         }
-
         public Builder sample(@Nullable Output<ProjectSampleArgs> sample) {
             this.sample = sample;
             return this;
         }
-
         public Builder sample(@Nullable ProjectSampleArgs sample) {
             this.sample = Output.ofNullable(sample);
             return this;
         }
-
         public Builder tags(@Nullable Output<List<ProjectTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable List<ProjectTagArgs> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-        public ProjectArgs build() {
+        public Builder tags(ProjectTagArgs... tags) {
+            return tags(List.of(tags));
+        }        public ProjectArgs build() {
             return new ProjectArgs(datasetName, name, recipeName, roleArn, sample, tags);
         }
     }

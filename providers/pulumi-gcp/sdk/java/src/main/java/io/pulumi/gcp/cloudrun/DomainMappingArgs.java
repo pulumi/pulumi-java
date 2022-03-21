@@ -127,52 +127,42 @@ public final class DomainMappingArgs extends io.pulumi.resources.ResourceArgs {
             this.location = Objects.requireNonNull(location);
             return this;
         }
-
         public Builder location(String location) {
             this.location = Output.of(Objects.requireNonNull(location));
             return this;
         }
-
         public Builder metadata(Output<DomainMappingMetadataArgs> metadata) {
             this.metadata = Objects.requireNonNull(metadata);
             return this;
         }
-
         public Builder metadata(DomainMappingMetadataArgs metadata) {
             this.metadata = Output.of(Objects.requireNonNull(metadata));
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
         }
-
         public Builder spec(Output<DomainMappingSpecArgs> spec) {
             this.spec = Objects.requireNonNull(spec);
             return this;
         }
-
         public Builder spec(DomainMappingSpecArgs spec) {
             this.spec = Output.of(Objects.requireNonNull(spec));
             return this;
-        }
-        public DomainMappingArgs build() {
+        }        public DomainMappingArgs build() {
             return new DomainMappingArgs(location, metadata, name, project, spec);
         }
     }

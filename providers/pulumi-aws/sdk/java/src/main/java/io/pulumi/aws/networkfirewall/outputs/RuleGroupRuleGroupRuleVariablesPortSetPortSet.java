@@ -53,7 +53,9 @@ public final class RuleGroupRuleGroupRuleVariablesPortSetPortSet {
             this.definitions = Objects.requireNonNull(definitions);
             return this;
         }
-        public RuleGroupRuleGroupRuleVariablesPortSetPortSet build() {
+        public Builder definitions(String... definitions) {
+            return definitions(List.of(definitions));
+        }        public RuleGroupRuleGroupRuleVariablesPortSetPortSet build() {
             return new RuleGroupRuleGroupRuleVariablesPortSetPortSet(definitions);
         }
     }

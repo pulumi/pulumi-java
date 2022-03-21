@@ -180,47 +180,44 @@ public final class ApiConnectionDefinitionResponseProperties {
             this.api = api;
             return this;
         }
-
         public Builder changedTime(@Nullable String changedTime) {
             this.changedTime = changedTime;
             return this;
         }
-
         public Builder createdTime(@Nullable String createdTime) {
             this.createdTime = createdTime;
             return this;
         }
-
         public Builder customParameterValues(@Nullable Map<String,String> customParameterValues) {
             this.customParameterValues = customParameterValues;
             return this;
         }
-
         public Builder displayName(@Nullable String displayName) {
             this.displayName = displayName;
             return this;
         }
-
         public Builder nonSecretParameterValues(@Nullable Map<String,String> nonSecretParameterValues) {
             this.nonSecretParameterValues = nonSecretParameterValues;
             return this;
         }
-
         public Builder parameterValues(@Nullable Map<String,String> parameterValues) {
             this.parameterValues = parameterValues;
             return this;
         }
-
         public Builder statuses(@Nullable List<ConnectionStatusDefinitionResponse> statuses) {
             this.statuses = statuses;
             return this;
         }
-
+        public Builder statuses(ConnectionStatusDefinitionResponse... statuses) {
+            return statuses(List.of(statuses));
+        }
         public Builder testLinks(@Nullable List<ApiConnectionTestLinkResponse> testLinks) {
             this.testLinks = testLinks;
             return this;
         }
-        public ApiConnectionDefinitionResponseProperties build() {
+        public Builder testLinks(ApiConnectionTestLinkResponse... testLinks) {
+            return testLinks(List.of(testLinks));
+        }        public ApiConnectionDefinitionResponseProperties build() {
             return new ApiConnectionDefinitionResponseProperties(api, changedTime, createdTime, customParameterValues, displayName, nonSecretParameterValues, parameterValues, statuses, testLinks);
         }
     }

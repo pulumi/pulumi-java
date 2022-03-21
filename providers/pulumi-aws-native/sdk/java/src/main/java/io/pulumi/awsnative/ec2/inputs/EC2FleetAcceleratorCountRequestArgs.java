@@ -66,22 +66,18 @@ public final class EC2FleetAcceleratorCountRequestArgs extends io.pulumi.resourc
             this.max = max;
             return this;
         }
-
         public Builder max(@Nullable Integer max) {
             this.max = Output.ofNullable(max);
             return this;
         }
-
         public Builder min(@Nullable Output<Integer> min) {
             this.min = min;
             return this;
         }
-
         public Builder min(@Nullable Integer min) {
             this.min = Output.ofNullable(min);
             return this;
-        }
-        public EC2FleetAcceleratorCountRequestArgs build() {
+        }        public EC2FleetAcceleratorCountRequestArgs build() {
             return new EC2FleetAcceleratorCountRequestArgs(max, min);
         }
     }

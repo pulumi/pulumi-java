@@ -234,122 +234,98 @@ public final class ExportConfigurationArgs extends io.pulumi.resources.ResourceA
             this.destinationAccountId = destinationAccountId;
             return this;
         }
-
         public Builder destinationAccountId(@Nullable String destinationAccountId) {
             this.destinationAccountId = Output.ofNullable(destinationAccountId);
             return this;
         }
-
         public Builder destinationAddress(@Nullable Output<String> destinationAddress) {
             this.destinationAddress = destinationAddress;
             return this;
         }
-
         public Builder destinationAddress(@Nullable String destinationAddress) {
             this.destinationAddress = Output.ofNullable(destinationAddress);
             return this;
         }
-
         public Builder destinationStorageLocationId(@Nullable Output<String> destinationStorageLocationId) {
             this.destinationStorageLocationId = destinationStorageLocationId;
             return this;
         }
-
         public Builder destinationStorageLocationId(@Nullable String destinationStorageLocationId) {
             this.destinationStorageLocationId = Output.ofNullable(destinationStorageLocationId);
             return this;
         }
-
         public Builder destinationStorageSubscriptionId(@Nullable Output<String> destinationStorageSubscriptionId) {
             this.destinationStorageSubscriptionId = destinationStorageSubscriptionId;
             return this;
         }
-
         public Builder destinationStorageSubscriptionId(@Nullable String destinationStorageSubscriptionId) {
             this.destinationStorageSubscriptionId = Output.ofNullable(destinationStorageSubscriptionId);
             return this;
         }
-
         public Builder destinationType(@Nullable Output<String> destinationType) {
             this.destinationType = destinationType;
             return this;
         }
-
         public Builder destinationType(@Nullable String destinationType) {
             this.destinationType = Output.ofNullable(destinationType);
             return this;
         }
-
         public Builder exportId(@Nullable Output<String> exportId) {
             this.exportId = exportId;
             return this;
         }
-
         public Builder exportId(@Nullable String exportId) {
             this.exportId = Output.ofNullable(exportId);
             return this;
         }
-
         public Builder isEnabled(@Nullable Output<String> isEnabled) {
             this.isEnabled = isEnabled;
             return this;
         }
-
         public Builder isEnabled(@Nullable String isEnabled) {
             this.isEnabled = Output.ofNullable(isEnabled);
             return this;
         }
-
         public Builder notificationQueueEnabled(@Nullable Output<String> notificationQueueEnabled) {
             this.notificationQueueEnabled = notificationQueueEnabled;
             return this;
         }
-
         public Builder notificationQueueEnabled(@Nullable String notificationQueueEnabled) {
             this.notificationQueueEnabled = Output.ofNullable(notificationQueueEnabled);
             return this;
         }
-
         public Builder notificationQueueUri(@Nullable Output<String> notificationQueueUri) {
             this.notificationQueueUri = notificationQueueUri;
             return this;
         }
-
         public Builder notificationQueueUri(@Nullable String notificationQueueUri) {
             this.notificationQueueUri = Output.ofNullable(notificationQueueUri);
             return this;
         }
-
         public Builder recordTypes(@Nullable Output<String> recordTypes) {
             this.recordTypes = recordTypes;
             return this;
         }
-
         public Builder recordTypes(@Nullable String recordTypes) {
             this.recordTypes = Output.ofNullable(recordTypes);
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder resourceName(Output<String> resourceName) {
             this.resourceName = Objects.requireNonNull(resourceName);
             return this;
         }
-
         public Builder resourceName(String resourceName) {
             this.resourceName = Output.of(Objects.requireNonNull(resourceName));
             return this;
-        }
-        public ExportConfigurationArgs build() {
+        }        public ExportConfigurationArgs build() {
             return new ExportConfigurationArgs(destinationAccountId, destinationAddress, destinationStorageLocationId, destinationStorageSubscriptionId, destinationType, exportId, isEnabled, notificationQueueEnabled, notificationQueueUri, recordTypes, resourceGroupName, resourceName);
         }
     }

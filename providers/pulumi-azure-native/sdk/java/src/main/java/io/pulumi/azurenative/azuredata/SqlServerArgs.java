@@ -171,82 +171,66 @@ public final class SqlServerArgs extends io.pulumi.resources.ResourceArgs {
             this.cores = cores;
             return this;
         }
-
         public Builder cores(@Nullable Integer cores) {
             this.cores = Output.ofNullable(cores);
             return this;
         }
-
         public Builder edition(@Nullable Output<String> edition) {
             this.edition = edition;
             return this;
         }
-
         public Builder edition(@Nullable String edition) {
             this.edition = Output.ofNullable(edition);
             return this;
         }
-
         public Builder propertyBag(@Nullable Output<String> propertyBag) {
             this.propertyBag = propertyBag;
             return this;
         }
-
         public Builder propertyBag(@Nullable String propertyBag) {
             this.propertyBag = Output.ofNullable(propertyBag);
             return this;
         }
-
         public Builder registrationID(@Nullable Output<String> registrationID) {
             this.registrationID = registrationID;
             return this;
         }
-
         public Builder registrationID(@Nullable String registrationID) {
             this.registrationID = Output.ofNullable(registrationID);
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder sqlServerName(@Nullable Output<String> sqlServerName) {
             this.sqlServerName = sqlServerName;
             return this;
         }
-
         public Builder sqlServerName(@Nullable String sqlServerName) {
             this.sqlServerName = Output.ofNullable(sqlServerName);
             return this;
         }
-
         public Builder sqlServerRegistrationName(Output<String> sqlServerRegistrationName) {
             this.sqlServerRegistrationName = Objects.requireNonNull(sqlServerRegistrationName);
             return this;
         }
-
         public Builder sqlServerRegistrationName(String sqlServerRegistrationName) {
             this.sqlServerRegistrationName = Output.of(Objects.requireNonNull(sqlServerRegistrationName));
             return this;
         }
-
         public Builder version(@Nullable Output<String> version) {
             this.version = version;
             return this;
         }
-
         public Builder version(@Nullable String version) {
             this.version = Output.ofNullable(version);
             return this;
-        }
-        public SqlServerArgs build() {
+        }        public SqlServerArgs build() {
             return new SqlServerArgs(cores, edition, propertyBag, registrationID, resourceGroupName, sqlServerName, sqlServerRegistrationName, version);
         }
     }

@@ -53,8 +53,7 @@ public final class UserAssignedPropertiesResponse {
         public Builder resourceId(@Nullable String resourceId) {
             this.resourceId = resourceId;
             return this;
-        }
-        public UserAssignedPropertiesResponse build() {
+        }        public UserAssignedPropertiesResponse build() {
             return new UserAssignedPropertiesResponse(resourceId);
         }
     }

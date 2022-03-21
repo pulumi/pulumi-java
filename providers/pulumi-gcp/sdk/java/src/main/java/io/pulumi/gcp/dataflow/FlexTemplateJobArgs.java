@@ -172,72 +172,58 @@ public final class FlexTemplateJobArgs extends io.pulumi.resources.ResourceArgs 
             this.containerSpecGcsPath = Objects.requireNonNull(containerSpecGcsPath);
             return this;
         }
-
         public Builder containerSpecGcsPath(String containerSpecGcsPath) {
             this.containerSpecGcsPath = Output.of(Objects.requireNonNull(containerSpecGcsPath));
             return this;
         }
-
         public Builder labels(@Nullable Output<Map<String,Object>> labels) {
             this.labels = labels;
             return this;
         }
-
         public Builder labels(@Nullable Map<String,Object> labels) {
             this.labels = Output.ofNullable(labels);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder onDelete(@Nullable Output<String> onDelete) {
             this.onDelete = onDelete;
             return this;
         }
-
         public Builder onDelete(@Nullable String onDelete) {
             this.onDelete = Output.ofNullable(onDelete);
             return this;
         }
-
         public Builder parameters(@Nullable Output<Map<String,Object>> parameters) {
             this.parameters = parameters;
             return this;
         }
-
         public Builder parameters(@Nullable Map<String,Object> parameters) {
             this.parameters = Output.ofNullable(parameters);
             return this;
         }
-
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
         }
-
         public Builder region(@Nullable Output<String> region) {
             this.region = region;
             return this;
         }
-
         public Builder region(@Nullable String region) {
             this.region = Output.ofNullable(region);
             return this;
-        }
-        public FlexTemplateJobArgs build() {
+        }        public FlexTemplateJobArgs build() {
             return new FlexTemplateJobArgs(containerSpecGcsPath, labels, name, onDelete, parameters, project, region);
         }
     }

@@ -56,12 +56,10 @@ public final class PacketMirroringNetworkGetArgs extends io.pulumi.resources.Res
             this.url = Objects.requireNonNull(url);
             return this;
         }
-
         public Builder url(String url) {
             this.url = Output.of(Objects.requireNonNull(url));
             return this;
-        }
-        public PacketMirroringNetworkGetArgs build() {
+        }        public PacketMirroringNetworkGetArgs build() {
             return new PacketMirroringNetworkGetArgs(url);
         }
     }

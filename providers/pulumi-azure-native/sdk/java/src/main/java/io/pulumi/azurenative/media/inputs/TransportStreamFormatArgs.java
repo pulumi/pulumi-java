@@ -97,32 +97,29 @@ public final class TransportStreamFormatArgs extends io.pulumi.resources.Resourc
             this.filenamePattern = Objects.requireNonNull(filenamePattern);
             return this;
         }
-
         public Builder filenamePattern(String filenamePattern) {
             this.filenamePattern = Output.of(Objects.requireNonNull(filenamePattern));
             return this;
         }
-
         public Builder odataType(Output<String> odataType) {
             this.odataType = Objects.requireNonNull(odataType);
             return this;
         }
-
         public Builder odataType(String odataType) {
             this.odataType = Output.of(Objects.requireNonNull(odataType));
             return this;
         }
-
         public Builder outputFiles(@Nullable Output<List<OutputFileArgs>> outputFiles) {
             this.outputFiles = outputFiles;
             return this;
         }
-
         public Builder outputFiles(@Nullable List<OutputFileArgs> outputFiles) {
             this.outputFiles = Output.ofNullable(outputFiles);
             return this;
         }
-        public TransportStreamFormatArgs build() {
+        public Builder outputFiles(OutputFileArgs... outputFiles) {
+            return outputFiles(List.of(outputFiles));
+        }        public TransportStreamFormatArgs build() {
             return new TransportStreamFormatArgs(filenamePattern, odataType, outputFiles);
         }
     }

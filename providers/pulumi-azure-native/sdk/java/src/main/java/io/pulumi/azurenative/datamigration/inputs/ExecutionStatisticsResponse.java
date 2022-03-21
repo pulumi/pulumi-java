@@ -147,32 +147,29 @@ public final class ExecutionStatisticsResponse extends io.pulumi.resources.Invok
             this.cpuTimeMs = Objects.requireNonNull(cpuTimeMs);
             return this;
         }
-
         public Builder elapsedTimeMs(Double elapsedTimeMs) {
             this.elapsedTimeMs = Objects.requireNonNull(elapsedTimeMs);
             return this;
         }
-
         public Builder executionCount(Double executionCount) {
             this.executionCount = Objects.requireNonNull(executionCount);
             return this;
         }
-
         public Builder hasErrors(Boolean hasErrors) {
             this.hasErrors = Objects.requireNonNull(hasErrors);
             return this;
         }
-
         public Builder sqlErrors(List<String> sqlErrors) {
             this.sqlErrors = Objects.requireNonNull(sqlErrors);
             return this;
         }
-
+        public Builder sqlErrors(String... sqlErrors) {
+            return sqlErrors(List.of(sqlErrors));
+        }
         public Builder waitStats(@Nullable Map<String,WaitStatisticsResponse> waitStats) {
             this.waitStats = waitStats;
             return this;
-        }
-        public ExecutionStatisticsResponse build() {
+        }        public ExecutionStatisticsResponse build() {
             return new ExecutionStatisticsResponse(cpuTimeMs, elapsedTimeMs, executionCount, hasErrors, sqlErrors, waitStats);
         }
     }

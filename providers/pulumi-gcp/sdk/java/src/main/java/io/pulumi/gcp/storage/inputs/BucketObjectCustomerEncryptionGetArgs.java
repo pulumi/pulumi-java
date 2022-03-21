@@ -74,22 +74,18 @@ public final class BucketObjectCustomerEncryptionGetArgs extends io.pulumi.resou
             this.encryptionAlgorithm = encryptionAlgorithm;
             return this;
         }
-
         public Builder encryptionAlgorithm(@Nullable String encryptionAlgorithm) {
             this.encryptionAlgorithm = Output.ofNullable(encryptionAlgorithm);
             return this;
         }
-
         public Builder encryptionKey(Output<String> encryptionKey) {
             this.encryptionKey = Objects.requireNonNull(encryptionKey);
             return this;
         }
-
         public Builder encryptionKey(String encryptionKey) {
             this.encryptionKey = Output.of(Objects.requireNonNull(encryptionKey));
             return this;
-        }
-        public BucketObjectCustomerEncryptionGetArgs build() {
+        }        public BucketObjectCustomerEncryptionGetArgs build() {
             return new BucketObjectCustomerEncryptionGetArgs(encryptionAlgorithm, encryptionKey);
         }
     }

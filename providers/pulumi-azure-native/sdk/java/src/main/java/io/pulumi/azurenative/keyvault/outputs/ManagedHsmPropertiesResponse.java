@@ -252,67 +252,60 @@ public final class ManagedHsmPropertiesResponse {
             this.createMode = createMode;
             return this;
         }
-
         public Builder enablePurgeProtection(@Nullable Boolean enablePurgeProtection) {
             this.enablePurgeProtection = enablePurgeProtection;
             return this;
         }
-
         public Builder enableSoftDelete(@Nullable Boolean enableSoftDelete) {
             this.enableSoftDelete = enableSoftDelete;
             return this;
         }
-
         public Builder hsmUri(String hsmUri) {
             this.hsmUri = Objects.requireNonNull(hsmUri);
             return this;
         }
-
         public Builder initialAdminObjectIds(@Nullable List<String> initialAdminObjectIds) {
             this.initialAdminObjectIds = initialAdminObjectIds;
             return this;
         }
-
+        public Builder initialAdminObjectIds(String... initialAdminObjectIds) {
+            return initialAdminObjectIds(List.of(initialAdminObjectIds));
+        }
         public Builder networkAcls(@Nullable MHSMNetworkRuleSetResponse networkAcls) {
             this.networkAcls = networkAcls;
             return this;
         }
-
         public Builder privateEndpointConnections(List<MHSMPrivateEndpointConnectionItemResponse> privateEndpointConnections) {
             this.privateEndpointConnections = Objects.requireNonNull(privateEndpointConnections);
             return this;
         }
-
+        public Builder privateEndpointConnections(MHSMPrivateEndpointConnectionItemResponse... privateEndpointConnections) {
+            return privateEndpointConnections(List.of(privateEndpointConnections));
+        }
         public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
-
         public Builder publicNetworkAccess(@Nullable String publicNetworkAccess) {
             this.publicNetworkAccess = publicNetworkAccess;
             return this;
         }
-
         public Builder scheduledPurgeDate(String scheduledPurgeDate) {
             this.scheduledPurgeDate = Objects.requireNonNull(scheduledPurgeDate);
             return this;
         }
-
         public Builder softDeleteRetentionInDays(@Nullable Integer softDeleteRetentionInDays) {
             this.softDeleteRetentionInDays = softDeleteRetentionInDays;
             return this;
         }
-
         public Builder statusMessage(String statusMessage) {
             this.statusMessage = Objects.requireNonNull(statusMessage);
             return this;
         }
-
         public Builder tenantId(@Nullable String tenantId) {
             this.tenantId = tenantId;
             return this;
-        }
-        public ManagedHsmPropertiesResponse build() {
+        }        public ManagedHsmPropertiesResponse build() {
             return new ManagedHsmPropertiesResponse(createMode, enablePurgeProtection, enableSoftDelete, hsmUri, initialAdminObjectIds, networkAcls, privateEndpointConnections, provisioningState, publicNetworkAccess, scheduledPurgeDate, softDeleteRetentionInDays, statusMessage, tenantId);
         }
     }

@@ -63,12 +63,10 @@ public final class HostedZoneConfigArgs extends io.pulumi.resources.ResourceArgs
             this.comment = comment;
             return this;
         }
-
         public Builder comment(@Nullable String comment) {
             this.comment = Output.ofNullable(comment);
             return this;
-        }
-        public HostedZoneConfigArgs build() {
+        }        public HostedZoneConfigArgs build() {
             return new HostedZoneConfigArgs(comment);
         }
     }

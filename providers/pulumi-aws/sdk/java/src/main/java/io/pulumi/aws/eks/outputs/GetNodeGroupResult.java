@@ -299,87 +299,85 @@ public final class GetNodeGroupResult {
             this.amiType = Objects.requireNonNull(amiType);
             return this;
         }
-
         public Builder arn(String arn) {
             this.arn = Objects.requireNonNull(arn);
             return this;
         }
-
         public Builder clusterName(String clusterName) {
             this.clusterName = Objects.requireNonNull(clusterName);
             return this;
         }
-
         public Builder diskSize(Integer diskSize) {
             this.diskSize = Objects.requireNonNull(diskSize);
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder instanceTypes(List<String> instanceTypes) {
             this.instanceTypes = Objects.requireNonNull(instanceTypes);
             return this;
         }
-
+        public Builder instanceTypes(String... instanceTypes) {
+            return instanceTypes(List.of(instanceTypes));
+        }
         public Builder labels(Map<String,String> labels) {
             this.labels = Objects.requireNonNull(labels);
             return this;
         }
-
         public Builder nodeGroupName(String nodeGroupName) {
             this.nodeGroupName = Objects.requireNonNull(nodeGroupName);
             return this;
         }
-
         public Builder nodeRoleArn(String nodeRoleArn) {
             this.nodeRoleArn = Objects.requireNonNull(nodeRoleArn);
             return this;
         }
-
         public Builder releaseVersion(String releaseVersion) {
             this.releaseVersion = Objects.requireNonNull(releaseVersion);
             return this;
         }
-
         public Builder remoteAccesses(List<GetNodeGroupRemoteAccess> remoteAccesses) {
             this.remoteAccesses = Objects.requireNonNull(remoteAccesses);
             return this;
         }
-
+        public Builder remoteAccesses(GetNodeGroupRemoteAccess... remoteAccesses) {
+            return remoteAccesses(List.of(remoteAccesses));
+        }
         public Builder resources(List<GetNodeGroupResource> resources) {
             this.resources = Objects.requireNonNull(resources);
             return this;
         }
-
+        public Builder resources(GetNodeGroupResource... resources) {
+            return resources(List.of(resources));
+        }
         public Builder scalingConfigs(List<GetNodeGroupScalingConfig> scalingConfigs) {
             this.scalingConfigs = Objects.requireNonNull(scalingConfigs);
             return this;
         }
-
+        public Builder scalingConfigs(GetNodeGroupScalingConfig... scalingConfigs) {
+            return scalingConfigs(List.of(scalingConfigs));
+        }
         public Builder status(String status) {
             this.status = Objects.requireNonNull(status);
             return this;
         }
-
         public Builder subnetIds(List<String> subnetIds) {
             this.subnetIds = Objects.requireNonNull(subnetIds);
             return this;
         }
-
+        public Builder subnetIds(String... subnetIds) {
+            return subnetIds(List.of(subnetIds));
+        }
         public Builder tags(Map<String,String> tags) {
             this.tags = Objects.requireNonNull(tags);
             return this;
         }
-
         public Builder version(String version) {
             this.version = Objects.requireNonNull(version);
             return this;
-        }
-        public GetNodeGroupResult build() {
+        }        public GetNodeGroupResult build() {
             return new GetNodeGroupResult(amiType, arn, clusterName, diskSize, id, instanceTypes, labels, nodeGroupName, nodeRoleArn, releaseVersion, remoteAccesses, resources, scalingConfigs, status, subnetIds, tags, version);
         }
     }

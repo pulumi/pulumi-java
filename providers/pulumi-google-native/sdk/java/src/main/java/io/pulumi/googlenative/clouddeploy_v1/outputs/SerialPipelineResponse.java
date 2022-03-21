@@ -53,7 +53,9 @@ public final class SerialPipelineResponse {
             this.stages = Objects.requireNonNull(stages);
             return this;
         }
-        public SerialPipelineResponse build() {
+        public Builder stages(StageResponse... stages) {
+            return stages(List.of(stages));
+        }        public SerialPipelineResponse build() {
             return new SerialPipelineResponse(stages);
         }
     }

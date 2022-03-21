@@ -175,52 +175,42 @@ public final class GetServiceQuotaResult {
             this.adjustable = Objects.requireNonNull(adjustable);
             return this;
         }
-
         public Builder arn(String arn) {
             this.arn = Objects.requireNonNull(arn);
             return this;
         }
-
         public Builder defaultValue(Double defaultValue) {
             this.defaultValue = Objects.requireNonNull(defaultValue);
             return this;
         }
-
         public Builder globalQuota(Boolean globalQuota) {
             this.globalQuota = Objects.requireNonNull(globalQuota);
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder quotaCode(String quotaCode) {
             this.quotaCode = Objects.requireNonNull(quotaCode);
             return this;
         }
-
         public Builder quotaName(String quotaName) {
             this.quotaName = Objects.requireNonNull(quotaName);
             return this;
         }
-
         public Builder serviceCode(String serviceCode) {
             this.serviceCode = Objects.requireNonNull(serviceCode);
             return this;
         }
-
         public Builder serviceName(String serviceName) {
             this.serviceName = Objects.requireNonNull(serviceName);
             return this;
         }
-
         public Builder value(Double value) {
             this.value = Objects.requireNonNull(value);
             return this;
-        }
-        public GetServiceQuotaResult build() {
+        }        public GetServiceQuotaResult build() {
             return new GetServiceQuotaResult(adjustable, arn, defaultValue, globalQuota, id, quotaCode, quotaName, serviceCode, serviceName, value);
         }
     }

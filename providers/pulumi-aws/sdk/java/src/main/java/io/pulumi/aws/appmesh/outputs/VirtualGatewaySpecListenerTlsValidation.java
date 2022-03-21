@@ -72,12 +72,10 @@ public final class VirtualGatewaySpecListenerTlsValidation {
             this.subjectAlternativeNames = subjectAlternativeNames;
             return this;
         }
-
         public Builder trust(VirtualGatewaySpecListenerTlsValidationTrust trust) {
             this.trust = Objects.requireNonNull(trust);
             return this;
-        }
-        public VirtualGatewaySpecListenerTlsValidation build() {
+        }        public VirtualGatewaySpecListenerTlsValidation build() {
             return new VirtualGatewaySpecListenerTlsValidation(subjectAlternativeNames, trust);
         }
     }

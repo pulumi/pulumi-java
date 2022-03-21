@@ -69,12 +69,10 @@ public final class AttachedDiskResponse {
             this.mode = Objects.requireNonNull(mode);
             return this;
         }
-
         public Builder sourceDisk(String sourceDisk) {
             this.sourceDisk = Objects.requireNonNull(sourceDisk);
             return this;
-        }
-        public AttachedDiskResponse build() {
+        }        public AttachedDiskResponse build() {
             return new AttachedDiskResponse(mode, sourceDisk);
         }
     }

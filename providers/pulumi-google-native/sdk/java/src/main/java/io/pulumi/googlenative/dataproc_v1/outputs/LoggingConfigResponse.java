@@ -52,8 +52,7 @@ public final class LoggingConfigResponse {
         public Builder driverLogLevels(Map<String,String> driverLogLevels) {
             this.driverLogLevels = Objects.requireNonNull(driverLogLevels);
             return this;
-        }
-        public LoggingConfigResponse build() {
+        }        public LoggingConfigResponse build() {
             return new LoggingConfigResponse(driverLogLevels);
         }
     }

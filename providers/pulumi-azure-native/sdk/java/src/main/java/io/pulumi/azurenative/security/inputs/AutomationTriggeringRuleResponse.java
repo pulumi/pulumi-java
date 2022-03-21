@@ -110,22 +110,18 @@ public final class AutomationTriggeringRuleResponse extends io.pulumi.resources.
             this.expectedValue = expectedValue;
             return this;
         }
-
         public Builder operator(@Nullable String operator) {
             this.operator = operator;
             return this;
         }
-
         public Builder propertyJPath(@Nullable String propertyJPath) {
             this.propertyJPath = propertyJPath;
             return this;
         }
-
         public Builder propertyType(@Nullable String propertyType) {
             this.propertyType = propertyType;
             return this;
-        }
-        public AutomationTriggeringRuleResponse build() {
+        }        public AutomationTriggeringRuleResponse build() {
             return new AutomationTriggeringRuleResponse(expectedValue, operator, propertyJPath, propertyType);
         }
     }

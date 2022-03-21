@@ -148,62 +148,50 @@ public final class IntegrationServiceEnvironmentPropertiesArgs extends io.pulumi
             this.encryptionConfiguration = encryptionConfiguration;
             return this;
         }
-
         public Builder encryptionConfiguration(@Nullable IntegrationServiceEnvironmenEncryptionConfigurationArgs encryptionConfiguration) {
             this.encryptionConfiguration = Output.ofNullable(encryptionConfiguration);
             return this;
         }
-
         public Builder endpointsConfiguration(@Nullable Output<FlowEndpointsConfigurationArgs> endpointsConfiguration) {
             this.endpointsConfiguration = endpointsConfiguration;
             return this;
         }
-
         public Builder endpointsConfiguration(@Nullable FlowEndpointsConfigurationArgs endpointsConfiguration) {
             this.endpointsConfiguration = Output.ofNullable(endpointsConfiguration);
             return this;
         }
-
         public Builder integrationServiceEnvironmentId(@Nullable Output<String> integrationServiceEnvironmentId) {
             this.integrationServiceEnvironmentId = integrationServiceEnvironmentId;
             return this;
         }
-
         public Builder integrationServiceEnvironmentId(@Nullable String integrationServiceEnvironmentId) {
             this.integrationServiceEnvironmentId = Output.ofNullable(integrationServiceEnvironmentId);
             return this;
         }
-
         public Builder networkConfiguration(@Nullable Output<NetworkConfigurationArgs> networkConfiguration) {
             this.networkConfiguration = networkConfiguration;
             return this;
         }
-
         public Builder networkConfiguration(@Nullable NetworkConfigurationArgs networkConfiguration) {
             this.networkConfiguration = Output.ofNullable(networkConfiguration);
             return this;
         }
-
         public Builder provisioningState(@Nullable Output<Either<String,WorkflowProvisioningState>> provisioningState) {
             this.provisioningState = provisioningState;
             return this;
         }
-
         public Builder provisioningState(@Nullable Either<String,WorkflowProvisioningState> provisioningState) {
             this.provisioningState = Output.ofNullable(provisioningState);
             return this;
         }
-
         public Builder state(@Nullable Output<Either<String,WorkflowState>> state) {
             this.state = state;
             return this;
         }
-
         public Builder state(@Nullable Either<String,WorkflowState> state) {
             this.state = Output.ofNullable(state);
             return this;
-        }
-        public IntegrationServiceEnvironmentPropertiesArgs build() {
+        }        public IntegrationServiceEnvironmentPropertiesArgs build() {
             return new IntegrationServiceEnvironmentPropertiesArgs(encryptionConfiguration, endpointsConfiguration, integrationServiceEnvironmentId, networkConfiguration, provisioningState, state);
         }
     }

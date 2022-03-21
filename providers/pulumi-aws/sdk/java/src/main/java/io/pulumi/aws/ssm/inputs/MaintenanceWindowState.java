@@ -253,132 +253,106 @@ public final class MaintenanceWindowState extends io.pulumi.resources.ResourceAr
             this.allowUnassociatedTargets = allowUnassociatedTargets;
             return this;
         }
-
         public Builder allowUnassociatedTargets(@Nullable Boolean allowUnassociatedTargets) {
             this.allowUnassociatedTargets = Output.ofNullable(allowUnassociatedTargets);
             return this;
         }
-
         public Builder cutoff(@Nullable Output<Integer> cutoff) {
             this.cutoff = cutoff;
             return this;
         }
-
         public Builder cutoff(@Nullable Integer cutoff) {
             this.cutoff = Output.ofNullable(cutoff);
             return this;
         }
-
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder duration(@Nullable Output<Integer> duration) {
             this.duration = duration;
             return this;
         }
-
         public Builder duration(@Nullable Integer duration) {
             this.duration = Output.ofNullable(duration);
             return this;
         }
-
         public Builder enabled(@Nullable Output<Boolean> enabled) {
             this.enabled = enabled;
             return this;
         }
-
         public Builder enabled(@Nullable Boolean enabled) {
             this.enabled = Output.ofNullable(enabled);
             return this;
         }
-
         public Builder endDate(@Nullable Output<String> endDate) {
             this.endDate = endDate;
             return this;
         }
-
         public Builder endDate(@Nullable String endDate) {
             this.endDate = Output.ofNullable(endDate);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder schedule(@Nullable Output<String> schedule) {
             this.schedule = schedule;
             return this;
         }
-
         public Builder schedule(@Nullable String schedule) {
             this.schedule = Output.ofNullable(schedule);
             return this;
         }
-
         public Builder scheduleOffset(@Nullable Output<Integer> scheduleOffset) {
             this.scheduleOffset = scheduleOffset;
             return this;
         }
-
         public Builder scheduleOffset(@Nullable Integer scheduleOffset) {
             this.scheduleOffset = Output.ofNullable(scheduleOffset);
             return this;
         }
-
         public Builder scheduleTimezone(@Nullable Output<String> scheduleTimezone) {
             this.scheduleTimezone = scheduleTimezone;
             return this;
         }
-
         public Builder scheduleTimezone(@Nullable String scheduleTimezone) {
             this.scheduleTimezone = Output.ofNullable(scheduleTimezone);
             return this;
         }
-
         public Builder startDate(@Nullable Output<String> startDate) {
             this.startDate = startDate;
             return this;
         }
-
         public Builder startDate(@Nullable String startDate) {
             this.startDate = Output.ofNullable(startDate);
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
             this.tagsAll = tagsAll;
             return this;
         }
-
         public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
             this.tagsAll = Output.ofNullable(tagsAll);
             return this;
-        }
-        public MaintenanceWindowState build() {
+        }        public MaintenanceWindowState build() {
             return new MaintenanceWindowState(allowUnassociatedTargets, cutoff, description, duration, enabled, endDate, name, schedule, scheduleOffset, scheduleTimezone, startDate, tags, tagsAll);
         }
     }

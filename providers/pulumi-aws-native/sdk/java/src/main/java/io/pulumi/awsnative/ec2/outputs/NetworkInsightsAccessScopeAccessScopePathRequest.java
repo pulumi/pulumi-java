@@ -65,17 +65,17 @@ public final class NetworkInsightsAccessScopeAccessScopePathRequest {
             this.destination = destination;
             return this;
         }
-
         public Builder source(@Nullable NetworkInsightsAccessScopePathStatementRequest source) {
             this.source = source;
             return this;
         }
-
         public Builder throughResources(@Nullable List<NetworkInsightsAccessScopeThroughResourcesStatementRequest> throughResources) {
             this.throughResources = throughResources;
             return this;
         }
-        public NetworkInsightsAccessScopeAccessScopePathRequest build() {
+        public Builder throughResources(NetworkInsightsAccessScopeThroughResourcesStatementRequest... throughResources) {
+            return throughResources(List.of(throughResources));
+        }        public NetworkInsightsAccessScopeAccessScopePathRequest build() {
             return new NetworkInsightsAccessScopeAccessScopePathRequest(destination, source, throughResources);
         }
     }

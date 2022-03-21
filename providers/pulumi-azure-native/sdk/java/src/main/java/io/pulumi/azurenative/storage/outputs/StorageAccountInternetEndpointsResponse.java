@@ -101,22 +101,18 @@ public final class StorageAccountInternetEndpointsResponse {
             this.blob = Objects.requireNonNull(blob);
             return this;
         }
-
         public Builder dfs(String dfs) {
             this.dfs = Objects.requireNonNull(dfs);
             return this;
         }
-
         public Builder file(String file) {
             this.file = Objects.requireNonNull(file);
             return this;
         }
-
         public Builder web(String web) {
             this.web = Objects.requireNonNull(web);
             return this;
-        }
-        public StorageAccountInternetEndpointsResponse build() {
+        }        public StorageAccountInternetEndpointsResponse build() {
             return new StorageAccountInternetEndpointsResponse(blob, dfs, file, web);
         }
     }

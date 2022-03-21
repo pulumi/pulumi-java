@@ -69,12 +69,10 @@ public final class EventSourceMappingSourceAccessConfiguration {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder uri(String uri) {
             this.uri = Objects.requireNonNull(uri);
             return this;
-        }
-        public EventSourceMappingSourceAccessConfiguration build() {
+        }        public EventSourceMappingSourceAccessConfiguration build() {
             return new EventSourceMappingSourceAccessConfiguration(type, uri);
         }
     }

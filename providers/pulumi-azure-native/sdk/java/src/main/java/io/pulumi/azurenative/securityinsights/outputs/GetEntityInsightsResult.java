@@ -73,12 +73,13 @@ public final class GetEntityInsightsResult {
             this.metaData = metaData;
             return this;
         }
-
         public Builder value(@Nullable List<EntityInsightItemResponse> value) {
             this.value = value;
             return this;
         }
-        public GetEntityInsightsResult build() {
+        public Builder value(EntityInsightItemResponse... value) {
+            return value(List.of(value));
+        }        public GetEntityInsightsResult build() {
             return new GetEntityInsightsResult(metaData, value);
         }
     }

@@ -66,22 +66,18 @@ public final class EncryptionConfigPropertiesArgs extends io.pulumi.resources.Re
             this.kmsKeyArn = kmsKeyArn;
             return this;
         }
-
         public Builder kmsKeyArn(@Nullable String kmsKeyArn) {
             this.kmsKeyArn = Output.ofNullable(kmsKeyArn);
             return this;
         }
-
         public Builder roleArn(@Nullable Output<String> roleArn) {
             this.roleArn = roleArn;
             return this;
         }
-
         public Builder roleArn(@Nullable String roleArn) {
             this.roleArn = Output.ofNullable(roleArn);
             return this;
-        }
-        public EncryptionConfigPropertiesArgs build() {
+        }        public EncryptionConfigPropertiesArgs build() {
             return new EncryptionConfigPropertiesArgs(kmsKeyArn, roleArn);
         }
     }

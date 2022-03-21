@@ -319,172 +319,138 @@ public final class ManagedDatabaseArgs extends io.pulumi.resources.ResourceArgs 
             this.autoCompleteRestore = autoCompleteRestore;
             return this;
         }
-
         public Builder autoCompleteRestore(@Nullable Boolean autoCompleteRestore) {
             this.autoCompleteRestore = Output.ofNullable(autoCompleteRestore);
             return this;
         }
-
         public Builder catalogCollation(@Nullable Output<Either<String,CatalogCollationType>> catalogCollation) {
             this.catalogCollation = catalogCollation;
             return this;
         }
-
         public Builder catalogCollation(@Nullable Either<String,CatalogCollationType> catalogCollation) {
             this.catalogCollation = Output.ofNullable(catalogCollation);
             return this;
         }
-
         public Builder collation(@Nullable Output<String> collation) {
             this.collation = collation;
             return this;
         }
-
         public Builder collation(@Nullable String collation) {
             this.collation = Output.ofNullable(collation);
             return this;
         }
-
         public Builder createMode(@Nullable Output<Either<String,ManagedDatabaseCreateMode>> createMode) {
             this.createMode = createMode;
             return this;
         }
-
         public Builder createMode(@Nullable Either<String,ManagedDatabaseCreateMode> createMode) {
             this.createMode = Output.ofNullable(createMode);
             return this;
         }
-
         public Builder databaseName(@Nullable Output<String> databaseName) {
             this.databaseName = databaseName;
             return this;
         }
-
         public Builder databaseName(@Nullable String databaseName) {
             this.databaseName = Output.ofNullable(databaseName);
             return this;
         }
-
         public Builder lastBackupName(@Nullable Output<String> lastBackupName) {
             this.lastBackupName = lastBackupName;
             return this;
         }
-
         public Builder lastBackupName(@Nullable String lastBackupName) {
             this.lastBackupName = Output.ofNullable(lastBackupName);
             return this;
         }
-
         public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder longTermRetentionBackupResourceId(@Nullable Output<String> longTermRetentionBackupResourceId) {
             this.longTermRetentionBackupResourceId = longTermRetentionBackupResourceId;
             return this;
         }
-
         public Builder longTermRetentionBackupResourceId(@Nullable String longTermRetentionBackupResourceId) {
             this.longTermRetentionBackupResourceId = Output.ofNullable(longTermRetentionBackupResourceId);
             return this;
         }
-
         public Builder managedInstanceName(Output<String> managedInstanceName) {
             this.managedInstanceName = Objects.requireNonNull(managedInstanceName);
             return this;
         }
-
         public Builder managedInstanceName(String managedInstanceName) {
             this.managedInstanceName = Output.of(Objects.requireNonNull(managedInstanceName));
             return this;
         }
-
         public Builder recoverableDatabaseId(@Nullable Output<String> recoverableDatabaseId) {
             this.recoverableDatabaseId = recoverableDatabaseId;
             return this;
         }
-
         public Builder recoverableDatabaseId(@Nullable String recoverableDatabaseId) {
             this.recoverableDatabaseId = Output.ofNullable(recoverableDatabaseId);
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder restorableDroppedDatabaseId(@Nullable Output<String> restorableDroppedDatabaseId) {
             this.restorableDroppedDatabaseId = restorableDroppedDatabaseId;
             return this;
         }
-
         public Builder restorableDroppedDatabaseId(@Nullable String restorableDroppedDatabaseId) {
             this.restorableDroppedDatabaseId = Output.ofNullable(restorableDroppedDatabaseId);
             return this;
         }
-
         public Builder restorePointInTime(@Nullable Output<String> restorePointInTime) {
             this.restorePointInTime = restorePointInTime;
             return this;
         }
-
         public Builder restorePointInTime(@Nullable String restorePointInTime) {
             this.restorePointInTime = Output.ofNullable(restorePointInTime);
             return this;
         }
-
         public Builder sourceDatabaseId(@Nullable Output<String> sourceDatabaseId) {
             this.sourceDatabaseId = sourceDatabaseId;
             return this;
         }
-
         public Builder sourceDatabaseId(@Nullable String sourceDatabaseId) {
             this.sourceDatabaseId = Output.ofNullable(sourceDatabaseId);
             return this;
         }
-
         public Builder storageContainerSasToken(@Nullable Output<String> storageContainerSasToken) {
             this.storageContainerSasToken = storageContainerSasToken;
             return this;
         }
-
         public Builder storageContainerSasToken(@Nullable String storageContainerSasToken) {
             this.storageContainerSasToken = Output.ofNullable(storageContainerSasToken);
             return this;
         }
-
         public Builder storageContainerUri(@Nullable Output<String> storageContainerUri) {
             this.storageContainerUri = storageContainerUri;
             return this;
         }
-
         public Builder storageContainerUri(@Nullable String storageContainerUri) {
             this.storageContainerUri = Output.ofNullable(storageContainerUri);
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
-        }
-        public ManagedDatabaseArgs build() {
+        }        public ManagedDatabaseArgs build() {
             return new ManagedDatabaseArgs(autoCompleteRestore, catalogCollation, collation, createMode, databaseName, lastBackupName, location, longTermRetentionBackupResourceId, managedInstanceName, recoverableDatabaseId, resourceGroupName, restorableDroppedDatabaseId, restorePointInTime, sourceDatabaseId, storageContainerSasToken, storageContainerUri, tags);
         }
     }

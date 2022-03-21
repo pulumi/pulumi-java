@@ -149,62 +149,53 @@ public final class AcsClusterPropertiesArgs extends io.pulumi.resources.Resource
             this.agentCount = agentCount;
             return this;
         }
-
         public Builder agentCount(@Nullable Integer agentCount) {
             this.agentCount = Output.ofNullable(agentCount);
             return this;
         }
-
         public Builder agentVmSize(@Nullable Output<Either<String,AgentVMSizeTypes>> agentVmSize) {
             this.agentVmSize = agentVmSize;
             return this;
         }
-
         public Builder agentVmSize(@Nullable Either<String,AgentVMSizeTypes> agentVmSize) {
             this.agentVmSize = Output.ofNullable(agentVmSize);
             return this;
         }
-
         public Builder masterCount(@Nullable Output<Integer> masterCount) {
             this.masterCount = masterCount;
             return this;
         }
-
         public Builder masterCount(@Nullable Integer masterCount) {
             this.masterCount = Output.ofNullable(masterCount);
             return this;
         }
-
         public Builder orchestratorProperties(@Nullable Output<KubernetesClusterPropertiesArgs> orchestratorProperties) {
             this.orchestratorProperties = orchestratorProperties;
             return this;
         }
-
         public Builder orchestratorProperties(@Nullable KubernetesClusterPropertiesArgs orchestratorProperties) {
             this.orchestratorProperties = Output.ofNullable(orchestratorProperties);
             return this;
         }
-
         public Builder orchestratorType(Output<Either<String,OrchestratorType>> orchestratorType) {
             this.orchestratorType = Objects.requireNonNull(orchestratorType);
             return this;
         }
-
         public Builder orchestratorType(Either<String,OrchestratorType> orchestratorType) {
             this.orchestratorType = Output.of(Objects.requireNonNull(orchestratorType));
             return this;
         }
-
         public Builder systemServices(@Nullable Output<List<SystemServiceArgs>> systemServices) {
             this.systemServices = systemServices;
             return this;
         }
-
         public Builder systemServices(@Nullable List<SystemServiceArgs> systemServices) {
             this.systemServices = Output.ofNullable(systemServices);
             return this;
         }
-        public AcsClusterPropertiesArgs build() {
+        public Builder systemServices(SystemServiceArgs... systemServices) {
+            return systemServices(List.of(systemServices));
+        }        public AcsClusterPropertiesArgs build() {
             return new AcsClusterPropertiesArgs(agentCount, agentVmSize, masterCount, orchestratorProperties, orchestratorType, systemServices);
         }
     }

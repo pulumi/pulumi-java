@@ -91,42 +91,34 @@ public final class ServiceTaskSpecRestartPolicyArgs extends io.pulumi.resources.
             this.condition = condition;
             return this;
         }
-
         public Builder condition(@Nullable String condition) {
             this.condition = Output.ofNullable(condition);
             return this;
         }
-
         public Builder delay(@Nullable Output<String> delay) {
             this.delay = delay;
             return this;
         }
-
         public Builder delay(@Nullable String delay) {
             this.delay = Output.ofNullable(delay);
             return this;
         }
-
         public Builder maxAttempts(@Nullable Output<Integer> maxAttempts) {
             this.maxAttempts = maxAttempts;
             return this;
         }
-
         public Builder maxAttempts(@Nullable Integer maxAttempts) {
             this.maxAttempts = Output.ofNullable(maxAttempts);
             return this;
         }
-
         public Builder window(@Nullable Output<String> window) {
             this.window = window;
             return this;
         }
-
         public Builder window(@Nullable String window) {
             this.window = Output.ofNullable(window);
             return this;
-        }
-        public ServiceTaskSpecRestartPolicyArgs build() {
+        }        public ServiceTaskSpecRestartPolicyArgs build() {
             return new ServiceTaskSpecRestartPolicyArgs(condition, delay, maxAttempts, window);
         }
     }

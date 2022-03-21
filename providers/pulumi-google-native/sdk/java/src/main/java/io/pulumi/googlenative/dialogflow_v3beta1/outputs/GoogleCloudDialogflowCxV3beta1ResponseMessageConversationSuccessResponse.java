@@ -52,8 +52,7 @@ public final class GoogleCloudDialogflowCxV3beta1ResponseMessageConversationSucc
         public Builder metadata(Map<String,String> metadata) {
             this.metadata = Objects.requireNonNull(metadata);
             return this;
-        }
-        public GoogleCloudDialogflowCxV3beta1ResponseMessageConversationSuccessResponse build() {
+        }        public GoogleCloudDialogflowCxV3beta1ResponseMessageConversationSuccessResponse build() {
             return new GoogleCloudDialogflowCxV3beta1ResponseMessageConversationSuccessResponse(metadata);
         }
     }

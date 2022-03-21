@@ -53,12 +53,10 @@ public final class AssetModelTag {
             this.key = Objects.requireNonNull(key);
             return this;
         }
-
         public Builder value(String value) {
             this.value = Objects.requireNonNull(value);
             return this;
-        }
-        public AssetModelTag build() {
+        }        public AssetModelTag build() {
             return new AssetModelTag(key, value);
         }
     }

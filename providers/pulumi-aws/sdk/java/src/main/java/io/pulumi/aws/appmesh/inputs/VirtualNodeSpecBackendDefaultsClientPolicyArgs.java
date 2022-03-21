@@ -57,12 +57,10 @@ public final class VirtualNodeSpecBackendDefaultsClientPolicyArgs extends io.pul
             this.tls = tls;
             return this;
         }
-
         public Builder tls(@Nullable VirtualNodeSpecBackendDefaultsClientPolicyTlsArgs tls) {
             this.tls = Output.ofNullable(tls);
             return this;
-        }
-        public VirtualNodeSpecBackendDefaultsClientPolicyArgs build() {
+        }        public VirtualNodeSpecBackendDefaultsClientPolicyArgs build() {
             return new VirtualNodeSpecBackendDefaultsClientPolicyArgs(tls);
         }
     }

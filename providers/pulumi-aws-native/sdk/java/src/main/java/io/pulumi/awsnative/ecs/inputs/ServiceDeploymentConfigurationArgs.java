@@ -79,32 +79,26 @@ public final class ServiceDeploymentConfigurationArgs extends io.pulumi.resource
             this.deploymentCircuitBreaker = deploymentCircuitBreaker;
             return this;
         }
-
         public Builder deploymentCircuitBreaker(@Nullable ServiceDeploymentCircuitBreakerArgs deploymentCircuitBreaker) {
             this.deploymentCircuitBreaker = Output.ofNullable(deploymentCircuitBreaker);
             return this;
         }
-
         public Builder maximumPercent(@Nullable Output<Integer> maximumPercent) {
             this.maximumPercent = maximumPercent;
             return this;
         }
-
         public Builder maximumPercent(@Nullable Integer maximumPercent) {
             this.maximumPercent = Output.ofNullable(maximumPercent);
             return this;
         }
-
         public Builder minimumHealthyPercent(@Nullable Output<Integer> minimumHealthyPercent) {
             this.minimumHealthyPercent = minimumHealthyPercent;
             return this;
         }
-
         public Builder minimumHealthyPercent(@Nullable Integer minimumHealthyPercent) {
             this.minimumHealthyPercent = Output.ofNullable(minimumHealthyPercent);
             return this;
-        }
-        public ServiceDeploymentConfigurationArgs build() {
+        }        public ServiceDeploymentConfigurationArgs build() {
             return new ServiceDeploymentConfigurationArgs(deploymentCircuitBreaker, maximumPercent, minimumHealthyPercent);
         }
     }

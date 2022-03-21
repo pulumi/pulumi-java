@@ -76,12 +76,10 @@ public final class SecurityScanConfigAuthentication {
             this.customAccount = customAccount;
             return this;
         }
-
         public Builder googleAccount(@Nullable SecurityScanConfigAuthenticationGoogleAccount googleAccount) {
             this.googleAccount = googleAccount;
             return this;
-        }
-        public SecurityScanConfigAuthentication build() {
+        }        public SecurityScanConfigAuthentication build() {
             return new SecurityScanConfigAuthentication(customAccount, googleAccount);
         }
     }

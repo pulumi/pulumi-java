@@ -124,42 +124,40 @@ public final class RouterBgpArgs extends io.pulumi.resources.ResourceArgs {
             this.advertiseMode = advertiseMode;
             return this;
         }
-
         public Builder advertiseMode(@Nullable String advertiseMode) {
             this.advertiseMode = Output.ofNullable(advertiseMode);
             return this;
         }
-
         public Builder advertisedGroups(@Nullable Output<List<String>> advertisedGroups) {
             this.advertisedGroups = advertisedGroups;
             return this;
         }
-
         public Builder advertisedGroups(@Nullable List<String> advertisedGroups) {
             this.advertisedGroups = Output.ofNullable(advertisedGroups);
             return this;
         }
-
+        public Builder advertisedGroups(String... advertisedGroups) {
+            return advertisedGroups(List.of(advertisedGroups));
+        }
         public Builder advertisedIpRanges(@Nullable Output<List<RouterBgpAdvertisedIpRangeArgs>> advertisedIpRanges) {
             this.advertisedIpRanges = advertisedIpRanges;
             return this;
         }
-
         public Builder advertisedIpRanges(@Nullable List<RouterBgpAdvertisedIpRangeArgs> advertisedIpRanges) {
             this.advertisedIpRanges = Output.ofNullable(advertisedIpRanges);
             return this;
         }
-
+        public Builder advertisedIpRanges(RouterBgpAdvertisedIpRangeArgs... advertisedIpRanges) {
+            return advertisedIpRanges(List.of(advertisedIpRanges));
+        }
         public Builder asn(Output<Integer> asn) {
             this.asn = Objects.requireNonNull(asn);
             return this;
         }
-
         public Builder asn(Integer asn) {
             this.asn = Output.of(Objects.requireNonNull(asn));
             return this;
-        }
-        public RouterBgpArgs build() {
+        }        public RouterBgpArgs build() {
             return new RouterBgpArgs(advertiseMode, advertisedGroups, advertisedIpRanges, asn);
         }
     }

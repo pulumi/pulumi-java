@@ -185,92 +185,77 @@ public final class S3LocationState extends io.pulumi.resources.ResourceArgs {
             this.agentArns = agentArns;
             return this;
         }
-
         public Builder agentArns(@Nullable List<String> agentArns) {
             this.agentArns = Output.ofNullable(agentArns);
             return this;
         }
-
+        public Builder agentArns(String... agentArns) {
+            return agentArns(List.of(agentArns));
+        }
         public Builder arn(@Nullable Output<String> arn) {
             this.arn = arn;
             return this;
         }
-
         public Builder arn(@Nullable String arn) {
             this.arn = Output.ofNullable(arn);
             return this;
         }
-
         public Builder s3BucketArn(@Nullable Output<String> s3BucketArn) {
             this.s3BucketArn = s3BucketArn;
             return this;
         }
-
         public Builder s3BucketArn(@Nullable String s3BucketArn) {
             this.s3BucketArn = Output.ofNullable(s3BucketArn);
             return this;
         }
-
         public Builder s3Config(@Nullable Output<S3LocationS3ConfigGetArgs> s3Config) {
             this.s3Config = s3Config;
             return this;
         }
-
         public Builder s3Config(@Nullable S3LocationS3ConfigGetArgs s3Config) {
             this.s3Config = Output.ofNullable(s3Config);
             return this;
         }
-
         public Builder s3StorageClass(@Nullable Output<String> s3StorageClass) {
             this.s3StorageClass = s3StorageClass;
             return this;
         }
-
         public Builder s3StorageClass(@Nullable String s3StorageClass) {
             this.s3StorageClass = Output.ofNullable(s3StorageClass);
             return this;
         }
-
         public Builder subdirectory(@Nullable Output<String> subdirectory) {
             this.subdirectory = subdirectory;
             return this;
         }
-
         public Builder subdirectory(@Nullable String subdirectory) {
             this.subdirectory = Output.ofNullable(subdirectory);
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
             this.tagsAll = tagsAll;
             return this;
         }
-
         public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
             this.tagsAll = Output.ofNullable(tagsAll);
             return this;
         }
-
         public Builder uri(@Nullable Output<String> uri) {
             this.uri = uri;
             return this;
         }
-
         public Builder uri(@Nullable String uri) {
             this.uri = Output.ofNullable(uri);
             return this;
-        }
-        public S3LocationState build() {
+        }        public S3LocationState build() {
             return new S3LocationState(agentArns, arn, s3BucketArn, s3Config, s3StorageClass, subdirectory, tags, tagsAll, uri);
         }
     }

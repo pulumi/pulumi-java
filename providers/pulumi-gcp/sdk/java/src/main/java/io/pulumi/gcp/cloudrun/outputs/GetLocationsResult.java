@@ -78,17 +78,17 @@ public final class GetLocationsResult {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder locations(List<String> locations) {
             this.locations = Objects.requireNonNull(locations);
             return this;
         }
-
+        public Builder locations(String... locations) {
+            return locations(List.of(locations));
+        }
         public Builder project(String project) {
             this.project = Objects.requireNonNull(project);
             return this;
-        }
-        public GetLocationsResult build() {
+        }        public GetLocationsResult build() {
             return new GetLocationsResult(id, locations, project);
         }
     }

@@ -64,12 +64,10 @@ public final class DashboardError {
             this.message = message;
             return this;
         }
-
         public Builder type(@Nullable DashboardErrorType type) {
             this.type = type;
             return this;
-        }
-        public DashboardError build() {
+        }        public DashboardError build() {
             return new DashboardError(message, type);
         }
     }

@@ -61,12 +61,10 @@ public final class ConnectionMonitorEndpointScopeItemArgs extends io.pulumi.reso
             this.address = address;
             return this;
         }
-
         public Builder address(@Nullable String address) {
             this.address = Output.ofNullable(address);
             return this;
-        }
-        public ConnectionMonitorEndpointScopeItemArgs build() {
+        }        public ConnectionMonitorEndpointScopeItemArgs build() {
             return new ConnectionMonitorEndpointScopeItemArgs(address);
         }
     }

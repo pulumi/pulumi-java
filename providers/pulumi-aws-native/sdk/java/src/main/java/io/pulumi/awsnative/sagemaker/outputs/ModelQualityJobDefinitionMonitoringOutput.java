@@ -43,8 +43,7 @@ public final class ModelQualityJobDefinitionMonitoringOutput {
         public Builder s3Output(ModelQualityJobDefinitionS3Output s3Output) {
             this.s3Output = Objects.requireNonNull(s3Output);
             return this;
-        }
-        public ModelQualityJobDefinitionMonitoringOutput build() {
+        }        public ModelQualityJobDefinitionMonitoringOutput build() {
             return new ModelQualityJobDefinitionMonitoringOutput(s3Output);
         }
     }

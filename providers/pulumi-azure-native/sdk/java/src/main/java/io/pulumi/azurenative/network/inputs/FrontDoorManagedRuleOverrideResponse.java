@@ -112,22 +112,21 @@ public final class FrontDoorManagedRuleOverrideResponse extends io.pulumi.resour
             this.action = action;
             return this;
         }
-
         public Builder enabledState(@Nullable String enabledState) {
             this.enabledState = enabledState;
             return this;
         }
-
         public Builder exclusions(@Nullable List<ManagedRuleExclusionResponse> exclusions) {
             this.exclusions = exclusions;
             return this;
         }
-
+        public Builder exclusions(ManagedRuleExclusionResponse... exclusions) {
+            return exclusions(List.of(exclusions));
+        }
         public Builder ruleId(String ruleId) {
             this.ruleId = Objects.requireNonNull(ruleId);
             return this;
-        }
-        public FrontDoorManagedRuleOverrideResponse build() {
+        }        public FrontDoorManagedRuleOverrideResponse build() {
             return new FrontDoorManagedRuleOverrideResponse(action, enabledState, exclusions, ruleId);
         }
     }

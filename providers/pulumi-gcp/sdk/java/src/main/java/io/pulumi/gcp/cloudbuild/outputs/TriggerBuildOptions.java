@@ -285,62 +285,62 @@ public final class TriggerBuildOptions {
             this.diskSizeGb = diskSizeGb;
             return this;
         }
-
         public Builder dynamicSubstitutions(@Nullable Boolean dynamicSubstitutions) {
             this.dynamicSubstitutions = dynamicSubstitutions;
             return this;
         }
-
         public Builder envs(@Nullable List<String> envs) {
             this.envs = envs;
             return this;
         }
-
+        public Builder envs(String... envs) {
+            return envs(List.of(envs));
+        }
         public Builder logStreamingOption(@Nullable String logStreamingOption) {
             this.logStreamingOption = logStreamingOption;
             return this;
         }
-
         public Builder logging(@Nullable String logging) {
             this.logging = logging;
             return this;
         }
-
         public Builder machineType(@Nullable String machineType) {
             this.machineType = machineType;
             return this;
         }
-
         public Builder requestedVerifyOption(@Nullable String requestedVerifyOption) {
             this.requestedVerifyOption = requestedVerifyOption;
             return this;
         }
-
         public Builder secretEnvs(@Nullable List<String> secretEnvs) {
             this.secretEnvs = secretEnvs;
             return this;
         }
-
+        public Builder secretEnvs(String... secretEnvs) {
+            return secretEnvs(List.of(secretEnvs));
+        }
         public Builder sourceProvenanceHashes(@Nullable List<String> sourceProvenanceHashes) {
             this.sourceProvenanceHashes = sourceProvenanceHashes;
             return this;
         }
-
+        public Builder sourceProvenanceHashes(String... sourceProvenanceHashes) {
+            return sourceProvenanceHashes(List.of(sourceProvenanceHashes));
+        }
         public Builder substitutionOption(@Nullable String substitutionOption) {
             this.substitutionOption = substitutionOption;
             return this;
         }
-
         public Builder volumes(@Nullable List<TriggerBuildOptionsVolume> volumes) {
             this.volumes = volumes;
             return this;
         }
-
+        public Builder volumes(TriggerBuildOptionsVolume... volumes) {
+            return volumes(List.of(volumes));
+        }
         public Builder workerPool(@Nullable String workerPool) {
             this.workerPool = workerPool;
             return this;
-        }
-        public TriggerBuildOptions build() {
+        }        public TriggerBuildOptions build() {
             return new TriggerBuildOptions(diskSizeGb, dynamicSubstitutions, envs, logStreamingOption, logging, machineType, requestedVerifyOption, secretEnvs, sourceProvenanceHashes, substitutionOption, volumes, workerPool);
         }
     }

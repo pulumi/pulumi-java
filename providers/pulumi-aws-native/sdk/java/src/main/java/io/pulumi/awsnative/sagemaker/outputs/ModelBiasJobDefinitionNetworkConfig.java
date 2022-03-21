@@ -80,17 +80,14 @@ public final class ModelBiasJobDefinitionNetworkConfig {
             this.enableInterContainerTrafficEncryption = enableInterContainerTrafficEncryption;
             return this;
         }
-
         public Builder enableNetworkIsolation(@Nullable Boolean enableNetworkIsolation) {
             this.enableNetworkIsolation = enableNetworkIsolation;
             return this;
         }
-
         public Builder vpcConfig(@Nullable ModelBiasJobDefinitionVpcConfig vpcConfig) {
             this.vpcConfig = vpcConfig;
             return this;
-        }
-        public ModelBiasJobDefinitionNetworkConfig build() {
+        }        public ModelBiasJobDefinitionNetworkConfig build() {
             return new ModelBiasJobDefinitionNetworkConfig(enableInterContainerTrafficEncryption, enableNetworkIsolation, vpcConfig);
         }
     }

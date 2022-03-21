@@ -51,8 +51,7 @@ public final class KalmConfigResponse {
         public Builder enabled(Boolean enabled) {
             this.enabled = Objects.requireNonNull(enabled);
             return this;
-        }
-        public KalmConfigResponse build() {
+        }        public KalmConfigResponse build() {
             return new KalmConfigResponse(enabled);
         }
     }

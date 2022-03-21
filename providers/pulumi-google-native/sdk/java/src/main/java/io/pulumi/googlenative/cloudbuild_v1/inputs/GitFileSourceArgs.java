@@ -111,42 +111,34 @@ public final class GitFileSourceArgs extends io.pulumi.resources.ResourceArgs {
             this.path = path;
             return this;
         }
-
         public Builder path(@Nullable String path) {
             this.path = Output.ofNullable(path);
             return this;
         }
-
         public Builder repoType(@Nullable Output<GitFileSourceRepoType> repoType) {
             this.repoType = repoType;
             return this;
         }
-
         public Builder repoType(@Nullable GitFileSourceRepoType repoType) {
             this.repoType = Output.ofNullable(repoType);
             return this;
         }
-
         public Builder revision(@Nullable Output<String> revision) {
             this.revision = revision;
             return this;
         }
-
         public Builder revision(@Nullable String revision) {
             this.revision = Output.ofNullable(revision);
             return this;
         }
-
         public Builder uri(@Nullable Output<String> uri) {
             this.uri = uri;
             return this;
         }
-
         public Builder uri(@Nullable String uri) {
             this.uri = Output.ofNullable(uri);
             return this;
-        }
-        public GitFileSourceArgs build() {
+        }        public GitFileSourceArgs build() {
             return new GitFileSourceArgs(path, repoType, revision, uri);
         }
     }

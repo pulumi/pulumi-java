@@ -69,12 +69,10 @@ public final class KeyTag {
             this.key = Objects.requireNonNull(key);
             return this;
         }
-
         public Builder value(String value) {
             this.value = Objects.requireNonNull(value);
             return this;
-        }
-        public KeyTag build() {
+        }        public KeyTag build() {
             return new KeyTag(key, value);
         }
     }

@@ -51,8 +51,7 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourcePkgGooget {
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
-        }
-        public OsPolicyAssignmentOsPolicyResourceGroupResourcePkgGooget build() {
+        }        public OsPolicyAssignmentOsPolicyResourceGroupResourcePkgGooget build() {
             return new OsPolicyAssignmentOsPolicyResourceGroupResourcePkgGooget(name);
         }
     }

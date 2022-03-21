@@ -72,22 +72,21 @@ public final class GetSecretSecret {
             this.context = context;
             return this;
         }
-
         public Builder grantTokens(@Nullable List<String> grantTokens) {
             this.grantTokens = grantTokens;
             return this;
         }
-
+        public Builder grantTokens(String... grantTokens) {
+            return grantTokens(List.of(grantTokens));
+        }
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder payload(String payload) {
             this.payload = Objects.requireNonNull(payload);
             return this;
-        }
-        public GetSecretSecret build() {
+        }        public GetSecretSecret build() {
             return new GetSecretSecret(context, grantTokens, name, payload);
         }
     }

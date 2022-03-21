@@ -58,8 +58,7 @@ public final class HealthCheckLogConfigResponse extends io.pulumi.resources.Invo
         public Builder enable(Boolean enable) {
             this.enable = Objects.requireNonNull(enable);
             return this;
-        }
-        public HealthCheckLogConfigResponse build() {
+        }        public HealthCheckLogConfigResponse build() {
             return new HealthCheckLogConfigResponse(enable);
         }
     }

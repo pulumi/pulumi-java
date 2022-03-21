@@ -104,22 +104,18 @@ public final class GetOnlineEndpointTokenResult {
             this.accessToken = accessToken;
             return this;
         }
-
         public Builder expiryTimeUtc(@Nullable Double expiryTimeUtc) {
             this.expiryTimeUtc = expiryTimeUtc;
             return this;
         }
-
         public Builder refreshAfterTimeUtc(@Nullable Double refreshAfterTimeUtc) {
             this.refreshAfterTimeUtc = refreshAfterTimeUtc;
             return this;
         }
-
         public Builder tokenType(@Nullable String tokenType) {
             this.tokenType = tokenType;
             return this;
-        }
-        public GetOnlineEndpointTokenResult build() {
+        }        public GetOnlineEndpointTokenResult build() {
             return new GetOnlineEndpointTokenResult(accessToken, expiryTimeUtc, refreshAfterTimeUtc, tokenType);
         }
     }

@@ -104,42 +104,34 @@ public final class NetworkInterfaceSubInterfaceArgs extends io.pulumi.resources.
             this.ipAddress = ipAddress;
             return this;
         }
-
         public Builder ipAddress(@Nullable String ipAddress) {
             this.ipAddress = Output.ofNullable(ipAddress);
             return this;
         }
-
         public Builder ipAllocationMode(@Nullable Output<NetworkInterfaceSubInterfaceIpAllocationMode> ipAllocationMode) {
             this.ipAllocationMode = ipAllocationMode;
             return this;
         }
-
         public Builder ipAllocationMode(@Nullable NetworkInterfaceSubInterfaceIpAllocationMode ipAllocationMode) {
             this.ipAllocationMode = Output.ofNullable(ipAllocationMode);
             return this;
         }
-
         public Builder subnetwork(@Nullable Output<String> subnetwork) {
             this.subnetwork = subnetwork;
             return this;
         }
-
         public Builder subnetwork(@Nullable String subnetwork) {
             this.subnetwork = Output.ofNullable(subnetwork);
             return this;
         }
-
         public Builder vlan(@Nullable Output<Integer> vlan) {
             this.vlan = vlan;
             return this;
         }
-
         public Builder vlan(@Nullable Integer vlan) {
             this.vlan = Output.ofNullable(vlan);
             return this;
-        }
-        public NetworkInterfaceSubInterfaceArgs build() {
+        }        public NetworkInterfaceSubInterfaceArgs build() {
             return new NetworkInterfaceSubInterfaceArgs(ipAddress, ipAllocationMode, subnetwork, vlan);
         }
     }

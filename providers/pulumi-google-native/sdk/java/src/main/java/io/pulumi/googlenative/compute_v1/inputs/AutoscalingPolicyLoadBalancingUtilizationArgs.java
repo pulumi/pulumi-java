@@ -61,12 +61,10 @@ public final class AutoscalingPolicyLoadBalancingUtilizationArgs extends io.pulu
             this.utilizationTarget = utilizationTarget;
             return this;
         }
-
         public Builder utilizationTarget(@Nullable Double utilizationTarget) {
             this.utilizationTarget = Output.ofNullable(utilizationTarget);
             return this;
-        }
-        public AutoscalingPolicyLoadBalancingUtilizationArgs build() {
+        }        public AutoscalingPolicyLoadBalancingUtilizationArgs build() {
             return new AutoscalingPolicyLoadBalancingUtilizationArgs(utilizationTarget);
         }
     }

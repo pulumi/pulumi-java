@@ -78,22 +78,18 @@ public final class DatastoreIODetailsArgs extends io.pulumi.resources.ResourceAr
             this.namespace = namespace;
             return this;
         }
-
         public Builder namespace(@Nullable String namespace) {
             this.namespace = Output.ofNullable(namespace);
             return this;
         }
-
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
-        }
-        public DatastoreIODetailsArgs build() {
+        }        public DatastoreIODetailsArgs build() {
             return new DatastoreIODetailsArgs(namespace, project);
         }
     }

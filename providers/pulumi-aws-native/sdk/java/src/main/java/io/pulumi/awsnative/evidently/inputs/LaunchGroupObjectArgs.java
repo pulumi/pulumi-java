@@ -90,42 +90,34 @@ public final class LaunchGroupObjectArgs extends io.pulumi.resources.ResourceArg
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder feature(Output<String> feature) {
             this.feature = Objects.requireNonNull(feature);
             return this;
         }
-
         public Builder feature(String feature) {
             this.feature = Output.of(Objects.requireNonNull(feature));
             return this;
         }
-
         public Builder groupName(Output<String> groupName) {
             this.groupName = Objects.requireNonNull(groupName);
             return this;
         }
-
         public Builder groupName(String groupName) {
             this.groupName = Output.of(Objects.requireNonNull(groupName));
             return this;
         }
-
         public Builder variation(Output<String> variation) {
             this.variation = Objects.requireNonNull(variation);
             return this;
         }
-
         public Builder variation(String variation) {
             this.variation = Output.of(Objects.requireNonNull(variation));
             return this;
-        }
-        public LaunchGroupObjectArgs build() {
+        }        public LaunchGroupObjectArgs build() {
             return new LaunchGroupObjectArgs(description, feature, groupName, variation);
         }
     }

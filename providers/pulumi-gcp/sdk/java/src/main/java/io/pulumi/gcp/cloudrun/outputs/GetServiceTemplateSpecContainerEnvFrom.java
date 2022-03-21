@@ -64,17 +64,20 @@ public final class GetServiceTemplateSpecContainerEnvFrom {
             this.configMapReves = Objects.requireNonNull(configMapReves);
             return this;
         }
-
+        public Builder configMapReves(GetServiceTemplateSpecContainerEnvFromConfigMapRef... configMapReves) {
+            return configMapReves(List.of(configMapReves));
+        }
         public Builder prefix(String prefix) {
             this.prefix = Objects.requireNonNull(prefix);
             return this;
         }
-
         public Builder secretReves(List<GetServiceTemplateSpecContainerEnvFromSecretRef> secretReves) {
             this.secretReves = Objects.requireNonNull(secretReves);
             return this;
         }
-        public GetServiceTemplateSpecContainerEnvFrom build() {
+        public Builder secretReves(GetServiceTemplateSpecContainerEnvFromSecretRef... secretReves) {
+            return secretReves(List.of(secretReves));
+        }        public GetServiceTemplateSpecContainerEnvFrom build() {
             return new GetServiceTemplateSpecContainerEnvFrom(configMapReves, prefix, secretReves);
         }
     }

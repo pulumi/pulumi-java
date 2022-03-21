@@ -61,12 +61,10 @@ public final class AwsCloudTrailDataConnectorDataTypesArgs extends io.pulumi.res
             this.logs = logs;
             return this;
         }
-
         public Builder logs(@Nullable AwsCloudTrailDataConnectorDataTypesLogsArgs logs) {
             this.logs = Output.ofNullable(logs);
             return this;
-        }
-        public AwsCloudTrailDataConnectorDataTypesArgs build() {
+        }        public AwsCloudTrailDataConnectorDataTypesArgs build() {
             return new AwsCloudTrailDataConnectorDataTypesArgs(logs);
         }
     }

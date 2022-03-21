@@ -96,32 +96,26 @@ public final class WorkloadsConfigArgs extends io.pulumi.resources.ResourceArgs 
             this.scheduler = scheduler;
             return this;
         }
-
         public Builder scheduler(@Nullable SchedulerResourceArgs scheduler) {
             this.scheduler = Output.ofNullable(scheduler);
             return this;
         }
-
         public Builder webServer(@Nullable Output<WebServerResourceArgs> webServer) {
             this.webServer = webServer;
             return this;
         }
-
         public Builder webServer(@Nullable WebServerResourceArgs webServer) {
             this.webServer = Output.ofNullable(webServer);
             return this;
         }
-
         public Builder worker(@Nullable Output<WorkerResourceArgs> worker) {
             this.worker = worker;
             return this;
         }
-
         public Builder worker(@Nullable WorkerResourceArgs worker) {
             this.worker = Output.ofNullable(worker);
             return this;
-        }
-        public WorkloadsConfigArgs build() {
+        }        public WorkloadsConfigArgs build() {
             return new WorkloadsConfigArgs(scheduler, webServer, worker);
         }
     }

@@ -91,32 +91,26 @@ public final class CiphertextArgs extends io.pulumi.resources.ResourceArgs {
             this.context = context;
             return this;
         }
-
         public Builder context(@Nullable Map<String,String> context) {
             this.context = Output.ofNullable(context);
             return this;
         }
-
         public Builder keyId(Output<String> keyId) {
             this.keyId = Objects.requireNonNull(keyId);
             return this;
         }
-
         public Builder keyId(String keyId) {
             this.keyId = Output.of(Objects.requireNonNull(keyId));
             return this;
         }
-
         public Builder plaintext(Output<String> plaintext) {
             this.plaintext = Objects.requireNonNull(plaintext);
             return this;
         }
-
         public Builder plaintext(String plaintext) {
             this.plaintext = Output.of(Objects.requireNonNull(plaintext));
             return this;
-        }
-        public CiphertextArgs build() {
+        }        public CiphertextArgs build() {
             return new CiphertextArgs(context, keyId, plaintext);
         }
     }

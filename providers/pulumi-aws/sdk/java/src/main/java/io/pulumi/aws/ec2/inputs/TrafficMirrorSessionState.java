@@ -220,112 +220,90 @@ public final class TrafficMirrorSessionState extends io.pulumi.resources.Resourc
             this.arn = arn;
             return this;
         }
-
         public Builder arn(@Nullable String arn) {
             this.arn = Output.ofNullable(arn);
             return this;
         }
-
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder networkInterfaceId(@Nullable Output<String> networkInterfaceId) {
             this.networkInterfaceId = networkInterfaceId;
             return this;
         }
-
         public Builder networkInterfaceId(@Nullable String networkInterfaceId) {
             this.networkInterfaceId = Output.ofNullable(networkInterfaceId);
             return this;
         }
-
         public Builder ownerId(@Nullable Output<String> ownerId) {
             this.ownerId = ownerId;
             return this;
         }
-
         public Builder ownerId(@Nullable String ownerId) {
             this.ownerId = Output.ofNullable(ownerId);
             return this;
         }
-
         public Builder packetLength(@Nullable Output<Integer> packetLength) {
             this.packetLength = packetLength;
             return this;
         }
-
         public Builder packetLength(@Nullable Integer packetLength) {
             this.packetLength = Output.ofNullable(packetLength);
             return this;
         }
-
         public Builder sessionNumber(@Nullable Output<Integer> sessionNumber) {
             this.sessionNumber = sessionNumber;
             return this;
         }
-
         public Builder sessionNumber(@Nullable Integer sessionNumber) {
             this.sessionNumber = Output.ofNullable(sessionNumber);
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
             this.tagsAll = tagsAll;
             return this;
         }
-
         public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
             this.tagsAll = Output.ofNullable(tagsAll);
             return this;
         }
-
         public Builder trafficMirrorFilterId(@Nullable Output<String> trafficMirrorFilterId) {
             this.trafficMirrorFilterId = trafficMirrorFilterId;
             return this;
         }
-
         public Builder trafficMirrorFilterId(@Nullable String trafficMirrorFilterId) {
             this.trafficMirrorFilterId = Output.ofNullable(trafficMirrorFilterId);
             return this;
         }
-
         public Builder trafficMirrorTargetId(@Nullable Output<String> trafficMirrorTargetId) {
             this.trafficMirrorTargetId = trafficMirrorTargetId;
             return this;
         }
-
         public Builder trafficMirrorTargetId(@Nullable String trafficMirrorTargetId) {
             this.trafficMirrorTargetId = Output.ofNullable(trafficMirrorTargetId);
             return this;
         }
-
         public Builder virtualNetworkId(@Nullable Output<Integer> virtualNetworkId) {
             this.virtualNetworkId = virtualNetworkId;
             return this;
         }
-
         public Builder virtualNetworkId(@Nullable Integer virtualNetworkId) {
             this.virtualNetworkId = Output.ofNullable(virtualNetworkId);
             return this;
-        }
-        public TrafficMirrorSessionState build() {
+        }        public TrafficMirrorSessionState build() {
             return new TrafficMirrorSessionState(arn, description, networkInterfaceId, ownerId, packetLength, sessionNumber, tags, tagsAll, trafficMirrorFilterId, trafficMirrorTargetId, virtualNetworkId);
         }
     }

@@ -80,22 +80,18 @@ public final class ApiManagementServiceSkuPropertiesArgs extends io.pulumi.resou
             this.capacity = Objects.requireNonNull(capacity);
             return this;
         }
-
         public Builder capacity(Integer capacity) {
             this.capacity = Output.of(Objects.requireNonNull(capacity));
             return this;
         }
-
         public Builder name(Output<Either<String,SkuType>> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder name(Either<String,SkuType> name) {
             this.name = Output.of(Objects.requireNonNull(name));
             return this;
-        }
-        public ApiManagementServiceSkuPropertiesArgs build() {
+        }        public ApiManagementServiceSkuPropertiesArgs build() {
             return new ApiManagementServiceSkuPropertiesArgs(capacity, name);
         }
     }

@@ -88,17 +88,14 @@ public final class GoogleRpcStatusResponse {
             this.code = Objects.requireNonNull(code);
             return this;
         }
-
         public Builder details(List<Map<String,String>> details) {
             this.details = Objects.requireNonNull(details);
             return this;
         }
-
         public Builder message(String message) {
             this.message = Objects.requireNonNull(message);
             return this;
-        }
-        public GoogleRpcStatusResponse build() {
+        }        public GoogleRpcStatusResponse build() {
             return new GoogleRpcStatusResponse(code, details, message);
         }
     }

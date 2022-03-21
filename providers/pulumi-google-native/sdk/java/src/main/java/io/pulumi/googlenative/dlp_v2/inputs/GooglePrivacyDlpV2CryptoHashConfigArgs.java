@@ -61,12 +61,10 @@ public final class GooglePrivacyDlpV2CryptoHashConfigArgs extends io.pulumi.reso
             this.cryptoKey = cryptoKey;
             return this;
         }
-
         public Builder cryptoKey(@Nullable GooglePrivacyDlpV2CryptoKeyArgs cryptoKey) {
             this.cryptoKey = Output.ofNullable(cryptoKey);
             return this;
-        }
-        public GooglePrivacyDlpV2CryptoHashConfigArgs build() {
+        }        public GooglePrivacyDlpV2CryptoHashConfigArgs build() {
             return new GooglePrivacyDlpV2CryptoHashConfigArgs(cryptoKey);
         }
     }

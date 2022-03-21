@@ -51,8 +51,7 @@ public final class NodeGroupAffinityResponse {
         public Builder nodeGroupUri(String nodeGroupUri) {
             this.nodeGroupUri = Objects.requireNonNull(nodeGroupUri);
             return this;
-        }
-        public NodeGroupAffinityResponse build() {
+        }        public NodeGroupAffinityResponse build() {
             return new NodeGroupAffinityResponse(nodeGroupUri);
         }
     }

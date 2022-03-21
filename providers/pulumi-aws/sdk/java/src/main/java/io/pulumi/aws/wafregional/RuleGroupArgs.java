@@ -109,42 +109,37 @@ public final class RuleGroupArgs extends io.pulumi.resources.ResourceArgs {
             this.activatedRules = activatedRules;
             return this;
         }
-
         public Builder activatedRules(@Nullable List<RuleGroupActivatedRuleArgs> activatedRules) {
             this.activatedRules = Output.ofNullable(activatedRules);
             return this;
         }
-
+        public Builder activatedRules(RuleGroupActivatedRuleArgs... activatedRules) {
+            return activatedRules(List.of(activatedRules));
+        }
         public Builder metricName(Output<String> metricName) {
             this.metricName = Objects.requireNonNull(metricName);
             return this;
         }
-
         public Builder metricName(String metricName) {
             this.metricName = Output.of(Objects.requireNonNull(metricName));
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
-        }
-        public RuleGroupArgs build() {
+        }        public RuleGroupArgs build() {
             return new RuleGroupArgs(activatedRules, metricName, name, tags);
         }
     }

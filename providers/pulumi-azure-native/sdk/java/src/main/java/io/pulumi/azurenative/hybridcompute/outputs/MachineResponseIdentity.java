@@ -87,17 +87,14 @@ public final class MachineResponseIdentity {
             this.principalId = Objects.requireNonNull(principalId);
             return this;
         }
-
         public Builder tenantId(String tenantId) {
             this.tenantId = Objects.requireNonNull(tenantId);
             return this;
         }
-
         public Builder type(@Nullable String type) {
             this.type = type;
             return this;
-        }
-        public MachineResponseIdentity build() {
+        }        public MachineResponseIdentity build() {
             return new MachineResponseIdentity(principalId, tenantId, type);
         }
     }

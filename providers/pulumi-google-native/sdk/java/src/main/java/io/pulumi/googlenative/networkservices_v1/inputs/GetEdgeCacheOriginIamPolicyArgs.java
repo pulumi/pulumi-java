@@ -90,22 +90,18 @@ public final class GetEdgeCacheOriginIamPolicyArgs extends io.pulumi.resources.I
             this.edgeCacheOriginId = Objects.requireNonNull(edgeCacheOriginId);
             return this;
         }
-
         public Builder location(String location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
-
         public Builder optionsRequestedPolicyVersion(@Nullable String optionsRequestedPolicyVersion) {
             this.optionsRequestedPolicyVersion = optionsRequestedPolicyVersion;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = project;
             return this;
-        }
-        public GetEdgeCacheOriginIamPolicyArgs build() {
+        }        public GetEdgeCacheOriginIamPolicyArgs build() {
             return new GetEdgeCacheOriginIamPolicyArgs(edgeCacheOriginId, location, optionsRequestedPolicyVersion, project);
         }
     }

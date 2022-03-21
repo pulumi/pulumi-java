@@ -110,42 +110,34 @@ public final class NetworkUtilizationArgs extends io.pulumi.resources.ResourceAr
             this.targetReceivedBytesPerSecond = targetReceivedBytesPerSecond;
             return this;
         }
-
         public Builder targetReceivedBytesPerSecond(@Nullable Integer targetReceivedBytesPerSecond) {
             this.targetReceivedBytesPerSecond = Output.ofNullable(targetReceivedBytesPerSecond);
             return this;
         }
-
         public Builder targetReceivedPacketsPerSecond(@Nullable Output<Integer> targetReceivedPacketsPerSecond) {
             this.targetReceivedPacketsPerSecond = targetReceivedPacketsPerSecond;
             return this;
         }
-
         public Builder targetReceivedPacketsPerSecond(@Nullable Integer targetReceivedPacketsPerSecond) {
             this.targetReceivedPacketsPerSecond = Output.ofNullable(targetReceivedPacketsPerSecond);
             return this;
         }
-
         public Builder targetSentBytesPerSecond(@Nullable Output<Integer> targetSentBytesPerSecond) {
             this.targetSentBytesPerSecond = targetSentBytesPerSecond;
             return this;
         }
-
         public Builder targetSentBytesPerSecond(@Nullable Integer targetSentBytesPerSecond) {
             this.targetSentBytesPerSecond = Output.ofNullable(targetSentBytesPerSecond);
             return this;
         }
-
         public Builder targetSentPacketsPerSecond(@Nullable Output<Integer> targetSentPacketsPerSecond) {
             this.targetSentPacketsPerSecond = targetSentPacketsPerSecond;
             return this;
         }
-
         public Builder targetSentPacketsPerSecond(@Nullable Integer targetSentPacketsPerSecond) {
             this.targetSentPacketsPerSecond = Output.ofNullable(targetSentPacketsPerSecond);
             return this;
-        }
-        public NetworkUtilizationArgs build() {
+        }        public NetworkUtilizationArgs build() {
             return new NetworkUtilizationArgs(targetReceivedBytesPerSecond, targetReceivedPacketsPerSecond, targetSentBytesPerSecond, targetSentPacketsPerSecond);
         }
     }

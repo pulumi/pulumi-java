@@ -53,8 +53,7 @@ public final class FirewallPolicyFilterRuleActionResponse {
         public Builder type(@Nullable String type) {
             this.type = type;
             return this;
-        }
-        public FirewallPolicyFilterRuleActionResponse build() {
+        }        public FirewallPolicyFilterRuleActionResponse build() {
             return new FirewallPolicyFilterRuleActionResponse(type);
         }
     }

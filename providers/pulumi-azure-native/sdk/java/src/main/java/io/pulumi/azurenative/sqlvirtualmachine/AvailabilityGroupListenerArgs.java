@@ -158,72 +158,61 @@ public final class AvailabilityGroupListenerArgs extends io.pulumi.resources.Res
             this.availabilityGroupListenerName = availabilityGroupListenerName;
             return this;
         }
-
         public Builder availabilityGroupListenerName(@Nullable String availabilityGroupListenerName) {
             this.availabilityGroupListenerName = Output.ofNullable(availabilityGroupListenerName);
             return this;
         }
-
         public Builder availabilityGroupName(@Nullable Output<String> availabilityGroupName) {
             this.availabilityGroupName = availabilityGroupName;
             return this;
         }
-
         public Builder availabilityGroupName(@Nullable String availabilityGroupName) {
             this.availabilityGroupName = Output.ofNullable(availabilityGroupName);
             return this;
         }
-
         public Builder createDefaultAvailabilityGroupIfNotExist(@Nullable Output<Boolean> createDefaultAvailabilityGroupIfNotExist) {
             this.createDefaultAvailabilityGroupIfNotExist = createDefaultAvailabilityGroupIfNotExist;
             return this;
         }
-
         public Builder createDefaultAvailabilityGroupIfNotExist(@Nullable Boolean createDefaultAvailabilityGroupIfNotExist) {
             this.createDefaultAvailabilityGroupIfNotExist = Output.ofNullable(createDefaultAvailabilityGroupIfNotExist);
             return this;
         }
-
         public Builder loadBalancerConfigurations(@Nullable Output<List<LoadBalancerConfigurationArgs>> loadBalancerConfigurations) {
             this.loadBalancerConfigurations = loadBalancerConfigurations;
             return this;
         }
-
         public Builder loadBalancerConfigurations(@Nullable List<LoadBalancerConfigurationArgs> loadBalancerConfigurations) {
             this.loadBalancerConfigurations = Output.ofNullable(loadBalancerConfigurations);
             return this;
         }
-
+        public Builder loadBalancerConfigurations(LoadBalancerConfigurationArgs... loadBalancerConfigurations) {
+            return loadBalancerConfigurations(List.of(loadBalancerConfigurations));
+        }
         public Builder port(@Nullable Output<Integer> port) {
             this.port = port;
             return this;
         }
-
         public Builder port(@Nullable Integer port) {
             this.port = Output.ofNullable(port);
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder sqlVirtualMachineGroupName(Output<String> sqlVirtualMachineGroupName) {
             this.sqlVirtualMachineGroupName = Objects.requireNonNull(sqlVirtualMachineGroupName);
             return this;
         }
-
         public Builder sqlVirtualMachineGroupName(String sqlVirtualMachineGroupName) {
             this.sqlVirtualMachineGroupName = Output.of(Objects.requireNonNull(sqlVirtualMachineGroupName));
             return this;
-        }
-        public AvailabilityGroupListenerArgs build() {
+        }        public AvailabilityGroupListenerArgs build() {
             return new AvailabilityGroupListenerArgs(availabilityGroupListenerName, availabilityGroupName, createDefaultAvailabilityGroupIfNotExist, loadBalancerConfigurations, port, resourceGroupName, sqlVirtualMachineGroupName);
         }
     }

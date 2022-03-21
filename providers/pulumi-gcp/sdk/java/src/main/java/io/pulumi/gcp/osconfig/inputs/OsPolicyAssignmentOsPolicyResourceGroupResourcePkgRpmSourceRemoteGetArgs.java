@@ -74,22 +74,18 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourcePkgRpmSourceRe
             this.sha256Checksum = sha256Checksum;
             return this;
         }
-
         public Builder sha256Checksum(@Nullable String sha256Checksum) {
             this.sha256Checksum = Output.ofNullable(sha256Checksum);
             return this;
         }
-
         public Builder uri(Output<String> uri) {
             this.uri = Objects.requireNonNull(uri);
             return this;
         }
-
         public Builder uri(String uri) {
             this.uri = Output.of(Objects.requireNonNull(uri));
             return this;
-        }
-        public OsPolicyAssignmentOsPolicyResourceGroupResourcePkgRpmSourceRemoteGetArgs build() {
+        }        public OsPolicyAssignmentOsPolicyResourceGroupResourcePkgRpmSourceRemoteGetArgs build() {
             return new OsPolicyAssignmentOsPolicyResourceGroupResourcePkgRpmSourceRemoteGetArgs(sha256Checksum, uri);
         }
     }

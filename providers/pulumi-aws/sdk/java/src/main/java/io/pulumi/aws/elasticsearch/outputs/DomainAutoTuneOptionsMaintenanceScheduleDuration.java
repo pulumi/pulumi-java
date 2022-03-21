@@ -70,12 +70,10 @@ public final class DomainAutoTuneOptionsMaintenanceScheduleDuration {
             this.unit = Objects.requireNonNull(unit);
             return this;
         }
-
         public Builder value(Integer value) {
             this.value = Objects.requireNonNull(value);
             return this;
-        }
-        public DomainAutoTuneOptionsMaintenanceScheduleDuration build() {
+        }        public DomainAutoTuneOptionsMaintenanceScheduleDuration build() {
             return new DomainAutoTuneOptionsMaintenanceScheduleDuration(unit, value);
         }
     }

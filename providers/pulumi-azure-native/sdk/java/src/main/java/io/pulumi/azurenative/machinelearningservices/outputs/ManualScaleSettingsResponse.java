@@ -104,22 +104,18 @@ public final class ManualScaleSettingsResponse {
             this.instanceCount = instanceCount;
             return this;
         }
-
         public Builder maxInstances(@Nullable Integer maxInstances) {
             this.maxInstances = maxInstances;
             return this;
         }
-
         public Builder minInstances(@Nullable Integer minInstances) {
             this.minInstances = minInstances;
             return this;
         }
-
         public Builder scaleType(String scaleType) {
             this.scaleType = Objects.requireNonNull(scaleType);
             return this;
-        }
-        public ManualScaleSettingsResponse build() {
+        }        public ManualScaleSettingsResponse build() {
             return new ManualScaleSettingsResponse(instanceCount, maxInstances, minInstances, scaleType);
         }
     }

@@ -60,8 +60,7 @@ public final class PowerStateResponse extends io.pulumi.resources.InvokeArgs {
         public Builder code(@Nullable String code) {
             this.code = code;
             return this;
-        }
-        public PowerStateResponse build() {
+        }        public PowerStateResponse build() {
             return new PowerStateResponse(code);
         }
     }

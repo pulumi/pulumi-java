@@ -79,22 +79,18 @@ public final class WebhookArgs extends io.pulumi.resources.ResourceArgs {
             this.clientConfig = Objects.requireNonNull(clientConfig);
             return this;
         }
-
         public Builder clientConfig(WebhookClientConfigArgs clientConfig) {
             this.clientConfig = Output.of(Objects.requireNonNull(clientConfig));
             return this;
         }
-
         public Builder throttle(@Nullable Output<WebhookThrottleConfigArgs> throttle) {
             this.throttle = throttle;
             return this;
         }
-
         public Builder throttle(@Nullable WebhookThrottleConfigArgs throttle) {
             this.throttle = Output.ofNullable(throttle);
             return this;
-        }
-        public WebhookArgs build() {
+        }        public WebhookArgs build() {
             return new WebhookArgs(clientConfig, throttle);
         }
     }

@@ -220,57 +220,49 @@ public final class GetTemplateSpecVersionResult {
             this.description = description;
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder linkedTemplates(@Nullable List<LinkedTemplateArtifactResponse> linkedTemplates) {
             this.linkedTemplates = linkedTemplates;
             return this;
         }
-
+        public Builder linkedTemplates(LinkedTemplateArtifactResponse... linkedTemplates) {
+            return linkedTemplates(List.of(linkedTemplates));
+        }
         public Builder location(String location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
-
         public Builder mainTemplate(@Nullable Object mainTemplate) {
             this.mainTemplate = mainTemplate;
             return this;
         }
-
         public Builder metadata(@Nullable Object metadata) {
             this.metadata = metadata;
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder systemData(SystemDataResponse systemData) {
             this.systemData = Objects.requireNonNull(systemData);
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder uiFormDefinition(@Nullable Object uiFormDefinition) {
             this.uiFormDefinition = uiFormDefinition;
             return this;
-        }
-        public GetTemplateSpecVersionResult build() {
+        }        public GetTemplateSpecVersionResult build() {
             return new GetTemplateSpecVersionResult(description, id, linkedTemplates, location, mainTemplate, metadata, name, systemData, tags, type, uiFormDefinition);
         }
     }

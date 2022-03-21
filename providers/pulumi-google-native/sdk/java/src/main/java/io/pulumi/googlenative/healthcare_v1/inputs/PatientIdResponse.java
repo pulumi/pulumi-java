@@ -76,12 +76,10 @@ public final class PatientIdResponse extends io.pulumi.resources.InvokeArgs {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder value(String value) {
             this.value = Objects.requireNonNull(value);
             return this;
-        }
-        public PatientIdResponse build() {
+        }        public PatientIdResponse build() {
             return new PatientIdResponse(type, value);
         }
     }

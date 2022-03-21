@@ -104,22 +104,18 @@ public final class EventTargetBatchTarget {
             this.arraySize = arraySize;
             return this;
         }
-
         public Builder jobAttempts(@Nullable Integer jobAttempts) {
             this.jobAttempts = jobAttempts;
             return this;
         }
-
         public Builder jobDefinition(String jobDefinition) {
             this.jobDefinition = Objects.requireNonNull(jobDefinition);
             return this;
         }
-
         public Builder jobName(String jobName) {
             this.jobName = Objects.requireNonNull(jobName);
             return this;
-        }
-        public EventTargetBatchTarget build() {
+        }        public EventTargetBatchTarget build() {
             return new EventTargetBatchTarget(arraySize, jobAttempts, jobDefinition, jobName);
         }
     }

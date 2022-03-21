@@ -122,52 +122,42 @@ public final class BackendEnvironmentState extends io.pulumi.resources.ResourceA
             this.appId = appId;
             return this;
         }
-
         public Builder appId(@Nullable String appId) {
             this.appId = Output.ofNullable(appId);
             return this;
         }
-
         public Builder arn(@Nullable Output<String> arn) {
             this.arn = arn;
             return this;
         }
-
         public Builder arn(@Nullable String arn) {
             this.arn = Output.ofNullable(arn);
             return this;
         }
-
         public Builder deploymentArtifacts(@Nullable Output<String> deploymentArtifacts) {
             this.deploymentArtifacts = deploymentArtifacts;
             return this;
         }
-
         public Builder deploymentArtifacts(@Nullable String deploymentArtifacts) {
             this.deploymentArtifacts = Output.ofNullable(deploymentArtifacts);
             return this;
         }
-
         public Builder environmentName(@Nullable Output<String> environmentName) {
             this.environmentName = environmentName;
             return this;
         }
-
         public Builder environmentName(@Nullable String environmentName) {
             this.environmentName = Output.ofNullable(environmentName);
             return this;
         }
-
         public Builder stackName(@Nullable Output<String> stackName) {
             this.stackName = stackName;
             return this;
         }
-
         public Builder stackName(@Nullable String stackName) {
             this.stackName = Output.ofNullable(stackName);
             return this;
-        }
-        public BackendEnvironmentState build() {
+        }        public BackendEnvironmentState build() {
             return new BackendEnvironmentState(appId, arn, deploymentArtifacts, environmentName, stackName);
         }
     }

@@ -70,12 +70,10 @@ public final class PartitionStorageDescriptorSortColumn {
             this.column = Objects.requireNonNull(column);
             return this;
         }
-
         public Builder sortOrder(Integer sortOrder) {
             this.sortOrder = Objects.requireNonNull(sortOrder);
             return this;
-        }
-        public PartitionStorageDescriptorSortColumn build() {
+        }        public PartitionStorageDescriptorSortColumn build() {
             return new PartitionStorageDescriptorSortColumn(column, sortOrder);
         }
     }

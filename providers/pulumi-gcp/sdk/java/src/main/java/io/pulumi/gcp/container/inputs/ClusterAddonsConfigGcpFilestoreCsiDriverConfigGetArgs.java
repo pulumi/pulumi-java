@@ -57,12 +57,10 @@ public final class ClusterAddonsConfigGcpFilestoreCsiDriverConfigGetArgs extends
             this.enabled = Objects.requireNonNull(enabled);
             return this;
         }
-
         public Builder enabled(Boolean enabled) {
             this.enabled = Output.of(Objects.requireNonNull(enabled));
             return this;
-        }
-        public ClusterAddonsConfigGcpFilestoreCsiDriverConfigGetArgs build() {
+        }        public ClusterAddonsConfigGcpFilestoreCsiDriverConfigGetArgs build() {
             return new ClusterAddonsConfigGcpFilestoreCsiDriverConfigGetArgs(enabled);
         }
     }

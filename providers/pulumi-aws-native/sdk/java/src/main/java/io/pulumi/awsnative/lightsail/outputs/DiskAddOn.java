@@ -81,17 +81,14 @@ public final class DiskAddOn {
             this.addOnType = Objects.requireNonNull(addOnType);
             return this;
         }
-
         public Builder autoSnapshotAddOnRequest(@Nullable DiskAutoSnapshotAddOn autoSnapshotAddOnRequest) {
             this.autoSnapshotAddOnRequest = autoSnapshotAddOnRequest;
             return this;
         }
-
         public Builder status(@Nullable DiskAddOnStatus status) {
             this.status = status;
             return this;
-        }
-        public DiskAddOn build() {
+        }        public DiskAddOn build() {
             return new DiskAddOn(addOnType, autoSnapshotAddOnRequest, status);
         }
     }

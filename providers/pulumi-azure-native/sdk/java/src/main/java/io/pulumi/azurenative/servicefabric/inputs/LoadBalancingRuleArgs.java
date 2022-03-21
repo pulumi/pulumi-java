@@ -130,52 +130,42 @@ public final class LoadBalancingRuleArgs extends io.pulumi.resources.ResourceArg
             this.backendPort = Objects.requireNonNull(backendPort);
             return this;
         }
-
         public Builder backendPort(Integer backendPort) {
             this.backendPort = Output.of(Objects.requireNonNull(backendPort));
             return this;
         }
-
         public Builder frontendPort(Output<Integer> frontendPort) {
             this.frontendPort = Objects.requireNonNull(frontendPort);
             return this;
         }
-
         public Builder frontendPort(Integer frontendPort) {
             this.frontendPort = Output.of(Objects.requireNonNull(frontendPort));
             return this;
         }
-
         public Builder probeProtocol(Output<Either<String,ProbeProtocol>> probeProtocol) {
             this.probeProtocol = Objects.requireNonNull(probeProtocol);
             return this;
         }
-
         public Builder probeProtocol(Either<String,ProbeProtocol> probeProtocol) {
             this.probeProtocol = Output.of(Objects.requireNonNull(probeProtocol));
             return this;
         }
-
         public Builder probeRequestPath(@Nullable Output<String> probeRequestPath) {
             this.probeRequestPath = probeRequestPath;
             return this;
         }
-
         public Builder probeRequestPath(@Nullable String probeRequestPath) {
             this.probeRequestPath = Output.ofNullable(probeRequestPath);
             return this;
         }
-
         public Builder protocol(Output<Either<String,Protocol>> protocol) {
             this.protocol = Objects.requireNonNull(protocol);
             return this;
         }
-
         public Builder protocol(Either<String,Protocol> protocol) {
             this.protocol = Output.of(Objects.requireNonNull(protocol));
             return this;
-        }
-        public LoadBalancingRuleArgs build() {
+        }        public LoadBalancingRuleArgs build() {
             return new LoadBalancingRuleArgs(backendPort, frontendPort, probeProtocol, probeRequestPath, protocol);
         }
     }

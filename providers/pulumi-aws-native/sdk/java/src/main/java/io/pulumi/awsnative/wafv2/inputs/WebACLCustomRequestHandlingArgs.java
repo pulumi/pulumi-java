@@ -61,12 +61,13 @@ public final class WebACLCustomRequestHandlingArgs extends io.pulumi.resources.R
             this.insertHeaders = Objects.requireNonNull(insertHeaders);
             return this;
         }
-
         public Builder insertHeaders(List<WebACLCustomHTTPHeaderArgs> insertHeaders) {
             this.insertHeaders = Output.of(Objects.requireNonNull(insertHeaders));
             return this;
         }
-        public WebACLCustomRequestHandlingArgs build() {
+        public Builder insertHeaders(WebACLCustomHTTPHeaderArgs... insertHeaders) {
+            return insertHeaders(List.of(insertHeaders));
+        }        public WebACLCustomRequestHandlingArgs build() {
             return new WebACLCustomRequestHandlingArgs(insertHeaders);
         }
     }

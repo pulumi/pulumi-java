@@ -72,12 +72,10 @@ public final class GetUserProfileResult {
             this.userProfileArn = userProfileArn;
             return this;
         }
-
         public Builder userSettings(@Nullable UserProfileUserSettings userSettings) {
             this.userSettings = userSettings;
             return this;
-        }
-        public GetUserProfileResult build() {
+        }        public GetUserProfileResult build() {
             return new GetUserProfileResult(userProfileArn, userSettings);
         }
     }

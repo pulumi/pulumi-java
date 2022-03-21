@@ -96,32 +96,26 @@ public final class SubnetArgs extends io.pulumi.resources.ResourceArgs {
             this.allowPublicIp = allowPublicIp;
             return this;
         }
-
         public Builder allowPublicIp(@Nullable Either<String,UsagePermissionType> allowPublicIp) {
             this.allowPublicIp = Output.ofNullable(allowPublicIp);
             return this;
         }
-
         public Builder labSubnetName(@Nullable Output<String> labSubnetName) {
             this.labSubnetName = labSubnetName;
             return this;
         }
-
         public Builder labSubnetName(@Nullable String labSubnetName) {
             this.labSubnetName = Output.ofNullable(labSubnetName);
             return this;
         }
-
         public Builder resourceId(@Nullable Output<String> resourceId) {
             this.resourceId = resourceId;
             return this;
         }
-
         public Builder resourceId(@Nullable String resourceId) {
             this.resourceId = Output.ofNullable(resourceId);
             return this;
-        }
-        public SubnetArgs build() {
+        }        public SubnetArgs build() {
             return new SubnetArgs(allowPublicIp, labSubnetName, resourceId);
         }
     }

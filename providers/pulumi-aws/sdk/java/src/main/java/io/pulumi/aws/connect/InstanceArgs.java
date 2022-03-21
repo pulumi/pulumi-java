@@ -188,92 +188,74 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
             this.autoResolveBestVoicesEnabled = autoResolveBestVoicesEnabled;
             return this;
         }
-
         public Builder autoResolveBestVoicesEnabled(@Nullable Boolean autoResolveBestVoicesEnabled) {
             this.autoResolveBestVoicesEnabled = Output.ofNullable(autoResolveBestVoicesEnabled);
             return this;
         }
-
         public Builder contactFlowLogsEnabled(@Nullable Output<Boolean> contactFlowLogsEnabled) {
             this.contactFlowLogsEnabled = contactFlowLogsEnabled;
             return this;
         }
-
         public Builder contactFlowLogsEnabled(@Nullable Boolean contactFlowLogsEnabled) {
             this.contactFlowLogsEnabled = Output.ofNullable(contactFlowLogsEnabled);
             return this;
         }
-
         public Builder contactLensEnabled(@Nullable Output<Boolean> contactLensEnabled) {
             this.contactLensEnabled = contactLensEnabled;
             return this;
         }
-
         public Builder contactLensEnabled(@Nullable Boolean contactLensEnabled) {
             this.contactLensEnabled = Output.ofNullable(contactLensEnabled);
             return this;
         }
-
         public Builder directoryId(@Nullable Output<String> directoryId) {
             this.directoryId = directoryId;
             return this;
         }
-
         public Builder directoryId(@Nullable String directoryId) {
             this.directoryId = Output.ofNullable(directoryId);
             return this;
         }
-
         public Builder earlyMediaEnabled(@Nullable Output<Boolean> earlyMediaEnabled) {
             this.earlyMediaEnabled = earlyMediaEnabled;
             return this;
         }
-
         public Builder earlyMediaEnabled(@Nullable Boolean earlyMediaEnabled) {
             this.earlyMediaEnabled = Output.ofNullable(earlyMediaEnabled);
             return this;
         }
-
         public Builder identityManagementType(Output<String> identityManagementType) {
             this.identityManagementType = Objects.requireNonNull(identityManagementType);
             return this;
         }
-
         public Builder identityManagementType(String identityManagementType) {
             this.identityManagementType = Output.of(Objects.requireNonNull(identityManagementType));
             return this;
         }
-
         public Builder inboundCallsEnabled(Output<Boolean> inboundCallsEnabled) {
             this.inboundCallsEnabled = Objects.requireNonNull(inboundCallsEnabled);
             return this;
         }
-
         public Builder inboundCallsEnabled(Boolean inboundCallsEnabled) {
             this.inboundCallsEnabled = Output.of(Objects.requireNonNull(inboundCallsEnabled));
             return this;
         }
-
         public Builder instanceAlias(@Nullable Output<String> instanceAlias) {
             this.instanceAlias = instanceAlias;
             return this;
         }
-
         public Builder instanceAlias(@Nullable String instanceAlias) {
             this.instanceAlias = Output.ofNullable(instanceAlias);
             return this;
         }
-
         public Builder outboundCallsEnabled(Output<Boolean> outboundCallsEnabled) {
             this.outboundCallsEnabled = Objects.requireNonNull(outboundCallsEnabled);
             return this;
         }
-
         public Builder outboundCallsEnabled(Boolean outboundCallsEnabled) {
             this.outboundCallsEnabled = Output.of(Objects.requireNonNull(outboundCallsEnabled));
             return this;
-        }
-        public InstanceArgs build() {
+        }        public InstanceArgs build() {
             return new InstanceArgs(autoResolveBestVoicesEnabled, contactFlowLogsEnabled, contactLensEnabled, directoryId, earlyMediaEnabled, identityManagementType, inboundCallsEnabled, instanceAlias, outboundCallsEnabled);
         }
     }

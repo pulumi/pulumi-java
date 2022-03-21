@@ -74,12 +74,10 @@ public final class PipelineRunSourcePropertiesResponse extends io.pulumi.resourc
             this.name = name;
             return this;
         }
-
         public Builder type(@Nullable String type) {
             this.type = type;
             return this;
-        }
-        public PipelineRunSourcePropertiesResponse build() {
+        }        public PipelineRunSourcePropertiesResponse build() {
             return new PipelineRunSourcePropertiesResponse(name, type);
         }
     }

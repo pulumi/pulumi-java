@@ -209,102 +209,82 @@ public final class MongoDbAtlasSourceArgs extends io.pulumi.resources.ResourceAr
             this.additionalColumns = additionalColumns;
             return this;
         }
-
         public Builder additionalColumns(@Nullable Object additionalColumns) {
             this.additionalColumns = Output.ofNullable(additionalColumns);
             return this;
         }
-
         public Builder batchSize(@Nullable Output<Object> batchSize) {
             this.batchSize = batchSize;
             return this;
         }
-
         public Builder batchSize(@Nullable Object batchSize) {
             this.batchSize = Output.ofNullable(batchSize);
             return this;
         }
-
         public Builder cursorMethods(@Nullable Output<MongoDbCursorMethodsPropertiesArgs> cursorMethods) {
             this.cursorMethods = cursorMethods;
             return this;
         }
-
         public Builder cursorMethods(@Nullable MongoDbCursorMethodsPropertiesArgs cursorMethods) {
             this.cursorMethods = Output.ofNullable(cursorMethods);
             return this;
         }
-
         public Builder disableMetricsCollection(@Nullable Output<Object> disableMetricsCollection) {
             this.disableMetricsCollection = disableMetricsCollection;
             return this;
         }
-
         public Builder disableMetricsCollection(@Nullable Object disableMetricsCollection) {
             this.disableMetricsCollection = Output.ofNullable(disableMetricsCollection);
             return this;
         }
-
         public Builder filter(@Nullable Output<Object> filter) {
             this.filter = filter;
             return this;
         }
-
         public Builder filter(@Nullable Object filter) {
             this.filter = Output.ofNullable(filter);
             return this;
         }
-
         public Builder maxConcurrentConnections(@Nullable Output<Object> maxConcurrentConnections) {
             this.maxConcurrentConnections = maxConcurrentConnections;
             return this;
         }
-
         public Builder maxConcurrentConnections(@Nullable Object maxConcurrentConnections) {
             this.maxConcurrentConnections = Output.ofNullable(maxConcurrentConnections);
             return this;
         }
-
         public Builder queryTimeout(@Nullable Output<Object> queryTimeout) {
             this.queryTimeout = queryTimeout;
             return this;
         }
-
         public Builder queryTimeout(@Nullable Object queryTimeout) {
             this.queryTimeout = Output.ofNullable(queryTimeout);
             return this;
         }
-
         public Builder sourceRetryCount(@Nullable Output<Object> sourceRetryCount) {
             this.sourceRetryCount = sourceRetryCount;
             return this;
         }
-
         public Builder sourceRetryCount(@Nullable Object sourceRetryCount) {
             this.sourceRetryCount = Output.ofNullable(sourceRetryCount);
             return this;
         }
-
         public Builder sourceRetryWait(@Nullable Output<Object> sourceRetryWait) {
             this.sourceRetryWait = sourceRetryWait;
             return this;
         }
-
         public Builder sourceRetryWait(@Nullable Object sourceRetryWait) {
             this.sourceRetryWait = Output.ofNullable(sourceRetryWait);
             return this;
         }
-
         public Builder type(Output<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Output.of(Objects.requireNonNull(type));
             return this;
-        }
-        public MongoDbAtlasSourceArgs build() {
+        }        public MongoDbAtlasSourceArgs build() {
             return new MongoDbAtlasSourceArgs(additionalColumns, batchSize, cursorMethods, disableMetricsCollection, filter, maxConcurrentConnections, queryTimeout, sourceRetryCount, sourceRetryWait, type);
         }
     }

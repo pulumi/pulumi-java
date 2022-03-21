@@ -90,17 +90,14 @@ public final class GetCustomApiArgs extends io.pulumi.resources.InvokeArgs {
             this.apiName = Objects.requireNonNull(apiName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder subscriptionId(@Nullable String subscriptionId) {
             this.subscriptionId = subscriptionId;
             return this;
-        }
-        public GetCustomApiArgs build() {
+        }        public GetCustomApiArgs build() {
             return new GetCustomApiArgs(apiName, resourceGroupName, subscriptionId);
         }
     }

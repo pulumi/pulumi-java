@@ -67,22 +67,21 @@ public final class RuleGroupRuleOptionArgs extends io.pulumi.resources.ResourceA
             this.keyword = Objects.requireNonNull(keyword);
             return this;
         }
-
         public Builder keyword(String keyword) {
             this.keyword = Output.of(Objects.requireNonNull(keyword));
             return this;
         }
-
         public Builder settings(@Nullable Output<List<String>> settings) {
             this.settings = settings;
             return this;
         }
-
         public Builder settings(@Nullable List<String> settings) {
             this.settings = Output.ofNullable(settings);
             return this;
         }
-        public RuleGroupRuleOptionArgs build() {
+        public Builder settings(String... settings) {
+            return settings(List.of(settings));
+        }        public RuleGroupRuleOptionArgs build() {
             return new RuleGroupRuleOptionArgs(keyword, settings);
         }
     }

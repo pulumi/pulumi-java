@@ -69,12 +69,10 @@ public final class SslNegotiationPolicyAttribute {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder value(String value) {
             this.value = Objects.requireNonNull(value);
             return this;
-        }
-        public SslNegotiationPolicyAttribute build() {
+        }        public SslNegotiationPolicyAttribute build() {
             return new SslNegotiationPolicyAttribute(name, value);
         }
     }

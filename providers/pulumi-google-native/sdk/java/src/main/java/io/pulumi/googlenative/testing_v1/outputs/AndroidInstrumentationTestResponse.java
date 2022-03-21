@@ -185,47 +185,41 @@ public final class AndroidInstrumentationTestResponse {
             this.appApk = Objects.requireNonNull(appApk);
             return this;
         }
-
         public Builder appBundle(AppBundleResponse appBundle) {
             this.appBundle = Objects.requireNonNull(appBundle);
             return this;
         }
-
         public Builder appPackageId(String appPackageId) {
             this.appPackageId = Objects.requireNonNull(appPackageId);
             return this;
         }
-
         public Builder orchestratorOption(String orchestratorOption) {
             this.orchestratorOption = Objects.requireNonNull(orchestratorOption);
             return this;
         }
-
         public Builder shardingOption(ShardingOptionResponse shardingOption) {
             this.shardingOption = Objects.requireNonNull(shardingOption);
             return this;
         }
-
         public Builder testApk(FileReferenceResponse testApk) {
             this.testApk = Objects.requireNonNull(testApk);
             return this;
         }
-
         public Builder testPackageId(String testPackageId) {
             this.testPackageId = Objects.requireNonNull(testPackageId);
             return this;
         }
-
         public Builder testRunnerClass(String testRunnerClass) {
             this.testRunnerClass = Objects.requireNonNull(testRunnerClass);
             return this;
         }
-
         public Builder testTargets(List<String> testTargets) {
             this.testTargets = Objects.requireNonNull(testTargets);
             return this;
         }
-        public AndroidInstrumentationTestResponse build() {
+        public Builder testTargets(String... testTargets) {
+            return testTargets(List.of(testTargets));
+        }        public AndroidInstrumentationTestResponse build() {
             return new AndroidInstrumentationTestResponse(appApk, appBundle, appPackageId, orchestratorOption, shardingOption, testApk, testPackageId, testRunnerClass, testTargets);
         }
     }

@@ -72,12 +72,10 @@ public final class GetIotSecuritySolutionArgs extends io.pulumi.resources.Invoke
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder solutionName(String solutionName) {
             this.solutionName = Objects.requireNonNull(solutionName);
             return this;
-        }
-        public GetIotSecuritySolutionArgs build() {
+        }        public GetIotSecuritySolutionArgs build() {
             return new GetIotSecuritySolutionArgs(resourceGroupName, solutionName);
         }
     }

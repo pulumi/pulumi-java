@@ -112,22 +112,24 @@ public final class TestExecutionStepResponse extends io.pulumi.resources.InvokeA
             this.testIssues = Objects.requireNonNull(testIssues);
             return this;
         }
-
+        public Builder testIssues(TestIssueResponse... testIssues) {
+            return testIssues(List.of(testIssues));
+        }
         public Builder testSuiteOverviews(List<TestSuiteOverviewResponse> testSuiteOverviews) {
             this.testSuiteOverviews = Objects.requireNonNull(testSuiteOverviews);
             return this;
         }
-
+        public Builder testSuiteOverviews(TestSuiteOverviewResponse... testSuiteOverviews) {
+            return testSuiteOverviews(List.of(testSuiteOverviews));
+        }
         public Builder testTiming(TestTimingResponse testTiming) {
             this.testTiming = Objects.requireNonNull(testTiming);
             return this;
         }
-
         public Builder toolExecution(ToolExecutionResponse toolExecution) {
             this.toolExecution = Objects.requireNonNull(toolExecution);
             return this;
-        }
-        public TestExecutionStepResponse build() {
+        }        public TestExecutionStepResponse build() {
             return new TestExecutionStepResponse(testIssues, testSuiteOverviews, testTiming, toolExecution);
         }
     }

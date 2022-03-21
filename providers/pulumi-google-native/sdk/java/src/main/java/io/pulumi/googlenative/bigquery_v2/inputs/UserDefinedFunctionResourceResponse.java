@@ -76,12 +76,10 @@ public final class UserDefinedFunctionResourceResponse extends io.pulumi.resourc
             this.inlineCode = Objects.requireNonNull(inlineCode);
             return this;
         }
-
         public Builder resourceUri(String resourceUri) {
             this.resourceUri = Objects.requireNonNull(resourceUri);
             return this;
-        }
-        public UserDefinedFunctionResourceResponse build() {
+        }        public UserDefinedFunctionResourceResponse build() {
             return new UserDefinedFunctionResourceResponse(inlineCode, resourceUri);
         }
     }

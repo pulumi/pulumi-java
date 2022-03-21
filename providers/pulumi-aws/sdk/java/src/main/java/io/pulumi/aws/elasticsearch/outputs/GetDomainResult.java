@@ -404,117 +404,124 @@ public final class GetDomainResult {
             this.accessPolicies = Objects.requireNonNull(accessPolicies);
             return this;
         }
-
         public Builder advancedOptions(Map<String,String> advancedOptions) {
             this.advancedOptions = Objects.requireNonNull(advancedOptions);
             return this;
         }
-
         public Builder advancedSecurityOptions(List<GetDomainAdvancedSecurityOption> advancedSecurityOptions) {
             this.advancedSecurityOptions = Objects.requireNonNull(advancedSecurityOptions);
             return this;
         }
-
+        public Builder advancedSecurityOptions(GetDomainAdvancedSecurityOption... advancedSecurityOptions) {
+            return advancedSecurityOptions(List.of(advancedSecurityOptions));
+        }
         public Builder arn(String arn) {
             this.arn = Objects.requireNonNull(arn);
             return this;
         }
-
         public Builder autoTuneOptions(List<GetDomainAutoTuneOption> autoTuneOptions) {
             this.autoTuneOptions = Objects.requireNonNull(autoTuneOptions);
             return this;
         }
-
+        public Builder autoTuneOptions(GetDomainAutoTuneOption... autoTuneOptions) {
+            return autoTuneOptions(List.of(autoTuneOptions));
+        }
         public Builder clusterConfigs(List<GetDomainClusterConfig> clusterConfigs) {
             this.clusterConfigs = Objects.requireNonNull(clusterConfigs);
             return this;
         }
-
+        public Builder clusterConfigs(GetDomainClusterConfig... clusterConfigs) {
+            return clusterConfigs(List.of(clusterConfigs));
+        }
         public Builder cognitoOptions(List<GetDomainCognitoOption> cognitoOptions) {
             this.cognitoOptions = Objects.requireNonNull(cognitoOptions);
             return this;
         }
-
+        public Builder cognitoOptions(GetDomainCognitoOption... cognitoOptions) {
+            return cognitoOptions(List.of(cognitoOptions));
+        }
         public Builder created(Boolean created) {
             this.created = Objects.requireNonNull(created);
             return this;
         }
-
         public Builder deleted(Boolean deleted) {
             this.deleted = Objects.requireNonNull(deleted);
             return this;
         }
-
         public Builder domainId(String domainId) {
             this.domainId = Objects.requireNonNull(domainId);
             return this;
         }
-
         public Builder domainName(String domainName) {
             this.domainName = Objects.requireNonNull(domainName);
             return this;
         }
-
         public Builder ebsOptions(List<GetDomainEbsOption> ebsOptions) {
             this.ebsOptions = Objects.requireNonNull(ebsOptions);
             return this;
         }
-
+        public Builder ebsOptions(GetDomainEbsOption... ebsOptions) {
+            return ebsOptions(List.of(ebsOptions));
+        }
         public Builder elasticsearchVersion(String elasticsearchVersion) {
             this.elasticsearchVersion = Objects.requireNonNull(elasticsearchVersion);
             return this;
         }
-
         public Builder encryptionAtRests(List<GetDomainEncryptionAtRest> encryptionAtRests) {
             this.encryptionAtRests = Objects.requireNonNull(encryptionAtRests);
             return this;
         }
-
+        public Builder encryptionAtRests(GetDomainEncryptionAtRest... encryptionAtRests) {
+            return encryptionAtRests(List.of(encryptionAtRests));
+        }
         public Builder endpoint(String endpoint) {
             this.endpoint = Objects.requireNonNull(endpoint);
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder kibanaEndpoint(String kibanaEndpoint) {
             this.kibanaEndpoint = Objects.requireNonNull(kibanaEndpoint);
             return this;
         }
-
         public Builder logPublishingOptions(List<GetDomainLogPublishingOption> logPublishingOptions) {
             this.logPublishingOptions = Objects.requireNonNull(logPublishingOptions);
             return this;
         }
-
+        public Builder logPublishingOptions(GetDomainLogPublishingOption... logPublishingOptions) {
+            return logPublishingOptions(List.of(logPublishingOptions));
+        }
         public Builder nodeToNodeEncryptions(List<GetDomainNodeToNodeEncryption> nodeToNodeEncryptions) {
             this.nodeToNodeEncryptions = Objects.requireNonNull(nodeToNodeEncryptions);
             return this;
         }
-
+        public Builder nodeToNodeEncryptions(GetDomainNodeToNodeEncryption... nodeToNodeEncryptions) {
+            return nodeToNodeEncryptions(List.of(nodeToNodeEncryptions));
+        }
         public Builder processing(Boolean processing) {
             this.processing = Objects.requireNonNull(processing);
             return this;
         }
-
         public Builder snapshotOptions(List<GetDomainSnapshotOption> snapshotOptions) {
             this.snapshotOptions = Objects.requireNonNull(snapshotOptions);
             return this;
         }
-
+        public Builder snapshotOptions(GetDomainSnapshotOption... snapshotOptions) {
+            return snapshotOptions(List.of(snapshotOptions));
+        }
         public Builder tags(Map<String,String> tags) {
             this.tags = Objects.requireNonNull(tags);
             return this;
         }
-
         public Builder vpcOptions(List<GetDomainVpcOption> vpcOptions) {
             this.vpcOptions = Objects.requireNonNull(vpcOptions);
             return this;
         }
-        public GetDomainResult build() {
+        public Builder vpcOptions(GetDomainVpcOption... vpcOptions) {
+            return vpcOptions(List.of(vpcOptions));
+        }        public GetDomainResult build() {
             return new GetDomainResult(accessPolicies, advancedOptions, advancedSecurityOptions, arn, autoTuneOptions, clusterConfigs, cognitoOptions, created, deleted, domainId, domainName, ebsOptions, elasticsearchVersion, encryptionAtRests, endpoint, id, kibanaEndpoint, logPublishingOptions, nodeToNodeEncryptions, processing, snapshotOptions, tags, vpcOptions);
         }
     }

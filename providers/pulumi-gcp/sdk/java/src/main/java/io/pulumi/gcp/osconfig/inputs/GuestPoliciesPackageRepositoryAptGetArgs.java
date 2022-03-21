@@ -126,52 +126,45 @@ public final class GuestPoliciesPackageRepositoryAptGetArgs extends io.pulumi.re
             this.archiveType = archiveType;
             return this;
         }
-
         public Builder archiveType(@Nullable String archiveType) {
             this.archiveType = Output.ofNullable(archiveType);
             return this;
         }
-
         public Builder components(Output<List<String>> components) {
             this.components = Objects.requireNonNull(components);
             return this;
         }
-
         public Builder components(List<String> components) {
             this.components = Output.of(Objects.requireNonNull(components));
             return this;
         }
-
+        public Builder components(String... components) {
+            return components(List.of(components));
+        }
         public Builder distribution(Output<String> distribution) {
             this.distribution = Objects.requireNonNull(distribution);
             return this;
         }
-
         public Builder distribution(String distribution) {
             this.distribution = Output.of(Objects.requireNonNull(distribution));
             return this;
         }
-
         public Builder gpgKey(@Nullable Output<String> gpgKey) {
             this.gpgKey = gpgKey;
             return this;
         }
-
         public Builder gpgKey(@Nullable String gpgKey) {
             this.gpgKey = Output.ofNullable(gpgKey);
             return this;
         }
-
         public Builder uri(Output<String> uri) {
             this.uri = Objects.requireNonNull(uri);
             return this;
         }
-
         public Builder uri(String uri) {
             this.uri = Output.of(Objects.requireNonNull(uri));
             return this;
-        }
-        public GuestPoliciesPackageRepositoryAptGetArgs build() {
+        }        public GuestPoliciesPackageRepositoryAptGetArgs build() {
             return new GuestPoliciesPackageRepositoryAptGetArgs(archiveType, components, distribution, gpgKey, uri);
         }
     }

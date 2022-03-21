@@ -155,37 +155,36 @@ public final class GetEndpointAccessResult {
             this.address = address;
             return this;
         }
-
         public Builder endpointCreateTime(@Nullable String endpointCreateTime) {
             this.endpointCreateTime = endpointCreateTime;
             return this;
         }
-
         public Builder endpointStatus(@Nullable String endpointStatus) {
             this.endpointStatus = endpointStatus;
             return this;
         }
-
         public Builder port(@Nullable Integer port) {
             this.port = port;
             return this;
         }
-
         public Builder vpcEndpoint(@Nullable VpcEndpointProperties vpcEndpoint) {
             this.vpcEndpoint = vpcEndpoint;
             return this;
         }
-
         public Builder vpcSecurityGroupIds(@Nullable List<String> vpcSecurityGroupIds) {
             this.vpcSecurityGroupIds = vpcSecurityGroupIds;
             return this;
         }
-
+        public Builder vpcSecurityGroupIds(String... vpcSecurityGroupIds) {
+            return vpcSecurityGroupIds(List.of(vpcSecurityGroupIds));
+        }
         public Builder vpcSecurityGroups(@Nullable List<EndpointAccessVpcSecurityGroup> vpcSecurityGroups) {
             this.vpcSecurityGroups = vpcSecurityGroups;
             return this;
         }
-        public GetEndpointAccessResult build() {
+        public Builder vpcSecurityGroups(EndpointAccessVpcSecurityGroup... vpcSecurityGroups) {
+            return vpcSecurityGroups(List.of(vpcSecurityGroups));
+        }        public GetEndpointAccessResult build() {
             return new GetEndpointAccessResult(address, endpointCreateTime, endpointStatus, port, vpcEndpoint, vpcSecurityGroupIds, vpcSecurityGroups);
         }
     }

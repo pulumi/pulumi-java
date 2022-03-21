@@ -69,12 +69,10 @@ public final class ReportConfigTimePeriodResponse {
             this.from = Objects.requireNonNull(from);
             return this;
         }
-
         public Builder to(String to) {
             this.to = Objects.requireNonNull(to);
             return this;
-        }
-        public ReportConfigTimePeriodResponse build() {
+        }        public ReportConfigTimePeriodResponse build() {
             return new ReportConfigTimePeriodResponse(from, to);
         }
     }

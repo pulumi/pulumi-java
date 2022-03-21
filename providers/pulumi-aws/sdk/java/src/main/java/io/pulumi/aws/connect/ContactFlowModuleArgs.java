@@ -167,82 +167,66 @@ public final class ContactFlowModuleArgs extends io.pulumi.resources.ResourceArg
             this.content = content;
             return this;
         }
-
         public Builder content(@Nullable String content) {
             this.content = Output.ofNullable(content);
             return this;
         }
-
         public Builder contentHash(@Nullable Output<String> contentHash) {
             this.contentHash = contentHash;
             return this;
         }
-
         public Builder contentHash(@Nullable String contentHash) {
             this.contentHash = Output.ofNullable(contentHash);
             return this;
         }
-
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder filename(@Nullable Output<String> filename) {
             this.filename = filename;
             return this;
         }
-
         public Builder filename(@Nullable String filename) {
             this.filename = Output.ofNullable(filename);
             return this;
         }
-
         public Builder instanceId(Output<String> instanceId) {
             this.instanceId = Objects.requireNonNull(instanceId);
             return this;
         }
-
         public Builder instanceId(String instanceId) {
             this.instanceId = Output.of(Objects.requireNonNull(instanceId));
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
             this.tagsAll = tagsAll;
             return this;
         }
-
         public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
             this.tagsAll = Output.ofNullable(tagsAll);
             return this;
-        }
-        public ContactFlowModuleArgs build() {
+        }        public ContactFlowModuleArgs build() {
             return new ContactFlowModuleArgs(content, contentHash, description, filename, instanceId, name, tags, tagsAll);
         }
     }

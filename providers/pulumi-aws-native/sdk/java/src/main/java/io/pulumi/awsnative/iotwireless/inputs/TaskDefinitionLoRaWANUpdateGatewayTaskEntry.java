@@ -66,12 +66,10 @@ public final class TaskDefinitionLoRaWANUpdateGatewayTaskEntry extends io.pulumi
             this.currentVersion = currentVersion;
             return this;
         }
-
         public Builder updateVersion(@Nullable TaskDefinitionLoRaWANGatewayVersion updateVersion) {
             this.updateVersion = updateVersion;
             return this;
-        }
-        public TaskDefinitionLoRaWANUpdateGatewayTaskEntry build() {
+        }        public TaskDefinitionLoRaWANUpdateGatewayTaskEntry build() {
             return new TaskDefinitionLoRaWANUpdateGatewayTaskEntry(currentVersion, updateVersion);
         }
     }

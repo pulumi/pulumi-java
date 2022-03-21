@@ -145,32 +145,32 @@ public final class JobInputClipResponse {
             this.end = end;
             return this;
         }
-
         public Builder files(@Nullable List<String> files) {
             this.files = files;
             return this;
         }
-
+        public Builder files(String... files) {
+            return files(List.of(files));
+        }
         public Builder inputDefinitions(@Nullable List<Object> inputDefinitions) {
             this.inputDefinitions = inputDefinitions;
             return this;
         }
-
+        public Builder inputDefinitions(Object... inputDefinitions) {
+            return inputDefinitions(List.of(inputDefinitions));
+        }
         public Builder label(@Nullable String label) {
             this.label = label;
             return this;
         }
-
         public Builder odataType(String odataType) {
             this.odataType = Objects.requireNonNull(odataType);
             return this;
         }
-
         public Builder start(@Nullable Either<AbsoluteClipTimeResponse,UtcClipTimeResponse> start) {
             this.start = start;
             return this;
-        }
-        public JobInputClipResponse build() {
+        }        public JobInputClipResponse build() {
             return new JobInputClipResponse(end, files, inputDefinitions, label, odataType, start);
         }
     }

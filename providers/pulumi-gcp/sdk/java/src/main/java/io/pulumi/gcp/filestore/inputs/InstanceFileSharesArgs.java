@@ -95,32 +95,29 @@ public final class InstanceFileSharesArgs extends io.pulumi.resources.ResourceAr
             this.capacityGb = Objects.requireNonNull(capacityGb);
             return this;
         }
-
         public Builder capacityGb(Integer capacityGb) {
             this.capacityGb = Output.of(Objects.requireNonNull(capacityGb));
             return this;
         }
-
         public Builder name(Output<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
-
         public Builder nfsExportOptions(@Nullable Output<List<InstanceFileSharesNfsExportOptionArgs>> nfsExportOptions) {
             this.nfsExportOptions = nfsExportOptions;
             return this;
         }
-
         public Builder nfsExportOptions(@Nullable List<InstanceFileSharesNfsExportOptionArgs> nfsExportOptions) {
             this.nfsExportOptions = Output.ofNullable(nfsExportOptions);
             return this;
         }
-        public InstanceFileSharesArgs build() {
+        public Builder nfsExportOptions(InstanceFileSharesNfsExportOptionArgs... nfsExportOptions) {
+            return nfsExportOptions(List.of(nfsExportOptions));
+        }        public InstanceFileSharesArgs build() {
             return new InstanceFileSharesArgs(capacityGb, name, nfsExportOptions);
         }
     }

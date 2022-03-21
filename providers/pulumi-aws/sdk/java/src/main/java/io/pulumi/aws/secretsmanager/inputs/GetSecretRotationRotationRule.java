@@ -50,8 +50,7 @@ public final class GetSecretRotationRotationRule extends io.pulumi.resources.Inv
         public Builder automaticallyAfterDays(Integer automaticallyAfterDays) {
             this.automaticallyAfterDays = Objects.requireNonNull(automaticallyAfterDays);
             return this;
-        }
-        public GetSecretRotationRotationRule build() {
+        }        public GetSecretRotationRotationRule build() {
             return new GetSecretRotationRotationRule(automaticallyAfterDays);
         }
     }

@@ -73,12 +73,13 @@ public final class WebhookConversion {
             this.clientConfig = clientConfig;
             return this;
         }
-
         public Builder conversionReviewVersions(List<String> conversionReviewVersions) {
             this.conversionReviewVersions = Objects.requireNonNull(conversionReviewVersions);
             return this;
         }
-        public WebhookConversion build() {
+        public Builder conversionReviewVersions(String... conversionReviewVersions) {
+            return conversionReviewVersions(List.of(conversionReviewVersions));
+        }        public WebhookConversion build() {
             return new WebhookConversion(clientConfig, conversionReviewVersions);
         }
     }

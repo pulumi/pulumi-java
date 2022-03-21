@@ -88,17 +88,17 @@ public final class GetV1beta1IamPolicyResult {
             this.bindings = Objects.requireNonNull(bindings);
             return this;
         }
-
+        public Builder bindings(BindingResponse... bindings) {
+            return bindings(List.of(bindings));
+        }
         public Builder etag(String etag) {
             this.etag = Objects.requireNonNull(etag);
             return this;
         }
-
         public Builder version(Integer version) {
             this.version = Objects.requireNonNull(version);
             return this;
-        }
-        public GetV1beta1IamPolicyResult build() {
+        }        public GetV1beta1IamPolicyResult build() {
             return new GetV1beta1IamPolicyResult(bindings, etag, version);
         }
     }

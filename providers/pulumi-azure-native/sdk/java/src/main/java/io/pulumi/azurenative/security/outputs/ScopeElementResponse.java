@@ -53,8 +53,7 @@ public final class ScopeElementResponse {
         public Builder field(@Nullable String field) {
             this.field = field;
             return this;
-        }
-        public ScopeElementResponse build() {
+        }        public ScopeElementResponse build() {
             return new ScopeElementResponse(field);
         }
     }

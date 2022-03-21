@@ -64,12 +64,10 @@ public final class LicenseMetadata extends io.pulumi.resources.InvokeArgs {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder value(String value) {
             this.value = Objects.requireNonNull(value);
             return this;
-        }
-        public LicenseMetadata build() {
+        }        public LicenseMetadata build() {
             return new LicenseMetadata(name, value);
         }
     }

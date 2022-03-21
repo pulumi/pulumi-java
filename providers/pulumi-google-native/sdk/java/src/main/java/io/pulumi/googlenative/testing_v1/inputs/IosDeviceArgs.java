@@ -109,42 +109,34 @@ public final class IosDeviceArgs extends io.pulumi.resources.ResourceArgs {
             this.iosModelId = Objects.requireNonNull(iosModelId);
             return this;
         }
-
         public Builder iosModelId(String iosModelId) {
             this.iosModelId = Output.of(Objects.requireNonNull(iosModelId));
             return this;
         }
-
         public Builder iosVersionId(Output<String> iosVersionId) {
             this.iosVersionId = Objects.requireNonNull(iosVersionId);
             return this;
         }
-
         public Builder iosVersionId(String iosVersionId) {
             this.iosVersionId = Output.of(Objects.requireNonNull(iosVersionId));
             return this;
         }
-
         public Builder locale(Output<String> locale) {
             this.locale = Objects.requireNonNull(locale);
             return this;
         }
-
         public Builder locale(String locale) {
             this.locale = Output.of(Objects.requireNonNull(locale));
             return this;
         }
-
         public Builder orientation(Output<String> orientation) {
             this.orientation = Objects.requireNonNull(orientation);
             return this;
         }
-
         public Builder orientation(String orientation) {
             this.orientation = Output.of(Objects.requireNonNull(orientation));
             return this;
-        }
-        public IosDeviceArgs build() {
+        }        public IosDeviceArgs build() {
             return new IosDeviceArgs(iosModelId, iosVersionId, locale, orientation);
         }
     }

@@ -80,12 +80,10 @@ public final class AlertPolicyConditionConditionAbsentTrigger {
             this.count = count;
             return this;
         }
-
         public Builder percent(@Nullable Double percent) {
             this.percent = percent;
             return this;
-        }
-        public AlertPolicyConditionConditionAbsentTrigger build() {
+        }        public AlertPolicyConditionConditionAbsentTrigger build() {
             return new AlertPolicyConditionConditionAbsentTrigger(count, percent);
         }
     }

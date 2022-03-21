@@ -201,52 +201,42 @@ public final class ScaleIOPersistentVolumeSource {
             this.fsType = fsType;
             return this;
         }
-
         public Builder gateway(String gateway) {
             this.gateway = Objects.requireNonNull(gateway);
             return this;
         }
-
         public Builder protectionDomain(@Nullable String protectionDomain) {
             this.protectionDomain = protectionDomain;
             return this;
         }
-
         public Builder readOnly(@Nullable Boolean readOnly) {
             this.readOnly = readOnly;
             return this;
         }
-
         public Builder secretRef(SecretReference secretRef) {
             this.secretRef = Objects.requireNonNull(secretRef);
             return this;
         }
-
         public Builder sslEnabled(@Nullable Boolean sslEnabled) {
             this.sslEnabled = sslEnabled;
             return this;
         }
-
         public Builder storageMode(@Nullable String storageMode) {
             this.storageMode = storageMode;
             return this;
         }
-
         public Builder storagePool(@Nullable String storagePool) {
             this.storagePool = storagePool;
             return this;
         }
-
         public Builder system(String system) {
             this.system = Objects.requireNonNull(system);
             return this;
         }
-
         public Builder volumeName(@Nullable String volumeName) {
             this.volumeName = volumeName;
             return this;
-        }
-        public ScaleIOPersistentVolumeSource build() {
+        }        public ScaleIOPersistentVolumeSource build() {
             return new ScaleIOPersistentVolumeSource(fsType, gateway, protectionDomain, readOnly, secretRef, sslEnabled, storageMode, storagePool, system, volumeName);
         }
     }

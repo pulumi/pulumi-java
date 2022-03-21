@@ -66,12 +66,10 @@ public final class GetDatasetArgs extends io.pulumi.resources.InvokeArgs {
             this.datasetId = Objects.requireNonNull(datasetId);
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = project;
             return this;
-        }
-        public GetDatasetArgs build() {
+        }        public GetDatasetArgs build() {
             return new GetDatasetArgs(datasetId, project);
         }
     }

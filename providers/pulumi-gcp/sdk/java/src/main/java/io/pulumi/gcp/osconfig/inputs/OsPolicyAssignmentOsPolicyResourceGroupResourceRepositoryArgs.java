@@ -109,42 +109,34 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourceRepositoryArgs
             this.apt = apt;
             return this;
         }
-
         public Builder apt(@Nullable OsPolicyAssignmentOsPolicyResourceGroupResourceRepositoryAptArgs apt) {
             this.apt = Output.ofNullable(apt);
             return this;
         }
-
         public Builder goo(@Nullable Output<OsPolicyAssignmentOsPolicyResourceGroupResourceRepositoryGooArgs> goo) {
             this.goo = goo;
             return this;
         }
-
         public Builder goo(@Nullable OsPolicyAssignmentOsPolicyResourceGroupResourceRepositoryGooArgs goo) {
             this.goo = Output.ofNullable(goo);
             return this;
         }
-
         public Builder yum(@Nullable Output<OsPolicyAssignmentOsPolicyResourceGroupResourceRepositoryYumArgs> yum) {
             this.yum = yum;
             return this;
         }
-
         public Builder yum(@Nullable OsPolicyAssignmentOsPolicyResourceGroupResourceRepositoryYumArgs yum) {
             this.yum = Output.ofNullable(yum);
             return this;
         }
-
         public Builder zypper(@Nullable Output<OsPolicyAssignmentOsPolicyResourceGroupResourceRepositoryZypperArgs> zypper) {
             this.zypper = zypper;
             return this;
         }
-
         public Builder zypper(@Nullable OsPolicyAssignmentOsPolicyResourceGroupResourceRepositoryZypperArgs zypper) {
             this.zypper = Output.ofNullable(zypper);
             return this;
-        }
-        public OsPolicyAssignmentOsPolicyResourceGroupResourceRepositoryArgs build() {
+        }        public OsPolicyAssignmentOsPolicyResourceGroupResourceRepositoryArgs build() {
             return new OsPolicyAssignmentOsPolicyResourceGroupResourceRepositoryArgs(apt, goo, yum, zypper);
         }
     }

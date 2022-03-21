@@ -163,72 +163,58 @@ public final class ContentKeyPolicyFairPlayConfigurationArgs extends io.pulumi.r
             this.ask = Objects.requireNonNull(ask);
             return this;
         }
-
         public Builder ask(String ask) {
             this.ask = Output.of(Objects.requireNonNull(ask));
             return this;
         }
-
         public Builder fairPlayPfx(Output<String> fairPlayPfx) {
             this.fairPlayPfx = Objects.requireNonNull(fairPlayPfx);
             return this;
         }
-
         public Builder fairPlayPfx(String fairPlayPfx) {
             this.fairPlayPfx = Output.of(Objects.requireNonNull(fairPlayPfx));
             return this;
         }
-
         public Builder fairPlayPfxPassword(Output<String> fairPlayPfxPassword) {
             this.fairPlayPfxPassword = Objects.requireNonNull(fairPlayPfxPassword);
             return this;
         }
-
         public Builder fairPlayPfxPassword(String fairPlayPfxPassword) {
             this.fairPlayPfxPassword = Output.of(Objects.requireNonNull(fairPlayPfxPassword));
             return this;
         }
-
         public Builder odataType(Output<String> odataType) {
             this.odataType = Objects.requireNonNull(odataType);
             return this;
         }
-
         public Builder odataType(String odataType) {
             this.odataType = Output.of(Objects.requireNonNull(odataType));
             return this;
         }
-
         public Builder offlineRentalConfiguration(@Nullable Output<ContentKeyPolicyFairPlayOfflineRentalConfigurationArgs> offlineRentalConfiguration) {
             this.offlineRentalConfiguration = offlineRentalConfiguration;
             return this;
         }
-
         public Builder offlineRentalConfiguration(@Nullable ContentKeyPolicyFairPlayOfflineRentalConfigurationArgs offlineRentalConfiguration) {
             this.offlineRentalConfiguration = Output.ofNullable(offlineRentalConfiguration);
             return this;
         }
-
         public Builder rentalAndLeaseKeyType(Output<Either<String,ContentKeyPolicyFairPlayRentalAndLeaseKeyType>> rentalAndLeaseKeyType) {
             this.rentalAndLeaseKeyType = Objects.requireNonNull(rentalAndLeaseKeyType);
             return this;
         }
-
         public Builder rentalAndLeaseKeyType(Either<String,ContentKeyPolicyFairPlayRentalAndLeaseKeyType> rentalAndLeaseKeyType) {
             this.rentalAndLeaseKeyType = Output.of(Objects.requireNonNull(rentalAndLeaseKeyType));
             return this;
         }
-
         public Builder rentalDuration(Output<Double> rentalDuration) {
             this.rentalDuration = Objects.requireNonNull(rentalDuration);
             return this;
         }
-
         public Builder rentalDuration(Double rentalDuration) {
             this.rentalDuration = Output.of(Objects.requireNonNull(rentalDuration));
             return this;
-        }
-        public ContentKeyPolicyFairPlayConfigurationArgs build() {
+        }        public ContentKeyPolicyFairPlayConfigurationArgs build() {
             return new ContentKeyPolicyFairPlayConfigurationArgs(ask, fairPlayPfx, fairPlayPfxPassword, odataType, offlineRentalConfiguration, rentalAndLeaseKeyType, rentalDuration);
         }
     }

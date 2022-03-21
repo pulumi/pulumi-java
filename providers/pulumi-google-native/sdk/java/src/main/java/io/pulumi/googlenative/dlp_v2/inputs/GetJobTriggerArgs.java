@@ -78,17 +78,14 @@ public final class GetJobTriggerArgs extends io.pulumi.resources.InvokeArgs {
             this.jobTriggerId = Objects.requireNonNull(jobTriggerId);
             return this;
         }
-
         public Builder location(String location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = project;
             return this;
-        }
-        public GetJobTriggerArgs build() {
+        }        public GetJobTriggerArgs build() {
             return new GetJobTriggerArgs(jobTriggerId, location, project);
         }
     }

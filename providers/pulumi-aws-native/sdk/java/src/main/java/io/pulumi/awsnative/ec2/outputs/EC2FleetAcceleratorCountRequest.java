@@ -55,12 +55,10 @@ public final class EC2FleetAcceleratorCountRequest {
             this.max = max;
             return this;
         }
-
         public Builder min(@Nullable Integer min) {
             this.min = min;
             return this;
-        }
-        public EC2FleetAcceleratorCountRequest build() {
+        }        public EC2FleetAcceleratorCountRequest build() {
             return new EC2FleetAcceleratorCountRequest(max, min);
         }
     }

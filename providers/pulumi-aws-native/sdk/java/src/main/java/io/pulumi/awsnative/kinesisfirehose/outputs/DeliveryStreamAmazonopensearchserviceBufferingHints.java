@@ -55,12 +55,10 @@ public final class DeliveryStreamAmazonopensearchserviceBufferingHints {
             this.intervalInSeconds = intervalInSeconds;
             return this;
         }
-
         public Builder sizeInMBs(@Nullable Integer sizeInMBs) {
             this.sizeInMBs = sizeInMBs;
             return this;
-        }
-        public DeliveryStreamAmazonopensearchserviceBufferingHints build() {
+        }        public DeliveryStreamAmazonopensearchserviceBufferingHints build() {
             return new DeliveryStreamAmazonopensearchserviceBufferingHints(intervalInSeconds, sizeInMBs);
         }
     }

@@ -138,32 +138,26 @@ public final class GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggesti
             this.confidenceThreshold = Objects.requireNonNull(confidenceThreshold);
             return this;
         }
-
         public Builder contextFilterSettings(GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggestionQueryConfigContextFilterSettingsResponse contextFilterSettings) {
             this.contextFilterSettings = Objects.requireNonNull(contextFilterSettings);
             return this;
         }
-
         public Builder dialogflowQuerySource(GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggestionQueryConfigDialogflowQuerySourceResponse dialogflowQuerySource) {
             this.dialogflowQuerySource = Objects.requireNonNull(dialogflowQuerySource);
             return this;
         }
-
         public Builder documentQuerySource(GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggestionQueryConfigDocumentQuerySourceResponse documentQuerySource) {
             this.documentQuerySource = Objects.requireNonNull(documentQuerySource);
             return this;
         }
-
         public Builder knowledgeBaseQuerySource(GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggestionQueryConfigKnowledgeBaseQuerySourceResponse knowledgeBaseQuerySource) {
             this.knowledgeBaseQuerySource = Objects.requireNonNull(knowledgeBaseQuerySource);
             return this;
         }
-
         public Builder maxResults(Integer maxResults) {
             this.maxResults = Objects.requireNonNull(maxResults);
             return this;
-        }
-        public GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggestionQueryConfigResponse build() {
+        }        public GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggestionQueryConfigResponse build() {
             return new GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggestionQueryConfigResponse(confidenceThreshold, contextFilterSettings, dialogflowQuerySource, documentQuerySource, knowledgeBaseQuerySource, maxResults);
         }
     }

@@ -90,17 +90,14 @@ public final class GetCustomIPPrefixArgs extends io.pulumi.resources.InvokeArgs 
             this.customIpPrefixName = Objects.requireNonNull(customIpPrefixName);
             return this;
         }
-
         public Builder expand(@Nullable String expand) {
             this.expand = expand;
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
-        }
-        public GetCustomIPPrefixArgs build() {
+        }        public GetCustomIPPrefixArgs build() {
             return new GetCustomIPPrefixArgs(customIpPrefixName, expand, resourceGroupName);
         }
     }

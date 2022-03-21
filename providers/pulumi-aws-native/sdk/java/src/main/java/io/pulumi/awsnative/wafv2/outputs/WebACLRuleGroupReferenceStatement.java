@@ -56,12 +56,13 @@ public final class WebACLRuleGroupReferenceStatement {
             this.arn = Objects.requireNonNull(arn);
             return this;
         }
-
         public Builder excludedRules(@Nullable List<WebACLExcludedRule> excludedRules) {
             this.excludedRules = excludedRules;
             return this;
         }
-        public WebACLRuleGroupReferenceStatement build() {
+        public Builder excludedRules(WebACLExcludedRule... excludedRules) {
+            return excludedRules(List.of(excludedRules));
+        }        public WebACLRuleGroupReferenceStatement build() {
             return new WebACLRuleGroupReferenceStatement(arn, excludedRules);
         }
     }

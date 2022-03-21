@@ -72,12 +72,16 @@ public final class ClusterCoreInstanceFleetLaunchSpecifications {
             this.onDemandSpecifications = onDemandSpecifications;
             return this;
         }
-
+        public Builder onDemandSpecifications(ClusterCoreInstanceFleetLaunchSpecificationsOnDemandSpecification... onDemandSpecifications) {
+            return onDemandSpecifications(List.of(onDemandSpecifications));
+        }
         public Builder spotSpecifications(@Nullable List<ClusterCoreInstanceFleetLaunchSpecificationsSpotSpecification> spotSpecifications) {
             this.spotSpecifications = spotSpecifications;
             return this;
         }
-        public ClusterCoreInstanceFleetLaunchSpecifications build() {
+        public Builder spotSpecifications(ClusterCoreInstanceFleetLaunchSpecificationsSpotSpecification... spotSpecifications) {
+            return spotSpecifications(List.of(spotSpecifications));
+        }        public ClusterCoreInstanceFleetLaunchSpecifications build() {
             return new ClusterCoreInstanceFleetLaunchSpecifications(onDemandSpecifications, spotSpecifications);
         }
     }

@@ -165,42 +165,34 @@ public final class GitHubEnterpriseSecretsResponse {
             this.oauthClientIdName = Objects.requireNonNull(oauthClientIdName);
             return this;
         }
-
         public Builder oauthClientIdVersionName(String oauthClientIdVersionName) {
             this.oauthClientIdVersionName = Objects.requireNonNull(oauthClientIdVersionName);
             return this;
         }
-
         public Builder oauthSecretName(String oauthSecretName) {
             this.oauthSecretName = Objects.requireNonNull(oauthSecretName);
             return this;
         }
-
         public Builder oauthSecretVersionName(String oauthSecretVersionName) {
             this.oauthSecretVersionName = Objects.requireNonNull(oauthSecretVersionName);
             return this;
         }
-
         public Builder privateKeyName(String privateKeyName) {
             this.privateKeyName = Objects.requireNonNull(privateKeyName);
             return this;
         }
-
         public Builder privateKeyVersionName(String privateKeyVersionName) {
             this.privateKeyVersionName = Objects.requireNonNull(privateKeyVersionName);
             return this;
         }
-
         public Builder webhookSecretName(String webhookSecretName) {
             this.webhookSecretName = Objects.requireNonNull(webhookSecretName);
             return this;
         }
-
         public Builder webhookSecretVersionName(String webhookSecretVersionName) {
             this.webhookSecretVersionName = Objects.requireNonNull(webhookSecretVersionName);
             return this;
-        }
-        public GitHubEnterpriseSecretsResponse build() {
+        }        public GitHubEnterpriseSecretsResponse build() {
             return new GitHubEnterpriseSecretsResponse(oauthClientIdName, oauthClientIdVersionName, oauthSecretName, oauthSecretVersionName, privateKeyName, privateKeyVersionName, webhookSecretName, webhookSecretVersionName);
         }
     }

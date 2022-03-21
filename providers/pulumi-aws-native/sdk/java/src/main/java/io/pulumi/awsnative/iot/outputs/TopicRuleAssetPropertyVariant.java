@@ -71,22 +71,18 @@ public final class TopicRuleAssetPropertyVariant {
             this.booleanValue = booleanValue;
             return this;
         }
-
         public Builder doubleValue(@Nullable String doubleValue) {
             this.doubleValue = doubleValue;
             return this;
         }
-
         public Builder integerValue(@Nullable String integerValue) {
             this.integerValue = integerValue;
             return this;
         }
-
         public Builder stringValue(@Nullable String stringValue) {
             this.stringValue = stringValue;
             return this;
-        }
-        public TopicRuleAssetPropertyVariant build() {
+        }        public TopicRuleAssetPropertyVariant build() {
             return new TopicRuleAssetPropertyVariant(booleanValue, doubleValue, integerValue, stringValue);
         }
     }

@@ -89,32 +89,26 @@ public final class TableRangePartitioningRangeGetArgs extends io.pulumi.resource
             this.end = Objects.requireNonNull(end);
             return this;
         }
-
         public Builder end(Integer end) {
             this.end = Output.of(Objects.requireNonNull(end));
             return this;
         }
-
         public Builder interval(Output<Integer> interval) {
             this.interval = Objects.requireNonNull(interval);
             return this;
         }
-
         public Builder interval(Integer interval) {
             this.interval = Output.of(Objects.requireNonNull(interval));
             return this;
         }
-
         public Builder start(Output<Integer> start) {
             this.start = Objects.requireNonNull(start);
             return this;
         }
-
         public Builder start(Integer start) {
             this.start = Output.of(Objects.requireNonNull(start));
             return this;
-        }
-        public TableRangePartitioningRangeGetArgs build() {
+        }        public TableRangePartitioningRangeGetArgs build() {
             return new TableRangePartitioningRangeGetArgs(end, interval, start);
         }
     }

@@ -73,12 +73,13 @@ public final class ListEffectiveVirtualNetworkByNetworkGroupResult {
             this.skipToken = skipToken;
             return this;
         }
-
         public Builder value(@Nullable List<EffectiveVirtualNetworkResponse> value) {
             this.value = value;
             return this;
         }
-        public ListEffectiveVirtualNetworkByNetworkGroupResult build() {
+        public Builder value(EffectiveVirtualNetworkResponse... value) {
+            return value(List.of(value));
+        }        public ListEffectiveVirtualNetworkByNetworkGroupResult build() {
             return new ListEffectiveVirtualNetworkByNetworkGroupResult(skipToken, value);
         }
     }

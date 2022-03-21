@@ -140,32 +140,32 @@ public final class RequestHeaderMatchConditionParametersResponse extends io.pulu
             this.matchValues = matchValues;
             return this;
         }
-
+        public Builder matchValues(String... matchValues) {
+            return matchValues(List.of(matchValues));
+        }
         public Builder negateCondition(@Nullable Boolean negateCondition) {
             this.negateCondition = negateCondition;
             return this;
         }
-
         public Builder odataType(String odataType) {
             this.odataType = Objects.requireNonNull(odataType);
             return this;
         }
-
         public Builder operator(String operator) {
             this.operator = Objects.requireNonNull(operator);
             return this;
         }
-
         public Builder selector(@Nullable String selector) {
             this.selector = selector;
             return this;
         }
-
         public Builder transforms(@Nullable List<String> transforms) {
             this.transforms = transforms;
             return this;
         }
-        public RequestHeaderMatchConditionParametersResponse build() {
+        public Builder transforms(String... transforms) {
+            return transforms(List.of(transforms));
+        }        public RequestHeaderMatchConditionParametersResponse build() {
             return new RequestHeaderMatchConditionParametersResponse(matchValues, negateCondition, odataType, operator, selector, transforms);
         }
     }

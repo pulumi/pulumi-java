@@ -93,17 +93,17 @@ public final class WebACLCustomResponse extends io.pulumi.resources.InvokeArgs {
             this.customResponseBodyKey = customResponseBodyKey;
             return this;
         }
-
         public Builder responseCode(Integer responseCode) {
             this.responseCode = Objects.requireNonNull(responseCode);
             return this;
         }
-
         public Builder responseHeaders(@Nullable List<WebACLCustomHTTPHeader> responseHeaders) {
             this.responseHeaders = responseHeaders;
             return this;
         }
-        public WebACLCustomResponse build() {
+        public Builder responseHeaders(WebACLCustomHTTPHeader... responseHeaders) {
+            return responseHeaders(List.of(responseHeaders));
+        }        public WebACLCustomResponse build() {
             return new WebACLCustomResponse(customResponseBodyKey, responseCode, responseHeaders);
         }
     }

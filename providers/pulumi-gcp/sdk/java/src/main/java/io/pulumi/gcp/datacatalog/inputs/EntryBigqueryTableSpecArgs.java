@@ -81,32 +81,32 @@ public final class EntryBigqueryTableSpecArgs extends io.pulumi.resources.Resour
             this.tableSourceType = tableSourceType;
             return this;
         }
-
         public Builder tableSourceType(@Nullable String tableSourceType) {
             this.tableSourceType = Output.ofNullable(tableSourceType);
             return this;
         }
-
         public Builder tableSpecs(@Nullable Output<List<EntryBigqueryTableSpecTableSpecArgs>> tableSpecs) {
             this.tableSpecs = tableSpecs;
             return this;
         }
-
         public Builder tableSpecs(@Nullable List<EntryBigqueryTableSpecTableSpecArgs> tableSpecs) {
             this.tableSpecs = Output.ofNullable(tableSpecs);
             return this;
         }
-
+        public Builder tableSpecs(EntryBigqueryTableSpecTableSpecArgs... tableSpecs) {
+            return tableSpecs(List.of(tableSpecs));
+        }
         public Builder viewSpecs(@Nullable Output<List<EntryBigqueryTableSpecViewSpecArgs>> viewSpecs) {
             this.viewSpecs = viewSpecs;
             return this;
         }
-
         public Builder viewSpecs(@Nullable List<EntryBigqueryTableSpecViewSpecArgs> viewSpecs) {
             this.viewSpecs = Output.ofNullable(viewSpecs);
             return this;
         }
-        public EntryBigqueryTableSpecArgs build() {
+        public Builder viewSpecs(EntryBigqueryTableSpecViewSpecArgs... viewSpecs) {
+            return viewSpecs(List.of(viewSpecs));
+        }        public EntryBigqueryTableSpecArgs build() {
             return new EntryBigqueryTableSpecArgs(tableSourceType, tableSpecs, viewSpecs);
         }
     }

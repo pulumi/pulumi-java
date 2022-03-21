@@ -319,87 +319,76 @@ public final class GetServiceResult {
             this.hostingMode = hostingMode;
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder identity(@Nullable IdentityResponse identity) {
             this.identity = identity;
             return this;
         }
-
         public Builder location(String location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder networkRuleSet(@Nullable NetworkRuleSetResponse networkRuleSet) {
             this.networkRuleSet = networkRuleSet;
             return this;
         }
-
         public Builder partitionCount(@Nullable Integer partitionCount) {
             this.partitionCount = partitionCount;
             return this;
         }
-
         public Builder privateEndpointConnections(List<PrivateEndpointConnectionResponse> privateEndpointConnections) {
             this.privateEndpointConnections = Objects.requireNonNull(privateEndpointConnections);
             return this;
         }
-
+        public Builder privateEndpointConnections(PrivateEndpointConnectionResponse... privateEndpointConnections) {
+            return privateEndpointConnections(List.of(privateEndpointConnections));
+        }
         public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
-
         public Builder publicNetworkAccess(@Nullable String publicNetworkAccess) {
             this.publicNetworkAccess = publicNetworkAccess;
             return this;
         }
-
         public Builder replicaCount(@Nullable Integer replicaCount) {
             this.replicaCount = replicaCount;
             return this;
         }
-
         public Builder sharedPrivateLinkResources(List<SharedPrivateLinkResourceResponse> sharedPrivateLinkResources) {
             this.sharedPrivateLinkResources = Objects.requireNonNull(sharedPrivateLinkResources);
             return this;
         }
-
+        public Builder sharedPrivateLinkResources(SharedPrivateLinkResourceResponse... sharedPrivateLinkResources) {
+            return sharedPrivateLinkResources(List.of(sharedPrivateLinkResources));
+        }
         public Builder sku(@Nullable SkuResponse sku) {
             this.sku = sku;
             return this;
         }
-
         public Builder status(String status) {
             this.status = Objects.requireNonNull(status);
             return this;
         }
-
         public Builder statusDetails(String statusDetails) {
             this.statusDetails = Objects.requireNonNull(statusDetails);
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public GetServiceResult build() {
+        }        public GetServiceResult build() {
             return new GetServiceResult(hostingMode, id, identity, location, name, networkRuleSet, partitionCount, privateEndpointConnections, provisioningState, publicNetworkAccess, replicaCount, sharedPrivateLinkResources, sku, status, statusDetails, tags, type);
         }
     }

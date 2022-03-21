@@ -72,12 +72,10 @@ public final class GetObjectAnchorsAccountArgs extends io.pulumi.resources.Invok
             this.accountName = Objects.requireNonNull(accountName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
-        }
-        public GetObjectAnchorsAccountArgs build() {
+        }        public GetObjectAnchorsAccountArgs build() {
             return new GetObjectAnchorsAccountArgs(accountName, resourceGroupName);
         }
     }

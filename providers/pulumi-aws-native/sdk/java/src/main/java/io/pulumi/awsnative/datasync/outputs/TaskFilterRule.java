@@ -72,12 +72,10 @@ public final class TaskFilterRule {
             this.filterType = filterType;
             return this;
         }
-
         public Builder value(@Nullable String value) {
             this.value = value;
             return this;
-        }
-        public TaskFilterRule build() {
+        }        public TaskFilterRule build() {
             return new TaskFilterRule(filterType, value);
         }
     }

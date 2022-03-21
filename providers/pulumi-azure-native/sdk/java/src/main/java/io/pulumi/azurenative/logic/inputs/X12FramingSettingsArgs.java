@@ -162,72 +162,58 @@ public final class X12FramingSettingsArgs extends io.pulumi.resources.ResourceAr
             this.characterSet = Objects.requireNonNull(characterSet);
             return this;
         }
-
         public Builder characterSet(Either<String,X12CharacterSet> characterSet) {
             this.characterSet = Output.of(Objects.requireNonNull(characterSet));
             return this;
         }
-
         public Builder componentSeparator(Output<Integer> componentSeparator) {
             this.componentSeparator = Objects.requireNonNull(componentSeparator);
             return this;
         }
-
         public Builder componentSeparator(Integer componentSeparator) {
             this.componentSeparator = Output.of(Objects.requireNonNull(componentSeparator));
             return this;
         }
-
         public Builder dataElementSeparator(Output<Integer> dataElementSeparator) {
             this.dataElementSeparator = Objects.requireNonNull(dataElementSeparator);
             return this;
         }
-
         public Builder dataElementSeparator(Integer dataElementSeparator) {
             this.dataElementSeparator = Output.of(Objects.requireNonNull(dataElementSeparator));
             return this;
         }
-
         public Builder replaceCharacter(Output<Integer> replaceCharacter) {
             this.replaceCharacter = Objects.requireNonNull(replaceCharacter);
             return this;
         }
-
         public Builder replaceCharacter(Integer replaceCharacter) {
             this.replaceCharacter = Output.of(Objects.requireNonNull(replaceCharacter));
             return this;
         }
-
         public Builder replaceSeparatorsInPayload(Output<Boolean> replaceSeparatorsInPayload) {
             this.replaceSeparatorsInPayload = Objects.requireNonNull(replaceSeparatorsInPayload);
             return this;
         }
-
         public Builder replaceSeparatorsInPayload(Boolean replaceSeparatorsInPayload) {
             this.replaceSeparatorsInPayload = Output.of(Objects.requireNonNull(replaceSeparatorsInPayload));
             return this;
         }
-
         public Builder segmentTerminator(Output<Integer> segmentTerminator) {
             this.segmentTerminator = Objects.requireNonNull(segmentTerminator);
             return this;
         }
-
         public Builder segmentTerminator(Integer segmentTerminator) {
             this.segmentTerminator = Output.of(Objects.requireNonNull(segmentTerminator));
             return this;
         }
-
         public Builder segmentTerminatorSuffix(Output<SegmentTerminatorSuffix> segmentTerminatorSuffix) {
             this.segmentTerminatorSuffix = Objects.requireNonNull(segmentTerminatorSuffix);
             return this;
         }
-
         public Builder segmentTerminatorSuffix(SegmentTerminatorSuffix segmentTerminatorSuffix) {
             this.segmentTerminatorSuffix = Output.of(Objects.requireNonNull(segmentTerminatorSuffix));
             return this;
-        }
-        public X12FramingSettingsArgs build() {
+        }        public X12FramingSettingsArgs build() {
             return new X12FramingSettingsArgs(characterSet, componentSeparator, dataElementSeparator, replaceCharacter, replaceSeparatorsInPayload, segmentTerminator, segmentTerminatorSuffix);
         }
     }

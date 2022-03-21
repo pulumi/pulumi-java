@@ -88,17 +88,14 @@ public final class GetSystemTopicEventSubscriptionDeliveryAttributesArgs extends
             this.eventSubscriptionName = Objects.requireNonNull(eventSubscriptionName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder systemTopicName(String systemTopicName) {
             this.systemTopicName = Objects.requireNonNull(systemTopicName);
             return this;
-        }
-        public GetSystemTopicEventSubscriptionDeliveryAttributesArgs build() {
+        }        public GetSystemTopicEventSubscriptionDeliveryAttributesArgs build() {
             return new GetSystemTopicEventSubscriptionDeliveryAttributesArgs(eventSubscriptionName, resourceGroupName, systemTopicName);
         }
     }

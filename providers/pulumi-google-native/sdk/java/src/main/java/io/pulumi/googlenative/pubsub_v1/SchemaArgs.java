@@ -115,52 +115,42 @@ public final class SchemaArgs extends io.pulumi.resources.ResourceArgs {
             this.definition = definition;
             return this;
         }
-
         public Builder definition(@Nullable String definition) {
             this.definition = Output.ofNullable(definition);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
         }
-
         public Builder schemaId(@Nullable Output<String> schemaId) {
             this.schemaId = schemaId;
             return this;
         }
-
         public Builder schemaId(@Nullable String schemaId) {
             this.schemaId = Output.ofNullable(schemaId);
             return this;
         }
-
         public Builder type(@Nullable Output<SchemaType> type) {
             this.type = type;
             return this;
         }
-
         public Builder type(@Nullable SchemaType type) {
             this.type = Output.ofNullable(type);
             return this;
-        }
-        public SchemaArgs build() {
+        }        public SchemaArgs build() {
             return new SchemaArgs(definition, name, project, schemaId, type);
         }
     }

@@ -117,27 +117,22 @@ public final class GetEventConnectionResult {
             this.arn = Objects.requireNonNull(arn);
             return this;
         }
-
         public Builder authorizationType(String authorizationType) {
             this.authorizationType = Objects.requireNonNull(authorizationType);
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder secretArn(String secretArn) {
             this.secretArn = Objects.requireNonNull(secretArn);
             return this;
-        }
-        public GetEventConnectionResult build() {
+        }        public GetEventConnectionResult build() {
             return new GetEventConnectionResult(arn, authorizationType, id, name, secretArn);
         }
     }

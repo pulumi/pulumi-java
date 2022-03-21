@@ -122,27 +122,22 @@ public final class JpgLayerResponse {
             this.height = height;
             return this;
         }
-
         public Builder label(@Nullable String label) {
             this.label = label;
             return this;
         }
-
         public Builder odataType(String odataType) {
             this.odataType = Objects.requireNonNull(odataType);
             return this;
         }
-
         public Builder quality(@Nullable Integer quality) {
             this.quality = quality;
             return this;
         }
-
         public Builder width(@Nullable String width) {
             this.width = width;
             return this;
-        }
-        public JpgLayerResponse build() {
+        }        public JpgLayerResponse build() {
             return new JpgLayerResponse(height, label, odataType, quality, width);
         }
     }

@@ -59,12 +59,13 @@ public final class ClusterMasterAuthorizedNetworksConfigGetArgs extends io.pulum
             this.cidrBlocks = cidrBlocks;
             return this;
         }
-
         public Builder cidrBlocks(@Nullable List<ClusterMasterAuthorizedNetworksConfigCidrBlockGetArgs> cidrBlocks) {
             this.cidrBlocks = Output.ofNullable(cidrBlocks);
             return this;
         }
-        public ClusterMasterAuthorizedNetworksConfigGetArgs build() {
+        public Builder cidrBlocks(ClusterMasterAuthorizedNetworksConfigCidrBlockGetArgs... cidrBlocks) {
+            return cidrBlocks(List.of(cidrBlocks));
+        }        public ClusterMasterAuthorizedNetworksConfigGetArgs build() {
             return new ClusterMasterAuthorizedNetworksConfigGetArgs(cidrBlocks);
         }
     }

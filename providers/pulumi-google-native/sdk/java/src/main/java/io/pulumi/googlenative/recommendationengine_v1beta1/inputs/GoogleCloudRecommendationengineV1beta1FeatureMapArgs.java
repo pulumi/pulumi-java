@@ -79,22 +79,18 @@ public final class GoogleCloudRecommendationengineV1beta1FeatureMapArgs extends 
             this.categoricalFeatures = categoricalFeatures;
             return this;
         }
-
         public Builder categoricalFeatures(@Nullable Map<String,String> categoricalFeatures) {
             this.categoricalFeatures = Output.ofNullable(categoricalFeatures);
             return this;
         }
-
         public Builder numericalFeatures(@Nullable Output<Map<String,String>> numericalFeatures) {
             this.numericalFeatures = numericalFeatures;
             return this;
         }
-
         public Builder numericalFeatures(@Nullable Map<String,String> numericalFeatures) {
             this.numericalFeatures = Output.ofNullable(numericalFeatures);
             return this;
-        }
-        public GoogleCloudRecommendationengineV1beta1FeatureMapArgs build() {
+        }        public GoogleCloudRecommendationengineV1beta1FeatureMapArgs build() {
             return new GoogleCloudRecommendationengineV1beta1FeatureMapArgs(categoricalFeatures, numericalFeatures);
         }
     }

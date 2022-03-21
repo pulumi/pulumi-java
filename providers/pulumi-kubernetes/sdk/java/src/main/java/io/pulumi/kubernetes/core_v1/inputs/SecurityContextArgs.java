@@ -228,112 +228,90 @@ public final class SecurityContextArgs extends io.pulumi.resources.ResourceArgs 
             this.allowPrivilegeEscalation = allowPrivilegeEscalation;
             return this;
         }
-
         public Builder allowPrivilegeEscalation(@Nullable Boolean allowPrivilegeEscalation) {
             this.allowPrivilegeEscalation = Output.ofNullable(allowPrivilegeEscalation);
             return this;
         }
-
         public Builder capabilities(@Nullable Output<CapabilitiesArgs> capabilities) {
             this.capabilities = capabilities;
             return this;
         }
-
         public Builder capabilities(@Nullable CapabilitiesArgs capabilities) {
             this.capabilities = Output.ofNullable(capabilities);
             return this;
         }
-
         public Builder privileged(@Nullable Output<Boolean> privileged) {
             this.privileged = privileged;
             return this;
         }
-
         public Builder privileged(@Nullable Boolean privileged) {
             this.privileged = Output.ofNullable(privileged);
             return this;
         }
-
         public Builder procMount(@Nullable Output<String> procMount) {
             this.procMount = procMount;
             return this;
         }
-
         public Builder procMount(@Nullable String procMount) {
             this.procMount = Output.ofNullable(procMount);
             return this;
         }
-
         public Builder readOnlyRootFilesystem(@Nullable Output<Boolean> readOnlyRootFilesystem) {
             this.readOnlyRootFilesystem = readOnlyRootFilesystem;
             return this;
         }
-
         public Builder readOnlyRootFilesystem(@Nullable Boolean readOnlyRootFilesystem) {
             this.readOnlyRootFilesystem = Output.ofNullable(readOnlyRootFilesystem);
             return this;
         }
-
         public Builder runAsGroup(@Nullable Output<Integer> runAsGroup) {
             this.runAsGroup = runAsGroup;
             return this;
         }
-
         public Builder runAsGroup(@Nullable Integer runAsGroup) {
             this.runAsGroup = Output.ofNullable(runAsGroup);
             return this;
         }
-
         public Builder runAsNonRoot(@Nullable Output<Boolean> runAsNonRoot) {
             this.runAsNonRoot = runAsNonRoot;
             return this;
         }
-
         public Builder runAsNonRoot(@Nullable Boolean runAsNonRoot) {
             this.runAsNonRoot = Output.ofNullable(runAsNonRoot);
             return this;
         }
-
         public Builder runAsUser(@Nullable Output<Integer> runAsUser) {
             this.runAsUser = runAsUser;
             return this;
         }
-
         public Builder runAsUser(@Nullable Integer runAsUser) {
             this.runAsUser = Output.ofNullable(runAsUser);
             return this;
         }
-
         public Builder seLinuxOptions(@Nullable Output<SELinuxOptionsArgs> seLinuxOptions) {
             this.seLinuxOptions = seLinuxOptions;
             return this;
         }
-
         public Builder seLinuxOptions(@Nullable SELinuxOptionsArgs seLinuxOptions) {
             this.seLinuxOptions = Output.ofNullable(seLinuxOptions);
             return this;
         }
-
         public Builder seccompProfile(@Nullable Output<SeccompProfileArgs> seccompProfile) {
             this.seccompProfile = seccompProfile;
             return this;
         }
-
         public Builder seccompProfile(@Nullable SeccompProfileArgs seccompProfile) {
             this.seccompProfile = Output.ofNullable(seccompProfile);
             return this;
         }
-
         public Builder windowsOptions(@Nullable Output<WindowsSecurityContextOptionsArgs> windowsOptions) {
             this.windowsOptions = windowsOptions;
             return this;
         }
-
         public Builder windowsOptions(@Nullable WindowsSecurityContextOptionsArgs windowsOptions) {
             this.windowsOptions = Output.ofNullable(windowsOptions);
             return this;
-        }
-        public SecurityContextArgs build() {
+        }        public SecurityContextArgs build() {
             return new SecurityContextArgs(allowPrivilegeEscalation, capabilities, privileged, procMount, readOnlyRootFilesystem, runAsGroup, runAsNonRoot, runAsUser, seLinuxOptions, seccompProfile, windowsOptions);
         }
     }

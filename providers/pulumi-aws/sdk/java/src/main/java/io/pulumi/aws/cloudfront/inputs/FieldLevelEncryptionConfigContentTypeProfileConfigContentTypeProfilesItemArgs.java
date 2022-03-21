@@ -90,32 +90,26 @@ public final class FieldLevelEncryptionConfigContentTypeProfileConfigContentType
             this.contentType = Objects.requireNonNull(contentType);
             return this;
         }
-
         public Builder contentType(String contentType) {
             this.contentType = Output.of(Objects.requireNonNull(contentType));
             return this;
         }
-
         public Builder format(Output<String> format) {
             this.format = Objects.requireNonNull(format);
             return this;
         }
-
         public Builder format(String format) {
             this.format = Output.of(Objects.requireNonNull(format));
             return this;
         }
-
         public Builder profileId(@Nullable Output<String> profileId) {
             this.profileId = profileId;
             return this;
         }
-
         public Builder profileId(@Nullable String profileId) {
             this.profileId = Output.ofNullable(profileId);
             return this;
-        }
-        public FieldLevelEncryptionConfigContentTypeProfileConfigContentTypeProfilesItemArgs build() {
+        }        public FieldLevelEncryptionConfigContentTypeProfileConfigContentTypeProfilesItemArgs build() {
             return new FieldLevelEncryptionConfigContentTypeProfileConfigContentTypeProfilesItemArgs(contentType, format, profileId);
         }
     }

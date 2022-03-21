@@ -157,72 +157,58 @@ public final class VaultState extends io.pulumi.resources.ResourceArgs {
             this.accessPolicy = accessPolicy;
             return this;
         }
-
         public Builder accessPolicy(@Nullable String accessPolicy) {
             this.accessPolicy = Output.ofNullable(accessPolicy);
             return this;
         }
-
         public Builder arn(@Nullable Output<String> arn) {
             this.arn = arn;
             return this;
         }
-
         public Builder arn(@Nullable String arn) {
             this.arn = Output.ofNullable(arn);
             return this;
         }
-
         public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder notification(@Nullable Output<VaultNotificationGetArgs> notification) {
             this.notification = notification;
             return this;
         }
-
         public Builder notification(@Nullable VaultNotificationGetArgs notification) {
             this.notification = Output.ofNullable(notification);
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
             this.tagsAll = tagsAll;
             return this;
         }
-
         public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
             this.tagsAll = Output.ofNullable(tagsAll);
             return this;
-        }
-        public VaultState build() {
+        }        public VaultState build() {
             return new VaultState(accessPolicy, arn, location, name, notification, tags, tagsAll);
         }
     }

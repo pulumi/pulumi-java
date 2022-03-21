@@ -124,52 +124,42 @@ public final class CodeRepositoryState extends io.pulumi.resources.ResourceArgs 
             this.arn = arn;
             return this;
         }
-
         public Builder arn(@Nullable String arn) {
             this.arn = Output.ofNullable(arn);
             return this;
         }
-
         public Builder codeRepositoryName(@Nullable Output<String> codeRepositoryName) {
             this.codeRepositoryName = codeRepositoryName;
             return this;
         }
-
         public Builder codeRepositoryName(@Nullable String codeRepositoryName) {
             this.codeRepositoryName = Output.ofNullable(codeRepositoryName);
             return this;
         }
-
         public Builder gitConfig(@Nullable Output<CodeRepositoryGitConfigGetArgs> gitConfig) {
             this.gitConfig = gitConfig;
             return this;
         }
-
         public Builder gitConfig(@Nullable CodeRepositoryGitConfigGetArgs gitConfig) {
             this.gitConfig = Output.ofNullable(gitConfig);
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
             this.tagsAll = tagsAll;
             return this;
         }
-
         public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
             this.tagsAll = Output.ofNullable(tagsAll);
             return this;
-        }
-        public CodeRepositoryState build() {
+        }        public CodeRepositoryState build() {
             return new CodeRepositoryState(arn, codeRepositoryName, gitConfig, tags, tagsAll);
         }
     }

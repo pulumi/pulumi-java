@@ -53,7 +53,9 @@ public final class WebServerNetworkAccessControlResponse {
             this.allowedIpRanges = Objects.requireNonNull(allowedIpRanges);
             return this;
         }
-        public WebServerNetworkAccessControlResponse build() {
+        public Builder allowedIpRanges(AllowedIpRangeResponse... allowedIpRanges) {
+            return allowedIpRanges(List.of(allowedIpRanges));
+        }        public WebServerNetworkAccessControlResponse build() {
             return new WebServerNetworkAccessControlResponse(allowedIpRanges);
         }
     }

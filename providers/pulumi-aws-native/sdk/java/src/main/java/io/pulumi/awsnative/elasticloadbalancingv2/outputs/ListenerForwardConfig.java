@@ -57,12 +57,13 @@ public final class ListenerForwardConfig {
             this.targetGroupStickinessConfig = targetGroupStickinessConfig;
             return this;
         }
-
         public Builder targetGroups(@Nullable List<ListenerTargetGroupTuple> targetGroups) {
             this.targetGroups = targetGroups;
             return this;
         }
-        public ListenerForwardConfig build() {
+        public Builder targetGroups(ListenerTargetGroupTuple... targetGroups) {
+            return targetGroups(List.of(targetGroups));
+        }        public ListenerForwardConfig build() {
             return new ListenerForwardConfig(targetGroupStickinessConfig, targetGroups);
         }
     }

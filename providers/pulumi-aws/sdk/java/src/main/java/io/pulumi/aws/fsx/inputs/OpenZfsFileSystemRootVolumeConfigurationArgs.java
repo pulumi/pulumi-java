@@ -126,52 +126,45 @@ public final class OpenZfsFileSystemRootVolumeConfigurationArgs extends io.pulum
             this.copyTagsToSnapshots = copyTagsToSnapshots;
             return this;
         }
-
         public Builder copyTagsToSnapshots(@Nullable Boolean copyTagsToSnapshots) {
             this.copyTagsToSnapshots = Output.ofNullable(copyTagsToSnapshots);
             return this;
         }
-
         public Builder dataCompressionType(@Nullable Output<String> dataCompressionType) {
             this.dataCompressionType = dataCompressionType;
             return this;
         }
-
         public Builder dataCompressionType(@Nullable String dataCompressionType) {
             this.dataCompressionType = Output.ofNullable(dataCompressionType);
             return this;
         }
-
         public Builder nfsExports(@Nullable Output<OpenZfsFileSystemRootVolumeConfigurationNfsExportsArgs> nfsExports) {
             this.nfsExports = nfsExports;
             return this;
         }
-
         public Builder nfsExports(@Nullable OpenZfsFileSystemRootVolumeConfigurationNfsExportsArgs nfsExports) {
             this.nfsExports = Output.ofNullable(nfsExports);
             return this;
         }
-
         public Builder readOnly(@Nullable Output<Boolean> readOnly) {
             this.readOnly = readOnly;
             return this;
         }
-
         public Builder readOnly(@Nullable Boolean readOnly) {
             this.readOnly = Output.ofNullable(readOnly);
             return this;
         }
-
         public Builder userAndGroupQuotas(@Nullable Output<List<OpenZfsFileSystemRootVolumeConfigurationUserAndGroupQuotaArgs>> userAndGroupQuotas) {
             this.userAndGroupQuotas = userAndGroupQuotas;
             return this;
         }
-
         public Builder userAndGroupQuotas(@Nullable List<OpenZfsFileSystemRootVolumeConfigurationUserAndGroupQuotaArgs> userAndGroupQuotas) {
             this.userAndGroupQuotas = Output.ofNullable(userAndGroupQuotas);
             return this;
         }
-        public OpenZfsFileSystemRootVolumeConfigurationArgs build() {
+        public Builder userAndGroupQuotas(OpenZfsFileSystemRootVolumeConfigurationUserAndGroupQuotaArgs... userAndGroupQuotas) {
+            return userAndGroupQuotas(List.of(userAndGroupQuotas));
+        }        public OpenZfsFileSystemRootVolumeConfigurationArgs build() {
             return new OpenZfsFileSystemRootVolumeConfigurationArgs(copyTagsToSnapshots, dataCompressionType, nfsExports, readOnly, userAndGroupQuotas);
         }
     }

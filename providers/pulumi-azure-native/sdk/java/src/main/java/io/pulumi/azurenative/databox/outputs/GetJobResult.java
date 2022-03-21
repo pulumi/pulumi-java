@@ -386,107 +386,86 @@ public final class GetJobResult {
             this.cancellationReason = Objects.requireNonNull(cancellationReason);
             return this;
         }
-
         public Builder deliveryInfo(@Nullable JobDeliveryInfoResponse deliveryInfo) {
             this.deliveryInfo = deliveryInfo;
             return this;
         }
-
         public Builder deliveryType(@Nullable String deliveryType) {
             this.deliveryType = deliveryType;
             return this;
         }
-
         public Builder details(@Nullable Object details) {
             this.details = details;
             return this;
         }
-
         public Builder error(CloudErrorResponse error) {
             this.error = Objects.requireNonNull(error);
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder identity(@Nullable ResourceIdentityResponse identity) {
             this.identity = identity;
             return this;
         }
-
         public Builder isCancellable(Boolean isCancellable) {
             this.isCancellable = Objects.requireNonNull(isCancellable);
             return this;
         }
-
         public Builder isCancellableWithoutFee(Boolean isCancellableWithoutFee) {
             this.isCancellableWithoutFee = Objects.requireNonNull(isCancellableWithoutFee);
             return this;
         }
-
         public Builder isDeletable(Boolean isDeletable) {
             this.isDeletable = Objects.requireNonNull(isDeletable);
             return this;
         }
-
         public Builder isPrepareToShipEnabled(Boolean isPrepareToShipEnabled) {
             this.isPrepareToShipEnabled = Objects.requireNonNull(isPrepareToShipEnabled);
             return this;
         }
-
         public Builder isShippingAddressEditable(Boolean isShippingAddressEditable) {
             this.isShippingAddressEditable = Objects.requireNonNull(isShippingAddressEditable);
             return this;
         }
-
         public Builder location(String location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder sku(SkuResponse sku) {
             this.sku = Objects.requireNonNull(sku);
             return this;
         }
-
         public Builder startTime(String startTime) {
             this.startTime = Objects.requireNonNull(startTime);
             return this;
         }
-
         public Builder status(String status) {
             this.status = Objects.requireNonNull(status);
             return this;
         }
-
         public Builder systemData(SystemDataResponse systemData) {
             this.systemData = Objects.requireNonNull(systemData);
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder transferType(String transferType) {
             this.transferType = Objects.requireNonNull(transferType);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public GetJobResult build() {
+        }        public GetJobResult build() {
             return new GetJobResult(cancellationReason, deliveryInfo, deliveryType, details, error, id, identity, isCancellable, isCancellableWithoutFee, isDeletable, isPrepareToShipEnabled, isShippingAddressEditable, location, name, sku, startTime, status, systemData, tags, transferType, type);
         }
     }

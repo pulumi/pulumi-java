@@ -103,22 +103,18 @@ public final class ScriptReferenceResponse {
             this.scriptArguments = scriptArguments;
             return this;
         }
-
         public Builder scriptData(@Nullable String scriptData) {
             this.scriptData = scriptData;
             return this;
         }
-
         public Builder scriptSource(@Nullable String scriptSource) {
             this.scriptSource = scriptSource;
             return this;
         }
-
         public Builder timeout(@Nullable String timeout) {
             this.timeout = timeout;
             return this;
-        }
-        public ScriptReferenceResponse build() {
+        }        public ScriptReferenceResponse build() {
             return new ScriptReferenceResponse(scriptArguments, scriptData, scriptSource, timeout);
         }
     }

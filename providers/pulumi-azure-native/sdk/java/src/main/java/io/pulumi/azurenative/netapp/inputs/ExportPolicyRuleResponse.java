@@ -272,72 +272,58 @@ public final class ExportPolicyRuleResponse extends io.pulumi.resources.InvokeAr
             this.allowedClients = allowedClients;
             return this;
         }
-
         public Builder cifs(@Nullable Boolean cifs) {
             this.cifs = cifs;
             return this;
         }
-
         public Builder hasRootAccess(@Nullable Boolean hasRootAccess) {
             this.hasRootAccess = hasRootAccess;
             return this;
         }
-
         public Builder kerberos5ReadOnly(@Nullable Boolean kerberos5ReadOnly) {
             this.kerberos5ReadOnly = kerberos5ReadOnly;
             return this;
         }
-
         public Builder kerberos5ReadWrite(@Nullable Boolean kerberos5ReadWrite) {
             this.kerberos5ReadWrite = kerberos5ReadWrite;
             return this;
         }
-
         public Builder kerberos5iReadOnly(@Nullable Boolean kerberos5iReadOnly) {
             this.kerberos5iReadOnly = kerberos5iReadOnly;
             return this;
         }
-
         public Builder kerberos5iReadWrite(@Nullable Boolean kerberos5iReadWrite) {
             this.kerberos5iReadWrite = kerberos5iReadWrite;
             return this;
         }
-
         public Builder kerberos5pReadOnly(@Nullable Boolean kerberos5pReadOnly) {
             this.kerberos5pReadOnly = kerberos5pReadOnly;
             return this;
         }
-
         public Builder kerberos5pReadWrite(@Nullable Boolean kerberos5pReadWrite) {
             this.kerberos5pReadWrite = kerberos5pReadWrite;
             return this;
         }
-
         public Builder nfsv3(@Nullable Boolean nfsv3) {
             this.nfsv3 = nfsv3;
             return this;
         }
-
         public Builder nfsv41(@Nullable Boolean nfsv41) {
             this.nfsv41 = nfsv41;
             return this;
         }
-
         public Builder ruleIndex(@Nullable Integer ruleIndex) {
             this.ruleIndex = ruleIndex;
             return this;
         }
-
         public Builder unixReadOnly(@Nullable Boolean unixReadOnly) {
             this.unixReadOnly = unixReadOnly;
             return this;
         }
-
         public Builder unixReadWrite(@Nullable Boolean unixReadWrite) {
             this.unixReadWrite = unixReadWrite;
             return this;
-        }
-        public ExportPolicyRuleResponse build() {
+        }        public ExportPolicyRuleResponse build() {
             return new ExportPolicyRuleResponse(allowedClients, cifs, hasRootAccess, kerberos5ReadOnly, kerberos5ReadWrite, kerberos5iReadOnly, kerberos5iReadWrite, kerberos5pReadOnly, kerberos5pReadWrite, nfsv3, nfsv41, ruleIndex, unixReadOnly, unixReadWrite);
         }
     }

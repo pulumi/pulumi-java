@@ -74,22 +74,30 @@ public final class SelectionCondition {
             this.stringEquals = stringEquals;
             return this;
         }
-
+        public Builder stringEquals(SelectionConditionStringEqual... stringEquals) {
+            return stringEquals(List.of(stringEquals));
+        }
         public Builder stringLikes(@Nullable List<SelectionConditionStringLike> stringLikes) {
             this.stringLikes = stringLikes;
             return this;
         }
-
+        public Builder stringLikes(SelectionConditionStringLike... stringLikes) {
+            return stringLikes(List.of(stringLikes));
+        }
         public Builder stringNotEquals(@Nullable List<SelectionConditionStringNotEqual> stringNotEquals) {
             this.stringNotEquals = stringNotEquals;
             return this;
         }
-
+        public Builder stringNotEquals(SelectionConditionStringNotEqual... stringNotEquals) {
+            return stringNotEquals(List.of(stringNotEquals));
+        }
         public Builder stringNotLikes(@Nullable List<SelectionConditionStringNotLike> stringNotLikes) {
             this.stringNotLikes = stringNotLikes;
             return this;
         }
-        public SelectionCondition build() {
+        public Builder stringNotLikes(SelectionConditionStringNotLike... stringNotLikes) {
+            return stringNotLikes(List.of(stringNotLikes));
+        }        public SelectionCondition build() {
             return new SelectionCondition(stringEquals, stringLikes, stringNotEquals, stringNotLikes);
         }
     }

@@ -239,112 +239,93 @@ public final class AvroDatasetArgs extends io.pulumi.resources.ResourceArgs {
             this.annotations = annotations;
             return this;
         }
-
         public Builder annotations(@Nullable List<Object> annotations) {
             this.annotations = Output.ofNullable(annotations);
             return this;
         }
-
+        public Builder annotations(Object... annotations) {
+            return annotations(List.of(annotations));
+        }
         public Builder avroCompressionCodec(@Nullable Output<Object> avroCompressionCodec) {
             this.avroCompressionCodec = avroCompressionCodec;
             return this;
         }
-
         public Builder avroCompressionCodec(@Nullable Object avroCompressionCodec) {
             this.avroCompressionCodec = Output.ofNullable(avroCompressionCodec);
             return this;
         }
-
         public Builder avroCompressionLevel(@Nullable Output<Integer> avroCompressionLevel) {
             this.avroCompressionLevel = avroCompressionLevel;
             return this;
         }
-
         public Builder avroCompressionLevel(@Nullable Integer avroCompressionLevel) {
             this.avroCompressionLevel = Output.ofNullable(avroCompressionLevel);
             return this;
         }
-
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder folder(@Nullable Output<DatasetFolderArgs> folder) {
             this.folder = folder;
             return this;
         }
-
         public Builder folder(@Nullable DatasetFolderArgs folder) {
             this.folder = Output.ofNullable(folder);
             return this;
         }
-
         public Builder linkedServiceName(Output<LinkedServiceReferenceArgs> linkedServiceName) {
             this.linkedServiceName = Objects.requireNonNull(linkedServiceName);
             return this;
         }
-
         public Builder linkedServiceName(LinkedServiceReferenceArgs linkedServiceName) {
             this.linkedServiceName = Output.of(Objects.requireNonNull(linkedServiceName));
             return this;
         }
-
         public Builder location(Output<Object> location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
-
         public Builder location(Object location) {
             this.location = Output.of(Objects.requireNonNull(location));
             return this;
         }
-
         public Builder parameters(@Nullable Output<Map<String,ParameterSpecificationArgs>> parameters) {
             this.parameters = parameters;
             return this;
         }
-
         public Builder parameters(@Nullable Map<String,ParameterSpecificationArgs> parameters) {
             this.parameters = Output.ofNullable(parameters);
             return this;
         }
-
         public Builder schema(@Nullable Output<Object> schema) {
             this.schema = schema;
             return this;
         }
-
         public Builder schema(@Nullable Object schema) {
             this.schema = Output.ofNullable(schema);
             return this;
         }
-
         public Builder structure(@Nullable Output<Object> structure) {
             this.structure = structure;
             return this;
         }
-
         public Builder structure(@Nullable Object structure) {
             this.structure = Output.ofNullable(structure);
             return this;
         }
-
         public Builder type(Output<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Output.of(Objects.requireNonNull(type));
             return this;
-        }
-        public AvroDatasetArgs build() {
+        }        public AvroDatasetArgs build() {
             return new AvroDatasetArgs(annotations, avroCompressionCodec, avroCompressionLevel, description, folder, linkedServiceName, location, parameters, schema, structure, type);
         }
     }

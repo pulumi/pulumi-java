@@ -57,12 +57,10 @@ public final class AzureNodePoolConfigRootVolumeGetArgs extends io.pulumi.resour
             this.sizeGib = sizeGib;
             return this;
         }
-
         public Builder sizeGib(@Nullable Integer sizeGib) {
             this.sizeGib = Output.ofNullable(sizeGib);
             return this;
-        }
-        public AzureNodePoolConfigRootVolumeGetArgs build() {
+        }        public AzureNodePoolConfigRootVolumeGetArgs build() {
             return new AzureNodePoolConfigRootVolumeGetArgs(sizeGib);
         }
     }

@@ -86,17 +86,14 @@ public final class EndpointResponse {
             this.allowCors = Objects.requireNonNull(allowCors);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder target(String target) {
             this.target = Objects.requireNonNull(target);
             return this;
-        }
-        public EndpointResponse build() {
+        }        public EndpointResponse build() {
             return new EndpointResponse(allowCors, name, target);
         }
     }

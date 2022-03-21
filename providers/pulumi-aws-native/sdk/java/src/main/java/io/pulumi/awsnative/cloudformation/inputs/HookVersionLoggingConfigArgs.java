@@ -74,22 +74,18 @@ public final class HookVersionLoggingConfigArgs extends io.pulumi.resources.Reso
             this.logGroupName = logGroupName;
             return this;
         }
-
         public Builder logGroupName(@Nullable String logGroupName) {
             this.logGroupName = Output.ofNullable(logGroupName);
             return this;
         }
-
         public Builder logRoleArn(@Nullable Output<String> logRoleArn) {
             this.logRoleArn = logRoleArn;
             return this;
         }
-
         public Builder logRoleArn(@Nullable String logRoleArn) {
             this.logRoleArn = Output.ofNullable(logRoleArn);
             return this;
-        }
-        public HookVersionLoggingConfigArgs build() {
+        }        public HookVersionLoggingConfigArgs build() {
             return new HookVersionLoggingConfigArgs(logGroupName, logRoleArn);
         }
     }

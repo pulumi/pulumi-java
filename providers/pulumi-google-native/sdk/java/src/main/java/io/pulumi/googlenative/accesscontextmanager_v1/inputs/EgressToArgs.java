@@ -80,22 +80,24 @@ public final class EgressToArgs extends io.pulumi.resources.ResourceArgs {
             this.operations = operations;
             return this;
         }
-
         public Builder operations(@Nullable List<ApiOperationArgs> operations) {
             this.operations = Output.ofNullable(operations);
             return this;
         }
-
+        public Builder operations(ApiOperationArgs... operations) {
+            return operations(List.of(operations));
+        }
         public Builder resources(@Nullable Output<List<String>> resources) {
             this.resources = resources;
             return this;
         }
-
         public Builder resources(@Nullable List<String> resources) {
             this.resources = Output.ofNullable(resources);
             return this;
         }
-        public EgressToArgs build() {
+        public Builder resources(String... resources) {
+            return resources(List.of(resources));
+        }        public EgressToArgs build() {
             return new EgressToArgs(operations, resources);
         }
     }

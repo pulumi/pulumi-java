@@ -77,22 +77,18 @@ public final class AwsAccessKeyArgs extends io.pulumi.resources.ResourceArgs {
             this.accessKeyId = Objects.requireNonNull(accessKeyId);
             return this;
         }
-
         public Builder accessKeyId(String accessKeyId) {
             this.accessKeyId = Output.of(Objects.requireNonNull(accessKeyId));
             return this;
         }
-
         public Builder secretAccessKey(Output<String> secretAccessKey) {
             this.secretAccessKey = Objects.requireNonNull(secretAccessKey);
             return this;
         }
-
         public Builder secretAccessKey(String secretAccessKey) {
             this.secretAccessKey = Output.of(Objects.requireNonNull(secretAccessKey));
             return this;
-        }
-        public AwsAccessKeyArgs build() {
+        }        public AwsAccessKeyArgs build() {
             return new AwsAccessKeyArgs(accessKeyId, secretAccessKey);
         }
     }

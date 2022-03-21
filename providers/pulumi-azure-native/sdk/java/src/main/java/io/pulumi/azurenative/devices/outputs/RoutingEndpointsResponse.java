@@ -106,22 +106,30 @@ public final class RoutingEndpointsResponse {
             this.eventHubs = eventHubs;
             return this;
         }
-
+        public Builder eventHubs(RoutingEventHubPropertiesResponse... eventHubs) {
+            return eventHubs(List.of(eventHubs));
+        }
         public Builder serviceBusQueues(@Nullable List<RoutingServiceBusQueueEndpointPropertiesResponse> serviceBusQueues) {
             this.serviceBusQueues = serviceBusQueues;
             return this;
         }
-
+        public Builder serviceBusQueues(RoutingServiceBusQueueEndpointPropertiesResponse... serviceBusQueues) {
+            return serviceBusQueues(List.of(serviceBusQueues));
+        }
         public Builder serviceBusTopics(@Nullable List<RoutingServiceBusTopicEndpointPropertiesResponse> serviceBusTopics) {
             this.serviceBusTopics = serviceBusTopics;
             return this;
         }
-
+        public Builder serviceBusTopics(RoutingServiceBusTopicEndpointPropertiesResponse... serviceBusTopics) {
+            return serviceBusTopics(List.of(serviceBusTopics));
+        }
         public Builder storageContainers(@Nullable List<RoutingStorageContainerPropertiesResponse> storageContainers) {
             this.storageContainers = storageContainers;
             return this;
         }
-        public RoutingEndpointsResponse build() {
+        public Builder storageContainers(RoutingStorageContainerPropertiesResponse... storageContainers) {
+            return storageContainers(List.of(storageContainers));
+        }        public RoutingEndpointsResponse build() {
             return new RoutingEndpointsResponse(eventHubs, serviceBusQueues, serviceBusTopics, storageContainers);
         }
     }

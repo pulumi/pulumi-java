@@ -91,32 +91,29 @@ public final class GroupMembershipState extends io.pulumi.resources.ResourceArgs
             this.group = group;
             return this;
         }
-
         public Builder group(@Nullable String group) {
             this.group = Output.ofNullable(group);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder users(@Nullable Output<List<String>> users) {
             this.users = users;
             return this;
         }
-
         public Builder users(@Nullable List<String> users) {
             this.users = Output.ofNullable(users);
             return this;
         }
-        public GroupMembershipState build() {
+        public Builder users(String... users) {
+            return users(List.of(users));
+        }        public GroupMembershipState build() {
             return new GroupMembershipState(group, name, users);
         }
     }

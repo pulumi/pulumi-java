@@ -144,62 +144,53 @@ public final class ServiceBusTopicOutputDataSourceArgs extends io.pulumi.resourc
             this.propertyColumns = propertyColumns;
             return this;
         }
-
         public Builder propertyColumns(@Nullable List<String> propertyColumns) {
             this.propertyColumns = Output.ofNullable(propertyColumns);
             return this;
         }
-
+        public Builder propertyColumns(String... propertyColumns) {
+            return propertyColumns(List.of(propertyColumns));
+        }
         public Builder serviceBusNamespace(@Nullable Output<String> serviceBusNamespace) {
             this.serviceBusNamespace = serviceBusNamespace;
             return this;
         }
-
         public Builder serviceBusNamespace(@Nullable String serviceBusNamespace) {
             this.serviceBusNamespace = Output.ofNullable(serviceBusNamespace);
             return this;
         }
-
         public Builder sharedAccessPolicyKey(@Nullable Output<String> sharedAccessPolicyKey) {
             this.sharedAccessPolicyKey = sharedAccessPolicyKey;
             return this;
         }
-
         public Builder sharedAccessPolicyKey(@Nullable String sharedAccessPolicyKey) {
             this.sharedAccessPolicyKey = Output.ofNullable(sharedAccessPolicyKey);
             return this;
         }
-
         public Builder sharedAccessPolicyName(@Nullable Output<String> sharedAccessPolicyName) {
             this.sharedAccessPolicyName = sharedAccessPolicyName;
             return this;
         }
-
         public Builder sharedAccessPolicyName(@Nullable String sharedAccessPolicyName) {
             this.sharedAccessPolicyName = Output.ofNullable(sharedAccessPolicyName);
             return this;
         }
-
         public Builder topicName(@Nullable Output<String> topicName) {
             this.topicName = topicName;
             return this;
         }
-
         public Builder topicName(@Nullable String topicName) {
             this.topicName = Output.ofNullable(topicName);
             return this;
         }
-
         public Builder type(Output<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Output.of(Objects.requireNonNull(type));
             return this;
-        }
-        public ServiceBusTopicOutputDataSourceArgs build() {
+        }        public ServiceBusTopicOutputDataSourceArgs build() {
             return new ServiceBusTopicOutputDataSourceArgs(propertyColumns, serviceBusNamespace, sharedAccessPolicyKey, sharedAccessPolicyName, topicName, type);
         }
     }

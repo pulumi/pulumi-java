@@ -207,67 +207,54 @@ public final class DeliveryStreamExtendedS3DestinationConfiguration extends io.p
             this.bucketARN = Objects.requireNonNull(bucketARN);
             return this;
         }
-
         public Builder bufferingHints(@Nullable DeliveryStreamBufferingHints bufferingHints) {
             this.bufferingHints = bufferingHints;
             return this;
         }
-
         public Builder cloudWatchLoggingOptions(@Nullable DeliveryStreamCloudWatchLoggingOptions cloudWatchLoggingOptions) {
             this.cloudWatchLoggingOptions = cloudWatchLoggingOptions;
             return this;
         }
-
         public Builder compressionFormat(@Nullable DeliveryStreamExtendedS3DestinationConfigurationCompressionFormat compressionFormat) {
             this.compressionFormat = compressionFormat;
             return this;
         }
-
         public Builder dataFormatConversionConfiguration(@Nullable DeliveryStreamDataFormatConversionConfiguration dataFormatConversionConfiguration) {
             this.dataFormatConversionConfiguration = dataFormatConversionConfiguration;
             return this;
         }
-
         public Builder dynamicPartitioningConfiguration(@Nullable DeliveryStreamDynamicPartitioningConfiguration dynamicPartitioningConfiguration) {
             this.dynamicPartitioningConfiguration = dynamicPartitioningConfiguration;
             return this;
         }
-
         public Builder encryptionConfiguration(@Nullable DeliveryStreamEncryptionConfiguration encryptionConfiguration) {
             this.encryptionConfiguration = encryptionConfiguration;
             return this;
         }
-
         public Builder errorOutputPrefix(@Nullable String errorOutputPrefix) {
             this.errorOutputPrefix = errorOutputPrefix;
             return this;
         }
-
         public Builder prefix(@Nullable String prefix) {
             this.prefix = prefix;
             return this;
         }
-
         public Builder processingConfiguration(@Nullable DeliveryStreamProcessingConfiguration processingConfiguration) {
             this.processingConfiguration = processingConfiguration;
             return this;
         }
-
         public Builder roleARN(String roleARN) {
             this.roleARN = Objects.requireNonNull(roleARN);
             return this;
         }
-
         public Builder s3BackupConfiguration(@Nullable DeliveryStreamS3DestinationConfiguration s3BackupConfiguration) {
             this.s3BackupConfiguration = s3BackupConfiguration;
             return this;
         }
-
         public Builder s3BackupMode(@Nullable DeliveryStreamExtendedS3DestinationConfigurationS3BackupMode s3BackupMode) {
             this.s3BackupMode = s3BackupMode;
             return this;
-        }
-        public DeliveryStreamExtendedS3DestinationConfiguration build() {
+        }        public DeliveryStreamExtendedS3DestinationConfiguration build() {
             return new DeliveryStreamExtendedS3DestinationConfiguration(bucketARN, bufferingHints, cloudWatchLoggingOptions, compressionFormat, dataFormatConversionConfiguration, dynamicPartitioningConfiguration, encryptionConfiguration, errorOutputPrefix, prefix, processingConfiguration, roleARN, s3BackupConfiguration, s3BackupMode);
         }
     }

@@ -104,22 +104,18 @@ public final class NodeConfigStatus {
             this.active = active;
             return this;
         }
-
         public Builder assigned(@Nullable NodeConfigSource assigned) {
             this.assigned = assigned;
             return this;
         }
-
         public Builder error(@Nullable String error) {
             this.error = error;
             return this;
         }
-
         public Builder lastKnownGood(@Nullable NodeConfigSource lastKnownGood) {
             this.lastKnownGood = lastKnownGood;
             return this;
-        }
-        public NodeConfigStatus build() {
+        }        public NodeConfigStatus build() {
             return new NodeConfigStatus(active, assigned, error, lastKnownGood);
         }
     }

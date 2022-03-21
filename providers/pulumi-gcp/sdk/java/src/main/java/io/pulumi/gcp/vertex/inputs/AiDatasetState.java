@@ -192,92 +192,74 @@ public final class AiDatasetState extends io.pulumi.resources.ResourceArgs {
             this.createTime = createTime;
             return this;
         }
-
         public Builder createTime(@Nullable String createTime) {
             this.createTime = Output.ofNullable(createTime);
             return this;
         }
-
         public Builder displayName(@Nullable Output<String> displayName) {
             this.displayName = displayName;
             return this;
         }
-
         public Builder displayName(@Nullable String displayName) {
             this.displayName = Output.ofNullable(displayName);
             return this;
         }
-
         public Builder encryptionSpec(@Nullable Output<AiDatasetEncryptionSpecGetArgs> encryptionSpec) {
             this.encryptionSpec = encryptionSpec;
             return this;
         }
-
         public Builder encryptionSpec(@Nullable AiDatasetEncryptionSpecGetArgs encryptionSpec) {
             this.encryptionSpec = Output.ofNullable(encryptionSpec);
             return this;
         }
-
         public Builder labels(@Nullable Output<Map<String,String>> labels) {
             this.labels = labels;
             return this;
         }
-
         public Builder labels(@Nullable Map<String,String> labels) {
             this.labels = Output.ofNullable(labels);
             return this;
         }
-
         public Builder metadataSchemaUri(@Nullable Output<String> metadataSchemaUri) {
             this.metadataSchemaUri = metadataSchemaUri;
             return this;
         }
-
         public Builder metadataSchemaUri(@Nullable String metadataSchemaUri) {
             this.metadataSchemaUri = Output.ofNullable(metadataSchemaUri);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
         }
-
         public Builder region(@Nullable Output<String> region) {
             this.region = region;
             return this;
         }
-
         public Builder region(@Nullable String region) {
             this.region = Output.ofNullable(region);
             return this;
         }
-
         public Builder updateTime(@Nullable Output<String> updateTime) {
             this.updateTime = updateTime;
             return this;
         }
-
         public Builder updateTime(@Nullable String updateTime) {
             this.updateTime = Output.ofNullable(updateTime);
             return this;
-        }
-        public AiDatasetState build() {
+        }        public AiDatasetState build() {
             return new AiDatasetState(createTime, displayName, encryptionSpec, labels, metadataSchemaUri, name, project, region, updateTime);
         }
     }

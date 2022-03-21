@@ -56,8 +56,7 @@ public final class InstanceProfileArgs extends io.pulumi.resources.ResourceArgs 
         public Builder role(@Nullable Output<String> role) {
             this.role = role;
             return this;
-        }
-        public InstanceProfileArgs build() {
+        }        public InstanceProfileArgs build() {
             return new InstanceProfileArgs(role);
         }
     }

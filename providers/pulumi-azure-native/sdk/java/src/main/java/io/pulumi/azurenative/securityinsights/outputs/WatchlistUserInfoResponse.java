@@ -87,17 +87,14 @@ public final class WatchlistUserInfoResponse {
             this.email = Objects.requireNonNull(email);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder objectId(@Nullable String objectId) {
             this.objectId = objectId;
             return this;
-        }
-        public WatchlistUserInfoResponse build() {
+        }        public WatchlistUserInfoResponse build() {
             return new WatchlistUserInfoResponse(email, name, objectId);
         }
     }

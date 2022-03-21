@@ -469,262 +469,216 @@ public final class GoogleCloudMlV1__TrainingInputArgs extends io.pulumi.resource
             this.args = args;
             return this;
         }
-
         public Builder args(@Nullable List<String> args) {
             this.args = Output.ofNullable(args);
             return this;
         }
-
+        public Builder args(String... args) {
+            return args(List.of(args));
+        }
         public Builder enableWebAccess(@Nullable Output<Boolean> enableWebAccess) {
             this.enableWebAccess = enableWebAccess;
             return this;
         }
-
         public Builder enableWebAccess(@Nullable Boolean enableWebAccess) {
             this.enableWebAccess = Output.ofNullable(enableWebAccess);
             return this;
         }
-
         public Builder encryptionConfig(@Nullable Output<GoogleCloudMlV1__EncryptionConfigArgs> encryptionConfig) {
             this.encryptionConfig = encryptionConfig;
             return this;
         }
-
         public Builder encryptionConfig(@Nullable GoogleCloudMlV1__EncryptionConfigArgs encryptionConfig) {
             this.encryptionConfig = Output.ofNullable(encryptionConfig);
             return this;
         }
-
         public Builder evaluatorConfig(@Nullable Output<GoogleCloudMlV1__ReplicaConfigArgs> evaluatorConfig) {
             this.evaluatorConfig = evaluatorConfig;
             return this;
         }
-
         public Builder evaluatorConfig(@Nullable GoogleCloudMlV1__ReplicaConfigArgs evaluatorConfig) {
             this.evaluatorConfig = Output.ofNullable(evaluatorConfig);
             return this;
         }
-
         public Builder evaluatorCount(@Nullable Output<String> evaluatorCount) {
             this.evaluatorCount = evaluatorCount;
             return this;
         }
-
         public Builder evaluatorCount(@Nullable String evaluatorCount) {
             this.evaluatorCount = Output.ofNullable(evaluatorCount);
             return this;
         }
-
         public Builder evaluatorType(@Nullable Output<String> evaluatorType) {
             this.evaluatorType = evaluatorType;
             return this;
         }
-
         public Builder evaluatorType(@Nullable String evaluatorType) {
             this.evaluatorType = Output.ofNullable(evaluatorType);
             return this;
         }
-
         public Builder hyperparameters(@Nullable Output<GoogleCloudMlV1__HyperparameterSpecArgs> hyperparameters) {
             this.hyperparameters = hyperparameters;
             return this;
         }
-
         public Builder hyperparameters(@Nullable GoogleCloudMlV1__HyperparameterSpecArgs hyperparameters) {
             this.hyperparameters = Output.ofNullable(hyperparameters);
             return this;
         }
-
         public Builder jobDir(@Nullable Output<String> jobDir) {
             this.jobDir = jobDir;
             return this;
         }
-
         public Builder jobDir(@Nullable String jobDir) {
             this.jobDir = Output.ofNullable(jobDir);
             return this;
         }
-
         public Builder masterConfig(@Nullable Output<GoogleCloudMlV1__ReplicaConfigArgs> masterConfig) {
             this.masterConfig = masterConfig;
             return this;
         }
-
         public Builder masterConfig(@Nullable GoogleCloudMlV1__ReplicaConfigArgs masterConfig) {
             this.masterConfig = Output.ofNullable(masterConfig);
             return this;
         }
-
         public Builder masterType(@Nullable Output<String> masterType) {
             this.masterType = masterType;
             return this;
         }
-
         public Builder masterType(@Nullable String masterType) {
             this.masterType = Output.ofNullable(masterType);
             return this;
         }
-
         public Builder network(@Nullable Output<String> network) {
             this.network = network;
             return this;
         }
-
         public Builder network(@Nullable String network) {
             this.network = Output.ofNullable(network);
             return this;
         }
-
         public Builder packageUris(Output<List<String>> packageUris) {
             this.packageUris = Objects.requireNonNull(packageUris);
             return this;
         }
-
         public Builder packageUris(List<String> packageUris) {
             this.packageUris = Output.of(Objects.requireNonNull(packageUris));
             return this;
         }
-
+        public Builder packageUris(String... packageUris) {
+            return packageUris(List.of(packageUris));
+        }
         public Builder parameterServerConfig(@Nullable Output<GoogleCloudMlV1__ReplicaConfigArgs> parameterServerConfig) {
             this.parameterServerConfig = parameterServerConfig;
             return this;
         }
-
         public Builder parameterServerConfig(@Nullable GoogleCloudMlV1__ReplicaConfigArgs parameterServerConfig) {
             this.parameterServerConfig = Output.ofNullable(parameterServerConfig);
             return this;
         }
-
         public Builder parameterServerCount(@Nullable Output<String> parameterServerCount) {
             this.parameterServerCount = parameterServerCount;
             return this;
         }
-
         public Builder parameterServerCount(@Nullable String parameterServerCount) {
             this.parameterServerCount = Output.ofNullable(parameterServerCount);
             return this;
         }
-
         public Builder parameterServerType(@Nullable Output<String> parameterServerType) {
             this.parameterServerType = parameterServerType;
             return this;
         }
-
         public Builder parameterServerType(@Nullable String parameterServerType) {
             this.parameterServerType = Output.ofNullable(parameterServerType);
             return this;
         }
-
         public Builder pythonModule(Output<String> pythonModule) {
             this.pythonModule = Objects.requireNonNull(pythonModule);
             return this;
         }
-
         public Builder pythonModule(String pythonModule) {
             this.pythonModule = Output.of(Objects.requireNonNull(pythonModule));
             return this;
         }
-
         public Builder pythonVersion(@Nullable Output<String> pythonVersion) {
             this.pythonVersion = pythonVersion;
             return this;
         }
-
         public Builder pythonVersion(@Nullable String pythonVersion) {
             this.pythonVersion = Output.ofNullable(pythonVersion);
             return this;
         }
-
         public Builder region(Output<String> region) {
             this.region = Objects.requireNonNull(region);
             return this;
         }
-
         public Builder region(String region) {
             this.region = Output.of(Objects.requireNonNull(region));
             return this;
         }
-
         public Builder runtimeVersion(@Nullable Output<String> runtimeVersion) {
             this.runtimeVersion = runtimeVersion;
             return this;
         }
-
         public Builder runtimeVersion(@Nullable String runtimeVersion) {
             this.runtimeVersion = Output.ofNullable(runtimeVersion);
             return this;
         }
-
         public Builder scaleTier(Output<GoogleCloudMlV1__TrainingInputScaleTier> scaleTier) {
             this.scaleTier = Objects.requireNonNull(scaleTier);
             return this;
         }
-
         public Builder scaleTier(GoogleCloudMlV1__TrainingInputScaleTier scaleTier) {
             this.scaleTier = Output.of(Objects.requireNonNull(scaleTier));
             return this;
         }
-
         public Builder scheduling(@Nullable Output<GoogleCloudMlV1__SchedulingArgs> scheduling) {
             this.scheduling = scheduling;
             return this;
         }
-
         public Builder scheduling(@Nullable GoogleCloudMlV1__SchedulingArgs scheduling) {
             this.scheduling = Output.ofNullable(scheduling);
             return this;
         }
-
         public Builder serviceAccount(@Nullable Output<String> serviceAccount) {
             this.serviceAccount = serviceAccount;
             return this;
         }
-
         public Builder serviceAccount(@Nullable String serviceAccount) {
             this.serviceAccount = Output.ofNullable(serviceAccount);
             return this;
         }
-
         public Builder useChiefInTfConfig(@Nullable Output<Boolean> useChiefInTfConfig) {
             this.useChiefInTfConfig = useChiefInTfConfig;
             return this;
         }
-
         public Builder useChiefInTfConfig(@Nullable Boolean useChiefInTfConfig) {
             this.useChiefInTfConfig = Output.ofNullable(useChiefInTfConfig);
             return this;
         }
-
         public Builder workerConfig(@Nullable Output<GoogleCloudMlV1__ReplicaConfigArgs> workerConfig) {
             this.workerConfig = workerConfig;
             return this;
         }
-
         public Builder workerConfig(@Nullable GoogleCloudMlV1__ReplicaConfigArgs workerConfig) {
             this.workerConfig = Output.ofNullable(workerConfig);
             return this;
         }
-
         public Builder workerCount(@Nullable Output<String> workerCount) {
             this.workerCount = workerCount;
             return this;
         }
-
         public Builder workerCount(@Nullable String workerCount) {
             this.workerCount = Output.ofNullable(workerCount);
             return this;
         }
-
         public Builder workerType(@Nullable Output<String> workerType) {
             this.workerType = workerType;
             return this;
         }
-
         public Builder workerType(@Nullable String workerType) {
             this.workerType = Output.ofNullable(workerType);
             return this;
-        }
-        public GoogleCloudMlV1__TrainingInputArgs build() {
+        }        public GoogleCloudMlV1__TrainingInputArgs build() {
             return new GoogleCloudMlV1__TrainingInputArgs(args, enableWebAccess, encryptionConfig, evaluatorConfig, evaluatorCount, evaluatorType, hyperparameters, jobDir, masterConfig, masterType, network, packageUris, parameterServerConfig, parameterServerCount, parameterServerType, pythonModule, pythonVersion, region, runtimeVersion, scaleTier, scheduling, serviceAccount, useChiefInTfConfig, workerConfig, workerCount, workerType);
         }
     }

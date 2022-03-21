@@ -222,112 +222,96 @@ public final class DatabaseSecurityAlertPolicyArgs extends io.pulumi.resources.R
             this.databaseName = Objects.requireNonNull(databaseName);
             return this;
         }
-
         public Builder databaseName(String databaseName) {
             this.databaseName = Output.of(Objects.requireNonNull(databaseName));
             return this;
         }
-
         public Builder disabledAlerts(@Nullable Output<List<String>> disabledAlerts) {
             this.disabledAlerts = disabledAlerts;
             return this;
         }
-
         public Builder disabledAlerts(@Nullable List<String> disabledAlerts) {
             this.disabledAlerts = Output.ofNullable(disabledAlerts);
             return this;
         }
-
+        public Builder disabledAlerts(String... disabledAlerts) {
+            return disabledAlerts(List.of(disabledAlerts));
+        }
         public Builder emailAccountAdmins(@Nullable Output<Boolean> emailAccountAdmins) {
             this.emailAccountAdmins = emailAccountAdmins;
             return this;
         }
-
         public Builder emailAccountAdmins(@Nullable Boolean emailAccountAdmins) {
             this.emailAccountAdmins = Output.ofNullable(emailAccountAdmins);
             return this;
         }
-
         public Builder emailAddresses(@Nullable Output<List<String>> emailAddresses) {
             this.emailAddresses = emailAddresses;
             return this;
         }
-
         public Builder emailAddresses(@Nullable List<String> emailAddresses) {
             this.emailAddresses = Output.ofNullable(emailAddresses);
             return this;
         }
-
+        public Builder emailAddresses(String... emailAddresses) {
+            return emailAddresses(List.of(emailAddresses));
+        }
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder retentionDays(@Nullable Output<Integer> retentionDays) {
             this.retentionDays = retentionDays;
             return this;
         }
-
         public Builder retentionDays(@Nullable Integer retentionDays) {
             this.retentionDays = Output.ofNullable(retentionDays);
             return this;
         }
-
         public Builder securityAlertPolicyName(@Nullable Output<String> securityAlertPolicyName) {
             this.securityAlertPolicyName = securityAlertPolicyName;
             return this;
         }
-
         public Builder securityAlertPolicyName(@Nullable String securityAlertPolicyName) {
             this.securityAlertPolicyName = Output.ofNullable(securityAlertPolicyName);
             return this;
         }
-
         public Builder serverName(Output<String> serverName) {
             this.serverName = Objects.requireNonNull(serverName);
             return this;
         }
-
         public Builder serverName(String serverName) {
             this.serverName = Output.of(Objects.requireNonNull(serverName));
             return this;
         }
-
         public Builder state(Output<SecurityAlertsPolicyState> state) {
             this.state = Objects.requireNonNull(state);
             return this;
         }
-
         public Builder state(SecurityAlertsPolicyState state) {
             this.state = Output.of(Objects.requireNonNull(state));
             return this;
         }
-
         public Builder storageAccountAccessKey(@Nullable Output<String> storageAccountAccessKey) {
             this.storageAccountAccessKey = storageAccountAccessKey;
             return this;
         }
-
         public Builder storageAccountAccessKey(@Nullable String storageAccountAccessKey) {
             this.storageAccountAccessKey = Output.ofNullable(storageAccountAccessKey);
             return this;
         }
-
         public Builder storageEndpoint(@Nullable Output<String> storageEndpoint) {
             this.storageEndpoint = storageEndpoint;
             return this;
         }
-
         public Builder storageEndpoint(@Nullable String storageEndpoint) {
             this.storageEndpoint = Output.ofNullable(storageEndpoint);
             return this;
-        }
-        public DatabaseSecurityAlertPolicyArgs build() {
+        }        public DatabaseSecurityAlertPolicyArgs build() {
             return new DatabaseSecurityAlertPolicyArgs(databaseName, disabledAlerts, emailAccountAdmins, emailAddresses, resourceGroupName, retentionDays, securityAlertPolicyName, serverName, state, storageAccountAccessKey, storageEndpoint);
         }
     }

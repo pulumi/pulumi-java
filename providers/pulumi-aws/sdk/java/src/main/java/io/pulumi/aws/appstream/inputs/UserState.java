@@ -171,82 +171,66 @@ public final class UserState extends io.pulumi.resources.ResourceArgs {
             this.arn = arn;
             return this;
         }
-
         public Builder arn(@Nullable String arn) {
             this.arn = Output.ofNullable(arn);
             return this;
         }
-
         public Builder authenticationType(@Nullable Output<String> authenticationType) {
             this.authenticationType = authenticationType;
             return this;
         }
-
         public Builder authenticationType(@Nullable String authenticationType) {
             this.authenticationType = Output.ofNullable(authenticationType);
             return this;
         }
-
         public Builder createdTime(@Nullable Output<String> createdTime) {
             this.createdTime = createdTime;
             return this;
         }
-
         public Builder createdTime(@Nullable String createdTime) {
             this.createdTime = Output.ofNullable(createdTime);
             return this;
         }
-
         public Builder enabled(@Nullable Output<Boolean> enabled) {
             this.enabled = enabled;
             return this;
         }
-
         public Builder enabled(@Nullable Boolean enabled) {
             this.enabled = Output.ofNullable(enabled);
             return this;
         }
-
         public Builder firstName(@Nullable Output<String> firstName) {
             this.firstName = firstName;
             return this;
         }
-
         public Builder firstName(@Nullable String firstName) {
             this.firstName = Output.ofNullable(firstName);
             return this;
         }
-
         public Builder lastName(@Nullable Output<String> lastName) {
             this.lastName = lastName;
             return this;
         }
-
         public Builder lastName(@Nullable String lastName) {
             this.lastName = Output.ofNullable(lastName);
             return this;
         }
-
         public Builder sendEmailNotification(@Nullable Output<Boolean> sendEmailNotification) {
             this.sendEmailNotification = sendEmailNotification;
             return this;
         }
-
         public Builder sendEmailNotification(@Nullable Boolean sendEmailNotification) {
             this.sendEmailNotification = Output.ofNullable(sendEmailNotification);
             return this;
         }
-
         public Builder userName(@Nullable Output<String> userName) {
             this.userName = userName;
             return this;
         }
-
         public Builder userName(@Nullable String userName) {
             this.userName = Output.ofNullable(userName);
             return this;
-        }
-        public UserState build() {
+        }        public UserState build() {
             return new UserState(arn, authenticationType, createdTime, enabled, firstName, lastName, sendEmailNotification, userName);
         }
     }

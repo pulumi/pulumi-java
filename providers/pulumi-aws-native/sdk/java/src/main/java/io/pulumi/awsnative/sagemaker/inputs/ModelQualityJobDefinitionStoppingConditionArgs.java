@@ -60,12 +60,10 @@ public final class ModelQualityJobDefinitionStoppingConditionArgs extends io.pul
             this.maxRuntimeInSeconds = Objects.requireNonNull(maxRuntimeInSeconds);
             return this;
         }
-
         public Builder maxRuntimeInSeconds(Integer maxRuntimeInSeconds) {
             this.maxRuntimeInSeconds = Output.of(Objects.requireNonNull(maxRuntimeInSeconds));
             return this;
-        }
-        public ModelQualityJobDefinitionStoppingConditionArgs build() {
+        }        public ModelQualityJobDefinitionStoppingConditionArgs build() {
             return new ModelQualityJobDefinitionStoppingConditionArgs(maxRuntimeInSeconds);
         }
     }

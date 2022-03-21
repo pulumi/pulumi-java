@@ -88,17 +88,14 @@ public final class GetDigitalTwinsEndpointArgs extends io.pulumi.resources.Invok
             this.endpointName = Objects.requireNonNull(endpointName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceName(String resourceName) {
             this.resourceName = Objects.requireNonNull(resourceName);
             return this;
-        }
-        public GetDigitalTwinsEndpointArgs build() {
+        }        public GetDigitalTwinsEndpointArgs build() {
             return new GetDigitalTwinsEndpointArgs(endpointName, resourceGroupName, resourceName);
         }
     }

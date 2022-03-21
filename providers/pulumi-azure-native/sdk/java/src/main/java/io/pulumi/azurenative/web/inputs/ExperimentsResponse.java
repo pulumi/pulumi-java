@@ -62,7 +62,9 @@ public final class ExperimentsResponse extends io.pulumi.resources.InvokeArgs {
             this.rampUpRules = rampUpRules;
             return this;
         }
-        public ExperimentsResponse build() {
+        public Builder rampUpRules(RampUpRuleResponse... rampUpRules) {
+            return rampUpRules(List.of(rampUpRules));
+        }        public ExperimentsResponse build() {
             return new ExperimentsResponse(rampUpRules);
         }
     }

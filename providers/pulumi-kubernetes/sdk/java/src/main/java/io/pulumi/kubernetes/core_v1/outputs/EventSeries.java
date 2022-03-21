@@ -88,17 +88,14 @@ public final class EventSeries {
             this.count = count;
             return this;
         }
-
         public Builder lastObservedTime(@Nullable String lastObservedTime) {
             this.lastObservedTime = lastObservedTime;
             return this;
         }
-
         public Builder state(@Nullable String state) {
             this.state = state;
             return this;
-        }
-        public EventSeries build() {
+        }        public EventSeries build() {
             return new EventSeries(count, lastObservedTime, state);
         }
     }

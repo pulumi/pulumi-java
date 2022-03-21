@@ -125,47 +125,50 @@ public final class GetServiceResult {
             this.autogenerateRevisionName = Objects.requireNonNull(autogenerateRevisionName);
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder location(String location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
-
         public Builder metadatas(List<GetServiceMetadata> metadatas) {
             this.metadatas = Objects.requireNonNull(metadatas);
             return this;
         }
-
+        public Builder metadatas(GetServiceMetadata... metadatas) {
+            return metadatas(List.of(metadatas));
+        }
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = project;
             return this;
         }
-
         public Builder statuses(List<GetServiceStatus> statuses) {
             this.statuses = Objects.requireNonNull(statuses);
             return this;
         }
-
+        public Builder statuses(GetServiceStatus... statuses) {
+            return statuses(List.of(statuses));
+        }
         public Builder templates(List<GetServiceTemplate> templates) {
             this.templates = Objects.requireNonNull(templates);
             return this;
         }
-
+        public Builder templates(GetServiceTemplate... templates) {
+            return templates(List.of(templates));
+        }
         public Builder traffics(List<GetServiceTraffic> traffics) {
             this.traffics = Objects.requireNonNull(traffics);
             return this;
         }
-        public GetServiceResult build() {
+        public Builder traffics(GetServiceTraffic... traffics) {
+            return traffics(List.of(traffics));
+        }        public GetServiceResult build() {
             return new GetServiceResult(autogenerateRevisionName, id, location, metadatas, name, project, statuses, templates, traffics);
         }
     }

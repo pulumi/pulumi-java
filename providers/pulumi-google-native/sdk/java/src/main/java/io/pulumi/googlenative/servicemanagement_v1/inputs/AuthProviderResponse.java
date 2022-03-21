@@ -126,27 +126,25 @@ public final class AuthProviderResponse extends io.pulumi.resources.InvokeArgs {
             this.audiences = Objects.requireNonNull(audiences);
             return this;
         }
-
         public Builder authorizationUrl(String authorizationUrl) {
             this.authorizationUrl = Objects.requireNonNull(authorizationUrl);
             return this;
         }
-
         public Builder issuer(String issuer) {
             this.issuer = Objects.requireNonNull(issuer);
             return this;
         }
-
         public Builder jwksUri(String jwksUri) {
             this.jwksUri = Objects.requireNonNull(jwksUri);
             return this;
         }
-
         public Builder jwtLocations(List<JwtLocationResponse> jwtLocations) {
             this.jwtLocations = Objects.requireNonNull(jwtLocations);
             return this;
         }
-        public AuthProviderResponse build() {
+        public Builder jwtLocations(JwtLocationResponse... jwtLocations) {
+            return jwtLocations(List.of(jwtLocations));
+        }        public AuthProviderResponse build() {
             return new AuthProviderResponse(audiences, authorizationUrl, issuer, jwksUri, jwtLocations);
         }
     }

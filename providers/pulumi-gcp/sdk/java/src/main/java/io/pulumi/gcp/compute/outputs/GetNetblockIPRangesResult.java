@@ -112,27 +112,31 @@ public final class GetNetblockIPRangesResult {
             this.cidrBlocks = Objects.requireNonNull(cidrBlocks);
             return this;
         }
-
+        public Builder cidrBlocks(String... cidrBlocks) {
+            return cidrBlocks(List.of(cidrBlocks));
+        }
         public Builder cidrBlocksIpv4s(List<String> cidrBlocksIpv4s) {
             this.cidrBlocksIpv4s = Objects.requireNonNull(cidrBlocksIpv4s);
             return this;
         }
-
+        public Builder cidrBlocksIpv4s(String... cidrBlocksIpv4s) {
+            return cidrBlocksIpv4s(List.of(cidrBlocksIpv4s));
+        }
         public Builder cidrBlocksIpv6s(List<String> cidrBlocksIpv6s) {
             this.cidrBlocksIpv6s = Objects.requireNonNull(cidrBlocksIpv6s);
             return this;
         }
-
+        public Builder cidrBlocksIpv6s(String... cidrBlocksIpv6s) {
+            return cidrBlocksIpv6s(List.of(cidrBlocksIpv6s));
+        }
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder rangeType(@Nullable String rangeType) {
             this.rangeType = rangeType;
             return this;
-        }
-        public GetNetblockIPRangesResult build() {
+        }        public GetNetblockIPRangesResult build() {
             return new GetNetblockIPRangesResult(cidrBlocks, cidrBlocksIpv4s, cidrBlocksIpv6s, id, rangeType);
         }
     }

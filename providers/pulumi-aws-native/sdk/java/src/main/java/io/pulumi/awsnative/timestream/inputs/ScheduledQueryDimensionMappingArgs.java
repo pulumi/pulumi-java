@@ -70,22 +70,18 @@ public final class ScheduledQueryDimensionMappingArgs extends io.pulumi.resource
             this.dimensionValueType = Objects.requireNonNull(dimensionValueType);
             return this;
         }
-
         public Builder dimensionValueType(ScheduledQueryDimensionValueType dimensionValueType) {
             this.dimensionValueType = Output.of(Objects.requireNonNull(dimensionValueType));
             return this;
         }
-
         public Builder name(Output<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Output.of(Objects.requireNonNull(name));
             return this;
-        }
-        public ScheduledQueryDimensionMappingArgs build() {
+        }        public ScheduledQueryDimensionMappingArgs build() {
             return new ScheduledQueryDimensionMappingArgs(dimensionValueType, name);
         }
     }

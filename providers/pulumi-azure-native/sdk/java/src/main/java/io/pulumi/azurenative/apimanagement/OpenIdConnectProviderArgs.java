@@ -170,82 +170,66 @@ public final class OpenIdConnectProviderArgs extends io.pulumi.resources.Resourc
             this.clientId = Objects.requireNonNull(clientId);
             return this;
         }
-
         public Builder clientId(String clientId) {
             this.clientId = Output.of(Objects.requireNonNull(clientId));
             return this;
         }
-
         public Builder clientSecret(@Nullable Output<String> clientSecret) {
             this.clientSecret = clientSecret;
             return this;
         }
-
         public Builder clientSecret(@Nullable String clientSecret) {
             this.clientSecret = Output.ofNullable(clientSecret);
             return this;
         }
-
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder displayName(Output<String> displayName) {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
-
         public Builder displayName(String displayName) {
             this.displayName = Output.of(Objects.requireNonNull(displayName));
             return this;
         }
-
         public Builder metadataEndpoint(Output<String> metadataEndpoint) {
             this.metadataEndpoint = Objects.requireNonNull(metadataEndpoint);
             return this;
         }
-
         public Builder metadataEndpoint(String metadataEndpoint) {
             this.metadataEndpoint = Output.of(Objects.requireNonNull(metadataEndpoint));
             return this;
         }
-
         public Builder opid(@Nullable Output<String> opid) {
             this.opid = opid;
             return this;
         }
-
         public Builder opid(@Nullable String opid) {
             this.opid = Output.ofNullable(opid);
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder serviceName(Output<String> serviceName) {
             this.serviceName = Objects.requireNonNull(serviceName);
             return this;
         }
-
         public Builder serviceName(String serviceName) {
             this.serviceName = Output.of(Objects.requireNonNull(serviceName));
             return this;
-        }
-        public OpenIdConnectProviderArgs build() {
+        }        public OpenIdConnectProviderArgs build() {
             return new OpenIdConnectProviderArgs(clientId, clientSecret, description, displayName, metadataEndpoint, opid, resourceGroupName, serviceName);
         }
     }

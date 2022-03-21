@@ -112,42 +112,37 @@ public final class SchemaArgs extends io.pulumi.resources.ResourceArgs {
             this.columns = columns;
             return this;
         }
-
         public Builder columns(@Nullable List<ColumnArgs> columns) {
             this.columns = Output.ofNullable(columns);
             return this;
         }
-
+        public Builder columns(ColumnArgs... columns) {
+            return columns(List.of(columns));
+        }
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder displayName(@Nullable Output<String> displayName) {
             this.displayName = displayName;
             return this;
         }
-
         public Builder displayName(@Nullable String displayName) {
             this.displayName = Output.ofNullable(displayName);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
-        }
-        public SchemaArgs build() {
+        }        public SchemaArgs build() {
             return new SchemaArgs(columns, description, displayName, name);
         }
     }

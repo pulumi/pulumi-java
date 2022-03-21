@@ -72,12 +72,10 @@ public final class GetDeviceGroupArgs extends io.pulumi.resources.InvokeArgs {
             this.deviceGroupName = Objects.requireNonNull(deviceGroupName);
             return this;
         }
-
         public Builder iotDefenderLocation(String iotDefenderLocation) {
             this.iotDefenderLocation = Objects.requireNonNull(iotDefenderLocation);
             return this;
-        }
-        public GetDeviceGroupArgs build() {
+        }        public GetDeviceGroupArgs build() {
             return new GetDeviceGroupArgs(deviceGroupName, iotDefenderLocation);
         }
     }

@@ -178,92 +178,74 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
             this.clusterConfig = clusterConfig;
             return this;
         }
-
         public Builder clusterConfig(@Nullable ClusterConfigArgs clusterConfig) {
             this.clusterConfig = Output.ofNullable(clusterConfig);
             return this;
         }
-
         public Builder clusterId(Output<String> clusterId) {
             this.clusterId = Objects.requireNonNull(clusterId);
             return this;
         }
-
         public Builder clusterId(String clusterId) {
             this.clusterId = Output.of(Objects.requireNonNull(clusterId));
             return this;
         }
-
         public Builder defaultStorageType(@Nullable Output<ClusterDefaultStorageType> defaultStorageType) {
             this.defaultStorageType = defaultStorageType;
             return this;
         }
-
         public Builder defaultStorageType(@Nullable ClusterDefaultStorageType defaultStorageType) {
             this.defaultStorageType = Output.ofNullable(defaultStorageType);
             return this;
         }
-
         public Builder encryptionConfig(@Nullable Output<EncryptionConfigArgs> encryptionConfig) {
             this.encryptionConfig = encryptionConfig;
             return this;
         }
-
         public Builder encryptionConfig(@Nullable EncryptionConfigArgs encryptionConfig) {
             this.encryptionConfig = Output.ofNullable(encryptionConfig);
             return this;
         }
-
         public Builder instanceId(Output<String> instanceId) {
             this.instanceId = Objects.requireNonNull(instanceId);
             return this;
         }
-
         public Builder instanceId(String instanceId) {
             this.instanceId = Output.of(Objects.requireNonNull(instanceId));
             return this;
         }
-
         public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
         }
-
         public Builder serveNodes(@Nullable Output<Integer> serveNodes) {
             this.serveNodes = serveNodes;
             return this;
         }
-
         public Builder serveNodes(@Nullable Integer serveNodes) {
             this.serveNodes = Output.ofNullable(serveNodes);
             return this;
-        }
-        public ClusterArgs build() {
+        }        public ClusterArgs build() {
             return new ClusterArgs(clusterConfig, clusterId, defaultStorageType, encryptionConfig, instanceId, location, name, project, serveNodes);
         }
     }

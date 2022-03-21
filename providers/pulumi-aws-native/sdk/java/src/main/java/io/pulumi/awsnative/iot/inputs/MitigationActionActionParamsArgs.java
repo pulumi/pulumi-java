@@ -123,62 +123,50 @@ public final class MitigationActionActionParamsArgs extends io.pulumi.resources.
             this.addThingsToThingGroupParams = addThingsToThingGroupParams;
             return this;
         }
-
         public Builder addThingsToThingGroupParams(@Nullable MitigationActionAddThingsToThingGroupParamsArgs addThingsToThingGroupParams) {
             this.addThingsToThingGroupParams = Output.ofNullable(addThingsToThingGroupParams);
             return this;
         }
-
         public Builder enableIoTLoggingParams(@Nullable Output<MitigationActionEnableIoTLoggingParamsArgs> enableIoTLoggingParams) {
             this.enableIoTLoggingParams = enableIoTLoggingParams;
             return this;
         }
-
         public Builder enableIoTLoggingParams(@Nullable MitigationActionEnableIoTLoggingParamsArgs enableIoTLoggingParams) {
             this.enableIoTLoggingParams = Output.ofNullable(enableIoTLoggingParams);
             return this;
         }
-
         public Builder publishFindingToSnsParams(@Nullable Output<MitigationActionPublishFindingToSnsParamsArgs> publishFindingToSnsParams) {
             this.publishFindingToSnsParams = publishFindingToSnsParams;
             return this;
         }
-
         public Builder publishFindingToSnsParams(@Nullable MitigationActionPublishFindingToSnsParamsArgs publishFindingToSnsParams) {
             this.publishFindingToSnsParams = Output.ofNullable(publishFindingToSnsParams);
             return this;
         }
-
         public Builder replaceDefaultPolicyVersionParams(@Nullable Output<MitigationActionReplaceDefaultPolicyVersionParamsArgs> replaceDefaultPolicyVersionParams) {
             this.replaceDefaultPolicyVersionParams = replaceDefaultPolicyVersionParams;
             return this;
         }
-
         public Builder replaceDefaultPolicyVersionParams(@Nullable MitigationActionReplaceDefaultPolicyVersionParamsArgs replaceDefaultPolicyVersionParams) {
             this.replaceDefaultPolicyVersionParams = Output.ofNullable(replaceDefaultPolicyVersionParams);
             return this;
         }
-
         public Builder updateCACertificateParams(@Nullable Output<MitigationActionUpdateCACertificateParamsArgs> updateCACertificateParams) {
             this.updateCACertificateParams = updateCACertificateParams;
             return this;
         }
-
         public Builder updateCACertificateParams(@Nullable MitigationActionUpdateCACertificateParamsArgs updateCACertificateParams) {
             this.updateCACertificateParams = Output.ofNullable(updateCACertificateParams);
             return this;
         }
-
         public Builder updateDeviceCertificateParams(@Nullable Output<MitigationActionUpdateDeviceCertificateParamsArgs> updateDeviceCertificateParams) {
             this.updateDeviceCertificateParams = updateDeviceCertificateParams;
             return this;
         }
-
         public Builder updateDeviceCertificateParams(@Nullable MitigationActionUpdateDeviceCertificateParamsArgs updateDeviceCertificateParams) {
             this.updateDeviceCertificateParams = Output.ofNullable(updateDeviceCertificateParams);
             return this;
-        }
-        public MitigationActionActionParamsArgs build() {
+        }        public MitigationActionActionParamsArgs build() {
             return new MitigationActionActionParamsArgs(addThingsToThingGroupParams, enableIoTLoggingParams, publishFindingToSnsParams, replaceDefaultPolicyVersionParams, updateCACertificateParams, updateDeviceCertificateParams);
         }
     }

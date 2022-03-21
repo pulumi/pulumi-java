@@ -61,12 +61,10 @@ public final class GoogleCloudApigeeV1AdvancedApiOpsConfigArgs extends io.pulumi
             this.enabled = enabled;
             return this;
         }
-
         public Builder enabled(@Nullable Boolean enabled) {
             this.enabled = Output.ofNullable(enabled);
             return this;
-        }
-        public GoogleCloudApigeeV1AdvancedApiOpsConfigArgs build() {
+        }        public GoogleCloudApigeeV1AdvancedApiOpsConfigArgs build() {
             return new GoogleCloudApigeeV1AdvancedApiOpsConfigArgs(enabled);
         }
     }

@@ -66,22 +66,18 @@ public final class RuleGroupLabelMatchStatementArgs extends io.pulumi.resources.
             this.key = Objects.requireNonNull(key);
             return this;
         }
-
         public Builder key(String key) {
             this.key = Output.of(Objects.requireNonNull(key));
             return this;
         }
-
         public Builder scope(Output<RuleGroupLabelMatchScope> scope) {
             this.scope = Objects.requireNonNull(scope);
             return this;
         }
-
         public Builder scope(RuleGroupLabelMatchScope scope) {
             this.scope = Output.of(Objects.requireNonNull(scope));
             return this;
-        }
-        public RuleGroupLabelMatchStatementArgs build() {
+        }        public RuleGroupLabelMatchStatementArgs build() {
             return new RuleGroupLabelMatchStatementArgs(key, scope);
         }
     }

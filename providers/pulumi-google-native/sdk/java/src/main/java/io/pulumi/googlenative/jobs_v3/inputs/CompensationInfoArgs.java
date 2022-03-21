@@ -62,12 +62,13 @@ public final class CompensationInfoArgs extends io.pulumi.resources.ResourceArgs
             this.entries = entries;
             return this;
         }
-
         public Builder entries(@Nullable List<CompensationEntryArgs> entries) {
             this.entries = Output.ofNullable(entries);
             return this;
         }
-        public CompensationInfoArgs build() {
+        public Builder entries(CompensationEntryArgs... entries) {
+            return entries(List.of(entries));
+        }        public CompensationInfoArgs build() {
             return new CompensationInfoArgs(entries);
         }
     }

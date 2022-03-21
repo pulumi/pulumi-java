@@ -58,8 +58,7 @@ public final class ChartOptionsResponse extends io.pulumi.resources.InvokeArgs {
         public Builder mode(String mode) {
             this.mode = Objects.requireNonNull(mode);
             return this;
-        }
-        public ChartOptionsResponse build() {
+        }        public ChartOptionsResponse build() {
             return new ChartOptionsResponse(mode);
         }
     }

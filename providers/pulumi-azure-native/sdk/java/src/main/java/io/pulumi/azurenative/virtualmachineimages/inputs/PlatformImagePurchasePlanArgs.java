@@ -93,32 +93,26 @@ public final class PlatformImagePurchasePlanArgs extends io.pulumi.resources.Res
             this.planName = Objects.requireNonNull(planName);
             return this;
         }
-
         public Builder planName(String planName) {
             this.planName = Output.of(Objects.requireNonNull(planName));
             return this;
         }
-
         public Builder planProduct(Output<String> planProduct) {
             this.planProduct = Objects.requireNonNull(planProduct);
             return this;
         }
-
         public Builder planProduct(String planProduct) {
             this.planProduct = Output.of(Objects.requireNonNull(planProduct));
             return this;
         }
-
         public Builder planPublisher(Output<String> planPublisher) {
             this.planPublisher = Objects.requireNonNull(planPublisher);
             return this;
         }
-
         public Builder planPublisher(String planPublisher) {
             this.planPublisher = Output.of(Objects.requireNonNull(planPublisher));
             return this;
-        }
-        public PlatformImagePurchasePlanArgs build() {
+        }        public PlatformImagePurchasePlanArgs build() {
             return new PlatformImagePurchasePlanArgs(planName, planProduct, planPublisher);
         }
     }

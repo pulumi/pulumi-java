@@ -62,12 +62,13 @@ public final class V2AndroidKeyRestrictionsArgs extends io.pulumi.resources.Reso
             this.allowedApplications = allowedApplications;
             return this;
         }
-
         public Builder allowedApplications(@Nullable List<V2AndroidApplicationArgs> allowedApplications) {
             this.allowedApplications = Output.ofNullable(allowedApplications);
             return this;
         }
-        public V2AndroidKeyRestrictionsArgs build() {
+        public Builder allowedApplications(V2AndroidApplicationArgs... allowedApplications) {
+            return allowedApplications(List.of(allowedApplications));
+        }        public V2AndroidKeyRestrictionsArgs build() {
             return new V2AndroidKeyRestrictionsArgs(allowedApplications);
         }
     }

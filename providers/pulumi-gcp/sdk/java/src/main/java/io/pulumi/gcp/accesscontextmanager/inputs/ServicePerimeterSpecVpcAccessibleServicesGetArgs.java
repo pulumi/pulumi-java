@@ -78,22 +78,21 @@ public final class ServicePerimeterSpecVpcAccessibleServicesGetArgs extends io.p
             this.allowedServices = allowedServices;
             return this;
         }
-
         public Builder allowedServices(@Nullable List<String> allowedServices) {
             this.allowedServices = Output.ofNullable(allowedServices);
             return this;
         }
-
+        public Builder allowedServices(String... allowedServices) {
+            return allowedServices(List.of(allowedServices));
+        }
         public Builder enableRestriction(@Nullable Output<Boolean> enableRestriction) {
             this.enableRestriction = enableRestriction;
             return this;
         }
-
         public Builder enableRestriction(@Nullable Boolean enableRestriction) {
             this.enableRestriction = Output.ofNullable(enableRestriction);
             return this;
-        }
-        public ServicePerimeterSpecVpcAccessibleServicesGetArgs build() {
+        }        public ServicePerimeterSpecVpcAccessibleServicesGetArgs build() {
             return new ServicePerimeterSpecVpcAccessibleServicesGetArgs(allowedServices, enableRestriction);
         }
     }

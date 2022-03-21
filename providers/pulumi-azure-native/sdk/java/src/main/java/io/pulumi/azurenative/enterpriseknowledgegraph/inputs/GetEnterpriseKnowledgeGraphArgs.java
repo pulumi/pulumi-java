@@ -72,12 +72,10 @@ public final class GetEnterpriseKnowledgeGraphArgs extends io.pulumi.resources.I
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceName(String resourceName) {
             this.resourceName = Objects.requireNonNull(resourceName);
             return this;
-        }
-        public GetEnterpriseKnowledgeGraphArgs build() {
+        }        public GetEnterpriseKnowledgeGraphArgs build() {
             return new GetEnterpriseKnowledgeGraphArgs(resourceGroupName, resourceName);
         }
     }

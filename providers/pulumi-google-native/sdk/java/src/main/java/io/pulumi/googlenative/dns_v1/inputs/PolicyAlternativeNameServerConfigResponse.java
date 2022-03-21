@@ -70,12 +70,13 @@ public final class PolicyAlternativeNameServerConfigResponse extends io.pulumi.r
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
-
         public Builder targetNameServers(List<PolicyAlternativeNameServerConfigTargetNameServerResponse> targetNameServers) {
             this.targetNameServers = Objects.requireNonNull(targetNameServers);
             return this;
         }
-        public PolicyAlternativeNameServerConfigResponse build() {
+        public Builder targetNameServers(PolicyAlternativeNameServerConfigTargetNameServerResponse... targetNameServers) {
+            return targetNameServers(List.of(targetNameServers));
+        }        public PolicyAlternativeNameServerConfigResponse build() {
             return new PolicyAlternativeNameServerConfigResponse(kind, targetNameServers);
         }
     }

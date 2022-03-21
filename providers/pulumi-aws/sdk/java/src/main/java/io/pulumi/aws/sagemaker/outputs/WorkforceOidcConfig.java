@@ -165,42 +165,34 @@ public final class WorkforceOidcConfig {
             this.authorizationEndpoint = Objects.requireNonNull(authorizationEndpoint);
             return this;
         }
-
         public Builder clientId(String clientId) {
             this.clientId = Objects.requireNonNull(clientId);
             return this;
         }
-
         public Builder clientSecret(String clientSecret) {
             this.clientSecret = Objects.requireNonNull(clientSecret);
             return this;
         }
-
         public Builder issuer(String issuer) {
             this.issuer = Objects.requireNonNull(issuer);
             return this;
         }
-
         public Builder jwksUri(String jwksUri) {
             this.jwksUri = Objects.requireNonNull(jwksUri);
             return this;
         }
-
         public Builder logoutEndpoint(String logoutEndpoint) {
             this.logoutEndpoint = Objects.requireNonNull(logoutEndpoint);
             return this;
         }
-
         public Builder tokenEndpoint(String tokenEndpoint) {
             this.tokenEndpoint = Objects.requireNonNull(tokenEndpoint);
             return this;
         }
-
         public Builder userInfoEndpoint(String userInfoEndpoint) {
             this.userInfoEndpoint = Objects.requireNonNull(userInfoEndpoint);
             return this;
-        }
-        public WorkforceOidcConfig build() {
+        }        public WorkforceOidcConfig build() {
             return new WorkforceOidcConfig(authorizationEndpoint, clientId, clientSecret, issuer, jwksUri, logoutEndpoint, tokenEndpoint, userInfoEndpoint);
         }
     }

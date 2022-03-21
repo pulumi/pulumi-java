@@ -88,17 +88,14 @@ public final class ClusterDefaultCapacityProviderStrategy {
             this.base = base;
             return this;
         }
-
         public Builder capacityProvider(String capacityProvider) {
             this.capacityProvider = Objects.requireNonNull(capacityProvider);
             return this;
         }
-
         public Builder weight(@Nullable Integer weight) {
             this.weight = weight;
             return this;
-        }
-        public ClusterDefaultCapacityProviderStrategy build() {
+        }        public ClusterDefaultCapacityProviderStrategy build() {
             return new ClusterDefaultCapacityProviderStrategy(base, capacityProvider, weight);
         }
     }

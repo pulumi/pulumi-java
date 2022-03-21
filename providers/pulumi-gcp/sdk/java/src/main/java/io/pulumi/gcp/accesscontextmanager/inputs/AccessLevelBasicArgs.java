@@ -83,22 +83,21 @@ public final class AccessLevelBasicArgs extends io.pulumi.resources.ResourceArgs
             this.combiningFunction = combiningFunction;
             return this;
         }
-
         public Builder combiningFunction(@Nullable String combiningFunction) {
             this.combiningFunction = Output.ofNullable(combiningFunction);
             return this;
         }
-
         public Builder conditions(Output<List<AccessLevelBasicConditionArgs>> conditions) {
             this.conditions = Objects.requireNonNull(conditions);
             return this;
         }
-
         public Builder conditions(List<AccessLevelBasicConditionArgs> conditions) {
             this.conditions = Output.of(Objects.requireNonNull(conditions));
             return this;
         }
-        public AccessLevelBasicArgs build() {
+        public Builder conditions(AccessLevelBasicConditionArgs... conditions) {
+            return conditions(List.of(conditions));
+        }        public AccessLevelBasicArgs build() {
             return new AccessLevelBasicArgs(combiningFunction, conditions);
         }
     }

@@ -50,8 +50,7 @@ public final class GlobalTableReplicaSSESpecification extends io.pulumi.resource
         public Builder kMSMasterKeyId(String kMSMasterKeyId) {
             this.kMSMasterKeyId = Objects.requireNonNull(kMSMasterKeyId);
             return this;
-        }
-        public GlobalTableReplicaSSESpecification build() {
+        }        public GlobalTableReplicaSSESpecification build() {
             return new GlobalTableReplicaSSESpecification(kMSMasterKeyId);
         }
     }

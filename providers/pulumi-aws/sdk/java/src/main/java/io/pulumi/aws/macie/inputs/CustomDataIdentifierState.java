@@ -213,112 +213,96 @@ public final class CustomDataIdentifierState extends io.pulumi.resources.Resourc
             this.arn = arn;
             return this;
         }
-
         public Builder arn(@Nullable String arn) {
             this.arn = Output.ofNullable(arn);
             return this;
         }
-
         public Builder createdAt(@Nullable Output<String> createdAt) {
             this.createdAt = createdAt;
             return this;
         }
-
         public Builder createdAt(@Nullable String createdAt) {
             this.createdAt = Output.ofNullable(createdAt);
             return this;
         }
-
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder ignoreWords(@Nullable Output<List<String>> ignoreWords) {
             this.ignoreWords = ignoreWords;
             return this;
         }
-
         public Builder ignoreWords(@Nullable List<String> ignoreWords) {
             this.ignoreWords = Output.ofNullable(ignoreWords);
             return this;
         }
-
+        public Builder ignoreWords(String... ignoreWords) {
+            return ignoreWords(List.of(ignoreWords));
+        }
         public Builder keywords(@Nullable Output<List<String>> keywords) {
             this.keywords = keywords;
             return this;
         }
-
         public Builder keywords(@Nullable List<String> keywords) {
             this.keywords = Output.ofNullable(keywords);
             return this;
         }
-
+        public Builder keywords(String... keywords) {
+            return keywords(List.of(keywords));
+        }
         public Builder maximumMatchDistance(@Nullable Output<Integer> maximumMatchDistance) {
             this.maximumMatchDistance = maximumMatchDistance;
             return this;
         }
-
         public Builder maximumMatchDistance(@Nullable Integer maximumMatchDistance) {
             this.maximumMatchDistance = Output.ofNullable(maximumMatchDistance);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder namePrefix(@Nullable Output<String> namePrefix) {
             this.namePrefix = namePrefix;
             return this;
         }
-
         public Builder namePrefix(@Nullable String namePrefix) {
             this.namePrefix = Output.ofNullable(namePrefix);
             return this;
         }
-
         public Builder regex(@Nullable Output<String> regex) {
             this.regex = regex;
             return this;
         }
-
         public Builder regex(@Nullable String regex) {
             this.regex = Output.ofNullable(regex);
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
             this.tagsAll = tagsAll;
             return this;
         }
-
         public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
             this.tagsAll = Output.ofNullable(tagsAll);
             return this;
-        }
-        public CustomDataIdentifierState build() {
+        }        public CustomDataIdentifierState build() {
             return new CustomDataIdentifierState(arn, createdAt, description, ignoreWords, keywords, maximumMatchDistance, name, namePrefix, regex, tags, tagsAll);
         }
     }

@@ -65,22 +65,18 @@ public final class DomainConfigurationTagArgs extends io.pulumi.resources.Resour
             this.key = Objects.requireNonNull(key);
             return this;
         }
-
         public Builder key(String key) {
             this.key = Output.of(Objects.requireNonNull(key));
             return this;
         }
-
         public Builder value(Output<String> value) {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public Builder value(String value) {
             this.value = Output.of(Objects.requireNonNull(value));
             return this;
-        }
-        public DomainConfigurationTagArgs build() {
+        }        public DomainConfigurationTagArgs build() {
             return new DomainConfigurationTagArgs(key, value);
         }
     }

@@ -773,227 +773,194 @@ public final class InMageRcmReplicationDetailsResponse extends io.pulumi.resourc
             this.agentUpgradeBlockingErrorDetails = Objects.requireNonNull(agentUpgradeBlockingErrorDetails);
             return this;
         }
-
+        public Builder agentUpgradeBlockingErrorDetails(InMageRcmAgentUpgradeBlockingErrorDetailsResponse... agentUpgradeBlockingErrorDetails) {
+            return agentUpgradeBlockingErrorDetails(List.of(agentUpgradeBlockingErrorDetails));
+        }
         public Builder agentUpgradeState(String agentUpgradeState) {
             this.agentUpgradeState = Objects.requireNonNull(agentUpgradeState);
             return this;
         }
-
         public Builder allocatedMemoryInMB(Double allocatedMemoryInMB) {
             this.allocatedMemoryInMB = Objects.requireNonNull(allocatedMemoryInMB);
             return this;
         }
-
         public Builder discoveryType(String discoveryType) {
             this.discoveryType = Objects.requireNonNull(discoveryType);
             return this;
         }
-
         public Builder fabricDiscoveryMachineId(String fabricDiscoveryMachineId) {
             this.fabricDiscoveryMachineId = Objects.requireNonNull(fabricDiscoveryMachineId);
             return this;
         }
-
         public Builder failoverRecoveryPointId(String failoverRecoveryPointId) {
             this.failoverRecoveryPointId = Objects.requireNonNull(failoverRecoveryPointId);
             return this;
         }
-
         public Builder firmwareType(String firmwareType) {
             this.firmwareType = Objects.requireNonNull(firmwareType);
             return this;
         }
-
         public Builder initialReplicationProcessedBytes(Double initialReplicationProcessedBytes) {
             this.initialReplicationProcessedBytes = Objects.requireNonNull(initialReplicationProcessedBytes);
             return this;
         }
-
         public Builder initialReplicationProgressPercentage(Integer initialReplicationProgressPercentage) {
             this.initialReplicationProgressPercentage = Objects.requireNonNull(initialReplicationProgressPercentage);
             return this;
         }
-
         public Builder initialReplicationTransferredBytes(Double initialReplicationTransferredBytes) {
             this.initialReplicationTransferredBytes = Objects.requireNonNull(initialReplicationTransferredBytes);
             return this;
         }
-
         public Builder instanceType(String instanceType) {
             this.instanceType = Objects.requireNonNull(instanceType);
             return this;
         }
-
         public Builder internalIdentifier(String internalIdentifier) {
             this.internalIdentifier = Objects.requireNonNull(internalIdentifier);
             return this;
         }
-
         public Builder isLastUpgradeSuccessful(String isLastUpgradeSuccessful) {
             this.isLastUpgradeSuccessful = Objects.requireNonNull(isLastUpgradeSuccessful);
             return this;
         }
-
         public Builder lastAgentUpgradeErrorDetails(List<InMageRcmLastAgentUpgradeErrorDetailsResponse> lastAgentUpgradeErrorDetails) {
             this.lastAgentUpgradeErrorDetails = Objects.requireNonNull(lastAgentUpgradeErrorDetails);
             return this;
         }
-
+        public Builder lastAgentUpgradeErrorDetails(InMageRcmLastAgentUpgradeErrorDetailsResponse... lastAgentUpgradeErrorDetails) {
+            return lastAgentUpgradeErrorDetails(List.of(lastAgentUpgradeErrorDetails));
+        }
         public Builder lastAgentUpgradeFailedJobId(String lastAgentUpgradeFailedJobId) {
             this.lastAgentUpgradeFailedJobId = Objects.requireNonNull(lastAgentUpgradeFailedJobId);
             return this;
         }
-
         public Builder lastAgentUpgradeType(String lastAgentUpgradeType) {
             this.lastAgentUpgradeType = Objects.requireNonNull(lastAgentUpgradeType);
             return this;
         }
-
         public Builder lastRecoveryPointId(String lastRecoveryPointId) {
             this.lastRecoveryPointId = Objects.requireNonNull(lastRecoveryPointId);
             return this;
         }
-
         public Builder lastRecoveryPointReceived(String lastRecoveryPointReceived) {
             this.lastRecoveryPointReceived = Objects.requireNonNull(lastRecoveryPointReceived);
             return this;
         }
-
         public Builder lastRpoCalculatedTime(String lastRpoCalculatedTime) {
             this.lastRpoCalculatedTime = Objects.requireNonNull(lastRpoCalculatedTime);
             return this;
         }
-
         public Builder lastRpoInSeconds(Double lastRpoInSeconds) {
             this.lastRpoInSeconds = Objects.requireNonNull(lastRpoInSeconds);
             return this;
         }
-
         public Builder licenseType(String licenseType) {
             this.licenseType = Objects.requireNonNull(licenseType);
             return this;
         }
-
         public Builder mobilityAgentDetails(InMageRcmMobilityAgentDetailsResponse mobilityAgentDetails) {
             this.mobilityAgentDetails = Objects.requireNonNull(mobilityAgentDetails);
             return this;
         }
-
         public Builder multiVmGroupName(String multiVmGroupName) {
             this.multiVmGroupName = Objects.requireNonNull(multiVmGroupName);
             return this;
         }
-
         public Builder osType(String osType) {
             this.osType = Objects.requireNonNull(osType);
             return this;
         }
-
         public Builder processServerId(String processServerId) {
             this.processServerId = Objects.requireNonNull(processServerId);
             return this;
         }
-
         public Builder processServerName(String processServerName) {
             this.processServerName = Objects.requireNonNull(processServerName);
             return this;
         }
-
         public Builder processorCoreCount(Integer processorCoreCount) {
             this.processorCoreCount = Objects.requireNonNull(processorCoreCount);
             return this;
         }
-
         public Builder protectedDisks(List<InMageRcmProtectedDiskDetailsResponse> protectedDisks) {
             this.protectedDisks = Objects.requireNonNull(protectedDisks);
             return this;
         }
-
+        public Builder protectedDisks(InMageRcmProtectedDiskDetailsResponse... protectedDisks) {
+            return protectedDisks(List.of(protectedDisks));
+        }
         public Builder resyncProcessedBytes(Double resyncProcessedBytes) {
             this.resyncProcessedBytes = Objects.requireNonNull(resyncProcessedBytes);
             return this;
         }
-
         public Builder resyncProgressPercentage(Integer resyncProgressPercentage) {
             this.resyncProgressPercentage = Objects.requireNonNull(resyncProgressPercentage);
             return this;
         }
-
         public Builder resyncRequired(String resyncRequired) {
             this.resyncRequired = Objects.requireNonNull(resyncRequired);
             return this;
         }
-
         public Builder resyncState(String resyncState) {
             this.resyncState = Objects.requireNonNull(resyncState);
             return this;
         }
-
         public Builder resyncTransferredBytes(Double resyncTransferredBytes) {
             this.resyncTransferredBytes = Objects.requireNonNull(resyncTransferredBytes);
             return this;
         }
-
         public Builder runAsAccountId(String runAsAccountId) {
             this.runAsAccountId = Objects.requireNonNull(runAsAccountId);
             return this;
         }
-
         public Builder targetAvailabilitySetId(String targetAvailabilitySetId) {
             this.targetAvailabilitySetId = Objects.requireNonNull(targetAvailabilitySetId);
             return this;
         }
-
         public Builder targetAvailabilityZone(String targetAvailabilityZone) {
             this.targetAvailabilityZone = Objects.requireNonNull(targetAvailabilityZone);
             return this;
         }
-
         public Builder targetBootDiagnosticsStorageAccountId(String targetBootDiagnosticsStorageAccountId) {
             this.targetBootDiagnosticsStorageAccountId = Objects.requireNonNull(targetBootDiagnosticsStorageAccountId);
             return this;
         }
-
         public Builder targetGeneration(String targetGeneration) {
             this.targetGeneration = Objects.requireNonNull(targetGeneration);
             return this;
         }
-
         public Builder targetNetworkId(String targetNetworkId) {
             this.targetNetworkId = Objects.requireNonNull(targetNetworkId);
             return this;
         }
-
         public Builder targetProximityPlacementGroupId(String targetProximityPlacementGroupId) {
             this.targetProximityPlacementGroupId = Objects.requireNonNull(targetProximityPlacementGroupId);
             return this;
         }
-
         public Builder targetResourceGroupId(String targetResourceGroupId) {
             this.targetResourceGroupId = Objects.requireNonNull(targetResourceGroupId);
             return this;
         }
-
         public Builder targetVmName(String targetVmName) {
             this.targetVmName = Objects.requireNonNull(targetVmName);
             return this;
         }
-
         public Builder targetVmSize(String targetVmSize) {
             this.targetVmSize = Objects.requireNonNull(targetVmSize);
             return this;
         }
-
         public Builder testNetworkId(String testNetworkId) {
             this.testNetworkId = Objects.requireNonNull(testNetworkId);
             return this;
         }
-
         public Builder vmNics(List<InMageRcmNicDetailsResponse> vmNics) {
             this.vmNics = Objects.requireNonNull(vmNics);
             return this;
         }
-        public InMageRcmReplicationDetailsResponse build() {
+        public Builder vmNics(InMageRcmNicDetailsResponse... vmNics) {
+            return vmNics(List.of(vmNics));
+        }        public InMageRcmReplicationDetailsResponse build() {
             return new InMageRcmReplicationDetailsResponse(agentUpgradeBlockingErrorDetails, agentUpgradeState, allocatedMemoryInMB, discoveryType, fabricDiscoveryMachineId, failoverRecoveryPointId, firmwareType, initialReplicationProcessedBytes, initialReplicationProgressPercentage, initialReplicationTransferredBytes, instanceType, internalIdentifier, isLastUpgradeSuccessful, lastAgentUpgradeErrorDetails, lastAgentUpgradeFailedJobId, lastAgentUpgradeType, lastRecoveryPointId, lastRecoveryPointReceived, lastRpoCalculatedTime, lastRpoInSeconds, licenseType, mobilityAgentDetails, multiVmGroupName, osType, processServerId, processServerName, processorCoreCount, protectedDisks, resyncProcessedBytes, resyncProgressPercentage, resyncRequired, resyncState, resyncTransferredBytes, runAsAccountId, targetAvailabilitySetId, targetAvailabilityZone, targetBootDiagnosticsStorageAccountId, targetGeneration, targetNetworkId, targetProximityPlacementGroupId, targetResourceGroupId, targetVmName, targetVmSize, testNetworkId, vmNics);
         }
     }

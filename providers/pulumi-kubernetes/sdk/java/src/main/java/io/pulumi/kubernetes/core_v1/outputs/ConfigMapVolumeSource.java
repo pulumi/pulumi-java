@@ -107,22 +107,21 @@ public final class ConfigMapVolumeSource {
             this.defaultMode = defaultMode;
             return this;
         }
-
         public Builder items(@Nullable List<KeyToPath> items) {
             this.items = items;
             return this;
         }
-
+        public Builder items(KeyToPath... items) {
+            return items(List.of(items));
+        }
         public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
-
         public Builder optional(@Nullable Boolean optional) {
             this.optional = optional;
             return this;
-        }
-        public ConfigMapVolumeSource build() {
+        }        public ConfigMapVolumeSource build() {
             return new ConfigMapVolumeSource(defaultMode, items, name, optional);
         }
     }

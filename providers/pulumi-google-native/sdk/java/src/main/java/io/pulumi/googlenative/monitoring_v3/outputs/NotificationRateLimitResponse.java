@@ -51,8 +51,7 @@ public final class NotificationRateLimitResponse {
         public Builder period(String period) {
             this.period = Objects.requireNonNull(period);
             return this;
-        }
-        public NotificationRateLimitResponse build() {
+        }        public NotificationRateLimitResponse build() {
             return new NotificationRateLimitResponse(period);
         }
     }

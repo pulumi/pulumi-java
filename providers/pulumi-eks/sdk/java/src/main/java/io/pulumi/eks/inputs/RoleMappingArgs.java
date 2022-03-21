@@ -94,32 +94,29 @@ public final class RoleMappingArgs extends io.pulumi.resources.ResourceArgs {
             this.groups = Objects.requireNonNull(groups);
             return this;
         }
-
         public Builder groups(List<String> groups) {
             this.groups = Output.of(Objects.requireNonNull(groups));
             return this;
         }
-
+        public Builder groups(String... groups) {
+            return groups(List.of(groups));
+        }
         public Builder roleArn(Output<String> roleArn) {
             this.roleArn = Objects.requireNonNull(roleArn);
             return this;
         }
-
         public Builder roleArn(String roleArn) {
             this.roleArn = Output.of(Objects.requireNonNull(roleArn));
             return this;
         }
-
         public Builder username(Output<String> username) {
             this.username = Objects.requireNonNull(username);
             return this;
         }
-
         public Builder username(String username) {
             this.username = Output.of(Objects.requireNonNull(username));
             return this;
-        }
-        public RoleMappingArgs build() {
+        }        public RoleMappingArgs build() {
             return new RoleMappingArgs(groups, roleArn, username);
         }
     }

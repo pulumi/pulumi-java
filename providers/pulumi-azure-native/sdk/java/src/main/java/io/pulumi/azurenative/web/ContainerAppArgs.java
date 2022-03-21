@@ -173,82 +173,66 @@ public final class ContainerAppArgs extends io.pulumi.resources.ResourceArgs {
             this.configuration = configuration;
             return this;
         }
-
         public Builder configuration(@Nullable ConfigurationArgs configuration) {
             this.configuration = Output.ofNullable(configuration);
             return this;
         }
-
         public Builder kind(@Nullable Output<String> kind) {
             this.kind = kind;
             return this;
         }
-
         public Builder kind(@Nullable String kind) {
             this.kind = Output.ofNullable(kind);
             return this;
         }
-
         public Builder kubeEnvironmentId(@Nullable Output<String> kubeEnvironmentId) {
             this.kubeEnvironmentId = kubeEnvironmentId;
             return this;
         }
-
         public Builder kubeEnvironmentId(@Nullable String kubeEnvironmentId) {
             this.kubeEnvironmentId = Output.ofNullable(kubeEnvironmentId);
             return this;
         }
-
         public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
         public Builder template(@Nullable Output<TemplateArgs> template) {
             this.template = template;
             return this;
         }
-
         public Builder template(@Nullable TemplateArgs template) {
             this.template = Output.ofNullable(template);
             return this;
-        }
-        public ContainerAppArgs build() {
+        }        public ContainerAppArgs build() {
             return new ContainerAppArgs(configuration, kind, kubeEnvironmentId, location, name, resourceGroupName, tags, template);
         }
     }

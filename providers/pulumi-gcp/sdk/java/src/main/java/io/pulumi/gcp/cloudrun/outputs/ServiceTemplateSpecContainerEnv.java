@@ -104,17 +104,14 @@ public final class ServiceTemplateSpecContainerEnv {
             this.name = name;
             return this;
         }
-
         public Builder value(@Nullable String value) {
             this.value = value;
             return this;
         }
-
         public Builder valueFrom(@Nullable ServiceTemplateSpecContainerEnvValueFrom valueFrom) {
             this.valueFrom = valueFrom;
             return this;
-        }
-        public ServiceTemplateSpecContainerEnv build() {
+        }        public ServiceTemplateSpecContainerEnv build() {
             return new ServiceTemplateSpecContainerEnv(name, value, valueFrom);
         }
     }

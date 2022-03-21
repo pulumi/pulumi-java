@@ -45,8 +45,7 @@ public final class InstanceGroupManagerStatusVersionTarget {
         public Builder isReached(@Nullable Boolean isReached) {
             this.isReached = isReached;
             return this;
-        }
-        public InstanceGroupManagerStatusVersionTarget build() {
+        }        public InstanceGroupManagerStatusVersionTarget build() {
             return new InstanceGroupManagerStatusVersionTarget(isReached);
         }
     }

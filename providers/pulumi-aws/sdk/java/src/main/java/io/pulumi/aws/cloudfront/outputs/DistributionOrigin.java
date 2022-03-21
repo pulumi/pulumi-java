@@ -209,47 +209,41 @@ public final class DistributionOrigin {
             this.connectionAttempts = connectionAttempts;
             return this;
         }
-
         public Builder connectionTimeout(@Nullable Integer connectionTimeout) {
             this.connectionTimeout = connectionTimeout;
             return this;
         }
-
         public Builder customHeaders(@Nullable List<DistributionOriginCustomHeader> customHeaders) {
             this.customHeaders = customHeaders;
             return this;
         }
-
+        public Builder customHeaders(DistributionOriginCustomHeader... customHeaders) {
+            return customHeaders(List.of(customHeaders));
+        }
         public Builder customOriginConfig(@Nullable DistributionOriginCustomOriginConfig customOriginConfig) {
             this.customOriginConfig = customOriginConfig;
             return this;
         }
-
         public Builder domainName(String domainName) {
             this.domainName = Objects.requireNonNull(domainName);
             return this;
         }
-
         public Builder originId(String originId) {
             this.originId = Objects.requireNonNull(originId);
             return this;
         }
-
         public Builder originPath(@Nullable String originPath) {
             this.originPath = originPath;
             return this;
         }
-
         public Builder originShield(@Nullable DistributionOriginOriginShield originShield) {
             this.originShield = originShield;
             return this;
         }
-
         public Builder s3OriginConfig(@Nullable DistributionOriginS3OriginConfig s3OriginConfig) {
             this.s3OriginConfig = s3OriginConfig;
             return this;
-        }
-        public DistributionOrigin build() {
+        }        public DistributionOrigin build() {
             return new DistributionOrigin(connectionAttempts, connectionTimeout, customHeaders, customOriginConfig, domainName, originId, originPath, originShield, s3OriginConfig);
         }
     }

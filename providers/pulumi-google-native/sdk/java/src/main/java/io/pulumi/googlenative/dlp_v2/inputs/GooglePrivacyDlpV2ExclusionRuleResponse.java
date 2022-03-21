@@ -111,22 +111,18 @@ public final class GooglePrivacyDlpV2ExclusionRuleResponse extends io.pulumi.res
             this.dictionary = Objects.requireNonNull(dictionary);
             return this;
         }
-
         public Builder excludeInfoTypes(GooglePrivacyDlpV2ExcludeInfoTypesResponse excludeInfoTypes) {
             this.excludeInfoTypes = Objects.requireNonNull(excludeInfoTypes);
             return this;
         }
-
         public Builder matchingType(String matchingType) {
             this.matchingType = Objects.requireNonNull(matchingType);
             return this;
         }
-
         public Builder regex(GooglePrivacyDlpV2RegexResponse regex) {
             this.regex = Objects.requireNonNull(regex);
             return this;
-        }
-        public GooglePrivacyDlpV2ExclusionRuleResponse build() {
+        }        public GooglePrivacyDlpV2ExclusionRuleResponse build() {
             return new GooglePrivacyDlpV2ExclusionRuleResponse(dictionary, excludeInfoTypes, matchingType, regex);
         }
     }

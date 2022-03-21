@@ -181,82 +181,66 @@ public final class IpsecPolicyArgs extends io.pulumi.resources.ResourceArgs {
             this.dhGroup = Objects.requireNonNull(dhGroup);
             return this;
         }
-
         public Builder dhGroup(Either<String,DhGroup> dhGroup) {
             this.dhGroup = Output.of(Objects.requireNonNull(dhGroup));
             return this;
         }
-
         public Builder ikeEncryption(Output<Either<String,IkeEncryption>> ikeEncryption) {
             this.ikeEncryption = Objects.requireNonNull(ikeEncryption);
             return this;
         }
-
         public Builder ikeEncryption(Either<String,IkeEncryption> ikeEncryption) {
             this.ikeEncryption = Output.of(Objects.requireNonNull(ikeEncryption));
             return this;
         }
-
         public Builder ikeIntegrity(Output<Either<String,IkeIntegrity>> ikeIntegrity) {
             this.ikeIntegrity = Objects.requireNonNull(ikeIntegrity);
             return this;
         }
-
         public Builder ikeIntegrity(Either<String,IkeIntegrity> ikeIntegrity) {
             this.ikeIntegrity = Output.of(Objects.requireNonNull(ikeIntegrity));
             return this;
         }
-
         public Builder ipsecEncryption(Output<Either<String,IpsecEncryption>> ipsecEncryption) {
             this.ipsecEncryption = Objects.requireNonNull(ipsecEncryption);
             return this;
         }
-
         public Builder ipsecEncryption(Either<String,IpsecEncryption> ipsecEncryption) {
             this.ipsecEncryption = Output.of(Objects.requireNonNull(ipsecEncryption));
             return this;
         }
-
         public Builder ipsecIntegrity(Output<Either<String,IpsecIntegrity>> ipsecIntegrity) {
             this.ipsecIntegrity = Objects.requireNonNull(ipsecIntegrity);
             return this;
         }
-
         public Builder ipsecIntegrity(Either<String,IpsecIntegrity> ipsecIntegrity) {
             this.ipsecIntegrity = Output.of(Objects.requireNonNull(ipsecIntegrity));
             return this;
         }
-
         public Builder pfsGroup(Output<Either<String,PfsGroup>> pfsGroup) {
             this.pfsGroup = Objects.requireNonNull(pfsGroup);
             return this;
         }
-
         public Builder pfsGroup(Either<String,PfsGroup> pfsGroup) {
             this.pfsGroup = Output.of(Objects.requireNonNull(pfsGroup));
             return this;
         }
-
         public Builder saDataSizeKilobytes(Output<Integer> saDataSizeKilobytes) {
             this.saDataSizeKilobytes = Objects.requireNonNull(saDataSizeKilobytes);
             return this;
         }
-
         public Builder saDataSizeKilobytes(Integer saDataSizeKilobytes) {
             this.saDataSizeKilobytes = Output.of(Objects.requireNonNull(saDataSizeKilobytes));
             return this;
         }
-
         public Builder saLifeTimeSeconds(Output<Integer> saLifeTimeSeconds) {
             this.saLifeTimeSeconds = Objects.requireNonNull(saLifeTimeSeconds);
             return this;
         }
-
         public Builder saLifeTimeSeconds(Integer saLifeTimeSeconds) {
             this.saLifeTimeSeconds = Output.of(Objects.requireNonNull(saLifeTimeSeconds));
             return this;
-        }
-        public IpsecPolicyArgs build() {
+        }        public IpsecPolicyArgs build() {
             return new IpsecPolicyArgs(dhGroup, ikeEncryption, ikeIntegrity, ipsecEncryption, ipsecIntegrity, pfsGroup, saDataSizeKilobytes, saLifeTimeSeconds);
         }
     }

@@ -53,8 +53,7 @@ public final class StorageAccountPropertiesResponse {
         public Builder resourceId(@Nullable String resourceId) {
             this.resourceId = resourceId;
             return this;
-        }
-        public StorageAccountPropertiesResponse build() {
+        }        public StorageAccountPropertiesResponse build() {
             return new StorageAccountPropertiesResponse(resourceId);
         }
     }

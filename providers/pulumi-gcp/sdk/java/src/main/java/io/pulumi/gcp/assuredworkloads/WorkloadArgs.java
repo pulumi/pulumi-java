@@ -190,92 +190,77 @@ public final class WorkloadArgs extends io.pulumi.resources.ResourceArgs {
             this.billingAccount = Objects.requireNonNull(billingAccount);
             return this;
         }
-
         public Builder billingAccount(String billingAccount) {
             this.billingAccount = Output.of(Objects.requireNonNull(billingAccount));
             return this;
         }
-
         public Builder complianceRegime(Output<String> complianceRegime) {
             this.complianceRegime = Objects.requireNonNull(complianceRegime);
             return this;
         }
-
         public Builder complianceRegime(String complianceRegime) {
             this.complianceRegime = Output.of(Objects.requireNonNull(complianceRegime));
             return this;
         }
-
         public Builder displayName(Output<String> displayName) {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
-
         public Builder displayName(String displayName) {
             this.displayName = Output.of(Objects.requireNonNull(displayName));
             return this;
         }
-
         public Builder kmsSettings(@Nullable Output<WorkloadKmsSettingsArgs> kmsSettings) {
             this.kmsSettings = kmsSettings;
             return this;
         }
-
         public Builder kmsSettings(@Nullable WorkloadKmsSettingsArgs kmsSettings) {
             this.kmsSettings = Output.ofNullable(kmsSettings);
             return this;
         }
-
         public Builder labels(@Nullable Output<Map<String,String>> labels) {
             this.labels = labels;
             return this;
         }
-
         public Builder labels(@Nullable Map<String,String> labels) {
             this.labels = Output.ofNullable(labels);
             return this;
         }
-
         public Builder location(Output<String> location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
-
         public Builder location(String location) {
             this.location = Output.of(Objects.requireNonNull(location));
             return this;
         }
-
         public Builder organization(Output<String> organization) {
             this.organization = Objects.requireNonNull(organization);
             return this;
         }
-
         public Builder organization(String organization) {
             this.organization = Output.of(Objects.requireNonNull(organization));
             return this;
         }
-
         public Builder provisionedResourcesParent(@Nullable Output<String> provisionedResourcesParent) {
             this.provisionedResourcesParent = provisionedResourcesParent;
             return this;
         }
-
         public Builder provisionedResourcesParent(@Nullable String provisionedResourcesParent) {
             this.provisionedResourcesParent = Output.ofNullable(provisionedResourcesParent);
             return this;
         }
-
         public Builder resourceSettings(@Nullable Output<List<WorkloadResourceSettingArgs>> resourceSettings) {
             this.resourceSettings = resourceSettings;
             return this;
         }
-
         public Builder resourceSettings(@Nullable List<WorkloadResourceSettingArgs> resourceSettings) {
             this.resourceSettings = Output.ofNullable(resourceSettings);
             return this;
         }
-        public WorkloadArgs build() {
+        public Builder resourceSettings(WorkloadResourceSettingArgs... resourceSettings) {
+            return resourceSettings(List.of(resourceSettings));
+        }        public WorkloadArgs build() {
             return new WorkloadArgs(billingAccount, complianceRegime, displayName, kmsSettings, labels, location, organization, provisionedResourcesParent, resourceSettings);
         }
     }

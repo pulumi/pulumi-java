@@ -108,42 +108,34 @@ public final class PodDisruptionBudgetArgs extends io.pulumi.resources.ResourceA
             this.apiVersion = apiVersion;
             return this;
         }
-
         public Builder apiVersion(@Nullable String apiVersion) {
             this.apiVersion = Output.ofNullable(apiVersion);
             return this;
         }
-
         public Builder kind(@Nullable Output<String> kind) {
             this.kind = kind;
             return this;
         }
-
         public Builder kind(@Nullable String kind) {
             this.kind = Output.ofNullable(kind);
             return this;
         }
-
         public Builder metadata(@Nullable Output<ObjectMetaArgs> metadata) {
             this.metadata = metadata;
             return this;
         }
-
         public Builder metadata(@Nullable ObjectMetaArgs metadata) {
             this.metadata = Output.ofNullable(metadata);
             return this;
         }
-
         public Builder spec(@Nullable Output<PodDisruptionBudgetSpecArgs> spec) {
             this.spec = spec;
             return this;
         }
-
         public Builder spec(@Nullable PodDisruptionBudgetSpecArgs spec) {
             this.spec = Output.ofNullable(spec);
             return this;
-        }
-        public PodDisruptionBudgetArgs build() {
+        }        public PodDisruptionBudgetArgs build() {
             return new PodDisruptionBudgetArgs(apiVersion, kind, metadata, spec);
         }
     }

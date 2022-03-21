@@ -75,22 +75,18 @@ public final class InstanceCapacityReservationSpecificationGetArgs extends io.pu
             this.capacityReservationPreference = capacityReservationPreference;
             return this;
         }
-
         public Builder capacityReservationPreference(@Nullable String capacityReservationPreference) {
             this.capacityReservationPreference = Output.ofNullable(capacityReservationPreference);
             return this;
         }
-
         public Builder capacityReservationTarget(@Nullable Output<InstanceCapacityReservationSpecificationCapacityReservationTargetGetArgs> capacityReservationTarget) {
             this.capacityReservationTarget = capacityReservationTarget;
             return this;
         }
-
         public Builder capacityReservationTarget(@Nullable InstanceCapacityReservationSpecificationCapacityReservationTargetGetArgs capacityReservationTarget) {
             this.capacityReservationTarget = Output.ofNullable(capacityReservationTarget);
             return this;
-        }
-        public InstanceCapacityReservationSpecificationGetArgs build() {
+        }        public InstanceCapacityReservationSpecificationGetArgs build() {
             return new InstanceCapacityReservationSpecificationGetArgs(capacityReservationPreference, capacityReservationTarget);
         }
     }

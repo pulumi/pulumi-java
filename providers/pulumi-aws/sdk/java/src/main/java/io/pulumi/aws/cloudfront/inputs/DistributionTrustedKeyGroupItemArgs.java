@@ -75,22 +75,21 @@ public final class DistributionTrustedKeyGroupItemArgs extends io.pulumi.resourc
             this.keyGroupId = keyGroupId;
             return this;
         }
-
         public Builder keyGroupId(@Nullable String keyGroupId) {
             this.keyGroupId = Output.ofNullable(keyGroupId);
             return this;
         }
-
         public Builder keyPairIds(@Nullable Output<List<String>> keyPairIds) {
             this.keyPairIds = keyPairIds;
             return this;
         }
-
         public Builder keyPairIds(@Nullable List<String> keyPairIds) {
             this.keyPairIds = Output.ofNullable(keyPairIds);
             return this;
         }
-        public DistributionTrustedKeyGroupItemArgs build() {
+        public Builder keyPairIds(String... keyPairIds) {
+            return keyPairIds(List.of(keyPairIds));
+        }        public DistributionTrustedKeyGroupItemArgs build() {
             return new DistributionTrustedKeyGroupItemArgs(keyGroupId, keyPairIds);
         }
     }

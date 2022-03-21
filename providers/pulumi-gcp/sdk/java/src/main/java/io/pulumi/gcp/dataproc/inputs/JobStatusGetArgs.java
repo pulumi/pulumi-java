@@ -90,42 +90,34 @@ public final class JobStatusGetArgs extends io.pulumi.resources.ResourceArgs {
             this.details = details;
             return this;
         }
-
         public Builder details(@Nullable String details) {
             this.details = Output.ofNullable(details);
             return this;
         }
-
         public Builder state(@Nullable Output<String> state) {
             this.state = state;
             return this;
         }
-
         public Builder state(@Nullable String state) {
             this.state = Output.ofNullable(state);
             return this;
         }
-
         public Builder stateStartTime(@Nullable Output<String> stateStartTime) {
             this.stateStartTime = stateStartTime;
             return this;
         }
-
         public Builder stateStartTime(@Nullable String stateStartTime) {
             this.stateStartTime = Output.ofNullable(stateStartTime);
             return this;
         }
-
         public Builder substate(@Nullable Output<String> substate) {
             this.substate = substate;
             return this;
         }
-
         public Builder substate(@Nullable String substate) {
             this.substate = Output.ofNullable(substate);
             return this;
-        }
-        public JobStatusGetArgs build() {
+        }        public JobStatusGetArgs build() {
             return new JobStatusGetArgs(details, state, stateStartTime, substate);
         }
     }

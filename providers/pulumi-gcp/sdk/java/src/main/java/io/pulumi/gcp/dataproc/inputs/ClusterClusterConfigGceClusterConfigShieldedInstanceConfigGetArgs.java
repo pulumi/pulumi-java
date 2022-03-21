@@ -90,32 +90,26 @@ public final class ClusterClusterConfigGceClusterConfigShieldedInstanceConfigGet
             this.enableIntegrityMonitoring = enableIntegrityMonitoring;
             return this;
         }
-
         public Builder enableIntegrityMonitoring(@Nullable Boolean enableIntegrityMonitoring) {
             this.enableIntegrityMonitoring = Output.ofNullable(enableIntegrityMonitoring);
             return this;
         }
-
         public Builder enableSecureBoot(@Nullable Output<Boolean> enableSecureBoot) {
             this.enableSecureBoot = enableSecureBoot;
             return this;
         }
-
         public Builder enableSecureBoot(@Nullable Boolean enableSecureBoot) {
             this.enableSecureBoot = Output.ofNullable(enableSecureBoot);
             return this;
         }
-
         public Builder enableVtpm(@Nullable Output<Boolean> enableVtpm) {
             this.enableVtpm = enableVtpm;
             return this;
         }
-
         public Builder enableVtpm(@Nullable Boolean enableVtpm) {
             this.enableVtpm = Output.ofNullable(enableVtpm);
             return this;
-        }
-        public ClusterClusterConfigGceClusterConfigShieldedInstanceConfigGetArgs build() {
+        }        public ClusterClusterConfigGceClusterConfigShieldedInstanceConfigGetArgs build() {
             return new ClusterClusterConfigGceClusterConfigShieldedInstanceConfigGetArgs(enableIntegrityMonitoring, enableSecureBoot, enableVtpm);
         }
     }

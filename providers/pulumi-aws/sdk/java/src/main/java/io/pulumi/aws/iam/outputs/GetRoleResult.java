@@ -207,57 +207,46 @@ public final class GetRoleResult {
             this.arn = Objects.requireNonNull(arn);
             return this;
         }
-
         public Builder assumeRolePolicy(String assumeRolePolicy) {
             this.assumeRolePolicy = Objects.requireNonNull(assumeRolePolicy);
             return this;
         }
-
         public Builder createDate(String createDate) {
             this.createDate = Objects.requireNonNull(createDate);
             return this;
         }
-
         public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder maxSessionDuration(Integer maxSessionDuration) {
             this.maxSessionDuration = Objects.requireNonNull(maxSessionDuration);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder path(String path) {
             this.path = Objects.requireNonNull(path);
             return this;
         }
-
         public Builder permissionsBoundary(String permissionsBoundary) {
             this.permissionsBoundary = Objects.requireNonNull(permissionsBoundary);
             return this;
         }
-
         public Builder tags(Map<String,String> tags) {
             this.tags = Objects.requireNonNull(tags);
             return this;
         }
-
         public Builder uniqueId(String uniqueId) {
             this.uniqueId = Objects.requireNonNull(uniqueId);
             return this;
-        }
-        public GetRoleResult build() {
+        }        public GetRoleResult build() {
             return new GetRoleResult(arn, assumeRolePolicy, createDate, description, id, maxSessionDuration, name, path, permissionsBoundary, tags, uniqueId);
         }
     }

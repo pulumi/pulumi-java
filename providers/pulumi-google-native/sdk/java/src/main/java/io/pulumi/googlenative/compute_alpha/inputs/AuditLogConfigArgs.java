@@ -97,32 +97,29 @@ public final class AuditLogConfigArgs extends io.pulumi.resources.ResourceArgs {
             this.exemptedMembers = exemptedMembers;
             return this;
         }
-
         public Builder exemptedMembers(@Nullable List<String> exemptedMembers) {
             this.exemptedMembers = Output.ofNullable(exemptedMembers);
             return this;
         }
-
+        public Builder exemptedMembers(String... exemptedMembers) {
+            return exemptedMembers(List.of(exemptedMembers));
+        }
         public Builder ignoreChildExemptions(@Nullable Output<Boolean> ignoreChildExemptions) {
             this.ignoreChildExemptions = ignoreChildExemptions;
             return this;
         }
-
         public Builder ignoreChildExemptions(@Nullable Boolean ignoreChildExemptions) {
             this.ignoreChildExemptions = Output.ofNullable(ignoreChildExemptions);
             return this;
         }
-
         public Builder logType(@Nullable Output<AuditLogConfigLogType> logType) {
             this.logType = logType;
             return this;
         }
-
         public Builder logType(@Nullable AuditLogConfigLogType logType) {
             this.logType = Output.ofNullable(logType);
             return this;
-        }
-        public AuditLogConfigArgs build() {
+        }        public AuditLogConfigArgs build() {
             return new AuditLogConfigArgs(exemptedMembers, ignoreChildExemptions, logType);
         }
     }

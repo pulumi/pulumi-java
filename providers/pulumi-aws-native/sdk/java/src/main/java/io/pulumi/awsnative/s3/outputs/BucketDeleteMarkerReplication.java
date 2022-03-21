@@ -45,8 +45,7 @@ public final class BucketDeleteMarkerReplication {
         public Builder status(@Nullable BucketDeleteMarkerReplicationStatus status) {
             this.status = status;
             return this;
-        }
-        public BucketDeleteMarkerReplication build() {
+        }        public BucketDeleteMarkerReplication build() {
             return new BucketDeleteMarkerReplication(status);
         }
     }

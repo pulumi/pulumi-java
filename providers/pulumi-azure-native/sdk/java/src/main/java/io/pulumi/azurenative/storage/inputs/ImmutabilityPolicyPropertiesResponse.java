@@ -130,27 +130,25 @@ public final class ImmutabilityPolicyPropertiesResponse extends io.pulumi.resour
             this.allowProtectedAppendWrites = allowProtectedAppendWrites;
             return this;
         }
-
         public Builder etag(String etag) {
             this.etag = Objects.requireNonNull(etag);
             return this;
         }
-
         public Builder immutabilityPeriodSinceCreationInDays(@Nullable Integer immutabilityPeriodSinceCreationInDays) {
             this.immutabilityPeriodSinceCreationInDays = immutabilityPeriodSinceCreationInDays;
             return this;
         }
-
         public Builder state(String state) {
             this.state = Objects.requireNonNull(state);
             return this;
         }
-
         public Builder updateHistory(List<UpdateHistoryPropertyResponse> updateHistory) {
             this.updateHistory = Objects.requireNonNull(updateHistory);
             return this;
         }
-        public ImmutabilityPolicyPropertiesResponse build() {
+        public Builder updateHistory(UpdateHistoryPropertyResponse... updateHistory) {
+            return updateHistory(List.of(updateHistory));
+        }        public ImmutabilityPolicyPropertiesResponse build() {
             return new ImmutabilityPolicyPropertiesResponse(allowProtectedAppendWrites, etag, immutabilityPeriodSinceCreationInDays, state, updateHistory);
         }
     }

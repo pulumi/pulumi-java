@@ -159,72 +159,58 @@ public final class ReadinessCheckArgs extends io.pulumi.resources.ResourceArgs {
             this.appStartTimeout = appStartTimeout;
             return this;
         }
-
         public Builder appStartTimeout(@Nullable String appStartTimeout) {
             this.appStartTimeout = Output.ofNullable(appStartTimeout);
             return this;
         }
-
         public Builder checkInterval(@Nullable Output<String> checkInterval) {
             this.checkInterval = checkInterval;
             return this;
         }
-
         public Builder checkInterval(@Nullable String checkInterval) {
             this.checkInterval = Output.ofNullable(checkInterval);
             return this;
         }
-
         public Builder failureThreshold(@Nullable Output<Integer> failureThreshold) {
             this.failureThreshold = failureThreshold;
             return this;
         }
-
         public Builder failureThreshold(@Nullable Integer failureThreshold) {
             this.failureThreshold = Output.ofNullable(failureThreshold);
             return this;
         }
-
         public Builder host(@Nullable Output<String> host) {
             this.host = host;
             return this;
         }
-
         public Builder host(@Nullable String host) {
             this.host = Output.ofNullable(host);
             return this;
         }
-
         public Builder path(@Nullable Output<String> path) {
             this.path = path;
             return this;
         }
-
         public Builder path(@Nullable String path) {
             this.path = Output.ofNullable(path);
             return this;
         }
-
         public Builder successThreshold(@Nullable Output<Integer> successThreshold) {
             this.successThreshold = successThreshold;
             return this;
         }
-
         public Builder successThreshold(@Nullable Integer successThreshold) {
             this.successThreshold = Output.ofNullable(successThreshold);
             return this;
         }
-
         public Builder timeout(@Nullable Output<String> timeout) {
             this.timeout = timeout;
             return this;
         }
-
         public Builder timeout(@Nullable String timeout) {
             this.timeout = Output.ofNullable(timeout);
             return this;
-        }
-        public ReadinessCheckArgs build() {
+        }        public ReadinessCheckArgs build() {
             return new ReadinessCheckArgs(appStartTimeout, checkInterval, failureThreshold, host, path, successThreshold, timeout);
         }
     }

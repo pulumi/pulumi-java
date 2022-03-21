@@ -54,7 +54,9 @@ public final class ListLinkerConfigurationsResult {
             this.configurations = configurations;
             return this;
         }
-        public ListLinkerConfigurationsResult build() {
+        public Builder configurations(SourceConfigurationResponse... configurations) {
+            return configurations(List.of(configurations));
+        }        public ListLinkerConfigurationsResult build() {
             return new ListLinkerConfigurationsResult(configurations);
         }
     }

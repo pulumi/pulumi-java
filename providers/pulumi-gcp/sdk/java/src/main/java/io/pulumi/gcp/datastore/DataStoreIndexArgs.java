@@ -112,42 +112,37 @@ public final class DataStoreIndexArgs extends io.pulumi.resources.ResourceArgs {
             this.ancestor = ancestor;
             return this;
         }
-
         public Builder ancestor(@Nullable String ancestor) {
             this.ancestor = Output.ofNullable(ancestor);
             return this;
         }
-
         public Builder kind(Output<String> kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
-
         public Builder kind(String kind) {
             this.kind = Output.of(Objects.requireNonNull(kind));
             return this;
         }
-
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
         }
-
         public Builder properties(@Nullable Output<List<DataStoreIndexPropertyArgs>> properties) {
             this.properties = properties;
             return this;
         }
-
         public Builder properties(@Nullable List<DataStoreIndexPropertyArgs> properties) {
             this.properties = Output.ofNullable(properties);
             return this;
         }
-        public DataStoreIndexArgs build() {
+        public Builder properties(DataStoreIndexPropertyArgs... properties) {
+            return properties(List.of(properties));
+        }        public DataStoreIndexArgs build() {
             return new DataStoreIndexArgs(ancestor, kind, project, properties);
         }
     }

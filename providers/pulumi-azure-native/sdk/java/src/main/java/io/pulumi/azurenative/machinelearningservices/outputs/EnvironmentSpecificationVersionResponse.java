@@ -177,42 +177,34 @@ public final class EnvironmentSpecificationVersionResponse {
             this.condaFile = condaFile;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
-
         public Builder docker(@Nullable Either<DockerBuildResponse,DockerImageResponse> docker) {
             this.docker = docker;
             return this;
         }
-
         public Builder environmentSpecificationType(String environmentSpecificationType) {
             this.environmentSpecificationType = Objects.requireNonNull(environmentSpecificationType);
             return this;
         }
-
         public Builder inferenceContainerProperties(@Nullable InferenceContainerPropertiesResponse inferenceContainerProperties) {
             this.inferenceContainerProperties = inferenceContainerProperties;
             return this;
         }
-
         public Builder isAnonymous(@Nullable Boolean isAnonymous) {
             this.isAnonymous = isAnonymous;
             return this;
         }
-
         public Builder properties(@Nullable Map<String,String> properties) {
             this.properties = properties;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
-        }
-        public EnvironmentSpecificationVersionResponse build() {
+        }        public EnvironmentSpecificationVersionResponse build() {
             return new EnvironmentSpecificationVersionResponse(condaFile, description, docker, environmentSpecificationType, inferenceContainerProperties, isAnonymous, properties, tags);
         }
     }

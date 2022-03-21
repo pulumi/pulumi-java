@@ -132,52 +132,48 @@ public final class ApplicationGatewaySslPolicyArgs extends io.pulumi.resources.R
             this.cipherSuites = cipherSuites;
             return this;
         }
-
         public Builder cipherSuites(@Nullable List<Either<String,ApplicationGatewaySslCipherSuite>> cipherSuites) {
             this.cipherSuites = Output.ofNullable(cipherSuites);
             return this;
         }
-
+        public Builder cipherSuites(Either<String,ApplicationGatewaySslCipherSuite>... cipherSuites) {
+            return cipherSuites(List.of(cipherSuites));
+        }
         public Builder disabledSslProtocols(@Nullable Output<List<Either<String,ApplicationGatewaySslProtocol>>> disabledSslProtocols) {
             this.disabledSslProtocols = disabledSslProtocols;
             return this;
         }
-
         public Builder disabledSslProtocols(@Nullable List<Either<String,ApplicationGatewaySslProtocol>> disabledSslProtocols) {
             this.disabledSslProtocols = Output.ofNullable(disabledSslProtocols);
             return this;
         }
-
+        public Builder disabledSslProtocols(Either<String,ApplicationGatewaySslProtocol>... disabledSslProtocols) {
+            return disabledSslProtocols(List.of(disabledSslProtocols));
+        }
         public Builder minProtocolVersion(@Nullable Output<Either<String,ApplicationGatewaySslProtocol>> minProtocolVersion) {
             this.minProtocolVersion = minProtocolVersion;
             return this;
         }
-
         public Builder minProtocolVersion(@Nullable Either<String,ApplicationGatewaySslProtocol> minProtocolVersion) {
             this.minProtocolVersion = Output.ofNullable(minProtocolVersion);
             return this;
         }
-
         public Builder policyName(@Nullable Output<Either<String,ApplicationGatewaySslPolicyName>> policyName) {
             this.policyName = policyName;
             return this;
         }
-
         public Builder policyName(@Nullable Either<String,ApplicationGatewaySslPolicyName> policyName) {
             this.policyName = Output.ofNullable(policyName);
             return this;
         }
-
         public Builder policyType(@Nullable Output<Either<String,ApplicationGatewaySslPolicyType>> policyType) {
             this.policyType = policyType;
             return this;
         }
-
         public Builder policyType(@Nullable Either<String,ApplicationGatewaySslPolicyType> policyType) {
             this.policyType = Output.ofNullable(policyType);
             return this;
-        }
-        public ApplicationGatewaySslPolicyArgs build() {
+        }        public ApplicationGatewaySslPolicyArgs build() {
             return new ApplicationGatewaySslPolicyArgs(cipherSuites, disabledSslProtocols, minProtocolVersion, policyName, policyType);
         }
     }

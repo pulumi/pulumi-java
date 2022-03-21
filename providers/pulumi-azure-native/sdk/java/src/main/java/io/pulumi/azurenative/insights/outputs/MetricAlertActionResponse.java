@@ -72,12 +72,10 @@ public final class MetricAlertActionResponse {
             this.actionGroupId = actionGroupId;
             return this;
         }
-
         public Builder webHookProperties(@Nullable Map<String,String> webHookProperties) {
             this.webHookProperties = webHookProperties;
             return this;
-        }
-        public MetricAlertActionResponse build() {
+        }        public MetricAlertActionResponse build() {
             return new MetricAlertActionResponse(actionGroupId, webHookProperties);
         }
     }

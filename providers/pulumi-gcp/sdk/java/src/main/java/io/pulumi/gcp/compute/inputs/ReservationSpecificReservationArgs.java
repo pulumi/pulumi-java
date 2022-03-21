@@ -93,32 +93,26 @@ public final class ReservationSpecificReservationArgs extends io.pulumi.resource
             this.count = Objects.requireNonNull(count);
             return this;
         }
-
         public Builder count(Integer count) {
             this.count = Output.of(Objects.requireNonNull(count));
             return this;
         }
-
         public Builder inUseCount(@Nullable Output<Integer> inUseCount) {
             this.inUseCount = inUseCount;
             return this;
         }
-
         public Builder inUseCount(@Nullable Integer inUseCount) {
             this.inUseCount = Output.ofNullable(inUseCount);
             return this;
         }
-
         public Builder instanceProperties(Output<ReservationSpecificReservationInstancePropertiesArgs> instanceProperties) {
             this.instanceProperties = Objects.requireNonNull(instanceProperties);
             return this;
         }
-
         public Builder instanceProperties(ReservationSpecificReservationInstancePropertiesArgs instanceProperties) {
             this.instanceProperties = Output.of(Objects.requireNonNull(instanceProperties));
             return this;
-        }
-        public ReservationSpecificReservationArgs build() {
+        }        public ReservationSpecificReservationArgs build() {
             return new ReservationSpecificReservationArgs(count, inUseCount, instanceProperties);
         }
     }

@@ -161,62 +161,56 @@ public final class ServiceTemplateSpecArgs extends io.pulumi.resources.ResourceA
             this.containerConcurrency = containerConcurrency;
             return this;
         }
-
         public Builder containerConcurrency(@Nullable Integer containerConcurrency) {
             this.containerConcurrency = Output.ofNullable(containerConcurrency);
             return this;
         }
-
         public Builder containers(@Nullable Output<List<ServiceTemplateSpecContainerArgs>> containers) {
             this.containers = containers;
             return this;
         }
-
         public Builder containers(@Nullable List<ServiceTemplateSpecContainerArgs> containers) {
             this.containers = Output.ofNullable(containers);
             return this;
         }
-
+        public Builder containers(ServiceTemplateSpecContainerArgs... containers) {
+            return containers(List.of(containers));
+        }
         public Builder serviceAccountName(@Nullable Output<String> serviceAccountName) {
             this.serviceAccountName = serviceAccountName;
             return this;
         }
-
         public Builder serviceAccountName(@Nullable String serviceAccountName) {
             this.serviceAccountName = Output.ofNullable(serviceAccountName);
             return this;
         }
-
         public Builder servingState(@Nullable Output<String> servingState) {
             this.servingState = servingState;
             return this;
         }
-
         public Builder servingState(@Nullable String servingState) {
             this.servingState = Output.ofNullable(servingState);
             return this;
         }
-
         public Builder timeoutSeconds(@Nullable Output<Integer> timeoutSeconds) {
             this.timeoutSeconds = timeoutSeconds;
             return this;
         }
-
         public Builder timeoutSeconds(@Nullable Integer timeoutSeconds) {
             this.timeoutSeconds = Output.ofNullable(timeoutSeconds);
             return this;
         }
-
         public Builder volumes(@Nullable Output<List<ServiceTemplateSpecVolumeArgs>> volumes) {
             this.volumes = volumes;
             return this;
         }
-
         public Builder volumes(@Nullable List<ServiceTemplateSpecVolumeArgs> volumes) {
             this.volumes = Output.ofNullable(volumes);
             return this;
         }
-        public ServiceTemplateSpecArgs build() {
+        public Builder volumes(ServiceTemplateSpecVolumeArgs... volumes) {
+            return volumes(List.of(volumes));
+        }        public ServiceTemplateSpecArgs build() {
             return new ServiceTemplateSpecArgs(containerConcurrency, containers, serviceAccountName, servingState, timeoutSeconds, volumes);
         }
     }

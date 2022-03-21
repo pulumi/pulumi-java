@@ -314,87 +314,73 @@ public final class GetBookmarkResult {
             this.created = created;
             return this;
         }
-
         public Builder createdBy(@Nullable UserInfoResponse createdBy) {
             this.createdBy = createdBy;
             return this;
         }
-
         public Builder displayName(String displayName) {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
-
         public Builder etag(@Nullable String etag) {
             this.etag = etag;
             return this;
         }
-
         public Builder eventTime(@Nullable String eventTime) {
             this.eventTime = eventTime;
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder incidentInfo(@Nullable IncidentInfoResponse incidentInfo) {
             this.incidentInfo = incidentInfo;
             return this;
         }
-
         public Builder labels(@Nullable List<String> labels) {
             this.labels = labels;
             return this;
         }
-
+        public Builder labels(String... labels) {
+            return labels(List.of(labels));
+        }
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder notes(@Nullable String notes) {
             this.notes = notes;
             return this;
         }
-
         public Builder query(String query) {
             this.query = Objects.requireNonNull(query);
             return this;
         }
-
         public Builder queryEndTime(@Nullable String queryEndTime) {
             this.queryEndTime = queryEndTime;
             return this;
         }
-
         public Builder queryResult(@Nullable String queryResult) {
             this.queryResult = queryResult;
             return this;
         }
-
         public Builder queryStartTime(@Nullable String queryStartTime) {
             this.queryStartTime = queryStartTime;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder updated(@Nullable String updated) {
             this.updated = updated;
             return this;
         }
-
         public Builder updatedBy(@Nullable UserInfoResponse updatedBy) {
             this.updatedBy = updatedBy;
             return this;
-        }
-        public GetBookmarkResult build() {
+        }        public GetBookmarkResult build() {
             return new GetBookmarkResult(created, createdBy, displayName, etag, eventTime, id, incidentInfo, labels, name, notes, query, queryEndTime, queryResult, queryStartTime, type, updated, updatedBy);
         }
     }

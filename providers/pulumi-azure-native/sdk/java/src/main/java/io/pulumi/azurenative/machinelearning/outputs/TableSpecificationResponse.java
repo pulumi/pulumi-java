@@ -121,27 +121,22 @@ public final class TableSpecificationResponse {
             this.description = description;
             return this;
         }
-
         public Builder format(@Nullable String format) {
             this.format = format;
             return this;
         }
-
         public Builder properties(@Nullable Map<String,ColumnSpecificationResponse> properties) {
             this.properties = properties;
             return this;
         }
-
         public Builder title(@Nullable String title) {
             this.title = title;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public TableSpecificationResponse build() {
+        }        public TableSpecificationResponse build() {
             return new TableSpecificationResponse(description, format, properties, title, type);
         }
     }

@@ -69,12 +69,10 @@ public final class ManagedHsmSkuResponse {
             this.family = Objects.requireNonNull(family);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
-        }
-        public ManagedHsmSkuResponse build() {
+        }        public ManagedHsmSkuResponse build() {
             return new ManagedHsmSkuResponse(family, name);
         }
     }

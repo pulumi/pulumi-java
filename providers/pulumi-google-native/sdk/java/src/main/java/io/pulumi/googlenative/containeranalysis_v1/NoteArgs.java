@@ -318,172 +318,144 @@ public final class NoteArgs extends io.pulumi.resources.ResourceArgs {
             this.attestation = attestation;
             return this;
         }
-
         public Builder attestation(@Nullable AttestationNoteArgs attestation) {
             this.attestation = Output.ofNullable(attestation);
             return this;
         }
-
         public Builder build(@Nullable Output<BuildNoteArgs> build) {
             this.build = build;
             return this;
         }
-
         public Builder build(@Nullable BuildNoteArgs build) {
             this.build = Output.ofNullable(build);
             return this;
         }
-
         public Builder compliance(@Nullable Output<ComplianceNoteArgs> compliance) {
             this.compliance = compliance;
             return this;
         }
-
         public Builder compliance(@Nullable ComplianceNoteArgs compliance) {
             this.compliance = Output.ofNullable(compliance);
             return this;
         }
-
         public Builder deployment(@Nullable Output<DeploymentNoteArgs> deployment) {
             this.deployment = deployment;
             return this;
         }
-
         public Builder deployment(@Nullable DeploymentNoteArgs deployment) {
             this.deployment = Output.ofNullable(deployment);
             return this;
         }
-
         public Builder discovery(@Nullable Output<DiscoveryNoteArgs> discovery) {
             this.discovery = discovery;
             return this;
         }
-
         public Builder discovery(@Nullable DiscoveryNoteArgs discovery) {
             this.discovery = Output.ofNullable(discovery);
             return this;
         }
-
         public Builder dsseAttestation(@Nullable Output<DSSEAttestationNoteArgs> dsseAttestation) {
             this.dsseAttestation = dsseAttestation;
             return this;
         }
-
         public Builder dsseAttestation(@Nullable DSSEAttestationNoteArgs dsseAttestation) {
             this.dsseAttestation = Output.ofNullable(dsseAttestation);
             return this;
         }
-
         public Builder expirationTime(@Nullable Output<String> expirationTime) {
             this.expirationTime = expirationTime;
             return this;
         }
-
         public Builder expirationTime(@Nullable String expirationTime) {
             this.expirationTime = Output.ofNullable(expirationTime);
             return this;
         }
-
         public Builder image(@Nullable Output<ImageNoteArgs> image) {
             this.image = image;
             return this;
         }
-
         public Builder image(@Nullable ImageNoteArgs image) {
             this.image = Output.ofNullable(image);
             return this;
         }
-
         public Builder longDescription(@Nullable Output<String> longDescription) {
             this.longDescription = longDescription;
             return this;
         }
-
         public Builder longDescription(@Nullable String longDescription) {
             this.longDescription = Output.ofNullable(longDescription);
             return this;
         }
-
         public Builder noteId(Output<String> noteId) {
             this.noteId = Objects.requireNonNull(noteId);
             return this;
         }
-
         public Builder noteId(String noteId) {
             this.noteId = Output.of(Objects.requireNonNull(noteId));
             return this;
         }
-
         public Builder $package(@Nullable Output<PackageNoteArgs> $package) {
             this.$package = $package;
             return this;
         }
-
         public Builder $package(@Nullable PackageNoteArgs $package) {
             this.$package = Output.ofNullable($package);
             return this;
         }
-
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
         }
-
         public Builder relatedNoteNames(@Nullable Output<List<String>> relatedNoteNames) {
             this.relatedNoteNames = relatedNoteNames;
             return this;
         }
-
         public Builder relatedNoteNames(@Nullable List<String> relatedNoteNames) {
             this.relatedNoteNames = Output.ofNullable(relatedNoteNames);
             return this;
         }
-
+        public Builder relatedNoteNames(String... relatedNoteNames) {
+            return relatedNoteNames(List.of(relatedNoteNames));
+        }
         public Builder relatedUrl(@Nullable Output<List<RelatedUrlArgs>> relatedUrl) {
             this.relatedUrl = relatedUrl;
             return this;
         }
-
         public Builder relatedUrl(@Nullable List<RelatedUrlArgs> relatedUrl) {
             this.relatedUrl = Output.ofNullable(relatedUrl);
             return this;
         }
-
+        public Builder relatedUrl(RelatedUrlArgs... relatedUrl) {
+            return relatedUrl(List.of(relatedUrl));
+        }
         public Builder shortDescription(@Nullable Output<String> shortDescription) {
             this.shortDescription = shortDescription;
             return this;
         }
-
         public Builder shortDescription(@Nullable String shortDescription) {
             this.shortDescription = Output.ofNullable(shortDescription);
             return this;
         }
-
         public Builder upgrade(@Nullable Output<UpgradeNoteArgs> upgrade) {
             this.upgrade = upgrade;
             return this;
         }
-
         public Builder upgrade(@Nullable UpgradeNoteArgs upgrade) {
             this.upgrade = Output.ofNullable(upgrade);
             return this;
         }
-
         public Builder vulnerability(@Nullable Output<VulnerabilityNoteArgs> vulnerability) {
             this.vulnerability = vulnerability;
             return this;
         }
-
         public Builder vulnerability(@Nullable VulnerabilityNoteArgs vulnerability) {
             this.vulnerability = Output.ofNullable(vulnerability);
             return this;
-        }
-        public NoteArgs build() {
+        }        public NoteArgs build() {
             return new NoteArgs(attestation, build, compliance, deployment, discovery, dsseAttestation, expirationTime, image, longDescription, noteId, $package, project, relatedNoteNames, relatedUrl, shortDescription, upgrade, vulnerability);
         }
     }

@@ -203,102 +203,82 @@ public final class ReplicationTaskArgs extends io.pulumi.resources.ResourceArgs 
             this.cdcStartPosition = cdcStartPosition;
             return this;
         }
-
         public Builder cdcStartPosition(@Nullable String cdcStartPosition) {
             this.cdcStartPosition = Output.ofNullable(cdcStartPosition);
             return this;
         }
-
         public Builder cdcStartTime(@Nullable Output<String> cdcStartTime) {
             this.cdcStartTime = cdcStartTime;
             return this;
         }
-
         public Builder cdcStartTime(@Nullable String cdcStartTime) {
             this.cdcStartTime = Output.ofNullable(cdcStartTime);
             return this;
         }
-
         public Builder migrationType(Output<String> migrationType) {
             this.migrationType = Objects.requireNonNull(migrationType);
             return this;
         }
-
         public Builder migrationType(String migrationType) {
             this.migrationType = Output.of(Objects.requireNonNull(migrationType));
             return this;
         }
-
         public Builder replicationInstanceArn(Output<String> replicationInstanceArn) {
             this.replicationInstanceArn = Objects.requireNonNull(replicationInstanceArn);
             return this;
         }
-
         public Builder replicationInstanceArn(String replicationInstanceArn) {
             this.replicationInstanceArn = Output.of(Objects.requireNonNull(replicationInstanceArn));
             return this;
         }
-
         public Builder replicationTaskId(Output<String> replicationTaskId) {
             this.replicationTaskId = Objects.requireNonNull(replicationTaskId);
             return this;
         }
-
         public Builder replicationTaskId(String replicationTaskId) {
             this.replicationTaskId = Output.of(Objects.requireNonNull(replicationTaskId));
             return this;
         }
-
         public Builder replicationTaskSettings(@Nullable Output<String> replicationTaskSettings) {
             this.replicationTaskSettings = replicationTaskSettings;
             return this;
         }
-
         public Builder replicationTaskSettings(@Nullable String replicationTaskSettings) {
             this.replicationTaskSettings = Output.ofNullable(replicationTaskSettings);
             return this;
         }
-
         public Builder sourceEndpointArn(Output<String> sourceEndpointArn) {
             this.sourceEndpointArn = Objects.requireNonNull(sourceEndpointArn);
             return this;
         }
-
         public Builder sourceEndpointArn(String sourceEndpointArn) {
             this.sourceEndpointArn = Output.of(Objects.requireNonNull(sourceEndpointArn));
             return this;
         }
-
         public Builder tableMappings(Output<String> tableMappings) {
             this.tableMappings = Objects.requireNonNull(tableMappings);
             return this;
         }
-
         public Builder tableMappings(String tableMappings) {
             this.tableMappings = Output.of(Objects.requireNonNull(tableMappings));
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
         public Builder targetEndpointArn(Output<String> targetEndpointArn) {
             this.targetEndpointArn = Objects.requireNonNull(targetEndpointArn);
             return this;
         }
-
         public Builder targetEndpointArn(String targetEndpointArn) {
             this.targetEndpointArn = Output.of(Objects.requireNonNull(targetEndpointArn));
             return this;
-        }
-        public ReplicationTaskArgs build() {
+        }        public ReplicationTaskArgs build() {
             return new ReplicationTaskArgs(cdcStartPosition, cdcStartTime, migrationType, replicationInstanceArn, replicationTaskId, replicationTaskSettings, sourceEndpointArn, tableMappings, tags, targetEndpointArn);
         }
     }

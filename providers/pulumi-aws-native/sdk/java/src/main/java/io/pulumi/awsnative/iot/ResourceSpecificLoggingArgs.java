@@ -91,32 +91,26 @@ public final class ResourceSpecificLoggingArgs extends io.pulumi.resources.Resou
             this.logLevel = Objects.requireNonNull(logLevel);
             return this;
         }
-
         public Builder logLevel(ResourceSpecificLoggingLogLevel logLevel) {
             this.logLevel = Output.of(Objects.requireNonNull(logLevel));
             return this;
         }
-
         public Builder targetName(Output<String> targetName) {
             this.targetName = Objects.requireNonNull(targetName);
             return this;
         }
-
         public Builder targetName(String targetName) {
             this.targetName = Output.of(Objects.requireNonNull(targetName));
             return this;
         }
-
         public Builder targetType(Output<ResourceSpecificLoggingTargetType> targetType) {
             this.targetType = Objects.requireNonNull(targetType);
             return this;
         }
-
         public Builder targetType(ResourceSpecificLoggingTargetType targetType) {
             this.targetType = Output.of(Objects.requireNonNull(targetType));
             return this;
-        }
-        public ResourceSpecificLoggingArgs build() {
+        }        public ResourceSpecificLoggingArgs build() {
             return new ResourceSpecificLoggingArgs(logLevel, targetName, targetType);
         }
     }

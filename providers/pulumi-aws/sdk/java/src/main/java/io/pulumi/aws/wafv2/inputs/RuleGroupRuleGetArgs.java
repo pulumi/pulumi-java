@@ -144,62 +144,53 @@ public final class RuleGroupRuleGetArgs extends io.pulumi.resources.ResourceArgs
             this.action = Objects.requireNonNull(action);
             return this;
         }
-
         public Builder action(RuleGroupRuleActionGetArgs action) {
             this.action = Output.of(Objects.requireNonNull(action));
             return this;
         }
-
         public Builder name(Output<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
-
         public Builder priority(Output<Integer> priority) {
             this.priority = Objects.requireNonNull(priority);
             return this;
         }
-
         public Builder priority(Integer priority) {
             this.priority = Output.of(Objects.requireNonNull(priority));
             return this;
         }
-
         public Builder ruleLabels(@Nullable Output<List<RuleGroupRuleRuleLabelGetArgs>> ruleLabels) {
             this.ruleLabels = ruleLabels;
             return this;
         }
-
         public Builder ruleLabels(@Nullable List<RuleGroupRuleRuleLabelGetArgs> ruleLabels) {
             this.ruleLabels = Output.ofNullable(ruleLabels);
             return this;
         }
-
+        public Builder ruleLabels(RuleGroupRuleRuleLabelGetArgs... ruleLabels) {
+            return ruleLabels(List.of(ruleLabels));
+        }
         public Builder statement(Output<RuleGroupRuleStatementGetArgs> statement) {
             this.statement = Objects.requireNonNull(statement);
             return this;
         }
-
         public Builder statement(RuleGroupRuleStatementGetArgs statement) {
             this.statement = Output.of(Objects.requireNonNull(statement));
             return this;
         }
-
         public Builder visibilityConfig(Output<RuleGroupRuleVisibilityConfigGetArgs> visibilityConfig) {
             this.visibilityConfig = Objects.requireNonNull(visibilityConfig);
             return this;
         }
-
         public Builder visibilityConfig(RuleGroupRuleVisibilityConfigGetArgs visibilityConfig) {
             this.visibilityConfig = Output.of(Objects.requireNonNull(visibilityConfig));
             return this;
-        }
-        public RuleGroupRuleGetArgs build() {
+        }        public RuleGroupRuleGetArgs build() {
             return new RuleGroupRuleGetArgs(action, name, priority, ruleLabels, statement, visibilityConfig);
         }
     }

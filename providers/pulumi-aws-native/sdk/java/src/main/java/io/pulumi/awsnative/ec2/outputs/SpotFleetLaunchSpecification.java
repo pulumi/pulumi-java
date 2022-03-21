@@ -194,92 +194,86 @@ public final class SpotFleetLaunchSpecification {
             this.blockDeviceMappings = blockDeviceMappings;
             return this;
         }
-
+        public Builder blockDeviceMappings(SpotFleetBlockDeviceMapping... blockDeviceMappings) {
+            return blockDeviceMappings(List.of(blockDeviceMappings));
+        }
         public Builder ebsOptimized(@Nullable Boolean ebsOptimized) {
             this.ebsOptimized = ebsOptimized;
             return this;
         }
-
         public Builder iamInstanceProfile(@Nullable SpotFleetIamInstanceProfileSpecification iamInstanceProfile) {
             this.iamInstanceProfile = iamInstanceProfile;
             return this;
         }
-
         public Builder imageId(String imageId) {
             this.imageId = Objects.requireNonNull(imageId);
             return this;
         }
-
         public Builder instanceRequirements(@Nullable SpotFleetInstanceRequirementsRequest instanceRequirements) {
             this.instanceRequirements = instanceRequirements;
             return this;
         }
-
         public Builder instanceType(@Nullable String instanceType) {
             this.instanceType = instanceType;
             return this;
         }
-
         public Builder kernelId(@Nullable String kernelId) {
             this.kernelId = kernelId;
             return this;
         }
-
         public Builder keyName(@Nullable String keyName) {
             this.keyName = keyName;
             return this;
         }
-
         public Builder monitoring(@Nullable SpotFleetMonitoring monitoring) {
             this.monitoring = monitoring;
             return this;
         }
-
         public Builder networkInterfaces(@Nullable List<SpotFleetInstanceNetworkInterfaceSpecification> networkInterfaces) {
             this.networkInterfaces = networkInterfaces;
             return this;
         }
-
+        public Builder networkInterfaces(SpotFleetInstanceNetworkInterfaceSpecification... networkInterfaces) {
+            return networkInterfaces(List.of(networkInterfaces));
+        }
         public Builder placement(@Nullable SpotFleetSpotPlacement placement) {
             this.placement = placement;
             return this;
         }
-
         public Builder ramdiskId(@Nullable String ramdiskId) {
             this.ramdiskId = ramdiskId;
             return this;
         }
-
         public Builder securityGroups(@Nullable List<SpotFleetGroupIdentifier> securityGroups) {
             this.securityGroups = securityGroups;
             return this;
         }
-
+        public Builder securityGroups(SpotFleetGroupIdentifier... securityGroups) {
+            return securityGroups(List.of(securityGroups));
+        }
         public Builder spotPrice(@Nullable String spotPrice) {
             this.spotPrice = spotPrice;
             return this;
         }
-
         public Builder subnetId(@Nullable String subnetId) {
             this.subnetId = subnetId;
             return this;
         }
-
         public Builder tagSpecifications(@Nullable List<SpotFleetTagSpecification> tagSpecifications) {
             this.tagSpecifications = tagSpecifications;
             return this;
         }
-
+        public Builder tagSpecifications(SpotFleetTagSpecification... tagSpecifications) {
+            return tagSpecifications(List.of(tagSpecifications));
+        }
         public Builder userData(@Nullable String userData) {
             this.userData = userData;
             return this;
         }
-
         public Builder weightedCapacity(@Nullable Double weightedCapacity) {
             this.weightedCapacity = weightedCapacity;
             return this;
-        }
-        public SpotFleetLaunchSpecification build() {
+        }        public SpotFleetLaunchSpecification build() {
             return new SpotFleetLaunchSpecification(blockDeviceMappings, ebsOptimized, iamInstanceProfile, imageId, instanceRequirements, instanceType, kernelId, keyName, monitoring, networkInterfaces, placement, ramdiskId, securityGroups, spotPrice, subnetId, tagSpecifications, userData, weightedCapacity);
         }
     }

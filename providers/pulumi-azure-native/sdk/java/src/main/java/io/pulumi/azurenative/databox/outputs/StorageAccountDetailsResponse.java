@@ -71,12 +71,10 @@ public final class StorageAccountDetailsResponse {
             this.dataAccountType = Objects.requireNonNull(dataAccountType);
             return this;
         }
-
         public Builder storageAccountId(String storageAccountId) {
             this.storageAccountId = Objects.requireNonNull(storageAccountId);
             return this;
-        }
-        public StorageAccountDetailsResponse build() {
+        }        public StorageAccountDetailsResponse build() {
             return new StorageAccountDetailsResponse(dataAccountType, storageAccountId);
         }
     }

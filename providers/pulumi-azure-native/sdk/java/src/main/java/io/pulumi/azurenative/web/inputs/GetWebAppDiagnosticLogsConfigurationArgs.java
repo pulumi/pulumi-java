@@ -72,12 +72,10 @@ public final class GetWebAppDiagnosticLogsConfigurationArgs extends io.pulumi.re
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
-        }
-        public GetWebAppDiagnosticLogsConfigurationArgs build() {
+        }        public GetWebAppDiagnosticLogsConfigurationArgs build() {
             return new GetWebAppDiagnosticLogsConfigurationArgs(name, resourceGroupName);
         }
     }

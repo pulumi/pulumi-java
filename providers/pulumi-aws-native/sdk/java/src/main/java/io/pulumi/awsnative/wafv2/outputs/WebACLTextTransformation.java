@@ -54,12 +54,10 @@ public final class WebACLTextTransformation {
             this.priority = Objects.requireNonNull(priority);
             return this;
         }
-
         public Builder type(WebACLTextTransformationType type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public WebACLTextTransformation build() {
+        }        public WebACLTextTransformation build() {
             return new WebACLTextTransformation(priority, type);
         }
     }

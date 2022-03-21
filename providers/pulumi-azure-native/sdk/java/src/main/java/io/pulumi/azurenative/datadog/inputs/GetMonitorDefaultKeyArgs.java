@@ -72,12 +72,10 @@ public final class GetMonitorDefaultKeyArgs extends io.pulumi.resources.InvokeAr
             this.monitorName = Objects.requireNonNull(monitorName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
-        }
-        public GetMonitorDefaultKeyArgs build() {
+        }        public GetMonitorDefaultKeyArgs build() {
             return new GetMonitorDefaultKeyArgs(monitorName, resourceGroupName);
         }
     }

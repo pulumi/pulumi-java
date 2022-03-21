@@ -53,8 +53,7 @@ public final class JobNotificationProperty {
         public Builder notifyDelayAfter(@Nullable Integer notifyDelayAfter) {
             this.notifyDelayAfter = notifyDelayAfter;
             return this;
-        }
-        public JobNotificationProperty build() {
+        }        public JobNotificationProperty build() {
             return new JobNotificationProperty(notifyDelayAfter);
         }
     }

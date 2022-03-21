@@ -80,27 +80,22 @@ public final class ContainerVolume {
             this.containerPath = containerPath;
             return this;
         }
-
         public Builder fromContainer(@Nullable String fromContainer) {
             this.fromContainer = fromContainer;
             return this;
         }
-
         public Builder hostPath(@Nullable String hostPath) {
             this.hostPath = hostPath;
             return this;
         }
-
         public Builder readOnly(@Nullable Boolean readOnly) {
             this.readOnly = readOnly;
             return this;
         }
-
         public Builder volumeName(@Nullable String volumeName) {
             this.volumeName = volumeName;
             return this;
-        }
-        public ContainerVolume build() {
+        }        public ContainerVolume build() {
             return new ContainerVolume(containerPath, fromContainer, hostPath, readOnly, volumeName);
         }
     }

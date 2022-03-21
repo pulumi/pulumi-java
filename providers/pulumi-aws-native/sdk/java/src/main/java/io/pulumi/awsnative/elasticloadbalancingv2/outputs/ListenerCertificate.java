@@ -45,8 +45,7 @@ public final class ListenerCertificate {
         public Builder certificateArn(@Nullable String certificateArn) {
             this.certificateArn = certificateArn;
             return this;
-        }
-        public ListenerCertificate build() {
+        }        public ListenerCertificate build() {
             return new ListenerCertificate(certificateArn);
         }
     }

@@ -69,12 +69,10 @@ public final class FleetIdentityProvider {
             this.samlMetadata = Objects.requireNonNull(samlMetadata);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public FleetIdentityProvider build() {
+        }        public FleetIdentityProvider build() {
             return new FleetIdentityProvider(samlMetadata, type);
         }
     }

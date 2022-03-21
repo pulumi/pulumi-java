@@ -51,8 +51,7 @@ public final class GoogleCloudDatalabelingV1beta1PdfInstructionResponse {
         public Builder gcsFileUri(String gcsFileUri) {
             this.gcsFileUri = Objects.requireNonNull(gcsFileUri);
             return this;
-        }
-        public GoogleCloudDatalabelingV1beta1PdfInstructionResponse build() {
+        }        public GoogleCloudDatalabelingV1beta1PdfInstructionResponse build() {
             return new GoogleCloudDatalabelingV1beta1PdfInstructionResponse(gcsFileUri);
         }
     }

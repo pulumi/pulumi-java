@@ -257,112 +257,105 @@ public final class TriggerBuildStepGetArgs extends io.pulumi.resources.ResourceA
             this.args = args;
             return this;
         }
-
         public Builder args(@Nullable List<String> args) {
             this.args = Output.ofNullable(args);
             return this;
         }
-
+        public Builder args(String... args) {
+            return args(List.of(args));
+        }
         public Builder dir(@Nullable Output<String> dir) {
             this.dir = dir;
             return this;
         }
-
         public Builder dir(@Nullable String dir) {
             this.dir = Output.ofNullable(dir);
             return this;
         }
-
         public Builder entrypoint(@Nullable Output<String> entrypoint) {
             this.entrypoint = entrypoint;
             return this;
         }
-
         public Builder entrypoint(@Nullable String entrypoint) {
             this.entrypoint = Output.ofNullable(entrypoint);
             return this;
         }
-
         public Builder envs(@Nullable Output<List<String>> envs) {
             this.envs = envs;
             return this;
         }
-
         public Builder envs(@Nullable List<String> envs) {
             this.envs = Output.ofNullable(envs);
             return this;
         }
-
+        public Builder envs(String... envs) {
+            return envs(List.of(envs));
+        }
         public Builder id(@Nullable Output<String> id) {
             this.id = id;
             return this;
         }
-
         public Builder id(@Nullable String id) {
             this.id = Output.ofNullable(id);
             return this;
         }
-
         public Builder name(Output<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
-
         public Builder secretEnvs(@Nullable Output<List<String>> secretEnvs) {
             this.secretEnvs = secretEnvs;
             return this;
         }
-
         public Builder secretEnvs(@Nullable List<String> secretEnvs) {
             this.secretEnvs = Output.ofNullable(secretEnvs);
             return this;
         }
-
+        public Builder secretEnvs(String... secretEnvs) {
+            return secretEnvs(List.of(secretEnvs));
+        }
         public Builder timeout(@Nullable Output<String> timeout) {
             this.timeout = timeout;
             return this;
         }
-
         public Builder timeout(@Nullable String timeout) {
             this.timeout = Output.ofNullable(timeout);
             return this;
         }
-
         public Builder timing(@Nullable Output<String> timing) {
             this.timing = timing;
             return this;
         }
-
         public Builder timing(@Nullable String timing) {
             this.timing = Output.ofNullable(timing);
             return this;
         }
-
         public Builder volumes(@Nullable Output<List<TriggerBuildStepVolumeGetArgs>> volumes) {
             this.volumes = volumes;
             return this;
         }
-
         public Builder volumes(@Nullable List<TriggerBuildStepVolumeGetArgs> volumes) {
             this.volumes = Output.ofNullable(volumes);
             return this;
         }
-
+        public Builder volumes(TriggerBuildStepVolumeGetArgs... volumes) {
+            return volumes(List.of(volumes));
+        }
         public Builder waitFors(@Nullable Output<List<String>> waitFors) {
             this.waitFors = waitFors;
             return this;
         }
-
         public Builder waitFors(@Nullable List<String> waitFors) {
             this.waitFors = Output.ofNullable(waitFors);
             return this;
         }
-        public TriggerBuildStepGetArgs build() {
+        public Builder waitFors(String... waitFors) {
+            return waitFors(List.of(waitFors));
+        }        public TriggerBuildStepGetArgs build() {
             return new TriggerBuildStepGetArgs(args, dir, entrypoint, envs, id, name, secretEnvs, timeout, timing, volumes, waitFors);
         }
     }

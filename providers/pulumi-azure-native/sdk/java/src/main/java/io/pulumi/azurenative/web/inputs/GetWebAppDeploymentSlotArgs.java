@@ -104,22 +104,18 @@ public final class GetWebAppDeploymentSlotArgs extends io.pulumi.resources.Invok
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder slot(String slot) {
             this.slot = Objects.requireNonNull(slot);
             return this;
-        }
-        public GetWebAppDeploymentSlotArgs build() {
+        }        public GetWebAppDeploymentSlotArgs build() {
             return new GetWebAppDeploymentSlotArgs(id, name, resourceGroupName, slot);
         }
     }

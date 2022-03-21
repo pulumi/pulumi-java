@@ -78,12 +78,10 @@ public final class LinkBandwidth extends io.pulumi.resources.InvokeArgs {
             this.downloadSpeed = downloadSpeed;
             return this;
         }
-
         public Builder uploadSpeed(@Nullable Integer uploadSpeed) {
             this.uploadSpeed = uploadSpeed;
             return this;
-        }
-        public LinkBandwidth build() {
+        }        public LinkBandwidth build() {
             return new LinkBandwidth(downloadSpeed, uploadSpeed);
         }
     }

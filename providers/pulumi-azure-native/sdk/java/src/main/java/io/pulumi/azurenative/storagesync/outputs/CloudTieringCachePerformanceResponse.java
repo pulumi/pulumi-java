@@ -103,22 +103,18 @@ public final class CloudTieringCachePerformanceResponse {
             this.cacheHitBytes = Objects.requireNonNull(cacheHitBytes);
             return this;
         }
-
         public Builder cacheHitBytesPercent(Integer cacheHitBytesPercent) {
             this.cacheHitBytesPercent = Objects.requireNonNull(cacheHitBytesPercent);
             return this;
         }
-
         public Builder cacheMissBytes(Double cacheMissBytes) {
             this.cacheMissBytes = Objects.requireNonNull(cacheMissBytes);
             return this;
         }
-
         public Builder lastUpdatedTimestamp(String lastUpdatedTimestamp) {
             this.lastUpdatedTimestamp = Objects.requireNonNull(lastUpdatedTimestamp);
             return this;
-        }
-        public CloudTieringCachePerformanceResponse build() {
+        }        public CloudTieringCachePerformanceResponse build() {
             return new CloudTieringCachePerformanceResponse(cacheHitBytes, cacheHitBytesPercent, cacheMissBytes, lastUpdatedTimestamp);
         }
     }

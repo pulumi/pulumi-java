@@ -72,12 +72,13 @@ public final class GetTdeCertificatesSqlTaskOutputResponse {
             this.base64EncodedCertificates = Objects.requireNonNull(base64EncodedCertificates);
             return this;
         }
-
         public Builder validationErrors(List<ReportableExceptionResponse> validationErrors) {
             this.validationErrors = Objects.requireNonNull(validationErrors);
             return this;
         }
-        public GetTdeCertificatesSqlTaskOutputResponse build() {
+        public Builder validationErrors(ReportableExceptionResponse... validationErrors) {
+            return validationErrors(List.of(validationErrors));
+        }        public GetTdeCertificatesSqlTaskOutputResponse build() {
             return new GetTdeCertificatesSqlTaskOutputResponse(base64EncodedCertificates, validationErrors);
         }
     }

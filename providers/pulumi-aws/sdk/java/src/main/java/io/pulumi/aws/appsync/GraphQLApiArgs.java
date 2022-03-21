@@ -210,102 +210,85 @@ public final class GraphQLApiArgs extends io.pulumi.resources.ResourceArgs {
             this.additionalAuthenticationProviders = additionalAuthenticationProviders;
             return this;
         }
-
         public Builder additionalAuthenticationProviders(@Nullable List<GraphQLApiAdditionalAuthenticationProviderArgs> additionalAuthenticationProviders) {
             this.additionalAuthenticationProviders = Output.ofNullable(additionalAuthenticationProviders);
             return this;
         }
-
+        public Builder additionalAuthenticationProviders(GraphQLApiAdditionalAuthenticationProviderArgs... additionalAuthenticationProviders) {
+            return additionalAuthenticationProviders(List.of(additionalAuthenticationProviders));
+        }
         public Builder authenticationType(Output<String> authenticationType) {
             this.authenticationType = Objects.requireNonNull(authenticationType);
             return this;
         }
-
         public Builder authenticationType(String authenticationType) {
             this.authenticationType = Output.of(Objects.requireNonNull(authenticationType));
             return this;
         }
-
         public Builder lambdaAuthorizerConfig(@Nullable Output<GraphQLApiLambdaAuthorizerConfigArgs> lambdaAuthorizerConfig) {
             this.lambdaAuthorizerConfig = lambdaAuthorizerConfig;
             return this;
         }
-
         public Builder lambdaAuthorizerConfig(@Nullable GraphQLApiLambdaAuthorizerConfigArgs lambdaAuthorizerConfig) {
             this.lambdaAuthorizerConfig = Output.ofNullable(lambdaAuthorizerConfig);
             return this;
         }
-
         public Builder logConfig(@Nullable Output<GraphQLApiLogConfigArgs> logConfig) {
             this.logConfig = logConfig;
             return this;
         }
-
         public Builder logConfig(@Nullable GraphQLApiLogConfigArgs logConfig) {
             this.logConfig = Output.ofNullable(logConfig);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder openidConnectConfig(@Nullable Output<GraphQLApiOpenidConnectConfigArgs> openidConnectConfig) {
             this.openidConnectConfig = openidConnectConfig;
             return this;
         }
-
         public Builder openidConnectConfig(@Nullable GraphQLApiOpenidConnectConfigArgs openidConnectConfig) {
             this.openidConnectConfig = Output.ofNullable(openidConnectConfig);
             return this;
         }
-
         public Builder schema(@Nullable Output<String> schema) {
             this.schema = schema;
             return this;
         }
-
         public Builder schema(@Nullable String schema) {
             this.schema = Output.ofNullable(schema);
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
         public Builder userPoolConfig(@Nullable Output<GraphQLApiUserPoolConfigArgs> userPoolConfig) {
             this.userPoolConfig = userPoolConfig;
             return this;
         }
-
         public Builder userPoolConfig(@Nullable GraphQLApiUserPoolConfigArgs userPoolConfig) {
             this.userPoolConfig = Output.ofNullable(userPoolConfig);
             return this;
         }
-
         public Builder xrayEnabled(@Nullable Output<Boolean> xrayEnabled) {
             this.xrayEnabled = xrayEnabled;
             return this;
         }
-
         public Builder xrayEnabled(@Nullable Boolean xrayEnabled) {
             this.xrayEnabled = Output.ofNullable(xrayEnabled);
             return this;
-        }
-        public GraphQLApiArgs build() {
+        }        public GraphQLApiArgs build() {
             return new GraphQLApiArgs(additionalAuthenticationProviders, authenticationType, lambdaAuthorizerConfig, logConfig, name, openidConnectConfig, schema, tags, userPoolConfig, xrayEnabled);
         }
     }

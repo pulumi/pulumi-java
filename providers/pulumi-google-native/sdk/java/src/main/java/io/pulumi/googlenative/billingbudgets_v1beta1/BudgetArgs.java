@@ -155,72 +155,61 @@ public final class BudgetArgs extends io.pulumi.resources.ResourceArgs {
             this.allUpdatesRule = allUpdatesRule;
             return this;
         }
-
         public Builder allUpdatesRule(@Nullable GoogleCloudBillingBudgetsV1beta1AllUpdatesRuleArgs allUpdatesRule) {
             this.allUpdatesRule = Output.ofNullable(allUpdatesRule);
             return this;
         }
-
         public Builder amount(Output<GoogleCloudBillingBudgetsV1beta1BudgetAmountArgs> amount) {
             this.amount = Objects.requireNonNull(amount);
             return this;
         }
-
         public Builder amount(GoogleCloudBillingBudgetsV1beta1BudgetAmountArgs amount) {
             this.amount = Output.of(Objects.requireNonNull(amount));
             return this;
         }
-
         public Builder billingAccountId(Output<String> billingAccountId) {
             this.billingAccountId = Objects.requireNonNull(billingAccountId);
             return this;
         }
-
         public Builder billingAccountId(String billingAccountId) {
             this.billingAccountId = Output.of(Objects.requireNonNull(billingAccountId));
             return this;
         }
-
         public Builder budgetFilter(@Nullable Output<GoogleCloudBillingBudgetsV1beta1FilterArgs> budgetFilter) {
             this.budgetFilter = budgetFilter;
             return this;
         }
-
         public Builder budgetFilter(@Nullable GoogleCloudBillingBudgetsV1beta1FilterArgs budgetFilter) {
             this.budgetFilter = Output.ofNullable(budgetFilter);
             return this;
         }
-
         public Builder displayName(@Nullable Output<String> displayName) {
             this.displayName = displayName;
             return this;
         }
-
         public Builder displayName(@Nullable String displayName) {
             this.displayName = Output.ofNullable(displayName);
             return this;
         }
-
         public Builder etag(@Nullable Output<String> etag) {
             this.etag = etag;
             return this;
         }
-
         public Builder etag(@Nullable String etag) {
             this.etag = Output.ofNullable(etag);
             return this;
         }
-
         public Builder thresholdRules(@Nullable Output<List<GoogleCloudBillingBudgetsV1beta1ThresholdRuleArgs>> thresholdRules) {
             this.thresholdRules = thresholdRules;
             return this;
         }
-
         public Builder thresholdRules(@Nullable List<GoogleCloudBillingBudgetsV1beta1ThresholdRuleArgs> thresholdRules) {
             this.thresholdRules = Output.ofNullable(thresholdRules);
             return this;
         }
-        public BudgetArgs build() {
+        public Builder thresholdRules(GoogleCloudBillingBudgetsV1beta1ThresholdRuleArgs... thresholdRules) {
+            return thresholdRules(List.of(thresholdRules));
+        }        public BudgetArgs build() {
             return new BudgetArgs(allUpdatesRule, amount, billingAccountId, budgetFilter, displayName, etag, thresholdRules);
         }
     }

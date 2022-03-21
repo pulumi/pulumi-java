@@ -79,12 +79,10 @@ public final class ScaleSettingsResponse extends io.pulumi.resources.InvokeArgs 
             this.autoScale = autoScale;
             return this;
         }
-
         public Builder fixedScale(@Nullable FixedScaleSettingsResponse fixedScale) {
             this.fixedScale = fixedScale;
             return this;
-        }
-        public ScaleSettingsResponse build() {
+        }        public ScaleSettingsResponse build() {
             return new ScaleSettingsResponse(autoScale, fixedScale);
         }
     }

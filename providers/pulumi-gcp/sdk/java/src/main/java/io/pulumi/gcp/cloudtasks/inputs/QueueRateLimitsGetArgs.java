@@ -100,32 +100,26 @@ public final class QueueRateLimitsGetArgs extends io.pulumi.resources.ResourceAr
             this.maxBurstSize = maxBurstSize;
             return this;
         }
-
         public Builder maxBurstSize(@Nullable Integer maxBurstSize) {
             this.maxBurstSize = Output.ofNullable(maxBurstSize);
             return this;
         }
-
         public Builder maxConcurrentDispatches(@Nullable Output<Integer> maxConcurrentDispatches) {
             this.maxConcurrentDispatches = maxConcurrentDispatches;
             return this;
         }
-
         public Builder maxConcurrentDispatches(@Nullable Integer maxConcurrentDispatches) {
             this.maxConcurrentDispatches = Output.ofNullable(maxConcurrentDispatches);
             return this;
         }
-
         public Builder maxDispatchesPerSecond(@Nullable Output<Double> maxDispatchesPerSecond) {
             this.maxDispatchesPerSecond = maxDispatchesPerSecond;
             return this;
         }
-
         public Builder maxDispatchesPerSecond(@Nullable Double maxDispatchesPerSecond) {
             this.maxDispatchesPerSecond = Output.ofNullable(maxDispatchesPerSecond);
             return this;
-        }
-        public QueueRateLimitsGetArgs build() {
+        }        public QueueRateLimitsGetArgs build() {
             return new QueueRateLimitsGetArgs(maxBurstSize, maxConcurrentDispatches, maxDispatchesPerSecond);
         }
     }

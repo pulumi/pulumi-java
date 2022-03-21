@@ -121,22 +121,18 @@ public final class RegionPerInstanceConfigPreservedStateDisk {
             this.deleteRule = deleteRule;
             return this;
         }
-
         public Builder deviceName(String deviceName) {
             this.deviceName = Objects.requireNonNull(deviceName);
             return this;
         }
-
         public Builder mode(@Nullable String mode) {
             this.mode = mode;
             return this;
         }
-
         public Builder source(String source) {
             this.source = Objects.requireNonNull(source);
             return this;
-        }
-        public RegionPerInstanceConfigPreservedStateDisk build() {
+        }        public RegionPerInstanceConfigPreservedStateDisk build() {
             return new RegionPerInstanceConfigPreservedStateDisk(deleteRule, deviceName, mode, source);
         }
     }

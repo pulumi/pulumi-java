@@ -72,12 +72,10 @@ public final class SELinuxStrategyOptions {
             this.rule = Objects.requireNonNull(rule);
             return this;
         }
-
         public Builder seLinuxOptions(@Nullable SELinuxOptions seLinuxOptions) {
             this.seLinuxOptions = seLinuxOptions;
             return this;
-        }
-        public SELinuxStrategyOptions build() {
+        }        public SELinuxStrategyOptions build() {
             return new SELinuxStrategyOptions(rule, seLinuxOptions);
         }
     }

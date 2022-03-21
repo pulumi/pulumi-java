@@ -51,8 +51,7 @@ public final class NodeConfigDefaultsResponse {
         public Builder gcfsConfig(GcfsConfigResponse gcfsConfig) {
             this.gcfsConfig = Objects.requireNonNull(gcfsConfig);
             return this;
-        }
-        public NodeConfigDefaultsResponse build() {
+        }        public NodeConfigDefaultsResponse build() {
             return new NodeConfigDefaultsResponse(gcfsConfig);
         }
     }

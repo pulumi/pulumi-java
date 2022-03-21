@@ -150,32 +150,35 @@ public final class ValidateMigrationInputSqlServerSqlMITaskPropertiesResponse ex
             this.commands = Objects.requireNonNull(commands);
             return this;
         }
-
+        public Builder commands(Either<MigrateMISyncCompleteCommandPropertiesResponse,MigrateSyncCompleteCommandPropertiesResponse>... commands) {
+            return commands(List.of(commands));
+        }
         public Builder errors(List<ODataErrorResponse> errors) {
             this.errors = Objects.requireNonNull(errors);
             return this;
         }
-
+        public Builder errors(ODataErrorResponse... errors) {
+            return errors(List.of(errors));
+        }
         public Builder input(@Nullable ValidateMigrationInputSqlServerSqlMITaskInputResponse input) {
             this.input = input;
             return this;
         }
-
         public Builder output(List<ValidateMigrationInputSqlServerSqlMITaskOutputResponse> output) {
             this.output = Objects.requireNonNull(output);
             return this;
         }
-
+        public Builder output(ValidateMigrationInputSqlServerSqlMITaskOutputResponse... output) {
+            return output(List.of(output));
+        }
         public Builder state(String state) {
             this.state = Objects.requireNonNull(state);
             return this;
         }
-
         public Builder taskType(String taskType) {
             this.taskType = Objects.requireNonNull(taskType);
             return this;
-        }
-        public ValidateMigrationInputSqlServerSqlMITaskPropertiesResponse build() {
+        }        public ValidateMigrationInputSqlServerSqlMITaskPropertiesResponse build() {
             return new ValidateMigrationInputSqlServerSqlMITaskPropertiesResponse(commands, errors, input, output, state, taskType);
         }
     }

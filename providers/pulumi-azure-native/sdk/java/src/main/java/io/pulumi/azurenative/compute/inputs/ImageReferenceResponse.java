@@ -142,32 +142,26 @@ public final class ImageReferenceResponse extends io.pulumi.resources.InvokeArgs
             this.exactVersion = Objects.requireNonNull(exactVersion);
             return this;
         }
-
         public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
-
         public Builder offer(@Nullable String offer) {
             this.offer = offer;
             return this;
         }
-
         public Builder publisher(@Nullable String publisher) {
             this.publisher = publisher;
             return this;
         }
-
         public Builder sku(@Nullable String sku) {
             this.sku = sku;
             return this;
         }
-
         public Builder version(@Nullable String version) {
             this.version = version;
             return this;
-        }
-        public ImageReferenceResponse build() {
+        }        public ImageReferenceResponse build() {
             return new ImageReferenceResponse(exactVersion, id, offer, publisher, sku, version);
         }
     }

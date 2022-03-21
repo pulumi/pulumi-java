@@ -58,12 +58,13 @@ public final class FindingsFilterFindingCriteriaArgs extends io.pulumi.resources
             this.criterions = criterions;
             return this;
         }
-
         public Builder criterions(@Nullable List<FindingsFilterFindingCriteriaCriterionArgs> criterions) {
             this.criterions = Output.ofNullable(criterions);
             return this;
         }
-        public FindingsFilterFindingCriteriaArgs build() {
+        public Builder criterions(FindingsFilterFindingCriteriaCriterionArgs... criterions) {
+            return criterions(List.of(criterions));
+        }        public FindingsFilterFindingCriteriaArgs build() {
             return new FindingsFilterFindingCriteriaArgs(criterions);
         }
     }

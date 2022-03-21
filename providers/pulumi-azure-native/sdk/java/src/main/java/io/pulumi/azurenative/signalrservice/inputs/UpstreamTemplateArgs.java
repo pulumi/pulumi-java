@@ -124,42 +124,34 @@ public final class UpstreamTemplateArgs extends io.pulumi.resources.ResourceArgs
             this.categoryPattern = categoryPattern;
             return this;
         }
-
         public Builder categoryPattern(@Nullable String categoryPattern) {
             this.categoryPattern = Output.ofNullable(categoryPattern);
             return this;
         }
-
         public Builder eventPattern(@Nullable Output<String> eventPattern) {
             this.eventPattern = eventPattern;
             return this;
         }
-
         public Builder eventPattern(@Nullable String eventPattern) {
             this.eventPattern = Output.ofNullable(eventPattern);
             return this;
         }
-
         public Builder hubPattern(@Nullable Output<String> hubPattern) {
             this.hubPattern = hubPattern;
             return this;
         }
-
         public Builder hubPattern(@Nullable String hubPattern) {
             this.hubPattern = Output.ofNullable(hubPattern);
             return this;
         }
-
         public Builder urlTemplate(Output<String> urlTemplate) {
             this.urlTemplate = Objects.requireNonNull(urlTemplate);
             return this;
         }
-
         public Builder urlTemplate(String urlTemplate) {
             this.urlTemplate = Output.of(Objects.requireNonNull(urlTemplate));
             return this;
-        }
-        public UpstreamTemplateArgs build() {
+        }        public UpstreamTemplateArgs build() {
             return new UpstreamTemplateArgs(categoryPattern, eventPattern, hubPattern, urlTemplate);
         }
     }

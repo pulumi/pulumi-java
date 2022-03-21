@@ -207,102 +207,88 @@ public final class FeatureState extends io.pulumi.resources.ResourceArgs {
             this.createTime = createTime;
             return this;
         }
-
         public Builder createTime(@Nullable String createTime) {
             this.createTime = Output.ofNullable(createTime);
             return this;
         }
-
         public Builder deleteTime(@Nullable Output<String> deleteTime) {
             this.deleteTime = deleteTime;
             return this;
         }
-
         public Builder deleteTime(@Nullable String deleteTime) {
             this.deleteTime = Output.ofNullable(deleteTime);
             return this;
         }
-
         public Builder labels(@Nullable Output<Map<String,String>> labels) {
             this.labels = labels;
             return this;
         }
-
         public Builder labels(@Nullable Map<String,String> labels) {
             this.labels = Output.ofNullable(labels);
             return this;
         }
-
         public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
         }
-
         public Builder resourceStates(@Nullable Output<List<FeatureResourceStateGetArgs>> resourceStates) {
             this.resourceStates = resourceStates;
             return this;
         }
-
         public Builder resourceStates(@Nullable List<FeatureResourceStateGetArgs> resourceStates) {
             this.resourceStates = Output.ofNullable(resourceStates);
             return this;
         }
-
+        public Builder resourceStates(FeatureResourceStateGetArgs... resourceStates) {
+            return resourceStates(List.of(resourceStates));
+        }
         public Builder spec(@Nullable Output<FeatureSpecGetArgs> spec) {
             this.spec = spec;
             return this;
         }
-
         public Builder spec(@Nullable FeatureSpecGetArgs spec) {
             this.spec = Output.ofNullable(spec);
             return this;
         }
-
         public Builder states(@Nullable Output<List<FeatureStateGetArgs>> states) {
             this.states = states;
             return this;
         }
-
         public Builder states(@Nullable List<FeatureStateGetArgs> states) {
             this.states = Output.ofNullable(states);
             return this;
         }
-
+        public Builder states(FeatureStateGetArgs... states) {
+            return states(List.of(states));
+        }
         public Builder updateTime(@Nullable Output<String> updateTime) {
             this.updateTime = updateTime;
             return this;
         }
-
         public Builder updateTime(@Nullable String updateTime) {
             this.updateTime = Output.ofNullable(updateTime);
             return this;
-        }
-        public FeatureState build() {
+        }        public FeatureState build() {
             return new FeatureState(createTime, deleteTime, labels, location, name, project, resourceStates, spec, states, updateTime);
         }
     }

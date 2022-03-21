@@ -70,12 +70,10 @@ public final class WorkflowTemplatePlacementResponse {
             this.clusterSelector = Objects.requireNonNull(clusterSelector);
             return this;
         }
-
         public Builder managedCluster(ManagedClusterResponse managedCluster) {
             this.managedCluster = Objects.requireNonNull(managedCluster);
             return this;
-        }
-        public WorkflowTemplatePlacementResponse build() {
+        }        public WorkflowTemplatePlacementResponse build() {
             return new WorkflowTemplatePlacementResponse(clusterSelector, managedCluster);
         }
     }

@@ -102,27 +102,22 @@ public final class GetVersionArgs extends io.pulumi.resources.InvokeArgs {
             this.agentId = Objects.requireNonNull(agentId);
             return this;
         }
-
         public Builder flowId(String flowId) {
             this.flowId = Objects.requireNonNull(flowId);
             return this;
         }
-
         public Builder location(String location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = project;
             return this;
         }
-
         public Builder versionId(String versionId) {
             this.versionId = Objects.requireNonNull(versionId);
             return this;
-        }
-        public GetVersionArgs build() {
+        }        public GetVersionArgs build() {
             return new GetVersionArgs(agentId, flowId, location, project, versionId);
         }
     }

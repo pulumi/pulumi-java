@@ -117,42 +117,34 @@ public final class ArmApplicationHealthPolicyArgs extends io.pulumi.resources.Re
             this.considerWarningAsError = considerWarningAsError;
             return this;
         }
-
         public Builder considerWarningAsError(@Nullable Boolean considerWarningAsError) {
             this.considerWarningAsError = Output.ofNullable(considerWarningAsError);
             return this;
         }
-
         public Builder defaultServiceTypeHealthPolicy(@Nullable Output<ArmServiceTypeHealthPolicyArgs> defaultServiceTypeHealthPolicy) {
             this.defaultServiceTypeHealthPolicy = defaultServiceTypeHealthPolicy;
             return this;
         }
-
         public Builder defaultServiceTypeHealthPolicy(@Nullable ArmServiceTypeHealthPolicyArgs defaultServiceTypeHealthPolicy) {
             this.defaultServiceTypeHealthPolicy = Output.ofNullable(defaultServiceTypeHealthPolicy);
             return this;
         }
-
         public Builder maxPercentUnhealthyDeployedApplications(@Nullable Output<Integer> maxPercentUnhealthyDeployedApplications) {
             this.maxPercentUnhealthyDeployedApplications = maxPercentUnhealthyDeployedApplications;
             return this;
         }
-
         public Builder maxPercentUnhealthyDeployedApplications(@Nullable Integer maxPercentUnhealthyDeployedApplications) {
             this.maxPercentUnhealthyDeployedApplications = Output.ofNullable(maxPercentUnhealthyDeployedApplications);
             return this;
         }
-
         public Builder serviceTypeHealthPolicyMap(@Nullable Output<Map<String,ArmServiceTypeHealthPolicyArgs>> serviceTypeHealthPolicyMap) {
             this.serviceTypeHealthPolicyMap = serviceTypeHealthPolicyMap;
             return this;
         }
-
         public Builder serviceTypeHealthPolicyMap(@Nullable Map<String,ArmServiceTypeHealthPolicyArgs> serviceTypeHealthPolicyMap) {
             this.serviceTypeHealthPolicyMap = Output.ofNullable(serviceTypeHealthPolicyMap);
             return this;
-        }
-        public ArmApplicationHealthPolicyArgs build() {
+        }        public ArmApplicationHealthPolicyArgs build() {
             return new ArmApplicationHealthPolicyArgs(considerWarningAsError, defaultServiceTypeHealthPolicy, maxPercentUnhealthyDeployedApplications, serviceTypeHealthPolicyMap);
         }
     }

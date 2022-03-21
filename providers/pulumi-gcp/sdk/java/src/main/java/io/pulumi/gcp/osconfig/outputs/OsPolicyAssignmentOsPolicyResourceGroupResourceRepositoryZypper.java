@@ -104,22 +104,21 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourceRepositoryZypp
             this.baseUrl = Objects.requireNonNull(baseUrl);
             return this;
         }
-
         public Builder displayName(@Nullable String displayName) {
             this.displayName = displayName;
             return this;
         }
-
         public Builder gpgKeys(@Nullable List<String> gpgKeys) {
             this.gpgKeys = gpgKeys;
             return this;
         }
-
+        public Builder gpgKeys(String... gpgKeys) {
+            return gpgKeys(List.of(gpgKeys));
+        }
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
-        }
-        public OsPolicyAssignmentOsPolicyResourceGroupResourceRepositoryZypper build() {
+        }        public OsPolicyAssignmentOsPolicyResourceGroupResourceRepositoryZypper build() {
             return new OsPolicyAssignmentOsPolicyResourceGroupResourceRepositoryZypper(baseUrl, displayName, gpgKeys, id);
         }
     }

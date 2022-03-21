@@ -52,12 +52,10 @@ public final class DistributionRestrictionsGetArgs extends io.pulumi.resources.R
             this.geoRestriction = Objects.requireNonNull(geoRestriction);
             return this;
         }
-
         public Builder geoRestriction(DistributionRestrictionsGeoRestrictionGetArgs geoRestriction) {
             this.geoRestriction = Output.of(Objects.requireNonNull(geoRestriction));
             return this;
-        }
-        public DistributionRestrictionsGetArgs build() {
+        }        public DistributionRestrictionsGetArgs build() {
             return new DistributionRestrictionsGetArgs(geoRestriction);
         }
     }

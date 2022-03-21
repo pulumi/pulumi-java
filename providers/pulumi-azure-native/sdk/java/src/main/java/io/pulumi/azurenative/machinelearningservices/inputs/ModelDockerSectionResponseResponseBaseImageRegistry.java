@@ -56,8 +56,7 @@ public final class ModelDockerSectionResponseResponseBaseImageRegistry extends i
         public Builder address(@Nullable String address) {
             this.address = address;
             return this;
-        }
-        public ModelDockerSectionResponseResponseBaseImageRegistry build() {
+        }        public ModelDockerSectionResponseResponseBaseImageRegistry build() {
             return new ModelDockerSectionResponseResponseBaseImageRegistry(address);
         }
     }

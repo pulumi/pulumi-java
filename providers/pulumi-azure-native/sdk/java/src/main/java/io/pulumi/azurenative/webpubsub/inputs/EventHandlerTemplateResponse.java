@@ -119,22 +119,18 @@ public final class EventHandlerTemplateResponse extends io.pulumi.resources.Invo
             this.auth = auth;
             return this;
         }
-
         public Builder systemEventPattern(@Nullable String systemEventPattern) {
             this.systemEventPattern = systemEventPattern;
             return this;
         }
-
         public Builder urlTemplate(String urlTemplate) {
             this.urlTemplate = Objects.requireNonNull(urlTemplate);
             return this;
         }
-
         public Builder userEventPattern(@Nullable String userEventPattern) {
             this.userEventPattern = userEventPattern;
             return this;
-        }
-        public EventHandlerTemplateResponse build() {
+        }        public EventHandlerTemplateResponse build() {
             return new EventHandlerTemplateResponse(auth, systemEventPattern, urlTemplate, userEventPattern);
         }
     }

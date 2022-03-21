@@ -110,42 +110,37 @@ public final class ScalingPlanState extends io.pulumi.resources.ResourceArgs {
             this.applicationSource = applicationSource;
             return this;
         }
-
         public Builder applicationSource(@Nullable ScalingPlanApplicationSourceGetArgs applicationSource) {
             this.applicationSource = Output.ofNullable(applicationSource);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder scalingInstructions(@Nullable Output<List<ScalingPlanScalingInstructionGetArgs>> scalingInstructions) {
             this.scalingInstructions = scalingInstructions;
             return this;
         }
-
         public Builder scalingInstructions(@Nullable List<ScalingPlanScalingInstructionGetArgs> scalingInstructions) {
             this.scalingInstructions = Output.ofNullable(scalingInstructions);
             return this;
         }
-
+        public Builder scalingInstructions(ScalingPlanScalingInstructionGetArgs... scalingInstructions) {
+            return scalingInstructions(List.of(scalingInstructions));
+        }
         public Builder scalingPlanVersion(@Nullable Output<Integer> scalingPlanVersion) {
             this.scalingPlanVersion = scalingPlanVersion;
             return this;
         }
-
         public Builder scalingPlanVersion(@Nullable Integer scalingPlanVersion) {
             this.scalingPlanVersion = Output.ofNullable(scalingPlanVersion);
             return this;
-        }
-        public ScalingPlanState build() {
+        }        public ScalingPlanState build() {
             return new ScalingPlanState(applicationSource, name, scalingInstructions, scalingPlanVersion);
         }
     }

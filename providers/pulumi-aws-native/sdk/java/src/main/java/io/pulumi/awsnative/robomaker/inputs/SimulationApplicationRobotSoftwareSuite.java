@@ -79,12 +79,10 @@ public final class SimulationApplicationRobotSoftwareSuite extends io.pulumi.res
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder version(@Nullable SimulationApplicationRobotSoftwareSuiteVersion version) {
             this.version = version;
             return this;
-        }
-        public SimulationApplicationRobotSoftwareSuite build() {
+        }        public SimulationApplicationRobotSoftwareSuite build() {
             return new SimulationApplicationRobotSoftwareSuite(name, version);
         }
     }

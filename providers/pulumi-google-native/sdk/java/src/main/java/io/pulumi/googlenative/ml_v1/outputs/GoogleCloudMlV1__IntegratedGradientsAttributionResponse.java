@@ -51,8 +51,7 @@ public final class GoogleCloudMlV1__IntegratedGradientsAttributionResponse {
         public Builder numIntegralSteps(Integer numIntegralSteps) {
             this.numIntegralSteps = Objects.requireNonNull(numIntegralSteps);
             return this;
-        }
-        public GoogleCloudMlV1__IntegratedGradientsAttributionResponse build() {
+        }        public GoogleCloudMlV1__IntegratedGradientsAttributionResponse build() {
             return new GoogleCloudMlV1__IntegratedGradientsAttributionResponse(numIntegralSteps);
         }
     }

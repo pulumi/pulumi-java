@@ -193,92 +193,74 @@ public final class X12DelimiterOverridesArgs extends io.pulumi.resources.Resourc
             this.componentSeparator = Objects.requireNonNull(componentSeparator);
             return this;
         }
-
         public Builder componentSeparator(Integer componentSeparator) {
             this.componentSeparator = Output.of(Objects.requireNonNull(componentSeparator));
             return this;
         }
-
         public Builder dataElementSeparator(Output<Integer> dataElementSeparator) {
             this.dataElementSeparator = Objects.requireNonNull(dataElementSeparator);
             return this;
         }
-
         public Builder dataElementSeparator(Integer dataElementSeparator) {
             this.dataElementSeparator = Output.of(Objects.requireNonNull(dataElementSeparator));
             return this;
         }
-
         public Builder messageId(@Nullable Output<String> messageId) {
             this.messageId = messageId;
             return this;
         }
-
         public Builder messageId(@Nullable String messageId) {
             this.messageId = Output.ofNullable(messageId);
             return this;
         }
-
         public Builder protocolVersion(@Nullable Output<String> protocolVersion) {
             this.protocolVersion = protocolVersion;
             return this;
         }
-
         public Builder protocolVersion(@Nullable String protocolVersion) {
             this.protocolVersion = Output.ofNullable(protocolVersion);
             return this;
         }
-
         public Builder replaceCharacter(Output<Integer> replaceCharacter) {
             this.replaceCharacter = Objects.requireNonNull(replaceCharacter);
             return this;
         }
-
         public Builder replaceCharacter(Integer replaceCharacter) {
             this.replaceCharacter = Output.of(Objects.requireNonNull(replaceCharacter));
             return this;
         }
-
         public Builder replaceSeparatorsInPayload(Output<Boolean> replaceSeparatorsInPayload) {
             this.replaceSeparatorsInPayload = Objects.requireNonNull(replaceSeparatorsInPayload);
             return this;
         }
-
         public Builder replaceSeparatorsInPayload(Boolean replaceSeparatorsInPayload) {
             this.replaceSeparatorsInPayload = Output.of(Objects.requireNonNull(replaceSeparatorsInPayload));
             return this;
         }
-
         public Builder segmentTerminator(Output<Integer> segmentTerminator) {
             this.segmentTerminator = Objects.requireNonNull(segmentTerminator);
             return this;
         }
-
         public Builder segmentTerminator(Integer segmentTerminator) {
             this.segmentTerminator = Output.of(Objects.requireNonNull(segmentTerminator));
             return this;
         }
-
         public Builder segmentTerminatorSuffix(Output<SegmentTerminatorSuffix> segmentTerminatorSuffix) {
             this.segmentTerminatorSuffix = Objects.requireNonNull(segmentTerminatorSuffix);
             return this;
         }
-
         public Builder segmentTerminatorSuffix(SegmentTerminatorSuffix segmentTerminatorSuffix) {
             this.segmentTerminatorSuffix = Output.of(Objects.requireNonNull(segmentTerminatorSuffix));
             return this;
         }
-
         public Builder targetNamespace(@Nullable Output<String> targetNamespace) {
             this.targetNamespace = targetNamespace;
             return this;
         }
-
         public Builder targetNamespace(@Nullable String targetNamespace) {
             this.targetNamespace = Output.ofNullable(targetNamespace);
             return this;
-        }
-        public X12DelimiterOverridesArgs build() {
+        }        public X12DelimiterOverridesArgs build() {
             return new X12DelimiterOverridesArgs(componentSeparator, dataElementSeparator, messageId, protocolVersion, replaceCharacter, replaceSeparatorsInPayload, segmentTerminator, segmentTerminatorSuffix, targetNamespace);
         }
     }

@@ -86,17 +86,14 @@ public final class ScheduleOptionsResponse {
             this.disableAutoScheduling = Objects.requireNonNull(disableAutoScheduling);
             return this;
         }
-
         public Builder endTime(String endTime) {
             this.endTime = Objects.requireNonNull(endTime);
             return this;
         }
-
         public Builder startTime(String startTime) {
             this.startTime = Objects.requireNonNull(startTime);
             return this;
-        }
-        public ScheduleOptionsResponse build() {
+        }        public ScheduleOptionsResponse build() {
             return new ScheduleOptionsResponse(disableAutoScheduling, endTime, startTime);
         }
     }

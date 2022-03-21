@@ -94,17 +94,14 @@ public final class JobStepActionResponse extends io.pulumi.resources.InvokeArgs 
             this.source = source;
             return this;
         }
-
         public Builder type(@Nullable String type) {
             this.type = type;
             return this;
         }
-
         public Builder value(String value) {
             this.value = Objects.requireNonNull(value);
             return this;
-        }
-        public JobStepActionResponse build() {
+        }        public JobStepActionResponse build() {
             return new JobStepActionResponse(source, type, value);
         }
     }

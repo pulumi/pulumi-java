@@ -185,47 +185,50 @@ public final class GetHubRouteTableResult {
             this.associatedConnections = Objects.requireNonNull(associatedConnections);
             return this;
         }
-
+        public Builder associatedConnections(String... associatedConnections) {
+            return associatedConnections(List.of(associatedConnections));
+        }
         public Builder etag(String etag) {
             this.etag = Objects.requireNonNull(etag);
             return this;
         }
-
         public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
-
         public Builder labels(@Nullable List<String> labels) {
             this.labels = labels;
             return this;
         }
-
+        public Builder labels(String... labels) {
+            return labels(List.of(labels));
+        }
         public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
-
         public Builder propagatingConnections(List<String> propagatingConnections) {
             this.propagatingConnections = Objects.requireNonNull(propagatingConnections);
             return this;
         }
-
+        public Builder propagatingConnections(String... propagatingConnections) {
+            return propagatingConnections(List.of(propagatingConnections));
+        }
         public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
-
         public Builder routes(@Nullable List<HubRouteResponse> routes) {
             this.routes = routes;
             return this;
         }
-
+        public Builder routes(HubRouteResponse... routes) {
+            return routes(List.of(routes));
+        }
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public GetHubRouteTableResult build() {
+        }        public GetHubRouteTableResult build() {
             return new GetHubRouteTableResult(associatedConnections, etag, id, labels, name, propagatingConnections, provisioningState, routes, type);
         }
     }

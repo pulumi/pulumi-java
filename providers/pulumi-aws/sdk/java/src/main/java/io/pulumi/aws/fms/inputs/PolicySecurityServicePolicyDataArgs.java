@@ -74,22 +74,18 @@ public final class PolicySecurityServicePolicyDataArgs extends io.pulumi.resourc
             this.managedServiceData = managedServiceData;
             return this;
         }
-
         public Builder managedServiceData(@Nullable String managedServiceData) {
             this.managedServiceData = Output.ofNullable(managedServiceData);
             return this;
         }
-
         public Builder type(Output<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Output.of(Objects.requireNonNull(type));
             return this;
-        }
-        public PolicySecurityServicePolicyDataArgs build() {
+        }        public PolicySecurityServicePolicyDataArgs build() {
             return new PolicySecurityServicePolicyDataArgs(managedServiceData, type);
         }
     }

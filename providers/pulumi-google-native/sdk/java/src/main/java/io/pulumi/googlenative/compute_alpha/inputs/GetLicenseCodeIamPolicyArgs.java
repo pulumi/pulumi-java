@@ -78,17 +78,14 @@ public final class GetLicenseCodeIamPolicyArgs extends io.pulumi.resources.Invok
             this.optionsRequestedPolicyVersion = optionsRequestedPolicyVersion;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = project;
             return this;
         }
-
         public Builder resource(String resource) {
             this.resource = Objects.requireNonNull(resource);
             return this;
-        }
-        public GetLicenseCodeIamPolicyArgs build() {
+        }        public GetLicenseCodeIamPolicyArgs build() {
             return new GetLicenseCodeIamPolicyArgs(optionsRequestedPolicyVersion, project, resource);
         }
     }

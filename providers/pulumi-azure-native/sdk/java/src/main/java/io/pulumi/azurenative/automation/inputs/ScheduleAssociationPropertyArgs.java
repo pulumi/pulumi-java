@@ -61,12 +61,10 @@ public final class ScheduleAssociationPropertyArgs extends io.pulumi.resources.R
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
-        }
-        public ScheduleAssociationPropertyArgs build() {
+        }        public ScheduleAssociationPropertyArgs build() {
             return new ScheduleAssociationPropertyArgs(name);
         }
     }

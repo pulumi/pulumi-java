@@ -79,22 +79,18 @@ public final class AlertPolicyConditionConditionMonitoringQueryLanguageTriggerAr
             this.count = count;
             return this;
         }
-
         public Builder count(@Nullable Integer count) {
             this.count = Output.ofNullable(count);
             return this;
         }
-
         public Builder percent(@Nullable Output<Double> percent) {
             this.percent = percent;
             return this;
         }
-
         public Builder percent(@Nullable Double percent) {
             this.percent = Output.ofNullable(percent);
             return this;
-        }
-        public AlertPolicyConditionConditionMonitoringQueryLanguageTriggerArgs build() {
+        }        public AlertPolicyConditionConditionMonitoringQueryLanguageTriggerArgs build() {
             return new AlertPolicyConditionConditionMonitoringQueryLanguageTriggerArgs(count, percent);
         }
     }

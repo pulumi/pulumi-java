@@ -95,17 +95,23 @@ public final class CertificateCertificateDescriptionConfigValueKeyUsage {
             this.baseKeyUsages = baseKeyUsages;
             return this;
         }
-
+        public Builder baseKeyUsages(CertificateCertificateDescriptionConfigValueKeyUsageBaseKeyUsage... baseKeyUsages) {
+            return baseKeyUsages(List.of(baseKeyUsages));
+        }
         public Builder extendedKeyUsages(@Nullable List<CertificateCertificateDescriptionConfigValueKeyUsageExtendedKeyUsage> extendedKeyUsages) {
             this.extendedKeyUsages = extendedKeyUsages;
             return this;
         }
-
+        public Builder extendedKeyUsages(CertificateCertificateDescriptionConfigValueKeyUsageExtendedKeyUsage... extendedKeyUsages) {
+            return extendedKeyUsages(List.of(extendedKeyUsages));
+        }
         public Builder unknownExtendedKeyUsages(@Nullable List<CertificateCertificateDescriptionConfigValueKeyUsageUnknownExtendedKeyUsage> unknownExtendedKeyUsages) {
             this.unknownExtendedKeyUsages = unknownExtendedKeyUsages;
             return this;
         }
-        public CertificateCertificateDescriptionConfigValueKeyUsage build() {
+        public Builder unknownExtendedKeyUsages(CertificateCertificateDescriptionConfigValueKeyUsageUnknownExtendedKeyUsage... unknownExtendedKeyUsages) {
+            return unknownExtendedKeyUsages(List.of(unknownExtendedKeyUsages));
+        }        public CertificateCertificateDescriptionConfigValueKeyUsage build() {
             return new CertificateCertificateDescriptionConfigValueKeyUsage(baseKeyUsages, extendedKeyUsages, unknownExtendedKeyUsages);
         }
     }

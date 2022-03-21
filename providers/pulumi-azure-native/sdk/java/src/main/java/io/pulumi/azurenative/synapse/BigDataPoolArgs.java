@@ -422,232 +422,189 @@ public final class BigDataPoolArgs extends io.pulumi.resources.ResourceArgs {
             this.autoPause = autoPause;
             return this;
         }
-
         public Builder autoPause(@Nullable AutoPausePropertiesArgs autoPause) {
             this.autoPause = Output.ofNullable(autoPause);
             return this;
         }
-
         public Builder autoScale(@Nullable Output<AutoScalePropertiesArgs> autoScale) {
             this.autoScale = autoScale;
             return this;
         }
-
         public Builder autoScale(@Nullable AutoScalePropertiesArgs autoScale) {
             this.autoScale = Output.ofNullable(autoScale);
             return this;
         }
-
         public Builder bigDataPoolName(@Nullable Output<String> bigDataPoolName) {
             this.bigDataPoolName = bigDataPoolName;
             return this;
         }
-
         public Builder bigDataPoolName(@Nullable String bigDataPoolName) {
             this.bigDataPoolName = Output.ofNullable(bigDataPoolName);
             return this;
         }
-
         public Builder cacheSize(@Nullable Output<Integer> cacheSize) {
             this.cacheSize = cacheSize;
             return this;
         }
-
         public Builder cacheSize(@Nullable Integer cacheSize) {
             this.cacheSize = Output.ofNullable(cacheSize);
             return this;
         }
-
         public Builder creationDate(@Nullable Output<String> creationDate) {
             this.creationDate = creationDate;
             return this;
         }
-
         public Builder creationDate(@Nullable String creationDate) {
             this.creationDate = Output.ofNullable(creationDate);
             return this;
         }
-
         public Builder customLibraries(@Nullable Output<List<LibraryInfoArgs>> customLibraries) {
             this.customLibraries = customLibraries;
             return this;
         }
-
         public Builder customLibraries(@Nullable List<LibraryInfoArgs> customLibraries) {
             this.customLibraries = Output.ofNullable(customLibraries);
             return this;
         }
-
+        public Builder customLibraries(LibraryInfoArgs... customLibraries) {
+            return customLibraries(List.of(customLibraries));
+        }
         public Builder defaultSparkLogFolder(@Nullable Output<String> defaultSparkLogFolder) {
             this.defaultSparkLogFolder = defaultSparkLogFolder;
             return this;
         }
-
         public Builder defaultSparkLogFolder(@Nullable String defaultSparkLogFolder) {
             this.defaultSparkLogFolder = Output.ofNullable(defaultSparkLogFolder);
             return this;
         }
-
         public Builder dynamicExecutorAllocation(@Nullable Output<DynamicExecutorAllocationArgs> dynamicExecutorAllocation) {
             this.dynamicExecutorAllocation = dynamicExecutorAllocation;
             return this;
         }
-
         public Builder dynamicExecutorAllocation(@Nullable DynamicExecutorAllocationArgs dynamicExecutorAllocation) {
             this.dynamicExecutorAllocation = Output.ofNullable(dynamicExecutorAllocation);
             return this;
         }
-
         public Builder force(@Nullable Output<Boolean> force) {
             this.force = force;
             return this;
         }
-
         public Builder force(@Nullable Boolean force) {
             this.force = Output.ofNullable(force);
             return this;
         }
-
         public Builder isComputeIsolationEnabled(@Nullable Output<Boolean> isComputeIsolationEnabled) {
             this.isComputeIsolationEnabled = isComputeIsolationEnabled;
             return this;
         }
-
         public Builder isComputeIsolationEnabled(@Nullable Boolean isComputeIsolationEnabled) {
             this.isComputeIsolationEnabled = Output.ofNullable(isComputeIsolationEnabled);
             return this;
         }
-
         public Builder libraryRequirements(@Nullable Output<LibraryRequirementsArgs> libraryRequirements) {
             this.libraryRequirements = libraryRequirements;
             return this;
         }
-
         public Builder libraryRequirements(@Nullable LibraryRequirementsArgs libraryRequirements) {
             this.libraryRequirements = Output.ofNullable(libraryRequirements);
             return this;
         }
-
         public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder nodeCount(@Nullable Output<Integer> nodeCount) {
             this.nodeCount = nodeCount;
             return this;
         }
-
         public Builder nodeCount(@Nullable Integer nodeCount) {
             this.nodeCount = Output.ofNullable(nodeCount);
             return this;
         }
-
         public Builder nodeSize(@Nullable Output<Either<String,NodeSize>> nodeSize) {
             this.nodeSize = nodeSize;
             return this;
         }
-
         public Builder nodeSize(@Nullable Either<String,NodeSize> nodeSize) {
             this.nodeSize = Output.ofNullable(nodeSize);
             return this;
         }
-
         public Builder nodeSizeFamily(@Nullable Output<Either<String,NodeSizeFamily>> nodeSizeFamily) {
             this.nodeSizeFamily = nodeSizeFamily;
             return this;
         }
-
         public Builder nodeSizeFamily(@Nullable Either<String,NodeSizeFamily> nodeSizeFamily) {
             this.nodeSizeFamily = Output.ofNullable(nodeSizeFamily);
             return this;
         }
-
         public Builder provisioningState(@Nullable Output<String> provisioningState) {
             this.provisioningState = provisioningState;
             return this;
         }
-
         public Builder provisioningState(@Nullable String provisioningState) {
             this.provisioningState = Output.ofNullable(provisioningState);
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder sessionLevelPackagesEnabled(@Nullable Output<Boolean> sessionLevelPackagesEnabled) {
             this.sessionLevelPackagesEnabled = sessionLevelPackagesEnabled;
             return this;
         }
-
         public Builder sessionLevelPackagesEnabled(@Nullable Boolean sessionLevelPackagesEnabled) {
             this.sessionLevelPackagesEnabled = Output.ofNullable(sessionLevelPackagesEnabled);
             return this;
         }
-
         public Builder sparkConfigProperties(@Nullable Output<LibraryRequirementsArgs> sparkConfigProperties) {
             this.sparkConfigProperties = sparkConfigProperties;
             return this;
         }
-
         public Builder sparkConfigProperties(@Nullable LibraryRequirementsArgs sparkConfigProperties) {
             this.sparkConfigProperties = Output.ofNullable(sparkConfigProperties);
             return this;
         }
-
         public Builder sparkEventsFolder(@Nullable Output<String> sparkEventsFolder) {
             this.sparkEventsFolder = sparkEventsFolder;
             return this;
         }
-
         public Builder sparkEventsFolder(@Nullable String sparkEventsFolder) {
             this.sparkEventsFolder = Output.ofNullable(sparkEventsFolder);
             return this;
         }
-
         public Builder sparkVersion(@Nullable Output<String> sparkVersion) {
             this.sparkVersion = sparkVersion;
             return this;
         }
-
         public Builder sparkVersion(@Nullable String sparkVersion) {
             this.sparkVersion = Output.ofNullable(sparkVersion);
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
         public Builder workspaceName(Output<String> workspaceName) {
             this.workspaceName = Objects.requireNonNull(workspaceName);
             return this;
         }
-
         public Builder workspaceName(String workspaceName) {
             this.workspaceName = Output.of(Objects.requireNonNull(workspaceName));
             return this;
-        }
-        public BigDataPoolArgs build() {
+        }        public BigDataPoolArgs build() {
             return new BigDataPoolArgs(autoPause, autoScale, bigDataPoolName, cacheSize, creationDate, customLibraries, defaultSparkLogFolder, dynamicExecutorAllocation, force, isComputeIsolationEnabled, libraryRequirements, location, nodeCount, nodeSize, nodeSizeFamily, provisioningState, resourceGroupName, sessionLevelPackagesEnabled, sparkConfigProperties, sparkEventsFolder, sparkVersion, tags, workspaceName);
         }
     }

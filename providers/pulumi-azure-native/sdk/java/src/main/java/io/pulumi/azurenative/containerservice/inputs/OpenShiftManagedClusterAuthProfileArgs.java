@@ -62,12 +62,13 @@ public final class OpenShiftManagedClusterAuthProfileArgs extends io.pulumi.reso
             this.identityProviders = identityProviders;
             return this;
         }
-
         public Builder identityProviders(@Nullable List<OpenShiftManagedClusterIdentityProviderArgs> identityProviders) {
             this.identityProviders = Output.ofNullable(identityProviders);
             return this;
         }
-        public OpenShiftManagedClusterAuthProfileArgs build() {
+        public Builder identityProviders(OpenShiftManagedClusterIdentityProviderArgs... identityProviders) {
+            return identityProviders(List.of(identityProviders));
+        }        public OpenShiftManagedClusterAuthProfileArgs build() {
             return new OpenShiftManagedClusterAuthProfileArgs(identityProviders);
         }
     }

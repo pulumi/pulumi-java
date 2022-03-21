@@ -134,22 +134,18 @@ public final class RouterPeerBfd {
             this.minReceiveInterval = minReceiveInterval;
             return this;
         }
-
         public Builder minTransmitInterval(@Nullable Integer minTransmitInterval) {
             this.minTransmitInterval = minTransmitInterval;
             return this;
         }
-
         public Builder multiplier(@Nullable Integer multiplier) {
             this.multiplier = multiplier;
             return this;
         }
-
         public Builder sessionInitializationMode(String sessionInitializationMode) {
             this.sessionInitializationMode = Objects.requireNonNull(sessionInitializationMode);
             return this;
-        }
-        public RouterPeerBfd build() {
+        }        public RouterPeerBfd build() {
             return new RouterPeerBfd(minReceiveInterval, minTransmitInterval, multiplier, sessionInitializationMode);
         }
     }

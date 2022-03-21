@@ -73,22 +73,21 @@ public final class GetNetworkInsightsPathResult {
             this.createdDate = createdDate;
             return this;
         }
-
         public Builder networkInsightsPathArn(@Nullable String networkInsightsPathArn) {
             this.networkInsightsPathArn = networkInsightsPathArn;
             return this;
         }
-
         public Builder networkInsightsPathId(@Nullable String networkInsightsPathId) {
             this.networkInsightsPathId = networkInsightsPathId;
             return this;
         }
-
         public Builder tags(@Nullable List<NetworkInsightsPathTag> tags) {
             this.tags = tags;
             return this;
         }
-        public GetNetworkInsightsPathResult build() {
+        public Builder tags(NetworkInsightsPathTag... tags) {
+            return tags(List.of(tags));
+        }        public GetNetworkInsightsPathResult build() {
             return new GetNetworkInsightsPathResult(createdDate, networkInsightsPathArn, networkInsightsPathId, tags);
         }
     }

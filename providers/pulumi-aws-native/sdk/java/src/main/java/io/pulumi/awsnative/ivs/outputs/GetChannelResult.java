@@ -188,47 +188,41 @@ public final class GetChannelResult {
             this.arn = arn;
             return this;
         }
-
         public Builder authorized(@Nullable Boolean authorized) {
             this.authorized = authorized;
             return this;
         }
-
         public Builder ingestEndpoint(@Nullable String ingestEndpoint) {
             this.ingestEndpoint = ingestEndpoint;
             return this;
         }
-
         public Builder latencyMode(@Nullable ChannelLatencyMode latencyMode) {
             this.latencyMode = latencyMode;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
-
         public Builder playbackUrl(@Nullable String playbackUrl) {
             this.playbackUrl = playbackUrl;
             return this;
         }
-
         public Builder recordingConfigurationArn(@Nullable String recordingConfigurationArn) {
             this.recordingConfigurationArn = recordingConfigurationArn;
             return this;
         }
-
         public Builder tags(@Nullable List<ChannelTag> tags) {
             this.tags = tags;
             return this;
         }
-
+        public Builder tags(ChannelTag... tags) {
+            return tags(List.of(tags));
+        }
         public Builder type(@Nullable ChannelType type) {
             this.type = type;
             return this;
-        }
-        public GetChannelResult build() {
+        }        public GetChannelResult build() {
             return new GetChannelResult(arn, authorized, ingestEndpoint, latencyMode, name, playbackUrl, recordingConfigurationArn, tags, type);
         }
     }

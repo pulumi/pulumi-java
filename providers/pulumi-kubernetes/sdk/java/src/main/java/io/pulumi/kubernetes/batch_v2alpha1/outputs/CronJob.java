@@ -122,27 +122,22 @@ public final class CronJob {
             this.apiVersion = apiVersion;
             return this;
         }
-
         public Builder kind(@Nullable String kind) {
             this.kind = kind;
             return this;
         }
-
         public Builder metadata(@Nullable ObjectMeta metadata) {
             this.metadata = metadata;
             return this;
         }
-
         public Builder spec(@Nullable CronJobSpec spec) {
             this.spec = spec;
             return this;
         }
-
         public Builder status(@Nullable CronJobStatus status) {
             this.status = status;
             return this;
-        }
-        public CronJob build() {
+        }        public CronJob build() {
             return new CronJob(apiVersion, kind, metadata, spec, status);
         }
     }

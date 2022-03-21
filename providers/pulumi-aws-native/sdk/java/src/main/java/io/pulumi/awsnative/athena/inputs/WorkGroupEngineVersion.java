@@ -70,12 +70,10 @@ public final class WorkGroupEngineVersion extends io.pulumi.resources.InvokeArgs
             this.effectiveEngineVersion = effectiveEngineVersion;
             return this;
         }
-
         public Builder selectedEngineVersion(@Nullable String selectedEngineVersion) {
             this.selectedEngineVersion = selectedEngineVersion;
             return this;
-        }
-        public WorkGroupEngineVersion build() {
+        }        public WorkGroupEngineVersion build() {
             return new WorkGroupEngineVersion(effectiveEngineVersion, selectedEngineVersion);
         }
     }

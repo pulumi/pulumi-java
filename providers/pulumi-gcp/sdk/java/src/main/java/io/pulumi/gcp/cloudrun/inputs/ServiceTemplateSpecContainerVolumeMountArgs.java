@@ -74,22 +74,18 @@ public final class ServiceTemplateSpecContainerVolumeMountArgs extends io.pulumi
             this.mountPath = Objects.requireNonNull(mountPath);
             return this;
         }
-
         public Builder mountPath(String mountPath) {
             this.mountPath = Output.of(Objects.requireNonNull(mountPath));
             return this;
         }
-
         public Builder name(Output<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Output.of(Objects.requireNonNull(name));
             return this;
-        }
-        public ServiceTemplateSpecContainerVolumeMountArgs build() {
+        }        public ServiceTemplateSpecContainerVolumeMountArgs build() {
             return new ServiceTemplateSpecContainerVolumeMountArgs(mountPath, name);
         }
     }

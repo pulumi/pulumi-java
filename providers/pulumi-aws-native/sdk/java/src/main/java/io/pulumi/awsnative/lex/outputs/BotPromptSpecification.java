@@ -74,17 +74,17 @@ public final class BotPromptSpecification {
             this.allowInterrupt = allowInterrupt;
             return this;
         }
-
         public Builder maxRetries(Integer maxRetries) {
             this.maxRetries = Objects.requireNonNull(maxRetries);
             return this;
         }
-
         public Builder messageGroupsList(List<BotMessageGroup> messageGroupsList) {
             this.messageGroupsList = Objects.requireNonNull(messageGroupsList);
             return this;
         }
-        public BotPromptSpecification build() {
+        public Builder messageGroupsList(BotMessageGroup... messageGroupsList) {
+            return messageGroupsList(List.of(messageGroupsList));
+        }        public BotPromptSpecification build() {
             return new BotPromptSpecification(allowInterrupt, maxRetries, messageGroupsList);
         }
     }

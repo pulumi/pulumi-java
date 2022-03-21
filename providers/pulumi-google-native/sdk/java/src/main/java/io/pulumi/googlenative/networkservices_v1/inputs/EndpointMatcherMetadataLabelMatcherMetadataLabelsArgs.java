@@ -77,22 +77,18 @@ public final class EndpointMatcherMetadataLabelMatcherMetadataLabelsArgs extends
             this.labelName = Objects.requireNonNull(labelName);
             return this;
         }
-
         public Builder labelName(String labelName) {
             this.labelName = Output.of(Objects.requireNonNull(labelName));
             return this;
         }
-
         public Builder labelValue(Output<String> labelValue) {
             this.labelValue = Objects.requireNonNull(labelValue);
             return this;
         }
-
         public Builder labelValue(String labelValue) {
             this.labelValue = Output.of(Objects.requireNonNull(labelValue));
             return this;
-        }
-        public EndpointMatcherMetadataLabelMatcherMetadataLabelsArgs build() {
+        }        public EndpointMatcherMetadataLabelMatcherMetadataLabelsArgs build() {
             return new EndpointMatcherMetadataLabelMatcherMetadataLabelsArgs(labelName, labelValue);
         }
     }

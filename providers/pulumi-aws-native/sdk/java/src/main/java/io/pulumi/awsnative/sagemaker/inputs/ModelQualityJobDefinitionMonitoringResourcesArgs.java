@@ -56,12 +56,10 @@ public final class ModelQualityJobDefinitionMonitoringResourcesArgs extends io.p
             this.clusterConfig = Objects.requireNonNull(clusterConfig);
             return this;
         }
-
         public Builder clusterConfig(ModelQualityJobDefinitionClusterConfigArgs clusterConfig) {
             this.clusterConfig = Output.of(Objects.requireNonNull(clusterConfig));
             return this;
-        }
-        public ModelQualityJobDefinitionMonitoringResourcesArgs build() {
+        }        public ModelQualityJobDefinitionMonitoringResourcesArgs build() {
             return new ModelQualityJobDefinitionMonitoringResourcesArgs(clusterConfig);
         }
     }

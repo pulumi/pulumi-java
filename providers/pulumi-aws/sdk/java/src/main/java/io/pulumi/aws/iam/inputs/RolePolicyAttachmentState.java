@@ -74,17 +74,14 @@ public final class RolePolicyAttachmentState extends io.pulumi.resources.Resourc
             this.policyArn = policyArn;
             return this;
         }
-
         public Builder policyArn(@Nullable String policyArn) {
             this.policyArn = Output.ofNullable(policyArn);
             return this;
         }
-
         public Builder role(@Nullable Output<String> role) {
             this.role = role;
             return this;
-        }
-        public RolePolicyAttachmentState build() {
+        }        public RolePolicyAttachmentState build() {
             return new RolePolicyAttachmentState(policyArn, role);
         }
     }

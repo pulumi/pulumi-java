@@ -105,22 +105,18 @@ public final class SourceProvenanceResponse {
             this.fileHashes = Objects.requireNonNull(fileHashes);
             return this;
         }
-
         public Builder resolvedRepoSource(RepoSourceResponse resolvedRepoSource) {
             this.resolvedRepoSource = Objects.requireNonNull(resolvedRepoSource);
             return this;
         }
-
         public Builder resolvedStorageSource(StorageSourceResponse resolvedStorageSource) {
             this.resolvedStorageSource = Objects.requireNonNull(resolvedStorageSource);
             return this;
         }
-
         public Builder resolvedStorageSourceManifest(StorageSourceManifestResponse resolvedStorageSourceManifest) {
             this.resolvedStorageSourceManifest = Objects.requireNonNull(resolvedStorageSourceManifest);
             return this;
-        }
-        public SourceProvenanceResponse build() {
+        }        public SourceProvenanceResponse build() {
             return new SourceProvenanceResponse(fileHashes, resolvedRepoSource, resolvedStorageSource, resolvedStorageSourceManifest);
         }
     }

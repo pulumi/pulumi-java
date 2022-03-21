@@ -60,12 +60,10 @@ public final class CustomLevelArgs extends io.pulumi.resources.ResourceArgs {
             this.expr = Objects.requireNonNull(expr);
             return this;
         }
-
         public Builder expr(ExprArgs expr) {
             this.expr = Output.of(Objects.requireNonNull(expr));
             return this;
-        }
-        public CustomLevelArgs build() {
+        }        public CustomLevelArgs build() {
             return new CustomLevelArgs(expr);
         }
     }

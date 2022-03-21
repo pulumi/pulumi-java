@@ -86,17 +86,14 @@ public final class TextMappingResponse {
             this.atomKey = Objects.requireNonNull(atomKey);
             return this;
         }
-
         public Builder inputKey(String inputKey) {
             this.inputKey = Objects.requireNonNull(inputKey);
             return this;
         }
-
         public Builder inputTrack(Integer inputTrack) {
             this.inputTrack = Objects.requireNonNull(inputTrack);
             return this;
-        }
-        public TextMappingResponse build() {
+        }        public TextMappingResponse build() {
             return new TextMappingResponse(atomKey, inputKey, inputTrack);
         }
     }

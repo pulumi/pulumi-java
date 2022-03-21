@@ -78,22 +78,18 @@ public final class EventTargetInputTransformerArgs extends io.pulumi.resources.R
             this.inputPaths = inputPaths;
             return this;
         }
-
         public Builder inputPaths(@Nullable Map<String,String> inputPaths) {
             this.inputPaths = Output.ofNullable(inputPaths);
             return this;
         }
-
         public Builder inputTemplate(Output<String> inputTemplate) {
             this.inputTemplate = Objects.requireNonNull(inputTemplate);
             return this;
         }
-
         public Builder inputTemplate(String inputTemplate) {
             this.inputTemplate = Output.of(Objects.requireNonNull(inputTemplate));
             return this;
-        }
-        public EventTargetInputTransformerArgs build() {
+        }        public EventTargetInputTransformerArgs build() {
             return new EventTargetInputTransformerArgs(inputPaths, inputTemplate);
         }
     }

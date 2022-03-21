@@ -53,8 +53,7 @@ public final class BodyDiagnosticSettingsResponse {
         public Builder bytes(@Nullable Integer bytes) {
             this.bytes = bytes;
             return this;
-        }
-        public BodyDiagnosticSettingsResponse build() {
+        }        public BodyDiagnosticSettingsResponse build() {
             return new BodyDiagnosticSettingsResponse(bytes);
         }
     }

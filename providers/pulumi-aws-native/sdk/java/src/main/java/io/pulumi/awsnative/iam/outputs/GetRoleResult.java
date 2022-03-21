@@ -188,47 +188,47 @@ public final class GetRoleResult {
             this.arn = arn;
             return this;
         }
-
         public Builder assumeRolePolicyDocument(@Nullable Object assumeRolePolicyDocument) {
             this.assumeRolePolicyDocument = assumeRolePolicyDocument;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
-
         public Builder managedPolicyArns(@Nullable List<String> managedPolicyArns) {
             this.managedPolicyArns = managedPolicyArns;
             return this;
         }
-
+        public Builder managedPolicyArns(String... managedPolicyArns) {
+            return managedPolicyArns(List.of(managedPolicyArns));
+        }
         public Builder maxSessionDuration(@Nullable Integer maxSessionDuration) {
             this.maxSessionDuration = maxSessionDuration;
             return this;
         }
-
         public Builder permissionsBoundary(@Nullable String permissionsBoundary) {
             this.permissionsBoundary = permissionsBoundary;
             return this;
         }
-
         public Builder policies(@Nullable List<RolePolicy> policies) {
             this.policies = policies;
             return this;
         }
-
+        public Builder policies(RolePolicy... policies) {
+            return policies(List.of(policies));
+        }
         public Builder roleId(@Nullable String roleId) {
             this.roleId = roleId;
             return this;
         }
-
         public Builder tags(@Nullable List<RoleTag> tags) {
             this.tags = tags;
             return this;
         }
-        public GetRoleResult build() {
+        public Builder tags(RoleTag... tags) {
+            return tags(List.of(tags));
+        }        public GetRoleResult build() {
             return new GetRoleResult(arn, assumeRolePolicyDocument, description, managedPolicyArns, maxSessionDuration, permissionsBoundary, policies, roleId, tags);
         }
     }

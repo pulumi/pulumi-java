@@ -88,17 +88,14 @@ public final class GetTableArgs extends io.pulumi.resources.InvokeArgs {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder tableName(String tableName) {
             this.tableName = Objects.requireNonNull(tableName);
             return this;
         }
-
         public Builder workspaceName(String workspaceName) {
             this.workspaceName = Objects.requireNonNull(workspaceName);
             return this;
-        }
-        public GetTableArgs build() {
+        }        public GetTableArgs build() {
             return new GetTableArgs(resourceGroupName, tableName, workspaceName);
         }
     }

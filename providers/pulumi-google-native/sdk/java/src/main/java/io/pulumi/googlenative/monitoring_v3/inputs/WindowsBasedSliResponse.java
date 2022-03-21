@@ -126,27 +126,22 @@ public final class WindowsBasedSliResponse extends io.pulumi.resources.InvokeArg
             this.goodBadMetricFilter = Objects.requireNonNull(goodBadMetricFilter);
             return this;
         }
-
         public Builder goodTotalRatioThreshold(PerformanceThresholdResponse goodTotalRatioThreshold) {
             this.goodTotalRatioThreshold = Objects.requireNonNull(goodTotalRatioThreshold);
             return this;
         }
-
         public Builder metricMeanInRange(MetricRangeResponse metricMeanInRange) {
             this.metricMeanInRange = Objects.requireNonNull(metricMeanInRange);
             return this;
         }
-
         public Builder metricSumInRange(MetricRangeResponse metricSumInRange) {
             this.metricSumInRange = Objects.requireNonNull(metricSumInRange);
             return this;
         }
-
         public Builder windowPeriod(String windowPeriod) {
             this.windowPeriod = Objects.requireNonNull(windowPeriod);
             return this;
-        }
-        public WindowsBasedSliResponse build() {
+        }        public WindowsBasedSliResponse build() {
             return new WindowsBasedSliResponse(goodBadMetricFilter, goodTotalRatioThreshold, metricMeanInRange, metricSumInRange, windowPeriod);
         }
     }

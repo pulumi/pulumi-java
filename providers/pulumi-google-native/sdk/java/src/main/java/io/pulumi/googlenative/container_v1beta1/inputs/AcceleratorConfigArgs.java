@@ -94,32 +94,26 @@ public final class AcceleratorConfigArgs extends io.pulumi.resources.ResourceArg
             this.acceleratorCount = acceleratorCount;
             return this;
         }
-
         public Builder acceleratorCount(@Nullable String acceleratorCount) {
             this.acceleratorCount = Output.ofNullable(acceleratorCount);
             return this;
         }
-
         public Builder acceleratorType(@Nullable Output<String> acceleratorType) {
             this.acceleratorType = acceleratorType;
             return this;
         }
-
         public Builder acceleratorType(@Nullable String acceleratorType) {
             this.acceleratorType = Output.ofNullable(acceleratorType);
             return this;
         }
-
         public Builder gpuPartitionSize(@Nullable Output<String> gpuPartitionSize) {
             this.gpuPartitionSize = gpuPartitionSize;
             return this;
         }
-
         public Builder gpuPartitionSize(@Nullable String gpuPartitionSize) {
             this.gpuPartitionSize = Output.ofNullable(gpuPartitionSize);
             return this;
-        }
-        public AcceleratorConfigArgs build() {
+        }        public AcceleratorConfigArgs build() {
             return new AcceleratorConfigArgs(acceleratorCount, acceleratorType, gpuPartitionSize);
         }
     }

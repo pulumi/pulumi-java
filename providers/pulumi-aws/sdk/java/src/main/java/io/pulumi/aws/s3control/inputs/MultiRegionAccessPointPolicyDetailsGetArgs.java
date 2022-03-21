@@ -73,22 +73,18 @@ public final class MultiRegionAccessPointPolicyDetailsGetArgs extends io.pulumi.
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
-
         public Builder policy(Output<String> policy) {
             this.policy = Objects.requireNonNull(policy);
             return this;
         }
-
         public Builder policy(String policy) {
             this.policy = Output.of(Objects.requireNonNull(policy));
             return this;
-        }
-        public MultiRegionAccessPointPolicyDetailsGetArgs build() {
+        }        public MultiRegionAccessPointPolicyDetailsGetArgs build() {
             return new MultiRegionAccessPointPolicyDetailsGetArgs(name, policy);
         }
     }

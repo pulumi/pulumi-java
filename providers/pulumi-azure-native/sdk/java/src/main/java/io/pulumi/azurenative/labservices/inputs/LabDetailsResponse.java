@@ -110,22 +110,18 @@ public final class LabDetailsResponse extends io.pulumi.resources.InvokeArgs {
             this.id = id;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
-
         public Builder provisioningState(@Nullable String provisioningState) {
             this.provisioningState = provisioningState;
             return this;
         }
-
         public Builder usageQuota(String usageQuota) {
             this.usageQuota = Objects.requireNonNull(usageQuota);
             return this;
-        }
-        public LabDetailsResponse build() {
+        }        public LabDetailsResponse build() {
             return new LabDetailsResponse(id, name, provisioningState, usageQuota);
         }
     }

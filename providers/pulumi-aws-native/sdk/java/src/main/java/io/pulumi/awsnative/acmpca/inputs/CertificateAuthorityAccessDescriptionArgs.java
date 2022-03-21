@@ -70,22 +70,18 @@ public final class CertificateAuthorityAccessDescriptionArgs extends io.pulumi.r
             this.accessLocation = Objects.requireNonNull(accessLocation);
             return this;
         }
-
         public Builder accessLocation(CertificateAuthorityGeneralNameArgs accessLocation) {
             this.accessLocation = Output.of(Objects.requireNonNull(accessLocation));
             return this;
         }
-
         public Builder accessMethod(Output<CertificateAuthorityAccessMethodArgs> accessMethod) {
             this.accessMethod = Objects.requireNonNull(accessMethod);
             return this;
         }
-
         public Builder accessMethod(CertificateAuthorityAccessMethodArgs accessMethod) {
             this.accessMethod = Output.of(Objects.requireNonNull(accessMethod));
             return this;
-        }
-        public CertificateAuthorityAccessDescriptionArgs build() {
+        }        public CertificateAuthorityAccessDescriptionArgs build() {
             return new CertificateAuthorityAccessDescriptionArgs(accessLocation, accessMethod);
         }
     }

@@ -60,8 +60,7 @@ public final class LBBackendAddressPoolResourceSettingsResponse extends io.pulum
         public Builder name(@Nullable String name) {
             this.name = name;
             return this;
-        }
-        public LBBackendAddressPoolResourceSettingsResponse build() {
+        }        public LBBackendAddressPoolResourceSettingsResponse build() {
             return new LBBackendAddressPoolResourceSettingsResponse(name);
         }
     }

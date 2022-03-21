@@ -111,22 +111,24 @@ public final class LinuxPropertiesResponse extends io.pulumi.resources.InvokeArg
             this.excludedPackageNameMasks = excludedPackageNameMasks;
             return this;
         }
-
+        public Builder excludedPackageNameMasks(String... excludedPackageNameMasks) {
+            return excludedPackageNameMasks(List.of(excludedPackageNameMasks));
+        }
         public Builder includedPackageClassifications(@Nullable String includedPackageClassifications) {
             this.includedPackageClassifications = includedPackageClassifications;
             return this;
         }
-
         public Builder includedPackageNameMasks(@Nullable List<String> includedPackageNameMasks) {
             this.includedPackageNameMasks = includedPackageNameMasks;
             return this;
         }
-
+        public Builder includedPackageNameMasks(String... includedPackageNameMasks) {
+            return includedPackageNameMasks(List.of(includedPackageNameMasks));
+        }
         public Builder rebootSetting(@Nullable String rebootSetting) {
             this.rebootSetting = rebootSetting;
             return this;
-        }
-        public LinuxPropertiesResponse build() {
+        }        public LinuxPropertiesResponse build() {
             return new LinuxPropertiesResponse(excludedPackageNameMasks, includedPackageClassifications, includedPackageNameMasks, rebootSetting);
         }
     }

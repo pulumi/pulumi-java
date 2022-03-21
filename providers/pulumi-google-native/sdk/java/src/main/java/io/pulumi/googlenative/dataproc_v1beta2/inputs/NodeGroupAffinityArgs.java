@@ -60,12 +60,10 @@ public final class NodeGroupAffinityArgs extends io.pulumi.resources.ResourceArg
             this.nodeGroupUri = Objects.requireNonNull(nodeGroupUri);
             return this;
         }
-
         public Builder nodeGroupUri(String nodeGroupUri) {
             this.nodeGroupUri = Output.of(Objects.requireNonNull(nodeGroupUri));
             return this;
-        }
-        public NodeGroupAffinityArgs build() {
+        }        public NodeGroupAffinityArgs build() {
             return new NodeGroupAffinityArgs(nodeGroupUri);
         }
     }

@@ -88,17 +88,14 @@ public final class GetCloudEdgeManagementRoleArgs extends io.pulumi.resources.In
             this.deviceName = Objects.requireNonNull(deviceName);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
-        }
-        public GetCloudEdgeManagementRoleArgs build() {
+        }        public GetCloudEdgeManagementRoleArgs build() {
             return new GetCloudEdgeManagementRoleArgs(deviceName, name, resourceGroupName);
         }
     }

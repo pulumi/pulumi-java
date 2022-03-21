@@ -190,92 +190,80 @@ public final class LocationObjectStorageArgs extends io.pulumi.resources.Resourc
             this.accessKey = accessKey;
             return this;
         }
-
         public Builder accessKey(@Nullable String accessKey) {
             this.accessKey = Output.ofNullable(accessKey);
             return this;
         }
-
         public Builder agentArns(Output<List<String>> agentArns) {
             this.agentArns = Objects.requireNonNull(agentArns);
             return this;
         }
-
         public Builder agentArns(List<String> agentArns) {
             this.agentArns = Output.of(Objects.requireNonNull(agentArns));
             return this;
         }
-
+        public Builder agentArns(String... agentArns) {
+            return agentArns(List.of(agentArns));
+        }
         public Builder bucketName(Output<String> bucketName) {
             this.bucketName = Objects.requireNonNull(bucketName);
             return this;
         }
-
         public Builder bucketName(String bucketName) {
             this.bucketName = Output.of(Objects.requireNonNull(bucketName));
             return this;
         }
-
         public Builder secretKey(@Nullable Output<String> secretKey) {
             this.secretKey = secretKey;
             return this;
         }
-
         public Builder secretKey(@Nullable String secretKey) {
             this.secretKey = Output.ofNullable(secretKey);
             return this;
         }
-
         public Builder serverHostname(Output<String> serverHostname) {
             this.serverHostname = Objects.requireNonNull(serverHostname);
             return this;
         }
-
         public Builder serverHostname(String serverHostname) {
             this.serverHostname = Output.of(Objects.requireNonNull(serverHostname));
             return this;
         }
-
         public Builder serverPort(@Nullable Output<Integer> serverPort) {
             this.serverPort = serverPort;
             return this;
         }
-
         public Builder serverPort(@Nullable Integer serverPort) {
             this.serverPort = Output.ofNullable(serverPort);
             return this;
         }
-
         public Builder serverProtocol(@Nullable Output<LocationObjectStorageServerProtocol> serverProtocol) {
             this.serverProtocol = serverProtocol;
             return this;
         }
-
         public Builder serverProtocol(@Nullable LocationObjectStorageServerProtocol serverProtocol) {
             this.serverProtocol = Output.ofNullable(serverProtocol);
             return this;
         }
-
         public Builder subdirectory(@Nullable Output<String> subdirectory) {
             this.subdirectory = subdirectory;
             return this;
         }
-
         public Builder subdirectory(@Nullable String subdirectory) {
             this.subdirectory = Output.ofNullable(subdirectory);
             return this;
         }
-
         public Builder tags(@Nullable Output<List<LocationObjectStorageTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable List<LocationObjectStorageTagArgs> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-        public LocationObjectStorageArgs build() {
+        public Builder tags(LocationObjectStorageTagArgs... tags) {
+            return tags(List.of(tags));
+        }        public LocationObjectStorageArgs build() {
             return new LocationObjectStorageArgs(accessKey, agentArns, bucketName, secretKey, serverHostname, serverPort, serverProtocol, subdirectory, tags);
         }
     }

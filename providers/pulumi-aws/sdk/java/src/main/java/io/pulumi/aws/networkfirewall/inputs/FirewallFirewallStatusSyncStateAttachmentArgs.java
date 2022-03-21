@@ -74,22 +74,18 @@ public final class FirewallFirewallStatusSyncStateAttachmentArgs extends io.pulu
             this.endpointId = endpointId;
             return this;
         }
-
         public Builder endpointId(@Nullable String endpointId) {
             this.endpointId = Output.ofNullable(endpointId);
             return this;
         }
-
         public Builder subnetId(@Nullable Output<String> subnetId) {
             this.subnetId = subnetId;
             return this;
         }
-
         public Builder subnetId(@Nullable String subnetId) {
             this.subnetId = Output.ofNullable(subnetId);
             return this;
-        }
-        public FirewallFirewallStatusSyncStateAttachmentArgs build() {
+        }        public FirewallFirewallStatusSyncStateAttachmentArgs build() {
             return new FirewallFirewallStatusSyncStateAttachmentArgs(endpointId, subnetId);
         }
     }

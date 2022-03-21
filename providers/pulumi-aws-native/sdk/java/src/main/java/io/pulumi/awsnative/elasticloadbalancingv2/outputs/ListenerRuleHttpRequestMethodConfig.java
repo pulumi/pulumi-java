@@ -46,7 +46,9 @@ public final class ListenerRuleHttpRequestMethodConfig {
             this.values = values;
             return this;
         }
-        public ListenerRuleHttpRequestMethodConfig build() {
+        public Builder values(String... values) {
+            return values(List.of(values));
+        }        public ListenerRuleHttpRequestMethodConfig build() {
             return new ListenerRuleHttpRequestMethodConfig(values);
         }
     }

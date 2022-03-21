@@ -109,42 +109,34 @@ public final class VirtualNodeSpecListenerTimeoutGetArgs extends io.pulumi.resou
             this.grpc = grpc;
             return this;
         }
-
         public Builder grpc(@Nullable VirtualNodeSpecListenerTimeoutGrpcGetArgs grpc) {
             this.grpc = Output.ofNullable(grpc);
             return this;
         }
-
         public Builder http(@Nullable Output<VirtualNodeSpecListenerTimeoutHttpGetArgs> http) {
             this.http = http;
             return this;
         }
-
         public Builder http(@Nullable VirtualNodeSpecListenerTimeoutHttpGetArgs http) {
             this.http = Output.ofNullable(http);
             return this;
         }
-
         public Builder http2(@Nullable Output<VirtualNodeSpecListenerTimeoutHttp2GetArgs> http2) {
             this.http2 = http2;
             return this;
         }
-
         public Builder http2(@Nullable VirtualNodeSpecListenerTimeoutHttp2GetArgs http2) {
             this.http2 = Output.ofNullable(http2);
             return this;
         }
-
         public Builder tcp(@Nullable Output<VirtualNodeSpecListenerTimeoutTcpGetArgs> tcp) {
             this.tcp = tcp;
             return this;
         }
-
         public Builder tcp(@Nullable VirtualNodeSpecListenerTimeoutTcpGetArgs tcp) {
             this.tcp = Output.ofNullable(tcp);
             return this;
-        }
-        public VirtualNodeSpecListenerTimeoutGetArgs build() {
+        }        public VirtualNodeSpecListenerTimeoutGetArgs build() {
             return new VirtualNodeSpecListenerTimeoutGetArgs(grpc, http, http2, tcp);
         }
     }

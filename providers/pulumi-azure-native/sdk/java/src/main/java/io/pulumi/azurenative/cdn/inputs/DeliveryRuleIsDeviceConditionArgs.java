@@ -79,22 +79,18 @@ public final class DeliveryRuleIsDeviceConditionArgs extends io.pulumi.resources
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
-
         public Builder parameters(Output<IsDeviceMatchConditionParametersArgs> parameters) {
             this.parameters = Objects.requireNonNull(parameters);
             return this;
         }
-
         public Builder parameters(IsDeviceMatchConditionParametersArgs parameters) {
             this.parameters = Output.of(Objects.requireNonNull(parameters));
             return this;
-        }
-        public DeliveryRuleIsDeviceConditionArgs build() {
+        }        public DeliveryRuleIsDeviceConditionArgs build() {
             return new DeliveryRuleIsDeviceConditionArgs(name, parameters);
         }
     }

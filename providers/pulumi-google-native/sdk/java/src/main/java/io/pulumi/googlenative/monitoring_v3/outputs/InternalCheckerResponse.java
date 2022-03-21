@@ -133,32 +133,26 @@ public final class InternalCheckerResponse {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
-
         public Builder gcpZone(String gcpZone) {
             this.gcpZone = Objects.requireNonNull(gcpZone);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder network(String network) {
             this.network = Objects.requireNonNull(network);
             return this;
         }
-
         public Builder peerProjectId(String peerProjectId) {
             this.peerProjectId = Objects.requireNonNull(peerProjectId);
             return this;
         }
-
         public Builder state(String state) {
             this.state = Objects.requireNonNull(state);
             return this;
-        }
-        public InternalCheckerResponse build() {
+        }        public InternalCheckerResponse build() {
             return new InternalCheckerResponse(displayName, gcpZone, name, network, peerProjectId, state);
         }
     }

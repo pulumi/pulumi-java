@@ -107,42 +107,34 @@ public final class StudioLifecycleConfigArgs extends io.pulumi.resources.Resourc
             this.studioLifecycleConfigAppType = Objects.requireNonNull(studioLifecycleConfigAppType);
             return this;
         }
-
         public Builder studioLifecycleConfigAppType(String studioLifecycleConfigAppType) {
             this.studioLifecycleConfigAppType = Output.of(Objects.requireNonNull(studioLifecycleConfigAppType));
             return this;
         }
-
         public Builder studioLifecycleConfigContent(Output<String> studioLifecycleConfigContent) {
             this.studioLifecycleConfigContent = Objects.requireNonNull(studioLifecycleConfigContent);
             return this;
         }
-
         public Builder studioLifecycleConfigContent(String studioLifecycleConfigContent) {
             this.studioLifecycleConfigContent = Output.of(Objects.requireNonNull(studioLifecycleConfigContent));
             return this;
         }
-
         public Builder studioLifecycleConfigName(Output<String> studioLifecycleConfigName) {
             this.studioLifecycleConfigName = Objects.requireNonNull(studioLifecycleConfigName);
             return this;
         }
-
         public Builder studioLifecycleConfigName(String studioLifecycleConfigName) {
             this.studioLifecycleConfigName = Output.of(Objects.requireNonNull(studioLifecycleConfigName));
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
-        }
-        public StudioLifecycleConfigArgs build() {
+        }        public StudioLifecycleConfigArgs build() {
             return new StudioLifecycleConfigArgs(studioLifecycleConfigAppType, studioLifecycleConfigContent, studioLifecycleConfigName, tags);
         }
     }

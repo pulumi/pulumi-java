@@ -110,22 +110,18 @@ public final class PurchasePlanResponse extends io.pulumi.resources.InvokeArgs {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder product(String product) {
             this.product = Objects.requireNonNull(product);
             return this;
         }
-
         public Builder promotionCode(@Nullable String promotionCode) {
             this.promotionCode = promotionCode;
             return this;
         }
-
         public Builder publisher(String publisher) {
             this.publisher = Objects.requireNonNull(publisher);
             return this;
-        }
-        public PurchasePlanResponse build() {
+        }        public PurchasePlanResponse build() {
             return new PurchasePlanResponse(name, product, promotionCode, publisher);
         }
     }

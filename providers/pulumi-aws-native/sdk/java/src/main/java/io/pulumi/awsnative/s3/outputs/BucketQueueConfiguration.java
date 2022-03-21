@@ -88,17 +88,14 @@ public final class BucketQueueConfiguration {
             this.event = Objects.requireNonNull(event);
             return this;
         }
-
         public Builder filter(@Nullable BucketNotificationFilter filter) {
             this.filter = filter;
             return this;
         }
-
         public Builder queue(String queue) {
             this.queue = Objects.requireNonNull(queue);
             return this;
-        }
-        public BucketQueueConfiguration build() {
+        }        public BucketQueueConfiguration build() {
             return new BucketQueueConfiguration(event, filter, queue);
         }
     }

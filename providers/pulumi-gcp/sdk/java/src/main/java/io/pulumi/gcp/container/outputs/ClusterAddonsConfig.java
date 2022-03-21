@@ -246,52 +246,42 @@ public final class ClusterAddonsConfig {
             this.cloudrunConfig = cloudrunConfig;
             return this;
         }
-
         public Builder configConnectorConfig(@Nullable ClusterAddonsConfigConfigConnectorConfig configConnectorConfig) {
             this.configConnectorConfig = configConnectorConfig;
             return this;
         }
-
         public Builder dnsCacheConfig(@Nullable ClusterAddonsConfigDnsCacheConfig dnsCacheConfig) {
             this.dnsCacheConfig = dnsCacheConfig;
             return this;
         }
-
         public Builder gcePersistentDiskCsiDriverConfig(@Nullable ClusterAddonsConfigGcePersistentDiskCsiDriverConfig gcePersistentDiskCsiDriverConfig) {
             this.gcePersistentDiskCsiDriverConfig = gcePersistentDiskCsiDriverConfig;
             return this;
         }
-
         public Builder gcpFilestoreCsiDriverConfig(@Nullable ClusterAddonsConfigGcpFilestoreCsiDriverConfig gcpFilestoreCsiDriverConfig) {
             this.gcpFilestoreCsiDriverConfig = gcpFilestoreCsiDriverConfig;
             return this;
         }
-
         public Builder horizontalPodAutoscaling(@Nullable ClusterAddonsConfigHorizontalPodAutoscaling horizontalPodAutoscaling) {
             this.horizontalPodAutoscaling = horizontalPodAutoscaling;
             return this;
         }
-
         public Builder httpLoadBalancing(@Nullable ClusterAddonsConfigHttpLoadBalancing httpLoadBalancing) {
             this.httpLoadBalancing = httpLoadBalancing;
             return this;
         }
-
         public Builder istioConfig(@Nullable ClusterAddonsConfigIstioConfig istioConfig) {
             this.istioConfig = istioConfig;
             return this;
         }
-
         public Builder kalmConfig(@Nullable ClusterAddonsConfigKalmConfig kalmConfig) {
             this.kalmConfig = kalmConfig;
             return this;
         }
-
         public Builder networkPolicyConfig(@Nullable ClusterAddonsConfigNetworkPolicyConfig networkPolicyConfig) {
             this.networkPolicyConfig = networkPolicyConfig;
             return this;
-        }
-        public ClusterAddonsConfig build() {
+        }        public ClusterAddonsConfig build() {
             return new ClusterAddonsConfig(cloudrunConfig, configConnectorConfig, dnsCacheConfig, gcePersistentDiskCsiDriverConfig, gcpFilestoreCsiDriverConfig, horizontalPodAutoscaling, httpLoadBalancing, istioConfig, kalmConfig, networkPolicyConfig);
         }
     }

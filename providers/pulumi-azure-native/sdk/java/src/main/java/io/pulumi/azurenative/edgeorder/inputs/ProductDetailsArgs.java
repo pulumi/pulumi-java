@@ -60,12 +60,10 @@ public final class ProductDetailsArgs extends io.pulumi.resources.ResourceArgs {
             this.hierarchyInformation = Objects.requireNonNull(hierarchyInformation);
             return this;
         }
-
         public Builder hierarchyInformation(HierarchyInformationArgs hierarchyInformation) {
             this.hierarchyInformation = Output.of(Objects.requireNonNull(hierarchyInformation));
             return this;
-        }
-        public ProductDetailsArgs build() {
+        }        public ProductDetailsArgs build() {
             return new ProductDetailsArgs(hierarchyInformation);
         }
     }

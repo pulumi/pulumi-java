@@ -321,172 +321,138 @@ public final class CanaryArgs extends io.pulumi.resources.ResourceArgs {
             this.artifactConfig = artifactConfig;
             return this;
         }
-
         public Builder artifactConfig(@Nullable CanaryArtifactConfigArgs artifactConfig) {
             this.artifactConfig = Output.ofNullable(artifactConfig);
             return this;
         }
-
         public Builder artifactS3Location(Output<String> artifactS3Location) {
             this.artifactS3Location = Objects.requireNonNull(artifactS3Location);
             return this;
         }
-
         public Builder artifactS3Location(String artifactS3Location) {
             this.artifactS3Location = Output.of(Objects.requireNonNull(artifactS3Location));
             return this;
         }
-
         public Builder executionRoleArn(Output<String> executionRoleArn) {
             this.executionRoleArn = Objects.requireNonNull(executionRoleArn);
             return this;
         }
-
         public Builder executionRoleArn(String executionRoleArn) {
             this.executionRoleArn = Output.of(Objects.requireNonNull(executionRoleArn));
             return this;
         }
-
         public Builder failureRetentionPeriod(@Nullable Output<Integer> failureRetentionPeriod) {
             this.failureRetentionPeriod = failureRetentionPeriod;
             return this;
         }
-
         public Builder failureRetentionPeriod(@Nullable Integer failureRetentionPeriod) {
             this.failureRetentionPeriod = Output.ofNullable(failureRetentionPeriod);
             return this;
         }
-
         public Builder handler(Output<String> handler) {
             this.handler = Objects.requireNonNull(handler);
             return this;
         }
-
         public Builder handler(String handler) {
             this.handler = Output.of(Objects.requireNonNull(handler));
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder runConfig(@Nullable Output<CanaryRunConfigArgs> runConfig) {
             this.runConfig = runConfig;
             return this;
         }
-
         public Builder runConfig(@Nullable CanaryRunConfigArgs runConfig) {
             this.runConfig = Output.ofNullable(runConfig);
             return this;
         }
-
         public Builder runtimeVersion(Output<String> runtimeVersion) {
             this.runtimeVersion = Objects.requireNonNull(runtimeVersion);
             return this;
         }
-
         public Builder runtimeVersion(String runtimeVersion) {
             this.runtimeVersion = Output.of(Objects.requireNonNull(runtimeVersion));
             return this;
         }
-
         public Builder s3Bucket(@Nullable Output<String> s3Bucket) {
             this.s3Bucket = s3Bucket;
             return this;
         }
-
         public Builder s3Bucket(@Nullable String s3Bucket) {
             this.s3Bucket = Output.ofNullable(s3Bucket);
             return this;
         }
-
         public Builder s3Key(@Nullable Output<String> s3Key) {
             this.s3Key = s3Key;
             return this;
         }
-
         public Builder s3Key(@Nullable String s3Key) {
             this.s3Key = Output.ofNullable(s3Key);
             return this;
         }
-
         public Builder s3Version(@Nullable Output<String> s3Version) {
             this.s3Version = s3Version;
             return this;
         }
-
         public Builder s3Version(@Nullable String s3Version) {
             this.s3Version = Output.ofNullable(s3Version);
             return this;
         }
-
         public Builder schedule(Output<CanaryScheduleArgs> schedule) {
             this.schedule = Objects.requireNonNull(schedule);
             return this;
         }
-
         public Builder schedule(CanaryScheduleArgs schedule) {
             this.schedule = Output.of(Objects.requireNonNull(schedule));
             return this;
         }
-
         public Builder startCanary(@Nullable Output<Boolean> startCanary) {
             this.startCanary = startCanary;
             return this;
         }
-
         public Builder startCanary(@Nullable Boolean startCanary) {
             this.startCanary = Output.ofNullable(startCanary);
             return this;
         }
-
         public Builder successRetentionPeriod(@Nullable Output<Integer> successRetentionPeriod) {
             this.successRetentionPeriod = successRetentionPeriod;
             return this;
         }
-
         public Builder successRetentionPeriod(@Nullable Integer successRetentionPeriod) {
             this.successRetentionPeriod = Output.ofNullable(successRetentionPeriod);
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
         public Builder vpcConfig(@Nullable Output<CanaryVpcConfigArgs> vpcConfig) {
             this.vpcConfig = vpcConfig;
             return this;
         }
-
         public Builder vpcConfig(@Nullable CanaryVpcConfigArgs vpcConfig) {
             this.vpcConfig = Output.ofNullable(vpcConfig);
             return this;
         }
-
         public Builder zipFile(@Nullable Output<String> zipFile) {
             this.zipFile = zipFile;
             return this;
         }
-
         public Builder zipFile(@Nullable String zipFile) {
             this.zipFile = Output.ofNullable(zipFile);
             return this;
-        }
-        public CanaryArgs build() {
+        }        public CanaryArgs build() {
             return new CanaryArgs(artifactConfig, artifactS3Location, executionRoleArn, failureRetentionPeriod, handler, name, runConfig, runtimeVersion, s3Bucket, s3Key, s3Version, schedule, startCanary, successRetentionPeriod, tags, vpcConfig, zipFile);
         }
     }

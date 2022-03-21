@@ -43,8 +43,7 @@ public final class GetClusterAddonsConfigKalmConfig {
         public Builder enabled(Boolean enabled) {
             this.enabled = Objects.requireNonNull(enabled);
             return this;
-        }
-        public GetClusterAddonsConfigKalmConfig build() {
+        }        public GetClusterAddonsConfigKalmConfig build() {
             return new GetClusterAddonsConfigKalmConfig(enabled);
         }
     }

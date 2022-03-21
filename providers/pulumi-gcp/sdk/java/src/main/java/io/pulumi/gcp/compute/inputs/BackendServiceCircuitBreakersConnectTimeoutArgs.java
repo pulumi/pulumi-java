@@ -77,22 +77,18 @@ public final class BackendServiceCircuitBreakersConnectTimeoutArgs extends io.pu
             this.nanos = nanos;
             return this;
         }
-
         public Builder nanos(@Nullable Integer nanos) {
             this.nanos = Output.ofNullable(nanos);
             return this;
         }
-
         public Builder seconds(Output<Integer> seconds) {
             this.seconds = Objects.requireNonNull(seconds);
             return this;
         }
-
         public Builder seconds(Integer seconds) {
             this.seconds = Output.of(Objects.requireNonNull(seconds));
             return this;
-        }
-        public BackendServiceCircuitBreakersConnectTimeoutArgs build() {
+        }        public BackendServiceCircuitBreakersConnectTimeoutArgs build() {
             return new BackendServiceCircuitBreakersConnectTimeoutArgs(nanos, seconds);
         }
     }

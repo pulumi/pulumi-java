@@ -53,8 +53,7 @@ public final class ClusterServerSideEncryption {
         public Builder enabled(@Nullable Boolean enabled) {
             this.enabled = enabled;
             return this;
-        }
-        public ClusterServerSideEncryption build() {
+        }        public ClusterServerSideEncryption build() {
             return new ClusterServerSideEncryption(enabled);
         }
     }

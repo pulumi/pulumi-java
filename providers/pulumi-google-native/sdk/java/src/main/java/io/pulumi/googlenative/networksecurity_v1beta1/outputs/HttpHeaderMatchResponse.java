@@ -69,12 +69,10 @@ public final class HttpHeaderMatchResponse {
             this.headerName = Objects.requireNonNull(headerName);
             return this;
         }
-
         public Builder regexMatch(String regexMatch) {
             this.regexMatch = Objects.requireNonNull(regexMatch);
             return this;
-        }
-        public HttpHeaderMatchResponse build() {
+        }        public HttpHeaderMatchResponse build() {
             return new HttpHeaderMatchResponse(headerName, regexMatch);
         }
     }

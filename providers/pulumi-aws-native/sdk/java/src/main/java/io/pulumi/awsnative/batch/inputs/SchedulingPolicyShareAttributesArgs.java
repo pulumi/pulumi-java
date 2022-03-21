@@ -67,22 +67,18 @@ public final class SchedulingPolicyShareAttributesArgs extends io.pulumi.resourc
             this.shareIdentifier = shareIdentifier;
             return this;
         }
-
         public Builder shareIdentifier(@Nullable String shareIdentifier) {
             this.shareIdentifier = Output.ofNullable(shareIdentifier);
             return this;
         }
-
         public Builder weightFactor(@Nullable Output<Double> weightFactor) {
             this.weightFactor = weightFactor;
             return this;
         }
-
         public Builder weightFactor(@Nullable Double weightFactor) {
             this.weightFactor = Output.ofNullable(weightFactor);
             return this;
-        }
-        public SchedulingPolicyShareAttributesArgs build() {
+        }        public SchedulingPolicyShareAttributesArgs build() {
             return new SchedulingPolicyShareAttributesArgs(shareIdentifier, weightFactor);
         }
     }

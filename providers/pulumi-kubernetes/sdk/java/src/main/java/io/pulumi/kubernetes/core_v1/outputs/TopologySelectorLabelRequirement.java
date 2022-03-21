@@ -70,12 +70,13 @@ public final class TopologySelectorLabelRequirement {
             this.key = Objects.requireNonNull(key);
             return this;
         }
-
         public Builder values(List<String> values) {
             this.values = Objects.requireNonNull(values);
             return this;
         }
-        public TopologySelectorLabelRequirement build() {
+        public Builder values(String... values) {
+            return values(List.of(values));
+        }        public TopologySelectorLabelRequirement build() {
             return new TopologySelectorLabelRequirement(key, values);
         }
     }

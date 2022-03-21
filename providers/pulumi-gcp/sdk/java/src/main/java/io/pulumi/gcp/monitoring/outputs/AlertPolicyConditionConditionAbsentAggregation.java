@@ -246,22 +246,21 @@ public final class AlertPolicyConditionConditionAbsentAggregation {
             this.alignmentPeriod = alignmentPeriod;
             return this;
         }
-
         public Builder crossSeriesReducer(@Nullable String crossSeriesReducer) {
             this.crossSeriesReducer = crossSeriesReducer;
             return this;
         }
-
         public Builder groupByFields(@Nullable List<String> groupByFields) {
             this.groupByFields = groupByFields;
             return this;
         }
-
+        public Builder groupByFields(String... groupByFields) {
+            return groupByFields(List.of(groupByFields));
+        }
         public Builder perSeriesAligner(@Nullable String perSeriesAligner) {
             this.perSeriesAligner = perSeriesAligner;
             return this;
-        }
-        public AlertPolicyConditionConditionAbsentAggregation build() {
+        }        public AlertPolicyConditionConditionAbsentAggregation build() {
             return new AlertPolicyConditionConditionAbsentAggregation(alignmentPeriod, crossSeriesReducer, groupByFields, perSeriesAligner);
         }
     }

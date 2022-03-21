@@ -53,8 +53,7 @@ public final class CertificateResponse {
         public Builder pem(@Nullable String pem) {
             this.pem = pem;
             return this;
-        }
-        public CertificateResponse build() {
+        }        public CertificateResponse build() {
             return new CertificateResponse(pem);
         }
     }

@@ -98,42 +98,43 @@ public final class BucketNotificationConfigurationArgs extends io.pulumi.resourc
             this.eventBridgeConfiguration = eventBridgeConfiguration;
             return this;
         }
-
         public Builder eventBridgeConfiguration(@Nullable BucketEventBridgeConfigurationArgs eventBridgeConfiguration) {
             this.eventBridgeConfiguration = Output.ofNullable(eventBridgeConfiguration);
             return this;
         }
-
         public Builder lambdaConfigurations(@Nullable Output<List<BucketLambdaConfigurationArgs>> lambdaConfigurations) {
             this.lambdaConfigurations = lambdaConfigurations;
             return this;
         }
-
         public Builder lambdaConfigurations(@Nullable List<BucketLambdaConfigurationArgs> lambdaConfigurations) {
             this.lambdaConfigurations = Output.ofNullable(lambdaConfigurations);
             return this;
         }
-
+        public Builder lambdaConfigurations(BucketLambdaConfigurationArgs... lambdaConfigurations) {
+            return lambdaConfigurations(List.of(lambdaConfigurations));
+        }
         public Builder queueConfigurations(@Nullable Output<List<BucketQueueConfigurationArgs>> queueConfigurations) {
             this.queueConfigurations = queueConfigurations;
             return this;
         }
-
         public Builder queueConfigurations(@Nullable List<BucketQueueConfigurationArgs> queueConfigurations) {
             this.queueConfigurations = Output.ofNullable(queueConfigurations);
             return this;
         }
-
+        public Builder queueConfigurations(BucketQueueConfigurationArgs... queueConfigurations) {
+            return queueConfigurations(List.of(queueConfigurations));
+        }
         public Builder topicConfigurations(@Nullable Output<List<BucketTopicConfigurationArgs>> topicConfigurations) {
             this.topicConfigurations = topicConfigurations;
             return this;
         }
-
         public Builder topicConfigurations(@Nullable List<BucketTopicConfigurationArgs> topicConfigurations) {
             this.topicConfigurations = Output.ofNullable(topicConfigurations);
             return this;
         }
-        public BucketNotificationConfigurationArgs build() {
+        public Builder topicConfigurations(BucketTopicConfigurationArgs... topicConfigurations) {
+            return topicConfigurations(List.of(topicConfigurations));
+        }        public BucketNotificationConfigurationArgs build() {
             return new BucketNotificationConfigurationArgs(eventBridgeConfiguration, lambdaConfigurations, queueConfigurations, topicConfigurations);
         }
     }

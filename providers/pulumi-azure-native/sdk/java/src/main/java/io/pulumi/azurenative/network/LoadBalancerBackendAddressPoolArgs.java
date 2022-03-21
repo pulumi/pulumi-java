@@ -156,72 +156,61 @@ public final class LoadBalancerBackendAddressPoolArgs extends io.pulumi.resource
             this.backendAddressPoolName = backendAddressPoolName;
             return this;
         }
-
         public Builder backendAddressPoolName(@Nullable String backendAddressPoolName) {
             this.backendAddressPoolName = Output.ofNullable(backendAddressPoolName);
             return this;
         }
-
         public Builder id(@Nullable Output<String> id) {
             this.id = id;
             return this;
         }
-
         public Builder id(@Nullable String id) {
             this.id = Output.ofNullable(id);
             return this;
         }
-
         public Builder loadBalancerBackendAddresses(@Nullable Output<List<LoadBalancerBackendAddressArgs>> loadBalancerBackendAddresses) {
             this.loadBalancerBackendAddresses = loadBalancerBackendAddresses;
             return this;
         }
-
         public Builder loadBalancerBackendAddresses(@Nullable List<LoadBalancerBackendAddressArgs> loadBalancerBackendAddresses) {
             this.loadBalancerBackendAddresses = Output.ofNullable(loadBalancerBackendAddresses);
             return this;
         }
-
+        public Builder loadBalancerBackendAddresses(LoadBalancerBackendAddressArgs... loadBalancerBackendAddresses) {
+            return loadBalancerBackendAddresses(List.of(loadBalancerBackendAddresses));
+        }
         public Builder loadBalancerName(Output<String> loadBalancerName) {
             this.loadBalancerName = Objects.requireNonNull(loadBalancerName);
             return this;
         }
-
         public Builder loadBalancerName(String loadBalancerName) {
             this.loadBalancerName = Output.of(Objects.requireNonNull(loadBalancerName));
             return this;
         }
-
         public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
-        }
-        public LoadBalancerBackendAddressPoolArgs build() {
+        }        public LoadBalancerBackendAddressPoolArgs build() {
             return new LoadBalancerBackendAddressPoolArgs(backendAddressPoolName, id, loadBalancerBackendAddresses, loadBalancerName, location, name, resourceGroupName);
         }
     }

@@ -174,82 +174,66 @@ public final class GraphResourceGraphArgs extends io.pulumi.resources.ResourceAr
             this.accountName = Objects.requireNonNull(accountName);
             return this;
         }
-
         public Builder accountName(String accountName) {
             this.accountName = Output.of(Objects.requireNonNull(accountName));
             return this;
         }
-
         public Builder graphName(@Nullable Output<String> graphName) {
             this.graphName = graphName;
             return this;
         }
-
         public Builder graphName(@Nullable String graphName) {
             this.graphName = Output.ofNullable(graphName);
             return this;
         }
-
         public Builder identity(@Nullable Output<ManagedServiceIdentityArgs> identity) {
             this.identity = identity;
             return this;
         }
-
         public Builder identity(@Nullable ManagedServiceIdentityArgs identity) {
             this.identity = Output.ofNullable(identity);
             return this;
         }
-
         public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder options(@Nullable Output<CreateUpdateOptionsArgs> options) {
             this.options = options;
             return this;
         }
-
         public Builder options(@Nullable CreateUpdateOptionsArgs options) {
             this.options = Output.ofNullable(options);
             return this;
         }
-
         public Builder resource(Output<GraphResourceArgs> resource) {
             this.resource = Objects.requireNonNull(resource);
             return this;
         }
-
         public Builder resource(GraphResourceArgs resource) {
             this.resource = Output.of(Objects.requireNonNull(resource));
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
-        }
-        public GraphResourceGraphArgs build() {
+        }        public GraphResourceGraphArgs build() {
             return new GraphResourceGraphArgs(accountName, graphName, identity, location, options, resource, resourceGroupName, tags);
         }
     }

@@ -79,22 +79,18 @@ public final class GrafeasV1beta1BuildDetailsArgs extends io.pulumi.resources.Re
             this.provenance = Objects.requireNonNull(provenance);
             return this;
         }
-
         public Builder provenance(BuildProvenanceArgs provenance) {
             this.provenance = Output.of(Objects.requireNonNull(provenance));
             return this;
         }
-
         public Builder provenanceBytes(@Nullable Output<String> provenanceBytes) {
             this.provenanceBytes = provenanceBytes;
             return this;
         }
-
         public Builder provenanceBytes(@Nullable String provenanceBytes) {
             this.provenanceBytes = Output.ofNullable(provenanceBytes);
             return this;
-        }
-        public GrafeasV1beta1BuildDetailsArgs build() {
+        }        public GrafeasV1beta1BuildDetailsArgs build() {
             return new GrafeasV1beta1BuildDetailsArgs(provenance, provenanceBytes);
         }
     }

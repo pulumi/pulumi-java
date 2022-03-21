@@ -193,47 +193,38 @@ public final class TestExecutionResponse extends io.pulumi.resources.InvokeArgs 
             this.environment = Objects.requireNonNull(environment);
             return this;
         }
-
         public Builder matrixId(String matrixId) {
             this.matrixId = Objects.requireNonNull(matrixId);
             return this;
         }
-
         public Builder project(String project) {
             this.project = Objects.requireNonNull(project);
             return this;
         }
-
         public Builder shard(ShardResponse shard) {
             this.shard = Objects.requireNonNull(shard);
             return this;
         }
-
         public Builder state(String state) {
             this.state = Objects.requireNonNull(state);
             return this;
         }
-
         public Builder testDetails(TestDetailsResponse testDetails) {
             this.testDetails = Objects.requireNonNull(testDetails);
             return this;
         }
-
         public Builder testSpecification(TestSpecificationResponse testSpecification) {
             this.testSpecification = Objects.requireNonNull(testSpecification);
             return this;
         }
-
         public Builder timestamp(String timestamp) {
             this.timestamp = Objects.requireNonNull(timestamp);
             return this;
         }
-
         public Builder toolResultsStep(ToolResultsStepResponse toolResultsStep) {
             this.toolResultsStep = Objects.requireNonNull(toolResultsStep);
             return this;
-        }
-        public TestExecutionResponse build() {
+        }        public TestExecutionResponse build() {
             return new TestExecutionResponse(environment, matrixId, project, shard, state, testDetails, testSpecification, timestamp, toolResultsStep);
         }
     }

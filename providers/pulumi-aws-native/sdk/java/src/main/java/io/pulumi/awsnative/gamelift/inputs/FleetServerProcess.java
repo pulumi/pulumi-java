@@ -99,17 +99,14 @@ public final class FleetServerProcess extends io.pulumi.resources.InvokeArgs {
             this.concurrentExecutions = Objects.requireNonNull(concurrentExecutions);
             return this;
         }
-
         public Builder launchPath(String launchPath) {
             this.launchPath = Objects.requireNonNull(launchPath);
             return this;
         }
-
         public Builder parameters(@Nullable String parameters) {
             this.parameters = parameters;
             return this;
-        }
-        public FleetServerProcess build() {
+        }        public FleetServerProcess build() {
             return new FleetServerProcess(concurrentExecutions, launchPath, parameters);
         }
     }

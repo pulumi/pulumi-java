@@ -336,162 +336,133 @@ public final class TableArgs extends io.pulumi.resources.ResourceArgs {
             this.clusterings = clusterings;
             return this;
         }
-
         public Builder clusterings(@Nullable List<String> clusterings) {
             this.clusterings = Output.ofNullable(clusterings);
             return this;
         }
-
+        public Builder clusterings(String... clusterings) {
+            return clusterings(List.of(clusterings));
+        }
         public Builder datasetId(Output<String> datasetId) {
             this.datasetId = Objects.requireNonNull(datasetId);
             return this;
         }
-
         public Builder datasetId(String datasetId) {
             this.datasetId = Output.of(Objects.requireNonNull(datasetId));
             return this;
         }
-
         public Builder deletionProtection(@Nullable Output<Boolean> deletionProtection) {
             this.deletionProtection = deletionProtection;
             return this;
         }
-
         public Builder deletionProtection(@Nullable Boolean deletionProtection) {
             this.deletionProtection = Output.ofNullable(deletionProtection);
             return this;
         }
-
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder encryptionConfiguration(@Nullable Output<TableEncryptionConfigurationArgs> encryptionConfiguration) {
             this.encryptionConfiguration = encryptionConfiguration;
             return this;
         }
-
         public Builder encryptionConfiguration(@Nullable TableEncryptionConfigurationArgs encryptionConfiguration) {
             this.encryptionConfiguration = Output.ofNullable(encryptionConfiguration);
             return this;
         }
-
         public Builder expirationTime(@Nullable Output<Integer> expirationTime) {
             this.expirationTime = expirationTime;
             return this;
         }
-
         public Builder expirationTime(@Nullable Integer expirationTime) {
             this.expirationTime = Output.ofNullable(expirationTime);
             return this;
         }
-
         public Builder externalDataConfiguration(@Nullable Output<TableExternalDataConfigurationArgs> externalDataConfiguration) {
             this.externalDataConfiguration = externalDataConfiguration;
             return this;
         }
-
         public Builder externalDataConfiguration(@Nullable TableExternalDataConfigurationArgs externalDataConfiguration) {
             this.externalDataConfiguration = Output.ofNullable(externalDataConfiguration);
             return this;
         }
-
         public Builder friendlyName(@Nullable Output<String> friendlyName) {
             this.friendlyName = friendlyName;
             return this;
         }
-
         public Builder friendlyName(@Nullable String friendlyName) {
             this.friendlyName = Output.ofNullable(friendlyName);
             return this;
         }
-
         public Builder labels(@Nullable Output<Map<String,String>> labels) {
             this.labels = labels;
             return this;
         }
-
         public Builder labels(@Nullable Map<String,String> labels) {
             this.labels = Output.ofNullable(labels);
             return this;
         }
-
         public Builder materializedView(@Nullable Output<TableMaterializedViewArgs> materializedView) {
             this.materializedView = materializedView;
             return this;
         }
-
         public Builder materializedView(@Nullable TableMaterializedViewArgs materializedView) {
             this.materializedView = Output.ofNullable(materializedView);
             return this;
         }
-
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
         }
-
         public Builder rangePartitioning(@Nullable Output<TableRangePartitioningArgs> rangePartitioning) {
             this.rangePartitioning = rangePartitioning;
             return this;
         }
-
         public Builder rangePartitioning(@Nullable TableRangePartitioningArgs rangePartitioning) {
             this.rangePartitioning = Output.ofNullable(rangePartitioning);
             return this;
         }
-
         public Builder schema(@Nullable Output<String> schema) {
             this.schema = schema;
             return this;
         }
-
         public Builder schema(@Nullable String schema) {
             this.schema = Output.ofNullable(schema);
             return this;
         }
-
         public Builder tableId(Output<String> tableId) {
             this.tableId = Objects.requireNonNull(tableId);
             return this;
         }
-
         public Builder tableId(String tableId) {
             this.tableId = Output.of(Objects.requireNonNull(tableId));
             return this;
         }
-
         public Builder timePartitioning(@Nullable Output<TableTimePartitioningArgs> timePartitioning) {
             this.timePartitioning = timePartitioning;
             return this;
         }
-
         public Builder timePartitioning(@Nullable TableTimePartitioningArgs timePartitioning) {
             this.timePartitioning = Output.ofNullable(timePartitioning);
             return this;
         }
-
         public Builder view(@Nullable Output<TableViewArgs> view) {
             this.view = view;
             return this;
         }
-
         public Builder view(@Nullable TableViewArgs view) {
             this.view = Output.ofNullable(view);
             return this;
-        }
-        public TableArgs build() {
+        }        public TableArgs build() {
             return new TableArgs(clusterings, datasetId, deletionProtection, description, encryptionConfiguration, expirationTime, externalDataConfiguration, friendlyName, labels, materializedView, project, rangePartitioning, schema, tableId, timePartitioning, view);
         }
     }

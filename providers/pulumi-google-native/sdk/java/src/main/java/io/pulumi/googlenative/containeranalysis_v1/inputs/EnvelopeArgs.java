@@ -84,32 +84,29 @@ public final class EnvelopeArgs extends io.pulumi.resources.ResourceArgs {
             this.payload = payload;
             return this;
         }
-
         public Builder payload(@Nullable String payload) {
             this.payload = Output.ofNullable(payload);
             return this;
         }
-
         public Builder payloadType(@Nullable Output<String> payloadType) {
             this.payloadType = payloadType;
             return this;
         }
-
         public Builder payloadType(@Nullable String payloadType) {
             this.payloadType = Output.ofNullable(payloadType);
             return this;
         }
-
         public Builder signatures(@Nullable Output<List<EnvelopeSignatureArgs>> signatures) {
             this.signatures = signatures;
             return this;
         }
-
         public Builder signatures(@Nullable List<EnvelopeSignatureArgs> signatures) {
             this.signatures = Output.ofNullable(signatures);
             return this;
         }
-        public EnvelopeArgs build() {
+        public Builder signatures(EnvelopeSignatureArgs... signatures) {
+            return signatures(List.of(signatures));
+        }        public EnvelopeArgs build() {
             return new EnvelopeArgs(payload, payloadType, signatures);
         }
     }

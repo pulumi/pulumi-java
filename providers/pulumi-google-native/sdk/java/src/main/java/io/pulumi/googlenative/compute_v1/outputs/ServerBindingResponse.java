@@ -43,8 +43,7 @@ public final class ServerBindingResponse {
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public ServerBindingResponse build() {
+        }        public ServerBindingResponse build() {
             return new ServerBindingResponse(type);
         }
     }

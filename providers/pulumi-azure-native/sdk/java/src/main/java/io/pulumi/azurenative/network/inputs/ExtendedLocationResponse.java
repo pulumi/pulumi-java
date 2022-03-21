@@ -76,12 +76,10 @@ public final class ExtendedLocationResponse extends io.pulumi.resources.InvokeAr
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public ExtendedLocationResponse build() {
+        }        public ExtendedLocationResponse build() {
             return new ExtendedLocationResponse(name, type);
         }
     }

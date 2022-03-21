@@ -57,12 +57,10 @@ public final class ApiConfigGatewayConfigGetArgs extends io.pulumi.resources.Res
             this.backendConfig = Objects.requireNonNull(backendConfig);
             return this;
         }
-
         public Builder backendConfig(ApiConfigGatewayConfigBackendConfigGetArgs backendConfig) {
             this.backendConfig = Output.of(Objects.requireNonNull(backendConfig));
             return this;
-        }
-        public ApiConfigGatewayConfigGetArgs build() {
+        }        public ApiConfigGatewayConfigGetArgs build() {
             return new ApiConfigGatewayConfigGetArgs(backendConfig);
         }
     }

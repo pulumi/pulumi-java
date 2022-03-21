@@ -139,62 +139,50 @@ public final class ResolverFirewallRuleGroupState extends io.pulumi.resources.Re
             this.arn = arn;
             return this;
         }
-
         public Builder arn(@Nullable String arn) {
             this.arn = Output.ofNullable(arn);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder ownerId(@Nullable Output<String> ownerId) {
             this.ownerId = ownerId;
             return this;
         }
-
         public Builder ownerId(@Nullable String ownerId) {
             this.ownerId = Output.ofNullable(ownerId);
             return this;
         }
-
         public Builder shareStatus(@Nullable Output<String> shareStatus) {
             this.shareStatus = shareStatus;
             return this;
         }
-
         public Builder shareStatus(@Nullable String shareStatus) {
             this.shareStatus = Output.ofNullable(shareStatus);
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
             this.tagsAll = tagsAll;
             return this;
         }
-
         public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
             this.tagsAll = Output.ofNullable(tagsAll);
             return this;
-        }
-        public ResolverFirewallRuleGroupState build() {
+        }        public ResolverFirewallRuleGroupState build() {
             return new ResolverFirewallRuleGroupState(arn, name, ownerId, shareStatus, tags, tagsAll);
         }
     }

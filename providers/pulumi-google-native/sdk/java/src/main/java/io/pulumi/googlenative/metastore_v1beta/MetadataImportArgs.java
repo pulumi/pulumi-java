@@ -151,82 +151,66 @@ public final class MetadataImportArgs extends io.pulumi.resources.ResourceArgs {
             this.databaseDump = databaseDump;
             return this;
         }
-
         public Builder databaseDump(@Nullable DatabaseDumpArgs databaseDump) {
             this.databaseDump = Output.ofNullable(databaseDump);
             return this;
         }
-
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder metadataImportId(Output<String> metadataImportId) {
             this.metadataImportId = Objects.requireNonNull(metadataImportId);
             return this;
         }
-
         public Builder metadataImportId(String metadataImportId) {
             this.metadataImportId = Output.of(Objects.requireNonNull(metadataImportId));
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
         }
-
         public Builder requestId(@Nullable Output<String> requestId) {
             this.requestId = requestId;
             return this;
         }
-
         public Builder requestId(@Nullable String requestId) {
             this.requestId = Output.ofNullable(requestId);
             return this;
         }
-
         public Builder serviceId(Output<String> serviceId) {
             this.serviceId = Objects.requireNonNull(serviceId);
             return this;
         }
-
         public Builder serviceId(String serviceId) {
             this.serviceId = Output.of(Objects.requireNonNull(serviceId));
             return this;
-        }
-        public MetadataImportArgs build() {
+        }        public MetadataImportArgs build() {
             return new MetadataImportArgs(databaseDump, description, location, metadataImportId, name, project, requestId, serviceId);
         }
     }

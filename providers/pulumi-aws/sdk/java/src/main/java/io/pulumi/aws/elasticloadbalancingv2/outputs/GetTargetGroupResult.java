@@ -202,97 +202,78 @@ public final class GetTargetGroupResult {
             this.arn = Objects.requireNonNull(arn);
             return this;
         }
-
         public Builder arnSuffix(String arnSuffix) {
             this.arnSuffix = Objects.requireNonNull(arnSuffix);
             return this;
         }
-
         public Builder connectionTermination(Boolean connectionTermination) {
             this.connectionTermination = Objects.requireNonNull(connectionTermination);
             return this;
         }
-
         public Builder deregistrationDelay(Integer deregistrationDelay) {
             this.deregistrationDelay = Objects.requireNonNull(deregistrationDelay);
             return this;
         }
-
         public Builder healthCheck(GetTargetGroupHealthCheck healthCheck) {
             this.healthCheck = Objects.requireNonNull(healthCheck);
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder lambdaMultiValueHeadersEnabled(Boolean lambdaMultiValueHeadersEnabled) {
             this.lambdaMultiValueHeadersEnabled = Objects.requireNonNull(lambdaMultiValueHeadersEnabled);
             return this;
         }
-
         public Builder loadBalancingAlgorithmType(String loadBalancingAlgorithmType) {
             this.loadBalancingAlgorithmType = Objects.requireNonNull(loadBalancingAlgorithmType);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder port(Integer port) {
             this.port = Objects.requireNonNull(port);
             return this;
         }
-
         public Builder preserveClientIp(String preserveClientIp) {
             this.preserveClientIp = Objects.requireNonNull(preserveClientIp);
             return this;
         }
-
         public Builder protocol(String protocol) {
             this.protocol = Objects.requireNonNull(protocol);
             return this;
         }
-
         public Builder protocolVersion(String protocolVersion) {
             this.protocolVersion = Objects.requireNonNull(protocolVersion);
             return this;
         }
-
         public Builder proxyProtocolV2(Boolean proxyProtocolV2) {
             this.proxyProtocolV2 = Objects.requireNonNull(proxyProtocolV2);
             return this;
         }
-
         public Builder slowStart(Integer slowStart) {
             this.slowStart = Objects.requireNonNull(slowStart);
             return this;
         }
-
         public Builder stickiness(GetTargetGroupStickiness stickiness) {
             this.stickiness = Objects.requireNonNull(stickiness);
             return this;
         }
-
         public Builder tags(Map<String,String> tags) {
             this.tags = Objects.requireNonNull(tags);
             return this;
         }
-
         public Builder targetType(String targetType) {
             this.targetType = Objects.requireNonNull(targetType);
             return this;
         }
-
         public Builder vpcId(String vpcId) {
             this.vpcId = Objects.requireNonNull(vpcId);
             return this;
-        }
-        public GetTargetGroupResult build() {
+        }        public GetTargetGroupResult build() {
             return new GetTargetGroupResult(arn, arnSuffix, connectionTermination, deregistrationDelay, healthCheck, id, lambdaMultiValueHeadersEnabled, loadBalancingAlgorithmType, name, port, preserveClientIp, protocol, protocolVersion, proxyProtocolV2, slowStart, stickiness, tags, targetType, vpcId);
         }
     }

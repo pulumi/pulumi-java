@@ -210,52 +210,45 @@ public final class JpgImageResponse extends io.pulumi.resources.InvokeArgs {
             this.keyFrameInterval = keyFrameInterval;
             return this;
         }
-
         public Builder label(@Nullable String label) {
             this.label = label;
             return this;
         }
-
         public Builder layers(@Nullable List<JpgLayerResponse> layers) {
             this.layers = layers;
             return this;
         }
-
+        public Builder layers(JpgLayerResponse... layers) {
+            return layers(List.of(layers));
+        }
         public Builder odataType(String odataType) {
             this.odataType = Objects.requireNonNull(odataType);
             return this;
         }
-
         public Builder range(@Nullable String range) {
             this.range = range;
             return this;
         }
-
         public Builder spriteColumn(@Nullable Integer spriteColumn) {
             this.spriteColumn = spriteColumn;
             return this;
         }
-
         public Builder start(String start) {
             this.start = Objects.requireNonNull(start);
             return this;
         }
-
         public Builder step(@Nullable String step) {
             this.step = step;
             return this;
         }
-
         public Builder stretchMode(@Nullable String stretchMode) {
             this.stretchMode = stretchMode;
             return this;
         }
-
         public Builder syncMode(@Nullable String syncMode) {
             this.syncMode = syncMode;
             return this;
-        }
-        public JpgImageResponse build() {
+        }        public JpgImageResponse build() {
             return new JpgImageResponse(keyFrameInterval, label, layers, odataType, range, spriteColumn, start, step, stretchMode, syncMode);
         }
     }

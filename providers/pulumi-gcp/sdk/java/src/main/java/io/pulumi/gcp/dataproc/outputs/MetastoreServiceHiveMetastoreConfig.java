@@ -93,17 +93,14 @@ public final class MetastoreServiceHiveMetastoreConfig {
             this.configOverrides = configOverrides;
             return this;
         }
-
         public Builder kerberosConfig(@Nullable MetastoreServiceHiveMetastoreConfigKerberosConfig kerberosConfig) {
             this.kerberosConfig = kerberosConfig;
             return this;
         }
-
         public Builder version(String version) {
             this.version = Objects.requireNonNull(version);
             return this;
-        }
-        public MetastoreServiceHiveMetastoreConfig build() {
+        }        public MetastoreServiceHiveMetastoreConfig build() {
             return new MetastoreServiceHiveMetastoreConfig(configOverrides, kerberosConfig, version);
         }
     }

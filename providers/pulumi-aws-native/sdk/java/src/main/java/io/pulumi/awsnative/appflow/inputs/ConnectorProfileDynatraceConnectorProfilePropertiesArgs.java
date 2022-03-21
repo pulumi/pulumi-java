@@ -56,12 +56,10 @@ public final class ConnectorProfileDynatraceConnectorProfilePropertiesArgs exten
             this.instanceUrl = Objects.requireNonNull(instanceUrl);
             return this;
         }
-
         public Builder instanceUrl(String instanceUrl) {
             this.instanceUrl = Output.of(Objects.requireNonNull(instanceUrl));
             return this;
-        }
-        public ConnectorProfileDynatraceConnectorProfilePropertiesArgs build() {
+        }        public ConnectorProfileDynatraceConnectorProfilePropertiesArgs build() {
             return new ConnectorProfileDynatraceConnectorProfilePropertiesArgs(instanceUrl);
         }
     }

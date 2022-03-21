@@ -191,47 +191,38 @@ public final class EventGridResponse extends io.pulumi.resources.InvokeArgs {
             this.accessKey1 = Objects.requireNonNull(accessKey1);
             return this;
         }
-
         public Builder accessKey2(@Nullable String accessKey2) {
             this.accessKey2 = accessKey2;
             return this;
         }
-
         public Builder authenticationType(@Nullable String authenticationType) {
             this.authenticationType = authenticationType;
             return this;
         }
-
         public Builder createdTime(String createdTime) {
             this.createdTime = Objects.requireNonNull(createdTime);
             return this;
         }
-
         public Builder deadLetterSecret(@Nullable String deadLetterSecret) {
             this.deadLetterSecret = deadLetterSecret;
             return this;
         }
-
         public Builder deadLetterUri(@Nullable String deadLetterUri) {
             this.deadLetterUri = deadLetterUri;
             return this;
         }
-
         public Builder endpointType(String endpointType) {
             this.endpointType = Objects.requireNonNull(endpointType);
             return this;
         }
-
         public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
-
         public Builder topicEndpoint(String topicEndpoint) {
             this.topicEndpoint = Objects.requireNonNull(topicEndpoint);
             return this;
-        }
-        public EventGridResponse build() {
+        }        public EventGridResponse build() {
             return new EventGridResponse(accessKey1, accessKey2, authenticationType, createdTime, deadLetterSecret, deadLetterUri, endpointType, provisioningState, topicEndpoint);
         }
     }

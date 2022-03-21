@@ -189,92 +189,77 @@ public final class StandardArgs extends io.pulumi.resources.ResourceArgs {
             this.category = category;
             return this;
         }
-
         public Builder category(@Nullable String category) {
             this.category = Output.ofNullable(category);
             return this;
         }
-
         public Builder components(@Nullable Output<List<StandardComponentPropertiesArgs>> components) {
             this.components = components;
             return this;
         }
-
         public Builder components(@Nullable List<StandardComponentPropertiesArgs> components) {
             this.components = Output.ofNullable(components);
             return this;
         }
-
+        public Builder components(StandardComponentPropertiesArgs... components) {
+            return components(List.of(components));
+        }
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder displayName(@Nullable Output<String> displayName) {
             this.displayName = displayName;
             return this;
         }
-
         public Builder displayName(@Nullable String displayName) {
             this.displayName = Output.ofNullable(displayName);
             return this;
         }
-
         public Builder kind(@Nullable Output<String> kind) {
             this.kind = kind;
             return this;
         }
-
         public Builder kind(@Nullable String kind) {
             this.kind = Output.ofNullable(kind);
             return this;
         }
-
         public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder standardId(@Nullable Output<String> standardId) {
             this.standardId = standardId;
             return this;
         }
-
         public Builder standardId(@Nullable String standardId) {
             this.standardId = Output.ofNullable(standardId);
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
-        }
-        public StandardArgs build() {
+        }        public StandardArgs build() {
             return new StandardArgs(category, components, description, displayName, kind, location, resourceGroupName, standardId, tags);
         }
     }

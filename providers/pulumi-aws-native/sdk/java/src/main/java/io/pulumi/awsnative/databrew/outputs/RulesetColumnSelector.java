@@ -71,12 +71,10 @@ public final class RulesetColumnSelector {
             this.name = name;
             return this;
         }
-
         public Builder regex(@Nullable String regex) {
             this.regex = regex;
             return this;
-        }
-        public RulesetColumnSelector build() {
+        }        public RulesetColumnSelector build() {
             return new RulesetColumnSelector(name, regex);
         }
     }

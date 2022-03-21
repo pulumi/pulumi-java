@@ -50,8 +50,7 @@ public final class GetInstanceProfileArgs extends io.pulumi.resources.InvokeArgs
         public Builder arn(String arn) {
             this.arn = Objects.requireNonNull(arn);
             return this;
-        }
-        public GetInstanceProfileArgs build() {
+        }        public GetInstanceProfileArgs build() {
             return new GetInstanceProfileArgs(arn);
         }
     }

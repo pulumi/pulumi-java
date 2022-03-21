@@ -76,12 +76,10 @@ public final class UserAssignedManagedIdentityResponse extends io.pulumi.resourc
             this.clientId = Objects.requireNonNull(clientId);
             return this;
         }
-
         public Builder principalId(String principalId) {
             this.principalId = Objects.requireNonNull(principalId);
             return this;
-        }
-        public UserAssignedManagedIdentityResponse build() {
+        }        public UserAssignedManagedIdentityResponse build() {
             return new UserAssignedManagedIdentityResponse(clientId, principalId);
         }
     }

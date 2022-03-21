@@ -91,32 +91,29 @@ public final class DirectoryConfigArgs extends io.pulumi.resources.ResourceArgs 
             this.directoryName = Objects.requireNonNull(directoryName);
             return this;
         }
-
         public Builder directoryName(String directoryName) {
             this.directoryName = Output.of(Objects.requireNonNull(directoryName));
             return this;
         }
-
         public Builder organizationalUnitDistinguishedNames(Output<List<String>> organizationalUnitDistinguishedNames) {
             this.organizationalUnitDistinguishedNames = Objects.requireNonNull(organizationalUnitDistinguishedNames);
             return this;
         }
-
         public Builder organizationalUnitDistinguishedNames(List<String> organizationalUnitDistinguishedNames) {
             this.organizationalUnitDistinguishedNames = Output.of(Objects.requireNonNull(organizationalUnitDistinguishedNames));
             return this;
         }
-
+        public Builder organizationalUnitDistinguishedNames(String... organizationalUnitDistinguishedNames) {
+            return organizationalUnitDistinguishedNames(List.of(organizationalUnitDistinguishedNames));
+        }
         public Builder serviceAccountCredentials(Output<DirectoryConfigServiceAccountCredentialsArgs> serviceAccountCredentials) {
             this.serviceAccountCredentials = Objects.requireNonNull(serviceAccountCredentials);
             return this;
         }
-
         public Builder serviceAccountCredentials(DirectoryConfigServiceAccountCredentialsArgs serviceAccountCredentials) {
             this.serviceAccountCredentials = Output.of(Objects.requireNonNull(serviceAccountCredentials));
             return this;
-        }
-        public DirectoryConfigArgs build() {
+        }        public DirectoryConfigArgs build() {
             return new DirectoryConfigArgs(directoryName, organizationalUnitDistinguishedNames, serviceAccountCredentials);
         }
     }

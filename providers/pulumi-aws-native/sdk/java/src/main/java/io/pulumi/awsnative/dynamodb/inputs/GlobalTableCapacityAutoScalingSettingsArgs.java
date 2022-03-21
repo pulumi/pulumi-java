@@ -91,42 +91,34 @@ public final class GlobalTableCapacityAutoScalingSettingsArgs extends io.pulumi.
             this.maxCapacity = Objects.requireNonNull(maxCapacity);
             return this;
         }
-
         public Builder maxCapacity(Integer maxCapacity) {
             this.maxCapacity = Output.of(Objects.requireNonNull(maxCapacity));
             return this;
         }
-
         public Builder minCapacity(Output<Integer> minCapacity) {
             this.minCapacity = Objects.requireNonNull(minCapacity);
             return this;
         }
-
         public Builder minCapacity(Integer minCapacity) {
             this.minCapacity = Output.of(Objects.requireNonNull(minCapacity));
             return this;
         }
-
         public Builder seedCapacity(@Nullable Output<Integer> seedCapacity) {
             this.seedCapacity = seedCapacity;
             return this;
         }
-
         public Builder seedCapacity(@Nullable Integer seedCapacity) {
             this.seedCapacity = Output.ofNullable(seedCapacity);
             return this;
         }
-
         public Builder targetTrackingScalingPolicyConfiguration(Output<GlobalTableTargetTrackingScalingPolicyConfigurationArgs> targetTrackingScalingPolicyConfiguration) {
             this.targetTrackingScalingPolicyConfiguration = Objects.requireNonNull(targetTrackingScalingPolicyConfiguration);
             return this;
         }
-
         public Builder targetTrackingScalingPolicyConfiguration(GlobalTableTargetTrackingScalingPolicyConfigurationArgs targetTrackingScalingPolicyConfiguration) {
             this.targetTrackingScalingPolicyConfiguration = Output.of(Objects.requireNonNull(targetTrackingScalingPolicyConfiguration));
             return this;
-        }
-        public GlobalTableCapacityAutoScalingSettingsArgs build() {
+        }        public GlobalTableCapacityAutoScalingSettingsArgs build() {
             return new GlobalTableCapacityAutoScalingSettingsArgs(maxCapacity, minCapacity, seedCapacity, targetTrackingScalingPolicyConfiguration);
         }
     }

@@ -78,17 +78,14 @@ public final class GetRegistrationArgs extends io.pulumi.resources.InvokeArgs {
             this.location = Objects.requireNonNull(location);
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = project;
             return this;
         }
-
         public Builder registrationId(String registrationId) {
             this.registrationId = Objects.requireNonNull(registrationId);
             return this;
-        }
-        public GetRegistrationArgs build() {
+        }        public GetRegistrationArgs build() {
             return new GetRegistrationArgs(location, project, registrationId);
         }
     }

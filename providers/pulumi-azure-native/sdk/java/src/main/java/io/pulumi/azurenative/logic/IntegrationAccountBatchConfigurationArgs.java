@@ -140,62 +140,50 @@ public final class IntegrationAccountBatchConfigurationArgs extends io.pulumi.re
             this.batchConfigurationName = batchConfigurationName;
             return this;
         }
-
         public Builder batchConfigurationName(@Nullable String batchConfigurationName) {
             this.batchConfigurationName = Output.ofNullable(batchConfigurationName);
             return this;
         }
-
         public Builder integrationAccountName(Output<String> integrationAccountName) {
             this.integrationAccountName = Objects.requireNonNull(integrationAccountName);
             return this;
         }
-
         public Builder integrationAccountName(String integrationAccountName) {
             this.integrationAccountName = Output.of(Objects.requireNonNull(integrationAccountName));
             return this;
         }
-
         public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder properties(Output<BatchConfigurationPropertiesArgs> properties) {
             this.properties = Objects.requireNonNull(properties);
             return this;
         }
-
         public Builder properties(BatchConfigurationPropertiesArgs properties) {
             this.properties = Output.of(Objects.requireNonNull(properties));
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
-        }
-        public IntegrationAccountBatchConfigurationArgs build() {
+        }        public IntegrationAccountBatchConfigurationArgs build() {
             return new IntegrationAccountBatchConfigurationArgs(batchConfigurationName, integrationAccountName, location, properties, resourceGroupName, tags);
         }
     }

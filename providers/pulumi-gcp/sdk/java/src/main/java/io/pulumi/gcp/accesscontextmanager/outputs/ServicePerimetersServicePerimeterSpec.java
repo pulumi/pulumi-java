@@ -191,32 +191,41 @@ public final class ServicePerimetersServicePerimeterSpec {
             this.accessLevels = accessLevels;
             return this;
         }
-
+        public Builder accessLevels(String... accessLevels) {
+            return accessLevels(List.of(accessLevels));
+        }
         public Builder egressPolicies(@Nullable List<ServicePerimetersServicePerimeterSpecEgressPolicy> egressPolicies) {
             this.egressPolicies = egressPolicies;
             return this;
         }
-
+        public Builder egressPolicies(ServicePerimetersServicePerimeterSpecEgressPolicy... egressPolicies) {
+            return egressPolicies(List.of(egressPolicies));
+        }
         public Builder ingressPolicies(@Nullable List<ServicePerimetersServicePerimeterSpecIngressPolicy> ingressPolicies) {
             this.ingressPolicies = ingressPolicies;
             return this;
         }
-
+        public Builder ingressPolicies(ServicePerimetersServicePerimeterSpecIngressPolicy... ingressPolicies) {
+            return ingressPolicies(List.of(ingressPolicies));
+        }
         public Builder resources(@Nullable List<String> resources) {
             this.resources = resources;
             return this;
         }
-
+        public Builder resources(String... resources) {
+            return resources(List.of(resources));
+        }
         public Builder restrictedServices(@Nullable List<String> restrictedServices) {
             this.restrictedServices = restrictedServices;
             return this;
         }
-
+        public Builder restrictedServices(String... restrictedServices) {
+            return restrictedServices(List.of(restrictedServices));
+        }
         public Builder vpcAccessibleServices(@Nullable ServicePerimetersServicePerimeterSpecVpcAccessibleServices vpcAccessibleServices) {
             this.vpcAccessibleServices = vpcAccessibleServices;
             return this;
-        }
-        public ServicePerimetersServicePerimeterSpec build() {
+        }        public ServicePerimetersServicePerimeterSpec build() {
             return new ServicePerimetersServicePerimeterSpec(accessLevels, egressPolicies, ingressPolicies, resources, restrictedServices, vpcAccessibleServices);
         }
     }

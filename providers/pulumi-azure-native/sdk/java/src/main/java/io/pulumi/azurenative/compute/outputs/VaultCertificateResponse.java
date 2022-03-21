@@ -71,12 +71,10 @@ public final class VaultCertificateResponse {
             this.certificateStore = certificateStore;
             return this;
         }
-
         public Builder certificateUrl(@Nullable String certificateUrl) {
             this.certificateUrl = certificateUrl;
             return this;
-        }
-        public VaultCertificateResponse build() {
+        }        public VaultCertificateResponse build() {
             return new VaultCertificateResponse(certificateStore, certificateUrl);
         }
     }

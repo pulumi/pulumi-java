@@ -53,8 +53,7 @@ public final class InstanceCapacityReservationSpecificationCapacityReservationTa
         public Builder capacityReservationId(@Nullable String capacityReservationId) {
             this.capacityReservationId = capacityReservationId;
             return this;
-        }
-        public InstanceCapacityReservationSpecificationCapacityReservationTarget build() {
+        }        public InstanceCapacityReservationSpecificationCapacityReservationTarget build() {
             return new InstanceCapacityReservationSpecificationCapacityReservationTarget(capacityReservationId);
         }
     }

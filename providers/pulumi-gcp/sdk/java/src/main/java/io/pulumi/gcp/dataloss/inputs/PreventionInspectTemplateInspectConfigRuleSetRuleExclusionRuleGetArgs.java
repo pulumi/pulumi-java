@@ -113,42 +113,34 @@ public final class PreventionInspectTemplateInspectConfigRuleSetRuleExclusionRul
             this.dictionary = dictionary;
             return this;
         }
-
         public Builder dictionary(@Nullable PreventionInspectTemplateInspectConfigRuleSetRuleExclusionRuleDictionaryGetArgs dictionary) {
             this.dictionary = Output.ofNullable(dictionary);
             return this;
         }
-
         public Builder excludeInfoTypes(@Nullable Output<PreventionInspectTemplateInspectConfigRuleSetRuleExclusionRuleExcludeInfoTypesGetArgs> excludeInfoTypes) {
             this.excludeInfoTypes = excludeInfoTypes;
             return this;
         }
-
         public Builder excludeInfoTypes(@Nullable PreventionInspectTemplateInspectConfigRuleSetRuleExclusionRuleExcludeInfoTypesGetArgs excludeInfoTypes) {
             this.excludeInfoTypes = Output.ofNullable(excludeInfoTypes);
             return this;
         }
-
         public Builder matchingType(Output<String> matchingType) {
             this.matchingType = Objects.requireNonNull(matchingType);
             return this;
         }
-
         public Builder matchingType(String matchingType) {
             this.matchingType = Output.of(Objects.requireNonNull(matchingType));
             return this;
         }
-
         public Builder regex(@Nullable Output<PreventionInspectTemplateInspectConfigRuleSetRuleExclusionRuleRegexGetArgs> regex) {
             this.regex = regex;
             return this;
         }
-
         public Builder regex(@Nullable PreventionInspectTemplateInspectConfigRuleSetRuleExclusionRuleRegexGetArgs regex) {
             this.regex = Output.ofNullable(regex);
             return this;
-        }
-        public PreventionInspectTemplateInspectConfigRuleSetRuleExclusionRuleGetArgs build() {
+        }        public PreventionInspectTemplateInspectConfigRuleSetRuleExclusionRuleGetArgs build() {
             return new PreventionInspectTemplateInspectConfigRuleSetRuleExclusionRuleGetArgs(dictionary, excludeInfoTypes, matchingType, regex);
         }
     }

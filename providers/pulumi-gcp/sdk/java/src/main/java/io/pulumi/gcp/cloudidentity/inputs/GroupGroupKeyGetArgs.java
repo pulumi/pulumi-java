@@ -84,22 +84,18 @@ public final class GroupGroupKeyGetArgs extends io.pulumi.resources.ResourceArgs
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder id(String id) {
             this.id = Output.of(Objects.requireNonNull(id));
             return this;
         }
-
         public Builder namespace(@Nullable Output<String> namespace) {
             this.namespace = namespace;
             return this;
         }
-
         public Builder namespace(@Nullable String namespace) {
             this.namespace = Output.ofNullable(namespace);
             return this;
-        }
-        public GroupGroupKeyGetArgs build() {
+        }        public GroupGroupKeyGetArgs build() {
             return new GroupGroupKeyGetArgs(id, namespace);
         }
     }

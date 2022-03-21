@@ -87,17 +87,14 @@ public final class MaintenanceWindowTaskTaskInvocationParametersLambdaParameters
             this.clientContext = clientContext;
             return this;
         }
-
         public Builder payload(@Nullable String payload) {
             this.payload = payload;
             return this;
         }
-
         public Builder qualifier(@Nullable String qualifier) {
             this.qualifier = qualifier;
             return this;
-        }
-        public MaintenanceWindowTaskTaskInvocationParametersLambdaParameters build() {
+        }        public MaintenanceWindowTaskTaskInvocationParametersLambdaParameters build() {
             return new MaintenanceWindowTaskTaskInvocationParametersLambdaParameters(clientContext, payload, qualifier);
         }
     }

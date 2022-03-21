@@ -76,12 +76,10 @@ public final class DatabaseEncryptionResponse extends io.pulumi.resources.Invoke
             this.keyName = Objects.requireNonNull(keyName);
             return this;
         }
-
         public Builder state(String state) {
             this.state = Objects.requireNonNull(state);
             return this;
-        }
-        public DatabaseEncryptionResponse build() {
+        }        public DatabaseEncryptionResponse build() {
             return new DatabaseEncryptionResponse(keyName, state);
         }
     }

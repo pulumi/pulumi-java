@@ -123,52 +123,42 @@ public final class GatewayRouteConfigArgs extends io.pulumi.resources.ResourceAr
             this.gatewayName = Objects.requireNonNull(gatewayName);
             return this;
         }
-
         public Builder gatewayName(String gatewayName) {
             this.gatewayName = Output.of(Objects.requireNonNull(gatewayName));
             return this;
         }
-
         public Builder properties(@Nullable Output<GatewayRouteConfigPropertiesArgs> properties) {
             this.properties = properties;
             return this;
         }
-
         public Builder properties(@Nullable GatewayRouteConfigPropertiesArgs properties) {
             this.properties = Output.ofNullable(properties);
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder routeConfigName(@Nullable Output<String> routeConfigName) {
             this.routeConfigName = routeConfigName;
             return this;
         }
-
         public Builder routeConfigName(@Nullable String routeConfigName) {
             this.routeConfigName = Output.ofNullable(routeConfigName);
             return this;
         }
-
         public Builder serviceName(Output<String> serviceName) {
             this.serviceName = Objects.requireNonNull(serviceName);
             return this;
         }
-
         public Builder serviceName(String serviceName) {
             this.serviceName = Output.of(Objects.requireNonNull(serviceName));
             return this;
-        }
-        public GatewayRouteConfigArgs build() {
+        }        public GatewayRouteConfigArgs build() {
             return new GatewayRouteConfigArgs(gatewayName, properties, resourceGroupName, routeConfigName, serviceName);
         }
     }

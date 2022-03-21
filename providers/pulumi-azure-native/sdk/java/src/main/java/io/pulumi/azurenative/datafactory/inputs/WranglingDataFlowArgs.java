@@ -163,72 +163,64 @@ public final class WranglingDataFlowArgs extends io.pulumi.resources.ResourceArg
             this.annotations = annotations;
             return this;
         }
-
         public Builder annotations(@Nullable List<Object> annotations) {
             this.annotations = Output.ofNullable(annotations);
             return this;
         }
-
+        public Builder annotations(Object... annotations) {
+            return annotations(List.of(annotations));
+        }
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder documentLocale(@Nullable Output<String> documentLocale) {
             this.documentLocale = documentLocale;
             return this;
         }
-
         public Builder documentLocale(@Nullable String documentLocale) {
             this.documentLocale = Output.ofNullable(documentLocale);
             return this;
         }
-
         public Builder folder(@Nullable Output<DataFlowFolderArgs> folder) {
             this.folder = folder;
             return this;
         }
-
         public Builder folder(@Nullable DataFlowFolderArgs folder) {
             this.folder = Output.ofNullable(folder);
             return this;
         }
-
         public Builder script(@Nullable Output<String> script) {
             this.script = script;
             return this;
         }
-
         public Builder script(@Nullable String script) {
             this.script = Output.ofNullable(script);
             return this;
         }
-
         public Builder sources(@Nullable Output<List<PowerQuerySourceArgs>> sources) {
             this.sources = sources;
             return this;
         }
-
         public Builder sources(@Nullable List<PowerQuerySourceArgs> sources) {
             this.sources = Output.ofNullable(sources);
             return this;
         }
-
+        public Builder sources(PowerQuerySourceArgs... sources) {
+            return sources(List.of(sources));
+        }
         public Builder type(Output<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Output.of(Objects.requireNonNull(type));
             return this;
-        }
-        public WranglingDataFlowArgs build() {
+        }        public WranglingDataFlowArgs build() {
             return new WranglingDataFlowArgs(annotations, description, documentLocale, folder, script, sources, type);
         }
     }

@@ -64,12 +64,10 @@ public final class GetEnvironmentConfigWebServerNetworkAccessControlAllowedIpRan
             this.description = Objects.requireNonNull(description);
             return this;
         }
-
         public Builder value(String value) {
             this.value = Objects.requireNonNull(value);
             return this;
-        }
-        public GetEnvironmentConfigWebServerNetworkAccessControlAllowedIpRange build() {
+        }        public GetEnvironmentConfigWebServerNetworkAccessControlAllowedIpRange build() {
             return new GetEnvironmentConfigWebServerNetworkAccessControlAllowedIpRange(description, value);
         }
     }

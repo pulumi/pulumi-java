@@ -110,42 +110,34 @@ public final class DataFlowArgs extends io.pulumi.resources.ResourceArgs {
             this.dataFlowName = dataFlowName;
             return this;
         }
-
         public Builder dataFlowName(@Nullable String dataFlowName) {
             this.dataFlowName = Output.ofNullable(dataFlowName);
             return this;
         }
-
         public Builder factoryName(Output<String> factoryName) {
             this.factoryName = Objects.requireNonNull(factoryName);
             return this;
         }
-
         public Builder factoryName(String factoryName) {
             this.factoryName = Output.of(Objects.requireNonNull(factoryName));
             return this;
         }
-
         public Builder properties(Output<Object> properties) {
             this.properties = Objects.requireNonNull(properties);
             return this;
         }
-
         public Builder properties(Object properties) {
             this.properties = Output.of(Objects.requireNonNull(properties));
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
-        }
-        public DataFlowArgs build() {
+        }        public DataFlowArgs build() {
             return new DataFlowArgs(dataFlowName, factoryName, properties, resourceGroupName);
         }
     }

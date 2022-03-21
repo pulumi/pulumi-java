@@ -56,12 +56,10 @@ public final class RecordFailoverRoutingPolicyArgs extends io.pulumi.resources.R
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Output.of(Objects.requireNonNull(type));
             return this;
-        }
-        public RecordFailoverRoutingPolicyArgs build() {
+        }        public RecordFailoverRoutingPolicyArgs build() {
             return new RecordFailoverRoutingPolicyArgs(type);
         }
     }

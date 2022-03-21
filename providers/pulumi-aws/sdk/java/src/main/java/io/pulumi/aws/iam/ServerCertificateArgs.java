@@ -163,72 +163,58 @@ public final class ServerCertificateArgs extends io.pulumi.resources.ResourceArg
             this.certificateBody = Objects.requireNonNull(certificateBody);
             return this;
         }
-
         public Builder certificateBody(String certificateBody) {
             this.certificateBody = Output.of(Objects.requireNonNull(certificateBody));
             return this;
         }
-
         public Builder certificateChain(@Nullable Output<String> certificateChain) {
             this.certificateChain = certificateChain;
             return this;
         }
-
         public Builder certificateChain(@Nullable String certificateChain) {
             this.certificateChain = Output.ofNullable(certificateChain);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder namePrefix(@Nullable Output<String> namePrefix) {
             this.namePrefix = namePrefix;
             return this;
         }
-
         public Builder namePrefix(@Nullable String namePrefix) {
             this.namePrefix = Output.ofNullable(namePrefix);
             return this;
         }
-
         public Builder path(@Nullable Output<String> path) {
             this.path = path;
             return this;
         }
-
         public Builder path(@Nullable String path) {
             this.path = Output.ofNullable(path);
             return this;
         }
-
         public Builder privateKey(Output<String> privateKey) {
             this.privateKey = Objects.requireNonNull(privateKey);
             return this;
         }
-
         public Builder privateKey(String privateKey) {
             this.privateKey = Output.of(Objects.requireNonNull(privateKey));
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
-        }
-        public ServerCertificateArgs build() {
+        }        public ServerCertificateArgs build() {
             return new ServerCertificateArgs(certificateBody, certificateChain, name, namePrefix, path, privateKey, tags);
         }
     }

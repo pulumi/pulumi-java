@@ -109,42 +109,34 @@ public final class RandomPetState extends io.pulumi.resources.ResourceArgs {
             this.keepers = keepers;
             return this;
         }
-
         public Builder keepers(@Nullable Map<String,Object> keepers) {
             this.keepers = Output.ofNullable(keepers);
             return this;
         }
-
         public Builder length(@Nullable Output<Integer> length) {
             this.length = length;
             return this;
         }
-
         public Builder length(@Nullable Integer length) {
             this.length = Output.ofNullable(length);
             return this;
         }
-
         public Builder prefix(@Nullable Output<String> prefix) {
             this.prefix = prefix;
             return this;
         }
-
         public Builder prefix(@Nullable String prefix) {
             this.prefix = Output.ofNullable(prefix);
             return this;
         }
-
         public Builder separator(@Nullable Output<String> separator) {
             this.separator = separator;
             return this;
         }
-
         public Builder separator(@Nullable String separator) {
             this.separator = Output.ofNullable(separator);
             return this;
-        }
-        public RandomPetState build() {
+        }        public RandomPetState build() {
             return new RandomPetState(keepers, length, prefix, separator);
         }
     }

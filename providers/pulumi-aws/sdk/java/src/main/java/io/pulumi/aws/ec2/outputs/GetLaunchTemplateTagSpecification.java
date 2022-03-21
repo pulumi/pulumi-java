@@ -62,12 +62,10 @@ public final class GetLaunchTemplateTagSpecification {
             this.resourceType = Objects.requireNonNull(resourceType);
             return this;
         }
-
         public Builder tags(Map<String,String> tags) {
             this.tags = Objects.requireNonNull(tags);
             return this;
-        }
-        public GetLaunchTemplateTagSpecification build() {
+        }        public GetLaunchTemplateTagSpecification build() {
             return new GetLaunchTemplateTagSpecification(resourceType, tags);
         }
     }

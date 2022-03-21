@@ -208,52 +208,45 @@ public final class ConnectionSettingPropertiesResponse extends io.pulumi.resourc
             this.clientId = clientId;
             return this;
         }
-
         public Builder clientSecret(@Nullable String clientSecret) {
             this.clientSecret = clientSecret;
             return this;
         }
-
         public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
-
         public Builder parameters(@Nullable List<ConnectionSettingParameterResponse> parameters) {
             this.parameters = parameters;
             return this;
         }
-
+        public Builder parameters(ConnectionSettingParameterResponse... parameters) {
+            return parameters(List.of(parameters));
+        }
         public Builder provisioningState(@Nullable String provisioningState) {
             this.provisioningState = provisioningState;
             return this;
         }
-
         public Builder scopes(@Nullable String scopes) {
             this.scopes = scopes;
             return this;
         }
-
         public Builder serviceProviderDisplayName(@Nullable String serviceProviderDisplayName) {
             this.serviceProviderDisplayName = serviceProviderDisplayName;
             return this;
         }
-
         public Builder serviceProviderId(@Nullable String serviceProviderId) {
             this.serviceProviderId = serviceProviderId;
             return this;
         }
-
         public Builder settingId(String settingId) {
             this.settingId = Objects.requireNonNull(settingId);
             return this;
-        }
-        public ConnectionSettingPropertiesResponse build() {
+        }        public ConnectionSettingPropertiesResponse build() {
             return new ConnectionSettingPropertiesResponse(clientId, clientSecret, id, name, parameters, provisioningState, scopes, serviceProviderDisplayName, serviceProviderId, settingId);
         }
     }

@@ -71,12 +71,10 @@ public final class UserIdentityContractResponse {
             this.id = id;
             return this;
         }
-
         public Builder provider(@Nullable String provider) {
             this.provider = provider;
             return this;
-        }
-        public UserIdentityContractResponse build() {
+        }        public UserIdentityContractResponse build() {
             return new UserIdentityContractResponse(id, provider);
         }
     }

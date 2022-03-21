@@ -151,62 +151,53 @@ public final class TagState extends io.pulumi.resources.ResourceArgs {
             this.column = column;
             return this;
         }
-
         public Builder column(@Nullable String column) {
             this.column = Output.ofNullable(column);
             return this;
         }
-
         public Builder fields(@Nullable Output<List<TagFieldGetArgs>> fields) {
             this.fields = fields;
             return this;
         }
-
         public Builder fields(@Nullable List<TagFieldGetArgs> fields) {
             this.fields = Output.ofNullable(fields);
             return this;
         }
-
+        public Builder fields(TagFieldGetArgs... fields) {
+            return fields(List.of(fields));
+        }
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder parent(@Nullable Output<String> parent) {
             this.parent = parent;
             return this;
         }
-
         public Builder parent(@Nullable String parent) {
             this.parent = Output.ofNullable(parent);
             return this;
         }
-
         public Builder template(@Nullable Output<String> template) {
             this.template = template;
             return this;
         }
-
         public Builder template(@Nullable String template) {
             this.template = Output.ofNullable(template);
             return this;
         }
-
         public Builder templateDisplayname(@Nullable Output<String> templateDisplayname) {
             this.templateDisplayname = templateDisplayname;
             return this;
         }
-
         public Builder templateDisplayname(@Nullable String templateDisplayname) {
             this.templateDisplayname = Output.ofNullable(templateDisplayname);
             return this;
-        }
-        public TagState build() {
+        }        public TagState build() {
             return new TagState(column, fields, name, parent, template, templateDisplayname);
         }
     }

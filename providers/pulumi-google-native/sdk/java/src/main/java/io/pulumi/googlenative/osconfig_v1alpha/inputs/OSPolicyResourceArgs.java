@@ -130,52 +130,42 @@ public final class OSPolicyResourceArgs extends io.pulumi.resources.ResourceArgs
             this.exec = exec;
             return this;
         }
-
         public Builder exec(@Nullable OSPolicyResourceExecResourceArgs exec) {
             this.exec = Output.ofNullable(exec);
             return this;
         }
-
         public Builder file(@Nullable Output<OSPolicyResourceFileResourceArgs> file) {
             this.file = file;
             return this;
         }
-
         public Builder file(@Nullable OSPolicyResourceFileResourceArgs file) {
             this.file = Output.ofNullable(file);
             return this;
         }
-
         public Builder id(Output<String> id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder id(String id) {
             this.id = Output.of(Objects.requireNonNull(id));
             return this;
         }
-
         public Builder pkg(@Nullable Output<OSPolicyResourcePackageResourceArgs> pkg) {
             this.pkg = pkg;
             return this;
         }
-
         public Builder pkg(@Nullable OSPolicyResourcePackageResourceArgs pkg) {
             this.pkg = Output.ofNullable(pkg);
             return this;
         }
-
         public Builder repository(@Nullable Output<OSPolicyResourceRepositoryResourceArgs> repository) {
             this.repository = repository;
             return this;
         }
-
         public Builder repository(@Nullable OSPolicyResourceRepositoryResourceArgs repository) {
             this.repository = Output.ofNullable(repository);
             return this;
-        }
-        public OSPolicyResourceArgs build() {
+        }        public OSPolicyResourceArgs build() {
             return new OSPolicyResourceArgs(exec, file, id, pkg, repository);
         }
     }

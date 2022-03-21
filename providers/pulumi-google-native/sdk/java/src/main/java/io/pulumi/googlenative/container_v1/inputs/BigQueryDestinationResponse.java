@@ -58,8 +58,7 @@ public final class BigQueryDestinationResponse extends io.pulumi.resources.Invok
         public Builder datasetId(String datasetId) {
             this.datasetId = Objects.requireNonNull(datasetId);
             return this;
-        }
-        public BigQueryDestinationResponse build() {
+        }        public BigQueryDestinationResponse build() {
             return new BigQueryDestinationResponse(datasetId);
         }
     }

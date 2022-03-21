@@ -81,12 +81,10 @@ public final class TopicSchemaSettings {
             this.encoding = encoding;
             return this;
         }
-
         public Builder schema(String schema) {
             this.schema = Objects.requireNonNull(schema);
             return this;
-        }
-        public TopicSchemaSettings build() {
+        }        public TopicSchemaSettings build() {
             return new TopicSchemaSettings(encoding, schema);
         }
     }

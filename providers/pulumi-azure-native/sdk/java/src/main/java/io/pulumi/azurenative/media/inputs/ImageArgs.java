@@ -178,82 +178,66 @@ public final class ImageArgs extends io.pulumi.resources.ResourceArgs {
             this.keyFrameInterval = keyFrameInterval;
             return this;
         }
-
         public Builder keyFrameInterval(@Nullable String keyFrameInterval) {
             this.keyFrameInterval = Output.ofNullable(keyFrameInterval);
             return this;
         }
-
         public Builder label(@Nullable Output<String> label) {
             this.label = label;
             return this;
         }
-
         public Builder label(@Nullable String label) {
             this.label = Output.ofNullable(label);
             return this;
         }
-
         public Builder odataType(Output<String> odataType) {
             this.odataType = Objects.requireNonNull(odataType);
             return this;
         }
-
         public Builder odataType(String odataType) {
             this.odataType = Output.of(Objects.requireNonNull(odataType));
             return this;
         }
-
         public Builder range(@Nullable Output<String> range) {
             this.range = range;
             return this;
         }
-
         public Builder range(@Nullable String range) {
             this.range = Output.ofNullable(range);
             return this;
         }
-
         public Builder start(Output<String> start) {
             this.start = Objects.requireNonNull(start);
             return this;
         }
-
         public Builder start(String start) {
             this.start = Output.of(Objects.requireNonNull(start));
             return this;
         }
-
         public Builder step(@Nullable Output<String> step) {
             this.step = step;
             return this;
         }
-
         public Builder step(@Nullable String step) {
             this.step = Output.ofNullable(step);
             return this;
         }
-
         public Builder stretchMode(@Nullable Output<Either<String,StretchMode>> stretchMode) {
             this.stretchMode = stretchMode;
             return this;
         }
-
         public Builder stretchMode(@Nullable Either<String,StretchMode> stretchMode) {
             this.stretchMode = Output.ofNullable(stretchMode);
             return this;
         }
-
         public Builder syncMode(@Nullable Output<Either<String,VideoSyncMode>> syncMode) {
             this.syncMode = syncMode;
             return this;
         }
-
         public Builder syncMode(@Nullable Either<String,VideoSyncMode> syncMode) {
             this.syncMode = Output.ofNullable(syncMode);
             return this;
-        }
-        public ImageArgs build() {
+        }        public ImageArgs build() {
             return new ImageArgs(keyFrameInterval, label, odataType, range, start, step, stretchMode, syncMode);
         }
     }

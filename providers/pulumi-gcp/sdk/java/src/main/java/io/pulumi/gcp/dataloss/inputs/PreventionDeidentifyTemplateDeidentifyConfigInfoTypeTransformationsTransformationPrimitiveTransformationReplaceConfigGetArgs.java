@@ -57,12 +57,10 @@ public final class PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransform
             this.newValue = Objects.requireNonNull(newValue);
             return this;
         }
-
         public Builder newValue(PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationReplaceConfigNewValueGetArgs newValue) {
             this.newValue = Output.of(Objects.requireNonNull(newValue));
             return this;
-        }
-        public PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationReplaceConfigGetArgs build() {
+        }        public PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationReplaceConfigGetArgs build() {
             return new PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationReplaceConfigGetArgs(newValue);
         }
     }

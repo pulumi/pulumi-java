@@ -91,32 +91,26 @@ public final class FirehoseDeliveryStreamHttpEndpointConfigurationCloudwatchLogg
             this.enabled = enabled;
             return this;
         }
-
         public Builder enabled(@Nullable Boolean enabled) {
             this.enabled = Output.ofNullable(enabled);
             return this;
         }
-
         public Builder logGroupName(@Nullable Output<String> logGroupName) {
             this.logGroupName = logGroupName;
             return this;
         }
-
         public Builder logGroupName(@Nullable String logGroupName) {
             this.logGroupName = Output.ofNullable(logGroupName);
             return this;
         }
-
         public Builder logStreamName(@Nullable Output<String> logStreamName) {
             this.logStreamName = logStreamName;
             return this;
         }
-
         public Builder logStreamName(@Nullable String logStreamName) {
             this.logStreamName = Output.ofNullable(logStreamName);
             return this;
-        }
-        public FirehoseDeliveryStreamHttpEndpointConfigurationCloudwatchLoggingOptionsGetArgs build() {
+        }        public FirehoseDeliveryStreamHttpEndpointConfigurationCloudwatchLoggingOptionsGetArgs build() {
             return new FirehoseDeliveryStreamHttpEndpointConfigurationCloudwatchLoggingOptionsGetArgs(enabled, logGroupName, logStreamName);
         }
     }

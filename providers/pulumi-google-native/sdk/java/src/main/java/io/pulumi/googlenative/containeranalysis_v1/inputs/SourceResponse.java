@@ -111,22 +111,21 @@ public final class SourceResponse extends io.pulumi.resources.InvokeArgs {
             this.additionalContexts = Objects.requireNonNull(additionalContexts);
             return this;
         }
-
+        public Builder additionalContexts(SourceContextResponse... additionalContexts) {
+            return additionalContexts(List.of(additionalContexts));
+        }
         public Builder artifactStorageSourceUri(String artifactStorageSourceUri) {
             this.artifactStorageSourceUri = Objects.requireNonNull(artifactStorageSourceUri);
             return this;
         }
-
         public Builder context(SourceContextResponse context) {
             this.context = Objects.requireNonNull(context);
             return this;
         }
-
         public Builder fileHashes(Map<String,String> fileHashes) {
             this.fileHashes = Objects.requireNonNull(fileHashes);
             return this;
-        }
-        public SourceResponse build() {
+        }        public SourceResponse build() {
             return new SourceResponse(additionalContexts, artifactStorageSourceUri, context, fileHashes);
         }
     }

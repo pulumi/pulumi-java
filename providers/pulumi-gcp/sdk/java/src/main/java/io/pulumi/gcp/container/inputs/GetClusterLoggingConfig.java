@@ -52,7 +52,9 @@ public final class GetClusterLoggingConfig extends io.pulumi.resources.InvokeArg
             this.enableComponents = Objects.requireNonNull(enableComponents);
             return this;
         }
-        public GetClusterLoggingConfig build() {
+        public Builder enableComponents(String... enableComponents) {
+            return enableComponents(List.of(enableComponents));
+        }        public GetClusterLoggingConfig build() {
             return new GetClusterLoggingConfig(enableComponents);
         }
     }

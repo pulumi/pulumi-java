@@ -187,47 +187,59 @@ public final class GetPolicyDocumentStatement {
             this.actions = actions;
             return this;
         }
-
+        public Builder actions(String... actions) {
+            return actions(List.of(actions));
+        }
         public Builder conditions(@Nullable List<GetPolicyDocumentStatementCondition> conditions) {
             this.conditions = conditions;
             return this;
         }
-
+        public Builder conditions(GetPolicyDocumentStatementCondition... conditions) {
+            return conditions(List.of(conditions));
+        }
         public Builder effect(@Nullable String effect) {
             this.effect = effect;
             return this;
         }
-
         public Builder notActions(@Nullable List<String> notActions) {
             this.notActions = notActions;
             return this;
         }
-
+        public Builder notActions(String... notActions) {
+            return notActions(List.of(notActions));
+        }
         public Builder notPrincipals(@Nullable List<GetPolicyDocumentStatementNotPrincipal> notPrincipals) {
             this.notPrincipals = notPrincipals;
             return this;
         }
-
+        public Builder notPrincipals(GetPolicyDocumentStatementNotPrincipal... notPrincipals) {
+            return notPrincipals(List.of(notPrincipals));
+        }
         public Builder notResources(@Nullable List<String> notResources) {
             this.notResources = notResources;
             return this;
         }
-
+        public Builder notResources(String... notResources) {
+            return notResources(List.of(notResources));
+        }
         public Builder principals(@Nullable List<GetPolicyDocumentStatementPrincipal> principals) {
             this.principals = principals;
             return this;
         }
-
+        public Builder principals(GetPolicyDocumentStatementPrincipal... principals) {
+            return principals(List.of(principals));
+        }
         public Builder resources(@Nullable List<String> resources) {
             this.resources = resources;
             return this;
         }
-
+        public Builder resources(String... resources) {
+            return resources(List.of(resources));
+        }
         public Builder sid(@Nullable String sid) {
             this.sid = sid;
             return this;
-        }
-        public GetPolicyDocumentStatement build() {
+        }        public GetPolicyDocumentStatement build() {
             return new GetPolicyDocumentStatement(actions, conditions, effect, notActions, notPrincipals, notResources, principals, resources, sid);
         }
     }

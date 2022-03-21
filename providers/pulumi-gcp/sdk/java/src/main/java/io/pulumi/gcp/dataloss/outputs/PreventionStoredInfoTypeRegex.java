@@ -74,12 +74,13 @@ public final class PreventionStoredInfoTypeRegex {
             this.groupIndexes = groupIndexes;
             return this;
         }
-
+        public Builder groupIndexes(Integer... groupIndexes) {
+            return groupIndexes(List.of(groupIndexes));
+        }
         public Builder pattern(String pattern) {
             this.pattern = Objects.requireNonNull(pattern);
             return this;
-        }
-        public PreventionStoredInfoTypeRegex build() {
+        }        public PreventionStoredInfoTypeRegex build() {
             return new PreventionStoredInfoTypeRegex(groupIndexes, pattern);
         }
     }

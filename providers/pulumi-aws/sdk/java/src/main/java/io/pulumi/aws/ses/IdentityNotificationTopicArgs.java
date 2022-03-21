@@ -107,42 +107,34 @@ public final class IdentityNotificationTopicArgs extends io.pulumi.resources.Res
             this.identity = Objects.requireNonNull(identity);
             return this;
         }
-
         public Builder identity(String identity) {
             this.identity = Output.of(Objects.requireNonNull(identity));
             return this;
         }
-
         public Builder includeOriginalHeaders(@Nullable Output<Boolean> includeOriginalHeaders) {
             this.includeOriginalHeaders = includeOriginalHeaders;
             return this;
         }
-
         public Builder includeOriginalHeaders(@Nullable Boolean includeOriginalHeaders) {
             this.includeOriginalHeaders = Output.ofNullable(includeOriginalHeaders);
             return this;
         }
-
         public Builder notificationType(Output<String> notificationType) {
             this.notificationType = Objects.requireNonNull(notificationType);
             return this;
         }
-
         public Builder notificationType(String notificationType) {
             this.notificationType = Output.of(Objects.requireNonNull(notificationType));
             return this;
         }
-
         public Builder topicArn(@Nullable Output<String> topicArn) {
             this.topicArn = topicArn;
             return this;
         }
-
         public Builder topicArn(@Nullable String topicArn) {
             this.topicArn = Output.ofNullable(topicArn);
             return this;
-        }
-        public IdentityNotificationTopicArgs build() {
+        }        public IdentityNotificationTopicArgs build() {
             return new IdentityNotificationTopicArgs(identity, includeOriginalHeaders, notificationType, topicArn);
         }
     }

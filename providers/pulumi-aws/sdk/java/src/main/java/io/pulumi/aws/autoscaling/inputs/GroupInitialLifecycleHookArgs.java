@@ -131,72 +131,58 @@ public final class GroupInitialLifecycleHookArgs extends io.pulumi.resources.Res
             this.defaultResult = defaultResult;
             return this;
         }
-
         public Builder defaultResult(@Nullable String defaultResult) {
             this.defaultResult = Output.ofNullable(defaultResult);
             return this;
         }
-
         public Builder heartbeatTimeout(@Nullable Output<Integer> heartbeatTimeout) {
             this.heartbeatTimeout = heartbeatTimeout;
             return this;
         }
-
         public Builder heartbeatTimeout(@Nullable Integer heartbeatTimeout) {
             this.heartbeatTimeout = Output.ofNullable(heartbeatTimeout);
             return this;
         }
-
         public Builder lifecycleTransition(Output<String> lifecycleTransition) {
             this.lifecycleTransition = Objects.requireNonNull(lifecycleTransition);
             return this;
         }
-
         public Builder lifecycleTransition(String lifecycleTransition) {
             this.lifecycleTransition = Output.of(Objects.requireNonNull(lifecycleTransition));
             return this;
         }
-
         public Builder name(Output<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
-
         public Builder notificationMetadata(@Nullable Output<String> notificationMetadata) {
             this.notificationMetadata = notificationMetadata;
             return this;
         }
-
         public Builder notificationMetadata(@Nullable String notificationMetadata) {
             this.notificationMetadata = Output.ofNullable(notificationMetadata);
             return this;
         }
-
         public Builder notificationTargetArn(@Nullable Output<String> notificationTargetArn) {
             this.notificationTargetArn = notificationTargetArn;
             return this;
         }
-
         public Builder notificationTargetArn(@Nullable String notificationTargetArn) {
             this.notificationTargetArn = Output.ofNullable(notificationTargetArn);
             return this;
         }
-
         public Builder roleArn(@Nullable Output<String> roleArn) {
             this.roleArn = roleArn;
             return this;
         }
-
         public Builder roleArn(@Nullable String roleArn) {
             this.roleArn = Output.ofNullable(roleArn);
             return this;
-        }
-        public GroupInitialLifecycleHookArgs build() {
+        }        public GroupInitialLifecycleHookArgs build() {
             return new GroupInitialLifecycleHookArgs(defaultResult, heartbeatTimeout, lifecycleTransition, name, notificationMetadata, notificationTargetArn, roleArn);
         }
     }

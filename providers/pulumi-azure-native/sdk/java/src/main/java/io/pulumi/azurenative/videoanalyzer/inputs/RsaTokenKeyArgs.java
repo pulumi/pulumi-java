@@ -128,52 +128,42 @@ public final class RsaTokenKeyArgs extends io.pulumi.resources.ResourceArgs {
             this.alg = Objects.requireNonNull(alg);
             return this;
         }
-
         public Builder alg(Either<String,AccessPolicyRsaAlgo> alg) {
             this.alg = Output.of(Objects.requireNonNull(alg));
             return this;
         }
-
         public Builder e(Output<String> e) {
             this.e = Objects.requireNonNull(e);
             return this;
         }
-
         public Builder e(String e) {
             this.e = Output.of(Objects.requireNonNull(e));
             return this;
         }
-
         public Builder kid(Output<String> kid) {
             this.kid = Objects.requireNonNull(kid);
             return this;
         }
-
         public Builder kid(String kid) {
             this.kid = Output.of(Objects.requireNonNull(kid));
             return this;
         }
-
         public Builder n(Output<String> n) {
             this.n = Objects.requireNonNull(n);
             return this;
         }
-
         public Builder n(String n) {
             this.n = Output.of(Objects.requireNonNull(n));
             return this;
         }
-
         public Builder type(Output<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Output.of(Objects.requireNonNull(type));
             return this;
-        }
-        public RsaTokenKeyArgs build() {
+        }        public RsaTokenKeyArgs build() {
             return new RsaTokenKeyArgs(alg, e, kid, n, type);
         }
     }

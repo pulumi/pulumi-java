@@ -53,8 +53,7 @@ public final class SecurityProfileStatisticalThreshold {
         public Builder statistic(@Nullable SecurityProfileStatisticalThresholdStatistic statistic) {
             this.statistic = statistic;
             return this;
-        }
-        public SecurityProfileStatisticalThreshold build() {
+        }        public SecurityProfileStatisticalThreshold build() {
             return new SecurityProfileStatisticalThreshold(statistic);
         }
     }

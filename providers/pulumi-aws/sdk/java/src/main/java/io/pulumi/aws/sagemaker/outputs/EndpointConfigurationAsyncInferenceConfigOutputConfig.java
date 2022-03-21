@@ -88,17 +88,14 @@ public final class EndpointConfigurationAsyncInferenceConfigOutputConfig {
             this.kmsKeyId = kmsKeyId;
             return this;
         }
-
         public Builder notificationConfig(@Nullable EndpointConfigurationAsyncInferenceConfigOutputConfigNotificationConfig notificationConfig) {
             this.notificationConfig = notificationConfig;
             return this;
         }
-
         public Builder s3OutputPath(String s3OutputPath) {
             this.s3OutputPath = Objects.requireNonNull(s3OutputPath);
             return this;
-        }
-        public EndpointConfigurationAsyncInferenceConfigOutputConfig build() {
+        }        public EndpointConfigurationAsyncInferenceConfigOutputConfig build() {
             return new EndpointConfigurationAsyncInferenceConfigOutputConfig(kmsKeyId, notificationConfig, s3OutputPath);
         }
     }

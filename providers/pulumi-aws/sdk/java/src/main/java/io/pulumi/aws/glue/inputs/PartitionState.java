@@ -185,92 +185,77 @@ public final class PartitionState extends io.pulumi.resources.ResourceArgs {
             this.catalogId = catalogId;
             return this;
         }
-
         public Builder catalogId(@Nullable String catalogId) {
             this.catalogId = Output.ofNullable(catalogId);
             return this;
         }
-
         public Builder creationTime(@Nullable Output<String> creationTime) {
             this.creationTime = creationTime;
             return this;
         }
-
         public Builder creationTime(@Nullable String creationTime) {
             this.creationTime = Output.ofNullable(creationTime);
             return this;
         }
-
         public Builder databaseName(@Nullable Output<String> databaseName) {
             this.databaseName = databaseName;
             return this;
         }
-
         public Builder databaseName(@Nullable String databaseName) {
             this.databaseName = Output.ofNullable(databaseName);
             return this;
         }
-
         public Builder lastAccessedTime(@Nullable Output<String> lastAccessedTime) {
             this.lastAccessedTime = lastAccessedTime;
             return this;
         }
-
         public Builder lastAccessedTime(@Nullable String lastAccessedTime) {
             this.lastAccessedTime = Output.ofNullable(lastAccessedTime);
             return this;
         }
-
         public Builder lastAnalyzedTime(@Nullable Output<String> lastAnalyzedTime) {
             this.lastAnalyzedTime = lastAnalyzedTime;
             return this;
         }
-
         public Builder lastAnalyzedTime(@Nullable String lastAnalyzedTime) {
             this.lastAnalyzedTime = Output.ofNullable(lastAnalyzedTime);
             return this;
         }
-
         public Builder parameters(@Nullable Output<Map<String,String>> parameters) {
             this.parameters = parameters;
             return this;
         }
-
         public Builder parameters(@Nullable Map<String,String> parameters) {
             this.parameters = Output.ofNullable(parameters);
             return this;
         }
-
         public Builder partitionValues(@Nullable Output<List<String>> partitionValues) {
             this.partitionValues = partitionValues;
             return this;
         }
-
         public Builder partitionValues(@Nullable List<String> partitionValues) {
             this.partitionValues = Output.ofNullable(partitionValues);
             return this;
         }
-
+        public Builder partitionValues(String... partitionValues) {
+            return partitionValues(List.of(partitionValues));
+        }
         public Builder storageDescriptor(@Nullable Output<PartitionStorageDescriptorGetArgs> storageDescriptor) {
             this.storageDescriptor = storageDescriptor;
             return this;
         }
-
         public Builder storageDescriptor(@Nullable PartitionStorageDescriptorGetArgs storageDescriptor) {
             this.storageDescriptor = Output.ofNullable(storageDescriptor);
             return this;
         }
-
         public Builder tableName(@Nullable Output<String> tableName) {
             this.tableName = tableName;
             return this;
         }
-
         public Builder tableName(@Nullable String tableName) {
             this.tableName = Output.ofNullable(tableName);
             return this;
-        }
-        public PartitionState build() {
+        }        public PartitionState build() {
             return new PartitionState(catalogId, creationTime, databaseName, lastAccessedTime, lastAnalyzedTime, parameters, partitionValues, storageDescriptor, tableName);
         }
     }

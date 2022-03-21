@@ -78,22 +78,18 @@ public final class GoogleDevtoolsContaineranalysisV1alpha1GitSourceContextArgs e
             this.revisionId = Objects.requireNonNull(revisionId);
             return this;
         }
-
         public Builder revisionId(String revisionId) {
             this.revisionId = Output.of(Objects.requireNonNull(revisionId));
             return this;
         }
-
         public Builder url(@Nullable Output<String> url) {
             this.url = url;
             return this;
         }
-
         public Builder url(@Nullable String url) {
             this.url = Output.ofNullable(url);
             return this;
-        }
-        public GoogleDevtoolsContaineranalysisV1alpha1GitSourceContextArgs build() {
+        }        public GoogleDevtoolsContaineranalysisV1alpha1GitSourceContextArgs build() {
             return new GoogleDevtoolsContaineranalysisV1alpha1GitSourceContextArgs(revisionId, url);
         }
     }

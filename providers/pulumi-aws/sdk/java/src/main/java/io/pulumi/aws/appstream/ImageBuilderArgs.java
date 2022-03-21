@@ -256,132 +256,109 @@ public final class ImageBuilderArgs extends io.pulumi.resources.ResourceArgs {
             this.accessEndpoints = accessEndpoints;
             return this;
         }
-
         public Builder accessEndpoints(@Nullable List<ImageBuilderAccessEndpointArgs> accessEndpoints) {
             this.accessEndpoints = Output.ofNullable(accessEndpoints);
             return this;
         }
-
+        public Builder accessEndpoints(ImageBuilderAccessEndpointArgs... accessEndpoints) {
+            return accessEndpoints(List.of(accessEndpoints));
+        }
         public Builder appstreamAgentVersion(@Nullable Output<String> appstreamAgentVersion) {
             this.appstreamAgentVersion = appstreamAgentVersion;
             return this;
         }
-
         public Builder appstreamAgentVersion(@Nullable String appstreamAgentVersion) {
             this.appstreamAgentVersion = Output.ofNullable(appstreamAgentVersion);
             return this;
         }
-
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder displayName(@Nullable Output<String> displayName) {
             this.displayName = displayName;
             return this;
         }
-
         public Builder displayName(@Nullable String displayName) {
             this.displayName = Output.ofNullable(displayName);
             return this;
         }
-
         public Builder domainJoinInfo(@Nullable Output<ImageBuilderDomainJoinInfoArgs> domainJoinInfo) {
             this.domainJoinInfo = domainJoinInfo;
             return this;
         }
-
         public Builder domainJoinInfo(@Nullable ImageBuilderDomainJoinInfoArgs domainJoinInfo) {
             this.domainJoinInfo = Output.ofNullable(domainJoinInfo);
             return this;
         }
-
         public Builder enableDefaultInternetAccess(@Nullable Output<Boolean> enableDefaultInternetAccess) {
             this.enableDefaultInternetAccess = enableDefaultInternetAccess;
             return this;
         }
-
         public Builder enableDefaultInternetAccess(@Nullable Boolean enableDefaultInternetAccess) {
             this.enableDefaultInternetAccess = Output.ofNullable(enableDefaultInternetAccess);
             return this;
         }
-
         public Builder iamRoleArn(@Nullable Output<String> iamRoleArn) {
             this.iamRoleArn = iamRoleArn;
             return this;
         }
-
         public Builder iamRoleArn(@Nullable String iamRoleArn) {
             this.iamRoleArn = Output.ofNullable(iamRoleArn);
             return this;
         }
-
         public Builder imageArn(@Nullable Output<String> imageArn) {
             this.imageArn = imageArn;
             return this;
         }
-
         public Builder imageArn(@Nullable String imageArn) {
             this.imageArn = Output.ofNullable(imageArn);
             return this;
         }
-
         public Builder imageName(@Nullable Output<String> imageName) {
             this.imageName = imageName;
             return this;
         }
-
         public Builder imageName(@Nullable String imageName) {
             this.imageName = Output.ofNullable(imageName);
             return this;
         }
-
         public Builder instanceType(Output<String> instanceType) {
             this.instanceType = Objects.requireNonNull(instanceType);
             return this;
         }
-
         public Builder instanceType(String instanceType) {
             this.instanceType = Output.of(Objects.requireNonNull(instanceType));
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
         public Builder vpcConfig(@Nullable Output<ImageBuilderVpcConfigArgs> vpcConfig) {
             this.vpcConfig = vpcConfig;
             return this;
         }
-
         public Builder vpcConfig(@Nullable ImageBuilderVpcConfigArgs vpcConfig) {
             this.vpcConfig = Output.ofNullable(vpcConfig);
             return this;
-        }
-        public ImageBuilderArgs build() {
+        }        public ImageBuilderArgs build() {
             return new ImageBuilderArgs(accessEndpoints, appstreamAgentVersion, description, displayName, domainJoinInfo, enableDefaultInternetAccess, iamRoleArn, imageArn, imageName, instanceType, name, tags, vpcConfig);
         }
     }

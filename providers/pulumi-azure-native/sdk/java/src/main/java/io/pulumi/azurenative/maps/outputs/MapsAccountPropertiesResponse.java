@@ -53,8 +53,7 @@ public final class MapsAccountPropertiesResponse {
         public Builder xMsClientId(@Nullable String xMsClientId) {
             this.xMsClientId = xMsClientId;
             return this;
-        }
-        public MapsAccountPropertiesResponse build() {
+        }        public MapsAccountPropertiesResponse build() {
             return new MapsAccountPropertiesResponse(xMsClientId);
         }
     }

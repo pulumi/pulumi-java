@@ -80,17 +80,20 @@ public final class GetInstanceTypesResult {
             this.filters = filters;
             return this;
         }
-
+        public Builder filters(GetInstanceTypesFilter... filters) {
+            return filters(List.of(filters));
+        }
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder instanceTypes(List<String> instanceTypes) {
             this.instanceTypes = Objects.requireNonNull(instanceTypes);
             return this;
         }
-        public GetInstanceTypesResult build() {
+        public Builder instanceTypes(String... instanceTypes) {
+            return instanceTypes(List.of(instanceTypes));
+        }        public GetInstanceTypesResult build() {
             return new GetInstanceTypesResult(filters, id, instanceTypes);
         }
     }

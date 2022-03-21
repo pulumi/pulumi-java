@@ -53,8 +53,7 @@ public final class AnalyticsApplicationInputsParallelism {
         public Builder count(@Nullable Integer count) {
             this.count = count;
             return this;
-        }
-        public AnalyticsApplicationInputsParallelism build() {
+        }        public AnalyticsApplicationInputsParallelism build() {
             return new AnalyticsApplicationInputsParallelism(count);
         }
     }

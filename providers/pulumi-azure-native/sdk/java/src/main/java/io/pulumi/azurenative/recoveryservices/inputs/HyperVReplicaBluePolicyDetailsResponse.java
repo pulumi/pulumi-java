@@ -240,62 +240,50 @@ public final class HyperVReplicaBluePolicyDetailsResponse extends io.pulumi.reso
             this.allowedAuthenticationType = allowedAuthenticationType;
             return this;
         }
-
         public Builder applicationConsistentSnapshotFrequencyInHours(@Nullable Integer applicationConsistentSnapshotFrequencyInHours) {
             this.applicationConsistentSnapshotFrequencyInHours = applicationConsistentSnapshotFrequencyInHours;
             return this;
         }
-
         public Builder compression(@Nullable String compression) {
             this.compression = compression;
             return this;
         }
-
         public Builder initialReplicationMethod(@Nullable String initialReplicationMethod) {
             this.initialReplicationMethod = initialReplicationMethod;
             return this;
         }
-
         public Builder instanceType(String instanceType) {
             this.instanceType = Objects.requireNonNull(instanceType);
             return this;
         }
-
         public Builder offlineReplicationExportPath(@Nullable String offlineReplicationExportPath) {
             this.offlineReplicationExportPath = offlineReplicationExportPath;
             return this;
         }
-
         public Builder offlineReplicationImportPath(@Nullable String offlineReplicationImportPath) {
             this.offlineReplicationImportPath = offlineReplicationImportPath;
             return this;
         }
-
         public Builder onlineReplicationStartTime(@Nullable String onlineReplicationStartTime) {
             this.onlineReplicationStartTime = onlineReplicationStartTime;
             return this;
         }
-
         public Builder recoveryPoints(@Nullable Integer recoveryPoints) {
             this.recoveryPoints = recoveryPoints;
             return this;
         }
-
         public Builder replicaDeletionOption(@Nullable String replicaDeletionOption) {
             this.replicaDeletionOption = replicaDeletionOption;
             return this;
         }
-
         public Builder replicationFrequencyInSeconds(@Nullable Integer replicationFrequencyInSeconds) {
             this.replicationFrequencyInSeconds = replicationFrequencyInSeconds;
             return this;
         }
-
         public Builder replicationPort(@Nullable Integer replicationPort) {
             this.replicationPort = replicationPort;
             return this;
-        }
-        public HyperVReplicaBluePolicyDetailsResponse build() {
+        }        public HyperVReplicaBluePolicyDetailsResponse build() {
             return new HyperVReplicaBluePolicyDetailsResponse(allowedAuthenticationType, applicationConsistentSnapshotFrequencyInHours, compression, initialReplicationMethod, instanceType, offlineReplicationExportPath, offlineReplicationImportPath, onlineReplicationStartTime, recoveryPoints, replicaDeletionOption, replicationFrequencyInSeconds, replicationPort);
         }
     }

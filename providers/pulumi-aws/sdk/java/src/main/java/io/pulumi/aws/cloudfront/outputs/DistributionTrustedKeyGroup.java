@@ -73,12 +73,13 @@ public final class DistributionTrustedKeyGroup {
             this.enabled = enabled;
             return this;
         }
-
         public Builder items(@Nullable List<DistributionTrustedKeyGroupItem> items) {
             this.items = items;
             return this;
         }
-        public DistributionTrustedKeyGroup build() {
+        public Builder items(DistributionTrustedKeyGroupItem... items) {
+            return items(List.of(items));
+        }        public DistributionTrustedKeyGroup build() {
             return new DistributionTrustedKeyGroup(enabled, items);
         }
     }

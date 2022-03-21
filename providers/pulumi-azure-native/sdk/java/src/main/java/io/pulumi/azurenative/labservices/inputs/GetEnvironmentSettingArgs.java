@@ -122,27 +122,22 @@ public final class GetEnvironmentSettingArgs extends io.pulumi.resources.InvokeA
             this.environmentSettingName = Objects.requireNonNull(environmentSettingName);
             return this;
         }
-
         public Builder expand(@Nullable String expand) {
             this.expand = expand;
             return this;
         }
-
         public Builder labAccountName(String labAccountName) {
             this.labAccountName = Objects.requireNonNull(labAccountName);
             return this;
         }
-
         public Builder labName(String labName) {
             this.labName = Objects.requireNonNull(labName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
-        }
-        public GetEnvironmentSettingArgs build() {
+        }        public GetEnvironmentSettingArgs build() {
             return new GetEnvironmentSettingArgs(environmentSettingName, expand, labAccountName, labName, resourceGroupName);
         }
     }

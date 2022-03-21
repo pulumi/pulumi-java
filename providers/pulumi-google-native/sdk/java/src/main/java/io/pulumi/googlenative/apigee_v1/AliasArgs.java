@@ -176,102 +176,82 @@ public final class AliasArgs extends io.pulumi.resources.ResourceArgs {
             this.alias = alias;
             return this;
         }
-
         public Builder alias(@Nullable String alias) {
             this.alias = Output.ofNullable(alias);
             return this;
         }
-
         public Builder contentType(@Nullable Output<String> contentType) {
             this.contentType = contentType;
             return this;
         }
-
         public Builder contentType(@Nullable String contentType) {
             this.contentType = Output.ofNullable(contentType);
             return this;
         }
-
         public Builder data(@Nullable Output<String> data) {
             this.data = data;
             return this;
         }
-
         public Builder data(@Nullable String data) {
             this.data = Output.ofNullable(data);
             return this;
         }
-
         public Builder environmentId(Output<String> environmentId) {
             this.environmentId = Objects.requireNonNull(environmentId);
             return this;
         }
-
         public Builder environmentId(String environmentId) {
             this.environmentId = Output.of(Objects.requireNonNull(environmentId));
             return this;
         }
-
         public Builder extensions(@Nullable Output<List<Map<String,String>>> extensions) {
             this.extensions = extensions;
             return this;
         }
-
         public Builder extensions(@Nullable List<Map<String,String>> extensions) {
             this.extensions = Output.ofNullable(extensions);
             return this;
         }
-
         public Builder format(Output<String> format) {
             this.format = Objects.requireNonNull(format);
             return this;
         }
-
         public Builder format(String format) {
             this.format = Output.of(Objects.requireNonNull(format));
             return this;
         }
-
         public Builder ignoreExpiryValidation(@Nullable Output<String> ignoreExpiryValidation) {
             this.ignoreExpiryValidation = ignoreExpiryValidation;
             return this;
         }
-
         public Builder ignoreExpiryValidation(@Nullable String ignoreExpiryValidation) {
             this.ignoreExpiryValidation = Output.ofNullable(ignoreExpiryValidation);
             return this;
         }
-
         public Builder ignoreNewlineValidation(@Nullable Output<String> ignoreNewlineValidation) {
             this.ignoreNewlineValidation = ignoreNewlineValidation;
             return this;
         }
-
         public Builder ignoreNewlineValidation(@Nullable String ignoreNewlineValidation) {
             this.ignoreNewlineValidation = Output.ofNullable(ignoreNewlineValidation);
             return this;
         }
-
         public Builder keystoreId(Output<String> keystoreId) {
             this.keystoreId = Objects.requireNonNull(keystoreId);
             return this;
         }
-
         public Builder keystoreId(String keystoreId) {
             this.keystoreId = Output.of(Objects.requireNonNull(keystoreId));
             return this;
         }
-
         public Builder organizationId(Output<String> organizationId) {
             this.organizationId = Objects.requireNonNull(organizationId);
             return this;
         }
-
         public Builder organizationId(String organizationId) {
             this.organizationId = Output.of(Objects.requireNonNull(organizationId));
             return this;
-        }
-        public AliasArgs build() {
+        }        public AliasArgs build() {
             return new AliasArgs(alias, contentType, data, environmentId, extensions, format, ignoreExpiryValidation, ignoreNewlineValidation, keystoreId, organizationId);
         }
     }

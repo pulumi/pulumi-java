@@ -76,12 +76,10 @@ public final class SqlServerAuditConfigResponse extends io.pulumi.resources.Invo
             this.bucket = Objects.requireNonNull(bucket);
             return this;
         }
-
         public Builder kind(String kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
-        }
-        public SqlServerAuditConfigResponse build() {
+        }        public SqlServerAuditConfigResponse build() {
             return new SqlServerAuditConfigResponse(bucket, kind);
         }
     }

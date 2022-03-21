@@ -160,72 +160,70 @@ public final class CacheKeyPolicyArgs extends io.pulumi.resources.ResourceArgs {
             this.includeHost = includeHost;
             return this;
         }
-
         public Builder includeHost(@Nullable Boolean includeHost) {
             this.includeHost = Output.ofNullable(includeHost);
             return this;
         }
-
         public Builder includeHttpHeaders(@Nullable Output<List<String>> includeHttpHeaders) {
             this.includeHttpHeaders = includeHttpHeaders;
             return this;
         }
-
         public Builder includeHttpHeaders(@Nullable List<String> includeHttpHeaders) {
             this.includeHttpHeaders = Output.ofNullable(includeHttpHeaders);
             return this;
         }
-
+        public Builder includeHttpHeaders(String... includeHttpHeaders) {
+            return includeHttpHeaders(List.of(includeHttpHeaders));
+        }
         public Builder includeNamedCookies(@Nullable Output<List<String>> includeNamedCookies) {
             this.includeNamedCookies = includeNamedCookies;
             return this;
         }
-
         public Builder includeNamedCookies(@Nullable List<String> includeNamedCookies) {
             this.includeNamedCookies = Output.ofNullable(includeNamedCookies);
             return this;
         }
-
+        public Builder includeNamedCookies(String... includeNamedCookies) {
+            return includeNamedCookies(List.of(includeNamedCookies));
+        }
         public Builder includeProtocol(@Nullable Output<Boolean> includeProtocol) {
             this.includeProtocol = includeProtocol;
             return this;
         }
-
         public Builder includeProtocol(@Nullable Boolean includeProtocol) {
             this.includeProtocol = Output.ofNullable(includeProtocol);
             return this;
         }
-
         public Builder includeQueryString(@Nullable Output<Boolean> includeQueryString) {
             this.includeQueryString = includeQueryString;
             return this;
         }
-
         public Builder includeQueryString(@Nullable Boolean includeQueryString) {
             this.includeQueryString = Output.ofNullable(includeQueryString);
             return this;
         }
-
         public Builder queryStringBlacklist(@Nullable Output<List<String>> queryStringBlacklist) {
             this.queryStringBlacklist = queryStringBlacklist;
             return this;
         }
-
         public Builder queryStringBlacklist(@Nullable List<String> queryStringBlacklist) {
             this.queryStringBlacklist = Output.ofNullable(queryStringBlacklist);
             return this;
         }
-
+        public Builder queryStringBlacklist(String... queryStringBlacklist) {
+            return queryStringBlacklist(List.of(queryStringBlacklist));
+        }
         public Builder queryStringWhitelist(@Nullable Output<List<String>> queryStringWhitelist) {
             this.queryStringWhitelist = queryStringWhitelist;
             return this;
         }
-
         public Builder queryStringWhitelist(@Nullable List<String> queryStringWhitelist) {
             this.queryStringWhitelist = Output.ofNullable(queryStringWhitelist);
             return this;
         }
-        public CacheKeyPolicyArgs build() {
+        public Builder queryStringWhitelist(String... queryStringWhitelist) {
+            return queryStringWhitelist(List.of(queryStringWhitelist));
+        }        public CacheKeyPolicyArgs build() {
             return new CacheKeyPolicyArgs(includeHost, includeHttpHeaders, includeNamedCookies, includeProtocol, includeQueryString, queryStringBlacklist, queryStringWhitelist);
         }
     }

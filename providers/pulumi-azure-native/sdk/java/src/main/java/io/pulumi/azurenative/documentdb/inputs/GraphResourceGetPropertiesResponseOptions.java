@@ -75,12 +75,10 @@ public final class GraphResourceGetPropertiesResponseOptions extends io.pulumi.r
             this.autoscaleSettings = autoscaleSettings;
             return this;
         }
-
         public Builder throughput(@Nullable Integer throughput) {
             this.throughput = throughput;
             return this;
-        }
-        public GraphResourceGetPropertiesResponseOptions build() {
+        }        public GraphResourceGetPropertiesResponseOptions build() {
             return new GraphResourceGetPropertiesResponseOptions(autoscaleSettings, throughput);
         }
     }

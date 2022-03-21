@@ -119,27 +119,22 @@ public final class ClusterKerberosAttributes {
             this.adDomainJoinPassword = adDomainJoinPassword;
             return this;
         }
-
         public Builder adDomainJoinUser(@Nullable String adDomainJoinUser) {
             this.adDomainJoinUser = adDomainJoinUser;
             return this;
         }
-
         public Builder crossRealmTrustPrincipalPassword(@Nullable String crossRealmTrustPrincipalPassword) {
             this.crossRealmTrustPrincipalPassword = crossRealmTrustPrincipalPassword;
             return this;
         }
-
         public Builder kdcAdminPassword(String kdcAdminPassword) {
             this.kdcAdminPassword = Objects.requireNonNull(kdcAdminPassword);
             return this;
         }
-
         public Builder realm(String realm) {
             this.realm = Objects.requireNonNull(realm);
             return this;
-        }
-        public ClusterKerberosAttributes build() {
+        }        public ClusterKerberosAttributes build() {
             return new ClusterKerberosAttributes(adDomainJoinPassword, adDomainJoinUser, crossRealmTrustPrincipalPassword, kdcAdminPassword, realm);
         }
     }

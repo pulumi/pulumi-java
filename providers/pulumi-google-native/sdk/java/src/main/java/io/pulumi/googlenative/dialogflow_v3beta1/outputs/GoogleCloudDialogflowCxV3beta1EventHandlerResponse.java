@@ -118,27 +118,22 @@ public final class GoogleCloudDialogflowCxV3beta1EventHandlerResponse {
             this.event = Objects.requireNonNull(event);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder targetFlow(String targetFlow) {
             this.targetFlow = Objects.requireNonNull(targetFlow);
             return this;
         }
-
         public Builder targetPage(String targetPage) {
             this.targetPage = Objects.requireNonNull(targetPage);
             return this;
         }
-
         public Builder triggerFulfillment(GoogleCloudDialogflowCxV3beta1FulfillmentResponse triggerFulfillment) {
             this.triggerFulfillment = Objects.requireNonNull(triggerFulfillment);
             return this;
-        }
-        public GoogleCloudDialogflowCxV3beta1EventHandlerResponse build() {
+        }        public GoogleCloudDialogflowCxV3beta1EventHandlerResponse build() {
             return new GoogleCloudDialogflowCxV3beta1EventHandlerResponse(event, name, targetFlow, targetPage, triggerFulfillment);
         }
     }

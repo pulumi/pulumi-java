@@ -189,92 +189,74 @@ public final class TransferJobState extends io.pulumi.resources.ResourceArgs {
             this.creationTime = creationTime;
             return this;
         }
-
         public Builder creationTime(@Nullable String creationTime) {
             this.creationTime = Output.ofNullable(creationTime);
             return this;
         }
-
         public Builder deletionTime(@Nullable Output<String> deletionTime) {
             this.deletionTime = deletionTime;
             return this;
         }
-
         public Builder deletionTime(@Nullable String deletionTime) {
             this.deletionTime = Output.ofNullable(deletionTime);
             return this;
         }
-
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder lastModificationTime(@Nullable Output<String> lastModificationTime) {
             this.lastModificationTime = lastModificationTime;
             return this;
         }
-
         public Builder lastModificationTime(@Nullable String lastModificationTime) {
             this.lastModificationTime = Output.ofNullable(lastModificationTime);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
         }
-
         public Builder schedule(@Nullable Output<TransferJobScheduleGetArgs> schedule) {
             this.schedule = schedule;
             return this;
         }
-
         public Builder schedule(@Nullable TransferJobScheduleGetArgs schedule) {
             this.schedule = Output.ofNullable(schedule);
             return this;
         }
-
         public Builder status(@Nullable Output<String> status) {
             this.status = status;
             return this;
         }
-
         public Builder status(@Nullable String status) {
             this.status = Output.ofNullable(status);
             return this;
         }
-
         public Builder transferSpec(@Nullable Output<TransferJobTransferSpecGetArgs> transferSpec) {
             this.transferSpec = transferSpec;
             return this;
         }
-
         public Builder transferSpec(@Nullable TransferJobTransferSpecGetArgs transferSpec) {
             this.transferSpec = Output.ofNullable(transferSpec);
             return this;
-        }
-        public TransferJobState build() {
+        }        public TransferJobState build() {
             return new TransferJobState(creationTime, deletionTime, description, lastModificationTime, name, project, schedule, status, transferSpec);
         }
     }

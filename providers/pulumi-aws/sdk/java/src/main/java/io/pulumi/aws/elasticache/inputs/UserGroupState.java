@@ -128,62 +128,53 @@ public final class UserGroupState extends io.pulumi.resources.ResourceArgs {
             this.arn = arn;
             return this;
         }
-
         public Builder arn(@Nullable String arn) {
             this.arn = Output.ofNullable(arn);
             return this;
         }
-
         public Builder engine(@Nullable Output<String> engine) {
             this.engine = engine;
             return this;
         }
-
         public Builder engine(@Nullable String engine) {
             this.engine = Output.ofNullable(engine);
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
             this.tagsAll = tagsAll;
             return this;
         }
-
         public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
             this.tagsAll = Output.ofNullable(tagsAll);
             return this;
         }
-
         public Builder userGroupId(@Nullable Output<String> userGroupId) {
             this.userGroupId = userGroupId;
             return this;
         }
-
         public Builder userGroupId(@Nullable String userGroupId) {
             this.userGroupId = Output.ofNullable(userGroupId);
             return this;
         }
-
         public Builder userIds(@Nullable Output<List<String>> userIds) {
             this.userIds = userIds;
             return this;
         }
-
         public Builder userIds(@Nullable List<String> userIds) {
             this.userIds = Output.ofNullable(userIds);
             return this;
         }
-        public UserGroupState build() {
+        public Builder userIds(String... userIds) {
+            return userIds(List.of(userIds));
+        }        public UserGroupState build() {
             return new UserGroupState(arn, engine, tags, tagsAll, userGroupId, userIds);
         }
     }

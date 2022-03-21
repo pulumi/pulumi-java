@@ -95,17 +95,14 @@ public final class StorageAccountResponse extends io.pulumi.resources.InvokeArgs
             this.id = id;
             return this;
         }
-
         public Builder identity(@Nullable ResourceIdentityResponse identity) {
             this.identity = identity;
             return this;
         }
-
         public Builder status(String status) {
             this.status = Objects.requireNonNull(status);
             return this;
-        }
-        public StorageAccountResponse build() {
+        }        public StorageAccountResponse build() {
             return new StorageAccountResponse(id, identity, status);
         }
     }

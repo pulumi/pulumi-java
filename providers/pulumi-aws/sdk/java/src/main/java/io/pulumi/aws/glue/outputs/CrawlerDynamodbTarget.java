@@ -89,17 +89,14 @@ public final class CrawlerDynamodbTarget {
             this.path = Objects.requireNonNull(path);
             return this;
         }
-
         public Builder scanAll(@Nullable Boolean scanAll) {
             this.scanAll = scanAll;
             return this;
         }
-
         public Builder scanRate(@Nullable Double scanRate) {
             this.scanRate = scanRate;
             return this;
-        }
-        public CrawlerDynamodbTarget build() {
+        }        public CrawlerDynamodbTarget build() {
             return new CrawlerDynamodbTarget(path, scanAll, scanRate);
         }
     }

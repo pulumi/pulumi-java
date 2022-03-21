@@ -119,27 +119,22 @@ public final class PolicyDefinitionGroupResponse {
             this.additionalMetadataId = additionalMetadataId;
             return this;
         }
-
         public Builder category(@Nullable String category) {
             this.category = category;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
-
         public Builder displayName(@Nullable String displayName) {
             this.displayName = displayName;
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
-        }
-        public PolicyDefinitionGroupResponse build() {
+        }        public PolicyDefinitionGroupResponse build() {
             return new PolicyDefinitionGroupResponse(additionalMetadataId, category, description, displayName, name);
         }
     }

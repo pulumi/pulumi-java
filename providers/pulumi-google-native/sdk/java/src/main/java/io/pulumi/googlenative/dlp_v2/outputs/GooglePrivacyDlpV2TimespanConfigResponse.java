@@ -103,22 +103,18 @@ public final class GooglePrivacyDlpV2TimespanConfigResponse {
             this.enableAutoPopulationOfTimespanConfig = Objects.requireNonNull(enableAutoPopulationOfTimespanConfig);
             return this;
         }
-
         public Builder endTime(String endTime) {
             this.endTime = Objects.requireNonNull(endTime);
             return this;
         }
-
         public Builder startTime(String startTime) {
             this.startTime = Objects.requireNonNull(startTime);
             return this;
         }
-
         public Builder timestampField(GooglePrivacyDlpV2FieldIdResponse timestampField) {
             this.timestampField = Objects.requireNonNull(timestampField);
             return this;
-        }
-        public GooglePrivacyDlpV2TimespanConfigResponse build() {
+        }        public GooglePrivacyDlpV2TimespanConfigResponse build() {
             return new GooglePrivacyDlpV2TimespanConfigResponse(enableAutoPopulationOfTimespanConfig, endTime, startTime, timestampField);
         }
     }

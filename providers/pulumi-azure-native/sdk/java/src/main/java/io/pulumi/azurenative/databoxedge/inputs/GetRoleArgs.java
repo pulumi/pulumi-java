@@ -88,17 +88,14 @@ public final class GetRoleArgs extends io.pulumi.resources.InvokeArgs {
             this.deviceName = Objects.requireNonNull(deviceName);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
-        }
-        public GetRoleArgs build() {
+        }        public GetRoleArgs build() {
             return new GetRoleArgs(deviceName, name, resourceGroupName);
         }
     }

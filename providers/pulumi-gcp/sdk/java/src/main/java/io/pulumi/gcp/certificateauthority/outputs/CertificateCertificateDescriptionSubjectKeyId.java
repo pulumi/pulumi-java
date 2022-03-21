@@ -45,8 +45,7 @@ public final class CertificateCertificateDescriptionSubjectKeyId {
         public Builder keyId(@Nullable String keyId) {
             this.keyId = keyId;
             return this;
-        }
-        public CertificateCertificateDescriptionSubjectKeyId build() {
+        }        public CertificateCertificateDescriptionSubjectKeyId build() {
             return new CertificateCertificateDescriptionSubjectKeyId(keyId);
         }
     }

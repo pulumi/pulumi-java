@@ -73,22 +73,18 @@ public final class InsightFiltersResourcePartitionGetArgs extends io.pulumi.reso
             this.comparison = Objects.requireNonNull(comparison);
             return this;
         }
-
         public Builder comparison(String comparison) {
             this.comparison = Output.of(Objects.requireNonNull(comparison));
             return this;
         }
-
         public Builder value(Output<String> value) {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public Builder value(String value) {
             this.value = Output.of(Objects.requireNonNull(value));
             return this;
-        }
-        public InsightFiltersResourcePartitionGetArgs build() {
+        }        public InsightFiltersResourcePartitionGetArgs build() {
             return new InsightFiltersResourcePartitionGetArgs(comparison, value);
         }
     }

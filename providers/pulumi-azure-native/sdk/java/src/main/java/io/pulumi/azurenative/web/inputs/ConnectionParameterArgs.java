@@ -79,22 +79,18 @@ public final class ConnectionParameterArgs extends io.pulumi.resources.ResourceA
             this.oAuthSettings = oAuthSettings;
             return this;
         }
-
         public Builder oAuthSettings(@Nullable ApiOAuthSettingsArgs oAuthSettings) {
             this.oAuthSettings = Output.ofNullable(oAuthSettings);
             return this;
         }
-
         public Builder type(@Nullable Output<ConnectionParameterType> type) {
             this.type = type;
             return this;
         }
-
         public Builder type(@Nullable ConnectionParameterType type) {
             this.type = Output.ofNullable(type);
             return this;
-        }
-        public ConnectionParameterArgs build() {
+        }        public ConnectionParameterArgs build() {
             return new ConnectionParameterArgs(oAuthSettings, type);
         }
     }

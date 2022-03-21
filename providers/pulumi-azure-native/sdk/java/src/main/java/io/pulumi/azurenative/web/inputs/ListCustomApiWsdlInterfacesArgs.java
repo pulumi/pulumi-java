@@ -141,32 +141,26 @@ public final class ListCustomApiWsdlInterfacesArgs extends io.pulumi.resources.I
             this.content = content;
             return this;
         }
-
         public Builder importMethod(@Nullable Either<String,WsdlImportMethod> importMethod) {
             this.importMethod = importMethod;
             return this;
         }
-
         public Builder location(String location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
-
         public Builder service(@Nullable WsdlService service) {
             this.service = service;
             return this;
         }
-
         public Builder subscriptionId(@Nullable String subscriptionId) {
             this.subscriptionId = subscriptionId;
             return this;
         }
-
         public Builder url(@Nullable String url) {
             this.url = url;
             return this;
-        }
-        public ListCustomApiWsdlInterfacesArgs build() {
+        }        public ListCustomApiWsdlInterfacesArgs build() {
             return new ListCustomApiWsdlInterfacesArgs(content, importMethod, location, service, subscriptionId, url);
         }
     }

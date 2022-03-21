@@ -202,52 +202,42 @@ public final class GetQueueResult {
             this.appEngineHttpTarget = Objects.requireNonNull(appEngineHttpTarget);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder pullTarget(PullTargetResponse pullTarget) {
             this.pullTarget = Objects.requireNonNull(pullTarget);
             return this;
         }
-
         public Builder purgeTime(String purgeTime) {
             this.purgeTime = Objects.requireNonNull(purgeTime);
             return this;
         }
-
         public Builder rateLimits(RateLimitsResponse rateLimits) {
             this.rateLimits = Objects.requireNonNull(rateLimits);
             return this;
         }
-
         public Builder retryConfig(RetryConfigResponse retryConfig) {
             this.retryConfig = Objects.requireNonNull(retryConfig);
             return this;
         }
-
         public Builder state(String state) {
             this.state = Objects.requireNonNull(state);
             return this;
         }
-
         public Builder stats(QueueStatsResponse stats) {
             this.stats = Objects.requireNonNull(stats);
             return this;
         }
-
         public Builder taskTtl(String taskTtl) {
             this.taskTtl = Objects.requireNonNull(taskTtl);
             return this;
         }
-
         public Builder tombstoneTtl(String tombstoneTtl) {
             this.tombstoneTtl = Objects.requireNonNull(tombstoneTtl);
             return this;
-        }
-        public GetQueueResult build() {
+        }        public GetQueueResult build() {
             return new GetQueueResult(appEngineHttpTarget, name, pullTarget, purgeTime, rateLimits, retryConfig, state, stats, taskTtl, tombstoneTtl);
         }
     }

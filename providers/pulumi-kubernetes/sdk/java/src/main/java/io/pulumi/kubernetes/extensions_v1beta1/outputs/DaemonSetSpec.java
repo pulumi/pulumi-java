@@ -138,32 +138,26 @@ public final class DaemonSetSpec {
             this.minReadySeconds = minReadySeconds;
             return this;
         }
-
         public Builder revisionHistoryLimit(@Nullable Integer revisionHistoryLimit) {
             this.revisionHistoryLimit = revisionHistoryLimit;
             return this;
         }
-
         public Builder selector(@Nullable LabelSelector selector) {
             this.selector = selector;
             return this;
         }
-
         public Builder template(PodTemplateSpec template) {
             this.template = Objects.requireNonNull(template);
             return this;
         }
-
         public Builder templateGeneration(@Nullable Integer templateGeneration) {
             this.templateGeneration = templateGeneration;
             return this;
         }
-
         public Builder updateStrategy(@Nullable DaemonSetUpdateStrategy updateStrategy) {
             this.updateStrategy = updateStrategy;
             return this;
-        }
-        public DaemonSetSpec build() {
+        }        public DaemonSetSpec build() {
             return new DaemonSetSpec(minReadySeconds, revisionHistoryLimit, selector, template, templateGeneration, updateStrategy);
         }
     }

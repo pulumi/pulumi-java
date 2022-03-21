@@ -56,12 +56,10 @@ public final class MonitoringScheduleMonitoringOutputArgs extends io.pulumi.reso
             this.s3Output = Objects.requireNonNull(s3Output);
             return this;
         }
-
         public Builder s3Output(MonitoringScheduleS3OutputArgs s3Output) {
             this.s3Output = Output.of(Objects.requireNonNull(s3Output));
             return this;
-        }
-        public MonitoringScheduleMonitoringOutputArgs build() {
+        }        public MonitoringScheduleMonitoringOutputArgs build() {
             return new MonitoringScheduleMonitoringOutputArgs(s3Output);
         }
     }

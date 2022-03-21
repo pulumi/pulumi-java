@@ -106,22 +106,18 @@ public final class VirtualNodeSpecListenerConnectionPool {
             this.grpc = grpc;
             return this;
         }
-
         public Builder http(@Nullable VirtualNodeSpecListenerConnectionPoolHttp http) {
             this.http = http;
             return this;
         }
-
         public Builder http2(@Nullable VirtualNodeSpecListenerConnectionPoolHttp2 http2) {
             this.http2 = http2;
             return this;
         }
-
         public Builder tcp(@Nullable VirtualNodeSpecListenerConnectionPoolTcp tcp) {
             this.tcp = tcp;
             return this;
-        }
-        public VirtualNodeSpecListenerConnectionPool build() {
+        }        public VirtualNodeSpecListenerConnectionPool build() {
             return new VirtualNodeSpecListenerConnectionPool(grpc, http, http2, tcp);
         }
     }

@@ -68,12 +68,10 @@ public final class ProjectTag extends io.pulumi.resources.InvokeArgs {
             this.key = Objects.requireNonNull(key);
             return this;
         }
-
         public Builder value(String value) {
             this.value = Objects.requireNonNull(value);
             return this;
-        }
-        public ProjectTag build() {
+        }        public ProjectTag build() {
             return new ProjectTag(key, value);
         }
     }

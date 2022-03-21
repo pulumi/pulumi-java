@@ -56,12 +56,10 @@ public final class InviteAccepterArgs extends io.pulumi.resources.ResourceArgs {
             this.masterId = Objects.requireNonNull(masterId);
             return this;
         }
-
         public Builder masterId(String masterId) {
             this.masterId = Output.of(Objects.requireNonNull(masterId));
             return this;
-        }
-        public InviteAccepterArgs build() {
+        }        public InviteAccepterArgs build() {
             return new InviteAccepterArgs(masterId);
         }
     }

@@ -72,12 +72,10 @@ public final class KeyVaultKeyResponse {
             this.attributes = attributes;
             return this;
         }
-
         public Builder kid(@Nullable String kid) {
             this.kid = kid;
             return this;
-        }
-        public KeyVaultKeyResponse build() {
+        }        public KeyVaultKeyResponse build() {
             return new KeyVaultKeyResponse(attributes, kid);
         }
     }

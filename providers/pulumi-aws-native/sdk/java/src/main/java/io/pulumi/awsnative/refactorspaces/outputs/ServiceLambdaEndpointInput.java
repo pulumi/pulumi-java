@@ -43,8 +43,7 @@ public final class ServiceLambdaEndpointInput {
         public Builder arn(String arn) {
             this.arn = Objects.requireNonNull(arn);
             return this;
-        }
-        public ServiceLambdaEndpointInput build() {
+        }        public ServiceLambdaEndpointInput build() {
             return new ServiceLambdaEndpointInput(arn);
         }
     }

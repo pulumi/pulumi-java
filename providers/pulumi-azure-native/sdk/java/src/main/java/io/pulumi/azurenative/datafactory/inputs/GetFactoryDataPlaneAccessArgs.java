@@ -154,37 +154,30 @@ public final class GetFactoryDataPlaneAccessArgs extends io.pulumi.resources.Inv
             this.accessResourcePath = accessResourcePath;
             return this;
         }
-
         public Builder expireTime(@Nullable String expireTime) {
             this.expireTime = expireTime;
             return this;
         }
-
         public Builder factoryName(String factoryName) {
             this.factoryName = Objects.requireNonNull(factoryName);
             return this;
         }
-
         public Builder permissions(@Nullable String permissions) {
             this.permissions = permissions;
             return this;
         }
-
         public Builder profileName(@Nullable String profileName) {
             this.profileName = profileName;
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder startTime(@Nullable String startTime) {
             this.startTime = startTime;
             return this;
-        }
-        public GetFactoryDataPlaneAccessArgs build() {
+        }        public GetFactoryDataPlaneAccessArgs build() {
             return new GetFactoryDataPlaneAccessArgs(accessResourcePath, expireTime, factoryName, permissions, profileName, resourceGroupName, startTime);
         }
     }

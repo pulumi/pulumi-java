@@ -79,22 +79,18 @@ public final class ImageRawDiskArgs extends io.pulumi.resources.ResourceArgs {
             this.containerType = containerType;
             return this;
         }
-
         public Builder containerType(@Nullable ImageRawDiskContainerType containerType) {
             this.containerType = Output.ofNullable(containerType);
             return this;
         }
-
         public Builder source(@Nullable Output<String> source) {
             this.source = source;
             return this;
         }
-
         public Builder source(@Nullable String source) {
             this.source = Output.ofNullable(source);
             return this;
-        }
-        public ImageRawDiskArgs build() {
+        }        public ImageRawDiskArgs build() {
             return new ImageRawDiskArgs(containerType, source);
         }
     }

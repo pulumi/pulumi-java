@@ -114,42 +114,37 @@ public final class FlowSchemaSpecArgs extends io.pulumi.resources.ResourceArgs {
             this.distinguisherMethod = distinguisherMethod;
             return this;
         }
-
         public Builder distinguisherMethod(@Nullable FlowDistinguisherMethodArgs distinguisherMethod) {
             this.distinguisherMethod = Output.ofNullable(distinguisherMethod);
             return this;
         }
-
         public Builder matchingPrecedence(@Nullable Output<Integer> matchingPrecedence) {
             this.matchingPrecedence = matchingPrecedence;
             return this;
         }
-
         public Builder matchingPrecedence(@Nullable Integer matchingPrecedence) {
             this.matchingPrecedence = Output.ofNullable(matchingPrecedence);
             return this;
         }
-
         public Builder priorityLevelConfiguration(Output<PriorityLevelConfigurationReferenceArgs> priorityLevelConfiguration) {
             this.priorityLevelConfiguration = Objects.requireNonNull(priorityLevelConfiguration);
             return this;
         }
-
         public Builder priorityLevelConfiguration(PriorityLevelConfigurationReferenceArgs priorityLevelConfiguration) {
             this.priorityLevelConfiguration = Output.of(Objects.requireNonNull(priorityLevelConfiguration));
             return this;
         }
-
         public Builder rules(@Nullable Output<List<PolicyRulesWithSubjectsArgs>> rules) {
             this.rules = rules;
             return this;
         }
-
         public Builder rules(@Nullable List<PolicyRulesWithSubjectsArgs> rules) {
             this.rules = Output.ofNullable(rules);
             return this;
         }
-        public FlowSchemaSpecArgs build() {
+        public Builder rules(PolicyRulesWithSubjectsArgs... rules) {
+            return rules(List.of(rules));
+        }        public FlowSchemaSpecArgs build() {
             return new FlowSchemaSpecArgs(distinguisherMethod, matchingPrecedence, priorityLevelConfiguration, rules);
         }
     }

@@ -119,27 +119,22 @@ public final class AppEngineHttpTargetResponse {
             this.appEngineRouting = Objects.requireNonNull(appEngineRouting);
             return this;
         }
-
         public Builder body(String body) {
             this.body = Objects.requireNonNull(body);
             return this;
         }
-
         public Builder headers(Map<String,String> headers) {
             this.headers = Objects.requireNonNull(headers);
             return this;
         }
-
         public Builder httpMethod(String httpMethod) {
             this.httpMethod = Objects.requireNonNull(httpMethod);
             return this;
         }
-
         public Builder relativeUri(String relativeUri) {
             this.relativeUri = Objects.requireNonNull(relativeUri);
             return this;
-        }
-        public AppEngineHttpTargetResponse build() {
+        }        public AppEngineHttpTargetResponse build() {
             return new AppEngineHttpTargetResponse(appEngineRouting, body, headers, httpMethod, relativeUri);
         }
     }

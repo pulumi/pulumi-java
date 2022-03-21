@@ -96,32 +96,26 @@ public final class GoogleCloudDialogflowCxV3VersionVariantsVariantArgs extends i
             this.isControlGroup = isControlGroup;
             return this;
         }
-
         public Builder isControlGroup(@Nullable Boolean isControlGroup) {
             this.isControlGroup = Output.ofNullable(isControlGroup);
             return this;
         }
-
         public Builder trafficAllocation(@Nullable Output<Double> trafficAllocation) {
             this.trafficAllocation = trafficAllocation;
             return this;
         }
-
         public Builder trafficAllocation(@Nullable Double trafficAllocation) {
             this.trafficAllocation = Output.ofNullable(trafficAllocation);
             return this;
         }
-
         public Builder version(@Nullable Output<String> version) {
             this.version = version;
             return this;
         }
-
         public Builder version(@Nullable String version) {
             this.version = Output.ofNullable(version);
             return this;
-        }
-        public GoogleCloudDialogflowCxV3VersionVariantsVariantArgs build() {
+        }        public GoogleCloudDialogflowCxV3VersionVariantsVariantArgs build() {
             return new GoogleCloudDialogflowCxV3VersionVariantsVariantArgs(isControlGroup, trafficAllocation, version);
         }
     }

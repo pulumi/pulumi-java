@@ -53,8 +53,7 @@ public final class ApiResourceBackendServiceResponse {
         public Builder serviceUrl(@Nullable String serviceUrl) {
             this.serviceUrl = serviceUrl;
             return this;
-        }
-        public ApiResourceBackendServiceResponse build() {
+        }        public ApiResourceBackendServiceResponse build() {
             return new ApiResourceBackendServiceResponse(serviceUrl);
         }
     }

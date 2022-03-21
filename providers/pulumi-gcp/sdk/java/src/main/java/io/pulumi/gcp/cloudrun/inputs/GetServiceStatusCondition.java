@@ -88,22 +88,18 @@ public final class GetServiceStatusCondition extends io.pulumi.resources.InvokeA
             this.message = Objects.requireNonNull(message);
             return this;
         }
-
         public Builder reason(String reason) {
             this.reason = Objects.requireNonNull(reason);
             return this;
         }
-
         public Builder status(String status) {
             this.status = Objects.requireNonNull(status);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public GetServiceStatusCondition build() {
+        }        public GetServiceStatusCondition build() {
             return new GetServiceStatusCondition(message, reason, status, type);
         }
     }

@@ -73,12 +73,13 @@ public final class FirewallPolicyRuleMatcherLayer4ConfigResponse extends io.pulu
             this.ipProtocol = Objects.requireNonNull(ipProtocol);
             return this;
         }
-
         public Builder ports(List<String> ports) {
             this.ports = Objects.requireNonNull(ports);
             return this;
         }
-        public FirewallPolicyRuleMatcherLayer4ConfigResponse build() {
+        public Builder ports(String... ports) {
+            return ports(List.of(ports));
+        }        public FirewallPolicyRuleMatcherLayer4ConfigResponse build() {
             return new FirewallPolicyRuleMatcherLayer4ConfigResponse(ipProtocol, ports);
         }
     }

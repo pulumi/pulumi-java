@@ -63,17 +63,14 @@ public final class JobOutputLocation {
             this.bucket = Objects.requireNonNull(bucket);
             return this;
         }
-
         public Builder bucketOwner(@Nullable String bucketOwner) {
             this.bucketOwner = bucketOwner;
             return this;
         }
-
         public Builder key(@Nullable String key) {
             this.key = key;
             return this;
-        }
-        public JobOutputLocation build() {
+        }        public JobOutputLocation build() {
             return new JobOutputLocation(bucket, bucketOwner, key);
         }
     }

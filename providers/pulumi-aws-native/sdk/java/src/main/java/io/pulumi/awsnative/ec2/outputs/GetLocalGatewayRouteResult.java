@@ -71,12 +71,10 @@ public final class GetLocalGatewayRouteResult {
             this.state = state;
             return this;
         }
-
         public Builder type(@Nullable String type) {
             this.type = type;
             return this;
-        }
-        public GetLocalGatewayRouteResult build() {
+        }        public GetLocalGatewayRouteResult build() {
             return new GetLocalGatewayRouteResult(state, type);
         }
     }

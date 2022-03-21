@@ -225,112 +225,90 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
             this.hostingMode = hostingMode;
             return this;
         }
-
         public Builder hostingMode(@Nullable HostingMode hostingMode) {
             this.hostingMode = Output.ofNullable(hostingMode);
             return this;
         }
-
         public Builder identity(@Nullable Output<IdentityArgs> identity) {
             this.identity = identity;
             return this;
         }
-
         public Builder identity(@Nullable IdentityArgs identity) {
             this.identity = Output.ofNullable(identity);
             return this;
         }
-
         public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder networkRuleSet(@Nullable Output<NetworkRuleSetArgs> networkRuleSet) {
             this.networkRuleSet = networkRuleSet;
             return this;
         }
-
         public Builder networkRuleSet(@Nullable NetworkRuleSetArgs networkRuleSet) {
             this.networkRuleSet = Output.ofNullable(networkRuleSet);
             return this;
         }
-
         public Builder partitionCount(@Nullable Output<Integer> partitionCount) {
             this.partitionCount = partitionCount;
             return this;
         }
-
         public Builder partitionCount(@Nullable Integer partitionCount) {
             this.partitionCount = Output.ofNullable(partitionCount);
             return this;
         }
-
         public Builder publicNetworkAccess(@Nullable Output<PublicNetworkAccess> publicNetworkAccess) {
             this.publicNetworkAccess = publicNetworkAccess;
             return this;
         }
-
         public Builder publicNetworkAccess(@Nullable PublicNetworkAccess publicNetworkAccess) {
             this.publicNetworkAccess = Output.ofNullable(publicNetworkAccess);
             return this;
         }
-
         public Builder replicaCount(@Nullable Output<Integer> replicaCount) {
             this.replicaCount = replicaCount;
             return this;
         }
-
         public Builder replicaCount(@Nullable Integer replicaCount) {
             this.replicaCount = Output.ofNullable(replicaCount);
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder searchServiceName(@Nullable Output<String> searchServiceName) {
             this.searchServiceName = searchServiceName;
             return this;
         }
-
         public Builder searchServiceName(@Nullable String searchServiceName) {
             this.searchServiceName = Output.ofNullable(searchServiceName);
             return this;
         }
-
         public Builder sku(@Nullable Output<SkuArgs> sku) {
             this.sku = sku;
             return this;
         }
-
         public Builder sku(@Nullable SkuArgs sku) {
             this.sku = Output.ofNullable(sku);
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
-        }
-        public ServiceArgs build() {
+        }        public ServiceArgs build() {
             return new ServiceArgs(hostingMode, identity, location, networkRuleSet, partitionCount, publicNetworkAccess, replicaCount, resourceGroupName, searchServiceName, sku, tags);
         }
     }

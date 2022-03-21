@@ -53,8 +53,7 @@ public final class GetUserSharedAccessTokenResult {
         public Builder value(@Nullable String value) {
             this.value = value;
             return this;
-        }
-        public GetUserSharedAccessTokenResult build() {
+        }        public GetUserSharedAccessTokenResult build() {
             return new GetUserSharedAccessTokenResult(value);
         }
     }

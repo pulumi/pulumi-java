@@ -109,42 +109,37 @@ public final class VoiceConnectorStreamingState extends io.pulumi.resources.Reso
             this.dataRetention = dataRetention;
             return this;
         }
-
         public Builder dataRetention(@Nullable Integer dataRetention) {
             this.dataRetention = Output.ofNullable(dataRetention);
             return this;
         }
-
         public Builder disabled(@Nullable Output<Boolean> disabled) {
             this.disabled = disabled;
             return this;
         }
-
         public Builder disabled(@Nullable Boolean disabled) {
             this.disabled = Output.ofNullable(disabled);
             return this;
         }
-
         public Builder streamingNotificationTargets(@Nullable Output<List<String>> streamingNotificationTargets) {
             this.streamingNotificationTargets = streamingNotificationTargets;
             return this;
         }
-
         public Builder streamingNotificationTargets(@Nullable List<String> streamingNotificationTargets) {
             this.streamingNotificationTargets = Output.ofNullable(streamingNotificationTargets);
             return this;
         }
-
+        public Builder streamingNotificationTargets(String... streamingNotificationTargets) {
+            return streamingNotificationTargets(List.of(streamingNotificationTargets));
+        }
         public Builder voiceConnectorId(@Nullable Output<String> voiceConnectorId) {
             this.voiceConnectorId = voiceConnectorId;
             return this;
         }
-
         public Builder voiceConnectorId(@Nullable String voiceConnectorId) {
             this.voiceConnectorId = Output.ofNullable(voiceConnectorId);
             return this;
-        }
-        public VoiceConnectorStreamingState build() {
+        }        public VoiceConnectorStreamingState build() {
             return new VoiceConnectorStreamingState(dataRetention, disabled, streamingNotificationTargets, voiceConnectorId);
         }
     }

@@ -80,22 +80,24 @@ public final class NetworkPolicyEgressRuleArgs extends io.pulumi.resources.Resou
             this.ports = ports;
             return this;
         }
-
         public Builder ports(@Nullable List<NetworkPolicyPortArgs> ports) {
             this.ports = Output.ofNullable(ports);
             return this;
         }
-
+        public Builder ports(NetworkPolicyPortArgs... ports) {
+            return ports(List.of(ports));
+        }
         public Builder to(@Nullable Output<List<NetworkPolicyPeerArgs>> to) {
             this.to = to;
             return this;
         }
-
         public Builder to(@Nullable List<NetworkPolicyPeerArgs> to) {
             this.to = Output.ofNullable(to);
             return this;
         }
-        public NetworkPolicyEgressRuleArgs build() {
+        public Builder to(NetworkPolicyPeerArgs... to) {
+            return to(List.of(to));
+        }        public NetworkPolicyEgressRuleArgs build() {
             return new NetworkPolicyEgressRuleArgs(ports, to);
         }
     }

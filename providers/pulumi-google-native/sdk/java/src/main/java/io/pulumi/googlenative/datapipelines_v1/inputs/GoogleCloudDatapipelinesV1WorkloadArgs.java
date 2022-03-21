@@ -79,22 +79,18 @@ public final class GoogleCloudDatapipelinesV1WorkloadArgs extends io.pulumi.reso
             this.dataflowFlexTemplateRequest = dataflowFlexTemplateRequest;
             return this;
         }
-
         public Builder dataflowFlexTemplateRequest(@Nullable GoogleCloudDatapipelinesV1LaunchFlexTemplateRequestArgs dataflowFlexTemplateRequest) {
             this.dataflowFlexTemplateRequest = Output.ofNullable(dataflowFlexTemplateRequest);
             return this;
         }
-
         public Builder dataflowLaunchTemplateRequest(@Nullable Output<GoogleCloudDatapipelinesV1LaunchTemplateRequestArgs> dataflowLaunchTemplateRequest) {
             this.dataflowLaunchTemplateRequest = dataflowLaunchTemplateRequest;
             return this;
         }
-
         public Builder dataflowLaunchTemplateRequest(@Nullable GoogleCloudDatapipelinesV1LaunchTemplateRequestArgs dataflowLaunchTemplateRequest) {
             this.dataflowLaunchTemplateRequest = Output.ofNullable(dataflowLaunchTemplateRequest);
             return this;
-        }
-        public GoogleCloudDatapipelinesV1WorkloadArgs build() {
+        }        public GoogleCloudDatapipelinesV1WorkloadArgs build() {
             return new GoogleCloudDatapipelinesV1WorkloadArgs(dataflowFlexTemplateRequest, dataflowLaunchTemplateRequest);
         }
     }

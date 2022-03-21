@@ -104,42 +104,34 @@ public final class TaskContainerSettingsArgs extends io.pulumi.resources.Resourc
             this.containerRunOptions = containerRunOptions;
             return this;
         }
-
         public Builder containerRunOptions(@Nullable String containerRunOptions) {
             this.containerRunOptions = Output.ofNullable(containerRunOptions);
             return this;
         }
-
         public Builder imageName(Output<String> imageName) {
             this.imageName = Objects.requireNonNull(imageName);
             return this;
         }
-
         public Builder imageName(String imageName) {
             this.imageName = Output.of(Objects.requireNonNull(imageName));
             return this;
         }
-
         public Builder registry(@Nullable Output<ContainerRegistryArgs> registry) {
             this.registry = registry;
             return this;
         }
-
         public Builder registry(@Nullable ContainerRegistryArgs registry) {
             this.registry = Output.ofNullable(registry);
             return this;
         }
-
         public Builder workingDirectory(@Nullable Output<ContainerWorkingDirectory> workingDirectory) {
             this.workingDirectory = workingDirectory;
             return this;
         }
-
         public Builder workingDirectory(@Nullable ContainerWorkingDirectory workingDirectory) {
             this.workingDirectory = Output.ofNullable(workingDirectory);
             return this;
-        }
-        public TaskContainerSettingsArgs build() {
+        }        public TaskContainerSettingsArgs build() {
             return new TaskContainerSettingsArgs(containerRunOptions, imageName, registry, workingDirectory);
         }
     }

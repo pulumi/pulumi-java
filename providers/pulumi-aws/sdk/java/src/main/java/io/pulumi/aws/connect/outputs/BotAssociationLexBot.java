@@ -71,12 +71,10 @@ public final class BotAssociationLexBot {
             this.lexRegion = lexRegion;
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
-        }
-        public BotAssociationLexBot build() {
+        }        public BotAssociationLexBot build() {
             return new BotAssociationLexBot(lexRegion, name);
         }
     }

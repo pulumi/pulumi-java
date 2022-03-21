@@ -106,27 +106,22 @@ public final class EnvironmentLoggingConfiguration extends io.pulumi.resources.I
             this.dagProcessingLogs = dagProcessingLogs;
             return this;
         }
-
         public Builder schedulerLogs(@Nullable EnvironmentModuleLoggingConfiguration schedulerLogs) {
             this.schedulerLogs = schedulerLogs;
             return this;
         }
-
         public Builder taskLogs(@Nullable EnvironmentModuleLoggingConfiguration taskLogs) {
             this.taskLogs = taskLogs;
             return this;
         }
-
         public Builder webserverLogs(@Nullable EnvironmentModuleLoggingConfiguration webserverLogs) {
             this.webserverLogs = webserverLogs;
             return this;
         }
-
         public Builder workerLogs(@Nullable EnvironmentModuleLoggingConfiguration workerLogs) {
             this.workerLogs = workerLogs;
             return this;
-        }
-        public EnvironmentLoggingConfiguration build() {
+        }        public EnvironmentLoggingConfiguration build() {
             return new EnvironmentLoggingConfiguration(dagProcessingLogs, schedulerLogs, taskLogs, webserverLogs, workerLogs);
         }
     }

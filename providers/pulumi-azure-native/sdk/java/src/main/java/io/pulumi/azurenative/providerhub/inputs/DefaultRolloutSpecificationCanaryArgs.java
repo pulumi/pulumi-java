@@ -67,22 +67,24 @@ public final class DefaultRolloutSpecificationCanaryArgs extends io.pulumi.resou
             this.regions = regions;
             return this;
         }
-
         public Builder regions(@Nullable List<String> regions) {
             this.regions = Output.ofNullable(regions);
             return this;
         }
-
+        public Builder regions(String... regions) {
+            return regions(List.of(regions));
+        }
         public Builder skipRegions(@Nullable Output<List<String>> skipRegions) {
             this.skipRegions = skipRegions;
             return this;
         }
-
         public Builder skipRegions(@Nullable List<String> skipRegions) {
             this.skipRegions = Output.ofNullable(skipRegions);
             return this;
         }
-        public DefaultRolloutSpecificationCanaryArgs build() {
+        public Builder skipRegions(String... skipRegions) {
+            return skipRegions(List.of(skipRegions));
+        }        public DefaultRolloutSpecificationCanaryArgs build() {
             return new DefaultRolloutSpecificationCanaryArgs(regions, skipRegions);
         }
     }

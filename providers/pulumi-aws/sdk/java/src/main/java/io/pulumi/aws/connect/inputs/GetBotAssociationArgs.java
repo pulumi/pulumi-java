@@ -73,12 +73,10 @@ public final class GetBotAssociationArgs extends io.pulumi.resources.InvokeArgs 
             this.instanceId = Objects.requireNonNull(instanceId);
             return this;
         }
-
         public Builder lexBot(GetBotAssociationLexBot lexBot) {
             this.lexBot = Objects.requireNonNull(lexBot);
             return this;
-        }
-        public GetBotAssociationArgs build() {
+        }        public GetBotAssociationArgs build() {
             return new GetBotAssociationArgs(instanceId, lexBot);
         }
     }

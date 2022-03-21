@@ -112,42 +112,34 @@ public final class OsProfileArgs extends io.pulumi.resources.ResourceArgs {
             this.adminUsername = adminUsername;
             return this;
         }
-
         public Builder adminUsername(@Nullable String adminUsername) {
             this.adminUsername = Output.ofNullable(adminUsername);
             return this;
         }
-
         public Builder customData(@Nullable Output<String> customData) {
             this.customData = customData;
             return this;
         }
-
         public Builder customData(@Nullable String customData) {
             this.customData = Output.ofNullable(customData);
             return this;
         }
-
         public Builder customDataRequired(@Nullable Output<Boolean> customDataRequired) {
             this.customDataRequired = customDataRequired;
             return this;
         }
-
         public Builder customDataRequired(@Nullable Boolean customDataRequired) {
             this.customDataRequired = Output.ofNullable(customDataRequired);
             return this;
         }
-
         public Builder linuxConfiguration(@Nullable Output<LinuxConfigurationArgs> linuxConfiguration) {
             this.linuxConfiguration = linuxConfiguration;
             return this;
         }
-
         public Builder linuxConfiguration(@Nullable LinuxConfigurationArgs linuxConfiguration) {
             this.linuxConfiguration = Output.ofNullable(linuxConfiguration);
             return this;
-        }
-        public OsProfileArgs build() {
+        }        public OsProfileArgs build() {
             return new OsProfileArgs(adminUsername, customData, customDataRequired, linuxConfiguration);
         }
     }

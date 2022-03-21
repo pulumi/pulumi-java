@@ -55,8 +55,7 @@ public final class ManagedZonePeeringConfigTargetNetwork {
         public Builder networkUrl(String networkUrl) {
             this.networkUrl = Objects.requireNonNull(networkUrl);
             return this;
-        }
-        public ManagedZonePeeringConfigTargetNetwork build() {
+        }        public ManagedZonePeeringConfigTargetNetwork build() {
             return new ManagedZonePeeringConfigTargetNetwork(networkUrl);
         }
     }

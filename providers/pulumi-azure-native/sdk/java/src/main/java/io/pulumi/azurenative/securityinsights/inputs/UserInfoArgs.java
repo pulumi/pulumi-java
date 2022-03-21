@@ -60,12 +60,10 @@ public final class UserInfoArgs extends io.pulumi.resources.ResourceArgs {
             this.objectId = Objects.requireNonNull(objectId);
             return this;
         }
-
         public Builder objectId(String objectId) {
             this.objectId = Output.of(Objects.requireNonNull(objectId));
             return this;
-        }
-        public UserInfoArgs build() {
+        }        public UserInfoArgs build() {
             return new UserInfoArgs(objectId);
         }
     }

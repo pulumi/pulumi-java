@@ -111,42 +111,37 @@ public final class UpgradeDistributionArgs extends io.pulumi.resources.ResourceA
             this.classification = classification;
             return this;
         }
-
         public Builder classification(@Nullable String classification) {
             this.classification = Output.ofNullable(classification);
             return this;
         }
-
         public Builder cpeUri(@Nullable Output<String> cpeUri) {
             this.cpeUri = cpeUri;
             return this;
         }
-
         public Builder cpeUri(@Nullable String cpeUri) {
             this.cpeUri = Output.ofNullable(cpeUri);
             return this;
         }
-
         public Builder cve(@Nullable Output<List<String>> cve) {
             this.cve = cve;
             return this;
         }
-
         public Builder cve(@Nullable List<String> cve) {
             this.cve = Output.ofNullable(cve);
             return this;
         }
-
+        public Builder cve(String... cve) {
+            return cve(List.of(cve));
+        }
         public Builder severity(@Nullable Output<String> severity) {
             this.severity = severity;
             return this;
         }
-
         public Builder severity(@Nullable String severity) {
             this.severity = Output.ofNullable(severity);
             return this;
-        }
-        public UpgradeDistributionArgs build() {
+        }        public UpgradeDistributionArgs build() {
             return new UpgradeDistributionArgs(classification, cpeUri, cve, severity);
         }
     }

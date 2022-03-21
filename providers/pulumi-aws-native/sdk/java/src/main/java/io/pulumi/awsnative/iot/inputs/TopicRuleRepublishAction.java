@@ -79,17 +79,14 @@ public final class TopicRuleRepublishAction extends io.pulumi.resources.InvokeAr
             this.qos = qos;
             return this;
         }
-
         public Builder roleArn(String roleArn) {
             this.roleArn = Objects.requireNonNull(roleArn);
             return this;
         }
-
         public Builder topic(String topic) {
             this.topic = Objects.requireNonNull(topic);
             return this;
-        }
-        public TopicRuleRepublishAction build() {
+        }        public TopicRuleRepublishAction build() {
             return new TopicRuleRepublishAction(qos, roleArn, topic);
         }
     }

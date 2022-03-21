@@ -78,17 +78,14 @@ public final class OpenZfsFileSystemRootVolumeConfigurationUserAndGroupQuota {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder storageCapacityQuotaGib(Integer storageCapacityQuotaGib) {
             this.storageCapacityQuotaGib = Objects.requireNonNull(storageCapacityQuotaGib);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public OpenZfsFileSystemRootVolumeConfigurationUserAndGroupQuota build() {
+        }        public OpenZfsFileSystemRootVolumeConfigurationUserAndGroupQuota build() {
             return new OpenZfsFileSystemRootVolumeConfigurationUserAndGroupQuota(id, storageCapacityQuotaGib, type);
         }
     }

@@ -140,32 +140,26 @@ public final class ExtendedKeyUsageOptionsResponse extends io.pulumi.resources.I
             this.clientAuth = Objects.requireNonNull(clientAuth);
             return this;
         }
-
         public Builder codeSigning(Boolean codeSigning) {
             this.codeSigning = Objects.requireNonNull(codeSigning);
             return this;
         }
-
         public Builder emailProtection(Boolean emailProtection) {
             this.emailProtection = Objects.requireNonNull(emailProtection);
             return this;
         }
-
         public Builder ocspSigning(Boolean ocspSigning) {
             this.ocspSigning = Objects.requireNonNull(ocspSigning);
             return this;
         }
-
         public Builder serverAuth(Boolean serverAuth) {
             this.serverAuth = Objects.requireNonNull(serverAuth);
             return this;
         }
-
         public Builder timeStamping(Boolean timeStamping) {
             this.timeStamping = Objects.requireNonNull(timeStamping);
             return this;
-        }
-        public ExtendedKeyUsageOptionsResponse build() {
+        }        public ExtendedKeyUsageOptionsResponse build() {
             return new ExtendedKeyUsageOptionsResponse(clientAuth, codeSigning, emailProtection, ocspSigning, serverAuth, timeStamping);
         }
     }

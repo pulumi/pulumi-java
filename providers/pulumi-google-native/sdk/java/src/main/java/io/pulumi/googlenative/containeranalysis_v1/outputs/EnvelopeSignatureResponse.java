@@ -53,12 +53,10 @@ public final class EnvelopeSignatureResponse {
             this.keyid = Objects.requireNonNull(keyid);
             return this;
         }
-
         public Builder sig(String sig) {
             this.sig = Objects.requireNonNull(sig);
             return this;
-        }
-        public EnvelopeSignatureResponse build() {
+        }        public EnvelopeSignatureResponse build() {
             return new EnvelopeSignatureResponse(keyid, sig);
         }
     }

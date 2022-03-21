@@ -88,17 +88,14 @@ public final class DataQualityJobDefinitionS3Output {
             this.localPath = Objects.requireNonNull(localPath);
             return this;
         }
-
         public Builder s3UploadMode(@Nullable DataQualityJobDefinitionS3OutputS3UploadMode s3UploadMode) {
             this.s3UploadMode = s3UploadMode;
             return this;
         }
-
         public Builder s3Uri(String s3Uri) {
             this.s3Uri = Objects.requireNonNull(s3Uri);
             return this;
-        }
-        public DataQualityJobDefinitionS3Output build() {
+        }        public DataQualityJobDefinitionS3Output build() {
             return new DataQualityJobDefinitionS3Output(localPath, s3UploadMode, s3Uri);
         }
     }

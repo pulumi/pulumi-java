@@ -159,72 +159,61 @@ public final class ExportPipelineArgs extends io.pulumi.resources.ResourceArgs {
             this.exportPipelineName = exportPipelineName;
             return this;
         }
-
         public Builder exportPipelineName(@Nullable String exportPipelineName) {
             this.exportPipelineName = Output.ofNullable(exportPipelineName);
             return this;
         }
-
         public Builder identity(@Nullable Output<IdentityPropertiesArgs> identity) {
             this.identity = identity;
             return this;
         }
-
         public Builder identity(@Nullable IdentityPropertiesArgs identity) {
             this.identity = Output.ofNullable(identity);
             return this;
         }
-
         public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder options(@Nullable Output<List<Either<String,PipelineOptions>>> options) {
             this.options = options;
             return this;
         }
-
         public Builder options(@Nullable List<Either<String,PipelineOptions>> options) {
             this.options = Output.ofNullable(options);
             return this;
         }
-
+        public Builder options(Either<String,PipelineOptions>... options) {
+            return options(List.of(options));
+        }
         public Builder registryName(Output<String> registryName) {
             this.registryName = Objects.requireNonNull(registryName);
             return this;
         }
-
         public Builder registryName(String registryName) {
             this.registryName = Output.of(Objects.requireNonNull(registryName));
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder target(Output<ExportPipelineTargetPropertiesArgs> target) {
             this.target = Objects.requireNonNull(target);
             return this;
         }
-
         public Builder target(ExportPipelineTargetPropertiesArgs target) {
             this.target = Output.of(Objects.requireNonNull(target));
             return this;
-        }
-        public ExportPipelineArgs build() {
+        }        public ExportPipelineArgs build() {
             return new ExportPipelineArgs(exportPipelineName, identity, location, options, registryName, resourceGroupName, target);
         }
     }

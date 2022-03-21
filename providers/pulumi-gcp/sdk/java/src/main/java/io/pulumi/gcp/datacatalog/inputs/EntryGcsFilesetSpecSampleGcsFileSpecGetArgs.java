@@ -77,22 +77,18 @@ public final class EntryGcsFilesetSpecSampleGcsFileSpecGetArgs extends io.pulumi
             this.filePath = filePath;
             return this;
         }
-
         public Builder filePath(@Nullable String filePath) {
             this.filePath = Output.ofNullable(filePath);
             return this;
         }
-
         public Builder sizeBytes(@Nullable Output<Integer> sizeBytes) {
             this.sizeBytes = sizeBytes;
             return this;
         }
-
         public Builder sizeBytes(@Nullable Integer sizeBytes) {
             this.sizeBytes = Output.ofNullable(sizeBytes);
             return this;
-        }
-        public EntryGcsFilesetSpecSampleGcsFileSpecGetArgs build() {
+        }        public EntryGcsFilesetSpecSampleGcsFileSpecGetArgs build() {
             return new EntryGcsFilesetSpecSampleGcsFileSpecGetArgs(filePath, sizeBytes);
         }
     }

@@ -53,7 +53,9 @@ public final class FilterTrackSelectionResponse {
             this.trackSelections = Objects.requireNonNull(trackSelections);
             return this;
         }
-        public FilterTrackSelectionResponse build() {
+        public Builder trackSelections(FilterTrackPropertyConditionResponse... trackSelections) {
+            return trackSelections(List.of(trackSelections));
+        }        public FilterTrackSelectionResponse build() {
             return new FilterTrackSelectionResponse(trackSelections);
         }
     }

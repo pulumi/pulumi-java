@@ -56,8 +56,7 @@ public final class GetReleaseLabelsArgs extends io.pulumi.resources.InvokeArgs {
         public Builder filters(@Nullable GetReleaseLabelsFilters filters) {
             this.filters = filters;
             return this;
-        }
-        public GetReleaseLabelsArgs build() {
+        }        public GetReleaseLabelsArgs build() {
             return new GetReleaseLabelsArgs(filters);
         }
     }

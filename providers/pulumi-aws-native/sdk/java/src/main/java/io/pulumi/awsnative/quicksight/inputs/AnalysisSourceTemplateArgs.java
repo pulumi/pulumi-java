@@ -79,22 +79,21 @@ public final class AnalysisSourceTemplateArgs extends io.pulumi.resources.Resour
             this.arn = Objects.requireNonNull(arn);
             return this;
         }
-
         public Builder arn(String arn) {
             this.arn = Output.of(Objects.requireNonNull(arn));
             return this;
         }
-
         public Builder dataSetReferences(Output<List<AnalysisDataSetReferenceArgs>> dataSetReferences) {
             this.dataSetReferences = Objects.requireNonNull(dataSetReferences);
             return this;
         }
-
         public Builder dataSetReferences(List<AnalysisDataSetReferenceArgs> dataSetReferences) {
             this.dataSetReferences = Output.of(Objects.requireNonNull(dataSetReferences));
             return this;
         }
-        public AnalysisSourceTemplateArgs build() {
+        public Builder dataSetReferences(AnalysisDataSetReferenceArgs... dataSetReferences) {
+            return dataSetReferences(List.of(dataSetReferences));
+        }        public AnalysisSourceTemplateArgs build() {
             return new AnalysisSourceTemplateArgs(arn, dataSetReferences);
         }
     }

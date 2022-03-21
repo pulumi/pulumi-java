@@ -119,27 +119,22 @@ public final class ListNamespaceKeysResult {
             this.keyName = keyName;
             return this;
         }
-
         public Builder primaryConnectionString(@Nullable String primaryConnectionString) {
             this.primaryConnectionString = primaryConnectionString;
             return this;
         }
-
         public Builder primaryKey(@Nullable String primaryKey) {
             this.primaryKey = primaryKey;
             return this;
         }
-
         public Builder secondaryConnectionString(@Nullable String secondaryConnectionString) {
             this.secondaryConnectionString = secondaryConnectionString;
             return this;
         }
-
         public Builder secondaryKey(@Nullable String secondaryKey) {
             this.secondaryKey = secondaryKey;
             return this;
-        }
-        public ListNamespaceKeysResult build() {
+        }        public ListNamespaceKeysResult build() {
             return new ListNamespaceKeysResult(keyName, primaryConnectionString, primaryKey, secondaryConnectionString, secondaryKey);
         }
     }

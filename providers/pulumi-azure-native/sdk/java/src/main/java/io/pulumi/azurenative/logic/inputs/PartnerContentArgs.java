@@ -61,12 +61,10 @@ public final class PartnerContentArgs extends io.pulumi.resources.ResourceArgs {
             this.b2b = b2b;
             return this;
         }
-
         public Builder b2b(@Nullable B2BPartnerContentArgs b2b) {
             this.b2b = Output.ofNullable(b2b);
             return this;
-        }
-        public PartnerContentArgs build() {
+        }        public PartnerContentArgs build() {
             return new PartnerContentArgs(b2b);
         }
     }

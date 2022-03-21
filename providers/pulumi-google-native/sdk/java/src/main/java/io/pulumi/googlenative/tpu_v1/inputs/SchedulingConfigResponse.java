@@ -76,12 +76,10 @@ public final class SchedulingConfigResponse extends io.pulumi.resources.InvokeAr
             this.preemptible = Objects.requireNonNull(preemptible);
             return this;
         }
-
         public Builder reserved(Boolean reserved) {
             this.reserved = Objects.requireNonNull(reserved);
             return this;
-        }
-        public SchedulingConfigResponse build() {
+        }        public SchedulingConfigResponse build() {
             return new SchedulingConfigResponse(preemptible, reserved);
         }
     }

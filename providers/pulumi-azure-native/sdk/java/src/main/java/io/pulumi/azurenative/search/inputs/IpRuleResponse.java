@@ -60,8 +60,7 @@ public final class IpRuleResponse extends io.pulumi.resources.InvokeArgs {
         public Builder value(@Nullable String value) {
             this.value = value;
             return this;
-        }
-        public IpRuleResponse build() {
+        }        public IpRuleResponse build() {
             return new IpRuleResponse(value);
         }
     }

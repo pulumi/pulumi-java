@@ -91,32 +91,26 @@ public final class EventBusArgs extends io.pulumi.resources.ResourceArgs {
             this.eventSourceName = eventSourceName;
             return this;
         }
-
         public Builder eventSourceName(@Nullable String eventSourceName) {
             this.eventSourceName = Output.ofNullable(eventSourceName);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
-        }
-        public EventBusArgs build() {
+        }        public EventBusArgs build() {
             return new EventBusArgs(eventSourceName, name, tags);
         }
     }

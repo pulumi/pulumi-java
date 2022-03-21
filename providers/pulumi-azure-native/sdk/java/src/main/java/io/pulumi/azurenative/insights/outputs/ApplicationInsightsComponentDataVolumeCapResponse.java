@@ -137,32 +137,26 @@ public final class ApplicationInsightsComponentDataVolumeCapResponse {
             this.cap = cap;
             return this;
         }
-
         public Builder maxHistoryCap(Double maxHistoryCap) {
             this.maxHistoryCap = Objects.requireNonNull(maxHistoryCap);
             return this;
         }
-
         public Builder resetTime(Integer resetTime) {
             this.resetTime = Objects.requireNonNull(resetTime);
             return this;
         }
-
         public Builder stopSendNotificationWhenHitCap(@Nullable Boolean stopSendNotificationWhenHitCap) {
             this.stopSendNotificationWhenHitCap = stopSendNotificationWhenHitCap;
             return this;
         }
-
         public Builder stopSendNotificationWhenHitThreshold(@Nullable Boolean stopSendNotificationWhenHitThreshold) {
             this.stopSendNotificationWhenHitThreshold = stopSendNotificationWhenHitThreshold;
             return this;
         }
-
         public Builder warningThreshold(@Nullable Integer warningThreshold) {
             this.warningThreshold = warningThreshold;
             return this;
-        }
-        public ApplicationInsightsComponentDataVolumeCapResponse build() {
+        }        public ApplicationInsightsComponentDataVolumeCapResponse build() {
             return new ApplicationInsightsComponentDataVolumeCapResponse(cap, maxHistoryCap, resetTime, stopSendNotificationWhenHitCap, stopSendNotificationWhenHitThreshold, warningThreshold);
         }
     }

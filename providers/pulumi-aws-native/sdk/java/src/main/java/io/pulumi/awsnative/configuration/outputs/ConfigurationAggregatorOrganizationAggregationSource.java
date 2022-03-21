@@ -65,17 +65,17 @@ public final class ConfigurationAggregatorOrganizationAggregationSource {
             this.allAwsRegions = allAwsRegions;
             return this;
         }
-
         public Builder awsRegions(@Nullable List<String> awsRegions) {
             this.awsRegions = awsRegions;
             return this;
         }
-
+        public Builder awsRegions(String... awsRegions) {
+            return awsRegions(List.of(awsRegions));
+        }
         public Builder roleArn(String roleArn) {
             this.roleArn = Objects.requireNonNull(roleArn);
             return this;
-        }
-        public ConfigurationAggregatorOrganizationAggregationSource build() {
+        }        public ConfigurationAggregatorOrganizationAggregationSource build() {
             return new ConfigurationAggregatorOrganizationAggregationSource(allAwsRegions, awsRegions, roleArn);
         }
     }

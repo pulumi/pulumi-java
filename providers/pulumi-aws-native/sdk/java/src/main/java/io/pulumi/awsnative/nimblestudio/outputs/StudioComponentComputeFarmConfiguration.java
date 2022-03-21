@@ -71,12 +71,10 @@ public final class StudioComponentComputeFarmConfiguration {
             this.activeDirectoryUser = activeDirectoryUser;
             return this;
         }
-
         public Builder endpoint(@Nullable String endpoint) {
             this.endpoint = endpoint;
             return this;
-        }
-        public StudioComponentComputeFarmConfiguration build() {
+        }        public StudioComponentComputeFarmConfiguration build() {
             return new StudioComponentComputeFarmConfiguration(activeDirectoryUser, endpoint);
         }
     }

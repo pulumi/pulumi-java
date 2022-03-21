@@ -78,22 +78,18 @@ public final class RegularFileArgs extends io.pulumi.resources.ResourceArgs {
             this.content = Objects.requireNonNull(content);
             return this;
         }
-
         public Builder content(FileReferenceArgs content) {
             this.content = Output.of(Objects.requireNonNull(content));
             return this;
         }
-
         public Builder devicePath(Output<String> devicePath) {
             this.devicePath = Objects.requireNonNull(devicePath);
             return this;
         }
-
         public Builder devicePath(String devicePath) {
             this.devicePath = Output.of(Objects.requireNonNull(devicePath));
             return this;
-        }
-        public RegularFileArgs build() {
+        }        public RegularFileArgs build() {
             return new RegularFileArgs(content, devicePath);
         }
     }

@@ -130,52 +130,42 @@ public final class Ipv6ExpressRouteCircuitPeeringConfigArgs extends io.pulumi.re
             this.microsoftPeeringConfig = microsoftPeeringConfig;
             return this;
         }
-
         public Builder microsoftPeeringConfig(@Nullable ExpressRouteCircuitPeeringConfigArgs microsoftPeeringConfig) {
             this.microsoftPeeringConfig = Output.ofNullable(microsoftPeeringConfig);
             return this;
         }
-
         public Builder primaryPeerAddressPrefix(@Nullable Output<String> primaryPeerAddressPrefix) {
             this.primaryPeerAddressPrefix = primaryPeerAddressPrefix;
             return this;
         }
-
         public Builder primaryPeerAddressPrefix(@Nullable String primaryPeerAddressPrefix) {
             this.primaryPeerAddressPrefix = Output.ofNullable(primaryPeerAddressPrefix);
             return this;
         }
-
         public Builder routeFilter(@Nullable Output<SubResourceArgs> routeFilter) {
             this.routeFilter = routeFilter;
             return this;
         }
-
         public Builder routeFilter(@Nullable SubResourceArgs routeFilter) {
             this.routeFilter = Output.ofNullable(routeFilter);
             return this;
         }
-
         public Builder secondaryPeerAddressPrefix(@Nullable Output<String> secondaryPeerAddressPrefix) {
             this.secondaryPeerAddressPrefix = secondaryPeerAddressPrefix;
             return this;
         }
-
         public Builder secondaryPeerAddressPrefix(@Nullable String secondaryPeerAddressPrefix) {
             this.secondaryPeerAddressPrefix = Output.ofNullable(secondaryPeerAddressPrefix);
             return this;
         }
-
         public Builder state(@Nullable Output<Either<String,ExpressRouteCircuitPeeringState>> state) {
             this.state = state;
             return this;
         }
-
         public Builder state(@Nullable Either<String,ExpressRouteCircuitPeeringState> state) {
             this.state = Output.ofNullable(state);
             return this;
-        }
-        public Ipv6ExpressRouteCircuitPeeringConfigArgs build() {
+        }        public Ipv6ExpressRouteCircuitPeeringConfigArgs build() {
             return new Ipv6ExpressRouteCircuitPeeringConfigArgs(microsoftPeeringConfig, primaryPeerAddressPrefix, routeFilter, secondaryPeerAddressPrefix, state);
         }
     }

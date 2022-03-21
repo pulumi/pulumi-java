@@ -72,12 +72,10 @@ public final class ParameterSpecificationResponse {
             this.defaultValue = defaultValue;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public ParameterSpecificationResponse build() {
+        }        public ParameterSpecificationResponse build() {
             return new ParameterSpecificationResponse(defaultValue, type);
         }
     }

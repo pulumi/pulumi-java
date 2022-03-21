@@ -93,32 +93,26 @@ public final class ResourcePolicySnapshotSchedulePolicySnapshotPropertiesArgs ex
             this.guestFlush = guestFlush;
             return this;
         }
-
         public Builder guestFlush(@Nullable Boolean guestFlush) {
             this.guestFlush = Output.ofNullable(guestFlush);
             return this;
         }
-
         public Builder labels(@Nullable Output<Map<String,String>> labels) {
             this.labels = labels;
             return this;
         }
-
         public Builder labels(@Nullable Map<String,String> labels) {
             this.labels = Output.ofNullable(labels);
             return this;
         }
-
         public Builder storageLocations(@Nullable Output<String> storageLocations) {
             this.storageLocations = storageLocations;
             return this;
         }
-
         public Builder storageLocations(@Nullable String storageLocations) {
             this.storageLocations = Output.ofNullable(storageLocations);
             return this;
-        }
-        public ResourcePolicySnapshotSchedulePolicySnapshotPropertiesArgs build() {
+        }        public ResourcePolicySnapshotSchedulePolicySnapshotPropertiesArgs build() {
             return new ResourcePolicySnapshotSchedulePolicySnapshotPropertiesArgs(guestFlush, labels, storageLocations);
         }
     }

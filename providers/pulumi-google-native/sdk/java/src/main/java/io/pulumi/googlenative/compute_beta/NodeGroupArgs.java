@@ -214,122 +214,98 @@ public final class NodeGroupArgs extends io.pulumi.resources.ResourceArgs {
             this.autoscalingPolicy = autoscalingPolicy;
             return this;
         }
-
         public Builder autoscalingPolicy(@Nullable NodeGroupAutoscalingPolicyArgs autoscalingPolicy) {
             this.autoscalingPolicy = Output.ofNullable(autoscalingPolicy);
             return this;
         }
-
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder initialNodeCount(Output<String> initialNodeCount) {
             this.initialNodeCount = Objects.requireNonNull(initialNodeCount);
             return this;
         }
-
         public Builder initialNodeCount(String initialNodeCount) {
             this.initialNodeCount = Output.of(Objects.requireNonNull(initialNodeCount));
             return this;
         }
-
         public Builder locationHint(@Nullable Output<String> locationHint) {
             this.locationHint = locationHint;
             return this;
         }
-
         public Builder locationHint(@Nullable String locationHint) {
             this.locationHint = Output.ofNullable(locationHint);
             return this;
         }
-
         public Builder maintenancePolicy(@Nullable Output<NodeGroupMaintenancePolicy> maintenancePolicy) {
             this.maintenancePolicy = maintenancePolicy;
             return this;
         }
-
         public Builder maintenancePolicy(@Nullable NodeGroupMaintenancePolicy maintenancePolicy) {
             this.maintenancePolicy = Output.ofNullable(maintenancePolicy);
             return this;
         }
-
         public Builder maintenanceWindow(@Nullable Output<NodeGroupMaintenanceWindowArgs> maintenanceWindow) {
             this.maintenanceWindow = maintenanceWindow;
             return this;
         }
-
         public Builder maintenanceWindow(@Nullable NodeGroupMaintenanceWindowArgs maintenanceWindow) {
             this.maintenanceWindow = Output.ofNullable(maintenanceWindow);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder nodeTemplate(@Nullable Output<String> nodeTemplate) {
             this.nodeTemplate = nodeTemplate;
             return this;
         }
-
         public Builder nodeTemplate(@Nullable String nodeTemplate) {
             this.nodeTemplate = Output.ofNullable(nodeTemplate);
             return this;
         }
-
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
         }
-
         public Builder requestId(@Nullable Output<String> requestId) {
             this.requestId = requestId;
             return this;
         }
-
         public Builder requestId(@Nullable String requestId) {
             this.requestId = Output.ofNullable(requestId);
             return this;
         }
-
         public Builder status(@Nullable Output<NodeGroupStatus> status) {
             this.status = status;
             return this;
         }
-
         public Builder status(@Nullable NodeGroupStatus status) {
             this.status = Output.ofNullable(status);
             return this;
         }
-
         public Builder zone(@Nullable Output<String> zone) {
             this.zone = zone;
             return this;
         }
-
         public Builder zone(@Nullable String zone) {
             this.zone = Output.ofNullable(zone);
             return this;
-        }
-        public NodeGroupArgs build() {
+        }        public NodeGroupArgs build() {
             return new NodeGroupArgs(autoscalingPolicy, description, initialNodeCount, locationHint, maintenancePolicy, maintenanceWindow, name, nodeTemplate, project, requestId, status, zone);
         }
     }

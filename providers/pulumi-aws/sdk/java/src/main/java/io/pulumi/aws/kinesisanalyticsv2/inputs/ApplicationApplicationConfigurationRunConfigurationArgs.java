@@ -75,22 +75,18 @@ public final class ApplicationApplicationConfigurationRunConfigurationArgs exten
             this.applicationRestoreConfiguration = applicationRestoreConfiguration;
             return this;
         }
-
         public Builder applicationRestoreConfiguration(@Nullable ApplicationApplicationConfigurationRunConfigurationApplicationRestoreConfigurationArgs applicationRestoreConfiguration) {
             this.applicationRestoreConfiguration = Output.ofNullable(applicationRestoreConfiguration);
             return this;
         }
-
         public Builder flinkRunConfiguration(@Nullable Output<ApplicationApplicationConfigurationRunConfigurationFlinkRunConfigurationArgs> flinkRunConfiguration) {
             this.flinkRunConfiguration = flinkRunConfiguration;
             return this;
         }
-
         public Builder flinkRunConfiguration(@Nullable ApplicationApplicationConfigurationRunConfigurationFlinkRunConfigurationArgs flinkRunConfiguration) {
             this.flinkRunConfiguration = Output.ofNullable(flinkRunConfiguration);
             return this;
-        }
-        public ApplicationApplicationConfigurationRunConfigurationArgs build() {
+        }        public ApplicationApplicationConfigurationRunConfigurationArgs build() {
             return new ApplicationApplicationConfigurationRunConfigurationArgs(applicationRestoreConfiguration, flinkRunConfiguration);
         }
     }

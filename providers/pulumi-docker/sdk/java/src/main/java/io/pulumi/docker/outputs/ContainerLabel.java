@@ -53,12 +53,10 @@ public final class ContainerLabel {
             this.label = Objects.requireNonNull(label);
             return this;
         }
-
         public Builder value(String value) {
             this.value = Objects.requireNonNull(value);
             return this;
-        }
-        public ContainerLabel build() {
+        }        public ContainerLabel build() {
             return new ContainerLabel(label, value);
         }
     }

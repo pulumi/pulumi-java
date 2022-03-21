@@ -160,42 +160,37 @@ public final class GetDistributionConfigurationResult {
             this.arn = Objects.requireNonNull(arn);
             return this;
         }
-
         public Builder dateCreated(String dateCreated) {
             this.dateCreated = Objects.requireNonNull(dateCreated);
             return this;
         }
-
         public Builder dateUpdated(String dateUpdated) {
             this.dateUpdated = Objects.requireNonNull(dateUpdated);
             return this;
         }
-
         public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
-
         public Builder distributions(List<GetDistributionConfigurationDistribution> distributions) {
             this.distributions = Objects.requireNonNull(distributions);
             return this;
         }
-
+        public Builder distributions(GetDistributionConfigurationDistribution... distributions) {
+            return distributions(List.of(distributions));
+        }
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder tags(Map<String,String> tags) {
             this.tags = Objects.requireNonNull(tags);
             return this;
-        }
-        public GetDistributionConfigurationResult build() {
+        }        public GetDistributionConfigurationResult build() {
             return new GetDistributionConfigurationResult(arn, dateCreated, dateUpdated, description, distributions, id, name, tags);
         }
     }

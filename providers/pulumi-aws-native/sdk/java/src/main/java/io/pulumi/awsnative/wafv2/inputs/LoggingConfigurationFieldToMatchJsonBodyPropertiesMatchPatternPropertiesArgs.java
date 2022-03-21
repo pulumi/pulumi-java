@@ -80,22 +80,21 @@ public final class LoggingConfigurationFieldToMatchJsonBodyPropertiesMatchPatter
             this.all = all;
             return this;
         }
-
         public Builder all(@Nullable Object all) {
             this.all = Output.ofNullable(all);
             return this;
         }
-
         public Builder includedPaths(@Nullable Output<List<String>> includedPaths) {
             this.includedPaths = includedPaths;
             return this;
         }
-
         public Builder includedPaths(@Nullable List<String> includedPaths) {
             this.includedPaths = Output.ofNullable(includedPaths);
             return this;
         }
-        public LoggingConfigurationFieldToMatchJsonBodyPropertiesMatchPatternPropertiesArgs build() {
+        public Builder includedPaths(String... includedPaths) {
+            return includedPaths(List.of(includedPaths));
+        }        public LoggingConfigurationFieldToMatchJsonBodyPropertiesMatchPatternPropertiesArgs build() {
             return new LoggingConfigurationFieldToMatchJsonBodyPropertiesMatchPatternPropertiesArgs(all, includedPaths);
         }
     }

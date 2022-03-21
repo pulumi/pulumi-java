@@ -200,92 +200,77 @@ public final class EventSubscriptionArgs extends io.pulumi.resources.ResourceArg
             this.deadLetterDestination = deadLetterDestination;
             return this;
         }
-
         public Builder deadLetterDestination(@Nullable StorageBlobDeadLetterDestinationArgs deadLetterDestination) {
             this.deadLetterDestination = Output.ofNullable(deadLetterDestination);
             return this;
         }
-
         public Builder destination(@Nullable Output<Object> destination) {
             this.destination = destination;
             return this;
         }
-
         public Builder destination(@Nullable Object destination) {
             this.destination = Output.ofNullable(destination);
             return this;
         }
-
         public Builder eventDeliverySchema(@Nullable Output<Either<String,EventDeliverySchema>> eventDeliverySchema) {
             this.eventDeliverySchema = eventDeliverySchema;
             return this;
         }
-
         public Builder eventDeliverySchema(@Nullable Either<String,EventDeliverySchema> eventDeliverySchema) {
             this.eventDeliverySchema = Output.ofNullable(eventDeliverySchema);
             return this;
         }
-
         public Builder eventSubscriptionName(@Nullable Output<String> eventSubscriptionName) {
             this.eventSubscriptionName = eventSubscriptionName;
             return this;
         }
-
         public Builder eventSubscriptionName(@Nullable String eventSubscriptionName) {
             this.eventSubscriptionName = Output.ofNullable(eventSubscriptionName);
             return this;
         }
-
         public Builder expirationTimeUtc(@Nullable Output<String> expirationTimeUtc) {
             this.expirationTimeUtc = expirationTimeUtc;
             return this;
         }
-
         public Builder expirationTimeUtc(@Nullable String expirationTimeUtc) {
             this.expirationTimeUtc = Output.ofNullable(expirationTimeUtc);
             return this;
         }
-
         public Builder filter(@Nullable Output<EventSubscriptionFilterArgs> filter) {
             this.filter = filter;
             return this;
         }
-
         public Builder filter(@Nullable EventSubscriptionFilterArgs filter) {
             this.filter = Output.ofNullable(filter);
             return this;
         }
-
         public Builder labels(@Nullable Output<List<String>> labels) {
             this.labels = labels;
             return this;
         }
-
         public Builder labels(@Nullable List<String> labels) {
             this.labels = Output.ofNullable(labels);
             return this;
         }
-
+        public Builder labels(String... labels) {
+            return labels(List.of(labels));
+        }
         public Builder retryPolicy(@Nullable Output<RetryPolicyArgs> retryPolicy) {
             this.retryPolicy = retryPolicy;
             return this;
         }
-
         public Builder retryPolicy(@Nullable RetryPolicyArgs retryPolicy) {
             this.retryPolicy = Output.ofNullable(retryPolicy);
             return this;
         }
-
         public Builder scope(Output<String> scope) {
             this.scope = Objects.requireNonNull(scope);
             return this;
         }
-
         public Builder scope(String scope) {
             this.scope = Output.of(Objects.requireNonNull(scope));
             return this;
-        }
-        public EventSubscriptionArgs build() {
+        }        public EventSubscriptionArgs build() {
             return new EventSubscriptionArgs(deadLetterDestination, destination, eventDeliverySchema, eventSubscriptionName, expirationTimeUtc, filter, labels, retryPolicy, scope);
         }
     }

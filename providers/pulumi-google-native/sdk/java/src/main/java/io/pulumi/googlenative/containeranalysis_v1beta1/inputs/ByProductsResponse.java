@@ -55,8 +55,7 @@ public final class ByProductsResponse extends io.pulumi.resources.InvokeArgs {
         public Builder customValues(Map<String,String> customValues) {
             this.customValues = Objects.requireNonNull(customValues);
             return this;
-        }
-        public ByProductsResponse build() {
+        }        public ByProductsResponse build() {
             return new ByProductsResponse(customValues);
         }
     }

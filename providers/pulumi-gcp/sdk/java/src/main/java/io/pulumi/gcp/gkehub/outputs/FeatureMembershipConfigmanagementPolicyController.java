@@ -137,32 +137,29 @@ public final class FeatureMembershipConfigmanagementPolicyController {
             this.auditIntervalSeconds = auditIntervalSeconds;
             return this;
         }
-
         public Builder enabled(@Nullable Boolean enabled) {
             this.enabled = enabled;
             return this;
         }
-
         public Builder exemptableNamespaces(@Nullable List<String> exemptableNamespaces) {
             this.exemptableNamespaces = exemptableNamespaces;
             return this;
         }
-
+        public Builder exemptableNamespaces(String... exemptableNamespaces) {
+            return exemptableNamespaces(List.of(exemptableNamespaces));
+        }
         public Builder logDeniesEnabled(@Nullable Boolean logDeniesEnabled) {
             this.logDeniesEnabled = logDeniesEnabled;
             return this;
         }
-
         public Builder referentialRulesEnabled(@Nullable Boolean referentialRulesEnabled) {
             this.referentialRulesEnabled = referentialRulesEnabled;
             return this;
         }
-
         public Builder templateLibraryInstalled(@Nullable Boolean templateLibraryInstalled) {
             this.templateLibraryInstalled = templateLibraryInstalled;
             return this;
-        }
-        public FeatureMembershipConfigmanagementPolicyController build() {
+        }        public FeatureMembershipConfigmanagementPolicyController build() {
             return new FeatureMembershipConfigmanagementPolicyController(auditIntervalSeconds, enabled, exemptableNamespaces, logDeniesEnabled, referentialRulesEnabled, templateLibraryInstalled);
         }
     }

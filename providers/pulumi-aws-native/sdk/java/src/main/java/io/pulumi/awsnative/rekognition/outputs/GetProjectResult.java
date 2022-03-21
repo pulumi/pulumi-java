@@ -45,8 +45,7 @@ public final class GetProjectResult {
         public Builder arn(@Nullable String arn) {
             this.arn = arn;
             return this;
-        }
-        public GetProjectResult build() {
+        }        public GetProjectResult build() {
             return new GetProjectResult(arn);
         }
     }

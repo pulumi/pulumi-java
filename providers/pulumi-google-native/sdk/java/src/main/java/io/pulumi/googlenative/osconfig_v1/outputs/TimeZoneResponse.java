@@ -51,8 +51,7 @@ public final class TimeZoneResponse {
         public Builder version(String version) {
             this.version = Objects.requireNonNull(version);
             return this;
-        }
-        public TimeZoneResponse build() {
+        }        public TimeZoneResponse build() {
             return new TimeZoneResponse(version);
         }
     }

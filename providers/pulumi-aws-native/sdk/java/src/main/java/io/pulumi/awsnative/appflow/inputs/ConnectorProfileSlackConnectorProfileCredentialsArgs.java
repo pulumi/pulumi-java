@@ -107,42 +107,34 @@ public final class ConnectorProfileSlackConnectorProfileCredentialsArgs extends 
             this.accessToken = accessToken;
             return this;
         }
-
         public Builder accessToken(@Nullable String accessToken) {
             this.accessToken = Output.ofNullable(accessToken);
             return this;
         }
-
         public Builder clientId(Output<String> clientId) {
             this.clientId = Objects.requireNonNull(clientId);
             return this;
         }
-
         public Builder clientId(String clientId) {
             this.clientId = Output.of(Objects.requireNonNull(clientId));
             return this;
         }
-
         public Builder clientSecret(Output<String> clientSecret) {
             this.clientSecret = Objects.requireNonNull(clientSecret);
             return this;
         }
-
         public Builder clientSecret(String clientSecret) {
             this.clientSecret = Output.of(Objects.requireNonNull(clientSecret));
             return this;
         }
-
         public Builder connectorOAuthRequest(@Nullable Output<ConnectorProfileConnectorOAuthRequestArgs> connectorOAuthRequest) {
             this.connectorOAuthRequest = connectorOAuthRequest;
             return this;
         }
-
         public Builder connectorOAuthRequest(@Nullable ConnectorProfileConnectorOAuthRequestArgs connectorOAuthRequest) {
             this.connectorOAuthRequest = Output.ofNullable(connectorOAuthRequest);
             return this;
-        }
-        public ConnectorProfileSlackConnectorProfileCredentialsArgs build() {
+        }        public ConnectorProfileSlackConnectorProfileCredentialsArgs build() {
             return new ConnectorProfileSlackConnectorProfileCredentialsArgs(accessToken, clientId, clientSecret, connectorOAuthRequest);
         }
     }

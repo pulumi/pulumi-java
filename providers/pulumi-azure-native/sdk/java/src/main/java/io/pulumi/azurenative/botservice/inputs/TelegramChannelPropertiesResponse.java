@@ -95,17 +95,14 @@ public final class TelegramChannelPropertiesResponse extends io.pulumi.resources
             this.accessToken = accessToken;
             return this;
         }
-
         public Builder isEnabled(Boolean isEnabled) {
             this.isEnabled = Objects.requireNonNull(isEnabled);
             return this;
         }
-
         public Builder isValidated(@Nullable Boolean isValidated) {
             this.isValidated = isValidated;
             return this;
-        }
-        public TelegramChannelPropertiesResponse build() {
+        }        public TelegramChannelPropertiesResponse build() {
             return new TelegramChannelPropertiesResponse(accessToken, isEnabled, isValidated);
         }
     }

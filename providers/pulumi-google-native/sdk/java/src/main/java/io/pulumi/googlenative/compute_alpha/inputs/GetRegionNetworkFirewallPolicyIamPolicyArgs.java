@@ -90,22 +90,18 @@ public final class GetRegionNetworkFirewallPolicyIamPolicyArgs extends io.pulumi
             this.optionsRequestedPolicyVersion = optionsRequestedPolicyVersion;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = project;
             return this;
         }
-
         public Builder region(String region) {
             this.region = Objects.requireNonNull(region);
             return this;
         }
-
         public Builder resource(String resource) {
             this.resource = Objects.requireNonNull(resource);
             return this;
-        }
-        public GetRegionNetworkFirewallPolicyIamPolicyArgs build() {
+        }        public GetRegionNetworkFirewallPolicyIamPolicyArgs build() {
             return new GetRegionNetworkFirewallPolicyIamPolicyArgs(optionsRequestedPolicyVersion, project, region, resource);
         }
     }

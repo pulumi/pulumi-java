@@ -61,12 +61,10 @@ public final class FileSystemTokenStoreArgs extends io.pulumi.resources.Resource
             this.directory = directory;
             return this;
         }
-
         public Builder directory(@Nullable String directory) {
             this.directory = Output.ofNullable(directory);
             return this;
-        }
-        public FileSystemTokenStoreArgs build() {
+        }        public FileSystemTokenStoreArgs build() {
             return new FileSystemTokenStoreArgs(directory);
         }
     }

@@ -96,32 +96,26 @@ public final class ApplicationLogsConfigArgs extends io.pulumi.resources.Resourc
             this.azureBlobStorage = azureBlobStorage;
             return this;
         }
-
         public Builder azureBlobStorage(@Nullable AzureBlobStorageApplicationLogsConfigArgs azureBlobStorage) {
             this.azureBlobStorage = Output.ofNullable(azureBlobStorage);
             return this;
         }
-
         public Builder azureTableStorage(@Nullable Output<AzureTableStorageApplicationLogsConfigArgs> azureTableStorage) {
             this.azureTableStorage = azureTableStorage;
             return this;
         }
-
         public Builder azureTableStorage(@Nullable AzureTableStorageApplicationLogsConfigArgs azureTableStorage) {
             this.azureTableStorage = Output.ofNullable(azureTableStorage);
             return this;
         }
-
         public Builder fileSystem(@Nullable Output<FileSystemApplicationLogsConfigArgs> fileSystem) {
             this.fileSystem = fileSystem;
             return this;
         }
-
         public Builder fileSystem(@Nullable FileSystemApplicationLogsConfigArgs fileSystem) {
             this.fileSystem = Output.ofNullable(fileSystem);
             return this;
-        }
-        public ApplicationLogsConfigArgs build() {
+        }        public ApplicationLogsConfigArgs build() {
             return new ApplicationLogsConfigArgs(azureBlobStorage, azureTableStorage, fileSystem);
         }
     }

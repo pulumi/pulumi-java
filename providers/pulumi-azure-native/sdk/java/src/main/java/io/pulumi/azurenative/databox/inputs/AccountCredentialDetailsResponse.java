@@ -110,22 +110,21 @@ public final class AccountCredentialDetailsResponse extends io.pulumi.resources.
             this.accountConnectionString = Objects.requireNonNull(accountConnectionString);
             return this;
         }
-
         public Builder accountName(String accountName) {
             this.accountName = Objects.requireNonNull(accountName);
             return this;
         }
-
         public Builder dataAccountType(String dataAccountType) {
             this.dataAccountType = Objects.requireNonNull(dataAccountType);
             return this;
         }
-
         public Builder shareCredentialDetails(List<ShareCredentialDetailsResponse> shareCredentialDetails) {
             this.shareCredentialDetails = Objects.requireNonNull(shareCredentialDetails);
             return this;
         }
-        public AccountCredentialDetailsResponse build() {
+        public Builder shareCredentialDetails(ShareCredentialDetailsResponse... shareCredentialDetails) {
+            return shareCredentialDetails(List.of(shareCredentialDetails));
+        }        public AccountCredentialDetailsResponse build() {
             return new AccountCredentialDetailsResponse(accountConnectionString, accountName, dataAccountType, shareCredentialDetails);
         }
     }

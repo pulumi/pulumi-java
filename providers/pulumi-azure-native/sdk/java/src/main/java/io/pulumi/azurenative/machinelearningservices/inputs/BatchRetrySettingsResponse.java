@@ -79,12 +79,10 @@ public final class BatchRetrySettingsResponse extends io.pulumi.resources.Invoke
             this.maxRetries = maxRetries;
             return this;
         }
-
         public Builder timeout(@Nullable String timeout) {
             this.timeout = timeout;
             return this;
-        }
-        public BatchRetrySettingsResponse build() {
+        }        public BatchRetrySettingsResponse build() {
             return new BatchRetrySettingsResponse(maxRetries, timeout);
         }
     }

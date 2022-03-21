@@ -138,62 +138,50 @@ public final class HybridRunbookWorkerArgs extends io.pulumi.resources.ResourceA
             this.automationAccountName = Objects.requireNonNull(automationAccountName);
             return this;
         }
-
         public Builder automationAccountName(String automationAccountName) {
             this.automationAccountName = Output.of(Objects.requireNonNull(automationAccountName));
             return this;
         }
-
         public Builder hybridRunbookWorkerGroupName(Output<String> hybridRunbookWorkerGroupName) {
             this.hybridRunbookWorkerGroupName = Objects.requireNonNull(hybridRunbookWorkerGroupName);
             return this;
         }
-
         public Builder hybridRunbookWorkerGroupName(String hybridRunbookWorkerGroupName) {
             this.hybridRunbookWorkerGroupName = Output.of(Objects.requireNonNull(hybridRunbookWorkerGroupName));
             return this;
         }
-
         public Builder hybridRunbookWorkerId(@Nullable Output<String> hybridRunbookWorkerId) {
             this.hybridRunbookWorkerId = hybridRunbookWorkerId;
             return this;
         }
-
         public Builder hybridRunbookWorkerId(@Nullable String hybridRunbookWorkerId) {
             this.hybridRunbookWorkerId = Output.ofNullable(hybridRunbookWorkerId);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder vmResourceId(@Nullable Output<String> vmResourceId) {
             this.vmResourceId = vmResourceId;
             return this;
         }
-
         public Builder vmResourceId(@Nullable String vmResourceId) {
             this.vmResourceId = Output.ofNullable(vmResourceId);
             return this;
-        }
-        public HybridRunbookWorkerArgs build() {
+        }        public HybridRunbookWorkerArgs build() {
             return new HybridRunbookWorkerArgs(automationAccountName, hybridRunbookWorkerGroupName, hybridRunbookWorkerId, name, resourceGroupName, vmResourceId);
         }
     }

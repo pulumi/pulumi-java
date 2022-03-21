@@ -250,67 +250,54 @@ public final class ContentKeyPolicyPlayReadyPlayRightResponse {
             this.agcAndColorStripeRestriction = agcAndColorStripeRestriction;
             return this;
         }
-
         public Builder allowPassingVideoContentToUnknownOutput(String allowPassingVideoContentToUnknownOutput) {
             this.allowPassingVideoContentToUnknownOutput = Objects.requireNonNull(allowPassingVideoContentToUnknownOutput);
             return this;
         }
-
         public Builder analogVideoOpl(@Nullable Integer analogVideoOpl) {
             this.analogVideoOpl = analogVideoOpl;
             return this;
         }
-
         public Builder compressedDigitalAudioOpl(@Nullable Integer compressedDigitalAudioOpl) {
             this.compressedDigitalAudioOpl = compressedDigitalAudioOpl;
             return this;
         }
-
         public Builder compressedDigitalVideoOpl(@Nullable Integer compressedDigitalVideoOpl) {
             this.compressedDigitalVideoOpl = compressedDigitalVideoOpl;
             return this;
         }
-
         public Builder digitalVideoOnlyContentRestriction(Boolean digitalVideoOnlyContentRestriction) {
             this.digitalVideoOnlyContentRestriction = Objects.requireNonNull(digitalVideoOnlyContentRestriction);
             return this;
         }
-
         public Builder explicitAnalogTelevisionOutputRestriction(@Nullable ContentKeyPolicyPlayReadyExplicitAnalogTelevisionRestrictionResponse explicitAnalogTelevisionOutputRestriction) {
             this.explicitAnalogTelevisionOutputRestriction = explicitAnalogTelevisionOutputRestriction;
             return this;
         }
-
         public Builder firstPlayExpiration(@Nullable String firstPlayExpiration) {
             this.firstPlayExpiration = firstPlayExpiration;
             return this;
         }
-
         public Builder imageConstraintForAnalogComponentVideoRestriction(Boolean imageConstraintForAnalogComponentVideoRestriction) {
             this.imageConstraintForAnalogComponentVideoRestriction = Objects.requireNonNull(imageConstraintForAnalogComponentVideoRestriction);
             return this;
         }
-
         public Builder imageConstraintForAnalogComputerMonitorRestriction(Boolean imageConstraintForAnalogComputerMonitorRestriction) {
             this.imageConstraintForAnalogComputerMonitorRestriction = Objects.requireNonNull(imageConstraintForAnalogComputerMonitorRestriction);
             return this;
         }
-
         public Builder scmsRestriction(@Nullable Integer scmsRestriction) {
             this.scmsRestriction = scmsRestriction;
             return this;
         }
-
         public Builder uncompressedDigitalAudioOpl(@Nullable Integer uncompressedDigitalAudioOpl) {
             this.uncompressedDigitalAudioOpl = uncompressedDigitalAudioOpl;
             return this;
         }
-
         public Builder uncompressedDigitalVideoOpl(@Nullable Integer uncompressedDigitalVideoOpl) {
             this.uncompressedDigitalVideoOpl = uncompressedDigitalVideoOpl;
             return this;
-        }
-        public ContentKeyPolicyPlayReadyPlayRightResponse build() {
+        }        public ContentKeyPolicyPlayReadyPlayRightResponse build() {
             return new ContentKeyPolicyPlayReadyPlayRightResponse(agcAndColorStripeRestriction, allowPassingVideoContentToUnknownOutput, analogVideoOpl, compressedDigitalAudioOpl, compressedDigitalVideoOpl, digitalVideoOnlyContentRestriction, explicitAnalogTelevisionOutputRestriction, firstPlayExpiration, imageConstraintForAnalogComponentVideoRestriction, imageConstraintForAnalogComputerMonitorRestriction, scmsRestriction, uncompressedDigitalAudioOpl, uncompressedDigitalVideoOpl);
         }
     }

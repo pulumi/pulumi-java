@@ -199,102 +199,91 @@ public final class MachineImageArgs extends io.pulumi.resources.ResourceArgs {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder guestFlush(@Nullable Output<Boolean> guestFlush) {
             this.guestFlush = guestFlush;
             return this;
         }
-
         public Builder guestFlush(@Nullable Boolean guestFlush) {
             this.guestFlush = Output.ofNullable(guestFlush);
             return this;
         }
-
         public Builder machineImageEncryptionKey(@Nullable Output<CustomerEncryptionKeyArgs> machineImageEncryptionKey) {
             this.machineImageEncryptionKey = machineImageEncryptionKey;
             return this;
         }
-
         public Builder machineImageEncryptionKey(@Nullable CustomerEncryptionKeyArgs machineImageEncryptionKey) {
             this.machineImageEncryptionKey = Output.ofNullable(machineImageEncryptionKey);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
         }
-
         public Builder requestId(@Nullable Output<String> requestId) {
             this.requestId = requestId;
             return this;
         }
-
         public Builder requestId(@Nullable String requestId) {
             this.requestId = Output.ofNullable(requestId);
             return this;
         }
-
         public Builder savedDisks(@Nullable Output<List<SavedDiskArgs>> savedDisks) {
             this.savedDisks = savedDisks;
             return this;
         }
-
         public Builder savedDisks(@Nullable List<SavedDiskArgs> savedDisks) {
             this.savedDisks = Output.ofNullable(savedDisks);
             return this;
         }
-
+        public Builder savedDisks(SavedDiskArgs... savedDisks) {
+            return savedDisks(List.of(savedDisks));
+        }
         public Builder sourceDiskEncryptionKeys(@Nullable Output<List<SourceDiskEncryptionKeyArgs>> sourceDiskEncryptionKeys) {
             this.sourceDiskEncryptionKeys = sourceDiskEncryptionKeys;
             return this;
         }
-
         public Builder sourceDiskEncryptionKeys(@Nullable List<SourceDiskEncryptionKeyArgs> sourceDiskEncryptionKeys) {
             this.sourceDiskEncryptionKeys = Output.ofNullable(sourceDiskEncryptionKeys);
             return this;
         }
-
+        public Builder sourceDiskEncryptionKeys(SourceDiskEncryptionKeyArgs... sourceDiskEncryptionKeys) {
+            return sourceDiskEncryptionKeys(List.of(sourceDiskEncryptionKeys));
+        }
         public Builder sourceInstance(Output<String> sourceInstance) {
             this.sourceInstance = Objects.requireNonNull(sourceInstance);
             return this;
         }
-
         public Builder sourceInstance(String sourceInstance) {
             this.sourceInstance = Output.of(Objects.requireNonNull(sourceInstance));
             return this;
         }
-
         public Builder storageLocations(@Nullable Output<List<String>> storageLocations) {
             this.storageLocations = storageLocations;
             return this;
         }
-
         public Builder storageLocations(@Nullable List<String> storageLocations) {
             this.storageLocations = Output.ofNullable(storageLocations);
             return this;
         }
-        public MachineImageArgs build() {
+        public Builder storageLocations(String... storageLocations) {
+            return storageLocations(List.of(storageLocations));
+        }        public MachineImageArgs build() {
             return new MachineImageArgs(description, guestFlush, machineImageEncryptionKey, name, project, requestId, savedDisks, sourceDiskEncryptionKeys, sourceInstance, storageLocations);
         }
     }

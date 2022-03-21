@@ -108,22 +108,18 @@ public final class SymptomResponse extends io.pulumi.resources.InvokeArgs {
             this.createTime = Objects.requireNonNull(createTime);
             return this;
         }
-
         public Builder details(String details) {
             this.details = Objects.requireNonNull(details);
             return this;
         }
-
         public Builder symptomType(String symptomType) {
             this.symptomType = Objects.requireNonNull(symptomType);
             return this;
         }
-
         public Builder workerId(String workerId) {
             this.workerId = Objects.requireNonNull(workerId);
             return this;
-        }
-        public SymptomResponse build() {
+        }        public SymptomResponse build() {
             return new SymptomResponse(createTime, details, symptomType, workerId);
         }
     }

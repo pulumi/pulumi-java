@@ -95,32 +95,26 @@ public final class SubnetResourceSettingsArgs extends io.pulumi.resources.Resour
             this.addressPrefix = addressPrefix;
             return this;
         }
-
         public Builder addressPrefix(@Nullable String addressPrefix) {
             this.addressPrefix = Output.ofNullable(addressPrefix);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder networkSecurityGroup(@Nullable Output<NsgReferenceArgs> networkSecurityGroup) {
             this.networkSecurityGroup = networkSecurityGroup;
             return this;
         }
-
         public Builder networkSecurityGroup(@Nullable NsgReferenceArgs networkSecurityGroup) {
             this.networkSecurityGroup = Output.ofNullable(networkSecurityGroup);
             return this;
-        }
-        public SubnetResourceSettingsArgs build() {
+        }        public SubnetResourceSettingsArgs build() {
             return new SubnetResourceSettingsArgs(addressPrefix, name, networkSecurityGroup);
         }
     }

@@ -65,22 +65,18 @@ public final class IndexCapacityUnitsConfigurationArgs extends io.pulumi.resourc
             this.queryCapacityUnits = Objects.requireNonNull(queryCapacityUnits);
             return this;
         }
-
         public Builder queryCapacityUnits(Integer queryCapacityUnits) {
             this.queryCapacityUnits = Output.of(Objects.requireNonNull(queryCapacityUnits));
             return this;
         }
-
         public Builder storageCapacityUnits(Output<Integer> storageCapacityUnits) {
             this.storageCapacityUnits = Objects.requireNonNull(storageCapacityUnits);
             return this;
         }
-
         public Builder storageCapacityUnits(Integer storageCapacityUnits) {
             this.storageCapacityUnits = Output.of(Objects.requireNonNull(storageCapacityUnits));
             return this;
-        }
-        public IndexCapacityUnitsConfigurationArgs build() {
+        }        public IndexCapacityUnitsConfigurationArgs build() {
             return new IndexCapacityUnitsConfigurationArgs(queryCapacityUnits, storageCapacityUnits);
         }
     }

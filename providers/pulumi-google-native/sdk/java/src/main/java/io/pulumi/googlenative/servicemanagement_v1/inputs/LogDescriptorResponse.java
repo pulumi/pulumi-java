@@ -110,22 +110,21 @@ public final class LogDescriptorResponse extends io.pulumi.resources.InvokeArgs 
             this.description = Objects.requireNonNull(description);
             return this;
         }
-
         public Builder displayName(String displayName) {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
-
         public Builder labels(List<LabelDescriptorResponse> labels) {
             this.labels = Objects.requireNonNull(labels);
             return this;
         }
-
+        public Builder labels(LabelDescriptorResponse... labels) {
+            return labels(List.of(labels));
+        }
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
-        }
-        public LogDescriptorResponse build() {
+        }        public LogDescriptorResponse build() {
             return new LogDescriptorResponse(description, displayName, labels, name);
         }
     }

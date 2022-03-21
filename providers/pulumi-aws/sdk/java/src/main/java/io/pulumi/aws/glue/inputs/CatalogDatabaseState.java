@@ -156,72 +156,58 @@ public final class CatalogDatabaseState extends io.pulumi.resources.ResourceArgs
             this.arn = arn;
             return this;
         }
-
         public Builder arn(@Nullable String arn) {
             this.arn = Output.ofNullable(arn);
             return this;
         }
-
         public Builder catalogId(@Nullable Output<String> catalogId) {
             this.catalogId = catalogId;
             return this;
         }
-
         public Builder catalogId(@Nullable String catalogId) {
             this.catalogId = Output.ofNullable(catalogId);
             return this;
         }
-
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder locationUri(@Nullable Output<String> locationUri) {
             this.locationUri = locationUri;
             return this;
         }
-
         public Builder locationUri(@Nullable String locationUri) {
             this.locationUri = Output.ofNullable(locationUri);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder parameters(@Nullable Output<Map<String,String>> parameters) {
             this.parameters = parameters;
             return this;
         }
-
         public Builder parameters(@Nullable Map<String,String> parameters) {
             this.parameters = Output.ofNullable(parameters);
             return this;
         }
-
         public Builder targetDatabase(@Nullable Output<CatalogDatabaseTargetDatabaseGetArgs> targetDatabase) {
             this.targetDatabase = targetDatabase;
             return this;
         }
-
         public Builder targetDatabase(@Nullable CatalogDatabaseTargetDatabaseGetArgs targetDatabase) {
             this.targetDatabase = Output.ofNullable(targetDatabase);
             return this;
-        }
-        public CatalogDatabaseState build() {
+        }        public CatalogDatabaseState build() {
             return new CatalogDatabaseState(arn, catalogId, description, locationUri, name, parameters, targetDatabase);
         }
     }

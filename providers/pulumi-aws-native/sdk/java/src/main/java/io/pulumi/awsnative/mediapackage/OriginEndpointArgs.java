@@ -239,132 +239,112 @@ public final class OriginEndpointArgs extends io.pulumi.resources.ResourceArgs {
             this.authorization = authorization;
             return this;
         }
-
         public Builder authorization(@Nullable OriginEndpointAuthorizationArgs authorization) {
             this.authorization = Output.ofNullable(authorization);
             return this;
         }
-
         public Builder channelId(Output<String> channelId) {
             this.channelId = Objects.requireNonNull(channelId);
             return this;
         }
-
         public Builder channelId(String channelId) {
             this.channelId = Output.of(Objects.requireNonNull(channelId));
             return this;
         }
-
         public Builder cmafPackage(@Nullable Output<OriginEndpointCmafPackageArgs> cmafPackage) {
             this.cmafPackage = cmafPackage;
             return this;
         }
-
         public Builder cmafPackage(@Nullable OriginEndpointCmafPackageArgs cmafPackage) {
             this.cmafPackage = Output.ofNullable(cmafPackage);
             return this;
         }
-
         public Builder dashPackage(@Nullable Output<OriginEndpointDashPackageArgs> dashPackage) {
             this.dashPackage = dashPackage;
             return this;
         }
-
         public Builder dashPackage(@Nullable OriginEndpointDashPackageArgs dashPackage) {
             this.dashPackage = Output.ofNullable(dashPackage);
             return this;
         }
-
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder hlsPackage(@Nullable Output<OriginEndpointHlsPackageArgs> hlsPackage) {
             this.hlsPackage = hlsPackage;
             return this;
         }
-
         public Builder hlsPackage(@Nullable OriginEndpointHlsPackageArgs hlsPackage) {
             this.hlsPackage = Output.ofNullable(hlsPackage);
             return this;
         }
-
         public Builder manifestName(@Nullable Output<String> manifestName) {
             this.manifestName = manifestName;
             return this;
         }
-
         public Builder manifestName(@Nullable String manifestName) {
             this.manifestName = Output.ofNullable(manifestName);
             return this;
         }
-
         public Builder mssPackage(@Nullable Output<OriginEndpointMssPackageArgs> mssPackage) {
             this.mssPackage = mssPackage;
             return this;
         }
-
         public Builder mssPackage(@Nullable OriginEndpointMssPackageArgs mssPackage) {
             this.mssPackage = Output.ofNullable(mssPackage);
             return this;
         }
-
         public Builder origination(@Nullable Output<OriginEndpointOrigination> origination) {
             this.origination = origination;
             return this;
         }
-
         public Builder origination(@Nullable OriginEndpointOrigination origination) {
             this.origination = Output.ofNullable(origination);
             return this;
         }
-
         public Builder startoverWindowSeconds(@Nullable Output<Integer> startoverWindowSeconds) {
             this.startoverWindowSeconds = startoverWindowSeconds;
             return this;
         }
-
         public Builder startoverWindowSeconds(@Nullable Integer startoverWindowSeconds) {
             this.startoverWindowSeconds = Output.ofNullable(startoverWindowSeconds);
             return this;
         }
-
         public Builder tags(@Nullable Output<List<OriginEndpointTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable List<OriginEndpointTagArgs> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
+        public Builder tags(OriginEndpointTagArgs... tags) {
+            return tags(List.of(tags));
+        }
         public Builder timeDelaySeconds(@Nullable Output<Integer> timeDelaySeconds) {
             this.timeDelaySeconds = timeDelaySeconds;
             return this;
         }
-
         public Builder timeDelaySeconds(@Nullable Integer timeDelaySeconds) {
             this.timeDelaySeconds = Output.ofNullable(timeDelaySeconds);
             return this;
         }
-
         public Builder whitelist(@Nullable Output<List<String>> whitelist) {
             this.whitelist = whitelist;
             return this;
         }
-
         public Builder whitelist(@Nullable List<String> whitelist) {
             this.whitelist = Output.ofNullable(whitelist);
             return this;
         }
-        public OriginEndpointArgs build() {
+        public Builder whitelist(String... whitelist) {
+            return whitelist(List.of(whitelist));
+        }        public OriginEndpointArgs build() {
             return new OriginEndpointArgs(authorization, channelId, cmafPackage, dashPackage, description, hlsPackage, manifestName, mssPackage, origination, startoverWindowSeconds, tags, timeDelaySeconds, whitelist);
         }
     }

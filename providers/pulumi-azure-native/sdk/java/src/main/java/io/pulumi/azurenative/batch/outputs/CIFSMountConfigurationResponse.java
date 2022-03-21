@@ -95,27 +95,22 @@ public final class CIFSMountConfigurationResponse {
             this.mountOptions = mountOptions;
             return this;
         }
-
         public Builder password(String password) {
             this.password = Objects.requireNonNull(password);
             return this;
         }
-
         public Builder relativeMountPath(String relativeMountPath) {
             this.relativeMountPath = Objects.requireNonNull(relativeMountPath);
             return this;
         }
-
         public Builder source(String source) {
             this.source = Objects.requireNonNull(source);
             return this;
         }
-
         public Builder username(String username) {
             this.username = Objects.requireNonNull(username);
             return this;
-        }
-        public CIFSMountConfigurationResponse build() {
+        }        public CIFSMountConfigurationResponse build() {
             return new CIFSMountConfigurationResponse(mountOptions, password, relativeMountPath, source, username);
         }
     }

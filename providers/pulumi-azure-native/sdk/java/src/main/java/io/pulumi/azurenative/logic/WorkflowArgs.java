@@ -243,122 +243,98 @@ public final class WorkflowArgs extends io.pulumi.resources.ResourceArgs {
             this.accessControl = accessControl;
             return this;
         }
-
         public Builder accessControl(@Nullable FlowAccessControlConfigurationArgs accessControl) {
             this.accessControl = Output.ofNullable(accessControl);
             return this;
         }
-
         public Builder definition(@Nullable Output<Object> definition) {
             this.definition = definition;
             return this;
         }
-
         public Builder definition(@Nullable Object definition) {
             this.definition = Output.ofNullable(definition);
             return this;
         }
-
         public Builder endpointsConfiguration(@Nullable Output<FlowEndpointsConfigurationArgs> endpointsConfiguration) {
             this.endpointsConfiguration = endpointsConfiguration;
             return this;
         }
-
         public Builder endpointsConfiguration(@Nullable FlowEndpointsConfigurationArgs endpointsConfiguration) {
             this.endpointsConfiguration = Output.ofNullable(endpointsConfiguration);
             return this;
         }
-
         public Builder identity(@Nullable Output<ManagedServiceIdentityArgs> identity) {
             this.identity = identity;
             return this;
         }
-
         public Builder identity(@Nullable ManagedServiceIdentityArgs identity) {
             this.identity = Output.ofNullable(identity);
             return this;
         }
-
         public Builder integrationAccount(@Nullable Output<ResourceReferenceArgs> integrationAccount) {
             this.integrationAccount = integrationAccount;
             return this;
         }
-
         public Builder integrationAccount(@Nullable ResourceReferenceArgs integrationAccount) {
             this.integrationAccount = Output.ofNullable(integrationAccount);
             return this;
         }
-
         public Builder integrationServiceEnvironment(@Nullable Output<ResourceReferenceArgs> integrationServiceEnvironment) {
             this.integrationServiceEnvironment = integrationServiceEnvironment;
             return this;
         }
-
         public Builder integrationServiceEnvironment(@Nullable ResourceReferenceArgs integrationServiceEnvironment) {
             this.integrationServiceEnvironment = Output.ofNullable(integrationServiceEnvironment);
             return this;
         }
-
         public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder parameters(@Nullable Output<Map<String,WorkflowParameterArgs>> parameters) {
             this.parameters = parameters;
             return this;
         }
-
         public Builder parameters(@Nullable Map<String,WorkflowParameterArgs> parameters) {
             this.parameters = Output.ofNullable(parameters);
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder state(@Nullable Output<Either<String,WorkflowState>> state) {
             this.state = state;
             return this;
         }
-
         public Builder state(@Nullable Either<String,WorkflowState> state) {
             this.state = Output.ofNullable(state);
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
         public Builder workflowName(@Nullable Output<String> workflowName) {
             this.workflowName = workflowName;
             return this;
         }
-
         public Builder workflowName(@Nullable String workflowName) {
             this.workflowName = Output.ofNullable(workflowName);
             return this;
-        }
-        public WorkflowArgs build() {
+        }        public WorkflowArgs build() {
             return new WorkflowArgs(accessControl, definition, endpointsConfiguration, identity, integrationAccount, integrationServiceEnvironment, location, parameters, resourceGroupName, state, tags, workflowName);
         }
     }

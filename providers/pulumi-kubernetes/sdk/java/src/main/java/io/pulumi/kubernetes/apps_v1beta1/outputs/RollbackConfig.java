@@ -53,8 +53,7 @@ public final class RollbackConfig {
         public Builder revision(@Nullable Integer revision) {
             this.revision = revision;
             return this;
-        }
-        public RollbackConfig build() {
+        }        public RollbackConfig build() {
             return new RollbackConfig(revision);
         }
     }

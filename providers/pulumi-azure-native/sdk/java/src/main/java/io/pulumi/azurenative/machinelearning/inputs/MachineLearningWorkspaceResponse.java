@@ -58,8 +58,7 @@ public final class MachineLearningWorkspaceResponse extends io.pulumi.resources.
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
-        }
-        public MachineLearningWorkspaceResponse build() {
+        }        public MachineLearningWorkspaceResponse build() {
             return new MachineLearningWorkspaceResponse(id);
         }
     }

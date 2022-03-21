@@ -174,82 +174,66 @@ public final class SecurityPolicyRuleRateLimitOptionsArgs extends io.pulumi.reso
             this.banDurationSec = banDurationSec;
             return this;
         }
-
         public Builder banDurationSec(@Nullable Integer banDurationSec) {
             this.banDurationSec = Output.ofNullable(banDurationSec);
             return this;
         }
-
         public Builder banThreshold(@Nullable Output<SecurityPolicyRuleRateLimitOptionsThresholdArgs> banThreshold) {
             this.banThreshold = banThreshold;
             return this;
         }
-
         public Builder banThreshold(@Nullable SecurityPolicyRuleRateLimitOptionsThresholdArgs banThreshold) {
             this.banThreshold = Output.ofNullable(banThreshold);
             return this;
         }
-
         public Builder conformAction(@Nullable Output<String> conformAction) {
             this.conformAction = conformAction;
             return this;
         }
-
         public Builder conformAction(@Nullable String conformAction) {
             this.conformAction = Output.ofNullable(conformAction);
             return this;
         }
-
         public Builder enforceOnKey(@Nullable Output<SecurityPolicyRuleRateLimitOptionsEnforceOnKey> enforceOnKey) {
             this.enforceOnKey = enforceOnKey;
             return this;
         }
-
         public Builder enforceOnKey(@Nullable SecurityPolicyRuleRateLimitOptionsEnforceOnKey enforceOnKey) {
             this.enforceOnKey = Output.ofNullable(enforceOnKey);
             return this;
         }
-
         public Builder enforceOnKeyName(@Nullable Output<String> enforceOnKeyName) {
             this.enforceOnKeyName = enforceOnKeyName;
             return this;
         }
-
         public Builder enforceOnKeyName(@Nullable String enforceOnKeyName) {
             this.enforceOnKeyName = Output.ofNullable(enforceOnKeyName);
             return this;
         }
-
         public Builder exceedAction(@Nullable Output<String> exceedAction) {
             this.exceedAction = exceedAction;
             return this;
         }
-
         public Builder exceedAction(@Nullable String exceedAction) {
             this.exceedAction = Output.ofNullable(exceedAction);
             return this;
         }
-
         public Builder exceedRedirectOptions(@Nullable Output<SecurityPolicyRuleRedirectOptionsArgs> exceedRedirectOptions) {
             this.exceedRedirectOptions = exceedRedirectOptions;
             return this;
         }
-
         public Builder exceedRedirectOptions(@Nullable SecurityPolicyRuleRedirectOptionsArgs exceedRedirectOptions) {
             this.exceedRedirectOptions = Output.ofNullable(exceedRedirectOptions);
             return this;
         }
-
         public Builder rateLimitThreshold(@Nullable Output<SecurityPolicyRuleRateLimitOptionsThresholdArgs> rateLimitThreshold) {
             this.rateLimitThreshold = rateLimitThreshold;
             return this;
         }
-
         public Builder rateLimitThreshold(@Nullable SecurityPolicyRuleRateLimitOptionsThresholdArgs rateLimitThreshold) {
             this.rateLimitThreshold = Output.ofNullable(rateLimitThreshold);
             return this;
-        }
-        public SecurityPolicyRuleRateLimitOptionsArgs build() {
+        }        public SecurityPolicyRuleRateLimitOptionsArgs build() {
             return new SecurityPolicyRuleRateLimitOptionsArgs(banDurationSec, banThreshold, conformAction, enforceOnKey, enforceOnKeyName, exceedAction, exceedRedirectOptions, rateLimitThreshold);
         }
     }

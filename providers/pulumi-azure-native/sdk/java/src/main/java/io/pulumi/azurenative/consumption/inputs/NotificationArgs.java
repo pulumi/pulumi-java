@@ -181,82 +181,75 @@ public final class NotificationArgs extends io.pulumi.resources.ResourceArgs {
             this.contactEmails = Objects.requireNonNull(contactEmails);
             return this;
         }
-
         public Builder contactEmails(List<String> contactEmails) {
             this.contactEmails = Output.of(Objects.requireNonNull(contactEmails));
             return this;
         }
-
+        public Builder contactEmails(String... contactEmails) {
+            return contactEmails(List.of(contactEmails));
+        }
         public Builder contactGroups(@Nullable Output<List<String>> contactGroups) {
             this.contactGroups = contactGroups;
             return this;
         }
-
         public Builder contactGroups(@Nullable List<String> contactGroups) {
             this.contactGroups = Output.ofNullable(contactGroups);
             return this;
         }
-
+        public Builder contactGroups(String... contactGroups) {
+            return contactGroups(List.of(contactGroups));
+        }
         public Builder contactRoles(@Nullable Output<List<String>> contactRoles) {
             this.contactRoles = contactRoles;
             return this;
         }
-
         public Builder contactRoles(@Nullable List<String> contactRoles) {
             this.contactRoles = Output.ofNullable(contactRoles);
             return this;
         }
-
+        public Builder contactRoles(String... contactRoles) {
+            return contactRoles(List.of(contactRoles));
+        }
         public Builder enabled(Output<Boolean> enabled) {
             this.enabled = Objects.requireNonNull(enabled);
             return this;
         }
-
         public Builder enabled(Boolean enabled) {
             this.enabled = Output.of(Objects.requireNonNull(enabled));
             return this;
         }
-
         public Builder locale(@Nullable Output<Either<String,CultureCode>> locale) {
             this.locale = locale;
             return this;
         }
-
         public Builder locale(@Nullable Either<String,CultureCode> locale) {
             this.locale = Output.ofNullable(locale);
             return this;
         }
-
         public Builder operator(Output<Either<String,OperatorType>> operator) {
             this.operator = Objects.requireNonNull(operator);
             return this;
         }
-
         public Builder operator(Either<String,OperatorType> operator) {
             this.operator = Output.of(Objects.requireNonNull(operator));
             return this;
         }
-
         public Builder threshold(Output<Double> threshold) {
             this.threshold = Objects.requireNonNull(threshold);
             return this;
         }
-
         public Builder threshold(Double threshold) {
             this.threshold = Output.of(Objects.requireNonNull(threshold));
             return this;
         }
-
         public Builder thresholdType(@Nullable Output<Either<String,ThresholdType>> thresholdType) {
             this.thresholdType = thresholdType;
             return this;
         }
-
         public Builder thresholdType(@Nullable Either<String,ThresholdType> thresholdType) {
             this.thresholdType = Output.ofNullable(thresholdType);
             return this;
-        }
-        public NotificationArgs build() {
+        }        public NotificationArgs build() {
             return new NotificationArgs(contactEmails, contactGroups, contactRoles, enabled, locale, operator, threshold, thresholdType);
         }
     }

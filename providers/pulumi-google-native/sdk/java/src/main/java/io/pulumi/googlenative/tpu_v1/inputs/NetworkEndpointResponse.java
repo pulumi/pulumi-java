@@ -77,12 +77,10 @@ public final class NetworkEndpointResponse extends io.pulumi.resources.InvokeArg
             this.ipAddress = Objects.requireNonNull(ipAddress);
             return this;
         }
-
         public Builder port(Integer port) {
             this.port = Objects.requireNonNull(port);
             return this;
-        }
-        public NetworkEndpointResponse build() {
+        }        public NetworkEndpointResponse build() {
             return new NetworkEndpointResponse(ipAddress, port);
         }
     }

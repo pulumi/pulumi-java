@@ -124,27 +124,22 @@ public final class GKEResponse extends io.pulumi.resources.InvokeArgs {
             this.cluster = Objects.requireNonNull(cluster);
             return this;
         }
-
         public Builder location(String location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
-
         public Builder namespace(String namespace) {
             this.namespace = Objects.requireNonNull(namespace);
             return this;
         }
-
         public Builder path(String path) {
             this.path = Objects.requireNonNull(path);
             return this;
         }
-
         public Builder service(String service) {
             this.service = Objects.requireNonNull(service);
             return this;
-        }
-        public GKEResponse build() {
+        }        public GKEResponse build() {
             return new GKEResponse(cluster, location, namespace, path, service);
         }
     }

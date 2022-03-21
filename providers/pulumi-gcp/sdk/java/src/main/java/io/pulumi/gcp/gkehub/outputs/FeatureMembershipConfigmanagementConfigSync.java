@@ -74,12 +74,10 @@ public final class FeatureMembershipConfigmanagementConfigSync {
             this.git = git;
             return this;
         }
-
         public Builder sourceFormat(@Nullable String sourceFormat) {
             this.sourceFormat = sourceFormat;
             return this;
-        }
-        public FeatureMembershipConfigmanagementConfigSync build() {
+        }        public FeatureMembershipConfigmanagementConfigSync build() {
             return new FeatureMembershipConfigmanagementConfigSync(git, sourceFormat);
         }
     }

@@ -93,32 +93,26 @@ public final class ApplicationGatewayFirewallExclusionArgs extends io.pulumi.res
             this.matchVariable = Objects.requireNonNull(matchVariable);
             return this;
         }
-
         public Builder matchVariable(String matchVariable) {
             this.matchVariable = Output.of(Objects.requireNonNull(matchVariable));
             return this;
         }
-
         public Builder selector(Output<String> selector) {
             this.selector = Objects.requireNonNull(selector);
             return this;
         }
-
         public Builder selector(String selector) {
             this.selector = Output.of(Objects.requireNonNull(selector));
             return this;
         }
-
         public Builder selectorMatchOperator(Output<String> selectorMatchOperator) {
             this.selectorMatchOperator = Objects.requireNonNull(selectorMatchOperator);
             return this;
         }
-
         public Builder selectorMatchOperator(String selectorMatchOperator) {
             this.selectorMatchOperator = Output.of(Objects.requireNonNull(selectorMatchOperator));
             return this;
-        }
-        public ApplicationGatewayFirewallExclusionArgs build() {
+        }        public ApplicationGatewayFirewallExclusionArgs build() {
             return new ApplicationGatewayFirewallExclusionArgs(matchVariable, selector, selectorMatchOperator);
         }
     }

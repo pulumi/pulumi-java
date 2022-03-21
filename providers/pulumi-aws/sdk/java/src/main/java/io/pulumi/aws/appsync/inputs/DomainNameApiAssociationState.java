@@ -74,22 +74,18 @@ public final class DomainNameApiAssociationState extends io.pulumi.resources.Res
             this.apiId = apiId;
             return this;
         }
-
         public Builder apiId(@Nullable String apiId) {
             this.apiId = Output.ofNullable(apiId);
             return this;
         }
-
         public Builder domainName(@Nullable Output<String> domainName) {
             this.domainName = domainName;
             return this;
         }
-
         public Builder domainName(@Nullable String domainName) {
             this.domainName = Output.ofNullable(domainName);
             return this;
-        }
-        public DomainNameApiAssociationState build() {
+        }        public DomainNameApiAssociationState build() {
             return new DomainNameApiAssociationState(apiId, domainName);
         }
     }

@@ -88,12 +88,10 @@ public final class PreventionJobTriggerInspectJobActionSaveFindingsOutputConfig 
             this.outputSchema = outputSchema;
             return this;
         }
-
         public Builder table(PreventionJobTriggerInspectJobActionSaveFindingsOutputConfigTable table) {
             this.table = Objects.requireNonNull(table);
             return this;
-        }
-        public PreventionJobTriggerInspectJobActionSaveFindingsOutputConfig build() {
+        }        public PreventionJobTriggerInspectJobActionSaveFindingsOutputConfig build() {
             return new PreventionJobTriggerInspectJobActionSaveFindingsOutputConfig(outputSchema, table);
         }
     }

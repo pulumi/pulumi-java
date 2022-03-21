@@ -74,12 +74,10 @@ public final class GetActivityArgs extends io.pulumi.resources.InvokeArgs {
             this.arn = arn;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = name;
             return this;
-        }
-        public GetActivityArgs build() {
+        }        public GetActivityArgs build() {
             return new GetActivityArgs(arn, name);
         }
     }

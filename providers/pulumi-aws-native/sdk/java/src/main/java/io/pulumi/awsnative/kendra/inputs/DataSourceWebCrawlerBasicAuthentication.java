@@ -77,17 +77,14 @@ public final class DataSourceWebCrawlerBasicAuthentication extends io.pulumi.res
             this.credentials = Objects.requireNonNull(credentials);
             return this;
         }
-
         public Builder host(String host) {
             this.host = Objects.requireNonNull(host);
             return this;
         }
-
         public Builder port(Integer port) {
             this.port = Objects.requireNonNull(port);
             return this;
-        }
-        public DataSourceWebCrawlerBasicAuthentication build() {
+        }        public DataSourceWebCrawlerBasicAuthentication build() {
             return new DataSourceWebCrawlerBasicAuthentication(credentials, host, port);
         }
     }

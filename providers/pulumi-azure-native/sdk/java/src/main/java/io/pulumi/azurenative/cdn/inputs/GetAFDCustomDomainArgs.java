@@ -88,17 +88,14 @@ public final class GetAFDCustomDomainArgs extends io.pulumi.resources.InvokeArgs
             this.customDomainName = Objects.requireNonNull(customDomainName);
             return this;
         }
-
         public Builder profileName(String profileName) {
             this.profileName = Objects.requireNonNull(profileName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
-        }
-        public GetAFDCustomDomainArgs build() {
+        }        public GetAFDCustomDomainArgs build() {
             return new GetAFDCustomDomainArgs(customDomainName, profileName, resourceGroupName);
         }
     }

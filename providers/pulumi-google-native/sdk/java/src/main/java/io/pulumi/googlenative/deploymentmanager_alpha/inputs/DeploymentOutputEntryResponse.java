@@ -76,12 +76,10 @@ public final class DeploymentOutputEntryResponse extends io.pulumi.resources.Inv
             this.key = Objects.requireNonNull(key);
             return this;
         }
-
         public Builder value(String value) {
             this.value = Objects.requireNonNull(value);
             return this;
-        }
-        public DeploymentOutputEntryResponse build() {
+        }        public DeploymentOutputEntryResponse build() {
             return new DeploymentOutputEntryResponse(key, value);
         }
     }

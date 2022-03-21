@@ -96,32 +96,26 @@ public final class GitRepoVolumeSourceArgs extends io.pulumi.resources.ResourceA
             this.directory = directory;
             return this;
         }
-
         public Builder directory(@Nullable String directory) {
             this.directory = Output.ofNullable(directory);
             return this;
         }
-
         public Builder repository(Output<String> repository) {
             this.repository = Objects.requireNonNull(repository);
             return this;
         }
-
         public Builder repository(String repository) {
             this.repository = Output.of(Objects.requireNonNull(repository));
             return this;
         }
-
         public Builder revision(@Nullable Output<String> revision) {
             this.revision = revision;
             return this;
         }
-
         public Builder revision(@Nullable String revision) {
             this.revision = Output.ofNullable(revision);
             return this;
-        }
-        public GitRepoVolumeSourceArgs build() {
+        }        public GitRepoVolumeSourceArgs build() {
             return new GitRepoVolumeSourceArgs(directory, repository, revision);
         }
     }

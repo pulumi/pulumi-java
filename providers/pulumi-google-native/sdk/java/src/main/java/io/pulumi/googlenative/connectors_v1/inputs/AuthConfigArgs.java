@@ -131,52 +131,45 @@ public final class AuthConfigArgs extends io.pulumi.resources.ResourceArgs {
             this.additionalVariables = additionalVariables;
             return this;
         }
-
         public Builder additionalVariables(@Nullable List<ConfigVariableArgs> additionalVariables) {
             this.additionalVariables = Output.ofNullable(additionalVariables);
             return this;
         }
-
+        public Builder additionalVariables(ConfigVariableArgs... additionalVariables) {
+            return additionalVariables(List.of(additionalVariables));
+        }
         public Builder authType(@Nullable Output<AuthConfigAuthType> authType) {
             this.authType = authType;
             return this;
         }
-
         public Builder authType(@Nullable AuthConfigAuthType authType) {
             this.authType = Output.ofNullable(authType);
             return this;
         }
-
         public Builder oauth2ClientCredentials(@Nullable Output<Oauth2ClientCredentialsArgs> oauth2ClientCredentials) {
             this.oauth2ClientCredentials = oauth2ClientCredentials;
             return this;
         }
-
         public Builder oauth2ClientCredentials(@Nullable Oauth2ClientCredentialsArgs oauth2ClientCredentials) {
             this.oauth2ClientCredentials = Output.ofNullable(oauth2ClientCredentials);
             return this;
         }
-
         public Builder oauth2JwtBearer(@Nullable Output<Oauth2JwtBearerArgs> oauth2JwtBearer) {
             this.oauth2JwtBearer = oauth2JwtBearer;
             return this;
         }
-
         public Builder oauth2JwtBearer(@Nullable Oauth2JwtBearerArgs oauth2JwtBearer) {
             this.oauth2JwtBearer = Output.ofNullable(oauth2JwtBearer);
             return this;
         }
-
         public Builder userPassword(@Nullable Output<UserPasswordArgs> userPassword) {
             this.userPassword = userPassword;
             return this;
         }
-
         public Builder userPassword(@Nullable UserPasswordArgs userPassword) {
             this.userPassword = Output.ofNullable(userPassword);
             return this;
-        }
-        public AuthConfigArgs build() {
+        }        public AuthConfigArgs build() {
             return new AuthConfigArgs(additionalVariables, authType, oauth2ClientCredentials, oauth2JwtBearer, userPassword);
         }
     }

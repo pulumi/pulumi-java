@@ -146,72 +146,64 @@ public final class TrialArgs extends io.pulumi.resources.ResourceArgs {
             this.finalMeasurement = finalMeasurement;
             return this;
         }
-
         public Builder finalMeasurement(@Nullable GoogleCloudMlV1__MeasurementArgs finalMeasurement) {
             this.finalMeasurement = Output.ofNullable(finalMeasurement);
             return this;
         }
-
         public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder measurements(@Nullable Output<List<GoogleCloudMlV1__MeasurementArgs>> measurements) {
             this.measurements = measurements;
             return this;
         }
-
         public Builder measurements(@Nullable List<GoogleCloudMlV1__MeasurementArgs> measurements) {
             this.measurements = Output.ofNullable(measurements);
             return this;
         }
-
+        public Builder measurements(GoogleCloudMlV1__MeasurementArgs... measurements) {
+            return measurements(List.of(measurements));
+        }
         public Builder parameters(@Nullable Output<List<GoogleCloudMlV1_Trial_ParameterArgs>> parameters) {
             this.parameters = parameters;
             return this;
         }
-
         public Builder parameters(@Nullable List<GoogleCloudMlV1_Trial_ParameterArgs> parameters) {
             this.parameters = Output.ofNullable(parameters);
             return this;
         }
-
+        public Builder parameters(GoogleCloudMlV1_Trial_ParameterArgs... parameters) {
+            return parameters(List.of(parameters));
+        }
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
         }
-
         public Builder state(@Nullable Output<TrialState> state) {
             this.state = state;
             return this;
         }
-
         public Builder state(@Nullable TrialState state) {
             this.state = Output.ofNullable(state);
             return this;
         }
-
         public Builder studyId(Output<String> studyId) {
             this.studyId = Objects.requireNonNull(studyId);
             return this;
         }
-
         public Builder studyId(String studyId) {
             this.studyId = Output.of(Objects.requireNonNull(studyId));
             return this;
-        }
-        public TrialArgs build() {
+        }        public TrialArgs build() {
             return new TrialArgs(finalMeasurement, location, measurements, parameters, project, state, studyId);
         }
     }

@@ -72,12 +72,13 @@ public final class RecipeStep extends io.pulumi.resources.InvokeArgs {
             this.action = Objects.requireNonNull(action);
             return this;
         }
-
         public Builder conditionExpressions(@Nullable List<RecipeConditionExpression> conditionExpressions) {
             this.conditionExpressions = conditionExpressions;
             return this;
         }
-        public RecipeStep build() {
+        public Builder conditionExpressions(RecipeConditionExpression... conditionExpressions) {
+            return conditionExpressions(List.of(conditionExpressions));
+        }        public RecipeStep build() {
             return new RecipeStep(action, conditionExpressions);
         }
     }

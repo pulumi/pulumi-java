@@ -121,27 +121,25 @@ public final class GetVpcIamPoolArgs extends io.pulumi.resources.InvokeArgs {
             this.allocationResourceTags = allocationResourceTags;
             return this;
         }
-
         public Builder filters(@Nullable List<GetVpcIamPoolFilter> filters) {
             this.filters = filters;
             return this;
         }
-
+        public Builder filters(GetVpcIamPoolFilter... filters) {
+            return filters(List.of(filters));
+        }
         public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
-
         public Builder ipamPoolId(@Nullable String ipamPoolId) {
             this.ipamPoolId = ipamPoolId;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
-        }
-        public GetVpcIamPoolArgs build() {
+        }        public GetVpcIamPoolArgs build() {
             return new GetVpcIamPoolArgs(allocationResourceTags, filters, id, ipamPoolId, tags);
         }
     }

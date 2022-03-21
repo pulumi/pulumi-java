@@ -96,17 +96,14 @@ public final class OrcWriteSettingsResponse extends io.pulumi.resources.InvokeAr
             this.fileNamePrefix = fileNamePrefix;
             return this;
         }
-
         public Builder maxRowsPerFile(@Nullable Object maxRowsPerFile) {
             this.maxRowsPerFile = maxRowsPerFile;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public OrcWriteSettingsResponse build() {
+        }        public OrcWriteSettingsResponse build() {
             return new OrcWriteSettingsResponse(fileNamePrefix, maxRowsPerFile, type);
         }
     }

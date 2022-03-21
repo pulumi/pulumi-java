@@ -90,32 +90,26 @@ public final class InstanceTemplateShieldedInstanceConfigArgs extends io.pulumi.
             this.enableIntegrityMonitoring = enableIntegrityMonitoring;
             return this;
         }
-
         public Builder enableIntegrityMonitoring(@Nullable Boolean enableIntegrityMonitoring) {
             this.enableIntegrityMonitoring = Output.ofNullable(enableIntegrityMonitoring);
             return this;
         }
-
         public Builder enableSecureBoot(@Nullable Output<Boolean> enableSecureBoot) {
             this.enableSecureBoot = enableSecureBoot;
             return this;
         }
-
         public Builder enableSecureBoot(@Nullable Boolean enableSecureBoot) {
             this.enableSecureBoot = Output.ofNullable(enableSecureBoot);
             return this;
         }
-
         public Builder enableVtpm(@Nullable Output<Boolean> enableVtpm) {
             this.enableVtpm = enableVtpm;
             return this;
         }
-
         public Builder enableVtpm(@Nullable Boolean enableVtpm) {
             this.enableVtpm = Output.ofNullable(enableVtpm);
             return this;
-        }
-        public InstanceTemplateShieldedInstanceConfigArgs build() {
+        }        public InstanceTemplateShieldedInstanceConfigArgs build() {
             return new InstanceTemplateShieldedInstanceConfigArgs(enableIntegrityMonitoring, enableSecureBoot, enableVtpm);
         }
     }

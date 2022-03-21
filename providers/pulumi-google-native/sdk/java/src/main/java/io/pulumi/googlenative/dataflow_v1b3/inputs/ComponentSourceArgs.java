@@ -94,32 +94,26 @@ public final class ComponentSourceArgs extends io.pulumi.resources.ResourceArgs 
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder originalTransformOrCollection(@Nullable Output<String> originalTransformOrCollection) {
             this.originalTransformOrCollection = originalTransformOrCollection;
             return this;
         }
-
         public Builder originalTransformOrCollection(@Nullable String originalTransformOrCollection) {
             this.originalTransformOrCollection = Output.ofNullable(originalTransformOrCollection);
             return this;
         }
-
         public Builder userName(@Nullable Output<String> userName) {
             this.userName = userName;
             return this;
         }
-
         public Builder userName(@Nullable String userName) {
             this.userName = Output.ofNullable(userName);
             return this;
-        }
-        public ComponentSourceArgs build() {
+        }        public ComponentSourceArgs build() {
             return new ComponentSourceArgs(name, originalTransformOrCollection, userName);
         }
     }

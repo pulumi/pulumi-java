@@ -54,12 +54,16 @@ public final class ModelVpcConfig {
             this.securityGroupIds = Objects.requireNonNull(securityGroupIds);
             return this;
         }
-
+        public Builder securityGroupIds(String... securityGroupIds) {
+            return securityGroupIds(List.of(securityGroupIds));
+        }
         public Builder subnets(List<String> subnets) {
             this.subnets = Objects.requireNonNull(subnets);
             return this;
         }
-        public ModelVpcConfig build() {
+        public Builder subnets(String... subnets) {
+            return subnets(List.of(subnets));
+        }        public ModelVpcConfig build() {
             return new ModelVpcConfig(securityGroupIds, subnets);
         }
     }

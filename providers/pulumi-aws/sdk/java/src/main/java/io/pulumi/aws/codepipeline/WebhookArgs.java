@@ -158,72 +158,61 @@ public final class WebhookArgs extends io.pulumi.resources.ResourceArgs {
             this.authentication = Objects.requireNonNull(authentication);
             return this;
         }
-
         public Builder authentication(String authentication) {
             this.authentication = Output.of(Objects.requireNonNull(authentication));
             return this;
         }
-
         public Builder authenticationConfiguration(@Nullable Output<WebhookAuthenticationConfigurationArgs> authenticationConfiguration) {
             this.authenticationConfiguration = authenticationConfiguration;
             return this;
         }
-
         public Builder authenticationConfiguration(@Nullable WebhookAuthenticationConfigurationArgs authenticationConfiguration) {
             this.authenticationConfiguration = Output.ofNullable(authenticationConfiguration);
             return this;
         }
-
         public Builder filters(Output<List<WebhookFilterArgs>> filters) {
             this.filters = Objects.requireNonNull(filters);
             return this;
         }
-
         public Builder filters(List<WebhookFilterArgs> filters) {
             this.filters = Output.of(Objects.requireNonNull(filters));
             return this;
         }
-
+        public Builder filters(WebhookFilterArgs... filters) {
+            return filters(List.of(filters));
+        }
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
         public Builder targetAction(Output<String> targetAction) {
             this.targetAction = Objects.requireNonNull(targetAction);
             return this;
         }
-
         public Builder targetAction(String targetAction) {
             this.targetAction = Output.of(Objects.requireNonNull(targetAction));
             return this;
         }
-
         public Builder targetPipeline(Output<String> targetPipeline) {
             this.targetPipeline = Objects.requireNonNull(targetPipeline);
             return this;
         }
-
         public Builder targetPipeline(String targetPipeline) {
             this.targetPipeline = Output.of(Objects.requireNonNull(targetPipeline));
             return this;
-        }
-        public WebhookArgs build() {
+        }        public WebhookArgs build() {
             return new WebhookArgs(authentication, authenticationConfiguration, filters, name, tags, targetAction, targetPipeline);
         }
     }

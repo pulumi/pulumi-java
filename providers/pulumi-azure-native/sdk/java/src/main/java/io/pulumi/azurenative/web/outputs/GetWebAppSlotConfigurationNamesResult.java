@@ -152,37 +152,39 @@ public final class GetWebAppSlotConfigurationNamesResult {
             this.appSettingNames = appSettingNames;
             return this;
         }
-
+        public Builder appSettingNames(String... appSettingNames) {
+            return appSettingNames(List.of(appSettingNames));
+        }
         public Builder azureStorageConfigNames(@Nullable List<String> azureStorageConfigNames) {
             this.azureStorageConfigNames = azureStorageConfigNames;
             return this;
         }
-
+        public Builder azureStorageConfigNames(String... azureStorageConfigNames) {
+            return azureStorageConfigNames(List.of(azureStorageConfigNames));
+        }
         public Builder connectionStringNames(@Nullable List<String> connectionStringNames) {
             this.connectionStringNames = connectionStringNames;
             return this;
         }
-
+        public Builder connectionStringNames(String... connectionStringNames) {
+            return connectionStringNames(List.of(connectionStringNames));
+        }
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder kind(@Nullable String kind) {
             this.kind = kind;
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public GetWebAppSlotConfigurationNamesResult build() {
+        }        public GetWebAppSlotConfigurationNamesResult build() {
             return new GetWebAppSlotConfigurationNamesResult(appSettingNames, azureStorageConfigNames, connectionStringNames, id, kind, name, type);
         }
     }

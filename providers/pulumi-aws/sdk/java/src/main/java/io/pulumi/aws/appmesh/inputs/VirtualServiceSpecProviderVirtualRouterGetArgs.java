@@ -56,12 +56,10 @@ public final class VirtualServiceSpecProviderVirtualRouterGetArgs extends io.pul
             this.virtualRouterName = Objects.requireNonNull(virtualRouterName);
             return this;
         }
-
         public Builder virtualRouterName(String virtualRouterName) {
             this.virtualRouterName = Output.of(Objects.requireNonNull(virtualRouterName));
             return this;
-        }
-        public VirtualServiceSpecProviderVirtualRouterGetArgs build() {
+        }        public VirtualServiceSpecProviderVirtualRouterGetArgs build() {
             return new VirtualServiceSpecProviderVirtualRouterGetArgs(virtualRouterName);
         }
     }

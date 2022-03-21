@@ -78,17 +78,14 @@ public final class GetFutureReservationArgs extends io.pulumi.resources.InvokeAr
             this.futureReservation = Objects.requireNonNull(futureReservation);
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = project;
             return this;
         }
-
         public Builder zone(String zone) {
             this.zone = Objects.requireNonNull(zone);
             return this;
-        }
-        public GetFutureReservationArgs build() {
+        }        public GetFutureReservationArgs build() {
             return new GetFutureReservationArgs(futureReservation, project, zone);
         }
     }

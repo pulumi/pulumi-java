@@ -50,8 +50,7 @@ public final class SpotFleetClassicLoadBalancer extends io.pulumi.resources.Invo
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
-        }
-        public SpotFleetClassicLoadBalancer build() {
+        }        public SpotFleetClassicLoadBalancer build() {
             return new SpotFleetClassicLoadBalancer(name);
         }
     }

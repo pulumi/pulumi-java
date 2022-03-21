@@ -81,22 +81,18 @@ public final class FirewallPolicyRuleConditionApplicationProtocolArgs extends io
             this.port = port;
             return this;
         }
-
         public Builder port(@Nullable Integer port) {
             this.port = Output.ofNullable(port);
             return this;
         }
-
         public Builder protocolType(@Nullable Output<Either<String,FirewallPolicyRuleConditionApplicationProtocolType>> protocolType) {
             this.protocolType = protocolType;
             return this;
         }
-
         public Builder protocolType(@Nullable Either<String,FirewallPolicyRuleConditionApplicationProtocolType> protocolType) {
             this.protocolType = Output.ofNullable(protocolType);
             return this;
-        }
-        public FirewallPolicyRuleConditionApplicationProtocolArgs build() {
+        }        public FirewallPolicyRuleConditionApplicationProtocolArgs build() {
             return new FirewallPolicyRuleConditionApplicationProtocolArgs(port, protocolType);
         }
     }

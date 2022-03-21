@@ -126,52 +126,48 @@ public final class FlowTaskArgs extends io.pulumi.resources.ResourceArgs {
             this.connectorOperator = connectorOperator;
             return this;
         }
-
         public Builder connectorOperator(@Nullable FlowConnectorOperatorArgs connectorOperator) {
             this.connectorOperator = Output.ofNullable(connectorOperator);
             return this;
         }
-
         public Builder destinationField(@Nullable Output<String> destinationField) {
             this.destinationField = destinationField;
             return this;
         }
-
         public Builder destinationField(@Nullable String destinationField) {
             this.destinationField = Output.ofNullable(destinationField);
             return this;
         }
-
         public Builder sourceFields(Output<List<String>> sourceFields) {
             this.sourceFields = Objects.requireNonNull(sourceFields);
             return this;
         }
-
         public Builder sourceFields(List<String> sourceFields) {
             this.sourceFields = Output.of(Objects.requireNonNull(sourceFields));
             return this;
         }
-
+        public Builder sourceFields(String... sourceFields) {
+            return sourceFields(List.of(sourceFields));
+        }
         public Builder taskProperties(@Nullable Output<List<FlowTaskPropertiesObjectArgs>> taskProperties) {
             this.taskProperties = taskProperties;
             return this;
         }
-
         public Builder taskProperties(@Nullable List<FlowTaskPropertiesObjectArgs> taskProperties) {
             this.taskProperties = Output.ofNullable(taskProperties);
             return this;
         }
-
+        public Builder taskProperties(FlowTaskPropertiesObjectArgs... taskProperties) {
+            return taskProperties(List.of(taskProperties));
+        }
         public Builder taskType(Output<FlowTaskType> taskType) {
             this.taskType = Objects.requireNonNull(taskType);
             return this;
         }
-
         public Builder taskType(FlowTaskType taskType) {
             this.taskType = Output.of(Objects.requireNonNull(taskType));
             return this;
-        }
-        public FlowTaskArgs build() {
+        }        public FlowTaskArgs build() {
             return new FlowTaskArgs(connectorOperator, destinationField, sourceFields, taskProperties, taskType);
         }
     }

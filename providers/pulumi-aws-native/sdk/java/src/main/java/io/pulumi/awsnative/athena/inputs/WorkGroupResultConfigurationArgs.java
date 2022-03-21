@@ -71,22 +71,18 @@ public final class WorkGroupResultConfigurationArgs extends io.pulumi.resources.
             this.encryptionConfiguration = encryptionConfiguration;
             return this;
         }
-
         public Builder encryptionConfiguration(@Nullable WorkGroupEncryptionConfigurationArgs encryptionConfiguration) {
             this.encryptionConfiguration = Output.ofNullable(encryptionConfiguration);
             return this;
         }
-
         public Builder outputLocation(@Nullable Output<String> outputLocation) {
             this.outputLocation = outputLocation;
             return this;
         }
-
         public Builder outputLocation(@Nullable String outputLocation) {
             this.outputLocation = Output.ofNullable(outputLocation);
             return this;
-        }
-        public WorkGroupResultConfigurationArgs build() {
+        }        public WorkGroupResultConfigurationArgs build() {
             return new WorkGroupResultConfigurationArgs(encryptionConfiguration, outputLocation);
         }
     }

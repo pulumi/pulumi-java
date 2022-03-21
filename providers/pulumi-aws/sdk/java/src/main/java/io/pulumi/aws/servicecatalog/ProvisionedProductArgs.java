@@ -271,142 +271,120 @@ public final class ProvisionedProductArgs extends io.pulumi.resources.ResourceAr
             this.acceptLanguage = acceptLanguage;
             return this;
         }
-
         public Builder acceptLanguage(@Nullable String acceptLanguage) {
             this.acceptLanguage = Output.ofNullable(acceptLanguage);
             return this;
         }
-
         public Builder ignoreErrors(@Nullable Output<Boolean> ignoreErrors) {
             this.ignoreErrors = ignoreErrors;
             return this;
         }
-
         public Builder ignoreErrors(@Nullable Boolean ignoreErrors) {
             this.ignoreErrors = Output.ofNullable(ignoreErrors);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder notificationArns(@Nullable Output<List<String>> notificationArns) {
             this.notificationArns = notificationArns;
             return this;
         }
-
         public Builder notificationArns(@Nullable List<String> notificationArns) {
             this.notificationArns = Output.ofNullable(notificationArns);
             return this;
         }
-
+        public Builder notificationArns(String... notificationArns) {
+            return notificationArns(List.of(notificationArns));
+        }
         public Builder pathId(@Nullable Output<String> pathId) {
             this.pathId = pathId;
             return this;
         }
-
         public Builder pathId(@Nullable String pathId) {
             this.pathId = Output.ofNullable(pathId);
             return this;
         }
-
         public Builder pathName(@Nullable Output<String> pathName) {
             this.pathName = pathName;
             return this;
         }
-
         public Builder pathName(@Nullable String pathName) {
             this.pathName = Output.ofNullable(pathName);
             return this;
         }
-
         public Builder productId(@Nullable Output<String> productId) {
             this.productId = productId;
             return this;
         }
-
         public Builder productId(@Nullable String productId) {
             this.productId = Output.ofNullable(productId);
             return this;
         }
-
         public Builder productName(@Nullable Output<String> productName) {
             this.productName = productName;
             return this;
         }
-
         public Builder productName(@Nullable String productName) {
             this.productName = Output.ofNullable(productName);
             return this;
         }
-
         public Builder provisioningArtifactId(@Nullable Output<String> provisioningArtifactId) {
             this.provisioningArtifactId = provisioningArtifactId;
             return this;
         }
-
         public Builder provisioningArtifactId(@Nullable String provisioningArtifactId) {
             this.provisioningArtifactId = Output.ofNullable(provisioningArtifactId);
             return this;
         }
-
         public Builder provisioningArtifactName(@Nullable Output<String> provisioningArtifactName) {
             this.provisioningArtifactName = provisioningArtifactName;
             return this;
         }
-
         public Builder provisioningArtifactName(@Nullable String provisioningArtifactName) {
             this.provisioningArtifactName = Output.ofNullable(provisioningArtifactName);
             return this;
         }
-
         public Builder provisioningParameters(@Nullable Output<List<ProvisionedProductProvisioningParameterArgs>> provisioningParameters) {
             this.provisioningParameters = provisioningParameters;
             return this;
         }
-
         public Builder provisioningParameters(@Nullable List<ProvisionedProductProvisioningParameterArgs> provisioningParameters) {
             this.provisioningParameters = Output.ofNullable(provisioningParameters);
             return this;
         }
-
+        public Builder provisioningParameters(ProvisionedProductProvisioningParameterArgs... provisioningParameters) {
+            return provisioningParameters(List.of(provisioningParameters));
+        }
         public Builder retainPhysicalResources(@Nullable Output<Boolean> retainPhysicalResources) {
             this.retainPhysicalResources = retainPhysicalResources;
             return this;
         }
-
         public Builder retainPhysicalResources(@Nullable Boolean retainPhysicalResources) {
             this.retainPhysicalResources = Output.ofNullable(retainPhysicalResources);
             return this;
         }
-
         public Builder stackSetProvisioningPreferences(@Nullable Output<ProvisionedProductStackSetProvisioningPreferencesArgs> stackSetProvisioningPreferences) {
             this.stackSetProvisioningPreferences = stackSetProvisioningPreferences;
             return this;
         }
-
         public Builder stackSetProvisioningPreferences(@Nullable ProvisionedProductStackSetProvisioningPreferencesArgs stackSetProvisioningPreferences) {
             this.stackSetProvisioningPreferences = Output.ofNullable(stackSetProvisioningPreferences);
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
-        }
-        public ProvisionedProductArgs build() {
+        }        public ProvisionedProductArgs build() {
             return new ProvisionedProductArgs(acceptLanguage, ignoreErrors, name, notificationArns, pathId, pathName, productId, productName, provisioningArtifactId, provisioningArtifactName, provisioningParameters, retainPhysicalResources, stackSetProvisioningPreferences, tags);
         }
     }

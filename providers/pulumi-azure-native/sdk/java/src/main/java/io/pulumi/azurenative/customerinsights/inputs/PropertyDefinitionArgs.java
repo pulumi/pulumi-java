@@ -290,152 +290,125 @@ public final class PropertyDefinitionArgs extends io.pulumi.resources.ResourceAr
             this.arrayValueSeparator = arrayValueSeparator;
             return this;
         }
-
         public Builder arrayValueSeparator(@Nullable String arrayValueSeparator) {
             this.arrayValueSeparator = Output.ofNullable(arrayValueSeparator);
             return this;
         }
-
         public Builder enumValidValues(@Nullable Output<List<ProfileEnumValidValuesFormatArgs>> enumValidValues) {
             this.enumValidValues = enumValidValues;
             return this;
         }
-
         public Builder enumValidValues(@Nullable List<ProfileEnumValidValuesFormatArgs> enumValidValues) {
             this.enumValidValues = Output.ofNullable(enumValidValues);
             return this;
         }
-
+        public Builder enumValidValues(ProfileEnumValidValuesFormatArgs... enumValidValues) {
+            return enumValidValues(List.of(enumValidValues));
+        }
         public Builder fieldName(Output<String> fieldName) {
             this.fieldName = Objects.requireNonNull(fieldName);
             return this;
         }
-
         public Builder fieldName(String fieldName) {
             this.fieldName = Output.of(Objects.requireNonNull(fieldName));
             return this;
         }
-
         public Builder fieldType(Output<String> fieldType) {
             this.fieldType = Objects.requireNonNull(fieldType);
             return this;
         }
-
         public Builder fieldType(String fieldType) {
             this.fieldType = Output.of(Objects.requireNonNull(fieldType));
             return this;
         }
-
         public Builder isArray(@Nullable Output<Boolean> isArray) {
             this.isArray = isArray;
             return this;
         }
-
         public Builder isArray(@Nullable Boolean isArray) {
             this.isArray = Output.ofNullable(isArray);
             return this;
         }
-
         public Builder isAvailableInGraph(@Nullable Output<Boolean> isAvailableInGraph) {
             this.isAvailableInGraph = isAvailableInGraph;
             return this;
         }
-
         public Builder isAvailableInGraph(@Nullable Boolean isAvailableInGraph) {
             this.isAvailableInGraph = Output.ofNullable(isAvailableInGraph);
             return this;
         }
-
         public Builder isEnum(@Nullable Output<Boolean> isEnum) {
             this.isEnum = isEnum;
             return this;
         }
-
         public Builder isEnum(@Nullable Boolean isEnum) {
             this.isEnum = Output.ofNullable(isEnum);
             return this;
         }
-
         public Builder isFlagEnum(@Nullable Output<Boolean> isFlagEnum) {
             this.isFlagEnum = isFlagEnum;
             return this;
         }
-
         public Builder isFlagEnum(@Nullable Boolean isFlagEnum) {
             this.isFlagEnum = Output.ofNullable(isFlagEnum);
             return this;
         }
-
         public Builder isImage(@Nullable Output<Boolean> isImage) {
             this.isImage = isImage;
             return this;
         }
-
         public Builder isImage(@Nullable Boolean isImage) {
             this.isImage = Output.ofNullable(isImage);
             return this;
         }
-
         public Builder isLocalizedString(@Nullable Output<Boolean> isLocalizedString) {
             this.isLocalizedString = isLocalizedString;
             return this;
         }
-
         public Builder isLocalizedString(@Nullable Boolean isLocalizedString) {
             this.isLocalizedString = Output.ofNullable(isLocalizedString);
             return this;
         }
-
         public Builder isName(@Nullable Output<Boolean> isName) {
             this.isName = isName;
             return this;
         }
-
         public Builder isName(@Nullable Boolean isName) {
             this.isName = Output.ofNullable(isName);
             return this;
         }
-
         public Builder isRequired(@Nullable Output<Boolean> isRequired) {
             this.isRequired = isRequired;
             return this;
         }
-
         public Builder isRequired(@Nullable Boolean isRequired) {
             this.isRequired = Output.ofNullable(isRequired);
             return this;
         }
-
         public Builder maxLength(@Nullable Output<Integer> maxLength) {
             this.maxLength = maxLength;
             return this;
         }
-
         public Builder maxLength(@Nullable Integer maxLength) {
             this.maxLength = Output.ofNullable(maxLength);
             return this;
         }
-
         public Builder propertyId(@Nullable Output<String> propertyId) {
             this.propertyId = propertyId;
             return this;
         }
-
         public Builder propertyId(@Nullable String propertyId) {
             this.propertyId = Output.ofNullable(propertyId);
             return this;
         }
-
         public Builder schemaItemPropLink(@Nullable Output<String> schemaItemPropLink) {
             this.schemaItemPropLink = schemaItemPropLink;
             return this;
         }
-
         public Builder schemaItemPropLink(@Nullable String schemaItemPropLink) {
             this.schemaItemPropLink = Output.ofNullable(schemaItemPropLink);
             return this;
-        }
-        public PropertyDefinitionArgs build() {
+        }        public PropertyDefinitionArgs build() {
             return new PropertyDefinitionArgs(arrayValueSeparator, enumValidValues, fieldName, fieldType, isArray, isAvailableInGraph, isEnum, isFlagEnum, isImage, isLocalizedString, isName, isRequired, maxLength, propertyId, schemaItemPropLink);
         }
     }

@@ -72,12 +72,10 @@ public final class GetIotHubResourceArgs extends io.pulumi.resources.InvokeArgs 
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceName(String resourceName) {
             this.resourceName = Objects.requireNonNull(resourceName);
             return this;
-        }
-        public GetIotHubResourceArgs build() {
+        }        public GetIotHubResourceArgs build() {
             return new GetIotHubResourceArgs(resourceGroupName, resourceName);
         }
     }

@@ -90,17 +90,14 @@ public final class GetVirtualRouterArgs extends io.pulumi.resources.InvokeArgs {
             this.expand = expand;
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder virtualRouterName(String virtualRouterName) {
             this.virtualRouterName = Objects.requireNonNull(virtualRouterName);
             return this;
-        }
-        public GetVirtualRouterArgs build() {
+        }        public GetVirtualRouterArgs build() {
             return new GetVirtualRouterArgs(expand, resourceGroupName, virtualRouterName);
         }
     }

@@ -76,22 +76,21 @@ public final class RouteTableArgs extends io.pulumi.resources.ResourceArgs {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable List<RouteTableTagArgs> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
+        public Builder tags(RouteTableTagArgs... tags) {
+            return tags(List.of(tags));
+        }
         public Builder vpcId(Output<String> vpcId) {
             this.vpcId = Objects.requireNonNull(vpcId);
             return this;
         }
-
         public Builder vpcId(String vpcId) {
             this.vpcId = Output.of(Objects.requireNonNull(vpcId));
             return this;
-        }
-        public RouteTableArgs build() {
+        }        public RouteTableArgs build() {
             return new RouteTableArgs(tags, vpcId);
         }
     }

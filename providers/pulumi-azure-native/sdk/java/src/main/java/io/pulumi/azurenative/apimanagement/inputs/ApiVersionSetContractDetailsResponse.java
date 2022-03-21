@@ -142,32 +142,26 @@ public final class ApiVersionSetContractDetailsResponse extends io.pulumi.resour
             this.description = description;
             return this;
         }
-
         public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
-
         public Builder versionHeaderName(@Nullable String versionHeaderName) {
             this.versionHeaderName = versionHeaderName;
             return this;
         }
-
         public Builder versionQueryName(@Nullable String versionQueryName) {
             this.versionQueryName = versionQueryName;
             return this;
         }
-
         public Builder versioningScheme(@Nullable String versioningScheme) {
             this.versioningScheme = versioningScheme;
             return this;
-        }
-        public ApiVersionSetContractDetailsResponse build() {
+        }        public ApiVersionSetContractDetailsResponse build() {
             return new ApiVersionSetContractDetailsResponse(description, id, name, versionHeaderName, versionQueryName, versioningScheme);
         }
     }

@@ -121,27 +121,25 @@ public final class GoogleCloudDialogflowV2beta1FulfillmentResponse {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
-
         public Builder enabled(Boolean enabled) {
             this.enabled = Objects.requireNonNull(enabled);
             return this;
         }
-
         public Builder features(List<GoogleCloudDialogflowV2beta1FulfillmentFeatureResponse> features) {
             this.features = Objects.requireNonNull(features);
             return this;
         }
-
+        public Builder features(GoogleCloudDialogflowV2beta1FulfillmentFeatureResponse... features) {
+            return features(List.of(features));
+        }
         public Builder genericWebService(GoogleCloudDialogflowV2beta1FulfillmentGenericWebServiceResponse genericWebService) {
             this.genericWebService = Objects.requireNonNull(genericWebService);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
-        }
-        public GoogleCloudDialogflowV2beta1FulfillmentResponse build() {
+        }        public GoogleCloudDialogflowV2beta1FulfillmentResponse build() {
             return new GoogleCloudDialogflowV2beta1FulfillmentResponse(displayName, enabled, features, genericWebService, name);
         }
     }

@@ -170,77 +170,62 @@ public final class EnvironmentConfig {
             this.airflowUri = airflowUri;
             return this;
         }
-
         public Builder dagGcsPrefix(@Nullable String dagGcsPrefix) {
             this.dagGcsPrefix = dagGcsPrefix;
             return this;
         }
-
         public Builder databaseConfig(@Nullable EnvironmentConfigDatabaseConfig databaseConfig) {
             this.databaseConfig = databaseConfig;
             return this;
         }
-
         public Builder encryptionConfig(@Nullable EnvironmentConfigEncryptionConfig encryptionConfig) {
             this.encryptionConfig = encryptionConfig;
             return this;
         }
-
         public Builder environmentSize(@Nullable String environmentSize) {
             this.environmentSize = environmentSize;
             return this;
         }
-
         public Builder gkeCluster(@Nullable String gkeCluster) {
             this.gkeCluster = gkeCluster;
             return this;
         }
-
         public Builder maintenanceWindow(@Nullable EnvironmentConfigMaintenanceWindow maintenanceWindow) {
             this.maintenanceWindow = maintenanceWindow;
             return this;
         }
-
         public Builder masterAuthorizedNetworksConfig(@Nullable EnvironmentConfigMasterAuthorizedNetworksConfig masterAuthorizedNetworksConfig) {
             this.masterAuthorizedNetworksConfig = masterAuthorizedNetworksConfig;
             return this;
         }
-
         public Builder nodeConfig(@Nullable EnvironmentConfigNodeConfig nodeConfig) {
             this.nodeConfig = nodeConfig;
             return this;
         }
-
         public Builder nodeCount(@Nullable Integer nodeCount) {
             this.nodeCount = nodeCount;
             return this;
         }
-
         public Builder privateEnvironmentConfig(@Nullable EnvironmentConfigPrivateEnvironmentConfig privateEnvironmentConfig) {
             this.privateEnvironmentConfig = privateEnvironmentConfig;
             return this;
         }
-
         public Builder softwareConfig(@Nullable EnvironmentConfigSoftwareConfig softwareConfig) {
             this.softwareConfig = softwareConfig;
             return this;
         }
-
         public Builder webServerConfig(@Nullable EnvironmentConfigWebServerConfig webServerConfig) {
             this.webServerConfig = webServerConfig;
             return this;
         }
-
         public Builder webServerNetworkAccessControl(@Nullable EnvironmentConfigWebServerNetworkAccessControl webServerNetworkAccessControl) {
             this.webServerNetworkAccessControl = webServerNetworkAccessControl;
             return this;
         }
-
         public Builder workloadsConfig(@Nullable EnvironmentConfigWorkloadsConfig workloadsConfig) {
             this.workloadsConfig = workloadsConfig;
             return this;
-        }
-        public EnvironmentConfig build() {
+        }        public EnvironmentConfig build() {
             return new EnvironmentConfig(airflowUri, dagGcsPrefix, databaseConfig, encryptionConfig, environmentSize, gkeCluster, maintenanceWindow, masterAuthorizedNetworksConfig, nodeConfig, nodeCount, privateEnvironmentConfig, softwareConfig, webServerConfig, webServerNetworkAccessControl, workloadsConfig);
         }
     }

@@ -53,12 +53,10 @@ public final class StepDimensionValueEntryResponse {
             this.key = Objects.requireNonNull(key);
             return this;
         }
-
         public Builder value(String value) {
             this.value = Objects.requireNonNull(value);
             return this;
-        }
-        public StepDimensionValueEntryResponse build() {
+        }        public StepDimensionValueEntryResponse build() {
             return new StepDimensionValueEntryResponse(key, value);
         }
     }

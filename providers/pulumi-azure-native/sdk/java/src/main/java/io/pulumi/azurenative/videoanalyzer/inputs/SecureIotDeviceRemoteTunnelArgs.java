@@ -94,32 +94,26 @@ public final class SecureIotDeviceRemoteTunnelArgs extends io.pulumi.resources.R
             this.deviceId = Objects.requireNonNull(deviceId);
             return this;
         }
-
         public Builder deviceId(String deviceId) {
             this.deviceId = Output.of(Objects.requireNonNull(deviceId));
             return this;
         }
-
         public Builder iotHubName(Output<String> iotHubName) {
             this.iotHubName = Objects.requireNonNull(iotHubName);
             return this;
         }
-
         public Builder iotHubName(String iotHubName) {
             this.iotHubName = Output.of(Objects.requireNonNull(iotHubName));
             return this;
         }
-
         public Builder type(Output<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Output.of(Objects.requireNonNull(type));
             return this;
-        }
-        public SecureIotDeviceRemoteTunnelArgs build() {
+        }        public SecureIotDeviceRemoteTunnelArgs build() {
             return new SecureIotDeviceRemoteTunnelArgs(deviceId, iotHubName, type);
         }
     }

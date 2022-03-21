@@ -96,32 +96,26 @@ public final class GooglePrivacyDlpV2HotwordRuleArgs extends io.pulumi.resources
             this.hotwordRegex = hotwordRegex;
             return this;
         }
-
         public Builder hotwordRegex(@Nullable GooglePrivacyDlpV2RegexArgs hotwordRegex) {
             this.hotwordRegex = Output.ofNullable(hotwordRegex);
             return this;
         }
-
         public Builder likelihoodAdjustment(@Nullable Output<GooglePrivacyDlpV2LikelihoodAdjustmentArgs> likelihoodAdjustment) {
             this.likelihoodAdjustment = likelihoodAdjustment;
             return this;
         }
-
         public Builder likelihoodAdjustment(@Nullable GooglePrivacyDlpV2LikelihoodAdjustmentArgs likelihoodAdjustment) {
             this.likelihoodAdjustment = Output.ofNullable(likelihoodAdjustment);
             return this;
         }
-
         public Builder proximity(@Nullable Output<GooglePrivacyDlpV2ProximityArgs> proximity) {
             this.proximity = proximity;
             return this;
         }
-
         public Builder proximity(@Nullable GooglePrivacyDlpV2ProximityArgs proximity) {
             this.proximity = Output.ofNullable(proximity);
             return this;
-        }
-        public GooglePrivacyDlpV2HotwordRuleArgs build() {
+        }        public GooglePrivacyDlpV2HotwordRuleArgs build() {
             return new GooglePrivacyDlpV2HotwordRuleArgs(hotwordRegex, likelihoodAdjustment, proximity);
         }
     }

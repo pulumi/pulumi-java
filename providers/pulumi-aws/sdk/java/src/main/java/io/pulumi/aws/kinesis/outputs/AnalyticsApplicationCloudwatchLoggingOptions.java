@@ -87,17 +87,14 @@ public final class AnalyticsApplicationCloudwatchLoggingOptions {
             this.id = id;
             return this;
         }
-
         public Builder logStreamArn(String logStreamArn) {
             this.logStreamArn = Objects.requireNonNull(logStreamArn);
             return this;
         }
-
         public Builder roleArn(String roleArn) {
             this.roleArn = Objects.requireNonNull(roleArn);
             return this;
-        }
-        public AnalyticsApplicationCloudwatchLoggingOptions build() {
+        }        public AnalyticsApplicationCloudwatchLoggingOptions build() {
             return new AnalyticsApplicationCloudwatchLoggingOptions(id, logStreamArn, roleArn);
         }
     }

@@ -145,82 +145,69 @@ public final class ServiceTaskSpecArgs extends io.pulumi.resources.ResourceArgs 
             this.containerSpec = Objects.requireNonNull(containerSpec);
             return this;
         }
-
         public Builder containerSpec(ServiceTaskSpecContainerSpecArgs containerSpec) {
             this.containerSpec = Output.of(Objects.requireNonNull(containerSpec));
             return this;
         }
-
         public Builder forceUpdate(@Nullable Output<Integer> forceUpdate) {
             this.forceUpdate = forceUpdate;
             return this;
         }
-
         public Builder forceUpdate(@Nullable Integer forceUpdate) {
             this.forceUpdate = Output.ofNullable(forceUpdate);
             return this;
         }
-
         public Builder logDriver(@Nullable Output<ServiceTaskSpecLogDriverArgs> logDriver) {
             this.logDriver = logDriver;
             return this;
         }
-
         public Builder logDriver(@Nullable ServiceTaskSpecLogDriverArgs logDriver) {
             this.logDriver = Output.ofNullable(logDriver);
             return this;
         }
-
         public Builder networks(@Nullable Output<List<String>> networks) {
             this.networks = networks;
             return this;
         }
-
         public Builder networks(@Nullable List<String> networks) {
             this.networks = Output.ofNullable(networks);
             return this;
         }
-
+        public Builder networks(String... networks) {
+            return networks(List.of(networks));
+        }
         public Builder placement(@Nullable Output<ServiceTaskSpecPlacementArgs> placement) {
             this.placement = placement;
             return this;
         }
-
         public Builder placement(@Nullable ServiceTaskSpecPlacementArgs placement) {
             this.placement = Output.ofNullable(placement);
             return this;
         }
-
         public Builder resources(@Nullable Output<ServiceTaskSpecResourcesArgs> resources) {
             this.resources = resources;
             return this;
         }
-
         public Builder resources(@Nullable ServiceTaskSpecResourcesArgs resources) {
             this.resources = Output.ofNullable(resources);
             return this;
         }
-
         public Builder restartPolicy(@Nullable Output<ServiceTaskSpecRestartPolicyArgs> restartPolicy) {
             this.restartPolicy = restartPolicy;
             return this;
         }
-
         public Builder restartPolicy(@Nullable ServiceTaskSpecRestartPolicyArgs restartPolicy) {
             this.restartPolicy = Output.ofNullable(restartPolicy);
             return this;
         }
-
         public Builder runtime(@Nullable Output<String> runtime) {
             this.runtime = runtime;
             return this;
         }
-
         public Builder runtime(@Nullable String runtime) {
             this.runtime = Output.ofNullable(runtime);
             return this;
-        }
-        public ServiceTaskSpecArgs build() {
+        }        public ServiceTaskSpecArgs build() {
             return new ServiceTaskSpecArgs(containerSpec, forceUpdate, logDriver, networks, placement, resources, restartPolicy, runtime);
         }
     }

@@ -72,12 +72,10 @@ public final class ListBitLockerKeyArgs extends io.pulumi.resources.InvokeArgs {
             this.jobName = Objects.requireNonNull(jobName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
-        }
-        public ListBitLockerKeyArgs build() {
+        }        public ListBitLockerKeyArgs build() {
             return new ListBitLockerKeyArgs(jobName, resourceGroupName);
         }
     }

@@ -58,8 +58,7 @@ public final class ToolExecutionStepResponse extends io.pulumi.resources.InvokeA
         public Builder toolExecution(ToolExecutionResponse toolExecution) {
             this.toolExecution = Objects.requireNonNull(toolExecution);
             return this;
-        }
-        public ToolExecutionStepResponse build() {
+        }        public ToolExecutionStepResponse build() {
             return new ToolExecutionStepResponse(toolExecution);
         }
     }

@@ -104,22 +104,18 @@ public final class HorizontalPodAutoscalerSpec {
             this.maxReplicas = Objects.requireNonNull(maxReplicas);
             return this;
         }
-
         public Builder minReplicas(@Nullable Integer minReplicas) {
             this.minReplicas = minReplicas;
             return this;
         }
-
         public Builder scaleTargetRef(CrossVersionObjectReference scaleTargetRef) {
             this.scaleTargetRef = Objects.requireNonNull(scaleTargetRef);
             return this;
         }
-
         public Builder targetCPUUtilizationPercentage(@Nullable Integer targetCPUUtilizationPercentage) {
             this.targetCPUUtilizationPercentage = targetCPUUtilizationPercentage;
             return this;
-        }
-        public HorizontalPodAutoscalerSpec build() {
+        }        public HorizontalPodAutoscalerSpec build() {
             return new HorizontalPodAutoscalerSpec(maxReplicas, minReplicas, scaleTargetRef, targetCPUUtilizationPercentage);
         }
     }

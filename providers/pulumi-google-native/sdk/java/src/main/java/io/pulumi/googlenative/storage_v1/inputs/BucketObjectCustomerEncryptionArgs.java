@@ -78,22 +78,18 @@ public final class BucketObjectCustomerEncryptionArgs extends io.pulumi.resource
             this.encryptionAlgorithm = encryptionAlgorithm;
             return this;
         }
-
         public Builder encryptionAlgorithm(@Nullable String encryptionAlgorithm) {
             this.encryptionAlgorithm = Output.ofNullable(encryptionAlgorithm);
             return this;
         }
-
         public Builder keySha256(@Nullable Output<String> keySha256) {
             this.keySha256 = keySha256;
             return this;
         }
-
         public Builder keySha256(@Nullable String keySha256) {
             this.keySha256 = Output.ofNullable(keySha256);
             return this;
-        }
-        public BucketObjectCustomerEncryptionArgs build() {
+        }        public BucketObjectCustomerEncryptionArgs build() {
             return new BucketObjectCustomerEncryptionArgs(encryptionAlgorithm, keySha256);
         }
     }

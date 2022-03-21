@@ -167,82 +167,66 @@ public final class DatabaseArgs extends io.pulumi.resources.ResourceArgs {
             this.charset = charset;
             return this;
         }
-
         public Builder charset(@Nullable String charset) {
             this.charset = Output.ofNullable(charset);
             return this;
         }
-
         public Builder collation(@Nullable Output<String> collation) {
             this.collation = collation;
             return this;
         }
-
         public Builder collation(@Nullable String collation) {
             this.collation = Output.ofNullable(collation);
             return this;
         }
-
         public Builder instance(Output<String> instance) {
             this.instance = Objects.requireNonNull(instance);
             return this;
         }
-
         public Builder instance(String instance) {
             this.instance = Output.of(Objects.requireNonNull(instance));
             return this;
         }
-
         public Builder kind(@Nullable Output<String> kind) {
             this.kind = kind;
             return this;
         }
-
         public Builder kind(@Nullable String kind) {
             this.kind = Output.ofNullable(kind);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
         }
-
         public Builder selfLink(@Nullable Output<String> selfLink) {
             this.selfLink = selfLink;
             return this;
         }
-
         public Builder selfLink(@Nullable String selfLink) {
             this.selfLink = Output.ofNullable(selfLink);
             return this;
         }
-
         public Builder sqlserverDatabaseDetails(@Nullable Output<SqlServerDatabaseDetailsArgs> sqlserverDatabaseDetails) {
             this.sqlserverDatabaseDetails = sqlserverDatabaseDetails;
             return this;
         }
-
         public Builder sqlserverDatabaseDetails(@Nullable SqlServerDatabaseDetailsArgs sqlserverDatabaseDetails) {
             this.sqlserverDatabaseDetails = Output.ofNullable(sqlserverDatabaseDetails);
             return this;
-        }
-        public DatabaseArgs build() {
+        }        public DatabaseArgs build() {
             return new DatabaseArgs(charset, collation, instance, kind, name, project, selfLink, sqlserverDatabaseDetails);
         }
     }

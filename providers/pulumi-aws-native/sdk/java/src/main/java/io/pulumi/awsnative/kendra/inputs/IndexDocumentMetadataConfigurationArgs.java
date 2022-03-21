@@ -93,42 +93,34 @@ public final class IndexDocumentMetadataConfigurationArgs extends io.pulumi.reso
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
-
         public Builder relevance(@Nullable Output<IndexRelevanceArgs> relevance) {
             this.relevance = relevance;
             return this;
         }
-
         public Builder relevance(@Nullable IndexRelevanceArgs relevance) {
             this.relevance = Output.ofNullable(relevance);
             return this;
         }
-
         public Builder search(@Nullable Output<IndexSearchArgs> search) {
             this.search = search;
             return this;
         }
-
         public Builder search(@Nullable IndexSearchArgs search) {
             this.search = Output.ofNullable(search);
             return this;
         }
-
         public Builder type(Output<IndexDocumentAttributeValueType> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder type(IndexDocumentAttributeValueType type) {
             this.type = Output.of(Objects.requireNonNull(type));
             return this;
-        }
-        public IndexDocumentMetadataConfigurationArgs build() {
+        }        public IndexDocumentMetadataConfigurationArgs build() {
             return new IndexDocumentMetadataConfigurationArgs(name, relevance, search, type);
         }
     }

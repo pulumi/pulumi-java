@@ -191,92 +191,74 @@ public final class PublishedBlueprintArgs extends io.pulumi.resources.ResourceAr
             this.blueprintName = Objects.requireNonNull(blueprintName);
             return this;
         }
-
         public Builder blueprintName(String blueprintName) {
             this.blueprintName = Output.of(Objects.requireNonNull(blueprintName));
             return this;
         }
-
         public Builder changeNotes(@Nullable Output<String> changeNotes) {
             this.changeNotes = changeNotes;
             return this;
         }
-
         public Builder changeNotes(@Nullable String changeNotes) {
             this.changeNotes = Output.ofNullable(changeNotes);
             return this;
         }
-
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder displayName(@Nullable Output<String> displayName) {
             this.displayName = displayName;
             return this;
         }
-
         public Builder displayName(@Nullable String displayName) {
             this.displayName = Output.ofNullable(displayName);
             return this;
         }
-
         public Builder parameters(@Nullable Output<Map<String,ParameterDefinitionArgs>> parameters) {
             this.parameters = parameters;
             return this;
         }
-
         public Builder parameters(@Nullable Map<String,ParameterDefinitionArgs> parameters) {
             this.parameters = Output.ofNullable(parameters);
             return this;
         }
-
         public Builder resourceGroups(@Nullable Output<Map<String,ResourceGroupDefinitionArgs>> resourceGroups) {
             this.resourceGroups = resourceGroups;
             return this;
         }
-
         public Builder resourceGroups(@Nullable Map<String,ResourceGroupDefinitionArgs> resourceGroups) {
             this.resourceGroups = Output.ofNullable(resourceGroups);
             return this;
         }
-
         public Builder resourceScope(Output<String> resourceScope) {
             this.resourceScope = Objects.requireNonNull(resourceScope);
             return this;
         }
-
         public Builder resourceScope(String resourceScope) {
             this.resourceScope = Output.of(Objects.requireNonNull(resourceScope));
             return this;
         }
-
         public Builder targetScope(@Nullable Output<Either<String,BlueprintTargetScope>> targetScope) {
             this.targetScope = targetScope;
             return this;
         }
-
         public Builder targetScope(@Nullable Either<String,BlueprintTargetScope> targetScope) {
             this.targetScope = Output.ofNullable(targetScope);
             return this;
         }
-
         public Builder versionId(@Nullable Output<String> versionId) {
             this.versionId = versionId;
             return this;
         }
-
         public Builder versionId(@Nullable String versionId) {
             this.versionId = Output.ofNullable(versionId);
             return this;
-        }
-        public PublishedBlueprintArgs build() {
+        }        public PublishedBlueprintArgs build() {
             return new PublishedBlueprintArgs(blueprintName, changeNotes, description, displayName, parameters, resourceGroups, resourceScope, targetScope, versionId);
         }
     }

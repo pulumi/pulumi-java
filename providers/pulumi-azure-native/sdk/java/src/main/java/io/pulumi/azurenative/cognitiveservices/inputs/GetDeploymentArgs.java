@@ -88,17 +88,14 @@ public final class GetDeploymentArgs extends io.pulumi.resources.InvokeArgs {
             this.accountName = Objects.requireNonNull(accountName);
             return this;
         }
-
         public Builder deploymentName(String deploymentName) {
             this.deploymentName = Objects.requireNonNull(deploymentName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
-        }
-        public GetDeploymentArgs build() {
+        }        public GetDeploymentArgs build() {
             return new GetDeploymentArgs(accountName, deploymentName, resourceGroupName);
         }
     }

@@ -76,12 +76,10 @@ public final class GooglePrivacyDlpV2ProximityResponse extends io.pulumi.resourc
             this.windowAfter = Objects.requireNonNull(windowAfter);
             return this;
         }
-
         public Builder windowBefore(Integer windowBefore) {
             this.windowBefore = Objects.requireNonNull(windowBefore);
             return this;
-        }
-        public GooglePrivacyDlpV2ProximityResponse build() {
+        }        public GooglePrivacyDlpV2ProximityResponse build() {
             return new GooglePrivacyDlpV2ProximityResponse(windowAfter, windowBefore);
         }
     }

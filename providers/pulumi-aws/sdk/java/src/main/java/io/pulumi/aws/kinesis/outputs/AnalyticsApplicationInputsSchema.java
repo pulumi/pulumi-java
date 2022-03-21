@@ -94,17 +94,17 @@ public final class AnalyticsApplicationInputsSchema {
             this.recordColumns = Objects.requireNonNull(recordColumns);
             return this;
         }
-
+        public Builder recordColumns(AnalyticsApplicationInputsSchemaRecordColumn... recordColumns) {
+            return recordColumns(List.of(recordColumns));
+        }
         public Builder recordEncoding(@Nullable String recordEncoding) {
             this.recordEncoding = recordEncoding;
             return this;
         }
-
         public Builder recordFormat(AnalyticsApplicationInputsSchemaRecordFormat recordFormat) {
             this.recordFormat = Objects.requireNonNull(recordFormat);
             return this;
-        }
-        public AnalyticsApplicationInputsSchema build() {
+        }        public AnalyticsApplicationInputsSchema build() {
             return new AnalyticsApplicationInputsSchema(recordColumns, recordEncoding, recordFormat);
         }
     }

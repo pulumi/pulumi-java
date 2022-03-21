@@ -164,82 +164,66 @@ public final class MachineLearningDatasetArgs extends io.pulumi.resources.Resour
             this.datasetName = datasetName;
             return this;
         }
-
         public Builder datasetName(@Nullable String datasetName) {
             this.datasetName = Output.ofNullable(datasetName);
             return this;
         }
-
         public Builder datasetType(Output<Either<String,DatasetType>> datasetType) {
             this.datasetType = Objects.requireNonNull(datasetType);
             return this;
         }
-
         public Builder datasetType(Either<String,DatasetType> datasetType) {
             this.datasetType = Output.of(Objects.requireNonNull(datasetType));
             return this;
         }
-
         public Builder parameters(Output<DatasetCreateRequestParametersArgs> parameters) {
             this.parameters = Objects.requireNonNull(parameters);
             return this;
         }
-
         public Builder parameters(DatasetCreateRequestParametersArgs parameters) {
             this.parameters = Output.of(Objects.requireNonNull(parameters));
             return this;
         }
-
         public Builder registration(Output<DatasetCreateRequestRegistrationArgs> registration) {
             this.registration = Objects.requireNonNull(registration);
             return this;
         }
-
         public Builder registration(DatasetCreateRequestRegistrationArgs registration) {
             this.registration = Output.of(Objects.requireNonNull(registration));
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder skipValidation(@Nullable Output<Boolean> skipValidation) {
             this.skipValidation = skipValidation;
             return this;
         }
-
         public Builder skipValidation(@Nullable Boolean skipValidation) {
             this.skipValidation = Output.ofNullable(skipValidation);
             return this;
         }
-
         public Builder timeSeries(@Nullable Output<DatasetCreateRequestTimeSeriesArgs> timeSeries) {
             this.timeSeries = timeSeries;
             return this;
         }
-
         public Builder timeSeries(@Nullable DatasetCreateRequestTimeSeriesArgs timeSeries) {
             this.timeSeries = Output.ofNullable(timeSeries);
             return this;
         }
-
         public Builder workspaceName(Output<String> workspaceName) {
             this.workspaceName = Objects.requireNonNull(workspaceName);
             return this;
         }
-
         public Builder workspaceName(String workspaceName) {
             this.workspaceName = Output.of(Objects.requireNonNull(workspaceName));
             return this;
-        }
-        public MachineLearningDatasetArgs build() {
+        }        public MachineLearningDatasetArgs build() {
             return new MachineLearningDatasetArgs(datasetName, datasetType, parameters, registration, resourceGroupName, skipValidation, timeSeries, workspaceName);
         }
     }

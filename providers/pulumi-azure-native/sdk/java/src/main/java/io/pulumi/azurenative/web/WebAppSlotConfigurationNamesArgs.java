@@ -139,62 +139,59 @@ public final class WebAppSlotConfigurationNamesArgs extends io.pulumi.resources.
             this.appSettingNames = appSettingNames;
             return this;
         }
-
         public Builder appSettingNames(@Nullable List<String> appSettingNames) {
             this.appSettingNames = Output.ofNullable(appSettingNames);
             return this;
         }
-
+        public Builder appSettingNames(String... appSettingNames) {
+            return appSettingNames(List.of(appSettingNames));
+        }
         public Builder azureStorageConfigNames(@Nullable Output<List<String>> azureStorageConfigNames) {
             this.azureStorageConfigNames = azureStorageConfigNames;
             return this;
         }
-
         public Builder azureStorageConfigNames(@Nullable List<String> azureStorageConfigNames) {
             this.azureStorageConfigNames = Output.ofNullable(azureStorageConfigNames);
             return this;
         }
-
+        public Builder azureStorageConfigNames(String... azureStorageConfigNames) {
+            return azureStorageConfigNames(List.of(azureStorageConfigNames));
+        }
         public Builder connectionStringNames(@Nullable Output<List<String>> connectionStringNames) {
             this.connectionStringNames = connectionStringNames;
             return this;
         }
-
         public Builder connectionStringNames(@Nullable List<String> connectionStringNames) {
             this.connectionStringNames = Output.ofNullable(connectionStringNames);
             return this;
         }
-
+        public Builder connectionStringNames(String... connectionStringNames) {
+            return connectionStringNames(List.of(connectionStringNames));
+        }
         public Builder kind(@Nullable Output<String> kind) {
             this.kind = kind;
             return this;
         }
-
         public Builder kind(@Nullable String kind) {
             this.kind = Output.ofNullable(kind);
             return this;
         }
-
         public Builder name(Output<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
-        }
-        public WebAppSlotConfigurationNamesArgs build() {
+        }        public WebAppSlotConfigurationNamesArgs build() {
             return new WebAppSlotConfigurationNamesArgs(appSettingNames, azureStorageConfigNames, connectionStringNames, kind, name, resourceGroupName);
         }
     }

@@ -193,92 +193,77 @@ public final class VMSSExtensionArgs extends io.pulumi.resources.ResourceArgs {
             this.autoUpgradeMinorVersion = autoUpgradeMinorVersion;
             return this;
         }
-
         public Builder autoUpgradeMinorVersion(@Nullable Boolean autoUpgradeMinorVersion) {
             this.autoUpgradeMinorVersion = Output.ofNullable(autoUpgradeMinorVersion);
             return this;
         }
-
         public Builder forceUpdateTag(@Nullable Output<String> forceUpdateTag) {
             this.forceUpdateTag = forceUpdateTag;
             return this;
         }
-
         public Builder forceUpdateTag(@Nullable String forceUpdateTag) {
             this.forceUpdateTag = Output.ofNullable(forceUpdateTag);
             return this;
         }
-
         public Builder name(Output<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
-
         public Builder protectedSettings(@Nullable Output<Object> protectedSettings) {
             this.protectedSettings = protectedSettings;
             return this;
         }
-
         public Builder protectedSettings(@Nullable Object protectedSettings) {
             this.protectedSettings = Output.ofNullable(protectedSettings);
             return this;
         }
-
         public Builder provisionAfterExtensions(@Nullable Output<List<String>> provisionAfterExtensions) {
             this.provisionAfterExtensions = provisionAfterExtensions;
             return this;
         }
-
         public Builder provisionAfterExtensions(@Nullable List<String> provisionAfterExtensions) {
             this.provisionAfterExtensions = Output.ofNullable(provisionAfterExtensions);
             return this;
         }
-
+        public Builder provisionAfterExtensions(String... provisionAfterExtensions) {
+            return provisionAfterExtensions(List.of(provisionAfterExtensions));
+        }
         public Builder publisher(Output<String> publisher) {
             this.publisher = Objects.requireNonNull(publisher);
             return this;
         }
-
         public Builder publisher(String publisher) {
             this.publisher = Output.of(Objects.requireNonNull(publisher));
             return this;
         }
-
         public Builder settings(@Nullable Output<Object> settings) {
             this.settings = settings;
             return this;
         }
-
         public Builder settings(@Nullable Object settings) {
             this.settings = Output.ofNullable(settings);
             return this;
         }
-
         public Builder type(Output<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Output.of(Objects.requireNonNull(type));
             return this;
         }
-
         public Builder typeHandlerVersion(Output<String> typeHandlerVersion) {
             this.typeHandlerVersion = Objects.requireNonNull(typeHandlerVersion);
             return this;
         }
-
         public Builder typeHandlerVersion(String typeHandlerVersion) {
             this.typeHandlerVersion = Output.of(Objects.requireNonNull(typeHandlerVersion));
             return this;
-        }
-        public VMSSExtensionArgs build() {
+        }        public VMSSExtensionArgs build() {
             return new VMSSExtensionArgs(autoUpgradeMinorVersion, forceUpdateTag, name, protectedSettings, provisionAfterExtensions, publisher, settings, type, typeHandlerVersion);
         }
     }

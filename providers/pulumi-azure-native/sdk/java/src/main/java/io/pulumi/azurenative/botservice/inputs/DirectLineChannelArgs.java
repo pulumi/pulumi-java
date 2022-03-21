@@ -112,42 +112,34 @@ public final class DirectLineChannelArgs extends io.pulumi.resources.ResourceArg
             this.channelName = Objects.requireNonNull(channelName);
             return this;
         }
-
         public Builder channelName(String channelName) {
             this.channelName = Output.of(Objects.requireNonNull(channelName));
             return this;
         }
-
         public Builder etag(@Nullable Output<String> etag) {
             this.etag = etag;
             return this;
         }
-
         public Builder etag(@Nullable String etag) {
             this.etag = Output.ofNullable(etag);
             return this;
         }
-
         public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder properties(@Nullable Output<DirectLineChannelPropertiesArgs> properties) {
             this.properties = properties;
             return this;
         }
-
         public Builder properties(@Nullable DirectLineChannelPropertiesArgs properties) {
             this.properties = Output.ofNullable(properties);
             return this;
-        }
-        public DirectLineChannelArgs build() {
+        }        public DirectLineChannelArgs build() {
             return new DirectLineChannelArgs(channelName, etag, location, properties);
         }
     }

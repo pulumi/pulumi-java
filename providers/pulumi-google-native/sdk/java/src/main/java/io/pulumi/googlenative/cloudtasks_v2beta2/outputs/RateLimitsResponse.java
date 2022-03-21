@@ -86,17 +86,14 @@ public final class RateLimitsResponse {
             this.maxBurstSize = Objects.requireNonNull(maxBurstSize);
             return this;
         }
-
         public Builder maxConcurrentTasks(Integer maxConcurrentTasks) {
             this.maxConcurrentTasks = Objects.requireNonNull(maxConcurrentTasks);
             return this;
         }
-
         public Builder maxTasksDispatchedPerSecond(Double maxTasksDispatchedPerSecond) {
             this.maxTasksDispatchedPerSecond = Objects.requireNonNull(maxTasksDispatchedPerSecond);
             return this;
-        }
-        public RateLimitsResponse build() {
+        }        public RateLimitsResponse build() {
             return new RateLimitsResponse(maxBurstSize, maxConcurrentTasks, maxTasksDispatchedPerSecond);
         }
     }

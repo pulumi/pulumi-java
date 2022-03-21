@@ -70,12 +70,10 @@ public final class GoogleCloudDatacatalogV1beta1UsageSignalResponse {
             this.updateTime = Objects.requireNonNull(updateTime);
             return this;
         }
-
         public Builder usageWithinTimeRange(Map<String,String> usageWithinTimeRange) {
             this.usageWithinTimeRange = Objects.requireNonNull(usageWithinTimeRange);
             return this;
-        }
-        public GoogleCloudDatacatalogV1beta1UsageSignalResponse build() {
+        }        public GoogleCloudDatacatalogV1beta1UsageSignalResponse build() {
             return new GoogleCloudDatacatalogV1beta1UsageSignalResponse(updateTime, usageWithinTimeRange);
         }
     }

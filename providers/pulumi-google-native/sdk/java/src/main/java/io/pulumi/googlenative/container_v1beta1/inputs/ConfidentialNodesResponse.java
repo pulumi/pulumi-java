@@ -58,8 +58,7 @@ public final class ConfidentialNodesResponse extends io.pulumi.resources.InvokeA
         public Builder enabled(Boolean enabled) {
             this.enabled = Objects.requireNonNull(enabled);
             return this;
-        }
-        public ConfidentialNodesResponse build() {
+        }        public ConfidentialNodesResponse build() {
             return new ConfidentialNodesResponse(enabled);
         }
     }

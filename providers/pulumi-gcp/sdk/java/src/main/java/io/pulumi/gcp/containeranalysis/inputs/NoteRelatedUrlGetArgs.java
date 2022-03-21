@@ -74,22 +74,18 @@ public final class NoteRelatedUrlGetArgs extends io.pulumi.resources.ResourceArg
             this.label = label;
             return this;
         }
-
         public Builder label(@Nullable String label) {
             this.label = Output.ofNullable(label);
             return this;
         }
-
         public Builder url(Output<String> url) {
             this.url = Objects.requireNonNull(url);
             return this;
         }
-
         public Builder url(String url) {
             this.url = Output.of(Objects.requireNonNull(url));
             return this;
-        }
-        public NoteRelatedUrlGetArgs build() {
+        }        public NoteRelatedUrlGetArgs build() {
             return new NoteRelatedUrlGetArgs(label, url);
         }
     }

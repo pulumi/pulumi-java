@@ -127,27 +127,28 @@ public final class NetworkInterfaceDnsSettingsResponse extends io.pulumi.resourc
             this.appliedDnsServers = Objects.requireNonNull(appliedDnsServers);
             return this;
         }
-
+        public Builder appliedDnsServers(String... appliedDnsServers) {
+            return appliedDnsServers(List.of(appliedDnsServers));
+        }
         public Builder dnsServers(@Nullable List<String> dnsServers) {
             this.dnsServers = dnsServers;
             return this;
         }
-
+        public Builder dnsServers(String... dnsServers) {
+            return dnsServers(List.of(dnsServers));
+        }
         public Builder internalDnsNameLabel(@Nullable String internalDnsNameLabel) {
             this.internalDnsNameLabel = internalDnsNameLabel;
             return this;
         }
-
         public Builder internalDomainNameSuffix(String internalDomainNameSuffix) {
             this.internalDomainNameSuffix = Objects.requireNonNull(internalDomainNameSuffix);
             return this;
         }
-
         public Builder internalFqdn(String internalFqdn) {
             this.internalFqdn = Objects.requireNonNull(internalFqdn);
             return this;
-        }
-        public NetworkInterfaceDnsSettingsResponse build() {
+        }        public NetworkInterfaceDnsSettingsResponse build() {
             return new NetworkInterfaceDnsSettingsResponse(appliedDnsServers, dnsServers, internalDnsNameLabel, internalDomainNameSuffix, internalFqdn);
         }
     }

@@ -74,22 +74,18 @@ public final class ResolverQueryLogConfigAssociationState extends io.pulumi.reso
             this.resolverQueryLogConfigId = resolverQueryLogConfigId;
             return this;
         }
-
         public Builder resolverQueryLogConfigId(@Nullable String resolverQueryLogConfigId) {
             this.resolverQueryLogConfigId = Output.ofNullable(resolverQueryLogConfigId);
             return this;
         }
-
         public Builder resourceId(@Nullable Output<String> resourceId) {
             this.resourceId = resourceId;
             return this;
         }
-
         public Builder resourceId(@Nullable String resourceId) {
             this.resourceId = Output.ofNullable(resourceId);
             return this;
-        }
-        public ResolverQueryLogConfigAssociationState build() {
+        }        public ResolverQueryLogConfigAssociationState build() {
             return new ResolverQueryLogConfigAssociationState(resolverQueryLogConfigId, resourceId);
         }
     }

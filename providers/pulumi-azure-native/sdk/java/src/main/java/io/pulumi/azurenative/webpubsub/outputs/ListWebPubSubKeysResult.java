@@ -103,22 +103,18 @@ public final class ListWebPubSubKeysResult {
             this.primaryConnectionString = primaryConnectionString;
             return this;
         }
-
         public Builder primaryKey(@Nullable String primaryKey) {
             this.primaryKey = primaryKey;
             return this;
         }
-
         public Builder secondaryConnectionString(@Nullable String secondaryConnectionString) {
             this.secondaryConnectionString = secondaryConnectionString;
             return this;
         }
-
         public Builder secondaryKey(@Nullable String secondaryKey) {
             this.secondaryKey = secondaryKey;
             return this;
-        }
-        public ListWebPubSubKeysResult build() {
+        }        public ListWebPubSubKeysResult build() {
             return new ListWebPubSubKeysResult(primaryConnectionString, primaryKey, secondaryConnectionString, secondaryKey);
         }
     }

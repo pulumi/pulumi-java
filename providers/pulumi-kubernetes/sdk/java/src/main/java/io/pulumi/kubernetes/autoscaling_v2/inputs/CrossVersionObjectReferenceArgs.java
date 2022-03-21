@@ -94,32 +94,26 @@ public final class CrossVersionObjectReferenceArgs extends io.pulumi.resources.R
             this.apiVersion = apiVersion;
             return this;
         }
-
         public Builder apiVersion(@Nullable String apiVersion) {
             this.apiVersion = Output.ofNullable(apiVersion);
             return this;
         }
-
         public Builder kind(Output<String> kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
-
         public Builder kind(String kind) {
             this.kind = Output.of(Objects.requireNonNull(kind));
             return this;
         }
-
         public Builder name(Output<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Output.of(Objects.requireNonNull(name));
             return this;
-        }
-        public CrossVersionObjectReferenceArgs build() {
+        }        public CrossVersionObjectReferenceArgs build() {
             return new CrossVersionObjectReferenceArgs(apiVersion, kind, name);
         }
     }

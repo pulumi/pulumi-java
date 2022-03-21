@@ -95,32 +95,26 @@ public final class GoogleCloudDatacatalogV1RoutineSpecArgumentArgs extends io.pu
             this.mode = mode;
             return this;
         }
-
         public Builder mode(@Nullable GoogleCloudDatacatalogV1RoutineSpecArgumentMode mode) {
             this.mode = Output.ofNullable(mode);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder type(@Nullable Output<String> type) {
             this.type = type;
             return this;
         }
-
         public Builder type(@Nullable String type) {
             this.type = Output.ofNullable(type);
             return this;
-        }
-        public GoogleCloudDatacatalogV1RoutineSpecArgumentArgs build() {
+        }        public GoogleCloudDatacatalogV1RoutineSpecArgumentArgs build() {
             return new GoogleCloudDatacatalogV1RoutineSpecArgumentArgs(mode, name, type);
         }
     }

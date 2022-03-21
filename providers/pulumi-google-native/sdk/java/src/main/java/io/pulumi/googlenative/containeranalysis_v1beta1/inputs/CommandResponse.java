@@ -125,27 +125,31 @@ public final class CommandResponse extends io.pulumi.resources.InvokeArgs {
             this.args = Objects.requireNonNull(args);
             return this;
         }
-
+        public Builder args(String... args) {
+            return args(List.of(args));
+        }
         public Builder dir(String dir) {
             this.dir = Objects.requireNonNull(dir);
             return this;
         }
-
         public Builder env(List<String> env) {
             this.env = Objects.requireNonNull(env);
             return this;
         }
-
+        public Builder env(String... env) {
+            return env(List.of(env));
+        }
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder waitFor(List<String> waitFor) {
             this.waitFor = Objects.requireNonNull(waitFor);
             return this;
         }
-        public CommandResponse build() {
+        public Builder waitFor(String... waitFor) {
+            return waitFor(List.of(waitFor));
+        }        public CommandResponse build() {
             return new CommandResponse(args, dir, env, name, waitFor);
         }
     }

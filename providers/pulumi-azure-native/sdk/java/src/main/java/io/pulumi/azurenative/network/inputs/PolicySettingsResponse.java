@@ -128,27 +128,22 @@ public final class PolicySettingsResponse extends io.pulumi.resources.InvokeArgs
             this.fileUploadLimitInMb = fileUploadLimitInMb;
             return this;
         }
-
         public Builder maxRequestBodySizeInKb(@Nullable Integer maxRequestBodySizeInKb) {
             this.maxRequestBodySizeInKb = maxRequestBodySizeInKb;
             return this;
         }
-
         public Builder mode(@Nullable String mode) {
             this.mode = mode;
             return this;
         }
-
         public Builder requestBodyCheck(@Nullable Boolean requestBodyCheck) {
             this.requestBodyCheck = requestBodyCheck;
             return this;
         }
-
         public Builder state(@Nullable String state) {
             this.state = state;
             return this;
-        }
-        public PolicySettingsResponse build() {
+        }        public PolicySettingsResponse build() {
             return new PolicySettingsResponse(fileUploadLimitInMb, maxRequestBodySizeInKb, mode, requestBodyCheck, state);
         }
     }

@@ -120,27 +120,25 @@ public final class ObjectCopyGrant {
             this.email = email;
             return this;
         }
-
         public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
-
         public Builder permissions(List<String> permissions) {
             this.permissions = Objects.requireNonNull(permissions);
             return this;
         }
-
+        public Builder permissions(String... permissions) {
+            return permissions(List.of(permissions));
+        }
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder uri(@Nullable String uri) {
             this.uri = uri;
             return this;
-        }
-        public ObjectCopyGrant build() {
+        }        public ObjectCopyGrant build() {
             return new ObjectCopyGrant(email, id, permissions, type, uri);
         }
     }

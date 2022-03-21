@@ -73,22 +73,18 @@ public final class ConnectionAssociationArgs extends io.pulumi.resources.Resourc
             this.connectionId = Objects.requireNonNull(connectionId);
             return this;
         }
-
         public Builder connectionId(String connectionId) {
             this.connectionId = Output.of(Objects.requireNonNull(connectionId));
             return this;
         }
-
         public Builder lagId(Output<String> lagId) {
             this.lagId = Objects.requireNonNull(lagId);
             return this;
         }
-
         public Builder lagId(String lagId) {
             this.lagId = Output.of(Objects.requireNonNull(lagId));
             return this;
-        }
-        public ConnectionAssociationArgs build() {
+        }        public ConnectionAssociationArgs build() {
             return new ConnectionAssociationArgs(connectionId, lagId);
         }
     }

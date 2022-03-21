@@ -78,17 +78,14 @@ public final class GetMembershipArgs extends io.pulumi.resources.InvokeArgs {
             this.location = Objects.requireNonNull(location);
             return this;
         }
-
         public Builder membershipId(String membershipId) {
             this.membershipId = Objects.requireNonNull(membershipId);
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = project;
             return this;
-        }
-        public GetMembershipArgs build() {
+        }        public GetMembershipArgs build() {
             return new GetMembershipArgs(location, membershipId, project);
         }
     }

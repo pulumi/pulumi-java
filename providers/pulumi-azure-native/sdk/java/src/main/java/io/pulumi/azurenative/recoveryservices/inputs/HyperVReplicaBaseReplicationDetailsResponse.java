@@ -179,42 +179,40 @@ public final class HyperVReplicaBaseReplicationDetailsResponse extends io.pulumi
             this.initialReplicationDetails = initialReplicationDetails;
             return this;
         }
-
         public Builder instanceType(String instanceType) {
             this.instanceType = Objects.requireNonNull(instanceType);
             return this;
         }
-
         public Builder lastReplicatedTime(@Nullable String lastReplicatedTime) {
             this.lastReplicatedTime = lastReplicatedTime;
             return this;
         }
-
         public Builder vMDiskDetails(@Nullable List<DiskDetailsResponse> vMDiskDetails) {
             this.vMDiskDetails = vMDiskDetails;
             return this;
         }
-
+        public Builder vMDiskDetails(DiskDetailsResponse... vMDiskDetails) {
+            return vMDiskDetails(List.of(vMDiskDetails));
+        }
         public Builder vmId(@Nullable String vmId) {
             this.vmId = vmId;
             return this;
         }
-
         public Builder vmNics(@Nullable List<VMNicDetailsResponse> vmNics) {
             this.vmNics = vmNics;
             return this;
         }
-
+        public Builder vmNics(VMNicDetailsResponse... vmNics) {
+            return vmNics(List.of(vmNics));
+        }
         public Builder vmProtectionState(@Nullable String vmProtectionState) {
             this.vmProtectionState = vmProtectionState;
             return this;
         }
-
         public Builder vmProtectionStateDescription(@Nullable String vmProtectionStateDescription) {
             this.vmProtectionStateDescription = vmProtectionStateDescription;
             return this;
-        }
-        public HyperVReplicaBaseReplicationDetailsResponse build() {
+        }        public HyperVReplicaBaseReplicationDetailsResponse build() {
             return new HyperVReplicaBaseReplicationDetailsResponse(initialReplicationDetails, instanceType, lastReplicatedTime, vMDiskDetails, vmId, vmNics, vmProtectionState, vmProtectionStateDescription);
         }
     }

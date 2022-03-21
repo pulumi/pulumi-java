@@ -78,22 +78,18 @@ public final class OSPolicyAssignmentInstanceFilterInventoryArgs extends io.pulu
             this.osShortName = Objects.requireNonNull(osShortName);
             return this;
         }
-
         public Builder osShortName(String osShortName) {
             this.osShortName = Output.of(Objects.requireNonNull(osShortName));
             return this;
         }
-
         public Builder osVersion(@Nullable Output<String> osVersion) {
             this.osVersion = osVersion;
             return this;
         }
-
         public Builder osVersion(@Nullable String osVersion) {
             this.osVersion = Output.ofNullable(osVersion);
             return this;
-        }
-        public OSPolicyAssignmentInstanceFilterInventoryArgs build() {
+        }        public OSPolicyAssignmentInstanceFilterInventoryArgs build() {
             return new OSPolicyAssignmentInstanceFilterInventoryArgs(osShortName, osVersion);
         }
     }

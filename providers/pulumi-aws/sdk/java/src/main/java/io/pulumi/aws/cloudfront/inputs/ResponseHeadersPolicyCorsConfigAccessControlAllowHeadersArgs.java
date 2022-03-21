@@ -54,12 +54,13 @@ public final class ResponseHeadersPolicyCorsConfigAccessControlAllowHeadersArgs 
             this.items = items;
             return this;
         }
-
         public Builder items(@Nullable List<String> items) {
             this.items = Output.ofNullable(items);
             return this;
         }
-        public ResponseHeadersPolicyCorsConfigAccessControlAllowHeadersArgs build() {
+        public Builder items(String... items) {
+            return items(List.of(items));
+        }        public ResponseHeadersPolicyCorsConfigAccessControlAllowHeadersArgs build() {
             return new ResponseHeadersPolicyCorsConfigAccessControlAllowHeadersArgs(items);
         }
     }

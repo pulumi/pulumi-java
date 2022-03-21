@@ -89,17 +89,14 @@ public final class OfficeDataConnectorDataTypesResponse {
             this.exchange = exchange;
             return this;
         }
-
         public Builder sharePoint(@Nullable OfficeDataConnectorDataTypesResponseSharePoint sharePoint) {
             this.sharePoint = sharePoint;
             return this;
         }
-
         public Builder teams(@Nullable OfficeDataConnectorDataTypesResponseTeams teams) {
             this.teams = teams;
             return this;
-        }
-        public OfficeDataConnectorDataTypesResponse build() {
+        }        public OfficeDataConnectorDataTypesResponse build() {
             return new OfficeDataConnectorDataTypesResponse(exchange, sharePoint, teams);
         }
     }

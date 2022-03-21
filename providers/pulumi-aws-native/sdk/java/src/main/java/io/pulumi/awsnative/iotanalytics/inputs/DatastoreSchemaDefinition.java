@@ -54,7 +54,9 @@ public final class DatastoreSchemaDefinition extends io.pulumi.resources.InvokeA
             this.columns = columns;
             return this;
         }
-        public DatastoreSchemaDefinition build() {
+        public Builder columns(DatastoreColumn... columns) {
+            return columns(List.of(columns));
+        }        public DatastoreSchemaDefinition build() {
             return new DatastoreSchemaDefinition(columns);
         }
     }

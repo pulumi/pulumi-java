@@ -128,27 +128,22 @@ public final class AudioResponse extends io.pulumi.resources.InvokeArgs {
             this.bitrate = bitrate;
             return this;
         }
-
         public Builder channels(@Nullable Integer channels) {
             this.channels = channels;
             return this;
         }
-
         public Builder label(@Nullable String label) {
             this.label = label;
             return this;
         }
-
         public Builder odataType(String odataType) {
             this.odataType = Objects.requireNonNull(odataType);
             return this;
         }
-
         public Builder samplingRate(@Nullable Integer samplingRate) {
             this.samplingRate = samplingRate;
             return this;
-        }
-        public AudioResponse build() {
+        }        public AudioResponse build() {
             return new AudioResponse(bitrate, channels, label, odataType, samplingRate);
         }
     }

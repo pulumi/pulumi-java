@@ -178,92 +178,77 @@ public final class RegionSslPolicyArgs extends io.pulumi.resources.ResourceArgs 
             this.customFeatures = customFeatures;
             return this;
         }
-
         public Builder customFeatures(@Nullable List<String> customFeatures) {
             this.customFeatures = Output.ofNullable(customFeatures);
             return this;
         }
-
+        public Builder customFeatures(String... customFeatures) {
+            return customFeatures(List.of(customFeatures));
+        }
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder minTlsVersion(@Nullable Output<RegionSslPolicyMinTlsVersion> minTlsVersion) {
             this.minTlsVersion = minTlsVersion;
             return this;
         }
-
         public Builder minTlsVersion(@Nullable RegionSslPolicyMinTlsVersion minTlsVersion) {
             this.minTlsVersion = Output.ofNullable(minTlsVersion);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder profile(@Nullable Output<RegionSslPolicyProfile> profile) {
             this.profile = profile;
             return this;
         }
-
         public Builder profile(@Nullable RegionSslPolicyProfile profile) {
             this.profile = Output.ofNullable(profile);
             return this;
         }
-
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
         }
-
         public Builder region(Output<String> region) {
             this.region = Objects.requireNonNull(region);
             return this;
         }
-
         public Builder region(String region) {
             this.region = Output.of(Objects.requireNonNull(region));
             return this;
         }
-
         public Builder requestId(@Nullable Output<String> requestId) {
             this.requestId = requestId;
             return this;
         }
-
         public Builder requestId(@Nullable String requestId) {
             this.requestId = Output.ofNullable(requestId);
             return this;
         }
-
         public Builder tlsSettings(@Nullable Output<ServerTlsSettingsArgs> tlsSettings) {
             this.tlsSettings = tlsSettings;
             return this;
         }
-
         public Builder tlsSettings(@Nullable ServerTlsSettingsArgs tlsSettings) {
             this.tlsSettings = Output.ofNullable(tlsSettings);
             return this;
-        }
-        public RegionSslPolicyArgs build() {
+        }        public RegionSslPolicyArgs build() {
             return new RegionSslPolicyArgs(customFeatures, description, minTlsVersion, name, profile, project, region, requestId, tlsSettings);
         }
     }

@@ -53,7 +53,9 @@ public final class MonitoringComponentConfigResponse {
             this.enableComponents = Objects.requireNonNull(enableComponents);
             return this;
         }
-        public MonitoringComponentConfigResponse build() {
+        public Builder enableComponents(String... enableComponents) {
+            return enableComponents(List.of(enableComponents));
+        }        public MonitoringComponentConfigResponse build() {
             return new MonitoringComponentConfigResponse(enableComponents);
         }
     }

@@ -70,12 +70,10 @@ public final class BucketLoggingConfiguration extends io.pulumi.resources.Invoke
             this.destinationBucketName = destinationBucketName;
             return this;
         }
-
         public Builder logFilePrefix(@Nullable String logFilePrefix) {
             this.logFilePrefix = logFilePrefix;
             return this;
-        }
-        public BucketLoggingConfiguration build() {
+        }        public BucketLoggingConfiguration build() {
             return new BucketLoggingConfiguration(destinationBucketName, logFilePrefix);
         }
     }

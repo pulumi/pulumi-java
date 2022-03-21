@@ -91,32 +91,26 @@ public final class TransferJobTransferSpecAwsS3DataSourceArgs extends io.pulumi.
             this.awsAccessKey = awsAccessKey;
             return this;
         }
-
         public Builder awsAccessKey(@Nullable TransferJobTransferSpecAwsS3DataSourceAwsAccessKeyArgs awsAccessKey) {
             this.awsAccessKey = Output.ofNullable(awsAccessKey);
             return this;
         }
-
         public Builder bucketName(Output<String> bucketName) {
             this.bucketName = Objects.requireNonNull(bucketName);
             return this;
         }
-
         public Builder bucketName(String bucketName) {
             this.bucketName = Output.of(Objects.requireNonNull(bucketName));
             return this;
         }
-
         public Builder roleArn(@Nullable Output<String> roleArn) {
             this.roleArn = roleArn;
             return this;
         }
-
         public Builder roleArn(@Nullable String roleArn) {
             this.roleArn = Output.ofNullable(roleArn);
             return this;
-        }
-        public TransferJobTransferSpecAwsS3DataSourceArgs build() {
+        }        public TransferJobTransferSpecAwsS3DataSourceArgs build() {
             return new TransferJobTransferSpecAwsS3DataSourceArgs(awsAccessKey, bucketName, roleArn);
         }
     }

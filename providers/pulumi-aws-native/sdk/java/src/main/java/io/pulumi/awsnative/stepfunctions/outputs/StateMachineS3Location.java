@@ -63,17 +63,14 @@ public final class StateMachineS3Location {
             this.bucket = Objects.requireNonNull(bucket);
             return this;
         }
-
         public Builder key(String key) {
             this.key = Objects.requireNonNull(key);
             return this;
         }
-
         public Builder version(@Nullable String version) {
             this.version = version;
             return this;
-        }
-        public StateMachineS3Location build() {
+        }        public StateMachineS3Location build() {
             return new StateMachineS3Location(bucket, key, version);
         }
     }

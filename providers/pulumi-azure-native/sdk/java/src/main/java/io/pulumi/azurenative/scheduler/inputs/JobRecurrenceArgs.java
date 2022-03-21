@@ -121,52 +121,42 @@ public final class JobRecurrenceArgs extends io.pulumi.resources.ResourceArgs {
             this.count = count;
             return this;
         }
-
         public Builder count(@Nullable Integer count) {
             this.count = Output.ofNullable(count);
             return this;
         }
-
         public Builder endTime(@Nullable Output<String> endTime) {
             this.endTime = endTime;
             return this;
         }
-
         public Builder endTime(@Nullable String endTime) {
             this.endTime = Output.ofNullable(endTime);
             return this;
         }
-
         public Builder frequency(@Nullable Output<RecurrenceFrequency> frequency) {
             this.frequency = frequency;
             return this;
         }
-
         public Builder frequency(@Nullable RecurrenceFrequency frequency) {
             this.frequency = Output.ofNullable(frequency);
             return this;
         }
-
         public Builder interval(@Nullable Output<Integer> interval) {
             this.interval = interval;
             return this;
         }
-
         public Builder interval(@Nullable Integer interval) {
             this.interval = Output.ofNullable(interval);
             return this;
         }
-
         public Builder schedule(@Nullable Output<JobRecurrenceScheduleArgs> schedule) {
             this.schedule = schedule;
             return this;
         }
-
         public Builder schedule(@Nullable JobRecurrenceScheduleArgs schedule) {
             this.schedule = Output.ofNullable(schedule);
             return this;
-        }
-        public JobRecurrenceArgs build() {
+        }        public JobRecurrenceArgs build() {
             return new JobRecurrenceArgs(count, endTime, frequency, interval, schedule);
         }
     }

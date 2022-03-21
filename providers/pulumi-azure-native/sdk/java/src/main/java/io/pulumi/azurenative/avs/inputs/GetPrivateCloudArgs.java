@@ -72,12 +72,10 @@ public final class GetPrivateCloudArgs extends io.pulumi.resources.InvokeArgs {
             this.privateCloudName = Objects.requireNonNull(privateCloudName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
-        }
-        public GetPrivateCloudArgs build() {
+        }        public GetPrivateCloudArgs build() {
             return new GetPrivateCloudArgs(privateCloudName, resourceGroupName);
         }
     }

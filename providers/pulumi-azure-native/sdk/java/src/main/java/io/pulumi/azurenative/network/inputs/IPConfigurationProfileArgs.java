@@ -95,32 +95,26 @@ public final class IPConfigurationProfileArgs extends io.pulumi.resources.Resour
             this.id = id;
             return this;
         }
-
         public Builder id(@Nullable String id) {
             this.id = Output.ofNullable(id);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder subnet(@Nullable Output<SubnetArgs> subnet) {
             this.subnet = subnet;
             return this;
         }
-
         public Builder subnet(@Nullable SubnetArgs subnet) {
             this.subnet = Output.ofNullable(subnet);
             return this;
-        }
-        public IPConfigurationProfileArgs build() {
+        }        public IPConfigurationProfileArgs build() {
             return new IPConfigurationProfileArgs(id, name, subnet);
         }
     }

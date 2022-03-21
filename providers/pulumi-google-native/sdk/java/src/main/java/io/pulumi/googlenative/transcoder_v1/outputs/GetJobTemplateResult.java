@@ -70,12 +70,10 @@ public final class GetJobTemplateResult {
             this.config = Objects.requireNonNull(config);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
-        }
-        public GetJobTemplateResult build() {
+        }        public GetJobTemplateResult build() {
             return new GetJobTemplateResult(config, name);
         }
     }

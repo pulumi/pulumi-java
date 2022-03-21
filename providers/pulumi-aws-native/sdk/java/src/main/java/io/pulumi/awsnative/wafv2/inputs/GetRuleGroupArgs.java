@@ -77,17 +77,14 @@ public final class GetRuleGroupArgs extends io.pulumi.resources.InvokeArgs {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder scope(RuleGroupScope scope) {
             this.scope = Objects.requireNonNull(scope);
             return this;
-        }
-        public GetRuleGroupArgs build() {
+        }        public GetRuleGroupArgs build() {
             return new GetRuleGroupArgs(id, name, scope);
         }
     }

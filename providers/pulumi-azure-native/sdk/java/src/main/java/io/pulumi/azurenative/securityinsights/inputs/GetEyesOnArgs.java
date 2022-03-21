@@ -104,22 +104,18 @@ public final class GetEyesOnArgs extends io.pulumi.resources.InvokeArgs {
             this.operationalInsightsResourceProvider = Objects.requireNonNull(operationalInsightsResourceProvider);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder settingsName(String settingsName) {
             this.settingsName = Objects.requireNonNull(settingsName);
             return this;
         }
-
         public Builder workspaceName(String workspaceName) {
             this.workspaceName = Objects.requireNonNull(workspaceName);
             return this;
-        }
-        public GetEyesOnArgs build() {
+        }        public GetEyesOnArgs build() {
             return new GetEyesOnArgs(operationalInsightsResourceProvider, resourceGroupName, settingsName, workspaceName);
         }
     }

@@ -166,42 +166,34 @@ public final class GetGatewayResult {
             this.apiConfig = Objects.requireNonNull(apiConfig);
             return this;
         }
-
         public Builder createTime(String createTime) {
             this.createTime = Objects.requireNonNull(createTime);
             return this;
         }
-
         public Builder defaultHostname(String defaultHostname) {
             this.defaultHostname = Objects.requireNonNull(defaultHostname);
             return this;
         }
-
         public Builder displayName(String displayName) {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
-
         public Builder labels(Map<String,String> labels) {
             this.labels = Objects.requireNonNull(labels);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder state(String state) {
             this.state = Objects.requireNonNull(state);
             return this;
         }
-
         public Builder updateTime(String updateTime) {
             this.updateTime = Objects.requireNonNull(updateTime);
             return this;
-        }
-        public GetGatewayResult build() {
+        }        public GetGatewayResult build() {
             return new GetGatewayResult(apiConfig, createTime, defaultHostname, displayName, labels, name, state, updateTime);
         }
     }

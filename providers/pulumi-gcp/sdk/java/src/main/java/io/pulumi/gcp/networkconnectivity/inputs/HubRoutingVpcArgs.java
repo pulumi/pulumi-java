@@ -53,12 +53,10 @@ public final class HubRoutingVpcArgs extends io.pulumi.resources.ResourceArgs {
             this.uri = uri;
             return this;
         }
-
         public Builder uri(@Nullable String uri) {
             this.uri = Output.ofNullable(uri);
             return this;
-        }
-        public HubRoutingVpcArgs build() {
+        }        public HubRoutingVpcArgs build() {
             return new HubRoutingVpcArgs(uri);
         }
     }

@@ -99,32 +99,26 @@ public final class AzureSqlProtectionPolicyArgs extends io.pulumi.resources.Reso
             this.backupManagementType = Objects.requireNonNull(backupManagementType);
             return this;
         }
-
         public Builder backupManagementType(String backupManagementType) {
             this.backupManagementType = Output.of(Objects.requireNonNull(backupManagementType));
             return this;
         }
-
         public Builder protectedItemsCount(@Nullable Output<Integer> protectedItemsCount) {
             this.protectedItemsCount = protectedItemsCount;
             return this;
         }
-
         public Builder protectedItemsCount(@Nullable Integer protectedItemsCount) {
             this.protectedItemsCount = Output.ofNullable(protectedItemsCount);
             return this;
         }
-
         public Builder retentionPolicy(@Nullable Output<Either<LongTermRetentionPolicyArgs,SimpleRetentionPolicyArgs>> retentionPolicy) {
             this.retentionPolicy = retentionPolicy;
             return this;
         }
-
         public Builder retentionPolicy(@Nullable Either<LongTermRetentionPolicyArgs,SimpleRetentionPolicyArgs> retentionPolicy) {
             this.retentionPolicy = Output.ofNullable(retentionPolicy);
             return this;
-        }
-        public AzureSqlProtectionPolicyArgs build() {
+        }        public AzureSqlProtectionPolicyArgs build() {
             return new AzureSqlProtectionPolicyArgs(backupManagementType, protectedItemsCount, retentionPolicy);
         }
     }

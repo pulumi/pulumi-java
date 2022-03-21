@@ -107,42 +107,34 @@ public final class InstanceMetadataOptionsGetArgs extends io.pulumi.resources.Re
             this.httpEndpoint = httpEndpoint;
             return this;
         }
-
         public Builder httpEndpoint(@Nullable String httpEndpoint) {
             this.httpEndpoint = Output.ofNullable(httpEndpoint);
             return this;
         }
-
         public Builder httpPutResponseHopLimit(@Nullable Output<Integer> httpPutResponseHopLimit) {
             this.httpPutResponseHopLimit = httpPutResponseHopLimit;
             return this;
         }
-
         public Builder httpPutResponseHopLimit(@Nullable Integer httpPutResponseHopLimit) {
             this.httpPutResponseHopLimit = Output.ofNullable(httpPutResponseHopLimit);
             return this;
         }
-
         public Builder httpTokens(@Nullable Output<String> httpTokens) {
             this.httpTokens = httpTokens;
             return this;
         }
-
         public Builder httpTokens(@Nullable String httpTokens) {
             this.httpTokens = Output.ofNullable(httpTokens);
             return this;
         }
-
         public Builder instanceMetadataTags(@Nullable Output<String> instanceMetadataTags) {
             this.instanceMetadataTags = instanceMetadataTags;
             return this;
         }
-
         public Builder instanceMetadataTags(@Nullable String instanceMetadataTags) {
             this.instanceMetadataTags = Output.ofNullable(instanceMetadataTags);
             return this;
-        }
-        public InstanceMetadataOptionsGetArgs build() {
+        }        public InstanceMetadataOptionsGetArgs build() {
             return new InstanceMetadataOptionsGetArgs(httpEndpoint, httpPutResponseHopLimit, httpTokens, instanceMetadataTags);
         }
     }

@@ -88,17 +88,14 @@ public final class GetCodeContainerArgs extends io.pulumi.resources.InvokeArgs {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder workspaceName(String workspaceName) {
             this.workspaceName = Objects.requireNonNull(workspaceName);
             return this;
-        }
-        public GetCodeContainerArgs build() {
+        }        public GetCodeContainerArgs build() {
             return new GetCodeContainerArgs(name, resourceGroupName, workspaceName);
         }
     }

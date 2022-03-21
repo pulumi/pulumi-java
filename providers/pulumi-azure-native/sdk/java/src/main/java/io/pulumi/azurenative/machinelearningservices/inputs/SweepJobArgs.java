@@ -318,162 +318,130 @@ public final class SweepJobArgs extends io.pulumi.resources.ResourceArgs {
             this.algorithm = Objects.requireNonNull(algorithm);
             return this;
         }
-
         public Builder algorithm(Either<String,SamplingAlgorithm> algorithm) {
             this.algorithm = Output.of(Objects.requireNonNull(algorithm));
             return this;
         }
-
         public Builder compute(Output<ComputeConfigurationArgs> compute) {
             this.compute = Objects.requireNonNull(compute);
             return this;
         }
-
         public Builder compute(ComputeConfigurationArgs compute) {
             this.compute = Output.of(Objects.requireNonNull(compute));
             return this;
         }
-
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder earlyTermination(@Nullable Output<Object> earlyTermination) {
             this.earlyTermination = earlyTermination;
             return this;
         }
-
         public Builder earlyTermination(@Nullable Object earlyTermination) {
             this.earlyTermination = Output.ofNullable(earlyTermination);
             return this;
         }
-
         public Builder experimentName(@Nullable Output<String> experimentName) {
             this.experimentName = experimentName;
             return this;
         }
-
         public Builder experimentName(@Nullable String experimentName) {
             this.experimentName = Output.ofNullable(experimentName);
             return this;
         }
-
         public Builder identity(@Nullable Output<Either<AmlTokenArgs,ManagedIdentityArgs>> identity) {
             this.identity = identity;
             return this;
         }
-
         public Builder identity(@Nullable Either<AmlTokenArgs,ManagedIdentityArgs> identity) {
             this.identity = Output.ofNullable(identity);
             return this;
         }
-
         public Builder jobType(Output<String> jobType) {
             this.jobType = Objects.requireNonNull(jobType);
             return this;
         }
-
         public Builder jobType(String jobType) {
             this.jobType = Output.of(Objects.requireNonNull(jobType));
             return this;
         }
-
         public Builder maxConcurrentTrials(@Nullable Output<Integer> maxConcurrentTrials) {
             this.maxConcurrentTrials = maxConcurrentTrials;
             return this;
         }
-
         public Builder maxConcurrentTrials(@Nullable Integer maxConcurrentTrials) {
             this.maxConcurrentTrials = Output.ofNullable(maxConcurrentTrials);
             return this;
         }
-
         public Builder maxTotalTrials(@Nullable Output<Integer> maxTotalTrials) {
             this.maxTotalTrials = maxTotalTrials;
             return this;
         }
-
         public Builder maxTotalTrials(@Nullable Integer maxTotalTrials) {
             this.maxTotalTrials = Output.ofNullable(maxTotalTrials);
             return this;
         }
-
         public Builder objective(Output<ObjectiveArgs> objective) {
             this.objective = Objects.requireNonNull(objective);
             return this;
         }
-
         public Builder objective(ObjectiveArgs objective) {
             this.objective = Output.of(Objects.requireNonNull(objective));
             return this;
         }
-
         public Builder priority(@Nullable Output<Integer> priority) {
             this.priority = priority;
             return this;
         }
-
         public Builder priority(@Nullable Integer priority) {
             this.priority = Output.ofNullable(priority);
             return this;
         }
-
         public Builder properties(@Nullable Output<Map<String,String>> properties) {
             this.properties = properties;
             return this;
         }
-
         public Builder properties(@Nullable Map<String,String> properties) {
             this.properties = Output.ofNullable(properties);
             return this;
         }
-
         public Builder searchSpace(Output<Map<String,Object>> searchSpace) {
             this.searchSpace = Objects.requireNonNull(searchSpace);
             return this;
         }
-
         public Builder searchSpace(Map<String,Object> searchSpace) {
             this.searchSpace = Output.of(Objects.requireNonNull(searchSpace));
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
         public Builder timeout(@Nullable Output<String> timeout) {
             this.timeout = timeout;
             return this;
         }
-
         public Builder timeout(@Nullable String timeout) {
             this.timeout = Output.ofNullable(timeout);
             return this;
         }
-
         public Builder trial(@Nullable Output<TrialComponentArgs> trial) {
             this.trial = trial;
             return this;
         }
-
         public Builder trial(@Nullable TrialComponentArgs trial) {
             this.trial = Output.ofNullable(trial);
             return this;
-        }
-        public SweepJobArgs build() {
+        }        public SweepJobArgs build() {
             return new SweepJobArgs(algorithm, compute, description, earlyTermination, experimentName, identity, jobType, maxConcurrentTrials, maxTotalTrials, objective, priority, properties, searchSpace, tags, timeout, trial);
         }
     }

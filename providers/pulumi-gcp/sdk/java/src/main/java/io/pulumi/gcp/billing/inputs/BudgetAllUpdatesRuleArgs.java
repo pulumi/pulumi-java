@@ -119,42 +119,37 @@ public final class BudgetAllUpdatesRuleArgs extends io.pulumi.resources.Resource
             this.disableDefaultIamRecipients = disableDefaultIamRecipients;
             return this;
         }
-
         public Builder disableDefaultIamRecipients(@Nullable Boolean disableDefaultIamRecipients) {
             this.disableDefaultIamRecipients = Output.ofNullable(disableDefaultIamRecipients);
             return this;
         }
-
         public Builder monitoringNotificationChannels(@Nullable Output<List<String>> monitoringNotificationChannels) {
             this.monitoringNotificationChannels = monitoringNotificationChannels;
             return this;
         }
-
         public Builder monitoringNotificationChannels(@Nullable List<String> monitoringNotificationChannels) {
             this.monitoringNotificationChannels = Output.ofNullable(monitoringNotificationChannels);
             return this;
         }
-
+        public Builder monitoringNotificationChannels(String... monitoringNotificationChannels) {
+            return monitoringNotificationChannels(List.of(monitoringNotificationChannels));
+        }
         public Builder pubsubTopic(@Nullable Output<String> pubsubTopic) {
             this.pubsubTopic = pubsubTopic;
             return this;
         }
-
         public Builder pubsubTopic(@Nullable String pubsubTopic) {
             this.pubsubTopic = Output.ofNullable(pubsubTopic);
             return this;
         }
-
         public Builder schemaVersion(@Nullable Output<String> schemaVersion) {
             this.schemaVersion = schemaVersion;
             return this;
         }
-
         public Builder schemaVersion(@Nullable String schemaVersion) {
             this.schemaVersion = Output.ofNullable(schemaVersion);
             return this;
-        }
-        public BudgetAllUpdatesRuleArgs build() {
+        }        public BudgetAllUpdatesRuleArgs build() {
             return new BudgetAllUpdatesRuleArgs(disableDefaultIamRecipients, monitoringNotificationChannels, pubsubTopic, schemaVersion);
         }
     }

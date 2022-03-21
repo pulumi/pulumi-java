@@ -83,27 +83,22 @@ public final class AnomalyDetectorMetricSource {
             this.appFlowConfig = appFlowConfig;
             return this;
         }
-
         public Builder cloudwatchConfig(@Nullable AnomalyDetectorCloudwatchConfig cloudwatchConfig) {
             this.cloudwatchConfig = cloudwatchConfig;
             return this;
         }
-
         public Builder rDSSourceConfig(@Nullable AnomalyDetectorRDSSourceConfig rDSSourceConfig) {
             this.rDSSourceConfig = rDSSourceConfig;
             return this;
         }
-
         public Builder redshiftSourceConfig(@Nullable AnomalyDetectorRedshiftSourceConfig redshiftSourceConfig) {
             this.redshiftSourceConfig = redshiftSourceConfig;
             return this;
         }
-
         public Builder s3SourceConfig(@Nullable AnomalyDetectorS3SourceConfig s3SourceConfig) {
             this.s3SourceConfig = s3SourceConfig;
             return this;
-        }
-        public AnomalyDetectorMetricSource build() {
+        }        public AnomalyDetectorMetricSource build() {
             return new AnomalyDetectorMetricSource(appFlowConfig, cloudwatchConfig, rDSSourceConfig, redshiftSourceConfig, s3SourceConfig);
         }
     }

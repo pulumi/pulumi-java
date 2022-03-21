@@ -51,8 +51,7 @@ public final class SubResourceReadOnlyResponse {
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
-        }
-        public SubResourceReadOnlyResponse build() {
+        }        public SubResourceReadOnlyResponse build() {
             return new SubResourceReadOnlyResponse(id);
         }
     }

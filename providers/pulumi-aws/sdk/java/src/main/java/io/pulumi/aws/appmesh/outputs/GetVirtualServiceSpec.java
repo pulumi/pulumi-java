@@ -53,7 +53,9 @@ public final class GetVirtualServiceSpec {
             this.providers = Objects.requireNonNull(providers);
             return this;
         }
-        public GetVirtualServiceSpec build() {
+        public Builder providers(GetVirtualServiceSpecProvider... providers) {
+            return providers(List.of(providers));
+        }        public GetVirtualServiceSpec build() {
             return new GetVirtualServiceSpec(providers);
         }
     }

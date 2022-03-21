@@ -55,12 +55,10 @@ public final class EC2FleetMemoryGiBPerVCpuRequest {
             this.max = max;
             return this;
         }
-
         public Builder min(@Nullable Double min) {
             this.min = min;
             return this;
-        }
-        public EC2FleetMemoryGiBPerVCpuRequest build() {
+        }        public EC2FleetMemoryGiBPerVCpuRequest build() {
             return new EC2FleetMemoryGiBPerVCpuRequest(max, min);
         }
     }

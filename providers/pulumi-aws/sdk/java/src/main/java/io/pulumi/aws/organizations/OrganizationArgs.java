@@ -91,32 +91,32 @@ public final class OrganizationArgs extends io.pulumi.resources.ResourceArgs {
             this.awsServiceAccessPrincipals = awsServiceAccessPrincipals;
             return this;
         }
-
         public Builder awsServiceAccessPrincipals(@Nullable List<String> awsServiceAccessPrincipals) {
             this.awsServiceAccessPrincipals = Output.ofNullable(awsServiceAccessPrincipals);
             return this;
         }
-
+        public Builder awsServiceAccessPrincipals(String... awsServiceAccessPrincipals) {
+            return awsServiceAccessPrincipals(List.of(awsServiceAccessPrincipals));
+        }
         public Builder enabledPolicyTypes(@Nullable Output<List<String>> enabledPolicyTypes) {
             this.enabledPolicyTypes = enabledPolicyTypes;
             return this;
         }
-
         public Builder enabledPolicyTypes(@Nullable List<String> enabledPolicyTypes) {
             this.enabledPolicyTypes = Output.ofNullable(enabledPolicyTypes);
             return this;
         }
-
+        public Builder enabledPolicyTypes(String... enabledPolicyTypes) {
+            return enabledPolicyTypes(List.of(enabledPolicyTypes));
+        }
         public Builder featureSet(@Nullable Output<String> featureSet) {
             this.featureSet = featureSet;
             return this;
         }
-
         public Builder featureSet(@Nullable String featureSet) {
             this.featureSet = Output.ofNullable(featureSet);
             return this;
-        }
-        public OrganizationArgs build() {
+        }        public OrganizationArgs build() {
             return new OrganizationArgs(awsServiceAccessPrincipals, enabledPolicyTypes, featureSet);
         }
     }

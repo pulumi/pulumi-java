@@ -54,7 +54,9 @@ public final class DedicatedHostGroupInstanceViewResponse {
             this.hosts = hosts;
             return this;
         }
-        public DedicatedHostGroupInstanceViewResponse build() {
+        public Builder hosts(DedicatedHostInstanceViewWithNameResponse... hosts) {
+            return hosts(List.of(hosts));
+        }        public DedicatedHostGroupInstanceViewResponse build() {
             return new DedicatedHostGroupInstanceViewResponse(hosts);
         }
     }

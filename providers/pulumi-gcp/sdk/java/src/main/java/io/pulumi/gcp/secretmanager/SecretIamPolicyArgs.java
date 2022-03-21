@@ -88,32 +88,26 @@ public final class SecretIamPolicyArgs extends io.pulumi.resources.ResourceArgs 
             this.policyData = Objects.requireNonNull(policyData);
             return this;
         }
-
         public Builder policyData(String policyData) {
             this.policyData = Output.of(Objects.requireNonNull(policyData));
             return this;
         }
-
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
         }
-
         public Builder secretId(Output<String> secretId) {
             this.secretId = Objects.requireNonNull(secretId);
             return this;
         }
-
         public Builder secretId(String secretId) {
             this.secretId = Output.of(Objects.requireNonNull(secretId));
             return this;
-        }
-        public SecretIamPolicyArgs build() {
+        }        public SecretIamPolicyArgs build() {
             return new SecretIamPolicyArgs(policyData, project, secretId);
         }
     }

@@ -176,82 +176,66 @@ public final class CapacityDetailsArgs extends io.pulumi.resources.ResourceArgs 
             this.administration = administration;
             return this;
         }
-
         public Builder administration(@Nullable DedicatedCapacityAdministratorsArgs administration) {
             this.administration = Output.ofNullable(administration);
             return this;
         }
-
         public Builder dedicatedCapacityName(@Nullable Output<String> dedicatedCapacityName) {
             this.dedicatedCapacityName = dedicatedCapacityName;
             return this;
         }
-
         public Builder dedicatedCapacityName(@Nullable String dedicatedCapacityName) {
             this.dedicatedCapacityName = Output.ofNullable(dedicatedCapacityName);
             return this;
         }
-
         public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder mode(@Nullable Output<Either<String,Mode>> mode) {
             this.mode = mode;
             return this;
         }
-
         public Builder mode(@Nullable Either<String,Mode> mode) {
             this.mode = Output.ofNullable(mode);
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder sku(Output<CapacitySkuArgs> sku) {
             this.sku = Objects.requireNonNull(sku);
             return this;
         }
-
         public Builder sku(CapacitySkuArgs sku) {
             this.sku = Output.of(Objects.requireNonNull(sku));
             return this;
         }
-
         public Builder systemData(@Nullable Output<SystemDataArgs> systemData) {
             this.systemData = systemData;
             return this;
         }
-
         public Builder systemData(@Nullable SystemDataArgs systemData) {
             this.systemData = Output.ofNullable(systemData);
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
-        }
-        public CapacityDetailsArgs build() {
+        }        public CapacityDetailsArgs build() {
             return new CapacityDetailsArgs(administration, dedicatedCapacityName, location, mode, resourceGroupName, sku, systemData, tags);
         }
     }

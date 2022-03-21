@@ -123,52 +123,42 @@ public final class FeatureMembershipState extends io.pulumi.resources.ResourceAr
             this.configmanagement = configmanagement;
             return this;
         }
-
         public Builder configmanagement(@Nullable FeatureMembershipConfigmanagementGetArgs configmanagement) {
             this.configmanagement = Output.ofNullable(configmanagement);
             return this;
         }
-
         public Builder feature(@Nullable Output<String> feature) {
             this.feature = feature;
             return this;
         }
-
         public Builder feature(@Nullable String feature) {
             this.feature = Output.ofNullable(feature);
             return this;
         }
-
         public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder membership(@Nullable Output<String> membership) {
             this.membership = membership;
             return this;
         }
-
         public Builder membership(@Nullable String membership) {
             this.membership = Output.ofNullable(membership);
             return this;
         }
-
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
-        }
-        public FeatureMembershipState build() {
+        }        public FeatureMembershipState build() {
             return new FeatureMembershipState(configmanagement, feature, location, membership, project);
         }
     }

@@ -57,12 +57,10 @@ public final class IntegrationTlsConfigGetArgs extends io.pulumi.resources.Resou
             this.serverNameToVerify = serverNameToVerify;
             return this;
         }
-
         public Builder serverNameToVerify(@Nullable String serverNameToVerify) {
             this.serverNameToVerify = Output.ofNullable(serverNameToVerify);
             return this;
-        }
-        public IntegrationTlsConfigGetArgs build() {
+        }        public IntegrationTlsConfigGetArgs build() {
             return new IntegrationTlsConfigGetArgs(serverNameToVerify);
         }
     }

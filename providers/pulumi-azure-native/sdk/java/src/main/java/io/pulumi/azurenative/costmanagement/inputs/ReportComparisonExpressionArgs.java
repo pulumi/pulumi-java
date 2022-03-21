@@ -96,32 +96,29 @@ public final class ReportComparisonExpressionArgs extends io.pulumi.resources.Re
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
-
         public Builder operator(Output<Either<String,OperatorType>> operator) {
             this.operator = Objects.requireNonNull(operator);
             return this;
         }
-
         public Builder operator(Either<String,OperatorType> operator) {
             this.operator = Output.of(Objects.requireNonNull(operator));
             return this;
         }
-
         public Builder values(Output<List<String>> values) {
             this.values = Objects.requireNonNull(values);
             return this;
         }
-
         public Builder values(List<String> values) {
             this.values = Output.of(Objects.requireNonNull(values));
             return this;
         }
-        public ReportComparisonExpressionArgs build() {
+        public Builder values(String... values) {
+            return values(List.of(values));
+        }        public ReportComparisonExpressionArgs build() {
             return new ReportComparisonExpressionArgs(name, operator, values);
         }
     }

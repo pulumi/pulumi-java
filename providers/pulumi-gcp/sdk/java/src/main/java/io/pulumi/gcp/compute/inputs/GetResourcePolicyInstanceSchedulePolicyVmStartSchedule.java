@@ -50,8 +50,7 @@ public final class GetResourcePolicyInstanceSchedulePolicyVmStartSchedule extend
         public Builder schedule(String schedule) {
             this.schedule = Objects.requireNonNull(schedule);
             return this;
-        }
-        public GetResourcePolicyInstanceSchedulePolicyVmStartSchedule build() {
+        }        public GetResourcePolicyInstanceSchedulePolicyVmStartSchedule build() {
             return new GetResourcePolicyInstanceSchedulePolicyVmStartSchedule(schedule);
         }
     }

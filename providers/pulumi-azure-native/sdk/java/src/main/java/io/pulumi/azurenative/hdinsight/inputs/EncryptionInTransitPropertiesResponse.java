@@ -60,8 +60,7 @@ public final class EncryptionInTransitPropertiesResponse extends io.pulumi.resou
         public Builder isEncryptionInTransitEnabled(@Nullable Boolean isEncryptionInTransitEnabled) {
             this.isEncryptionInTransitEnabled = isEncryptionInTransitEnabled;
             return this;
-        }
-        public EncryptionInTransitPropertiesResponse build() {
+        }        public EncryptionInTransitPropertiesResponse build() {
             return new EncryptionInTransitPropertiesResponse(isEncryptionInTransitEnabled);
         }
     }

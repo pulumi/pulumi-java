@@ -173,82 +173,66 @@ public final class CustomAssessmentAutomationArgs extends io.pulumi.resources.Re
             this.compressedQuery = compressedQuery;
             return this;
         }
-
         public Builder compressedQuery(@Nullable String compressedQuery) {
             this.compressedQuery = Output.ofNullable(compressedQuery);
             return this;
         }
-
         public Builder customAssessmentAutomationName(@Nullable Output<String> customAssessmentAutomationName) {
             this.customAssessmentAutomationName = customAssessmentAutomationName;
             return this;
         }
-
         public Builder customAssessmentAutomationName(@Nullable String customAssessmentAutomationName) {
             this.customAssessmentAutomationName = Output.ofNullable(customAssessmentAutomationName);
             return this;
         }
-
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder displayName(@Nullable Output<String> displayName) {
             this.displayName = displayName;
             return this;
         }
-
         public Builder displayName(@Nullable String displayName) {
             this.displayName = Output.ofNullable(displayName);
             return this;
         }
-
         public Builder remediationDescription(@Nullable Output<String> remediationDescription) {
             this.remediationDescription = remediationDescription;
             return this;
         }
-
         public Builder remediationDescription(@Nullable String remediationDescription) {
             this.remediationDescription = Output.ofNullable(remediationDescription);
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder severity(@Nullable Output<Either<String,SeverityEnum>> severity) {
             this.severity = severity;
             return this;
         }
-
         public Builder severity(@Nullable Either<String,SeverityEnum> severity) {
             this.severity = Output.ofNullable(severity);
             return this;
         }
-
         public Builder supportedCloud(@Nullable Output<Either<String,SupportedCloudEnum>> supportedCloud) {
             this.supportedCloud = supportedCloud;
             return this;
         }
-
         public Builder supportedCloud(@Nullable Either<String,SupportedCloudEnum> supportedCloud) {
             this.supportedCloud = Output.ofNullable(supportedCloud);
             return this;
-        }
-        public CustomAssessmentAutomationArgs build() {
+        }        public CustomAssessmentAutomationArgs build() {
             return new CustomAssessmentAutomationArgs(compressedQuery, customAssessmentAutomationName, description, displayName, remediationDescription, resourceGroupName, severity, supportedCloud);
         }
     }

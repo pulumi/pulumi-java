@@ -142,62 +142,56 @@ public final class ScheduledAuditArgs extends io.pulumi.resources.ResourceArgs {
             this.dayOfMonth = dayOfMonth;
             return this;
         }
-
         public Builder dayOfMonth(@Nullable String dayOfMonth) {
             this.dayOfMonth = Output.ofNullable(dayOfMonth);
             return this;
         }
-
         public Builder dayOfWeek(@Nullable Output<ScheduledAuditDayOfWeek> dayOfWeek) {
             this.dayOfWeek = dayOfWeek;
             return this;
         }
-
         public Builder dayOfWeek(@Nullable ScheduledAuditDayOfWeek dayOfWeek) {
             this.dayOfWeek = Output.ofNullable(dayOfWeek);
             return this;
         }
-
         public Builder frequency(Output<ScheduledAuditFrequency> frequency) {
             this.frequency = Objects.requireNonNull(frequency);
             return this;
         }
-
         public Builder frequency(ScheduledAuditFrequency frequency) {
             this.frequency = Output.of(Objects.requireNonNull(frequency));
             return this;
         }
-
         public Builder scheduledAuditName(@Nullable Output<String> scheduledAuditName) {
             this.scheduledAuditName = scheduledAuditName;
             return this;
         }
-
         public Builder scheduledAuditName(@Nullable String scheduledAuditName) {
             this.scheduledAuditName = Output.ofNullable(scheduledAuditName);
             return this;
         }
-
         public Builder tags(@Nullable Output<List<ScheduledAuditTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable List<ScheduledAuditTagArgs> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
+        public Builder tags(ScheduledAuditTagArgs... tags) {
+            return tags(List.of(tags));
+        }
         public Builder targetCheckNames(Output<List<String>> targetCheckNames) {
             this.targetCheckNames = Objects.requireNonNull(targetCheckNames);
             return this;
         }
-
         public Builder targetCheckNames(List<String> targetCheckNames) {
             this.targetCheckNames = Output.of(Objects.requireNonNull(targetCheckNames));
             return this;
         }
-        public ScheduledAuditArgs build() {
+        public Builder targetCheckNames(String... targetCheckNames) {
+            return targetCheckNames(List.of(targetCheckNames));
+        }        public ScheduledAuditArgs build() {
             return new ScheduledAuditArgs(dayOfMonth, dayOfWeek, frequency, scheduledAuditName, tags, targetCheckNames);
         }
     }

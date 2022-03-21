@@ -425,232 +425,198 @@ public final class ProjectArgs extends io.pulumi.resources.ResourceArgs {
             this.artifacts = Objects.requireNonNull(artifacts);
             return this;
         }
-
         public Builder artifacts(ProjectArtifactsArgs artifacts) {
             this.artifacts = Output.of(Objects.requireNonNull(artifacts));
             return this;
         }
-
         public Builder badgeEnabled(@Nullable Output<Boolean> badgeEnabled) {
             this.badgeEnabled = badgeEnabled;
             return this;
         }
-
         public Builder badgeEnabled(@Nullable Boolean badgeEnabled) {
             this.badgeEnabled = Output.ofNullable(badgeEnabled);
             return this;
         }
-
         public Builder buildBatchConfig(@Nullable Output<ProjectBuildBatchConfigArgs> buildBatchConfig) {
             this.buildBatchConfig = buildBatchConfig;
             return this;
         }
-
         public Builder buildBatchConfig(@Nullable ProjectBuildBatchConfigArgs buildBatchConfig) {
             this.buildBatchConfig = Output.ofNullable(buildBatchConfig);
             return this;
         }
-
         public Builder buildTimeout(@Nullable Output<Integer> buildTimeout) {
             this.buildTimeout = buildTimeout;
             return this;
         }
-
         public Builder buildTimeout(@Nullable Integer buildTimeout) {
             this.buildTimeout = Output.ofNullable(buildTimeout);
             return this;
         }
-
         public Builder cache(@Nullable Output<ProjectCacheArgs> cache) {
             this.cache = cache;
             return this;
         }
-
         public Builder cache(@Nullable ProjectCacheArgs cache) {
             this.cache = Output.ofNullable(cache);
             return this;
         }
-
         public Builder concurrentBuildLimit(@Nullable Output<Integer> concurrentBuildLimit) {
             this.concurrentBuildLimit = concurrentBuildLimit;
             return this;
         }
-
         public Builder concurrentBuildLimit(@Nullable Integer concurrentBuildLimit) {
             this.concurrentBuildLimit = Output.ofNullable(concurrentBuildLimit);
             return this;
         }
-
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder encryptionKey(@Nullable Output<String> encryptionKey) {
             this.encryptionKey = encryptionKey;
             return this;
         }
-
         public Builder encryptionKey(@Nullable String encryptionKey) {
             this.encryptionKey = Output.ofNullable(encryptionKey);
             return this;
         }
-
         public Builder environment(Output<ProjectEnvironmentArgs> environment) {
             this.environment = Objects.requireNonNull(environment);
             return this;
         }
-
         public Builder environment(ProjectEnvironmentArgs environment) {
             this.environment = Output.of(Objects.requireNonNull(environment));
             return this;
         }
-
         public Builder fileSystemLocations(@Nullable Output<List<ProjectFileSystemLocationArgs>> fileSystemLocations) {
             this.fileSystemLocations = fileSystemLocations;
             return this;
         }
-
         public Builder fileSystemLocations(@Nullable List<ProjectFileSystemLocationArgs> fileSystemLocations) {
             this.fileSystemLocations = Output.ofNullable(fileSystemLocations);
             return this;
         }
-
+        public Builder fileSystemLocations(ProjectFileSystemLocationArgs... fileSystemLocations) {
+            return fileSystemLocations(List.of(fileSystemLocations));
+        }
         public Builder logsConfig(@Nullable Output<ProjectLogsConfigArgs> logsConfig) {
             this.logsConfig = logsConfig;
             return this;
         }
-
         public Builder logsConfig(@Nullable ProjectLogsConfigArgs logsConfig) {
             this.logsConfig = Output.ofNullable(logsConfig);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder projectVisibility(@Nullable Output<String> projectVisibility) {
             this.projectVisibility = projectVisibility;
             return this;
         }
-
         public Builder projectVisibility(@Nullable String projectVisibility) {
             this.projectVisibility = Output.ofNullable(projectVisibility);
             return this;
         }
-
         public Builder queuedTimeout(@Nullable Output<Integer> queuedTimeout) {
             this.queuedTimeout = queuedTimeout;
             return this;
         }
-
         public Builder queuedTimeout(@Nullable Integer queuedTimeout) {
             this.queuedTimeout = Output.ofNullable(queuedTimeout);
             return this;
         }
-
         public Builder resourceAccessRole(@Nullable Output<String> resourceAccessRole) {
             this.resourceAccessRole = resourceAccessRole;
             return this;
         }
-
         public Builder resourceAccessRole(@Nullable String resourceAccessRole) {
             this.resourceAccessRole = Output.ofNullable(resourceAccessRole);
             return this;
         }
-
         public Builder secondaryArtifacts(@Nullable Output<List<ProjectSecondaryArtifactArgs>> secondaryArtifacts) {
             this.secondaryArtifacts = secondaryArtifacts;
             return this;
         }
-
         public Builder secondaryArtifacts(@Nullable List<ProjectSecondaryArtifactArgs> secondaryArtifacts) {
             this.secondaryArtifacts = Output.ofNullable(secondaryArtifacts);
             return this;
         }
-
+        public Builder secondaryArtifacts(ProjectSecondaryArtifactArgs... secondaryArtifacts) {
+            return secondaryArtifacts(List.of(secondaryArtifacts));
+        }
         public Builder secondarySourceVersions(@Nullable Output<List<ProjectSecondarySourceVersionArgs>> secondarySourceVersions) {
             this.secondarySourceVersions = secondarySourceVersions;
             return this;
         }
-
         public Builder secondarySourceVersions(@Nullable List<ProjectSecondarySourceVersionArgs> secondarySourceVersions) {
             this.secondarySourceVersions = Output.ofNullable(secondarySourceVersions);
             return this;
         }
-
+        public Builder secondarySourceVersions(ProjectSecondarySourceVersionArgs... secondarySourceVersions) {
+            return secondarySourceVersions(List.of(secondarySourceVersions));
+        }
         public Builder secondarySources(@Nullable Output<List<ProjectSecondarySourceArgs>> secondarySources) {
             this.secondarySources = secondarySources;
             return this;
         }
-
         public Builder secondarySources(@Nullable List<ProjectSecondarySourceArgs> secondarySources) {
             this.secondarySources = Output.ofNullable(secondarySources);
             return this;
         }
-
+        public Builder secondarySources(ProjectSecondarySourceArgs... secondarySources) {
+            return secondarySources(List.of(secondarySources));
+        }
         public Builder serviceRole(Output<String> serviceRole) {
             this.serviceRole = Objects.requireNonNull(serviceRole);
             return this;
         }
-
         public Builder serviceRole(String serviceRole) {
             this.serviceRole = Output.of(Objects.requireNonNull(serviceRole));
             return this;
         }
-
         public Builder source(Output<ProjectSourceArgs> source) {
             this.source = Objects.requireNonNull(source);
             return this;
         }
-
         public Builder source(ProjectSourceArgs source) {
             this.source = Output.of(Objects.requireNonNull(source));
             return this;
         }
-
         public Builder sourceVersion(@Nullable Output<String> sourceVersion) {
             this.sourceVersion = sourceVersion;
             return this;
         }
-
         public Builder sourceVersion(@Nullable String sourceVersion) {
             this.sourceVersion = Output.ofNullable(sourceVersion);
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
         public Builder vpcConfig(@Nullable Output<ProjectVpcConfigArgs> vpcConfig) {
             this.vpcConfig = vpcConfig;
             return this;
         }
-
         public Builder vpcConfig(@Nullable ProjectVpcConfigArgs vpcConfig) {
             this.vpcConfig = Output.ofNullable(vpcConfig);
             return this;
-        }
-        public ProjectArgs build() {
+        }        public ProjectArgs build() {
             return new ProjectArgs(artifacts, badgeEnabled, buildBatchConfig, buildTimeout, cache, concurrentBuildLimit, description, encryptionKey, environment, fileSystemLocations, logsConfig, name, projectVisibility, queuedTimeout, resourceAccessRole, secondaryArtifacts, secondarySourceVersions, secondarySources, serviceRole, source, sourceVersion, tags, vpcConfig);
         }
     }

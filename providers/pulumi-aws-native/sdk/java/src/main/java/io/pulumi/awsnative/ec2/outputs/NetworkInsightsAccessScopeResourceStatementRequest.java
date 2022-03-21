@@ -55,12 +55,16 @@ public final class NetworkInsightsAccessScopeResourceStatementRequest {
             this.resourceTypes = resourceTypes;
             return this;
         }
-
+        public Builder resourceTypes(String... resourceTypes) {
+            return resourceTypes(List.of(resourceTypes));
+        }
         public Builder resources(@Nullable List<String> resources) {
             this.resources = resources;
             return this;
         }
-        public NetworkInsightsAccessScopeResourceStatementRequest build() {
+        public Builder resources(String... resources) {
+            return resources(List.of(resources));
+        }        public NetworkInsightsAccessScopeResourceStatementRequest build() {
             return new NetworkInsightsAccessScopeResourceStatementRequest(resourceTypes, resources);
         }
     }

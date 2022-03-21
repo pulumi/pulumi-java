@@ -151,37 +151,30 @@ public final class SubjectDescriptionResponse {
             this.commonName = Objects.requireNonNull(commonName);
             return this;
         }
-
         public Builder hexSerialNumber(String hexSerialNumber) {
             this.hexSerialNumber = Objects.requireNonNull(hexSerialNumber);
             return this;
         }
-
         public Builder lifetime(String lifetime) {
             this.lifetime = Objects.requireNonNull(lifetime);
             return this;
         }
-
         public Builder notAfterTime(String notAfterTime) {
             this.notAfterTime = Objects.requireNonNull(notAfterTime);
             return this;
         }
-
         public Builder notBeforeTime(String notBeforeTime) {
             this.notBeforeTime = Objects.requireNonNull(notBeforeTime);
             return this;
         }
-
         public Builder subject(SubjectResponse subject) {
             this.subject = Objects.requireNonNull(subject);
             return this;
         }
-
         public Builder subjectAltName(SubjectAltNamesResponse subjectAltName) {
             this.subjectAltName = Objects.requireNonNull(subjectAltName);
             return this;
-        }
-        public SubjectDescriptionResponse build() {
+        }        public SubjectDescriptionResponse build() {
             return new SubjectDescriptionResponse(commonName, hexSerialNumber, lifetime, notAfterTime, notBeforeTime, subject, subjectAltName);
         }
     }

@@ -78,32 +78,26 @@ public final class DomainMasterUserOptionsArgs extends io.pulumi.resources.Resou
             this.masterUserARN = masterUserARN;
             return this;
         }
-
         public Builder masterUserARN(@Nullable String masterUserARN) {
             this.masterUserARN = Output.ofNullable(masterUserARN);
             return this;
         }
-
         public Builder masterUserName(@Nullable Output<String> masterUserName) {
             this.masterUserName = masterUserName;
             return this;
         }
-
         public Builder masterUserName(@Nullable String masterUserName) {
             this.masterUserName = Output.ofNullable(masterUserName);
             return this;
         }
-
         public Builder masterUserPassword(@Nullable Output<String> masterUserPassword) {
             this.masterUserPassword = masterUserPassword;
             return this;
         }
-
         public Builder masterUserPassword(@Nullable String masterUserPassword) {
             this.masterUserPassword = Output.ofNullable(masterUserPassword);
             return this;
-        }
-        public DomainMasterUserOptionsArgs build() {
+        }        public DomainMasterUserOptionsArgs build() {
             return new DomainMasterUserOptionsArgs(masterUserARN, masterUserName, masterUserPassword);
         }
     }

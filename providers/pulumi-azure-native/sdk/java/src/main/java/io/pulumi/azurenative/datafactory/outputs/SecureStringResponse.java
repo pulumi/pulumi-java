@@ -71,12 +71,10 @@ public final class SecureStringResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder value(String value) {
             this.value = Objects.requireNonNull(value);
             return this;
-        }
-        public SecureStringResponse build() {
+        }        public SecureStringResponse build() {
             return new SecureStringResponse(type, value);
         }
     }

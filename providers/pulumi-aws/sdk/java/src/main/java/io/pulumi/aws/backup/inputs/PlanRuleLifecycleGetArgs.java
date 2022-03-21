@@ -74,22 +74,18 @@ public final class PlanRuleLifecycleGetArgs extends io.pulumi.resources.Resource
             this.coldStorageAfter = coldStorageAfter;
             return this;
         }
-
         public Builder coldStorageAfter(@Nullable Integer coldStorageAfter) {
             this.coldStorageAfter = Output.ofNullable(coldStorageAfter);
             return this;
         }
-
         public Builder deleteAfter(@Nullable Output<Integer> deleteAfter) {
             this.deleteAfter = deleteAfter;
             return this;
         }
-
         public Builder deleteAfter(@Nullable Integer deleteAfter) {
             this.deleteAfter = Output.ofNullable(deleteAfter);
             return this;
-        }
-        public PlanRuleLifecycleGetArgs build() {
+        }        public PlanRuleLifecycleGetArgs build() {
             return new PlanRuleLifecycleGetArgs(coldStorageAfter, deleteAfter);
         }
     }

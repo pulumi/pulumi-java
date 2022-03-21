@@ -50,8 +50,7 @@ public final class GetRealtimeLogConfigArgs extends io.pulumi.resources.InvokeAr
         public Builder arn(String arn) {
             this.arn = Objects.requireNonNull(arn);
             return this;
-        }
-        public GetRealtimeLogConfigArgs build() {
+        }        public GetRealtimeLogConfigArgs build() {
             return new GetRealtimeLogConfigArgs(arn);
         }
     }

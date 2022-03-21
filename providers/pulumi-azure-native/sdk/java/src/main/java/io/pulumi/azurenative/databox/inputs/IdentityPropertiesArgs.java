@@ -79,22 +79,18 @@ public final class IdentityPropertiesArgs extends io.pulumi.resources.ResourceAr
             this.type = type;
             return this;
         }
-
         public Builder type(@Nullable String type) {
             this.type = Output.ofNullable(type);
             return this;
         }
-
         public Builder userAssigned(@Nullable Output<UserAssignedPropertiesArgs> userAssigned) {
             this.userAssigned = userAssigned;
             return this;
         }
-
         public Builder userAssigned(@Nullable UserAssignedPropertiesArgs userAssigned) {
             this.userAssigned = Output.ofNullable(userAssigned);
             return this;
-        }
-        public IdentityPropertiesArgs build() {
+        }        public IdentityPropertiesArgs build() {
             return new IdentityPropertiesArgs(type, userAssigned);
         }
     }

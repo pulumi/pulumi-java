@@ -83,12 +83,13 @@ public final class OccurenceAttestation {
             this.serializedPayload = Objects.requireNonNull(serializedPayload);
             return this;
         }
-
         public Builder signatures(List<OccurenceAttestationSignature> signatures) {
             this.signatures = Objects.requireNonNull(signatures);
             return this;
         }
-        public OccurenceAttestation build() {
+        public Builder signatures(OccurenceAttestationSignature... signatures) {
+            return signatures(List.of(signatures));
+        }        public OccurenceAttestation build() {
             return new OccurenceAttestation(serializedPayload, signatures);
         }
     }

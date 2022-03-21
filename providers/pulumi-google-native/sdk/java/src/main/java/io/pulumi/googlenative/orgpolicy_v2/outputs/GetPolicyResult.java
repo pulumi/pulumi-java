@@ -70,12 +70,10 @@ public final class GetPolicyResult {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder spec(GoogleCloudOrgpolicyV2PolicySpecResponse spec) {
             this.spec = Objects.requireNonNull(spec);
             return this;
-        }
-        public GetPolicyResult build() {
+        }        public GetPolicyResult build() {
             return new GetPolicyResult(name, spec);
         }
     }

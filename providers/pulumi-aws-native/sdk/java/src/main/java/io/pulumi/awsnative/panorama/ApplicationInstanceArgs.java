@@ -167,102 +167,85 @@ public final class ApplicationInstanceArgs extends io.pulumi.resources.ResourceA
             this.applicationInstanceIdToReplace = applicationInstanceIdToReplace;
             return this;
         }
-
         public Builder applicationInstanceIdToReplace(@Nullable String applicationInstanceIdToReplace) {
             this.applicationInstanceIdToReplace = Output.ofNullable(applicationInstanceIdToReplace);
             return this;
         }
-
         public Builder defaultRuntimeContextDevice(Output<String> defaultRuntimeContextDevice) {
             this.defaultRuntimeContextDevice = Objects.requireNonNull(defaultRuntimeContextDevice);
             return this;
         }
-
         public Builder defaultRuntimeContextDevice(String defaultRuntimeContextDevice) {
             this.defaultRuntimeContextDevice = Output.of(Objects.requireNonNull(defaultRuntimeContextDevice));
             return this;
         }
-
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder deviceId(@Nullable Output<String> deviceId) {
             this.deviceId = deviceId;
             return this;
         }
-
         public Builder deviceId(@Nullable String deviceId) {
             this.deviceId = Output.ofNullable(deviceId);
             return this;
         }
-
         public Builder manifestOverridesPayload(@Nullable Output<ApplicationInstanceManifestOverridesPayloadArgs> manifestOverridesPayload) {
             this.manifestOverridesPayload = manifestOverridesPayload;
             return this;
         }
-
         public Builder manifestOverridesPayload(@Nullable ApplicationInstanceManifestOverridesPayloadArgs manifestOverridesPayload) {
             this.manifestOverridesPayload = Output.ofNullable(manifestOverridesPayload);
             return this;
         }
-
         public Builder manifestPayload(Output<ApplicationInstanceManifestPayloadArgs> manifestPayload) {
             this.manifestPayload = Objects.requireNonNull(manifestPayload);
             return this;
         }
-
         public Builder manifestPayload(ApplicationInstanceManifestPayloadArgs manifestPayload) {
             this.manifestPayload = Output.of(Objects.requireNonNull(manifestPayload));
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder runtimeRoleArn(@Nullable Output<String> runtimeRoleArn) {
             this.runtimeRoleArn = runtimeRoleArn;
             return this;
         }
-
         public Builder runtimeRoleArn(@Nullable String runtimeRoleArn) {
             this.runtimeRoleArn = Output.ofNullable(runtimeRoleArn);
             return this;
         }
-
         public Builder statusFilter(@Nullable Output<ApplicationInstanceStatusFilter> statusFilter) {
             this.statusFilter = statusFilter;
             return this;
         }
-
         public Builder statusFilter(@Nullable ApplicationInstanceStatusFilter statusFilter) {
             this.statusFilter = Output.ofNullable(statusFilter);
             return this;
         }
-
         public Builder tags(@Nullable Output<List<ApplicationInstanceTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable List<ApplicationInstanceTagArgs> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-        public ApplicationInstanceArgs build() {
+        public Builder tags(ApplicationInstanceTagArgs... tags) {
+            return tags(List.of(tags));
+        }        public ApplicationInstanceArgs build() {
             return new ApplicationInstanceArgs(applicationInstanceIdToReplace, defaultRuntimeContextDevice, description, deviceId, manifestOverridesPayload, manifestPayload, name, runtimeRoleArn, statusFilter, tags);
         }
     }

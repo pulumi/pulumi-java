@@ -88,17 +88,14 @@ public final class TaskDefinitionProxyConfiguration {
             this.containerName = Objects.requireNonNull(containerName);
             return this;
         }
-
         public Builder properties(@Nullable Map<String,String> properties) {
             this.properties = properties;
             return this;
         }
-
         public Builder type(@Nullable String type) {
             this.type = type;
             return this;
-        }
-        public TaskDefinitionProxyConfiguration build() {
+        }        public TaskDefinitionProxyConfiguration build() {
             return new TaskDefinitionProxyConfiguration(containerName, properties, type);
         }
     }

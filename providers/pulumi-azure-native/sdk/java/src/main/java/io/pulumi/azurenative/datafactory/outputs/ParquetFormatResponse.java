@@ -90,17 +90,14 @@ public final class ParquetFormatResponse {
             this.deserializer = deserializer;
             return this;
         }
-
         public Builder serializer(@Nullable Object serializer) {
             this.serializer = serializer;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public ParquetFormatResponse build() {
+        }        public ParquetFormatResponse build() {
             return new ParquetFormatResponse(deserializer, serializer, type);
         }
     }

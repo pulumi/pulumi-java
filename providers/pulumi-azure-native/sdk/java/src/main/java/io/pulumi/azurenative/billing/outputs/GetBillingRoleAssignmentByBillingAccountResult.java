@@ -247,67 +247,54 @@ public final class GetBillingRoleAssignmentByBillingAccountResult {
             this.createdByPrincipalId = Objects.requireNonNull(createdByPrincipalId);
             return this;
         }
-
         public Builder createdByPrincipalTenantId(String createdByPrincipalTenantId) {
             this.createdByPrincipalTenantId = Objects.requireNonNull(createdByPrincipalTenantId);
             return this;
         }
-
         public Builder createdByUserEmailAddress(String createdByUserEmailAddress) {
             this.createdByUserEmailAddress = Objects.requireNonNull(createdByUserEmailAddress);
             return this;
         }
-
         public Builder createdOn(String createdOn) {
             this.createdOn = Objects.requireNonNull(createdOn);
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder principalId(@Nullable String principalId) {
             this.principalId = principalId;
             return this;
         }
-
         public Builder principalTenantId(@Nullable String principalTenantId) {
             this.principalTenantId = principalTenantId;
             return this;
         }
-
         public Builder roleDefinitionId(@Nullable String roleDefinitionId) {
             this.roleDefinitionId = roleDefinitionId;
             return this;
         }
-
         public Builder scope(String scope) {
             this.scope = Objects.requireNonNull(scope);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder userAuthenticationType(@Nullable String userAuthenticationType) {
             this.userAuthenticationType = userAuthenticationType;
             return this;
         }
-
         public Builder userEmailAddress(@Nullable String userEmailAddress) {
             this.userEmailAddress = userEmailAddress;
             return this;
-        }
-        public GetBillingRoleAssignmentByBillingAccountResult build() {
+        }        public GetBillingRoleAssignmentByBillingAccountResult build() {
             return new GetBillingRoleAssignmentByBillingAccountResult(createdByPrincipalId, createdByPrincipalTenantId, createdByUserEmailAddress, createdOn, id, name, principalId, principalTenantId, roleDefinitionId, scope, type, userAuthenticationType, userEmailAddress);
         }
     }

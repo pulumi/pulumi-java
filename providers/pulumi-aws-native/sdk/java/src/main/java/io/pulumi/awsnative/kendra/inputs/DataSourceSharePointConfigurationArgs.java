@@ -196,122 +196,110 @@ public final class DataSourceSharePointConfigurationArgs extends io.pulumi.resou
             this.crawlAttachments = crawlAttachments;
             return this;
         }
-
         public Builder crawlAttachments(@Nullable Boolean crawlAttachments) {
             this.crawlAttachments = Output.ofNullable(crawlAttachments);
             return this;
         }
-
         public Builder disableLocalGroups(@Nullable Output<Boolean> disableLocalGroups) {
             this.disableLocalGroups = disableLocalGroups;
             return this;
         }
-
         public Builder disableLocalGroups(@Nullable Boolean disableLocalGroups) {
             this.disableLocalGroups = Output.ofNullable(disableLocalGroups);
             return this;
         }
-
         public Builder documentTitleFieldName(@Nullable Output<String> documentTitleFieldName) {
             this.documentTitleFieldName = documentTitleFieldName;
             return this;
         }
-
         public Builder documentTitleFieldName(@Nullable String documentTitleFieldName) {
             this.documentTitleFieldName = Output.ofNullable(documentTitleFieldName);
             return this;
         }
-
         public Builder exclusionPatterns(@Nullable Output<List<String>> exclusionPatterns) {
             this.exclusionPatterns = exclusionPatterns;
             return this;
         }
-
         public Builder exclusionPatterns(@Nullable List<String> exclusionPatterns) {
             this.exclusionPatterns = Output.ofNullable(exclusionPatterns);
             return this;
         }
-
+        public Builder exclusionPatterns(String... exclusionPatterns) {
+            return exclusionPatterns(List.of(exclusionPatterns));
+        }
         public Builder fieldMappings(@Nullable Output<List<DataSourceToIndexFieldMappingArgs>> fieldMappings) {
             this.fieldMappings = fieldMappings;
             return this;
         }
-
         public Builder fieldMappings(@Nullable List<DataSourceToIndexFieldMappingArgs> fieldMappings) {
             this.fieldMappings = Output.ofNullable(fieldMappings);
             return this;
         }
-
+        public Builder fieldMappings(DataSourceToIndexFieldMappingArgs... fieldMappings) {
+            return fieldMappings(List.of(fieldMappings));
+        }
         public Builder inclusionPatterns(@Nullable Output<List<String>> inclusionPatterns) {
             this.inclusionPatterns = inclusionPatterns;
             return this;
         }
-
         public Builder inclusionPatterns(@Nullable List<String> inclusionPatterns) {
             this.inclusionPatterns = Output.ofNullable(inclusionPatterns);
             return this;
         }
-
+        public Builder inclusionPatterns(String... inclusionPatterns) {
+            return inclusionPatterns(List.of(inclusionPatterns));
+        }
         public Builder secretArn(Output<String> secretArn) {
             this.secretArn = Objects.requireNonNull(secretArn);
             return this;
         }
-
         public Builder secretArn(String secretArn) {
             this.secretArn = Output.of(Objects.requireNonNull(secretArn));
             return this;
         }
-
         public Builder sharePointVersion(Output<DataSourceSharePointConfigurationSharePointVersion> sharePointVersion) {
             this.sharePointVersion = Objects.requireNonNull(sharePointVersion);
             return this;
         }
-
         public Builder sharePointVersion(DataSourceSharePointConfigurationSharePointVersion sharePointVersion) {
             this.sharePointVersion = Output.of(Objects.requireNonNull(sharePointVersion));
             return this;
         }
-
         public Builder sslCertificateS3Path(@Nullable Output<DataSourceS3PathArgs> sslCertificateS3Path) {
             this.sslCertificateS3Path = sslCertificateS3Path;
             return this;
         }
-
         public Builder sslCertificateS3Path(@Nullable DataSourceS3PathArgs sslCertificateS3Path) {
             this.sslCertificateS3Path = Output.ofNullable(sslCertificateS3Path);
             return this;
         }
-
         public Builder urls(Output<List<String>> urls) {
             this.urls = Objects.requireNonNull(urls);
             return this;
         }
-
         public Builder urls(List<String> urls) {
             this.urls = Output.of(Objects.requireNonNull(urls));
             return this;
         }
-
+        public Builder urls(String... urls) {
+            return urls(List.of(urls));
+        }
         public Builder useChangeLog(@Nullable Output<Boolean> useChangeLog) {
             this.useChangeLog = useChangeLog;
             return this;
         }
-
         public Builder useChangeLog(@Nullable Boolean useChangeLog) {
             this.useChangeLog = Output.ofNullable(useChangeLog);
             return this;
         }
-
         public Builder vpcConfiguration(@Nullable Output<DataSourceVpcConfigurationArgs> vpcConfiguration) {
             this.vpcConfiguration = vpcConfiguration;
             return this;
         }
-
         public Builder vpcConfiguration(@Nullable DataSourceVpcConfigurationArgs vpcConfiguration) {
             this.vpcConfiguration = Output.ofNullable(vpcConfiguration);
             return this;
-        }
-        public DataSourceSharePointConfigurationArgs build() {
+        }        public DataSourceSharePointConfigurationArgs build() {
             return new DataSourceSharePointConfigurationArgs(crawlAttachments, disableLocalGroups, documentTitleFieldName, exclusionPatterns, fieldMappings, inclusionPatterns, secretArn, sharePointVersion, sslCertificateS3Path, urls, useChangeLog, vpcConfiguration);
         }
     }

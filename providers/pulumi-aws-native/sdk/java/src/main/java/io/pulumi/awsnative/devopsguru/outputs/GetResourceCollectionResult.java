@@ -64,12 +64,10 @@ public final class GetResourceCollectionResult {
             this.resourceCollectionFilter = resourceCollectionFilter;
             return this;
         }
-
         public Builder resourceCollectionType(@Nullable ResourceCollectionType resourceCollectionType) {
             this.resourceCollectionType = resourceCollectionType;
             return this;
-        }
-        public GetResourceCollectionResult build() {
+        }        public GetResourceCollectionResult build() {
             return new GetResourceCollectionResult(resourceCollectionFilter, resourceCollectionType);
         }
     }

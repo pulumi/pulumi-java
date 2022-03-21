@@ -55,12 +55,10 @@ public final class AlertPolicyCreationRecord {
             this.mutateTime = mutateTime;
             return this;
         }
-
         public Builder mutatedBy(@Nullable String mutatedBy) {
             this.mutatedBy = mutatedBy;
             return this;
-        }
-        public AlertPolicyCreationRecord build() {
+        }        public AlertPolicyCreationRecord build() {
             return new AlertPolicyCreationRecord(mutateTime, mutatedBy);
         }
     }

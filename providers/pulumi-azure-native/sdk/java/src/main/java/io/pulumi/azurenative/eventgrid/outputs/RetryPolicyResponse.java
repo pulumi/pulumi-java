@@ -71,12 +71,10 @@ public final class RetryPolicyResponse {
             this.eventTimeToLiveInMinutes = eventTimeToLiveInMinutes;
             return this;
         }
-
         public Builder maxDeliveryAttempts(@Nullable Integer maxDeliveryAttempts) {
             this.maxDeliveryAttempts = maxDeliveryAttempts;
             return this;
-        }
-        public RetryPolicyResponse build() {
+        }        public RetryPolicyResponse build() {
             return new RetryPolicyResponse(eventTimeToLiveInMinutes, maxDeliveryAttempts);
         }
     }

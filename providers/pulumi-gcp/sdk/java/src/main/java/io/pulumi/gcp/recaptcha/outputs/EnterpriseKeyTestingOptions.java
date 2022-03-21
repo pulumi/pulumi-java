@@ -72,12 +72,10 @@ public final class EnterpriseKeyTestingOptions {
             this.testingChallenge = testingChallenge;
             return this;
         }
-
         public Builder testingScore(@Nullable Double testingScore) {
             this.testingScore = testingScore;
             return this;
-        }
-        public EnterpriseKeyTestingOptions build() {
+        }        public EnterpriseKeyTestingOptions build() {
             return new EnterpriseKeyTestingOptions(testingChallenge, testingScore);
         }
     }

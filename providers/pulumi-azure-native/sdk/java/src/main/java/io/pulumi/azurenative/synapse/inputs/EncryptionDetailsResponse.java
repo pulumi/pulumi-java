@@ -79,12 +79,10 @@ public final class EncryptionDetailsResponse extends io.pulumi.resources.InvokeA
             this.cmk = cmk;
             return this;
         }
-
         public Builder doubleEncryptionEnabled(Boolean doubleEncryptionEnabled) {
             this.doubleEncryptionEnabled = Objects.requireNonNull(doubleEncryptionEnabled);
             return this;
-        }
-        public EncryptionDetailsResponse build() {
+        }        public EncryptionDetailsResponse build() {
             return new EncryptionDetailsResponse(cmk, doubleEncryptionEnabled);
         }
     }

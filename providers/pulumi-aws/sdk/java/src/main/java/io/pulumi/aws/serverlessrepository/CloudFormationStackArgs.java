@@ -140,62 +140,53 @@ public final class CloudFormationStackArgs extends io.pulumi.resources.ResourceA
             this.applicationId = Objects.requireNonNull(applicationId);
             return this;
         }
-
         public Builder applicationId(String applicationId) {
             this.applicationId = Output.of(Objects.requireNonNull(applicationId));
             return this;
         }
-
         public Builder capabilities(Output<List<String>> capabilities) {
             this.capabilities = Objects.requireNonNull(capabilities);
             return this;
         }
-
         public Builder capabilities(List<String> capabilities) {
             this.capabilities = Output.of(Objects.requireNonNull(capabilities));
             return this;
         }
-
+        public Builder capabilities(String... capabilities) {
+            return capabilities(List.of(capabilities));
+        }
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder parameters(@Nullable Output<Map<String,String>> parameters) {
             this.parameters = parameters;
             return this;
         }
-
         public Builder parameters(@Nullable Map<String,String> parameters) {
             this.parameters = Output.ofNullable(parameters);
             return this;
         }
-
         public Builder semanticVersion(@Nullable Output<String> semanticVersion) {
             this.semanticVersion = semanticVersion;
             return this;
         }
-
         public Builder semanticVersion(@Nullable String semanticVersion) {
             this.semanticVersion = Output.ofNullable(semanticVersion);
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
-        }
-        public CloudFormationStackArgs build() {
+        }        public CloudFormationStackArgs build() {
             return new CloudFormationStackArgs(applicationId, capabilities, name, parameters, semanticVersion, tags);
         }
     }

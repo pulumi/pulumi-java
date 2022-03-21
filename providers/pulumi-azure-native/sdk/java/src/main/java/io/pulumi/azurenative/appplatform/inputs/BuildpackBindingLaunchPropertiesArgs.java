@@ -79,22 +79,18 @@ public final class BuildpackBindingLaunchPropertiesArgs extends io.pulumi.resour
             this.properties = properties;
             return this;
         }
-
         public Builder properties(@Nullable Map<String,String> properties) {
             this.properties = Output.ofNullable(properties);
             return this;
         }
-
         public Builder secrets(@Nullable Output<Map<String,String>> secrets) {
             this.secrets = secrets;
             return this;
         }
-
         public Builder secrets(@Nullable Map<String,String> secrets) {
             this.secrets = Output.ofNullable(secrets);
             return this;
-        }
-        public BuildpackBindingLaunchPropertiesArgs build() {
+        }        public BuildpackBindingLaunchPropertiesArgs build() {
             return new BuildpackBindingLaunchPropertiesArgs(properties, secrets);
         }
     }

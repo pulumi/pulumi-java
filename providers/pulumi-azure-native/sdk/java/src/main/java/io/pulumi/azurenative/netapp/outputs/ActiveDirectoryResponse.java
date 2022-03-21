@@ -345,97 +345,84 @@ public final class ActiveDirectoryResponse {
             this.activeDirectoryId = activeDirectoryId;
             return this;
         }
-
         public Builder adName(@Nullable String adName) {
             this.adName = adName;
             return this;
         }
-
         public Builder aesEncryption(@Nullable Boolean aesEncryption) {
             this.aesEncryption = aesEncryption;
             return this;
         }
-
         public Builder allowLocalNfsUsersWithLdap(@Nullable Boolean allowLocalNfsUsersWithLdap) {
             this.allowLocalNfsUsersWithLdap = allowLocalNfsUsersWithLdap;
             return this;
         }
-
         public Builder backupOperators(@Nullable List<String> backupOperators) {
             this.backupOperators = backupOperators;
             return this;
         }
-
+        public Builder backupOperators(String... backupOperators) {
+            return backupOperators(List.of(backupOperators));
+        }
         public Builder dns(@Nullable String dns) {
             this.dns = dns;
             return this;
         }
-
         public Builder domain(@Nullable String domain) {
             this.domain = domain;
             return this;
         }
-
         public Builder kdcIP(@Nullable String kdcIP) {
             this.kdcIP = kdcIP;
             return this;
         }
-
         public Builder ldapOverTLS(@Nullable Boolean ldapOverTLS) {
             this.ldapOverTLS = ldapOverTLS;
             return this;
         }
-
         public Builder ldapSigning(@Nullable Boolean ldapSigning) {
             this.ldapSigning = ldapSigning;
             return this;
         }
-
         public Builder organizationalUnit(@Nullable String organizationalUnit) {
             this.organizationalUnit = organizationalUnit;
             return this;
         }
-
         public Builder password(@Nullable String password) {
             this.password = password;
             return this;
         }
-
         public Builder securityOperators(@Nullable List<String> securityOperators) {
             this.securityOperators = securityOperators;
             return this;
         }
-
+        public Builder securityOperators(String... securityOperators) {
+            return securityOperators(List.of(securityOperators));
+        }
         public Builder serverRootCACertificate(@Nullable String serverRootCACertificate) {
             this.serverRootCACertificate = serverRootCACertificate;
             return this;
         }
-
         public Builder site(@Nullable String site) {
             this.site = site;
             return this;
         }
-
         public Builder smbServerName(@Nullable String smbServerName) {
             this.smbServerName = smbServerName;
             return this;
         }
-
         public Builder status(String status) {
             this.status = Objects.requireNonNull(status);
             return this;
         }
-
         public Builder statusDetails(String statusDetails) {
             this.statusDetails = Objects.requireNonNull(statusDetails);
             return this;
         }
-
         public Builder username(@Nullable String username) {
             this.username = username;
             return this;
-        }
-        public ActiveDirectoryResponse build() {
+        }        public ActiveDirectoryResponse build() {
             return new ActiveDirectoryResponse(activeDirectoryId, adName, aesEncryption, allowLocalNfsUsersWithLdap, backupOperators, dns, domain, kdcIP, ldapOverTLS, ldapSigning, organizationalUnit, password, securityOperators, serverRootCACertificate, site, smbServerName, status, statusDetails, username);
         }
     }

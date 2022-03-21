@@ -112,22 +112,18 @@ public final class GoogleDevtoolsContaineranalysisV1alpha1SourceContextResponse 
             this.cloudRepo = Objects.requireNonNull(cloudRepo);
             return this;
         }
-
         public Builder gerrit(GoogleDevtoolsContaineranalysisV1alpha1GerritSourceContextResponse gerrit) {
             this.gerrit = Objects.requireNonNull(gerrit);
             return this;
         }
-
         public Builder git(GoogleDevtoolsContaineranalysisV1alpha1GitSourceContextResponse git) {
             this.git = Objects.requireNonNull(git);
             return this;
         }
-
         public Builder labels(Map<String,String> labels) {
             this.labels = Objects.requireNonNull(labels);
             return this;
-        }
-        public GoogleDevtoolsContaineranalysisV1alpha1SourceContextResponse build() {
+        }        public GoogleDevtoolsContaineranalysisV1alpha1SourceContextResponse build() {
             return new GoogleDevtoolsContaineranalysisV1alpha1SourceContextResponse(cloudRepo, gerrit, git, labels);
         }
     }

@@ -271,72 +271,64 @@ public final class MethodIntegration {
             this.cacheKeyParameters = cacheKeyParameters;
             return this;
         }
-
+        public Builder cacheKeyParameters(String... cacheKeyParameters) {
+            return cacheKeyParameters(List.of(cacheKeyParameters));
+        }
         public Builder cacheNamespace(@Nullable String cacheNamespace) {
             this.cacheNamespace = cacheNamespace;
             return this;
         }
-
         public Builder connectionId(@Nullable String connectionId) {
             this.connectionId = connectionId;
             return this;
         }
-
         public Builder connectionType(@Nullable MethodIntegrationConnectionType connectionType) {
             this.connectionType = connectionType;
             return this;
         }
-
         public Builder contentHandling(@Nullable MethodIntegrationContentHandling contentHandling) {
             this.contentHandling = contentHandling;
             return this;
         }
-
         public Builder credentials(@Nullable String credentials) {
             this.credentials = credentials;
             return this;
         }
-
         public Builder integrationHttpMethod(@Nullable String integrationHttpMethod) {
             this.integrationHttpMethod = integrationHttpMethod;
             return this;
         }
-
         public Builder integrationResponses(@Nullable List<MethodIntegrationResponse> integrationResponses) {
             this.integrationResponses = integrationResponses;
             return this;
         }
-
+        public Builder integrationResponses(MethodIntegrationResponse... integrationResponses) {
+            return integrationResponses(List.of(integrationResponses));
+        }
         public Builder passthroughBehavior(@Nullable MethodIntegrationPassthroughBehavior passthroughBehavior) {
             this.passthroughBehavior = passthroughBehavior;
             return this;
         }
-
         public Builder requestParameters(@Nullable Object requestParameters) {
             this.requestParameters = requestParameters;
             return this;
         }
-
         public Builder requestTemplates(@Nullable Object requestTemplates) {
             this.requestTemplates = requestTemplates;
             return this;
         }
-
         public Builder timeoutInMillis(@Nullable Integer timeoutInMillis) {
             this.timeoutInMillis = timeoutInMillis;
             return this;
         }
-
         public Builder type(MethodIntegrationType type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder uri(@Nullable String uri) {
             this.uri = uri;
             return this;
-        }
-        public MethodIntegration build() {
+        }        public MethodIntegration build() {
             return new MethodIntegration(cacheKeyParameters, cacheNamespace, connectionId, connectionType, contentHandling, credentials, integrationHttpMethod, integrationResponses, passthroughBehavior, requestParameters, requestTemplates, timeoutInMillis, type, uri);
         }
     }

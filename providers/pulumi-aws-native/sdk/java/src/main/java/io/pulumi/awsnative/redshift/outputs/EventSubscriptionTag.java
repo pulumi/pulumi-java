@@ -69,12 +69,10 @@ public final class EventSubscriptionTag {
             this.key = Objects.requireNonNull(key);
             return this;
         }
-
         public Builder value(String value) {
             this.value = Objects.requireNonNull(value);
             return this;
-        }
-        public EventSubscriptionTag build() {
+        }        public EventSubscriptionTag build() {
             return new EventSubscriptionTag(key, value);
         }
     }

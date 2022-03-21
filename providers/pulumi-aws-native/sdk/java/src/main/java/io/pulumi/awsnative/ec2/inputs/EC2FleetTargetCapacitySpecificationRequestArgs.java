@@ -104,52 +104,42 @@ public final class EC2FleetTargetCapacitySpecificationRequestArgs extends io.pul
             this.defaultTargetCapacityType = defaultTargetCapacityType;
             return this;
         }
-
         public Builder defaultTargetCapacityType(@Nullable EC2FleetTargetCapacitySpecificationRequestDefaultTargetCapacityType defaultTargetCapacityType) {
             this.defaultTargetCapacityType = Output.ofNullable(defaultTargetCapacityType);
             return this;
         }
-
         public Builder onDemandTargetCapacity(@Nullable Output<Integer> onDemandTargetCapacity) {
             this.onDemandTargetCapacity = onDemandTargetCapacity;
             return this;
         }
-
         public Builder onDemandTargetCapacity(@Nullable Integer onDemandTargetCapacity) {
             this.onDemandTargetCapacity = Output.ofNullable(onDemandTargetCapacity);
             return this;
         }
-
         public Builder spotTargetCapacity(@Nullable Output<Integer> spotTargetCapacity) {
             this.spotTargetCapacity = spotTargetCapacity;
             return this;
         }
-
         public Builder spotTargetCapacity(@Nullable Integer spotTargetCapacity) {
             this.spotTargetCapacity = Output.ofNullable(spotTargetCapacity);
             return this;
         }
-
         public Builder targetCapacityUnitType(@Nullable Output<EC2FleetTargetCapacitySpecificationRequestTargetCapacityUnitType> targetCapacityUnitType) {
             this.targetCapacityUnitType = targetCapacityUnitType;
             return this;
         }
-
         public Builder targetCapacityUnitType(@Nullable EC2FleetTargetCapacitySpecificationRequestTargetCapacityUnitType targetCapacityUnitType) {
             this.targetCapacityUnitType = Output.ofNullable(targetCapacityUnitType);
             return this;
         }
-
         public Builder totalTargetCapacity(Output<Integer> totalTargetCapacity) {
             this.totalTargetCapacity = Objects.requireNonNull(totalTargetCapacity);
             return this;
         }
-
         public Builder totalTargetCapacity(Integer totalTargetCapacity) {
             this.totalTargetCapacity = Output.of(Objects.requireNonNull(totalTargetCapacity));
             return this;
-        }
-        public EC2FleetTargetCapacitySpecificationRequestArgs build() {
+        }        public EC2FleetTargetCapacitySpecificationRequestArgs build() {
             return new EC2FleetTargetCapacitySpecificationRequestArgs(defaultTargetCapacityType, onDemandTargetCapacity, spotTargetCapacity, targetCapacityUnitType, totalTargetCapacity);
         }
     }

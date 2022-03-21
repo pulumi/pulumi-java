@@ -88,17 +88,14 @@ public final class InnerErrorResponse {
             this.additionalInfo = additionalInfo;
             return this;
         }
-
         public Builder code(@Nullable String code) {
             this.code = code;
             return this;
         }
-
         public Builder embeddedInnerError(@Nullable InnerErrorResponse embeddedInnerError) {
             this.embeddedInnerError = embeddedInnerError;
             return this;
-        }
-        public InnerErrorResponse build() {
+        }        public InnerErrorResponse build() {
             return new InnerErrorResponse(additionalInfo, code, embeddedInnerError);
         }
     }

@@ -57,12 +57,13 @@ public final class MetricBucketOptionsExplicitBucketsGetArgs extends io.pulumi.r
             this.bounds = Objects.requireNonNull(bounds);
             return this;
         }
-
         public Builder bounds(List<Double> bounds) {
             this.bounds = Output.of(Objects.requireNonNull(bounds));
             return this;
         }
-        public MetricBucketOptionsExplicitBucketsGetArgs build() {
+        public Builder bounds(Double... bounds) {
+            return bounds(List.of(bounds));
+        }        public MetricBucketOptionsExplicitBucketsGetArgs build() {
             return new MetricBucketOptionsExplicitBucketsGetArgs(bounds);
         }
     }

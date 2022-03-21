@@ -69,12 +69,10 @@ public final class ListEdgeModuleProvisioningTokenResult {
             this.expirationDate = Objects.requireNonNull(expirationDate);
             return this;
         }
-
         public Builder token(String token) {
             this.token = Objects.requireNonNull(token);
             return this;
-        }
-        public ListEdgeModuleProvisioningTokenResult build() {
+        }        public ListEdgeModuleProvisioningTokenResult build() {
             return new ListEdgeModuleProvisioningTokenResult(expirationDate, token);
         }
     }

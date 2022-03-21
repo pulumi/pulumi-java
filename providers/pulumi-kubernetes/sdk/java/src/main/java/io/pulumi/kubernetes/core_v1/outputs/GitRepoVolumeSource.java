@@ -87,17 +87,14 @@ public final class GitRepoVolumeSource {
             this.directory = directory;
             return this;
         }
-
         public Builder repository(String repository) {
             this.repository = Objects.requireNonNull(repository);
             return this;
         }
-
         public Builder revision(@Nullable String revision) {
             this.revision = revision;
             return this;
-        }
-        public GitRepoVolumeSource build() {
+        }        public GitRepoVolumeSource build() {
             return new GitRepoVolumeSource(directory, repository, revision);
         }
     }

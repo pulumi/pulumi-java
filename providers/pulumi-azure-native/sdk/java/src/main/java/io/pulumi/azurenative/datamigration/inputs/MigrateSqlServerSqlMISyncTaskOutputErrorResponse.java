@@ -90,17 +90,14 @@ public final class MigrateSqlServerSqlMISyncTaskOutputErrorResponse extends io.p
             this.error = Objects.requireNonNull(error);
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder resultType(String resultType) {
             this.resultType = Objects.requireNonNull(resultType);
             return this;
-        }
-        public MigrateSqlServerSqlMISyncTaskOutputErrorResponse build() {
+        }        public MigrateSqlServerSqlMISyncTaskOutputErrorResponse build() {
             return new MigrateSqlServerSqlMISyncTaskOutputErrorResponse(error, id, resultType);
         }
     }

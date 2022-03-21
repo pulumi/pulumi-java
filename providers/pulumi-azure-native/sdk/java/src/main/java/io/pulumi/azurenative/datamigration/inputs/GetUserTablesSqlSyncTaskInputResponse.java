@@ -110,22 +110,24 @@ public final class GetUserTablesSqlSyncTaskInputResponse extends io.pulumi.resou
             this.selectedSourceDatabases = Objects.requireNonNull(selectedSourceDatabases);
             return this;
         }
-
+        public Builder selectedSourceDatabases(String... selectedSourceDatabases) {
+            return selectedSourceDatabases(List.of(selectedSourceDatabases));
+        }
         public Builder selectedTargetDatabases(List<String> selectedTargetDatabases) {
             this.selectedTargetDatabases = Objects.requireNonNull(selectedTargetDatabases);
             return this;
         }
-
+        public Builder selectedTargetDatabases(String... selectedTargetDatabases) {
+            return selectedTargetDatabases(List.of(selectedTargetDatabases));
+        }
         public Builder sourceConnectionInfo(SqlConnectionInfoResponse sourceConnectionInfo) {
             this.sourceConnectionInfo = Objects.requireNonNull(sourceConnectionInfo);
             return this;
         }
-
         public Builder targetConnectionInfo(SqlConnectionInfoResponse targetConnectionInfo) {
             this.targetConnectionInfo = Objects.requireNonNull(targetConnectionInfo);
             return this;
-        }
-        public GetUserTablesSqlSyncTaskInputResponse build() {
+        }        public GetUserTablesSqlSyncTaskInputResponse build() {
             return new GetUserTablesSqlSyncTaskInputResponse(selectedSourceDatabases, selectedTargetDatabases, sourceConnectionInfo, targetConnectionInfo);
         }
     }

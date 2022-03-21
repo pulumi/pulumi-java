@@ -62,7 +62,9 @@ public final class TrackSelectionResponse extends io.pulumi.resources.InvokeArgs
             this.trackSelections = trackSelections;
             return this;
         }
-        public TrackSelectionResponse build() {
+        public Builder trackSelections(TrackPropertyConditionResponse... trackSelections) {
+            return trackSelections(List.of(trackSelections));
+        }        public TrackSelectionResponse build() {
             return new TrackSelectionResponse(trackSelections);
         }
     }

@@ -70,12 +70,10 @@ public final class BucketLifecycleRule {
             this.action = Objects.requireNonNull(action);
             return this;
         }
-
         public Builder condition(BucketLifecycleRuleCondition condition) {
             this.condition = Objects.requireNonNull(condition);
             return this;
-        }
-        public BucketLifecycleRule build() {
+        }        public BucketLifecycleRule build() {
             return new BucketLifecycleRule(action, condition);
         }
     }

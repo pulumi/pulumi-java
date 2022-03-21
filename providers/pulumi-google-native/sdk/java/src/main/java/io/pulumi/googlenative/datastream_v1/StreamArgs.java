@@ -248,142 +248,114 @@ public final class StreamArgs extends io.pulumi.resources.ResourceArgs {
             this.backfillAll = backfillAll;
             return this;
         }
-
         public Builder backfillAll(@Nullable BackfillAllStrategyArgs backfillAll) {
             this.backfillAll = Output.ofNullable(backfillAll);
             return this;
         }
-
         public Builder backfillNone(@Nullable Output<BackfillNoneStrategyArgs> backfillNone) {
             this.backfillNone = backfillNone;
             return this;
         }
-
         public Builder backfillNone(@Nullable BackfillNoneStrategyArgs backfillNone) {
             this.backfillNone = Output.ofNullable(backfillNone);
             return this;
         }
-
         public Builder customerManagedEncryptionKey(@Nullable Output<String> customerManagedEncryptionKey) {
             this.customerManagedEncryptionKey = customerManagedEncryptionKey;
             return this;
         }
-
         public Builder customerManagedEncryptionKey(@Nullable String customerManagedEncryptionKey) {
             this.customerManagedEncryptionKey = Output.ofNullable(customerManagedEncryptionKey);
             return this;
         }
-
         public Builder destinationConfig(Output<DestinationConfigArgs> destinationConfig) {
             this.destinationConfig = Objects.requireNonNull(destinationConfig);
             return this;
         }
-
         public Builder destinationConfig(DestinationConfigArgs destinationConfig) {
             this.destinationConfig = Output.of(Objects.requireNonNull(destinationConfig));
             return this;
         }
-
         public Builder displayName(Output<String> displayName) {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
-
         public Builder displayName(String displayName) {
             this.displayName = Output.of(Objects.requireNonNull(displayName));
             return this;
         }
-
         public Builder force(@Nullable Output<String> force) {
             this.force = force;
             return this;
         }
-
         public Builder force(@Nullable String force) {
             this.force = Output.ofNullable(force);
             return this;
         }
-
         public Builder labels(@Nullable Output<Map<String,String>> labels) {
             this.labels = labels;
             return this;
         }
-
         public Builder labels(@Nullable Map<String,String> labels) {
             this.labels = Output.ofNullable(labels);
             return this;
         }
-
         public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
         }
-
         public Builder requestId(@Nullable Output<String> requestId) {
             this.requestId = requestId;
             return this;
         }
-
         public Builder requestId(@Nullable String requestId) {
             this.requestId = Output.ofNullable(requestId);
             return this;
         }
-
         public Builder sourceConfig(Output<SourceConfigArgs> sourceConfig) {
             this.sourceConfig = Objects.requireNonNull(sourceConfig);
             return this;
         }
-
         public Builder sourceConfig(SourceConfigArgs sourceConfig) {
             this.sourceConfig = Output.of(Objects.requireNonNull(sourceConfig));
             return this;
         }
-
         public Builder state(@Nullable Output<StreamState> state) {
             this.state = state;
             return this;
         }
-
         public Builder state(@Nullable StreamState state) {
             this.state = Output.ofNullable(state);
             return this;
         }
-
         public Builder streamId(Output<String> streamId) {
             this.streamId = Objects.requireNonNull(streamId);
             return this;
         }
-
         public Builder streamId(String streamId) {
             this.streamId = Output.of(Objects.requireNonNull(streamId));
             return this;
         }
-
         public Builder validateOnly(@Nullable Output<String> validateOnly) {
             this.validateOnly = validateOnly;
             return this;
         }
-
         public Builder validateOnly(@Nullable String validateOnly) {
             this.validateOnly = Output.ofNullable(validateOnly);
             return this;
-        }
-        public StreamArgs build() {
+        }        public StreamArgs build() {
             return new StreamArgs(backfillAll, backfillNone, customerManagedEncryptionKey, destinationConfig, displayName, force, labels, location, project, requestId, sourceConfig, state, streamId, validateOnly);
         }
     }

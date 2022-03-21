@@ -71,22 +71,18 @@ public final class GameServerGroupAutoScalingPolicyArgs extends io.pulumi.resour
             this.estimatedInstanceWarmup = estimatedInstanceWarmup;
             return this;
         }
-
         public Builder estimatedInstanceWarmup(@Nullable Double estimatedInstanceWarmup) {
             this.estimatedInstanceWarmup = Output.ofNullable(estimatedInstanceWarmup);
             return this;
         }
-
         public Builder targetTrackingConfiguration(Output<GameServerGroupTargetTrackingConfigurationArgs> targetTrackingConfiguration) {
             this.targetTrackingConfiguration = Objects.requireNonNull(targetTrackingConfiguration);
             return this;
         }
-
         public Builder targetTrackingConfiguration(GameServerGroupTargetTrackingConfigurationArgs targetTrackingConfiguration) {
             this.targetTrackingConfiguration = Output.of(Objects.requireNonNull(targetTrackingConfiguration));
             return this;
-        }
-        public GameServerGroupAutoScalingPolicyArgs build() {
+        }        public GameServerGroupAutoScalingPolicyArgs build() {
             return new GameServerGroupAutoScalingPolicyArgs(estimatedInstanceWarmup, targetTrackingConfiguration);
         }
     }

@@ -90,17 +90,14 @@ public final class RegionUrlMapPathMatcherRouteRuleHeaderActionRequestHeadersToA
             this.headerName = Objects.requireNonNull(headerName);
             return this;
         }
-
         public Builder headerValue(String headerValue) {
             this.headerValue = Objects.requireNonNull(headerValue);
             return this;
         }
-
         public Builder replace(Boolean replace) {
             this.replace = Objects.requireNonNull(replace);
             return this;
-        }
-        public RegionUrlMapPathMatcherRouteRuleHeaderActionRequestHeadersToAdd build() {
+        }        public RegionUrlMapPathMatcherRouteRuleHeaderActionRequestHeadersToAdd build() {
             return new RegionUrlMapPathMatcherRouteRuleHeaderActionRequestHeadersToAdd(headerName, headerValue, replace);
         }
     }

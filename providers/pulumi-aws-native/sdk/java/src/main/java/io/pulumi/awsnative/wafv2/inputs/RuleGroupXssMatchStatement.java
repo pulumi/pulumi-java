@@ -70,12 +70,13 @@ public final class RuleGroupXssMatchStatement extends io.pulumi.resources.Invoke
             this.fieldToMatch = Objects.requireNonNull(fieldToMatch);
             return this;
         }
-
         public Builder textTransformations(List<RuleGroupTextTransformation> textTransformations) {
             this.textTransformations = Objects.requireNonNull(textTransformations);
             return this;
         }
-        public RuleGroupXssMatchStatement build() {
+        public Builder textTransformations(RuleGroupTextTransformation... textTransformations) {
+            return textTransformations(List.of(textTransformations));
+        }        public RuleGroupXssMatchStatement build() {
             return new RuleGroupXssMatchStatement(fieldToMatch, textTransformations);
         }
     }

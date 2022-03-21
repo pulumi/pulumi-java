@@ -232,62 +232,50 @@ public final class GetManagedDatabaseResult {
             this.catalogCollation = catalogCollation;
             return this;
         }
-
         public Builder collation(@Nullable String collation) {
             this.collation = collation;
             return this;
         }
-
         public Builder creationDate(String creationDate) {
             this.creationDate = Objects.requireNonNull(creationDate);
             return this;
         }
-
         public Builder defaultSecondaryLocation(String defaultSecondaryLocation) {
             this.defaultSecondaryLocation = Objects.requireNonNull(defaultSecondaryLocation);
             return this;
         }
-
         public Builder earliestRestorePoint(String earliestRestorePoint) {
             this.earliestRestorePoint = Objects.requireNonNull(earliestRestorePoint);
             return this;
         }
-
         public Builder failoverGroupId(String failoverGroupId) {
             this.failoverGroupId = Objects.requireNonNull(failoverGroupId);
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder location(String location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder status(String status) {
             this.status = Objects.requireNonNull(status);
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public GetManagedDatabaseResult build() {
+        }        public GetManagedDatabaseResult build() {
             return new GetManagedDatabaseResult(catalogCollation, collation, creationDate, defaultSecondaryLocation, earliestRestorePoint, failoverGroupId, id, location, name, status, tags, type);
         }
     }

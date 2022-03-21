@@ -94,32 +94,26 @@ public final class StorageAccountArgs extends io.pulumi.resources.ResourceArgs {
             this.accountKey = Objects.requireNonNull(accountKey);
             return this;
         }
-
         public Builder accountKey(String accountKey) {
             this.accountKey = Output.of(Objects.requireNonNull(accountKey));
             return this;
         }
-
         public Builder accountName(Output<String> accountName) {
             this.accountName = Objects.requireNonNull(accountName);
             return this;
         }
-
         public Builder accountName(String accountName) {
             this.accountName = Output.of(Objects.requireNonNull(accountName));
             return this;
         }
-
         public Builder storageType(Output<String> storageType) {
             this.storageType = Objects.requireNonNull(storageType);
             return this;
         }
-
         public Builder storageType(String storageType) {
             this.storageType = Output.of(Objects.requireNonNull(storageType));
             return this;
-        }
-        public StorageAccountArgs build() {
+        }        public StorageAccountArgs build() {
             return new StorageAccountArgs(accountKey, accountName, storageType);
         }
     }

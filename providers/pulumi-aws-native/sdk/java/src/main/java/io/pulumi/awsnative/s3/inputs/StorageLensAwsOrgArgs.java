@@ -56,12 +56,10 @@ public final class StorageLensAwsOrgArgs extends io.pulumi.resources.ResourceArg
             this.arn = Objects.requireNonNull(arn);
             return this;
         }
-
         public Builder arn(String arn) {
             this.arn = Output.of(Objects.requireNonNull(arn));
             return this;
-        }
-        public StorageLensAwsOrgArgs build() {
+        }        public StorageLensAwsOrgArgs build() {
             return new StorageLensAwsOrgArgs(arn);
         }
     }

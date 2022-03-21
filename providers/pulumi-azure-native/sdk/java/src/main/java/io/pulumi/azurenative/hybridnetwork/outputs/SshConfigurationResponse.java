@@ -54,7 +54,9 @@ public final class SshConfigurationResponse {
             this.publicKeys = publicKeys;
             return this;
         }
-        public SshConfigurationResponse build() {
+        public Builder publicKeys(SshPublicKeyResponse... publicKeys) {
+            return publicKeys(List.of(publicKeys));
+        }        public SshConfigurationResponse build() {
             return new SshConfigurationResponse(publicKeys);
         }
     }

@@ -56,12 +56,10 @@ public final class FleetLocationConfiguration {
             this.location = Objects.requireNonNull(location);
             return this;
         }
-
         public Builder locationCapacity(@Nullable FleetLocationCapacity locationCapacity) {
             this.locationCapacity = locationCapacity;
             return this;
-        }
-        public FleetLocationConfiguration build() {
+        }        public FleetLocationConfiguration build() {
             return new FleetLocationConfiguration(location, locationCapacity);
         }
     }

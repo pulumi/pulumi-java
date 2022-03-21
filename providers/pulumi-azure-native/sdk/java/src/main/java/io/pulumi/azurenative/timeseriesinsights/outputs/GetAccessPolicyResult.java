@@ -136,32 +136,29 @@ public final class GetAccessPolicyResult {
             this.description = description;
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder principalObjectId(@Nullable String principalObjectId) {
             this.principalObjectId = principalObjectId;
             return this;
         }
-
         public Builder roles(@Nullable List<String> roles) {
             this.roles = roles;
             return this;
         }
-
+        public Builder roles(String... roles) {
+            return roles(List.of(roles));
+        }
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public GetAccessPolicyResult build() {
+        }        public GetAccessPolicyResult build() {
             return new GetAccessPolicyResult(description, id, name, principalObjectId, roles, type);
         }
     }

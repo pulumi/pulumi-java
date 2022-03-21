@@ -78,22 +78,18 @@ public final class UserIdentityContractArgs extends io.pulumi.resources.Resource
             this.id = id;
             return this;
         }
-
         public Builder id(@Nullable String id) {
             this.id = Output.ofNullable(id);
             return this;
         }
-
         public Builder provider(@Nullable Output<String> provider) {
             this.provider = provider;
             return this;
         }
-
         public Builder provider(@Nullable String provider) {
             this.provider = Output.ofNullable(provider);
             return this;
-        }
-        public UserIdentityContractArgs build() {
+        }        public UserIdentityContractArgs build() {
             return new UserIdentityContractArgs(id, provider);
         }
     }

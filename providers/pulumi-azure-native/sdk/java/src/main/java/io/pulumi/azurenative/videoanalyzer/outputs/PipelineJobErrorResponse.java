@@ -71,12 +71,10 @@ public final class PipelineJobErrorResponse {
             this.code = code;
             return this;
         }
-
         public Builder message(@Nullable String message) {
             this.message = message;
             return this;
-        }
-        public PipelineJobErrorResponse build() {
+        }        public PipelineJobErrorResponse build() {
             return new PipelineJobErrorResponse(code, message);
         }
     }

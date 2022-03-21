@@ -80,22 +80,21 @@ public final class NodeAffinityArgs extends io.pulumi.resources.ResourceArgs {
             this.preferredDuringSchedulingIgnoredDuringExecution = preferredDuringSchedulingIgnoredDuringExecution;
             return this;
         }
-
         public Builder preferredDuringSchedulingIgnoredDuringExecution(@Nullable List<PreferredSchedulingTermArgs> preferredDuringSchedulingIgnoredDuringExecution) {
             this.preferredDuringSchedulingIgnoredDuringExecution = Output.ofNullable(preferredDuringSchedulingIgnoredDuringExecution);
             return this;
         }
-
+        public Builder preferredDuringSchedulingIgnoredDuringExecution(PreferredSchedulingTermArgs... preferredDuringSchedulingIgnoredDuringExecution) {
+            return preferredDuringSchedulingIgnoredDuringExecution(List.of(preferredDuringSchedulingIgnoredDuringExecution));
+        }
         public Builder requiredDuringSchedulingIgnoredDuringExecution(@Nullable Output<NodeSelectorArgs> requiredDuringSchedulingIgnoredDuringExecution) {
             this.requiredDuringSchedulingIgnoredDuringExecution = requiredDuringSchedulingIgnoredDuringExecution;
             return this;
         }
-
         public Builder requiredDuringSchedulingIgnoredDuringExecution(@Nullable NodeSelectorArgs requiredDuringSchedulingIgnoredDuringExecution) {
             this.requiredDuringSchedulingIgnoredDuringExecution = Output.ofNullable(requiredDuringSchedulingIgnoredDuringExecution);
             return this;
-        }
-        public NodeAffinityArgs build() {
+        }        public NodeAffinityArgs build() {
             return new NodeAffinityArgs(preferredDuringSchedulingIgnoredDuringExecution, requiredDuringSchedulingIgnoredDuringExecution);
         }
     }

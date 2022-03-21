@@ -58,8 +58,7 @@ public final class GkeClusterResponse extends io.pulumi.resources.InvokeArgs {
         public Builder cluster(String cluster) {
             this.cluster = Objects.requireNonNull(cluster);
             return this;
-        }
-        public GkeClusterResponse build() {
+        }        public GkeClusterResponse build() {
             return new GkeClusterResponse(cluster);
         }
     }

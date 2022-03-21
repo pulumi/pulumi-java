@@ -54,8 +54,7 @@ public final class ResourceStatusUpcomingMaintenanceResponse extends io.pulumi.r
         public Builder canReschedule(Boolean canReschedule) {
             this.canReschedule = Objects.requireNonNull(canReschedule);
             return this;
-        }
-        public ResourceStatusUpcomingMaintenanceResponse build() {
+        }        public ResourceStatusUpcomingMaintenanceResponse build() {
             return new ResourceStatusUpcomingMaintenanceResponse(canReschedule);
         }
     }

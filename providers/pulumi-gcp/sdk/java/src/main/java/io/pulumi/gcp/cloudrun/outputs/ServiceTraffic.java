@@ -95,17 +95,14 @@ public final class ServiceTraffic {
             this.latestRevision = latestRevision;
             return this;
         }
-
         public Builder percent(Integer percent) {
             this.percent = Objects.requireNonNull(percent);
             return this;
         }
-
         public Builder revisionName(@Nullable String revisionName) {
             this.revisionName = revisionName;
             return this;
-        }
-        public ServiceTraffic build() {
+        }        public ServiceTraffic build() {
             return new ServiceTraffic(latestRevision, percent, revisionName);
         }
     }

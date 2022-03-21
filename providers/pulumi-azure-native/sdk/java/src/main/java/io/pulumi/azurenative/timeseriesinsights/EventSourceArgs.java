@@ -158,72 +158,58 @@ public final class EventSourceArgs extends io.pulumi.resources.ResourceArgs {
             this.environmentName = Objects.requireNonNull(environmentName);
             return this;
         }
-
         public Builder environmentName(String environmentName) {
             this.environmentName = Output.of(Objects.requireNonNull(environmentName));
             return this;
         }
-
         public Builder eventSourceName(@Nullable Output<String> eventSourceName) {
             this.eventSourceName = eventSourceName;
             return this;
         }
-
         public Builder eventSourceName(@Nullable String eventSourceName) {
             this.eventSourceName = Output.ofNullable(eventSourceName);
             return this;
         }
-
         public Builder kind(Output<Either<String,EventSourceKind>> kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
-
         public Builder kind(Either<String,EventSourceKind> kind) {
             this.kind = Output.of(Objects.requireNonNull(kind));
             return this;
         }
-
         public Builder localTimestamp(@Nullable Output<LocalTimestampArgs> localTimestamp) {
             this.localTimestamp = localTimestamp;
             return this;
         }
-
         public Builder localTimestamp(@Nullable LocalTimestampArgs localTimestamp) {
             this.localTimestamp = Output.ofNullable(localTimestamp);
             return this;
         }
-
         public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
-        }
-        public EventSourceArgs build() {
+        }        public EventSourceArgs build() {
             return new EventSourceArgs(environmentName, eventSourceName, kind, localTimestamp, location, resourceGroupName, tags);
         }
     }

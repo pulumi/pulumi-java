@@ -109,22 +109,18 @@ public final class MoveCollectionPropertiesResponse extends io.pulumi.resources.
             this.errors = Objects.requireNonNull(errors);
             return this;
         }
-
         public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
-
         public Builder sourceRegion(String sourceRegion) {
             this.sourceRegion = Objects.requireNonNull(sourceRegion);
             return this;
         }
-
         public Builder targetRegion(String targetRegion) {
             this.targetRegion = Objects.requireNonNull(targetRegion);
             return this;
-        }
-        public MoveCollectionPropertiesResponse build() {
+        }        public MoveCollectionPropertiesResponse build() {
             return new MoveCollectionPropertiesResponse(errors, provisioningState, sourceRegion, targetRegion);
         }
     }

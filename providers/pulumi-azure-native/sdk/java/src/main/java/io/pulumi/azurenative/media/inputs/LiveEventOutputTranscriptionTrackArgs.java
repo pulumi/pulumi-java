@@ -60,12 +60,10 @@ public final class LiveEventOutputTranscriptionTrackArgs extends io.pulumi.resou
             this.trackName = Objects.requireNonNull(trackName);
             return this;
         }
-
         public Builder trackName(String trackName) {
             this.trackName = Output.of(Objects.requireNonNull(trackName));
             return this;
-        }
-        public LiveEventOutputTranscriptionTrackArgs build() {
+        }        public LiveEventOutputTranscriptionTrackArgs build() {
             return new LiveEventOutputTranscriptionTrackArgs(trackName);
         }
     }

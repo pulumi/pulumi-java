@@ -110,22 +110,18 @@ public final class RectangleResponse extends io.pulumi.resources.InvokeArgs {
             this.height = height;
             return this;
         }
-
         public Builder left(@Nullable String left) {
             this.left = left;
             return this;
         }
-
         public Builder top(@Nullable String top) {
             this.top = top;
             return this;
         }
-
         public Builder width(@Nullable String width) {
             this.width = width;
             return this;
-        }
-        public RectangleResponse build() {
+        }        public RectangleResponse build() {
             return new RectangleResponse(height, left, top, width);
         }
     }

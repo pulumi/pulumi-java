@@ -107,22 +107,21 @@ public final class TemplateResponse {
             this.containers = containers;
             return this;
         }
-
+        public Builder containers(ContainerResponse... containers) {
+            return containers(List.of(containers));
+        }
         public Builder dapr(@Nullable DaprResponse dapr) {
             this.dapr = dapr;
             return this;
         }
-
         public Builder revisionSuffix(@Nullable String revisionSuffix) {
             this.revisionSuffix = revisionSuffix;
             return this;
         }
-
         public Builder scale(@Nullable ScaleResponse scale) {
             this.scale = scale;
             return this;
-        }
-        public TemplateResponse build() {
+        }        public TemplateResponse build() {
             return new TemplateResponse(containers, dapr, revisionSuffix, scale);
         }
     }

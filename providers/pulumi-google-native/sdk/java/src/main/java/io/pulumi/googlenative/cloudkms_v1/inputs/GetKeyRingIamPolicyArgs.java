@@ -90,22 +90,18 @@ public final class GetKeyRingIamPolicyArgs extends io.pulumi.resources.InvokeArg
             this.keyRingId = Objects.requireNonNull(keyRingId);
             return this;
         }
-
         public Builder location(String location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
-
         public Builder optionsRequestedPolicyVersion(@Nullable String optionsRequestedPolicyVersion) {
             this.optionsRequestedPolicyVersion = optionsRequestedPolicyVersion;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = project;
             return this;
-        }
-        public GetKeyRingIamPolicyArgs build() {
+        }        public GetKeyRingIamPolicyArgs build() {
             return new GetKeyRingIamPolicyArgs(keyRingId, location, optionsRequestedPolicyVersion, project);
         }
     }

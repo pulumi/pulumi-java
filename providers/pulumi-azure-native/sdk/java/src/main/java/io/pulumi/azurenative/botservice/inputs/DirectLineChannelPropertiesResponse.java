@@ -80,12 +80,13 @@ public final class DirectLineChannelPropertiesResponse extends io.pulumi.resourc
             this.directLineEmbedCode = directLineEmbedCode;
             return this;
         }
-
         public Builder sites(@Nullable List<DirectLineSiteResponse> sites) {
             this.sites = sites;
             return this;
         }
-        public DirectLineChannelPropertiesResponse build() {
+        public Builder sites(DirectLineSiteResponse... sites) {
+            return sites(List.of(sites));
+        }        public DirectLineChannelPropertiesResponse build() {
             return new DirectLineChannelPropertiesResponse(directLineEmbedCode, sites);
         }
     }

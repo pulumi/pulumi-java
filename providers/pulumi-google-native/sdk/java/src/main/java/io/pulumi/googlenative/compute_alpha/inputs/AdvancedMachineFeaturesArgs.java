@@ -127,52 +127,42 @@ public final class AdvancedMachineFeaturesArgs extends io.pulumi.resources.Resou
             this.enableNestedVirtualization = enableNestedVirtualization;
             return this;
         }
-
         public Builder enableNestedVirtualization(@Nullable Boolean enableNestedVirtualization) {
             this.enableNestedVirtualization = Output.ofNullable(enableNestedVirtualization);
             return this;
         }
-
         public Builder enableUefiNetworking(@Nullable Output<Boolean> enableUefiNetworking) {
             this.enableUefiNetworking = enableUefiNetworking;
             return this;
         }
-
         public Builder enableUefiNetworking(@Nullable Boolean enableUefiNetworking) {
             this.enableUefiNetworking = Output.ofNullable(enableUefiNetworking);
             return this;
         }
-
         public Builder numaNodeCount(@Nullable Output<Integer> numaNodeCount) {
             this.numaNodeCount = numaNodeCount;
             return this;
         }
-
         public Builder numaNodeCount(@Nullable Integer numaNodeCount) {
             this.numaNodeCount = Output.ofNullable(numaNodeCount);
             return this;
         }
-
         public Builder threadsPerCore(@Nullable Output<Integer> threadsPerCore) {
             this.threadsPerCore = threadsPerCore;
             return this;
         }
-
         public Builder threadsPerCore(@Nullable Integer threadsPerCore) {
             this.threadsPerCore = Output.ofNullable(threadsPerCore);
             return this;
         }
-
         public Builder visibleCoreCount(@Nullable Output<Integer> visibleCoreCount) {
             this.visibleCoreCount = visibleCoreCount;
             return this;
         }
-
         public Builder visibleCoreCount(@Nullable Integer visibleCoreCount) {
             this.visibleCoreCount = Output.ofNullable(visibleCoreCount);
             return this;
-        }
-        public AdvancedMachineFeaturesArgs build() {
+        }        public AdvancedMachineFeaturesArgs build() {
             return new AdvancedMachineFeaturesArgs(enableNestedVirtualization, enableUefiNetworking, numaNodeCount, threadsPerCore, visibleCoreCount);
         }
     }

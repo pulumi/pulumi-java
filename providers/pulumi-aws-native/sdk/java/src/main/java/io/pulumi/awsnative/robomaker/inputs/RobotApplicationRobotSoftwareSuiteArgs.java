@@ -79,22 +79,18 @@ public final class RobotApplicationRobotSoftwareSuiteArgs extends io.pulumi.reso
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder name(RobotApplicationRobotSoftwareSuiteName name) {
             this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
-
         public Builder version(@Nullable Output<RobotApplicationRobotSoftwareSuiteVersion> version) {
             this.version = version;
             return this;
         }
-
         public Builder version(@Nullable RobotApplicationRobotSoftwareSuiteVersion version) {
             this.version = Output.ofNullable(version);
             return this;
-        }
-        public RobotApplicationRobotSoftwareSuiteArgs build() {
+        }        public RobotApplicationRobotSoftwareSuiteArgs build() {
             return new RobotApplicationRobotSoftwareSuiteArgs(name, version);
         }
     }

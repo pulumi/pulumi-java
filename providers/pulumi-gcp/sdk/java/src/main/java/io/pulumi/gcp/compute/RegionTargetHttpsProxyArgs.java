@@ -150,62 +150,53 @@ public final class RegionTargetHttpsProxyArgs extends io.pulumi.resources.Resour
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
         }
-
         public Builder region(@Nullable Output<String> region) {
             this.region = region;
             return this;
         }
-
         public Builder region(@Nullable String region) {
             this.region = Output.ofNullable(region);
             return this;
         }
-
         public Builder sslCertificates(Output<List<String>> sslCertificates) {
             this.sslCertificates = Objects.requireNonNull(sslCertificates);
             return this;
         }
-
         public Builder sslCertificates(List<String> sslCertificates) {
             this.sslCertificates = Output.of(Objects.requireNonNull(sslCertificates));
             return this;
         }
-
+        public Builder sslCertificates(String... sslCertificates) {
+            return sslCertificates(List.of(sslCertificates));
+        }
         public Builder urlMap(Output<String> urlMap) {
             this.urlMap = Objects.requireNonNull(urlMap);
             return this;
         }
-
         public Builder urlMap(String urlMap) {
             this.urlMap = Output.of(Objects.requireNonNull(urlMap));
             return this;
-        }
-        public RegionTargetHttpsProxyArgs build() {
+        }        public RegionTargetHttpsProxyArgs build() {
             return new RegionTargetHttpsProxyArgs(description, name, project, region, sslCertificates, urlMap);
         }
     }

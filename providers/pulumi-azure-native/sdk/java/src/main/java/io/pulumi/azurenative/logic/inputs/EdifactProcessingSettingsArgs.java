@@ -125,52 +125,42 @@ public final class EdifactProcessingSettingsArgs extends io.pulumi.resources.Res
             this.createEmptyXmlTagsForTrailingSeparators = Objects.requireNonNull(createEmptyXmlTagsForTrailingSeparators);
             return this;
         }
-
         public Builder createEmptyXmlTagsForTrailingSeparators(Boolean createEmptyXmlTagsForTrailingSeparators) {
             this.createEmptyXmlTagsForTrailingSeparators = Output.of(Objects.requireNonNull(createEmptyXmlTagsForTrailingSeparators));
             return this;
         }
-
         public Builder maskSecurityInfo(Output<Boolean> maskSecurityInfo) {
             this.maskSecurityInfo = Objects.requireNonNull(maskSecurityInfo);
             return this;
         }
-
         public Builder maskSecurityInfo(Boolean maskSecurityInfo) {
             this.maskSecurityInfo = Output.of(Objects.requireNonNull(maskSecurityInfo));
             return this;
         }
-
         public Builder preserveInterchange(Output<Boolean> preserveInterchange) {
             this.preserveInterchange = Objects.requireNonNull(preserveInterchange);
             return this;
         }
-
         public Builder preserveInterchange(Boolean preserveInterchange) {
             this.preserveInterchange = Output.of(Objects.requireNonNull(preserveInterchange));
             return this;
         }
-
         public Builder suspendInterchangeOnError(Output<Boolean> suspendInterchangeOnError) {
             this.suspendInterchangeOnError = Objects.requireNonNull(suspendInterchangeOnError);
             return this;
         }
-
         public Builder suspendInterchangeOnError(Boolean suspendInterchangeOnError) {
             this.suspendInterchangeOnError = Output.of(Objects.requireNonNull(suspendInterchangeOnError));
             return this;
         }
-
         public Builder useDotAsDecimalSeparator(Output<Boolean> useDotAsDecimalSeparator) {
             this.useDotAsDecimalSeparator = Objects.requireNonNull(useDotAsDecimalSeparator);
             return this;
         }
-
         public Builder useDotAsDecimalSeparator(Boolean useDotAsDecimalSeparator) {
             this.useDotAsDecimalSeparator = Output.of(Objects.requireNonNull(useDotAsDecimalSeparator));
             return this;
-        }
-        public EdifactProcessingSettingsArgs build() {
+        }        public EdifactProcessingSettingsArgs build() {
             return new EdifactProcessingSettingsArgs(createEmptyXmlTagsForTrailingSeparators, maskSecurityInfo, preserveInterchange, suspendInterchangeOnError, useDotAsDecimalSeparator);
         }
     }

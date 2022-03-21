@@ -107,42 +107,34 @@ public final class QueryPackArgs extends io.pulumi.resources.ResourceArgs {
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder queryPackName(@Nullable Output<String> queryPackName) {
             this.queryPackName = queryPackName;
             return this;
         }
-
         public Builder queryPackName(@Nullable String queryPackName) {
             this.queryPackName = Output.ofNullable(queryPackName);
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
-        }
-        public QueryPackArgs build() {
+        }        public QueryPackArgs build() {
             return new QueryPackArgs(location, queryPackName, resourceGroupName, tags);
         }
     }

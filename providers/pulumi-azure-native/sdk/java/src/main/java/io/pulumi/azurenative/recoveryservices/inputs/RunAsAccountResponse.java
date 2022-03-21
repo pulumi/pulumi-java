@@ -78,12 +78,10 @@ public final class RunAsAccountResponse extends io.pulumi.resources.InvokeArgs {
             this.accountId = accountId;
             return this;
         }
-
         public Builder accountName(@Nullable String accountName) {
             this.accountName = accountName;
             return this;
-        }
-        public RunAsAccountResponse build() {
+        }        public RunAsAccountResponse build() {
             return new RunAsAccountResponse(accountId, accountName);
         }
     }

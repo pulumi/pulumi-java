@@ -52,8 +52,7 @@ public final class PatchInstanceFilterGroupLabelResponse {
         public Builder labels(Map<String,String> labels) {
             this.labels = Objects.requireNonNull(labels);
             return this;
-        }
-        public PatchInstanceFilterGroupLabelResponse build() {
+        }        public PatchInstanceFilterGroupLabelResponse build() {
             return new PatchInstanceFilterGroupLabelResponse(labels);
         }
     }

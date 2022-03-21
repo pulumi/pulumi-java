@@ -79,22 +79,18 @@ public final class VpcAccessConnectorArgs extends io.pulumi.resources.ResourceAr
             this.egressSetting = egressSetting;
             return this;
         }
-
         public Builder egressSetting(@Nullable VpcAccessConnectorEgressSetting egressSetting) {
             this.egressSetting = Output.ofNullable(egressSetting);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
-        }
-        public VpcAccessConnectorArgs build() {
+        }        public VpcAccessConnectorArgs build() {
             return new VpcAccessConnectorArgs(egressSetting, name);
         }
     }

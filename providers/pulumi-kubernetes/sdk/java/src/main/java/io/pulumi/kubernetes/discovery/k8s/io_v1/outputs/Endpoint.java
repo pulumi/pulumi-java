@@ -172,42 +172,37 @@ public final class Endpoint {
             this.addresses = Objects.requireNonNull(addresses);
             return this;
         }
-
+        public Builder addresses(String... addresses) {
+            return addresses(List.of(addresses));
+        }
         public Builder conditions(@Nullable EndpointConditions conditions) {
             this.conditions = conditions;
             return this;
         }
-
         public Builder deprecatedTopology(@Nullable Map<String,String> deprecatedTopology) {
             this.deprecatedTopology = deprecatedTopology;
             return this;
         }
-
         public Builder hints(@Nullable EndpointHints hints) {
             this.hints = hints;
             return this;
         }
-
         public Builder hostname(@Nullable String hostname) {
             this.hostname = hostname;
             return this;
         }
-
         public Builder nodeName(@Nullable String nodeName) {
             this.nodeName = nodeName;
             return this;
         }
-
         public Builder targetRef(@Nullable ObjectReference targetRef) {
             this.targetRef = targetRef;
             return this;
         }
-
         public Builder zone(@Nullable String zone) {
             this.zone = zone;
             return this;
-        }
-        public Endpoint build() {
+        }        public Endpoint build() {
             return new Endpoint(addresses, conditions, deprecatedTopology, hints, hostname, nodeName, targetRef, zone);
         }
     }

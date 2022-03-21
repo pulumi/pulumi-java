@@ -60,12 +60,10 @@ public final class GoogleCloudDialogflowV2AutomatedAgentConfigArgs extends io.pu
             this.agent = Objects.requireNonNull(agent);
             return this;
         }
-
         public Builder agent(String agent) {
             this.agent = Output.of(Objects.requireNonNull(agent));
             return this;
-        }
-        public GoogleCloudDialogflowV2AutomatedAgentConfigArgs build() {
+        }        public GoogleCloudDialogflowV2AutomatedAgentConfigArgs build() {
             return new GoogleCloudDialogflowV2AutomatedAgentConfigArgs(agent);
         }
     }

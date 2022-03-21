@@ -111,42 +111,34 @@ public final class KikChannelPropertiesArgs extends io.pulumi.resources.Resource
             this.apiKey = apiKey;
             return this;
         }
-
         public Builder apiKey(@Nullable String apiKey) {
             this.apiKey = Output.ofNullable(apiKey);
             return this;
         }
-
         public Builder isEnabled(Output<Boolean> isEnabled) {
             this.isEnabled = Objects.requireNonNull(isEnabled);
             return this;
         }
-
         public Builder isEnabled(Boolean isEnabled) {
             this.isEnabled = Output.of(Objects.requireNonNull(isEnabled));
             return this;
         }
-
         public Builder isValidated(@Nullable Output<Boolean> isValidated) {
             this.isValidated = isValidated;
             return this;
         }
-
         public Builder isValidated(@Nullable Boolean isValidated) {
             this.isValidated = Output.ofNullable(isValidated);
             return this;
         }
-
         public Builder userName(Output<String> userName) {
             this.userName = Objects.requireNonNull(userName);
             return this;
         }
-
         public Builder userName(String userName) {
             this.userName = Output.of(Objects.requireNonNull(userName));
             return this;
-        }
-        public KikChannelPropertiesArgs build() {
+        }        public KikChannelPropertiesArgs build() {
             return new KikChannelPropertiesArgs(apiKey, isEnabled, isValidated, userName);
         }
     }

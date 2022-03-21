@@ -114,42 +114,34 @@ public final class GoogleCloudDialogflowV2TextToSpeechSettingsArgs extends io.pu
             this.enableTextToSpeech = enableTextToSpeech;
             return this;
         }
-
         public Builder enableTextToSpeech(@Nullable Boolean enableTextToSpeech) {
             this.enableTextToSpeech = Output.ofNullable(enableTextToSpeech);
             return this;
         }
-
         public Builder outputAudioEncoding(Output<GoogleCloudDialogflowV2TextToSpeechSettingsOutputAudioEncoding> outputAudioEncoding) {
             this.outputAudioEncoding = Objects.requireNonNull(outputAudioEncoding);
             return this;
         }
-
         public Builder outputAudioEncoding(GoogleCloudDialogflowV2TextToSpeechSettingsOutputAudioEncoding outputAudioEncoding) {
             this.outputAudioEncoding = Output.of(Objects.requireNonNull(outputAudioEncoding));
             return this;
         }
-
         public Builder sampleRateHertz(@Nullable Output<Integer> sampleRateHertz) {
             this.sampleRateHertz = sampleRateHertz;
             return this;
         }
-
         public Builder sampleRateHertz(@Nullable Integer sampleRateHertz) {
             this.sampleRateHertz = Output.ofNullable(sampleRateHertz);
             return this;
         }
-
         public Builder synthesizeSpeechConfigs(@Nullable Output<Map<String,String>> synthesizeSpeechConfigs) {
             this.synthesizeSpeechConfigs = synthesizeSpeechConfigs;
             return this;
         }
-
         public Builder synthesizeSpeechConfigs(@Nullable Map<String,String> synthesizeSpeechConfigs) {
             this.synthesizeSpeechConfigs = Output.ofNullable(synthesizeSpeechConfigs);
             return this;
-        }
-        public GoogleCloudDialogflowV2TextToSpeechSettingsArgs build() {
+        }        public GoogleCloudDialogflowV2TextToSpeechSettingsArgs build() {
             return new GoogleCloudDialogflowV2TextToSpeechSettingsArgs(enableTextToSpeech, outputAudioEncoding, sampleRateHertz, synthesizeSpeechConfigs);
         }
     }

@@ -146,62 +146,50 @@ public final class ScheduleTriggerRecurrenceArgs extends io.pulumi.resources.Res
             this.endTime = endTime;
             return this;
         }
-
         public Builder endTime(@Nullable String endTime) {
             this.endTime = Output.ofNullable(endTime);
             return this;
         }
-
         public Builder frequency(@Nullable Output<Either<String,RecurrenceFrequency>> frequency) {
             this.frequency = frequency;
             return this;
         }
-
         public Builder frequency(@Nullable Either<String,RecurrenceFrequency> frequency) {
             this.frequency = Output.ofNullable(frequency);
             return this;
         }
-
         public Builder interval(@Nullable Output<Integer> interval) {
             this.interval = interval;
             return this;
         }
-
         public Builder interval(@Nullable Integer interval) {
             this.interval = Output.ofNullable(interval);
             return this;
         }
-
         public Builder schedule(@Nullable Output<RecurrenceScheduleArgs> schedule) {
             this.schedule = schedule;
             return this;
         }
-
         public Builder schedule(@Nullable RecurrenceScheduleArgs schedule) {
             this.schedule = Output.ofNullable(schedule);
             return this;
         }
-
         public Builder startTime(@Nullable Output<String> startTime) {
             this.startTime = startTime;
             return this;
         }
-
         public Builder startTime(@Nullable String startTime) {
             this.startTime = Output.ofNullable(startTime);
             return this;
         }
-
         public Builder timeZone(@Nullable Output<String> timeZone) {
             this.timeZone = timeZone;
             return this;
         }
-
         public Builder timeZone(@Nullable String timeZone) {
             this.timeZone = Output.ofNullable(timeZone);
             return this;
-        }
-        public ScheduleTriggerRecurrenceArgs build() {
+        }        public ScheduleTriggerRecurrenceArgs build() {
             return new ScheduleTriggerRecurrenceArgs(endTime, frequency, interval, schedule, startTime, timeZone);
         }
     }

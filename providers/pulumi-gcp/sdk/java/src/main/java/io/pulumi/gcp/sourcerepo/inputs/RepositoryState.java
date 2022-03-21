@@ -129,52 +129,45 @@ public final class RepositoryState extends io.pulumi.resources.ResourceArgs {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
         }
-
         public Builder pubsubConfigs(@Nullable Output<List<RepositoryPubsubConfigGetArgs>> pubsubConfigs) {
             this.pubsubConfigs = pubsubConfigs;
             return this;
         }
-
         public Builder pubsubConfigs(@Nullable List<RepositoryPubsubConfigGetArgs> pubsubConfigs) {
             this.pubsubConfigs = Output.ofNullable(pubsubConfigs);
             return this;
         }
-
+        public Builder pubsubConfigs(RepositoryPubsubConfigGetArgs... pubsubConfigs) {
+            return pubsubConfigs(List.of(pubsubConfigs));
+        }
         public Builder size(@Nullable Output<Integer> size) {
             this.size = size;
             return this;
         }
-
         public Builder size(@Nullable Integer size) {
             this.size = Output.ofNullable(size);
             return this;
         }
-
         public Builder url(@Nullable Output<String> url) {
             this.url = url;
             return this;
         }
-
         public Builder url(@Nullable String url) {
             this.url = Output.ofNullable(url);
             return this;
-        }
-        public RepositoryState build() {
+        }        public RepositoryState build() {
             return new RepositoryState(name, project, pubsubConfigs, size, url);
         }
     }

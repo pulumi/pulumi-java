@@ -96,32 +96,26 @@ public final class DiskEncryptionSettingsArgs extends io.pulumi.resources.Resour
             this.diskEncryptionKey = diskEncryptionKey;
             return this;
         }
-
         public Builder diskEncryptionKey(@Nullable KeyVaultSecretReferenceArgs diskEncryptionKey) {
             this.diskEncryptionKey = Output.ofNullable(diskEncryptionKey);
             return this;
         }
-
         public Builder enabled(@Nullable Output<Boolean> enabled) {
             this.enabled = enabled;
             return this;
         }
-
         public Builder enabled(@Nullable Boolean enabled) {
             this.enabled = Output.ofNullable(enabled);
             return this;
         }
-
         public Builder keyEncryptionKey(@Nullable Output<KeyVaultKeyReferenceArgs> keyEncryptionKey) {
             this.keyEncryptionKey = keyEncryptionKey;
             return this;
         }
-
         public Builder keyEncryptionKey(@Nullable KeyVaultKeyReferenceArgs keyEncryptionKey) {
             this.keyEncryptionKey = Output.ofNullable(keyEncryptionKey);
             return this;
-        }
-        public DiskEncryptionSettingsArgs build() {
+        }        public DiskEncryptionSettingsArgs build() {
             return new DiskEncryptionSettingsArgs(diskEncryptionKey, enabled, keyEncryptionKey);
         }
     }

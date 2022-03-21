@@ -76,12 +76,10 @@ public final class GoogleCloudDialogflowCxV3beta1DtmfInputResponse extends io.pu
             this.digits = Objects.requireNonNull(digits);
             return this;
         }
-
         public Builder finishDigit(String finishDigit) {
             this.finishDigit = Objects.requireNonNull(finishDigit);
             return this;
-        }
-        public GoogleCloudDialogflowCxV3beta1DtmfInputResponse build() {
+        }        public GoogleCloudDialogflowCxV3beta1DtmfInputResponse build() {
             return new GoogleCloudDialogflowCxV3beta1DtmfInputResponse(digits, finishDigit);
         }
     }

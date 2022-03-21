@@ -51,8 +51,7 @@ public final class GoogleCloudMlV1__ContainerPortResponse {
         public Builder containerPort(Integer containerPort) {
             this.containerPort = Objects.requireNonNull(containerPort);
             return this;
-        }
-        public GoogleCloudMlV1__ContainerPortResponse build() {
+        }        public GoogleCloudMlV1__ContainerPortResponse build() {
             return new GoogleCloudMlV1__ContainerPortResponse(containerPort);
         }
     }

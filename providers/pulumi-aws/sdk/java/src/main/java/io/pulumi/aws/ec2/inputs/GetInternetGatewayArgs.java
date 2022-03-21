@@ -94,17 +94,17 @@ public final class GetInternetGatewayArgs extends io.pulumi.resources.InvokeArgs
             this.filters = filters;
             return this;
         }
-
+        public Builder filters(GetInternetGatewayFilter... filters) {
+            return filters(List.of(filters));
+        }
         public Builder internetGatewayId(@Nullable String internetGatewayId) {
             this.internetGatewayId = internetGatewayId;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
-        }
-        public GetInternetGatewayArgs build() {
+        }        public GetInternetGatewayArgs build() {
             return new GetInternetGatewayArgs(filters, internetGatewayId, tags);
         }
     }

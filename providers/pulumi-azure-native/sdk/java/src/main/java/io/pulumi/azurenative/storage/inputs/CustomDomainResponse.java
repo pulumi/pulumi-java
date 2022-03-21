@@ -79,12 +79,10 @@ public final class CustomDomainResponse extends io.pulumi.resources.InvokeArgs {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder useSubDomainName(@Nullable Boolean useSubDomainName) {
             this.useSubDomainName = useSubDomainName;
             return this;
-        }
-        public CustomDomainResponse build() {
+        }        public CustomDomainResponse build() {
             return new CustomDomainResponse(name, useSubDomainName);
         }
     }

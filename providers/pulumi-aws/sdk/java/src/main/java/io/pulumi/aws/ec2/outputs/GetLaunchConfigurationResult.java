@@ -363,102 +363,100 @@ public final class GetLaunchConfigurationResult {
             this.arn = Objects.requireNonNull(arn);
             return this;
         }
-
         public Builder associatePublicIpAddress(Boolean associatePublicIpAddress) {
             this.associatePublicIpAddress = Objects.requireNonNull(associatePublicIpAddress);
             return this;
         }
-
         public Builder ebsBlockDevices(List<GetLaunchConfigurationEbsBlockDevice> ebsBlockDevices) {
             this.ebsBlockDevices = Objects.requireNonNull(ebsBlockDevices);
             return this;
         }
-
+        public Builder ebsBlockDevices(GetLaunchConfigurationEbsBlockDevice... ebsBlockDevices) {
+            return ebsBlockDevices(List.of(ebsBlockDevices));
+        }
         public Builder ebsOptimized(Boolean ebsOptimized) {
             this.ebsOptimized = Objects.requireNonNull(ebsOptimized);
             return this;
         }
-
         public Builder enableMonitoring(Boolean enableMonitoring) {
             this.enableMonitoring = Objects.requireNonNull(enableMonitoring);
             return this;
         }
-
         public Builder ephemeralBlockDevices(List<GetLaunchConfigurationEphemeralBlockDevice> ephemeralBlockDevices) {
             this.ephemeralBlockDevices = Objects.requireNonNull(ephemeralBlockDevices);
             return this;
         }
-
+        public Builder ephemeralBlockDevices(GetLaunchConfigurationEphemeralBlockDevice... ephemeralBlockDevices) {
+            return ephemeralBlockDevices(List.of(ephemeralBlockDevices));
+        }
         public Builder iamInstanceProfile(String iamInstanceProfile) {
             this.iamInstanceProfile = Objects.requireNonNull(iamInstanceProfile);
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder imageId(String imageId) {
             this.imageId = Objects.requireNonNull(imageId);
             return this;
         }
-
         public Builder instanceType(String instanceType) {
             this.instanceType = Objects.requireNonNull(instanceType);
             return this;
         }
-
         public Builder keyName(String keyName) {
             this.keyName = Objects.requireNonNull(keyName);
             return this;
         }
-
         public Builder metadataOptions(List<GetLaunchConfigurationMetadataOption> metadataOptions) {
             this.metadataOptions = Objects.requireNonNull(metadataOptions);
             return this;
         }
-
+        public Builder metadataOptions(GetLaunchConfigurationMetadataOption... metadataOptions) {
+            return metadataOptions(List.of(metadataOptions));
+        }
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder placementTenancy(String placementTenancy) {
             this.placementTenancy = Objects.requireNonNull(placementTenancy);
             return this;
         }
-
         public Builder rootBlockDevices(List<GetLaunchConfigurationRootBlockDevice> rootBlockDevices) {
             this.rootBlockDevices = Objects.requireNonNull(rootBlockDevices);
             return this;
         }
-
+        public Builder rootBlockDevices(GetLaunchConfigurationRootBlockDevice... rootBlockDevices) {
+            return rootBlockDevices(List.of(rootBlockDevices));
+        }
         public Builder securityGroups(List<String> securityGroups) {
             this.securityGroups = Objects.requireNonNull(securityGroups);
             return this;
         }
-
+        public Builder securityGroups(String... securityGroups) {
+            return securityGroups(List.of(securityGroups));
+        }
         public Builder spotPrice(String spotPrice) {
             this.spotPrice = Objects.requireNonNull(spotPrice);
             return this;
         }
-
         public Builder userData(String userData) {
             this.userData = Objects.requireNonNull(userData);
             return this;
         }
-
         public Builder vpcClassicLinkId(String vpcClassicLinkId) {
             this.vpcClassicLinkId = Objects.requireNonNull(vpcClassicLinkId);
             return this;
         }
-
         public Builder vpcClassicLinkSecurityGroups(List<String> vpcClassicLinkSecurityGroups) {
             this.vpcClassicLinkSecurityGroups = Objects.requireNonNull(vpcClassicLinkSecurityGroups);
             return this;
         }
-        public GetLaunchConfigurationResult build() {
+        public Builder vpcClassicLinkSecurityGroups(String... vpcClassicLinkSecurityGroups) {
+            return vpcClassicLinkSecurityGroups(List.of(vpcClassicLinkSecurityGroups));
+        }        public GetLaunchConfigurationResult build() {
             return new GetLaunchConfigurationResult(arn, associatePublicIpAddress, ebsBlockDevices, ebsOptimized, enableMonitoring, ephemeralBlockDevices, iamInstanceProfile, id, imageId, instanceType, keyName, metadataOptions, name, placementTenancy, rootBlockDevices, securityGroups, spotPrice, userData, vpcClassicLinkId, vpcClassicLinkSecurityGroups);
         }
     }

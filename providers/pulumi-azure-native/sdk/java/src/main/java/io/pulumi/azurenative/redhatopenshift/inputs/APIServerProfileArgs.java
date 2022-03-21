@@ -94,32 +94,26 @@ public final class APIServerProfileArgs extends io.pulumi.resources.ResourceArgs
             this.ip = ip;
             return this;
         }
-
         public Builder ip(@Nullable String ip) {
             this.ip = Output.ofNullable(ip);
             return this;
         }
-
         public Builder url(@Nullable Output<String> url) {
             this.url = url;
             return this;
         }
-
         public Builder url(@Nullable String url) {
             this.url = Output.ofNullable(url);
             return this;
         }
-
         public Builder visibility(@Nullable Output<String> visibility) {
             this.visibility = visibility;
             return this;
         }
-
         public Builder visibility(@Nullable String visibility) {
             this.visibility = Output.ofNullable(visibility);
             return this;
-        }
-        public APIServerProfileArgs build() {
+        }        public APIServerProfileArgs build() {
             return new APIServerProfileArgs(ip, url, visibility);
         }
     }

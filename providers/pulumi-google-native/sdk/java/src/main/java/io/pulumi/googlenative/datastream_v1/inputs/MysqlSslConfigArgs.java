@@ -94,32 +94,26 @@ public final class MysqlSslConfigArgs extends io.pulumi.resources.ResourceArgs {
             this.caCertificate = caCertificate;
             return this;
         }
-
         public Builder caCertificate(@Nullable String caCertificate) {
             this.caCertificate = Output.ofNullable(caCertificate);
             return this;
         }
-
         public Builder clientCertificate(@Nullable Output<String> clientCertificate) {
             this.clientCertificate = clientCertificate;
             return this;
         }
-
         public Builder clientCertificate(@Nullable String clientCertificate) {
             this.clientCertificate = Output.ofNullable(clientCertificate);
             return this;
         }
-
         public Builder clientKey(@Nullable Output<String> clientKey) {
             this.clientKey = clientKey;
             return this;
         }
-
         public Builder clientKey(@Nullable String clientKey) {
             this.clientKey = Output.ofNullable(clientKey);
             return this;
-        }
-        public MysqlSslConfigArgs build() {
+        }        public MysqlSslConfigArgs build() {
             return new MysqlSslConfigArgs(caCertificate, clientCertificate, clientKey);
         }
     }

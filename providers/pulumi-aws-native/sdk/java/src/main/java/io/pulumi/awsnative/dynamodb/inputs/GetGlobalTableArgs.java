@@ -50,8 +50,7 @@ public final class GetGlobalTableArgs extends io.pulumi.resources.InvokeArgs {
         public Builder tableName(String tableName) {
             this.tableName = Objects.requireNonNull(tableName);
             return this;
-        }
-        public GetGlobalTableArgs build() {
+        }        public GetGlobalTableArgs build() {
             return new GetGlobalTableArgs(tableName);
         }
     }

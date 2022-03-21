@@ -54,8 +54,7 @@ public final class BucketNotificationFilter extends io.pulumi.resources.InvokeAr
         public Builder s3Key(BucketS3KeyFilter s3Key) {
             this.s3Key = Objects.requireNonNull(s3Key);
             return this;
-        }
-        public BucketNotificationFilter build() {
+        }        public BucketNotificationFilter build() {
             return new BucketNotificationFilter(s3Key);
         }
     }

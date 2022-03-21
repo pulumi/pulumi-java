@@ -66,22 +66,18 @@ public final class ClusterLoggingPropertiesArgs extends io.pulumi.resources.Reso
             this.bucketName = Objects.requireNonNull(bucketName);
             return this;
         }
-
         public Builder bucketName(String bucketName) {
             this.bucketName = Output.of(Objects.requireNonNull(bucketName));
             return this;
         }
-
         public Builder s3KeyPrefix(@Nullable Output<String> s3KeyPrefix) {
             this.s3KeyPrefix = s3KeyPrefix;
             return this;
         }
-
         public Builder s3KeyPrefix(@Nullable String s3KeyPrefix) {
             this.s3KeyPrefix = Output.ofNullable(s3KeyPrefix);
             return this;
-        }
-        public ClusterLoggingPropertiesArgs build() {
+        }        public ClusterLoggingPropertiesArgs build() {
             return new ClusterLoggingPropertiesArgs(bucketName, s3KeyPrefix);
         }
     }

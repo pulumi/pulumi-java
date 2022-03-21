@@ -130,72 +130,67 @@ public final class DataSourceOneDriveConfigurationArgs extends io.pulumi.resourc
             this.disableLocalGroups = disableLocalGroups;
             return this;
         }
-
         public Builder disableLocalGroups(@Nullable Boolean disableLocalGroups) {
             this.disableLocalGroups = Output.ofNullable(disableLocalGroups);
             return this;
         }
-
         public Builder exclusionPatterns(@Nullable Output<List<String>> exclusionPatterns) {
             this.exclusionPatterns = exclusionPatterns;
             return this;
         }
-
         public Builder exclusionPatterns(@Nullable List<String> exclusionPatterns) {
             this.exclusionPatterns = Output.ofNullable(exclusionPatterns);
             return this;
         }
-
+        public Builder exclusionPatterns(String... exclusionPatterns) {
+            return exclusionPatterns(List.of(exclusionPatterns));
+        }
         public Builder fieldMappings(@Nullable Output<List<DataSourceToIndexFieldMappingArgs>> fieldMappings) {
             this.fieldMappings = fieldMappings;
             return this;
         }
-
         public Builder fieldMappings(@Nullable List<DataSourceToIndexFieldMappingArgs> fieldMappings) {
             this.fieldMappings = Output.ofNullable(fieldMappings);
             return this;
         }
-
+        public Builder fieldMappings(DataSourceToIndexFieldMappingArgs... fieldMappings) {
+            return fieldMappings(List.of(fieldMappings));
+        }
         public Builder inclusionPatterns(@Nullable Output<List<String>> inclusionPatterns) {
             this.inclusionPatterns = inclusionPatterns;
             return this;
         }
-
         public Builder inclusionPatterns(@Nullable List<String> inclusionPatterns) {
             this.inclusionPatterns = Output.ofNullable(inclusionPatterns);
             return this;
         }
-
+        public Builder inclusionPatterns(String... inclusionPatterns) {
+            return inclusionPatterns(List.of(inclusionPatterns));
+        }
         public Builder oneDriveUsers(Output<DataSourceOneDriveUsersArgs> oneDriveUsers) {
             this.oneDriveUsers = Objects.requireNonNull(oneDriveUsers);
             return this;
         }
-
         public Builder oneDriveUsers(DataSourceOneDriveUsersArgs oneDriveUsers) {
             this.oneDriveUsers = Output.of(Objects.requireNonNull(oneDriveUsers));
             return this;
         }
-
         public Builder secretArn(Output<String> secretArn) {
             this.secretArn = Objects.requireNonNull(secretArn);
             return this;
         }
-
         public Builder secretArn(String secretArn) {
             this.secretArn = Output.of(Objects.requireNonNull(secretArn));
             return this;
         }
-
         public Builder tenantDomain(Output<String> tenantDomain) {
             this.tenantDomain = Objects.requireNonNull(tenantDomain);
             return this;
         }
-
         public Builder tenantDomain(String tenantDomain) {
             this.tenantDomain = Output.of(Objects.requireNonNull(tenantDomain));
             return this;
-        }
-        public DataSourceOneDriveConfigurationArgs build() {
+        }        public DataSourceOneDriveConfigurationArgs build() {
             return new DataSourceOneDriveConfigurationArgs(disableLocalGroups, exclusionPatterns, fieldMappings, inclusionPatterns, oneDriveUsers, secretArn, tenantDomain);
         }
     }

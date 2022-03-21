@@ -85,17 +85,14 @@ public final class ClusterNodePoolNodeConfigTaint {
             this.effect = Objects.requireNonNull(effect);
             return this;
         }
-
         public Builder key(String key) {
             this.key = Objects.requireNonNull(key);
             return this;
         }
-
         public Builder value(String value) {
             this.value = Objects.requireNonNull(value);
             return this;
-        }
-        public ClusterNodePoolNodeConfigTaint build() {
+        }        public ClusterNodePoolNodeConfigTaint build() {
             return new ClusterNodePoolNodeConfigTaint(effect, key, value);
         }
     }

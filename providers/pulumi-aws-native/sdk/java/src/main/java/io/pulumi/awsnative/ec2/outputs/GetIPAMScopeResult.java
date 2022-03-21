@@ -164,42 +164,37 @@ public final class GetIPAMScopeResult {
             this.arn = arn;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
-
         public Builder ipamArn(@Nullable String ipamArn) {
             this.ipamArn = ipamArn;
             return this;
         }
-
         public Builder ipamScopeId(@Nullable String ipamScopeId) {
             this.ipamScopeId = ipamScopeId;
             return this;
         }
-
         public Builder ipamScopeType(@Nullable IPAMScopeIpamScopeType ipamScopeType) {
             this.ipamScopeType = ipamScopeType;
             return this;
         }
-
         public Builder isDefault(@Nullable Boolean isDefault) {
             this.isDefault = isDefault;
             return this;
         }
-
         public Builder poolCount(@Nullable Integer poolCount) {
             this.poolCount = poolCount;
             return this;
         }
-
         public Builder tags(@Nullable List<IPAMScopeTag> tags) {
             this.tags = tags;
             return this;
         }
-        public GetIPAMScopeResult build() {
+        public Builder tags(IPAMScopeTag... tags) {
+            return tags(List.of(tags));
+        }        public GetIPAMScopeResult build() {
             return new GetIPAMScopeResult(arn, description, ipamArn, ipamScopeId, ipamScopeType, isDefault, poolCount, tags);
         }
     }

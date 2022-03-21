@@ -66,22 +66,18 @@ public final class BudgetsActionSubscriberArgs extends io.pulumi.resources.Resou
             this.address = Objects.requireNonNull(address);
             return this;
         }
-
         public Builder address(String address) {
             this.address = Output.of(Objects.requireNonNull(address));
             return this;
         }
-
         public Builder type(Output<BudgetsActionSubscriberType> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder type(BudgetsActionSubscriberType type) {
             this.type = Output.of(Objects.requireNonNull(type));
             return this;
-        }
-        public BudgetsActionSubscriberArgs build() {
+        }        public BudgetsActionSubscriberArgs build() {
             return new BudgetsActionSubscriberArgs(address, type);
         }
     }

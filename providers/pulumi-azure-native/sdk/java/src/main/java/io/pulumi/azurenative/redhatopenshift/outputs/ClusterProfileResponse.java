@@ -103,22 +103,18 @@ public final class ClusterProfileResponse {
             this.domain = domain;
             return this;
         }
-
         public Builder pullSecret(@Nullable String pullSecret) {
             this.pullSecret = pullSecret;
             return this;
         }
-
         public Builder resourceGroupId(@Nullable String resourceGroupId) {
             this.resourceGroupId = resourceGroupId;
             return this;
         }
-
         public Builder version(@Nullable String version) {
             this.version = version;
             return this;
-        }
-        public ClusterProfileResponse build() {
+        }        public ClusterProfileResponse build() {
             return new ClusterProfileResponse(domain, pullSecret, resourceGroupId, version);
         }
     }

@@ -71,12 +71,10 @@ public final class StageAccessLogSetting {
             this.destinationArn = destinationArn;
             return this;
         }
-
         public Builder format(@Nullable String format) {
             this.format = format;
             return this;
-        }
-        public StageAccessLogSetting build() {
+        }        public StageAccessLogSetting build() {
             return new StageAccessLogSetting(destinationArn, format);
         }
     }

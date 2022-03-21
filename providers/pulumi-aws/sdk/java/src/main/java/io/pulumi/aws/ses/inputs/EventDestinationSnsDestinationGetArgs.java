@@ -56,12 +56,10 @@ public final class EventDestinationSnsDestinationGetArgs extends io.pulumi.resou
             this.topicArn = Objects.requireNonNull(topicArn);
             return this;
         }
-
         public Builder topicArn(String topicArn) {
             this.topicArn = Output.of(Objects.requireNonNull(topicArn));
             return this;
-        }
-        public EventDestinationSnsDestinationGetArgs build() {
+        }        public EventDestinationSnsDestinationGetArgs build() {
             return new EventDestinationSnsDestinationGetArgs(topicArn);
         }
     }

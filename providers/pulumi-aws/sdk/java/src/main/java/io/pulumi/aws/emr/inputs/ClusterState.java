@@ -559,322 +559,267 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
             this.additionalInfo = additionalInfo;
             return this;
         }
-
         public Builder additionalInfo(@Nullable String additionalInfo) {
             this.additionalInfo = Output.ofNullable(additionalInfo);
             return this;
         }
-
         public Builder applications(@Nullable Output<List<String>> applications) {
             this.applications = applications;
             return this;
         }
-
         public Builder applications(@Nullable List<String> applications) {
             this.applications = Output.ofNullable(applications);
             return this;
         }
-
+        public Builder applications(String... applications) {
+            return applications(List.of(applications));
+        }
         public Builder arn(@Nullable Output<String> arn) {
             this.arn = arn;
             return this;
         }
-
         public Builder arn(@Nullable String arn) {
             this.arn = Output.ofNullable(arn);
             return this;
         }
-
         public Builder autoTerminationPolicy(@Nullable Output<ClusterAutoTerminationPolicyGetArgs> autoTerminationPolicy) {
             this.autoTerminationPolicy = autoTerminationPolicy;
             return this;
         }
-
         public Builder autoTerminationPolicy(@Nullable ClusterAutoTerminationPolicyGetArgs autoTerminationPolicy) {
             this.autoTerminationPolicy = Output.ofNullable(autoTerminationPolicy);
             return this;
         }
-
         public Builder autoscalingRole(@Nullable Output<String> autoscalingRole) {
             this.autoscalingRole = autoscalingRole;
             return this;
         }
-
         public Builder autoscalingRole(@Nullable String autoscalingRole) {
             this.autoscalingRole = Output.ofNullable(autoscalingRole);
             return this;
         }
-
         public Builder bootstrapActions(@Nullable Output<List<ClusterBootstrapActionGetArgs>> bootstrapActions) {
             this.bootstrapActions = bootstrapActions;
             return this;
         }
-
         public Builder bootstrapActions(@Nullable List<ClusterBootstrapActionGetArgs> bootstrapActions) {
             this.bootstrapActions = Output.ofNullable(bootstrapActions);
             return this;
         }
-
+        public Builder bootstrapActions(ClusterBootstrapActionGetArgs... bootstrapActions) {
+            return bootstrapActions(List.of(bootstrapActions));
+        }
         public Builder clusterState(@Nullable Output<String> clusterState) {
             this.clusterState = clusterState;
             return this;
         }
-
         public Builder clusterState(@Nullable String clusterState) {
             this.clusterState = Output.ofNullable(clusterState);
             return this;
         }
-
         public Builder configurations(@Nullable Output<String> configurations) {
             this.configurations = configurations;
             return this;
         }
-
         public Builder configurations(@Nullable String configurations) {
             this.configurations = Output.ofNullable(configurations);
             return this;
         }
-
         public Builder configurationsJson(@Nullable Output<String> configurationsJson) {
             this.configurationsJson = configurationsJson;
             return this;
         }
-
         public Builder configurationsJson(@Nullable String configurationsJson) {
             this.configurationsJson = Output.ofNullable(configurationsJson);
             return this;
         }
-
         public Builder coreInstanceFleet(@Nullable Output<ClusterCoreInstanceFleetGetArgs> coreInstanceFleet) {
             this.coreInstanceFleet = coreInstanceFleet;
             return this;
         }
-
         public Builder coreInstanceFleet(@Nullable ClusterCoreInstanceFleetGetArgs coreInstanceFleet) {
             this.coreInstanceFleet = Output.ofNullable(coreInstanceFleet);
             return this;
         }
-
         public Builder coreInstanceGroup(@Nullable Output<ClusterCoreInstanceGroupGetArgs> coreInstanceGroup) {
             this.coreInstanceGroup = coreInstanceGroup;
             return this;
         }
-
         public Builder coreInstanceGroup(@Nullable ClusterCoreInstanceGroupGetArgs coreInstanceGroup) {
             this.coreInstanceGroup = Output.ofNullable(coreInstanceGroup);
             return this;
         }
-
         public Builder customAmiId(@Nullable Output<String> customAmiId) {
             this.customAmiId = customAmiId;
             return this;
         }
-
         public Builder customAmiId(@Nullable String customAmiId) {
             this.customAmiId = Output.ofNullable(customAmiId);
             return this;
         }
-
         public Builder ebsRootVolumeSize(@Nullable Output<Integer> ebsRootVolumeSize) {
             this.ebsRootVolumeSize = ebsRootVolumeSize;
             return this;
         }
-
         public Builder ebsRootVolumeSize(@Nullable Integer ebsRootVolumeSize) {
             this.ebsRootVolumeSize = Output.ofNullable(ebsRootVolumeSize);
             return this;
         }
-
         public Builder ec2Attributes(@Nullable Output<ClusterEc2AttributesGetArgs> ec2Attributes) {
             this.ec2Attributes = ec2Attributes;
             return this;
         }
-
         public Builder ec2Attributes(@Nullable ClusterEc2AttributesGetArgs ec2Attributes) {
             this.ec2Attributes = Output.ofNullable(ec2Attributes);
             return this;
         }
-
         public Builder keepJobFlowAliveWhenNoSteps(@Nullable Output<Boolean> keepJobFlowAliveWhenNoSteps) {
             this.keepJobFlowAliveWhenNoSteps = keepJobFlowAliveWhenNoSteps;
             return this;
         }
-
         public Builder keepJobFlowAliveWhenNoSteps(@Nullable Boolean keepJobFlowAliveWhenNoSteps) {
             this.keepJobFlowAliveWhenNoSteps = Output.ofNullable(keepJobFlowAliveWhenNoSteps);
             return this;
         }
-
         public Builder kerberosAttributes(@Nullable Output<ClusterKerberosAttributesGetArgs> kerberosAttributes) {
             this.kerberosAttributes = kerberosAttributes;
             return this;
         }
-
         public Builder kerberosAttributes(@Nullable ClusterKerberosAttributesGetArgs kerberosAttributes) {
             this.kerberosAttributes = Output.ofNullable(kerberosAttributes);
             return this;
         }
-
         public Builder logEncryptionKmsKeyId(@Nullable Output<String> logEncryptionKmsKeyId) {
             this.logEncryptionKmsKeyId = logEncryptionKmsKeyId;
             return this;
         }
-
         public Builder logEncryptionKmsKeyId(@Nullable String logEncryptionKmsKeyId) {
             this.logEncryptionKmsKeyId = Output.ofNullable(logEncryptionKmsKeyId);
             return this;
         }
-
         public Builder logUri(@Nullable Output<String> logUri) {
             this.logUri = logUri;
             return this;
         }
-
         public Builder logUri(@Nullable String logUri) {
             this.logUri = Output.ofNullable(logUri);
             return this;
         }
-
         public Builder masterInstanceFleet(@Nullable Output<ClusterMasterInstanceFleetGetArgs> masterInstanceFleet) {
             this.masterInstanceFleet = masterInstanceFleet;
             return this;
         }
-
         public Builder masterInstanceFleet(@Nullable ClusterMasterInstanceFleetGetArgs masterInstanceFleet) {
             this.masterInstanceFleet = Output.ofNullable(masterInstanceFleet);
             return this;
         }
-
         public Builder masterInstanceGroup(@Nullable Output<ClusterMasterInstanceGroupGetArgs> masterInstanceGroup) {
             this.masterInstanceGroup = masterInstanceGroup;
             return this;
         }
-
         public Builder masterInstanceGroup(@Nullable ClusterMasterInstanceGroupGetArgs masterInstanceGroup) {
             this.masterInstanceGroup = Output.ofNullable(masterInstanceGroup);
             return this;
         }
-
         public Builder masterPublicDns(@Nullable Output<String> masterPublicDns) {
             this.masterPublicDns = masterPublicDns;
             return this;
         }
-
         public Builder masterPublicDns(@Nullable String masterPublicDns) {
             this.masterPublicDns = Output.ofNullable(masterPublicDns);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder releaseLabel(@Nullable Output<String> releaseLabel) {
             this.releaseLabel = releaseLabel;
             return this;
         }
-
         public Builder releaseLabel(@Nullable String releaseLabel) {
             this.releaseLabel = Output.ofNullable(releaseLabel);
             return this;
         }
-
         public Builder scaleDownBehavior(@Nullable Output<String> scaleDownBehavior) {
             this.scaleDownBehavior = scaleDownBehavior;
             return this;
         }
-
         public Builder scaleDownBehavior(@Nullable String scaleDownBehavior) {
             this.scaleDownBehavior = Output.ofNullable(scaleDownBehavior);
             return this;
         }
-
         public Builder securityConfiguration(@Nullable Output<String> securityConfiguration) {
             this.securityConfiguration = securityConfiguration;
             return this;
         }
-
         public Builder securityConfiguration(@Nullable String securityConfiguration) {
             this.securityConfiguration = Output.ofNullable(securityConfiguration);
             return this;
         }
-
         public Builder serviceRole(@Nullable Output<String> serviceRole) {
             this.serviceRole = serviceRole;
             return this;
         }
-
         public Builder serviceRole(@Nullable String serviceRole) {
             this.serviceRole = Output.ofNullable(serviceRole);
             return this;
         }
-
         public Builder stepConcurrencyLevel(@Nullable Output<Integer> stepConcurrencyLevel) {
             this.stepConcurrencyLevel = stepConcurrencyLevel;
             return this;
         }
-
         public Builder stepConcurrencyLevel(@Nullable Integer stepConcurrencyLevel) {
             this.stepConcurrencyLevel = Output.ofNullable(stepConcurrencyLevel);
             return this;
         }
-
         public Builder steps(@Nullable Output<List<ClusterStepGetArgs>> steps) {
             this.steps = steps;
             return this;
         }
-
         public Builder steps(@Nullable List<ClusterStepGetArgs> steps) {
             this.steps = Output.ofNullable(steps);
             return this;
         }
-
+        public Builder steps(ClusterStepGetArgs... steps) {
+            return steps(List.of(steps));
+        }
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
             this.tagsAll = tagsAll;
             return this;
         }
-
         public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
             this.tagsAll = Output.ofNullable(tagsAll);
             return this;
         }
-
         public Builder terminationProtection(@Nullable Output<Boolean> terminationProtection) {
             this.terminationProtection = terminationProtection;
             return this;
         }
-
         public Builder terminationProtection(@Nullable Boolean terminationProtection) {
             this.terminationProtection = Output.ofNullable(terminationProtection);
             return this;
         }
-
         public Builder visibleToAllUsers(@Nullable Output<Boolean> visibleToAllUsers) {
             this.visibleToAllUsers = visibleToAllUsers;
             return this;
         }
-
         public Builder visibleToAllUsers(@Nullable Boolean visibleToAllUsers) {
             this.visibleToAllUsers = Output.ofNullable(visibleToAllUsers);
             return this;
-        }
-        public ClusterState build() {
+        }        public ClusterState build() {
             return new ClusterState(additionalInfo, applications, arn, autoTerminationPolicy, autoscalingRole, bootstrapActions, clusterState, configurations, configurationsJson, coreInstanceFleet, coreInstanceGroup, customAmiId, ebsRootVolumeSize, ec2Attributes, keepJobFlowAliveWhenNoSteps, kerberosAttributes, logEncryptionKmsKeyId, logUri, masterInstanceFleet, masterInstanceGroup, masterPublicDns, name, releaseLabel, scaleDownBehavior, securityConfiguration, serviceRole, stepConcurrencyLevel, steps, tags, tagsAll, terminationProtection, visibleToAllUsers);
         }
     }

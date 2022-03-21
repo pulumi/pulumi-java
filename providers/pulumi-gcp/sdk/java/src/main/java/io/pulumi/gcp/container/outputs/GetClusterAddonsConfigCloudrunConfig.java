@@ -54,12 +54,10 @@ public final class GetClusterAddonsConfigCloudrunConfig {
             this.disabled = Objects.requireNonNull(disabled);
             return this;
         }
-
         public Builder loadBalancerType(String loadBalancerType) {
             this.loadBalancerType = Objects.requireNonNull(loadBalancerType);
             return this;
-        }
-        public GetClusterAddonsConfigCloudrunConfig build() {
+        }        public GetClusterAddonsConfigCloudrunConfig build() {
             return new GetClusterAddonsConfigCloudrunConfig(disabled, loadBalancerType);
         }
     }

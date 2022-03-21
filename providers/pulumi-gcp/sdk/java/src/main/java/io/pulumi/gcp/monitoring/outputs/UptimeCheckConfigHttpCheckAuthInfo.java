@@ -71,12 +71,10 @@ public final class UptimeCheckConfigHttpCheckAuthInfo {
             this.password = Objects.requireNonNull(password);
             return this;
         }
-
         public Builder username(String username) {
             this.username = Objects.requireNonNull(username);
             return this;
-        }
-        public UptimeCheckConfigHttpCheckAuthInfo build() {
+        }        public UptimeCheckConfigHttpCheckAuthInfo build() {
             return new UptimeCheckConfigHttpCheckAuthInfo(password, username);
         }
     }

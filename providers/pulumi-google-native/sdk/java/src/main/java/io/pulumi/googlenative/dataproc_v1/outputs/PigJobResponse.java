@@ -154,37 +154,33 @@ public final class PigJobResponse {
             this.continueOnFailure = Objects.requireNonNull(continueOnFailure);
             return this;
         }
-
         public Builder jarFileUris(List<String> jarFileUris) {
             this.jarFileUris = Objects.requireNonNull(jarFileUris);
             return this;
         }
-
+        public Builder jarFileUris(String... jarFileUris) {
+            return jarFileUris(List.of(jarFileUris));
+        }
         public Builder loggingConfig(LoggingConfigResponse loggingConfig) {
             this.loggingConfig = Objects.requireNonNull(loggingConfig);
             return this;
         }
-
         public Builder properties(Map<String,String> properties) {
             this.properties = Objects.requireNonNull(properties);
             return this;
         }
-
         public Builder queryFileUri(String queryFileUri) {
             this.queryFileUri = Objects.requireNonNull(queryFileUri);
             return this;
         }
-
         public Builder queryList(QueryListResponse queryList) {
             this.queryList = Objects.requireNonNull(queryList);
             return this;
         }
-
         public Builder scriptVariables(Map<String,String> scriptVariables) {
             this.scriptVariables = Objects.requireNonNull(scriptVariables);
             return this;
-        }
-        public PigJobResponse build() {
+        }        public PigJobResponse build() {
             return new PigJobResponse(continueOnFailure, jarFileUris, loggingConfig, properties, queryFileUri, queryList, scriptVariables);
         }
     }

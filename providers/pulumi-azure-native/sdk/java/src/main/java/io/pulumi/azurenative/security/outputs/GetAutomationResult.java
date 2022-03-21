@@ -240,62 +240,59 @@ public final class GetAutomationResult {
             this.actions = actions;
             return this;
         }
-
+        public Builder actions(Object... actions) {
+            return actions(List.of(actions));
+        }
         public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
-
         public Builder etag(@Nullable String etag) {
             this.etag = etag;
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder isEnabled(@Nullable Boolean isEnabled) {
             this.isEnabled = isEnabled;
             return this;
         }
-
         public Builder kind(@Nullable String kind) {
             this.kind = kind;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = location;
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder scopes(@Nullable List<AutomationScopeResponse> scopes) {
             this.scopes = scopes;
             return this;
         }
-
+        public Builder scopes(AutomationScopeResponse... scopes) {
+            return scopes(List.of(scopes));
+        }
         public Builder sources(@Nullable List<AutomationSourceResponse> sources) {
             this.sources = sources;
             return this;
         }
-
+        public Builder sources(AutomationSourceResponse... sources) {
+            return sources(List.of(sources));
+        }
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public GetAutomationResult build() {
+        }        public GetAutomationResult build() {
             return new GetAutomationResult(actions, description, etag, id, isEnabled, kind, location, name, scopes, sources, tags, type);
         }
     }

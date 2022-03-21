@@ -94,17 +94,14 @@ public final class AutoScalingPolicyResponse extends io.pulumi.resources.InvokeA
             this.mechanism = Objects.requireNonNull(mechanism);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder trigger(AverageLoadScalingTriggerResponse trigger) {
             this.trigger = Objects.requireNonNull(trigger);
             return this;
-        }
-        public AutoScalingPolicyResponse build() {
+        }        public AutoScalingPolicyResponse build() {
             return new AutoScalingPolicyResponse(mechanism, name, trigger);
         }
     }

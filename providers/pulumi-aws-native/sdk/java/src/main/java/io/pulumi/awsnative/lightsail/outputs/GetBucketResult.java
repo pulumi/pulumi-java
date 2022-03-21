@@ -171,47 +171,47 @@ public final class GetBucketResult {
             this.ableToUpdateBundle = ableToUpdateBundle;
             return this;
         }
-
         public Builder accessRules(@Nullable BucketAccessRules accessRules) {
             this.accessRules = accessRules;
             return this;
         }
-
         public Builder bucketArn(@Nullable String bucketArn) {
             this.bucketArn = bucketArn;
             return this;
         }
-
         public Builder bundleId(@Nullable String bundleId) {
             this.bundleId = bundleId;
             return this;
         }
-
         public Builder objectVersioning(@Nullable Boolean objectVersioning) {
             this.objectVersioning = objectVersioning;
             return this;
         }
-
         public Builder readOnlyAccessAccounts(@Nullable List<String> readOnlyAccessAccounts) {
             this.readOnlyAccessAccounts = readOnlyAccessAccounts;
             return this;
         }
-
+        public Builder readOnlyAccessAccounts(String... readOnlyAccessAccounts) {
+            return readOnlyAccessAccounts(List.of(readOnlyAccessAccounts));
+        }
         public Builder resourcesReceivingAccess(@Nullable List<String> resourcesReceivingAccess) {
             this.resourcesReceivingAccess = resourcesReceivingAccess;
             return this;
         }
-
+        public Builder resourcesReceivingAccess(String... resourcesReceivingAccess) {
+            return resourcesReceivingAccess(List.of(resourcesReceivingAccess));
+        }
         public Builder tags(@Nullable List<BucketTag> tags) {
             this.tags = tags;
             return this;
         }
-
+        public Builder tags(BucketTag... tags) {
+            return tags(List.of(tags));
+        }
         public Builder url(@Nullable String url) {
             this.url = url;
             return this;
-        }
-        public GetBucketResult build() {
+        }        public GetBucketResult build() {
             return new GetBucketResult(ableToUpdateBundle, accessRules, bucketArn, bundleId, objectVersioning, readOnlyAccessAccounts, resourcesReceivingAccess, tags, url);
         }
     }

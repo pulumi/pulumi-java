@@ -88,17 +88,14 @@ public final class HubBillingInfoFormatResponse {
             this.maxUnits = maxUnits;
             return this;
         }
-
         public Builder minUnits(@Nullable Integer minUnits) {
             this.minUnits = minUnits;
             return this;
         }
-
         public Builder skuName(@Nullable String skuName) {
             this.skuName = skuName;
             return this;
-        }
-        public HubBillingInfoFormatResponse build() {
+        }        public HubBillingInfoFormatResponse build() {
             return new HubBillingInfoFormatResponse(maxUnits, minUnits, skuName);
         }
     }

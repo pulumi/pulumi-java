@@ -79,22 +79,18 @@ public final class AcceleratorArgs extends io.pulumi.resources.ResourceArgs {
             this.acceleratorType = acceleratorType;
             return this;
         }
-
         public Builder acceleratorType(@Nullable AcceleratorAcceleratorType acceleratorType) {
             this.acceleratorType = Output.ofNullable(acceleratorType);
             return this;
         }
-
         public Builder state(@Nullable Output<AcceleratorState> state) {
             this.state = state;
             return this;
         }
-
         public Builder state(@Nullable AcceleratorState state) {
             this.state = Output.ofNullable(state);
             return this;
-        }
-        public AcceleratorArgs build() {
+        }        public AcceleratorArgs build() {
             return new AcceleratorArgs(acceleratorType, state);
         }
     }

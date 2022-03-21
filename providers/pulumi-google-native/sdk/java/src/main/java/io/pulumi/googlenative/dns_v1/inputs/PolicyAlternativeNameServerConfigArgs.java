@@ -72,22 +72,21 @@ public final class PolicyAlternativeNameServerConfigArgs extends io.pulumi.resou
             this.kind = kind;
             return this;
         }
-
         public Builder kind(@Nullable String kind) {
             this.kind = Output.ofNullable(kind);
             return this;
         }
-
         public Builder targetNameServers(@Nullable Output<List<PolicyAlternativeNameServerConfigTargetNameServerArgs>> targetNameServers) {
             this.targetNameServers = targetNameServers;
             return this;
         }
-
         public Builder targetNameServers(@Nullable List<PolicyAlternativeNameServerConfigTargetNameServerArgs> targetNameServers) {
             this.targetNameServers = Output.ofNullable(targetNameServers);
             return this;
         }
-        public PolicyAlternativeNameServerConfigArgs build() {
+        public Builder targetNameServers(PolicyAlternativeNameServerConfigTargetNameServerArgs... targetNameServers) {
+            return targetNameServers(List.of(targetNameServers));
+        }        public PolicyAlternativeNameServerConfigArgs build() {
             return new PolicyAlternativeNameServerConfigArgs(kind, targetNameServers);
         }
     }

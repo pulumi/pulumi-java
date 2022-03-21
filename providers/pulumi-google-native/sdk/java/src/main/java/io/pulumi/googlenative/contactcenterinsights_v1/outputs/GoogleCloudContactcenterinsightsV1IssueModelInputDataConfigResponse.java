@@ -85,17 +85,14 @@ public final class GoogleCloudContactcenterinsightsV1IssueModelInputDataConfigRe
             this.filter = Objects.requireNonNull(filter);
             return this;
         }
-
         public Builder medium(String medium) {
             this.medium = Objects.requireNonNull(medium);
             return this;
         }
-
         public Builder trainingConversationsCount(String trainingConversationsCount) {
             this.trainingConversationsCount = Objects.requireNonNull(trainingConversationsCount);
             return this;
-        }
-        public GoogleCloudContactcenterinsightsV1IssueModelInputDataConfigResponse build() {
+        }        public GoogleCloudContactcenterinsightsV1IssueModelInputDataConfigResponse build() {
             return new GoogleCloudContactcenterinsightsV1IssueModelInputDataConfigResponse(filter, medium, trainingConversationsCount);
         }
     }

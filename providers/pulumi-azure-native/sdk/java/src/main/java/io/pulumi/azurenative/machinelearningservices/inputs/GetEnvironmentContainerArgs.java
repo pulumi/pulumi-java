@@ -88,17 +88,14 @@ public final class GetEnvironmentContainerArgs extends io.pulumi.resources.Invok
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder workspaceName(String workspaceName) {
             this.workspaceName = Objects.requireNonNull(workspaceName);
             return this;
-        }
-        public GetEnvironmentContainerArgs build() {
+        }        public GetEnvironmentContainerArgs build() {
             return new GetEnvironmentContainerArgs(name, resourceGroupName, workspaceName);
         }
     }

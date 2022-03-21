@@ -390,112 +390,99 @@ public final class GetDomainResult {
             this.authCode = authCode;
             return this;
         }
-
         public Builder autoRenew(@Nullable Boolean autoRenew) {
             this.autoRenew = autoRenew;
             return this;
         }
-
         public Builder createdTime(String createdTime) {
             this.createdTime = Objects.requireNonNull(createdTime);
             return this;
         }
-
         public Builder dnsType(@Nullable String dnsType) {
             this.dnsType = dnsType;
             return this;
         }
-
         public Builder dnsZoneId(@Nullable String dnsZoneId) {
             this.dnsZoneId = dnsZoneId;
             return this;
         }
-
         public Builder domainNotRenewableReasons(List<String> domainNotRenewableReasons) {
             this.domainNotRenewableReasons = Objects.requireNonNull(domainNotRenewableReasons);
             return this;
         }
-
+        public Builder domainNotRenewableReasons(String... domainNotRenewableReasons) {
+            return domainNotRenewableReasons(List.of(domainNotRenewableReasons));
+        }
         public Builder expirationTime(String expirationTime) {
             this.expirationTime = Objects.requireNonNull(expirationTime);
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder kind(@Nullable String kind) {
             this.kind = kind;
             return this;
         }
-
         public Builder lastRenewedTime(String lastRenewedTime) {
             this.lastRenewedTime = Objects.requireNonNull(lastRenewedTime);
             return this;
         }
-
         public Builder location(String location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
-
         public Builder managedHostNames(List<HostNameResponse> managedHostNames) {
             this.managedHostNames = Objects.requireNonNull(managedHostNames);
             return this;
         }
-
+        public Builder managedHostNames(HostNameResponse... managedHostNames) {
+            return managedHostNames(List.of(managedHostNames));
+        }
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder nameServers(List<String> nameServers) {
             this.nameServers = Objects.requireNonNull(nameServers);
             return this;
         }
-
+        public Builder nameServers(String... nameServers) {
+            return nameServers(List.of(nameServers));
+        }
         public Builder privacy(@Nullable Boolean privacy) {
             this.privacy = privacy;
             return this;
         }
-
         public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
-
         public Builder readyForDnsRecordManagement(Boolean readyForDnsRecordManagement) {
             this.readyForDnsRecordManagement = Objects.requireNonNull(readyForDnsRecordManagement);
             return this;
         }
-
         public Builder registrationStatus(String registrationStatus) {
             this.registrationStatus = Objects.requireNonNull(registrationStatus);
             return this;
         }
-
         public Builder systemData(SystemDataResponse systemData) {
             this.systemData = Objects.requireNonNull(systemData);
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder targetDnsType(@Nullable String targetDnsType) {
             this.targetDnsType = targetDnsType;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public GetDomainResult build() {
+        }        public GetDomainResult build() {
             return new GetDomainResult(authCode, autoRenew, createdTime, dnsType, dnsZoneId, domainNotRenewableReasons, expirationTime, id, kind, lastRenewedTime, location, managedHostNames, name, nameServers, privacy, provisioningState, readyForDnsRecordManagement, registrationStatus, systemData, tags, targetDnsType, type);
         }
     }

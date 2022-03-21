@@ -53,8 +53,7 @@ public final class GetBucketPolicyResult {
         public Builder policyDocument(@Nullable Object policyDocument) {
             this.policyDocument = policyDocument;
             return this;
-        }
-        public GetBucketPolicyResult build() {
+        }        public GetBucketPolicyResult build() {
             return new GetBucketPolicyResult(policyDocument);
         }
     }

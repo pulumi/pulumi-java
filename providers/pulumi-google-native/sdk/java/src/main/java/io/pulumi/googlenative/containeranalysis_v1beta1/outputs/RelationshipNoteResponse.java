@@ -51,8 +51,7 @@ public final class RelationshipNoteResponse {
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public RelationshipNoteResponse build() {
+        }        public RelationshipNoteResponse build() {
             return new RelationshipNoteResponse(type);
         }
     }

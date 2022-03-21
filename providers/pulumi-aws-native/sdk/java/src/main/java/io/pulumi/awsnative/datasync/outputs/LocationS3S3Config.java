@@ -51,8 +51,7 @@ public final class LocationS3S3Config {
         public Builder bucketAccessRoleArn(String bucketAccessRoleArn) {
             this.bucketAccessRoleArn = Objects.requireNonNull(bucketAccessRoleArn);
             return this;
-        }
-        public LocationS3S3Config build() {
+        }        public LocationS3S3Config build() {
             return new LocationS3S3Config(bucketAccessRoleArn);
         }
     }

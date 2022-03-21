@@ -112,42 +112,37 @@ public final class BandwidthScheduleArgs extends io.pulumi.resources.ResourceArg
             this.days = Objects.requireNonNull(days);
             return this;
         }
-
         public Builder days(List<DayOfWeek> days) {
             this.days = Output.of(Objects.requireNonNull(days));
             return this;
         }
-
+        public Builder days(DayOfWeek... days) {
+            return days(List.of(days));
+        }
         public Builder rateInMbps(Output<Integer> rateInMbps) {
             this.rateInMbps = Objects.requireNonNull(rateInMbps);
             return this;
         }
-
         public Builder rateInMbps(Integer rateInMbps) {
             this.rateInMbps = Output.of(Objects.requireNonNull(rateInMbps));
             return this;
         }
-
         public Builder start(Output<TimeArgs> start) {
             this.start = Objects.requireNonNull(start);
             return this;
         }
-
         public Builder start(TimeArgs start) {
             this.start = Output.of(Objects.requireNonNull(start));
             return this;
         }
-
         public Builder stop(Output<TimeArgs> stop) {
             this.stop = Objects.requireNonNull(stop);
             return this;
         }
-
         public Builder stop(TimeArgs stop) {
             this.stop = Output.of(Objects.requireNonNull(stop));
             return this;
-        }
-        public BandwidthScheduleArgs build() {
+        }        public BandwidthScheduleArgs build() {
             return new BandwidthScheduleArgs(days, rateInMbps, start, stop);
         }
     }

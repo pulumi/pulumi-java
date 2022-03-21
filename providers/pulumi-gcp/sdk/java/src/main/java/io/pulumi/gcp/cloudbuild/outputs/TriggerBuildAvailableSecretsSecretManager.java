@@ -75,12 +75,10 @@ public final class TriggerBuildAvailableSecretsSecretManager {
             this.env = Objects.requireNonNull(env);
             return this;
         }
-
         public Builder versionName(String versionName) {
             this.versionName = Objects.requireNonNull(versionName);
             return this;
-        }
-        public TriggerBuildAvailableSecretsSecretManager build() {
+        }        public TriggerBuildAvailableSecretsSecretManager build() {
             return new TriggerBuildAvailableSecretsSecretManager(env, versionName);
         }
     }

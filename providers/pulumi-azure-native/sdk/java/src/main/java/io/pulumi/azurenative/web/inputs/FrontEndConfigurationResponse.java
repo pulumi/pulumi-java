@@ -52,8 +52,7 @@ public final class FrontEndConfigurationResponse extends io.pulumi.resources.Inv
         public Builder kind(@Nullable String kind) {
             this.kind = kind;
             return this;
-        }
-        public FrontEndConfigurationResponse build() {
+        }        public FrontEndConfigurationResponse build() {
             return new FrontEndConfigurationResponse(kind);
         }
     }

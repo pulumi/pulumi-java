@@ -120,27 +120,25 @@ public final class GetObjectIamPolicyResult {
             this.bindings = Objects.requireNonNull(bindings);
             return this;
         }
-
+        public Builder bindings(ObjectIamPolicyBindingsItemResponse... bindings) {
+            return bindings(List.of(bindings));
+        }
         public Builder etag(String etag) {
             this.etag = Objects.requireNonNull(etag);
             return this;
         }
-
         public Builder kind(String kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
-
         public Builder resourceId(String resourceId) {
             this.resourceId = Objects.requireNonNull(resourceId);
             return this;
         }
-
         public Builder version(Integer version) {
             this.version = Objects.requireNonNull(version);
             return this;
-        }
-        public GetObjectIamPolicyResult build() {
+        }        public GetObjectIamPolicyResult build() {
             return new GetObjectIamPolicyResult(bindings, etag, kind, resourceId, version);
         }
     }

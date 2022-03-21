@@ -92,32 +92,29 @@ public final class ParameterGroupState extends io.pulumi.resources.ResourceArgs 
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder parameters(@Nullable Output<List<ParameterGroupParameterGetArgs>> parameters) {
             this.parameters = parameters;
             return this;
         }
-
         public Builder parameters(@Nullable List<ParameterGroupParameterGetArgs> parameters) {
             this.parameters = Output.ofNullable(parameters);
             return this;
         }
-        public ParameterGroupState build() {
+        public Builder parameters(ParameterGroupParameterGetArgs... parameters) {
+            return parameters(List.of(parameters));
+        }        public ParameterGroupState build() {
             return new ParameterGroupState(description, name, parameters);
         }
     }

@@ -94,17 +94,14 @@ public final class RosettaNetPipActivitySettingsResponse extends io.pulumi.resou
             this.acknowledgmentOfReceiptSettings = Objects.requireNonNull(acknowledgmentOfReceiptSettings);
             return this;
         }
-
         public Builder activityBehavior(RosettaNetPipActivityBehaviorResponse activityBehavior) {
             this.activityBehavior = Objects.requireNonNull(activityBehavior);
             return this;
         }
-
         public Builder activityType(String activityType) {
             this.activityType = Objects.requireNonNull(activityType);
             return this;
-        }
-        public RosettaNetPipActivitySettingsResponse build() {
+        }        public RosettaNetPipActivitySettingsResponse build() {
             return new RosettaNetPipActivitySettingsResponse(acknowledgmentOfReceiptSettings, activityBehavior, activityType);
         }
     }

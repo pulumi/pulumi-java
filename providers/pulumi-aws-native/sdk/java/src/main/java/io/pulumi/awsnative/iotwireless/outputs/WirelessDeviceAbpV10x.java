@@ -54,12 +54,10 @@ public final class WirelessDeviceAbpV10x {
             this.devAddr = Objects.requireNonNull(devAddr);
             return this;
         }
-
         public Builder sessionKeys(WirelessDeviceSessionKeysAbpV10x sessionKeys) {
             this.sessionKeys = Objects.requireNonNull(sessionKeys);
             return this;
-        }
-        public WirelessDeviceAbpV10x build() {
+        }        public WirelessDeviceAbpV10x build() {
             return new WirelessDeviceAbpV10x(devAddr, sessionKeys);
         }
     }

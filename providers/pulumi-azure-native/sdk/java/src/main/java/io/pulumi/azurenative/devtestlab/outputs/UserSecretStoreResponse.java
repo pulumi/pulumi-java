@@ -71,12 +71,10 @@ public final class UserSecretStoreResponse {
             this.keyVaultId = keyVaultId;
             return this;
         }
-
         public Builder keyVaultUri(@Nullable String keyVaultUri) {
             this.keyVaultUri = keyVaultUri;
             return this;
-        }
-        public UserSecretStoreResponse build() {
+        }        public UserSecretStoreResponse build() {
             return new UserSecretStoreResponse(keyVaultId, keyVaultUri);
         }
     }

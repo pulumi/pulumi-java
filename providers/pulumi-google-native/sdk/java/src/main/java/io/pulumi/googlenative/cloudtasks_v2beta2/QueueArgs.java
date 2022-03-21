@@ -182,92 +182,74 @@ public final class QueueArgs extends io.pulumi.resources.ResourceArgs {
             this.appEngineHttpTarget = appEngineHttpTarget;
             return this;
         }
-
         public Builder appEngineHttpTarget(@Nullable AppEngineHttpTargetArgs appEngineHttpTarget) {
             this.appEngineHttpTarget = Output.ofNullable(appEngineHttpTarget);
             return this;
         }
-
         public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
         }
-
         public Builder pullTarget(@Nullable Output<PullTargetArgs> pullTarget) {
             this.pullTarget = pullTarget;
             return this;
         }
-
         public Builder pullTarget(@Nullable PullTargetArgs pullTarget) {
             this.pullTarget = Output.ofNullable(pullTarget);
             return this;
         }
-
         public Builder rateLimits(@Nullable Output<RateLimitsArgs> rateLimits) {
             this.rateLimits = rateLimits;
             return this;
         }
-
         public Builder rateLimits(@Nullable RateLimitsArgs rateLimits) {
             this.rateLimits = Output.ofNullable(rateLimits);
             return this;
         }
-
         public Builder retryConfig(@Nullable Output<RetryConfigArgs> retryConfig) {
             this.retryConfig = retryConfig;
             return this;
         }
-
         public Builder retryConfig(@Nullable RetryConfigArgs retryConfig) {
             this.retryConfig = Output.ofNullable(retryConfig);
             return this;
         }
-
         public Builder taskTtl(@Nullable Output<String> taskTtl) {
             this.taskTtl = taskTtl;
             return this;
         }
-
         public Builder taskTtl(@Nullable String taskTtl) {
             this.taskTtl = Output.ofNullable(taskTtl);
             return this;
         }
-
         public Builder tombstoneTtl(@Nullable Output<String> tombstoneTtl) {
             this.tombstoneTtl = tombstoneTtl;
             return this;
         }
-
         public Builder tombstoneTtl(@Nullable String tombstoneTtl) {
             this.tombstoneTtl = Output.ofNullable(tombstoneTtl);
             return this;
-        }
-        public QueueArgs build() {
+        }        public QueueArgs build() {
             return new QueueArgs(appEngineHttpTarget, location, name, project, pullTarget, rateLimits, retryConfig, taskTtl, tombstoneTtl);
         }
     }

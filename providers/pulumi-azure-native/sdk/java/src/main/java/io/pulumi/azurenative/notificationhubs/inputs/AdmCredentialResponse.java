@@ -94,17 +94,14 @@ public final class AdmCredentialResponse extends io.pulumi.resources.InvokeArgs 
             this.authTokenUrl = authTokenUrl;
             return this;
         }
-
         public Builder clientId(@Nullable String clientId) {
             this.clientId = clientId;
             return this;
         }
-
         public Builder clientSecret(@Nullable String clientSecret) {
             this.clientSecret = clientSecret;
             return this;
-        }
-        public AdmCredentialResponse build() {
+        }        public AdmCredentialResponse build() {
             return new AdmCredentialResponse(authTokenUrl, clientId, clientSecret);
         }
     }

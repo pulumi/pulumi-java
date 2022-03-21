@@ -100,32 +100,29 @@ public final class CxIntentTrainingPhraseGetArgs extends io.pulumi.resources.Res
             this.id = id;
             return this;
         }
-
         public Builder id(@Nullable String id) {
             this.id = Output.ofNullable(id);
             return this;
         }
-
         public Builder parts(Output<List<CxIntentTrainingPhrasePartGetArgs>> parts) {
             this.parts = Objects.requireNonNull(parts);
             return this;
         }
-
         public Builder parts(List<CxIntentTrainingPhrasePartGetArgs> parts) {
             this.parts = Output.of(Objects.requireNonNull(parts));
             return this;
         }
-
+        public Builder parts(CxIntentTrainingPhrasePartGetArgs... parts) {
+            return parts(List.of(parts));
+        }
         public Builder repeatCount(@Nullable Output<Integer> repeatCount) {
             this.repeatCount = repeatCount;
             return this;
         }
-
         public Builder repeatCount(@Nullable Integer repeatCount) {
             this.repeatCount = Output.ofNullable(repeatCount);
             return this;
-        }
-        public CxIntentTrainingPhraseGetArgs build() {
+        }        public CxIntentTrainingPhraseGetArgs build() {
             return new CxIntentTrainingPhraseGetArgs(id, parts, repeatCount);
         }
     }

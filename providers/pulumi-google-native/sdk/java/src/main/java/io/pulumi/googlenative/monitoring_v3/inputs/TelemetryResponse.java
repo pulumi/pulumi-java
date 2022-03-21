@@ -58,8 +58,7 @@ public final class TelemetryResponse extends io.pulumi.resources.InvokeArgs {
         public Builder resourceName(String resourceName) {
             this.resourceName = Objects.requireNonNull(resourceName);
             return this;
-        }
-        public TelemetryResponse build() {
+        }        public TelemetryResponse build() {
             return new TelemetryResponse(resourceName);
         }
     }

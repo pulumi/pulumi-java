@@ -307,82 +307,69 @@ public final class MigrateSqlServerSqlDbTaskOutputMigrationLevelResponse extends
             this.databaseSummary = Objects.requireNonNull(databaseSummary);
             return this;
         }
-
         public Builder databases(Map<String,String> databases) {
             this.databases = Objects.requireNonNull(databases);
             return this;
         }
-
         public Builder durationInSeconds(Double durationInSeconds) {
             this.durationInSeconds = Objects.requireNonNull(durationInSeconds);
             return this;
         }
-
         public Builder endedOn(String endedOn) {
             this.endedOn = Objects.requireNonNull(endedOn);
             return this;
         }
-
         public Builder exceptionsAndWarnings(List<ReportableExceptionResponse> exceptionsAndWarnings) {
             this.exceptionsAndWarnings = Objects.requireNonNull(exceptionsAndWarnings);
             return this;
         }
-
+        public Builder exceptionsAndWarnings(ReportableExceptionResponse... exceptionsAndWarnings) {
+            return exceptionsAndWarnings(List.of(exceptionsAndWarnings));
+        }
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder message(String message) {
             this.message = Objects.requireNonNull(message);
             return this;
         }
-
         public Builder migrationReport(MigrationReportResultResponse migrationReport) {
             this.migrationReport = Objects.requireNonNull(migrationReport);
             return this;
         }
-
         public Builder resultType(String resultType) {
             this.resultType = Objects.requireNonNull(resultType);
             return this;
         }
-
         public Builder sourceServerBrandVersion(String sourceServerBrandVersion) {
             this.sourceServerBrandVersion = Objects.requireNonNull(sourceServerBrandVersion);
             return this;
         }
-
         public Builder sourceServerVersion(String sourceServerVersion) {
             this.sourceServerVersion = Objects.requireNonNull(sourceServerVersion);
             return this;
         }
-
         public Builder startedOn(String startedOn) {
             this.startedOn = Objects.requireNonNull(startedOn);
             return this;
         }
-
         public Builder status(String status) {
             this.status = Objects.requireNonNull(status);
             return this;
         }
-
         public Builder statusMessage(String statusMessage) {
             this.statusMessage = Objects.requireNonNull(statusMessage);
             return this;
         }
-
         public Builder targetServerBrandVersion(String targetServerBrandVersion) {
             this.targetServerBrandVersion = Objects.requireNonNull(targetServerBrandVersion);
             return this;
         }
-
         public Builder targetServerVersion(String targetServerVersion) {
             this.targetServerVersion = Objects.requireNonNull(targetServerVersion);
             return this;
-        }
-        public MigrateSqlServerSqlDbTaskOutputMigrationLevelResponse build() {
+        }        public MigrateSqlServerSqlDbTaskOutputMigrationLevelResponse build() {
             return new MigrateSqlServerSqlDbTaskOutputMigrationLevelResponse(databaseSummary, databases, durationInSeconds, endedOn, exceptionsAndWarnings, id, message, migrationReport, resultType, sourceServerBrandVersion, sourceServerVersion, startedOn, status, statusMessage, targetServerBrandVersion, targetServerVersion);
         }
     }

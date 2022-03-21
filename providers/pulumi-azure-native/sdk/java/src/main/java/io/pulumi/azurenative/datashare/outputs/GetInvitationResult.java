@@ -268,72 +268,58 @@ public final class GetInvitationResult {
             this.expirationDate = expirationDate;
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder invitationId(String invitationId) {
             this.invitationId = Objects.requireNonNull(invitationId);
             return this;
         }
-
         public Builder invitationStatus(String invitationStatus) {
             this.invitationStatus = Objects.requireNonNull(invitationStatus);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder respondedAt(String respondedAt) {
             this.respondedAt = Objects.requireNonNull(respondedAt);
             return this;
         }
-
         public Builder sentAt(String sentAt) {
             this.sentAt = Objects.requireNonNull(sentAt);
             return this;
         }
-
         public Builder systemData(SystemDataResponse systemData) {
             this.systemData = Objects.requireNonNull(systemData);
             return this;
         }
-
         public Builder targetActiveDirectoryId(@Nullable String targetActiveDirectoryId) {
             this.targetActiveDirectoryId = targetActiveDirectoryId;
             return this;
         }
-
         public Builder targetEmail(@Nullable String targetEmail) {
             this.targetEmail = targetEmail;
             return this;
         }
-
         public Builder targetObjectId(@Nullable String targetObjectId) {
             this.targetObjectId = targetObjectId;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder userEmail(String userEmail) {
             this.userEmail = Objects.requireNonNull(userEmail);
             return this;
         }
-
         public Builder userName(String userName) {
             this.userName = Objects.requireNonNull(userName);
             return this;
-        }
-        public GetInvitationResult build() {
+        }        public GetInvitationResult build() {
             return new GetInvitationResult(expirationDate, id, invitationId, invitationStatus, name, respondedAt, sentAt, systemData, targetActiveDirectoryId, targetEmail, targetObjectId, type, userEmail, userName);
         }
     }

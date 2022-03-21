@@ -114,42 +114,34 @@ public final class GCEPersistentDiskVolumeSourceArgs extends io.pulumi.resources
             this.fsType = fsType;
             return this;
         }
-
         public Builder fsType(@Nullable String fsType) {
             this.fsType = Output.ofNullable(fsType);
             return this;
         }
-
         public Builder partition(@Nullable Output<Integer> partition) {
             this.partition = partition;
             return this;
         }
-
         public Builder partition(@Nullable Integer partition) {
             this.partition = Output.ofNullable(partition);
             return this;
         }
-
         public Builder pdName(Output<String> pdName) {
             this.pdName = Objects.requireNonNull(pdName);
             return this;
         }
-
         public Builder pdName(String pdName) {
             this.pdName = Output.of(Objects.requireNonNull(pdName));
             return this;
         }
-
         public Builder readOnly(@Nullable Output<Boolean> readOnly) {
             this.readOnly = readOnly;
             return this;
         }
-
         public Builder readOnly(@Nullable Boolean readOnly) {
             this.readOnly = Output.ofNullable(readOnly);
             return this;
-        }
-        public GCEPersistentDiskVolumeSourceArgs build() {
+        }        public GCEPersistentDiskVolumeSourceArgs build() {
             return new GCEPersistentDiskVolumeSourceArgs(fsType, partition, pdName, readOnly);
         }
     }

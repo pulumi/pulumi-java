@@ -108,22 +108,27 @@ public final class GetQuickConnectQuickConnectConfig extends io.pulumi.resources
             this.phoneConfigs = Objects.requireNonNull(phoneConfigs);
             return this;
         }
-
+        public Builder phoneConfigs(GetQuickConnectQuickConnectConfigPhoneConfig... phoneConfigs) {
+            return phoneConfigs(List.of(phoneConfigs));
+        }
         public Builder queueConfigs(List<GetQuickConnectQuickConnectConfigQueueConfig> queueConfigs) {
             this.queueConfigs = Objects.requireNonNull(queueConfigs);
             return this;
         }
-
+        public Builder queueConfigs(GetQuickConnectQuickConnectConfigQueueConfig... queueConfigs) {
+            return queueConfigs(List.of(queueConfigs));
+        }
         public Builder quickConnectType(String quickConnectType) {
             this.quickConnectType = Objects.requireNonNull(quickConnectType);
             return this;
         }
-
         public Builder userConfigs(List<GetQuickConnectQuickConnectConfigUserConfig> userConfigs) {
             this.userConfigs = Objects.requireNonNull(userConfigs);
             return this;
         }
-        public GetQuickConnectQuickConnectConfig build() {
+        public Builder userConfigs(GetQuickConnectQuickConnectConfigUserConfig... userConfigs) {
+            return userConfigs(List.of(userConfigs));
+        }        public GetQuickConnectQuickConnectConfig build() {
             return new GetQuickConnectQuickConnectConfig(phoneConfigs, queueConfigs, quickConnectType, userConfigs);
         }
     }

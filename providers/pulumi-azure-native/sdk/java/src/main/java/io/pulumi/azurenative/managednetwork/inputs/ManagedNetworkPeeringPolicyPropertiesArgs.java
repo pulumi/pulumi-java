@@ -114,42 +114,40 @@ public final class ManagedNetworkPeeringPolicyPropertiesArgs extends io.pulumi.r
             this.hub = hub;
             return this;
         }
-
         public Builder hub(@Nullable ResourceIdArgs hub) {
             this.hub = Output.ofNullable(hub);
             return this;
         }
-
         public Builder mesh(@Nullable Output<List<ResourceIdArgs>> mesh) {
             this.mesh = mesh;
             return this;
         }
-
         public Builder mesh(@Nullable List<ResourceIdArgs> mesh) {
             this.mesh = Output.ofNullable(mesh);
             return this;
         }
-
+        public Builder mesh(ResourceIdArgs... mesh) {
+            return mesh(List.of(mesh));
+        }
         public Builder spokes(@Nullable Output<List<ResourceIdArgs>> spokes) {
             this.spokes = spokes;
             return this;
         }
-
         public Builder spokes(@Nullable List<ResourceIdArgs> spokes) {
             this.spokes = Output.ofNullable(spokes);
             return this;
         }
-
+        public Builder spokes(ResourceIdArgs... spokes) {
+            return spokes(List.of(spokes));
+        }
         public Builder type(Output<Either<String,Type>> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder type(Either<String,Type> type) {
             this.type = Output.of(Objects.requireNonNull(type));
             return this;
-        }
-        public ManagedNetworkPeeringPolicyPropertiesArgs build() {
+        }        public ManagedNetworkPeeringPolicyPropertiesArgs build() {
             return new ManagedNetworkPeeringPolicyPropertiesArgs(hub, mesh, spokes, type);
         }
     }

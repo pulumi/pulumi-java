@@ -199,92 +199,77 @@ public final class NetworkFunctionRoleConfigurationArgs extends io.pulumi.resour
             this.customProfile = customProfile;
             return this;
         }
-
         public Builder customProfile(@Nullable CustomProfileArgs customProfile) {
             this.customProfile = Output.ofNullable(customProfile);
             return this;
         }
-
         public Builder networkInterfaces(@Nullable Output<List<NetworkInterfaceArgs>> networkInterfaces) {
             this.networkInterfaces = networkInterfaces;
             return this;
         }
-
         public Builder networkInterfaces(@Nullable List<NetworkInterfaceArgs> networkInterfaces) {
             this.networkInterfaces = Output.ofNullable(networkInterfaces);
             return this;
         }
-
+        public Builder networkInterfaces(NetworkInterfaceArgs... networkInterfaces) {
+            return networkInterfaces(List.of(networkInterfaces));
+        }
         public Builder osProfile(@Nullable Output<OsProfileArgs> osProfile) {
             this.osProfile = osProfile;
             return this;
         }
-
         public Builder osProfile(@Nullable OsProfileArgs osProfile) {
             this.osProfile = Output.ofNullable(osProfile);
             return this;
         }
-
         public Builder roleName(@Nullable Output<String> roleName) {
             this.roleName = roleName;
             return this;
         }
-
         public Builder roleName(@Nullable String roleName) {
             this.roleName = Output.ofNullable(roleName);
             return this;
         }
-
         public Builder roleType(@Nullable Output<Either<String,NetworkFunctionRoleConfigurationType>> roleType) {
             this.roleType = roleType;
             return this;
         }
-
         public Builder roleType(@Nullable Either<String,NetworkFunctionRoleConfigurationType> roleType) {
             this.roleType = Output.ofNullable(roleType);
             return this;
         }
-
         public Builder storageProfile(@Nullable Output<StorageProfileArgs> storageProfile) {
             this.storageProfile = storageProfile;
             return this;
         }
-
         public Builder storageProfile(@Nullable StorageProfileArgs storageProfile) {
             this.storageProfile = Output.ofNullable(storageProfile);
             return this;
         }
-
         public Builder userDataParameters(@Nullable Output<Object> userDataParameters) {
             this.userDataParameters = userDataParameters;
             return this;
         }
-
         public Builder userDataParameters(@Nullable Object userDataParameters) {
             this.userDataParameters = Output.ofNullable(userDataParameters);
             return this;
         }
-
         public Builder userDataTemplate(@Nullable Output<Object> userDataTemplate) {
             this.userDataTemplate = userDataTemplate;
             return this;
         }
-
         public Builder userDataTemplate(@Nullable Object userDataTemplate) {
             this.userDataTemplate = Output.ofNullable(userDataTemplate);
             return this;
         }
-
         public Builder virtualMachineSize(@Nullable Output<Either<String,VirtualMachineSizeTypes>> virtualMachineSize) {
             this.virtualMachineSize = virtualMachineSize;
             return this;
         }
-
         public Builder virtualMachineSize(@Nullable Either<String,VirtualMachineSizeTypes> virtualMachineSize) {
             this.virtualMachineSize = Output.ofNullable(virtualMachineSize);
             return this;
-        }
-        public NetworkFunctionRoleConfigurationArgs build() {
+        }        public NetworkFunctionRoleConfigurationArgs build() {
             return new NetworkFunctionRoleConfigurationArgs(customProfile, networkInterfaces, osProfile, roleName, roleType, storageProfile, userDataParameters, userDataTemplate, virtualMachineSize);
         }
     }

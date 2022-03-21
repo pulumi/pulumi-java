@@ -145,72 +145,61 @@ public final class EventTypeEntityTypeArgs extends io.pulumi.resources.ResourceA
             this.arn = arn;
             return this;
         }
-
         public Builder arn(@Nullable String arn) {
             this.arn = Output.ofNullable(arn);
             return this;
         }
-
         public Builder createdTime(@Nullable Output<String> createdTime) {
             this.createdTime = createdTime;
             return this;
         }
-
         public Builder createdTime(@Nullable String createdTime) {
             this.createdTime = Output.ofNullable(createdTime);
             return this;
         }
-
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder inline(@Nullable Output<Boolean> inline) {
             this.inline = inline;
             return this;
         }
-
         public Builder inline(@Nullable Boolean inline) {
             this.inline = Output.ofNullable(inline);
             return this;
         }
-
         public Builder lastUpdatedTime(@Nullable Output<String> lastUpdatedTime) {
             this.lastUpdatedTime = lastUpdatedTime;
             return this;
         }
-
         public Builder lastUpdatedTime(@Nullable String lastUpdatedTime) {
             this.lastUpdatedTime = Output.ofNullable(lastUpdatedTime);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder tags(@Nullable Output<List<EventTypeTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable List<EventTypeTagArgs> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-        public EventTypeEntityTypeArgs build() {
+        public Builder tags(EventTypeTagArgs... tags) {
+            return tags(List.of(tags));
+        }        public EventTypeEntityTypeArgs build() {
             return new EventTypeEntityTypeArgs(arn, createdTime, description, inline, lastUpdatedTime, name, tags);
         }
     }

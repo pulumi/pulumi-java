@@ -78,12 +78,10 @@ public final class PipelineJobErrorResponse extends io.pulumi.resources.InvokeAr
             this.code = code;
             return this;
         }
-
         public Builder message(@Nullable String message) {
             this.message = message;
             return this;
-        }
-        public PipelineJobErrorResponse build() {
+        }        public PipelineJobErrorResponse build() {
             return new PipelineJobErrorResponse(code, message);
         }
     }

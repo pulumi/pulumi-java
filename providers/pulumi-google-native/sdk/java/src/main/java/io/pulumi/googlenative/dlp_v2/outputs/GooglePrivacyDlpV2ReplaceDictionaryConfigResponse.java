@@ -51,8 +51,7 @@ public final class GooglePrivacyDlpV2ReplaceDictionaryConfigResponse {
         public Builder wordList(GooglePrivacyDlpV2WordListResponse wordList) {
             this.wordList = Objects.requireNonNull(wordList);
             return this;
-        }
-        public GooglePrivacyDlpV2ReplaceDictionaryConfigResponse build() {
+        }        public GooglePrivacyDlpV2ReplaceDictionaryConfigResponse build() {
             return new GooglePrivacyDlpV2ReplaceDictionaryConfigResponse(wordList);
         }
     }

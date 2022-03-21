@@ -364,102 +364,85 @@ public final class GetBlockchainMemberResult {
             this.consortium = consortium;
             return this;
         }
-
         public Builder consortiumManagementAccountAddress(String consortiumManagementAccountAddress) {
             this.consortiumManagementAccountAddress = Objects.requireNonNull(consortiumManagementAccountAddress);
             return this;
         }
-
         public Builder consortiumManagementAccountPassword(@Nullable String consortiumManagementAccountPassword) {
             this.consortiumManagementAccountPassword = consortiumManagementAccountPassword;
             return this;
         }
-
         public Builder consortiumMemberDisplayName(@Nullable String consortiumMemberDisplayName) {
             this.consortiumMemberDisplayName = consortiumMemberDisplayName;
             return this;
         }
-
         public Builder consortiumRole(@Nullable String consortiumRole) {
             this.consortiumRole = consortiumRole;
             return this;
         }
-
         public Builder dns(String dns) {
             this.dns = Objects.requireNonNull(dns);
             return this;
         }
-
         public Builder firewallRules(@Nullable List<FirewallRuleResponse> firewallRules) {
             this.firewallRules = firewallRules;
             return this;
         }
-
+        public Builder firewallRules(FirewallRuleResponse... firewallRules) {
+            return firewallRules(List.of(firewallRules));
+        }
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = location;
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder password(@Nullable String password) {
             this.password = password;
             return this;
         }
-
         public Builder protocol(@Nullable String protocol) {
             this.protocol = protocol;
             return this;
         }
-
         public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
-
         public Builder publicKey(String publicKey) {
             this.publicKey = Objects.requireNonNull(publicKey);
             return this;
         }
-
         public Builder rootContractAddress(String rootContractAddress) {
             this.rootContractAddress = Objects.requireNonNull(rootContractAddress);
             return this;
         }
-
         public Builder sku(@Nullable SkuResponse sku) {
             this.sku = sku;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder userName(String userName) {
             this.userName = Objects.requireNonNull(userName);
             return this;
         }
-
         public Builder validatorNodesSku(@Nullable BlockchainMemberNodesSkuResponse validatorNodesSku) {
             this.validatorNodesSku = validatorNodesSku;
             return this;
-        }
-        public GetBlockchainMemberResult build() {
+        }        public GetBlockchainMemberResult build() {
             return new GetBlockchainMemberResult(consortium, consortiumManagementAccountAddress, consortiumManagementAccountPassword, consortiumMemberDisplayName, consortiumRole, dns, firewallRules, id, location, name, password, protocol, provisioningState, publicKey, rootContractAddress, sku, tags, type, userName, validatorNodesSku);
         }
     }

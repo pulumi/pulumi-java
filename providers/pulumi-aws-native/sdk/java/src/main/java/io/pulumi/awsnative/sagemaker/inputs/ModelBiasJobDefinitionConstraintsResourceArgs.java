@@ -61,12 +61,10 @@ public final class ModelBiasJobDefinitionConstraintsResourceArgs extends io.pulu
             this.s3Uri = s3Uri;
             return this;
         }
-
         public Builder s3Uri(@Nullable String s3Uri) {
             this.s3Uri = Output.ofNullable(s3Uri);
             return this;
-        }
-        public ModelBiasJobDefinitionConstraintsResourceArgs build() {
+        }        public ModelBiasJobDefinitionConstraintsResourceArgs build() {
             return new ModelBiasJobDefinitionConstraintsResourceArgs(s3Uri);
         }
     }

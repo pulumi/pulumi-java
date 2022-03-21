@@ -76,22 +76,21 @@ public final class InstanceGroupManagerStatusStatefulArgs extends io.pulumi.reso
             this.hasStatefulConfig = hasStatefulConfig;
             return this;
         }
-
         public Builder hasStatefulConfig(@Nullable Boolean hasStatefulConfig) {
             this.hasStatefulConfig = Output.ofNullable(hasStatefulConfig);
             return this;
         }
-
         public Builder perInstanceConfigs(@Nullable Output<List<InstanceGroupManagerStatusStatefulPerInstanceConfigArgs>> perInstanceConfigs) {
             this.perInstanceConfigs = perInstanceConfigs;
             return this;
         }
-
         public Builder perInstanceConfigs(@Nullable List<InstanceGroupManagerStatusStatefulPerInstanceConfigArgs> perInstanceConfigs) {
             this.perInstanceConfigs = Output.ofNullable(perInstanceConfigs);
             return this;
         }
-        public InstanceGroupManagerStatusStatefulArgs build() {
+        public Builder perInstanceConfigs(InstanceGroupManagerStatusStatefulPerInstanceConfigArgs... perInstanceConfigs) {
+            return perInstanceConfigs(List.of(perInstanceConfigs));
+        }        public InstanceGroupManagerStatusStatefulArgs build() {
             return new InstanceGroupManagerStatusStatefulArgs(hasStatefulConfig, perInstanceConfigs);
         }
     }

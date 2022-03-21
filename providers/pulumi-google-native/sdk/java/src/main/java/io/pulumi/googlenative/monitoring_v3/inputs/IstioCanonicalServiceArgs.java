@@ -94,32 +94,26 @@ public final class IstioCanonicalServiceArgs extends io.pulumi.resources.Resourc
             this.canonicalService = canonicalService;
             return this;
         }
-
         public Builder canonicalService(@Nullable String canonicalService) {
             this.canonicalService = Output.ofNullable(canonicalService);
             return this;
         }
-
         public Builder canonicalServiceNamespace(@Nullable Output<String> canonicalServiceNamespace) {
             this.canonicalServiceNamespace = canonicalServiceNamespace;
             return this;
         }
-
         public Builder canonicalServiceNamespace(@Nullable String canonicalServiceNamespace) {
             this.canonicalServiceNamespace = Output.ofNullable(canonicalServiceNamespace);
             return this;
         }
-
         public Builder meshUid(@Nullable Output<String> meshUid) {
             this.meshUid = meshUid;
             return this;
         }
-
         public Builder meshUid(@Nullable String meshUid) {
             this.meshUid = Output.ofNullable(meshUid);
             return this;
-        }
-        public IstioCanonicalServiceArgs build() {
+        }        public IstioCanonicalServiceArgs build() {
             return new IstioCanonicalServiceArgs(canonicalService, canonicalServiceNamespace, meshUid);
         }
     }

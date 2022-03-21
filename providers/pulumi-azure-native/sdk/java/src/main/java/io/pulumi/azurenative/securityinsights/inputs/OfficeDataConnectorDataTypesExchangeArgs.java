@@ -63,12 +63,10 @@ public final class OfficeDataConnectorDataTypesExchangeArgs extends io.pulumi.re
             this.state = state;
             return this;
         }
-
         public Builder state(@Nullable Either<String,DataTypeState> state) {
             this.state = Output.ofNullable(state);
             return this;
-        }
-        public OfficeDataConnectorDataTypesExchangeArgs build() {
+        }        public OfficeDataConnectorDataTypesExchangeArgs build() {
             return new OfficeDataConnectorDataTypesExchangeArgs(state);
         }
     }

@@ -76,12 +76,10 @@ public final class SecurityProfileTag extends io.pulumi.resources.InvokeArgs {
             this.key = Objects.requireNonNull(key);
             return this;
         }
-
         public Builder value(String value) {
             this.value = Objects.requireNonNull(value);
             return this;
-        }
-        public SecurityProfileTag build() {
+        }        public SecurityProfileTag build() {
             return new SecurityProfileTag(key, value);
         }
     }

@@ -71,12 +71,10 @@ public final class ReplicationGroupClusterMode {
             this.numNodeGroups = numNodeGroups;
             return this;
         }
-
         public Builder replicasPerNodeGroup(Integer replicasPerNodeGroup) {
             this.replicasPerNodeGroup = Objects.requireNonNull(replicasPerNodeGroup);
             return this;
-        }
-        public ReplicationGroupClusterMode build() {
+        }        public ReplicationGroupClusterMode build() {
             return new ReplicationGroupClusterMode(numNodeGroups, replicasPerNodeGroup);
         }
     }

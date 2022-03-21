@@ -78,22 +78,18 @@ public final class SchemaRegistryArgs extends io.pulumi.resources.ResourceArgs {
             this.arn = arn;
             return this;
         }
-
         public Builder arn(@Nullable String arn) {
             this.arn = Output.ofNullable(arn);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
-        }
-        public SchemaRegistryArgs build() {
+        }        public SchemaRegistryArgs build() {
             return new SchemaRegistryArgs(arn, name);
         }
     }

@@ -92,17 +92,14 @@ public final class ErrorHandlerResponse extends io.pulumi.resources.InvokeArgs {
             this.errorCode = Objects.requireNonNull(errorCode);
             return this;
         }
-
         public Builder mimeType(String mimeType) {
             this.mimeType = Objects.requireNonNull(mimeType);
             return this;
         }
-
         public Builder staticFile(String staticFile) {
             this.staticFile = Objects.requireNonNull(staticFile);
             return this;
-        }
-        public ErrorHandlerResponse build() {
+        }        public ErrorHandlerResponse build() {
             return new ErrorHandlerResponse(errorCode, mimeType, staticFile);
         }
     }

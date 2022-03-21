@@ -92,17 +92,14 @@ public final class GetKMSSecretArgs extends io.pulumi.resources.InvokeArgs {
             this.additionalAuthenticatedData = additionalAuthenticatedData;
             return this;
         }
-
         public Builder ciphertext(String ciphertext) {
             this.ciphertext = Objects.requireNonNull(ciphertext);
             return this;
         }
-
         public Builder cryptoKey(String cryptoKey) {
             this.cryptoKey = Objects.requireNonNull(cryptoKey);
             return this;
-        }
-        public GetKMSSecretArgs build() {
+        }        public GetKMSSecretArgs build() {
             return new GetKMSSecretArgs(additionalAuthenticatedData, ciphertext, cryptoKey);
         }
     }

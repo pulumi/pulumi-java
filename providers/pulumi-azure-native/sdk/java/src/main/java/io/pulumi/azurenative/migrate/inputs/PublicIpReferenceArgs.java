@@ -60,12 +60,10 @@ public final class PublicIpReferenceArgs extends io.pulumi.resources.ResourceArg
             this.sourceArmResourceId = Objects.requireNonNull(sourceArmResourceId);
             return this;
         }
-
         public Builder sourceArmResourceId(String sourceArmResourceId) {
             this.sourceArmResourceId = Output.of(Objects.requireNonNull(sourceArmResourceId));
             return this;
-        }
-        public PublicIpReferenceArgs build() {
+        }        public PublicIpReferenceArgs build() {
             return new PublicIpReferenceArgs(sourceArmResourceId);
         }
     }

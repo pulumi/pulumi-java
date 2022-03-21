@@ -170,82 +170,66 @@ public final class BillingRoleAssignmentByDepartmentArgs extends io.pulumi.resou
             this.billingAccountName = Objects.requireNonNull(billingAccountName);
             return this;
         }
-
         public Builder billingAccountName(String billingAccountName) {
             this.billingAccountName = Output.of(Objects.requireNonNull(billingAccountName));
             return this;
         }
-
         public Builder billingRoleAssignmentName(@Nullable Output<String> billingRoleAssignmentName) {
             this.billingRoleAssignmentName = billingRoleAssignmentName;
             return this;
         }
-
         public Builder billingRoleAssignmentName(@Nullable String billingRoleAssignmentName) {
             this.billingRoleAssignmentName = Output.ofNullable(billingRoleAssignmentName);
             return this;
         }
-
         public Builder departmentName(Output<String> departmentName) {
             this.departmentName = Objects.requireNonNull(departmentName);
             return this;
         }
-
         public Builder departmentName(String departmentName) {
             this.departmentName = Output.of(Objects.requireNonNull(departmentName));
             return this;
         }
-
         public Builder principalId(@Nullable Output<String> principalId) {
             this.principalId = principalId;
             return this;
         }
-
         public Builder principalId(@Nullable String principalId) {
             this.principalId = Output.ofNullable(principalId);
             return this;
         }
-
         public Builder principalTenantId(@Nullable Output<String> principalTenantId) {
             this.principalTenantId = principalTenantId;
             return this;
         }
-
         public Builder principalTenantId(@Nullable String principalTenantId) {
             this.principalTenantId = Output.ofNullable(principalTenantId);
             return this;
         }
-
         public Builder roleDefinitionId(@Nullable Output<String> roleDefinitionId) {
             this.roleDefinitionId = roleDefinitionId;
             return this;
         }
-
         public Builder roleDefinitionId(@Nullable String roleDefinitionId) {
             this.roleDefinitionId = Output.ofNullable(roleDefinitionId);
             return this;
         }
-
         public Builder userAuthenticationType(@Nullable Output<String> userAuthenticationType) {
             this.userAuthenticationType = userAuthenticationType;
             return this;
         }
-
         public Builder userAuthenticationType(@Nullable String userAuthenticationType) {
             this.userAuthenticationType = Output.ofNullable(userAuthenticationType);
             return this;
         }
-
         public Builder userEmailAddress(@Nullable Output<String> userEmailAddress) {
             this.userEmailAddress = userEmailAddress;
             return this;
         }
-
         public Builder userEmailAddress(@Nullable String userEmailAddress) {
             this.userEmailAddress = Output.ofNullable(userEmailAddress);
             return this;
-        }
-        public BillingRoleAssignmentByDepartmentArgs build() {
+        }        public BillingRoleAssignmentByDepartmentArgs build() {
             return new BillingRoleAssignmentByDepartmentArgs(billingAccountName, billingRoleAssignmentName, departmentName, principalId, principalTenantId, roleDefinitionId, userAuthenticationType, userEmailAddress);
         }
     }

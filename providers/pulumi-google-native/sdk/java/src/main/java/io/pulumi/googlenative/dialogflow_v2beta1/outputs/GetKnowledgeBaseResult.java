@@ -85,17 +85,14 @@ public final class GetKnowledgeBaseResult {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
-
         public Builder languageCode(String languageCode) {
             this.languageCode = Objects.requireNonNull(languageCode);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
-        }
-        public GetKnowledgeBaseResult build() {
+        }        public GetKnowledgeBaseResult build() {
             return new GetKnowledgeBaseResult(displayName, languageCode, name);
         }
     }

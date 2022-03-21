@@ -97,32 +97,32 @@ public final class ModelEnvironmentDefinitionSparkArgs extends io.pulumi.resourc
             this.packages = packages;
             return this;
         }
-
         public Builder packages(@Nullable List<SparkMavenPackageArgs> packages) {
             this.packages = Output.ofNullable(packages);
             return this;
         }
-
+        public Builder packages(SparkMavenPackageArgs... packages) {
+            return packages(List.of(packages));
+        }
         public Builder precachePackages(@Nullable Output<Boolean> precachePackages) {
             this.precachePackages = precachePackages;
             return this;
         }
-
         public Builder precachePackages(@Nullable Boolean precachePackages) {
             this.precachePackages = Output.ofNullable(precachePackages);
             return this;
         }
-
         public Builder repositories(@Nullable Output<List<String>> repositories) {
             this.repositories = repositories;
             return this;
         }
-
         public Builder repositories(@Nullable List<String> repositories) {
             this.repositories = Output.ofNullable(repositories);
             return this;
         }
-        public ModelEnvironmentDefinitionSparkArgs build() {
+        public Builder repositories(String... repositories) {
+            return repositories(List.of(repositories));
+        }        public ModelEnvironmentDefinitionSparkArgs build() {
             return new ModelEnvironmentDefinitionSparkArgs(packages, precachePackages, repositories);
         }
     }

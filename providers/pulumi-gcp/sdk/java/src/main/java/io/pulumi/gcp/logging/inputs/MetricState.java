@@ -192,82 +192,66 @@ public final class MetricState extends io.pulumi.resources.ResourceArgs {
             this.bucketOptions = bucketOptions;
             return this;
         }
-
         public Builder bucketOptions(@Nullable MetricBucketOptionsGetArgs bucketOptions) {
             this.bucketOptions = Output.ofNullable(bucketOptions);
             return this;
         }
-
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder filter(@Nullable Output<String> filter) {
             this.filter = filter;
             return this;
         }
-
         public Builder filter(@Nullable String filter) {
             this.filter = Output.ofNullable(filter);
             return this;
         }
-
         public Builder labelExtractors(@Nullable Output<Map<String,String>> labelExtractors) {
             this.labelExtractors = labelExtractors;
             return this;
         }
-
         public Builder labelExtractors(@Nullable Map<String,String> labelExtractors) {
             this.labelExtractors = Output.ofNullable(labelExtractors);
             return this;
         }
-
         public Builder metricDescriptor(@Nullable Output<MetricMetricDescriptorGetArgs> metricDescriptor) {
             this.metricDescriptor = metricDescriptor;
             return this;
         }
-
         public Builder metricDescriptor(@Nullable MetricMetricDescriptorGetArgs metricDescriptor) {
             this.metricDescriptor = Output.ofNullable(metricDescriptor);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
         }
-
         public Builder valueExtractor(@Nullable Output<String> valueExtractor) {
             this.valueExtractor = valueExtractor;
             return this;
         }
-
         public Builder valueExtractor(@Nullable String valueExtractor) {
             this.valueExtractor = Output.ofNullable(valueExtractor);
             return this;
-        }
-        public MetricState build() {
+        }        public MetricState build() {
             return new MetricState(bucketOptions, description, filter, labelExtractors, metricDescriptor, name, project, valueExtractor);
         }
     }

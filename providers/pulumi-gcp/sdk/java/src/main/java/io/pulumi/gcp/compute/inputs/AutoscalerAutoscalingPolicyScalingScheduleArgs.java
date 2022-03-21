@@ -156,72 +156,58 @@ public final class AutoscalerAutoscalingPolicyScalingScheduleArgs extends io.pul
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder disabled(@Nullable Output<Boolean> disabled) {
             this.disabled = disabled;
             return this;
         }
-
         public Builder disabled(@Nullable Boolean disabled) {
             this.disabled = Output.ofNullable(disabled);
             return this;
         }
-
         public Builder durationSec(Output<Integer> durationSec) {
             this.durationSec = Objects.requireNonNull(durationSec);
             return this;
         }
-
         public Builder durationSec(Integer durationSec) {
             this.durationSec = Output.of(Objects.requireNonNull(durationSec));
             return this;
         }
-
         public Builder minRequiredReplicas(Output<Integer> minRequiredReplicas) {
             this.minRequiredReplicas = Objects.requireNonNull(minRequiredReplicas);
             return this;
         }
-
         public Builder minRequiredReplicas(Integer minRequiredReplicas) {
             this.minRequiredReplicas = Output.of(Objects.requireNonNull(minRequiredReplicas));
             return this;
         }
-
         public Builder name(Output<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
-
         public Builder schedule(Output<String> schedule) {
             this.schedule = Objects.requireNonNull(schedule);
             return this;
         }
-
         public Builder schedule(String schedule) {
             this.schedule = Output.of(Objects.requireNonNull(schedule));
             return this;
         }
-
         public Builder timeZone(@Nullable Output<String> timeZone) {
             this.timeZone = timeZone;
             return this;
         }
-
         public Builder timeZone(@Nullable String timeZone) {
             this.timeZone = Output.ofNullable(timeZone);
             return this;
-        }
-        public AutoscalerAutoscalingPolicyScalingScheduleArgs build() {
+        }        public AutoscalerAutoscalingPolicyScalingScheduleArgs build() {
             return new AutoscalerAutoscalingPolicyScalingScheduleArgs(description, disabled, durationSec, minRequiredReplicas, name, schedule, timeZone);
         }
     }

@@ -458,127 +458,105 @@ public final class ACIServiceResponseResponse extends io.pulumi.resources.Invoke
             this.appInsightsEnabled = appInsightsEnabled;
             return this;
         }
-
         public Builder authEnabled(@Nullable Boolean authEnabled) {
             this.authEnabled = authEnabled;
             return this;
         }
-
         public Builder cname(@Nullable String cname) {
             this.cname = cname;
             return this;
         }
-
         public Builder computeType(String computeType) {
             this.computeType = Objects.requireNonNull(computeType);
             return this;
         }
-
         public Builder containerResourceRequirements(@Nullable ContainerResourceRequirementsResponse containerResourceRequirements) {
             this.containerResourceRequirements = containerResourceRequirements;
             return this;
         }
-
         public Builder dataCollection(@Nullable ACIServiceResponseResponseDataCollection dataCollection) {
             this.dataCollection = dataCollection;
             return this;
         }
-
         public Builder deploymentType(@Nullable String deploymentType) {
             this.deploymentType = deploymentType;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
-
         public Builder encryptionProperties(@Nullable ACIServiceResponseResponseEncryptionProperties encryptionProperties) {
             this.encryptionProperties = encryptionProperties;
             return this;
         }
-
         public Builder environmentImageRequest(@Nullable ACIServiceResponseResponseEnvironmentImageRequest environmentImageRequest) {
             this.environmentImageRequest = environmentImageRequest;
             return this;
         }
-
         public Builder error(ServiceResponseBaseResponseError error) {
             this.error = Objects.requireNonNull(error);
             return this;
         }
-
         public Builder kvTags(@Nullable Map<String,String> kvTags) {
             this.kvTags = kvTags;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = location;
             return this;
         }
-
         public Builder modelConfigMap(Map<String,Object> modelConfigMap) {
             this.modelConfigMap = Objects.requireNonNull(modelConfigMap);
             return this;
         }
-
         public Builder models(@Nullable List<ModelResponse> models) {
             this.models = models;
             return this;
         }
-
+        public Builder models(ModelResponse... models) {
+            return models(List.of(models));
+        }
         public Builder properties(@Nullable Map<String,String> properties) {
             this.properties = properties;
             return this;
         }
-
         public Builder publicFqdn(@Nullable String publicFqdn) {
             this.publicFqdn = publicFqdn;
             return this;
         }
-
         public Builder publicIp(@Nullable String publicIp) {
             this.publicIp = publicIp;
             return this;
         }
-
         public Builder scoringUri(String scoringUri) {
             this.scoringUri = Objects.requireNonNull(scoringUri);
             return this;
         }
-
         public Builder sslCertificate(@Nullable String sslCertificate) {
             this.sslCertificate = sslCertificate;
             return this;
         }
-
         public Builder sslEnabled(@Nullable Boolean sslEnabled) {
             this.sslEnabled = sslEnabled;
             return this;
         }
-
         public Builder sslKey(@Nullable String sslKey) {
             this.sslKey = sslKey;
             return this;
         }
-
         public Builder state(String state) {
             this.state = Objects.requireNonNull(state);
             return this;
         }
-
         public Builder swaggerUri(String swaggerUri) {
             this.swaggerUri = Objects.requireNonNull(swaggerUri);
             return this;
         }
-
         public Builder vnetConfiguration(@Nullable ACIServiceResponseResponseVnetConfiguration vnetConfiguration) {
             this.vnetConfiguration = vnetConfiguration;
             return this;
-        }
-        public ACIServiceResponseResponse build() {
+        }        public ACIServiceResponseResponse build() {
             return new ACIServiceResponseResponse(appInsightsEnabled, authEnabled, cname, computeType, containerResourceRequirements, dataCollection, deploymentType, description, encryptionProperties, environmentImageRequest, error, kvTags, location, modelConfigMap, models, properties, publicFqdn, publicIp, scoringUri, sslCertificate, sslEnabled, sslKey, state, swaggerUri, vnetConfiguration);
         }
     }

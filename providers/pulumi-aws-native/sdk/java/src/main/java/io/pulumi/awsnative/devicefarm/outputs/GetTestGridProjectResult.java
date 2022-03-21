@@ -73,22 +73,21 @@ public final class GetTestGridProjectResult {
             this.arn = arn;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
-
         public Builder tags(@Nullable List<TestGridProjectTag> tags) {
             this.tags = tags;
             return this;
         }
-        public GetTestGridProjectResult build() {
+        public Builder tags(TestGridProjectTag... tags) {
+            return tags(List.of(tags));
+        }        public GetTestGridProjectResult build() {
             return new GetTestGridProjectResult(arn, description, name, tags);
         }
     }

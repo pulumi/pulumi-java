@@ -112,22 +112,18 @@ public final class CertificateConfigX509ConfigCaOptions {
             this.isCa = isCa;
             return this;
         }
-
         public Builder maxIssuerPathLength(@Nullable Integer maxIssuerPathLength) {
             this.maxIssuerPathLength = maxIssuerPathLength;
             return this;
         }
-
         public Builder nonCa(@Nullable Boolean nonCa) {
             this.nonCa = nonCa;
             return this;
         }
-
         public Builder zeroMaxIssuerPathLength(@Nullable Boolean zeroMaxIssuerPathLength) {
             this.zeroMaxIssuerPathLength = zeroMaxIssuerPathLength;
             return this;
-        }
-        public CertificateConfigX509ConfigCaOptions build() {
+        }        public CertificateConfigX509ConfigCaOptions build() {
             return new CertificateConfigX509ConfigCaOptions(isCa, maxIssuerPathLength, nonCa, zeroMaxIssuerPathLength);
         }
     }

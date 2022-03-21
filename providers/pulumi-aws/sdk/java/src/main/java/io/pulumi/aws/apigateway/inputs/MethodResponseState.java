@@ -142,57 +142,46 @@ public final class MethodResponseState extends io.pulumi.resources.ResourceArgs 
             this.httpMethod = httpMethod;
             return this;
         }
-
         public Builder httpMethod(@Nullable String httpMethod) {
             this.httpMethod = Output.ofNullable(httpMethod);
             return this;
         }
-
         public Builder resourceId(@Nullable Output<String> resourceId) {
             this.resourceId = resourceId;
             return this;
         }
-
         public Builder resourceId(@Nullable String resourceId) {
             this.resourceId = Output.ofNullable(resourceId);
             return this;
         }
-
         public Builder responseModels(@Nullable Output<Map<String,String>> responseModels) {
             this.responseModels = responseModels;
             return this;
         }
-
         public Builder responseModels(@Nullable Map<String,String> responseModels) {
             this.responseModels = Output.ofNullable(responseModels);
             return this;
         }
-
         public Builder responseParameters(@Nullable Output<Map<String,Boolean>> responseParameters) {
             this.responseParameters = responseParameters;
             return this;
         }
-
         public Builder responseParameters(@Nullable Map<String,Boolean> responseParameters) {
             this.responseParameters = Output.ofNullable(responseParameters);
             return this;
         }
-
         public Builder restApi(@Nullable Output<String> restApi) {
             this.restApi = restApi;
             return this;
         }
-
         public Builder statusCode(@Nullable Output<String> statusCode) {
             this.statusCode = statusCode;
             return this;
         }
-
         public Builder statusCode(@Nullable String statusCode) {
             this.statusCode = Output.ofNullable(statusCode);
             return this;
-        }
-        public MethodResponseState build() {
+        }        public MethodResponseState build() {
             return new MethodResponseState(httpMethod, resourceId, responseModels, responseParameters, restApi, statusCode);
         }
     }

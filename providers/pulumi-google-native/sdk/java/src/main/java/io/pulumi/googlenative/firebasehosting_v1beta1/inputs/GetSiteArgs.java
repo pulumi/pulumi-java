@@ -66,12 +66,10 @@ public final class GetSiteArgs extends io.pulumi.resources.InvokeArgs {
             this.project = project;
             return this;
         }
-
         public Builder siteId(String siteId) {
             this.siteId = Objects.requireNonNull(siteId);
             return this;
-        }
-        public GetSiteArgs build() {
+        }        public GetSiteArgs build() {
             return new GetSiteArgs(project, siteId);
         }
     }

@@ -57,12 +57,10 @@ public final class EncryptionByDefaultState extends io.pulumi.resources.Resource
             this.enabled = enabled;
             return this;
         }
-
         public Builder enabled(@Nullable Boolean enabled) {
             this.enabled = Output.ofNullable(enabled);
             return this;
-        }
-        public EncryptionByDefaultState build() {
+        }        public EncryptionByDefaultState build() {
             return new EncryptionByDefaultState(enabled);
         }
     }

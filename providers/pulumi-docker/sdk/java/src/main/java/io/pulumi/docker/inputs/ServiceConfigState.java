@@ -74,22 +74,18 @@ public final class ServiceConfigState extends io.pulumi.resources.ResourceArgs {
             this.data = data;
             return this;
         }
-
         public Builder data(@Nullable String data) {
             this.data = Output.ofNullable(data);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
-        }
-        public ServiceConfigState build() {
+        }        public ServiceConfigState build() {
             return new ServiceConfigState(data, name);
         }
     }

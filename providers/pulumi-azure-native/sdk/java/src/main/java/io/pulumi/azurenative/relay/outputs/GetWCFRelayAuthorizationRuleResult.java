@@ -102,22 +102,21 @@ public final class GetWCFRelayAuthorizationRuleResult {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder rights(List<String> rights) {
             this.rights = Objects.requireNonNull(rights);
             return this;
         }
-
+        public Builder rights(String... rights) {
+            return rights(List.of(rights));
+        }
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public GetWCFRelayAuthorizationRuleResult build() {
+        }        public GetWCFRelayAuthorizationRuleResult build() {
             return new GetWCFRelayAuthorizationRuleResult(id, name, rights, type);
         }
     }

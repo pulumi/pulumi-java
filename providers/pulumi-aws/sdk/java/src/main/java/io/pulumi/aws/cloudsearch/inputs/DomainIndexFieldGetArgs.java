@@ -187,92 +187,74 @@ public final class DomainIndexFieldGetArgs extends io.pulumi.resources.ResourceA
             this.analysisScheme = analysisScheme;
             return this;
         }
-
         public Builder analysisScheme(@Nullable String analysisScheme) {
             this.analysisScheme = Output.ofNullable(analysisScheme);
             return this;
         }
-
         public Builder defaultValue(@Nullable Output<String> defaultValue) {
             this.defaultValue = defaultValue;
             return this;
         }
-
         public Builder defaultValue(@Nullable String defaultValue) {
             this.defaultValue = Output.ofNullable(defaultValue);
             return this;
         }
-
         public Builder facet(@Nullable Output<Boolean> facet) {
             this.facet = facet;
             return this;
         }
-
         public Builder facet(@Nullable Boolean facet) {
             this.facet = Output.ofNullable(facet);
             return this;
         }
-
         public Builder highlight(@Nullable Output<Boolean> highlight) {
             this.highlight = highlight;
             return this;
         }
-
         public Builder highlight(@Nullable Boolean highlight) {
             this.highlight = Output.ofNullable(highlight);
             return this;
         }
-
         public Builder name(Output<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
-
         public Builder $return(@Nullable Output<Boolean> $return) {
             this.$return = $return;
             return this;
         }
-
         public Builder $return(@Nullable Boolean $return) {
             this.$return = Output.ofNullable($return);
             return this;
         }
-
         public Builder search(@Nullable Output<Boolean> search) {
             this.search = search;
             return this;
         }
-
         public Builder search(@Nullable Boolean search) {
             this.search = Output.ofNullable(search);
             return this;
         }
-
         public Builder sort(@Nullable Output<Boolean> sort) {
             this.sort = sort;
             return this;
         }
-
         public Builder sort(@Nullable Boolean sort) {
             this.sort = Output.ofNullable(sort);
             return this;
         }
-
         public Builder type(Output<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Output.of(Objects.requireNonNull(type));
             return this;
-        }
-        public DomainIndexFieldGetArgs build() {
+        }        public DomainIndexFieldGetArgs build() {
             return new DomainIndexFieldGetArgs(analysisScheme, defaultValue, facet, highlight, name, $return, search, sort, type);
         }
     }

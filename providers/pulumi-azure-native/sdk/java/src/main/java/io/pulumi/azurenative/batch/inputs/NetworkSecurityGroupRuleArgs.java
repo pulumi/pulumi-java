@@ -105,42 +105,37 @@ public final class NetworkSecurityGroupRuleArgs extends io.pulumi.resources.Reso
             this.access = Objects.requireNonNull(access);
             return this;
         }
-
         public Builder access(NetworkSecurityGroupRuleAccess access) {
             this.access = Output.of(Objects.requireNonNull(access));
             return this;
         }
-
         public Builder priority(Output<Integer> priority) {
             this.priority = Objects.requireNonNull(priority);
             return this;
         }
-
         public Builder priority(Integer priority) {
             this.priority = Output.of(Objects.requireNonNull(priority));
             return this;
         }
-
         public Builder sourceAddressPrefix(Output<String> sourceAddressPrefix) {
             this.sourceAddressPrefix = Objects.requireNonNull(sourceAddressPrefix);
             return this;
         }
-
         public Builder sourceAddressPrefix(String sourceAddressPrefix) {
             this.sourceAddressPrefix = Output.of(Objects.requireNonNull(sourceAddressPrefix));
             return this;
         }
-
         public Builder sourcePortRanges(@Nullable Output<List<String>> sourcePortRanges) {
             this.sourcePortRanges = sourcePortRanges;
             return this;
         }
-
         public Builder sourcePortRanges(@Nullable List<String> sourcePortRanges) {
             this.sourcePortRanges = Output.ofNullable(sourcePortRanges);
             return this;
         }
-        public NetworkSecurityGroupRuleArgs build() {
+        public Builder sourcePortRanges(String... sourcePortRanges) {
+            return sourcePortRanges(List.of(sourcePortRanges));
+        }        public NetworkSecurityGroupRuleArgs build() {
             return new NetworkSecurityGroupRuleArgs(access, priority, sourceAddressPrefix, sourcePortRanges);
         }
     }

@@ -226,72 +226,67 @@ public final class ClusterNodePool {
             this.autoscaling = autoscaling;
             return this;
         }
-
         public Builder initialNodeCount(@Nullable Integer initialNodeCount) {
             this.initialNodeCount = initialNodeCount;
             return this;
         }
-
         public Builder instanceGroupUrls(@Nullable List<String> instanceGroupUrls) {
             this.instanceGroupUrls = instanceGroupUrls;
             return this;
         }
-
+        public Builder instanceGroupUrls(String... instanceGroupUrls) {
+            return instanceGroupUrls(List.of(instanceGroupUrls));
+        }
         public Builder managedInstanceGroupUrls(@Nullable List<String> managedInstanceGroupUrls) {
             this.managedInstanceGroupUrls = managedInstanceGroupUrls;
             return this;
         }
-
+        public Builder managedInstanceGroupUrls(String... managedInstanceGroupUrls) {
+            return managedInstanceGroupUrls(List.of(managedInstanceGroupUrls));
+        }
         public Builder management(@Nullable ClusterNodePoolManagement management) {
             this.management = management;
             return this;
         }
-
         public Builder maxPodsPerNode(@Nullable Integer maxPodsPerNode) {
             this.maxPodsPerNode = maxPodsPerNode;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
-
         public Builder namePrefix(@Nullable String namePrefix) {
             this.namePrefix = namePrefix;
             return this;
         }
-
         public Builder networkConfig(@Nullable ClusterNodePoolNetworkConfig networkConfig) {
             this.networkConfig = networkConfig;
             return this;
         }
-
         public Builder nodeConfig(@Nullable ClusterNodePoolNodeConfig nodeConfig) {
             this.nodeConfig = nodeConfig;
             return this;
         }
-
         public Builder nodeCount(@Nullable Integer nodeCount) {
             this.nodeCount = nodeCount;
             return this;
         }
-
         public Builder nodeLocations(@Nullable List<String> nodeLocations) {
             this.nodeLocations = nodeLocations;
             return this;
         }
-
+        public Builder nodeLocations(String... nodeLocations) {
+            return nodeLocations(List.of(nodeLocations));
+        }
         public Builder upgradeSettings(@Nullable ClusterNodePoolUpgradeSettings upgradeSettings) {
             this.upgradeSettings = upgradeSettings;
             return this;
         }
-
         public Builder version(@Nullable String version) {
             this.version = version;
             return this;
-        }
-        public ClusterNodePool build() {
+        }        public ClusterNodePool build() {
             return new ClusterNodePool(autoscaling, initialNodeCount, instanceGroupUrls, managedInstanceGroupUrls, management, maxPodsPerNode, name, namePrefix, networkConfig, nodeConfig, nodeCount, nodeLocations, upgradeSettings, version);
         }
     }

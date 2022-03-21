@@ -53,8 +53,7 @@ public final class GetVPCDHCPOptionsAssociationResult {
         public Builder id(@Nullable String id) {
             this.id = id;
             return this;
-        }
-        public GetVPCDHCPOptionsAssociationResult build() {
+        }        public GetVPCDHCPOptionsAssociationResult build() {
             return new GetVPCDHCPOptionsAssociationResult(id);
         }
     }

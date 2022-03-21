@@ -124,27 +124,22 @@ public final class ListIntegrationAccountSchemaContentCallbackUrlArgs extends io
             this.integrationAccountName = Objects.requireNonNull(integrationAccountName);
             return this;
         }
-
         public Builder keyType(@Nullable Either<String,KeyType> keyType) {
             this.keyType = keyType;
             return this;
         }
-
         public Builder notAfter(@Nullable String notAfter) {
             this.notAfter = notAfter;
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder schemaName(String schemaName) {
             this.schemaName = Objects.requireNonNull(schemaName);
             return this;
-        }
-        public ListIntegrationAccountSchemaContentCallbackUrlArgs build() {
+        }        public ListIntegrationAccountSchemaContentCallbackUrlArgs build() {
             return new ListIntegrationAccountSchemaContentCallbackUrlArgs(integrationAccountName, keyType, notAfter, resourceGroupName, schemaName);
         }
     }

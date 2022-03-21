@@ -132,52 +132,45 @@ public final class PipelineRunRequestArgs extends io.pulumi.resources.ResourceAr
             this.artifacts = artifacts;
             return this;
         }
-
         public Builder artifacts(@Nullable List<String> artifacts) {
             this.artifacts = Output.ofNullable(artifacts);
             return this;
         }
-
+        public Builder artifacts(String... artifacts) {
+            return artifacts(List.of(artifacts));
+        }
         public Builder catalogDigest(@Nullable Output<String> catalogDigest) {
             this.catalogDigest = catalogDigest;
             return this;
         }
-
         public Builder catalogDigest(@Nullable String catalogDigest) {
             this.catalogDigest = Output.ofNullable(catalogDigest);
             return this;
         }
-
         public Builder pipelineResourceId(@Nullable Output<String> pipelineResourceId) {
             this.pipelineResourceId = pipelineResourceId;
             return this;
         }
-
         public Builder pipelineResourceId(@Nullable String pipelineResourceId) {
             this.pipelineResourceId = Output.ofNullable(pipelineResourceId);
             return this;
         }
-
         public Builder source(@Nullable Output<PipelineRunSourcePropertiesArgs> source) {
             this.source = source;
             return this;
         }
-
         public Builder source(@Nullable PipelineRunSourcePropertiesArgs source) {
             this.source = Output.ofNullable(source);
             return this;
         }
-
         public Builder target(@Nullable Output<PipelineRunTargetPropertiesArgs> target) {
             this.target = target;
             return this;
         }
-
         public Builder target(@Nullable PipelineRunTargetPropertiesArgs target) {
             this.target = Output.ofNullable(target);
             return this;
-        }
-        public PipelineRunRequestArgs build() {
+        }        public PipelineRunRequestArgs build() {
             return new PipelineRunRequestArgs(artifacts, catalogDigest, pipelineResourceId, source, target);
         }
     }

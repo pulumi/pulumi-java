@@ -110,22 +110,18 @@ public final class GoogleCloudContactcenterinsightsV1SmartComposeSuggestionDataR
             this.confidenceScore = Objects.requireNonNull(confidenceScore);
             return this;
         }
-
         public Builder metadata(Map<String,String> metadata) {
             this.metadata = Objects.requireNonNull(metadata);
             return this;
         }
-
         public Builder queryRecord(String queryRecord) {
             this.queryRecord = Objects.requireNonNull(queryRecord);
             return this;
         }
-
         public Builder suggestion(String suggestion) {
             this.suggestion = Objects.requireNonNull(suggestion);
             return this;
-        }
-        public GoogleCloudContactcenterinsightsV1SmartComposeSuggestionDataResponse build() {
+        }        public GoogleCloudContactcenterinsightsV1SmartComposeSuggestionDataResponse build() {
             return new GoogleCloudContactcenterinsightsV1SmartComposeSuggestionDataResponse(confidenceScore, metadata, queryRecord, suggestion);
         }
     }

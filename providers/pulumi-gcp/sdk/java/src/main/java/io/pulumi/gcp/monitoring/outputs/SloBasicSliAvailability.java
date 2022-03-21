@@ -53,8 +53,7 @@ public final class SloBasicSliAvailability {
         public Builder enabled(@Nullable Boolean enabled) {
             this.enabled = enabled;
             return this;
-        }
-        public SloBasicSliAvailability build() {
+        }        public SloBasicSliAvailability build() {
             return new SloBasicSliAvailability(enabled);
         }
     }

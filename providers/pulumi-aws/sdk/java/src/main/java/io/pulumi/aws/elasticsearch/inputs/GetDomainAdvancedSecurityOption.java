@@ -72,12 +72,10 @@ public final class GetDomainAdvancedSecurityOption extends io.pulumi.resources.I
             this.enabled = Objects.requireNonNull(enabled);
             return this;
         }
-
         public Builder internalUserDatabaseEnabled(Boolean internalUserDatabaseEnabled) {
             this.internalUserDatabaseEnabled = Objects.requireNonNull(internalUserDatabaseEnabled);
             return this;
-        }
-        public GetDomainAdvancedSecurityOption build() {
+        }        public GetDomainAdvancedSecurityOption build() {
             return new GetDomainAdvancedSecurityOption(enabled, internalUserDatabaseEnabled);
         }
     }

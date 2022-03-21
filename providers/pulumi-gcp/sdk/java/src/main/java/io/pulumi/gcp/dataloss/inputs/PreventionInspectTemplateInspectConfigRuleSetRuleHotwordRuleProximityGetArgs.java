@@ -74,22 +74,18 @@ public final class PreventionInspectTemplateInspectConfigRuleSetRuleHotwordRuleP
             this.windowAfter = windowAfter;
             return this;
         }
-
         public Builder windowAfter(@Nullable Integer windowAfter) {
             this.windowAfter = Output.ofNullable(windowAfter);
             return this;
         }
-
         public Builder windowBefore(@Nullable Output<Integer> windowBefore) {
             this.windowBefore = windowBefore;
             return this;
         }
-
         public Builder windowBefore(@Nullable Integer windowBefore) {
             this.windowBefore = Output.ofNullable(windowBefore);
             return this;
-        }
-        public PreventionInspectTemplateInspectConfigRuleSetRuleHotwordRuleProximityGetArgs build() {
+        }        public PreventionInspectTemplateInspectConfigRuleSetRuleHotwordRuleProximityGetArgs build() {
             return new PreventionInspectTemplateInspectConfigRuleSetRuleHotwordRuleProximityGetArgs(windowAfter, windowBefore);
         }
     }

@@ -111,42 +111,34 @@ public final class ApplicationApplicationConfigurationFlinkApplicationConfigurat
             this.checkpointInterval = checkpointInterval;
             return this;
         }
-
         public Builder checkpointInterval(@Nullable Integer checkpointInterval) {
             this.checkpointInterval = Output.ofNullable(checkpointInterval);
             return this;
         }
-
         public Builder checkpointingEnabled(@Nullable Output<Boolean> checkpointingEnabled) {
             this.checkpointingEnabled = checkpointingEnabled;
             return this;
         }
-
         public Builder checkpointingEnabled(@Nullable Boolean checkpointingEnabled) {
             this.checkpointingEnabled = Output.ofNullable(checkpointingEnabled);
             return this;
         }
-
         public Builder configurationType(Output<String> configurationType) {
             this.configurationType = Objects.requireNonNull(configurationType);
             return this;
         }
-
         public Builder configurationType(String configurationType) {
             this.configurationType = Output.of(Objects.requireNonNull(configurationType));
             return this;
         }
-
         public Builder minPauseBetweenCheckpoints(@Nullable Output<Integer> minPauseBetweenCheckpoints) {
             this.minPauseBetweenCheckpoints = minPauseBetweenCheckpoints;
             return this;
         }
-
         public Builder minPauseBetweenCheckpoints(@Nullable Integer minPauseBetweenCheckpoints) {
             this.minPauseBetweenCheckpoints = Output.ofNullable(minPauseBetweenCheckpoints);
             return this;
-        }
-        public ApplicationApplicationConfigurationFlinkApplicationConfigurationCheckpointConfigurationGetArgs build() {
+        }        public ApplicationApplicationConfigurationFlinkApplicationConfigurationCheckpointConfigurationGetArgs build() {
             return new ApplicationApplicationConfigurationFlinkApplicationConfigurationCheckpointConfigurationGetArgs(checkpointInterval, checkpointingEnabled, configurationType, minPauseBetweenCheckpoints);
         }
     }

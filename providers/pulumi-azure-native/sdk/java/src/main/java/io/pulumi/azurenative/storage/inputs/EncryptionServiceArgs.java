@@ -81,22 +81,18 @@ public final class EncryptionServiceArgs extends io.pulumi.resources.ResourceArg
             this.enabled = enabled;
             return this;
         }
-
         public Builder enabled(@Nullable Boolean enabled) {
             this.enabled = Output.ofNullable(enabled);
             return this;
         }
-
         public Builder keyType(@Nullable Output<Either<String,KeyType>> keyType) {
             this.keyType = keyType;
             return this;
         }
-
         public Builder keyType(@Nullable Either<String,KeyType> keyType) {
             this.keyType = Output.ofNullable(keyType);
             return this;
-        }
-        public EncryptionServiceArgs build() {
+        }        public EncryptionServiceArgs build() {
             return new EncryptionServiceArgs(enabled, keyType);
         }
     }

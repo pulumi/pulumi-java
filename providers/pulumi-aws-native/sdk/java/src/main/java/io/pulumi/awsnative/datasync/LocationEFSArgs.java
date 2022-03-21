@@ -105,42 +105,37 @@ public final class LocationEFSArgs extends io.pulumi.resources.ResourceArgs {
             this.ec2Config = Objects.requireNonNull(ec2Config);
             return this;
         }
-
         public Builder ec2Config(LocationEFSEc2ConfigArgs ec2Config) {
             this.ec2Config = Output.of(Objects.requireNonNull(ec2Config));
             return this;
         }
-
         public Builder efsFilesystemArn(Output<String> efsFilesystemArn) {
             this.efsFilesystemArn = Objects.requireNonNull(efsFilesystemArn);
             return this;
         }
-
         public Builder efsFilesystemArn(String efsFilesystemArn) {
             this.efsFilesystemArn = Output.of(Objects.requireNonNull(efsFilesystemArn));
             return this;
         }
-
         public Builder subdirectory(@Nullable Output<String> subdirectory) {
             this.subdirectory = subdirectory;
             return this;
         }
-
         public Builder subdirectory(@Nullable String subdirectory) {
             this.subdirectory = Output.ofNullable(subdirectory);
             return this;
         }
-
         public Builder tags(@Nullable Output<List<LocationEFSTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable List<LocationEFSTagArgs> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-        public LocationEFSArgs build() {
+        public Builder tags(LocationEFSTagArgs... tags) {
+            return tags(List.of(tags));
+        }        public LocationEFSArgs build() {
             return new LocationEFSArgs(ec2Config, efsFilesystemArn, subdirectory, tags);
         }
     }

@@ -187,47 +187,38 @@ public final class HttpReadSettingsResponse {
             this.additionalHeaders = additionalHeaders;
             return this;
         }
-
         public Builder disableMetricsCollection(@Nullable Object disableMetricsCollection) {
             this.disableMetricsCollection = disableMetricsCollection;
             return this;
         }
-
         public Builder enablePartitionDiscovery(@Nullable Boolean enablePartitionDiscovery) {
             this.enablePartitionDiscovery = enablePartitionDiscovery;
             return this;
         }
-
         public Builder maxConcurrentConnections(@Nullable Object maxConcurrentConnections) {
             this.maxConcurrentConnections = maxConcurrentConnections;
             return this;
         }
-
         public Builder partitionRootPath(@Nullable Object partitionRootPath) {
             this.partitionRootPath = partitionRootPath;
             return this;
         }
-
         public Builder requestBody(@Nullable Object requestBody) {
             this.requestBody = requestBody;
             return this;
         }
-
         public Builder requestMethod(@Nullable Object requestMethod) {
             this.requestMethod = requestMethod;
             return this;
         }
-
         public Builder requestTimeout(@Nullable Object requestTimeout) {
             this.requestTimeout = requestTimeout;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public HttpReadSettingsResponse build() {
+        }        public HttpReadSettingsResponse build() {
             return new HttpReadSettingsResponse(additionalHeaders, disableMetricsCollection, enablePartitionDiscovery, maxConcurrentConnections, partitionRootPath, requestBody, requestMethod, requestTimeout, type);
         }
     }

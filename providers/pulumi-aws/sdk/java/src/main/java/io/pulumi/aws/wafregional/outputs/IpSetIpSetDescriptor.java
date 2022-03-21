@@ -69,12 +69,10 @@ public final class IpSetIpSetDescriptor {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder value(String value) {
             this.value = Objects.requireNonNull(value);
             return this;
-        }
-        public IpSetIpSetDescriptor build() {
+        }        public IpSetIpSetDescriptor build() {
             return new IpSetIpSetDescriptor(type, value);
         }
     }

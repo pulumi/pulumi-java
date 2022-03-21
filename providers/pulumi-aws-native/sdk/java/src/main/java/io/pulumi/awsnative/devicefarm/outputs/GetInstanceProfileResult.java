@@ -98,37 +98,36 @@ public final class GetInstanceProfileResult {
             this.arn = arn;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
-
         public Builder excludeAppPackagesFromCleanup(@Nullable List<String> excludeAppPackagesFromCleanup) {
             this.excludeAppPackagesFromCleanup = excludeAppPackagesFromCleanup;
             return this;
         }
-
+        public Builder excludeAppPackagesFromCleanup(String... excludeAppPackagesFromCleanup) {
+            return excludeAppPackagesFromCleanup(List.of(excludeAppPackagesFromCleanup));
+        }
         public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
-
         public Builder packageCleanup(@Nullable Boolean packageCleanup) {
             this.packageCleanup = packageCleanup;
             return this;
         }
-
         public Builder rebootAfterUse(@Nullable Boolean rebootAfterUse) {
             this.rebootAfterUse = rebootAfterUse;
             return this;
         }
-
         public Builder tags(@Nullable List<InstanceProfileTag> tags) {
             this.tags = tags;
             return this;
         }
-        public GetInstanceProfileResult build() {
+        public Builder tags(InstanceProfileTag... tags) {
+            return tags(List.of(tags));
+        }        public GetInstanceProfileResult build() {
             return new GetInstanceProfileResult(arn, description, excludeAppPackagesFromCleanup, name, packageCleanup, rebootAfterUse, tags);
         }
     }

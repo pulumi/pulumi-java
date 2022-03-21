@@ -194,92 +194,80 @@ public final class AnalyticsApplicationInputsArgs extends io.pulumi.resources.Re
             this.id = id;
             return this;
         }
-
         public Builder id(@Nullable String id) {
             this.id = Output.ofNullable(id);
             return this;
         }
-
         public Builder kinesisFirehose(@Nullable Output<AnalyticsApplicationInputsKinesisFirehoseArgs> kinesisFirehose) {
             this.kinesisFirehose = kinesisFirehose;
             return this;
         }
-
         public Builder kinesisFirehose(@Nullable AnalyticsApplicationInputsKinesisFirehoseArgs kinesisFirehose) {
             this.kinesisFirehose = Output.ofNullable(kinesisFirehose);
             return this;
         }
-
         public Builder kinesisStream(@Nullable Output<AnalyticsApplicationInputsKinesisStreamArgs> kinesisStream) {
             this.kinesisStream = kinesisStream;
             return this;
         }
-
         public Builder kinesisStream(@Nullable AnalyticsApplicationInputsKinesisStreamArgs kinesisStream) {
             this.kinesisStream = Output.ofNullable(kinesisStream);
             return this;
         }
-
         public Builder namePrefix(Output<String> namePrefix) {
             this.namePrefix = Objects.requireNonNull(namePrefix);
             return this;
         }
-
         public Builder namePrefix(String namePrefix) {
             this.namePrefix = Output.of(Objects.requireNonNull(namePrefix));
             return this;
         }
-
         public Builder parallelism(@Nullable Output<AnalyticsApplicationInputsParallelismArgs> parallelism) {
             this.parallelism = parallelism;
             return this;
         }
-
         public Builder parallelism(@Nullable AnalyticsApplicationInputsParallelismArgs parallelism) {
             this.parallelism = Output.ofNullable(parallelism);
             return this;
         }
-
         public Builder processingConfiguration(@Nullable Output<AnalyticsApplicationInputsProcessingConfigurationArgs> processingConfiguration) {
             this.processingConfiguration = processingConfiguration;
             return this;
         }
-
         public Builder processingConfiguration(@Nullable AnalyticsApplicationInputsProcessingConfigurationArgs processingConfiguration) {
             this.processingConfiguration = Output.ofNullable(processingConfiguration);
             return this;
         }
-
         public Builder schema(Output<AnalyticsApplicationInputsSchemaArgs> schema) {
             this.schema = Objects.requireNonNull(schema);
             return this;
         }
-
         public Builder schema(AnalyticsApplicationInputsSchemaArgs schema) {
             this.schema = Output.of(Objects.requireNonNull(schema));
             return this;
         }
-
         public Builder startingPositionConfigurations(@Nullable Output<List<AnalyticsApplicationInputsStartingPositionConfigurationArgs>> startingPositionConfigurations) {
             this.startingPositionConfigurations = startingPositionConfigurations;
             return this;
         }
-
         public Builder startingPositionConfigurations(@Nullable List<AnalyticsApplicationInputsStartingPositionConfigurationArgs> startingPositionConfigurations) {
             this.startingPositionConfigurations = Output.ofNullable(startingPositionConfigurations);
             return this;
         }
-
+        public Builder startingPositionConfigurations(AnalyticsApplicationInputsStartingPositionConfigurationArgs... startingPositionConfigurations) {
+            return startingPositionConfigurations(List.of(startingPositionConfigurations));
+        }
         public Builder streamNames(@Nullable Output<List<String>> streamNames) {
             this.streamNames = streamNames;
             return this;
         }
-
         public Builder streamNames(@Nullable List<String> streamNames) {
             this.streamNames = Output.ofNullable(streamNames);
             return this;
         }
-        public AnalyticsApplicationInputsArgs build() {
+        public Builder streamNames(String... streamNames) {
+            return streamNames(List.of(streamNames));
+        }        public AnalyticsApplicationInputsArgs build() {
             return new AnalyticsApplicationInputsArgs(id, kinesisFirehose, kinesisStream, namePrefix, parallelism, processingConfiguration, schema, startingPositionConfigurations, streamNames);
         }
     }

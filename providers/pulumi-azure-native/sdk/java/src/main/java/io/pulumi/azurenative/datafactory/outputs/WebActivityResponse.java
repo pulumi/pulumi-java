@@ -290,77 +290,74 @@ public final class WebActivityResponse {
             this.authentication = authentication;
             return this;
         }
-
         public Builder body(@Nullable Object body) {
             this.body = body;
             return this;
         }
-
         public Builder connectVia(@Nullable IntegrationRuntimeReferenceResponse connectVia) {
             this.connectVia = connectVia;
             return this;
         }
-
         public Builder datasets(@Nullable List<DatasetReferenceResponse> datasets) {
             this.datasets = datasets;
             return this;
         }
-
+        public Builder datasets(DatasetReferenceResponse... datasets) {
+            return datasets(List.of(datasets));
+        }
         public Builder dependsOn(@Nullable List<ActivityDependencyResponse> dependsOn) {
             this.dependsOn = dependsOn;
             return this;
         }
-
+        public Builder dependsOn(ActivityDependencyResponse... dependsOn) {
+            return dependsOn(List.of(dependsOn));
+        }
         public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
-
         public Builder headers(@Nullable Object headers) {
             this.headers = headers;
             return this;
         }
-
         public Builder linkedServiceName(@Nullable LinkedServiceReferenceResponse linkedServiceName) {
             this.linkedServiceName = linkedServiceName;
             return this;
         }
-
         public Builder linkedServices(@Nullable List<LinkedServiceReferenceResponse> linkedServices) {
             this.linkedServices = linkedServices;
             return this;
         }
-
+        public Builder linkedServices(LinkedServiceReferenceResponse... linkedServices) {
+            return linkedServices(List.of(linkedServices));
+        }
         public Builder method(String method) {
             this.method = Objects.requireNonNull(method);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder policy(@Nullable ActivityPolicyResponse policy) {
             this.policy = policy;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder url(Object url) {
             this.url = Objects.requireNonNull(url);
             return this;
         }
-
         public Builder userProperties(@Nullable List<UserPropertyResponse> userProperties) {
             this.userProperties = userProperties;
             return this;
         }
-        public WebActivityResponse build() {
+        public Builder userProperties(UserPropertyResponse... userProperties) {
+            return userProperties(List.of(userProperties));
+        }        public WebActivityResponse build() {
             return new WebActivityResponse(authentication, body, connectVia, datasets, dependsOn, description, headers, linkedServiceName, linkedServices, method, name, policy, type, url, userProperties);
         }
     }

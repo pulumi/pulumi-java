@@ -291,152 +291,128 @@ public final class StackState extends io.pulumi.resources.ResourceArgs {
             this.capabilities = capabilities;
             return this;
         }
-
         public Builder capabilities(@Nullable List<String> capabilities) {
             this.capabilities = Output.ofNullable(capabilities);
             return this;
         }
-
+        public Builder capabilities(String... capabilities) {
+            return capabilities(List.of(capabilities));
+        }
         public Builder disableRollback(@Nullable Output<Boolean> disableRollback) {
             this.disableRollback = disableRollback;
             return this;
         }
-
         public Builder disableRollback(@Nullable Boolean disableRollback) {
             this.disableRollback = Output.ofNullable(disableRollback);
             return this;
         }
-
         public Builder iamRoleArn(@Nullable Output<String> iamRoleArn) {
             this.iamRoleArn = iamRoleArn;
             return this;
         }
-
         public Builder iamRoleArn(@Nullable String iamRoleArn) {
             this.iamRoleArn = Output.ofNullable(iamRoleArn);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder notificationArns(@Nullable Output<List<String>> notificationArns) {
             this.notificationArns = notificationArns;
             return this;
         }
-
         public Builder notificationArns(@Nullable List<String> notificationArns) {
             this.notificationArns = Output.ofNullable(notificationArns);
             return this;
         }
-
+        public Builder notificationArns(String... notificationArns) {
+            return notificationArns(List.of(notificationArns));
+        }
         public Builder onFailure(@Nullable Output<String> onFailure) {
             this.onFailure = onFailure;
             return this;
         }
-
         public Builder onFailure(@Nullable String onFailure) {
             this.onFailure = Output.ofNullable(onFailure);
             return this;
         }
-
         public Builder outputs(@Nullable Output<Map<String,String>> outputs) {
             this.outputs = outputs;
             return this;
         }
-
         public Builder outputs(@Nullable Map<String,String> outputs) {
             this.outputs = Output.ofNullable(outputs);
             return this;
         }
-
         public Builder parameters(@Nullable Output<Map<String,String>> parameters) {
             this.parameters = parameters;
             return this;
         }
-
         public Builder parameters(@Nullable Map<String,String> parameters) {
             this.parameters = Output.ofNullable(parameters);
             return this;
         }
-
         public Builder policyBody(@Nullable Output<String> policyBody) {
             this.policyBody = policyBody;
             return this;
         }
-
         public Builder policyBody(@Nullable String policyBody) {
             this.policyBody = Output.ofNullable(policyBody);
             return this;
         }
-
         public Builder policyUrl(@Nullable Output<String> policyUrl) {
             this.policyUrl = policyUrl;
             return this;
         }
-
         public Builder policyUrl(@Nullable String policyUrl) {
             this.policyUrl = Output.ofNullable(policyUrl);
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
             this.tagsAll = tagsAll;
             return this;
         }
-
         public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
             this.tagsAll = Output.ofNullable(tagsAll);
             return this;
         }
-
         public Builder templateBody(@Nullable Output<String> templateBody) {
             this.templateBody = templateBody;
             return this;
         }
-
         public Builder templateBody(@Nullable String templateBody) {
             this.templateBody = Output.ofNullable(templateBody);
             return this;
         }
-
         public Builder templateUrl(@Nullable Output<String> templateUrl) {
             this.templateUrl = templateUrl;
             return this;
         }
-
         public Builder templateUrl(@Nullable String templateUrl) {
             this.templateUrl = Output.ofNullable(templateUrl);
             return this;
         }
-
         public Builder timeoutInMinutes(@Nullable Output<Integer> timeoutInMinutes) {
             this.timeoutInMinutes = timeoutInMinutes;
             return this;
         }
-
         public Builder timeoutInMinutes(@Nullable Integer timeoutInMinutes) {
             this.timeoutInMinutes = Output.ofNullable(timeoutInMinutes);
             return this;
-        }
-        public StackState build() {
+        }        public StackState build() {
             return new StackState(capabilities, disableRollback, iamRoleArn, name, notificationArns, onFailure, outputs, parameters, policyBody, policyUrl, tags, tagsAll, templateBody, templateUrl, timeoutInMinutes);
         }
     }

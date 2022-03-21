@@ -135,52 +135,42 @@ public final class RuntimeVirtualMachineVirtualMachineConfigDataDiskInitializePa
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder diskName(@Nullable Output<String> diskName) {
             this.diskName = diskName;
             return this;
         }
-
         public Builder diskName(@Nullable String diskName) {
             this.diskName = Output.ofNullable(diskName);
             return this;
         }
-
         public Builder diskSizeGb(@Nullable Output<Integer> diskSizeGb) {
             this.diskSizeGb = diskSizeGb;
             return this;
         }
-
         public Builder diskSizeGb(@Nullable Integer diskSizeGb) {
             this.diskSizeGb = Output.ofNullable(diskSizeGb);
             return this;
         }
-
         public Builder diskType(@Nullable Output<String> diskType) {
             this.diskType = diskType;
             return this;
         }
-
         public Builder diskType(@Nullable String diskType) {
             this.diskType = Output.ofNullable(diskType);
             return this;
         }
-
         public Builder labels(@Nullable Output<Map<String,String>> labels) {
             this.labels = labels;
             return this;
         }
-
         public Builder labels(@Nullable Map<String,String> labels) {
             this.labels = Output.ofNullable(labels);
             return this;
-        }
-        public RuntimeVirtualMachineVirtualMachineConfigDataDiskInitializeParamsArgs build() {
+        }        public RuntimeVirtualMachineVirtualMachineConfigDataDiskInitializeParamsArgs build() {
             return new RuntimeVirtualMachineVirtualMachineConfigDataDiskInitializeParamsArgs(description, diskName, diskSizeGb, diskType, labels);
         }
     }

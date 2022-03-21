@@ -266,72 +266,58 @@ public final class SubscriptionFeatureRegistrationResponseProperties {
             this.approvalType = Objects.requireNonNull(approvalType);
             return this;
         }
-
         public Builder authorizationProfile(@Nullable AuthorizationProfileResponse authorizationProfile) {
             this.authorizationProfile = authorizationProfile;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
-
         public Builder displayName(String displayName) {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
-
         public Builder documentationLink(String documentationLink) {
             this.documentationLink = Objects.requireNonNull(documentationLink);
             return this;
         }
-
         public Builder featureName(String featureName) {
             this.featureName = Objects.requireNonNull(featureName);
             return this;
         }
-
         public Builder metadata(@Nullable Map<String,String> metadata) {
             this.metadata = metadata;
             return this;
         }
-
         public Builder providerNamespace(String providerNamespace) {
             this.providerNamespace = Objects.requireNonNull(providerNamespace);
             return this;
         }
-
         public Builder registrationDate(String registrationDate) {
             this.registrationDate = Objects.requireNonNull(registrationDate);
             return this;
         }
-
         public Builder releaseDate(String releaseDate) {
             this.releaseDate = Objects.requireNonNull(releaseDate);
             return this;
         }
-
         public Builder shouldFeatureDisplayInPortal(@Nullable Boolean shouldFeatureDisplayInPortal) {
             this.shouldFeatureDisplayInPortal = shouldFeatureDisplayInPortal;
             return this;
         }
-
         public Builder state(@Nullable String state) {
             this.state = state;
             return this;
         }
-
         public Builder subscriptionId(String subscriptionId) {
             this.subscriptionId = Objects.requireNonNull(subscriptionId);
             return this;
         }
-
         public Builder tenantId(String tenantId) {
             this.tenantId = Objects.requireNonNull(tenantId);
             return this;
-        }
-        public SubscriptionFeatureRegistrationResponseProperties build() {
+        }        public SubscriptionFeatureRegistrationResponseProperties build() {
             return new SubscriptionFeatureRegistrationResponseProperties(approvalType, authorizationProfile, description, displayName, documentationLink, featureName, metadata, providerNamespace, registrationDate, releaseDate, shouldFeatureDisplayInPortal, state, subscriptionId, tenantId);
         }
     }

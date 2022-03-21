@@ -78,22 +78,18 @@ public final class PhotonPersistentDiskVolumeSourceArgs extends io.pulumi.resour
             this.fsType = fsType;
             return this;
         }
-
         public Builder fsType(@Nullable String fsType) {
             this.fsType = Output.ofNullable(fsType);
             return this;
         }
-
         public Builder pdID(Output<String> pdID) {
             this.pdID = Objects.requireNonNull(pdID);
             return this;
         }
-
         public Builder pdID(String pdID) {
             this.pdID = Output.of(Objects.requireNonNull(pdID));
             return this;
-        }
-        public PhotonPersistentDiskVolumeSourceArgs build() {
+        }        public PhotonPersistentDiskVolumeSourceArgs build() {
             return new PhotonPersistentDiskVolumeSourceArgs(fsType, pdID);
         }
     }

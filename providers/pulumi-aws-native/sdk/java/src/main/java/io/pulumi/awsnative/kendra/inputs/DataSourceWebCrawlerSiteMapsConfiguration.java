@@ -52,7 +52,9 @@ public final class DataSourceWebCrawlerSiteMapsConfiguration extends io.pulumi.r
             this.siteMaps = Objects.requireNonNull(siteMaps);
             return this;
         }
-        public DataSourceWebCrawlerSiteMapsConfiguration build() {
+        public Builder siteMaps(String... siteMaps) {
+            return siteMaps(List.of(siteMaps));
+        }        public DataSourceWebCrawlerSiteMapsConfiguration build() {
             return new DataSourceWebCrawlerSiteMapsConfiguration(siteMaps);
         }
     }

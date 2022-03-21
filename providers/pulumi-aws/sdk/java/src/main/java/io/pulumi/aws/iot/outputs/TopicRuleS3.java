@@ -85,17 +85,14 @@ public final class TopicRuleS3 {
             this.bucketName = Objects.requireNonNull(bucketName);
             return this;
         }
-
         public Builder key(String key) {
             this.key = Objects.requireNonNull(key);
             return this;
         }
-
         public Builder roleArn(String roleArn) {
             this.roleArn = Objects.requireNonNull(roleArn);
             return this;
-        }
-        public TopicRuleS3 build() {
+        }        public TopicRuleS3 build() {
             return new TopicRuleS3(bucketName, key, roleArn);
         }
     }

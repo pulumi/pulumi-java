@@ -145,62 +145,62 @@ public final class BucketCorsRuleArgs extends io.pulumi.resources.ResourceArgs {
             this.allowedHeaders = allowedHeaders;
             return this;
         }
-
         public Builder allowedHeaders(@Nullable List<String> allowedHeaders) {
             this.allowedHeaders = Output.ofNullable(allowedHeaders);
             return this;
         }
-
+        public Builder allowedHeaders(String... allowedHeaders) {
+            return allowedHeaders(List.of(allowedHeaders));
+        }
         public Builder allowedMethods(Output<List<BucketCorsRuleAllowedMethodsItem>> allowedMethods) {
             this.allowedMethods = Objects.requireNonNull(allowedMethods);
             return this;
         }
-
         public Builder allowedMethods(List<BucketCorsRuleAllowedMethodsItem> allowedMethods) {
             this.allowedMethods = Output.of(Objects.requireNonNull(allowedMethods));
             return this;
         }
-
+        public Builder allowedMethods(BucketCorsRuleAllowedMethodsItem... allowedMethods) {
+            return allowedMethods(List.of(allowedMethods));
+        }
         public Builder allowedOrigins(Output<List<String>> allowedOrigins) {
             this.allowedOrigins = Objects.requireNonNull(allowedOrigins);
             return this;
         }
-
         public Builder allowedOrigins(List<String> allowedOrigins) {
             this.allowedOrigins = Output.of(Objects.requireNonNull(allowedOrigins));
             return this;
         }
-
+        public Builder allowedOrigins(String... allowedOrigins) {
+            return allowedOrigins(List.of(allowedOrigins));
+        }
         public Builder exposedHeaders(@Nullable Output<List<String>> exposedHeaders) {
             this.exposedHeaders = exposedHeaders;
             return this;
         }
-
         public Builder exposedHeaders(@Nullable List<String> exposedHeaders) {
             this.exposedHeaders = Output.ofNullable(exposedHeaders);
             return this;
         }
-
+        public Builder exposedHeaders(String... exposedHeaders) {
+            return exposedHeaders(List.of(exposedHeaders));
+        }
         public Builder id(@Nullable Output<String> id) {
             this.id = id;
             return this;
         }
-
         public Builder id(@Nullable String id) {
             this.id = Output.ofNullable(id);
             return this;
         }
-
         public Builder maxAge(@Nullable Output<Integer> maxAge) {
             this.maxAge = maxAge;
             return this;
         }
-
         public Builder maxAge(@Nullable Integer maxAge) {
             this.maxAge = Output.ofNullable(maxAge);
             return this;
-        }
-        public BucketCorsRuleArgs build() {
+        }        public BucketCorsRuleArgs build() {
             return new BucketCorsRuleArgs(allowedHeaders, allowedMethods, allowedOrigins, exposedHeaders, id, maxAge);
         }
     }

@@ -72,12 +72,13 @@ public final class AuthorizerJwtConfiguration {
             this.audiences = audiences;
             return this;
         }
-
+        public Builder audiences(String... audiences) {
+            return audiences(List.of(audiences));
+        }
         public Builder issuer(@Nullable String issuer) {
             this.issuer = issuer;
             return this;
-        }
-        public AuthorizerJwtConfiguration build() {
+        }        public AuthorizerJwtConfiguration build() {
             return new AuthorizerJwtConfiguration(audiences, issuer);
         }
     }

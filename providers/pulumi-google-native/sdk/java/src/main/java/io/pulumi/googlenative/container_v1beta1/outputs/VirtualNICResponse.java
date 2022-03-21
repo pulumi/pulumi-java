@@ -51,8 +51,7 @@ public final class VirtualNICResponse {
         public Builder enabled(Boolean enabled) {
             this.enabled = Objects.requireNonNull(enabled);
             return this;
-        }
-        public VirtualNICResponse build() {
+        }        public VirtualNICResponse build() {
             return new VirtualNICResponse(enabled);
         }
     }

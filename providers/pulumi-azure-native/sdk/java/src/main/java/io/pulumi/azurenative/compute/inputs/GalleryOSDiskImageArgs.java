@@ -79,22 +79,18 @@ public final class GalleryOSDiskImageArgs extends io.pulumi.resources.ResourceAr
             this.hostCaching = hostCaching;
             return this;
         }
-
         public Builder hostCaching(@Nullable HostCaching hostCaching) {
             this.hostCaching = Output.ofNullable(hostCaching);
             return this;
         }
-
         public Builder source(@Nullable Output<GalleryArtifactVersionSourceArgs> source) {
             this.source = source;
             return this;
         }
-
         public Builder source(@Nullable GalleryArtifactVersionSourceArgs source) {
             this.source = Output.ofNullable(source);
             return this;
-        }
-        public GalleryOSDiskImageArgs build() {
+        }        public GalleryOSDiskImageArgs build() {
             return new GalleryOSDiskImageArgs(hostCaching, source);
         }
     }

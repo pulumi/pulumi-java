@@ -71,12 +71,10 @@ public final class ApiResourceDefinitionsResponse {
             this.modifiedSwaggerUrl = modifiedSwaggerUrl;
             return this;
         }
-
         public Builder originalSwaggerUrl(@Nullable String originalSwaggerUrl) {
             this.originalSwaggerUrl = originalSwaggerUrl;
             return this;
-        }
-        public ApiResourceDefinitionsResponse build() {
+        }        public ApiResourceDefinitionsResponse build() {
             return new ApiResourceDefinitionsResponse(modifiedSwaggerUrl, originalSwaggerUrl);
         }
     }

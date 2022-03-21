@@ -53,8 +53,7 @@ public final class VirtualHardDiskResponse {
         public Builder uri(@Nullable String uri) {
             this.uri = uri;
             return this;
-        }
-        public VirtualHardDiskResponse build() {
+        }        public VirtualHardDiskResponse build() {
             return new VirtualHardDiskResponse(uri);
         }
     }

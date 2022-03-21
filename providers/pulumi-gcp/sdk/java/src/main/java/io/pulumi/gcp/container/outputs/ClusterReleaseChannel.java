@@ -61,8 +61,7 @@ public final class ClusterReleaseChannel {
         public Builder channel(String channel) {
             this.channel = Objects.requireNonNull(channel);
             return this;
-        }
-        public ClusterReleaseChannel build() {
+        }        public ClusterReleaseChannel build() {
             return new ClusterReleaseChannel(channel);
         }
     }

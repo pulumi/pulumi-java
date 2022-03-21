@@ -78,17 +78,14 @@ public final class GetSchemaArgs extends io.pulumi.resources.InvokeArgs {
             this.project = project;
             return this;
         }
-
         public Builder schemaId(String schemaId) {
             this.schemaId = Objects.requireNonNull(schemaId);
             return this;
         }
-
         public Builder view(@Nullable String view) {
             this.view = view;
             return this;
-        }
-        public GetSchemaArgs build() {
+        }        public GetSchemaArgs build() {
             return new GetSchemaArgs(project, schemaId, view);
         }
     }

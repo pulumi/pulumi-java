@@ -53,8 +53,7 @@ public final class ARecordResponse {
         public Builder ipv4Address(@Nullable String ipv4Address) {
             this.ipv4Address = ipv4Address;
             return this;
-        }
-        public ARecordResponse build() {
+        }        public ARecordResponse build() {
             return new ARecordResponse(ipv4Address);
         }
     }

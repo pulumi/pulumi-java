@@ -286,82 +286,69 @@ public final class GetManagedZoneResult {
             this.cloudLoggingConfig = Objects.requireNonNull(cloudLoggingConfig);
             return this;
         }
-
         public Builder creationTime(String creationTime) {
             this.creationTime = Objects.requireNonNull(creationTime);
             return this;
         }
-
         public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
-
         public Builder dnsName(String dnsName) {
             this.dnsName = Objects.requireNonNull(dnsName);
             return this;
         }
-
         public Builder dnssecConfig(ManagedZoneDnsSecConfigResponse dnssecConfig) {
             this.dnssecConfig = Objects.requireNonNull(dnssecConfig);
             return this;
         }
-
         public Builder forwardingConfig(ManagedZoneForwardingConfigResponse forwardingConfig) {
             this.forwardingConfig = Objects.requireNonNull(forwardingConfig);
             return this;
         }
-
         public Builder kind(String kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
-
         public Builder labels(Map<String,String> labels) {
             this.labels = Objects.requireNonNull(labels);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder nameServerSet(String nameServerSet) {
             this.nameServerSet = Objects.requireNonNull(nameServerSet);
             return this;
         }
-
         public Builder nameServers(List<String> nameServers) {
             this.nameServers = Objects.requireNonNull(nameServers);
             return this;
         }
-
+        public Builder nameServers(String... nameServers) {
+            return nameServers(List.of(nameServers));
+        }
         public Builder peeringConfig(ManagedZonePeeringConfigResponse peeringConfig) {
             this.peeringConfig = Objects.requireNonNull(peeringConfig);
             return this;
         }
-
         public Builder privateVisibilityConfig(ManagedZonePrivateVisibilityConfigResponse privateVisibilityConfig) {
             this.privateVisibilityConfig = Objects.requireNonNull(privateVisibilityConfig);
             return this;
         }
-
         public Builder reverseLookupConfig(ManagedZoneReverseLookupConfigResponse reverseLookupConfig) {
             this.reverseLookupConfig = Objects.requireNonNull(reverseLookupConfig);
             return this;
         }
-
         public Builder serviceDirectoryConfig(ManagedZoneServiceDirectoryConfigResponse serviceDirectoryConfig) {
             this.serviceDirectoryConfig = Objects.requireNonNull(serviceDirectoryConfig);
             return this;
         }
-
         public Builder visibility(String visibility) {
             this.visibility = Objects.requireNonNull(visibility);
             return this;
-        }
-        public GetManagedZoneResult build() {
+        }        public GetManagedZoneResult build() {
             return new GetManagedZoneResult(cloudLoggingConfig, creationTime, description, dnsName, dnssecConfig, forwardingConfig, kind, labels, name, nameServerSet, nameServers, peeringConfig, privateVisibilityConfig, reverseLookupConfig, serviceDirectoryConfig, visibility);
         }
     }

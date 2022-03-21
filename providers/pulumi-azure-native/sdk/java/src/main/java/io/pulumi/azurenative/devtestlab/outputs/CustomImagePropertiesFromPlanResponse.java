@@ -87,17 +87,14 @@ public final class CustomImagePropertiesFromPlanResponse {
             this.id = id;
             return this;
         }
-
         public Builder offer(@Nullable String offer) {
             this.offer = offer;
             return this;
         }
-
         public Builder publisher(@Nullable String publisher) {
             this.publisher = publisher;
             return this;
-        }
-        public CustomImagePropertiesFromPlanResponse build() {
+        }        public CustomImagePropertiesFromPlanResponse build() {
             return new CustomImagePropertiesFromPlanResponse(id, offer, publisher);
         }
     }

@@ -137,32 +137,32 @@ public final class GetProjectResult {
             this.assetIds = assetIds;
             return this;
         }
-
+        public Builder assetIds(String... assetIds) {
+            return assetIds(List.of(assetIds));
+        }
         public Builder projectArn(@Nullable String projectArn) {
             this.projectArn = projectArn;
             return this;
         }
-
         public Builder projectDescription(@Nullable String projectDescription) {
             this.projectDescription = projectDescription;
             return this;
         }
-
         public Builder projectId(@Nullable String projectId) {
             this.projectId = projectId;
             return this;
         }
-
         public Builder projectName(@Nullable String projectName) {
             this.projectName = projectName;
             return this;
         }
-
         public Builder tags(@Nullable List<ProjectTag> tags) {
             this.tags = tags;
             return this;
         }
-        public GetProjectResult build() {
+        public Builder tags(ProjectTag... tags) {
+            return tags(List.of(tags));
+        }        public GetProjectResult build() {
             return new GetProjectResult(assetIds, projectArn, projectDescription, projectId, projectName, tags);
         }
     }

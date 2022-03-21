@@ -88,17 +88,14 @@ public final class GetJobArgs extends io.pulumi.resources.InvokeArgs {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder workspaceName(String workspaceName) {
             this.workspaceName = Objects.requireNonNull(workspaceName);
             return this;
-        }
-        public GetJobArgs build() {
+        }        public GetJobArgs build() {
             return new GetJobArgs(id, resourceGroupName, workspaceName);
         }
     }

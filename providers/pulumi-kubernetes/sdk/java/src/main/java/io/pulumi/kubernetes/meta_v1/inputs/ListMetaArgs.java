@@ -113,42 +113,34 @@ public final class ListMetaArgs extends io.pulumi.resources.ResourceArgs {
             this.$continue = $continue;
             return this;
         }
-
         public Builder $continue(@Nullable String $continue) {
             this.$continue = Output.ofNullable($continue);
             return this;
         }
-
         public Builder remainingItemCount(@Nullable Output<Integer> remainingItemCount) {
             this.remainingItemCount = remainingItemCount;
             return this;
         }
-
         public Builder remainingItemCount(@Nullable Integer remainingItemCount) {
             this.remainingItemCount = Output.ofNullable(remainingItemCount);
             return this;
         }
-
         public Builder resourceVersion(@Nullable Output<String> resourceVersion) {
             this.resourceVersion = resourceVersion;
             return this;
         }
-
         public Builder resourceVersion(@Nullable String resourceVersion) {
             this.resourceVersion = Output.ofNullable(resourceVersion);
             return this;
         }
-
         public Builder selfLink(@Nullable Output<String> selfLink) {
             this.selfLink = selfLink;
             return this;
         }
-
         public Builder selfLink(@Nullable String selfLink) {
             this.selfLink = Output.ofNullable(selfLink);
             return this;
-        }
-        public ListMetaArgs build() {
+        }        public ListMetaArgs build() {
             return new ListMetaArgs($continue, remainingItemCount, resourceVersion, selfLink);
         }
     }

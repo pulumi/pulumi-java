@@ -174,52 +174,42 @@ public final class GetContactFlowModuleResult {
             this.arn = Objects.requireNonNull(arn);
             return this;
         }
-
         public Builder contactFlowModuleId(String contactFlowModuleId) {
             this.contactFlowModuleId = Objects.requireNonNull(contactFlowModuleId);
             return this;
         }
-
         public Builder content(String content) {
             this.content = Objects.requireNonNull(content);
             return this;
         }
-
         public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder instanceId(String instanceId) {
             this.instanceId = Objects.requireNonNull(instanceId);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder state(String state) {
             this.state = Objects.requireNonNull(state);
             return this;
         }
-
         public Builder status(String status) {
             this.status = Objects.requireNonNull(status);
             return this;
         }
-
         public Builder tags(Map<String,String> tags) {
             this.tags = Objects.requireNonNull(tags);
             return this;
-        }
-        public GetContactFlowModuleResult build() {
+        }        public GetContactFlowModuleResult build() {
             return new GetContactFlowModuleResult(arn, contactFlowModuleId, content, description, id, instanceId, name, state, status, tags);
         }
     }

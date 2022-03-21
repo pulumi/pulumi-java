@@ -135,32 +135,26 @@ public final class ResourceFileResponse {
             this.autoStorageContainerName = autoStorageContainerName;
             return this;
         }
-
         public Builder blobPrefix(@Nullable String blobPrefix) {
             this.blobPrefix = blobPrefix;
             return this;
         }
-
         public Builder fileMode(@Nullable String fileMode) {
             this.fileMode = fileMode;
             return this;
         }
-
         public Builder filePath(@Nullable String filePath) {
             this.filePath = filePath;
             return this;
         }
-
         public Builder httpUrl(@Nullable String httpUrl) {
             this.httpUrl = httpUrl;
             return this;
         }
-
         public Builder storageContainerUrl(@Nullable String storageContainerUrl) {
             this.storageContainerUrl = storageContainerUrl;
             return this;
-        }
-        public ResourceFileResponse build() {
+        }        public ResourceFileResponse build() {
             return new ResourceFileResponse(autoStorageContainerName, blobPrefix, fileMode, filePath, httpUrl, storageContainerUrl);
         }
     }

@@ -75,22 +75,18 @@ public final class TableMagneticStoreWritePropertiesGetArgs extends io.pulumi.re
             this.enableMagneticStoreWrites = enableMagneticStoreWrites;
             return this;
         }
-
         public Builder enableMagneticStoreWrites(@Nullable Boolean enableMagneticStoreWrites) {
             this.enableMagneticStoreWrites = Output.ofNullable(enableMagneticStoreWrites);
             return this;
         }
-
         public Builder magneticStoreRejectedDataLocation(@Nullable Output<TableMagneticStoreWritePropertiesMagneticStoreRejectedDataLocationGetArgs> magneticStoreRejectedDataLocation) {
             this.magneticStoreRejectedDataLocation = magneticStoreRejectedDataLocation;
             return this;
         }
-
         public Builder magneticStoreRejectedDataLocation(@Nullable TableMagneticStoreWritePropertiesMagneticStoreRejectedDataLocationGetArgs magneticStoreRejectedDataLocation) {
             this.magneticStoreRejectedDataLocation = Output.ofNullable(magneticStoreRejectedDataLocation);
             return this;
-        }
-        public TableMagneticStoreWritePropertiesGetArgs build() {
+        }        public TableMagneticStoreWritePropertiesGetArgs build() {
             return new TableMagneticStoreWritePropertiesGetArgs(enableMagneticStoreWrites, magneticStoreRejectedDataLocation);
         }
     }

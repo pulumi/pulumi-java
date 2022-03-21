@@ -77,12 +77,10 @@ public final class ServerEndpointRecallErrorResponse extends io.pulumi.resources
             this.count = Objects.requireNonNull(count);
             return this;
         }
-
         public Builder errorCode(Integer errorCode) {
             this.errorCode = Objects.requireNonNull(errorCode);
             return this;
-        }
-        public ServerEndpointRecallErrorResponse build() {
+        }        public ServerEndpointRecallErrorResponse build() {
             return new ServerEndpointRecallErrorResponse(count, errorCode);
         }
     }

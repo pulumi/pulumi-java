@@ -71,12 +71,10 @@ public final class DiskLocation {
             this.availabilityZone = availabilityZone;
             return this;
         }
-
         public Builder regionName(@Nullable String regionName) {
             this.regionName = regionName;
             return this;
-        }
-        public DiskLocation build() {
+        }        public DiskLocation build() {
             return new DiskLocation(availabilityZone, regionName);
         }
     }

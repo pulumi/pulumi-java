@@ -121,27 +121,28 @@ public final class EnumResponse {
             this.enumvalue = Objects.requireNonNull(enumvalue);
             return this;
         }
-
+        public Builder enumvalue(EnumValueResponse... enumvalue) {
+            return enumvalue(List.of(enumvalue));
+        }
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder options(List<OptionResponse> options) {
             this.options = Objects.requireNonNull(options);
             return this;
         }
-
+        public Builder options(OptionResponse... options) {
+            return options(List.of(options));
+        }
         public Builder sourceContext(SourceContextResponse sourceContext) {
             this.sourceContext = Objects.requireNonNull(sourceContext);
             return this;
         }
-
         public Builder syntax(String syntax) {
             this.syntax = Objects.requireNonNull(syntax);
             return this;
-        }
-        public EnumResponse build() {
+        }        public EnumResponse build() {
             return new EnumResponse(enumvalue, name, options, sourceContext, syntax);
         }
     }

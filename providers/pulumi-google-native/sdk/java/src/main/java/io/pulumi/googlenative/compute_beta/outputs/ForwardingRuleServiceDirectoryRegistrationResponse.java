@@ -85,17 +85,14 @@ public final class ForwardingRuleServiceDirectoryRegistrationResponse {
             this.namespace = Objects.requireNonNull(namespace);
             return this;
         }
-
         public Builder service(String service) {
             this.service = Objects.requireNonNull(service);
             return this;
         }
-
         public Builder serviceDirectoryRegion(String serviceDirectoryRegion) {
             this.serviceDirectoryRegion = Objects.requireNonNull(serviceDirectoryRegion);
             return this;
-        }
-        public ForwardingRuleServiceDirectoryRegistrationResponse build() {
+        }        public ForwardingRuleServiceDirectoryRegistrationResponse build() {
             return new ForwardingRuleServiceDirectoryRegistrationResponse(namespace, service, serviceDirectoryRegion);
         }
     }

@@ -73,12 +73,13 @@ public final class FirehoseDeliveryStreamRedshiftConfigurationProcessingConfigur
             this.enabled = enabled;
             return this;
         }
-
         public Builder processors(@Nullable List<FirehoseDeliveryStreamRedshiftConfigurationProcessingConfigurationProcessor> processors) {
             this.processors = processors;
             return this;
         }
-        public FirehoseDeliveryStreamRedshiftConfigurationProcessingConfiguration build() {
+        public Builder processors(FirehoseDeliveryStreamRedshiftConfigurationProcessingConfigurationProcessor... processors) {
+            return processors(List.of(processors));
+        }        public FirehoseDeliveryStreamRedshiftConfigurationProcessingConfiguration build() {
             return new FirehoseDeliveryStreamRedshiftConfigurationProcessingConfiguration(enabled, processors);
         }
     }

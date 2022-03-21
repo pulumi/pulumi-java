@@ -55,12 +55,10 @@ public final class DeviceTag {
             this.key = key;
             return this;
         }
-
         public Builder value(@Nullable String value) {
             this.value = value;
             return this;
-        }
-        public DeviceTag build() {
+        }        public DeviceTag build() {
             return new DeviceTag(key, value);
         }
     }

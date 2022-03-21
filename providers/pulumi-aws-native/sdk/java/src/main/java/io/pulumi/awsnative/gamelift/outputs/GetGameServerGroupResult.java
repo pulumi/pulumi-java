@@ -255,67 +255,63 @@ public final class GetGameServerGroupResult {
             this.autoScalingGroupArn = autoScalingGroupArn;
             return this;
         }
-
         public Builder autoScalingPolicy(@Nullable GameServerGroupAutoScalingPolicy autoScalingPolicy) {
             this.autoScalingPolicy = autoScalingPolicy;
             return this;
         }
-
         public Builder balancingStrategy(@Nullable GameServerGroupBalancingStrategy balancingStrategy) {
             this.balancingStrategy = balancingStrategy;
             return this;
         }
-
         public Builder gameServerGroupArn(@Nullable String gameServerGroupArn) {
             this.gameServerGroupArn = gameServerGroupArn;
             return this;
         }
-
         public Builder gameServerGroupName(@Nullable String gameServerGroupName) {
             this.gameServerGroupName = gameServerGroupName;
             return this;
         }
-
         public Builder gameServerProtectionPolicy(@Nullable GameServerGroupGameServerProtectionPolicy gameServerProtectionPolicy) {
             this.gameServerProtectionPolicy = gameServerProtectionPolicy;
             return this;
         }
-
         public Builder instanceDefinitions(@Nullable List<GameServerGroupInstanceDefinition> instanceDefinitions) {
             this.instanceDefinitions = instanceDefinitions;
             return this;
         }
-
+        public Builder instanceDefinitions(GameServerGroupInstanceDefinition... instanceDefinitions) {
+            return instanceDefinitions(List.of(instanceDefinitions));
+        }
         public Builder launchTemplate(@Nullable GameServerGroupLaunchTemplate launchTemplate) {
             this.launchTemplate = launchTemplate;
             return this;
         }
-
         public Builder maxSize(@Nullable Double maxSize) {
             this.maxSize = maxSize;
             return this;
         }
-
         public Builder minSize(@Nullable Double minSize) {
             this.minSize = minSize;
             return this;
         }
-
         public Builder roleArn(@Nullable String roleArn) {
             this.roleArn = roleArn;
             return this;
         }
-
         public Builder tags(@Nullable List<GameServerGroupTag> tags) {
             this.tags = tags;
             return this;
         }
-
+        public Builder tags(GameServerGroupTag... tags) {
+            return tags(List.of(tags));
+        }
         public Builder vpcSubnets(@Nullable List<String> vpcSubnets) {
             this.vpcSubnets = vpcSubnets;
             return this;
         }
-        public GetGameServerGroupResult build() {
+        public Builder vpcSubnets(String... vpcSubnets) {
+            return vpcSubnets(List.of(vpcSubnets));
+        }        public GetGameServerGroupResult build() {
             return new GetGameServerGroupResult(autoScalingGroupArn, autoScalingPolicy, balancingStrategy, gameServerGroupArn, gameServerGroupName, gameServerProtectionPolicy, instanceDefinitions, launchTemplate, maxSize, minSize, roleArn, tags, vpcSubnets);
         }
     }

@@ -52,12 +52,10 @@ public final class EnvironmentConfigEncryptionConfigArgs extends io.pulumi.resou
             this.kmsKeyName = Objects.requireNonNull(kmsKeyName);
             return this;
         }
-
         public Builder kmsKeyName(String kmsKeyName) {
             this.kmsKeyName = Output.of(Objects.requireNonNull(kmsKeyName));
             return this;
-        }
-        public EnvironmentConfigEncryptionConfigArgs build() {
+        }        public EnvironmentConfigEncryptionConfigArgs build() {
             return new EnvironmentConfigEncryptionConfigArgs(kmsKeyName);
         }
     }

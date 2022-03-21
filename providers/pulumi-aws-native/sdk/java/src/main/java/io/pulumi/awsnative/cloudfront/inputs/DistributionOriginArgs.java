@@ -156,92 +156,77 @@ public final class DistributionOriginArgs extends io.pulumi.resources.ResourceAr
             this.connectionAttempts = connectionAttempts;
             return this;
         }
-
         public Builder connectionAttempts(@Nullable Integer connectionAttempts) {
             this.connectionAttempts = Output.ofNullable(connectionAttempts);
             return this;
         }
-
         public Builder connectionTimeout(@Nullable Output<Integer> connectionTimeout) {
             this.connectionTimeout = connectionTimeout;
             return this;
         }
-
         public Builder connectionTimeout(@Nullable Integer connectionTimeout) {
             this.connectionTimeout = Output.ofNullable(connectionTimeout);
             return this;
         }
-
         public Builder customOriginConfig(@Nullable Output<DistributionCustomOriginConfigArgs> customOriginConfig) {
             this.customOriginConfig = customOriginConfig;
             return this;
         }
-
         public Builder customOriginConfig(@Nullable DistributionCustomOriginConfigArgs customOriginConfig) {
             this.customOriginConfig = Output.ofNullable(customOriginConfig);
             return this;
         }
-
         public Builder domainName(Output<String> domainName) {
             this.domainName = Objects.requireNonNull(domainName);
             return this;
         }
-
         public Builder domainName(String domainName) {
             this.domainName = Output.of(Objects.requireNonNull(domainName));
             return this;
         }
-
         public Builder id(Output<String> id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder id(String id) {
             this.id = Output.of(Objects.requireNonNull(id));
             return this;
         }
-
         public Builder originCustomHeaders(@Nullable Output<List<DistributionOriginCustomHeaderArgs>> originCustomHeaders) {
             this.originCustomHeaders = originCustomHeaders;
             return this;
         }
-
         public Builder originCustomHeaders(@Nullable List<DistributionOriginCustomHeaderArgs> originCustomHeaders) {
             this.originCustomHeaders = Output.ofNullable(originCustomHeaders);
             return this;
         }
-
+        public Builder originCustomHeaders(DistributionOriginCustomHeaderArgs... originCustomHeaders) {
+            return originCustomHeaders(List.of(originCustomHeaders));
+        }
         public Builder originPath(@Nullable Output<String> originPath) {
             this.originPath = originPath;
             return this;
         }
-
         public Builder originPath(@Nullable String originPath) {
             this.originPath = Output.ofNullable(originPath);
             return this;
         }
-
         public Builder originShield(@Nullable Output<DistributionOriginShieldArgs> originShield) {
             this.originShield = originShield;
             return this;
         }
-
         public Builder originShield(@Nullable DistributionOriginShieldArgs originShield) {
             this.originShield = Output.ofNullable(originShield);
             return this;
         }
-
         public Builder s3OriginConfig(@Nullable Output<DistributionS3OriginConfigArgs> s3OriginConfig) {
             this.s3OriginConfig = s3OriginConfig;
             return this;
         }
-
         public Builder s3OriginConfig(@Nullable DistributionS3OriginConfigArgs s3OriginConfig) {
             this.s3OriginConfig = Output.ofNullable(s3OriginConfig);
             return this;
-        }
-        public DistributionOriginArgs build() {
+        }        public DistributionOriginArgs build() {
             return new DistributionOriginArgs(connectionAttempts, connectionTimeout, customOriginConfig, domainName, id, originCustomHeaders, originPath, originShield, s3OriginConfig);
         }
     }

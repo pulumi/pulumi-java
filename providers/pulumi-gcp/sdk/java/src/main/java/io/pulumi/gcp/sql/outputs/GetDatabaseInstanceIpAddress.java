@@ -61,17 +61,14 @@ public final class GetDatabaseInstanceIpAddress {
             this.ipAddress = Objects.requireNonNull(ipAddress);
             return this;
         }
-
         public Builder timeToRetire(String timeToRetire) {
             this.timeToRetire = Objects.requireNonNull(timeToRetire);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public GetDatabaseInstanceIpAddress build() {
+        }        public GetDatabaseInstanceIpAddress build() {
             return new GetDatabaseInstanceIpAddress(ipAddress, timeToRetire, type);
         }
     }

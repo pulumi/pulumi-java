@@ -76,12 +76,10 @@ public final class ScheduleResponse extends io.pulumi.resources.InvokeArgs {
             this.frequencyInMinutes = Objects.requireNonNull(frequencyInMinutes);
             return this;
         }
-
         public Builder timeWindowInMinutes(Integer timeWindowInMinutes) {
             this.timeWindowInMinutes = Objects.requireNonNull(timeWindowInMinutes);
             return this;
-        }
-        public ScheduleResponse build() {
+        }        public ScheduleResponse build() {
             return new ScheduleResponse(frequencyInMinutes, timeWindowInMinutes);
         }
     }

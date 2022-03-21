@@ -104,22 +104,24 @@ public final class KubernetesResourceResponse {
             this.connectResources = Objects.requireNonNull(connectResources);
             return this;
         }
-
+        public Builder connectResources(ResourceManifestResponse... connectResources) {
+            return connectResources(List.of(connectResources));
+        }
         public Builder membershipCrManifest(String membershipCrManifest) {
             this.membershipCrManifest = Objects.requireNonNull(membershipCrManifest);
             return this;
         }
-
         public Builder membershipResources(List<ResourceManifestResponse> membershipResources) {
             this.membershipResources = Objects.requireNonNull(membershipResources);
             return this;
         }
-
+        public Builder membershipResources(ResourceManifestResponse... membershipResources) {
+            return membershipResources(List.of(membershipResources));
+        }
         public Builder resourceOptions(ResourceOptionsResponse resourceOptions) {
             this.resourceOptions = Objects.requireNonNull(resourceOptions);
             return this;
-        }
-        public KubernetesResourceResponse build() {
+        }        public KubernetesResourceResponse build() {
             return new KubernetesResourceResponse(connectResources, membershipCrManifest, membershipResources, resourceOptions);
         }
     }

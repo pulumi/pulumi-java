@@ -90,22 +90,18 @@ public final class GetSessionArgs extends io.pulumi.resources.InvokeArgs {
             this.databaseId = Objects.requireNonNull(databaseId);
             return this;
         }
-
         public Builder instanceId(String instanceId) {
             this.instanceId = Objects.requireNonNull(instanceId);
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = project;
             return this;
         }
-
         public Builder sessionId(String sessionId) {
             this.sessionId = Objects.requireNonNull(sessionId);
             return this;
-        }
-        public GetSessionArgs build() {
+        }        public GetSessionArgs build() {
             return new GetSessionArgs(databaseId, instanceId, project, sessionId);
         }
     }

@@ -74,12 +74,10 @@ public final class NotificationConfigStreamingConfigArgs extends io.pulumi.resou
             this.filter = Objects.requireNonNull(filter);
             return this;
         }
-
         public Builder filter(String filter) {
             this.filter = Output.of(Objects.requireNonNull(filter));
             return this;
-        }
-        public NotificationConfigStreamingConfigArgs build() {
+        }        public NotificationConfigStreamingConfigArgs build() {
             return new NotificationConfigStreamingConfigArgs(filter);
         }
     }

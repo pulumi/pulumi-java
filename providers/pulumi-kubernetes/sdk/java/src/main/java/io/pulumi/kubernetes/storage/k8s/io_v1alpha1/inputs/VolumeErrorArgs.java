@@ -78,22 +78,18 @@ public final class VolumeErrorArgs extends io.pulumi.resources.ResourceArgs {
             this.message = message;
             return this;
         }
-
         public Builder message(@Nullable String message) {
             this.message = Output.ofNullable(message);
             return this;
         }
-
         public Builder time(@Nullable Output<String> time) {
             this.time = time;
             return this;
         }
-
         public Builder time(@Nullable String time) {
             this.time = Output.ofNullable(time);
             return this;
-        }
-        public VolumeErrorArgs build() {
+        }        public VolumeErrorArgs build() {
             return new VolumeErrorArgs(message, time);
         }
     }

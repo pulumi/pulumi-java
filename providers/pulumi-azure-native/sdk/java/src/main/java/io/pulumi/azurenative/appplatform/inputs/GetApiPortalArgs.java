@@ -88,17 +88,14 @@ public final class GetApiPortalArgs extends io.pulumi.resources.InvokeArgs {
             this.apiPortalName = Objects.requireNonNull(apiPortalName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder serviceName(String serviceName) {
             this.serviceName = Objects.requireNonNull(serviceName);
             return this;
-        }
-        public GetApiPortalArgs build() {
+        }        public GetApiPortalArgs build() {
             return new GetApiPortalArgs(apiPortalName, resourceGroupName, serviceName);
         }
     }

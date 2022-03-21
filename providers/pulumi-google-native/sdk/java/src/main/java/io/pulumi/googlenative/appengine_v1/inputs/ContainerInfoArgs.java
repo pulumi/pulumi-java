@@ -61,12 +61,10 @@ public final class ContainerInfoArgs extends io.pulumi.resources.ResourceArgs {
             this.image = image;
             return this;
         }
-
         public Builder image(@Nullable String image) {
             this.image = Output.ofNullable(image);
             return this;
-        }
-        public ContainerInfoArgs build() {
+        }        public ContainerInfoArgs build() {
             return new ContainerInfoArgs(image);
         }
     }

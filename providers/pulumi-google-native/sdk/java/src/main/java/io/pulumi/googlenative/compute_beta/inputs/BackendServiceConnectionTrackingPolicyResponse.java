@@ -110,22 +110,18 @@ public final class BackendServiceConnectionTrackingPolicyResponse extends io.pul
             this.connectionPersistenceOnUnhealthyBackends = Objects.requireNonNull(connectionPersistenceOnUnhealthyBackends);
             return this;
         }
-
         public Builder enableStrongAffinity(Boolean enableStrongAffinity) {
             this.enableStrongAffinity = Objects.requireNonNull(enableStrongAffinity);
             return this;
         }
-
         public Builder idleTimeoutSec(Integer idleTimeoutSec) {
             this.idleTimeoutSec = Objects.requireNonNull(idleTimeoutSec);
             return this;
         }
-
         public Builder trackingMode(String trackingMode) {
             this.trackingMode = Objects.requireNonNull(trackingMode);
             return this;
-        }
-        public BackendServiceConnectionTrackingPolicyResponse build() {
+        }        public BackendServiceConnectionTrackingPolicyResponse build() {
             return new BackendServiceConnectionTrackingPolicyResponse(connectionPersistenceOnUnhealthyBackends, enableStrongAffinity, idleTimeoutSec, trackingMode);
         }
     }

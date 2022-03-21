@@ -87,17 +87,17 @@ public final class QueryParameterValueResponse {
             this.arrayValues = Objects.requireNonNull(arrayValues);
             return this;
         }
-
+        public Builder arrayValues(QueryParameterValueResponse... arrayValues) {
+            return arrayValues(List.of(arrayValues));
+        }
         public Builder structValues(Map<String,String> structValues) {
             this.structValues = Objects.requireNonNull(structValues);
             return this;
         }
-
         public Builder value(String value) {
             this.value = Objects.requireNonNull(value);
             return this;
-        }
-        public QueryParameterValueResponse build() {
+        }        public QueryParameterValueResponse build() {
             return new QueryParameterValueResponse(arrayValues, structValues, value);
         }
     }

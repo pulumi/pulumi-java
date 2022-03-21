@@ -143,37 +143,30 @@ public final class GetAuthorizationTokenResult {
             this.authorizationToken = Objects.requireNonNull(authorizationToken);
             return this;
         }
-
         public Builder expiresAt(String expiresAt) {
             this.expiresAt = Objects.requireNonNull(expiresAt);
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder password(String password) {
             this.password = Objects.requireNonNull(password);
             return this;
         }
-
         public Builder proxyEndpoint(String proxyEndpoint) {
             this.proxyEndpoint = Objects.requireNonNull(proxyEndpoint);
             return this;
         }
-
         public Builder registryId(@Nullable String registryId) {
             this.registryId = registryId;
             return this;
         }
-
         public Builder userName(String userName) {
             this.userName = Objects.requireNonNull(userName);
             return this;
-        }
-        public GetAuthorizationTokenResult build() {
+        }        public GetAuthorizationTokenResult build() {
             return new GetAuthorizationTokenResult(authorizationToken, expiresAt, id, password, proxyEndpoint, registryId, userName);
         }
     }

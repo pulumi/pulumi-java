@@ -94,32 +94,32 @@ public final class PatchDeploymentPatchConfigAptGetArgs extends io.pulumi.resour
             this.excludes = excludes;
             return this;
         }
-
         public Builder excludes(@Nullable List<String> excludes) {
             this.excludes = Output.ofNullable(excludes);
             return this;
         }
-
+        public Builder excludes(String... excludes) {
+            return excludes(List.of(excludes));
+        }
         public Builder exclusivePackages(@Nullable Output<List<String>> exclusivePackages) {
             this.exclusivePackages = exclusivePackages;
             return this;
         }
-
         public Builder exclusivePackages(@Nullable List<String> exclusivePackages) {
             this.exclusivePackages = Output.ofNullable(exclusivePackages);
             return this;
         }
-
+        public Builder exclusivePackages(String... exclusivePackages) {
+            return exclusivePackages(List.of(exclusivePackages));
+        }
         public Builder type(@Nullable Output<String> type) {
             this.type = type;
             return this;
         }
-
         public Builder type(@Nullable String type) {
             this.type = Output.ofNullable(type);
             return this;
-        }
-        public PatchDeploymentPatchConfigAptGetArgs build() {
+        }        public PatchDeploymentPatchConfigAptGetArgs build() {
             return new PatchDeploymentPatchConfigAptGetArgs(excludes, exclusivePackages, type);
         }
     }

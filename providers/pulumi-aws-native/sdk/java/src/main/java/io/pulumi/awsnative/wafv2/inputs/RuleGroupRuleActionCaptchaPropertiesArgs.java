@@ -57,12 +57,10 @@ public final class RuleGroupRuleActionCaptchaPropertiesArgs extends io.pulumi.re
             this.customRequestHandling = customRequestHandling;
             return this;
         }
-
         public Builder customRequestHandling(@Nullable RuleGroupCustomRequestHandlingArgs customRequestHandling) {
             this.customRequestHandling = Output.ofNullable(customRequestHandling);
             return this;
-        }
-        public RuleGroupRuleActionCaptchaPropertiesArgs build() {
+        }        public RuleGroupRuleActionCaptchaPropertiesArgs build() {
             return new RuleGroupRuleActionCaptchaPropertiesArgs(customRequestHandling);
         }
     }

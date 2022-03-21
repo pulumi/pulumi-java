@@ -57,12 +57,10 @@ public final class PacketMirroringNetworkInfoArgs extends io.pulumi.resources.Re
             this.url = url;
             return this;
         }
-
         public Builder url(@Nullable String url) {
             this.url = Output.ofNullable(url);
             return this;
-        }
-        public PacketMirroringNetworkInfoArgs build() {
+        }        public PacketMirroringNetworkInfoArgs build() {
             return new PacketMirroringNetworkInfoArgs(url);
         }
     }

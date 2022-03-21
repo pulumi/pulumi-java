@@ -71,12 +71,10 @@ public final class LabSupportPropertiesResponse {
             this.enabled = enabled;
             return this;
         }
-
         public Builder markdown(@Nullable String markdown) {
             this.markdown = markdown;
             return this;
-        }
-        public LabSupportPropertiesResponse build() {
+        }        public LabSupportPropertiesResponse build() {
             return new LabSupportPropertiesResponse(enabled, markdown);
         }
     }

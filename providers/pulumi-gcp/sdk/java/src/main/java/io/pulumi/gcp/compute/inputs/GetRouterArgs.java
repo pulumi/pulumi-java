@@ -108,22 +108,18 @@ public final class GetRouterArgs extends io.pulumi.resources.InvokeArgs {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder network(String network) {
             this.network = Objects.requireNonNull(network);
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = project;
             return this;
         }
-
         public Builder region(@Nullable String region) {
             this.region = region;
             return this;
-        }
-        public GetRouterArgs build() {
+        }        public GetRouterArgs build() {
             return new GetRouterArgs(name, network, project, region);
         }
     }

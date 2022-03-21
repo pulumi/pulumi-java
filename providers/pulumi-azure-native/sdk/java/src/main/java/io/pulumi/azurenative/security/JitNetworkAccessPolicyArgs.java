@@ -137,62 +137,56 @@ public final class JitNetworkAccessPolicyArgs extends io.pulumi.resources.Resour
             this.ascLocation = Objects.requireNonNull(ascLocation);
             return this;
         }
-
         public Builder ascLocation(String ascLocation) {
             this.ascLocation = Output.of(Objects.requireNonNull(ascLocation));
             return this;
         }
-
         public Builder jitNetworkAccessPolicyName(@Nullable Output<String> jitNetworkAccessPolicyName) {
             this.jitNetworkAccessPolicyName = jitNetworkAccessPolicyName;
             return this;
         }
-
         public Builder jitNetworkAccessPolicyName(@Nullable String jitNetworkAccessPolicyName) {
             this.jitNetworkAccessPolicyName = Output.ofNullable(jitNetworkAccessPolicyName);
             return this;
         }
-
         public Builder kind(@Nullable Output<String> kind) {
             this.kind = kind;
             return this;
         }
-
         public Builder kind(@Nullable String kind) {
             this.kind = Output.ofNullable(kind);
             return this;
         }
-
         public Builder requests(@Nullable Output<List<JitNetworkAccessRequestArgs>> requests) {
             this.requests = requests;
             return this;
         }
-
         public Builder requests(@Nullable List<JitNetworkAccessRequestArgs> requests) {
             this.requests = Output.ofNullable(requests);
             return this;
         }
-
+        public Builder requests(JitNetworkAccessRequestArgs... requests) {
+            return requests(List.of(requests));
+        }
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder virtualMachines(Output<List<JitNetworkAccessPolicyVirtualMachineArgs>> virtualMachines) {
             this.virtualMachines = Objects.requireNonNull(virtualMachines);
             return this;
         }
-
         public Builder virtualMachines(List<JitNetworkAccessPolicyVirtualMachineArgs> virtualMachines) {
             this.virtualMachines = Output.of(Objects.requireNonNull(virtualMachines));
             return this;
         }
-        public JitNetworkAccessPolicyArgs build() {
+        public Builder virtualMachines(JitNetworkAccessPolicyVirtualMachineArgs... virtualMachines) {
+            return virtualMachines(List.of(virtualMachines));
+        }        public JitNetworkAccessPolicyArgs build() {
             return new JitNetworkAccessPolicyArgs(ascLocation, jitNetworkAccessPolicyName, kind, requests, resourceGroupName, virtualMachines);
         }
     }

@@ -302,82 +302,72 @@ public final class GetVirtualMachineScaleSetVMRunCommandResult {
             this.asyncExecution = asyncExecution;
             return this;
         }
-
         public Builder errorBlobUri(@Nullable String errorBlobUri) {
             this.errorBlobUri = errorBlobUri;
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder instanceView(VirtualMachineRunCommandInstanceViewResponse instanceView) {
             this.instanceView = Objects.requireNonNull(instanceView);
             return this;
         }
-
         public Builder location(String location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder outputBlobUri(@Nullable String outputBlobUri) {
             this.outputBlobUri = outputBlobUri;
             return this;
         }
-
         public Builder parameters(@Nullable List<RunCommandInputParameterResponse> parameters) {
             this.parameters = parameters;
             return this;
         }
-
+        public Builder parameters(RunCommandInputParameterResponse... parameters) {
+            return parameters(List.of(parameters));
+        }
         public Builder protectedParameters(@Nullable List<RunCommandInputParameterResponse> protectedParameters) {
             this.protectedParameters = protectedParameters;
             return this;
         }
-
+        public Builder protectedParameters(RunCommandInputParameterResponse... protectedParameters) {
+            return protectedParameters(List.of(protectedParameters));
+        }
         public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
-
         public Builder runAsPassword(@Nullable String runAsPassword) {
             this.runAsPassword = runAsPassword;
             return this;
         }
-
         public Builder runAsUser(@Nullable String runAsUser) {
             this.runAsUser = runAsUser;
             return this;
         }
-
         public Builder source(@Nullable VirtualMachineRunCommandScriptSourceResponse source) {
             this.source = source;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder timeoutInSeconds(@Nullable Integer timeoutInSeconds) {
             this.timeoutInSeconds = timeoutInSeconds;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public GetVirtualMachineScaleSetVMRunCommandResult build() {
+        }        public GetVirtualMachineScaleSetVMRunCommandResult build() {
             return new GetVirtualMachineScaleSetVMRunCommandResult(asyncExecution, errorBlobUri, id, instanceView, location, name, outputBlobUri, parameters, protectedParameters, provisioningState, runAsPassword, runAsUser, source, tags, timeoutInSeconds, type);
         }
     }

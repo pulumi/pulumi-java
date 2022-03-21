@@ -72,12 +72,10 @@ public final class GetNetworkWatcherArgs extends io.pulumi.resources.InvokeArgs 
             this.networkWatcherName = Objects.requireNonNull(networkWatcherName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
-        }
-        public GetNetworkWatcherArgs build() {
+        }        public GetNetworkWatcherArgs build() {
             return new GetNetworkWatcherArgs(networkWatcherName, resourceGroupName);
         }
     }

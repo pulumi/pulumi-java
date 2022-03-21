@@ -102,22 +102,18 @@ public final class GetServerAzureADOnlyAuthenticationResult {
             this.azureADOnlyAuthentication = Objects.requireNonNull(azureADOnlyAuthentication);
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public GetServerAzureADOnlyAuthenticationResult build() {
+        }        public GetServerAzureADOnlyAuthenticationResult build() {
             return new GetServerAzureADOnlyAuthenticationResult(azureADOnlyAuthentication, id, name, type);
         }
     }

@@ -61,12 +61,10 @@ public final class ShieldedInstanceIntegrityPolicyArgs extends io.pulumi.resourc
             this.updateAutoLearnPolicy = updateAutoLearnPolicy;
             return this;
         }
-
         public Builder updateAutoLearnPolicy(@Nullable Boolean updateAutoLearnPolicy) {
             this.updateAutoLearnPolicy = Output.ofNullable(updateAutoLearnPolicy);
             return this;
-        }
-        public ShieldedInstanceIntegrityPolicyArgs build() {
+        }        public ShieldedInstanceIntegrityPolicyArgs build() {
             return new ShieldedInstanceIntegrityPolicyArgs(updateAutoLearnPolicy);
         }
     }

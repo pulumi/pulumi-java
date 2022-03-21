@@ -50,8 +50,7 @@ public final class GetNetworkProfileArgs extends io.pulumi.resources.InvokeArgs 
         public Builder arn(String arn) {
             this.arn = Objects.requireNonNull(arn);
             return this;
-        }
-        public GetNetworkProfileArgs build() {
+        }        public GetNetworkProfileArgs build() {
             return new GetNetworkProfileArgs(arn);
         }
     }

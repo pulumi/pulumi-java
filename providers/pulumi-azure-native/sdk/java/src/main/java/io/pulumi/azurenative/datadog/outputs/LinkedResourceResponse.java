@@ -53,8 +53,7 @@ public final class LinkedResourceResponse {
         public Builder id(@Nullable String id) {
             this.id = id;
             return this;
-        }
-        public LinkedResourceResponse build() {
+        }        public LinkedResourceResponse build() {
             return new LinkedResourceResponse(id);
         }
     }

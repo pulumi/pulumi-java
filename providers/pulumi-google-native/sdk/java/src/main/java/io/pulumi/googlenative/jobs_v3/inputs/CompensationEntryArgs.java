@@ -147,62 +147,50 @@ public final class CompensationEntryArgs extends io.pulumi.resources.ResourceArg
             this.amount = amount;
             return this;
         }
-
         public Builder amount(@Nullable MoneyArgs amount) {
             this.amount = Output.ofNullable(amount);
             return this;
         }
-
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder expectedUnitsPerYear(@Nullable Output<Double> expectedUnitsPerYear) {
             this.expectedUnitsPerYear = expectedUnitsPerYear;
             return this;
         }
-
         public Builder expectedUnitsPerYear(@Nullable Double expectedUnitsPerYear) {
             this.expectedUnitsPerYear = Output.ofNullable(expectedUnitsPerYear);
             return this;
         }
-
         public Builder range(@Nullable Output<CompensationRangeArgs> range) {
             this.range = range;
             return this;
         }
-
         public Builder range(@Nullable CompensationRangeArgs range) {
             this.range = Output.ofNullable(range);
             return this;
         }
-
         public Builder type(@Nullable Output<CompensationEntryType> type) {
             this.type = type;
             return this;
         }
-
         public Builder type(@Nullable CompensationEntryType type) {
             this.type = Output.ofNullable(type);
             return this;
         }
-
         public Builder unit(@Nullable Output<CompensationEntryUnit> unit) {
             this.unit = unit;
             return this;
         }
-
         public Builder unit(@Nullable CompensationEntryUnit unit) {
             this.unit = Output.ofNullable(unit);
             return this;
-        }
-        public CompensationEntryArgs build() {
+        }        public CompensationEntryArgs build() {
             return new CompensationEntryArgs(amount, description, expectedUnitsPerYear, range, type, unit);
         }
     }

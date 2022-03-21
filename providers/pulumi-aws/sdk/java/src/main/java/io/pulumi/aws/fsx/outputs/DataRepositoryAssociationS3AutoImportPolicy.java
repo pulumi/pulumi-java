@@ -54,7 +54,9 @@ public final class DataRepositoryAssociationS3AutoImportPolicy {
             this.events = events;
             return this;
         }
-        public DataRepositoryAssociationS3AutoImportPolicy build() {
+        public Builder events(String... events) {
+            return events(List.of(events));
+        }        public DataRepositoryAssociationS3AutoImportPolicy build() {
             return new DataRepositoryAssociationS3AutoImportPolicy(events);
         }
     }

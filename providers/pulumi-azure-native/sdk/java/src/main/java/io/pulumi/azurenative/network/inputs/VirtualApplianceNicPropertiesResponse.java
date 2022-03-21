@@ -92,17 +92,14 @@ public final class VirtualApplianceNicPropertiesResponse extends io.pulumi.resou
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder privateIpAddress(String privateIpAddress) {
             this.privateIpAddress = Objects.requireNonNull(privateIpAddress);
             return this;
         }
-
         public Builder publicIpAddress(String publicIpAddress) {
             this.publicIpAddress = Objects.requireNonNull(publicIpAddress);
             return this;
-        }
-        public VirtualApplianceNicPropertiesResponse build() {
+        }        public VirtualApplianceNicPropertiesResponse build() {
             return new VirtualApplianceNicPropertiesResponse(name, privateIpAddress, publicIpAddress);
         }
     }

@@ -110,22 +110,18 @@ public final class TableDataSetResponse extends io.pulumi.resources.InvokeArgs {
             this.minAlignmentPeriod = Objects.requireNonNull(minAlignmentPeriod);
             return this;
         }
-
         public Builder tableDisplayOptions(TableDisplayOptionsResponse tableDisplayOptions) {
             this.tableDisplayOptions = Objects.requireNonNull(tableDisplayOptions);
             return this;
         }
-
         public Builder tableTemplate(String tableTemplate) {
             this.tableTemplate = Objects.requireNonNull(tableTemplate);
             return this;
         }
-
         public Builder timeSeriesQuery(TimeSeriesQueryResponse timeSeriesQuery) {
             this.timeSeriesQuery = Objects.requireNonNull(timeSeriesQuery);
             return this;
-        }
-        public TableDataSetResponse build() {
+        }        public TableDataSetResponse build() {
             return new TableDataSetResponse(minAlignmentPeriod, tableDisplayOptions, tableTemplate, timeSeriesQuery);
         }
     }

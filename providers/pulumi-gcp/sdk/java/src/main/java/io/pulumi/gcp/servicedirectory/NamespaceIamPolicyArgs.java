@@ -75,22 +75,18 @@ public final class NamespaceIamPolicyArgs extends io.pulumi.resources.ResourceAr
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder policyData(Output<String> policyData) {
             this.policyData = Objects.requireNonNull(policyData);
             return this;
         }
-
         public Builder policyData(String policyData) {
             this.policyData = Output.of(Objects.requireNonNull(policyData));
             return this;
-        }
-        public NamespaceIamPolicyArgs build() {
+        }        public NamespaceIamPolicyArgs build() {
             return new NamespaceIamPolicyArgs(name, policyData);
         }
     }

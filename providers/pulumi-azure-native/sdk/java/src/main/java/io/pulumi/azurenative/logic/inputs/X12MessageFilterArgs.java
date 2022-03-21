@@ -62,12 +62,10 @@ public final class X12MessageFilterArgs extends io.pulumi.resources.ResourceArgs
             this.messageFilterType = Objects.requireNonNull(messageFilterType);
             return this;
         }
-
         public Builder messageFilterType(Either<String,MessageFilterType> messageFilterType) {
             this.messageFilterType = Output.of(Objects.requireNonNull(messageFilterType));
             return this;
-        }
-        public X12MessageFilterArgs build() {
+        }        public X12MessageFilterArgs build() {
             return new X12MessageFilterArgs(messageFilterType);
         }
     }

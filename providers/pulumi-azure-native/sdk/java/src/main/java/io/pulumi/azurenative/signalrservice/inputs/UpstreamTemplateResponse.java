@@ -124,22 +124,18 @@ public final class UpstreamTemplateResponse extends io.pulumi.resources.InvokeAr
             this.categoryPattern = categoryPattern;
             return this;
         }
-
         public Builder eventPattern(@Nullable String eventPattern) {
             this.eventPattern = eventPattern;
             return this;
         }
-
         public Builder hubPattern(@Nullable String hubPattern) {
             this.hubPattern = hubPattern;
             return this;
         }
-
         public Builder urlTemplate(String urlTemplate) {
             this.urlTemplate = Objects.requireNonNull(urlTemplate);
             return this;
-        }
-        public UpstreamTemplateResponse build() {
+        }        public UpstreamTemplateResponse build() {
             return new UpstreamTemplateResponse(categoryPattern, eventPattern, hubPattern, urlTemplate);
         }
     }

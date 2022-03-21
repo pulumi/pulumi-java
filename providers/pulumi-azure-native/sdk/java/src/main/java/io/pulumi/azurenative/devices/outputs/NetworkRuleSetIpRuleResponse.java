@@ -87,17 +87,14 @@ public final class NetworkRuleSetIpRuleResponse {
             this.action = action;
             return this;
         }
-
         public Builder filterName(String filterName) {
             this.filterName = Objects.requireNonNull(filterName);
             return this;
         }
-
         public Builder ipMask(String ipMask) {
             this.ipMask = Objects.requireNonNull(ipMask);
             return this;
-        }
-        public NetworkRuleSetIpRuleResponse build() {
+        }        public NetworkRuleSetIpRuleResponse build() {
             return new NetworkRuleSetIpRuleResponse(action, filterName, ipMask);
         }
     }

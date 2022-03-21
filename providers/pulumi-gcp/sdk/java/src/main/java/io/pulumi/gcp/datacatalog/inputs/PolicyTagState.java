@@ -147,62 +147,53 @@ public final class PolicyTagState extends io.pulumi.resources.ResourceArgs {
             this.childPolicyTags = childPolicyTags;
             return this;
         }
-
         public Builder childPolicyTags(@Nullable List<String> childPolicyTags) {
             this.childPolicyTags = Output.ofNullable(childPolicyTags);
             return this;
         }
-
+        public Builder childPolicyTags(String... childPolicyTags) {
+            return childPolicyTags(List.of(childPolicyTags));
+        }
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder displayName(@Nullable Output<String> displayName) {
             this.displayName = displayName;
             return this;
         }
-
         public Builder displayName(@Nullable String displayName) {
             this.displayName = Output.ofNullable(displayName);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder parentPolicyTag(@Nullable Output<String> parentPolicyTag) {
             this.parentPolicyTag = parentPolicyTag;
             return this;
         }
-
         public Builder parentPolicyTag(@Nullable String parentPolicyTag) {
             this.parentPolicyTag = Output.ofNullable(parentPolicyTag);
             return this;
         }
-
         public Builder taxonomy(@Nullable Output<String> taxonomy) {
             this.taxonomy = taxonomy;
             return this;
         }
-
         public Builder taxonomy(@Nullable String taxonomy) {
             this.taxonomy = Output.ofNullable(taxonomy);
             return this;
-        }
-        public PolicyTagState build() {
+        }        public PolicyTagState build() {
             return new PolicyTagState(childPolicyTags, description, displayName, name, parentPolicyTag, taxonomy);
         }
     }

@@ -229,62 +229,59 @@ public final class GetLocationHDFSResult {
             this.agentArns = agentArns;
             return this;
         }
-
+        public Builder agentArns(String... agentArns) {
+            return agentArns(List.of(agentArns));
+        }
         public Builder authenticationType(@Nullable LocationHDFSAuthenticationType authenticationType) {
             this.authenticationType = authenticationType;
             return this;
         }
-
         public Builder blockSize(@Nullable Integer blockSize) {
             this.blockSize = blockSize;
             return this;
         }
-
         public Builder kerberosPrincipal(@Nullable String kerberosPrincipal) {
             this.kerberosPrincipal = kerberosPrincipal;
             return this;
         }
-
         public Builder kmsKeyProviderUri(@Nullable String kmsKeyProviderUri) {
             this.kmsKeyProviderUri = kmsKeyProviderUri;
             return this;
         }
-
         public Builder locationArn(@Nullable String locationArn) {
             this.locationArn = locationArn;
             return this;
         }
-
         public Builder locationUri(@Nullable String locationUri) {
             this.locationUri = locationUri;
             return this;
         }
-
         public Builder nameNodes(@Nullable List<LocationHDFSNameNode> nameNodes) {
             this.nameNodes = nameNodes;
             return this;
         }
-
+        public Builder nameNodes(LocationHDFSNameNode... nameNodes) {
+            return nameNodes(List.of(nameNodes));
+        }
         public Builder qopConfiguration(@Nullable LocationHDFSQopConfiguration qopConfiguration) {
             this.qopConfiguration = qopConfiguration;
             return this;
         }
-
         public Builder replicationFactor(@Nullable Integer replicationFactor) {
             this.replicationFactor = replicationFactor;
             return this;
         }
-
         public Builder simpleUser(@Nullable String simpleUser) {
             this.simpleUser = simpleUser;
             return this;
         }
-
         public Builder tags(@Nullable List<LocationHDFSTag> tags) {
             this.tags = tags;
             return this;
         }
-        public GetLocationHDFSResult build() {
+        public Builder tags(LocationHDFSTag... tags) {
+            return tags(List.of(tags));
+        }        public GetLocationHDFSResult build() {
             return new GetLocationHDFSResult(agentArns, authenticationType, blockSize, kerberosPrincipal, kmsKeyProviderUri, locationArn, locationUri, nameNodes, qopConfiguration, replicationFactor, simpleUser, tags);
         }
     }

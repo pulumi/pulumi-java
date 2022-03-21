@@ -82,17 +82,17 @@ public final class BotFulfillmentStartResponseSpecification {
             this.allowInterrupt = allowInterrupt;
             return this;
         }
-
         public Builder delayInSeconds(Integer delayInSeconds) {
             this.delayInSeconds = Objects.requireNonNull(delayInSeconds);
             return this;
         }
-
         public Builder messageGroups(List<BotMessageGroup> messageGroups) {
             this.messageGroups = Objects.requireNonNull(messageGroups);
             return this;
         }
-        public BotFulfillmentStartResponseSpecification build() {
+        public Builder messageGroups(BotMessageGroup... messageGroups) {
+            return messageGroups(List.of(messageGroups));
+        }        public BotFulfillmentStartResponseSpecification build() {
             return new BotFulfillmentStartResponseSpecification(allowInterrupt, delayInSeconds, messageGroups);
         }
     }

@@ -79,22 +79,21 @@ public final class HostAliasArgs extends io.pulumi.resources.ResourceArgs {
             this.hostnames = hostnames;
             return this;
         }
-
         public Builder hostnames(@Nullable List<String> hostnames) {
             this.hostnames = Output.ofNullable(hostnames);
             return this;
         }
-
+        public Builder hostnames(String... hostnames) {
+            return hostnames(List.of(hostnames));
+        }
         public Builder ip(@Nullable Output<String> ip) {
             this.ip = ip;
             return this;
         }
-
         public Builder ip(@Nullable String ip) {
             this.ip = Output.ofNullable(ip);
             return this;
-        }
-        public HostAliasArgs build() {
+        }        public HostAliasArgs build() {
             return new HostAliasArgs(hostnames, ip);
         }
     }

@@ -50,8 +50,7 @@ public final class GetHostedZoneArgs extends io.pulumi.resources.InvokeArgs {
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
-        }
-        public GetHostedZoneArgs build() {
+        }        public GetHostedZoneArgs build() {
             return new GetHostedZoneArgs(id);
         }
     }

@@ -104,42 +104,40 @@ public final class FirewallDomainListArgs extends io.pulumi.resources.ResourceAr
             this.domainFileUrl = domainFileUrl;
             return this;
         }
-
         public Builder domainFileUrl(@Nullable String domainFileUrl) {
             this.domainFileUrl = Output.ofNullable(domainFileUrl);
             return this;
         }
-
         public Builder domains(@Nullable Output<List<String>> domains) {
             this.domains = domains;
             return this;
         }
-
         public Builder domains(@Nullable List<String> domains) {
             this.domains = Output.ofNullable(domains);
             return this;
         }
-
+        public Builder domains(String... domains) {
+            return domains(List.of(domains));
+        }
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder tags(@Nullable Output<List<FirewallDomainListTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable List<FirewallDomainListTagArgs> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-        public FirewallDomainListArgs build() {
+        public Builder tags(FirewallDomainListTagArgs... tags) {
+            return tags(List.of(tags));
+        }        public FirewallDomainListArgs build() {
             return new FirewallDomainListArgs(domainFileUrl, domains, name, tags);
         }
     }

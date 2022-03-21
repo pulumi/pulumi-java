@@ -174,42 +174,34 @@ public final class RepoSourceResponse extends io.pulumi.resources.InvokeArgs {
             this.branchName = Objects.requireNonNull(branchName);
             return this;
         }
-
         public Builder commitSha(String commitSha) {
             this.commitSha = Objects.requireNonNull(commitSha);
             return this;
         }
-
         public Builder dir(String dir) {
             this.dir = Objects.requireNonNull(dir);
             return this;
         }
-
         public Builder invertRegex(Boolean invertRegex) {
             this.invertRegex = Objects.requireNonNull(invertRegex);
             return this;
         }
-
         public Builder project(String project) {
             this.project = Objects.requireNonNull(project);
             return this;
         }
-
         public Builder repoName(String repoName) {
             this.repoName = Objects.requireNonNull(repoName);
             return this;
         }
-
         public Builder substitutions(Map<String,String> substitutions) {
             this.substitutions = Objects.requireNonNull(substitutions);
             return this;
         }
-
         public Builder tagName(String tagName) {
             this.tagName = Objects.requireNonNull(tagName);
             return this;
-        }
-        public RepoSourceResponse build() {
+        }        public RepoSourceResponse build() {
             return new RepoSourceResponse(branchName, commitSha, dir, invertRegex, project, repoName, substitutions, tagName);
         }
     }

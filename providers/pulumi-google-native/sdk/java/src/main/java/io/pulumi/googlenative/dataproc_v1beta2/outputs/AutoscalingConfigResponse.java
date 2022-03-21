@@ -51,8 +51,7 @@ public final class AutoscalingConfigResponse {
         public Builder policyUri(String policyUri) {
             this.policyUri = Objects.requireNonNull(policyUri);
             return this;
-        }
-        public AutoscalingConfigResponse build() {
+        }        public AutoscalingConfigResponse build() {
             return new AutoscalingConfigResponse(policyUri);
         }
     }

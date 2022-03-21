@@ -118,27 +118,22 @@ public final class AndroidRoboTestResponse {
             this.appInitialActivity = Objects.requireNonNull(appInitialActivity);
             return this;
         }
-
         public Builder bootstrapPackageId(String bootstrapPackageId) {
             this.bootstrapPackageId = Objects.requireNonNull(bootstrapPackageId);
             return this;
         }
-
         public Builder bootstrapRunnerClass(String bootstrapRunnerClass) {
             this.bootstrapRunnerClass = Objects.requireNonNull(bootstrapRunnerClass);
             return this;
         }
-
         public Builder maxDepth(Integer maxDepth) {
             this.maxDepth = Objects.requireNonNull(maxDepth);
             return this;
         }
-
         public Builder maxSteps(Integer maxSteps) {
             this.maxSteps = Objects.requireNonNull(maxSteps);
             return this;
-        }
-        public AndroidRoboTestResponse build() {
+        }        public AndroidRoboTestResponse build() {
             return new AndroidRoboTestResponse(appInitialActivity, bootstrapPackageId, bootstrapRunnerClass, maxDepth, maxSteps);
         }
     }

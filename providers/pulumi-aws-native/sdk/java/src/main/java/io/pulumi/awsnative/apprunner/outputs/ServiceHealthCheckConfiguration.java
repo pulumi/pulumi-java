@@ -137,32 +137,26 @@ public final class ServiceHealthCheckConfiguration {
             this.healthyThreshold = healthyThreshold;
             return this;
         }
-
         public Builder interval(@Nullable Integer interval) {
             this.interval = interval;
             return this;
         }
-
         public Builder path(@Nullable String path) {
             this.path = path;
             return this;
         }
-
         public Builder protocol(@Nullable ServiceHealthCheckConfigurationProtocol protocol) {
             this.protocol = protocol;
             return this;
         }
-
         public Builder timeout(@Nullable Integer timeout) {
             this.timeout = timeout;
             return this;
         }
-
         public Builder unhealthyThreshold(@Nullable Integer unhealthyThreshold) {
             this.unhealthyThreshold = unhealthyThreshold;
             return this;
-        }
-        public ServiceHealthCheckConfiguration build() {
+        }        public ServiceHealthCheckConfiguration build() {
             return new ServiceHealthCheckConfiguration(healthyThreshold, interval, path, protocol, timeout, unhealthyThreshold);
         }
     }

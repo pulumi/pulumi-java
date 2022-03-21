@@ -58,8 +58,7 @@ public final class GooglePrivacyDlpV2CloudStorageFileSetResponse extends io.pulu
         public Builder url(String url) {
             this.url = Objects.requireNonNull(url);
             return this;
-        }
-        public GooglePrivacyDlpV2CloudStorageFileSetResponse build() {
+        }        public GooglePrivacyDlpV2CloudStorageFileSetResponse build() {
             return new GooglePrivacyDlpV2CloudStorageFileSetResponse(url);
         }
     }

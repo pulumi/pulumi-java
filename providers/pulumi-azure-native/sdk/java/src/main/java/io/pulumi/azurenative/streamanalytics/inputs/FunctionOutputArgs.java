@@ -61,12 +61,10 @@ public final class FunctionOutputArgs extends io.pulumi.resources.ResourceArgs {
             this.dataType = dataType;
             return this;
         }
-
         public Builder dataType(@Nullable String dataType) {
             this.dataType = Output.ofNullable(dataType);
             return this;
-        }
-        public FunctionOutputArgs build() {
+        }        public FunctionOutputArgs build() {
             return new FunctionOutputArgs(dataType);
         }
     }

@@ -80,22 +80,21 @@ public final class NetworkRefArgs extends io.pulumi.resources.ResourceArgs {
             this.endpointRefs = endpointRefs;
             return this;
         }
-
         public Builder endpointRefs(@Nullable List<EndpointRefArgs> endpointRefs) {
             this.endpointRefs = Output.ofNullable(endpointRefs);
             return this;
         }
-
+        public Builder endpointRefs(EndpointRefArgs... endpointRefs) {
+            return endpointRefs(List.of(endpointRefs));
+        }
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
-        }
-        public NetworkRefArgs build() {
+        }        public NetworkRefArgs build() {
             return new NetworkRefArgs(endpointRefs, name);
         }
     }

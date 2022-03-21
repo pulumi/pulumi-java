@@ -57,12 +57,10 @@ public final class AzureClusterControlPlaneMainVolumeArgs extends io.pulumi.reso
             this.sizeGib = sizeGib;
             return this;
         }
-
         public Builder sizeGib(@Nullable Integer sizeGib) {
             this.sizeGib = Output.ofNullable(sizeGib);
             return this;
-        }
-        public AzureClusterControlPlaneMainVolumeArgs build() {
+        }        public AzureClusterControlPlaneMainVolumeArgs build() {
             return new AzureClusterControlPlaneMainVolumeArgs(sizeGib);
         }
     }

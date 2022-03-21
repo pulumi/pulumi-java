@@ -97,17 +97,17 @@ public final class VirtualMachinePatchStatusResponse extends io.pulumi.resources
             this.availablePatchSummary = availablePatchSummary;
             return this;
         }
-
         public Builder configurationStatuses(List<InstanceViewStatusResponse> configurationStatuses) {
             this.configurationStatuses = Objects.requireNonNull(configurationStatuses);
             return this;
         }
-
+        public Builder configurationStatuses(InstanceViewStatusResponse... configurationStatuses) {
+            return configurationStatuses(List.of(configurationStatuses));
+        }
         public Builder lastPatchInstallationSummary(@Nullable LastPatchInstallationSummaryResponse lastPatchInstallationSummary) {
             this.lastPatchInstallationSummary = lastPatchInstallationSummary;
             return this;
-        }
-        public VirtualMachinePatchStatusResponse build() {
+        }        public VirtualMachinePatchStatusResponse build() {
             return new VirtualMachinePatchStatusResponse(availablePatchSummary, configurationStatuses, lastPatchInstallationSummary);
         }
     }

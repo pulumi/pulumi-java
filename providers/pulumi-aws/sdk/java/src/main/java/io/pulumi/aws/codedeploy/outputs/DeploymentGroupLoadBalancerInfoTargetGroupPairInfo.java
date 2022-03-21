@@ -90,17 +90,17 @@ public final class DeploymentGroupLoadBalancerInfoTargetGroupPairInfo {
             this.prodTrafficRoute = Objects.requireNonNull(prodTrafficRoute);
             return this;
         }
-
         public Builder targetGroups(List<DeploymentGroupLoadBalancerInfoTargetGroupPairInfoTargetGroup> targetGroups) {
             this.targetGroups = Objects.requireNonNull(targetGroups);
             return this;
         }
-
+        public Builder targetGroups(DeploymentGroupLoadBalancerInfoTargetGroupPairInfoTargetGroup... targetGroups) {
+            return targetGroups(List.of(targetGroups));
+        }
         public Builder testTrafficRoute(@Nullable DeploymentGroupLoadBalancerInfoTargetGroupPairInfoTestTrafficRoute testTrafficRoute) {
             this.testTrafficRoute = testTrafficRoute;
             return this;
-        }
-        public DeploymentGroupLoadBalancerInfoTargetGroupPairInfo build() {
+        }        public DeploymentGroupLoadBalancerInfoTargetGroupPairInfo build() {
             return new DeploymentGroupLoadBalancerInfoTargetGroupPairInfo(prodTrafficRoute, targetGroups, testTrafficRoute);
         }
     }

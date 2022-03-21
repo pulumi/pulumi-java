@@ -53,8 +53,7 @@ public final class InstanceGroupManagerStatusStatefulPerInstanceConfig {
         public Builder allEffective(@Nullable Boolean allEffective) {
             this.allEffective = allEffective;
             return this;
-        }
-        public InstanceGroupManagerStatusStatefulPerInstanceConfig build() {
+        }        public InstanceGroupManagerStatusStatefulPerInstanceConfig build() {
             return new InstanceGroupManagerStatusStatefulPerInstanceConfig(allEffective);
         }
     }

@@ -122,52 +122,42 @@ public final class RepositoryPermissionsPolicyArgs extends io.pulumi.resources.R
             this.domain = Objects.requireNonNull(domain);
             return this;
         }
-
         public Builder domain(String domain) {
             this.domain = Output.of(Objects.requireNonNull(domain));
             return this;
         }
-
         public Builder domainOwner(@Nullable Output<String> domainOwner) {
             this.domainOwner = domainOwner;
             return this;
         }
-
         public Builder domainOwner(@Nullable String domainOwner) {
             this.domainOwner = Output.ofNullable(domainOwner);
             return this;
         }
-
         public Builder policyDocument(Output<String> policyDocument) {
             this.policyDocument = Objects.requireNonNull(policyDocument);
             return this;
         }
-
         public Builder policyDocument(String policyDocument) {
             this.policyDocument = Output.of(Objects.requireNonNull(policyDocument));
             return this;
         }
-
         public Builder policyRevision(@Nullable Output<String> policyRevision) {
             this.policyRevision = policyRevision;
             return this;
         }
-
         public Builder policyRevision(@Nullable String policyRevision) {
             this.policyRevision = Output.ofNullable(policyRevision);
             return this;
         }
-
         public Builder repository(Output<String> repository) {
             this.repository = Objects.requireNonNull(repository);
             return this;
         }
-
         public Builder repository(String repository) {
             this.repository = Output.of(Objects.requireNonNull(repository));
             return this;
-        }
-        public RepositoryPermissionsPolicyArgs build() {
+        }        public RepositoryPermissionsPolicyArgs build() {
             return new RepositoryPermissionsPolicyArgs(domain, domainOwner, policyDocument, policyRevision, repository);
         }
     }

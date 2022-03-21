@@ -75,22 +75,18 @@ public final class EgressOnlyInternetGatewayArgs extends io.pulumi.resources.Res
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
         public Builder vpcId(Output<String> vpcId) {
             this.vpcId = Objects.requireNonNull(vpcId);
             return this;
         }
-
         public Builder vpcId(String vpcId) {
             this.vpcId = Output.of(Objects.requireNonNull(vpcId));
             return this;
-        }
-        public EgressOnlyInternetGatewayArgs build() {
+        }        public EgressOnlyInternetGatewayArgs build() {
             return new EgressOnlyInternetGatewayArgs(tags, vpcId);
         }
     }

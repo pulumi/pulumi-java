@@ -107,22 +107,21 @@ public final class VirtualNodeSpecBackendVirtualServiceClientPolicyTls {
             this.certificate = certificate;
             return this;
         }
-
         public Builder enforce(@Nullable Boolean enforce) {
             this.enforce = enforce;
             return this;
         }
-
         public Builder ports(@Nullable List<Integer> ports) {
             this.ports = ports;
             return this;
         }
-
+        public Builder ports(Integer... ports) {
+            return ports(List.of(ports));
+        }
         public Builder validation(VirtualNodeSpecBackendVirtualServiceClientPolicyTlsValidation validation) {
             this.validation = Objects.requireNonNull(validation);
             return this;
-        }
-        public VirtualNodeSpecBackendVirtualServiceClientPolicyTls build() {
+        }        public VirtualNodeSpecBackendVirtualServiceClientPolicyTls build() {
             return new VirtualNodeSpecBackendVirtualServiceClientPolicyTls(certificate, enforce, ports, validation);
         }
     }

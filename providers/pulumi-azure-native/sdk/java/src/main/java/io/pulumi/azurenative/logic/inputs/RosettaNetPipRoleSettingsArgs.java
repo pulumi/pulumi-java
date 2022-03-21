@@ -160,72 +160,58 @@ public final class RosettaNetPipRoleSettingsArgs extends io.pulumi.resources.Res
             this.action = Objects.requireNonNull(action);
             return this;
         }
-
         public Builder action(String action) {
             this.action = Output.of(Objects.requireNonNull(action));
             return this;
         }
-
         public Builder businessDocument(Output<RosettaNetPipBusinessDocumentArgs> businessDocument) {
             this.businessDocument = Objects.requireNonNull(businessDocument);
             return this;
         }
-
         public Builder businessDocument(RosettaNetPipBusinessDocumentArgs businessDocument) {
             this.businessDocument = Output.of(Objects.requireNonNull(businessDocument));
             return this;
         }
-
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder role(Output<String> role) {
             this.role = Objects.requireNonNull(role);
             return this;
         }
-
         public Builder role(String role) {
             this.role = Output.of(Objects.requireNonNull(role));
             return this;
         }
-
         public Builder roleType(Output<RosettaNetPipRoleType> roleType) {
             this.roleType = Objects.requireNonNull(roleType);
             return this;
         }
-
         public Builder roleType(RosettaNetPipRoleType roleType) {
             this.roleType = Output.of(Objects.requireNonNull(roleType));
             return this;
         }
-
         public Builder service(Output<String> service) {
             this.service = Objects.requireNonNull(service);
             return this;
         }
-
         public Builder service(String service) {
             this.service = Output.of(Objects.requireNonNull(service));
             return this;
         }
-
         public Builder serviceClassification(Output<String> serviceClassification) {
             this.serviceClassification = Objects.requireNonNull(serviceClassification);
             return this;
         }
-
         public Builder serviceClassification(String serviceClassification) {
             this.serviceClassification = Output.of(Objects.requireNonNull(serviceClassification));
             return this;
-        }
-        public RosettaNetPipRoleSettingsArgs build() {
+        }        public RosettaNetPipRoleSettingsArgs build() {
             return new RosettaNetPipRoleSettingsArgs(action, businessDocument, description, role, roleType, service, serviceClassification);
         }
     }

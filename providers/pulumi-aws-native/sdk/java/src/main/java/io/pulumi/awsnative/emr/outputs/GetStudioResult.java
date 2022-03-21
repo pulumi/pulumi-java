@@ -201,52 +201,48 @@ public final class GetStudioResult {
             this.arn = arn;
             return this;
         }
-
         public Builder defaultS3Location(@Nullable String defaultS3Location) {
             this.defaultS3Location = defaultS3Location;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
-
         public Builder idpAuthUrl(@Nullable String idpAuthUrl) {
             this.idpAuthUrl = idpAuthUrl;
             return this;
         }
-
         public Builder idpRelayStateParameterName(@Nullable String idpRelayStateParameterName) {
             this.idpRelayStateParameterName = idpRelayStateParameterName;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
-
         public Builder studioId(@Nullable String studioId) {
             this.studioId = studioId;
             return this;
         }
-
         public Builder subnetIds(@Nullable List<String> subnetIds) {
             this.subnetIds = subnetIds;
             return this;
         }
-
+        public Builder subnetIds(String... subnetIds) {
+            return subnetIds(List.of(subnetIds));
+        }
         public Builder tags(@Nullable List<StudioTag> tags) {
             this.tags = tags;
             return this;
         }
-
+        public Builder tags(StudioTag... tags) {
+            return tags(List.of(tags));
+        }
         public Builder url(@Nullable String url) {
             this.url = url;
             return this;
-        }
-        public GetStudioResult build() {
+        }        public GetStudioResult build() {
             return new GetStudioResult(arn, defaultS3Location, description, idpAuthUrl, idpRelayStateParameterName, name, studioId, subnetIds, tags, url);
         }
     }

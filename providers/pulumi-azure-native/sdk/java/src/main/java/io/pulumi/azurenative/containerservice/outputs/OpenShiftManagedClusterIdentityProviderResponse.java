@@ -72,12 +72,10 @@ public final class OpenShiftManagedClusterIdentityProviderResponse {
             this.name = name;
             return this;
         }
-
         public Builder provider(@Nullable OpenShiftManagedClusterAADIdentityProviderResponse provider) {
             this.provider = provider;
             return this;
-        }
-        public OpenShiftManagedClusterIdentityProviderResponse build() {
+        }        public OpenShiftManagedClusterIdentityProviderResponse build() {
             return new OpenShiftManagedClusterIdentityProviderResponse(name, provider);
         }
     }

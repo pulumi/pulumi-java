@@ -63,12 +63,10 @@ public final class FailoverGroupReadOnlyEndpointArgs extends io.pulumi.resources
             this.failoverPolicy = failoverPolicy;
             return this;
         }
-
         public Builder failoverPolicy(@Nullable Either<String,ReadOnlyEndpointFailoverPolicy> failoverPolicy) {
             this.failoverPolicy = Output.ofNullable(failoverPolicy);
             return this;
-        }
-        public FailoverGroupReadOnlyEndpointArgs build() {
+        }        public FailoverGroupReadOnlyEndpointArgs build() {
             return new FailoverGroupReadOnlyEndpointArgs(failoverPolicy);
         }
     }

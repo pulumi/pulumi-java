@@ -53,12 +53,10 @@ public final class SafetyRuleTag {
             this.key = Objects.requireNonNull(key);
             return this;
         }
-
         public Builder value(String value) {
             this.value = Objects.requireNonNull(value);
             return this;
-        }
-        public SafetyRuleTag build() {
+        }        public SafetyRuleTag build() {
             return new SafetyRuleTag(key, value);
         }
     }

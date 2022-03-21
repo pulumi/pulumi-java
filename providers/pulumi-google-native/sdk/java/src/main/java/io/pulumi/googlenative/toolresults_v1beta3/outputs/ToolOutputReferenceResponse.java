@@ -87,17 +87,14 @@ public final class ToolOutputReferenceResponse {
             this.creationTime = Objects.requireNonNull(creationTime);
             return this;
         }
-
         public Builder output(FileReferenceResponse output) {
             this.output = Objects.requireNonNull(output);
             return this;
         }
-
         public Builder testCase(TestCaseReferenceResponse testCase) {
             this.testCase = Objects.requireNonNull(testCase);
             return this;
-        }
-        public ToolOutputReferenceResponse build() {
+        }        public ToolOutputReferenceResponse build() {
             return new ToolOutputReferenceResponse(creationTime, output, testCase);
         }
     }

@@ -62,7 +62,9 @@ public final class IPAccessControlResponse extends io.pulumi.resources.InvokeArg
             this.allow = allow;
             return this;
         }
-        public IPAccessControlResponse build() {
+        public Builder allow(IPRangeResponse... allow) {
+            return allow(List.of(allow));
+        }        public IPAccessControlResponse build() {
             return new IPAccessControlResponse(allow);
         }
     }

@@ -56,12 +56,10 @@ public final class GatewayRouteSpecHttpRouteMatchGetArgs extends io.pulumi.resou
             this.prefix = Objects.requireNonNull(prefix);
             return this;
         }
-
         public Builder prefix(String prefix) {
             this.prefix = Output.of(Objects.requireNonNull(prefix));
             return this;
-        }
-        public GatewayRouteSpecHttpRouteMatchGetArgs build() {
+        }        public GatewayRouteSpecHttpRouteMatchGetArgs build() {
             return new GatewayRouteSpecHttpRouteMatchGetArgs(prefix);
         }
     }

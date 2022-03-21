@@ -98,32 +98,26 @@ public final class ApplicationGatewaySkuArgs extends io.pulumi.resources.Resourc
             this.capacity = capacity;
             return this;
         }
-
         public Builder capacity(@Nullable Integer capacity) {
             this.capacity = Output.ofNullable(capacity);
             return this;
         }
-
         public Builder name(@Nullable Output<Either<String,ApplicationGatewaySkuName>> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable Either<String,ApplicationGatewaySkuName> name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder tier(@Nullable Output<Either<String,ApplicationGatewayTier>> tier) {
             this.tier = tier;
             return this;
         }
-
         public Builder tier(@Nullable Either<String,ApplicationGatewayTier> tier) {
             this.tier = Output.ofNullable(tier);
             return this;
-        }
-        public ApplicationGatewaySkuArgs build() {
+        }        public ApplicationGatewaySkuArgs build() {
             return new ApplicationGatewaySkuArgs(capacity, name, tier);
         }
     }

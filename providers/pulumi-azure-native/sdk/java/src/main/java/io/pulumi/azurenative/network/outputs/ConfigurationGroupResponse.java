@@ -153,37 +153,33 @@ public final class ConfigurationGroupResponse {
             this.conditionalMembership = conditionalMembership;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
-
         public Builder displayName(@Nullable String displayName) {
             this.displayName = displayName;
             return this;
         }
-
         public Builder groupMembers(@Nullable List<GroupMembersItemResponse> groupMembers) {
             this.groupMembers = groupMembers;
             return this;
         }
-
+        public Builder groupMembers(GroupMembersItemResponse... groupMembers) {
+            return groupMembers(List.of(groupMembers));
+        }
         public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
-
         public Builder memberType(@Nullable String memberType) {
             this.memberType = memberType;
             return this;
         }
-
         public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
-        }
-        public ConfigurationGroupResponse build() {
+        }        public ConfigurationGroupResponse build() {
             return new ConfigurationGroupResponse(conditionalMembership, description, displayName, groupMembers, id, memberType, provisioningState);
         }
     }

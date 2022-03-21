@@ -126,27 +126,22 @@ public final class NotificationEndpointGrpcSettingsResponse extends io.pulumi.re
             this.authority = Objects.requireNonNull(authority);
             return this;
         }
-
         public Builder endpoint(String endpoint) {
             this.endpoint = Objects.requireNonNull(endpoint);
             return this;
         }
-
         public Builder payloadName(String payloadName) {
             this.payloadName = Objects.requireNonNull(payloadName);
             return this;
         }
-
         public Builder resendInterval(DurationResponse resendInterval) {
             this.resendInterval = Objects.requireNonNull(resendInterval);
             return this;
         }
-
         public Builder retryDurationSec(Integer retryDurationSec) {
             this.retryDurationSec = Objects.requireNonNull(retryDurationSec);
             return this;
-        }
-        public NotificationEndpointGrpcSettingsResponse build() {
+        }        public NotificationEndpointGrpcSettingsResponse build() {
             return new NotificationEndpointGrpcSettingsResponse(authority, endpoint, payloadName, resendInterval, retryDurationSec);
         }
     }

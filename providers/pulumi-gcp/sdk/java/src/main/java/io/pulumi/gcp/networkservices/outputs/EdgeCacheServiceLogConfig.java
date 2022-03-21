@@ -74,12 +74,10 @@ public final class EdgeCacheServiceLogConfig {
             this.enable = enable;
             return this;
         }
-
         public Builder sampleRate(@Nullable Double sampleRate) {
             this.sampleRate = sampleRate;
             return this;
-        }
-        public EdgeCacheServiceLogConfig build() {
+        }        public EdgeCacheServiceLogConfig build() {
             return new EdgeCacheServiceLogConfig(enable, sampleRate);
         }
     }

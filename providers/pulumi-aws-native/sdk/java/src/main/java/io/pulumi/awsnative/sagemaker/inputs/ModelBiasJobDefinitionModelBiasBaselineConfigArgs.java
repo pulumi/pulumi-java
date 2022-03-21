@@ -71,22 +71,18 @@ public final class ModelBiasJobDefinitionModelBiasBaselineConfigArgs extends io.
             this.baseliningJobName = baseliningJobName;
             return this;
         }
-
         public Builder baseliningJobName(@Nullable String baseliningJobName) {
             this.baseliningJobName = Output.ofNullable(baseliningJobName);
             return this;
         }
-
         public Builder constraintsResource(@Nullable Output<ModelBiasJobDefinitionConstraintsResourceArgs> constraintsResource) {
             this.constraintsResource = constraintsResource;
             return this;
         }
-
         public Builder constraintsResource(@Nullable ModelBiasJobDefinitionConstraintsResourceArgs constraintsResource) {
             this.constraintsResource = Output.ofNullable(constraintsResource);
             return this;
-        }
-        public ModelBiasJobDefinitionModelBiasBaselineConfigArgs build() {
+        }        public ModelBiasJobDefinitionModelBiasBaselineConfigArgs build() {
             return new ModelBiasJobDefinitionModelBiasBaselineConfigArgs(baseliningJobName, constraintsResource);
         }
     }

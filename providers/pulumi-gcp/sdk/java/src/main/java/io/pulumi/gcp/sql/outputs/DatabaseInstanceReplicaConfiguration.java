@@ -229,57 +229,46 @@ public final class DatabaseInstanceReplicaConfiguration {
             this.caCertificate = caCertificate;
             return this;
         }
-
         public Builder clientCertificate(@Nullable String clientCertificate) {
             this.clientCertificate = clientCertificate;
             return this;
         }
-
         public Builder clientKey(@Nullable String clientKey) {
             this.clientKey = clientKey;
             return this;
         }
-
         public Builder connectRetryInterval(@Nullable Integer connectRetryInterval) {
             this.connectRetryInterval = connectRetryInterval;
             return this;
         }
-
         public Builder dumpFilePath(@Nullable String dumpFilePath) {
             this.dumpFilePath = dumpFilePath;
             return this;
         }
-
         public Builder failoverTarget(@Nullable Boolean failoverTarget) {
             this.failoverTarget = failoverTarget;
             return this;
         }
-
         public Builder masterHeartbeatPeriod(@Nullable Integer masterHeartbeatPeriod) {
             this.masterHeartbeatPeriod = masterHeartbeatPeriod;
             return this;
         }
-
         public Builder password(@Nullable String password) {
             this.password = password;
             return this;
         }
-
         public Builder sslCipher(@Nullable String sslCipher) {
             this.sslCipher = sslCipher;
             return this;
         }
-
         public Builder username(@Nullable String username) {
             this.username = username;
             return this;
         }
-
         public Builder verifyServerCertificate(@Nullable Boolean verifyServerCertificate) {
             this.verifyServerCertificate = verifyServerCertificate;
             return this;
-        }
-        public DatabaseInstanceReplicaConfiguration build() {
+        }        public DatabaseInstanceReplicaConfiguration build() {
             return new DatabaseInstanceReplicaConfiguration(caCertificate, clientCertificate, clientKey, connectRetryInterval, dumpFilePath, failoverTarget, masterHeartbeatPeriod, password, sslCipher, username, verifyServerCertificate);
         }
     }

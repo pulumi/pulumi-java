@@ -124,52 +124,45 @@ public final class LocationFsxLustreArgs extends io.pulumi.resources.ResourceArg
             this.fsxFilesystemArn = Objects.requireNonNull(fsxFilesystemArn);
             return this;
         }
-
         public Builder fsxFilesystemArn(String fsxFilesystemArn) {
             this.fsxFilesystemArn = Output.of(Objects.requireNonNull(fsxFilesystemArn));
             return this;
         }
-
         public Builder securityGroupArns(Output<List<String>> securityGroupArns) {
             this.securityGroupArns = Objects.requireNonNull(securityGroupArns);
             return this;
         }
-
         public Builder securityGroupArns(List<String> securityGroupArns) {
             this.securityGroupArns = Output.of(Objects.requireNonNull(securityGroupArns));
             return this;
         }
-
+        public Builder securityGroupArns(String... securityGroupArns) {
+            return securityGroupArns(List.of(securityGroupArns));
+        }
         public Builder subdirectory(@Nullable Output<String> subdirectory) {
             this.subdirectory = subdirectory;
             return this;
         }
-
         public Builder subdirectory(@Nullable String subdirectory) {
             this.subdirectory = Output.ofNullable(subdirectory);
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
             this.tagsAll = tagsAll;
             return this;
         }
-
         public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
             this.tagsAll = Output.ofNullable(tagsAll);
             return this;
-        }
-        public LocationFsxLustreArgs build() {
+        }        public LocationFsxLustreArgs build() {
             return new LocationFsxLustreArgs(fsxFilesystemArn, securityGroupArns, subdirectory, tags, tagsAll);
         }
     }

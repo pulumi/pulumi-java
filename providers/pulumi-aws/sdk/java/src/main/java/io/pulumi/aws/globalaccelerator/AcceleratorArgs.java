@@ -125,52 +125,42 @@ public final class AcceleratorArgs extends io.pulumi.resources.ResourceArgs {
             this.attributes = attributes;
             return this;
         }
-
         public Builder attributes(@Nullable AcceleratorAttributesArgs attributes) {
             this.attributes = Output.ofNullable(attributes);
             return this;
         }
-
         public Builder enabled(@Nullable Output<Boolean> enabled) {
             this.enabled = enabled;
             return this;
         }
-
         public Builder enabled(@Nullable Boolean enabled) {
             this.enabled = Output.ofNullable(enabled);
             return this;
         }
-
         public Builder ipAddressType(@Nullable Output<String> ipAddressType) {
             this.ipAddressType = ipAddressType;
             return this;
         }
-
         public Builder ipAddressType(@Nullable String ipAddressType) {
             this.ipAddressType = Output.ofNullable(ipAddressType);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
-        }
-        public AcceleratorArgs build() {
+        }        public AcceleratorArgs build() {
             return new AcceleratorArgs(attributes, enabled, ipAddressType, name, tags);
         }
     }

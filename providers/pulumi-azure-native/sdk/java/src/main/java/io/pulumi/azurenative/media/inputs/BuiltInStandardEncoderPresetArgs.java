@@ -80,22 +80,18 @@ public final class BuiltInStandardEncoderPresetArgs extends io.pulumi.resources.
             this.odataType = Objects.requireNonNull(odataType);
             return this;
         }
-
         public Builder odataType(String odataType) {
             this.odataType = Output.of(Objects.requireNonNull(odataType));
             return this;
         }
-
         public Builder presetName(Output<Either<String,EncoderNamedPreset>> presetName) {
             this.presetName = Objects.requireNonNull(presetName);
             return this;
         }
-
         public Builder presetName(Either<String,EncoderNamedPreset> presetName) {
             this.presetName = Output.of(Objects.requireNonNull(presetName));
             return this;
-        }
-        public BuiltInStandardEncoderPresetArgs build() {
+        }        public BuiltInStandardEncoderPresetArgs build() {
             return new BuiltInStandardEncoderPresetArgs(odataType, presetName);
         }
     }

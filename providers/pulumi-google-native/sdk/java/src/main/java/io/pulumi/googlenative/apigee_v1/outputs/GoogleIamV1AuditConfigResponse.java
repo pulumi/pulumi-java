@@ -71,12 +71,13 @@ public final class GoogleIamV1AuditConfigResponse {
             this.auditLogConfigs = Objects.requireNonNull(auditLogConfigs);
             return this;
         }
-
+        public Builder auditLogConfigs(GoogleIamV1AuditLogConfigResponse... auditLogConfigs) {
+            return auditLogConfigs(List.of(auditLogConfigs));
+        }
         public Builder service(String service) {
             this.service = Objects.requireNonNull(service);
             return this;
-        }
-        public GoogleIamV1AuditConfigResponse build() {
+        }        public GoogleIamV1AuditConfigResponse build() {
             return new GoogleIamV1AuditConfigResponse(auditLogConfigs, service);
         }
     }

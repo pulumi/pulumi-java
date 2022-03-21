@@ -69,12 +69,10 @@ public final class GoogleCloudDialogflowV2IntentFollowupIntentInfoResponse {
             this.followupIntentName = Objects.requireNonNull(followupIntentName);
             return this;
         }
-
         public Builder parentFollowupIntentName(String parentFollowupIntentName) {
             this.parentFollowupIntentName = Objects.requireNonNull(parentFollowupIntentName);
             return this;
-        }
-        public GoogleCloudDialogflowV2IntentFollowupIntentInfoResponse build() {
+        }        public GoogleCloudDialogflowV2IntentFollowupIntentInfoResponse build() {
             return new GoogleCloudDialogflowV2IntentFollowupIntentInfoResponse(followupIntentName, parentFollowupIntentName);
         }
     }

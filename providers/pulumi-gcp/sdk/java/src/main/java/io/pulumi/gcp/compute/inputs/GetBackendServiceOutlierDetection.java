@@ -175,57 +175,52 @@ public final class GetBackendServiceOutlierDetection extends io.pulumi.resources
             this.baseEjectionTimes = Objects.requireNonNull(baseEjectionTimes);
             return this;
         }
-
+        public Builder baseEjectionTimes(GetBackendServiceOutlierDetectionBaseEjectionTime... baseEjectionTimes) {
+            return baseEjectionTimes(List.of(baseEjectionTimes));
+        }
         public Builder consecutiveErrors(Integer consecutiveErrors) {
             this.consecutiveErrors = Objects.requireNonNull(consecutiveErrors);
             return this;
         }
-
         public Builder consecutiveGatewayFailure(Integer consecutiveGatewayFailure) {
             this.consecutiveGatewayFailure = Objects.requireNonNull(consecutiveGatewayFailure);
             return this;
         }
-
         public Builder enforcingConsecutiveErrors(Integer enforcingConsecutiveErrors) {
             this.enforcingConsecutiveErrors = Objects.requireNonNull(enforcingConsecutiveErrors);
             return this;
         }
-
         public Builder enforcingConsecutiveGatewayFailure(Integer enforcingConsecutiveGatewayFailure) {
             this.enforcingConsecutiveGatewayFailure = Objects.requireNonNull(enforcingConsecutiveGatewayFailure);
             return this;
         }
-
         public Builder enforcingSuccessRate(Integer enforcingSuccessRate) {
             this.enforcingSuccessRate = Objects.requireNonNull(enforcingSuccessRate);
             return this;
         }
-
         public Builder intervals(List<GetBackendServiceOutlierDetectionInterval> intervals) {
             this.intervals = Objects.requireNonNull(intervals);
             return this;
         }
-
+        public Builder intervals(GetBackendServiceOutlierDetectionInterval... intervals) {
+            return intervals(List.of(intervals));
+        }
         public Builder maxEjectionPercent(Integer maxEjectionPercent) {
             this.maxEjectionPercent = Objects.requireNonNull(maxEjectionPercent);
             return this;
         }
-
         public Builder successRateMinimumHosts(Integer successRateMinimumHosts) {
             this.successRateMinimumHosts = Objects.requireNonNull(successRateMinimumHosts);
             return this;
         }
-
         public Builder successRateRequestVolume(Integer successRateRequestVolume) {
             this.successRateRequestVolume = Objects.requireNonNull(successRateRequestVolume);
             return this;
         }
-
         public Builder successRateStdevFactor(Integer successRateStdevFactor) {
             this.successRateStdevFactor = Objects.requireNonNull(successRateStdevFactor);
             return this;
-        }
-        public GetBackendServiceOutlierDetection build() {
+        }        public GetBackendServiceOutlierDetection build() {
             return new GetBackendServiceOutlierDetection(baseEjectionTimes, consecutiveErrors, consecutiveGatewayFailure, enforcingConsecutiveErrors, enforcingConsecutiveGatewayFailure, enforcingSuccessRate, intervals, maxEjectionPercent, successRateMinimumHosts, successRateRequestVolume, successRateStdevFactor);
         }
     }

@@ -93,32 +93,26 @@ public final class JobAppEngineHttpTargetAppEngineRoutingArgs extends io.pulumi.
             this.instance = instance;
             return this;
         }
-
         public Builder instance(@Nullable String instance) {
             this.instance = Output.ofNullable(instance);
             return this;
         }
-
         public Builder service(@Nullable Output<String> service) {
             this.service = service;
             return this;
         }
-
         public Builder service(@Nullable String service) {
             this.service = Output.ofNullable(service);
             return this;
         }
-
         public Builder version(@Nullable Output<String> version) {
             this.version = version;
             return this;
         }
-
         public Builder version(@Nullable String version) {
             this.version = Output.ofNullable(version);
             return this;
-        }
-        public JobAppEngineHttpTargetAppEngineRoutingArgs build() {
+        }        public JobAppEngineHttpTargetAppEngineRoutingArgs build() {
             return new JobAppEngineHttpTargetAppEngineRoutingArgs(instance, service, version);
         }
     }

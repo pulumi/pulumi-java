@@ -136,32 +136,26 @@ public final class GetCapabilityArgs extends io.pulumi.resources.InvokeArgs {
             this.capabilityName = Objects.requireNonNull(capabilityName);
             return this;
         }
-
         public Builder parentProviderNamespace(String parentProviderNamespace) {
             this.parentProviderNamespace = Objects.requireNonNull(parentProviderNamespace);
             return this;
         }
-
         public Builder parentResourceName(String parentResourceName) {
             this.parentResourceName = Objects.requireNonNull(parentResourceName);
             return this;
         }
-
         public Builder parentResourceType(String parentResourceType) {
             this.parentResourceType = Objects.requireNonNull(parentResourceType);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder targetName(String targetName) {
             this.targetName = Objects.requireNonNull(targetName);
             return this;
-        }
-        public GetCapabilityArgs build() {
+        }        public GetCapabilityArgs build() {
             return new GetCapabilityArgs(capabilityName, parentProviderNamespace, parentResourceName, parentResourceType, resourceGroupName, targetName);
         }
     }

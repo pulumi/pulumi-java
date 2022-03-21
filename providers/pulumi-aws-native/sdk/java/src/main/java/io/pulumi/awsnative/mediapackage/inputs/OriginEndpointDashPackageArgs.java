@@ -285,152 +285,128 @@ public final class OriginEndpointDashPackageArgs extends io.pulumi.resources.Res
             this.adTriggers = adTriggers;
             return this;
         }
-
         public Builder adTriggers(@Nullable List<OriginEndpointDashPackageAdTriggersItem> adTriggers) {
             this.adTriggers = Output.ofNullable(adTriggers);
             return this;
         }
-
+        public Builder adTriggers(OriginEndpointDashPackageAdTriggersItem... adTriggers) {
+            return adTriggers(List.of(adTriggers));
+        }
         public Builder adsOnDeliveryRestrictions(@Nullable Output<OriginEndpointAdsOnDeliveryRestrictions> adsOnDeliveryRestrictions) {
             this.adsOnDeliveryRestrictions = adsOnDeliveryRestrictions;
             return this;
         }
-
         public Builder adsOnDeliveryRestrictions(@Nullable OriginEndpointAdsOnDeliveryRestrictions adsOnDeliveryRestrictions) {
             this.adsOnDeliveryRestrictions = Output.ofNullable(adsOnDeliveryRestrictions);
             return this;
         }
-
         public Builder encryption(@Nullable Output<OriginEndpointDashEncryptionArgs> encryption) {
             this.encryption = encryption;
             return this;
         }
-
         public Builder encryption(@Nullable OriginEndpointDashEncryptionArgs encryption) {
             this.encryption = Output.ofNullable(encryption);
             return this;
         }
-
         public Builder manifestLayout(@Nullable Output<OriginEndpointDashPackageManifestLayout> manifestLayout) {
             this.manifestLayout = manifestLayout;
             return this;
         }
-
         public Builder manifestLayout(@Nullable OriginEndpointDashPackageManifestLayout manifestLayout) {
             this.manifestLayout = Output.ofNullable(manifestLayout);
             return this;
         }
-
         public Builder manifestWindowSeconds(@Nullable Output<Integer> manifestWindowSeconds) {
             this.manifestWindowSeconds = manifestWindowSeconds;
             return this;
         }
-
         public Builder manifestWindowSeconds(@Nullable Integer manifestWindowSeconds) {
             this.manifestWindowSeconds = Output.ofNullable(manifestWindowSeconds);
             return this;
         }
-
         public Builder minBufferTimeSeconds(@Nullable Output<Integer> minBufferTimeSeconds) {
             this.minBufferTimeSeconds = minBufferTimeSeconds;
             return this;
         }
-
         public Builder minBufferTimeSeconds(@Nullable Integer minBufferTimeSeconds) {
             this.minBufferTimeSeconds = Output.ofNullable(minBufferTimeSeconds);
             return this;
         }
-
         public Builder minUpdatePeriodSeconds(@Nullable Output<Integer> minUpdatePeriodSeconds) {
             this.minUpdatePeriodSeconds = minUpdatePeriodSeconds;
             return this;
         }
-
         public Builder minUpdatePeriodSeconds(@Nullable Integer minUpdatePeriodSeconds) {
             this.minUpdatePeriodSeconds = Output.ofNullable(minUpdatePeriodSeconds);
             return this;
         }
-
         public Builder periodTriggers(@Nullable Output<List<OriginEndpointDashPackagePeriodTriggersItem>> periodTriggers) {
             this.periodTriggers = periodTriggers;
             return this;
         }
-
         public Builder periodTriggers(@Nullable List<OriginEndpointDashPackagePeriodTriggersItem> periodTriggers) {
             this.periodTriggers = Output.ofNullable(periodTriggers);
             return this;
         }
-
+        public Builder periodTriggers(OriginEndpointDashPackagePeriodTriggersItem... periodTriggers) {
+            return periodTriggers(List.of(periodTriggers));
+        }
         public Builder profile(@Nullable Output<OriginEndpointDashPackageProfile> profile) {
             this.profile = profile;
             return this;
         }
-
         public Builder profile(@Nullable OriginEndpointDashPackageProfile profile) {
             this.profile = Output.ofNullable(profile);
             return this;
         }
-
         public Builder segmentDurationSeconds(@Nullable Output<Integer> segmentDurationSeconds) {
             this.segmentDurationSeconds = segmentDurationSeconds;
             return this;
         }
-
         public Builder segmentDurationSeconds(@Nullable Integer segmentDurationSeconds) {
             this.segmentDurationSeconds = Output.ofNullable(segmentDurationSeconds);
             return this;
         }
-
         public Builder segmentTemplateFormat(@Nullable Output<OriginEndpointDashPackageSegmentTemplateFormat> segmentTemplateFormat) {
             this.segmentTemplateFormat = segmentTemplateFormat;
             return this;
         }
-
         public Builder segmentTemplateFormat(@Nullable OriginEndpointDashPackageSegmentTemplateFormat segmentTemplateFormat) {
             this.segmentTemplateFormat = Output.ofNullable(segmentTemplateFormat);
             return this;
         }
-
         public Builder streamSelection(@Nullable Output<OriginEndpointStreamSelectionArgs> streamSelection) {
             this.streamSelection = streamSelection;
             return this;
         }
-
         public Builder streamSelection(@Nullable OriginEndpointStreamSelectionArgs streamSelection) {
             this.streamSelection = Output.ofNullable(streamSelection);
             return this;
         }
-
         public Builder suggestedPresentationDelaySeconds(@Nullable Output<Integer> suggestedPresentationDelaySeconds) {
             this.suggestedPresentationDelaySeconds = suggestedPresentationDelaySeconds;
             return this;
         }
-
         public Builder suggestedPresentationDelaySeconds(@Nullable Integer suggestedPresentationDelaySeconds) {
             this.suggestedPresentationDelaySeconds = Output.ofNullable(suggestedPresentationDelaySeconds);
             return this;
         }
-
         public Builder utcTiming(@Nullable Output<OriginEndpointDashPackageUtcTiming> utcTiming) {
             this.utcTiming = utcTiming;
             return this;
         }
-
         public Builder utcTiming(@Nullable OriginEndpointDashPackageUtcTiming utcTiming) {
             this.utcTiming = Output.ofNullable(utcTiming);
             return this;
         }
-
         public Builder utcTimingUri(@Nullable Output<String> utcTimingUri) {
             this.utcTimingUri = utcTimingUri;
             return this;
         }
-
         public Builder utcTimingUri(@Nullable String utcTimingUri) {
             this.utcTimingUri = Output.ofNullable(utcTimingUri);
             return this;
-        }
-        public OriginEndpointDashPackageArgs build() {
+        }        public OriginEndpointDashPackageArgs build() {
             return new OriginEndpointDashPackageArgs(adTriggers, adsOnDeliveryRestrictions, encryption, manifestLayout, manifestWindowSeconds, minBufferTimeSeconds, minUpdatePeriodSeconds, periodTriggers, profile, segmentDurationSeconds, segmentTemplateFormat, streamSelection, suggestedPresentationDelaySeconds, utcTiming, utcTimingUri);
         }
     }

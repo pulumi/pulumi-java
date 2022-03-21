@@ -202,52 +202,42 @@ public final class CosmosDbSqlApiSourceResponse {
             this.additionalColumns = additionalColumns;
             return this;
         }
-
         public Builder detectDatetime(@Nullable Object detectDatetime) {
             this.detectDatetime = detectDatetime;
             return this;
         }
-
         public Builder disableMetricsCollection(@Nullable Object disableMetricsCollection) {
             this.disableMetricsCollection = disableMetricsCollection;
             return this;
         }
-
         public Builder maxConcurrentConnections(@Nullable Object maxConcurrentConnections) {
             this.maxConcurrentConnections = maxConcurrentConnections;
             return this;
         }
-
         public Builder pageSize(@Nullable Object pageSize) {
             this.pageSize = pageSize;
             return this;
         }
-
         public Builder preferredRegions(@Nullable Object preferredRegions) {
             this.preferredRegions = preferredRegions;
             return this;
         }
-
         public Builder query(@Nullable Object query) {
             this.query = query;
             return this;
         }
-
         public Builder sourceRetryCount(@Nullable Object sourceRetryCount) {
             this.sourceRetryCount = sourceRetryCount;
             return this;
         }
-
         public Builder sourceRetryWait(@Nullable Object sourceRetryWait) {
             this.sourceRetryWait = sourceRetryWait;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public CosmosDbSqlApiSourceResponse build() {
+        }        public CosmosDbSqlApiSourceResponse build() {
             return new CosmosDbSqlApiSourceResponse(additionalColumns, detectDatetime, disableMetricsCollection, maxConcurrentConnections, pageSize, preferredRegions, query, sourceRetryCount, sourceRetryWait, type);
         }
     }

@@ -124,52 +124,42 @@ public final class LinkedSubscriptionArgs extends io.pulumi.resources.ResourceAr
             this.linkedSubscriptionId = Objects.requireNonNull(linkedSubscriptionId);
             return this;
         }
-
         public Builder linkedSubscriptionId(String linkedSubscriptionId) {
             this.linkedSubscriptionId = Output.of(Objects.requireNonNull(linkedSubscriptionId));
             return this;
         }
-
         public Builder linkedSubscriptionName(@Nullable Output<String> linkedSubscriptionName) {
             this.linkedSubscriptionName = linkedSubscriptionName;
             return this;
         }
-
         public Builder linkedSubscriptionName(@Nullable String linkedSubscriptionName) {
             this.linkedSubscriptionName = Output.ofNullable(linkedSubscriptionName);
             return this;
         }
-
         public Builder location(@Nullable Output<Either<String,Location>> location) {
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable Either<String,Location> location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder registrationResourceId(Output<String> registrationResourceId) {
             this.registrationResourceId = Objects.requireNonNull(registrationResourceId);
             return this;
         }
-
         public Builder registrationResourceId(String registrationResourceId) {
             this.registrationResourceId = Output.of(Objects.requireNonNull(registrationResourceId));
             return this;
         }
-
         public Builder resourceGroup(Output<String> resourceGroup) {
             this.resourceGroup = Objects.requireNonNull(resourceGroup);
             return this;
         }
-
         public Builder resourceGroup(String resourceGroup) {
             this.resourceGroup = Output.of(Objects.requireNonNull(resourceGroup));
             return this;
-        }
-        public LinkedSubscriptionArgs build() {
+        }        public LinkedSubscriptionArgs build() {
             return new LinkedSubscriptionArgs(linkedSubscriptionId, linkedSubscriptionName, location, registrationResourceId, resourceGroup);
         }
     }

@@ -89,32 +89,29 @@ public final class EnvironmentLastUpdatedArgs extends io.pulumi.resources.Resour
             this.createdAt = createdAt;
             return this;
         }
-
         public Builder createdAt(@Nullable String createdAt) {
             this.createdAt = Output.ofNullable(createdAt);
             return this;
         }
-
         public Builder errors(@Nullable Output<List<EnvironmentLastUpdatedErrorArgs>> errors) {
             this.errors = errors;
             return this;
         }
-
         public Builder errors(@Nullable List<EnvironmentLastUpdatedErrorArgs> errors) {
             this.errors = Output.ofNullable(errors);
             return this;
         }
-
+        public Builder errors(EnvironmentLastUpdatedErrorArgs... errors) {
+            return errors(List.of(errors));
+        }
         public Builder status(@Nullable Output<String> status) {
             this.status = status;
             return this;
         }
-
         public Builder status(@Nullable String status) {
             this.status = Output.ofNullable(status);
             return this;
-        }
-        public EnvironmentLastUpdatedArgs build() {
+        }        public EnvironmentLastUpdatedArgs build() {
             return new EnvironmentLastUpdatedArgs(createdAt, errors, status);
         }
     }

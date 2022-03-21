@@ -78,22 +78,18 @@ public final class MetadataCredentialsFromPluginArgs extends io.pulumi.resources
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder structConfig(@Nullable Output<String> structConfig) {
             this.structConfig = structConfig;
             return this;
         }
-
         public Builder structConfig(@Nullable String structConfig) {
             this.structConfig = Output.ofNullable(structConfig);
             return this;
-        }
-        public MetadataCredentialsFromPluginArgs build() {
+        }        public MetadataCredentialsFromPluginArgs build() {
             return new MetadataCredentialsFromPluginArgs(name, structConfig);
         }
     }

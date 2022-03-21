@@ -104,22 +104,18 @@ public final class InstanceRestoreToPointInTime {
             this.restoreTime = restoreTime;
             return this;
         }
-
         public Builder sourceDbInstanceIdentifier(@Nullable String sourceDbInstanceIdentifier) {
             this.sourceDbInstanceIdentifier = sourceDbInstanceIdentifier;
             return this;
         }
-
         public Builder sourceDbiResourceId(@Nullable String sourceDbiResourceId) {
             this.sourceDbiResourceId = sourceDbiResourceId;
             return this;
         }
-
         public Builder useLatestRestorableTime(@Nullable Boolean useLatestRestorableTime) {
             this.useLatestRestorableTime = useLatestRestorableTime;
             return this;
-        }
-        public InstanceRestoreToPointInTime build() {
+        }        public InstanceRestoreToPointInTime build() {
             return new InstanceRestoreToPointInTime(restoreTime, sourceDbInstanceIdentifier, sourceDbiResourceId, useLatestRestorableTime);
         }
     }

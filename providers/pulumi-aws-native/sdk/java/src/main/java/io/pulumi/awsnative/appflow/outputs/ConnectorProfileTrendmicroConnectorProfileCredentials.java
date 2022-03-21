@@ -51,8 +51,7 @@ public final class ConnectorProfileTrendmicroConnectorProfileCredentials {
         public Builder apiSecretKey(String apiSecretKey) {
             this.apiSecretKey = Objects.requireNonNull(apiSecretKey);
             return this;
-        }
-        public ConnectorProfileTrendmicroConnectorProfileCredentials build() {
+        }        public ConnectorProfileTrendmicroConnectorProfileCredentials build() {
             return new ConnectorProfileTrendmicroConnectorProfileCredentials(apiSecretKey);
         }
     }

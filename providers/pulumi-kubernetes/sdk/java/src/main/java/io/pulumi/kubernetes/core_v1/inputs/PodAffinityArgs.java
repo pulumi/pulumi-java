@@ -80,22 +80,24 @@ public final class PodAffinityArgs extends io.pulumi.resources.ResourceArgs {
             this.preferredDuringSchedulingIgnoredDuringExecution = preferredDuringSchedulingIgnoredDuringExecution;
             return this;
         }
-
         public Builder preferredDuringSchedulingIgnoredDuringExecution(@Nullable List<WeightedPodAffinityTermArgs> preferredDuringSchedulingIgnoredDuringExecution) {
             this.preferredDuringSchedulingIgnoredDuringExecution = Output.ofNullable(preferredDuringSchedulingIgnoredDuringExecution);
             return this;
         }
-
+        public Builder preferredDuringSchedulingIgnoredDuringExecution(WeightedPodAffinityTermArgs... preferredDuringSchedulingIgnoredDuringExecution) {
+            return preferredDuringSchedulingIgnoredDuringExecution(List.of(preferredDuringSchedulingIgnoredDuringExecution));
+        }
         public Builder requiredDuringSchedulingIgnoredDuringExecution(@Nullable Output<List<PodAffinityTermArgs>> requiredDuringSchedulingIgnoredDuringExecution) {
             this.requiredDuringSchedulingIgnoredDuringExecution = requiredDuringSchedulingIgnoredDuringExecution;
             return this;
         }
-
         public Builder requiredDuringSchedulingIgnoredDuringExecution(@Nullable List<PodAffinityTermArgs> requiredDuringSchedulingIgnoredDuringExecution) {
             this.requiredDuringSchedulingIgnoredDuringExecution = Output.ofNullable(requiredDuringSchedulingIgnoredDuringExecution);
             return this;
         }
-        public PodAffinityArgs build() {
+        public Builder requiredDuringSchedulingIgnoredDuringExecution(PodAffinityTermArgs... requiredDuringSchedulingIgnoredDuringExecution) {
+            return requiredDuringSchedulingIgnoredDuringExecution(List.of(requiredDuringSchedulingIgnoredDuringExecution));
+        }        public PodAffinityArgs build() {
             return new PodAffinityArgs(preferredDuringSchedulingIgnoredDuringExecution, requiredDuringSchedulingIgnoredDuringExecution);
         }
     }

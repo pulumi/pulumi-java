@@ -64,17 +64,14 @@ public final class AppBasicAuthConfig {
             this.enableBasicAuth = enableBasicAuth;
             return this;
         }
-
         public Builder password(@Nullable String password) {
             this.password = password;
             return this;
         }
-
         public Builder username(@Nullable String username) {
             this.username = username;
             return this;
-        }
-        public AppBasicAuthConfig build() {
+        }        public AppBasicAuthConfig build() {
             return new AppBasicAuthConfig(enableBasicAuth, password, username);
         }
     }

@@ -153,37 +153,30 @@ public final class SsisVariableResponse {
             this.dataType = dataType;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
-
         public Builder id(@Nullable Double id) {
             this.id = id;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
-
         public Builder sensitive(@Nullable Boolean sensitive) {
             this.sensitive = sensitive;
             return this;
         }
-
         public Builder sensitiveValue(@Nullable String sensitiveValue) {
             this.sensitiveValue = sensitiveValue;
             return this;
         }
-
         public Builder value(@Nullable String value) {
             this.value = value;
             return this;
-        }
-        public SsisVariableResponse build() {
+        }        public SsisVariableResponse build() {
             return new SsisVariableResponse(dataType, description, id, name, sensitive, sensitiveValue, value);
         }
     }

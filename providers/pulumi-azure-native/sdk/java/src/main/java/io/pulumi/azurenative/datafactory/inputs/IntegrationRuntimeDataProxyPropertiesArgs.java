@@ -95,32 +95,26 @@ public final class IntegrationRuntimeDataProxyPropertiesArgs extends io.pulumi.r
             this.connectVia = connectVia;
             return this;
         }
-
         public Builder connectVia(@Nullable EntityReferenceArgs connectVia) {
             this.connectVia = Output.ofNullable(connectVia);
             return this;
         }
-
         public Builder path(@Nullable Output<String> path) {
             this.path = path;
             return this;
         }
-
         public Builder path(@Nullable String path) {
             this.path = Output.ofNullable(path);
             return this;
         }
-
         public Builder stagingLinkedService(@Nullable Output<EntityReferenceArgs> stagingLinkedService) {
             this.stagingLinkedService = stagingLinkedService;
             return this;
         }
-
         public Builder stagingLinkedService(@Nullable EntityReferenceArgs stagingLinkedService) {
             this.stagingLinkedService = Output.ofNullable(stagingLinkedService);
             return this;
-        }
-        public IntegrationRuntimeDataProxyPropertiesArgs build() {
+        }        public IntegrationRuntimeDataProxyPropertiesArgs build() {
             return new IntegrationRuntimeDataProxyPropertiesArgs(connectVia, path, stagingLinkedService);
         }
     }

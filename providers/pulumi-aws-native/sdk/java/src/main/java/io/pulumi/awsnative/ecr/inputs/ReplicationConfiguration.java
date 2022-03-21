@@ -60,7 +60,9 @@ public final class ReplicationConfiguration extends io.pulumi.resources.InvokeAr
             this.rules = Objects.requireNonNull(rules);
             return this;
         }
-        public ReplicationConfiguration build() {
+        public Builder rules(ReplicationConfigurationReplicationRule... rules) {
+            return rules(List.of(rules));
+        }        public ReplicationConfiguration build() {
             return new ReplicationConfiguration(rules);
         }
     }

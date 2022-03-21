@@ -94,17 +94,14 @@ public final class PubSubResponse extends io.pulumi.resources.InvokeArgs {
             this.enabled = Objects.requireNonNull(enabled);
             return this;
         }
-
         public Builder filter(FilterResponse filter) {
             this.filter = Objects.requireNonNull(filter);
             return this;
         }
-
         public Builder topic(String topic) {
             this.topic = Objects.requireNonNull(topic);
             return this;
-        }
-        public PubSubResponse build() {
+        }        public PubSubResponse build() {
             return new PubSubResponse(enabled, filter, topic);
         }
     }

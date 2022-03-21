@@ -82,22 +82,18 @@ public final class SubscriptionPushConfigOidcTokenGetArgs extends io.pulumi.reso
             this.audience = audience;
             return this;
         }
-
         public Builder audience(@Nullable String audience) {
             this.audience = Output.ofNullable(audience);
             return this;
         }
-
         public Builder serviceAccountEmail(Output<String> serviceAccountEmail) {
             this.serviceAccountEmail = Objects.requireNonNull(serviceAccountEmail);
             return this;
         }
-
         public Builder serviceAccountEmail(String serviceAccountEmail) {
             this.serviceAccountEmail = Output.of(Objects.requireNonNull(serviceAccountEmail));
             return this;
-        }
-        public SubscriptionPushConfigOidcTokenGetArgs build() {
+        }        public SubscriptionPushConfigOidcTokenGetArgs build() {
             return new SubscriptionPushConfigOidcTokenGetArgs(audience, serviceAccountEmail);
         }
     }

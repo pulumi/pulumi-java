@@ -62,12 +62,13 @@ public final class DownwardAPIProjectionArgs extends io.pulumi.resources.Resourc
             this.items = items;
             return this;
         }
-
         public Builder items(@Nullable List<DownwardAPIVolumeFileArgs> items) {
             this.items = Output.ofNullable(items);
             return this;
         }
-        public DownwardAPIProjectionArgs build() {
+        public Builder items(DownwardAPIVolumeFileArgs... items) {
+            return items(List.of(items));
+        }        public DownwardAPIProjectionArgs build() {
             return new DownwardAPIProjectionArgs(items);
         }
     }

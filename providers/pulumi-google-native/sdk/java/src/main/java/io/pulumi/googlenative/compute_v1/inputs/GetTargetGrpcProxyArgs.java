@@ -66,12 +66,10 @@ public final class GetTargetGrpcProxyArgs extends io.pulumi.resources.InvokeArgs
             this.project = project;
             return this;
         }
-
         public Builder targetGrpcProxy(String targetGrpcProxy) {
             this.targetGrpcProxy = Objects.requireNonNull(targetGrpcProxy);
             return this;
-        }
-        public GetTargetGrpcProxyArgs build() {
+        }        public GetTargetGrpcProxyArgs build() {
             return new GetTargetGrpcProxyArgs(project, targetGrpcProxy);
         }
     }

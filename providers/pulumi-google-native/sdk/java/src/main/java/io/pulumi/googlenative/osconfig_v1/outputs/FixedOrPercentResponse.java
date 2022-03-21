@@ -69,12 +69,10 @@ public final class FixedOrPercentResponse {
             this.fixed = Objects.requireNonNull(fixed);
             return this;
         }
-
         public Builder percent(Integer percent) {
             this.percent = Objects.requireNonNull(percent);
             return this;
-        }
-        public FixedOrPercentResponse build() {
+        }        public FixedOrPercentResponse build() {
             return new FixedOrPercentResponse(fixed, percent);
         }
     }

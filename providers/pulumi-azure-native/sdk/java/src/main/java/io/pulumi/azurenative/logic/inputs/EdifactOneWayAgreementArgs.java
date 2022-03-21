@@ -94,32 +94,26 @@ public final class EdifactOneWayAgreementArgs extends io.pulumi.resources.Resour
             this.protocolSettings = Objects.requireNonNull(protocolSettings);
             return this;
         }
-
         public Builder protocolSettings(EdifactProtocolSettingsArgs protocolSettings) {
             this.protocolSettings = Output.of(Objects.requireNonNull(protocolSettings));
             return this;
         }
-
         public Builder receiverBusinessIdentity(Output<BusinessIdentityArgs> receiverBusinessIdentity) {
             this.receiverBusinessIdentity = Objects.requireNonNull(receiverBusinessIdentity);
             return this;
         }
-
         public Builder receiverBusinessIdentity(BusinessIdentityArgs receiverBusinessIdentity) {
             this.receiverBusinessIdentity = Output.of(Objects.requireNonNull(receiverBusinessIdentity));
             return this;
         }
-
         public Builder senderBusinessIdentity(Output<BusinessIdentityArgs> senderBusinessIdentity) {
             this.senderBusinessIdentity = Objects.requireNonNull(senderBusinessIdentity);
             return this;
         }
-
         public Builder senderBusinessIdentity(BusinessIdentityArgs senderBusinessIdentity) {
             this.senderBusinessIdentity = Output.of(Objects.requireNonNull(senderBusinessIdentity));
             return this;
-        }
-        public EdifactOneWayAgreementArgs build() {
+        }        public EdifactOneWayAgreementArgs build() {
             return new EdifactOneWayAgreementArgs(protocolSettings, receiverBusinessIdentity, senderBusinessIdentity);
         }
     }

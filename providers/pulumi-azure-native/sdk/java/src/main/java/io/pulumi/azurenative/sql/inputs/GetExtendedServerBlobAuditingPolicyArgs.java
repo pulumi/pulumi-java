@@ -88,17 +88,14 @@ public final class GetExtendedServerBlobAuditingPolicyArgs extends io.pulumi.res
             this.blobAuditingPolicyName = Objects.requireNonNull(blobAuditingPolicyName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder serverName(String serverName) {
             this.serverName = Objects.requireNonNull(serverName);
             return this;
-        }
-        public GetExtendedServerBlobAuditingPolicyArgs build() {
+        }        public GetExtendedServerBlobAuditingPolicyArgs build() {
             return new GetExtendedServerBlobAuditingPolicyArgs(blobAuditingPolicyName, resourceGroupName, serverName);
         }
     }

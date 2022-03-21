@@ -105,22 +105,24 @@ public final class GetMembershipIamPolicyResult {
             this.auditConfigs = Objects.requireNonNull(auditConfigs);
             return this;
         }
-
+        public Builder auditConfigs(AuditConfigResponse... auditConfigs) {
+            return auditConfigs(List.of(auditConfigs));
+        }
         public Builder bindings(List<BindingResponse> bindings) {
             this.bindings = Objects.requireNonNull(bindings);
             return this;
         }
-
+        public Builder bindings(BindingResponse... bindings) {
+            return bindings(List.of(bindings));
+        }
         public Builder etag(String etag) {
             this.etag = Objects.requireNonNull(etag);
             return this;
         }
-
         public Builder version(Integer version) {
             this.version = Objects.requireNonNull(version);
             return this;
-        }
-        public GetMembershipIamPolicyResult build() {
+        }        public GetMembershipIamPolicyResult build() {
             return new GetMembershipIamPolicyResult(auditConfigs, bindings, etag, version);
         }
     }

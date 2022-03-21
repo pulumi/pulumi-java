@@ -70,12 +70,10 @@ public final class UrlSigningKeyResponse {
             this.keyId = Objects.requireNonNull(keyId);
             return this;
         }
-
         public Builder keySourceParameters(KeyVaultSigningKeyParametersResponse keySourceParameters) {
             this.keySourceParameters = Objects.requireNonNull(keySourceParameters);
             return this;
-        }
-        public UrlSigningKeyResponse build() {
+        }        public UrlSigningKeyResponse build() {
             return new UrlSigningKeyResponse(keyId, keySourceParameters);
         }
     }

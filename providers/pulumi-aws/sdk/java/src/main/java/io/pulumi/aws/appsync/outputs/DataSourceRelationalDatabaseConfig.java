@@ -72,12 +72,10 @@ public final class DataSourceRelationalDatabaseConfig {
             this.httpEndpointConfig = httpEndpointConfig;
             return this;
         }
-
         public Builder sourceType(@Nullable String sourceType) {
             this.sourceType = sourceType;
             return this;
-        }
-        public DataSourceRelationalDatabaseConfig build() {
+        }        public DataSourceRelationalDatabaseConfig build() {
             return new DataSourceRelationalDatabaseConfig(httpEndpointConfig, sourceType);
         }
     }

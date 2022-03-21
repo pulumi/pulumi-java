@@ -88,17 +88,14 @@ public final class GetEncryptionScopeArgs extends io.pulumi.resources.InvokeArgs
             this.accountName = Objects.requireNonNull(accountName);
             return this;
         }
-
         public Builder encryptionScopeName(String encryptionScopeName) {
             this.encryptionScopeName = Objects.requireNonNull(encryptionScopeName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
-        }
-        public GetEncryptionScopeArgs build() {
+        }        public GetEncryptionScopeArgs build() {
             return new GetEncryptionScopeArgs(accountName, encryptionScopeName, resourceGroupName);
         }
     }

@@ -411,117 +411,97 @@ public final class GetRoleAssignmentResult {
             this.assignmentName = Objects.requireNonNull(assignmentName);
             return this;
         }
-
         public Builder conflationPolicies(@Nullable ResourceSetDescriptionResponse conflationPolicies) {
             this.conflationPolicies = conflationPolicies;
             return this;
         }
-
         public Builder connectors(@Nullable ResourceSetDescriptionResponse connectors) {
             this.connectors = connectors;
             return this;
         }
-
         public Builder description(@Nullable Map<String,String> description) {
             this.description = description;
             return this;
         }
-
         public Builder displayName(@Nullable Map<String,String> displayName) {
             this.displayName = displayName;
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder interactions(@Nullable ResourceSetDescriptionResponse interactions) {
             this.interactions = interactions;
             return this;
         }
-
         public Builder kpis(@Nullable ResourceSetDescriptionResponse kpis) {
             this.kpis = kpis;
             return this;
         }
-
         public Builder links(@Nullable ResourceSetDescriptionResponse links) {
             this.links = links;
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder principals(List<AssignmentPrincipalResponse> principals) {
             this.principals = Objects.requireNonNull(principals);
             return this;
         }
-
+        public Builder principals(AssignmentPrincipalResponse... principals) {
+            return principals(List.of(principals));
+        }
         public Builder profiles(@Nullable ResourceSetDescriptionResponse profiles) {
             this.profiles = profiles;
             return this;
         }
-
         public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
-
         public Builder relationshipLinks(@Nullable ResourceSetDescriptionResponse relationshipLinks) {
             this.relationshipLinks = relationshipLinks;
             return this;
         }
-
         public Builder relationships(@Nullable ResourceSetDescriptionResponse relationships) {
             this.relationships = relationships;
             return this;
         }
-
         public Builder role(String role) {
             this.role = Objects.requireNonNull(role);
             return this;
         }
-
         public Builder roleAssignments(@Nullable ResourceSetDescriptionResponse roleAssignments) {
             this.roleAssignments = roleAssignments;
             return this;
         }
-
         public Builder sasPolicies(@Nullable ResourceSetDescriptionResponse sasPolicies) {
             this.sasPolicies = sasPolicies;
             return this;
         }
-
         public Builder segments(@Nullable ResourceSetDescriptionResponse segments) {
             this.segments = segments;
             return this;
         }
-
         public Builder tenantId(String tenantId) {
             this.tenantId = Objects.requireNonNull(tenantId);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder views(@Nullable ResourceSetDescriptionResponse views) {
             this.views = views;
             return this;
         }
-
         public Builder widgetTypes(@Nullable ResourceSetDescriptionResponse widgetTypes) {
             this.widgetTypes = widgetTypes;
             return this;
-        }
-        public GetRoleAssignmentResult build() {
+        }        public GetRoleAssignmentResult build() {
             return new GetRoleAssignmentResult(assignmentName, conflationPolicies, connectors, description, displayName, id, interactions, kpis, links, name, principals, profiles, provisioningState, relationshipLinks, relationships, role, roleAssignments, sasPolicies, segments, tenantId, type, views, widgetTypes);
         }
     }

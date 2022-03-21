@@ -96,32 +96,26 @@ public final class UpgradePolicyArgs extends io.pulumi.resources.ResourceArgs {
             this.automaticOSUpgradePolicy = automaticOSUpgradePolicy;
             return this;
         }
-
         public Builder automaticOSUpgradePolicy(@Nullable AutomaticOSUpgradePolicyArgs automaticOSUpgradePolicy) {
             this.automaticOSUpgradePolicy = Output.ofNullable(automaticOSUpgradePolicy);
             return this;
         }
-
         public Builder mode(@Nullable Output<UpgradeMode> mode) {
             this.mode = mode;
             return this;
         }
-
         public Builder mode(@Nullable UpgradeMode mode) {
             this.mode = Output.ofNullable(mode);
             return this;
         }
-
         public Builder rollingUpgradePolicy(@Nullable Output<RollingUpgradePolicyArgs> rollingUpgradePolicy) {
             this.rollingUpgradePolicy = rollingUpgradePolicy;
             return this;
         }
-
         public Builder rollingUpgradePolicy(@Nullable RollingUpgradePolicyArgs rollingUpgradePolicy) {
             this.rollingUpgradePolicy = Output.ofNullable(rollingUpgradePolicy);
             return this;
-        }
-        public UpgradePolicyArgs build() {
+        }        public UpgradePolicyArgs build() {
             return new UpgradePolicyArgs(automaticOSUpgradePolicy, mode, rollingUpgradePolicy);
         }
     }

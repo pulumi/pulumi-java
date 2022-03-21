@@ -53,12 +53,10 @@ public final class ControlPanelTag {
             this.key = Objects.requireNonNull(key);
             return this;
         }
-
         public Builder value(String value) {
             this.value = Objects.requireNonNull(value);
             return this;
-        }
-        public ControlPanelTag build() {
+        }        public ControlPanelTag build() {
             return new ControlPanelTag(key, value);
         }
     }

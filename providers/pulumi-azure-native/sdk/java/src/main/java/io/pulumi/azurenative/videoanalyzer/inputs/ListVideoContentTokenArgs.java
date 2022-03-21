@@ -88,17 +88,14 @@ public final class ListVideoContentTokenArgs extends io.pulumi.resources.InvokeA
             this.accountName = Objects.requireNonNull(accountName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder videoName(String videoName) {
             this.videoName = Objects.requireNonNull(videoName);
             return this;
-        }
-        public ListVideoContentTokenArgs build() {
+        }        public ListVideoContentTokenArgs build() {
             return new ListVideoContentTokenArgs(accountName, resourceGroupName, videoName);
         }
     }

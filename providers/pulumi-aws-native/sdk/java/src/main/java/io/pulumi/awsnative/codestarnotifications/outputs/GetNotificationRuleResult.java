@@ -115,47 +115,44 @@ public final class GetNotificationRuleResult {
             this.arn = arn;
             return this;
         }
-
         public Builder createdBy(@Nullable String createdBy) {
             this.createdBy = createdBy;
             return this;
         }
-
         public Builder detailType(@Nullable NotificationRuleDetailType detailType) {
             this.detailType = detailType;
             return this;
         }
-
         public Builder eventTypeId(@Nullable String eventTypeId) {
             this.eventTypeId = eventTypeId;
             return this;
         }
-
         public Builder eventTypeIds(@Nullable List<String> eventTypeIds) {
             this.eventTypeIds = eventTypeIds;
             return this;
         }
-
+        public Builder eventTypeIds(String... eventTypeIds) {
+            return eventTypeIds(List.of(eventTypeIds));
+        }
         public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
-
         public Builder status(@Nullable NotificationRuleStatus status) {
             this.status = status;
             return this;
         }
-
         public Builder targetAddress(@Nullable String targetAddress) {
             this.targetAddress = targetAddress;
             return this;
         }
-
         public Builder targets(@Nullable List<NotificationRuleTarget> targets) {
             this.targets = targets;
             return this;
         }
-        public GetNotificationRuleResult build() {
+        public Builder targets(NotificationRuleTarget... targets) {
+            return targets(List.of(targets));
+        }        public GetNotificationRuleResult build() {
             return new GetNotificationRuleResult(arn, createdBy, detailType, eventTypeId, eventTypeIds, name, status, targetAddress, targets);
         }
     }

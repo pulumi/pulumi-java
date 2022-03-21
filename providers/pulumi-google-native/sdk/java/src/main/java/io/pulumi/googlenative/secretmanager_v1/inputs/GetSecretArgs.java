@@ -66,12 +66,10 @@ public final class GetSecretArgs extends io.pulumi.resources.InvokeArgs {
             this.project = project;
             return this;
         }
-
         public Builder secretId(String secretId) {
             this.secretId = Objects.requireNonNull(secretId);
             return this;
-        }
-        public GetSecretArgs build() {
+        }        public GetSecretArgs build() {
             return new GetSecretArgs(project, secretId);
         }
     }

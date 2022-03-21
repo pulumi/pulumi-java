@@ -60,12 +60,10 @@ public final class DatabaseInfoArgs extends io.pulumi.resources.ResourceArgs {
             this.sourceDatabaseName = Objects.requireNonNull(sourceDatabaseName);
             return this;
         }
-
         public Builder sourceDatabaseName(String sourceDatabaseName) {
             this.sourceDatabaseName = Output.of(Objects.requireNonNull(sourceDatabaseName));
             return this;
-        }
-        public DatabaseInfoArgs build() {
+        }        public DatabaseInfoArgs build() {
             return new DatabaseInfoArgs(sourceDatabaseName);
         }
     }

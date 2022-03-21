@@ -103,22 +103,18 @@ public final class EndpointAccessNetworkInterface {
             this.availabilityZone = availabilityZone;
             return this;
         }
-
         public Builder networkInterfaceId(@Nullable String networkInterfaceId) {
             this.networkInterfaceId = networkInterfaceId;
             return this;
         }
-
         public Builder privateIpAddress(@Nullable String privateIpAddress) {
             this.privateIpAddress = privateIpAddress;
             return this;
         }
-
         public Builder subnetId(@Nullable String subnetId) {
             this.subnetId = subnetId;
             return this;
-        }
-        public EndpointAccessNetworkInterface build() {
+        }        public EndpointAccessNetworkInterface build() {
             return new EndpointAccessNetworkInterface(availabilityZone, networkInterfaceId, privateIpAddress, subnetId);
         }
     }

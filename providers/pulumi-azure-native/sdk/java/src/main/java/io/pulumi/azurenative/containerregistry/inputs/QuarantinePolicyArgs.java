@@ -63,12 +63,10 @@ public final class QuarantinePolicyArgs extends io.pulumi.resources.ResourceArgs
             this.status = status;
             return this;
         }
-
         public Builder status(@Nullable Either<String,PolicyStatus> status) {
             this.status = Output.ofNullable(status);
             return this;
-        }
-        public QuarantinePolicyArgs build() {
+        }        public QuarantinePolicyArgs build() {
             return new QuarantinePolicyArgs(status);
         }
     }

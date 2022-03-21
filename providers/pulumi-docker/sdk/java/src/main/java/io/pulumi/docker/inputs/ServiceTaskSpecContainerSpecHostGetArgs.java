@@ -65,22 +65,18 @@ public final class ServiceTaskSpecContainerSpecHostGetArgs extends io.pulumi.res
             this.host = Objects.requireNonNull(host);
             return this;
         }
-
         public Builder host(String host) {
             this.host = Output.of(Objects.requireNonNull(host));
             return this;
         }
-
         public Builder ip(Output<String> ip) {
             this.ip = Objects.requireNonNull(ip);
             return this;
         }
-
         public Builder ip(String ip) {
             this.ip = Output.of(Objects.requireNonNull(ip));
             return this;
-        }
-        public ServiceTaskSpecContainerSpecHostGetArgs build() {
+        }        public ServiceTaskSpecContainerSpecHostGetArgs build() {
             return new ServiceTaskSpecContainerSpecHostGetArgs(host, ip);
         }
     }

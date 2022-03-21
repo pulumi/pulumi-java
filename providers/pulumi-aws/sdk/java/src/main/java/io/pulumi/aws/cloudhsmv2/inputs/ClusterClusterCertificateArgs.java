@@ -102,52 +102,42 @@ public final class ClusterClusterCertificateArgs extends io.pulumi.resources.Res
             this.awsHardwareCertificate = awsHardwareCertificate;
             return this;
         }
-
         public Builder awsHardwareCertificate(@Nullable String awsHardwareCertificate) {
             this.awsHardwareCertificate = Output.ofNullable(awsHardwareCertificate);
             return this;
         }
-
         public Builder clusterCertificate(@Nullable Output<String> clusterCertificate) {
             this.clusterCertificate = clusterCertificate;
             return this;
         }
-
         public Builder clusterCertificate(@Nullable String clusterCertificate) {
             this.clusterCertificate = Output.ofNullable(clusterCertificate);
             return this;
         }
-
         public Builder clusterCsr(@Nullable Output<String> clusterCsr) {
             this.clusterCsr = clusterCsr;
             return this;
         }
-
         public Builder clusterCsr(@Nullable String clusterCsr) {
             this.clusterCsr = Output.ofNullable(clusterCsr);
             return this;
         }
-
         public Builder hsmCertificate(@Nullable Output<String> hsmCertificate) {
             this.hsmCertificate = hsmCertificate;
             return this;
         }
-
         public Builder hsmCertificate(@Nullable String hsmCertificate) {
             this.hsmCertificate = Output.ofNullable(hsmCertificate);
             return this;
         }
-
         public Builder manufacturerHardwareCertificate(@Nullable Output<String> manufacturerHardwareCertificate) {
             this.manufacturerHardwareCertificate = manufacturerHardwareCertificate;
             return this;
         }
-
         public Builder manufacturerHardwareCertificate(@Nullable String manufacturerHardwareCertificate) {
             this.manufacturerHardwareCertificate = Output.ofNullable(manufacturerHardwareCertificate);
             return this;
-        }
-        public ClusterClusterCertificateArgs build() {
+        }        public ClusterClusterCertificateArgs build() {
             return new ClusterClusterCertificateArgs(awsHardwareCertificate, clusterCertificate, clusterCsr, hsmCertificate, manufacturerHardwareCertificate);
         }
     }

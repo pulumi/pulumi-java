@@ -200,52 +200,42 @@ public final class GetAlertsSuppressionRuleResult {
             this.alertType = Objects.requireNonNull(alertType);
             return this;
         }
-
         public Builder comment(@Nullable String comment) {
             this.comment = comment;
             return this;
         }
-
         public Builder expirationDateUtc(@Nullable String expirationDateUtc) {
             this.expirationDateUtc = expirationDateUtc;
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder lastModifiedUtc(String lastModifiedUtc) {
             this.lastModifiedUtc = Objects.requireNonNull(lastModifiedUtc);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder reason(String reason) {
             this.reason = Objects.requireNonNull(reason);
             return this;
         }
-
         public Builder state(String state) {
             this.state = Objects.requireNonNull(state);
             return this;
         }
-
         public Builder suppressionAlertsScope(@Nullable SuppressionAlertsScopeResponse suppressionAlertsScope) {
             this.suppressionAlertsScope = suppressionAlertsScope;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public GetAlertsSuppressionRuleResult build() {
+        }        public GetAlertsSuppressionRuleResult build() {
             return new GetAlertsSuppressionRuleResult(alertType, comment, expirationDateUtc, id, lastModifiedUtc, name, reason, state, suppressionAlertsScope, type);
         }
     }

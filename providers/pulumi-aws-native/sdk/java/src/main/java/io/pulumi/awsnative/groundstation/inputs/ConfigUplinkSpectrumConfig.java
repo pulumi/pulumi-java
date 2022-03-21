@@ -67,12 +67,10 @@ public final class ConfigUplinkSpectrumConfig extends io.pulumi.resources.Invoke
             this.centerFrequency = centerFrequency;
             return this;
         }
-
         public Builder polarization(@Nullable ConfigPolarization polarization) {
             this.polarization = polarization;
             return this;
-        }
-        public ConfigUplinkSpectrumConfig build() {
+        }        public ConfigUplinkSpectrumConfig build() {
             return new ConfigUplinkSpectrumConfig(centerFrequency, polarization);
         }
     }

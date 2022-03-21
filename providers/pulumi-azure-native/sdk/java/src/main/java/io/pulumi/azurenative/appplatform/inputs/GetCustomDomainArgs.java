@@ -104,22 +104,18 @@ public final class GetCustomDomainArgs extends io.pulumi.resources.InvokeArgs {
             this.appName = Objects.requireNonNull(appName);
             return this;
         }
-
         public Builder domainName(String domainName) {
             this.domainName = Objects.requireNonNull(domainName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder serviceName(String serviceName) {
             this.serviceName = Objects.requireNonNull(serviceName);
             return this;
-        }
-        public GetCustomDomainArgs build() {
+        }        public GetCustomDomainArgs build() {
             return new GetCustomDomainArgs(appName, domainName, resourceGroupName, serviceName);
         }
     }

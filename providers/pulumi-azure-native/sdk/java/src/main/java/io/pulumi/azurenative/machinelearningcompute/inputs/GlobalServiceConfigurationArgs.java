@@ -113,42 +113,34 @@ public final class GlobalServiceConfigurationArgs extends io.pulumi.resources.Re
             this.autoScale = autoScale;
             return this;
         }
-
         public Builder autoScale(@Nullable AutoScaleConfigurationArgs autoScale) {
             this.autoScale = Output.ofNullable(autoScale);
             return this;
         }
-
         public Builder etag(@Nullable Output<String> etag) {
             this.etag = etag;
             return this;
         }
-
         public Builder etag(@Nullable String etag) {
             this.etag = Output.ofNullable(etag);
             return this;
         }
-
         public Builder serviceAuth(@Nullable Output<ServiceAuthConfigurationArgs> serviceAuth) {
             this.serviceAuth = serviceAuth;
             return this;
         }
-
         public Builder serviceAuth(@Nullable ServiceAuthConfigurationArgs serviceAuth) {
             this.serviceAuth = Output.ofNullable(serviceAuth);
             return this;
         }
-
         public Builder ssl(@Nullable Output<SslConfigurationArgs> ssl) {
             this.ssl = ssl;
             return this;
         }
-
         public Builder ssl(@Nullable SslConfigurationArgs ssl) {
             this.ssl = Output.ofNullable(ssl);
             return this;
-        }
-        public GlobalServiceConfigurationArgs build() {
+        }        public GlobalServiceConfigurationArgs build() {
             return new GlobalServiceConfigurationArgs(autoScale, etag, serviceAuth, ssl);
         }
     }

@@ -70,22 +70,21 @@ public final class GetDelegationSetResult {
             this.arn = Objects.requireNonNull(arn);
             return this;
         }
-
         public Builder callerReference(String callerReference) {
             this.callerReference = Objects.requireNonNull(callerReference);
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder nameServers(List<String> nameServers) {
             this.nameServers = Objects.requireNonNull(nameServers);
             return this;
         }
-        public GetDelegationSetResult build() {
+        public Builder nameServers(String... nameServers) {
+            return nameServers(List.of(nameServers));
+        }        public GetDelegationSetResult build() {
             return new GetDelegationSetResult(arn, callerReference, id, nameServers);
         }
     }

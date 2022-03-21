@@ -62,12 +62,13 @@ public final class EndpointHintsArgs extends io.pulumi.resources.ResourceArgs {
             this.forZones = forZones;
             return this;
         }
-
         public Builder forZones(@Nullable List<ForZoneArgs> forZones) {
             this.forZones = Output.ofNullable(forZones);
             return this;
         }
-        public EndpointHintsArgs build() {
+        public Builder forZones(ForZoneArgs... forZones) {
+            return forZones(List.of(forZones));
+        }        public EndpointHintsArgs build() {
             return new EndpointHintsArgs(forZones);
         }
     }

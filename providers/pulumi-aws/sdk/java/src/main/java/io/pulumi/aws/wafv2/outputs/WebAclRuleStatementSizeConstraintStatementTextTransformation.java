@@ -70,12 +70,10 @@ public final class WebAclRuleStatementSizeConstraintStatementTextTransformation 
             this.priority = Objects.requireNonNull(priority);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public WebAclRuleStatementSizeConstraintStatementTextTransformation build() {
+        }        public WebAclRuleStatementSizeConstraintStatementTextTransformation build() {
             return new WebAclRuleStatementSizeConstraintStatementTextTransformation(priority, type);
         }
     }

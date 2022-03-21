@@ -93,32 +93,32 @@ public final class DomainDefaultUserSettingsKernelGatewayAppSettingsGetArgs exte
             this.customImages = customImages;
             return this;
         }
-
         public Builder customImages(@Nullable List<DomainDefaultUserSettingsKernelGatewayAppSettingsCustomImageGetArgs> customImages) {
             this.customImages = Output.ofNullable(customImages);
             return this;
         }
-
+        public Builder customImages(DomainDefaultUserSettingsKernelGatewayAppSettingsCustomImageGetArgs... customImages) {
+            return customImages(List.of(customImages));
+        }
         public Builder defaultResourceSpec(@Nullable Output<DomainDefaultUserSettingsKernelGatewayAppSettingsDefaultResourceSpecGetArgs> defaultResourceSpec) {
             this.defaultResourceSpec = defaultResourceSpec;
             return this;
         }
-
         public Builder defaultResourceSpec(@Nullable DomainDefaultUserSettingsKernelGatewayAppSettingsDefaultResourceSpecGetArgs defaultResourceSpec) {
             this.defaultResourceSpec = Output.ofNullable(defaultResourceSpec);
             return this;
         }
-
         public Builder lifecycleConfigArns(@Nullable Output<List<String>> lifecycleConfigArns) {
             this.lifecycleConfigArns = lifecycleConfigArns;
             return this;
         }
-
         public Builder lifecycleConfigArns(@Nullable List<String> lifecycleConfigArns) {
             this.lifecycleConfigArns = Output.ofNullable(lifecycleConfigArns);
             return this;
         }
-        public DomainDefaultUserSettingsKernelGatewayAppSettingsGetArgs build() {
+        public Builder lifecycleConfigArns(String... lifecycleConfigArns) {
+            return lifecycleConfigArns(List.of(lifecycleConfigArns));
+        }        public DomainDefaultUserSettingsKernelGatewayAppSettingsGetArgs build() {
             return new DomainDefaultUserSettingsKernelGatewayAppSettingsGetArgs(customImages, defaultResourceSpec, lifecycleConfigArns);
         }
     }

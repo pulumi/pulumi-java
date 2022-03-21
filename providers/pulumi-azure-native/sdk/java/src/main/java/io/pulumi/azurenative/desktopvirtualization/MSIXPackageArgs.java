@@ -270,142 +270,120 @@ public final class MSIXPackageArgs extends io.pulumi.resources.ResourceArgs {
             this.displayName = displayName;
             return this;
         }
-
         public Builder displayName(@Nullable String displayName) {
             this.displayName = Output.ofNullable(displayName);
             return this;
         }
-
         public Builder hostPoolName(Output<String> hostPoolName) {
             this.hostPoolName = Objects.requireNonNull(hostPoolName);
             return this;
         }
-
         public Builder hostPoolName(String hostPoolName) {
             this.hostPoolName = Output.of(Objects.requireNonNull(hostPoolName));
             return this;
         }
-
         public Builder imagePath(@Nullable Output<String> imagePath) {
             this.imagePath = imagePath;
             return this;
         }
-
         public Builder imagePath(@Nullable String imagePath) {
             this.imagePath = Output.ofNullable(imagePath);
             return this;
         }
-
         public Builder isActive(@Nullable Output<Boolean> isActive) {
             this.isActive = isActive;
             return this;
         }
-
         public Builder isActive(@Nullable Boolean isActive) {
             this.isActive = Output.ofNullable(isActive);
             return this;
         }
-
         public Builder isRegularRegistration(@Nullable Output<Boolean> isRegularRegistration) {
             this.isRegularRegistration = isRegularRegistration;
             return this;
         }
-
         public Builder isRegularRegistration(@Nullable Boolean isRegularRegistration) {
             this.isRegularRegistration = Output.ofNullable(isRegularRegistration);
             return this;
         }
-
         public Builder lastUpdated(@Nullable Output<String> lastUpdated) {
             this.lastUpdated = lastUpdated;
             return this;
         }
-
         public Builder lastUpdated(@Nullable String lastUpdated) {
             this.lastUpdated = Output.ofNullable(lastUpdated);
             return this;
         }
-
         public Builder msixPackageFullName(@Nullable Output<String> msixPackageFullName) {
             this.msixPackageFullName = msixPackageFullName;
             return this;
         }
-
         public Builder msixPackageFullName(@Nullable String msixPackageFullName) {
             this.msixPackageFullName = Output.ofNullable(msixPackageFullName);
             return this;
         }
-
         public Builder packageApplications(@Nullable Output<List<MsixPackageApplicationsArgs>> packageApplications) {
             this.packageApplications = packageApplications;
             return this;
         }
-
         public Builder packageApplications(@Nullable List<MsixPackageApplicationsArgs> packageApplications) {
             this.packageApplications = Output.ofNullable(packageApplications);
             return this;
         }
-
+        public Builder packageApplications(MsixPackageApplicationsArgs... packageApplications) {
+            return packageApplications(List.of(packageApplications));
+        }
         public Builder packageDependencies(@Nullable Output<List<MsixPackageDependenciesArgs>> packageDependencies) {
             this.packageDependencies = packageDependencies;
             return this;
         }
-
         public Builder packageDependencies(@Nullable List<MsixPackageDependenciesArgs> packageDependencies) {
             this.packageDependencies = Output.ofNullable(packageDependencies);
             return this;
         }
-
+        public Builder packageDependencies(MsixPackageDependenciesArgs... packageDependencies) {
+            return packageDependencies(List.of(packageDependencies));
+        }
         public Builder packageFamilyName(@Nullable Output<String> packageFamilyName) {
             this.packageFamilyName = packageFamilyName;
             return this;
         }
-
         public Builder packageFamilyName(@Nullable String packageFamilyName) {
             this.packageFamilyName = Output.ofNullable(packageFamilyName);
             return this;
         }
-
         public Builder packageName(@Nullable Output<String> packageName) {
             this.packageName = packageName;
             return this;
         }
-
         public Builder packageName(@Nullable String packageName) {
             this.packageName = Output.ofNullable(packageName);
             return this;
         }
-
         public Builder packageRelativePath(@Nullable Output<String> packageRelativePath) {
             this.packageRelativePath = packageRelativePath;
             return this;
         }
-
         public Builder packageRelativePath(@Nullable String packageRelativePath) {
             this.packageRelativePath = Output.ofNullable(packageRelativePath);
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder version(@Nullable Output<String> version) {
             this.version = version;
             return this;
         }
-
         public Builder version(@Nullable String version) {
             this.version = Output.ofNullable(version);
             return this;
-        }
-        public MSIXPackageArgs build() {
+        }        public MSIXPackageArgs build() {
             return new MSIXPackageArgs(displayName, hostPoolName, imagePath, isActive, isRegularRegistration, lastUpdated, msixPackageFullName, packageApplications, packageDependencies, packageFamilyName, packageName, packageRelativePath, resourceGroupName, version);
         }
     }

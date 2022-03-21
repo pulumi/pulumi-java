@@ -447,242 +447,200 @@ public final class SettingsArgs extends io.pulumi.resources.ResourceArgs {
             this.activationPolicy = activationPolicy;
             return this;
         }
-
         public Builder activationPolicy(@Nullable SettingsActivationPolicy activationPolicy) {
             this.activationPolicy = Output.ofNullable(activationPolicy);
             return this;
         }
-
         public Builder activeDirectoryConfig(@Nullable Output<SqlActiveDirectoryConfigArgs> activeDirectoryConfig) {
             this.activeDirectoryConfig = activeDirectoryConfig;
             return this;
         }
-
         public Builder activeDirectoryConfig(@Nullable SqlActiveDirectoryConfigArgs activeDirectoryConfig) {
             this.activeDirectoryConfig = Output.ofNullable(activeDirectoryConfig);
             return this;
         }
-
         public Builder availabilityType(@Nullable Output<SettingsAvailabilityType> availabilityType) {
             this.availabilityType = availabilityType;
             return this;
         }
-
         public Builder availabilityType(@Nullable SettingsAvailabilityType availabilityType) {
             this.availabilityType = Output.ofNullable(availabilityType);
             return this;
         }
-
         public Builder backupConfiguration(@Nullable Output<BackupConfigurationArgs> backupConfiguration) {
             this.backupConfiguration = backupConfiguration;
             return this;
         }
-
         public Builder backupConfiguration(@Nullable BackupConfigurationArgs backupConfiguration) {
             this.backupConfiguration = Output.ofNullable(backupConfiguration);
             return this;
         }
-
         public Builder collation(@Nullable Output<String> collation) {
             this.collation = collation;
             return this;
         }
-
         public Builder collation(@Nullable String collation) {
             this.collation = Output.ofNullable(collation);
             return this;
         }
-
         public Builder crashSafeReplicationEnabled(@Nullable Output<Boolean> crashSafeReplicationEnabled) {
             this.crashSafeReplicationEnabled = crashSafeReplicationEnabled;
             return this;
         }
-
         public Builder crashSafeReplicationEnabled(@Nullable Boolean crashSafeReplicationEnabled) {
             this.crashSafeReplicationEnabled = Output.ofNullable(crashSafeReplicationEnabled);
             return this;
         }
-
         public Builder dataDiskSizeGb(@Nullable Output<String> dataDiskSizeGb) {
             this.dataDiskSizeGb = dataDiskSizeGb;
             return this;
         }
-
         public Builder dataDiskSizeGb(@Nullable String dataDiskSizeGb) {
             this.dataDiskSizeGb = Output.ofNullable(dataDiskSizeGb);
             return this;
         }
-
         public Builder dataDiskType(@Nullable Output<SettingsDataDiskType> dataDiskType) {
             this.dataDiskType = dataDiskType;
             return this;
         }
-
         public Builder dataDiskType(@Nullable SettingsDataDiskType dataDiskType) {
             this.dataDiskType = Output.ofNullable(dataDiskType);
             return this;
         }
-
         public Builder databaseFlags(@Nullable Output<List<DatabaseFlagsArgs>> databaseFlags) {
             this.databaseFlags = databaseFlags;
             return this;
         }
-
         public Builder databaseFlags(@Nullable List<DatabaseFlagsArgs> databaseFlags) {
             this.databaseFlags = Output.ofNullable(databaseFlags);
             return this;
         }
-
+        public Builder databaseFlags(DatabaseFlagsArgs... databaseFlags) {
+            return databaseFlags(List.of(databaseFlags));
+        }
         public Builder databaseReplicationEnabled(@Nullable Output<Boolean> databaseReplicationEnabled) {
             this.databaseReplicationEnabled = databaseReplicationEnabled;
             return this;
         }
-
         public Builder databaseReplicationEnabled(@Nullable Boolean databaseReplicationEnabled) {
             this.databaseReplicationEnabled = Output.ofNullable(databaseReplicationEnabled);
             return this;
         }
-
         public Builder denyMaintenancePeriods(@Nullable Output<List<DenyMaintenancePeriodArgs>> denyMaintenancePeriods) {
             this.denyMaintenancePeriods = denyMaintenancePeriods;
             return this;
         }
-
         public Builder denyMaintenancePeriods(@Nullable List<DenyMaintenancePeriodArgs> denyMaintenancePeriods) {
             this.denyMaintenancePeriods = Output.ofNullable(denyMaintenancePeriods);
             return this;
         }
-
+        public Builder denyMaintenancePeriods(DenyMaintenancePeriodArgs... denyMaintenancePeriods) {
+            return denyMaintenancePeriods(List.of(denyMaintenancePeriods));
+        }
         public Builder insightsConfig(@Nullable Output<InsightsConfigArgs> insightsConfig) {
             this.insightsConfig = insightsConfig;
             return this;
         }
-
         public Builder insightsConfig(@Nullable InsightsConfigArgs insightsConfig) {
             this.insightsConfig = Output.ofNullable(insightsConfig);
             return this;
         }
-
         public Builder ipConfiguration(@Nullable Output<IpConfigurationArgs> ipConfiguration) {
             this.ipConfiguration = ipConfiguration;
             return this;
         }
-
         public Builder ipConfiguration(@Nullable IpConfigurationArgs ipConfiguration) {
             this.ipConfiguration = Output.ofNullable(ipConfiguration);
             return this;
         }
-
         public Builder kind(@Nullable Output<String> kind) {
             this.kind = kind;
             return this;
         }
-
         public Builder kind(@Nullable String kind) {
             this.kind = Output.ofNullable(kind);
             return this;
         }
-
         public Builder locationPreference(@Nullable Output<LocationPreferenceArgs> locationPreference) {
             this.locationPreference = locationPreference;
             return this;
         }
-
         public Builder locationPreference(@Nullable LocationPreferenceArgs locationPreference) {
             this.locationPreference = Output.ofNullable(locationPreference);
             return this;
         }
-
         public Builder maintenanceWindow(@Nullable Output<MaintenanceWindowArgs> maintenanceWindow) {
             this.maintenanceWindow = maintenanceWindow;
             return this;
         }
-
         public Builder maintenanceWindow(@Nullable MaintenanceWindowArgs maintenanceWindow) {
             this.maintenanceWindow = Output.ofNullable(maintenanceWindow);
             return this;
         }
-
         public Builder passwordValidationPolicy(@Nullable Output<PasswordValidationPolicyArgs> passwordValidationPolicy) {
             this.passwordValidationPolicy = passwordValidationPolicy;
             return this;
         }
-
         public Builder passwordValidationPolicy(@Nullable PasswordValidationPolicyArgs passwordValidationPolicy) {
             this.passwordValidationPolicy = Output.ofNullable(passwordValidationPolicy);
             return this;
         }
-
         public Builder pricingPlan(@Nullable Output<SettingsPricingPlan> pricingPlan) {
             this.pricingPlan = pricingPlan;
             return this;
         }
-
         public Builder pricingPlan(@Nullable SettingsPricingPlan pricingPlan) {
             this.pricingPlan = Output.ofNullable(pricingPlan);
             return this;
         }
-
         public Builder settingsVersion(@Nullable Output<String> settingsVersion) {
             this.settingsVersion = settingsVersion;
             return this;
         }
-
         public Builder settingsVersion(@Nullable String settingsVersion) {
             this.settingsVersion = Output.ofNullable(settingsVersion);
             return this;
         }
-
         public Builder sqlServerAuditConfig(@Nullable Output<SqlServerAuditConfigArgs> sqlServerAuditConfig) {
             this.sqlServerAuditConfig = sqlServerAuditConfig;
             return this;
         }
-
         public Builder sqlServerAuditConfig(@Nullable SqlServerAuditConfigArgs sqlServerAuditConfig) {
             this.sqlServerAuditConfig = Output.ofNullable(sqlServerAuditConfig);
             return this;
         }
-
         public Builder storageAutoResize(@Nullable Output<Boolean> storageAutoResize) {
             this.storageAutoResize = storageAutoResize;
             return this;
         }
-
         public Builder storageAutoResize(@Nullable Boolean storageAutoResize) {
             this.storageAutoResize = Output.ofNullable(storageAutoResize);
             return this;
         }
-
         public Builder storageAutoResizeLimit(@Nullable Output<String> storageAutoResizeLimit) {
             this.storageAutoResizeLimit = storageAutoResizeLimit;
             return this;
         }
-
         public Builder storageAutoResizeLimit(@Nullable String storageAutoResizeLimit) {
             this.storageAutoResizeLimit = Output.ofNullable(storageAutoResizeLimit);
             return this;
         }
-
         public Builder tier(@Nullable Output<String> tier) {
             this.tier = tier;
             return this;
         }
-
         public Builder tier(@Nullable String tier) {
             this.tier = Output.ofNullable(tier);
             return this;
         }
-
         public Builder userLabels(@Nullable Output<Map<String,String>> userLabels) {
             this.userLabels = userLabels;
             return this;
         }
-
         public Builder userLabels(@Nullable Map<String,String> userLabels) {
             this.userLabels = Output.ofNullable(userLabels);
             return this;
-        }
-        public SettingsArgs build() {
+        }        public SettingsArgs build() {
             return new SettingsArgs(activationPolicy, activeDirectoryConfig, availabilityType, backupConfiguration, collation, crashSafeReplicationEnabled, dataDiskSizeGb, dataDiskType, databaseFlags, databaseReplicationEnabled, denyMaintenancePeriods, insightsConfig, ipConfiguration, kind, locationPreference, maintenanceWindow, passwordValidationPolicy, pricingPlan, settingsVersion, sqlServerAuditConfig, storageAutoResize, storageAutoResizeLimit, tier, userLabels);
         }
     }

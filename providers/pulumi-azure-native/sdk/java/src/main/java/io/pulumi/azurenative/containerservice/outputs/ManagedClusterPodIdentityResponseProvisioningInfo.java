@@ -53,8 +53,7 @@ public final class ManagedClusterPodIdentityResponseProvisioningInfo {
         public Builder error(@Nullable CloudErrorResponse error) {
             this.error = error;
             return this;
-        }
-        public ManagedClusterPodIdentityResponseProvisioningInfo build() {
+        }        public ManagedClusterPodIdentityResponseProvisioningInfo build() {
             return new ManagedClusterPodIdentityResponseProvisioningInfo(error);
         }
     }

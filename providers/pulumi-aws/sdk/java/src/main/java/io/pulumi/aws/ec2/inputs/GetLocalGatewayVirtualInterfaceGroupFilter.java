@@ -73,12 +73,13 @@ public final class GetLocalGatewayVirtualInterfaceGroupFilter extends io.pulumi.
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder values(List<String> values) {
             this.values = Objects.requireNonNull(values);
             return this;
         }
-        public GetLocalGatewayVirtualInterfaceGroupFilter build() {
+        public Builder values(String... values) {
+            return values(List.of(values));
+        }        public GetLocalGatewayVirtualInterfaceGroupFilter build() {
             return new GetLocalGatewayVirtualInterfaceGroupFilter(name, values);
         }
     }

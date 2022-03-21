@@ -271,142 +271,114 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
             this.applicationGroupName = Objects.requireNonNull(applicationGroupName);
             return this;
         }
-
         public Builder applicationGroupName(String applicationGroupName) {
             this.applicationGroupName = Output.of(Objects.requireNonNull(applicationGroupName));
             return this;
         }
-
         public Builder applicationName(@Nullable Output<String> applicationName) {
             this.applicationName = applicationName;
             return this;
         }
-
         public Builder applicationName(@Nullable String applicationName) {
             this.applicationName = Output.ofNullable(applicationName);
             return this;
         }
-
         public Builder applicationType(@Nullable Output<Either<String,RemoteApplicationType>> applicationType) {
             this.applicationType = applicationType;
             return this;
         }
-
         public Builder applicationType(@Nullable Either<String,RemoteApplicationType> applicationType) {
             this.applicationType = Output.ofNullable(applicationType);
             return this;
         }
-
         public Builder commandLineArguments(@Nullable Output<String> commandLineArguments) {
             this.commandLineArguments = commandLineArguments;
             return this;
         }
-
         public Builder commandLineArguments(@Nullable String commandLineArguments) {
             this.commandLineArguments = Output.ofNullable(commandLineArguments);
             return this;
         }
-
         public Builder commandLineSetting(Output<Either<String,CommandLineSetting>> commandLineSetting) {
             this.commandLineSetting = Objects.requireNonNull(commandLineSetting);
             return this;
         }
-
         public Builder commandLineSetting(Either<String,CommandLineSetting> commandLineSetting) {
             this.commandLineSetting = Output.of(Objects.requireNonNull(commandLineSetting));
             return this;
         }
-
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder filePath(@Nullable Output<String> filePath) {
             this.filePath = filePath;
             return this;
         }
-
         public Builder filePath(@Nullable String filePath) {
             this.filePath = Output.ofNullable(filePath);
             return this;
         }
-
         public Builder friendlyName(@Nullable Output<String> friendlyName) {
             this.friendlyName = friendlyName;
             return this;
         }
-
         public Builder friendlyName(@Nullable String friendlyName) {
             this.friendlyName = Output.ofNullable(friendlyName);
             return this;
         }
-
         public Builder iconIndex(@Nullable Output<Integer> iconIndex) {
             this.iconIndex = iconIndex;
             return this;
         }
-
         public Builder iconIndex(@Nullable Integer iconIndex) {
             this.iconIndex = Output.ofNullable(iconIndex);
             return this;
         }
-
         public Builder iconPath(@Nullable Output<String> iconPath) {
             this.iconPath = iconPath;
             return this;
         }
-
         public Builder iconPath(@Nullable String iconPath) {
             this.iconPath = Output.ofNullable(iconPath);
             return this;
         }
-
         public Builder msixPackageApplicationId(@Nullable Output<String> msixPackageApplicationId) {
             this.msixPackageApplicationId = msixPackageApplicationId;
             return this;
         }
-
         public Builder msixPackageApplicationId(@Nullable String msixPackageApplicationId) {
             this.msixPackageApplicationId = Output.ofNullable(msixPackageApplicationId);
             return this;
         }
-
         public Builder msixPackageFamilyName(@Nullable Output<String> msixPackageFamilyName) {
             this.msixPackageFamilyName = msixPackageFamilyName;
             return this;
         }
-
         public Builder msixPackageFamilyName(@Nullable String msixPackageFamilyName) {
             this.msixPackageFamilyName = Output.ofNullable(msixPackageFamilyName);
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder showInPortal(@Nullable Output<Boolean> showInPortal) {
             this.showInPortal = showInPortal;
             return this;
         }
-
         public Builder showInPortal(@Nullable Boolean showInPortal) {
             this.showInPortal = Output.ofNullable(showInPortal);
             return this;
-        }
-        public ApplicationArgs build() {
+        }        public ApplicationArgs build() {
             return new ApplicationArgs(applicationGroupName, applicationName, applicationType, commandLineArguments, commandLineSetting, description, filePath, friendlyName, iconIndex, iconPath, msixPackageApplicationId, msixPackageFamilyName, resourceGroupName, showInPortal);
         }
     }

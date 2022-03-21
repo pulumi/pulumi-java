@@ -143,62 +143,50 @@ public final class VolumeMountArgs extends io.pulumi.resources.ResourceArgs {
             this.mountPath = Objects.requireNonNull(mountPath);
             return this;
         }
-
         public Builder mountPath(String mountPath) {
             this.mountPath = Output.of(Objects.requireNonNull(mountPath));
             return this;
         }
-
         public Builder mountPropagation(@Nullable Output<String> mountPropagation) {
             this.mountPropagation = mountPropagation;
             return this;
         }
-
         public Builder mountPropagation(@Nullable String mountPropagation) {
             this.mountPropagation = Output.ofNullable(mountPropagation);
             return this;
         }
-
         public Builder name(Output<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
-
         public Builder readOnly(@Nullable Output<Boolean> readOnly) {
             this.readOnly = readOnly;
             return this;
         }
-
         public Builder readOnly(@Nullable Boolean readOnly) {
             this.readOnly = Output.ofNullable(readOnly);
             return this;
         }
-
         public Builder subPath(@Nullable Output<String> subPath) {
             this.subPath = subPath;
             return this;
         }
-
         public Builder subPath(@Nullable String subPath) {
             this.subPath = Output.ofNullable(subPath);
             return this;
         }
-
         public Builder subPathExpr(@Nullable Output<String> subPathExpr) {
             this.subPathExpr = subPathExpr;
             return this;
         }
-
         public Builder subPathExpr(@Nullable String subPathExpr) {
             this.subPathExpr = Output.ofNullable(subPathExpr);
             return this;
-        }
-        public VolumeMountArgs build() {
+        }        public VolumeMountArgs build() {
             return new VolumeMountArgs(mountPath, mountPropagation, name, readOnly, subPath, subPathExpr);
         }
     }

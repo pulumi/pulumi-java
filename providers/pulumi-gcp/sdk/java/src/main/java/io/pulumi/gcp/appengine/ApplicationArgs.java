@@ -162,72 +162,58 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
             this.authDomain = authDomain;
             return this;
         }
-
         public Builder authDomain(@Nullable String authDomain) {
             this.authDomain = Output.ofNullable(authDomain);
             return this;
         }
-
         public Builder databaseType(@Nullable Output<String> databaseType) {
             this.databaseType = databaseType;
             return this;
         }
-
         public Builder databaseType(@Nullable String databaseType) {
             this.databaseType = Output.ofNullable(databaseType);
             return this;
         }
-
         public Builder featureSettings(@Nullable Output<ApplicationFeatureSettingsArgs> featureSettings) {
             this.featureSettings = featureSettings;
             return this;
         }
-
         public Builder featureSettings(@Nullable ApplicationFeatureSettingsArgs featureSettings) {
             this.featureSettings = Output.ofNullable(featureSettings);
             return this;
         }
-
         public Builder iap(@Nullable Output<ApplicationIapArgs> iap) {
             this.iap = iap;
             return this;
         }
-
         public Builder iap(@Nullable ApplicationIapArgs iap) {
             this.iap = Output.ofNullable(iap);
             return this;
         }
-
         public Builder locationId(Output<String> locationId) {
             this.locationId = Objects.requireNonNull(locationId);
             return this;
         }
-
         public Builder locationId(String locationId) {
             this.locationId = Output.of(Objects.requireNonNull(locationId));
             return this;
         }
-
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
         }
-
         public Builder servingStatus(@Nullable Output<String> servingStatus) {
             this.servingStatus = servingStatus;
             return this;
         }
-
         public Builder servingStatus(@Nullable String servingStatus) {
             this.servingStatus = Output.ofNullable(servingStatus);
             return this;
-        }
-        public ApplicationArgs build() {
+        }        public ApplicationArgs build() {
             return new ApplicationArgs(authDomain, databaseType, featureSettings, iap, locationId, project, servingStatus);
         }
     }

@@ -56,12 +56,10 @@ public final class JobDatabaseTableOutputOptions {
             this.tableName = Objects.requireNonNull(tableName);
             return this;
         }
-
         public Builder tempDirectory(@Nullable JobS3Location tempDirectory) {
             this.tempDirectory = tempDirectory;
             return this;
-        }
-        public JobDatabaseTableOutputOptions build() {
+        }        public JobDatabaseTableOutputOptions build() {
             return new JobDatabaseTableOutputOptions(tableName, tempDirectory);
         }
     }

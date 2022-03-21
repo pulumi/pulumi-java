@@ -79,22 +79,18 @@ public final class IngressBackendArgs extends io.pulumi.resources.ResourceArgs {
             this.resource = resource;
             return this;
         }
-
         public Builder resource(@Nullable TypedLocalObjectReferenceArgs resource) {
             this.resource = Output.ofNullable(resource);
             return this;
         }
-
         public Builder service(@Nullable Output<IngressServiceBackendArgs> service) {
             this.service = service;
             return this;
         }
-
         public Builder service(@Nullable IngressServiceBackendArgs service) {
             this.service = Output.ofNullable(service);
             return this;
-        }
-        public IngressBackendArgs build() {
+        }        public IngressBackendArgs build() {
             return new IngressBackendArgs(resource, service);
         }
     }

@@ -549,152 +549,155 @@ public final class GetInstanceTemplateResult {
             this.advancedMachineFeatures = Objects.requireNonNull(advancedMachineFeatures);
             return this;
         }
-
+        public Builder advancedMachineFeatures(GetInstanceTemplateAdvancedMachineFeature... advancedMachineFeatures) {
+            return advancedMachineFeatures(List.of(advancedMachineFeatures));
+        }
         public Builder canIpForward(Boolean canIpForward) {
             this.canIpForward = Objects.requireNonNull(canIpForward);
             return this;
         }
-
         public Builder confidentialInstanceConfigs(List<GetInstanceTemplateConfidentialInstanceConfig> confidentialInstanceConfigs) {
             this.confidentialInstanceConfigs = Objects.requireNonNull(confidentialInstanceConfigs);
             return this;
         }
-
+        public Builder confidentialInstanceConfigs(GetInstanceTemplateConfidentialInstanceConfig... confidentialInstanceConfigs) {
+            return confidentialInstanceConfigs(List.of(confidentialInstanceConfigs));
+        }
         public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
-
         public Builder disks(List<GetInstanceTemplateDisk> disks) {
             this.disks = Objects.requireNonNull(disks);
             return this;
         }
-
+        public Builder disks(GetInstanceTemplateDisk... disks) {
+            return disks(List.of(disks));
+        }
         public Builder enableDisplay(Boolean enableDisplay) {
             this.enableDisplay = Objects.requireNonNull(enableDisplay);
             return this;
         }
-
         public Builder filter(@Nullable String filter) {
             this.filter = filter;
             return this;
         }
-
         public Builder guestAccelerators(List<GetInstanceTemplateGuestAccelerator> guestAccelerators) {
             this.guestAccelerators = Objects.requireNonNull(guestAccelerators);
             return this;
         }
-
+        public Builder guestAccelerators(GetInstanceTemplateGuestAccelerator... guestAccelerators) {
+            return guestAccelerators(List.of(guestAccelerators));
+        }
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder instanceDescription(String instanceDescription) {
             this.instanceDescription = Objects.requireNonNull(instanceDescription);
             return this;
         }
-
         public Builder labels(Map<String,String> labels) {
             this.labels = Objects.requireNonNull(labels);
             return this;
         }
-
         public Builder machineType(String machineType) {
             this.machineType = Objects.requireNonNull(machineType);
             return this;
         }
-
         public Builder metadata(Map<String,Object> metadata) {
             this.metadata = Objects.requireNonNull(metadata);
             return this;
         }
-
         public Builder metadataFingerprint(String metadataFingerprint) {
             this.metadataFingerprint = Objects.requireNonNull(metadataFingerprint);
             return this;
         }
-
         public Builder metadataStartupScript(String metadataStartupScript) {
             this.metadataStartupScript = Objects.requireNonNull(metadataStartupScript);
             return this;
         }
-
         public Builder minCpuPlatform(String minCpuPlatform) {
             this.minCpuPlatform = Objects.requireNonNull(minCpuPlatform);
             return this;
         }
-
         public Builder mostRecent(@Nullable Boolean mostRecent) {
             this.mostRecent = mostRecent;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
-
         public Builder namePrefix(String namePrefix) {
             this.namePrefix = Objects.requireNonNull(namePrefix);
             return this;
         }
-
         public Builder networkInterfaces(List<GetInstanceTemplateNetworkInterface> networkInterfaces) {
             this.networkInterfaces = Objects.requireNonNull(networkInterfaces);
             return this;
         }
-
+        public Builder networkInterfaces(GetInstanceTemplateNetworkInterface... networkInterfaces) {
+            return networkInterfaces(List.of(networkInterfaces));
+        }
         public Builder networkPerformanceConfigs(List<GetInstanceTemplateNetworkPerformanceConfig> networkPerformanceConfigs) {
             this.networkPerformanceConfigs = Objects.requireNonNull(networkPerformanceConfigs);
             return this;
         }
-
+        public Builder networkPerformanceConfigs(GetInstanceTemplateNetworkPerformanceConfig... networkPerformanceConfigs) {
+            return networkPerformanceConfigs(List.of(networkPerformanceConfigs));
+        }
         public Builder project(String project) {
             this.project = Objects.requireNonNull(project);
             return this;
         }
-
         public Builder region(String region) {
             this.region = Objects.requireNonNull(region);
             return this;
         }
-
         public Builder reservationAffinities(List<GetInstanceTemplateReservationAffinity> reservationAffinities) {
             this.reservationAffinities = Objects.requireNonNull(reservationAffinities);
             return this;
         }
-
+        public Builder reservationAffinities(GetInstanceTemplateReservationAffinity... reservationAffinities) {
+            return reservationAffinities(List.of(reservationAffinities));
+        }
         public Builder schedulings(List<GetInstanceTemplateScheduling> schedulings) {
             this.schedulings = Objects.requireNonNull(schedulings);
             return this;
         }
-
+        public Builder schedulings(GetInstanceTemplateScheduling... schedulings) {
+            return schedulings(List.of(schedulings));
+        }
         public Builder selfLink(String selfLink) {
             this.selfLink = Objects.requireNonNull(selfLink);
             return this;
         }
-
         public Builder serviceAccounts(List<GetInstanceTemplateServiceAccount> serviceAccounts) {
             this.serviceAccounts = Objects.requireNonNull(serviceAccounts);
             return this;
         }
-
+        public Builder serviceAccounts(GetInstanceTemplateServiceAccount... serviceAccounts) {
+            return serviceAccounts(List.of(serviceAccounts));
+        }
         public Builder shieldedInstanceConfigs(List<GetInstanceTemplateShieldedInstanceConfig> shieldedInstanceConfigs) {
             this.shieldedInstanceConfigs = Objects.requireNonNull(shieldedInstanceConfigs);
             return this;
         }
-
+        public Builder shieldedInstanceConfigs(GetInstanceTemplateShieldedInstanceConfig... shieldedInstanceConfigs) {
+            return shieldedInstanceConfigs(List.of(shieldedInstanceConfigs));
+        }
         public Builder tags(List<String> tags) {
             this.tags = Objects.requireNonNull(tags);
             return this;
         }
-
+        public Builder tags(String... tags) {
+            return tags(List.of(tags));
+        }
         public Builder tagsFingerprint(String tagsFingerprint) {
             this.tagsFingerprint = Objects.requireNonNull(tagsFingerprint);
             return this;
-        }
-        public GetInstanceTemplateResult build() {
+        }        public GetInstanceTemplateResult build() {
             return new GetInstanceTemplateResult(advancedMachineFeatures, canIpForward, confidentialInstanceConfigs, description, disks, enableDisplay, filter, guestAccelerators, id, instanceDescription, labels, machineType, metadata, metadataFingerprint, metadataStartupScript, minCpuPlatform, mostRecent, name, namePrefix, networkInterfaces, networkPerformanceConfigs, project, region, reservationAffinities, schedulings, selfLink, serviceAccounts, shieldedInstanceConfigs, tags, tagsFingerprint);
         }
     }

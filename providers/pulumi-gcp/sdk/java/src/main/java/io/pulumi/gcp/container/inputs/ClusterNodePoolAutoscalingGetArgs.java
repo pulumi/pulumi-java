@@ -65,22 +65,18 @@ public final class ClusterNodePoolAutoscalingGetArgs extends io.pulumi.resources
             this.maxNodeCount = Objects.requireNonNull(maxNodeCount);
             return this;
         }
-
         public Builder maxNodeCount(Integer maxNodeCount) {
             this.maxNodeCount = Output.of(Objects.requireNonNull(maxNodeCount));
             return this;
         }
-
         public Builder minNodeCount(Output<Integer> minNodeCount) {
             this.minNodeCount = Objects.requireNonNull(minNodeCount);
             return this;
         }
-
         public Builder minNodeCount(Integer minNodeCount) {
             this.minNodeCount = Output.of(Objects.requireNonNull(minNodeCount));
             return this;
-        }
-        public ClusterNodePoolAutoscalingGetArgs build() {
+        }        public ClusterNodePoolAutoscalingGetArgs build() {
             return new ClusterNodePoolAutoscalingGetArgs(maxNodeCount, minNodeCount);
         }
     }

@@ -76,12 +76,10 @@ public final class ConnStringValueTypePairResponse extends io.pulumi.resources.I
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder value(String value) {
             this.value = Objects.requireNonNull(value);
             return this;
-        }
-        public ConnStringValueTypePairResponse build() {
+        }        public ConnStringValueTypePairResponse build() {
             return new ConnStringValueTypePairResponse(type, value);
         }
     }

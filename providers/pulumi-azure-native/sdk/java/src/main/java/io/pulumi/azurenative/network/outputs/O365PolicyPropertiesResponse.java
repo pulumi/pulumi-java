@@ -53,8 +53,7 @@ public final class O365PolicyPropertiesResponse {
         public Builder breakOutCategories(@Nullable O365BreakOutCategoryPoliciesResponse breakOutCategories) {
             this.breakOutCategories = breakOutCategories;
             return this;
-        }
-        public O365PolicyPropertiesResponse build() {
+        }        public O365PolicyPropertiesResponse build() {
             return new O365PolicyPropertiesResponse(breakOutCategories);
         }
     }

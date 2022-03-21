@@ -58,8 +58,7 @@ public final class GoogleCloudDialogflowV2LoggingConfigResponse extends io.pulum
         public Builder enableStackdriverLogging(Boolean enableStackdriverLogging) {
             this.enableStackdriverLogging = Objects.requireNonNull(enableStackdriverLogging);
             return this;
-        }
-        public GoogleCloudDialogflowV2LoggingConfigResponse build() {
+        }        public GoogleCloudDialogflowV2LoggingConfigResponse build() {
             return new GoogleCloudDialogflowV2LoggingConfigResponse(enableStackdriverLogging);
         }
     }

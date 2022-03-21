@@ -51,8 +51,7 @@ public final class TopicRuleLambda {
         public Builder functionArn(String functionArn) {
             this.functionArn = Objects.requireNonNull(functionArn);
             return this;
-        }
-        public TopicRuleLambda build() {
+        }        public TopicRuleLambda build() {
             return new TopicRuleLambda(functionArn);
         }
     }

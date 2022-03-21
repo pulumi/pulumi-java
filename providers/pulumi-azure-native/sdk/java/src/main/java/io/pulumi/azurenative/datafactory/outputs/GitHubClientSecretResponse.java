@@ -71,12 +71,10 @@ public final class GitHubClientSecretResponse {
             this.byoaSecretAkvUrl = byoaSecretAkvUrl;
             return this;
         }
-
         public Builder byoaSecretName(@Nullable String byoaSecretName) {
             this.byoaSecretName = byoaSecretName;
             return this;
-        }
-        public GitHubClientSecretResponse build() {
+        }        public GitHubClientSecretResponse build() {
             return new GitHubClientSecretResponse(byoaSecretAkvUrl, byoaSecretName);
         }
     }

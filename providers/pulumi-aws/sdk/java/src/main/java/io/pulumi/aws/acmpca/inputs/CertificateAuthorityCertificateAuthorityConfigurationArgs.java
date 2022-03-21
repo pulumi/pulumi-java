@@ -90,32 +90,26 @@ public final class CertificateAuthorityCertificateAuthorityConfigurationArgs ext
             this.keyAlgorithm = Objects.requireNonNull(keyAlgorithm);
             return this;
         }
-
         public Builder keyAlgorithm(String keyAlgorithm) {
             this.keyAlgorithm = Output.of(Objects.requireNonNull(keyAlgorithm));
             return this;
         }
-
         public Builder signingAlgorithm(Output<String> signingAlgorithm) {
             this.signingAlgorithm = Objects.requireNonNull(signingAlgorithm);
             return this;
         }
-
         public Builder signingAlgorithm(String signingAlgorithm) {
             this.signingAlgorithm = Output.of(Objects.requireNonNull(signingAlgorithm));
             return this;
         }
-
         public Builder subject(Output<CertificateAuthorityCertificateAuthorityConfigurationSubjectArgs> subject) {
             this.subject = Objects.requireNonNull(subject);
             return this;
         }
-
         public Builder subject(CertificateAuthorityCertificateAuthorityConfigurationSubjectArgs subject) {
             this.subject = Output.of(Objects.requireNonNull(subject));
             return this;
-        }
-        public CertificateAuthorityCertificateAuthorityConfigurationArgs build() {
+        }        public CertificateAuthorityCertificateAuthorityConfigurationArgs build() {
             return new CertificateAuthorityCertificateAuthorityConfigurationArgs(keyAlgorithm, signingAlgorithm, subject);
         }
     }

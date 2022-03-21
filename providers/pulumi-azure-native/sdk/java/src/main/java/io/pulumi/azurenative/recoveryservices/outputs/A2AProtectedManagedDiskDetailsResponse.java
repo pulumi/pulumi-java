@@ -459,132 +459,109 @@ public final class A2AProtectedManagedDiskDetailsResponse {
             this.allowedDiskLevelOperation = allowedDiskLevelOperation;
             return this;
         }
-
+        public Builder allowedDiskLevelOperation(String... allowedDiskLevelOperation) {
+            return allowedDiskLevelOperation(List.of(allowedDiskLevelOperation));
+        }
         public Builder dataPendingAtSourceAgentInMB(@Nullable Double dataPendingAtSourceAgentInMB) {
             this.dataPendingAtSourceAgentInMB = dataPendingAtSourceAgentInMB;
             return this;
         }
-
         public Builder dataPendingInStagingStorageAccountInMB(@Nullable Double dataPendingInStagingStorageAccountInMB) {
             this.dataPendingInStagingStorageAccountInMB = dataPendingInStagingStorageAccountInMB;
             return this;
         }
-
         public Builder dekKeyVaultArmId(@Nullable String dekKeyVaultArmId) {
             this.dekKeyVaultArmId = dekKeyVaultArmId;
             return this;
         }
-
         public Builder diskCapacityInBytes(@Nullable Double diskCapacityInBytes) {
             this.diskCapacityInBytes = diskCapacityInBytes;
             return this;
         }
-
         public Builder diskId(@Nullable String diskId) {
             this.diskId = diskId;
             return this;
         }
-
         public Builder diskName(@Nullable String diskName) {
             this.diskName = diskName;
             return this;
         }
-
         public Builder diskState(@Nullable String diskState) {
             this.diskState = diskState;
             return this;
         }
-
         public Builder diskType(@Nullable String diskType) {
             this.diskType = diskType;
             return this;
         }
-
         public Builder failoverDiskName(@Nullable String failoverDiskName) {
             this.failoverDiskName = failoverDiskName;
             return this;
         }
-
         public Builder isDiskEncrypted(@Nullable Boolean isDiskEncrypted) {
             this.isDiskEncrypted = isDiskEncrypted;
             return this;
         }
-
         public Builder isDiskKeyEncrypted(@Nullable Boolean isDiskKeyEncrypted) {
             this.isDiskKeyEncrypted = isDiskKeyEncrypted;
             return this;
         }
-
         public Builder kekKeyVaultArmId(@Nullable String kekKeyVaultArmId) {
             this.kekKeyVaultArmId = kekKeyVaultArmId;
             return this;
         }
-
         public Builder keyIdentifier(@Nullable String keyIdentifier) {
             this.keyIdentifier = keyIdentifier;
             return this;
         }
-
         public Builder monitoringJobType(@Nullable String monitoringJobType) {
             this.monitoringJobType = monitoringJobType;
             return this;
         }
-
         public Builder monitoringPercentageCompletion(@Nullable Integer monitoringPercentageCompletion) {
             this.monitoringPercentageCompletion = monitoringPercentageCompletion;
             return this;
         }
-
         public Builder primaryStagingAzureStorageAccountId(@Nullable String primaryStagingAzureStorageAccountId) {
             this.primaryStagingAzureStorageAccountId = primaryStagingAzureStorageAccountId;
             return this;
         }
-
         public Builder recoveryDiskEncryptionSetId(@Nullable String recoveryDiskEncryptionSetId) {
             this.recoveryDiskEncryptionSetId = recoveryDiskEncryptionSetId;
             return this;
         }
-
         public Builder recoveryReplicaDiskAccountType(@Nullable String recoveryReplicaDiskAccountType) {
             this.recoveryReplicaDiskAccountType = recoveryReplicaDiskAccountType;
             return this;
         }
-
         public Builder recoveryReplicaDiskId(@Nullable String recoveryReplicaDiskId) {
             this.recoveryReplicaDiskId = recoveryReplicaDiskId;
             return this;
         }
-
         public Builder recoveryResourceGroupId(@Nullable String recoveryResourceGroupId) {
             this.recoveryResourceGroupId = recoveryResourceGroupId;
             return this;
         }
-
         public Builder recoveryTargetDiskAccountType(@Nullable String recoveryTargetDiskAccountType) {
             this.recoveryTargetDiskAccountType = recoveryTargetDiskAccountType;
             return this;
         }
-
         public Builder recoveryTargetDiskId(@Nullable String recoveryTargetDiskId) {
             this.recoveryTargetDiskId = recoveryTargetDiskId;
             return this;
         }
-
         public Builder resyncRequired(@Nullable Boolean resyncRequired) {
             this.resyncRequired = resyncRequired;
             return this;
         }
-
         public Builder secretIdentifier(@Nullable String secretIdentifier) {
             this.secretIdentifier = secretIdentifier;
             return this;
         }
-
         public Builder tfoDiskName(@Nullable String tfoDiskName) {
             this.tfoDiskName = tfoDiskName;
             return this;
-        }
-        public A2AProtectedManagedDiskDetailsResponse build() {
+        }        public A2AProtectedManagedDiskDetailsResponse build() {
             return new A2AProtectedManagedDiskDetailsResponse(allowedDiskLevelOperation, dataPendingAtSourceAgentInMB, dataPendingInStagingStorageAccountInMB, dekKeyVaultArmId, diskCapacityInBytes, diskId, diskName, diskState, diskType, failoverDiskName, isDiskEncrypted, isDiskKeyEncrypted, kekKeyVaultArmId, keyIdentifier, monitoringJobType, monitoringPercentageCompletion, primaryStagingAzureStorageAccountId, recoveryDiskEncryptionSetId, recoveryReplicaDiskAccountType, recoveryReplicaDiskId, recoveryResourceGroupId, recoveryTargetDiskAccountType, recoveryTargetDiskId, resyncRequired, secretIdentifier, tfoDiskName);
         }
     }

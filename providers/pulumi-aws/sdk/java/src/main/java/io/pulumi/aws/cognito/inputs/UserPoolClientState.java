@@ -383,212 +383,194 @@ public final class UserPoolClientState extends io.pulumi.resources.ResourceArgs 
             this.accessTokenValidity = accessTokenValidity;
             return this;
         }
-
         public Builder accessTokenValidity(@Nullable Integer accessTokenValidity) {
             this.accessTokenValidity = Output.ofNullable(accessTokenValidity);
             return this;
         }
-
         public Builder allowedOauthFlows(@Nullable Output<List<String>> allowedOauthFlows) {
             this.allowedOauthFlows = allowedOauthFlows;
             return this;
         }
-
         public Builder allowedOauthFlows(@Nullable List<String> allowedOauthFlows) {
             this.allowedOauthFlows = Output.ofNullable(allowedOauthFlows);
             return this;
         }
-
+        public Builder allowedOauthFlows(String... allowedOauthFlows) {
+            return allowedOauthFlows(List.of(allowedOauthFlows));
+        }
         public Builder allowedOauthFlowsUserPoolClient(@Nullable Output<Boolean> allowedOauthFlowsUserPoolClient) {
             this.allowedOauthFlowsUserPoolClient = allowedOauthFlowsUserPoolClient;
             return this;
         }
-
         public Builder allowedOauthFlowsUserPoolClient(@Nullable Boolean allowedOauthFlowsUserPoolClient) {
             this.allowedOauthFlowsUserPoolClient = Output.ofNullable(allowedOauthFlowsUserPoolClient);
             return this;
         }
-
         public Builder allowedOauthScopes(@Nullable Output<List<String>> allowedOauthScopes) {
             this.allowedOauthScopes = allowedOauthScopes;
             return this;
         }
-
         public Builder allowedOauthScopes(@Nullable List<String> allowedOauthScopes) {
             this.allowedOauthScopes = Output.ofNullable(allowedOauthScopes);
             return this;
         }
-
+        public Builder allowedOauthScopes(String... allowedOauthScopes) {
+            return allowedOauthScopes(List.of(allowedOauthScopes));
+        }
         public Builder analyticsConfiguration(@Nullable Output<UserPoolClientAnalyticsConfigurationGetArgs> analyticsConfiguration) {
             this.analyticsConfiguration = analyticsConfiguration;
             return this;
         }
-
         public Builder analyticsConfiguration(@Nullable UserPoolClientAnalyticsConfigurationGetArgs analyticsConfiguration) {
             this.analyticsConfiguration = Output.ofNullable(analyticsConfiguration);
             return this;
         }
-
         public Builder callbackUrls(@Nullable Output<List<String>> callbackUrls) {
             this.callbackUrls = callbackUrls;
             return this;
         }
-
         public Builder callbackUrls(@Nullable List<String> callbackUrls) {
             this.callbackUrls = Output.ofNullable(callbackUrls);
             return this;
         }
-
+        public Builder callbackUrls(String... callbackUrls) {
+            return callbackUrls(List.of(callbackUrls));
+        }
         public Builder clientSecret(@Nullable Output<String> clientSecret) {
             this.clientSecret = clientSecret;
             return this;
         }
-
         public Builder clientSecret(@Nullable String clientSecret) {
             this.clientSecret = Output.ofNullable(clientSecret);
             return this;
         }
-
         public Builder defaultRedirectUri(@Nullable Output<String> defaultRedirectUri) {
             this.defaultRedirectUri = defaultRedirectUri;
             return this;
         }
-
         public Builder defaultRedirectUri(@Nullable String defaultRedirectUri) {
             this.defaultRedirectUri = Output.ofNullable(defaultRedirectUri);
             return this;
         }
-
         public Builder enableTokenRevocation(@Nullable Output<Boolean> enableTokenRevocation) {
             this.enableTokenRevocation = enableTokenRevocation;
             return this;
         }
-
         public Builder enableTokenRevocation(@Nullable Boolean enableTokenRevocation) {
             this.enableTokenRevocation = Output.ofNullable(enableTokenRevocation);
             return this;
         }
-
         public Builder explicitAuthFlows(@Nullable Output<List<String>> explicitAuthFlows) {
             this.explicitAuthFlows = explicitAuthFlows;
             return this;
         }
-
         public Builder explicitAuthFlows(@Nullable List<String> explicitAuthFlows) {
             this.explicitAuthFlows = Output.ofNullable(explicitAuthFlows);
             return this;
         }
-
+        public Builder explicitAuthFlows(String... explicitAuthFlows) {
+            return explicitAuthFlows(List.of(explicitAuthFlows));
+        }
         public Builder generateSecret(@Nullable Output<Boolean> generateSecret) {
             this.generateSecret = generateSecret;
             return this;
         }
-
         public Builder generateSecret(@Nullable Boolean generateSecret) {
             this.generateSecret = Output.ofNullable(generateSecret);
             return this;
         }
-
         public Builder idTokenValidity(@Nullable Output<Integer> idTokenValidity) {
             this.idTokenValidity = idTokenValidity;
             return this;
         }
-
         public Builder idTokenValidity(@Nullable Integer idTokenValidity) {
             this.idTokenValidity = Output.ofNullable(idTokenValidity);
             return this;
         }
-
         public Builder logoutUrls(@Nullable Output<List<String>> logoutUrls) {
             this.logoutUrls = logoutUrls;
             return this;
         }
-
         public Builder logoutUrls(@Nullable List<String> logoutUrls) {
             this.logoutUrls = Output.ofNullable(logoutUrls);
             return this;
         }
-
+        public Builder logoutUrls(String... logoutUrls) {
+            return logoutUrls(List.of(logoutUrls));
+        }
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder preventUserExistenceErrors(@Nullable Output<String> preventUserExistenceErrors) {
             this.preventUserExistenceErrors = preventUserExistenceErrors;
             return this;
         }
-
         public Builder preventUserExistenceErrors(@Nullable String preventUserExistenceErrors) {
             this.preventUserExistenceErrors = Output.ofNullable(preventUserExistenceErrors);
             return this;
         }
-
         public Builder readAttributes(@Nullable Output<List<String>> readAttributes) {
             this.readAttributes = readAttributes;
             return this;
         }
-
         public Builder readAttributes(@Nullable List<String> readAttributes) {
             this.readAttributes = Output.ofNullable(readAttributes);
             return this;
         }
-
+        public Builder readAttributes(String... readAttributes) {
+            return readAttributes(List.of(readAttributes));
+        }
         public Builder refreshTokenValidity(@Nullable Output<Integer> refreshTokenValidity) {
             this.refreshTokenValidity = refreshTokenValidity;
             return this;
         }
-
         public Builder refreshTokenValidity(@Nullable Integer refreshTokenValidity) {
             this.refreshTokenValidity = Output.ofNullable(refreshTokenValidity);
             return this;
         }
-
         public Builder supportedIdentityProviders(@Nullable Output<List<String>> supportedIdentityProviders) {
             this.supportedIdentityProviders = supportedIdentityProviders;
             return this;
         }
-
         public Builder supportedIdentityProviders(@Nullable List<String> supportedIdentityProviders) {
             this.supportedIdentityProviders = Output.ofNullable(supportedIdentityProviders);
             return this;
         }
-
+        public Builder supportedIdentityProviders(String... supportedIdentityProviders) {
+            return supportedIdentityProviders(List.of(supportedIdentityProviders));
+        }
         public Builder tokenValidityUnits(@Nullable Output<UserPoolClientTokenValidityUnitsGetArgs> tokenValidityUnits) {
             this.tokenValidityUnits = tokenValidityUnits;
             return this;
         }
-
         public Builder tokenValidityUnits(@Nullable UserPoolClientTokenValidityUnitsGetArgs tokenValidityUnits) {
             this.tokenValidityUnits = Output.ofNullable(tokenValidityUnits);
             return this;
         }
-
         public Builder userPoolId(@Nullable Output<String> userPoolId) {
             this.userPoolId = userPoolId;
             return this;
         }
-
         public Builder userPoolId(@Nullable String userPoolId) {
             this.userPoolId = Output.ofNullable(userPoolId);
             return this;
         }
-
         public Builder writeAttributes(@Nullable Output<List<String>> writeAttributes) {
             this.writeAttributes = writeAttributes;
             return this;
         }
-
         public Builder writeAttributes(@Nullable List<String> writeAttributes) {
             this.writeAttributes = Output.ofNullable(writeAttributes);
             return this;
         }
-        public UserPoolClientState build() {
+        public Builder writeAttributes(String... writeAttributes) {
+            return writeAttributes(List.of(writeAttributes));
+        }        public UserPoolClientState build() {
             return new UserPoolClientState(accessTokenValidity, allowedOauthFlows, allowedOauthFlowsUserPoolClient, allowedOauthScopes, analyticsConfiguration, callbackUrls, clientSecret, defaultRedirectUri, enableTokenRevocation, explicitAuthFlows, generateSecret, idTokenValidity, logoutUrls, name, preventUserExistenceErrors, readAttributes, refreshTokenValidity, supportedIdentityProviders, tokenValidityUnits, userPoolId, writeAttributes);
         }
     }

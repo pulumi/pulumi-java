@@ -120,52 +120,48 @@ public final class ResourceServerState extends io.pulumi.resources.ResourceArgs 
             this.identifier = identifier;
             return this;
         }
-
         public Builder identifier(@Nullable String identifier) {
             this.identifier = Output.ofNullable(identifier);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder scopeIdentifiers(@Nullable Output<List<String>> scopeIdentifiers) {
             this.scopeIdentifiers = scopeIdentifiers;
             return this;
         }
-
         public Builder scopeIdentifiers(@Nullable List<String> scopeIdentifiers) {
             this.scopeIdentifiers = Output.ofNullable(scopeIdentifiers);
             return this;
         }
-
+        public Builder scopeIdentifiers(String... scopeIdentifiers) {
+            return scopeIdentifiers(List.of(scopeIdentifiers));
+        }
         public Builder scopes(@Nullable Output<List<ResourceServerScopeGetArgs>> scopes) {
             this.scopes = scopes;
             return this;
         }
-
         public Builder scopes(@Nullable List<ResourceServerScopeGetArgs> scopes) {
             this.scopes = Output.ofNullable(scopes);
             return this;
         }
-
+        public Builder scopes(ResourceServerScopeGetArgs... scopes) {
+            return scopes(List.of(scopes));
+        }
         public Builder userPoolId(@Nullable Output<String> userPoolId) {
             this.userPoolId = userPoolId;
             return this;
         }
-
         public Builder userPoolId(@Nullable String userPoolId) {
             this.userPoolId = Output.ofNullable(userPoolId);
             return this;
-        }
-        public ResourceServerState build() {
+        }        public ResourceServerState build() {
             return new ResourceServerState(identifier, name, scopeIdentifiers, scopes, userPoolId);
         }
     }

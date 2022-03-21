@@ -133,52 +133,42 @@ public final class GlobalNetworkEndpointGroupArgs extends io.pulumi.resources.Re
             this.defaultPort = defaultPort;
             return this;
         }
-
         public Builder defaultPort(@Nullable Integer defaultPort) {
             this.defaultPort = Output.ofNullable(defaultPort);
             return this;
         }
-
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder networkEndpointType(Output<String> networkEndpointType) {
             this.networkEndpointType = Objects.requireNonNull(networkEndpointType);
             return this;
         }
-
         public Builder networkEndpointType(String networkEndpointType) {
             this.networkEndpointType = Output.of(Objects.requireNonNull(networkEndpointType));
             return this;
         }
-
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
-        }
-        public GlobalNetworkEndpointGroupArgs build() {
+        }        public GlobalNetworkEndpointGroupArgs build() {
             return new GlobalNetworkEndpointGroupArgs(defaultPort, description, name, networkEndpointType, project);
         }
     }

@@ -92,17 +92,17 @@ public final class CustomScaleRuleResponse {
             this.auth = auth;
             return this;
         }
-
+        public Builder auth(ScaleRuleAuthResponse... auth) {
+            return auth(List.of(auth));
+        }
         public Builder metadata(@Nullable Map<String,String> metadata) {
             this.metadata = metadata;
             return this;
         }
-
         public Builder type(@Nullable String type) {
             this.type = type;
             return this;
-        }
-        public CustomScaleRuleResponse build() {
+        }        public CustomScaleRuleResponse build() {
             return new CustomScaleRuleResponse(auth, metadata, type);
         }
     }

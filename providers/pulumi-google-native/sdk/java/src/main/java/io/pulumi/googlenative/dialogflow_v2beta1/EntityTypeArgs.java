@@ -179,92 +179,77 @@ public final class EntityTypeArgs extends io.pulumi.resources.ResourceArgs {
             this.autoExpansionMode = autoExpansionMode;
             return this;
         }
-
         public Builder autoExpansionMode(@Nullable EntityTypeAutoExpansionMode autoExpansionMode) {
             this.autoExpansionMode = Output.ofNullable(autoExpansionMode);
             return this;
         }
-
         public Builder displayName(Output<String> displayName) {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
-
         public Builder displayName(String displayName) {
             this.displayName = Output.of(Objects.requireNonNull(displayName));
             return this;
         }
-
         public Builder enableFuzzyExtraction(@Nullable Output<Boolean> enableFuzzyExtraction) {
             this.enableFuzzyExtraction = enableFuzzyExtraction;
             return this;
         }
-
         public Builder enableFuzzyExtraction(@Nullable Boolean enableFuzzyExtraction) {
             this.enableFuzzyExtraction = Output.ofNullable(enableFuzzyExtraction);
             return this;
         }
-
         public Builder entities(@Nullable Output<List<GoogleCloudDialogflowV2beta1EntityTypeEntityArgs>> entities) {
             this.entities = entities;
             return this;
         }
-
         public Builder entities(@Nullable List<GoogleCloudDialogflowV2beta1EntityTypeEntityArgs> entities) {
             this.entities = Output.ofNullable(entities);
             return this;
         }
-
+        public Builder entities(GoogleCloudDialogflowV2beta1EntityTypeEntityArgs... entities) {
+            return entities(List.of(entities));
+        }
         public Builder kind(Output<EntityTypeKind> kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
-
         public Builder kind(EntityTypeKind kind) {
             this.kind = Output.of(Objects.requireNonNull(kind));
             return this;
         }
-
         public Builder languageCode(@Nullable Output<String> languageCode) {
             this.languageCode = languageCode;
             return this;
         }
-
         public Builder languageCode(@Nullable String languageCode) {
             this.languageCode = Output.ofNullable(languageCode);
             return this;
         }
-
         public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
-        }
-        public EntityTypeArgs build() {
+        }        public EntityTypeArgs build() {
             return new EntityTypeArgs(autoExpansionMode, displayName, enableFuzzyExtraction, entities, kind, languageCode, location, name, project);
         }
     }

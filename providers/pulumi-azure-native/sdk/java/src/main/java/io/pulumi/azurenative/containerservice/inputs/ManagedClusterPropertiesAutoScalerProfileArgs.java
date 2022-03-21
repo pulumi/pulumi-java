@@ -252,172 +252,138 @@ public final class ManagedClusterPropertiesAutoScalerProfileArgs extends io.pulu
             this.balanceSimilarNodeGroups = balanceSimilarNodeGroups;
             return this;
         }
-
         public Builder balanceSimilarNodeGroups(@Nullable String balanceSimilarNodeGroups) {
             this.balanceSimilarNodeGroups = Output.ofNullable(balanceSimilarNodeGroups);
             return this;
         }
-
         public Builder expander(@Nullable Output<Either<String,Expander>> expander) {
             this.expander = expander;
             return this;
         }
-
         public Builder expander(@Nullable Either<String,Expander> expander) {
             this.expander = Output.ofNullable(expander);
             return this;
         }
-
         public Builder maxEmptyBulkDelete(@Nullable Output<String> maxEmptyBulkDelete) {
             this.maxEmptyBulkDelete = maxEmptyBulkDelete;
             return this;
         }
-
         public Builder maxEmptyBulkDelete(@Nullable String maxEmptyBulkDelete) {
             this.maxEmptyBulkDelete = Output.ofNullable(maxEmptyBulkDelete);
             return this;
         }
-
         public Builder maxGracefulTerminationSec(@Nullable Output<String> maxGracefulTerminationSec) {
             this.maxGracefulTerminationSec = maxGracefulTerminationSec;
             return this;
         }
-
         public Builder maxGracefulTerminationSec(@Nullable String maxGracefulTerminationSec) {
             this.maxGracefulTerminationSec = Output.ofNullable(maxGracefulTerminationSec);
             return this;
         }
-
         public Builder maxNodeProvisionTime(@Nullable Output<String> maxNodeProvisionTime) {
             this.maxNodeProvisionTime = maxNodeProvisionTime;
             return this;
         }
-
         public Builder maxNodeProvisionTime(@Nullable String maxNodeProvisionTime) {
             this.maxNodeProvisionTime = Output.ofNullable(maxNodeProvisionTime);
             return this;
         }
-
         public Builder maxTotalUnreadyPercentage(@Nullable Output<String> maxTotalUnreadyPercentage) {
             this.maxTotalUnreadyPercentage = maxTotalUnreadyPercentage;
             return this;
         }
-
         public Builder maxTotalUnreadyPercentage(@Nullable String maxTotalUnreadyPercentage) {
             this.maxTotalUnreadyPercentage = Output.ofNullable(maxTotalUnreadyPercentage);
             return this;
         }
-
         public Builder newPodScaleUpDelay(@Nullable Output<String> newPodScaleUpDelay) {
             this.newPodScaleUpDelay = newPodScaleUpDelay;
             return this;
         }
-
         public Builder newPodScaleUpDelay(@Nullable String newPodScaleUpDelay) {
             this.newPodScaleUpDelay = Output.ofNullable(newPodScaleUpDelay);
             return this;
         }
-
         public Builder okTotalUnreadyCount(@Nullable Output<String> okTotalUnreadyCount) {
             this.okTotalUnreadyCount = okTotalUnreadyCount;
             return this;
         }
-
         public Builder okTotalUnreadyCount(@Nullable String okTotalUnreadyCount) {
             this.okTotalUnreadyCount = Output.ofNullable(okTotalUnreadyCount);
             return this;
         }
-
         public Builder scaleDownDelayAfterAdd(@Nullable Output<String> scaleDownDelayAfterAdd) {
             this.scaleDownDelayAfterAdd = scaleDownDelayAfterAdd;
             return this;
         }
-
         public Builder scaleDownDelayAfterAdd(@Nullable String scaleDownDelayAfterAdd) {
             this.scaleDownDelayAfterAdd = Output.ofNullable(scaleDownDelayAfterAdd);
             return this;
         }
-
         public Builder scaleDownDelayAfterDelete(@Nullable Output<String> scaleDownDelayAfterDelete) {
             this.scaleDownDelayAfterDelete = scaleDownDelayAfterDelete;
             return this;
         }
-
         public Builder scaleDownDelayAfterDelete(@Nullable String scaleDownDelayAfterDelete) {
             this.scaleDownDelayAfterDelete = Output.ofNullable(scaleDownDelayAfterDelete);
             return this;
         }
-
         public Builder scaleDownDelayAfterFailure(@Nullable Output<String> scaleDownDelayAfterFailure) {
             this.scaleDownDelayAfterFailure = scaleDownDelayAfterFailure;
             return this;
         }
-
         public Builder scaleDownDelayAfterFailure(@Nullable String scaleDownDelayAfterFailure) {
             this.scaleDownDelayAfterFailure = Output.ofNullable(scaleDownDelayAfterFailure);
             return this;
         }
-
         public Builder scaleDownUnneededTime(@Nullable Output<String> scaleDownUnneededTime) {
             this.scaleDownUnneededTime = scaleDownUnneededTime;
             return this;
         }
-
         public Builder scaleDownUnneededTime(@Nullable String scaleDownUnneededTime) {
             this.scaleDownUnneededTime = Output.ofNullable(scaleDownUnneededTime);
             return this;
         }
-
         public Builder scaleDownUnreadyTime(@Nullable Output<String> scaleDownUnreadyTime) {
             this.scaleDownUnreadyTime = scaleDownUnreadyTime;
             return this;
         }
-
         public Builder scaleDownUnreadyTime(@Nullable String scaleDownUnreadyTime) {
             this.scaleDownUnreadyTime = Output.ofNullable(scaleDownUnreadyTime);
             return this;
         }
-
         public Builder scaleDownUtilizationThreshold(@Nullable Output<String> scaleDownUtilizationThreshold) {
             this.scaleDownUtilizationThreshold = scaleDownUtilizationThreshold;
             return this;
         }
-
         public Builder scaleDownUtilizationThreshold(@Nullable String scaleDownUtilizationThreshold) {
             this.scaleDownUtilizationThreshold = Output.ofNullable(scaleDownUtilizationThreshold);
             return this;
         }
-
         public Builder scanInterval(@Nullable Output<String> scanInterval) {
             this.scanInterval = scanInterval;
             return this;
         }
-
         public Builder scanInterval(@Nullable String scanInterval) {
             this.scanInterval = Output.ofNullable(scanInterval);
             return this;
         }
-
         public Builder skipNodesWithLocalStorage(@Nullable Output<String> skipNodesWithLocalStorage) {
             this.skipNodesWithLocalStorage = skipNodesWithLocalStorage;
             return this;
         }
-
         public Builder skipNodesWithLocalStorage(@Nullable String skipNodesWithLocalStorage) {
             this.skipNodesWithLocalStorage = Output.ofNullable(skipNodesWithLocalStorage);
             return this;
         }
-
         public Builder skipNodesWithSystemPods(@Nullable Output<String> skipNodesWithSystemPods) {
             this.skipNodesWithSystemPods = skipNodesWithSystemPods;
             return this;
         }
-
         public Builder skipNodesWithSystemPods(@Nullable String skipNodesWithSystemPods) {
             this.skipNodesWithSystemPods = Output.ofNullable(skipNodesWithSystemPods);
             return this;
-        }
-        public ManagedClusterPropertiesAutoScalerProfileArgs build() {
+        }        public ManagedClusterPropertiesAutoScalerProfileArgs build() {
             return new ManagedClusterPropertiesAutoScalerProfileArgs(balanceSimilarNodeGroups, expander, maxEmptyBulkDelete, maxGracefulTerminationSec, maxNodeProvisionTime, maxTotalUnreadyPercentage, newPodScaleUpDelay, okTotalUnreadyCount, scaleDownDelayAfterAdd, scaleDownDelayAfterDelete, scaleDownDelayAfterFailure, scaleDownUnneededTime, scaleDownUnreadyTime, scaleDownUtilizationThreshold, scanInterval, skipNodesWithLocalStorage, skipNodesWithSystemPods);
         }
     }

@@ -73,12 +73,13 @@ public final class ListNetworkManagerDeploymentStatusResult {
             this.skipToken = skipToken;
             return this;
         }
-
         public Builder value(@Nullable List<NetworkManagerDeploymentStatusResponse> value) {
             this.value = value;
             return this;
         }
-        public ListNetworkManagerDeploymentStatusResult build() {
+        public Builder value(NetworkManagerDeploymentStatusResponse... value) {
+            return value(List.of(value));
+        }        public ListNetworkManagerDeploymentStatusResult build() {
             return new ListNetworkManagerDeploymentStatusResult(skipToken, value);
         }
     }

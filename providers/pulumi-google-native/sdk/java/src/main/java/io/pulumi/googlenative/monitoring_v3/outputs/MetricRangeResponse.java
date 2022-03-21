@@ -70,12 +70,10 @@ public final class MetricRangeResponse {
             this.range = Objects.requireNonNull(range);
             return this;
         }
-
         public Builder timeSeries(String timeSeries) {
             this.timeSeries = Objects.requireNonNull(timeSeries);
             return this;
-        }
-        public MetricRangeResponse build() {
+        }        public MetricRangeResponse build() {
             return new MetricRangeResponse(range, timeSeries);
         }
     }

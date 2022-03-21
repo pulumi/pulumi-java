@@ -77,22 +77,18 @@ public final class CreateVirtualNetworkRuleWithAccountParametersArgs extends io.
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
-
         public Builder subnetId(Output<String> subnetId) {
             this.subnetId = Objects.requireNonNull(subnetId);
             return this;
         }
-
         public Builder subnetId(String subnetId) {
             this.subnetId = Output.of(Objects.requireNonNull(subnetId));
             return this;
-        }
-        public CreateVirtualNetworkRuleWithAccountParametersArgs build() {
+        }        public CreateVirtualNetworkRuleWithAccountParametersArgs build() {
             return new CreateVirtualNetworkRuleWithAccountParametersArgs(name, subnetId);
         }
     }

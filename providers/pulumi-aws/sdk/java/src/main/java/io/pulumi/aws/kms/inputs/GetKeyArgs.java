@@ -79,12 +79,13 @@ public final class GetKeyArgs extends io.pulumi.resources.InvokeArgs {
             this.grantTokens = grantTokens;
             return this;
         }
-
+        public Builder grantTokens(String... grantTokens) {
+            return grantTokens(List.of(grantTokens));
+        }
         public Builder keyId(String keyId) {
             this.keyId = Objects.requireNonNull(keyId);
             return this;
-        }
-        public GetKeyArgs build() {
+        }        public GetKeyArgs build() {
             return new GetKeyArgs(grantTokens, keyId);
         }
     }

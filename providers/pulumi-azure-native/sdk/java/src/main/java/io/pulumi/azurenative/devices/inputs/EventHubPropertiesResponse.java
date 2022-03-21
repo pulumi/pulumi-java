@@ -129,27 +129,25 @@ public final class EventHubPropertiesResponse extends io.pulumi.resources.Invoke
             this.endpoint = Objects.requireNonNull(endpoint);
             return this;
         }
-
         public Builder partitionCount(@Nullable Integer partitionCount) {
             this.partitionCount = partitionCount;
             return this;
         }
-
         public Builder partitionIds(List<String> partitionIds) {
             this.partitionIds = Objects.requireNonNull(partitionIds);
             return this;
         }
-
+        public Builder partitionIds(String... partitionIds) {
+            return partitionIds(List.of(partitionIds));
+        }
         public Builder path(String path) {
             this.path = Objects.requireNonNull(path);
             return this;
         }
-
         public Builder retentionTimeInDays(@Nullable Double retentionTimeInDays) {
             this.retentionTimeInDays = retentionTimeInDays;
             return this;
-        }
-        public EventHubPropertiesResponse build() {
+        }        public EventHubPropertiesResponse build() {
             return new EventHubPropertiesResponse(endpoint, partitionCount, partitionIds, path, retentionTimeInDays);
         }
     }

@@ -97,32 +97,29 @@ public final class AzureWorkloadContainerExtendedInfoArgs extends io.pulumi.reso
             this.hostServerName = hostServerName;
             return this;
         }
-
         public Builder hostServerName(@Nullable String hostServerName) {
             this.hostServerName = Output.ofNullable(hostServerName);
             return this;
         }
-
         public Builder inquiryInfo(@Nullable Output<InquiryInfoArgs> inquiryInfo) {
             this.inquiryInfo = inquiryInfo;
             return this;
         }
-
         public Builder inquiryInfo(@Nullable InquiryInfoArgs inquiryInfo) {
             this.inquiryInfo = Output.ofNullable(inquiryInfo);
             return this;
         }
-
         public Builder nodesList(@Nullable Output<List<DistributedNodesInfoArgs>> nodesList) {
             this.nodesList = nodesList;
             return this;
         }
-
         public Builder nodesList(@Nullable List<DistributedNodesInfoArgs> nodesList) {
             this.nodesList = Output.ofNullable(nodesList);
             return this;
         }
-        public AzureWorkloadContainerExtendedInfoArgs build() {
+        public Builder nodesList(DistributedNodesInfoArgs... nodesList) {
+            return nodesList(List.of(nodesList));
+        }        public AzureWorkloadContainerExtendedInfoArgs build() {
             return new AzureWorkloadContainerExtendedInfoArgs(hostServerName, inquiryInfo, nodesList);
         }
     }

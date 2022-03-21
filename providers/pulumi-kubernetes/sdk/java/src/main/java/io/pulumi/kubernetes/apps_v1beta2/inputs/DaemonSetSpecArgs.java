@@ -129,52 +129,42 @@ public final class DaemonSetSpecArgs extends io.pulumi.resources.ResourceArgs {
             this.minReadySeconds = minReadySeconds;
             return this;
         }
-
         public Builder minReadySeconds(@Nullable Integer minReadySeconds) {
             this.minReadySeconds = Output.ofNullable(minReadySeconds);
             return this;
         }
-
         public Builder revisionHistoryLimit(@Nullable Output<Integer> revisionHistoryLimit) {
             this.revisionHistoryLimit = revisionHistoryLimit;
             return this;
         }
-
         public Builder revisionHistoryLimit(@Nullable Integer revisionHistoryLimit) {
             this.revisionHistoryLimit = Output.ofNullable(revisionHistoryLimit);
             return this;
         }
-
         public Builder selector(Output<LabelSelectorArgs> selector) {
             this.selector = Objects.requireNonNull(selector);
             return this;
         }
-
         public Builder selector(LabelSelectorArgs selector) {
             this.selector = Output.of(Objects.requireNonNull(selector));
             return this;
         }
-
         public Builder template(Output<PodTemplateSpecArgs> template) {
             this.template = Objects.requireNonNull(template);
             return this;
         }
-
         public Builder template(PodTemplateSpecArgs template) {
             this.template = Output.of(Objects.requireNonNull(template));
             return this;
         }
-
         public Builder updateStrategy(@Nullable Output<DaemonSetUpdateStrategyArgs> updateStrategy) {
             this.updateStrategy = updateStrategy;
             return this;
         }
-
         public Builder updateStrategy(@Nullable DaemonSetUpdateStrategyArgs updateStrategy) {
             this.updateStrategy = Output.ofNullable(updateStrategy);
             return this;
-        }
-        public DaemonSetSpecArgs build() {
+        }        public DaemonSetSpecArgs build() {
             return new DaemonSetSpecArgs(minReadySeconds, revisionHistoryLimit, selector, template, updateStrategy);
         }
     }

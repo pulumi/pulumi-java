@@ -89,32 +89,26 @@ public final class InAppTemplateDefaultButtonConfiguration {
             this.backgroundColor = backgroundColor;
             return this;
         }
-
         public Builder borderRadius(@Nullable Integer borderRadius) {
             this.borderRadius = borderRadius;
             return this;
         }
-
         public Builder buttonAction(@Nullable InAppTemplateButtonAction buttonAction) {
             this.buttonAction = buttonAction;
             return this;
         }
-
         public Builder link(@Nullable String link) {
             this.link = link;
             return this;
         }
-
         public Builder text(@Nullable String text) {
             this.text = text;
             return this;
         }
-
         public Builder textColor(@Nullable String textColor) {
             this.textColor = textColor;
             return this;
-        }
-        public InAppTemplateDefaultButtonConfiguration build() {
+        }        public InAppTemplateDefaultButtonConfiguration build() {
             return new InAppTemplateDefaultButtonConfiguration(backgroundColor, borderRadius, buttonAction, link, text, textColor);
         }
     }

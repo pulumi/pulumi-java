@@ -50,8 +50,7 @@ public final class FlowServiceNowSourceProperties extends io.pulumi.resources.In
         public Builder object(String object) {
             this.object = Objects.requireNonNull(object);
             return this;
-        }
-        public FlowServiceNowSourceProperties build() {
+        }        public FlowServiceNowSourceProperties build() {
             return new FlowServiceNowSourceProperties(object);
         }
     }

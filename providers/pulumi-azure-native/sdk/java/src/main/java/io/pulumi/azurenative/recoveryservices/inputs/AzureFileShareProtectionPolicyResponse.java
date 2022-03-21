@@ -151,32 +151,26 @@ public final class AzureFileShareProtectionPolicyResponse extends io.pulumi.reso
             this.backupManagementType = Objects.requireNonNull(backupManagementType);
             return this;
         }
-
         public Builder protectedItemsCount(@Nullable Integer protectedItemsCount) {
             this.protectedItemsCount = protectedItemsCount;
             return this;
         }
-
         public Builder retentionPolicy(@Nullable Either<LongTermRetentionPolicyResponse,SimpleRetentionPolicyResponse> retentionPolicy) {
             this.retentionPolicy = retentionPolicy;
             return this;
         }
-
         public Builder schedulePolicy(@Nullable Object schedulePolicy) {
             this.schedulePolicy = schedulePolicy;
             return this;
         }
-
         public Builder timeZone(@Nullable String timeZone) {
             this.timeZone = timeZone;
             return this;
         }
-
         public Builder workLoadType(@Nullable String workLoadType) {
             this.workLoadType = workLoadType;
             return this;
-        }
-        public AzureFileShareProtectionPolicyResponse build() {
+        }        public AzureFileShareProtectionPolicyResponse build() {
             return new AzureFileShareProtectionPolicyResponse(backupManagementType, protectedItemsCount, retentionPolicy, schedulePolicy, timeZone, workLoadType);
         }
     }

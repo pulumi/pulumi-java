@@ -88,17 +88,14 @@ public final class GetDisasterRecoveryConfigArgs extends io.pulumi.resources.Inv
             this.alias = Objects.requireNonNull(alias);
             return this;
         }
-
         public Builder namespaceName(String namespaceName) {
             this.namespaceName = Objects.requireNonNull(namespaceName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
-        }
-        public GetDisasterRecoveryConfigArgs build() {
+        }        public GetDisasterRecoveryConfigArgs build() {
             return new GetDisasterRecoveryConfigArgs(alias, namespaceName, resourceGroupName);
         }
     }

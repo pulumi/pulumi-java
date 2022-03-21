@@ -107,42 +107,34 @@ public final class ApplicationSnapshotState extends io.pulumi.resources.Resource
             this.applicationName = applicationName;
             return this;
         }
-
         public Builder applicationName(@Nullable String applicationName) {
             this.applicationName = Output.ofNullable(applicationName);
             return this;
         }
-
         public Builder applicationVersionId(@Nullable Output<Integer> applicationVersionId) {
             this.applicationVersionId = applicationVersionId;
             return this;
         }
-
         public Builder applicationVersionId(@Nullable Integer applicationVersionId) {
             this.applicationVersionId = Output.ofNullable(applicationVersionId);
             return this;
         }
-
         public Builder snapshotCreationTimestamp(@Nullable Output<String> snapshotCreationTimestamp) {
             this.snapshotCreationTimestamp = snapshotCreationTimestamp;
             return this;
         }
-
         public Builder snapshotCreationTimestamp(@Nullable String snapshotCreationTimestamp) {
             this.snapshotCreationTimestamp = Output.ofNullable(snapshotCreationTimestamp);
             return this;
         }
-
         public Builder snapshotName(@Nullable Output<String> snapshotName) {
             this.snapshotName = snapshotName;
             return this;
         }
-
         public Builder snapshotName(@Nullable String snapshotName) {
             this.snapshotName = Output.ofNullable(snapshotName);
             return this;
-        }
-        public ApplicationSnapshotState build() {
+        }        public ApplicationSnapshotState build() {
             return new ApplicationSnapshotState(applicationName, applicationVersionId, snapshotCreationTimestamp, snapshotName);
         }
     }

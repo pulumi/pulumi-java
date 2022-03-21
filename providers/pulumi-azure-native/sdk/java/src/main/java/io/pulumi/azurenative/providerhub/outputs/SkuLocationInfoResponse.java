@@ -81,27 +81,31 @@ public final class SkuLocationInfoResponse {
             this.extendedLocations = extendedLocations;
             return this;
         }
-
+        public Builder extendedLocations(String... extendedLocations) {
+            return extendedLocations(List.of(extendedLocations));
+        }
         public Builder location(String location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
-
         public Builder type(@Nullable String type) {
             this.type = type;
             return this;
         }
-
         public Builder zoneDetails(@Nullable List<SkuZoneDetailResponse> zoneDetails) {
             this.zoneDetails = zoneDetails;
             return this;
         }
-
+        public Builder zoneDetails(SkuZoneDetailResponse... zoneDetails) {
+            return zoneDetails(List.of(zoneDetails));
+        }
         public Builder zones(@Nullable List<String> zones) {
             this.zones = zones;
             return this;
         }
-        public SkuLocationInfoResponse build() {
+        public Builder zones(String... zones) {
+            return zones(List.of(zones));
+        }        public SkuLocationInfoResponse build() {
             return new SkuLocationInfoResponse(extendedLocations, location, type, zoneDetails, zones);
         }
     }

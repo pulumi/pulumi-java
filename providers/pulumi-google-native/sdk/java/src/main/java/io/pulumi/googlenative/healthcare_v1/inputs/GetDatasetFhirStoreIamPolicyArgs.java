@@ -102,27 +102,22 @@ public final class GetDatasetFhirStoreIamPolicyArgs extends io.pulumi.resources.
             this.datasetId = Objects.requireNonNull(datasetId);
             return this;
         }
-
         public Builder fhirStoreId(String fhirStoreId) {
             this.fhirStoreId = Objects.requireNonNull(fhirStoreId);
             return this;
         }
-
         public Builder location(String location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
-
         public Builder optionsRequestedPolicyVersion(@Nullable String optionsRequestedPolicyVersion) {
             this.optionsRequestedPolicyVersion = optionsRequestedPolicyVersion;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = project;
             return this;
-        }
-        public GetDatasetFhirStoreIamPolicyArgs build() {
+        }        public GetDatasetFhirStoreIamPolicyArgs build() {
             return new GetDatasetFhirStoreIamPolicyArgs(datasetId, fhirStoreId, location, optionsRequestedPolicyVersion, project);
         }
     }

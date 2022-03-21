@@ -378,117 +378,124 @@ public final class GetUserPoolClientResult {
             this.accessTokenValidity = Objects.requireNonNull(accessTokenValidity);
             return this;
         }
-
         public Builder allowedOauthFlows(List<String> allowedOauthFlows) {
             this.allowedOauthFlows = Objects.requireNonNull(allowedOauthFlows);
             return this;
         }
-
+        public Builder allowedOauthFlows(String... allowedOauthFlows) {
+            return allowedOauthFlows(List.of(allowedOauthFlows));
+        }
         public Builder allowedOauthFlowsUserPoolClient(Boolean allowedOauthFlowsUserPoolClient) {
             this.allowedOauthFlowsUserPoolClient = Objects.requireNonNull(allowedOauthFlowsUserPoolClient);
             return this;
         }
-
         public Builder allowedOauthScopes(List<String> allowedOauthScopes) {
             this.allowedOauthScopes = Objects.requireNonNull(allowedOauthScopes);
             return this;
         }
-
+        public Builder allowedOauthScopes(String... allowedOauthScopes) {
+            return allowedOauthScopes(List.of(allowedOauthScopes));
+        }
         public Builder analyticsConfigurations(List<GetUserPoolClientAnalyticsConfiguration> analyticsConfigurations) {
             this.analyticsConfigurations = Objects.requireNonNull(analyticsConfigurations);
             return this;
         }
-
+        public Builder analyticsConfigurations(GetUserPoolClientAnalyticsConfiguration... analyticsConfigurations) {
+            return analyticsConfigurations(List.of(analyticsConfigurations));
+        }
         public Builder callbackUrls(List<String> callbackUrls) {
             this.callbackUrls = Objects.requireNonNull(callbackUrls);
             return this;
         }
-
+        public Builder callbackUrls(String... callbackUrls) {
+            return callbackUrls(List.of(callbackUrls));
+        }
         public Builder clientId(String clientId) {
             this.clientId = Objects.requireNonNull(clientId);
             return this;
         }
-
         public Builder clientSecret(String clientSecret) {
             this.clientSecret = Objects.requireNonNull(clientSecret);
             return this;
         }
-
         public Builder defaultRedirectUri(String defaultRedirectUri) {
             this.defaultRedirectUri = Objects.requireNonNull(defaultRedirectUri);
             return this;
         }
-
         public Builder enableTokenRevocation(Boolean enableTokenRevocation) {
             this.enableTokenRevocation = Objects.requireNonNull(enableTokenRevocation);
             return this;
         }
-
         public Builder explicitAuthFlows(List<String> explicitAuthFlows) {
             this.explicitAuthFlows = Objects.requireNonNull(explicitAuthFlows);
             return this;
         }
-
+        public Builder explicitAuthFlows(String... explicitAuthFlows) {
+            return explicitAuthFlows(List.of(explicitAuthFlows));
+        }
         public Builder generateSecret(Boolean generateSecret) {
             this.generateSecret = Objects.requireNonNull(generateSecret);
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder idTokenValidity(Integer idTokenValidity) {
             this.idTokenValidity = Objects.requireNonNull(idTokenValidity);
             return this;
         }
-
         public Builder logoutUrls(List<String> logoutUrls) {
             this.logoutUrls = Objects.requireNonNull(logoutUrls);
             return this;
         }
-
+        public Builder logoutUrls(String... logoutUrls) {
+            return logoutUrls(List.of(logoutUrls));
+        }
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder preventUserExistenceErrors(String preventUserExistenceErrors) {
             this.preventUserExistenceErrors = Objects.requireNonNull(preventUserExistenceErrors);
             return this;
         }
-
         public Builder readAttributes(List<String> readAttributes) {
             this.readAttributes = Objects.requireNonNull(readAttributes);
             return this;
         }
-
+        public Builder readAttributes(String... readAttributes) {
+            return readAttributes(List.of(readAttributes));
+        }
         public Builder refreshTokenValidity(Integer refreshTokenValidity) {
             this.refreshTokenValidity = Objects.requireNonNull(refreshTokenValidity);
             return this;
         }
-
         public Builder supportedIdentityProviders(List<String> supportedIdentityProviders) {
             this.supportedIdentityProviders = Objects.requireNonNull(supportedIdentityProviders);
             return this;
         }
-
+        public Builder supportedIdentityProviders(String... supportedIdentityProviders) {
+            return supportedIdentityProviders(List.of(supportedIdentityProviders));
+        }
         public Builder tokenValidityUnits(List<GetUserPoolClientTokenValidityUnit> tokenValidityUnits) {
             this.tokenValidityUnits = Objects.requireNonNull(tokenValidityUnits);
             return this;
         }
-
+        public Builder tokenValidityUnits(GetUserPoolClientTokenValidityUnit... tokenValidityUnits) {
+            return tokenValidityUnits(List.of(tokenValidityUnits));
+        }
         public Builder userPoolId(String userPoolId) {
             this.userPoolId = Objects.requireNonNull(userPoolId);
             return this;
         }
-
         public Builder writeAttributes(List<String> writeAttributes) {
             this.writeAttributes = Objects.requireNonNull(writeAttributes);
             return this;
         }
-        public GetUserPoolClientResult build() {
+        public Builder writeAttributes(String... writeAttributes) {
+            return writeAttributes(List.of(writeAttributes));
+        }        public GetUserPoolClientResult build() {
             return new GetUserPoolClientResult(accessTokenValidity, allowedOauthFlows, allowedOauthFlowsUserPoolClient, allowedOauthScopes, analyticsConfigurations, callbackUrls, clientId, clientSecret, defaultRedirectUri, enableTokenRevocation, explicitAuthFlows, generateSecret, id, idTokenValidity, logoutUrls, name, preventUserExistenceErrors, readAttributes, refreshTokenValidity, supportedIdentityProviders, tokenValidityUnits, userPoolId, writeAttributes);
         }
     }

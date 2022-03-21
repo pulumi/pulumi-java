@@ -154,37 +154,33 @@ public final class GroupPropertiesResponse {
             this.areAssessmentsRunning = Objects.requireNonNull(areAssessmentsRunning);
             return this;
         }
-
         public Builder assessments(List<String> assessments) {
             this.assessments = Objects.requireNonNull(assessments);
             return this;
         }
-
+        public Builder assessments(String... assessments) {
+            return assessments(List.of(assessments));
+        }
         public Builder createdTimestamp(String createdTimestamp) {
             this.createdTimestamp = Objects.requireNonNull(createdTimestamp);
             return this;
         }
-
         public Builder groupStatus(String groupStatus) {
             this.groupStatus = Objects.requireNonNull(groupStatus);
             return this;
         }
-
         public Builder groupType(@Nullable String groupType) {
             this.groupType = groupType;
             return this;
         }
-
         public Builder machineCount(Integer machineCount) {
             this.machineCount = Objects.requireNonNull(machineCount);
             return this;
         }
-
         public Builder updatedTimestamp(String updatedTimestamp) {
             this.updatedTimestamp = Objects.requireNonNull(updatedTimestamp);
             return this;
-        }
-        public GroupPropertiesResponse build() {
+        }        public GroupPropertiesResponse build() {
             return new GroupPropertiesResponse(areAssessmentsRunning, assessments, createdTimestamp, groupStatus, groupType, machineCount, updatedTimestamp);
         }
     }

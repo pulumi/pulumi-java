@@ -55,12 +55,10 @@ public final class RubberTreeState extends io.pulumi.resources.ResourceArgs {
             this.farm = farm;
             return this;
         }
-
         public Builder farm(@Nullable Either<Farm,String> farm) {
             this.farm = Output.ofNullable(farm);
             return this;
-        }
-        public RubberTreeState build() {
+        }        public RubberTreeState build() {
             return new RubberTreeState(farm);
         }
     }

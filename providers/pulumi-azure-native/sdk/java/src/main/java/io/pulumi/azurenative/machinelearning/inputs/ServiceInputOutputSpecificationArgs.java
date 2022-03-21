@@ -112,42 +112,34 @@ public final class ServiceInputOutputSpecificationArgs extends io.pulumi.resourc
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder properties(Output<Map<String,TableSpecificationArgs>> properties) {
             this.properties = Objects.requireNonNull(properties);
             return this;
         }
-
         public Builder properties(Map<String,TableSpecificationArgs> properties) {
             this.properties = Output.of(Objects.requireNonNull(properties));
             return this;
         }
-
         public Builder title(@Nullable Output<String> title) {
             this.title = title;
             return this;
         }
-
         public Builder title(@Nullable String title) {
             this.title = Output.ofNullable(title);
             return this;
         }
-
         public Builder type(Output<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Output.of(Objects.requireNonNull(type));
             return this;
-        }
-        public ServiceInputOutputSpecificationArgs build() {
+        }        public ServiceInputOutputSpecificationArgs build() {
             return new ServiceInputOutputSpecificationArgs(description, properties, title, type);
         }
     }

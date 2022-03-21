@@ -219,72 +219,82 @@ public final class GetClusterNodePool extends io.pulumi.resources.InvokeArgs {
             this.autoscalings = Objects.requireNonNull(autoscalings);
             return this;
         }
-
+        public Builder autoscalings(GetClusterNodePoolAutoscaling... autoscalings) {
+            return autoscalings(List.of(autoscalings));
+        }
         public Builder initialNodeCount(Integer initialNodeCount) {
             this.initialNodeCount = Objects.requireNonNull(initialNodeCount);
             return this;
         }
-
         public Builder instanceGroupUrls(List<String> instanceGroupUrls) {
             this.instanceGroupUrls = Objects.requireNonNull(instanceGroupUrls);
             return this;
         }
-
+        public Builder instanceGroupUrls(String... instanceGroupUrls) {
+            return instanceGroupUrls(List.of(instanceGroupUrls));
+        }
         public Builder managedInstanceGroupUrls(List<String> managedInstanceGroupUrls) {
             this.managedInstanceGroupUrls = Objects.requireNonNull(managedInstanceGroupUrls);
             return this;
         }
-
+        public Builder managedInstanceGroupUrls(String... managedInstanceGroupUrls) {
+            return managedInstanceGroupUrls(List.of(managedInstanceGroupUrls));
+        }
         public Builder managements(List<GetClusterNodePoolManagement> managements) {
             this.managements = Objects.requireNonNull(managements);
             return this;
         }
-
+        public Builder managements(GetClusterNodePoolManagement... managements) {
+            return managements(List.of(managements));
+        }
         public Builder maxPodsPerNode(Integer maxPodsPerNode) {
             this.maxPodsPerNode = Objects.requireNonNull(maxPodsPerNode);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder namePrefix(String namePrefix) {
             this.namePrefix = Objects.requireNonNull(namePrefix);
             return this;
         }
-
         public Builder networkConfigs(List<GetClusterNodePoolNetworkConfig> networkConfigs) {
             this.networkConfigs = Objects.requireNonNull(networkConfigs);
             return this;
         }
-
+        public Builder networkConfigs(GetClusterNodePoolNetworkConfig... networkConfigs) {
+            return networkConfigs(List.of(networkConfigs));
+        }
         public Builder nodeConfigs(List<GetClusterNodePoolNodeConfig> nodeConfigs) {
             this.nodeConfigs = Objects.requireNonNull(nodeConfigs);
             return this;
         }
-
+        public Builder nodeConfigs(GetClusterNodePoolNodeConfig... nodeConfigs) {
+            return nodeConfigs(List.of(nodeConfigs));
+        }
         public Builder nodeCount(Integer nodeCount) {
             this.nodeCount = Objects.requireNonNull(nodeCount);
             return this;
         }
-
         public Builder nodeLocations(List<String> nodeLocations) {
             this.nodeLocations = Objects.requireNonNull(nodeLocations);
             return this;
         }
-
+        public Builder nodeLocations(String... nodeLocations) {
+            return nodeLocations(List.of(nodeLocations));
+        }
         public Builder upgradeSettings(List<GetClusterNodePoolUpgradeSetting> upgradeSettings) {
             this.upgradeSettings = Objects.requireNonNull(upgradeSettings);
             return this;
         }
-
+        public Builder upgradeSettings(GetClusterNodePoolUpgradeSetting... upgradeSettings) {
+            return upgradeSettings(List.of(upgradeSettings));
+        }
         public Builder version(String version) {
             this.version = Objects.requireNonNull(version);
             return this;
-        }
-        public GetClusterNodePool build() {
+        }        public GetClusterNodePool build() {
             return new GetClusterNodePool(autoscalings, initialNodeCount, instanceGroupUrls, managedInstanceGroupUrls, managements, maxPodsPerNode, name, namePrefix, networkConfigs, nodeConfigs, nodeCount, nodeLocations, upgradeSettings, version);
         }
     }

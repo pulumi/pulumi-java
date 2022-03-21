@@ -650,6 +650,7 @@ func (pt *plainType) genJumboInputType(ctx *classFileContext) error {
 			PropertyType: propertyType.ToCode(ctx.imports),
 			PropertyName: propertyName.String(),
 			Assignment:   assignment(propertyName),
+			ListType:     propertyType.ListType(ctx),
 		})
 
 		if isInputType(prop.Type) { // we have a wrapped field so we add an unwrapped helper setter
@@ -681,11 +682,13 @@ func (pt *plainType) genJumboInputType(ctx *classFileContext) error {
 
 			if !propertyTypeUnwrapped.Equal(propertyType) {
 				// add overloaded setter
+
 				builderSetters = append(builderSetters, builderSetterTemplateContext{
 					SetterName:   setterName,
 					PropertyType: propertyTypeUnwrapped.ToCode(ctx.imports),
 					PropertyName: propertyName.String(),
 					Assignment:   assignmentUnwrapped(propertyName),
+					ListType:     propertyTypeUnwrapped.ListType(ctx),
 				})
 			}
 		}
@@ -853,6 +856,7 @@ func (pt *plainType) genNormalInputType(ctx *classFileContext) error {
 			PropertyType: propertyType.ToCode(ctx.imports),
 			PropertyName: propertyName.String(),
 			Assignment:   assignment(propertyName),
+			ListType:     propertyType.ListType(ctx),
 		})
 
 		if isInputType(prop.Type) { // we have a wrapped field so we add an unwrapped helper setter
@@ -889,6 +893,7 @@ func (pt *plainType) genNormalInputType(ctx *classFileContext) error {
 					PropertyType: propertyTypeUnwrapped.ToCode(ctx.imports),
 					PropertyName: propertyName.String(),
 					Assignment:   assignmentUnwrapped(propertyName),
+					ListType:     propertyTypeUnwrapped.ListType(ctx),
 				})
 			}
 		}
@@ -1098,6 +1103,7 @@ func (pt *plainType) genJumboOutputType(ctx *classFileContext) error {
 			PropertyType: propertyType.ToCode(ctx.imports),
 			PropertyName: propertyName.String(),
 			Assignment:   assignment(propertyName),
+			ListType:     propertyType.ListType(ctx),
 		})
 	}
 
@@ -1324,6 +1330,7 @@ func (pt *plainType) genNormalOutputType(ctx *classFileContext) error {
 			PropertyType: propertyType.ToCode(ctx.imports),
 			PropertyName: propertyName.String(),
 			Assignment:   assignment(propertyName),
+			ListType:     propertyType.ListType(ctx),
 		})
 	}
 

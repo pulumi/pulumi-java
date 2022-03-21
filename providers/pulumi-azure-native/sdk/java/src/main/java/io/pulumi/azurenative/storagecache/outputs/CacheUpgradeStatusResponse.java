@@ -117,27 +117,22 @@ public final class CacheUpgradeStatusResponse {
             this.currentFirmwareVersion = Objects.requireNonNull(currentFirmwareVersion);
             return this;
         }
-
         public Builder firmwareUpdateDeadline(String firmwareUpdateDeadline) {
             this.firmwareUpdateDeadline = Objects.requireNonNull(firmwareUpdateDeadline);
             return this;
         }
-
         public Builder firmwareUpdateStatus(String firmwareUpdateStatus) {
             this.firmwareUpdateStatus = Objects.requireNonNull(firmwareUpdateStatus);
             return this;
         }
-
         public Builder lastFirmwareUpdate(String lastFirmwareUpdate) {
             this.lastFirmwareUpdate = Objects.requireNonNull(lastFirmwareUpdate);
             return this;
         }
-
         public Builder pendingFirmwareVersion(String pendingFirmwareVersion) {
             this.pendingFirmwareVersion = Objects.requireNonNull(pendingFirmwareVersion);
             return this;
-        }
-        public CacheUpgradeStatusResponse build() {
+        }        public CacheUpgradeStatusResponse build() {
             return new CacheUpgradeStatusResponse(currentFirmwareVersion, firmwareUpdateDeadline, firmwareUpdateStatus, lastFirmwareUpdate, pendingFirmwareVersion);
         }
     }

@@ -119,27 +119,22 @@ public final class IosXcTestResponse {
             this.appBundleId = Objects.requireNonNull(appBundleId);
             return this;
         }
-
         public Builder testSpecialEntitlements(Boolean testSpecialEntitlements) {
             this.testSpecialEntitlements = Objects.requireNonNull(testSpecialEntitlements);
             return this;
         }
-
         public Builder testsZip(FileReferenceResponse testsZip) {
             this.testsZip = Objects.requireNonNull(testsZip);
             return this;
         }
-
         public Builder xcodeVersion(String xcodeVersion) {
             this.xcodeVersion = Objects.requireNonNull(xcodeVersion);
             return this;
         }
-
         public Builder xctestrun(FileReferenceResponse xctestrun) {
             this.xctestrun = Objects.requireNonNull(xctestrun);
             return this;
-        }
-        public IosXcTestResponse build() {
+        }        public IosXcTestResponse build() {
             return new IosXcTestResponse(appBundleId, testSpecialEntitlements, testsZip, xcodeVersion, xctestrun);
         }
     }

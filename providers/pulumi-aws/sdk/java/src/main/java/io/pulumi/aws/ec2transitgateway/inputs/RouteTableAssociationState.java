@@ -106,42 +106,34 @@ public final class RouteTableAssociationState extends io.pulumi.resources.Resour
             this.resourceId = resourceId;
             return this;
         }
-
         public Builder resourceId(@Nullable String resourceId) {
             this.resourceId = Output.ofNullable(resourceId);
             return this;
         }
-
         public Builder resourceType(@Nullable Output<String> resourceType) {
             this.resourceType = resourceType;
             return this;
         }
-
         public Builder resourceType(@Nullable String resourceType) {
             this.resourceType = Output.ofNullable(resourceType);
             return this;
         }
-
         public Builder transitGatewayAttachmentId(@Nullable Output<String> transitGatewayAttachmentId) {
             this.transitGatewayAttachmentId = transitGatewayAttachmentId;
             return this;
         }
-
         public Builder transitGatewayAttachmentId(@Nullable String transitGatewayAttachmentId) {
             this.transitGatewayAttachmentId = Output.ofNullable(transitGatewayAttachmentId);
             return this;
         }
-
         public Builder transitGatewayRouteTableId(@Nullable Output<String> transitGatewayRouteTableId) {
             this.transitGatewayRouteTableId = transitGatewayRouteTableId;
             return this;
         }
-
         public Builder transitGatewayRouteTableId(@Nullable String transitGatewayRouteTableId) {
             this.transitGatewayRouteTableId = Output.ofNullable(transitGatewayRouteTableId);
             return this;
-        }
-        public RouteTableAssociationState build() {
+        }        public RouteTableAssociationState build() {
             return new RouteTableAssociationState(resourceId, resourceType, transitGatewayAttachmentId, transitGatewayRouteTableId);
         }
     }

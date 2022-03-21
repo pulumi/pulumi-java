@@ -94,32 +94,26 @@ public final class ManagementPolicySnapShotArgs extends io.pulumi.resources.Reso
             this.delete = delete;
             return this;
         }
-
         public Builder delete(@Nullable DateAfterCreationArgs delete) {
             this.delete = Output.ofNullable(delete);
             return this;
         }
-
         public Builder tierToArchive(@Nullable Output<DateAfterCreationArgs> tierToArchive) {
             this.tierToArchive = tierToArchive;
             return this;
         }
-
         public Builder tierToArchive(@Nullable DateAfterCreationArgs tierToArchive) {
             this.tierToArchive = Output.ofNullable(tierToArchive);
             return this;
         }
-
         public Builder tierToCool(@Nullable Output<DateAfterCreationArgs> tierToCool) {
             this.tierToCool = tierToCool;
             return this;
         }
-
         public Builder tierToCool(@Nullable DateAfterCreationArgs tierToCool) {
             this.tierToCool = Output.ofNullable(tierToCool);
             return this;
-        }
-        public ManagementPolicySnapShotArgs build() {
+        }        public ManagementPolicySnapShotArgs build() {
             return new ManagementPolicySnapShotArgs(delete, tierToArchive, tierToCool);
         }
     }

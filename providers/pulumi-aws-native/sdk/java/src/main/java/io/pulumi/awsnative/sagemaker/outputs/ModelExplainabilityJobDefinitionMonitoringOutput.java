@@ -43,8 +43,7 @@ public final class ModelExplainabilityJobDefinitionMonitoringOutput {
         public Builder s3Output(ModelExplainabilityJobDefinitionS3Output s3Output) {
             this.s3Output = Objects.requireNonNull(s3Output);
             return this;
-        }
-        public ModelExplainabilityJobDefinitionMonitoringOutput build() {
+        }        public ModelExplainabilityJobDefinitionMonitoringOutput build() {
             return new ModelExplainabilityJobDefinitionMonitoringOutput(s3Output);
         }
     }

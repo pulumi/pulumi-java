@@ -88,17 +88,14 @@ public final class GetBookmarkArgs extends io.pulumi.resources.InvokeArgs {
             this.bookmarkId = Objects.requireNonNull(bookmarkId);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder workspaceName(String workspaceName) {
             this.workspaceName = Objects.requireNonNull(workspaceName);
             return this;
-        }
-        public GetBookmarkArgs build() {
+        }        public GetBookmarkArgs build() {
             return new GetBookmarkArgs(bookmarkId, resourceGroupName, workspaceName);
         }
     }

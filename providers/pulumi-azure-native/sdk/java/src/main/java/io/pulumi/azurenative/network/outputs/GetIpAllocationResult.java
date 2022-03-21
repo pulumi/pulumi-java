@@ -250,67 +250,54 @@ public final class GetIpAllocationResult {
             this.allocationTags = allocationTags;
             return this;
         }
-
         public Builder etag(String etag) {
             this.etag = Objects.requireNonNull(etag);
             return this;
         }
-
         public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
-
         public Builder ipamAllocationId(@Nullable String ipamAllocationId) {
             this.ipamAllocationId = ipamAllocationId;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = location;
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder prefix(@Nullable String prefix) {
             this.prefix = prefix;
             return this;
         }
-
         public Builder prefixLength(@Nullable Integer prefixLength) {
             this.prefixLength = prefixLength;
             return this;
         }
-
         public Builder prefixType(@Nullable String prefixType) {
             this.prefixType = prefixType;
             return this;
         }
-
         public Builder subnet(SubResourceResponse subnet) {
             this.subnet = Objects.requireNonNull(subnet);
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder virtualNetwork(SubResourceResponse virtualNetwork) {
             this.virtualNetwork = Objects.requireNonNull(virtualNetwork);
             return this;
-        }
-        public GetIpAllocationResult build() {
+        }        public GetIpAllocationResult build() {
             return new GetIpAllocationResult(allocationTags, etag, id, ipamAllocationId, location, name, prefix, prefixLength, prefixType, subnet, tags, type, virtualNetwork);
         }
     }

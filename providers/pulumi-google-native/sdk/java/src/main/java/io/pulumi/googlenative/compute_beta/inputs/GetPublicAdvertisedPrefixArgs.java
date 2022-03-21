@@ -66,12 +66,10 @@ public final class GetPublicAdvertisedPrefixArgs extends io.pulumi.resources.Inv
             this.project = project;
             return this;
         }
-
         public Builder publicAdvertisedPrefix(String publicAdvertisedPrefix) {
             this.publicAdvertisedPrefix = Objects.requireNonNull(publicAdvertisedPrefix);
             return this;
-        }
-        public GetPublicAdvertisedPrefixArgs build() {
+        }        public GetPublicAdvertisedPrefixArgs build() {
             return new GetPublicAdvertisedPrefixArgs(project, publicAdvertisedPrefix);
         }
     }

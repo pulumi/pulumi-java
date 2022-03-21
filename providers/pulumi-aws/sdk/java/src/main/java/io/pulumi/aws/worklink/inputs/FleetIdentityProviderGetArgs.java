@@ -73,22 +73,18 @@ public final class FleetIdentityProviderGetArgs extends io.pulumi.resources.Reso
             this.samlMetadata = Objects.requireNonNull(samlMetadata);
             return this;
         }
-
         public Builder samlMetadata(String samlMetadata) {
             this.samlMetadata = Output.of(Objects.requireNonNull(samlMetadata));
             return this;
         }
-
         public Builder type(Output<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Output.of(Objects.requireNonNull(type));
             return this;
-        }
-        public FleetIdentityProviderGetArgs build() {
+        }        public FleetIdentityProviderGetArgs build() {
             return new FleetIdentityProviderGetArgs(samlMetadata, type);
         }
     }

@@ -78,17 +78,14 @@ public final class GetSnapshotIamPolicyArgs extends io.pulumi.resources.InvokeAr
             this.optionsRequestedPolicyVersion = optionsRequestedPolicyVersion;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = project;
             return this;
         }
-
         public Builder snapshotId(String snapshotId) {
             this.snapshotId = Objects.requireNonNull(snapshotId);
             return this;
-        }
-        public GetSnapshotIamPolicyArgs build() {
+        }        public GetSnapshotIamPolicyArgs build() {
             return new GetSnapshotIamPolicyArgs(optionsRequestedPolicyVersion, project, snapshotId);
         }
     }

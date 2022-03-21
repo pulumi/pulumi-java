@@ -142,82 +142,66 @@ public final class DeliveryStreamS3DestinationConfigurationArgs extends io.pulum
             this.bucketARN = Objects.requireNonNull(bucketARN);
             return this;
         }
-
         public Builder bucketARN(String bucketARN) {
             this.bucketARN = Output.of(Objects.requireNonNull(bucketARN));
             return this;
         }
-
         public Builder bufferingHints(@Nullable Output<DeliveryStreamBufferingHintsArgs> bufferingHints) {
             this.bufferingHints = bufferingHints;
             return this;
         }
-
         public Builder bufferingHints(@Nullable DeliveryStreamBufferingHintsArgs bufferingHints) {
             this.bufferingHints = Output.ofNullable(bufferingHints);
             return this;
         }
-
         public Builder cloudWatchLoggingOptions(@Nullable Output<DeliveryStreamCloudWatchLoggingOptionsArgs> cloudWatchLoggingOptions) {
             this.cloudWatchLoggingOptions = cloudWatchLoggingOptions;
             return this;
         }
-
         public Builder cloudWatchLoggingOptions(@Nullable DeliveryStreamCloudWatchLoggingOptionsArgs cloudWatchLoggingOptions) {
             this.cloudWatchLoggingOptions = Output.ofNullable(cloudWatchLoggingOptions);
             return this;
         }
-
         public Builder compressionFormat(@Nullable Output<DeliveryStreamS3DestinationConfigurationCompressionFormat> compressionFormat) {
             this.compressionFormat = compressionFormat;
             return this;
         }
-
         public Builder compressionFormat(@Nullable DeliveryStreamS3DestinationConfigurationCompressionFormat compressionFormat) {
             this.compressionFormat = Output.ofNullable(compressionFormat);
             return this;
         }
-
         public Builder encryptionConfiguration(@Nullable Output<DeliveryStreamEncryptionConfigurationArgs> encryptionConfiguration) {
             this.encryptionConfiguration = encryptionConfiguration;
             return this;
         }
-
         public Builder encryptionConfiguration(@Nullable DeliveryStreamEncryptionConfigurationArgs encryptionConfiguration) {
             this.encryptionConfiguration = Output.ofNullable(encryptionConfiguration);
             return this;
         }
-
         public Builder errorOutputPrefix(@Nullable Output<String> errorOutputPrefix) {
             this.errorOutputPrefix = errorOutputPrefix;
             return this;
         }
-
         public Builder errorOutputPrefix(@Nullable String errorOutputPrefix) {
             this.errorOutputPrefix = Output.ofNullable(errorOutputPrefix);
             return this;
         }
-
         public Builder prefix(@Nullable Output<String> prefix) {
             this.prefix = prefix;
             return this;
         }
-
         public Builder prefix(@Nullable String prefix) {
             this.prefix = Output.ofNullable(prefix);
             return this;
         }
-
         public Builder roleARN(Output<String> roleARN) {
             this.roleARN = Objects.requireNonNull(roleARN);
             return this;
         }
-
         public Builder roleARN(String roleARN) {
             this.roleARN = Output.of(Objects.requireNonNull(roleARN));
             return this;
-        }
-        public DeliveryStreamS3DestinationConfigurationArgs build() {
+        }        public DeliveryStreamS3DestinationConfigurationArgs build() {
             return new DeliveryStreamS3DestinationConfigurationArgs(bucketARN, bufferingHints, cloudWatchLoggingOptions, compressionFormat, encryptionConfiguration, errorOutputPrefix, prefix, roleARN);
         }
     }

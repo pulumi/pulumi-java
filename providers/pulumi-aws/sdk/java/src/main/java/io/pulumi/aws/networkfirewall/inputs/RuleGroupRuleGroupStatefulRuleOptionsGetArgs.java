@@ -56,12 +56,10 @@ public final class RuleGroupRuleGroupStatefulRuleOptionsGetArgs extends io.pulum
             this.ruleOrder = Objects.requireNonNull(ruleOrder);
             return this;
         }
-
         public Builder ruleOrder(String ruleOrder) {
             this.ruleOrder = Output.of(Objects.requireNonNull(ruleOrder));
             return this;
-        }
-        public RuleGroupRuleGroupStatefulRuleOptionsGetArgs build() {
+        }        public RuleGroupRuleGroupStatefulRuleOptionsGetArgs build() {
             return new RuleGroupRuleGroupStatefulRuleOptionsGetArgs(ruleOrder);
         }
     }

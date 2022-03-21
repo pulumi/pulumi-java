@@ -203,52 +203,42 @@ public final class GetExportResult {
             this.definition = Objects.requireNonNull(definition);
             return this;
         }
-
         public Builder deliveryInfo(ExportDeliveryInfoResponse deliveryInfo) {
             this.deliveryInfo = Objects.requireNonNull(deliveryInfo);
             return this;
         }
-
         public Builder eTag(@Nullable String eTag) {
             this.eTag = eTag;
             return this;
         }
-
         public Builder format(@Nullable String format) {
             this.format = format;
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder nextRunTimeEstimate(String nextRunTimeEstimate) {
             this.nextRunTimeEstimate = Objects.requireNonNull(nextRunTimeEstimate);
             return this;
         }
-
         public Builder runHistory(@Nullable ExportExecutionListResultResponse runHistory) {
             this.runHistory = runHistory;
             return this;
         }
-
         public Builder schedule(@Nullable ExportScheduleResponse schedule) {
             this.schedule = schedule;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public GetExportResult build() {
+        }        public GetExportResult build() {
             return new GetExportResult(definition, deliveryInfo, eTag, format, id, name, nextRunTimeEstimate, runHistory, schedule, type);
         }
     }

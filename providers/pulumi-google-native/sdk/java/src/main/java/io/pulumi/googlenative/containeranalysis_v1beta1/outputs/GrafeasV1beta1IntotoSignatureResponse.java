@@ -53,12 +53,10 @@ public final class GrafeasV1beta1IntotoSignatureResponse {
             this.keyid = Objects.requireNonNull(keyid);
             return this;
         }
-
         public Builder sig(String sig) {
             this.sig = Objects.requireNonNull(sig);
             return this;
-        }
-        public GrafeasV1beta1IntotoSignatureResponse build() {
+        }        public GrafeasV1beta1IntotoSignatureResponse build() {
             return new GrafeasV1beta1IntotoSignatureResponse(keyid, sig);
         }
     }

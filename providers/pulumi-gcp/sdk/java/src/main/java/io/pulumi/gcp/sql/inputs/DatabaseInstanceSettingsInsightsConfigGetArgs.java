@@ -107,42 +107,34 @@ public final class DatabaseInstanceSettingsInsightsConfigGetArgs extends io.pulu
             this.queryInsightsEnabled = queryInsightsEnabled;
             return this;
         }
-
         public Builder queryInsightsEnabled(@Nullable Boolean queryInsightsEnabled) {
             this.queryInsightsEnabled = Output.ofNullable(queryInsightsEnabled);
             return this;
         }
-
         public Builder queryStringLength(@Nullable Output<Integer> queryStringLength) {
             this.queryStringLength = queryStringLength;
             return this;
         }
-
         public Builder queryStringLength(@Nullable Integer queryStringLength) {
             this.queryStringLength = Output.ofNullable(queryStringLength);
             return this;
         }
-
         public Builder recordApplicationTags(@Nullable Output<Boolean> recordApplicationTags) {
             this.recordApplicationTags = recordApplicationTags;
             return this;
         }
-
         public Builder recordApplicationTags(@Nullable Boolean recordApplicationTags) {
             this.recordApplicationTags = Output.ofNullable(recordApplicationTags);
             return this;
         }
-
         public Builder recordClientAddress(@Nullable Output<Boolean> recordClientAddress) {
             this.recordClientAddress = recordClientAddress;
             return this;
         }
-
         public Builder recordClientAddress(@Nullable Boolean recordClientAddress) {
             this.recordClientAddress = Output.ofNullable(recordClientAddress);
             return this;
-        }
-        public DatabaseInstanceSettingsInsightsConfigGetArgs build() {
+        }        public DatabaseInstanceSettingsInsightsConfigGetArgs build() {
             return new DatabaseInstanceSettingsInsightsConfigGetArgs(queryInsightsEnabled, queryStringLength, recordApplicationTags, recordClientAddress);
         }
     }

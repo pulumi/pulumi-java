@@ -134,32 +134,29 @@ public final class GetOrganizationContactResult {
             this.email = Objects.requireNonNull(email);
             return this;
         }
-
         public Builder languageTag(String languageTag) {
             this.languageTag = Objects.requireNonNull(languageTag);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder notificationCategorySubscriptions(List<String> notificationCategorySubscriptions) {
             this.notificationCategorySubscriptions = Objects.requireNonNull(notificationCategorySubscriptions);
             return this;
         }
-
+        public Builder notificationCategorySubscriptions(String... notificationCategorySubscriptions) {
+            return notificationCategorySubscriptions(List.of(notificationCategorySubscriptions));
+        }
         public Builder validateTime(String validateTime) {
             this.validateTime = Objects.requireNonNull(validateTime);
             return this;
         }
-
         public Builder validationState(String validationState) {
             this.validationState = Objects.requireNonNull(validationState);
             return this;
-        }
-        public GetOrganizationContactResult build() {
+        }        public GetOrganizationContactResult build() {
             return new GetOrganizationContactResult(email, languageTag, name, notificationCategorySubscriptions, validateTime, validationState);
         }
     }

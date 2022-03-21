@@ -121,27 +121,22 @@ public final class TrafficAnalyticsConfigurationPropertiesResponse {
             this.enabled = enabled;
             return this;
         }
-
         public Builder trafficAnalyticsInterval(@Nullable Integer trafficAnalyticsInterval) {
             this.trafficAnalyticsInterval = trafficAnalyticsInterval;
             return this;
         }
-
         public Builder workspaceId(@Nullable String workspaceId) {
             this.workspaceId = workspaceId;
             return this;
         }
-
         public Builder workspaceRegion(@Nullable String workspaceRegion) {
             this.workspaceRegion = workspaceRegion;
             return this;
         }
-
         public Builder workspaceResourceId(@Nullable String workspaceResourceId) {
             this.workspaceResourceId = workspaceResourceId;
             return this;
-        }
-        public TrafficAnalyticsConfigurationPropertiesResponse build() {
+        }        public TrafficAnalyticsConfigurationPropertiesResponse build() {
             return new TrafficAnalyticsConfigurationPropertiesResponse(enabled, trafficAnalyticsInterval, workspaceId, workspaceRegion, workspaceResourceId);
         }
     }

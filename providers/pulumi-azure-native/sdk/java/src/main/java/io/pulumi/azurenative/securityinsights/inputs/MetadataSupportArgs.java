@@ -112,42 +112,34 @@ public final class MetadataSupportArgs extends io.pulumi.resources.ResourceArgs 
             this.email = email;
             return this;
         }
-
         public Builder email(@Nullable String email) {
             this.email = Output.ofNullable(email);
             return this;
         }
-
         public Builder link(@Nullable Output<String> link) {
             this.link = link;
             return this;
         }
-
         public Builder link(@Nullable String link) {
             this.link = Output.ofNullable(link);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder tier(Output<Either<String,SupportTier>> tier) {
             this.tier = Objects.requireNonNull(tier);
             return this;
         }
-
         public Builder tier(Either<String,SupportTier> tier) {
             this.tier = Output.of(Objects.requireNonNull(tier));
             return this;
-        }
-        public MetadataSupportArgs build() {
+        }        public MetadataSupportArgs build() {
             return new MetadataSupportArgs(email, link, name, tier);
         }
     }

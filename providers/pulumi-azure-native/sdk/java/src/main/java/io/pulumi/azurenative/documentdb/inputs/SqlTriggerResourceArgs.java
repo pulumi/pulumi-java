@@ -113,42 +113,34 @@ public final class SqlTriggerResourceArgs extends io.pulumi.resources.ResourceAr
             this.body = body;
             return this;
         }
-
         public Builder body(@Nullable String body) {
             this.body = Output.ofNullable(body);
             return this;
         }
-
         public Builder id(Output<String> id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder id(String id) {
             this.id = Output.of(Objects.requireNonNull(id));
             return this;
         }
-
         public Builder triggerOperation(@Nullable Output<Either<String,TriggerOperation>> triggerOperation) {
             this.triggerOperation = triggerOperation;
             return this;
         }
-
         public Builder triggerOperation(@Nullable Either<String,TriggerOperation> triggerOperation) {
             this.triggerOperation = Output.ofNullable(triggerOperation);
             return this;
         }
-
         public Builder triggerType(@Nullable Output<Either<String,TriggerType>> triggerType) {
             this.triggerType = triggerType;
             return this;
         }
-
         public Builder triggerType(@Nullable Either<String,TriggerType> triggerType) {
             this.triggerType = Output.ofNullable(triggerType);
             return this;
-        }
-        public SqlTriggerResourceArgs build() {
+        }        public SqlTriggerResourceArgs build() {
             return new SqlTriggerResourceArgs(body, id, triggerOperation, triggerType);
         }
     }

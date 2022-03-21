@@ -51,8 +51,7 @@ public final class GoogleCloudApigeeV1AdvancedApiOpsConfigResponse {
         public Builder enabled(Boolean enabled) {
             this.enabled = Objects.requireNonNull(enabled);
             return this;
-        }
-        public GoogleCloudApigeeV1AdvancedApiOpsConfigResponse build() {
+        }        public GoogleCloudApigeeV1AdvancedApiOpsConfigResponse build() {
             return new GoogleCloudApigeeV1AdvancedApiOpsConfigResponse(enabled);
         }
     }

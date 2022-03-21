@@ -193,47 +193,47 @@ public final class GatewayApiRouteResponse extends io.pulumi.resources.InvokeArg
             this.description = description;
             return this;
         }
-
         public Builder filters(@Nullable List<String> filters) {
             this.filters = filters;
             return this;
         }
-
+        public Builder filters(String... filters) {
+            return filters(List.of(filters));
+        }
         public Builder order(@Nullable Integer order) {
             this.order = order;
             return this;
         }
-
         public Builder predicates(@Nullable List<String> predicates) {
             this.predicates = predicates;
             return this;
         }
-
+        public Builder predicates(String... predicates) {
+            return predicates(List.of(predicates));
+        }
         public Builder ssoEnabled(@Nullable Boolean ssoEnabled) {
             this.ssoEnabled = ssoEnabled;
             return this;
         }
-
         public Builder tags(@Nullable List<String> tags) {
             this.tags = tags;
             return this;
         }
-
+        public Builder tags(String... tags) {
+            return tags(List.of(tags));
+        }
         public Builder title(@Nullable String title) {
             this.title = title;
             return this;
         }
-
         public Builder tokenRelay(@Nullable Boolean tokenRelay) {
             this.tokenRelay = tokenRelay;
             return this;
         }
-
         public Builder uri(@Nullable String uri) {
             this.uri = uri;
             return this;
-        }
-        public GatewayApiRouteResponse build() {
+        }        public GatewayApiRouteResponse build() {
             return new GatewayApiRouteResponse(description, filters, order, predicates, ssoEnabled, tags, title, tokenRelay, uri);
         }
     }

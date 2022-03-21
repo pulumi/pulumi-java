@@ -366,102 +366,85 @@ public final class GetPrivateCloudResult {
             this.circuit = circuit;
             return this;
         }
-
         public Builder endpoints(EndpointsResponse endpoints) {
             this.endpoints = Objects.requireNonNull(endpoints);
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder identitySources(@Nullable List<IdentitySourceResponse> identitySources) {
             this.identitySources = identitySources;
             return this;
         }
-
+        public Builder identitySources(IdentitySourceResponse... identitySources) {
+            return identitySources(List.of(identitySources));
+        }
         public Builder internet(@Nullable String internet) {
             this.internet = internet;
             return this;
         }
-
         public Builder location(String location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
-
         public Builder managementCluster(ManagementClusterResponse managementCluster) {
             this.managementCluster = Objects.requireNonNull(managementCluster);
             return this;
         }
-
         public Builder managementNetwork(String managementNetwork) {
             this.managementNetwork = Objects.requireNonNull(managementNetwork);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder networkBlock(String networkBlock) {
             this.networkBlock = Objects.requireNonNull(networkBlock);
             return this;
         }
-
         public Builder nsxtCertificateThumbprint(String nsxtCertificateThumbprint) {
             this.nsxtCertificateThumbprint = Objects.requireNonNull(nsxtCertificateThumbprint);
             return this;
         }
-
         public Builder nsxtPassword(@Nullable String nsxtPassword) {
             this.nsxtPassword = nsxtPassword;
             return this;
         }
-
         public Builder provisioningNetwork(String provisioningNetwork) {
             this.provisioningNetwork = Objects.requireNonNull(provisioningNetwork);
             return this;
         }
-
         public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
-
         public Builder sku(SkuResponse sku) {
             this.sku = Objects.requireNonNull(sku);
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder vcenterCertificateThumbprint(String vcenterCertificateThumbprint) {
             this.vcenterCertificateThumbprint = Objects.requireNonNull(vcenterCertificateThumbprint);
             return this;
         }
-
         public Builder vcenterPassword(@Nullable String vcenterPassword) {
             this.vcenterPassword = vcenterPassword;
             return this;
         }
-
         public Builder vmotionNetwork(String vmotionNetwork) {
             this.vmotionNetwork = Objects.requireNonNull(vmotionNetwork);
             return this;
-        }
-        public GetPrivateCloudResult build() {
+        }        public GetPrivateCloudResult build() {
             return new GetPrivateCloudResult(circuit, endpoints, id, identitySources, internet, location, managementCluster, managementNetwork, name, networkBlock, nsxtCertificateThumbprint, nsxtPassword, provisioningNetwork, provisioningState, sku, tags, type, vcenterCertificateThumbprint, vcenterPassword, vmotionNetwork);
         }
     }

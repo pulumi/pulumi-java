@@ -54,8 +54,7 @@ public final class GetStateMachineArgs extends io.pulumi.resources.InvokeArgs {
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
-        }
-        public GetStateMachineArgs build() {
+        }        public GetStateMachineArgs build() {
             return new GetStateMachineArgs(name);
         }
     }

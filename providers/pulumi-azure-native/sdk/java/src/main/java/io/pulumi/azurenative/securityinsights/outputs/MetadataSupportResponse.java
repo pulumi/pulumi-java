@@ -103,22 +103,18 @@ public final class MetadataSupportResponse {
             this.email = email;
             return this;
         }
-
         public Builder link(@Nullable String link) {
             this.link = link;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
-
         public Builder tier(String tier) {
             this.tier = Objects.requireNonNull(tier);
             return this;
-        }
-        public MetadataSupportResponse build() {
+        }        public MetadataSupportResponse build() {
             return new MetadataSupportResponse(email, link, name, tier);
         }
     }

@@ -54,8 +54,7 @@ public final class GetImageArgs extends io.pulumi.resources.InvokeArgs {
         public Builder imageId(String imageId) {
             this.imageId = Objects.requireNonNull(imageId);
             return this;
-        }
-        public GetImageArgs build() {
+        }        public GetImageArgs build() {
             return new GetImageArgs(imageId);
         }
     }

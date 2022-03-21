@@ -104,22 +104,18 @@ public final class ListServiceFabricApplicableSchedulesArgs extends io.pulumi.re
             this.labName = Objects.requireNonNull(labName);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder userName(String userName) {
             this.userName = Objects.requireNonNull(userName);
             return this;
-        }
-        public ListServiceFabricApplicableSchedulesArgs build() {
+        }        public ListServiceFabricApplicableSchedulesArgs build() {
             return new ListServiceFabricApplicableSchedulesArgs(labName, name, resourceGroupName, userName);
         }
     }

@@ -88,17 +88,14 @@ public final class RegionInstanceGroupManagerVersion {
             this.instanceTemplate = Objects.requireNonNull(instanceTemplate);
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
-
         public Builder targetSize(@Nullable RegionInstanceGroupManagerVersionTargetSize targetSize) {
             this.targetSize = targetSize;
             return this;
-        }
-        public RegionInstanceGroupManagerVersion build() {
+        }        public RegionInstanceGroupManagerVersion build() {
             return new RegionInstanceGroupManagerVersion(instanceTemplate, name, targetSize);
         }
     }

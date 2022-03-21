@@ -110,42 +110,34 @@ public final class EngineSplitTrafficArgs extends io.pulumi.resources.ResourceAr
             this.migrateTraffic = migrateTraffic;
             return this;
         }
-
         public Builder migrateTraffic(@Nullable Boolean migrateTraffic) {
             this.migrateTraffic = Output.ofNullable(migrateTraffic);
             return this;
         }
-
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
         }
-
         public Builder service(Output<String> service) {
             this.service = Objects.requireNonNull(service);
             return this;
         }
-
         public Builder service(String service) {
             this.service = Output.of(Objects.requireNonNull(service));
             return this;
         }
-
         public Builder split(Output<EngineSplitTrafficSplitArgs> split) {
             this.split = Objects.requireNonNull(split);
             return this;
         }
-
         public Builder split(EngineSplitTrafficSplitArgs split) {
             this.split = Output.of(Objects.requireNonNull(split));
             return this;
-        }
-        public EngineSplitTrafficArgs build() {
+        }        public EngineSplitTrafficArgs build() {
             return new EngineSplitTrafficArgs(migrateTraffic, project, service, split);
         }
     }

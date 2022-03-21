@@ -220,57 +220,46 @@ public final class GetReadWriteDatabaseResult {
             this.hotCachePeriod = hotCachePeriod;
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder isFollowed(Boolean isFollowed) {
             this.isFollowed = Objects.requireNonNull(isFollowed);
             return this;
         }
-
         public Builder kind(String kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = location;
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
-
         public Builder softDeletePeriod(@Nullable String softDeletePeriod) {
             this.softDeletePeriod = softDeletePeriod;
             return this;
         }
-
         public Builder statistics(DatabaseStatisticsResponse statistics) {
             this.statistics = Objects.requireNonNull(statistics);
             return this;
         }
-
         public Builder systemData(SystemDataResponse systemData) {
             this.systemData = Objects.requireNonNull(systemData);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public GetReadWriteDatabaseResult build() {
+        }        public GetReadWriteDatabaseResult build() {
             return new GetReadWriteDatabaseResult(hotCachePeriod, id, isFollowed, kind, location, name, provisioningState, softDeletePeriod, statistics, systemData, type);
         }
     }

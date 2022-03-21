@@ -69,12 +69,10 @@ public final class JsonFileFormatResponse {
             this.compression = Objects.requireNonNull(compression);
             return this;
         }
-
         public Builder schemaFileFormat(String schemaFileFormat) {
             this.schemaFileFormat = Objects.requireNonNull(schemaFileFormat);
             return this;
-        }
-        public JsonFileFormatResponse build() {
+        }        public JsonFileFormatResponse build() {
             return new JsonFileFormatResponse(compression, schemaFileFormat);
         }
     }

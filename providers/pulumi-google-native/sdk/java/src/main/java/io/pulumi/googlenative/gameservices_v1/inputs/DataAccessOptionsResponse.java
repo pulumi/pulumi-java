@@ -54,8 +54,7 @@ public final class DataAccessOptionsResponse extends io.pulumi.resources.InvokeA
         public Builder logMode(String logMode) {
             this.logMode = Objects.requireNonNull(logMode);
             return this;
-        }
-        public DataAccessOptionsResponse build() {
+        }        public DataAccessOptionsResponse build() {
             return new DataAccessOptionsResponse(logMode);
         }
     }

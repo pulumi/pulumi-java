@@ -109,42 +109,34 @@ public final class TriggerPubsubConfigArgs extends io.pulumi.resources.ResourceA
             this.serviceAccountEmail = serviceAccountEmail;
             return this;
         }
-
         public Builder serviceAccountEmail(@Nullable String serviceAccountEmail) {
             this.serviceAccountEmail = Output.ofNullable(serviceAccountEmail);
             return this;
         }
-
         public Builder state(@Nullable Output<String> state) {
             this.state = state;
             return this;
         }
-
         public Builder state(@Nullable String state) {
             this.state = Output.ofNullable(state);
             return this;
         }
-
         public Builder subscription(@Nullable Output<String> subscription) {
             this.subscription = subscription;
             return this;
         }
-
         public Builder subscription(@Nullable String subscription) {
             this.subscription = Output.ofNullable(subscription);
             return this;
         }
-
         public Builder topic(Output<String> topic) {
             this.topic = Objects.requireNonNull(topic);
             return this;
         }
-
         public Builder topic(String topic) {
             this.topic = Output.of(Objects.requireNonNull(topic));
             return this;
-        }
-        public TriggerPubsubConfigArgs build() {
+        }        public TriggerPubsubConfigArgs build() {
             return new TriggerPubsubConfigArgs(serviceAccountEmail, state, subscription, topic);
         }
     }

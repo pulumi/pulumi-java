@@ -56,12 +56,10 @@ public final class AnalyticsApplicationInputsProcessingConfigurationGetArgs exte
             this.lambda = Objects.requireNonNull(lambda);
             return this;
         }
-
         public Builder lambda(AnalyticsApplicationInputsProcessingConfigurationLambdaGetArgs lambda) {
             this.lambda = Output.of(Objects.requireNonNull(lambda));
             return this;
-        }
-        public AnalyticsApplicationInputsProcessingConfigurationGetArgs build() {
+        }        public AnalyticsApplicationInputsProcessingConfigurationGetArgs build() {
             return new AnalyticsApplicationInputsProcessingConfigurationGetArgs(lambda);
         }
     }

@@ -293,202 +293,186 @@ public final class ServiceTaskSpecContainerSpecGetArgs extends io.pulumi.resourc
             this.args = args;
             return this;
         }
-
         public Builder args(@Nullable List<String> args) {
             this.args = Output.ofNullable(args);
             return this;
         }
-
+        public Builder args(String... args) {
+            return args(List.of(args));
+        }
         public Builder commands(@Nullable Output<List<String>> commands) {
             this.commands = commands;
             return this;
         }
-
         public Builder commands(@Nullable List<String> commands) {
             this.commands = Output.ofNullable(commands);
             return this;
         }
-
+        public Builder commands(String... commands) {
+            return commands(List.of(commands));
+        }
         public Builder configs(@Nullable Output<List<ServiceTaskSpecContainerSpecConfigGetArgs>> configs) {
             this.configs = configs;
             return this;
         }
-
         public Builder configs(@Nullable List<ServiceTaskSpecContainerSpecConfigGetArgs> configs) {
             this.configs = Output.ofNullable(configs);
             return this;
         }
-
+        public Builder configs(ServiceTaskSpecContainerSpecConfigGetArgs... configs) {
+            return configs(List.of(configs));
+        }
         public Builder dir(@Nullable Output<String> dir) {
             this.dir = dir;
             return this;
         }
-
         public Builder dir(@Nullable String dir) {
             this.dir = Output.ofNullable(dir);
             return this;
         }
-
         public Builder dnsConfig(@Nullable Output<ServiceTaskSpecContainerSpecDnsConfigGetArgs> dnsConfig) {
             this.dnsConfig = dnsConfig;
             return this;
         }
-
         public Builder dnsConfig(@Nullable ServiceTaskSpecContainerSpecDnsConfigGetArgs dnsConfig) {
             this.dnsConfig = Output.ofNullable(dnsConfig);
             return this;
         }
-
         public Builder env(@Nullable Output<Map<String,String>> env) {
             this.env = env;
             return this;
         }
-
         public Builder env(@Nullable Map<String,String> env) {
             this.env = Output.ofNullable(env);
             return this;
         }
-
         public Builder groups(@Nullable Output<List<String>> groups) {
             this.groups = groups;
             return this;
         }
-
         public Builder groups(@Nullable List<String> groups) {
             this.groups = Output.ofNullable(groups);
             return this;
         }
-
+        public Builder groups(String... groups) {
+            return groups(List.of(groups));
+        }
         public Builder healthcheck(@Nullable Output<ServiceTaskSpecContainerSpecHealthcheckGetArgs> healthcheck) {
             this.healthcheck = healthcheck;
             return this;
         }
-
         public Builder healthcheck(@Nullable ServiceTaskSpecContainerSpecHealthcheckGetArgs healthcheck) {
             this.healthcheck = Output.ofNullable(healthcheck);
             return this;
         }
-
         public Builder hostname(@Nullable Output<String> hostname) {
             this.hostname = hostname;
             return this;
         }
-
         public Builder hostname(@Nullable String hostname) {
             this.hostname = Output.ofNullable(hostname);
             return this;
         }
-
         public Builder hosts(@Nullable Output<List<ServiceTaskSpecContainerSpecHostGetArgs>> hosts) {
             this.hosts = hosts;
             return this;
         }
-
         public Builder hosts(@Nullable List<ServiceTaskSpecContainerSpecHostGetArgs> hosts) {
             this.hosts = Output.ofNullable(hosts);
             return this;
         }
-
+        public Builder hosts(ServiceTaskSpecContainerSpecHostGetArgs... hosts) {
+            return hosts(List.of(hosts));
+        }
         public Builder image(Output<String> image) {
             this.image = Objects.requireNonNull(image);
             return this;
         }
-
         public Builder image(String image) {
             this.image = Output.of(Objects.requireNonNull(image));
             return this;
         }
-
         public Builder isolation(@Nullable Output<String> isolation) {
             this.isolation = isolation;
             return this;
         }
-
         public Builder isolation(@Nullable String isolation) {
             this.isolation = Output.ofNullable(isolation);
             return this;
         }
-
         public Builder labels(@Nullable Output<List<ServiceTaskSpecContainerSpecLabelGetArgs>> labels) {
             this.labels = labels;
             return this;
         }
-
         public Builder labels(@Nullable List<ServiceTaskSpecContainerSpecLabelGetArgs> labels) {
             this.labels = Output.ofNullable(labels);
             return this;
         }
-
+        public Builder labels(ServiceTaskSpecContainerSpecLabelGetArgs... labels) {
+            return labels(List.of(labels));
+        }
         public Builder mounts(@Nullable Output<List<ServiceTaskSpecContainerSpecMountGetArgs>> mounts) {
             this.mounts = mounts;
             return this;
         }
-
         public Builder mounts(@Nullable List<ServiceTaskSpecContainerSpecMountGetArgs> mounts) {
             this.mounts = Output.ofNullable(mounts);
             return this;
         }
-
+        public Builder mounts(ServiceTaskSpecContainerSpecMountGetArgs... mounts) {
+            return mounts(List.of(mounts));
+        }
         public Builder privileges(@Nullable Output<ServiceTaskSpecContainerSpecPrivilegesGetArgs> privileges) {
             this.privileges = privileges;
             return this;
         }
-
         public Builder privileges(@Nullable ServiceTaskSpecContainerSpecPrivilegesGetArgs privileges) {
             this.privileges = Output.ofNullable(privileges);
             return this;
         }
-
         public Builder readOnly(@Nullable Output<Boolean> readOnly) {
             this.readOnly = readOnly;
             return this;
         }
-
         public Builder readOnly(@Nullable Boolean readOnly) {
             this.readOnly = Output.ofNullable(readOnly);
             return this;
         }
-
         public Builder secrets(@Nullable Output<List<ServiceTaskSpecContainerSpecSecretGetArgs>> secrets) {
             this.secrets = secrets;
             return this;
         }
-
         public Builder secrets(@Nullable List<ServiceTaskSpecContainerSpecSecretGetArgs> secrets) {
             this.secrets = Output.ofNullable(secrets);
             return this;
         }
-
+        public Builder secrets(ServiceTaskSpecContainerSpecSecretGetArgs... secrets) {
+            return secrets(List.of(secrets));
+        }
         public Builder stopGracePeriod(@Nullable Output<String> stopGracePeriod) {
             this.stopGracePeriod = stopGracePeriod;
             return this;
         }
-
         public Builder stopGracePeriod(@Nullable String stopGracePeriod) {
             this.stopGracePeriod = Output.ofNullable(stopGracePeriod);
             return this;
         }
-
         public Builder stopSignal(@Nullable Output<String> stopSignal) {
             this.stopSignal = stopSignal;
             return this;
         }
-
         public Builder stopSignal(@Nullable String stopSignal) {
             this.stopSignal = Output.ofNullable(stopSignal);
             return this;
         }
-
         public Builder user(@Nullable Output<String> user) {
             this.user = user;
             return this;
         }
-
         public Builder user(@Nullable String user) {
             this.user = Output.ofNullable(user);
             return this;
-        }
-        public ServiceTaskSpecContainerSpecGetArgs build() {
+        }        public ServiceTaskSpecContainerSpecGetArgs build() {
             return new ServiceTaskSpecContainerSpecGetArgs(args, commands, configs, dir, dnsConfig, env, groups, healthcheck, hostname, hosts, image, isolation, labels, mounts, privileges, readOnly, secrets, stopGracePeriod, stopSignal, user);
         }
     }

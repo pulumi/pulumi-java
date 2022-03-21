@@ -96,17 +96,17 @@ public final class ScaleResponse extends io.pulumi.resources.InvokeArgs {
             this.maxReplicas = maxReplicas;
             return this;
         }
-
         public Builder minReplicas(@Nullable Integer minReplicas) {
             this.minReplicas = minReplicas;
             return this;
         }
-
         public Builder rules(@Nullable List<ScaleRuleResponse> rules) {
             this.rules = rules;
             return this;
         }
-        public ScaleResponse build() {
+        public Builder rules(ScaleRuleResponse... rules) {
+            return rules(List.of(rules));
+        }        public ScaleResponse build() {
             return new ScaleResponse(maxReplicas, minReplicas, rules);
         }
     }

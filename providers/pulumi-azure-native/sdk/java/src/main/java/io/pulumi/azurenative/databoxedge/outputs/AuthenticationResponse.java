@@ -53,8 +53,7 @@ public final class AuthenticationResponse {
         public Builder symmetricKey(@Nullable SymmetricKeyResponse symmetricKey) {
             this.symmetricKey = symmetricKey;
             return this;
-        }
-        public AuthenticationResponse build() {
+        }        public AuthenticationResponse build() {
             return new AuthenticationResponse(symmetricKey);
         }
     }

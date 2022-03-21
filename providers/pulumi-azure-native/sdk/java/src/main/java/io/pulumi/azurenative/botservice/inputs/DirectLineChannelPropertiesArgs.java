@@ -80,22 +80,21 @@ public final class DirectLineChannelPropertiesArgs extends io.pulumi.resources.R
             this.directLineEmbedCode = directLineEmbedCode;
             return this;
         }
-
         public Builder directLineEmbedCode(@Nullable String directLineEmbedCode) {
             this.directLineEmbedCode = Output.ofNullable(directLineEmbedCode);
             return this;
         }
-
         public Builder sites(@Nullable Output<List<DirectLineSiteArgs>> sites) {
             this.sites = sites;
             return this;
         }
-
         public Builder sites(@Nullable List<DirectLineSiteArgs> sites) {
             this.sites = Output.ofNullable(sites);
             return this;
         }
-        public DirectLineChannelPropertiesArgs build() {
+        public Builder sites(DirectLineSiteArgs... sites) {
+            return sites(List.of(sites));
+        }        public DirectLineChannelPropertiesArgs build() {
             return new DirectLineChannelPropertiesArgs(directLineEmbedCode, sites);
         }
     }

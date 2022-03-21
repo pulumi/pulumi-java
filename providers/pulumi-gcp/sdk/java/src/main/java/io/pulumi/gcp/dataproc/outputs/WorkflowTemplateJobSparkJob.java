@@ -170,42 +170,46 @@ public final class WorkflowTemplateJobSparkJob {
             this.archiveUris = archiveUris;
             return this;
         }
-
+        public Builder archiveUris(String... archiveUris) {
+            return archiveUris(List.of(archiveUris));
+        }
         public Builder args(@Nullable List<String> args) {
             this.args = args;
             return this;
         }
-
+        public Builder args(String... args) {
+            return args(List.of(args));
+        }
         public Builder fileUris(@Nullable List<String> fileUris) {
             this.fileUris = fileUris;
             return this;
         }
-
+        public Builder fileUris(String... fileUris) {
+            return fileUris(List.of(fileUris));
+        }
         public Builder jarFileUris(@Nullable List<String> jarFileUris) {
             this.jarFileUris = jarFileUris;
             return this;
         }
-
+        public Builder jarFileUris(String... jarFileUris) {
+            return jarFileUris(List.of(jarFileUris));
+        }
         public Builder loggingConfig(@Nullable WorkflowTemplateJobSparkJobLoggingConfig loggingConfig) {
             this.loggingConfig = loggingConfig;
             return this;
         }
-
         public Builder mainClass(@Nullable String mainClass) {
             this.mainClass = mainClass;
             return this;
         }
-
         public Builder mainJarFileUri(@Nullable String mainJarFileUri) {
             this.mainJarFileUri = mainJarFileUri;
             return this;
         }
-
         public Builder properties(@Nullable Map<String,String> properties) {
             this.properties = properties;
             return this;
-        }
-        public WorkflowTemplateJobSparkJob build() {
+        }        public WorkflowTemplateJobSparkJob build() {
             return new WorkflowTemplateJobSparkJob(archiveUris, args, fileUris, jarFileUris, loggingConfig, mainClass, mainJarFileUri, properties);
         }
     }

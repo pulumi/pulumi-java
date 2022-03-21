@@ -58,12 +58,13 @@ public final class DataRepositoryAssociationS3AutoExportPolicyArgs extends io.pu
             this.events = events;
             return this;
         }
-
         public Builder events(@Nullable List<String> events) {
             this.events = Output.ofNullable(events);
             return this;
         }
-        public DataRepositoryAssociationS3AutoExportPolicyArgs build() {
+        public Builder events(String... events) {
+            return events(List.of(events));
+        }        public DataRepositoryAssociationS3AutoExportPolicyArgs build() {
             return new DataRepositoryAssociationS3AutoExportPolicyArgs(events);
         }
     }

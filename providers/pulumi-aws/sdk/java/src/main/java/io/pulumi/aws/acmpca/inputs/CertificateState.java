@@ -171,82 +171,66 @@ public final class CertificateState extends io.pulumi.resources.ResourceArgs {
             this.arn = arn;
             return this;
         }
-
         public Builder arn(@Nullable String arn) {
             this.arn = Output.ofNullable(arn);
             return this;
         }
-
         public Builder certificate(@Nullable Output<String> certificate) {
             this.certificate = certificate;
             return this;
         }
-
         public Builder certificate(@Nullable String certificate) {
             this.certificate = Output.ofNullable(certificate);
             return this;
         }
-
         public Builder certificateAuthorityArn(@Nullable Output<String> certificateAuthorityArn) {
             this.certificateAuthorityArn = certificateAuthorityArn;
             return this;
         }
-
         public Builder certificateAuthorityArn(@Nullable String certificateAuthorityArn) {
             this.certificateAuthorityArn = Output.ofNullable(certificateAuthorityArn);
             return this;
         }
-
         public Builder certificateChain(@Nullable Output<String> certificateChain) {
             this.certificateChain = certificateChain;
             return this;
         }
-
         public Builder certificateChain(@Nullable String certificateChain) {
             this.certificateChain = Output.ofNullable(certificateChain);
             return this;
         }
-
         public Builder certificateSigningRequest(@Nullable Output<String> certificateSigningRequest) {
             this.certificateSigningRequest = certificateSigningRequest;
             return this;
         }
-
         public Builder certificateSigningRequest(@Nullable String certificateSigningRequest) {
             this.certificateSigningRequest = Output.ofNullable(certificateSigningRequest);
             return this;
         }
-
         public Builder signingAlgorithm(@Nullable Output<String> signingAlgorithm) {
             this.signingAlgorithm = signingAlgorithm;
             return this;
         }
-
         public Builder signingAlgorithm(@Nullable String signingAlgorithm) {
             this.signingAlgorithm = Output.ofNullable(signingAlgorithm);
             return this;
         }
-
         public Builder templateArn(@Nullable Output<String> templateArn) {
             this.templateArn = templateArn;
             return this;
         }
-
         public Builder templateArn(@Nullable String templateArn) {
             this.templateArn = Output.ofNullable(templateArn);
             return this;
         }
-
         public Builder validity(@Nullable Output<CertificateValidityGetArgs> validity) {
             this.validity = validity;
             return this;
         }
-
         public Builder validity(@Nullable CertificateValidityGetArgs validity) {
             this.validity = Output.ofNullable(validity);
             return this;
-        }
-        public CertificateState build() {
+        }        public CertificateState build() {
             return new CertificateState(arn, certificate, certificateAuthorityArn, certificateChain, certificateSigningRequest, signingAlgorithm, templateArn, validity);
         }
     }

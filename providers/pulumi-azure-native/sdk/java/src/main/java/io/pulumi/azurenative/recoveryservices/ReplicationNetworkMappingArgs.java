@@ -139,62 +139,50 @@ public final class ReplicationNetworkMappingArgs extends io.pulumi.resources.Res
             this.fabricName = Objects.requireNonNull(fabricName);
             return this;
         }
-
         public Builder fabricName(String fabricName) {
             this.fabricName = Output.of(Objects.requireNonNull(fabricName));
             return this;
         }
-
         public Builder networkMappingName(@Nullable Output<String> networkMappingName) {
             this.networkMappingName = networkMappingName;
             return this;
         }
-
         public Builder networkMappingName(@Nullable String networkMappingName) {
             this.networkMappingName = Output.ofNullable(networkMappingName);
             return this;
         }
-
         public Builder networkName(Output<String> networkName) {
             this.networkName = Objects.requireNonNull(networkName);
             return this;
         }
-
         public Builder networkName(String networkName) {
             this.networkName = Output.of(Objects.requireNonNull(networkName));
             return this;
         }
-
         public Builder properties(@Nullable Output<CreateNetworkMappingInputPropertiesArgs> properties) {
             this.properties = properties;
             return this;
         }
-
         public Builder properties(@Nullable CreateNetworkMappingInputPropertiesArgs properties) {
             this.properties = Output.ofNullable(properties);
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder resourceName(Output<String> resourceName) {
             this.resourceName = Objects.requireNonNull(resourceName);
             return this;
         }
-
         public Builder resourceName(String resourceName) {
             this.resourceName = Output.of(Objects.requireNonNull(resourceName));
             return this;
-        }
-        public ReplicationNetworkMappingArgs build() {
+        }        public ReplicationNetworkMappingArgs build() {
             return new ReplicationNetworkMappingArgs(fabricName, networkMappingName, networkName, properties, resourceGroupName, resourceName);
         }
     }

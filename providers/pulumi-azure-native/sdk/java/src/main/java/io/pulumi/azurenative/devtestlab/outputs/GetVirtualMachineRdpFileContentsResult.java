@@ -53,8 +53,7 @@ public final class GetVirtualMachineRdpFileContentsResult {
         public Builder contents(@Nullable String contents) {
             this.contents = contents;
             return this;
-        }
-        public GetVirtualMachineRdpFileContentsResult build() {
+        }        public GetVirtualMachineRdpFileContentsResult build() {
             return new GetVirtualMachineRdpFileContentsResult(contents);
         }
     }

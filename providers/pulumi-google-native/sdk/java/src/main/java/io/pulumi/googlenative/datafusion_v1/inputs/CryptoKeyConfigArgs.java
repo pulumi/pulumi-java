@@ -61,12 +61,10 @@ public final class CryptoKeyConfigArgs extends io.pulumi.resources.ResourceArgs 
             this.keyReference = keyReference;
             return this;
         }
-
         public Builder keyReference(@Nullable String keyReference) {
             this.keyReference = Output.ofNullable(keyReference);
             return this;
-        }
-        public CryptoKeyConfigArgs build() {
+        }        public CryptoKeyConfigArgs build() {
             return new CryptoKeyConfigArgs(keyReference);
         }
     }

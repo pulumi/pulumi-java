@@ -80,22 +80,18 @@ public final class ApplicationHealthPolicyArgs extends io.pulumi.resources.Resou
             this.defaultServiceTypeHealthPolicy = defaultServiceTypeHealthPolicy;
             return this;
         }
-
         public Builder defaultServiceTypeHealthPolicy(@Nullable ServiceTypeHealthPolicyArgs defaultServiceTypeHealthPolicy) {
             this.defaultServiceTypeHealthPolicy = Output.ofNullable(defaultServiceTypeHealthPolicy);
             return this;
         }
-
         public Builder serviceTypeHealthPolicies(@Nullable Output<Map<String,ServiceTypeHealthPolicyArgs>> serviceTypeHealthPolicies) {
             this.serviceTypeHealthPolicies = serviceTypeHealthPolicies;
             return this;
         }
-
         public Builder serviceTypeHealthPolicies(@Nullable Map<String,ServiceTypeHealthPolicyArgs> serviceTypeHealthPolicies) {
             this.serviceTypeHealthPolicies = Output.ofNullable(serviceTypeHealthPolicies);
             return this;
-        }
-        public ApplicationHealthPolicyArgs build() {
+        }        public ApplicationHealthPolicyArgs build() {
             return new ApplicationHealthPolicyArgs(defaultServiceTypeHealthPolicy, serviceTypeHealthPolicies);
         }
     }

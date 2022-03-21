@@ -51,8 +51,7 @@ public final class ClassifierJsonClassifier {
         public Builder jsonPath(String jsonPath) {
             this.jsonPath = Objects.requireNonNull(jsonPath);
             return this;
-        }
-        public ClassifierJsonClassifier build() {
+        }        public ClassifierJsonClassifier build() {
             return new ClassifierJsonClassifier(jsonPath);
         }
     }

@@ -91,32 +91,26 @@ public final class GcmChannelArgs extends io.pulumi.resources.ResourceArgs {
             this.apiKey = Objects.requireNonNull(apiKey);
             return this;
         }
-
         public Builder apiKey(String apiKey) {
             this.apiKey = Output.of(Objects.requireNonNull(apiKey));
             return this;
         }
-
         public Builder applicationId(Output<String> applicationId) {
             this.applicationId = Objects.requireNonNull(applicationId);
             return this;
         }
-
         public Builder applicationId(String applicationId) {
             this.applicationId = Output.of(Objects.requireNonNull(applicationId));
             return this;
         }
-
         public Builder enabled(@Nullable Output<Boolean> enabled) {
             this.enabled = enabled;
             return this;
         }
-
         public Builder enabled(@Nullable Boolean enabled) {
             this.enabled = Output.ofNullable(enabled);
             return this;
-        }
-        public GcmChannelArgs build() {
+        }        public GcmChannelArgs build() {
             return new GcmChannelArgs(apiKey, applicationId, enabled);
         }
     }

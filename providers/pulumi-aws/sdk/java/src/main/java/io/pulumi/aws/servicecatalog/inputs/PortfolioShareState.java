@@ -155,72 +155,58 @@ public final class PortfolioShareState extends io.pulumi.resources.ResourceArgs 
             this.acceptLanguage = acceptLanguage;
             return this;
         }
-
         public Builder acceptLanguage(@Nullable String acceptLanguage) {
             this.acceptLanguage = Output.ofNullable(acceptLanguage);
             return this;
         }
-
         public Builder accepted(@Nullable Output<Boolean> accepted) {
             this.accepted = accepted;
             return this;
         }
-
         public Builder accepted(@Nullable Boolean accepted) {
             this.accepted = Output.ofNullable(accepted);
             return this;
         }
-
         public Builder portfolioId(@Nullable Output<String> portfolioId) {
             this.portfolioId = portfolioId;
             return this;
         }
-
         public Builder portfolioId(@Nullable String portfolioId) {
             this.portfolioId = Output.ofNullable(portfolioId);
             return this;
         }
-
         public Builder principalId(@Nullable Output<String> principalId) {
             this.principalId = principalId;
             return this;
         }
-
         public Builder principalId(@Nullable String principalId) {
             this.principalId = Output.ofNullable(principalId);
             return this;
         }
-
         public Builder shareTagOptions(@Nullable Output<Boolean> shareTagOptions) {
             this.shareTagOptions = shareTagOptions;
             return this;
         }
-
         public Builder shareTagOptions(@Nullable Boolean shareTagOptions) {
             this.shareTagOptions = Output.ofNullable(shareTagOptions);
             return this;
         }
-
         public Builder type(@Nullable Output<String> type) {
             this.type = type;
             return this;
         }
-
         public Builder type(@Nullable String type) {
             this.type = Output.ofNullable(type);
             return this;
         }
-
         public Builder waitForAcceptance(@Nullable Output<Boolean> waitForAcceptance) {
             this.waitForAcceptance = waitForAcceptance;
             return this;
         }
-
         public Builder waitForAcceptance(@Nullable Boolean waitForAcceptance) {
             this.waitForAcceptance = Output.ofNullable(waitForAcceptance);
             return this;
-        }
-        public PortfolioShareState build() {
+        }        public PortfolioShareState build() {
             return new PortfolioShareState(acceptLanguage, accepted, portfolioId, principalId, shareTagOptions, type, waitForAcceptance);
         }
     }

@@ -72,12 +72,10 @@ public final class GetRegistryBuildSourceUploadUrlArgs extends io.pulumi.resourc
             this.registryName = Objects.requireNonNull(registryName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
-        }
-        public GetRegistryBuildSourceUploadUrlArgs build() {
+        }        public GetRegistryBuildSourceUploadUrlArgs build() {
             return new GetRegistryBuildSourceUploadUrlArgs(registryName, resourceGroupName);
         }
     }

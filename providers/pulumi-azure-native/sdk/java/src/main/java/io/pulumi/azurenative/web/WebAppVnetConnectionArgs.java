@@ -172,82 +172,66 @@ public final class WebAppVnetConnectionArgs extends io.pulumi.resources.Resource
             this.certBlob = certBlob;
             return this;
         }
-
         public Builder certBlob(@Nullable String certBlob) {
             this.certBlob = Output.ofNullable(certBlob);
             return this;
         }
-
         public Builder dnsServers(@Nullable Output<String> dnsServers) {
             this.dnsServers = dnsServers;
             return this;
         }
-
         public Builder dnsServers(@Nullable String dnsServers) {
             this.dnsServers = Output.ofNullable(dnsServers);
             return this;
         }
-
         public Builder isSwift(@Nullable Output<Boolean> isSwift) {
             this.isSwift = isSwift;
             return this;
         }
-
         public Builder isSwift(@Nullable Boolean isSwift) {
             this.isSwift = Output.ofNullable(isSwift);
             return this;
         }
-
         public Builder kind(@Nullable Output<String> kind) {
             this.kind = kind;
             return this;
         }
-
         public Builder kind(@Nullable String kind) {
             this.kind = Output.ofNullable(kind);
             return this;
         }
-
         public Builder name(Output<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder vnetName(@Nullable Output<String> vnetName) {
             this.vnetName = vnetName;
             return this;
         }
-
         public Builder vnetName(@Nullable String vnetName) {
             this.vnetName = Output.ofNullable(vnetName);
             return this;
         }
-
         public Builder vnetResourceId(@Nullable Output<String> vnetResourceId) {
             this.vnetResourceId = vnetResourceId;
             return this;
         }
-
         public Builder vnetResourceId(@Nullable String vnetResourceId) {
             this.vnetResourceId = Output.ofNullable(vnetResourceId);
             return this;
-        }
-        public WebAppVnetConnectionArgs build() {
+        }        public WebAppVnetConnectionArgs build() {
             return new WebAppVnetConnectionArgs(certBlob, dnsServers, isSwift, kind, name, resourceGroupName, vnetName, vnetResourceId);
         }
     }

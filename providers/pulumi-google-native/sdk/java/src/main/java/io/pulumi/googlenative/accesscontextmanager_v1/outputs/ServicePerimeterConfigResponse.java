@@ -137,32 +137,41 @@ public final class ServicePerimeterConfigResponse {
             this.accessLevels = Objects.requireNonNull(accessLevels);
             return this;
         }
-
+        public Builder accessLevels(String... accessLevels) {
+            return accessLevels(List.of(accessLevels));
+        }
         public Builder egressPolicies(List<EgressPolicyResponse> egressPolicies) {
             this.egressPolicies = Objects.requireNonNull(egressPolicies);
             return this;
         }
-
+        public Builder egressPolicies(EgressPolicyResponse... egressPolicies) {
+            return egressPolicies(List.of(egressPolicies));
+        }
         public Builder ingressPolicies(List<IngressPolicyResponse> ingressPolicies) {
             this.ingressPolicies = Objects.requireNonNull(ingressPolicies);
             return this;
         }
-
+        public Builder ingressPolicies(IngressPolicyResponse... ingressPolicies) {
+            return ingressPolicies(List.of(ingressPolicies));
+        }
         public Builder resources(List<String> resources) {
             this.resources = Objects.requireNonNull(resources);
             return this;
         }
-
+        public Builder resources(String... resources) {
+            return resources(List.of(resources));
+        }
         public Builder restrictedServices(List<String> restrictedServices) {
             this.restrictedServices = Objects.requireNonNull(restrictedServices);
             return this;
         }
-
+        public Builder restrictedServices(String... restrictedServices) {
+            return restrictedServices(List.of(restrictedServices));
+        }
         public Builder vpcAccessibleServices(VpcAccessibleServicesResponse vpcAccessibleServices) {
             this.vpcAccessibleServices = Objects.requireNonNull(vpcAccessibleServices);
             return this;
-        }
-        public ServicePerimeterConfigResponse build() {
+        }        public ServicePerimeterConfigResponse build() {
             return new ServicePerimeterConfigResponse(accessLevels, egressPolicies, ingressPolicies, resources, restrictedServices, vpcAccessibleServices);
         }
     }

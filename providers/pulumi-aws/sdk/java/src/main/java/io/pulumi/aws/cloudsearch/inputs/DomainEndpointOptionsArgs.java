@@ -75,22 +75,18 @@ public final class DomainEndpointOptionsArgs extends io.pulumi.resources.Resourc
             this.enforceHttps = enforceHttps;
             return this;
         }
-
         public Builder enforceHttps(@Nullable Boolean enforceHttps) {
             this.enforceHttps = Output.ofNullable(enforceHttps);
             return this;
         }
-
         public Builder tlsSecurityPolicy(@Nullable Output<String> tlsSecurityPolicy) {
             this.tlsSecurityPolicy = tlsSecurityPolicy;
             return this;
         }
-
         public Builder tlsSecurityPolicy(@Nullable String tlsSecurityPolicy) {
             this.tlsSecurityPolicy = Output.ofNullable(tlsSecurityPolicy);
             return this;
-        }
-        public DomainEndpointOptionsArgs build() {
+        }        public DomainEndpointOptionsArgs build() {
             return new DomainEndpointOptionsArgs(enforceHttps, tlsSecurityPolicy);
         }
     }

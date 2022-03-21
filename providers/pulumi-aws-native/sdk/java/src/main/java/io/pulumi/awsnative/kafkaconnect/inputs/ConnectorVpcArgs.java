@@ -78,22 +78,24 @@ public final class ConnectorVpcArgs extends io.pulumi.resources.ResourceArgs {
             this.securityGroups = Objects.requireNonNull(securityGroups);
             return this;
         }
-
         public Builder securityGroups(List<String> securityGroups) {
             this.securityGroups = Output.of(Objects.requireNonNull(securityGroups));
             return this;
         }
-
+        public Builder securityGroups(String... securityGroups) {
+            return securityGroups(List.of(securityGroups));
+        }
         public Builder subnets(Output<List<String>> subnets) {
             this.subnets = Objects.requireNonNull(subnets);
             return this;
         }
-
         public Builder subnets(List<String> subnets) {
             this.subnets = Output.of(Objects.requireNonNull(subnets));
             return this;
         }
-        public ConnectorVpcArgs build() {
+        public Builder subnets(String... subnets) {
+            return subnets(List.of(subnets));
+        }        public ConnectorVpcArgs build() {
             return new ConnectorVpcArgs(securityGroups, subnets);
         }
     }

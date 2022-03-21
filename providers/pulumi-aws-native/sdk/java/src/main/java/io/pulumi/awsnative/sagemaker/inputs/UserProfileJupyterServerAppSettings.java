@@ -56,8 +56,7 @@ public final class UserProfileJupyterServerAppSettings extends io.pulumi.resourc
         public Builder defaultResourceSpec(@Nullable UserProfileResourceSpec defaultResourceSpec) {
             this.defaultResourceSpec = defaultResourceSpec;
             return this;
-        }
-        public UserProfileJupyterServerAppSettings build() {
+        }        public UserProfileJupyterServerAppSettings build() {
             return new UserProfileJupyterServerAppSettings(defaultResourceSpec);
         }
     }

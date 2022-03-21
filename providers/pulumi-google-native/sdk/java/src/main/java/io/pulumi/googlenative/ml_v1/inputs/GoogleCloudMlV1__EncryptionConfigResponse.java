@@ -58,8 +58,7 @@ public final class GoogleCloudMlV1__EncryptionConfigResponse extends io.pulumi.r
         public Builder kmsKeyName(String kmsKeyName) {
             this.kmsKeyName = Objects.requireNonNull(kmsKeyName);
             return this;
-        }
-        public GoogleCloudMlV1__EncryptionConfigResponse build() {
+        }        public GoogleCloudMlV1__EncryptionConfigResponse build() {
             return new GoogleCloudMlV1__EncryptionConfigResponse(kmsKeyName);
         }
     }

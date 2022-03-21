@@ -209,102 +209,88 @@ public final class ConnectivityConfigurationArgs extends io.pulumi.resources.Res
             this.appliesToGroups = appliesToGroups;
             return this;
         }
-
         public Builder appliesToGroups(@Nullable List<ConnectivityGroupItemArgs> appliesToGroups) {
             this.appliesToGroups = Output.ofNullable(appliesToGroups);
             return this;
         }
-
+        public Builder appliesToGroups(ConnectivityGroupItemArgs... appliesToGroups) {
+            return appliesToGroups(List.of(appliesToGroups));
+        }
         public Builder configurationName(@Nullable Output<String> configurationName) {
             this.configurationName = configurationName;
             return this;
         }
-
         public Builder configurationName(@Nullable String configurationName) {
             this.configurationName = Output.ofNullable(configurationName);
             return this;
         }
-
         public Builder connectivityTopology(Output<Either<String,ConnectivityTopology>> connectivityTopology) {
             this.connectivityTopology = Objects.requireNonNull(connectivityTopology);
             return this;
         }
-
         public Builder connectivityTopology(Either<String,ConnectivityTopology> connectivityTopology) {
             this.connectivityTopology = Output.of(Objects.requireNonNull(connectivityTopology));
             return this;
         }
-
         public Builder deleteExistingPeering(@Nullable Output<Either<String,DeleteExistingPeering>> deleteExistingPeering) {
             this.deleteExistingPeering = deleteExistingPeering;
             return this;
         }
-
         public Builder deleteExistingPeering(@Nullable Either<String,DeleteExistingPeering> deleteExistingPeering) {
             this.deleteExistingPeering = Output.ofNullable(deleteExistingPeering);
             return this;
         }
-
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder displayName(@Nullable Output<String> displayName) {
             this.displayName = displayName;
             return this;
         }
-
         public Builder displayName(@Nullable String displayName) {
             this.displayName = Output.ofNullable(displayName);
             return this;
         }
-
         public Builder hubs(@Nullable Output<List<HubArgs>> hubs) {
             this.hubs = hubs;
             return this;
         }
-
         public Builder hubs(@Nullable List<HubArgs> hubs) {
             this.hubs = Output.ofNullable(hubs);
             return this;
         }
-
+        public Builder hubs(HubArgs... hubs) {
+            return hubs(List.of(hubs));
+        }
         public Builder isGlobal(@Nullable Output<Either<String,IsGlobal>> isGlobal) {
             this.isGlobal = isGlobal;
             return this;
         }
-
         public Builder isGlobal(@Nullable Either<String,IsGlobal> isGlobal) {
             this.isGlobal = Output.ofNullable(isGlobal);
             return this;
         }
-
         public Builder networkManagerName(Output<String> networkManagerName) {
             this.networkManagerName = Objects.requireNonNull(networkManagerName);
             return this;
         }
-
         public Builder networkManagerName(String networkManagerName) {
             this.networkManagerName = Output.of(Objects.requireNonNull(networkManagerName));
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
-        }
-        public ConnectivityConfigurationArgs build() {
+        }        public ConnectivityConfigurationArgs build() {
             return new ConnectivityConfigurationArgs(appliesToGroups, configurationName, connectivityTopology, deleteExistingPeering, description, displayName, hubs, isGlobal, networkManagerName, resourceGroupName);
         }
     }

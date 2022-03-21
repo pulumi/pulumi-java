@@ -589,342 +589,277 @@ public final class ReleaseArgs extends io.pulumi.resources.ResourceArgs {
             this.atomic = atomic;
             return this;
         }
-
         public Builder atomic(@Nullable Boolean atomic) {
             this.atomic = Output.ofNullable(atomic);
             return this;
         }
-
         public Builder chart(Output<String> chart) {
             this.chart = Objects.requireNonNull(chart);
             return this;
         }
-
         public Builder chart(String chart) {
             this.chart = Output.of(Objects.requireNonNull(chart));
             return this;
         }
-
         public Builder cleanupOnFail(@Nullable Output<Boolean> cleanupOnFail) {
             this.cleanupOnFail = cleanupOnFail;
             return this;
         }
-
         public Builder cleanupOnFail(@Nullable Boolean cleanupOnFail) {
             this.cleanupOnFail = Output.ofNullable(cleanupOnFail);
             return this;
         }
-
         public Builder compat(@Nullable Output<String> compat) {
             this.compat = compat;
             return this;
         }
-
         public Builder compat(@Nullable String compat) {
             this.compat = Output.ofNullable(compat);
             return this;
         }
-
         public Builder createNamespace(@Nullable Output<Boolean> createNamespace) {
             this.createNamespace = createNamespace;
             return this;
         }
-
         public Builder createNamespace(@Nullable Boolean createNamespace) {
             this.createNamespace = Output.ofNullable(createNamespace);
             return this;
         }
-
         public Builder dependencyUpdate(@Nullable Output<Boolean> dependencyUpdate) {
             this.dependencyUpdate = dependencyUpdate;
             return this;
         }
-
         public Builder dependencyUpdate(@Nullable Boolean dependencyUpdate) {
             this.dependencyUpdate = Output.ofNullable(dependencyUpdate);
             return this;
         }
-
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder devel(@Nullable Output<Boolean> devel) {
             this.devel = devel;
             return this;
         }
-
         public Builder devel(@Nullable Boolean devel) {
             this.devel = Output.ofNullable(devel);
             return this;
         }
-
         public Builder disableCRDHooks(@Nullable Output<Boolean> disableCRDHooks) {
             this.disableCRDHooks = disableCRDHooks;
             return this;
         }
-
         public Builder disableCRDHooks(@Nullable Boolean disableCRDHooks) {
             this.disableCRDHooks = Output.ofNullable(disableCRDHooks);
             return this;
         }
-
         public Builder disableOpenapiValidation(@Nullable Output<Boolean> disableOpenapiValidation) {
             this.disableOpenapiValidation = disableOpenapiValidation;
             return this;
         }
-
         public Builder disableOpenapiValidation(@Nullable Boolean disableOpenapiValidation) {
             this.disableOpenapiValidation = Output.ofNullable(disableOpenapiValidation);
             return this;
         }
-
         public Builder disableWebhooks(@Nullable Output<Boolean> disableWebhooks) {
             this.disableWebhooks = disableWebhooks;
             return this;
         }
-
         public Builder disableWebhooks(@Nullable Boolean disableWebhooks) {
             this.disableWebhooks = Output.ofNullable(disableWebhooks);
             return this;
         }
-
         public Builder forceUpdate(@Nullable Output<Boolean> forceUpdate) {
             this.forceUpdate = forceUpdate;
             return this;
         }
-
         public Builder forceUpdate(@Nullable Boolean forceUpdate) {
             this.forceUpdate = Output.ofNullable(forceUpdate);
             return this;
         }
-
         public Builder keyring(@Nullable Output<String> keyring) {
             this.keyring = keyring;
             return this;
         }
-
         public Builder keyring(@Nullable String keyring) {
             this.keyring = Output.ofNullable(keyring);
             return this;
         }
-
         public Builder lint(@Nullable Output<Boolean> lint) {
             this.lint = lint;
             return this;
         }
-
         public Builder lint(@Nullable Boolean lint) {
             this.lint = Output.ofNullable(lint);
             return this;
         }
-
         public Builder manifest(@Nullable Output<Map<String,Object>> manifest) {
             this.manifest = manifest;
             return this;
         }
-
         public Builder manifest(@Nullable Map<String,Object> manifest) {
             this.manifest = Output.ofNullable(manifest);
             return this;
         }
-
         public Builder maxHistory(@Nullable Output<Integer> maxHistory) {
             this.maxHistory = maxHistory;
             return this;
         }
-
         public Builder maxHistory(@Nullable Integer maxHistory) {
             this.maxHistory = Output.ofNullable(maxHistory);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder namespace(@Nullable Output<String> namespace) {
             this.namespace = namespace;
             return this;
         }
-
         public Builder namespace(@Nullable String namespace) {
             this.namespace = Output.ofNullable(namespace);
             return this;
         }
-
         public Builder postrender(@Nullable Output<String> postrender) {
             this.postrender = postrender;
             return this;
         }
-
         public Builder postrender(@Nullable String postrender) {
             this.postrender = Output.ofNullable(postrender);
             return this;
         }
-
         public Builder recreatePods(@Nullable Output<Boolean> recreatePods) {
             this.recreatePods = recreatePods;
             return this;
         }
-
         public Builder recreatePods(@Nullable Boolean recreatePods) {
             this.recreatePods = Output.ofNullable(recreatePods);
             return this;
         }
-
         public Builder renderSubchartNotes(@Nullable Output<Boolean> renderSubchartNotes) {
             this.renderSubchartNotes = renderSubchartNotes;
             return this;
         }
-
         public Builder renderSubchartNotes(@Nullable Boolean renderSubchartNotes) {
             this.renderSubchartNotes = Output.ofNullable(renderSubchartNotes);
             return this;
         }
-
         public Builder replace(@Nullable Output<Boolean> replace) {
             this.replace = replace;
             return this;
         }
-
         public Builder replace(@Nullable Boolean replace) {
             this.replace = Output.ofNullable(replace);
             return this;
         }
-
         public Builder repositoryOpts(@Nullable Output<RepositoryOptsArgs> repositoryOpts) {
             this.repositoryOpts = repositoryOpts;
             return this;
         }
-
         public Builder repositoryOpts(@Nullable RepositoryOptsArgs repositoryOpts) {
             this.repositoryOpts = Output.ofNullable(repositoryOpts);
             return this;
         }
-
         public Builder resetValues(@Nullable Output<Boolean> resetValues) {
             this.resetValues = resetValues;
             return this;
         }
-
         public Builder resetValues(@Nullable Boolean resetValues) {
             this.resetValues = Output.ofNullable(resetValues);
             return this;
         }
-
         public Builder resourceNames(@Nullable Output<Map<String,List<String>>> resourceNames) {
             this.resourceNames = resourceNames;
             return this;
         }
-
         public Builder resourceNames(@Nullable Map<String,List<String>> resourceNames) {
             this.resourceNames = Output.ofNullable(resourceNames);
             return this;
         }
-
         public Builder reuseValues(@Nullable Output<Boolean> reuseValues) {
             this.reuseValues = reuseValues;
             return this;
         }
-
         public Builder reuseValues(@Nullable Boolean reuseValues) {
             this.reuseValues = Output.ofNullable(reuseValues);
             return this;
         }
-
         public Builder skipAwait(@Nullable Output<Boolean> skipAwait) {
             this.skipAwait = skipAwait;
             return this;
         }
-
         public Builder skipAwait(@Nullable Boolean skipAwait) {
             this.skipAwait = Output.ofNullable(skipAwait);
             return this;
         }
-
         public Builder skipCrds(@Nullable Output<Boolean> skipCrds) {
             this.skipCrds = skipCrds;
             return this;
         }
-
         public Builder skipCrds(@Nullable Boolean skipCrds) {
             this.skipCrds = Output.ofNullable(skipCrds);
             return this;
         }
-
         public Builder timeout(@Nullable Output<Integer> timeout) {
             this.timeout = timeout;
             return this;
         }
-
         public Builder timeout(@Nullable Integer timeout) {
             this.timeout = Output.ofNullable(timeout);
             return this;
         }
-
         public Builder valueYamlFiles(@Nullable Output<List<AssetOrArchive>> valueYamlFiles) {
             this.valueYamlFiles = valueYamlFiles;
             return this;
         }
-
         public Builder valueYamlFiles(@Nullable List<AssetOrArchive> valueYamlFiles) {
             this.valueYamlFiles = Output.ofNullable(valueYamlFiles);
             return this;
         }
-
+        public Builder valueYamlFiles(AssetOrArchive... valueYamlFiles) {
+            return valueYamlFiles(List.of(valueYamlFiles));
+        }
         public Builder values(@Nullable Output<Map<String,Object>> values) {
             this.values = values;
             return this;
         }
-
         public Builder values(@Nullable Map<String,Object> values) {
             this.values = Output.ofNullable(values);
             return this;
         }
-
         public Builder verify(@Nullable Output<Boolean> verify) {
             this.verify = verify;
             return this;
         }
-
         public Builder verify(@Nullable Boolean verify) {
             this.verify = Output.ofNullable(verify);
             return this;
         }
-
         public Builder version(@Nullable Output<String> version) {
             this.version = version;
             return this;
         }
-
         public Builder version(@Nullable String version) {
             this.version = Output.ofNullable(version);
             return this;
         }
-
         public Builder waitForJobs(@Nullable Output<Boolean> waitForJobs) {
             this.waitForJobs = waitForJobs;
             return this;
         }
-
         public Builder waitForJobs(@Nullable Boolean waitForJobs) {
             this.waitForJobs = Output.ofNullable(waitForJobs);
             return this;
-        }
-        public ReleaseArgs build() {
+        }        public ReleaseArgs build() {
             return new ReleaseArgs(atomic, chart, cleanupOnFail, compat, createNamespace, dependencyUpdate, description, devel, disableCRDHooks, disableOpenapiValidation, disableWebhooks, forceUpdate, keyring, lint, manifest, maxHistory, name, namespace, postrender, recreatePods, renderSubchartNotes, replace, repositoryOpts, resetValues, resourceNames, reuseValues, skipAwait, skipCrds, timeout, valueYamlFiles, values, verify, version, waitForJobs);
         }
     }

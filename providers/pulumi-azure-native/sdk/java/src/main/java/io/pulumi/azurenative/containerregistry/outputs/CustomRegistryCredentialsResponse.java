@@ -98,17 +98,14 @@ public final class CustomRegistryCredentialsResponse {
             this.identity = identity;
             return this;
         }
-
         public Builder password(@Nullable SecretObjectResponse password) {
             this.password = password;
             return this;
         }
-
         public Builder userName(@Nullable SecretObjectResponse userName) {
             this.userName = userName;
             return this;
-        }
-        public CustomRegistryCredentialsResponse build() {
+        }        public CustomRegistryCredentialsResponse build() {
             return new CustomRegistryCredentialsResponse(identity, password, userName);
         }
     }

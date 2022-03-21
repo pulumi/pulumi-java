@@ -56,12 +56,10 @@ public final class VirtualNodeSpecListenerTlsValidationTrustSdsGetArgs extends i
             this.secretName = Objects.requireNonNull(secretName);
             return this;
         }
-
         public Builder secretName(String secretName) {
             this.secretName = Output.of(Objects.requireNonNull(secretName));
             return this;
-        }
-        public VirtualNodeSpecListenerTlsValidationTrustSdsGetArgs build() {
+        }        public VirtualNodeSpecListenerTlsValidationTrustSdsGetArgs build() {
             return new VirtualNodeSpecListenerTlsValidationTrustSdsGetArgs(secretName);
         }
     }

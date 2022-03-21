@@ -51,8 +51,7 @@ public final class WebAclRuleStatementSizeConstraintStatementFieldToMatchSingleH
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
-        }
-        public WebAclRuleStatementSizeConstraintStatementFieldToMatchSingleHeader build() {
+        }        public WebAclRuleStatementSizeConstraintStatementFieldToMatchSingleHeader build() {
             return new WebAclRuleStatementSizeConstraintStatementFieldToMatchSingleHeader(name);
         }
     }

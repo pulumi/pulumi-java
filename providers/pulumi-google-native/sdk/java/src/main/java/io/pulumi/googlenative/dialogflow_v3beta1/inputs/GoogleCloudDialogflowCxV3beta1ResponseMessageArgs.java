@@ -165,72 +165,58 @@ public final class GoogleCloudDialogflowCxV3beta1ResponseMessageArgs extends io.
             this.conversationSuccess = conversationSuccess;
             return this;
         }
-
         public Builder conversationSuccess(@Nullable GoogleCloudDialogflowCxV3beta1ResponseMessageConversationSuccessArgs conversationSuccess) {
             this.conversationSuccess = Output.ofNullable(conversationSuccess);
             return this;
         }
-
         public Builder liveAgentHandoff(@Nullable Output<GoogleCloudDialogflowCxV3beta1ResponseMessageLiveAgentHandoffArgs> liveAgentHandoff) {
             this.liveAgentHandoff = liveAgentHandoff;
             return this;
         }
-
         public Builder liveAgentHandoff(@Nullable GoogleCloudDialogflowCxV3beta1ResponseMessageLiveAgentHandoffArgs liveAgentHandoff) {
             this.liveAgentHandoff = Output.ofNullable(liveAgentHandoff);
             return this;
         }
-
         public Builder outputAudioText(@Nullable Output<GoogleCloudDialogflowCxV3beta1ResponseMessageOutputAudioTextArgs> outputAudioText) {
             this.outputAudioText = outputAudioText;
             return this;
         }
-
         public Builder outputAudioText(@Nullable GoogleCloudDialogflowCxV3beta1ResponseMessageOutputAudioTextArgs outputAudioText) {
             this.outputAudioText = Output.ofNullable(outputAudioText);
             return this;
         }
-
         public Builder payload(@Nullable Output<Map<String,String>> payload) {
             this.payload = payload;
             return this;
         }
-
         public Builder payload(@Nullable Map<String,String> payload) {
             this.payload = Output.ofNullable(payload);
             return this;
         }
-
         public Builder playAudio(@Nullable Output<GoogleCloudDialogflowCxV3beta1ResponseMessagePlayAudioArgs> playAudio) {
             this.playAudio = playAudio;
             return this;
         }
-
         public Builder playAudio(@Nullable GoogleCloudDialogflowCxV3beta1ResponseMessagePlayAudioArgs playAudio) {
             this.playAudio = Output.ofNullable(playAudio);
             return this;
         }
-
         public Builder telephonyTransferCall(@Nullable Output<GoogleCloudDialogflowCxV3beta1ResponseMessageTelephonyTransferCallArgs> telephonyTransferCall) {
             this.telephonyTransferCall = telephonyTransferCall;
             return this;
         }
-
         public Builder telephonyTransferCall(@Nullable GoogleCloudDialogflowCxV3beta1ResponseMessageTelephonyTransferCallArgs telephonyTransferCall) {
             this.telephonyTransferCall = Output.ofNullable(telephonyTransferCall);
             return this;
         }
-
         public Builder text(@Nullable Output<GoogleCloudDialogflowCxV3beta1ResponseMessageTextArgs> text) {
             this.text = text;
             return this;
         }
-
         public Builder text(@Nullable GoogleCloudDialogflowCxV3beta1ResponseMessageTextArgs text) {
             this.text = Output.ofNullable(text);
             return this;
-        }
-        public GoogleCloudDialogflowCxV3beta1ResponseMessageArgs build() {
+        }        public GoogleCloudDialogflowCxV3beta1ResponseMessageArgs build() {
             return new GoogleCloudDialogflowCxV3beta1ResponseMessageArgs(conversationSuccess, liveAgentHandoff, outputAudioText, payload, playAudio, telephonyTransferCall, text);
         }
     }

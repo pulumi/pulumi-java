@@ -101,22 +101,18 @@ public final class AuthorityResponse {
             this.identityProvider = Objects.requireNonNull(identityProvider);
             return this;
         }
-
         public Builder issuer(String issuer) {
             this.issuer = Objects.requireNonNull(issuer);
             return this;
         }
-
         public Builder oidcJwks(String oidcJwks) {
             this.oidcJwks = Objects.requireNonNull(oidcJwks);
             return this;
         }
-
         public Builder workloadIdentityPool(String workloadIdentityPool) {
             this.workloadIdentityPool = Objects.requireNonNull(workloadIdentityPool);
             return this;
-        }
-        public AuthorityResponse build() {
+        }        public AuthorityResponse build() {
             return new AuthorityResponse(identityProvider, issuer, oidcJwks, workloadIdentityPool);
         }
     }

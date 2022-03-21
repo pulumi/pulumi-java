@@ -101,22 +101,18 @@ public final class ListPrivateCloudAdminCredentialsResult {
             this.nsxtPassword = Objects.requireNonNull(nsxtPassword);
             return this;
         }
-
         public Builder nsxtUsername(String nsxtUsername) {
             this.nsxtUsername = Objects.requireNonNull(nsxtUsername);
             return this;
         }
-
         public Builder vcenterPassword(String vcenterPassword) {
             this.vcenterPassword = Objects.requireNonNull(vcenterPassword);
             return this;
         }
-
         public Builder vcenterUsername(String vcenterUsername) {
             this.vcenterUsername = Objects.requireNonNull(vcenterUsername);
             return this;
-        }
-        public ListPrivateCloudAdminCredentialsResult build() {
+        }        public ListPrivateCloudAdminCredentialsResult build() {
             return new ListPrivateCloudAdminCredentialsResult(nsxtPassword, nsxtUsername, vcenterPassword, vcenterUsername);
         }
     }

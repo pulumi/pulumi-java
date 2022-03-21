@@ -138,62 +138,50 @@ public final class PublicKeyState extends io.pulumi.resources.ResourceArgs {
             this.callerReference = callerReference;
             return this;
         }
-
         public Builder callerReference(@Nullable String callerReference) {
             this.callerReference = Output.ofNullable(callerReference);
             return this;
         }
-
         public Builder comment(@Nullable Output<String> comment) {
             this.comment = comment;
             return this;
         }
-
         public Builder comment(@Nullable String comment) {
             this.comment = Output.ofNullable(comment);
             return this;
         }
-
         public Builder encodedKey(@Nullable Output<String> encodedKey) {
             this.encodedKey = encodedKey;
             return this;
         }
-
         public Builder encodedKey(@Nullable String encodedKey) {
             this.encodedKey = Output.ofNullable(encodedKey);
             return this;
         }
-
         public Builder etag(@Nullable Output<String> etag) {
             this.etag = etag;
             return this;
         }
-
         public Builder etag(@Nullable String etag) {
             this.etag = Output.ofNullable(etag);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder namePrefix(@Nullable Output<String> namePrefix) {
             this.namePrefix = namePrefix;
             return this;
         }
-
         public Builder namePrefix(@Nullable String namePrefix) {
             this.namePrefix = Output.ofNullable(namePrefix);
             return this;
-        }
-        public PublicKeyState build() {
+        }        public PublicKeyState build() {
             return new PublicKeyState(callerReference, comment, encodedKey, etag, name, namePrefix);
         }
     }

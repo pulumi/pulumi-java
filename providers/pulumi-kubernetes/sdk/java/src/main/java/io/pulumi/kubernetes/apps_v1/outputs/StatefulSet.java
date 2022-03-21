@@ -122,27 +122,22 @@ public final class StatefulSet {
             this.apiVersion = apiVersion;
             return this;
         }
-
         public Builder kind(@Nullable String kind) {
             this.kind = kind;
             return this;
         }
-
         public Builder metadata(@Nullable ObjectMeta metadata) {
             this.metadata = metadata;
             return this;
         }
-
         public Builder spec(@Nullable StatefulSetSpec spec) {
             this.spec = spec;
             return this;
         }
-
         public Builder status(@Nullable StatefulSetStatus status) {
             this.status = status;
             return this;
-        }
-        public StatefulSet build() {
+        }        public StatefulSet build() {
             return new StatefulSet(apiVersion, kind, metadata, spec, status);
         }
     }

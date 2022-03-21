@@ -51,8 +51,7 @@ public final class IdentitySelectorResponse {
         public Builder identity(String identity) {
             this.identity = Objects.requireNonNull(identity);
             return this;
-        }
-        public IdentitySelectorResponse build() {
+        }        public IdentitySelectorResponse build() {
             return new IdentitySelectorResponse(identity);
         }
     }

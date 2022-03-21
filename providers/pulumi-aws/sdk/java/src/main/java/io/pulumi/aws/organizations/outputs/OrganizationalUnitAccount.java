@@ -103,22 +103,18 @@ public final class OrganizationalUnitAccount {
             this.arn = arn;
             return this;
         }
-
         public Builder email(@Nullable String email) {
             this.email = email;
             return this;
         }
-
         public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = name;
             return this;
-        }
-        public OrganizationalUnitAccount build() {
+        }        public OrganizationalUnitAccount build() {
             return new OrganizationalUnitAccount(arn, email, id, name);
         }
     }

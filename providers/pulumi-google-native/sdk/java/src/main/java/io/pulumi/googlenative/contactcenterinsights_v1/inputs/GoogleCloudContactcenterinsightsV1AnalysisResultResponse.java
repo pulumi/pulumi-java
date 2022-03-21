@@ -77,12 +77,10 @@ public final class GoogleCloudContactcenterinsightsV1AnalysisResultResponse exte
             this.callAnalysisMetadata = Objects.requireNonNull(callAnalysisMetadata);
             return this;
         }
-
         public Builder endTime(String endTime) {
             this.endTime = Objects.requireNonNull(endTime);
             return this;
-        }
-        public GoogleCloudContactcenterinsightsV1AnalysisResultResponse build() {
+        }        public GoogleCloudContactcenterinsightsV1AnalysisResultResponse build() {
             return new GoogleCloudContactcenterinsightsV1AnalysisResultResponse(callAnalysisMetadata, endTime);
         }
     }

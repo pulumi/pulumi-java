@@ -447,252 +447,205 @@ public final class VolumeArgs extends io.pulumi.resources.ResourceArgs {
             this.accountName = Objects.requireNonNull(accountName);
             return this;
         }
-
         public Builder accountName(String accountName) {
             this.accountName = Output.of(Objects.requireNonNull(accountName));
             return this;
         }
-
         public Builder backupId(@Nullable Output<String> backupId) {
             this.backupId = backupId;
             return this;
         }
-
         public Builder backupId(@Nullable String backupId) {
             this.backupId = Output.ofNullable(backupId);
             return this;
         }
-
         public Builder creationToken(Output<String> creationToken) {
             this.creationToken = Objects.requireNonNull(creationToken);
             return this;
         }
-
         public Builder creationToken(String creationToken) {
             this.creationToken = Output.of(Objects.requireNonNull(creationToken));
             return this;
         }
-
         public Builder dataProtection(@Nullable Output<VolumePropertiesDataProtectionArgs> dataProtection) {
             this.dataProtection = dataProtection;
             return this;
         }
-
         public Builder dataProtection(@Nullable VolumePropertiesDataProtectionArgs dataProtection) {
             this.dataProtection = Output.ofNullable(dataProtection);
             return this;
         }
-
         public Builder encryptionKeySource(@Nullable Output<String> encryptionKeySource) {
             this.encryptionKeySource = encryptionKeySource;
             return this;
         }
-
         public Builder encryptionKeySource(@Nullable String encryptionKeySource) {
             this.encryptionKeySource = Output.ofNullable(encryptionKeySource);
             return this;
         }
-
         public Builder exportPolicy(@Nullable Output<VolumePropertiesExportPolicyArgs> exportPolicy) {
             this.exportPolicy = exportPolicy;
             return this;
         }
-
         public Builder exportPolicy(@Nullable VolumePropertiesExportPolicyArgs exportPolicy) {
             this.exportPolicy = Output.ofNullable(exportPolicy);
             return this;
         }
-
         public Builder isRestoring(@Nullable Output<Boolean> isRestoring) {
             this.isRestoring = isRestoring;
             return this;
         }
-
         public Builder isRestoring(@Nullable Boolean isRestoring) {
             this.isRestoring = Output.ofNullable(isRestoring);
             return this;
         }
-
         public Builder kerberosEnabled(@Nullable Output<Boolean> kerberosEnabled) {
             this.kerberosEnabled = kerberosEnabled;
             return this;
         }
-
         public Builder kerberosEnabled(@Nullable Boolean kerberosEnabled) {
             this.kerberosEnabled = Output.ofNullable(kerberosEnabled);
             return this;
         }
-
         public Builder ldapEnabled(@Nullable Output<Boolean> ldapEnabled) {
             this.ldapEnabled = ldapEnabled;
             return this;
         }
-
         public Builder ldapEnabled(@Nullable Boolean ldapEnabled) {
             this.ldapEnabled = Output.ofNullable(ldapEnabled);
             return this;
         }
-
         public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder poolName(Output<String> poolName) {
             this.poolName = Objects.requireNonNull(poolName);
             return this;
         }
-
         public Builder poolName(String poolName) {
             this.poolName = Output.of(Objects.requireNonNull(poolName));
             return this;
         }
-
         public Builder protocolTypes(@Nullable Output<List<String>> protocolTypes) {
             this.protocolTypes = protocolTypes;
             return this;
         }
-
         public Builder protocolTypes(@Nullable List<String> protocolTypes) {
             this.protocolTypes = Output.ofNullable(protocolTypes);
             return this;
         }
-
+        public Builder protocolTypes(String... protocolTypes) {
+            return protocolTypes(List.of(protocolTypes));
+        }
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder securityStyle(@Nullable Output<Either<String,SecurityStyle>> securityStyle) {
             this.securityStyle = securityStyle;
             return this;
         }
-
         public Builder securityStyle(@Nullable Either<String,SecurityStyle> securityStyle) {
             this.securityStyle = Output.ofNullable(securityStyle);
             return this;
         }
-
         public Builder serviceLevel(@Nullable Output<Either<String,ServiceLevel>> serviceLevel) {
             this.serviceLevel = serviceLevel;
             return this;
         }
-
         public Builder serviceLevel(@Nullable Either<String,ServiceLevel> serviceLevel) {
             this.serviceLevel = Output.ofNullable(serviceLevel);
             return this;
         }
-
         public Builder smbContinuouslyAvailable(@Nullable Output<Boolean> smbContinuouslyAvailable) {
             this.smbContinuouslyAvailable = smbContinuouslyAvailable;
             return this;
         }
-
         public Builder smbContinuouslyAvailable(@Nullable Boolean smbContinuouslyAvailable) {
             this.smbContinuouslyAvailable = Output.ofNullable(smbContinuouslyAvailable);
             return this;
         }
-
         public Builder smbEncryption(@Nullable Output<Boolean> smbEncryption) {
             this.smbEncryption = smbEncryption;
             return this;
         }
-
         public Builder smbEncryption(@Nullable Boolean smbEncryption) {
             this.smbEncryption = Output.ofNullable(smbEncryption);
             return this;
         }
-
         public Builder snapshotDirectoryVisible(@Nullable Output<Boolean> snapshotDirectoryVisible) {
             this.snapshotDirectoryVisible = snapshotDirectoryVisible;
             return this;
         }
-
         public Builder snapshotDirectoryVisible(@Nullable Boolean snapshotDirectoryVisible) {
             this.snapshotDirectoryVisible = Output.ofNullable(snapshotDirectoryVisible);
             return this;
         }
-
         public Builder snapshotId(@Nullable Output<String> snapshotId) {
             this.snapshotId = snapshotId;
             return this;
         }
-
         public Builder snapshotId(@Nullable String snapshotId) {
             this.snapshotId = Output.ofNullable(snapshotId);
             return this;
         }
-
         public Builder subnetId(Output<String> subnetId) {
             this.subnetId = Objects.requireNonNull(subnetId);
             return this;
         }
-
         public Builder subnetId(String subnetId) {
             this.subnetId = Output.of(Objects.requireNonNull(subnetId));
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
         public Builder throughputMibps(@Nullable Output<Double> throughputMibps) {
             this.throughputMibps = throughputMibps;
             return this;
         }
-
         public Builder throughputMibps(@Nullable Double throughputMibps) {
             this.throughputMibps = Output.ofNullable(throughputMibps);
             return this;
         }
-
         public Builder usageThreshold(Output<Double> usageThreshold) {
             this.usageThreshold = Objects.requireNonNull(usageThreshold);
             return this;
         }
-
         public Builder usageThreshold(Double usageThreshold) {
             this.usageThreshold = Output.of(Objects.requireNonNull(usageThreshold));
             return this;
         }
-
         public Builder volumeName(@Nullable Output<String> volumeName) {
             this.volumeName = volumeName;
             return this;
         }
-
         public Builder volumeName(@Nullable String volumeName) {
             this.volumeName = Output.ofNullable(volumeName);
             return this;
         }
-
         public Builder volumeType(@Nullable Output<String> volumeType) {
             this.volumeType = volumeType;
             return this;
         }
-
         public Builder volumeType(@Nullable String volumeType) {
             this.volumeType = Output.ofNullable(volumeType);
             return this;
-        }
-        public VolumeArgs build() {
+        }        public VolumeArgs build() {
             return new VolumeArgs(accountName, backupId, creationToken, dataProtection, encryptionKeySource, exportPolicy, isRestoring, kerberosEnabled, ldapEnabled, location, poolName, protocolTypes, resourceGroupName, securityStyle, serviceLevel, smbContinuouslyAvailable, smbEncryption, snapshotDirectoryVisible, snapshotId, subnetId, tags, throughputMibps, usageThreshold, volumeName, volumeType);
         }
     }

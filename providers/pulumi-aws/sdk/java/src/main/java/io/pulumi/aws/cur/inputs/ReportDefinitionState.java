@@ -236,122 +236,104 @@ public final class ReportDefinitionState extends io.pulumi.resources.ResourceArg
             this.additionalArtifacts = additionalArtifacts;
             return this;
         }
-
         public Builder additionalArtifacts(@Nullable List<String> additionalArtifacts) {
             this.additionalArtifacts = Output.ofNullable(additionalArtifacts);
             return this;
         }
-
+        public Builder additionalArtifacts(String... additionalArtifacts) {
+            return additionalArtifacts(List.of(additionalArtifacts));
+        }
         public Builder additionalSchemaElements(@Nullable Output<List<String>> additionalSchemaElements) {
             this.additionalSchemaElements = additionalSchemaElements;
             return this;
         }
-
         public Builder additionalSchemaElements(@Nullable List<String> additionalSchemaElements) {
             this.additionalSchemaElements = Output.ofNullable(additionalSchemaElements);
             return this;
         }
-
+        public Builder additionalSchemaElements(String... additionalSchemaElements) {
+            return additionalSchemaElements(List.of(additionalSchemaElements));
+        }
         public Builder arn(@Nullable Output<String> arn) {
             this.arn = arn;
             return this;
         }
-
         public Builder arn(@Nullable String arn) {
             this.arn = Output.ofNullable(arn);
             return this;
         }
-
         public Builder compression(@Nullable Output<String> compression) {
             this.compression = compression;
             return this;
         }
-
         public Builder compression(@Nullable String compression) {
             this.compression = Output.ofNullable(compression);
             return this;
         }
-
         public Builder format(@Nullable Output<String> format) {
             this.format = format;
             return this;
         }
-
         public Builder format(@Nullable String format) {
             this.format = Output.ofNullable(format);
             return this;
         }
-
         public Builder refreshClosedReports(@Nullable Output<Boolean> refreshClosedReports) {
             this.refreshClosedReports = refreshClosedReports;
             return this;
         }
-
         public Builder refreshClosedReports(@Nullable Boolean refreshClosedReports) {
             this.refreshClosedReports = Output.ofNullable(refreshClosedReports);
             return this;
         }
-
         public Builder reportName(@Nullable Output<String> reportName) {
             this.reportName = reportName;
             return this;
         }
-
         public Builder reportName(@Nullable String reportName) {
             this.reportName = Output.ofNullable(reportName);
             return this;
         }
-
         public Builder reportVersioning(@Nullable Output<String> reportVersioning) {
             this.reportVersioning = reportVersioning;
             return this;
         }
-
         public Builder reportVersioning(@Nullable String reportVersioning) {
             this.reportVersioning = Output.ofNullable(reportVersioning);
             return this;
         }
-
         public Builder s3Bucket(@Nullable Output<String> s3Bucket) {
             this.s3Bucket = s3Bucket;
             return this;
         }
-
         public Builder s3Bucket(@Nullable String s3Bucket) {
             this.s3Bucket = Output.ofNullable(s3Bucket);
             return this;
         }
-
         public Builder s3Prefix(@Nullable Output<String> s3Prefix) {
             this.s3Prefix = s3Prefix;
             return this;
         }
-
         public Builder s3Prefix(@Nullable String s3Prefix) {
             this.s3Prefix = Output.ofNullable(s3Prefix);
             return this;
         }
-
         public Builder s3Region(@Nullable Output<String> s3Region) {
             this.s3Region = s3Region;
             return this;
         }
-
         public Builder s3Region(@Nullable String s3Region) {
             this.s3Region = Output.ofNullable(s3Region);
             return this;
         }
-
         public Builder timeUnit(@Nullable Output<String> timeUnit) {
             this.timeUnit = timeUnit;
             return this;
         }
-
         public Builder timeUnit(@Nullable String timeUnit) {
             this.timeUnit = Output.ofNullable(timeUnit);
             return this;
-        }
-        public ReportDefinitionState build() {
+        }        public ReportDefinitionState build() {
             return new ReportDefinitionState(additionalArtifacts, additionalSchemaElements, arn, compression, format, refreshClosedReports, reportName, reportVersioning, s3Bucket, s3Prefix, s3Region, timeUnit);
         }
     }

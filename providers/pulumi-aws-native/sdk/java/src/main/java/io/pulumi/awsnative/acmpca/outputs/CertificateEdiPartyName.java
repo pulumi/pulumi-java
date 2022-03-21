@@ -53,12 +53,10 @@ public final class CertificateEdiPartyName {
             this.nameAssigner = Objects.requireNonNull(nameAssigner);
             return this;
         }
-
         public Builder partyName(String partyName) {
             this.partyName = Objects.requireNonNull(partyName);
             return this;
-        }
-        public CertificateEdiPartyName build() {
+        }        public CertificateEdiPartyName build() {
             return new CertificateEdiPartyName(nameAssigner, partyName);
         }
     }

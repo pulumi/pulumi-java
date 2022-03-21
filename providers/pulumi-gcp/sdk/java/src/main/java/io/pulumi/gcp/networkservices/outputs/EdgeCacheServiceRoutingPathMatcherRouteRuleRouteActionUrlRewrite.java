@@ -107,17 +107,14 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionUrlRewr
             this.hostRewrite = hostRewrite;
             return this;
         }
-
         public Builder pathPrefixRewrite(@Nullable String pathPrefixRewrite) {
             this.pathPrefixRewrite = pathPrefixRewrite;
             return this;
         }
-
         public Builder pathTemplateRewrite(@Nullable String pathTemplateRewrite) {
             this.pathTemplateRewrite = pathTemplateRewrite;
             return this;
-        }
-        public EdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionUrlRewrite build() {
+        }        public EdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionUrlRewrite build() {
             return new EdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionUrlRewrite(hostRewrite, pathPrefixRewrite, pathTemplateRewrite);
         }
     }

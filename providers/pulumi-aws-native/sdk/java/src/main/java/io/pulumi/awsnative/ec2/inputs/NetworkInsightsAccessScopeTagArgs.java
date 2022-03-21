@@ -66,22 +66,18 @@ public final class NetworkInsightsAccessScopeTagArgs extends io.pulumi.resources
             this.key = Objects.requireNonNull(key);
             return this;
         }
-
         public Builder key(String key) {
             this.key = Output.of(Objects.requireNonNull(key));
             return this;
         }
-
         public Builder value(@Nullable Output<String> value) {
             this.value = value;
             return this;
         }
-
         public Builder value(@Nullable String value) {
             this.value = Output.ofNullable(value);
             return this;
-        }
-        public NetworkInsightsAccessScopeTagArgs build() {
+        }        public NetworkInsightsAccessScopeTagArgs build() {
             return new NetworkInsightsAccessScopeTagArgs(key, value);
         }
     }

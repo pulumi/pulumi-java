@@ -53,12 +53,10 @@ public final class StepLabelsEntryResponse {
             this.key = Objects.requireNonNull(key);
             return this;
         }
-
         public Builder value(String value) {
             this.value = Objects.requireNonNull(value);
             return this;
-        }
-        public StepLabelsEntryResponse build() {
+        }        public StepLabelsEntryResponse build() {
             return new StepLabelsEntryResponse(key, value);
         }
     }

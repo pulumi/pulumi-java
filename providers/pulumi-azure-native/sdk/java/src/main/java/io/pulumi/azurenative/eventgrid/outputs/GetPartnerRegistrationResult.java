@@ -362,97 +362,81 @@ public final class GetPartnerRegistrationResult {
             this.authorizedAzureSubscriptionIds = authorizedAzureSubscriptionIds;
             return this;
         }
-
+        public Builder authorizedAzureSubscriptionIds(String... authorizedAzureSubscriptionIds) {
+            return authorizedAzureSubscriptionIds(List.of(authorizedAzureSubscriptionIds));
+        }
         public Builder customerServiceUri(@Nullable String customerServiceUri) {
             this.customerServiceUri = customerServiceUri;
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder location(String location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
-
         public Builder logoUri(@Nullable String logoUri) {
             this.logoUri = logoUri;
             return this;
         }
-
         public Builder longDescription(@Nullable String longDescription) {
             this.longDescription = longDescription;
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder partnerCustomerServiceExtension(@Nullable String partnerCustomerServiceExtension) {
             this.partnerCustomerServiceExtension = partnerCustomerServiceExtension;
             return this;
         }
-
         public Builder partnerCustomerServiceNumber(@Nullable String partnerCustomerServiceNumber) {
             this.partnerCustomerServiceNumber = partnerCustomerServiceNumber;
             return this;
         }
-
         public Builder partnerName(@Nullable String partnerName) {
             this.partnerName = partnerName;
             return this;
         }
-
         public Builder partnerResourceTypeDescription(@Nullable String partnerResourceTypeDescription) {
             this.partnerResourceTypeDescription = partnerResourceTypeDescription;
             return this;
         }
-
         public Builder partnerResourceTypeDisplayName(@Nullable String partnerResourceTypeDisplayName) {
             this.partnerResourceTypeDisplayName = partnerResourceTypeDisplayName;
             return this;
         }
-
         public Builder partnerResourceTypeName(@Nullable String partnerResourceTypeName) {
             this.partnerResourceTypeName = partnerResourceTypeName;
             return this;
         }
-
         public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
-
         public Builder setupUri(@Nullable String setupUri) {
             this.setupUri = setupUri;
             return this;
         }
-
         public Builder systemData(SystemDataResponse systemData) {
             this.systemData = Objects.requireNonNull(systemData);
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder visibilityState(@Nullable String visibilityState) {
             this.visibilityState = visibilityState;
             return this;
-        }
-        public GetPartnerRegistrationResult build() {
+        }        public GetPartnerRegistrationResult build() {
             return new GetPartnerRegistrationResult(authorizedAzureSubscriptionIds, customerServiceUri, id, location, logoUri, longDescription, name, partnerCustomerServiceExtension, partnerCustomerServiceNumber, partnerName, partnerResourceTypeDescription, partnerResourceTypeDisplayName, partnerResourceTypeName, provisioningState, setupUri, systemData, tags, type, visibilityState);
         }
     }

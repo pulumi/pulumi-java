@@ -78,22 +78,18 @@ public final class DiskTagArgs extends io.pulumi.resources.ResourceArgs {
             this.key = Objects.requireNonNull(key);
             return this;
         }
-
         public Builder key(String key) {
             this.key = Output.of(Objects.requireNonNull(key));
             return this;
         }
-
         public Builder value(@Nullable Output<String> value) {
             this.value = value;
             return this;
         }
-
         public Builder value(@Nullable String value) {
             this.value = Output.ofNullable(value);
             return this;
-        }
-        public DiskTagArgs build() {
+        }        public DiskTagArgs build() {
             return new DiskTagArgs(key, value);
         }
     }

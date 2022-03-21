@@ -91,12 +91,13 @@ public final class TemplateResourcePermission extends io.pulumi.resources.Invoke
             this.actions = Objects.requireNonNull(actions);
             return this;
         }
-
+        public Builder actions(String... actions) {
+            return actions(List.of(actions));
+        }
         public Builder principal(String principal) {
             this.principal = Objects.requireNonNull(principal);
             return this;
-        }
-        public TemplateResourcePermission build() {
+        }        public TemplateResourcePermission build() {
             return new TemplateResourcePermission(actions, principal);
         }
     }

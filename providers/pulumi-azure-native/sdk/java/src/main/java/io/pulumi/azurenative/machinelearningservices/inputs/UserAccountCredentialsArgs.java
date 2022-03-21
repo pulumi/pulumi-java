@@ -94,32 +94,26 @@ public final class UserAccountCredentialsArgs extends io.pulumi.resources.Resour
             this.adminUserName = Objects.requireNonNull(adminUserName);
             return this;
         }
-
         public Builder adminUserName(String adminUserName) {
             this.adminUserName = Output.of(Objects.requireNonNull(adminUserName));
             return this;
         }
-
         public Builder adminUserPassword(@Nullable Output<String> adminUserPassword) {
             this.adminUserPassword = adminUserPassword;
             return this;
         }
-
         public Builder adminUserPassword(@Nullable String adminUserPassword) {
             this.adminUserPassword = Output.ofNullable(adminUserPassword);
             return this;
         }
-
         public Builder adminUserSshPublicKey(@Nullable Output<String> adminUserSshPublicKey) {
             this.adminUserSshPublicKey = adminUserSshPublicKey;
             return this;
         }
-
         public Builder adminUserSshPublicKey(@Nullable String adminUserSshPublicKey) {
             this.adminUserSshPublicKey = Output.ofNullable(adminUserSshPublicKey);
             return this;
-        }
-        public UserAccountCredentialsArgs build() {
+        }        public UserAccountCredentialsArgs build() {
             return new UserAccountCredentialsArgs(adminUserName, adminUserPassword, adminUserSshPublicKey);
         }
     }

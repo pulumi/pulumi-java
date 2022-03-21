@@ -56,12 +56,10 @@ public final class ResourcePolicyInstanceSchedulePolicyVmStopScheduleArgs extend
             this.schedule = Objects.requireNonNull(schedule);
             return this;
         }
-
         public Builder schedule(String schedule) {
             this.schedule = Output.of(Objects.requireNonNull(schedule));
             return this;
-        }
-        public ResourcePolicyInstanceSchedulePolicyVmStopScheduleArgs build() {
+        }        public ResourcePolicyInstanceSchedulePolicyVmStopScheduleArgs build() {
             return new ResourcePolicyInstanceSchedulePolicyVmStopScheduleArgs(schedule);
         }
     }

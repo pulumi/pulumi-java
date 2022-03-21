@@ -149,37 +149,30 @@ public final class HealthAlertResponse {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder issue(String issue) {
             this.issue = Objects.requireNonNull(issue);
             return this;
         }
-
         public Builder lastDetected(String lastDetected) {
             this.lastDetected = Objects.requireNonNull(lastDetected);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder raised(String raised) {
             this.raised = Objects.requireNonNull(raised);
             return this;
         }
-
         public Builder resolutionUri(String resolutionUri) {
             this.resolutionUri = Objects.requireNonNull(resolutionUri);
             return this;
         }
-
         public Builder severity(String severity) {
             this.severity = Objects.requireNonNull(severity);
             return this;
-        }
-        public HealthAlertResponse build() {
+        }        public HealthAlertResponse build() {
             return new HealthAlertResponse(id, issue, lastDetected, name, raised, resolutionUri, severity);
         }
     }

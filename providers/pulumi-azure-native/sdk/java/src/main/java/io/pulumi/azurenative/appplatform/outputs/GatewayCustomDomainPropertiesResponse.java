@@ -53,8 +53,7 @@ public final class GatewayCustomDomainPropertiesResponse {
         public Builder thumbprint(@Nullable String thumbprint) {
             this.thumbprint = thumbprint;
             return this;
-        }
-        public GatewayCustomDomainPropertiesResponse build() {
+        }        public GatewayCustomDomainPropertiesResponse build() {
             return new GatewayCustomDomainPropertiesResponse(thumbprint);
         }
     }

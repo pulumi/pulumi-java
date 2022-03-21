@@ -138,62 +138,50 @@ public final class ListenerDefaultActionRedirectGetArgs extends io.pulumi.resour
             this.host = host;
             return this;
         }
-
         public Builder host(@Nullable String host) {
             this.host = Output.ofNullable(host);
             return this;
         }
-
         public Builder path(@Nullable Output<String> path) {
             this.path = path;
             return this;
         }
-
         public Builder path(@Nullable String path) {
             this.path = Output.ofNullable(path);
             return this;
         }
-
         public Builder port(@Nullable Output<String> port) {
             this.port = port;
             return this;
         }
-
         public Builder port(@Nullable String port) {
             this.port = Output.ofNullable(port);
             return this;
         }
-
         public Builder protocol(@Nullable Output<String> protocol) {
             this.protocol = protocol;
             return this;
         }
-
         public Builder protocol(@Nullable String protocol) {
             this.protocol = Output.ofNullable(protocol);
             return this;
         }
-
         public Builder query(@Nullable Output<String> query) {
             this.query = query;
             return this;
         }
-
         public Builder query(@Nullable String query) {
             this.query = Output.ofNullable(query);
             return this;
         }
-
         public Builder statusCode(Output<String> statusCode) {
             this.statusCode = Objects.requireNonNull(statusCode);
             return this;
         }
-
         public Builder statusCode(String statusCode) {
             this.statusCode = Output.of(Objects.requireNonNull(statusCode));
             return this;
-        }
-        public ListenerDefaultActionRedirectGetArgs build() {
+        }        public ListenerDefaultActionRedirectGetArgs build() {
             return new ListenerDefaultActionRedirectGetArgs(host, path, port, protocol, query, statusCode);
         }
     }

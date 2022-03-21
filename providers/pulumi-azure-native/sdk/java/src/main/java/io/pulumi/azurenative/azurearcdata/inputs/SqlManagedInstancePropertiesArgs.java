@@ -160,72 +160,58 @@ public final class SqlManagedInstancePropertiesArgs extends io.pulumi.resources.
             this.admin = admin;
             return this;
         }
-
         public Builder admin(@Nullable String admin) {
             this.admin = Output.ofNullable(admin);
             return this;
         }
-
         public Builder basicLoginInformation(@Nullable Output<BasicLoginInformationArgs> basicLoginInformation) {
             this.basicLoginInformation = basicLoginInformation;
             return this;
         }
-
         public Builder basicLoginInformation(@Nullable BasicLoginInformationArgs basicLoginInformation) {
             this.basicLoginInformation = Output.ofNullable(basicLoginInformation);
             return this;
         }
-
         public Builder dataControllerId(@Nullable Output<String> dataControllerId) {
             this.dataControllerId = dataControllerId;
             return this;
         }
-
         public Builder dataControllerId(@Nullable String dataControllerId) {
             this.dataControllerId = Output.ofNullable(dataControllerId);
             return this;
         }
-
         public Builder endTime(@Nullable Output<String> endTime) {
             this.endTime = endTime;
             return this;
         }
-
         public Builder endTime(@Nullable String endTime) {
             this.endTime = Output.ofNullable(endTime);
             return this;
         }
-
         public Builder k8sRaw(@Nullable Output<Object> k8sRaw) {
             this.k8sRaw = k8sRaw;
             return this;
         }
-
         public Builder k8sRaw(@Nullable Object k8sRaw) {
             this.k8sRaw = Output.ofNullable(k8sRaw);
             return this;
         }
-
         public Builder lastUploadedDate(@Nullable Output<String> lastUploadedDate) {
             this.lastUploadedDate = lastUploadedDate;
             return this;
         }
-
         public Builder lastUploadedDate(@Nullable String lastUploadedDate) {
             this.lastUploadedDate = Output.ofNullable(lastUploadedDate);
             return this;
         }
-
         public Builder startTime(@Nullable Output<String> startTime) {
             this.startTime = startTime;
             return this;
         }
-
         public Builder startTime(@Nullable String startTime) {
             this.startTime = Output.ofNullable(startTime);
             return this;
-        }
-        public SqlManagedInstancePropertiesArgs build() {
+        }        public SqlManagedInstancePropertiesArgs build() {
             return new SqlManagedInstancePropertiesArgs(admin, basicLoginInformation, dataControllerId, endTime, k8sRaw, lastUploadedDate, startTime);
         }
     }

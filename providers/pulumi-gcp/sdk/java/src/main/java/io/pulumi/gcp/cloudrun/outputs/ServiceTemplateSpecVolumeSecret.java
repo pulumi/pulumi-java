@@ -122,17 +122,17 @@ public final class ServiceTemplateSpecVolumeSecret {
             this.defaultMode = defaultMode;
             return this;
         }
-
         public Builder items(@Nullable List<ServiceTemplateSpecVolumeSecretItem> items) {
             this.items = items;
             return this;
         }
-
+        public Builder items(ServiceTemplateSpecVolumeSecretItem... items) {
+            return items(List.of(items));
+        }
         public Builder secretName(String secretName) {
             this.secretName = Objects.requireNonNull(secretName);
             return this;
-        }
-        public ServiceTemplateSpecVolumeSecret build() {
+        }        public ServiceTemplateSpecVolumeSecret build() {
             return new ServiceTemplateSpecVolumeSecret(defaultMode, items, secretName);
         }
     }

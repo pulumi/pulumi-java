@@ -72,12 +72,10 @@ public final class EnterpriseSkuResponse {
             this.capacity = capacity;
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
-        }
-        public EnterpriseSkuResponse build() {
+        }        public EnterpriseSkuResponse build() {
             return new EnterpriseSkuResponse(capacity, name);
         }
     }

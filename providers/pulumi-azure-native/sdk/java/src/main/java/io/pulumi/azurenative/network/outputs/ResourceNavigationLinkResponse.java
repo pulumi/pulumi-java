@@ -151,37 +151,30 @@ public final class ResourceNavigationLinkResponse {
             this.etag = Objects.requireNonNull(etag);
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder link(@Nullable String link) {
             this.link = link;
             return this;
         }
-
         public Builder linkedResourceType(@Nullable String linkedResourceType) {
             this.linkedResourceType = linkedResourceType;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
-
         public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public ResourceNavigationLinkResponse build() {
+        }        public ResourceNavigationLinkResponse build() {
             return new ResourceNavigationLinkResponse(etag, id, link, linkedResourceType, name, provisioningState, type);
         }
     }

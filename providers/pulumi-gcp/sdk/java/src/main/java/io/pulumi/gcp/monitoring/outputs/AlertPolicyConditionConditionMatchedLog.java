@@ -83,12 +83,10 @@ public final class AlertPolicyConditionConditionMatchedLog {
             this.filter = Objects.requireNonNull(filter);
             return this;
         }
-
         public Builder labelExtractors(@Nullable Map<String,String> labelExtractors) {
             this.labelExtractors = labelExtractors;
             return this;
-        }
-        public AlertPolicyConditionConditionMatchedLog build() {
+        }        public AlertPolicyConditionConditionMatchedLog build() {
             return new AlertPolicyConditionConditionMatchedLog(filter, labelExtractors);
         }
     }

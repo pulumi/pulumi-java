@@ -73,12 +73,13 @@ public final class MaintenanceWindowTaskTaskInvocationParametersAutomationParame
             this.documentVersion = documentVersion;
             return this;
         }
-
         public Builder parameters(@Nullable List<MaintenanceWindowTaskTaskInvocationParametersAutomationParametersParameter> parameters) {
             this.parameters = parameters;
             return this;
         }
-        public MaintenanceWindowTaskTaskInvocationParametersAutomationParameters build() {
+        public Builder parameters(MaintenanceWindowTaskTaskInvocationParametersAutomationParametersParameter... parameters) {
+            return parameters(List.of(parameters));
+        }        public MaintenanceWindowTaskTaskInvocationParametersAutomationParameters build() {
             return new MaintenanceWindowTaskTaskInvocationParametersAutomationParameters(documentVersion, parameters);
         }
     }

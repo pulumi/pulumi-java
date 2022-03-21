@@ -119,27 +119,22 @@ public final class UserAccessPolicyResponse {
             this.accessResourcePath = accessResourcePath;
             return this;
         }
-
         public Builder expireTime(@Nullable String expireTime) {
             this.expireTime = expireTime;
             return this;
         }
-
         public Builder permissions(@Nullable String permissions) {
             this.permissions = permissions;
             return this;
         }
-
         public Builder profileName(@Nullable String profileName) {
             this.profileName = profileName;
             return this;
         }
-
         public Builder startTime(@Nullable String startTime) {
             this.startTime = startTime;
             return this;
-        }
-        public UserAccessPolicyResponse build() {
+        }        public UserAccessPolicyResponse build() {
             return new UserAccessPolicyResponse(accessResourcePath, expireTime, permissions, profileName, startTime);
         }
     }

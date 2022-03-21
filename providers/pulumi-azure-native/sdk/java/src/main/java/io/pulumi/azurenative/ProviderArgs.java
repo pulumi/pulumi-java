@@ -236,122 +236,101 @@ public final class ProviderArgs extends io.pulumi.resources.ResourceArgs {
             this.auxiliaryTenantIds = auxiliaryTenantIds;
             return this;
         }
-
         public Builder auxiliaryTenantIds(@Nullable List<String> auxiliaryTenantIds) {
             this.auxiliaryTenantIds = Output.ofNullable(auxiliaryTenantIds);
             return this;
         }
-
+        public Builder auxiliaryTenantIds(String... auxiliaryTenantIds) {
+            return auxiliaryTenantIds(List.of(auxiliaryTenantIds));
+        }
         public Builder clientCertificatePassword(@Nullable Output<String> clientCertificatePassword) {
             this.clientCertificatePassword = Output.ofNullable(clientCertificatePassword).asSecret();
             return this;
         }
-
         public Builder clientCertificatePassword(@Nullable String clientCertificatePassword) {
             this.clientCertificatePassword = Output.ofNullable(clientCertificatePassword).asSecret();
             return this;
         }
-
         public Builder clientCertificatePath(@Nullable Output<String> clientCertificatePath) {
             this.clientCertificatePath = clientCertificatePath;
             return this;
         }
-
         public Builder clientCertificatePath(@Nullable String clientCertificatePath) {
             this.clientCertificatePath = Output.ofNullable(clientCertificatePath);
             return this;
         }
-
         public Builder clientId(@Nullable Output<String> clientId) {
             this.clientId = Output.ofNullable(clientId).asSecret();
             return this;
         }
-
         public Builder clientId(@Nullable String clientId) {
             this.clientId = Output.ofNullable(clientId).asSecret();
             return this;
         }
-
         public Builder clientSecret(@Nullable Output<String> clientSecret) {
             this.clientSecret = Output.ofNullable(clientSecret).asSecret();
             return this;
         }
-
         public Builder clientSecret(@Nullable String clientSecret) {
             this.clientSecret = Output.ofNullable(clientSecret).asSecret();
             return this;
         }
-
         public Builder disablePulumiPartnerId(@Nullable Output<Boolean> disablePulumiPartnerId) {
             this.disablePulumiPartnerId = disablePulumiPartnerId;
             return this;
         }
-
         public Builder disablePulumiPartnerId(@Nullable Boolean disablePulumiPartnerId) {
             this.disablePulumiPartnerId = Output.ofNullable(disablePulumiPartnerId);
             return this;
         }
-
         public Builder environment(@Nullable Output<String> environment) {
             this.environment = environment;
             return this;
         }
-
         public Builder environment(@Nullable String environment) {
             this.environment = Output.ofNullable(environment);
             return this;
         }
-
         public Builder msiEndpoint(@Nullable Output<String> msiEndpoint) {
             this.msiEndpoint = msiEndpoint;
             return this;
         }
-
         public Builder msiEndpoint(@Nullable String msiEndpoint) {
             this.msiEndpoint = Output.ofNullable(msiEndpoint);
             return this;
         }
-
         public Builder partnerId(@Nullable Output<String> partnerId) {
             this.partnerId = partnerId;
             return this;
         }
-
         public Builder partnerId(@Nullable String partnerId) {
             this.partnerId = Output.ofNullable(partnerId);
             return this;
         }
-
         public Builder subscriptionId(@Nullable Output<String> subscriptionId) {
             this.subscriptionId = subscriptionId;
             return this;
         }
-
         public Builder subscriptionId(@Nullable String subscriptionId) {
             this.subscriptionId = Output.ofNullable(subscriptionId);
             return this;
         }
-
         public Builder tenantId(@Nullable Output<String> tenantId) {
             this.tenantId = tenantId;
             return this;
         }
-
         public Builder tenantId(@Nullable String tenantId) {
             this.tenantId = Output.ofNullable(tenantId);
             return this;
         }
-
         public Builder useMsi(@Nullable Output<Boolean> useMsi) {
             this.useMsi = useMsi;
             return this;
         }
-
         public Builder useMsi(@Nullable Boolean useMsi) {
             this.useMsi = Output.ofNullable(useMsi);
             return this;
-        }
-        public ProviderArgs build() {
+        }        public ProviderArgs build() {
             return new ProviderArgs(auxiliaryTenantIds, clientCertificatePassword, clientCertificatePath, clientId, clientSecret, disablePulumiPartnerId, environment, msiEndpoint, partnerId, subscriptionId, tenantId, useMsi);
         }
     }

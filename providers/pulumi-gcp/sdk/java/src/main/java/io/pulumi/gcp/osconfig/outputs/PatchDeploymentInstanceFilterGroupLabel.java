@@ -52,8 +52,7 @@ public final class PatchDeploymentInstanceFilterGroupLabel {
         public Builder labels(Map<String,String> labels) {
             this.labels = Objects.requireNonNull(labels);
             return this;
-        }
-        public PatchDeploymentInstanceFilterGroupLabel build() {
+        }        public PatchDeploymentInstanceFilterGroupLabel build() {
             return new PatchDeploymentInstanceFilterGroupLabel(labels);
         }
     }

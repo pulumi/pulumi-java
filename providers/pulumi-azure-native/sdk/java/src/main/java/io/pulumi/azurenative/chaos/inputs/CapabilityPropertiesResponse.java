@@ -124,27 +124,22 @@ public final class CapabilityPropertiesResponse extends io.pulumi.resources.Invo
             this.description = Objects.requireNonNull(description);
             return this;
         }
-
         public Builder parametersSchema(String parametersSchema) {
             this.parametersSchema = Objects.requireNonNull(parametersSchema);
             return this;
         }
-
         public Builder publisher(String publisher) {
             this.publisher = Objects.requireNonNull(publisher);
             return this;
         }
-
         public Builder targetType(String targetType) {
             this.targetType = Objects.requireNonNull(targetType);
             return this;
         }
-
         public Builder urn(String urn) {
             this.urn = Objects.requireNonNull(urn);
             return this;
-        }
-        public CapabilityPropertiesResponse build() {
+        }        public CapabilityPropertiesResponse build() {
             return new CapabilityPropertiesResponse(description, parametersSchema, publisher, targetType, urn);
         }
     }

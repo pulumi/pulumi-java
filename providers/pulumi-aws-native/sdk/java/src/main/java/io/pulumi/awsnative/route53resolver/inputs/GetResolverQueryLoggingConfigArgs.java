@@ -54,8 +54,7 @@ public final class GetResolverQueryLoggingConfigArgs extends io.pulumi.resources
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
-        }
-        public GetResolverQueryLoggingConfigArgs build() {
+        }        public GetResolverQueryLoggingConfigArgs build() {
             return new GetResolverQueryLoggingConfigArgs(id);
         }
     }

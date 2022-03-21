@@ -126,52 +126,42 @@ public final class TemplateLinkArgs extends io.pulumi.resources.ResourceArgs {
             this.contentVersion = contentVersion;
             return this;
         }
-
         public Builder contentVersion(@Nullable String contentVersion) {
             this.contentVersion = Output.ofNullable(contentVersion);
             return this;
         }
-
         public Builder id(@Nullable Output<String> id) {
             this.id = id;
             return this;
         }
-
         public Builder id(@Nullable String id) {
             this.id = Output.ofNullable(id);
             return this;
         }
-
         public Builder queryString(@Nullable Output<String> queryString) {
             this.queryString = queryString;
             return this;
         }
-
         public Builder queryString(@Nullable String queryString) {
             this.queryString = Output.ofNullable(queryString);
             return this;
         }
-
         public Builder relativePath(@Nullable Output<String> relativePath) {
             this.relativePath = relativePath;
             return this;
         }
-
         public Builder relativePath(@Nullable String relativePath) {
             this.relativePath = Output.ofNullable(relativePath);
             return this;
         }
-
         public Builder uri(@Nullable Output<String> uri) {
             this.uri = uri;
             return this;
         }
-
         public Builder uri(@Nullable String uri) {
             this.uri = Output.ofNullable(uri);
             return this;
-        }
-        public TemplateLinkArgs build() {
+        }        public TemplateLinkArgs build() {
             return new TemplateLinkArgs(contentVersion, id, queryString, relativePath, uri);
         }
     }

@@ -79,22 +79,18 @@ public final class EgressPolicyArgs extends io.pulumi.resources.ResourceArgs {
             this.egressFrom = egressFrom;
             return this;
         }
-
         public Builder egressFrom(@Nullable EgressFromArgs egressFrom) {
             this.egressFrom = Output.ofNullable(egressFrom);
             return this;
         }
-
         public Builder egressTo(@Nullable Output<EgressToArgs> egressTo) {
             this.egressTo = egressTo;
             return this;
         }
-
         public Builder egressTo(@Nullable EgressToArgs egressTo) {
             this.egressTo = Output.ofNullable(egressTo);
             return this;
-        }
-        public EgressPolicyArgs build() {
+        }        public EgressPolicyArgs build() {
             return new EgressPolicyArgs(egressFrom, egressTo);
         }
     }

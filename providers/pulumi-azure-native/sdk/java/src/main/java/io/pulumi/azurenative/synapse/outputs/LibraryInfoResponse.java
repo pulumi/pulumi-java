@@ -151,37 +151,30 @@ public final class LibraryInfoResponse {
             this.containerName = containerName;
             return this;
         }
-
         public Builder creatorId(String creatorId) {
             this.creatorId = Objects.requireNonNull(creatorId);
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
-
         public Builder path(@Nullable String path) {
             this.path = path;
             return this;
         }
-
         public Builder provisioningStatus(String provisioningStatus) {
             this.provisioningStatus = Objects.requireNonNull(provisioningStatus);
             return this;
         }
-
         public Builder type(@Nullable String type) {
             this.type = type;
             return this;
         }
-
         public Builder uploadedTimestamp(String uploadedTimestamp) {
             this.uploadedTimestamp = Objects.requireNonNull(uploadedTimestamp);
             return this;
-        }
-        public LibraryInfoResponse build() {
+        }        public LibraryInfoResponse build() {
             return new LibraryInfoResponse(containerName, creatorId, name, path, provisioningStatus, type, uploadedTimestamp);
         }
     }

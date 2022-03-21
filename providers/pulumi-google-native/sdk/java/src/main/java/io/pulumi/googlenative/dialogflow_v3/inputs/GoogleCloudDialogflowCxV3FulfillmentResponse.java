@@ -145,32 +145,35 @@ public final class GoogleCloudDialogflowCxV3FulfillmentResponse extends io.pulum
             this.conditionalCases = Objects.requireNonNull(conditionalCases);
             return this;
         }
-
+        public Builder conditionalCases(GoogleCloudDialogflowCxV3FulfillmentConditionalCasesResponse... conditionalCases) {
+            return conditionalCases(List.of(conditionalCases));
+        }
         public Builder messages(List<GoogleCloudDialogflowCxV3ResponseMessageResponse> messages) {
             this.messages = Objects.requireNonNull(messages);
             return this;
         }
-
+        public Builder messages(GoogleCloudDialogflowCxV3ResponseMessageResponse... messages) {
+            return messages(List.of(messages));
+        }
         public Builder returnPartialResponses(Boolean returnPartialResponses) {
             this.returnPartialResponses = Objects.requireNonNull(returnPartialResponses);
             return this;
         }
-
         public Builder setParameterActions(List<GoogleCloudDialogflowCxV3FulfillmentSetParameterActionResponse> setParameterActions) {
             this.setParameterActions = Objects.requireNonNull(setParameterActions);
             return this;
         }
-
+        public Builder setParameterActions(GoogleCloudDialogflowCxV3FulfillmentSetParameterActionResponse... setParameterActions) {
+            return setParameterActions(List.of(setParameterActions));
+        }
         public Builder tag(String tag) {
             this.tag = Objects.requireNonNull(tag);
             return this;
         }
-
         public Builder webhook(String webhook) {
             this.webhook = Objects.requireNonNull(webhook);
             return this;
-        }
-        public GoogleCloudDialogflowCxV3FulfillmentResponse build() {
+        }        public GoogleCloudDialogflowCxV3FulfillmentResponse build() {
             return new GoogleCloudDialogflowCxV3FulfillmentResponse(conditionalCases, messages, returnPartialResponses, setParameterActions, tag, webhook);
         }
     }

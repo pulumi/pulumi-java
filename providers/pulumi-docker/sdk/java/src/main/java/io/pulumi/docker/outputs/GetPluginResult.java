@@ -97,37 +97,33 @@ public final class GetPluginResult {
             this.alias = alias;
             return this;
         }
-
         public Builder enabled(Boolean enabled) {
             this.enabled = Objects.requireNonNull(enabled);
             return this;
         }
-
         public Builder envs(List<String> envs) {
             this.envs = Objects.requireNonNull(envs);
             return this;
         }
-
+        public Builder envs(String... envs) {
+            return envs(List.of(envs));
+        }
         public Builder grantAllPermissions(Boolean grantAllPermissions) {
             this.grantAllPermissions = Objects.requireNonNull(grantAllPermissions);
             return this;
         }
-
         public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder pluginReference(String pluginReference) {
             this.pluginReference = Objects.requireNonNull(pluginReference);
             return this;
-        }
-        public GetPluginResult build() {
+        }        public GetPluginResult build() {
             return new GetPluginResult(alias, enabled, envs, grantAllPermissions, id, name, pluginReference);
         }
     }

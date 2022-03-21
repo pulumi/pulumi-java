@@ -234,62 +234,50 @@ public final class GetContainerAppResult {
             this.configuration = configuration;
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder kind(@Nullable String kind) {
             this.kind = kind;
             return this;
         }
-
         public Builder kubeEnvironmentId(@Nullable String kubeEnvironmentId) {
             this.kubeEnvironmentId = kubeEnvironmentId;
             return this;
         }
-
         public Builder latestRevisionFqdn(String latestRevisionFqdn) {
             this.latestRevisionFqdn = Objects.requireNonNull(latestRevisionFqdn);
             return this;
         }
-
         public Builder latestRevisionName(String latestRevisionName) {
             this.latestRevisionName = Objects.requireNonNull(latestRevisionName);
             return this;
         }
-
         public Builder location(String location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder template(@Nullable TemplateResponse template) {
             this.template = template;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public GetContainerAppResult build() {
+        }        public GetContainerAppResult build() {
             return new GetContainerAppResult(configuration, id, kind, kubeEnvironmentId, latestRevisionFqdn, latestRevisionName, location, name, provisioningState, tags, template, type);
         }
     }

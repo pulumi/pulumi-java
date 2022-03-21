@@ -164,82 +164,66 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
             this.config = config;
             return this;
         }
-
         public Builder config(@Nullable JobConfigArgs config) {
             this.config = Output.ofNullable(config);
             return this;
         }
-
         public Builder inputUri(@Nullable Output<String> inputUri) {
             this.inputUri = inputUri;
             return this;
         }
-
         public Builder inputUri(@Nullable String inputUri) {
             this.inputUri = Output.ofNullable(inputUri);
             return this;
         }
-
         public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder outputUri(@Nullable Output<String> outputUri) {
             this.outputUri = outputUri;
             return this;
         }
-
         public Builder outputUri(@Nullable String outputUri) {
             this.outputUri = Output.ofNullable(outputUri);
             return this;
         }
-
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
         }
-
         public Builder templateId(@Nullable Output<String> templateId) {
             this.templateId = templateId;
             return this;
         }
-
         public Builder templateId(@Nullable String templateId) {
             this.templateId = Output.ofNullable(templateId);
             return this;
         }
-
         public Builder ttlAfterCompletionDays(@Nullable Output<Integer> ttlAfterCompletionDays) {
             this.ttlAfterCompletionDays = ttlAfterCompletionDays;
             return this;
         }
-
         public Builder ttlAfterCompletionDays(@Nullable Integer ttlAfterCompletionDays) {
             this.ttlAfterCompletionDays = Output.ofNullable(ttlAfterCompletionDays);
             return this;
-        }
-        public JobArgs build() {
+        }        public JobArgs build() {
             return new JobArgs(config, inputUri, location, name, outputUri, project, templateId, ttlAfterCompletionDays);
         }
     }

@@ -94,32 +94,26 @@ public final class MediaGraphUsernamePasswordCredentialsArgs extends io.pulumi.r
             this.odataType = Objects.requireNonNull(odataType);
             return this;
         }
-
         public Builder odataType(String odataType) {
             this.odataType = Output.of(Objects.requireNonNull(odataType));
             return this;
         }
-
         public Builder password(Output<String> password) {
             this.password = Objects.requireNonNull(password);
             return this;
         }
-
         public Builder password(String password) {
             this.password = Output.of(Objects.requireNonNull(password));
             return this;
         }
-
         public Builder username(Output<String> username) {
             this.username = Objects.requireNonNull(username);
             return this;
         }
-
         public Builder username(String username) {
             this.username = Output.of(Objects.requireNonNull(username));
             return this;
-        }
-        public MediaGraphUsernamePasswordCredentialsArgs build() {
+        }        public MediaGraphUsernamePasswordCredentialsArgs build() {
             return new MediaGraphUsernamePasswordCredentialsArgs(odataType, password, username);
         }
     }

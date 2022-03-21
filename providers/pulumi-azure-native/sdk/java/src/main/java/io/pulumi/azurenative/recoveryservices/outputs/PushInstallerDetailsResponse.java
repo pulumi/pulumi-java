@@ -135,32 +135,29 @@ public final class PushInstallerDetailsResponse {
             this.health = Objects.requireNonNull(health);
             return this;
         }
-
         public Builder healthErrors(List<HealthErrorResponse> healthErrors) {
             this.healthErrors = Objects.requireNonNull(healthErrors);
             return this;
         }
-
+        public Builder healthErrors(HealthErrorResponse... healthErrors) {
+            return healthErrors(List.of(healthErrors));
+        }
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder lastHeartbeatUtc(String lastHeartbeatUtc) {
             this.lastHeartbeatUtc = Objects.requireNonNull(lastHeartbeatUtc);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder version(String version) {
             this.version = Objects.requireNonNull(version);
             return this;
-        }
-        public PushInstallerDetailsResponse build() {
+        }        public PushInstallerDetailsResponse build() {
             return new PushInstallerDetailsResponse(health, healthErrors, id, lastHeartbeatUtc, name, version);
         }
     }

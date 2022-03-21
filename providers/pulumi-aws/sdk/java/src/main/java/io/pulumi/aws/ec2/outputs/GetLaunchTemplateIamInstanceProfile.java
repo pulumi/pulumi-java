@@ -69,12 +69,10 @@ public final class GetLaunchTemplateIamInstanceProfile {
             this.arn = Objects.requireNonNull(arn);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
-        }
-        public GetLaunchTemplateIamInstanceProfile build() {
+        }        public GetLaunchTemplateIamInstanceProfile build() {
             return new GetLaunchTemplateIamInstanceProfile(arn, name);
         }
     }

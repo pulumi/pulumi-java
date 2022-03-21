@@ -88,17 +88,14 @@ public final class GetMongoDBResourceMongoRoleDefinitionArgs extends io.pulumi.r
             this.accountName = Objects.requireNonNull(accountName);
             return this;
         }
-
         public Builder mongoRoleDefinitionId(String mongoRoleDefinitionId) {
             this.mongoRoleDefinitionId = Objects.requireNonNull(mongoRoleDefinitionId);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
-        }
-        public GetMongoDBResourceMongoRoleDefinitionArgs build() {
+        }        public GetMongoDBResourceMongoRoleDefinitionArgs build() {
             return new GetMongoDBResourceMongoRoleDefinitionArgs(accountName, mongoRoleDefinitionId, resourceGroupName);
         }
     }

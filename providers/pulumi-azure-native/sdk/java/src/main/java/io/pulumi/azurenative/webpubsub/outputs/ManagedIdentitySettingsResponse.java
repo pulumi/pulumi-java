@@ -55,8 +55,7 @@ public final class ManagedIdentitySettingsResponse {
         public Builder resource(@Nullable String resource) {
             this.resource = resource;
             return this;
-        }
-        public ManagedIdentitySettingsResponse build() {
+        }        public ManagedIdentitySettingsResponse build() {
             return new ManagedIdentitySettingsResponse(resource);
         }
     }

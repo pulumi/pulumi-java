@@ -316,152 +316,125 @@ public final class ClusterClusterConfigArgs extends io.pulumi.resources.Resource
             this.autoscalingConfig = autoscalingConfig;
             return this;
         }
-
         public Builder autoscalingConfig(@Nullable ClusterClusterConfigAutoscalingConfigArgs autoscalingConfig) {
             this.autoscalingConfig = Output.ofNullable(autoscalingConfig);
             return this;
         }
-
         public Builder bucket(@Nullable Output<String> bucket) {
             this.bucket = bucket;
             return this;
         }
-
         public Builder bucket(@Nullable String bucket) {
             this.bucket = Output.ofNullable(bucket);
             return this;
         }
-
         public Builder encryptionConfig(@Nullable Output<ClusterClusterConfigEncryptionConfigArgs> encryptionConfig) {
             this.encryptionConfig = encryptionConfig;
             return this;
         }
-
         public Builder encryptionConfig(@Nullable ClusterClusterConfigEncryptionConfigArgs encryptionConfig) {
             this.encryptionConfig = Output.ofNullable(encryptionConfig);
             return this;
         }
-
         public Builder endpointConfig(@Nullable Output<ClusterClusterConfigEndpointConfigArgs> endpointConfig) {
             this.endpointConfig = endpointConfig;
             return this;
         }
-
         public Builder endpointConfig(@Nullable ClusterClusterConfigEndpointConfigArgs endpointConfig) {
             this.endpointConfig = Output.ofNullable(endpointConfig);
             return this;
         }
-
         public Builder gceClusterConfig(@Nullable Output<ClusterClusterConfigGceClusterConfigArgs> gceClusterConfig) {
             this.gceClusterConfig = gceClusterConfig;
             return this;
         }
-
         public Builder gceClusterConfig(@Nullable ClusterClusterConfigGceClusterConfigArgs gceClusterConfig) {
             this.gceClusterConfig = Output.ofNullable(gceClusterConfig);
             return this;
         }
-
         public Builder initializationActions(@Nullable Output<List<ClusterClusterConfigInitializationActionArgs>> initializationActions) {
             this.initializationActions = initializationActions;
             return this;
         }
-
         public Builder initializationActions(@Nullable List<ClusterClusterConfigInitializationActionArgs> initializationActions) {
             this.initializationActions = Output.ofNullable(initializationActions);
             return this;
         }
-
+        public Builder initializationActions(ClusterClusterConfigInitializationActionArgs... initializationActions) {
+            return initializationActions(List.of(initializationActions));
+        }
         public Builder lifecycleConfig(@Nullable Output<ClusterClusterConfigLifecycleConfigArgs> lifecycleConfig) {
             this.lifecycleConfig = lifecycleConfig;
             return this;
         }
-
         public Builder lifecycleConfig(@Nullable ClusterClusterConfigLifecycleConfigArgs lifecycleConfig) {
             this.lifecycleConfig = Output.ofNullable(lifecycleConfig);
             return this;
         }
-
         public Builder masterConfig(@Nullable Output<ClusterClusterConfigMasterConfigArgs> masterConfig) {
             this.masterConfig = masterConfig;
             return this;
         }
-
         public Builder masterConfig(@Nullable ClusterClusterConfigMasterConfigArgs masterConfig) {
             this.masterConfig = Output.ofNullable(masterConfig);
             return this;
         }
-
         public Builder metastoreConfig(@Nullable Output<ClusterClusterConfigMetastoreConfigArgs> metastoreConfig) {
             this.metastoreConfig = metastoreConfig;
             return this;
         }
-
         public Builder metastoreConfig(@Nullable ClusterClusterConfigMetastoreConfigArgs metastoreConfig) {
             this.metastoreConfig = Output.ofNullable(metastoreConfig);
             return this;
         }
-
         public Builder preemptibleWorkerConfig(@Nullable Output<ClusterClusterConfigPreemptibleWorkerConfigArgs> preemptibleWorkerConfig) {
             this.preemptibleWorkerConfig = preemptibleWorkerConfig;
             return this;
         }
-
         public Builder preemptibleWorkerConfig(@Nullable ClusterClusterConfigPreemptibleWorkerConfigArgs preemptibleWorkerConfig) {
             this.preemptibleWorkerConfig = Output.ofNullable(preemptibleWorkerConfig);
             return this;
         }
-
         public Builder securityConfig(@Nullable Output<ClusterClusterConfigSecurityConfigArgs> securityConfig) {
             this.securityConfig = securityConfig;
             return this;
         }
-
         public Builder securityConfig(@Nullable ClusterClusterConfigSecurityConfigArgs securityConfig) {
             this.securityConfig = Output.ofNullable(securityConfig);
             return this;
         }
-
         public Builder softwareConfig(@Nullable Output<ClusterClusterConfigSoftwareConfigArgs> softwareConfig) {
             this.softwareConfig = softwareConfig;
             return this;
         }
-
         public Builder softwareConfig(@Nullable ClusterClusterConfigSoftwareConfigArgs softwareConfig) {
             this.softwareConfig = Output.ofNullable(softwareConfig);
             return this;
         }
-
         public Builder stagingBucket(@Nullable Output<String> stagingBucket) {
             this.stagingBucket = stagingBucket;
             return this;
         }
-
         public Builder stagingBucket(@Nullable String stagingBucket) {
             this.stagingBucket = Output.ofNullable(stagingBucket);
             return this;
         }
-
         public Builder tempBucket(@Nullable Output<String> tempBucket) {
             this.tempBucket = tempBucket;
             return this;
         }
-
         public Builder tempBucket(@Nullable String tempBucket) {
             this.tempBucket = Output.ofNullable(tempBucket);
             return this;
         }
-
         public Builder workerConfig(@Nullable Output<ClusterClusterConfigWorkerConfigArgs> workerConfig) {
             this.workerConfig = workerConfig;
             return this;
         }
-
         public Builder workerConfig(@Nullable ClusterClusterConfigWorkerConfigArgs workerConfig) {
             this.workerConfig = Output.ofNullable(workerConfig);
             return this;
-        }
-        public ClusterClusterConfigArgs build() {
+        }        public ClusterClusterConfigArgs build() {
             return new ClusterClusterConfigArgs(autoscalingConfig, bucket, encryptionConfig, endpointConfig, gceClusterConfig, initializationActions, lifecycleConfig, masterConfig, metastoreConfig, preemptibleWorkerConfig, securityConfig, softwareConfig, stagingBucket, tempBucket, workerConfig);
         }
     }

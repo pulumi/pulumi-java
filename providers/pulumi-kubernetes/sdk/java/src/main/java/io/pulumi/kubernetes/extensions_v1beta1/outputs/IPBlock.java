@@ -71,12 +71,13 @@ public final class IPBlock {
             this.cidr = Objects.requireNonNull(cidr);
             return this;
         }
-
         public Builder except(@Nullable List<String> except) {
             this.except = except;
             return this;
         }
-        public IPBlock build() {
+        public Builder except(String... except) {
+            return except(List.of(except));
+        }        public IPBlock build() {
             return new IPBlock(cidr, except);
         }
     }

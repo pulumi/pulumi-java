@@ -190,47 +190,38 @@ public final class OracleColumnResponse extends io.pulumi.resources.InvokeArgs {
             this.column = Objects.requireNonNull(column);
             return this;
         }
-
         public Builder dataType(String dataType) {
             this.dataType = Objects.requireNonNull(dataType);
             return this;
         }
-
         public Builder encoding(String encoding) {
             this.encoding = Objects.requireNonNull(encoding);
             return this;
         }
-
         public Builder length(Integer length) {
             this.length = Objects.requireNonNull(length);
             return this;
         }
-
         public Builder nullable(Boolean nullable) {
             this.nullable = Objects.requireNonNull(nullable);
             return this;
         }
-
         public Builder ordinalPosition(Integer ordinalPosition) {
             this.ordinalPosition = Objects.requireNonNull(ordinalPosition);
             return this;
         }
-
         public Builder precision(Integer precision) {
             this.precision = Objects.requireNonNull(precision);
             return this;
         }
-
         public Builder primaryKey(Boolean primaryKey) {
             this.primaryKey = Objects.requireNonNull(primaryKey);
             return this;
         }
-
         public Builder scale(Integer scale) {
             this.scale = Objects.requireNonNull(scale);
             return this;
-        }
-        public OracleColumnResponse build() {
+        }        public OracleColumnResponse build() {
             return new OracleColumnResponse(column, dataType, encoding, length, nullable, ordinalPosition, precision, primaryKey, scale);
         }
     }

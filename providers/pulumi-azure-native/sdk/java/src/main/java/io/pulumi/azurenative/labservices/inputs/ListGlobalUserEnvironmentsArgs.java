@@ -74,12 +74,10 @@ public final class ListGlobalUserEnvironmentsArgs extends io.pulumi.resources.In
             this.labId = labId;
             return this;
         }
-
         public Builder userName(String userName) {
             this.userName = Objects.requireNonNull(userName);
             return this;
-        }
-        public ListGlobalUserEnvironmentsArgs build() {
+        }        public ListGlobalUserEnvironmentsArgs build() {
             return new ListGlobalUserEnvironmentsArgs(labId, userName);
         }
     }

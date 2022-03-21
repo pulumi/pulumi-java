@@ -103,22 +103,18 @@ public final class VpcEndpointServicePrivateDnsNameConfiguration {
             this.name = name;
             return this;
         }
-
         public Builder state(@Nullable String state) {
             this.state = state;
             return this;
         }
-
         public Builder type(@Nullable String type) {
             this.type = type;
             return this;
         }
-
         public Builder value(@Nullable String value) {
             this.value = value;
             return this;
-        }
-        public VpcEndpointServicePrivateDnsNameConfiguration build() {
+        }        public VpcEndpointServicePrivateDnsNameConfiguration build() {
             return new VpcEndpointServicePrivateDnsNameConfiguration(name, state, type, value);
         }
     }

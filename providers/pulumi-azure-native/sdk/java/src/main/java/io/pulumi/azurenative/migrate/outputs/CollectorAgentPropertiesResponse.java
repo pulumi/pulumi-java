@@ -72,22 +72,18 @@ public final class CollectorAgentPropertiesResponse {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder lastHeartbeatUtc(String lastHeartbeatUtc) {
             this.lastHeartbeatUtc = Objects.requireNonNull(lastHeartbeatUtc);
             return this;
         }
-
         public Builder spnDetails(@Nullable CollectorBodyAgentSpnPropertiesResponse spnDetails) {
             this.spnDetails = spnDetails;
             return this;
         }
-
         public Builder version(String version) {
             this.version = Objects.requireNonNull(version);
             return this;
-        }
-        public CollectorAgentPropertiesResponse build() {
+        }        public CollectorAgentPropertiesResponse build() {
             return new CollectorAgentPropertiesResponse(id, lastHeartbeatUtc, spnDetails, version);
         }
     }

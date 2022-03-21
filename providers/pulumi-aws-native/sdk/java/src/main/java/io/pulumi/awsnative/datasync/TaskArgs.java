@@ -175,92 +175,83 @@ public final class TaskArgs extends io.pulumi.resources.ResourceArgs {
             this.cloudWatchLogGroupArn = cloudWatchLogGroupArn;
             return this;
         }
-
         public Builder cloudWatchLogGroupArn(@Nullable String cloudWatchLogGroupArn) {
             this.cloudWatchLogGroupArn = Output.ofNullable(cloudWatchLogGroupArn);
             return this;
         }
-
         public Builder destinationLocationArn(Output<String> destinationLocationArn) {
             this.destinationLocationArn = Objects.requireNonNull(destinationLocationArn);
             return this;
         }
-
         public Builder destinationLocationArn(String destinationLocationArn) {
             this.destinationLocationArn = Output.of(Objects.requireNonNull(destinationLocationArn));
             return this;
         }
-
         public Builder excludes(@Nullable Output<List<TaskFilterRuleArgs>> excludes) {
             this.excludes = excludes;
             return this;
         }
-
         public Builder excludes(@Nullable List<TaskFilterRuleArgs> excludes) {
             this.excludes = Output.ofNullable(excludes);
             return this;
         }
-
+        public Builder excludes(TaskFilterRuleArgs... excludes) {
+            return excludes(List.of(excludes));
+        }
         public Builder includes(@Nullable Output<List<TaskFilterRuleArgs>> includes) {
             this.includes = includes;
             return this;
         }
-
         public Builder includes(@Nullable List<TaskFilterRuleArgs> includes) {
             this.includes = Output.ofNullable(includes);
             return this;
         }
-
+        public Builder includes(TaskFilterRuleArgs... includes) {
+            return includes(List.of(includes));
+        }
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder options(@Nullable Output<TaskOptionsArgs> options) {
             this.options = options;
             return this;
         }
-
         public Builder options(@Nullable TaskOptionsArgs options) {
             this.options = Output.ofNullable(options);
             return this;
         }
-
         public Builder schedule(@Nullable Output<TaskScheduleArgs> schedule) {
             this.schedule = schedule;
             return this;
         }
-
         public Builder schedule(@Nullable TaskScheduleArgs schedule) {
             this.schedule = Output.ofNullable(schedule);
             return this;
         }
-
         public Builder sourceLocationArn(Output<String> sourceLocationArn) {
             this.sourceLocationArn = Objects.requireNonNull(sourceLocationArn);
             return this;
         }
-
         public Builder sourceLocationArn(String sourceLocationArn) {
             this.sourceLocationArn = Output.of(Objects.requireNonNull(sourceLocationArn));
             return this;
         }
-
         public Builder tags(@Nullable Output<List<TaskTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable List<TaskTagArgs> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-        public TaskArgs build() {
+        public Builder tags(TaskTagArgs... tags) {
+            return tags(List.of(tags));
+        }        public TaskArgs build() {
             return new TaskArgs(cloudWatchLogGroupArn, destinationLocationArn, excludes, includes, name, options, schedule, sourceLocationArn, tags);
         }
     }

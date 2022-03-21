@@ -80,22 +80,21 @@ public final class ActivityDependencyArgs extends io.pulumi.resources.ResourceAr
             this.activity = Objects.requireNonNull(activity);
             return this;
         }
-
         public Builder activity(String activity) {
             this.activity = Output.of(Objects.requireNonNull(activity));
             return this;
         }
-
         public Builder dependencyConditions(Output<List<Either<String,DependencyCondition>>> dependencyConditions) {
             this.dependencyConditions = Objects.requireNonNull(dependencyConditions);
             return this;
         }
-
         public Builder dependencyConditions(List<Either<String,DependencyCondition>> dependencyConditions) {
             this.dependencyConditions = Output.of(Objects.requireNonNull(dependencyConditions));
             return this;
         }
-        public ActivityDependencyArgs build() {
+        public Builder dependencyConditions(Either<String,DependencyCondition>... dependencyConditions) {
+            return dependencyConditions(List.of(dependencyConditions));
+        }        public ActivityDependencyArgs build() {
             return new ActivityDependencyArgs(activity, dependencyConditions);
         }
     }

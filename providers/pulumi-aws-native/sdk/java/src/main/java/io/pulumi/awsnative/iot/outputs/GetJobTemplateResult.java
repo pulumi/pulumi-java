@@ -56,12 +56,10 @@ public final class GetJobTemplateResult {
             this.arn = arn;
             return this;
         }
-
         public Builder jobExecutionsRetryConfig(@Nullable JobExecutionsRetryConfigProperties jobExecutionsRetryConfig) {
             this.jobExecutionsRetryConfig = jobExecutionsRetryConfig;
             return this;
-        }
-        public GetJobTemplateResult build() {
+        }        public GetJobTemplateResult build() {
             return new GetJobTemplateResult(arn, jobExecutionsRetryConfig);
         }
     }

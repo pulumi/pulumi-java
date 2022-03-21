@@ -276,142 +276,114 @@ public final class FirehoseDeliveryStreamArgs extends io.pulumi.resources.Resour
             this.arn = arn;
             return this;
         }
-
         public Builder arn(@Nullable String arn) {
             this.arn = Output.ofNullable(arn);
             return this;
         }
-
         public Builder destination(Output<String> destination) {
             this.destination = Objects.requireNonNull(destination);
             return this;
         }
-
         public Builder destination(String destination) {
             this.destination = Output.of(Objects.requireNonNull(destination));
             return this;
         }
-
         public Builder destinationId(@Nullable Output<String> destinationId) {
             this.destinationId = destinationId;
             return this;
         }
-
         public Builder destinationId(@Nullable String destinationId) {
             this.destinationId = Output.ofNullable(destinationId);
             return this;
         }
-
         public Builder elasticsearchConfiguration(@Nullable Output<FirehoseDeliveryStreamElasticsearchConfigurationArgs> elasticsearchConfiguration) {
             this.elasticsearchConfiguration = elasticsearchConfiguration;
             return this;
         }
-
         public Builder elasticsearchConfiguration(@Nullable FirehoseDeliveryStreamElasticsearchConfigurationArgs elasticsearchConfiguration) {
             this.elasticsearchConfiguration = Output.ofNullable(elasticsearchConfiguration);
             return this;
         }
-
         public Builder extendedS3Configuration(@Nullable Output<FirehoseDeliveryStreamExtendedS3ConfigurationArgs> extendedS3Configuration) {
             this.extendedS3Configuration = extendedS3Configuration;
             return this;
         }
-
         public Builder extendedS3Configuration(@Nullable FirehoseDeliveryStreamExtendedS3ConfigurationArgs extendedS3Configuration) {
             this.extendedS3Configuration = Output.ofNullable(extendedS3Configuration);
             return this;
         }
-
         public Builder httpEndpointConfiguration(@Nullable Output<FirehoseDeliveryStreamHttpEndpointConfigurationArgs> httpEndpointConfiguration) {
             this.httpEndpointConfiguration = httpEndpointConfiguration;
             return this;
         }
-
         public Builder httpEndpointConfiguration(@Nullable FirehoseDeliveryStreamHttpEndpointConfigurationArgs httpEndpointConfiguration) {
             this.httpEndpointConfiguration = Output.ofNullable(httpEndpointConfiguration);
             return this;
         }
-
         public Builder kinesisSourceConfiguration(@Nullable Output<FirehoseDeliveryStreamKinesisSourceConfigurationArgs> kinesisSourceConfiguration) {
             this.kinesisSourceConfiguration = kinesisSourceConfiguration;
             return this;
         }
-
         public Builder kinesisSourceConfiguration(@Nullable FirehoseDeliveryStreamKinesisSourceConfigurationArgs kinesisSourceConfiguration) {
             this.kinesisSourceConfiguration = Output.ofNullable(kinesisSourceConfiguration);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder redshiftConfiguration(@Nullable Output<FirehoseDeliveryStreamRedshiftConfigurationArgs> redshiftConfiguration) {
             this.redshiftConfiguration = redshiftConfiguration;
             return this;
         }
-
         public Builder redshiftConfiguration(@Nullable FirehoseDeliveryStreamRedshiftConfigurationArgs redshiftConfiguration) {
             this.redshiftConfiguration = Output.ofNullable(redshiftConfiguration);
             return this;
         }
-
         public Builder s3Configuration(@Nullable Output<FirehoseDeliveryStreamS3ConfigurationArgs> s3Configuration) {
             this.s3Configuration = s3Configuration;
             return this;
         }
-
         public Builder s3Configuration(@Nullable FirehoseDeliveryStreamS3ConfigurationArgs s3Configuration) {
             this.s3Configuration = Output.ofNullable(s3Configuration);
             return this;
         }
-
         public Builder serverSideEncryption(@Nullable Output<FirehoseDeliveryStreamServerSideEncryptionArgs> serverSideEncryption) {
             this.serverSideEncryption = serverSideEncryption;
             return this;
         }
-
         public Builder serverSideEncryption(@Nullable FirehoseDeliveryStreamServerSideEncryptionArgs serverSideEncryption) {
             this.serverSideEncryption = Output.ofNullable(serverSideEncryption);
             return this;
         }
-
         public Builder splunkConfiguration(@Nullable Output<FirehoseDeliveryStreamSplunkConfigurationArgs> splunkConfiguration) {
             this.splunkConfiguration = splunkConfiguration;
             return this;
         }
-
         public Builder splunkConfiguration(@Nullable FirehoseDeliveryStreamSplunkConfigurationArgs splunkConfiguration) {
             this.splunkConfiguration = Output.ofNullable(splunkConfiguration);
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
         public Builder versionId(@Nullable Output<String> versionId) {
             this.versionId = versionId;
             return this;
         }
-
         public Builder versionId(@Nullable String versionId) {
             this.versionId = Output.ofNullable(versionId);
             return this;
-        }
-        public FirehoseDeliveryStreamArgs build() {
+        }        public FirehoseDeliveryStreamArgs build() {
             return new FirehoseDeliveryStreamArgs(arn, destination, destinationId, elasticsearchConfiguration, extendedS3Configuration, httpEndpointConfiguration, kinesisSourceConfiguration, name, redshiftConfiguration, s3Configuration, serverSideEncryption, splunkConfiguration, tags, versionId);
         }
     }

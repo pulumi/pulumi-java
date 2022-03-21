@@ -80,12 +80,13 @@ public final class FirewallPolicyLogAnalyticsResourcesResponse extends io.pulumi
             this.defaultWorkspaceId = defaultWorkspaceId;
             return this;
         }
-
         public Builder workspaces(@Nullable List<FirewallPolicyLogAnalyticsWorkspaceResponse> workspaces) {
             this.workspaces = workspaces;
             return this;
         }
-        public FirewallPolicyLogAnalyticsResourcesResponse build() {
+        public Builder workspaces(FirewallPolicyLogAnalyticsWorkspaceResponse... workspaces) {
+            return workspaces(List.of(workspaces));
+        }        public FirewallPolicyLogAnalyticsResourcesResponse build() {
             return new FirewallPolicyLogAnalyticsResourcesResponse(defaultWorkspaceId, workspaces);
         }
     }

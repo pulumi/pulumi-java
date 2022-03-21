@@ -272,142 +272,114 @@ public final class RuleManagementEventDataSourceArgs extends io.pulumi.resources
             this.claims = claims;
             return this;
         }
-
         public Builder claims(@Nullable RuleManagementEventClaimsDataSourceArgs claims) {
             this.claims = Output.ofNullable(claims);
             return this;
         }
-
         public Builder eventName(@Nullable Output<String> eventName) {
             this.eventName = eventName;
             return this;
         }
-
         public Builder eventName(@Nullable String eventName) {
             this.eventName = Output.ofNullable(eventName);
             return this;
         }
-
         public Builder eventSource(@Nullable Output<String> eventSource) {
             this.eventSource = eventSource;
             return this;
         }
-
         public Builder eventSource(@Nullable String eventSource) {
             this.eventSource = Output.ofNullable(eventSource);
             return this;
         }
-
         public Builder legacyResourceId(@Nullable Output<String> legacyResourceId) {
             this.legacyResourceId = legacyResourceId;
             return this;
         }
-
         public Builder legacyResourceId(@Nullable String legacyResourceId) {
             this.legacyResourceId = Output.ofNullable(legacyResourceId);
             return this;
         }
-
         public Builder level(@Nullable Output<String> level) {
             this.level = level;
             return this;
         }
-
         public Builder level(@Nullable String level) {
             this.level = Output.ofNullable(level);
             return this;
         }
-
         public Builder metricNamespace(@Nullable Output<String> metricNamespace) {
             this.metricNamespace = metricNamespace;
             return this;
         }
-
         public Builder metricNamespace(@Nullable String metricNamespace) {
             this.metricNamespace = Output.ofNullable(metricNamespace);
             return this;
         }
-
         public Builder odataType(Output<String> odataType) {
             this.odataType = Objects.requireNonNull(odataType);
             return this;
         }
-
         public Builder odataType(String odataType) {
             this.odataType = Output.of(Objects.requireNonNull(odataType));
             return this;
         }
-
         public Builder operationName(@Nullable Output<String> operationName) {
             this.operationName = operationName;
             return this;
         }
-
         public Builder operationName(@Nullable String operationName) {
             this.operationName = Output.ofNullable(operationName);
             return this;
         }
-
         public Builder resourceGroupName(@Nullable Output<String> resourceGroupName) {
             this.resourceGroupName = resourceGroupName;
             return this;
         }
-
         public Builder resourceGroupName(@Nullable String resourceGroupName) {
             this.resourceGroupName = Output.ofNullable(resourceGroupName);
             return this;
         }
-
         public Builder resourceLocation(@Nullable Output<String> resourceLocation) {
             this.resourceLocation = resourceLocation;
             return this;
         }
-
         public Builder resourceLocation(@Nullable String resourceLocation) {
             this.resourceLocation = Output.ofNullable(resourceLocation);
             return this;
         }
-
         public Builder resourceProviderName(@Nullable Output<String> resourceProviderName) {
             this.resourceProviderName = resourceProviderName;
             return this;
         }
-
         public Builder resourceProviderName(@Nullable String resourceProviderName) {
             this.resourceProviderName = Output.ofNullable(resourceProviderName);
             return this;
         }
-
         public Builder resourceUri(@Nullable Output<String> resourceUri) {
             this.resourceUri = resourceUri;
             return this;
         }
-
         public Builder resourceUri(@Nullable String resourceUri) {
             this.resourceUri = Output.ofNullable(resourceUri);
             return this;
         }
-
         public Builder status(@Nullable Output<String> status) {
             this.status = status;
             return this;
         }
-
         public Builder status(@Nullable String status) {
             this.status = Output.ofNullable(status);
             return this;
         }
-
         public Builder subStatus(@Nullable Output<String> subStatus) {
             this.subStatus = subStatus;
             return this;
         }
-
         public Builder subStatus(@Nullable String subStatus) {
             this.subStatus = Output.ofNullable(subStatus);
             return this;
-        }
-        public RuleManagementEventDataSourceArgs build() {
+        }        public RuleManagementEventDataSourceArgs build() {
             return new RuleManagementEventDataSourceArgs(claims, eventName, eventSource, legacyResourceId, level, metricNamespace, odataType, operationName, resourceGroupName, resourceLocation, resourceProviderName, resourceUri, status, subStatus);
         }
     }

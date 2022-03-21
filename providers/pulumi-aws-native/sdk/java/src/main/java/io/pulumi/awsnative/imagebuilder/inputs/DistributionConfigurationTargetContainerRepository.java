@@ -79,12 +79,10 @@ public final class DistributionConfigurationTargetContainerRepository extends io
             this.repositoryName = repositoryName;
             return this;
         }
-
         public Builder service(@Nullable DistributionConfigurationTargetContainerRepositoryService service) {
             this.service = service;
             return this;
-        }
-        public DistributionConfigurationTargetContainerRepository build() {
+        }        public DistributionConfigurationTargetContainerRepository build() {
             return new DistributionConfigurationTargetContainerRepository(repositoryName, service);
         }
     }

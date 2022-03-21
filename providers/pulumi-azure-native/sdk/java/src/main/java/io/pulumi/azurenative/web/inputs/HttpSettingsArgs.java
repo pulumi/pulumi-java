@@ -96,32 +96,26 @@ public final class HttpSettingsArgs extends io.pulumi.resources.ResourceArgs {
             this.forwardProxy = forwardProxy;
             return this;
         }
-
         public Builder forwardProxy(@Nullable ForwardProxyArgs forwardProxy) {
             this.forwardProxy = Output.ofNullable(forwardProxy);
             return this;
         }
-
         public Builder requireHttps(@Nullable Output<Boolean> requireHttps) {
             this.requireHttps = requireHttps;
             return this;
         }
-
         public Builder requireHttps(@Nullable Boolean requireHttps) {
             this.requireHttps = Output.ofNullable(requireHttps);
             return this;
         }
-
         public Builder routes(@Nullable Output<HttpSettingsRoutesArgs> routes) {
             this.routes = routes;
             return this;
         }
-
         public Builder routes(@Nullable HttpSettingsRoutesArgs routes) {
             this.routes = Output.ofNullable(routes);
             return this;
-        }
-        public HttpSettingsArgs build() {
+        }        public HttpSettingsArgs build() {
             return new HttpSettingsArgs(forwardProxy, requireHttps, routes);
         }
     }

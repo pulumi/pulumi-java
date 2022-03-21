@@ -258,72 +258,64 @@ public final class GetImageRecipeResult {
             this.arn = Objects.requireNonNull(arn);
             return this;
         }
-
         public Builder blockDeviceMappings(List<GetImageRecipeBlockDeviceMapping> blockDeviceMappings) {
             this.blockDeviceMappings = Objects.requireNonNull(blockDeviceMappings);
             return this;
         }
-
+        public Builder blockDeviceMappings(GetImageRecipeBlockDeviceMapping... blockDeviceMappings) {
+            return blockDeviceMappings(List.of(blockDeviceMappings));
+        }
         public Builder components(List<GetImageRecipeComponent> components) {
             this.components = Objects.requireNonNull(components);
             return this;
         }
-
+        public Builder components(GetImageRecipeComponent... components) {
+            return components(List.of(components));
+        }
         public Builder dateCreated(String dateCreated) {
             this.dateCreated = Objects.requireNonNull(dateCreated);
             return this;
         }
-
         public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder owner(String owner) {
             this.owner = Objects.requireNonNull(owner);
             return this;
         }
-
         public Builder parentImage(String parentImage) {
             this.parentImage = Objects.requireNonNull(parentImage);
             return this;
         }
-
         public Builder platform(String platform) {
             this.platform = Objects.requireNonNull(platform);
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder userDataBase64(String userDataBase64) {
             this.userDataBase64 = Objects.requireNonNull(userDataBase64);
             return this;
         }
-
         public Builder version(String version) {
             this.version = Objects.requireNonNull(version);
             return this;
         }
-
         public Builder workingDirectory(String workingDirectory) {
             this.workingDirectory = Objects.requireNonNull(workingDirectory);
             return this;
-        }
-        public GetImageRecipeResult build() {
+        }        public GetImageRecipeResult build() {
             return new GetImageRecipeResult(arn, blockDeviceMappings, components, dateCreated, description, id, name, owner, parentImage, platform, tags, userDataBase64, version, workingDirectory);
         }
     }

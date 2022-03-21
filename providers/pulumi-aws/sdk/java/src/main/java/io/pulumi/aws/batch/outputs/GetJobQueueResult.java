@@ -203,52 +203,45 @@ public final class GetJobQueueResult {
             this.arn = Objects.requireNonNull(arn);
             return this;
         }
-
         public Builder computeEnvironmentOrders(List<GetJobQueueComputeEnvironmentOrder> computeEnvironmentOrders) {
             this.computeEnvironmentOrders = Objects.requireNonNull(computeEnvironmentOrders);
             return this;
         }
-
+        public Builder computeEnvironmentOrders(GetJobQueueComputeEnvironmentOrder... computeEnvironmentOrders) {
+            return computeEnvironmentOrders(List.of(computeEnvironmentOrders));
+        }
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder priority(Integer priority) {
             this.priority = Objects.requireNonNull(priority);
             return this;
         }
-
         public Builder schedulingPolicyArn(String schedulingPolicyArn) {
             this.schedulingPolicyArn = Objects.requireNonNull(schedulingPolicyArn);
             return this;
         }
-
         public Builder state(String state) {
             this.state = Objects.requireNonNull(state);
             return this;
         }
-
         public Builder status(String status) {
             this.status = Objects.requireNonNull(status);
             return this;
         }
-
         public Builder statusReason(String statusReason) {
             this.statusReason = Objects.requireNonNull(statusReason);
             return this;
         }
-
         public Builder tags(Map<String,String> tags) {
             this.tags = Objects.requireNonNull(tags);
             return this;
-        }
-        public GetJobQueueResult build() {
+        }        public GetJobQueueResult build() {
             return new GetJobQueueResult(arn, computeEnvironmentOrders, id, name, priority, schedulingPolicyArn, state, status, statusReason, tags);
         }
     }

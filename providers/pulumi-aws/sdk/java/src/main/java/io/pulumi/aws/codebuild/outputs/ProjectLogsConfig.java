@@ -72,12 +72,10 @@ public final class ProjectLogsConfig {
             this.cloudwatchLogs = cloudwatchLogs;
             return this;
         }
-
         public Builder s3Logs(@Nullable ProjectLogsConfigS3Logs s3Logs) {
             this.s3Logs = s3Logs;
             return this;
-        }
-        public ProjectLogsConfig build() {
+        }        public ProjectLogsConfig build() {
             return new ProjectLogsConfig(cloudwatchLogs, s3Logs);
         }
     }

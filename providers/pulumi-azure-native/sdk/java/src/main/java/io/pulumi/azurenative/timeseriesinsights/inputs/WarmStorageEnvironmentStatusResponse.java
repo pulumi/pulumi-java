@@ -95,17 +95,14 @@ public final class WarmStorageEnvironmentStatusResponse extends io.pulumi.resour
             this.currentCount = currentCount;
             return this;
         }
-
         public Builder maxCount(@Nullable Integer maxCount) {
             this.maxCount = maxCount;
             return this;
         }
-
         public Builder state(@Nullable String state) {
             this.state = state;
             return this;
-        }
-        public WarmStorageEnvironmentStatusResponse build() {
+        }        public WarmStorageEnvironmentStatusResponse build() {
             return new WarmStorageEnvironmentStatusResponse(currentCount, maxCount, state);
         }
     }

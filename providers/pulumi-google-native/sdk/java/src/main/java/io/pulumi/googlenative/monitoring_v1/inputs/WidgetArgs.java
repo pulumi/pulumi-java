@@ -181,82 +181,66 @@ public final class WidgetArgs extends io.pulumi.resources.ResourceArgs {
             this.alertChart = alertChart;
             return this;
         }
-
         public Builder alertChart(@Nullable AlertChartArgs alertChart) {
             this.alertChart = Output.ofNullable(alertChart);
             return this;
         }
-
         public Builder blank(@Nullable Output<EmptyArgs> blank) {
             this.blank = blank;
             return this;
         }
-
         public Builder blank(@Nullable EmptyArgs blank) {
             this.blank = Output.ofNullable(blank);
             return this;
         }
-
         public Builder logsPanel(@Nullable Output<LogsPanelArgs> logsPanel) {
             this.logsPanel = logsPanel;
             return this;
         }
-
         public Builder logsPanel(@Nullable LogsPanelArgs logsPanel) {
             this.logsPanel = Output.ofNullable(logsPanel);
             return this;
         }
-
         public Builder scorecard(@Nullable Output<ScorecardArgs> scorecard) {
             this.scorecard = scorecard;
             return this;
         }
-
         public Builder scorecard(@Nullable ScorecardArgs scorecard) {
             this.scorecard = Output.ofNullable(scorecard);
             return this;
         }
-
         public Builder text(@Nullable Output<TextArgs> text) {
             this.text = text;
             return this;
         }
-
         public Builder text(@Nullable TextArgs text) {
             this.text = Output.ofNullable(text);
             return this;
         }
-
         public Builder timeSeriesTable(@Nullable Output<TimeSeriesTableArgs> timeSeriesTable) {
             this.timeSeriesTable = timeSeriesTable;
             return this;
         }
-
         public Builder timeSeriesTable(@Nullable TimeSeriesTableArgs timeSeriesTable) {
             this.timeSeriesTable = Output.ofNullable(timeSeriesTable);
             return this;
         }
-
         public Builder title(@Nullable Output<String> title) {
             this.title = title;
             return this;
         }
-
         public Builder title(@Nullable String title) {
             this.title = Output.ofNullable(title);
             return this;
         }
-
         public Builder xyChart(@Nullable Output<XyChartArgs> xyChart) {
             this.xyChart = xyChart;
             return this;
         }
-
         public Builder xyChart(@Nullable XyChartArgs xyChart) {
             this.xyChart = Output.ofNullable(xyChart);
             return this;
-        }
-        public WidgetArgs build() {
+        }        public WidgetArgs build() {
             return new WidgetArgs(alertChart, blank, logsPanel, scorecard, text, timeSeriesTable, title, xyChart);
         }
     }

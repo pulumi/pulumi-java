@@ -69,12 +69,10 @@ public final class SkuResponse {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder tier(String tier) {
             this.tier = Objects.requireNonNull(tier);
             return this;
-        }
-        public SkuResponse build() {
+        }        public SkuResponse build() {
             return new SkuResponse(name, tier);
         }
     }

@@ -109,42 +109,40 @@ public final class FrameworkArgs extends io.pulumi.resources.ResourceArgs {
             this.frameworkControls = Objects.requireNonNull(frameworkControls);
             return this;
         }
-
         public Builder frameworkControls(List<FrameworkControlArgs> frameworkControls) {
             this.frameworkControls = Output.of(Objects.requireNonNull(frameworkControls));
             return this;
         }
-
+        public Builder frameworkControls(FrameworkControlArgs... frameworkControls) {
+            return frameworkControls(List.of(frameworkControls));
+        }
         public Builder frameworkDescription(@Nullable Output<String> frameworkDescription) {
             this.frameworkDescription = frameworkDescription;
             return this;
         }
-
         public Builder frameworkDescription(@Nullable String frameworkDescription) {
             this.frameworkDescription = Output.ofNullable(frameworkDescription);
             return this;
         }
-
         public Builder frameworkName(@Nullable Output<String> frameworkName) {
             this.frameworkName = frameworkName;
             return this;
         }
-
         public Builder frameworkName(@Nullable String frameworkName) {
             this.frameworkName = Output.ofNullable(frameworkName);
             return this;
         }
-
         public Builder frameworkTags(@Nullable Output<List<FrameworkTagArgs>> frameworkTags) {
             this.frameworkTags = frameworkTags;
             return this;
         }
-
         public Builder frameworkTags(@Nullable List<FrameworkTagArgs> frameworkTags) {
             this.frameworkTags = Output.ofNullable(frameworkTags);
             return this;
         }
-        public FrameworkArgs build() {
+        public Builder frameworkTags(FrameworkTagArgs... frameworkTags) {
+            return frameworkTags(List.of(frameworkTags));
+        }        public FrameworkArgs build() {
             return new FrameworkArgs(frameworkControls, frameworkDescription, frameworkName, frameworkTags);
         }
     }

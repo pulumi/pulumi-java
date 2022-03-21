@@ -147,62 +147,50 @@ public final class FrontDoorPolicySettingsArgs extends io.pulumi.resources.Resou
             this.customBlockResponseBody = customBlockResponseBody;
             return this;
         }
-
         public Builder customBlockResponseBody(@Nullable String customBlockResponseBody) {
             this.customBlockResponseBody = Output.ofNullable(customBlockResponseBody);
             return this;
         }
-
         public Builder customBlockResponseStatusCode(@Nullable Output<Integer> customBlockResponseStatusCode) {
             this.customBlockResponseStatusCode = customBlockResponseStatusCode;
             return this;
         }
-
         public Builder customBlockResponseStatusCode(@Nullable Integer customBlockResponseStatusCode) {
             this.customBlockResponseStatusCode = Output.ofNullable(customBlockResponseStatusCode);
             return this;
         }
-
         public Builder enabledState(@Nullable Output<Either<String,PolicyEnabledState>> enabledState) {
             this.enabledState = enabledState;
             return this;
         }
-
         public Builder enabledState(@Nullable Either<String,PolicyEnabledState> enabledState) {
             this.enabledState = Output.ofNullable(enabledState);
             return this;
         }
-
         public Builder mode(@Nullable Output<Either<String,PolicyMode>> mode) {
             this.mode = mode;
             return this;
         }
-
         public Builder mode(@Nullable Either<String,PolicyMode> mode) {
             this.mode = Output.ofNullable(mode);
             return this;
         }
-
         public Builder redirectUrl(@Nullable Output<String> redirectUrl) {
             this.redirectUrl = redirectUrl;
             return this;
         }
-
         public Builder redirectUrl(@Nullable String redirectUrl) {
             this.redirectUrl = Output.ofNullable(redirectUrl);
             return this;
         }
-
         public Builder requestBodyCheck(@Nullable Output<Either<String,PolicyRequestBodyCheck>> requestBodyCheck) {
             this.requestBodyCheck = requestBodyCheck;
             return this;
         }
-
         public Builder requestBodyCheck(@Nullable Either<String,PolicyRequestBodyCheck> requestBodyCheck) {
             this.requestBodyCheck = Output.ofNullable(requestBodyCheck);
             return this;
-        }
-        public FrontDoorPolicySettingsArgs build() {
+        }        public FrontDoorPolicySettingsArgs build() {
             return new FrontDoorPolicySettingsArgs(customBlockResponseBody, customBlockResponseStatusCode, enabledState, mode, redirectUrl, requestBodyCheck);
         }
     }

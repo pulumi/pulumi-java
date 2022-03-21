@@ -96,17 +96,14 @@ public final class AddressPropertiesResponse extends io.pulumi.resources.InvokeA
             this.addressValidationStatus = Objects.requireNonNull(addressValidationStatus);
             return this;
         }
-
         public Builder contactDetails(ContactDetailsResponse contactDetails) {
             this.contactDetails = Objects.requireNonNull(contactDetails);
             return this;
         }
-
         public Builder shippingAddress(@Nullable ShippingAddressResponse shippingAddress) {
             this.shippingAddress = shippingAddress;
             return this;
-        }
-        public AddressPropertiesResponse build() {
+        }        public AddressPropertiesResponse build() {
             return new AddressPropertiesResponse(addressValidationStatus, contactDetails, shippingAddress);
         }
     }

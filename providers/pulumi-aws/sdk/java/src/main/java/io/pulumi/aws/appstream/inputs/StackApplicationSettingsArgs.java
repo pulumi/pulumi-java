@@ -67,22 +67,18 @@ public final class StackApplicationSettingsArgs extends io.pulumi.resources.Reso
             this.enabled = enabled;
             return this;
         }
-
         public Builder enabled(@Nullable Boolean enabled) {
             this.enabled = Output.ofNullable(enabled);
             return this;
         }
-
         public Builder settingsGroup(@Nullable Output<String> settingsGroup) {
             this.settingsGroup = settingsGroup;
             return this;
         }
-
         public Builder settingsGroup(@Nullable String settingsGroup) {
             this.settingsGroup = Output.ofNullable(settingsGroup);
             return this;
-        }
-        public StackApplicationSettingsArgs build() {
+        }        public StackApplicationSettingsArgs build() {
             return new StackApplicationSettingsArgs(enabled, settingsGroup);
         }
     }

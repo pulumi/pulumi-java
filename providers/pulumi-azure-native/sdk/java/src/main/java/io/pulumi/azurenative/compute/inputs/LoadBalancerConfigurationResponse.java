@@ -95,17 +95,14 @@ public final class LoadBalancerConfigurationResponse extends io.pulumi.resources
             this.id = id;
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder properties(LoadBalancerConfigurationPropertiesResponse properties) {
             this.properties = Objects.requireNonNull(properties);
             return this;
-        }
-        public LoadBalancerConfigurationResponse build() {
+        }        public LoadBalancerConfigurationResponse build() {
             return new LoadBalancerConfigurationResponse(id, name, properties);
         }
     }

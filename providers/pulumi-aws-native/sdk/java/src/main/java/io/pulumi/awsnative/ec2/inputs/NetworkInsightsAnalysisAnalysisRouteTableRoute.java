@@ -162,52 +162,42 @@ public final class NetworkInsightsAnalysisAnalysisRouteTableRoute extends io.pul
             this.destinationCidr = destinationCidr;
             return this;
         }
-
         public Builder destinationPrefixListId(@Nullable String destinationPrefixListId) {
             this.destinationPrefixListId = destinationPrefixListId;
             return this;
         }
-
         public Builder egressOnlyInternetGatewayId(@Nullable String egressOnlyInternetGatewayId) {
             this.egressOnlyInternetGatewayId = egressOnlyInternetGatewayId;
             return this;
         }
-
         public Builder gatewayId(@Nullable String gatewayId) {
             this.gatewayId = gatewayId;
             return this;
         }
-
         public Builder instanceId(@Nullable String instanceId) {
             this.instanceId = instanceId;
             return this;
         }
-
         public Builder natGatewayId(@Nullable String natGatewayId) {
             this.natGatewayId = natGatewayId;
             return this;
         }
-
         public Builder networkInterfaceId(@Nullable String networkInterfaceId) {
             this.networkInterfaceId = networkInterfaceId;
             return this;
         }
-
         public Builder origin(@Nullable String origin) {
             this.origin = origin;
             return this;
         }
-
         public Builder transitGatewayId(@Nullable String transitGatewayId) {
             this.transitGatewayId = transitGatewayId;
             return this;
         }
-
         public Builder vpcPeeringConnectionId(@Nullable String vpcPeeringConnectionId) {
             this.vpcPeeringConnectionId = vpcPeeringConnectionId;
             return this;
-        }
-        public NetworkInsightsAnalysisAnalysisRouteTableRoute build() {
+        }        public NetworkInsightsAnalysisAnalysisRouteTableRoute build() {
             return new NetworkInsightsAnalysisAnalysisRouteTableRoute(destinationCidr, destinationPrefixListId, egressOnlyInternetGatewayId, gatewayId, instanceId, natGatewayId, networkInterfaceId, origin, transitGatewayId, vpcPeeringConnectionId);
         }
     }

@@ -88,17 +88,14 @@ public final class GetBlobServicePropertiesArgs extends io.pulumi.resources.Invo
             this.accountName = Objects.requireNonNull(accountName);
             return this;
         }
-
         public Builder blobServicesName(String blobServicesName) {
             this.blobServicesName = Objects.requireNonNull(blobServicesName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
-        }
-        public GetBlobServicePropertiesArgs build() {
+        }        public GetBlobServicePropertiesArgs build() {
             return new GetBlobServicePropertiesArgs(accountName, blobServicesName, resourceGroupName);
         }
     }

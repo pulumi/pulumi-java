@@ -118,52 +118,45 @@ public final class LocationNFSArgs extends io.pulumi.resources.ResourceArgs {
             this.mountOptions = mountOptions;
             return this;
         }
-
         public Builder mountOptions(@Nullable LocationNFSMountOptionsArgs mountOptions) {
             this.mountOptions = Output.ofNullable(mountOptions);
             return this;
         }
-
         public Builder onPremConfig(Output<LocationNFSOnPremConfigArgs> onPremConfig) {
             this.onPremConfig = Objects.requireNonNull(onPremConfig);
             return this;
         }
-
         public Builder onPremConfig(LocationNFSOnPremConfigArgs onPremConfig) {
             this.onPremConfig = Output.of(Objects.requireNonNull(onPremConfig));
             return this;
         }
-
         public Builder serverHostname(Output<String> serverHostname) {
             this.serverHostname = Objects.requireNonNull(serverHostname);
             return this;
         }
-
         public Builder serverHostname(String serverHostname) {
             this.serverHostname = Output.of(Objects.requireNonNull(serverHostname));
             return this;
         }
-
         public Builder subdirectory(Output<String> subdirectory) {
             this.subdirectory = Objects.requireNonNull(subdirectory);
             return this;
         }
-
         public Builder subdirectory(String subdirectory) {
             this.subdirectory = Output.of(Objects.requireNonNull(subdirectory));
             return this;
         }
-
         public Builder tags(@Nullable Output<List<LocationNFSTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable List<LocationNFSTagArgs> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-        public LocationNFSArgs build() {
+        public Builder tags(LocationNFSTagArgs... tags) {
+            return tags(List.of(tags));
+        }        public LocationNFSArgs build() {
             return new LocationNFSArgs(mountOptions, onPremConfig, serverHostname, subdirectory, tags);
         }
     }

@@ -88,17 +88,14 @@ public final class GetServiceRegistryArgs extends io.pulumi.resources.InvokeArgs
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder serviceName(String serviceName) {
             this.serviceName = Objects.requireNonNull(serviceName);
             return this;
         }
-
         public Builder serviceRegistryName(String serviceRegistryName) {
             this.serviceRegistryName = Objects.requireNonNull(serviceRegistryName);
             return this;
-        }
-        public GetServiceRegistryArgs build() {
+        }        public GetServiceRegistryArgs build() {
             return new GetServiceRegistryArgs(resourceGroupName, serviceName, serviceRegistryName);
         }
     }

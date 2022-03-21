@@ -75,12 +75,10 @@ public final class LoggingConfigurationCondition extends io.pulumi.resources.Inv
             this.actionCondition = actionCondition;
             return this;
         }
-
         public Builder labelNameCondition(@Nullable LoggingConfigurationConditionLabelNameConditionProperties labelNameCondition) {
             this.labelNameCondition = labelNameCondition;
             return this;
-        }
-        public LoggingConfigurationCondition build() {
+        }        public LoggingConfigurationCondition build() {
             return new LoggingConfigurationCondition(actionCondition, labelNameCondition);
         }
     }

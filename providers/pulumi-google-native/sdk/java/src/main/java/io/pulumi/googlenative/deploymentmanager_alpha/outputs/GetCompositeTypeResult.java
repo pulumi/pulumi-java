@@ -161,42 +161,37 @@ public final class GetCompositeTypeResult {
             this.description = Objects.requireNonNull(description);
             return this;
         }
-
         public Builder insertTime(String insertTime) {
             this.insertTime = Objects.requireNonNull(insertTime);
             return this;
         }
-
         public Builder labels(List<CompositeTypeLabelEntryResponse> labels) {
             this.labels = Objects.requireNonNull(labels);
             return this;
         }
-
+        public Builder labels(CompositeTypeLabelEntryResponse... labels) {
+            return labels(List.of(labels));
+        }
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder operation(OperationResponse operation) {
             this.operation = Objects.requireNonNull(operation);
             return this;
         }
-
         public Builder selfLink(String selfLink) {
             this.selfLink = Objects.requireNonNull(selfLink);
             return this;
         }
-
         public Builder status(String status) {
             this.status = Objects.requireNonNull(status);
             return this;
         }
-
         public Builder templateContents(TemplateContentsResponse templateContents) {
             this.templateContents = Objects.requireNonNull(templateContents);
             return this;
-        }
-        public GetCompositeTypeResult build() {
+        }        public GetCompositeTypeResult build() {
             return new GetCompositeTypeResult(description, insertTime, labels, name, operation, selfLink, status, templateContents);
         }
     }

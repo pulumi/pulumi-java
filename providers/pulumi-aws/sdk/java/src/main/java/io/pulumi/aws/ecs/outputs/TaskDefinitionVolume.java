@@ -124,27 +124,22 @@ public final class TaskDefinitionVolume {
             this.dockerVolumeConfiguration = dockerVolumeConfiguration;
             return this;
         }
-
         public Builder efsVolumeConfiguration(@Nullable TaskDefinitionVolumeEfsVolumeConfiguration efsVolumeConfiguration) {
             this.efsVolumeConfiguration = efsVolumeConfiguration;
             return this;
         }
-
         public Builder fsxWindowsFileServerVolumeConfiguration(@Nullable TaskDefinitionVolumeFsxWindowsFileServerVolumeConfiguration fsxWindowsFileServerVolumeConfiguration) {
             this.fsxWindowsFileServerVolumeConfiguration = fsxWindowsFileServerVolumeConfiguration;
             return this;
         }
-
         public Builder hostPath(@Nullable String hostPath) {
             this.hostPath = hostPath;
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
-        }
-        public TaskDefinitionVolume build() {
+        }        public TaskDefinitionVolume build() {
             return new TaskDefinitionVolume(dockerVolumeConfiguration, efsVolumeConfiguration, fsxWindowsFileServerVolumeConfiguration, hostPath, name);
         }
     }

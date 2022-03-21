@@ -79,22 +79,18 @@ public final class MongoIndexOptionsArgs extends io.pulumi.resources.ResourceArg
             this.expireAfterSeconds = expireAfterSeconds;
             return this;
         }
-
         public Builder expireAfterSeconds(@Nullable Integer expireAfterSeconds) {
             this.expireAfterSeconds = Output.ofNullable(expireAfterSeconds);
             return this;
         }
-
         public Builder unique(@Nullable Output<Boolean> unique) {
             this.unique = unique;
             return this;
         }
-
         public Builder unique(@Nullable Boolean unique) {
             this.unique = Output.ofNullable(unique);
             return this;
-        }
-        public MongoIndexOptionsArgs build() {
+        }        public MongoIndexOptionsArgs build() {
             return new MongoIndexOptionsArgs(expireAfterSeconds, unique);
         }
     }

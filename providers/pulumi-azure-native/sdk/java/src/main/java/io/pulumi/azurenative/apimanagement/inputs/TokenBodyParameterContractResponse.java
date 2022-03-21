@@ -76,12 +76,10 @@ public final class TokenBodyParameterContractResponse extends io.pulumi.resource
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder value(String value) {
             this.value = Objects.requireNonNull(value);
             return this;
-        }
-        public TokenBodyParameterContractResponse build() {
+        }        public TokenBodyParameterContractResponse build() {
             return new TokenBodyParameterContractResponse(name, value);
         }
     }

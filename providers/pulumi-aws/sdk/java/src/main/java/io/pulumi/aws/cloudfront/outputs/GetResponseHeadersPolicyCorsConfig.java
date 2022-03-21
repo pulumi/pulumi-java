@@ -147,37 +147,42 @@ public final class GetResponseHeadersPolicyCorsConfig {
             this.accessControlAllowCredentials = Objects.requireNonNull(accessControlAllowCredentials);
             return this;
         }
-
         public Builder accessControlAllowHeaders(List<GetResponseHeadersPolicyCorsConfigAccessControlAllowHeader> accessControlAllowHeaders) {
             this.accessControlAllowHeaders = Objects.requireNonNull(accessControlAllowHeaders);
             return this;
         }
-
+        public Builder accessControlAllowHeaders(GetResponseHeadersPolicyCorsConfigAccessControlAllowHeader... accessControlAllowHeaders) {
+            return accessControlAllowHeaders(List.of(accessControlAllowHeaders));
+        }
         public Builder accessControlAllowMethods(List<GetResponseHeadersPolicyCorsConfigAccessControlAllowMethod> accessControlAllowMethods) {
             this.accessControlAllowMethods = Objects.requireNonNull(accessControlAllowMethods);
             return this;
         }
-
+        public Builder accessControlAllowMethods(GetResponseHeadersPolicyCorsConfigAccessControlAllowMethod... accessControlAllowMethods) {
+            return accessControlAllowMethods(List.of(accessControlAllowMethods));
+        }
         public Builder accessControlAllowOrigins(List<GetResponseHeadersPolicyCorsConfigAccessControlAllowOrigin> accessControlAllowOrigins) {
             this.accessControlAllowOrigins = Objects.requireNonNull(accessControlAllowOrigins);
             return this;
         }
-
+        public Builder accessControlAllowOrigins(GetResponseHeadersPolicyCorsConfigAccessControlAllowOrigin... accessControlAllowOrigins) {
+            return accessControlAllowOrigins(List.of(accessControlAllowOrigins));
+        }
         public Builder accessControlExposeHeaders(List<GetResponseHeadersPolicyCorsConfigAccessControlExposeHeader> accessControlExposeHeaders) {
             this.accessControlExposeHeaders = Objects.requireNonNull(accessControlExposeHeaders);
             return this;
         }
-
+        public Builder accessControlExposeHeaders(GetResponseHeadersPolicyCorsConfigAccessControlExposeHeader... accessControlExposeHeaders) {
+            return accessControlExposeHeaders(List.of(accessControlExposeHeaders));
+        }
         public Builder accessControlMaxAgeSec(Integer accessControlMaxAgeSec) {
             this.accessControlMaxAgeSec = Objects.requireNonNull(accessControlMaxAgeSec);
             return this;
         }
-
         public Builder originOverride(Boolean originOverride) {
             this.originOverride = Objects.requireNonNull(originOverride);
             return this;
-        }
-        public GetResponseHeadersPolicyCorsConfig build() {
+        }        public GetResponseHeadersPolicyCorsConfig build() {
             return new GetResponseHeadersPolicyCorsConfig(accessControlAllowCredentials, accessControlAllowHeaders, accessControlAllowMethods, accessControlAllowOrigins, accessControlExposeHeaders, accessControlMaxAgeSec, originOverride);
         }
     }

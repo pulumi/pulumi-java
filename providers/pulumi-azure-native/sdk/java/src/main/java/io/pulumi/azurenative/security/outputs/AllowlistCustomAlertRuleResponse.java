@@ -137,32 +137,29 @@ public final class AllowlistCustomAlertRuleResponse {
             this.allowlistValues = Objects.requireNonNull(allowlistValues);
             return this;
         }
-
+        public Builder allowlistValues(String... allowlistValues) {
+            return allowlistValues(List.of(allowlistValues));
+        }
         public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
-
         public Builder displayName(String displayName) {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
-
         public Builder isEnabled(Boolean isEnabled) {
             this.isEnabled = Objects.requireNonNull(isEnabled);
             return this;
         }
-
         public Builder ruleType(String ruleType) {
             this.ruleType = Objects.requireNonNull(ruleType);
             return this;
         }
-
         public Builder valueType(String valueType) {
             this.valueType = Objects.requireNonNull(valueType);
             return this;
-        }
-        public AllowlistCustomAlertRuleResponse build() {
+        }        public AllowlistCustomAlertRuleResponse build() {
             return new AllowlistCustomAlertRuleResponse(allowlistValues, description, displayName, isEnabled, ruleType, valueType);
         }
     }

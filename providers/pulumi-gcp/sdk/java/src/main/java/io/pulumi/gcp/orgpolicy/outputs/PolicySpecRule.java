@@ -121,27 +121,22 @@ public final class PolicySpecRule {
             this.allowAll = allowAll;
             return this;
         }
-
         public Builder condition(@Nullable PolicySpecRuleCondition condition) {
             this.condition = condition;
             return this;
         }
-
         public Builder denyAll(@Nullable String denyAll) {
             this.denyAll = denyAll;
             return this;
         }
-
         public Builder enforce(@Nullable String enforce) {
             this.enforce = enforce;
             return this;
         }
-
         public Builder values(@Nullable PolicySpecRuleValues values) {
             this.values = values;
             return this;
-        }
-        public PolicySpecRule build() {
+        }        public PolicySpecRule build() {
             return new PolicySpecRule(allowAll, condition, denyAll, enforce, values);
         }
     }

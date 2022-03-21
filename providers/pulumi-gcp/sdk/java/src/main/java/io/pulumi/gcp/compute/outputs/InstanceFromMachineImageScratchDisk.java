@@ -43,8 +43,7 @@ public final class InstanceFromMachineImageScratchDisk {
         public Builder $interface(String $interface) {
             this.$interface = Objects.requireNonNull($interface);
             return this;
-        }
-        public InstanceFromMachineImageScratchDisk build() {
+        }        public InstanceFromMachineImageScratchDisk build() {
             return new InstanceFromMachineImageScratchDisk($interface);
         }
     }

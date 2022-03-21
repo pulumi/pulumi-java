@@ -51,8 +51,7 @@ public final class UptimeCheckConfigTcpCheck {
         public Builder port(Integer port) {
             this.port = Objects.requireNonNull(port);
             return this;
-        }
-        public UptimeCheckConfigTcpCheck build() {
+        }        public UptimeCheckConfigTcpCheck build() {
             return new UptimeCheckConfigTcpCheck(port);
         }
     }

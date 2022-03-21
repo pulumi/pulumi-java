@@ -104,22 +104,18 @@ public final class SubjectAccessReviewStatus {
             this.allowed = Objects.requireNonNull(allowed);
             return this;
         }
-
         public Builder denied(@Nullable Boolean denied) {
             this.denied = denied;
             return this;
         }
-
         public Builder evaluationError(@Nullable String evaluationError) {
             this.evaluationError = evaluationError;
             return this;
         }
-
         public Builder reason(@Nullable String reason) {
             this.reason = reason;
             return this;
-        }
-        public SubjectAccessReviewStatus build() {
+        }        public SubjectAccessReviewStatus build() {
             return new SubjectAccessReviewStatus(allowed, denied, evaluationError, reason);
         }
     }

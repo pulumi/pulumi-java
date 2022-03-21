@@ -79,22 +79,21 @@ public final class TrailDataResourceArgs extends io.pulumi.resources.ResourceArg
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Output.of(Objects.requireNonNull(type));
             return this;
         }
-
         public Builder values(@Nullable Output<List<String>> values) {
             this.values = values;
             return this;
         }
-
         public Builder values(@Nullable List<String> values) {
             this.values = Output.ofNullable(values);
             return this;
         }
-        public TrailDataResourceArgs build() {
+        public Builder values(String... values) {
+            return values(List.of(values));
+        }        public TrailDataResourceArgs build() {
             return new TrailDataResourceArgs(type, values);
         }
     }

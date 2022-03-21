@@ -68,22 +68,21 @@ public final class MysqlLayerCloudwatchConfigurationGetArgs extends io.pulumi.re
             this.enabled = enabled;
             return this;
         }
-
         public Builder enabled(@Nullable Boolean enabled) {
             this.enabled = Output.ofNullable(enabled);
             return this;
         }
-
         public Builder logStreams(@Nullable Output<List<MysqlLayerCloudwatchConfigurationLogStreamGetArgs>> logStreams) {
             this.logStreams = logStreams;
             return this;
         }
-
         public Builder logStreams(@Nullable List<MysqlLayerCloudwatchConfigurationLogStreamGetArgs> logStreams) {
             this.logStreams = Output.ofNullable(logStreams);
             return this;
         }
-        public MysqlLayerCloudwatchConfigurationGetArgs build() {
+        public Builder logStreams(MysqlLayerCloudwatchConfigurationLogStreamGetArgs... logStreams) {
+            return logStreams(List.of(logStreams));
+        }        public MysqlLayerCloudwatchConfigurationGetArgs build() {
             return new MysqlLayerCloudwatchConfigurationGetArgs(enabled, logStreams);
         }
     }

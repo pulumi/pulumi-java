@@ -60,8 +60,7 @@ public final class UserRoleResponseResponse extends io.pulumi.resources.InvokeAr
         public Builder role(@Nullable String role) {
             this.role = role;
             return this;
-        }
-        public UserRoleResponseResponse build() {
+        }        public UserRoleResponseResponse build() {
             return new UserRoleResponseResponse(role);
         }
     }

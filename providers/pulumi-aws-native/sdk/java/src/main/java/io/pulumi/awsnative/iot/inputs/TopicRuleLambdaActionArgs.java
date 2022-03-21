@@ -53,12 +53,10 @@ public final class TopicRuleLambdaActionArgs extends io.pulumi.resources.Resourc
             this.functionArn = functionArn;
             return this;
         }
-
         public Builder functionArn(@Nullable String functionArn) {
             this.functionArn = Output.ofNullable(functionArn);
             return this;
-        }
-        public TopicRuleLambdaActionArgs build() {
+        }        public TopicRuleLambdaActionArgs build() {
             return new TopicRuleLambdaActionArgs(functionArn);
         }
     }

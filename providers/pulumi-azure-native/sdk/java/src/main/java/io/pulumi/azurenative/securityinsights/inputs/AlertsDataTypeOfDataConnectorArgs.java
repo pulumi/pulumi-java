@@ -61,12 +61,10 @@ public final class AlertsDataTypeOfDataConnectorArgs extends io.pulumi.resources
             this.alerts = alerts;
             return this;
         }
-
         public Builder alerts(@Nullable DataConnectorDataTypeCommonArgs alerts) {
             this.alerts = Output.ofNullable(alerts);
             return this;
-        }
-        public AlertsDataTypeOfDataConnectorArgs build() {
+        }        public AlertsDataTypeOfDataConnectorArgs build() {
             return new AlertsDataTypeOfDataConnectorArgs(alerts);
         }
     }

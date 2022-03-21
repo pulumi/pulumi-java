@@ -149,52 +149,45 @@ public final class GetKMSCryptoKeyResult {
             this.destroyScheduledDuration = Objects.requireNonNull(destroyScheduledDuration);
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder importOnly(Boolean importOnly) {
             this.importOnly = Objects.requireNonNull(importOnly);
             return this;
         }
-
         public Builder keyRing(String keyRing) {
             this.keyRing = Objects.requireNonNull(keyRing);
             return this;
         }
-
         public Builder labels(Map<String,String> labels) {
             this.labels = Objects.requireNonNull(labels);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder purpose(String purpose) {
             this.purpose = Objects.requireNonNull(purpose);
             return this;
         }
-
         public Builder rotationPeriod(String rotationPeriod) {
             this.rotationPeriod = Objects.requireNonNull(rotationPeriod);
             return this;
         }
-
         public Builder skipInitialVersionCreation(Boolean skipInitialVersionCreation) {
             this.skipInitialVersionCreation = Objects.requireNonNull(skipInitialVersionCreation);
             return this;
         }
-
         public Builder versionTemplates(List<GetKMSCryptoKeyVersionTemplate> versionTemplates) {
             this.versionTemplates = Objects.requireNonNull(versionTemplates);
             return this;
         }
-        public GetKMSCryptoKeyResult build() {
+        public Builder versionTemplates(GetKMSCryptoKeyVersionTemplate... versionTemplates) {
+            return versionTemplates(List.of(versionTemplates));
+        }        public GetKMSCryptoKeyResult build() {
             return new GetKMSCryptoKeyResult(destroyScheduledDuration, id, importOnly, keyRing, labels, name, purpose, rotationPeriod, skipInitialVersionCreation, versionTemplates);
         }
     }

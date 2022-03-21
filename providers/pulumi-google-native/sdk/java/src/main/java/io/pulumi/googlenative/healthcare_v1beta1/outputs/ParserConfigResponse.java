@@ -103,22 +103,18 @@ public final class ParserConfigResponse {
             this.allowNullHeader = Objects.requireNonNull(allowNullHeader);
             return this;
         }
-
         public Builder schema(SchemaPackageResponse schema) {
             this.schema = Objects.requireNonNull(schema);
             return this;
         }
-
         public Builder segmentTerminator(String segmentTerminator) {
             this.segmentTerminator = Objects.requireNonNull(segmentTerminator);
             return this;
         }
-
         public Builder version(String version) {
             this.version = Objects.requireNonNull(version);
             return this;
-        }
-        public ParserConfigResponse build() {
+        }        public ParserConfigResponse build() {
             return new ParserConfigResponse(allowNullHeader, schema, segmentTerminator, version);
         }
     }

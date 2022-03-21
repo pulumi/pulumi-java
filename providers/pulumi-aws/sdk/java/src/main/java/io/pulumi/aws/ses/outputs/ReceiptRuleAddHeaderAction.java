@@ -86,17 +86,14 @@ public final class ReceiptRuleAddHeaderAction {
             this.headerName = Objects.requireNonNull(headerName);
             return this;
         }
-
         public Builder headerValue(String headerValue) {
             this.headerValue = Objects.requireNonNull(headerValue);
             return this;
         }
-
         public Builder position(Integer position) {
             this.position = Objects.requireNonNull(position);
             return this;
-        }
-        public ReceiptRuleAddHeaderAction build() {
+        }        public ReceiptRuleAddHeaderAction build() {
             return new ReceiptRuleAddHeaderAction(headerName, headerValue, position);
         }
     }

@@ -179,82 +179,66 @@ public final class RampUpRuleArgs extends io.pulumi.resources.ResourceArgs {
             this.actionHostName = actionHostName;
             return this;
         }
-
         public Builder actionHostName(@Nullable String actionHostName) {
             this.actionHostName = Output.ofNullable(actionHostName);
             return this;
         }
-
         public Builder changeDecisionCallbackUrl(@Nullable Output<String> changeDecisionCallbackUrl) {
             this.changeDecisionCallbackUrl = changeDecisionCallbackUrl;
             return this;
         }
-
         public Builder changeDecisionCallbackUrl(@Nullable String changeDecisionCallbackUrl) {
             this.changeDecisionCallbackUrl = Output.ofNullable(changeDecisionCallbackUrl);
             return this;
         }
-
         public Builder changeIntervalInMinutes(@Nullable Output<Integer> changeIntervalInMinutes) {
             this.changeIntervalInMinutes = changeIntervalInMinutes;
             return this;
         }
-
         public Builder changeIntervalInMinutes(@Nullable Integer changeIntervalInMinutes) {
             this.changeIntervalInMinutes = Output.ofNullable(changeIntervalInMinutes);
             return this;
         }
-
         public Builder changeStep(@Nullable Output<Double> changeStep) {
             this.changeStep = changeStep;
             return this;
         }
-
         public Builder changeStep(@Nullable Double changeStep) {
             this.changeStep = Output.ofNullable(changeStep);
             return this;
         }
-
         public Builder maxReroutePercentage(@Nullable Output<Double> maxReroutePercentage) {
             this.maxReroutePercentage = maxReroutePercentage;
             return this;
         }
-
         public Builder maxReroutePercentage(@Nullable Double maxReroutePercentage) {
             this.maxReroutePercentage = Output.ofNullable(maxReroutePercentage);
             return this;
         }
-
         public Builder minReroutePercentage(@Nullable Output<Double> minReroutePercentage) {
             this.minReroutePercentage = minReroutePercentage;
             return this;
         }
-
         public Builder minReroutePercentage(@Nullable Double minReroutePercentage) {
             this.minReroutePercentage = Output.ofNullable(minReroutePercentage);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder reroutePercentage(@Nullable Output<Double> reroutePercentage) {
             this.reroutePercentage = reroutePercentage;
             return this;
         }
-
         public Builder reroutePercentage(@Nullable Double reroutePercentage) {
             this.reroutePercentage = Output.ofNullable(reroutePercentage);
             return this;
-        }
-        public RampUpRuleArgs build() {
+        }        public RampUpRuleArgs build() {
             return new RampUpRuleArgs(actionHostName, changeDecisionCallbackUrl, changeIntervalInMinutes, changeStep, maxReroutePercentage, minReroutePercentage, name, reroutePercentage);
         }
     }

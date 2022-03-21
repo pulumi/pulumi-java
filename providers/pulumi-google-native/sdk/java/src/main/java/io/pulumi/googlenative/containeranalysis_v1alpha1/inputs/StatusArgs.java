@@ -97,32 +97,26 @@ public final class StatusArgs extends io.pulumi.resources.ResourceArgs {
             this.code = code;
             return this;
         }
-
         public Builder code(@Nullable Integer code) {
             this.code = Output.ofNullable(code);
             return this;
         }
-
         public Builder details(@Nullable Output<List<Map<String,String>>> details) {
             this.details = details;
             return this;
         }
-
         public Builder details(@Nullable List<Map<String,String>> details) {
             this.details = Output.ofNullable(details);
             return this;
         }
-
         public Builder message(@Nullable Output<String> message) {
             this.message = message;
             return this;
         }
-
         public Builder message(@Nullable String message) {
             this.message = Output.ofNullable(message);
             return this;
-        }
-        public StatusArgs build() {
+        }        public StatusArgs build() {
             return new StatusArgs(code, details, message);
         }
     }

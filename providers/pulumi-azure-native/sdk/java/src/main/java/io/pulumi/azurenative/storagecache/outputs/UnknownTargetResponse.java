@@ -53,8 +53,7 @@ public final class UnknownTargetResponse {
         public Builder attributes(@Nullable Map<String,String> attributes) {
             this.attributes = attributes;
             return this;
-        }
-        public UnknownTargetResponse build() {
+        }        public UnknownTargetResponse build() {
             return new UnknownTargetResponse(attributes);
         }
     }

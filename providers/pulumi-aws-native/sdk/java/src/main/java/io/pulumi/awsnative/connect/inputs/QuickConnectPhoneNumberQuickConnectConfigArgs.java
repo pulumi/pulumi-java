@@ -56,12 +56,10 @@ public final class QuickConnectPhoneNumberQuickConnectConfigArgs extends io.pulu
             this.phoneNumber = Objects.requireNonNull(phoneNumber);
             return this;
         }
-
         public Builder phoneNumber(String phoneNumber) {
             this.phoneNumber = Output.of(Objects.requireNonNull(phoneNumber));
             return this;
-        }
-        public QuickConnectPhoneNumberQuickConnectConfigArgs build() {
+        }        public QuickConnectPhoneNumberQuickConnectConfigArgs build() {
             return new QuickConnectPhoneNumberQuickConnectConfigArgs(phoneNumber);
         }
     }

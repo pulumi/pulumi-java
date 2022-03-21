@@ -251,67 +251,54 @@ public final class GetApplianceResult {
             this.distro = distro;
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder identity(@Nullable IdentityResponse identity) {
             this.identity = identity;
             return this;
         }
-
         public Builder infrastructureConfig(@Nullable AppliancePropertiesResponseInfrastructureConfig infrastructureConfig) {
             this.infrastructureConfig = infrastructureConfig;
             return this;
         }
-
         public Builder location(String location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
-
         public Builder publicKey(@Nullable String publicKey) {
             this.publicKey = publicKey;
             return this;
         }
-
         public Builder status(String status) {
             this.status = Objects.requireNonNull(status);
             return this;
         }
-
         public Builder systemData(SystemDataResponse systemData) {
             this.systemData = Objects.requireNonNull(systemData);
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder version(String version) {
             this.version = Objects.requireNonNull(version);
             return this;
-        }
-        public GetApplianceResult build() {
+        }        public GetApplianceResult build() {
             return new GetApplianceResult(distro, id, identity, infrastructureConfig, location, name, provisioningState, publicKey, status, systemData, tags, type, version);
         }
     }

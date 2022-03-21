@@ -159,72 +159,70 @@ public final class SecurityProfileArgs extends io.pulumi.resources.ResourceArgs 
             this.additionalMetricsToRetainV2 = additionalMetricsToRetainV2;
             return this;
         }
-
         public Builder additionalMetricsToRetainV2(@Nullable List<SecurityProfileMetricToRetainArgs> additionalMetricsToRetainV2) {
             this.additionalMetricsToRetainV2 = Output.ofNullable(additionalMetricsToRetainV2);
             return this;
         }
-
+        public Builder additionalMetricsToRetainV2(SecurityProfileMetricToRetainArgs... additionalMetricsToRetainV2) {
+            return additionalMetricsToRetainV2(List.of(additionalMetricsToRetainV2));
+        }
         public Builder alertTargets(@Nullable Output<Object> alertTargets) {
             this.alertTargets = alertTargets;
             return this;
         }
-
         public Builder alertTargets(@Nullable Object alertTargets) {
             this.alertTargets = Output.ofNullable(alertTargets);
             return this;
         }
-
         public Builder behaviors(@Nullable Output<List<SecurityProfileBehaviorArgs>> behaviors) {
             this.behaviors = behaviors;
             return this;
         }
-
         public Builder behaviors(@Nullable List<SecurityProfileBehaviorArgs> behaviors) {
             this.behaviors = Output.ofNullable(behaviors);
             return this;
         }
-
+        public Builder behaviors(SecurityProfileBehaviorArgs... behaviors) {
+            return behaviors(List.of(behaviors));
+        }
         public Builder securityProfileDescription(@Nullable Output<String> securityProfileDescription) {
             this.securityProfileDescription = securityProfileDescription;
             return this;
         }
-
         public Builder securityProfileDescription(@Nullable String securityProfileDescription) {
             this.securityProfileDescription = Output.ofNullable(securityProfileDescription);
             return this;
         }
-
         public Builder securityProfileName(@Nullable Output<String> securityProfileName) {
             this.securityProfileName = securityProfileName;
             return this;
         }
-
         public Builder securityProfileName(@Nullable String securityProfileName) {
             this.securityProfileName = Output.ofNullable(securityProfileName);
             return this;
         }
-
         public Builder tags(@Nullable Output<List<SecurityProfileTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable List<SecurityProfileTagArgs> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
+        public Builder tags(SecurityProfileTagArgs... tags) {
+            return tags(List.of(tags));
+        }
         public Builder targetArns(@Nullable Output<List<String>> targetArns) {
             this.targetArns = targetArns;
             return this;
         }
-
         public Builder targetArns(@Nullable List<String> targetArns) {
             this.targetArns = Output.ofNullable(targetArns);
             return this;
         }
-        public SecurityProfileArgs build() {
+        public Builder targetArns(String... targetArns) {
+            return targetArns(List.of(targetArns));
+        }        public SecurityProfileArgs build() {
             return new SecurityProfileArgs(additionalMetricsToRetainV2, alertTargets, behaviors, securityProfileDescription, securityProfileName, tags, targetArns);
         }
     }

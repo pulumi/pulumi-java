@@ -110,42 +110,34 @@ public final class ScriptReferenceArgs extends io.pulumi.resources.ResourceArgs 
             this.scriptArguments = scriptArguments;
             return this;
         }
-
         public Builder scriptArguments(@Nullable String scriptArguments) {
             this.scriptArguments = Output.ofNullable(scriptArguments);
             return this;
         }
-
         public Builder scriptData(@Nullable Output<String> scriptData) {
             this.scriptData = scriptData;
             return this;
         }
-
         public Builder scriptData(@Nullable String scriptData) {
             this.scriptData = Output.ofNullable(scriptData);
             return this;
         }
-
         public Builder scriptSource(@Nullable Output<String> scriptSource) {
             this.scriptSource = scriptSource;
             return this;
         }
-
         public Builder scriptSource(@Nullable String scriptSource) {
             this.scriptSource = Output.ofNullable(scriptSource);
             return this;
         }
-
         public Builder timeout(@Nullable Output<String> timeout) {
             this.timeout = timeout;
             return this;
         }
-
         public Builder timeout(@Nullable String timeout) {
             this.timeout = Output.ofNullable(timeout);
             return this;
-        }
-        public ScriptReferenceArgs build() {
+        }        public ScriptReferenceArgs build() {
             return new ScriptReferenceArgs(scriptArguments, scriptData, scriptSource, timeout);
         }
     }

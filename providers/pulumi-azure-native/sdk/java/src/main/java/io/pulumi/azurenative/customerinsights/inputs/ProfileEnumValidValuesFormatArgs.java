@@ -80,22 +80,18 @@ public final class ProfileEnumValidValuesFormatArgs extends io.pulumi.resources.
             this.localizedValueNames = localizedValueNames;
             return this;
         }
-
         public Builder localizedValueNames(@Nullable Map<String,String> localizedValueNames) {
             this.localizedValueNames = Output.ofNullable(localizedValueNames);
             return this;
         }
-
         public Builder value(@Nullable Output<Integer> value) {
             this.value = value;
             return this;
         }
-
         public Builder value(@Nullable Integer value) {
             this.value = Output.ofNullable(value);
             return this;
-        }
-        public ProfileEnumValidValuesFormatArgs build() {
+        }        public ProfileEnumValidValuesFormatArgs build() {
             return new ProfileEnumValidValuesFormatArgs(localizedValueNames, value);
         }
     }

@@ -71,12 +71,10 @@ public final class GetAccountResult {
             this.cloudWatchRoleArn = cloudWatchRoleArn;
             return this;
         }
-
         public Builder id(@Nullable String id) {
             this.id = id;
             return this;
-        }
-        public GetAccountResult build() {
+        }        public GetAccountResult build() {
             return new GetAccountResult(cloudWatchRoleArn, id);
         }
     }

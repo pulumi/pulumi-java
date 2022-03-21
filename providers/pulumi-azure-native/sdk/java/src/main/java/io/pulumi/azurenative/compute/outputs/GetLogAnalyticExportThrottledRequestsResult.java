@@ -51,8 +51,7 @@ public final class GetLogAnalyticExportThrottledRequestsResult {
         public Builder properties(LogAnalyticsOutputResponse properties) {
             this.properties = Objects.requireNonNull(properties);
             return this;
-        }
-        public GetLogAnalyticExportThrottledRequestsResult build() {
+        }        public GetLogAnalyticExportThrottledRequestsResult build() {
             return new GetLogAnalyticExportThrottledRequestsResult(properties);
         }
     }

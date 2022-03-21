@@ -72,12 +72,10 @@ public final class ClassificationJobS3JobDefinitionScoping {
             this.excludes = excludes;
             return this;
         }
-
         public Builder includes(@Nullable ClassificationJobS3JobDefinitionScopingIncludes includes) {
             this.includes = includes;
             return this;
-        }
-        public ClassificationJobS3JobDefinitionScoping build() {
+        }        public ClassificationJobS3JobDefinitionScoping build() {
             return new ClassificationJobS3JobDefinitionScoping(excludes, includes);
         }
     }

@@ -293,142 +293,126 @@ public final class InstanceGroupManagerArgs extends io.pulumi.resources.Resource
             this.autoHealingPolicies = autoHealingPolicies;
             return this;
         }
-
         public Builder autoHealingPolicies(@Nullable InstanceGroupManagerAutoHealingPoliciesArgs autoHealingPolicies) {
             this.autoHealingPolicies = Output.ofNullable(autoHealingPolicies);
             return this;
         }
-
         public Builder baseInstanceName(Output<String> baseInstanceName) {
             this.baseInstanceName = Objects.requireNonNull(baseInstanceName);
             return this;
         }
-
         public Builder baseInstanceName(String baseInstanceName) {
             this.baseInstanceName = Output.of(Objects.requireNonNull(baseInstanceName));
             return this;
         }
-
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder namedPorts(@Nullable Output<List<InstanceGroupManagerNamedPortArgs>> namedPorts) {
             this.namedPorts = namedPorts;
             return this;
         }
-
         public Builder namedPorts(@Nullable List<InstanceGroupManagerNamedPortArgs> namedPorts) {
             this.namedPorts = Output.ofNullable(namedPorts);
             return this;
         }
-
+        public Builder namedPorts(InstanceGroupManagerNamedPortArgs... namedPorts) {
+            return namedPorts(List.of(namedPorts));
+        }
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
         }
-
         public Builder statefulDisks(@Nullable Output<List<InstanceGroupManagerStatefulDiskArgs>> statefulDisks) {
             this.statefulDisks = statefulDisks;
             return this;
         }
-
         public Builder statefulDisks(@Nullable List<InstanceGroupManagerStatefulDiskArgs> statefulDisks) {
             this.statefulDisks = Output.ofNullable(statefulDisks);
             return this;
         }
-
+        public Builder statefulDisks(InstanceGroupManagerStatefulDiskArgs... statefulDisks) {
+            return statefulDisks(List.of(statefulDisks));
+        }
         public Builder targetPools(@Nullable Output<List<String>> targetPools) {
             this.targetPools = targetPools;
             return this;
         }
-
         public Builder targetPools(@Nullable List<String> targetPools) {
             this.targetPools = Output.ofNullable(targetPools);
             return this;
         }
-
+        public Builder targetPools(String... targetPools) {
+            return targetPools(List.of(targetPools));
+        }
         public Builder targetSize(@Nullable Output<Integer> targetSize) {
             this.targetSize = targetSize;
             return this;
         }
-
         public Builder targetSize(@Nullable Integer targetSize) {
             this.targetSize = Output.ofNullable(targetSize);
             return this;
         }
-
         public Builder updatePolicy(@Nullable Output<InstanceGroupManagerUpdatePolicyArgs> updatePolicy) {
             this.updatePolicy = updatePolicy;
             return this;
         }
-
         public Builder updatePolicy(@Nullable InstanceGroupManagerUpdatePolicyArgs updatePolicy) {
             this.updatePolicy = Output.ofNullable(updatePolicy);
             return this;
         }
-
         public Builder versions(Output<List<InstanceGroupManagerVersionArgs>> versions) {
             this.versions = Objects.requireNonNull(versions);
             return this;
         }
-
         public Builder versions(List<InstanceGroupManagerVersionArgs> versions) {
             this.versions = Output.of(Objects.requireNonNull(versions));
             return this;
         }
-
+        public Builder versions(InstanceGroupManagerVersionArgs... versions) {
+            return versions(List.of(versions));
+        }
         public Builder waitForInstances(@Nullable Output<Boolean> waitForInstances) {
             this.waitForInstances = waitForInstances;
             return this;
         }
-
         public Builder waitForInstances(@Nullable Boolean waitForInstances) {
             this.waitForInstances = Output.ofNullable(waitForInstances);
             return this;
         }
-
         public Builder waitForInstancesStatus(@Nullable Output<String> waitForInstancesStatus) {
             this.waitForInstancesStatus = waitForInstancesStatus;
             return this;
         }
-
         public Builder waitForInstancesStatus(@Nullable String waitForInstancesStatus) {
             this.waitForInstancesStatus = Output.ofNullable(waitForInstancesStatus);
             return this;
         }
-
         public Builder zone(@Nullable Output<String> zone) {
             this.zone = zone;
             return this;
         }
-
         public Builder zone(@Nullable String zone) {
             this.zone = Output.ofNullable(zone);
             return this;
-        }
-        public InstanceGroupManagerArgs build() {
+        }        public InstanceGroupManagerArgs build() {
             return new InstanceGroupManagerArgs(autoHealingPolicies, baseInstanceName, description, name, namedPorts, project, statefulDisks, targetPools, targetSize, updatePolicy, versions, waitForInstances, waitForInstancesStatus, zone);
         }
     }

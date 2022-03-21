@@ -70,12 +70,10 @@ public final class OsPolicyAssignmentRollout {
             this.disruptionBudget = Objects.requireNonNull(disruptionBudget);
             return this;
         }
-
         public Builder minWaitDuration(String minWaitDuration) {
             this.minWaitDuration = Objects.requireNonNull(minWaitDuration);
             return this;
-        }
-        public OsPolicyAssignmentRollout build() {
+        }        public OsPolicyAssignmentRollout build() {
             return new OsPolicyAssignmentRollout(disruptionBudget, minWaitDuration);
         }
     }

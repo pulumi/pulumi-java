@@ -162,37 +162,30 @@ public final class FirewallRuleGroupFirewallRule extends io.pulumi.resources.Inv
             this.action = Objects.requireNonNull(action);
             return this;
         }
-
         public Builder blockOverrideDnsType(@Nullable FirewallRuleGroupFirewallRuleBlockOverrideDnsType blockOverrideDnsType) {
             this.blockOverrideDnsType = blockOverrideDnsType;
             return this;
         }
-
         public Builder blockOverrideDomain(@Nullable String blockOverrideDomain) {
             this.blockOverrideDomain = blockOverrideDomain;
             return this;
         }
-
         public Builder blockOverrideTtl(@Nullable Integer blockOverrideTtl) {
             this.blockOverrideTtl = blockOverrideTtl;
             return this;
         }
-
         public Builder blockResponse(@Nullable FirewallRuleGroupFirewallRuleBlockResponse blockResponse) {
             this.blockResponse = blockResponse;
             return this;
         }
-
         public Builder firewallDomainListId(String firewallDomainListId) {
             this.firewallDomainListId = Objects.requireNonNull(firewallDomainListId);
             return this;
         }
-
         public Builder priority(Integer priority) {
             this.priority = Objects.requireNonNull(priority);
             return this;
-        }
-        public FirewallRuleGroupFirewallRule build() {
+        }        public FirewallRuleGroupFirewallRule build() {
             return new FirewallRuleGroupFirewallRule(action, blockOverrideDnsType, blockOverrideDomain, blockOverrideTtl, blockResponse, firewallDomainListId, priority);
         }
     }

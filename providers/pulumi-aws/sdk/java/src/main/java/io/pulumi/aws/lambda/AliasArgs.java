@@ -123,52 +123,42 @@ public final class AliasArgs extends io.pulumi.resources.ResourceArgs {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder functionName(Output<String> functionName) {
             this.functionName = Objects.requireNonNull(functionName);
             return this;
         }
-
         public Builder functionName(String functionName) {
             this.functionName = Output.of(Objects.requireNonNull(functionName));
             return this;
         }
-
         public Builder functionVersion(Output<String> functionVersion) {
             this.functionVersion = Objects.requireNonNull(functionVersion);
             return this;
         }
-
         public Builder functionVersion(String functionVersion) {
             this.functionVersion = Output.of(Objects.requireNonNull(functionVersion));
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder routingConfig(@Nullable Output<AliasRoutingConfigArgs> routingConfig) {
             this.routingConfig = routingConfig;
             return this;
         }
-
         public Builder routingConfig(@Nullable AliasRoutingConfigArgs routingConfig) {
             this.routingConfig = Output.ofNullable(routingConfig);
             return this;
-        }
-        public AliasArgs build() {
+        }        public AliasArgs build() {
             return new AliasArgs(description, functionName, functionVersion, name, routingConfig);
         }
     }

@@ -60,8 +60,7 @@ public final class RunbookAssociationPropertyResponse extends io.pulumi.resource
         public Builder name(@Nullable String name) {
             this.name = name;
             return this;
-        }
-        public RunbookAssociationPropertyResponse build() {
+        }        public RunbookAssociationPropertyResponse build() {
             return new RunbookAssociationPropertyResponse(name);
         }
     }

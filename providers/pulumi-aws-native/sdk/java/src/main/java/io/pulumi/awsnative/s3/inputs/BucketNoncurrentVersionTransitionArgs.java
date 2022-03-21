@@ -95,32 +95,26 @@ public final class BucketNoncurrentVersionTransitionArgs extends io.pulumi.resou
             this.newerNoncurrentVersions = newerNoncurrentVersions;
             return this;
         }
-
         public Builder newerNoncurrentVersions(@Nullable Integer newerNoncurrentVersions) {
             this.newerNoncurrentVersions = Output.ofNullable(newerNoncurrentVersions);
             return this;
         }
-
         public Builder storageClass(Output<BucketNoncurrentVersionTransitionStorageClass> storageClass) {
             this.storageClass = Objects.requireNonNull(storageClass);
             return this;
         }
-
         public Builder storageClass(BucketNoncurrentVersionTransitionStorageClass storageClass) {
             this.storageClass = Output.of(Objects.requireNonNull(storageClass));
             return this;
         }
-
         public Builder transitionInDays(Output<Integer> transitionInDays) {
             this.transitionInDays = Objects.requireNonNull(transitionInDays);
             return this;
         }
-
         public Builder transitionInDays(Integer transitionInDays) {
             this.transitionInDays = Output.of(Objects.requireNonNull(transitionInDays));
             return this;
-        }
-        public BucketNoncurrentVersionTransitionArgs build() {
+        }        public BucketNoncurrentVersionTransitionArgs build() {
             return new BucketNoncurrentVersionTransitionArgs(newerNoncurrentVersions, storageClass, transitionInDays);
         }
     }

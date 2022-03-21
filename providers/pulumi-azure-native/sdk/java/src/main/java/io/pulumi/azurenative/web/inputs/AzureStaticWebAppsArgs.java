@@ -79,22 +79,18 @@ public final class AzureStaticWebAppsArgs extends io.pulumi.resources.ResourceAr
             this.enabled = enabled;
             return this;
         }
-
         public Builder enabled(@Nullable Boolean enabled) {
             this.enabled = Output.ofNullable(enabled);
             return this;
         }
-
         public Builder registration(@Nullable Output<AzureStaticWebAppsRegistrationArgs> registration) {
             this.registration = registration;
             return this;
         }
-
         public Builder registration(@Nullable AzureStaticWebAppsRegistrationArgs registration) {
             this.registration = Output.ofNullable(registration);
             return this;
-        }
-        public AzureStaticWebAppsArgs build() {
+        }        public AzureStaticWebAppsArgs build() {
             return new AzureStaticWebAppsArgs(enabled, registration);
         }
     }

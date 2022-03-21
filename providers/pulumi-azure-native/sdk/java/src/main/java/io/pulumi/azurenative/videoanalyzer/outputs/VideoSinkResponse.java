@@ -141,32 +141,29 @@ public final class VideoSinkResponse {
             this.inputs = Objects.requireNonNull(inputs);
             return this;
         }
-
+        public Builder inputs(NodeInputResponse... inputs) {
+            return inputs(List.of(inputs));
+        }
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder videoCreationProperties(@Nullable VideoCreationPropertiesResponse videoCreationProperties) {
             this.videoCreationProperties = videoCreationProperties;
             return this;
         }
-
         public Builder videoName(String videoName) {
             this.videoName = Objects.requireNonNull(videoName);
             return this;
         }
-
         public Builder videoPublishingOptions(@Nullable VideoPublishingOptionsResponse videoPublishingOptions) {
             this.videoPublishingOptions = videoPublishingOptions;
             return this;
-        }
-        public VideoSinkResponse build() {
+        }        public VideoSinkResponse build() {
             return new VideoSinkResponse(inputs, name, type, videoCreationProperties, videoName, videoPublishingOptions);
         }
     }

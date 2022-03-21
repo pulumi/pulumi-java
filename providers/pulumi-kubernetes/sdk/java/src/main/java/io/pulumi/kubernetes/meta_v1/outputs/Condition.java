@@ -136,32 +136,26 @@ public final class Condition {
             this.lastTransitionTime = Objects.requireNonNull(lastTransitionTime);
             return this;
         }
-
         public Builder message(String message) {
             this.message = Objects.requireNonNull(message);
             return this;
         }
-
         public Builder observedGeneration(@Nullable Integer observedGeneration) {
             this.observedGeneration = observedGeneration;
             return this;
         }
-
         public Builder reason(String reason) {
             this.reason = Objects.requireNonNull(reason);
             return this;
         }
-
         public Builder status(String status) {
             this.status = Objects.requireNonNull(status);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public Condition build() {
+        }        public Condition build() {
             return new Condition(lastTransitionTime, message, observedGeneration, reason, status, type);
         }
     }

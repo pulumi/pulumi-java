@@ -71,12 +71,10 @@ public final class BucketLifecycleRuleAction {
             this.storageClass = storageClass;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public BucketLifecycleRuleAction build() {
+        }        public BucketLifecycleRuleAction build() {
             return new BucketLifecycleRuleAction(storageClass, type);
         }
     }

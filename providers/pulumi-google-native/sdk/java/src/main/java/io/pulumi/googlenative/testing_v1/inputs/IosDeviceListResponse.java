@@ -60,7 +60,9 @@ public final class IosDeviceListResponse extends io.pulumi.resources.InvokeArgs 
             this.iosDevices = Objects.requireNonNull(iosDevices);
             return this;
         }
-        public IosDeviceListResponse build() {
+        public Builder iosDevices(IosDeviceResponse... iosDevices) {
+            return iosDevices(List.of(iosDevices));
+        }        public IosDeviceListResponse build() {
             return new IosDeviceListResponse(iosDevices);
         }
     }

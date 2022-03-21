@@ -55,8 +55,7 @@ public final class EventHandlerSettingsResponse {
         public Builder items(@Nullable Map<String,List<EventHandlerTemplateResponse>> items) {
             this.items = items;
             return this;
-        }
-        public EventHandlerSettingsResponse build() {
+        }        public EventHandlerSettingsResponse build() {
             return new EventHandlerSettingsResponse(items);
         }
     }

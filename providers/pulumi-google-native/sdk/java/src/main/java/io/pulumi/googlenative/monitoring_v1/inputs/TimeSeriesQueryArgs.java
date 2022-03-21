@@ -112,42 +112,34 @@ public final class TimeSeriesQueryArgs extends io.pulumi.resources.ResourceArgs 
             this.timeSeriesFilter = timeSeriesFilter;
             return this;
         }
-
         public Builder timeSeriesFilter(@Nullable TimeSeriesFilterArgs timeSeriesFilter) {
             this.timeSeriesFilter = Output.ofNullable(timeSeriesFilter);
             return this;
         }
-
         public Builder timeSeriesFilterRatio(@Nullable Output<TimeSeriesFilterRatioArgs> timeSeriesFilterRatio) {
             this.timeSeriesFilterRatio = timeSeriesFilterRatio;
             return this;
         }
-
         public Builder timeSeriesFilterRatio(@Nullable TimeSeriesFilterRatioArgs timeSeriesFilterRatio) {
             this.timeSeriesFilterRatio = Output.ofNullable(timeSeriesFilterRatio);
             return this;
         }
-
         public Builder timeSeriesQueryLanguage(@Nullable Output<String> timeSeriesQueryLanguage) {
             this.timeSeriesQueryLanguage = timeSeriesQueryLanguage;
             return this;
         }
-
         public Builder timeSeriesQueryLanguage(@Nullable String timeSeriesQueryLanguage) {
             this.timeSeriesQueryLanguage = Output.ofNullable(timeSeriesQueryLanguage);
             return this;
         }
-
         public Builder unitOverride(@Nullable Output<String> unitOverride) {
             this.unitOverride = unitOverride;
             return this;
         }
-
         public Builder unitOverride(@Nullable String unitOverride) {
             this.unitOverride = Output.ofNullable(unitOverride);
             return this;
-        }
-        public TimeSeriesQueryArgs build() {
+        }        public TimeSeriesQueryArgs build() {
             return new TimeSeriesQueryArgs(timeSeriesFilter, timeSeriesFilterRatio, timeSeriesQueryLanguage, unitOverride);
         }
     }

@@ -103,22 +103,18 @@ public final class LogzOrganizationPropertiesResponse {
             this.companyName = companyName;
             return this;
         }
-
         public Builder enterpriseAppId(@Nullable String enterpriseAppId) {
             this.enterpriseAppId = enterpriseAppId;
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder singleSignOnUrl(@Nullable String singleSignOnUrl) {
             this.singleSignOnUrl = singleSignOnUrl;
             return this;
-        }
-        public LogzOrganizationPropertiesResponse build() {
+        }        public LogzOrganizationPropertiesResponse build() {
             return new LogzOrganizationPropertiesResponse(companyName, enterpriseAppId, id, singleSignOnUrl);
         }
     }

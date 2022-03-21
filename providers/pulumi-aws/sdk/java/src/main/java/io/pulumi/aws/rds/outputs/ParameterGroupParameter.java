@@ -91,17 +91,14 @@ public final class ParameterGroupParameter {
             this.applyMethod = applyMethod;
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder value(String value) {
             this.value = Objects.requireNonNull(value);
             return this;
-        }
-        public ParameterGroupParameter build() {
+        }        public ParameterGroupParameter build() {
             return new ParameterGroupParameter(applyMethod, name, value);
         }
     }

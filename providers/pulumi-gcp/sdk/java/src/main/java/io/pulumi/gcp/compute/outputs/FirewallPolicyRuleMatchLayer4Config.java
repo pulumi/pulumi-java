@@ -71,12 +71,13 @@ public final class FirewallPolicyRuleMatchLayer4Config {
             this.ipProtocol = Objects.requireNonNull(ipProtocol);
             return this;
         }
-
         public Builder ports(@Nullable List<String> ports) {
             this.ports = ports;
             return this;
         }
-        public FirewallPolicyRuleMatchLayer4Config build() {
+        public Builder ports(String... ports) {
+            return ports(List.of(ports));
+        }        public FirewallPolicyRuleMatchLayer4Config build() {
             return new FirewallPolicyRuleMatchLayer4Config(ipProtocol, ports);
         }
     }

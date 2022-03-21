@@ -56,12 +56,10 @@ public final class ScheduledActionTargetActionPauseClusterGetArgs extends io.pul
             this.clusterIdentifier = Objects.requireNonNull(clusterIdentifier);
             return this;
         }
-
         public Builder clusterIdentifier(String clusterIdentifier) {
             this.clusterIdentifier = Output.of(Objects.requireNonNull(clusterIdentifier));
             return this;
-        }
-        public ScheduledActionTargetActionPauseClusterGetArgs build() {
+        }        public ScheduledActionTargetActionPauseClusterGetArgs build() {
             return new ScheduledActionTargetActionPauseClusterGetArgs(clusterIdentifier);
         }
     }

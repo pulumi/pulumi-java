@@ -146,62 +146,53 @@ public final class NetworkInterfaceIPConfigurationArgs extends io.pulumi.resourc
             this.dnsServers = dnsServers;
             return this;
         }
-
         public Builder dnsServers(@Nullable List<String> dnsServers) {
             this.dnsServers = Output.ofNullable(dnsServers);
             return this;
         }
-
+        public Builder dnsServers(String... dnsServers) {
+            return dnsServers(List.of(dnsServers));
+        }
         public Builder gateway(@Nullable Output<String> gateway) {
             this.gateway = gateway;
             return this;
         }
-
         public Builder gateway(@Nullable String gateway) {
             this.gateway = Output.ofNullable(gateway);
             return this;
         }
-
         public Builder ipAddress(@Nullable Output<String> ipAddress) {
             this.ipAddress = ipAddress;
             return this;
         }
-
         public Builder ipAddress(@Nullable String ipAddress) {
             this.ipAddress = Output.ofNullable(ipAddress);
             return this;
         }
-
         public Builder ipAllocationMethod(@Nullable Output<Either<String,IPAllocationMethod>> ipAllocationMethod) {
             this.ipAllocationMethod = ipAllocationMethod;
             return this;
         }
-
         public Builder ipAllocationMethod(@Nullable Either<String,IPAllocationMethod> ipAllocationMethod) {
             this.ipAllocationMethod = Output.ofNullable(ipAllocationMethod);
             return this;
         }
-
         public Builder ipVersion(@Nullable Output<Either<String,IPVersion>> ipVersion) {
             this.ipVersion = ipVersion;
             return this;
         }
-
         public Builder ipVersion(@Nullable Either<String,IPVersion> ipVersion) {
             this.ipVersion = Output.ofNullable(ipVersion);
             return this;
         }
-
         public Builder subnet(@Nullable Output<String> subnet) {
             this.subnet = subnet;
             return this;
         }
-
         public Builder subnet(@Nullable String subnet) {
             this.subnet = Output.ofNullable(subnet);
             return this;
-        }
-        public NetworkInterfaceIPConfigurationArgs build() {
+        }        public NetworkInterfaceIPConfigurationArgs build() {
             return new NetworkInterfaceIPConfigurationArgs(dnsServers, gateway, ipAddress, ipAllocationMethod, ipVersion, subnet);
         }
     }

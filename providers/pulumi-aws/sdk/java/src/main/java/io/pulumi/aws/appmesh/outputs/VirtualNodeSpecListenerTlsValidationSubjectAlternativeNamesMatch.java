@@ -53,7 +53,9 @@ public final class VirtualNodeSpecListenerTlsValidationSubjectAlternativeNamesMa
             this.exacts = Objects.requireNonNull(exacts);
             return this;
         }
-        public VirtualNodeSpecListenerTlsValidationSubjectAlternativeNamesMatch build() {
+        public Builder exacts(String... exacts) {
+            return exacts(List.of(exacts));
+        }        public VirtualNodeSpecListenerTlsValidationSubjectAlternativeNamesMatch build() {
             return new VirtualNodeSpecListenerTlsValidationSubjectAlternativeNamesMatch(exacts);
         }
     }

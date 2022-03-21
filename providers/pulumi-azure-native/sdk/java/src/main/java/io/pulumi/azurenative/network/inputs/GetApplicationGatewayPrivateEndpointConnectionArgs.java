@@ -88,17 +88,14 @@ public final class GetApplicationGatewayPrivateEndpointConnectionArgs extends io
             this.applicationGatewayName = Objects.requireNonNull(applicationGatewayName);
             return this;
         }
-
         public Builder connectionName(String connectionName) {
             this.connectionName = Objects.requireNonNull(connectionName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
-        }
-        public GetApplicationGatewayPrivateEndpointConnectionArgs build() {
+        }        public GetApplicationGatewayPrivateEndpointConnectionArgs build() {
             return new GetApplicationGatewayPrivateEndpointConnectionArgs(applicationGatewayName, connectionName, resourceGroupName);
         }
     }

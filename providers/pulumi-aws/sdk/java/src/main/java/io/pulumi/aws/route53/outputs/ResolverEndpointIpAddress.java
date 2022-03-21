@@ -79,17 +79,14 @@ public final class ResolverEndpointIpAddress {
             this.ip = ip;
             return this;
         }
-
         public Builder ipId(@Nullable String ipId) {
             this.ipId = ipId;
             return this;
         }
-
         public Builder subnetId(String subnetId) {
             this.subnetId = Objects.requireNonNull(subnetId);
             return this;
-        }
-        public ResolverEndpointIpAddress build() {
+        }        public ResolverEndpointIpAddress build() {
             return new ResolverEndpointIpAddress(ip, ipId, subnetId);
         }
     }

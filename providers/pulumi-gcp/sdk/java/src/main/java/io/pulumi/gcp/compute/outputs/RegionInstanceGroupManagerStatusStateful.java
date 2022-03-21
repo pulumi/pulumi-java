@@ -73,12 +73,13 @@ public final class RegionInstanceGroupManagerStatusStateful {
             this.hasStatefulConfig = hasStatefulConfig;
             return this;
         }
-
         public Builder perInstanceConfigs(@Nullable List<RegionInstanceGroupManagerStatusStatefulPerInstanceConfig> perInstanceConfigs) {
             this.perInstanceConfigs = perInstanceConfigs;
             return this;
         }
-        public RegionInstanceGroupManagerStatusStateful build() {
+        public Builder perInstanceConfigs(RegionInstanceGroupManagerStatusStatefulPerInstanceConfig... perInstanceConfigs) {
+            return perInstanceConfigs(List.of(perInstanceConfigs));
+        }        public RegionInstanceGroupManagerStatusStateful build() {
             return new RegionInstanceGroupManagerStatusStateful(hasStatefulConfig, perInstanceConfigs);
         }
     }

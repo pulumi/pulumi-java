@@ -430,122 +430,110 @@ public final class GetVirtualHubResult {
             this.addressPrefix = addressPrefix;
             return this;
         }
-
         public Builder allowBranchToBranchTraffic(@Nullable Boolean allowBranchToBranchTraffic) {
             this.allowBranchToBranchTraffic = allowBranchToBranchTraffic;
             return this;
         }
-
         public Builder azureFirewall(@Nullable SubResourceResponse azureFirewall) {
             this.azureFirewall = azureFirewall;
             return this;
         }
-
         public Builder bgpConnections(List<SubResourceResponse> bgpConnections) {
             this.bgpConnections = Objects.requireNonNull(bgpConnections);
             return this;
         }
-
+        public Builder bgpConnections(SubResourceResponse... bgpConnections) {
+            return bgpConnections(List.of(bgpConnections));
+        }
         public Builder etag(String etag) {
             this.etag = Objects.requireNonNull(etag);
             return this;
         }
-
         public Builder expressRouteGateway(@Nullable SubResourceResponse expressRouteGateway) {
             this.expressRouteGateway = expressRouteGateway;
             return this;
         }
-
         public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
-
         public Builder ipConfigurations(List<SubResourceResponse> ipConfigurations) {
             this.ipConfigurations = Objects.requireNonNull(ipConfigurations);
             return this;
         }
-
+        public Builder ipConfigurations(SubResourceResponse... ipConfigurations) {
+            return ipConfigurations(List.of(ipConfigurations));
+        }
         public Builder location(String location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder p2SVpnGateway(@Nullable SubResourceResponse p2SVpnGateway) {
             this.p2SVpnGateway = p2SVpnGateway;
             return this;
         }
-
         public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
-
         public Builder routeTable(@Nullable VirtualHubRouteTableResponse routeTable) {
             this.routeTable = routeTable;
             return this;
         }
-
         public Builder routingState(String routingState) {
             this.routingState = Objects.requireNonNull(routingState);
             return this;
         }
-
         public Builder securityPartnerProvider(@Nullable SubResourceResponse securityPartnerProvider) {
             this.securityPartnerProvider = securityPartnerProvider;
             return this;
         }
-
         public Builder securityProviderName(@Nullable String securityProviderName) {
             this.securityProviderName = securityProviderName;
             return this;
         }
-
         public Builder sku(@Nullable String sku) {
             this.sku = sku;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder virtualHubRouteTableV2s(@Nullable List<VirtualHubRouteTableV2Response> virtualHubRouteTableV2s) {
             this.virtualHubRouteTableV2s = virtualHubRouteTableV2s;
             return this;
         }
-
+        public Builder virtualHubRouteTableV2s(VirtualHubRouteTableV2Response... virtualHubRouteTableV2s) {
+            return virtualHubRouteTableV2s(List.of(virtualHubRouteTableV2s));
+        }
         public Builder virtualRouterAsn(@Nullable Double virtualRouterAsn) {
             this.virtualRouterAsn = virtualRouterAsn;
             return this;
         }
-
         public Builder virtualRouterIps(@Nullable List<String> virtualRouterIps) {
             this.virtualRouterIps = virtualRouterIps;
             return this;
         }
-
+        public Builder virtualRouterIps(String... virtualRouterIps) {
+            return virtualRouterIps(List.of(virtualRouterIps));
+        }
         public Builder virtualWan(@Nullable SubResourceResponse virtualWan) {
             this.virtualWan = virtualWan;
             return this;
         }
-
         public Builder vpnGateway(@Nullable SubResourceResponse vpnGateway) {
             this.vpnGateway = vpnGateway;
             return this;
-        }
-        public GetVirtualHubResult build() {
+        }        public GetVirtualHubResult build() {
             return new GetVirtualHubResult(addressPrefix, allowBranchToBranchTraffic, azureFirewall, bgpConnections, etag, expressRouteGateway, id, ipConfigurations, location, name, p2SVpnGateway, provisioningState, routeTable, routingState, securityPartnerProvider, securityProviderName, sku, tags, type, virtualHubRouteTableV2s, virtualRouterAsn, virtualRouterIps, virtualWan, vpnGateway);
         }
     }

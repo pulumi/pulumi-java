@@ -121,27 +121,22 @@ public final class GetFilterResult {
             this.arn = arn;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
-
         public Builder filterAction(@Nullable FilterAction filterAction) {
             this.filterAction = filterAction;
             return this;
         }
-
         public Builder filterCriteria(@Nullable FilterCriteria filterCriteria) {
             this.filterCriteria = filterCriteria;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = name;
             return this;
-        }
-        public GetFilterResult build() {
+        }        public GetFilterResult build() {
             return new GetFilterResult(arn, description, filterAction, filterCriteria, name);
         }
     }

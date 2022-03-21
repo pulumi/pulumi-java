@@ -60,12 +60,10 @@ public final class GoogleCloudDialogflowCxV3TextInputArgs extends io.pulumi.reso
             this.text = Objects.requireNonNull(text);
             return this;
         }
-
         public Builder text(String text) {
             this.text = Output.of(Objects.requireNonNull(text));
             return this;
-        }
-        public GoogleCloudDialogflowCxV3TextInputArgs build() {
+        }        public GoogleCloudDialogflowCxV3TextInputArgs build() {
             return new GoogleCloudDialogflowCxV3TextInputArgs(text);
         }
     }

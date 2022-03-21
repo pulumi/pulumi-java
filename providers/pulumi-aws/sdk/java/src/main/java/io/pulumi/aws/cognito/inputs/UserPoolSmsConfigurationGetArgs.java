@@ -73,22 +73,18 @@ public final class UserPoolSmsConfigurationGetArgs extends io.pulumi.resources.R
             this.externalId = Objects.requireNonNull(externalId);
             return this;
         }
-
         public Builder externalId(String externalId) {
             this.externalId = Output.of(Objects.requireNonNull(externalId));
             return this;
         }
-
         public Builder snsCallerArn(Output<String> snsCallerArn) {
             this.snsCallerArn = Objects.requireNonNull(snsCallerArn);
             return this;
         }
-
         public Builder snsCallerArn(String snsCallerArn) {
             this.snsCallerArn = Output.of(Objects.requireNonNull(snsCallerArn));
             return this;
-        }
-        public UserPoolSmsConfigurationGetArgs build() {
+        }        public UserPoolSmsConfigurationGetArgs build() {
             return new UserPoolSmsConfigurationGetArgs(externalId, snsCallerArn);
         }
     }

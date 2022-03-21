@@ -54,8 +54,7 @@ public final class GetMultiRegionAccessPointPolicyArgs extends io.pulumi.resourc
         public Builder mrapName(String mrapName) {
             this.mrapName = Objects.requireNonNull(mrapName);
             return this;
-        }
-        public GetMultiRegionAccessPointPolicyArgs build() {
+        }        public GetMultiRegionAccessPointPolicyArgs build() {
             return new GetMultiRegionAccessPointPolicyArgs(mrapName);
         }
     }

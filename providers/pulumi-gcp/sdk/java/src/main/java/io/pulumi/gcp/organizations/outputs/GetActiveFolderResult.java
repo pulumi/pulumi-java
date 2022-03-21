@@ -85,22 +85,18 @@ public final class GetActiveFolderResult {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder parent(String parent) {
             this.parent = Objects.requireNonNull(parent);
             return this;
-        }
-        public GetActiveFolderResult build() {
+        }        public GetActiveFolderResult build() {
             return new GetActiveFolderResult(displayName, id, name, parent);
         }
     }

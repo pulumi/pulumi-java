@@ -105,27 +105,28 @@ public final class GetPrefixListResult {
             this.cidrBlocks = Objects.requireNonNull(cidrBlocks);
             return this;
         }
-
+        public Builder cidrBlocks(String... cidrBlocks) {
+            return cidrBlocks(List.of(cidrBlocks));
+        }
         public Builder filters(@Nullable List<GetPrefixListFilter> filters) {
             this.filters = filters;
             return this;
         }
-
+        public Builder filters(GetPrefixListFilter... filters) {
+            return filters(List.of(filters));
+        }
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder prefixListId(@Nullable String prefixListId) {
             this.prefixListId = prefixListId;
             return this;
-        }
-        public GetPrefixListResult build() {
+        }        public GetPrefixListResult build() {
             return new GetPrefixListResult(cidrBlocks, filters, id, name, prefixListId);
         }
     }

@@ -202,52 +202,45 @@ public final class GoogleCloudMlV1__HyperparameterOutputResponse {
             this.allMetrics = Objects.requireNonNull(allMetrics);
             return this;
         }
-
+        public Builder allMetrics(GoogleCloudMlV1_HyperparameterOutput_HyperparameterMetricResponse... allMetrics) {
+            return allMetrics(List.of(allMetrics));
+        }
         public Builder builtInAlgorithmOutput(GoogleCloudMlV1__BuiltInAlgorithmOutputResponse builtInAlgorithmOutput) {
             this.builtInAlgorithmOutput = Objects.requireNonNull(builtInAlgorithmOutput);
             return this;
         }
-
         public Builder endTime(String endTime) {
             this.endTime = Objects.requireNonNull(endTime);
             return this;
         }
-
         public Builder finalMetric(GoogleCloudMlV1_HyperparameterOutput_HyperparameterMetricResponse finalMetric) {
             this.finalMetric = Objects.requireNonNull(finalMetric);
             return this;
         }
-
         public Builder hyperparameters(Map<String,String> hyperparameters) {
             this.hyperparameters = Objects.requireNonNull(hyperparameters);
             return this;
         }
-
         public Builder isTrialStoppedEarly(Boolean isTrialStoppedEarly) {
             this.isTrialStoppedEarly = Objects.requireNonNull(isTrialStoppedEarly);
             return this;
         }
-
         public Builder startTime(String startTime) {
             this.startTime = Objects.requireNonNull(startTime);
             return this;
         }
-
         public Builder state(String state) {
             this.state = Objects.requireNonNull(state);
             return this;
         }
-
         public Builder trialId(String trialId) {
             this.trialId = Objects.requireNonNull(trialId);
             return this;
         }
-
         public Builder webAccessUris(Map<String,String> webAccessUris) {
             this.webAccessUris = Objects.requireNonNull(webAccessUris);
             return this;
-        }
-        public GoogleCloudMlV1__HyperparameterOutputResponse build() {
+        }        public GoogleCloudMlV1__HyperparameterOutputResponse build() {
             return new GoogleCloudMlV1__HyperparameterOutputResponse(allMetrics, builtInAlgorithmOutput, endTime, finalMetric, hyperparameters, isTrialStoppedEarly, startTime, state, trialId, webAccessUris);
         }
     }

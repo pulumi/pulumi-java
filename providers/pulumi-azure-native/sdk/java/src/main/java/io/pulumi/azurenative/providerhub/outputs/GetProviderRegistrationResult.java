@@ -94,22 +94,18 @@ public final class GetProviderRegistrationResult {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder properties(ProviderRegistrationResponseProperties properties) {
             this.properties = Objects.requireNonNull(properties);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public GetProviderRegistrationResult build() {
+        }        public GetProviderRegistrationResult build() {
             return new GetProviderRegistrationResult(id, name, properties, type);
         }
     }

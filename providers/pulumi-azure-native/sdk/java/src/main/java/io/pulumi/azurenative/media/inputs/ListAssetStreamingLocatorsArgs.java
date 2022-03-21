@@ -88,17 +88,14 @@ public final class ListAssetStreamingLocatorsArgs extends io.pulumi.resources.In
             this.accountName = Objects.requireNonNull(accountName);
             return this;
         }
-
         public Builder assetName(String assetName) {
             this.assetName = Objects.requireNonNull(assetName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
-        }
-        public ListAssetStreamingLocatorsArgs build() {
+        }        public ListAssetStreamingLocatorsArgs build() {
             return new ListAssetStreamingLocatorsArgs(accountName, assetName, resourceGroupName);
         }
     }

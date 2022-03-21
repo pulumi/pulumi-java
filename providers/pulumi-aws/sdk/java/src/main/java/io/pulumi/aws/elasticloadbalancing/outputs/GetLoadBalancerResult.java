@@ -220,107 +220,101 @@ public final class GetLoadBalancerResult {
             this.accessLogs = Objects.requireNonNull(accessLogs);
             return this;
         }
-
         public Builder arn(String arn) {
             this.arn = Objects.requireNonNull(arn);
             return this;
         }
-
         public Builder availabilityZones(List<String> availabilityZones) {
             this.availabilityZones = Objects.requireNonNull(availabilityZones);
             return this;
         }
-
+        public Builder availabilityZones(String... availabilityZones) {
+            return availabilityZones(List.of(availabilityZones));
+        }
         public Builder connectionDraining(Boolean connectionDraining) {
             this.connectionDraining = Objects.requireNonNull(connectionDraining);
             return this;
         }
-
         public Builder connectionDrainingTimeout(Integer connectionDrainingTimeout) {
             this.connectionDrainingTimeout = Objects.requireNonNull(connectionDrainingTimeout);
             return this;
         }
-
         public Builder crossZoneLoadBalancing(Boolean crossZoneLoadBalancing) {
             this.crossZoneLoadBalancing = Objects.requireNonNull(crossZoneLoadBalancing);
             return this;
         }
-
         public Builder desyncMitigationMode(String desyncMitigationMode) {
             this.desyncMitigationMode = Objects.requireNonNull(desyncMitigationMode);
             return this;
         }
-
         public Builder dnsName(String dnsName) {
             this.dnsName = Objects.requireNonNull(dnsName);
             return this;
         }
-
         public Builder healthCheck(GetLoadBalancerHealthCheck healthCheck) {
             this.healthCheck = Objects.requireNonNull(healthCheck);
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder idleTimeout(Integer idleTimeout) {
             this.idleTimeout = Objects.requireNonNull(idleTimeout);
             return this;
         }
-
         public Builder instances(List<String> instances) {
             this.instances = Objects.requireNonNull(instances);
             return this;
         }
-
+        public Builder instances(String... instances) {
+            return instances(List.of(instances));
+        }
         public Builder internal(Boolean internal) {
             this.internal = Objects.requireNonNull(internal);
             return this;
         }
-
         public Builder listeners(List<GetLoadBalancerListener> listeners) {
             this.listeners = Objects.requireNonNull(listeners);
             return this;
         }
-
+        public Builder listeners(GetLoadBalancerListener... listeners) {
+            return listeners(List.of(listeners));
+        }
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder securityGroups(List<String> securityGroups) {
             this.securityGroups = Objects.requireNonNull(securityGroups);
             return this;
         }
-
+        public Builder securityGroups(String... securityGroups) {
+            return securityGroups(List.of(securityGroups));
+        }
         public Builder sourceSecurityGroup(String sourceSecurityGroup) {
             this.sourceSecurityGroup = Objects.requireNonNull(sourceSecurityGroup);
             return this;
         }
-
         public Builder sourceSecurityGroupId(String sourceSecurityGroupId) {
             this.sourceSecurityGroupId = Objects.requireNonNull(sourceSecurityGroupId);
             return this;
         }
-
         public Builder subnets(List<String> subnets) {
             this.subnets = Objects.requireNonNull(subnets);
             return this;
         }
-
+        public Builder subnets(String... subnets) {
+            return subnets(List.of(subnets));
+        }
         public Builder tags(Map<String,String> tags) {
             this.tags = Objects.requireNonNull(tags);
             return this;
         }
-
         public Builder zoneId(String zoneId) {
             this.zoneId = Objects.requireNonNull(zoneId);
             return this;
-        }
-        public GetLoadBalancerResult build() {
+        }        public GetLoadBalancerResult build() {
             return new GetLoadBalancerResult(accessLogs, arn, availabilityZones, connectionDraining, connectionDrainingTimeout, crossZoneLoadBalancing, desyncMitigationMode, dnsName, healthCheck, id, idleTimeout, instances, internal, listeners, name, securityGroups, sourceSecurityGroup, sourceSecurityGroupId, subnets, tags, zoneId);
         }
     }

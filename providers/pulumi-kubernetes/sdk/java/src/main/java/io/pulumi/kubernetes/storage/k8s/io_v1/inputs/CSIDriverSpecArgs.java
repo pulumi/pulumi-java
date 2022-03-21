@@ -192,72 +192,64 @@ public final class CSIDriverSpecArgs extends io.pulumi.resources.ResourceArgs {
             this.attachRequired = attachRequired;
             return this;
         }
-
         public Builder attachRequired(@Nullable Boolean attachRequired) {
             this.attachRequired = Output.ofNullable(attachRequired);
             return this;
         }
-
         public Builder fsGroupPolicy(@Nullable Output<String> fsGroupPolicy) {
             this.fsGroupPolicy = fsGroupPolicy;
             return this;
         }
-
         public Builder fsGroupPolicy(@Nullable String fsGroupPolicy) {
             this.fsGroupPolicy = Output.ofNullable(fsGroupPolicy);
             return this;
         }
-
         public Builder podInfoOnMount(@Nullable Output<Boolean> podInfoOnMount) {
             this.podInfoOnMount = podInfoOnMount;
             return this;
         }
-
         public Builder podInfoOnMount(@Nullable Boolean podInfoOnMount) {
             this.podInfoOnMount = Output.ofNullable(podInfoOnMount);
             return this;
         }
-
         public Builder requiresRepublish(@Nullable Output<Boolean> requiresRepublish) {
             this.requiresRepublish = requiresRepublish;
             return this;
         }
-
         public Builder requiresRepublish(@Nullable Boolean requiresRepublish) {
             this.requiresRepublish = Output.ofNullable(requiresRepublish);
             return this;
         }
-
         public Builder storageCapacity(@Nullable Output<Boolean> storageCapacity) {
             this.storageCapacity = storageCapacity;
             return this;
         }
-
         public Builder storageCapacity(@Nullable Boolean storageCapacity) {
             this.storageCapacity = Output.ofNullable(storageCapacity);
             return this;
         }
-
         public Builder tokenRequests(@Nullable Output<List<TokenRequestArgs>> tokenRequests) {
             this.tokenRequests = tokenRequests;
             return this;
         }
-
         public Builder tokenRequests(@Nullable List<TokenRequestArgs> tokenRequests) {
             this.tokenRequests = Output.ofNullable(tokenRequests);
             return this;
         }
-
+        public Builder tokenRequests(TokenRequestArgs... tokenRequests) {
+            return tokenRequests(List.of(tokenRequests));
+        }
         public Builder volumeLifecycleModes(@Nullable Output<List<String>> volumeLifecycleModes) {
             this.volumeLifecycleModes = volumeLifecycleModes;
             return this;
         }
-
         public Builder volumeLifecycleModes(@Nullable List<String> volumeLifecycleModes) {
             this.volumeLifecycleModes = Output.ofNullable(volumeLifecycleModes);
             return this;
         }
-        public CSIDriverSpecArgs build() {
+        public Builder volumeLifecycleModes(String... volumeLifecycleModes) {
+            return volumeLifecycleModes(List.of(volumeLifecycleModes));
+        }        public CSIDriverSpecArgs build() {
             return new CSIDriverSpecArgs(attachRequired, fsGroupPolicy, podInfoOnMount, requiresRepublish, storageCapacity, tokenRequests, volumeLifecycleModes);
         }
     }

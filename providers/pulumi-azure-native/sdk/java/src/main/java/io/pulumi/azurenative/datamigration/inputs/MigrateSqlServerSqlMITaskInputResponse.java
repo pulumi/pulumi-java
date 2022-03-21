@@ -179,42 +179,43 @@ public final class MigrateSqlServerSqlMITaskInputResponse extends io.pulumi.reso
             this.backupBlobShare = Objects.requireNonNull(backupBlobShare);
             return this;
         }
-
         public Builder backupFileShare(@Nullable FileShareResponse backupFileShare) {
             this.backupFileShare = backupFileShare;
             return this;
         }
-
         public Builder backupMode(@Nullable String backupMode) {
             this.backupMode = backupMode;
             return this;
         }
-
         public Builder selectedAgentJobs(@Nullable List<String> selectedAgentJobs) {
             this.selectedAgentJobs = selectedAgentJobs;
             return this;
         }
-
+        public Builder selectedAgentJobs(String... selectedAgentJobs) {
+            return selectedAgentJobs(List.of(selectedAgentJobs));
+        }
         public Builder selectedDatabases(List<MigrateSqlServerSqlMIDatabaseInputResponse> selectedDatabases) {
             this.selectedDatabases = Objects.requireNonNull(selectedDatabases);
             return this;
         }
-
+        public Builder selectedDatabases(MigrateSqlServerSqlMIDatabaseInputResponse... selectedDatabases) {
+            return selectedDatabases(List.of(selectedDatabases));
+        }
         public Builder selectedLogins(@Nullable List<String> selectedLogins) {
             this.selectedLogins = selectedLogins;
             return this;
         }
-
+        public Builder selectedLogins(String... selectedLogins) {
+            return selectedLogins(List.of(selectedLogins));
+        }
         public Builder sourceConnectionInfo(SqlConnectionInfoResponse sourceConnectionInfo) {
             this.sourceConnectionInfo = Objects.requireNonNull(sourceConnectionInfo);
             return this;
         }
-
         public Builder targetConnectionInfo(SqlConnectionInfoResponse targetConnectionInfo) {
             this.targetConnectionInfo = Objects.requireNonNull(targetConnectionInfo);
             return this;
-        }
-        public MigrateSqlServerSqlMITaskInputResponse build() {
+        }        public MigrateSqlServerSqlMITaskInputResponse build() {
             return new MigrateSqlServerSqlMITaskInputResponse(backupBlobShare, backupFileShare, backupMode, selectedAgentJobs, selectedDatabases, selectedLogins, sourceConnectionInfo, targetConnectionInfo);
         }
     }

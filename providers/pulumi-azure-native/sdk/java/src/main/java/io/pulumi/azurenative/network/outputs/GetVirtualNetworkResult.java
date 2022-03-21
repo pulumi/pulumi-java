@@ -337,92 +337,83 @@ public final class GetVirtualNetworkResult {
             this.addressSpace = addressSpace;
             return this;
         }
-
         public Builder bgpCommunities(@Nullable VirtualNetworkBgpCommunitiesResponse bgpCommunities) {
             this.bgpCommunities = bgpCommunities;
             return this;
         }
-
         public Builder ddosProtectionPlan(@Nullable SubResourceResponse ddosProtectionPlan) {
             this.ddosProtectionPlan = ddosProtectionPlan;
             return this;
         }
-
         public Builder dhcpOptions(@Nullable DhcpOptionsResponse dhcpOptions) {
             this.dhcpOptions = dhcpOptions;
             return this;
         }
-
         public Builder enableDdosProtection(@Nullable Boolean enableDdosProtection) {
             this.enableDdosProtection = enableDdosProtection;
             return this;
         }
-
         public Builder enableVmProtection(@Nullable Boolean enableVmProtection) {
             this.enableVmProtection = enableVmProtection;
             return this;
         }
-
         public Builder etag(String etag) {
             this.etag = Objects.requireNonNull(etag);
             return this;
         }
-
         public Builder extendedLocation(@Nullable ExtendedLocationResponse extendedLocation) {
             this.extendedLocation = extendedLocation;
             return this;
         }
-
         public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
-
         public Builder ipAllocations(@Nullable List<SubResourceResponse> ipAllocations) {
             this.ipAllocations = ipAllocations;
             return this;
         }
-
+        public Builder ipAllocations(SubResourceResponse... ipAllocations) {
+            return ipAllocations(List.of(ipAllocations));
+        }
         public Builder location(@Nullable String location) {
             this.location = location;
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
-
         public Builder resourceGuid(String resourceGuid) {
             this.resourceGuid = Objects.requireNonNull(resourceGuid);
             return this;
         }
-
         public Builder subnets(@Nullable List<SubnetResponse> subnets) {
             this.subnets = subnets;
             return this;
         }
-
+        public Builder subnets(SubnetResponse... subnets) {
+            return subnets(List.of(subnets));
+        }
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder virtualNetworkPeerings(@Nullable List<VirtualNetworkPeeringResponse> virtualNetworkPeerings) {
             this.virtualNetworkPeerings = virtualNetworkPeerings;
             return this;
         }
-        public GetVirtualNetworkResult build() {
+        public Builder virtualNetworkPeerings(VirtualNetworkPeeringResponse... virtualNetworkPeerings) {
+            return virtualNetworkPeerings(List.of(virtualNetworkPeerings));
+        }        public GetVirtualNetworkResult build() {
             return new GetVirtualNetworkResult(addressSpace, bgpCommunities, ddosProtectionPlan, dhcpOptions, enableDdosProtection, enableVmProtection, etag, extendedLocation, id, ipAllocations, location, name, provisioningState, resourceGuid, subnets, tags, type, virtualNetworkPeerings);
         }
     }

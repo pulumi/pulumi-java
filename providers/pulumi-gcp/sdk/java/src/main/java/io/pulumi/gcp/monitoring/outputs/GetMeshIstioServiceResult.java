@@ -121,47 +121,41 @@ public final class GetMeshIstioServiceResult {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder meshUid(String meshUid) {
             this.meshUid = Objects.requireNonNull(meshUid);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = project;
             return this;
         }
-
         public Builder serviceId(String serviceId) {
             this.serviceId = Objects.requireNonNull(serviceId);
             return this;
         }
-
         public Builder serviceName(String serviceName) {
             this.serviceName = Objects.requireNonNull(serviceName);
             return this;
         }
-
         public Builder serviceNamespace(String serviceNamespace) {
             this.serviceNamespace = Objects.requireNonNull(serviceNamespace);
             return this;
         }
-
         public Builder telemetries(List<GetMeshIstioServiceTelemetry> telemetries) {
             this.telemetries = Objects.requireNonNull(telemetries);
             return this;
         }
-        public GetMeshIstioServiceResult build() {
+        public Builder telemetries(GetMeshIstioServiceTelemetry... telemetries) {
+            return telemetries(List.of(telemetries));
+        }        public GetMeshIstioServiceResult build() {
             return new GetMeshIstioServiceResult(displayName, id, meshUid, name, project, serviceId, serviceName, serviceNamespace, telemetries);
         }
     }

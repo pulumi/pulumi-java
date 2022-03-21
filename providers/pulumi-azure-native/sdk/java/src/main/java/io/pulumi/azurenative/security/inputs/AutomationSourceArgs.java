@@ -82,22 +82,21 @@ public final class AutomationSourceArgs extends io.pulumi.resources.ResourceArgs
             this.eventSource = eventSource;
             return this;
         }
-
         public Builder eventSource(@Nullable Either<String,EventSource> eventSource) {
             this.eventSource = Output.ofNullable(eventSource);
             return this;
         }
-
         public Builder ruleSets(@Nullable Output<List<AutomationRuleSetArgs>> ruleSets) {
             this.ruleSets = ruleSets;
             return this;
         }
-
         public Builder ruleSets(@Nullable List<AutomationRuleSetArgs> ruleSets) {
             this.ruleSets = Output.ofNullable(ruleSets);
             return this;
         }
-        public AutomationSourceArgs build() {
+        public Builder ruleSets(AutomationRuleSetArgs... ruleSets) {
+            return ruleSets(List.of(ruleSets));
+        }        public AutomationSourceArgs build() {
             return new AutomationSourceArgs(eventSource, ruleSets);
         }
     }

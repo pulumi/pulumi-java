@@ -227,112 +227,99 @@ public final class GetLoadBalancerResult {
             this.accessLogs = Objects.requireNonNull(accessLogs);
             return this;
         }
-
         public Builder arn(String arn) {
             this.arn = Objects.requireNonNull(arn);
             return this;
         }
-
         public Builder arnSuffix(String arnSuffix) {
             this.arnSuffix = Objects.requireNonNull(arnSuffix);
             return this;
         }
-
         public Builder customerOwnedIpv4Pool(String customerOwnedIpv4Pool) {
             this.customerOwnedIpv4Pool = Objects.requireNonNull(customerOwnedIpv4Pool);
             return this;
         }
-
         public Builder desyncMitigationMode(String desyncMitigationMode) {
             this.desyncMitigationMode = Objects.requireNonNull(desyncMitigationMode);
             return this;
         }
-
         public Builder dnsName(String dnsName) {
             this.dnsName = Objects.requireNonNull(dnsName);
             return this;
         }
-
         public Builder dropInvalidHeaderFields(Boolean dropInvalidHeaderFields) {
             this.dropInvalidHeaderFields = Objects.requireNonNull(dropInvalidHeaderFields);
             return this;
         }
-
         public Builder enableDeletionProtection(Boolean enableDeletionProtection) {
             this.enableDeletionProtection = Objects.requireNonNull(enableDeletionProtection);
             return this;
         }
-
         public Builder enableHttp2(Boolean enableHttp2) {
             this.enableHttp2 = Objects.requireNonNull(enableHttp2);
             return this;
         }
-
         public Builder enableWafFailOpen(Boolean enableWafFailOpen) {
             this.enableWafFailOpen = Objects.requireNonNull(enableWafFailOpen);
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder idleTimeout(Integer idleTimeout) {
             this.idleTimeout = Objects.requireNonNull(idleTimeout);
             return this;
         }
-
         public Builder internal(Boolean internal) {
             this.internal = Objects.requireNonNull(internal);
             return this;
         }
-
         public Builder ipAddressType(String ipAddressType) {
             this.ipAddressType = Objects.requireNonNull(ipAddressType);
             return this;
         }
-
         public Builder loadBalancerType(String loadBalancerType) {
             this.loadBalancerType = Objects.requireNonNull(loadBalancerType);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder securityGroups(List<String> securityGroups) {
             this.securityGroups = Objects.requireNonNull(securityGroups);
             return this;
         }
-
+        public Builder securityGroups(String... securityGroups) {
+            return securityGroups(List.of(securityGroups));
+        }
         public Builder subnetMappings(List<GetLoadBalancerSubnetMapping> subnetMappings) {
             this.subnetMappings = Objects.requireNonNull(subnetMappings);
             return this;
         }
-
+        public Builder subnetMappings(GetLoadBalancerSubnetMapping... subnetMappings) {
+            return subnetMappings(List.of(subnetMappings));
+        }
         public Builder subnets(List<String> subnets) {
             this.subnets = Objects.requireNonNull(subnets);
             return this;
         }
-
+        public Builder subnets(String... subnets) {
+            return subnets(List.of(subnets));
+        }
         public Builder tags(Map<String,String> tags) {
             this.tags = Objects.requireNonNull(tags);
             return this;
         }
-
         public Builder vpcId(String vpcId) {
             this.vpcId = Objects.requireNonNull(vpcId);
             return this;
         }
-
         public Builder zoneId(String zoneId) {
             this.zoneId = Objects.requireNonNull(zoneId);
             return this;
-        }
-        public GetLoadBalancerResult build() {
+        }        public GetLoadBalancerResult build() {
             return new GetLoadBalancerResult(accessLogs, arn, arnSuffix, customerOwnedIpv4Pool, desyncMitigationMode, dnsName, dropInvalidHeaderFields, enableDeletionProtection, enableHttp2, enableWafFailOpen, id, idleTimeout, internal, ipAddressType, loadBalancerType, name, securityGroups, subnetMappings, subnets, tags, vpcId, zoneId);
         }
     }

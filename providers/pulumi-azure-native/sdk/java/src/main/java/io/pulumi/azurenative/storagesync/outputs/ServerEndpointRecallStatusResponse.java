@@ -88,17 +88,17 @@ public final class ServerEndpointRecallStatusResponse {
             this.lastUpdatedTimestamp = Objects.requireNonNull(lastUpdatedTimestamp);
             return this;
         }
-
         public Builder recallErrors(List<ServerEndpointRecallErrorResponse> recallErrors) {
             this.recallErrors = Objects.requireNonNull(recallErrors);
             return this;
         }
-
+        public Builder recallErrors(ServerEndpointRecallErrorResponse... recallErrors) {
+            return recallErrors(List.of(recallErrors));
+        }
         public Builder totalRecallErrorsCount(Double totalRecallErrorsCount) {
             this.totalRecallErrorsCount = Objects.requireNonNull(totalRecallErrorsCount);
             return this;
-        }
-        public ServerEndpointRecallStatusResponse build() {
+        }        public ServerEndpointRecallStatusResponse build() {
             return new ServerEndpointRecallStatusResponse(lastUpdatedTimestamp, recallErrors, totalRecallErrorsCount);
         }
     }

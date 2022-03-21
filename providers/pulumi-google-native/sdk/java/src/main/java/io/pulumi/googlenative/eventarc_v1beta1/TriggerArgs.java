@@ -174,92 +174,77 @@ public final class TriggerArgs extends io.pulumi.resources.ResourceArgs {
             this.destination = Objects.requireNonNull(destination);
             return this;
         }
-
         public Builder destination(DestinationArgs destination) {
             this.destination = Output.of(Objects.requireNonNull(destination));
             return this;
         }
-
         public Builder labels(@Nullable Output<Map<String,String>> labels) {
             this.labels = labels;
             return this;
         }
-
         public Builder labels(@Nullable Map<String,String> labels) {
             this.labels = Output.ofNullable(labels);
             return this;
         }
-
         public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder matchingCriteria(Output<List<MatchingCriteriaArgs>> matchingCriteria) {
             this.matchingCriteria = Objects.requireNonNull(matchingCriteria);
             return this;
         }
-
         public Builder matchingCriteria(List<MatchingCriteriaArgs> matchingCriteria) {
             this.matchingCriteria = Output.of(Objects.requireNonNull(matchingCriteria));
             return this;
         }
-
+        public Builder matchingCriteria(MatchingCriteriaArgs... matchingCriteria) {
+            return matchingCriteria(List.of(matchingCriteria));
+        }
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
         }
-
         public Builder serviceAccount(@Nullable Output<String> serviceAccount) {
             this.serviceAccount = serviceAccount;
             return this;
         }
-
         public Builder serviceAccount(@Nullable String serviceAccount) {
             this.serviceAccount = Output.ofNullable(serviceAccount);
             return this;
         }
-
         public Builder triggerId(Output<String> triggerId) {
             this.triggerId = Objects.requireNonNull(triggerId);
             return this;
         }
-
         public Builder triggerId(String triggerId) {
             this.triggerId = Output.of(Objects.requireNonNull(triggerId));
             return this;
         }
-
         public Builder validateOnly(Output<String> validateOnly) {
             this.validateOnly = Objects.requireNonNull(validateOnly);
             return this;
         }
-
         public Builder validateOnly(String validateOnly) {
             this.validateOnly = Output.of(Objects.requireNonNull(validateOnly));
             return this;
-        }
-        public TriggerArgs build() {
+        }        public TriggerArgs build() {
             return new TriggerArgs(destination, labels, location, matchingCriteria, name, project, serviceAccount, triggerId, validateOnly);
         }
     }

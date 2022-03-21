@@ -75,22 +75,18 @@ public final class SpotInstanceRequestCapacityReservationSpecificationArgs exten
             this.capacityReservationPreference = capacityReservationPreference;
             return this;
         }
-
         public Builder capacityReservationPreference(@Nullable String capacityReservationPreference) {
             this.capacityReservationPreference = Output.ofNullable(capacityReservationPreference);
             return this;
         }
-
         public Builder capacityReservationTarget(@Nullable Output<SpotInstanceRequestCapacityReservationSpecificationCapacityReservationTargetArgs> capacityReservationTarget) {
             this.capacityReservationTarget = capacityReservationTarget;
             return this;
         }
-
         public Builder capacityReservationTarget(@Nullable SpotInstanceRequestCapacityReservationSpecificationCapacityReservationTargetArgs capacityReservationTarget) {
             this.capacityReservationTarget = Output.ofNullable(capacityReservationTarget);
             return this;
-        }
-        public SpotInstanceRequestCapacityReservationSpecificationArgs build() {
+        }        public SpotInstanceRequestCapacityReservationSpecificationArgs build() {
             return new SpotInstanceRequestCapacityReservationSpecificationArgs(capacityReservationPreference, capacityReservationTarget);
         }
     }

@@ -78,12 +78,10 @@ public final class AzureMachineLearningWebServiceOutputColumnResponse extends io
             this.dataType = dataType;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = name;
             return this;
-        }
-        public AzureMachineLearningWebServiceOutputColumnResponse build() {
+        }        public AzureMachineLearningWebServiceOutputColumnResponse build() {
             return new AzureMachineLearningWebServiceOutputColumnResponse(dataType, name);
         }
     }

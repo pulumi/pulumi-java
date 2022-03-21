@@ -104,22 +104,18 @@ public final class GetArcAddonArgs extends io.pulumi.resources.InvokeArgs {
             this.addonName = Objects.requireNonNull(addonName);
             return this;
         }
-
         public Builder deviceName(String deviceName) {
             this.deviceName = Objects.requireNonNull(deviceName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder roleName(String roleName) {
             this.roleName = Objects.requireNonNull(roleName);
             return this;
-        }
-        public GetArcAddonArgs build() {
+        }        public GetArcAddonArgs build() {
             return new GetArcAddonArgs(addonName, deviceName, resourceGroupName, roleName);
         }
     }

@@ -57,12 +57,10 @@ public final class DatabaseEncryptionConfigArgs extends io.pulumi.resources.Reso
             this.kmsKeyName = Objects.requireNonNull(kmsKeyName);
             return this;
         }
-
         public Builder kmsKeyName(String kmsKeyName) {
             this.kmsKeyName = Output.of(Objects.requireNonNull(kmsKeyName));
             return this;
-        }
-        public DatabaseEncryptionConfigArgs build() {
+        }        public DatabaseEncryptionConfigArgs build() {
             return new DatabaseEncryptionConfigArgs(kmsKeyName);
         }
     }

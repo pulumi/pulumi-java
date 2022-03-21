@@ -126,52 +126,42 @@ public final class OpenIdConnectConfigArgs extends io.pulumi.resources.ResourceA
             this.authorizationEndpoint = authorizationEndpoint;
             return this;
         }
-
         public Builder authorizationEndpoint(@Nullable String authorizationEndpoint) {
             this.authorizationEndpoint = Output.ofNullable(authorizationEndpoint);
             return this;
         }
-
         public Builder certificationUri(@Nullable Output<String> certificationUri) {
             this.certificationUri = certificationUri;
             return this;
         }
-
         public Builder certificationUri(@Nullable String certificationUri) {
             this.certificationUri = Output.ofNullable(certificationUri);
             return this;
         }
-
         public Builder issuer(@Nullable Output<String> issuer) {
             this.issuer = issuer;
             return this;
         }
-
         public Builder issuer(@Nullable String issuer) {
             this.issuer = Output.ofNullable(issuer);
             return this;
         }
-
         public Builder tokenEndpoint(@Nullable Output<String> tokenEndpoint) {
             this.tokenEndpoint = tokenEndpoint;
             return this;
         }
-
         public Builder tokenEndpoint(@Nullable String tokenEndpoint) {
             this.tokenEndpoint = Output.ofNullable(tokenEndpoint);
             return this;
         }
-
         public Builder wellKnownOpenIdConfiguration(@Nullable Output<String> wellKnownOpenIdConfiguration) {
             this.wellKnownOpenIdConfiguration = wellKnownOpenIdConfiguration;
             return this;
         }
-
         public Builder wellKnownOpenIdConfiguration(@Nullable String wellKnownOpenIdConfiguration) {
             this.wellKnownOpenIdConfiguration = Output.ofNullable(wellKnownOpenIdConfiguration);
             return this;
-        }
-        public OpenIdConnectConfigArgs build() {
+        }        public OpenIdConnectConfigArgs build() {
             return new OpenIdConnectConfigArgs(authorizationEndpoint, certificationUri, issuer, tokenEndpoint, wellKnownOpenIdConfiguration);
         }
     }

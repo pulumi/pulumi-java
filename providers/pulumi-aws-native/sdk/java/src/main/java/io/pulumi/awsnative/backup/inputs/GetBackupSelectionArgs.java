@@ -50,8 +50,7 @@ public final class GetBackupSelectionArgs extends io.pulumi.resources.InvokeArgs
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
-        }
-        public GetBackupSelectionArgs build() {
+        }        public GetBackupSelectionArgs build() {
             return new GetBackupSelectionArgs(id);
         }
     }

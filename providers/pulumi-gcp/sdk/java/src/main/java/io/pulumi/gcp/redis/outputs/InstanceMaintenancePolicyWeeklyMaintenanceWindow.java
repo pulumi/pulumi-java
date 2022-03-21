@@ -120,17 +120,14 @@ public final class InstanceMaintenancePolicyWeeklyMaintenanceWindow {
             this.day = Objects.requireNonNull(day);
             return this;
         }
-
         public Builder duration(@Nullable String duration) {
             this.duration = duration;
             return this;
         }
-
         public Builder startTime(InstanceMaintenancePolicyWeeklyMaintenanceWindowStartTime startTime) {
             this.startTime = Objects.requireNonNull(startTime);
             return this;
-        }
-        public InstanceMaintenancePolicyWeeklyMaintenanceWindow build() {
+        }        public InstanceMaintenancePolicyWeeklyMaintenanceWindow build() {
             return new InstanceMaintenancePolicyWeeklyMaintenanceWindow(day, duration, startTime);
         }
     }

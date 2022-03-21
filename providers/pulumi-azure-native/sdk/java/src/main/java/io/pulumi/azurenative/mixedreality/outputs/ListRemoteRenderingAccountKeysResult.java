@@ -69,12 +69,10 @@ public final class ListRemoteRenderingAccountKeysResult {
             this.primaryKey = Objects.requireNonNull(primaryKey);
             return this;
         }
-
         public Builder secondaryKey(String secondaryKey) {
             this.secondaryKey = Objects.requireNonNull(secondaryKey);
             return this;
-        }
-        public ListRemoteRenderingAccountKeysResult build() {
+        }        public ListRemoteRenderingAccountKeysResult build() {
             return new ListRemoteRenderingAccountKeysResult(primaryKey, secondaryKey);
         }
     }

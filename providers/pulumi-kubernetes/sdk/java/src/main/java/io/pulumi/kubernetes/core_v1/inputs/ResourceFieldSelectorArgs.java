@@ -94,32 +94,26 @@ public final class ResourceFieldSelectorArgs extends io.pulumi.resources.Resourc
             this.containerName = containerName;
             return this;
         }
-
         public Builder containerName(@Nullable String containerName) {
             this.containerName = Output.ofNullable(containerName);
             return this;
         }
-
         public Builder divisor(@Nullable Output<String> divisor) {
             this.divisor = divisor;
             return this;
         }
-
         public Builder divisor(@Nullable String divisor) {
             this.divisor = Output.ofNullable(divisor);
             return this;
         }
-
         public Builder resource(Output<String> resource) {
             this.resource = Objects.requireNonNull(resource);
             return this;
         }
-
         public Builder resource(String resource) {
             this.resource = Output.of(Objects.requireNonNull(resource));
             return this;
-        }
-        public ResourceFieldSelectorArgs build() {
+        }        public ResourceFieldSelectorArgs build() {
             return new ResourceFieldSelectorArgs(containerName, divisor, resource);
         }
     }

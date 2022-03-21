@@ -45,8 +45,7 @@ public final class HubRoutingVpc {
         public Builder uri(@Nullable String uri) {
             this.uri = uri;
             return this;
-        }
-        public HubRoutingVpc build() {
+        }        public HubRoutingVpc build() {
             return new HubRoutingVpc(uri);
         }
     }

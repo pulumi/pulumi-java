@@ -128,52 +128,42 @@ public final class TableSpecificationArgs extends io.pulumi.resources.ResourceAr
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder format(@Nullable Output<String> format) {
             this.format = format;
             return this;
         }
-
         public Builder format(@Nullable String format) {
             this.format = Output.ofNullable(format);
             return this;
         }
-
         public Builder properties(@Nullable Output<Map<String,ColumnSpecificationArgs>> properties) {
             this.properties = properties;
             return this;
         }
-
         public Builder properties(@Nullable Map<String,ColumnSpecificationArgs> properties) {
             this.properties = Output.ofNullable(properties);
             return this;
         }
-
         public Builder title(@Nullable Output<String> title) {
             this.title = title;
             return this;
         }
-
         public Builder title(@Nullable String title) {
             this.title = Output.ofNullable(title);
             return this;
         }
-
         public Builder type(Output<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Output.of(Objects.requireNonNull(type));
             return this;
-        }
-        public TableSpecificationArgs build() {
+        }        public TableSpecificationArgs build() {
             return new TableSpecificationArgs(description, format, properties, title, type);
         }
     }

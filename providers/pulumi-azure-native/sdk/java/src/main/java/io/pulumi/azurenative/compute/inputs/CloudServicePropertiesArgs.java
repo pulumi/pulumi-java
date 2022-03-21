@@ -219,102 +219,82 @@ public final class CloudServicePropertiesArgs extends io.pulumi.resources.Resour
             this.allowModelOverride = allowModelOverride;
             return this;
         }
-
         public Builder allowModelOverride(@Nullable Boolean allowModelOverride) {
             this.allowModelOverride = Output.ofNullable(allowModelOverride);
             return this;
         }
-
         public Builder configuration(@Nullable Output<String> configuration) {
             this.configuration = configuration;
             return this;
         }
-
         public Builder configuration(@Nullable String configuration) {
             this.configuration = Output.ofNullable(configuration);
             return this;
         }
-
         public Builder configurationUrl(@Nullable Output<String> configurationUrl) {
             this.configurationUrl = configurationUrl;
             return this;
         }
-
         public Builder configurationUrl(@Nullable String configurationUrl) {
             this.configurationUrl = Output.ofNullable(configurationUrl);
             return this;
         }
-
         public Builder extensionProfile(@Nullable Output<CloudServiceExtensionProfileArgs> extensionProfile) {
             this.extensionProfile = extensionProfile;
             return this;
         }
-
         public Builder extensionProfile(@Nullable CloudServiceExtensionProfileArgs extensionProfile) {
             this.extensionProfile = Output.ofNullable(extensionProfile);
             return this;
         }
-
         public Builder networkProfile(@Nullable Output<CloudServiceNetworkProfileArgs> networkProfile) {
             this.networkProfile = networkProfile;
             return this;
         }
-
         public Builder networkProfile(@Nullable CloudServiceNetworkProfileArgs networkProfile) {
             this.networkProfile = Output.ofNullable(networkProfile);
             return this;
         }
-
         public Builder osProfile(@Nullable Output<CloudServiceOsProfileArgs> osProfile) {
             this.osProfile = osProfile;
             return this;
         }
-
         public Builder osProfile(@Nullable CloudServiceOsProfileArgs osProfile) {
             this.osProfile = Output.ofNullable(osProfile);
             return this;
         }
-
         public Builder packageUrl(@Nullable Output<String> packageUrl) {
             this.packageUrl = packageUrl;
             return this;
         }
-
         public Builder packageUrl(@Nullable String packageUrl) {
             this.packageUrl = Output.ofNullable(packageUrl);
             return this;
         }
-
         public Builder roleProfile(@Nullable Output<CloudServiceRoleProfileArgs> roleProfile) {
             this.roleProfile = roleProfile;
             return this;
         }
-
         public Builder roleProfile(@Nullable CloudServiceRoleProfileArgs roleProfile) {
             this.roleProfile = Output.ofNullable(roleProfile);
             return this;
         }
-
         public Builder startCloudService(@Nullable Output<Boolean> startCloudService) {
             this.startCloudService = startCloudService;
             return this;
         }
-
         public Builder startCloudService(@Nullable Boolean startCloudService) {
             this.startCloudService = Output.ofNullable(startCloudService);
             return this;
         }
-
         public Builder upgradeMode(@Nullable Output<Either<String,CloudServiceUpgradeMode>> upgradeMode) {
             this.upgradeMode = upgradeMode;
             return this;
         }
-
         public Builder upgradeMode(@Nullable Either<String,CloudServiceUpgradeMode> upgradeMode) {
             this.upgradeMode = Output.ofNullable(upgradeMode);
             return this;
-        }
-        public CloudServicePropertiesArgs build() {
+        }        public CloudServicePropertiesArgs build() {
             return new CloudServicePropertiesArgs(allowModelOverride, configuration, configurationUrl, extensionProfile, networkProfile, osProfile, packageUrl, roleProfile, startCloudService, upgradeMode);
         }
     }

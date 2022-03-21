@@ -85,17 +85,14 @@ public final class ACIServiceResponseResponseEncryptionProperties {
             this.keyName = Objects.requireNonNull(keyName);
             return this;
         }
-
         public Builder keyVersion(String keyVersion) {
             this.keyVersion = Objects.requireNonNull(keyVersion);
             return this;
         }
-
         public Builder vaultBaseUrl(String vaultBaseUrl) {
             this.vaultBaseUrl = Objects.requireNonNull(vaultBaseUrl);
             return this;
-        }
-        public ACIServiceResponseResponseEncryptionProperties build() {
+        }        public ACIServiceResponseResponseEncryptionProperties build() {
             return new ACIServiceResponseResponseEncryptionProperties(keyName, keyVersion, vaultBaseUrl);
         }
     }

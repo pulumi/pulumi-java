@@ -60,12 +60,10 @@ public final class ResourceArgs extends io.pulumi.resources.ResourceArgs {
             this.uri = Objects.requireNonNull(uri);
             return this;
         }
-
         public Builder uri(String uri) {
             this.uri = Output.of(Objects.requireNonNull(uri));
             return this;
-        }
-        public ResourceArgs build() {
+        }        public ResourceArgs build() {
             return new ResourceArgs(uri);
         }
     }

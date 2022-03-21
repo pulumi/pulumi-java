@@ -91,32 +91,26 @@ public final class AccountAuditConfigurationAuditNotificationTargetArgs extends 
             this.enabled = enabled;
             return this;
         }
-
         public Builder enabled(@Nullable Boolean enabled) {
             this.enabled = Output.ofNullable(enabled);
             return this;
         }
-
         public Builder roleArn(@Nullable Output<String> roleArn) {
             this.roleArn = roleArn;
             return this;
         }
-
         public Builder roleArn(@Nullable String roleArn) {
             this.roleArn = Output.ofNullable(roleArn);
             return this;
         }
-
         public Builder targetArn(@Nullable Output<String> targetArn) {
             this.targetArn = targetArn;
             return this;
         }
-
         public Builder targetArn(@Nullable String targetArn) {
             this.targetArn = Output.ofNullable(targetArn);
             return this;
-        }
-        public AccountAuditConfigurationAuditNotificationTargetArgs build() {
+        }        public AccountAuditConfigurationAuditNotificationTargetArgs build() {
             return new AccountAuditConfigurationAuditNotificationTargetArgs(enabled, roleArn, targetArn);
         }
     }

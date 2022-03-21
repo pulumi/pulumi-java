@@ -137,32 +137,26 @@ public final class GetSentinelOnboardingStateResult {
             this.customerManagedKey = customerManagedKey;
             return this;
         }
-
         public Builder etag(@Nullable String etag) {
             this.etag = etag;
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder systemData(SystemDataResponse systemData) {
             this.systemData = Objects.requireNonNull(systemData);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public GetSentinelOnboardingStateResult build() {
+        }        public GetSentinelOnboardingStateResult build() {
             return new GetSentinelOnboardingStateResult(customerManagedKey, etag, id, name, systemData, type);
         }
     }

@@ -126,52 +126,42 @@ public final class AS2EnvelopeSettingsArgs extends io.pulumi.resources.ResourceA
             this.autogenerateFileName = Objects.requireNonNull(autogenerateFileName);
             return this;
         }
-
         public Builder autogenerateFileName(Boolean autogenerateFileName) {
             this.autogenerateFileName = Output.of(Objects.requireNonNull(autogenerateFileName));
             return this;
         }
-
         public Builder fileNameTemplate(Output<String> fileNameTemplate) {
             this.fileNameTemplate = Objects.requireNonNull(fileNameTemplate);
             return this;
         }
-
         public Builder fileNameTemplate(String fileNameTemplate) {
             this.fileNameTemplate = Output.of(Objects.requireNonNull(fileNameTemplate));
             return this;
         }
-
         public Builder messageContentType(Output<String> messageContentType) {
             this.messageContentType = Objects.requireNonNull(messageContentType);
             return this;
         }
-
         public Builder messageContentType(String messageContentType) {
             this.messageContentType = Output.of(Objects.requireNonNull(messageContentType));
             return this;
         }
-
         public Builder suspendMessageOnFileNameGenerationError(Output<Boolean> suspendMessageOnFileNameGenerationError) {
             this.suspendMessageOnFileNameGenerationError = Objects.requireNonNull(suspendMessageOnFileNameGenerationError);
             return this;
         }
-
         public Builder suspendMessageOnFileNameGenerationError(Boolean suspendMessageOnFileNameGenerationError) {
             this.suspendMessageOnFileNameGenerationError = Output.of(Objects.requireNonNull(suspendMessageOnFileNameGenerationError));
             return this;
         }
-
         public Builder transmitFileNameInMimeHeader(Output<Boolean> transmitFileNameInMimeHeader) {
             this.transmitFileNameInMimeHeader = Objects.requireNonNull(transmitFileNameInMimeHeader);
             return this;
         }
-
         public Builder transmitFileNameInMimeHeader(Boolean transmitFileNameInMimeHeader) {
             this.transmitFileNameInMimeHeader = Output.of(Objects.requireNonNull(transmitFileNameInMimeHeader));
             return this;
-        }
-        public AS2EnvelopeSettingsArgs build() {
+        }        public AS2EnvelopeSettingsArgs build() {
             return new AS2EnvelopeSettingsArgs(autogenerateFileName, fileNameTemplate, messageContentType, suspendMessageOnFileNameGenerationError, transmitFileNameInMimeHeader);
         }
     }

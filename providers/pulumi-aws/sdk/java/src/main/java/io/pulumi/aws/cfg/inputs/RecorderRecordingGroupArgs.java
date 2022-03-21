@@ -92,32 +92,29 @@ public final class RecorderRecordingGroupArgs extends io.pulumi.resources.Resour
             this.allSupported = allSupported;
             return this;
         }
-
         public Builder allSupported(@Nullable Boolean allSupported) {
             this.allSupported = Output.ofNullable(allSupported);
             return this;
         }
-
         public Builder includeGlobalResourceTypes(@Nullable Output<Boolean> includeGlobalResourceTypes) {
             this.includeGlobalResourceTypes = includeGlobalResourceTypes;
             return this;
         }
-
         public Builder includeGlobalResourceTypes(@Nullable Boolean includeGlobalResourceTypes) {
             this.includeGlobalResourceTypes = Output.ofNullable(includeGlobalResourceTypes);
             return this;
         }
-
         public Builder resourceTypes(@Nullable Output<List<String>> resourceTypes) {
             this.resourceTypes = resourceTypes;
             return this;
         }
-
         public Builder resourceTypes(@Nullable List<String> resourceTypes) {
             this.resourceTypes = Output.ofNullable(resourceTypes);
             return this;
         }
-        public RecorderRecordingGroupArgs build() {
+        public Builder resourceTypes(String... resourceTypes) {
+            return resourceTypes(List.of(resourceTypes));
+        }        public RecorderRecordingGroupArgs build() {
             return new RecorderRecordingGroupArgs(allSupported, includeGlobalResourceTypes, resourceTypes);
         }
     }

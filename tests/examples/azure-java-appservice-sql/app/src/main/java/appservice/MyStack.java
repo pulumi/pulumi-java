@@ -90,7 +90,7 @@ public final class MyStack extends Stack {
                 WebAppArgs.builder().resourceGroupName(resourceGroup.getName())
                         .serverFarmId(appServicePlan.getId())
                         .siteConfig(SiteConfigArgs.builder()
-                                .appSettings(List.of(
+                                .appSettings(
                                         NameValuePairArgs.builder()
                                             .name("APPINSIGHTS_INSTRUMENTATIONKEY")
                                             .value(appInsights.getInstrumentationKey())
@@ -106,8 +106,8 @@ public final class MyStack extends Stack {
                                         NameValuePairArgs.builder()
                                             .name("WEBSITE_RUN_FROM_PACKAGE")
                                             .value(codeBlobUrl)
-                                            .build()))
-                                .connectionStrings(List.of(
+                                            .build())
+                                .connectionStrings(
                                         ConnStringInfoArgs.builder()
                                             .name("db")
                                             .connectionString(
@@ -115,7 +115,7 @@ public final class MyStack extends Stack {
                                     "Server=tcp:%s.database.windows.net;initial catalog=%s;user ID=%s;password=%s;Min Pool Size=0;Max Pool Size=30;Persist Security Info=true;",
                                                    sqlServer.getName(), database.getName(), Output.of(username), Output.of(pwd)))
                                             .type(ConnectionStringType.SQLAzure)
-                                            .build()))
+                                            .build())
                                 .build())
                         .httpsOnly(true)
                         .build());

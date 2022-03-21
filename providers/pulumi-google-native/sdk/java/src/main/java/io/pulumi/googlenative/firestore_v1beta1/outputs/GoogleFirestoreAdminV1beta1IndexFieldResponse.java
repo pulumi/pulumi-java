@@ -69,12 +69,10 @@ public final class GoogleFirestoreAdminV1beta1IndexFieldResponse {
             this.fieldPath = Objects.requireNonNull(fieldPath);
             return this;
         }
-
         public Builder mode(String mode) {
             this.mode = Objects.requireNonNull(mode);
             return this;
-        }
-        public GoogleFirestoreAdminV1beta1IndexFieldResponse build() {
+        }        public GoogleFirestoreAdminV1beta1IndexFieldResponse build() {
             return new GoogleFirestoreAdminV1beta1IndexFieldResponse(fieldPath, mode);
         }
     }

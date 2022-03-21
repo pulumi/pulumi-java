@@ -70,12 +70,10 @@ public final class ExternalMetricStatus {
             this.current = Objects.requireNonNull(current);
             return this;
         }
-
         public Builder metric(MetricIdentifier metric) {
             this.metric = Objects.requireNonNull(metric);
             return this;
-        }
-        public ExternalMetricStatus build() {
+        }        public ExternalMetricStatus build() {
             return new ExternalMetricStatus(current, metric);
         }
     }

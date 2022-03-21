@@ -101,22 +101,18 @@ public final class ConnectorProfileInforNexusConnectorProfileCredentials {
             this.accessKeyId = Objects.requireNonNull(accessKeyId);
             return this;
         }
-
         public Builder datakey(String datakey) {
             this.datakey = Objects.requireNonNull(datakey);
             return this;
         }
-
         public Builder secretAccessKey(String secretAccessKey) {
             this.secretAccessKey = Objects.requireNonNull(secretAccessKey);
             return this;
         }
-
         public Builder userId(String userId) {
             this.userId = Objects.requireNonNull(userId);
             return this;
-        }
-        public ConnectorProfileInforNexusConnectorProfileCredentials build() {
+        }        public ConnectorProfileInforNexusConnectorProfileCredentials build() {
             return new ConnectorProfileInforNexusConnectorProfileCredentials(accessKeyId, datakey, secretAccessKey, userId);
         }
     }

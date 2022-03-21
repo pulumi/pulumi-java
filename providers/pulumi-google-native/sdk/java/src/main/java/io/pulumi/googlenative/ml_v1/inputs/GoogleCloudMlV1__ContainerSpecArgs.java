@@ -129,52 +129,54 @@ public final class GoogleCloudMlV1__ContainerSpecArgs extends io.pulumi.resource
             this.args = args;
             return this;
         }
-
         public Builder args(@Nullable List<String> args) {
             this.args = Output.ofNullable(args);
             return this;
         }
-
+        public Builder args(String... args) {
+            return args(List.of(args));
+        }
         public Builder command(@Nullable Output<List<String>> command) {
             this.command = command;
             return this;
         }
-
         public Builder command(@Nullable List<String> command) {
             this.command = Output.ofNullable(command);
             return this;
         }
-
+        public Builder command(String... command) {
+            return command(List.of(command));
+        }
         public Builder env(@Nullable Output<List<GoogleCloudMlV1__EnvVarArgs>> env) {
             this.env = env;
             return this;
         }
-
         public Builder env(@Nullable List<GoogleCloudMlV1__EnvVarArgs> env) {
             this.env = Output.ofNullable(env);
             return this;
         }
-
+        public Builder env(GoogleCloudMlV1__EnvVarArgs... env) {
+            return env(List.of(env));
+        }
         public Builder image(@Nullable Output<String> image) {
             this.image = image;
             return this;
         }
-
         public Builder image(@Nullable String image) {
             this.image = Output.ofNullable(image);
             return this;
         }
-
         public Builder ports(@Nullable Output<List<GoogleCloudMlV1__ContainerPortArgs>> ports) {
             this.ports = ports;
             return this;
         }
-
         public Builder ports(@Nullable List<GoogleCloudMlV1__ContainerPortArgs> ports) {
             this.ports = Output.ofNullable(ports);
             return this;
         }
-        public GoogleCloudMlV1__ContainerSpecArgs build() {
+        public Builder ports(GoogleCloudMlV1__ContainerPortArgs... ports) {
+            return ports(List.of(ports));
+        }        public GoogleCloudMlV1__ContainerSpecArgs build() {
             return new GoogleCloudMlV1__ContainerSpecArgs(args, command, env, image, ports);
         }
     }

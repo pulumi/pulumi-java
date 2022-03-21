@@ -80,22 +80,21 @@ public final class ApplicationComponentConfigurationArgs extends io.pulumi.resou
             this.configurationDetails = configurationDetails;
             return this;
         }
-
         public Builder configurationDetails(@Nullable ApplicationConfigurationDetailsArgs configurationDetails) {
             this.configurationDetails = Output.ofNullable(configurationDetails);
             return this;
         }
-
         public Builder subComponentTypeConfigurations(@Nullable Output<List<ApplicationSubComponentTypeConfigurationArgs>> subComponentTypeConfigurations) {
             this.subComponentTypeConfigurations = subComponentTypeConfigurations;
             return this;
         }
-
         public Builder subComponentTypeConfigurations(@Nullable List<ApplicationSubComponentTypeConfigurationArgs> subComponentTypeConfigurations) {
             this.subComponentTypeConfigurations = Output.ofNullable(subComponentTypeConfigurations);
             return this;
         }
-        public ApplicationComponentConfigurationArgs build() {
+        public Builder subComponentTypeConfigurations(ApplicationSubComponentTypeConfigurationArgs... subComponentTypeConfigurations) {
+            return subComponentTypeConfigurations(List.of(subComponentTypeConfigurations));
+        }        public ApplicationComponentConfigurationArgs build() {
             return new ApplicationComponentConfigurationArgs(configurationDetails, subComponentTypeConfigurations);
         }
     }

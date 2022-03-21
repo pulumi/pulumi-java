@@ -129,62 +129,53 @@ public final class RegionOperationIamPolicyArgs extends io.pulumi.resources.Reso
             this.bindings = bindings;
             return this;
         }
-
         public Builder bindings(@Nullable List<BindingArgs> bindings) {
             this.bindings = Output.ofNullable(bindings);
             return this;
         }
-
+        public Builder bindings(BindingArgs... bindings) {
+            return bindings(List.of(bindings));
+        }
         public Builder etag(@Nullable Output<String> etag) {
             this.etag = etag;
             return this;
         }
-
         public Builder etag(@Nullable String etag) {
             this.etag = Output.ofNullable(etag);
             return this;
         }
-
         public Builder operationId(Output<String> operationId) {
             this.operationId = Objects.requireNonNull(operationId);
             return this;
         }
-
         public Builder operationId(String operationId) {
             this.operationId = Output.of(Objects.requireNonNull(operationId));
             return this;
         }
-
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
         }
-
         public Builder regionId(Output<String> regionId) {
             this.regionId = Objects.requireNonNull(regionId);
             return this;
         }
-
         public Builder regionId(String regionId) {
             this.regionId = Output.of(Objects.requireNonNull(regionId));
             return this;
         }
-
         public Builder version(@Nullable Output<Integer> version) {
             this.version = version;
             return this;
         }
-
         public Builder version(@Nullable Integer version) {
             this.version = Output.ofNullable(version);
             return this;
-        }
-        public RegionOperationIamPolicyArgs build() {
+        }        public RegionOperationIamPolicyArgs build() {
             return new RegionOperationIamPolicyArgs(bindings, etag, operationId, project, regionId, version);
         }
     }

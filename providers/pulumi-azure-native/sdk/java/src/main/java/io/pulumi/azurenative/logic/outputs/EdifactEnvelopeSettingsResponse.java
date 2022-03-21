@@ -697,207 +697,166 @@ public final class EdifactEnvelopeSettingsResponse {
             this.applicationReferenceId = applicationReferenceId;
             return this;
         }
-
         public Builder applyDelimiterStringAdvice(Boolean applyDelimiterStringAdvice) {
             this.applyDelimiterStringAdvice = Objects.requireNonNull(applyDelimiterStringAdvice);
             return this;
         }
-
         public Builder communicationAgreementId(@Nullable String communicationAgreementId) {
             this.communicationAgreementId = communicationAgreementId;
             return this;
         }
-
         public Builder createGroupingSegments(Boolean createGroupingSegments) {
             this.createGroupingSegments = Objects.requireNonNull(createGroupingSegments);
             return this;
         }
-
         public Builder enableDefaultGroupHeaders(Boolean enableDefaultGroupHeaders) {
             this.enableDefaultGroupHeaders = Objects.requireNonNull(enableDefaultGroupHeaders);
             return this;
         }
-
         public Builder functionalGroupId(@Nullable String functionalGroupId) {
             this.functionalGroupId = functionalGroupId;
             return this;
         }
-
         public Builder groupApplicationPassword(@Nullable String groupApplicationPassword) {
             this.groupApplicationPassword = groupApplicationPassword;
             return this;
         }
-
         public Builder groupApplicationReceiverId(@Nullable String groupApplicationReceiverId) {
             this.groupApplicationReceiverId = groupApplicationReceiverId;
             return this;
         }
-
         public Builder groupApplicationReceiverQualifier(@Nullable String groupApplicationReceiverQualifier) {
             this.groupApplicationReceiverQualifier = groupApplicationReceiverQualifier;
             return this;
         }
-
         public Builder groupApplicationSenderId(@Nullable String groupApplicationSenderId) {
             this.groupApplicationSenderId = groupApplicationSenderId;
             return this;
         }
-
         public Builder groupApplicationSenderQualifier(@Nullable String groupApplicationSenderQualifier) {
             this.groupApplicationSenderQualifier = groupApplicationSenderQualifier;
             return this;
         }
-
         public Builder groupAssociationAssignedCode(@Nullable String groupAssociationAssignedCode) {
             this.groupAssociationAssignedCode = groupAssociationAssignedCode;
             return this;
         }
-
         public Builder groupControlNumberLowerBound(Double groupControlNumberLowerBound) {
             this.groupControlNumberLowerBound = Objects.requireNonNull(groupControlNumberLowerBound);
             return this;
         }
-
         public Builder groupControlNumberPrefix(@Nullable String groupControlNumberPrefix) {
             this.groupControlNumberPrefix = groupControlNumberPrefix;
             return this;
         }
-
         public Builder groupControlNumberSuffix(@Nullable String groupControlNumberSuffix) {
             this.groupControlNumberSuffix = groupControlNumberSuffix;
             return this;
         }
-
         public Builder groupControlNumberUpperBound(Double groupControlNumberUpperBound) {
             this.groupControlNumberUpperBound = Objects.requireNonNull(groupControlNumberUpperBound);
             return this;
         }
-
         public Builder groupControllingAgencyCode(@Nullable String groupControllingAgencyCode) {
             this.groupControllingAgencyCode = groupControllingAgencyCode;
             return this;
         }
-
         public Builder groupMessageRelease(@Nullable String groupMessageRelease) {
             this.groupMessageRelease = groupMessageRelease;
             return this;
         }
-
         public Builder groupMessageVersion(@Nullable String groupMessageVersion) {
             this.groupMessageVersion = groupMessageVersion;
             return this;
         }
-
         public Builder interchangeControlNumberLowerBound(Double interchangeControlNumberLowerBound) {
             this.interchangeControlNumberLowerBound = Objects.requireNonNull(interchangeControlNumberLowerBound);
             return this;
         }
-
         public Builder interchangeControlNumberPrefix(@Nullable String interchangeControlNumberPrefix) {
             this.interchangeControlNumberPrefix = interchangeControlNumberPrefix;
             return this;
         }
-
         public Builder interchangeControlNumberSuffix(@Nullable String interchangeControlNumberSuffix) {
             this.interchangeControlNumberSuffix = interchangeControlNumberSuffix;
             return this;
         }
-
         public Builder interchangeControlNumberUpperBound(Double interchangeControlNumberUpperBound) {
             this.interchangeControlNumberUpperBound = Objects.requireNonNull(interchangeControlNumberUpperBound);
             return this;
         }
-
         public Builder isTestInterchange(Boolean isTestInterchange) {
             this.isTestInterchange = Objects.requireNonNull(isTestInterchange);
             return this;
         }
-
         public Builder overwriteExistingTransactionSetControlNumber(Boolean overwriteExistingTransactionSetControlNumber) {
             this.overwriteExistingTransactionSetControlNumber = Objects.requireNonNull(overwriteExistingTransactionSetControlNumber);
             return this;
         }
-
         public Builder processingPriorityCode(@Nullable String processingPriorityCode) {
             this.processingPriorityCode = processingPriorityCode;
             return this;
         }
-
         public Builder receiverInternalIdentification(@Nullable String receiverInternalIdentification) {
             this.receiverInternalIdentification = receiverInternalIdentification;
             return this;
         }
-
         public Builder receiverInternalSubIdentification(@Nullable String receiverInternalSubIdentification) {
             this.receiverInternalSubIdentification = receiverInternalSubIdentification;
             return this;
         }
-
         public Builder receiverReverseRoutingAddress(@Nullable String receiverReverseRoutingAddress) {
             this.receiverReverseRoutingAddress = receiverReverseRoutingAddress;
             return this;
         }
-
         public Builder recipientReferencePasswordQualifier(@Nullable String recipientReferencePasswordQualifier) {
             this.recipientReferencePasswordQualifier = recipientReferencePasswordQualifier;
             return this;
         }
-
         public Builder recipientReferencePasswordValue(@Nullable String recipientReferencePasswordValue) {
             this.recipientReferencePasswordValue = recipientReferencePasswordValue;
             return this;
         }
-
         public Builder rolloverGroupControlNumber(Boolean rolloverGroupControlNumber) {
             this.rolloverGroupControlNumber = Objects.requireNonNull(rolloverGroupControlNumber);
             return this;
         }
-
         public Builder rolloverInterchangeControlNumber(Boolean rolloverInterchangeControlNumber) {
             this.rolloverInterchangeControlNumber = Objects.requireNonNull(rolloverInterchangeControlNumber);
             return this;
         }
-
         public Builder rolloverTransactionSetControlNumber(Boolean rolloverTransactionSetControlNumber) {
             this.rolloverTransactionSetControlNumber = Objects.requireNonNull(rolloverTransactionSetControlNumber);
             return this;
         }
-
         public Builder senderInternalIdentification(@Nullable String senderInternalIdentification) {
             this.senderInternalIdentification = senderInternalIdentification;
             return this;
         }
-
         public Builder senderInternalSubIdentification(@Nullable String senderInternalSubIdentification) {
             this.senderInternalSubIdentification = senderInternalSubIdentification;
             return this;
         }
-
         public Builder senderReverseRoutingAddress(@Nullable String senderReverseRoutingAddress) {
             this.senderReverseRoutingAddress = senderReverseRoutingAddress;
             return this;
         }
-
         public Builder transactionSetControlNumberLowerBound(Double transactionSetControlNumberLowerBound) {
             this.transactionSetControlNumberLowerBound = Objects.requireNonNull(transactionSetControlNumberLowerBound);
             return this;
         }
-
         public Builder transactionSetControlNumberPrefix(@Nullable String transactionSetControlNumberPrefix) {
             this.transactionSetControlNumberPrefix = transactionSetControlNumberPrefix;
             return this;
         }
-
         public Builder transactionSetControlNumberSuffix(@Nullable String transactionSetControlNumberSuffix) {
             this.transactionSetControlNumberSuffix = transactionSetControlNumberSuffix;
             return this;
         }
-
         public Builder transactionSetControlNumberUpperBound(Double transactionSetControlNumberUpperBound) {
             this.transactionSetControlNumberUpperBound = Objects.requireNonNull(transactionSetControlNumberUpperBound);
             return this;
-        }
-        public EdifactEnvelopeSettingsResponse build() {
+        }        public EdifactEnvelopeSettingsResponse build() {
             return new EdifactEnvelopeSettingsResponse(applicationReferenceId, applyDelimiterStringAdvice, communicationAgreementId, createGroupingSegments, enableDefaultGroupHeaders, functionalGroupId, groupApplicationPassword, groupApplicationReceiverId, groupApplicationReceiverQualifier, groupApplicationSenderId, groupApplicationSenderQualifier, groupAssociationAssignedCode, groupControlNumberLowerBound, groupControlNumberPrefix, groupControlNumberSuffix, groupControlNumberUpperBound, groupControllingAgencyCode, groupMessageRelease, groupMessageVersion, interchangeControlNumberLowerBound, interchangeControlNumberPrefix, interchangeControlNumberSuffix, interchangeControlNumberUpperBound, isTestInterchange, overwriteExistingTransactionSetControlNumber, processingPriorityCode, receiverInternalIdentification, receiverInternalSubIdentification, receiverReverseRoutingAddress, recipientReferencePasswordQualifier, recipientReferencePasswordValue, rolloverGroupControlNumber, rolloverInterchangeControlNumber, rolloverTransactionSetControlNumber, senderInternalIdentification, senderInternalSubIdentification, senderReverseRoutingAddress, transactionSetControlNumberLowerBound, transactionSetControlNumberPrefix, transactionSetControlNumberSuffix, transactionSetControlNumberUpperBound);
         }
     }

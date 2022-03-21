@@ -103,27 +103,22 @@ public final class GetKMSSecretAsymmetricResult {
             this.ciphertext = Objects.requireNonNull(ciphertext);
             return this;
         }
-
         public Builder crc32(@Nullable String crc32) {
             this.crc32 = crc32;
             return this;
         }
-
         public Builder cryptoKeyVersion(String cryptoKeyVersion) {
             this.cryptoKeyVersion = Objects.requireNonNull(cryptoKeyVersion);
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder plaintext(String plaintext) {
             this.plaintext = Objects.requireNonNull(plaintext);
             return this;
-        }
-        public GetKMSSecretAsymmetricResult build() {
+        }        public GetKMSSecretAsymmetricResult build() {
             return new GetKMSSecretAsymmetricResult(ciphertext, crc32, cryptoKeyVersion, id, plaintext);
         }
     }

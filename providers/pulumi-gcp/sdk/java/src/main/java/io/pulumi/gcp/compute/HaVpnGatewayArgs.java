@@ -148,62 +148,53 @@ public final class HaVpnGatewayArgs extends io.pulumi.resources.ResourceArgs {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder network(Output<String> network) {
             this.network = Objects.requireNonNull(network);
             return this;
         }
-
         public Builder network(String network) {
             this.network = Output.of(Objects.requireNonNull(network));
             return this;
         }
-
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
         }
-
         public Builder region(@Nullable Output<String> region) {
             this.region = region;
             return this;
         }
-
         public Builder region(@Nullable String region) {
             this.region = Output.ofNullable(region);
             return this;
         }
-
         public Builder vpnInterfaces(@Nullable Output<List<HaVpnGatewayVpnInterfaceArgs>> vpnInterfaces) {
             this.vpnInterfaces = vpnInterfaces;
             return this;
         }
-
         public Builder vpnInterfaces(@Nullable List<HaVpnGatewayVpnInterfaceArgs> vpnInterfaces) {
             this.vpnInterfaces = Output.ofNullable(vpnInterfaces);
             return this;
         }
-        public HaVpnGatewayArgs build() {
+        public Builder vpnInterfaces(HaVpnGatewayVpnInterfaceArgs... vpnInterfaces) {
+            return vpnInterfaces(List.of(vpnInterfaces));
+        }        public HaVpnGatewayArgs build() {
             return new HaVpnGatewayArgs(description, name, network, project, region, vpnInterfaces);
         }
     }

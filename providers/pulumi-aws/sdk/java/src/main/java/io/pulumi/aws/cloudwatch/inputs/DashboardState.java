@@ -90,32 +90,26 @@ public final class DashboardState extends io.pulumi.resources.ResourceArgs {
             this.dashboardArn = dashboardArn;
             return this;
         }
-
         public Builder dashboardArn(@Nullable String dashboardArn) {
             this.dashboardArn = Output.ofNullable(dashboardArn);
             return this;
         }
-
         public Builder dashboardBody(@Nullable Output<String> dashboardBody) {
             this.dashboardBody = dashboardBody;
             return this;
         }
-
         public Builder dashboardBody(@Nullable String dashboardBody) {
             this.dashboardBody = Output.ofNullable(dashboardBody);
             return this;
         }
-
         public Builder dashboardName(@Nullable Output<String> dashboardName) {
             this.dashboardName = dashboardName;
             return this;
         }
-
         public Builder dashboardName(@Nullable String dashboardName) {
             this.dashboardName = Output.ofNullable(dashboardName);
             return this;
-        }
-        public DashboardState build() {
+        }        public DashboardState build() {
             return new DashboardState(dashboardArn, dashboardBody, dashboardName);
         }
     }

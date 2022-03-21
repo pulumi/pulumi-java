@@ -103,52 +103,42 @@ public final class TopicRuleKafkaActionArgs extends io.pulumi.resources.Resource
             this.clientProperties = Objects.requireNonNull(clientProperties);
             return this;
         }
-
         public Builder clientProperties(Object clientProperties) {
             this.clientProperties = Output.of(Objects.requireNonNull(clientProperties));
             return this;
         }
-
         public Builder destinationArn(Output<String> destinationArn) {
             this.destinationArn = Objects.requireNonNull(destinationArn);
             return this;
         }
-
         public Builder destinationArn(String destinationArn) {
             this.destinationArn = Output.of(Objects.requireNonNull(destinationArn));
             return this;
         }
-
         public Builder key(@Nullable Output<String> key) {
             this.key = key;
             return this;
         }
-
         public Builder key(@Nullable String key) {
             this.key = Output.ofNullable(key);
             return this;
         }
-
         public Builder partition(@Nullable Output<String> partition) {
             this.partition = partition;
             return this;
         }
-
         public Builder partition(@Nullable String partition) {
             this.partition = Output.ofNullable(partition);
             return this;
         }
-
         public Builder topic(Output<String> topic) {
             this.topic = Objects.requireNonNull(topic);
             return this;
         }
-
         public Builder topic(String topic) {
             this.topic = Output.of(Objects.requireNonNull(topic));
             return this;
-        }
-        public TopicRuleKafkaActionArgs build() {
+        }        public TopicRuleKafkaActionArgs build() {
             return new TopicRuleKafkaActionArgs(clientProperties, destinationArn, key, partition, topic);
         }
     }

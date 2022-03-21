@@ -53,7 +53,9 @@ public final class GoogleCloudApigeeV1PropertiesResponse {
             this.property = Objects.requireNonNull(property);
             return this;
         }
-        public GoogleCloudApigeeV1PropertiesResponse build() {
+        public Builder property(GoogleCloudApigeeV1PropertyResponse... property) {
+            return property(List.of(property));
+        }        public GoogleCloudApigeeV1PropertiesResponse build() {
             return new GoogleCloudApigeeV1PropertiesResponse(property);
         }
     }

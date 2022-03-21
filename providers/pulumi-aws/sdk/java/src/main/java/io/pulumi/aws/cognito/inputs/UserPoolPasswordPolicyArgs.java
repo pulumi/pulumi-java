@@ -139,62 +139,50 @@ public final class UserPoolPasswordPolicyArgs extends io.pulumi.resources.Resour
             this.minimumLength = minimumLength;
             return this;
         }
-
         public Builder minimumLength(@Nullable Integer minimumLength) {
             this.minimumLength = Output.ofNullable(minimumLength);
             return this;
         }
-
         public Builder requireLowercase(@Nullable Output<Boolean> requireLowercase) {
             this.requireLowercase = requireLowercase;
             return this;
         }
-
         public Builder requireLowercase(@Nullable Boolean requireLowercase) {
             this.requireLowercase = Output.ofNullable(requireLowercase);
             return this;
         }
-
         public Builder requireNumbers(@Nullable Output<Boolean> requireNumbers) {
             this.requireNumbers = requireNumbers;
             return this;
         }
-
         public Builder requireNumbers(@Nullable Boolean requireNumbers) {
             this.requireNumbers = Output.ofNullable(requireNumbers);
             return this;
         }
-
         public Builder requireSymbols(@Nullable Output<Boolean> requireSymbols) {
             this.requireSymbols = requireSymbols;
             return this;
         }
-
         public Builder requireSymbols(@Nullable Boolean requireSymbols) {
             this.requireSymbols = Output.ofNullable(requireSymbols);
             return this;
         }
-
         public Builder requireUppercase(@Nullable Output<Boolean> requireUppercase) {
             this.requireUppercase = requireUppercase;
             return this;
         }
-
         public Builder requireUppercase(@Nullable Boolean requireUppercase) {
             this.requireUppercase = Output.ofNullable(requireUppercase);
             return this;
         }
-
         public Builder temporaryPasswordValidityDays(@Nullable Output<Integer> temporaryPasswordValidityDays) {
             this.temporaryPasswordValidityDays = temporaryPasswordValidityDays;
             return this;
         }
-
         public Builder temporaryPasswordValidityDays(@Nullable Integer temporaryPasswordValidityDays) {
             this.temporaryPasswordValidityDays = Output.ofNullable(temporaryPasswordValidityDays);
             return this;
-        }
-        public UserPoolPasswordPolicyArgs build() {
+        }        public UserPoolPasswordPolicyArgs build() {
             return new UserPoolPasswordPolicyArgs(minimumLength, requireLowercase, requireNumbers, requireSymbols, requireUppercase, temporaryPasswordValidityDays);
         }
     }

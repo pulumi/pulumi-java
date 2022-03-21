@@ -155,37 +155,33 @@ public final class AcsClusterPropertiesResponse {
             this.agentCount = agentCount;
             return this;
         }
-
         public Builder agentVmSize(@Nullable String agentVmSize) {
             this.agentVmSize = agentVmSize;
             return this;
         }
-
         public Builder clusterFqdn(String clusterFqdn) {
             this.clusterFqdn = Objects.requireNonNull(clusterFqdn);
             return this;
         }
-
         public Builder masterCount(@Nullable Integer masterCount) {
             this.masterCount = masterCount;
             return this;
         }
-
         public Builder orchestratorProperties(@Nullable KubernetesClusterPropertiesResponse orchestratorProperties) {
             this.orchestratorProperties = orchestratorProperties;
             return this;
         }
-
         public Builder orchestratorType(String orchestratorType) {
             this.orchestratorType = Objects.requireNonNull(orchestratorType);
             return this;
         }
-
         public Builder systemServices(@Nullable List<SystemServiceResponse> systemServices) {
             this.systemServices = systemServices;
             return this;
         }
-        public AcsClusterPropertiesResponse build() {
+        public Builder systemServices(SystemServiceResponse... systemServices) {
+            return systemServices(List.of(systemServices));
+        }        public AcsClusterPropertiesResponse build() {
             return new AcsClusterPropertiesResponse(agentCount, agentVmSize, clusterFqdn, masterCount, orchestratorProperties, orchestratorType, systemServices);
         }
     }

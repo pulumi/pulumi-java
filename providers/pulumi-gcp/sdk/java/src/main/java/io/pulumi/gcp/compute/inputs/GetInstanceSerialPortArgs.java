@@ -109,22 +109,18 @@ public final class GetInstanceSerialPortArgs extends io.pulumi.resources.InvokeA
             this.instance = Objects.requireNonNull(instance);
             return this;
         }
-
         public Builder port(Integer port) {
             this.port = Objects.requireNonNull(port);
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = project;
             return this;
         }
-
         public Builder zone(@Nullable String zone) {
             this.zone = zone;
             return this;
-        }
-        public GetInstanceSerialPortArgs build() {
+        }        public GetInstanceSerialPortArgs build() {
             return new GetInstanceSerialPortArgs(instance, port, project, zone);
         }
     }

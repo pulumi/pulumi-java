@@ -73,12 +73,13 @@ public final class SharingProfileResponse {
             this.groups = Objects.requireNonNull(groups);
             return this;
         }
-
+        public Builder groups(SharingProfileGroupResponse... groups) {
+            return groups(List.of(groups));
+        }
         public Builder permissions(@Nullable String permissions) {
             this.permissions = permissions;
             return this;
-        }
-        public SharingProfileResponse build() {
+        }        public SharingProfileResponse build() {
             return new SharingProfileResponse(groups, permissions);
         }
     }

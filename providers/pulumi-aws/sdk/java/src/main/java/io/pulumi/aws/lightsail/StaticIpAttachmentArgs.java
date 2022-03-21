@@ -73,22 +73,18 @@ public final class StaticIpAttachmentArgs extends io.pulumi.resources.ResourceAr
             this.instanceName = Objects.requireNonNull(instanceName);
             return this;
         }
-
         public Builder instanceName(String instanceName) {
             this.instanceName = Output.of(Objects.requireNonNull(instanceName));
             return this;
         }
-
         public Builder staticIpName(Output<String> staticIpName) {
             this.staticIpName = Objects.requireNonNull(staticIpName);
             return this;
         }
-
         public Builder staticIpName(String staticIpName) {
             this.staticIpName = Output.of(Objects.requireNonNull(staticIpName));
             return this;
-        }
-        public StaticIpAttachmentArgs build() {
+        }        public StaticIpAttachmentArgs build() {
             return new StaticIpAttachmentArgs(instanceName, staticIpName);
         }
     }

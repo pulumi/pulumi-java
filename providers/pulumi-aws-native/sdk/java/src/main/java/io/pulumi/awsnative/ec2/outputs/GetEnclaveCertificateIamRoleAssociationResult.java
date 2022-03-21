@@ -87,17 +87,14 @@ public final class GetEnclaveCertificateIamRoleAssociationResult {
             this.certificateS3BucketName = certificateS3BucketName;
             return this;
         }
-
         public Builder certificateS3ObjectKey(@Nullable String certificateS3ObjectKey) {
             this.certificateS3ObjectKey = certificateS3ObjectKey;
             return this;
         }
-
         public Builder encryptionKmsKeyId(@Nullable String encryptionKmsKeyId) {
             this.encryptionKmsKeyId = encryptionKmsKeyId;
             return this;
-        }
-        public GetEnclaveCertificateIamRoleAssociationResult build() {
+        }        public GetEnclaveCertificateIamRoleAssociationResult build() {
             return new GetEnclaveCertificateIamRoleAssociationResult(certificateS3BucketName, certificateS3ObjectKey, encryptionKmsKeyId);
         }
     }

@@ -102,22 +102,18 @@ public final class GetProductSetResult {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
-
         public Builder indexError(StatusResponse indexError) {
             this.indexError = Objects.requireNonNull(indexError);
             return this;
         }
-
         public Builder indexTime(String indexTime) {
             this.indexTime = Objects.requireNonNull(indexTime);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
-        }
-        public GetProductSetResult build() {
+        }        public GetProductSetResult build() {
             return new GetProductSetResult(displayName, indexError, indexTime, name);
         }
     }

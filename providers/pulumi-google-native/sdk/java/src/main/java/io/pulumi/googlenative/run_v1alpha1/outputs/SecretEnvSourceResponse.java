@@ -87,17 +87,14 @@ public final class SecretEnvSourceResponse {
             this.localObjectReference = Objects.requireNonNull(localObjectReference);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder optional(Boolean optional) {
             this.optional = Objects.requireNonNull(optional);
             return this;
-        }
-        public SecretEnvSourceResponse build() {
+        }        public SecretEnvSourceResponse build() {
             return new SecretEnvSourceResponse(localObjectReference, name, optional);
         }
     }

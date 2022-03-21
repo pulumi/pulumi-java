@@ -107,42 +107,34 @@ public final class MulticastGroupLoRaWANArgs extends io.pulumi.resources.Resourc
             this.dlClass = Objects.requireNonNull(dlClass);
             return this;
         }
-
         public Builder dlClass(String dlClass) {
             this.dlClass = Output.of(Objects.requireNonNull(dlClass));
             return this;
         }
-
         public Builder numberOfDevicesInGroup(@Nullable Output<Integer> numberOfDevicesInGroup) {
             this.numberOfDevicesInGroup = numberOfDevicesInGroup;
             return this;
         }
-
         public Builder numberOfDevicesInGroup(@Nullable Integer numberOfDevicesInGroup) {
             this.numberOfDevicesInGroup = Output.ofNullable(numberOfDevicesInGroup);
             return this;
         }
-
         public Builder numberOfDevicesRequested(@Nullable Output<Integer> numberOfDevicesRequested) {
             this.numberOfDevicesRequested = numberOfDevicesRequested;
             return this;
         }
-
         public Builder numberOfDevicesRequested(@Nullable Integer numberOfDevicesRequested) {
             this.numberOfDevicesRequested = Output.ofNullable(numberOfDevicesRequested);
             return this;
         }
-
         public Builder rfRegion(Output<String> rfRegion) {
             this.rfRegion = Objects.requireNonNull(rfRegion);
             return this;
         }
-
         public Builder rfRegion(String rfRegion) {
             this.rfRegion = Output.of(Objects.requireNonNull(rfRegion));
             return this;
-        }
-        public MulticastGroupLoRaWANArgs build() {
+        }        public MulticastGroupLoRaWANArgs build() {
             return new MulticastGroupLoRaWANArgs(dlClass, numberOfDevicesInGroup, numberOfDevicesRequested, rfRegion);
         }
     }

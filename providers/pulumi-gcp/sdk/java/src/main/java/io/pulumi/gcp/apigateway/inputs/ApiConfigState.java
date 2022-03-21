@@ -211,102 +211,85 @@ public final class ApiConfigState extends io.pulumi.resources.ResourceArgs {
             this.api = api;
             return this;
         }
-
         public Builder api(@Nullable String api) {
             this.api = Output.ofNullable(api);
             return this;
         }
-
         public Builder apiConfigId(@Nullable Output<String> apiConfigId) {
             this.apiConfigId = apiConfigId;
             return this;
         }
-
         public Builder apiConfigId(@Nullable String apiConfigId) {
             this.apiConfigId = Output.ofNullable(apiConfigId);
             return this;
         }
-
         public Builder apiConfigIdPrefix(@Nullable Output<String> apiConfigIdPrefix) {
             this.apiConfigIdPrefix = apiConfigIdPrefix;
             return this;
         }
-
         public Builder apiConfigIdPrefix(@Nullable String apiConfigIdPrefix) {
             this.apiConfigIdPrefix = Output.ofNullable(apiConfigIdPrefix);
             return this;
         }
-
         public Builder displayName(@Nullable Output<String> displayName) {
             this.displayName = displayName;
             return this;
         }
-
         public Builder displayName(@Nullable String displayName) {
             this.displayName = Output.ofNullable(displayName);
             return this;
         }
-
         public Builder gatewayConfig(@Nullable Output<ApiConfigGatewayConfigGetArgs> gatewayConfig) {
             this.gatewayConfig = gatewayConfig;
             return this;
         }
-
         public Builder gatewayConfig(@Nullable ApiConfigGatewayConfigGetArgs gatewayConfig) {
             this.gatewayConfig = Output.ofNullable(gatewayConfig);
             return this;
         }
-
         public Builder labels(@Nullable Output<Map<String,String>> labels) {
             this.labels = labels;
             return this;
         }
-
         public Builder labels(@Nullable Map<String,String> labels) {
             this.labels = Output.ofNullable(labels);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder openapiDocuments(@Nullable Output<List<ApiConfigOpenapiDocumentGetArgs>> openapiDocuments) {
             this.openapiDocuments = openapiDocuments;
             return this;
         }
-
         public Builder openapiDocuments(@Nullable List<ApiConfigOpenapiDocumentGetArgs> openapiDocuments) {
             this.openapiDocuments = Output.ofNullable(openapiDocuments);
             return this;
         }
-
+        public Builder openapiDocuments(ApiConfigOpenapiDocumentGetArgs... openapiDocuments) {
+            return openapiDocuments(List.of(openapiDocuments));
+        }
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
         }
-
         public Builder serviceConfigId(@Nullable Output<String> serviceConfigId) {
             this.serviceConfigId = serviceConfigId;
             return this;
         }
-
         public Builder serviceConfigId(@Nullable String serviceConfigId) {
             this.serviceConfigId = Output.ofNullable(serviceConfigId);
             return this;
-        }
-        public ApiConfigState build() {
+        }        public ApiConfigState build() {
             return new ApiConfigState(api, apiConfigId, apiConfigIdPrefix, displayName, gatewayConfig, labels, name, openapiDocuments, project, serviceConfigId);
         }
     }

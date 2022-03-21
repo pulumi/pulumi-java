@@ -205,52 +205,45 @@ public final class GetWorkbookTemplateResult {
             this.author = author;
             return this;
         }
-
         public Builder galleries(List<WorkbookTemplateGalleryResponse> galleries) {
             this.galleries = Objects.requireNonNull(galleries);
             return this;
         }
-
+        public Builder galleries(WorkbookTemplateGalleryResponse... galleries) {
+            return galleries(List.of(galleries));
+        }
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder localized(@Nullable Map<String,List<WorkbookTemplateLocalizedGalleryResponse>> localized) {
             this.localized = localized;
             return this;
         }
-
         public Builder location(String location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder priority(@Nullable Integer priority) {
             this.priority = priority;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder templateData(Object templateData) {
             this.templateData = Objects.requireNonNull(templateData);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public GetWorkbookTemplateResult build() {
+        }        public GetWorkbookTemplateResult build() {
             return new GetWorkbookTemplateResult(author, galleries, id, localized, location, name, priority, tags, templateData, type);
         }
     }

@@ -69,12 +69,10 @@ public final class AlertLambdaConfiguration {
             this.lambdaArn = Objects.requireNonNull(lambdaArn);
             return this;
         }
-
         public Builder roleArn(String roleArn) {
             this.roleArn = Objects.requireNonNull(roleArn);
             return this;
-        }
-        public AlertLambdaConfiguration build() {
+        }        public AlertLambdaConfiguration build() {
             return new AlertLambdaConfiguration(lambdaArn, roleArn);
         }
     }

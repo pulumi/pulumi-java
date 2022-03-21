@@ -101,22 +101,18 @@ public final class MonitoringScheduleConfig extends io.pulumi.resources.InvokeAr
             this.monitoringJobDefinition = monitoringJobDefinition;
             return this;
         }
-
         public Builder monitoringJobDefinitionName(@Nullable String monitoringJobDefinitionName) {
             this.monitoringJobDefinitionName = monitoringJobDefinitionName;
             return this;
         }
-
         public Builder monitoringType(@Nullable MonitoringScheduleMonitoringType monitoringType) {
             this.monitoringType = monitoringType;
             return this;
         }
-
         public Builder scheduleConfig(@Nullable MonitoringScheduleScheduleConfig scheduleConfig) {
             this.scheduleConfig = scheduleConfig;
             return this;
-        }
-        public MonitoringScheduleConfig build() {
+        }        public MonitoringScheduleConfig build() {
             return new MonitoringScheduleConfig(monitoringJobDefinition, monitoringJobDefinitionName, monitoringType, scheduleConfig);
         }
     }

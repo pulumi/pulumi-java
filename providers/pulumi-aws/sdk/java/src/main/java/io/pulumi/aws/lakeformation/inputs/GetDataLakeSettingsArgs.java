@@ -56,8 +56,7 @@ public final class GetDataLakeSettingsArgs extends io.pulumi.resources.InvokeArg
         public Builder catalogId(@Nullable String catalogId) {
             this.catalogId = catalogId;
             return this;
-        }
-        public GetDataLakeSettingsArgs build() {
+        }        public GetDataLakeSettingsArgs build() {
             return new GetDataLakeSettingsArgs(catalogId);
         }
     }

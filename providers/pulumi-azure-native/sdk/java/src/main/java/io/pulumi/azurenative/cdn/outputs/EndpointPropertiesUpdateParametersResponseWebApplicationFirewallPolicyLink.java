@@ -53,8 +53,7 @@ public final class EndpointPropertiesUpdateParametersResponseWebApplicationFirew
         public Builder id(@Nullable String id) {
             this.id = id;
             return this;
-        }
-        public EndpointPropertiesUpdateParametersResponseWebApplicationFirewallPolicyLink build() {
+        }        public EndpointPropertiesUpdateParametersResponseWebApplicationFirewallPolicyLink build() {
             return new EndpointPropertiesUpdateParametersResponseWebApplicationFirewallPolicyLink(id);
         }
     }

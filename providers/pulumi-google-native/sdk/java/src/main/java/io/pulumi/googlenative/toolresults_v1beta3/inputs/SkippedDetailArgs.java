@@ -94,32 +94,26 @@ public final class SkippedDetailArgs extends io.pulumi.resources.ResourceArgs {
             this.incompatibleAppVersion = incompatibleAppVersion;
             return this;
         }
-
         public Builder incompatibleAppVersion(@Nullable Boolean incompatibleAppVersion) {
             this.incompatibleAppVersion = Output.ofNullable(incompatibleAppVersion);
             return this;
         }
-
         public Builder incompatibleArchitecture(@Nullable Output<Boolean> incompatibleArchitecture) {
             this.incompatibleArchitecture = incompatibleArchitecture;
             return this;
         }
-
         public Builder incompatibleArchitecture(@Nullable Boolean incompatibleArchitecture) {
             this.incompatibleArchitecture = Output.ofNullable(incompatibleArchitecture);
             return this;
         }
-
         public Builder incompatibleDevice(@Nullable Output<Boolean> incompatibleDevice) {
             this.incompatibleDevice = incompatibleDevice;
             return this;
         }
-
         public Builder incompatibleDevice(@Nullable Boolean incompatibleDevice) {
             this.incompatibleDevice = Output.ofNullable(incompatibleDevice);
             return this;
-        }
-        public SkippedDetailArgs build() {
+        }        public SkippedDetailArgs build() {
             return new SkippedDetailArgs(incompatibleAppVersion, incompatibleArchitecture, incompatibleDevice);
         }
     }

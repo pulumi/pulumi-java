@@ -96,32 +96,32 @@ public final class TriggerBuildArtifactsObjectsGetArgs extends io.pulumi.resourc
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder paths(@Nullable Output<List<String>> paths) {
             this.paths = paths;
             return this;
         }
-
         public Builder paths(@Nullable List<String> paths) {
             this.paths = Output.ofNullable(paths);
             return this;
         }
-
+        public Builder paths(String... paths) {
+            return paths(List.of(paths));
+        }
         public Builder timings(@Nullable Output<List<TriggerBuildArtifactsObjectsTimingGetArgs>> timings) {
             this.timings = timings;
             return this;
         }
-
         public Builder timings(@Nullable List<TriggerBuildArtifactsObjectsTimingGetArgs> timings) {
             this.timings = Output.ofNullable(timings);
             return this;
         }
-        public TriggerBuildArtifactsObjectsGetArgs build() {
+        public Builder timings(TriggerBuildArtifactsObjectsTimingGetArgs... timings) {
+            return timings(List.of(timings));
+        }        public TriggerBuildArtifactsObjectsGetArgs build() {
             return new TriggerBuildArtifactsObjectsGetArgs(location, paths, timings);
         }
     }

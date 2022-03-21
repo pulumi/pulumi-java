@@ -75,22 +75,18 @@ public final class ClusterMasterAuthorizedNetworksConfigCidrBlockArgs extends io
             this.cidrBlock = Objects.requireNonNull(cidrBlock);
             return this;
         }
-
         public Builder cidrBlock(String cidrBlock) {
             this.cidrBlock = Output.of(Objects.requireNonNull(cidrBlock));
             return this;
         }
-
         public Builder displayName(@Nullable Output<String> displayName) {
             this.displayName = displayName;
             return this;
         }
-
         public Builder displayName(@Nullable String displayName) {
             this.displayName = Output.ofNullable(displayName);
             return this;
-        }
-        public ClusterMasterAuthorizedNetworksConfigCidrBlockArgs build() {
+        }        public ClusterMasterAuthorizedNetworksConfigCidrBlockArgs build() {
             return new ClusterMasterAuthorizedNetworksConfigCidrBlockArgs(cidrBlock, displayName);
         }
     }

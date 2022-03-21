@@ -88,17 +88,14 @@ public final class DataDisksGroupsResponse {
             this.diskSizeGB = Objects.requireNonNull(diskSizeGB);
             return this;
         }
-
         public Builder disksPerNode(@Nullable Integer disksPerNode) {
             this.disksPerNode = disksPerNode;
             return this;
         }
-
         public Builder storageAccountType(String storageAccountType) {
             this.storageAccountType = Objects.requireNonNull(storageAccountType);
             return this;
-        }
-        public DataDisksGroupsResponse build() {
+        }        public DataDisksGroupsResponse build() {
             return new DataDisksGroupsResponse(diskSizeGB, disksPerNode, storageAccountType);
         }
     }

@@ -122,37 +122,36 @@ public final class GetInternetGatewayResult {
             this.arn = Objects.requireNonNull(arn);
             return this;
         }
-
         public Builder attachments(List<GetInternetGatewayAttachment> attachments) {
             this.attachments = Objects.requireNonNull(attachments);
             return this;
         }
-
+        public Builder attachments(GetInternetGatewayAttachment... attachments) {
+            return attachments(List.of(attachments));
+        }
         public Builder filters(@Nullable List<GetInternetGatewayFilter> filters) {
             this.filters = filters;
             return this;
         }
-
+        public Builder filters(GetInternetGatewayFilter... filters) {
+            return filters(List.of(filters));
+        }
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder internetGatewayId(String internetGatewayId) {
             this.internetGatewayId = Objects.requireNonNull(internetGatewayId);
             return this;
         }
-
         public Builder ownerId(String ownerId) {
             this.ownerId = Objects.requireNonNull(ownerId);
             return this;
         }
-
         public Builder tags(Map<String,String> tags) {
             this.tags = Objects.requireNonNull(tags);
             return this;
-        }
-        public GetInternetGatewayResult build() {
+        }        public GetInternetGatewayResult build() {
             return new GetInternetGatewayResult(arn, attachments, filters, id, internetGatewayId, ownerId, tags);
         }
     }

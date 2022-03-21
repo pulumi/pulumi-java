@@ -108,42 +108,34 @@ public final class ModelEnvironmentDefinitionPythonArgs extends io.pulumi.resour
             this.baseCondaEnvironment = baseCondaEnvironment;
             return this;
         }
-
         public Builder baseCondaEnvironment(@Nullable String baseCondaEnvironment) {
             this.baseCondaEnvironment = Output.ofNullable(baseCondaEnvironment);
             return this;
         }
-
         public Builder condaDependencies(@Nullable Output<Object> condaDependencies) {
             this.condaDependencies = condaDependencies;
             return this;
         }
-
         public Builder condaDependencies(@Nullable Object condaDependencies) {
             this.condaDependencies = Output.ofNullable(condaDependencies);
             return this;
         }
-
         public Builder interpreterPath(@Nullable Output<String> interpreterPath) {
             this.interpreterPath = interpreterPath;
             return this;
         }
-
         public Builder interpreterPath(@Nullable String interpreterPath) {
             this.interpreterPath = Output.ofNullable(interpreterPath);
             return this;
         }
-
         public Builder userManagedDependencies(@Nullable Output<Boolean> userManagedDependencies) {
             this.userManagedDependencies = userManagedDependencies;
             return this;
         }
-
         public Builder userManagedDependencies(@Nullable Boolean userManagedDependencies) {
             this.userManagedDependencies = Output.ofNullable(userManagedDependencies);
             return this;
-        }
-        public ModelEnvironmentDefinitionPythonArgs build() {
+        }        public ModelEnvironmentDefinitionPythonArgs build() {
             return new ModelEnvironmentDefinitionPythonArgs(baseCondaEnvironment, condaDependencies, interpreterPath, userManagedDependencies);
         }
     }

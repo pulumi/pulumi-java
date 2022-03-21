@@ -80,22 +80,18 @@ public final class ClusterMasterAuth {
             this.clientCertificate = clientCertificate;
             return this;
         }
-
         public Builder clientCertificateConfig(ClusterMasterAuthClientCertificateConfig clientCertificateConfig) {
             this.clientCertificateConfig = Objects.requireNonNull(clientCertificateConfig);
             return this;
         }
-
         public Builder clientKey(@Nullable String clientKey) {
             this.clientKey = clientKey;
             return this;
         }
-
         public Builder clusterCaCertificate(@Nullable String clusterCaCertificate) {
             this.clusterCaCertificate = clusterCaCertificate;
             return this;
-        }
-        public ClusterMasterAuth build() {
+        }        public ClusterMasterAuth build() {
             return new ClusterMasterAuth(clientCertificate, clientCertificateConfig, clientKey, clusterCaCertificate);
         }
     }

@@ -43,8 +43,7 @@ public final class GetRegionResult {
         public Builder region(String region) {
             this.region = Objects.requireNonNull(region);
             return this;
-        }
-        public GetRegionResult build() {
+        }        public GetRegionResult build() {
             return new GetRegionResult(region);
         }
     }

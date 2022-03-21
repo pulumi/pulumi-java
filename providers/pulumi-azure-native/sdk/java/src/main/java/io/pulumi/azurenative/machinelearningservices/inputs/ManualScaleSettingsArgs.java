@@ -107,42 +107,34 @@ public final class ManualScaleSettingsArgs extends io.pulumi.resources.ResourceA
             this.instanceCount = instanceCount;
             return this;
         }
-
         public Builder instanceCount(@Nullable Integer instanceCount) {
             this.instanceCount = Output.ofNullable(instanceCount);
             return this;
         }
-
         public Builder maxInstances(@Nullable Output<Integer> maxInstances) {
             this.maxInstances = maxInstances;
             return this;
         }
-
         public Builder maxInstances(@Nullable Integer maxInstances) {
             this.maxInstances = Output.ofNullable(maxInstances);
             return this;
         }
-
         public Builder minInstances(@Nullable Output<Integer> minInstances) {
             this.minInstances = minInstances;
             return this;
         }
-
         public Builder minInstances(@Nullable Integer minInstances) {
             this.minInstances = Output.ofNullable(minInstances);
             return this;
         }
-
         public Builder scaleType(Output<String> scaleType) {
             this.scaleType = Objects.requireNonNull(scaleType);
             return this;
         }
-
         public Builder scaleType(String scaleType) {
             this.scaleType = Output.of(Objects.requireNonNull(scaleType));
             return this;
-        }
-        public ManualScaleSettingsArgs build() {
+        }        public ManualScaleSettingsArgs build() {
             return new ManualScaleSettingsArgs(instanceCount, maxInstances, minInstances, scaleType);
         }
     }

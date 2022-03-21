@@ -185,47 +185,38 @@ public final class GetWorkloadGroupResult {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder importance(@Nullable String importance) {
             this.importance = importance;
             return this;
         }
-
         public Builder maxResourcePercent(Integer maxResourcePercent) {
             this.maxResourcePercent = Objects.requireNonNull(maxResourcePercent);
             return this;
         }
-
         public Builder maxResourcePercentPerRequest(@Nullable Double maxResourcePercentPerRequest) {
             this.maxResourcePercentPerRequest = maxResourcePercentPerRequest;
             return this;
         }
-
         public Builder minResourcePercent(Integer minResourcePercent) {
             this.minResourcePercent = Objects.requireNonNull(minResourcePercent);
             return this;
         }
-
         public Builder minResourcePercentPerRequest(Double minResourcePercentPerRequest) {
             this.minResourcePercentPerRequest = Objects.requireNonNull(minResourcePercentPerRequest);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder queryExecutionTimeout(@Nullable Integer queryExecutionTimeout) {
             this.queryExecutionTimeout = queryExecutionTimeout;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public GetWorkloadGroupResult build() {
+        }        public GetWorkloadGroupResult build() {
             return new GetWorkloadGroupResult(id, importance, maxResourcePercent, maxResourcePercentPerRequest, minResourcePercent, minResourcePercentPerRequest, name, queryExecutionTimeout, type);
         }
     }

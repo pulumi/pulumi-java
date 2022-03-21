@@ -65,22 +65,18 @@ public final class RegistryScanningConfigurationRuleRepositoryFilterArgs extends
             this.filter = Objects.requireNonNull(filter);
             return this;
         }
-
         public Builder filter(String filter) {
             this.filter = Output.of(Objects.requireNonNull(filter));
             return this;
         }
-
         public Builder filterType(Output<String> filterType) {
             this.filterType = Objects.requireNonNull(filterType);
             return this;
         }
-
         public Builder filterType(String filterType) {
             this.filterType = Output.of(Objects.requireNonNull(filterType));
             return this;
-        }
-        public RegistryScanningConfigurationRuleRepositoryFilterArgs build() {
+        }        public RegistryScanningConfigurationRuleRepositoryFilterArgs build() {
             return new RegistryScanningConfigurationRuleRepositoryFilterArgs(filter, filterType);
         }
     }

@@ -124,27 +124,28 @@ public final class IsDeviceMatchConditionParametersResponse extends io.pulumi.re
             this.matchValues = matchValues;
             return this;
         }
-
+        public Builder matchValues(String... matchValues) {
+            return matchValues(List.of(matchValues));
+        }
         public Builder negateCondition(@Nullable Boolean negateCondition) {
             this.negateCondition = negateCondition;
             return this;
         }
-
         public Builder odataType(String odataType) {
             this.odataType = Objects.requireNonNull(odataType);
             return this;
         }
-
         public Builder operator(String operator) {
             this.operator = Objects.requireNonNull(operator);
             return this;
         }
-
         public Builder transforms(@Nullable List<String> transforms) {
             this.transforms = transforms;
             return this;
         }
-        public IsDeviceMatchConditionParametersResponse build() {
+        public Builder transforms(String... transforms) {
+            return transforms(List.of(transforms));
+        }        public IsDeviceMatchConditionParametersResponse build() {
             return new IsDeviceMatchConditionParametersResponse(matchValues, negateCondition, odataType, operator, transforms);
         }
     }

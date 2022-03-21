@@ -105,22 +105,24 @@ public final class BlobInventoryPolicyFilterResponse {
             this.blobTypes = Objects.requireNonNull(blobTypes);
             return this;
         }
-
+        public Builder blobTypes(String... blobTypes) {
+            return blobTypes(List.of(blobTypes));
+        }
         public Builder includeBlobVersions(@Nullable Boolean includeBlobVersions) {
             this.includeBlobVersions = includeBlobVersions;
             return this;
         }
-
         public Builder includeSnapshots(@Nullable Boolean includeSnapshots) {
             this.includeSnapshots = includeSnapshots;
             return this;
         }
-
         public Builder prefixMatch(@Nullable List<String> prefixMatch) {
             this.prefixMatch = prefixMatch;
             return this;
         }
-        public BlobInventoryPolicyFilterResponse build() {
+        public Builder prefixMatch(String... prefixMatch) {
+            return prefixMatch(List.of(prefixMatch));
+        }        public BlobInventoryPolicyFilterResponse build() {
             return new BlobInventoryPolicyFilterResponse(blobTypes, includeBlobVersions, includeSnapshots, prefixMatch);
         }
     }

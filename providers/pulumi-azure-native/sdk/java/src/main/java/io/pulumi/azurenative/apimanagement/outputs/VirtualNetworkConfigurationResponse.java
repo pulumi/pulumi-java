@@ -87,17 +87,14 @@ public final class VirtualNetworkConfigurationResponse {
             this.subnetResourceId = subnetResourceId;
             return this;
         }
-
         public Builder subnetname(String subnetname) {
             this.subnetname = Objects.requireNonNull(subnetname);
             return this;
         }
-
         public Builder vnetid(String vnetid) {
             this.vnetid = Objects.requireNonNull(vnetid);
             return this;
-        }
-        public VirtualNetworkConfigurationResponse build() {
+        }        public VirtualNetworkConfigurationResponse build() {
             return new VirtualNetworkConfigurationResponse(subnetResourceId, subnetname, vnetid);
         }
     }

@@ -73,22 +73,18 @@ public final class FirehoseDeliveryStreamElasticsearchConfigurationProcessingCon
             this.parameterName = Objects.requireNonNull(parameterName);
             return this;
         }
-
         public Builder parameterName(String parameterName) {
             this.parameterName = Output.of(Objects.requireNonNull(parameterName));
             return this;
         }
-
         public Builder parameterValue(Output<String> parameterValue) {
             this.parameterValue = Objects.requireNonNull(parameterValue);
             return this;
         }
-
         public Builder parameterValue(String parameterValue) {
             this.parameterValue = Output.of(Objects.requireNonNull(parameterValue));
             return this;
-        }
-        public FirehoseDeliveryStreamElasticsearchConfigurationProcessingConfigurationProcessorParameterGetArgs build() {
+        }        public FirehoseDeliveryStreamElasticsearchConfigurationProcessingConfigurationProcessorParameterGetArgs build() {
             return new FirehoseDeliveryStreamElasticsearchConfigurationProcessingConfigurationProcessorParameterGetArgs(parameterName, parameterValue);
         }
     }

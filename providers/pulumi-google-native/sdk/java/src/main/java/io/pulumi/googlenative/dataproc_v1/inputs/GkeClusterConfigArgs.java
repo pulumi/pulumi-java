@@ -61,12 +61,10 @@ public final class GkeClusterConfigArgs extends io.pulumi.resources.ResourceArgs
             this.namespacedGkeDeploymentTarget = namespacedGkeDeploymentTarget;
             return this;
         }
-
         public Builder namespacedGkeDeploymentTarget(@Nullable NamespacedGkeDeploymentTargetArgs namespacedGkeDeploymentTarget) {
             this.namespacedGkeDeploymentTarget = Output.ofNullable(namespacedGkeDeploymentTarget);
             return this;
-        }
-        public GkeClusterConfigArgs build() {
+        }        public GkeClusterConfigArgs build() {
             return new GkeClusterConfigArgs(namespacedGkeDeploymentTarget);
         }
     }

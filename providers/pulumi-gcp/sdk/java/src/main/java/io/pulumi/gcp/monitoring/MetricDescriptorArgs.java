@@ -228,102 +228,85 @@ public final class MetricDescriptorArgs extends io.pulumi.resources.ResourceArgs
             this.description = Objects.requireNonNull(description);
             return this;
         }
-
         public Builder description(String description) {
             this.description = Output.of(Objects.requireNonNull(description));
             return this;
         }
-
         public Builder displayName(Output<String> displayName) {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
-
         public Builder displayName(String displayName) {
             this.displayName = Output.of(Objects.requireNonNull(displayName));
             return this;
         }
-
         public Builder labels(@Nullable Output<List<MetricDescriptorLabelArgs>> labels) {
             this.labels = labels;
             return this;
         }
-
         public Builder labels(@Nullable List<MetricDescriptorLabelArgs> labels) {
             this.labels = Output.ofNullable(labels);
             return this;
         }
-
+        public Builder labels(MetricDescriptorLabelArgs... labels) {
+            return labels(List.of(labels));
+        }
         public Builder launchStage(@Nullable Output<String> launchStage) {
             this.launchStage = launchStage;
             return this;
         }
-
         public Builder launchStage(@Nullable String launchStage) {
             this.launchStage = Output.ofNullable(launchStage);
             return this;
         }
-
         public Builder metadata(@Nullable Output<MetricDescriptorMetadataArgs> metadata) {
             this.metadata = metadata;
             return this;
         }
-
         public Builder metadata(@Nullable MetricDescriptorMetadataArgs metadata) {
             this.metadata = Output.ofNullable(metadata);
             return this;
         }
-
         public Builder metricKind(Output<String> metricKind) {
             this.metricKind = Objects.requireNonNull(metricKind);
             return this;
         }
-
         public Builder metricKind(String metricKind) {
             this.metricKind = Output.of(Objects.requireNonNull(metricKind));
             return this;
         }
-
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
         }
-
         public Builder type(Output<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Output.of(Objects.requireNonNull(type));
             return this;
         }
-
         public Builder unit(@Nullable Output<String> unit) {
             this.unit = unit;
             return this;
         }
-
         public Builder unit(@Nullable String unit) {
             this.unit = Output.ofNullable(unit);
             return this;
         }
-
         public Builder valueType(Output<String> valueType) {
             this.valueType = Objects.requireNonNull(valueType);
             return this;
         }
-
         public Builder valueType(String valueType) {
             this.valueType = Output.of(Objects.requireNonNull(valueType));
             return this;
-        }
-        public MetricDescriptorArgs build() {
+        }        public MetricDescriptorArgs build() {
             return new MetricDescriptorArgs(description, displayName, labels, launchStage, metadata, metricKind, project, type, unit, valueType);
         }
     }

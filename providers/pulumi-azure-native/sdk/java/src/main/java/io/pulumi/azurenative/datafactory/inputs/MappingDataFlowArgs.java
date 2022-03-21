@@ -197,92 +197,89 @@ public final class MappingDataFlowArgs extends io.pulumi.resources.ResourceArgs 
             this.annotations = annotations;
             return this;
         }
-
         public Builder annotations(@Nullable List<Object> annotations) {
             this.annotations = Output.ofNullable(annotations);
             return this;
         }
-
+        public Builder annotations(Object... annotations) {
+            return annotations(List.of(annotations));
+        }
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder folder(@Nullable Output<DataFlowFolderArgs> folder) {
             this.folder = folder;
             return this;
         }
-
         public Builder folder(@Nullable DataFlowFolderArgs folder) {
             this.folder = Output.ofNullable(folder);
             return this;
         }
-
         public Builder script(@Nullable Output<String> script) {
             this.script = script;
             return this;
         }
-
         public Builder script(@Nullable String script) {
             this.script = Output.ofNullable(script);
             return this;
         }
-
         public Builder scriptLines(@Nullable Output<List<String>> scriptLines) {
             this.scriptLines = scriptLines;
             return this;
         }
-
         public Builder scriptLines(@Nullable List<String> scriptLines) {
             this.scriptLines = Output.ofNullable(scriptLines);
             return this;
         }
-
+        public Builder scriptLines(String... scriptLines) {
+            return scriptLines(List.of(scriptLines));
+        }
         public Builder sinks(@Nullable Output<List<DataFlowSinkArgs>> sinks) {
             this.sinks = sinks;
             return this;
         }
-
         public Builder sinks(@Nullable List<DataFlowSinkArgs> sinks) {
             this.sinks = Output.ofNullable(sinks);
             return this;
         }
-
+        public Builder sinks(DataFlowSinkArgs... sinks) {
+            return sinks(List.of(sinks));
+        }
         public Builder sources(@Nullable Output<List<DataFlowSourceArgs>> sources) {
             this.sources = sources;
             return this;
         }
-
         public Builder sources(@Nullable List<DataFlowSourceArgs> sources) {
             this.sources = Output.ofNullable(sources);
             return this;
         }
-
+        public Builder sources(DataFlowSourceArgs... sources) {
+            return sources(List.of(sources));
+        }
         public Builder transformations(@Nullable Output<List<TransformationArgs>> transformations) {
             this.transformations = transformations;
             return this;
         }
-
         public Builder transformations(@Nullable List<TransformationArgs> transformations) {
             this.transformations = Output.ofNullable(transformations);
             return this;
         }
-
+        public Builder transformations(TransformationArgs... transformations) {
+            return transformations(List.of(transformations));
+        }
         public Builder type(Output<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Output.of(Objects.requireNonNull(type));
             return this;
-        }
-        public MappingDataFlowArgs build() {
+        }        public MappingDataFlowArgs build() {
             return new MappingDataFlowArgs(annotations, description, folder, script, scriptLines, sinks, sources, transformations, type);
         }
     }

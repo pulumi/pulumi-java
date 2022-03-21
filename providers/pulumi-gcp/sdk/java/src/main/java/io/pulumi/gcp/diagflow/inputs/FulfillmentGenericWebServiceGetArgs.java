@@ -107,42 +107,34 @@ public final class FulfillmentGenericWebServiceGetArgs extends io.pulumi.resourc
             this.password = password;
             return this;
         }
-
         public Builder password(@Nullable String password) {
             this.password = Output.ofNullable(password);
             return this;
         }
-
         public Builder requestHeaders(@Nullable Output<Map<String,String>> requestHeaders) {
             this.requestHeaders = requestHeaders;
             return this;
         }
-
         public Builder requestHeaders(@Nullable Map<String,String> requestHeaders) {
             this.requestHeaders = Output.ofNullable(requestHeaders);
             return this;
         }
-
         public Builder uri(Output<String> uri) {
             this.uri = Objects.requireNonNull(uri);
             return this;
         }
-
         public Builder uri(String uri) {
             this.uri = Output.of(Objects.requireNonNull(uri));
             return this;
         }
-
         public Builder username(@Nullable Output<String> username) {
             this.username = username;
             return this;
         }
-
         public Builder username(@Nullable String username) {
             this.username = Output.ofNullable(username);
             return this;
-        }
-        public FulfillmentGenericWebServiceGetArgs build() {
+        }        public FulfillmentGenericWebServiceGetArgs build() {
             return new FulfillmentGenericWebServiceGetArgs(password, requestHeaders, uri, username);
         }
     }

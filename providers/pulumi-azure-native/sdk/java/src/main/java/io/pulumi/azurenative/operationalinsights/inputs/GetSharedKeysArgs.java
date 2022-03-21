@@ -72,12 +72,10 @@ public final class GetSharedKeysArgs extends io.pulumi.resources.InvokeArgs {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder workspaceName(String workspaceName) {
             this.workspaceName = Objects.requireNonNull(workspaceName);
             return this;
-        }
-        public GetSharedKeysArgs build() {
+        }        public GetSharedKeysArgs build() {
             return new GetSharedKeysArgs(resourceGroupName, workspaceName);
         }
     }

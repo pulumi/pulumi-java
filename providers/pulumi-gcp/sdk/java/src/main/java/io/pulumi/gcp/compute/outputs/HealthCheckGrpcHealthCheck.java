@@ -138,22 +138,18 @@ public final class HealthCheckGrpcHealthCheck {
             this.grpcServiceName = grpcServiceName;
             return this;
         }
-
         public Builder port(@Nullable Integer port) {
             this.port = port;
             return this;
         }
-
         public Builder portName(@Nullable String portName) {
             this.portName = portName;
             return this;
         }
-
         public Builder portSpecification(@Nullable String portSpecification) {
             this.portSpecification = portSpecification;
             return this;
-        }
-        public HealthCheckGrpcHealthCheck build() {
+        }        public HealthCheckGrpcHealthCheck build() {
             return new HealthCheckGrpcHealthCheck(grpcServiceName, port, portName, portSpecification);
         }
     }

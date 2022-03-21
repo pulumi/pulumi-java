@@ -165,92 +165,80 @@ public final class AssessmentArgs extends io.pulumi.resources.ResourceArgs {
             this.assessmentReportsDestination = assessmentReportsDestination;
             return this;
         }
-
         public Builder assessmentReportsDestination(@Nullable AssessmentReportsDestinationArgs assessmentReportsDestination) {
             this.assessmentReportsDestination = Output.ofNullable(assessmentReportsDestination);
             return this;
         }
-
         public Builder awsAccount(@Nullable Output<AssessmentAWSAccountArgs> awsAccount) {
             this.awsAccount = awsAccount;
             return this;
         }
-
         public Builder awsAccount(@Nullable AssessmentAWSAccountArgs awsAccount) {
             this.awsAccount = Output.ofNullable(awsAccount);
             return this;
         }
-
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder frameworkId(@Nullable Output<String> frameworkId) {
             this.frameworkId = frameworkId;
             return this;
         }
-
         public Builder frameworkId(@Nullable String frameworkId) {
             this.frameworkId = Output.ofNullable(frameworkId);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder roles(@Nullable Output<List<AssessmentRoleArgs>> roles) {
             this.roles = roles;
             return this;
         }
-
         public Builder roles(@Nullable List<AssessmentRoleArgs> roles) {
             this.roles = Output.ofNullable(roles);
             return this;
         }
-
+        public Builder roles(AssessmentRoleArgs... roles) {
+            return roles(List.of(roles));
+        }
         public Builder scope(@Nullable Output<AssessmentScopeArgs> scope) {
             this.scope = scope;
             return this;
         }
-
         public Builder scope(@Nullable AssessmentScopeArgs scope) {
             this.scope = Output.ofNullable(scope);
             return this;
         }
-
         public Builder status(@Nullable Output<AssessmentStatus> status) {
             this.status = status;
             return this;
         }
-
         public Builder status(@Nullable AssessmentStatus status) {
             this.status = Output.ofNullable(status);
             return this;
         }
-
         public Builder tags(@Nullable Output<List<AssessmentTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable List<AssessmentTagArgs> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-        public AssessmentArgs build() {
+        public Builder tags(AssessmentTagArgs... tags) {
+            return tags(List.of(tags));
+        }        public AssessmentArgs build() {
             return new AssessmentArgs(assessmentReportsDestination, awsAccount, description, frameworkId, name, roles, scope, status, tags);
         }
     }

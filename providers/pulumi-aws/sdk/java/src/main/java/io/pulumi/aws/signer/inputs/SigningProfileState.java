@@ -238,122 +238,101 @@ public final class SigningProfileState extends io.pulumi.resources.ResourceArgs 
             this.arn = arn;
             return this;
         }
-
         public Builder arn(@Nullable String arn) {
             this.arn = Output.ofNullable(arn);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder namePrefix(@Nullable Output<String> namePrefix) {
             this.namePrefix = namePrefix;
             return this;
         }
-
         public Builder namePrefix(@Nullable String namePrefix) {
             this.namePrefix = Output.ofNullable(namePrefix);
             return this;
         }
-
         public Builder platformDisplayName(@Nullable Output<String> platformDisplayName) {
             this.platformDisplayName = platformDisplayName;
             return this;
         }
-
         public Builder platformDisplayName(@Nullable String platformDisplayName) {
             this.platformDisplayName = Output.ofNullable(platformDisplayName);
             return this;
         }
-
         public Builder platformId(@Nullable Output<String> platformId) {
             this.platformId = platformId;
             return this;
         }
-
         public Builder platformId(@Nullable String platformId) {
             this.platformId = Output.ofNullable(platformId);
             return this;
         }
-
         public Builder revocationRecords(@Nullable Output<List<SigningProfileRevocationRecordGetArgs>> revocationRecords) {
             this.revocationRecords = revocationRecords;
             return this;
         }
-
         public Builder revocationRecords(@Nullable List<SigningProfileRevocationRecordGetArgs> revocationRecords) {
             this.revocationRecords = Output.ofNullable(revocationRecords);
             return this;
         }
-
+        public Builder revocationRecords(SigningProfileRevocationRecordGetArgs... revocationRecords) {
+            return revocationRecords(List.of(revocationRecords));
+        }
         public Builder signatureValidityPeriod(@Nullable Output<SigningProfileSignatureValidityPeriodGetArgs> signatureValidityPeriod) {
             this.signatureValidityPeriod = signatureValidityPeriod;
             return this;
         }
-
         public Builder signatureValidityPeriod(@Nullable SigningProfileSignatureValidityPeriodGetArgs signatureValidityPeriod) {
             this.signatureValidityPeriod = Output.ofNullable(signatureValidityPeriod);
             return this;
         }
-
         public Builder status(@Nullable Output<String> status) {
             this.status = status;
             return this;
         }
-
         public Builder status(@Nullable String status) {
             this.status = Output.ofNullable(status);
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
             this.tagsAll = tagsAll;
             return this;
         }
-
         public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
             this.tagsAll = Output.ofNullable(tagsAll);
             return this;
         }
-
         public Builder version(@Nullable Output<String> version) {
             this.version = version;
             return this;
         }
-
         public Builder version(@Nullable String version) {
             this.version = Output.ofNullable(version);
             return this;
         }
-
         public Builder versionArn(@Nullable Output<String> versionArn) {
             this.versionArn = versionArn;
             return this;
         }
-
         public Builder versionArn(@Nullable String versionArn) {
             this.versionArn = Output.ofNullable(versionArn);
             return this;
-        }
-        public SigningProfileState build() {
+        }        public SigningProfileState build() {
             return new SigningProfileState(arn, name, namePrefix, platformDisplayName, platformId, revocationRecords, signatureValidityPeriod, status, tags, tagsAll, version, versionArn);
         }
     }

@@ -108,42 +108,34 @@ public final class FleetSpotOptionsGetArgs extends io.pulumi.resources.ResourceA
             this.allocationStrategy = allocationStrategy;
             return this;
         }
-
         public Builder allocationStrategy(@Nullable String allocationStrategy) {
             this.allocationStrategy = Output.ofNullable(allocationStrategy);
             return this;
         }
-
         public Builder instanceInterruptionBehavior(@Nullable Output<String> instanceInterruptionBehavior) {
             this.instanceInterruptionBehavior = instanceInterruptionBehavior;
             return this;
         }
-
         public Builder instanceInterruptionBehavior(@Nullable String instanceInterruptionBehavior) {
             this.instanceInterruptionBehavior = Output.ofNullable(instanceInterruptionBehavior);
             return this;
         }
-
         public Builder instancePoolsToUseCount(@Nullable Output<Integer> instancePoolsToUseCount) {
             this.instancePoolsToUseCount = instancePoolsToUseCount;
             return this;
         }
-
         public Builder instancePoolsToUseCount(@Nullable Integer instancePoolsToUseCount) {
             this.instancePoolsToUseCount = Output.ofNullable(instancePoolsToUseCount);
             return this;
         }
-
         public Builder maintenanceStrategies(@Nullable Output<FleetSpotOptionsMaintenanceStrategiesGetArgs> maintenanceStrategies) {
             this.maintenanceStrategies = maintenanceStrategies;
             return this;
         }
-
         public Builder maintenanceStrategies(@Nullable FleetSpotOptionsMaintenanceStrategiesGetArgs maintenanceStrategies) {
             this.maintenanceStrategies = Output.ofNullable(maintenanceStrategies);
             return this;
-        }
-        public FleetSpotOptionsGetArgs build() {
+        }        public FleetSpotOptionsGetArgs build() {
             return new FleetSpotOptionsGetArgs(allocationStrategy, instanceInterruptionBehavior, instancePoolsToUseCount, maintenanceStrategies);
         }
     }

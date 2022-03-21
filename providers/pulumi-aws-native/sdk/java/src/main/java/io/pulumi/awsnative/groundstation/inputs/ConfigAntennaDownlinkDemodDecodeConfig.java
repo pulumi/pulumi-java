@@ -80,17 +80,14 @@ public final class ConfigAntennaDownlinkDemodDecodeConfig extends io.pulumi.reso
             this.decodeConfig = decodeConfig;
             return this;
         }
-
         public Builder demodulationConfig(@Nullable ConfigDemodulationConfig demodulationConfig) {
             this.demodulationConfig = demodulationConfig;
             return this;
         }
-
         public Builder spectrumConfig(@Nullable ConfigSpectrumConfig spectrumConfig) {
             this.spectrumConfig = spectrumConfig;
             return this;
-        }
-        public ConfigAntennaDownlinkDemodDecodeConfig build() {
+        }        public ConfigAntennaDownlinkDemodDecodeConfig build() {
             return new ConfigAntennaDownlinkDemodDecodeConfig(decodeConfig, demodulationConfig, spectrumConfig);
         }
     }

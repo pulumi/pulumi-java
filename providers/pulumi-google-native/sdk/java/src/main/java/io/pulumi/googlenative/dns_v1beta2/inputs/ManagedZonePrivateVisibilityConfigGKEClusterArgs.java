@@ -70,22 +70,18 @@ public final class ManagedZonePrivateVisibilityConfigGKEClusterArgs extends io.p
             this.gkeClusterName = gkeClusterName;
             return this;
         }
-
         public Builder gkeClusterName(@Nullable String gkeClusterName) {
             this.gkeClusterName = Output.ofNullable(gkeClusterName);
             return this;
         }
-
         public Builder kind(@Nullable Output<String> kind) {
             this.kind = kind;
             return this;
         }
-
         public Builder kind(@Nullable String kind) {
             this.kind = Output.ofNullable(kind);
             return this;
-        }
-        public ManagedZonePrivateVisibilityConfigGKEClusterArgs build() {
+        }        public ManagedZonePrivateVisibilityConfigGKEClusterArgs build() {
             return new ManagedZonePrivateVisibilityConfigGKEClusterArgs(gkeClusterName, kind);
         }
     }

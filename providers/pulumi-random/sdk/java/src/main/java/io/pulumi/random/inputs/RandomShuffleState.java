@@ -126,52 +126,48 @@ public final class RandomShuffleState extends io.pulumi.resources.ResourceArgs {
             this.inputs = inputs;
             return this;
         }
-
         public Builder inputs(@Nullable List<String> inputs) {
             this.inputs = Output.ofNullable(inputs);
             return this;
         }
-
+        public Builder inputs(String... inputs) {
+            return inputs(List.of(inputs));
+        }
         public Builder keepers(@Nullable Output<Map<String,Object>> keepers) {
             this.keepers = keepers;
             return this;
         }
-
         public Builder keepers(@Nullable Map<String,Object> keepers) {
             this.keepers = Output.ofNullable(keepers);
             return this;
         }
-
         public Builder resultCount(@Nullable Output<Integer> resultCount) {
             this.resultCount = resultCount;
             return this;
         }
-
         public Builder resultCount(@Nullable Integer resultCount) {
             this.resultCount = Output.ofNullable(resultCount);
             return this;
         }
-
         public Builder results(@Nullable Output<List<String>> results) {
             this.results = results;
             return this;
         }
-
         public Builder results(@Nullable List<String> results) {
             this.results = Output.ofNullable(results);
             return this;
         }
-
+        public Builder results(String... results) {
+            return results(List.of(results));
+        }
         public Builder seed(@Nullable Output<String> seed) {
             this.seed = seed;
             return this;
         }
-
         public Builder seed(@Nullable String seed) {
             this.seed = Output.ofNullable(seed);
             return this;
-        }
-        public RandomShuffleState build() {
+        }        public RandomShuffleState build() {
             return new RandomShuffleState(inputs, keepers, resultCount, results, seed);
         }
     }

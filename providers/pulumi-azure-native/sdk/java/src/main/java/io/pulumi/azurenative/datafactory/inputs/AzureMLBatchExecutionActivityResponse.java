@@ -215,52 +215,48 @@ public final class AzureMLBatchExecutionActivityResponse extends io.pulumi.resou
             this.dependsOn = dependsOn;
             return this;
         }
-
+        public Builder dependsOn(ActivityDependencyResponse... dependsOn) {
+            return dependsOn(List.of(dependsOn));
+        }
         public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
-
         public Builder globalParameters(@Nullable Map<String,Object> globalParameters) {
             this.globalParameters = globalParameters;
             return this;
         }
-
         public Builder linkedServiceName(@Nullable LinkedServiceReferenceResponse linkedServiceName) {
             this.linkedServiceName = linkedServiceName;
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder policy(@Nullable ActivityPolicyResponse policy) {
             this.policy = policy;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder userProperties(@Nullable List<UserPropertyResponse> userProperties) {
             this.userProperties = userProperties;
             return this;
         }
-
+        public Builder userProperties(UserPropertyResponse... userProperties) {
+            return userProperties(List.of(userProperties));
+        }
         public Builder webServiceInputs(@Nullable Map<String,AzureMLWebServiceFileResponse> webServiceInputs) {
             this.webServiceInputs = webServiceInputs;
             return this;
         }
-
         public Builder webServiceOutputs(@Nullable Map<String,AzureMLWebServiceFileResponse> webServiceOutputs) {
             this.webServiceOutputs = webServiceOutputs;
             return this;
-        }
-        public AzureMLBatchExecutionActivityResponse build() {
+        }        public AzureMLBatchExecutionActivityResponse build() {
             return new AzureMLBatchExecutionActivityResponse(dependsOn, description, globalParameters, linkedServiceName, name, policy, type, userProperties, webServiceInputs, webServiceOutputs);
         }
     }

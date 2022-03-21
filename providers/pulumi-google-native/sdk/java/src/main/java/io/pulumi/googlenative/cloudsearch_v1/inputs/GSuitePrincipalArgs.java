@@ -91,32 +91,26 @@ public final class GSuitePrincipalArgs extends io.pulumi.resources.ResourceArgs 
             this.gsuiteDomain = gsuiteDomain;
             return this;
         }
-
         public Builder gsuiteDomain(@Nullable Boolean gsuiteDomain) {
             this.gsuiteDomain = Output.ofNullable(gsuiteDomain);
             return this;
         }
-
         public Builder gsuiteGroupEmail(@Nullable Output<String> gsuiteGroupEmail) {
             this.gsuiteGroupEmail = gsuiteGroupEmail;
             return this;
         }
-
         public Builder gsuiteGroupEmail(@Nullable String gsuiteGroupEmail) {
             this.gsuiteGroupEmail = Output.ofNullable(gsuiteGroupEmail);
             return this;
         }
-
         public Builder gsuiteUserEmail(@Nullable Output<String> gsuiteUserEmail) {
             this.gsuiteUserEmail = gsuiteUserEmail;
             return this;
         }
-
         public Builder gsuiteUserEmail(@Nullable String gsuiteUserEmail) {
             this.gsuiteUserEmail = Output.ofNullable(gsuiteUserEmail);
             return this;
-        }
-        public GSuitePrincipalArgs build() {
+        }        public GSuitePrincipalArgs build() {
             return new GSuitePrincipalArgs(gsuiteDomain, gsuiteGroupEmail, gsuiteUserEmail);
         }
     }

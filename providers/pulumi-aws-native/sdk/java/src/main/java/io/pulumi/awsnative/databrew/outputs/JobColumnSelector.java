@@ -55,12 +55,10 @@ public final class JobColumnSelector {
             this.name = name;
             return this;
         }
-
         public Builder regex(@Nullable String regex) {
             this.regex = regex;
             return this;
-        }
-        public JobColumnSelector build() {
+        }        public JobColumnSelector build() {
             return new JobColumnSelector(name, regex);
         }
     }

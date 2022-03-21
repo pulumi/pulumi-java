@@ -72,12 +72,10 @@ public final class MongoIndexOptionsResponse {
             this.expireAfterSeconds = expireAfterSeconds;
             return this;
         }
-
         public Builder unique(@Nullable Boolean unique) {
             this.unique = unique;
             return this;
-        }
-        public MongoIndexOptionsResponse build() {
+        }        public MongoIndexOptionsResponse build() {
             return new MongoIndexOptionsResponse(expireAfterSeconds, unique);
         }
     }

@@ -78,22 +78,18 @@ public final class ActorArgs extends io.pulumi.resources.ResourceArgs {
             this.displayName = displayName;
             return this;
         }
-
         public Builder displayName(@Nullable String displayName) {
             this.displayName = Output.ofNullable(displayName);
             return this;
         }
-
         public Builder email(@Nullable Output<String> email) {
             this.email = email;
             return this;
         }
-
         public Builder email(@Nullable String email) {
             this.email = Output.ofNullable(email);
             return this;
-        }
-        public ActorArgs build() {
+        }        public ActorArgs build() {
             return new ActorArgs(displayName, email);
         }
     }

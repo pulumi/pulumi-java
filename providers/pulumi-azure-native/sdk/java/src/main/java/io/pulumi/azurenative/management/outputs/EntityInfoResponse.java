@@ -242,67 +242,60 @@ public final class EntityInfoResponse {
             this.displayName = displayName;
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder inheritedPermissions(@Nullable String inheritedPermissions) {
             this.inheritedPermissions = inheritedPermissions;
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder numberOfChildGroups(@Nullable Integer numberOfChildGroups) {
             this.numberOfChildGroups = numberOfChildGroups;
             return this;
         }
-
         public Builder numberOfChildren(@Nullable Integer numberOfChildren) {
             this.numberOfChildren = numberOfChildren;
             return this;
         }
-
         public Builder numberOfDescendants(@Nullable Integer numberOfDescendants) {
             this.numberOfDescendants = numberOfDescendants;
             return this;
         }
-
         public Builder parent(@Nullable EntityParentGroupInfoResponse parent) {
             this.parent = parent;
             return this;
         }
-
         public Builder parentDisplayNameChain(@Nullable List<String> parentDisplayNameChain) {
             this.parentDisplayNameChain = parentDisplayNameChain;
             return this;
         }
-
+        public Builder parentDisplayNameChain(String... parentDisplayNameChain) {
+            return parentDisplayNameChain(List.of(parentDisplayNameChain));
+        }
         public Builder parentNameChain(@Nullable List<String> parentNameChain) {
             this.parentNameChain = parentNameChain;
             return this;
         }
-
+        public Builder parentNameChain(String... parentNameChain) {
+            return parentNameChain(List.of(parentNameChain));
+        }
         public Builder permissions(@Nullable String permissions) {
             this.permissions = permissions;
             return this;
         }
-
         public Builder tenantId(@Nullable String tenantId) {
             this.tenantId = tenantId;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public EntityInfoResponse build() {
+        }        public EntityInfoResponse build() {
             return new EntityInfoResponse(displayName, id, inheritedPermissions, name, numberOfChildGroups, numberOfChildren, numberOfDescendants, parent, parentDisplayNameChain, parentNameChain, permissions, tenantId, type);
         }
     }

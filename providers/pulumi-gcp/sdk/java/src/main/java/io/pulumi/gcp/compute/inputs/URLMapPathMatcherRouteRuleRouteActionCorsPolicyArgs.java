@@ -178,82 +178,81 @@ public final class URLMapPathMatcherRouteRuleRouteActionCorsPolicyArgs extends i
             this.allowCredentials = allowCredentials;
             return this;
         }
-
         public Builder allowCredentials(@Nullable Boolean allowCredentials) {
             this.allowCredentials = Output.ofNullable(allowCredentials);
             return this;
         }
-
         public Builder allowHeaders(@Nullable Output<List<String>> allowHeaders) {
             this.allowHeaders = allowHeaders;
             return this;
         }
-
         public Builder allowHeaders(@Nullable List<String> allowHeaders) {
             this.allowHeaders = Output.ofNullable(allowHeaders);
             return this;
         }
-
+        public Builder allowHeaders(String... allowHeaders) {
+            return allowHeaders(List.of(allowHeaders));
+        }
         public Builder allowMethods(@Nullable Output<List<String>> allowMethods) {
             this.allowMethods = allowMethods;
             return this;
         }
-
         public Builder allowMethods(@Nullable List<String> allowMethods) {
             this.allowMethods = Output.ofNullable(allowMethods);
             return this;
         }
-
+        public Builder allowMethods(String... allowMethods) {
+            return allowMethods(List.of(allowMethods));
+        }
         public Builder allowOriginRegexes(@Nullable Output<List<String>> allowOriginRegexes) {
             this.allowOriginRegexes = allowOriginRegexes;
             return this;
         }
-
         public Builder allowOriginRegexes(@Nullable List<String> allowOriginRegexes) {
             this.allowOriginRegexes = Output.ofNullable(allowOriginRegexes);
             return this;
         }
-
+        public Builder allowOriginRegexes(String... allowOriginRegexes) {
+            return allowOriginRegexes(List.of(allowOriginRegexes));
+        }
         public Builder allowOrigins(@Nullable Output<List<String>> allowOrigins) {
             this.allowOrigins = allowOrigins;
             return this;
         }
-
         public Builder allowOrigins(@Nullable List<String> allowOrigins) {
             this.allowOrigins = Output.ofNullable(allowOrigins);
             return this;
         }
-
+        public Builder allowOrigins(String... allowOrigins) {
+            return allowOrigins(List.of(allowOrigins));
+        }
         public Builder disabled(@Nullable Output<Boolean> disabled) {
             this.disabled = disabled;
             return this;
         }
-
         public Builder disabled(@Nullable Boolean disabled) {
             this.disabled = Output.ofNullable(disabled);
             return this;
         }
-
         public Builder exposeHeaders(@Nullable Output<List<String>> exposeHeaders) {
             this.exposeHeaders = exposeHeaders;
             return this;
         }
-
         public Builder exposeHeaders(@Nullable List<String> exposeHeaders) {
             this.exposeHeaders = Output.ofNullable(exposeHeaders);
             return this;
         }
-
+        public Builder exposeHeaders(String... exposeHeaders) {
+            return exposeHeaders(List.of(exposeHeaders));
+        }
         public Builder maxAge(@Nullable Output<Integer> maxAge) {
             this.maxAge = maxAge;
             return this;
         }
-
         public Builder maxAge(@Nullable Integer maxAge) {
             this.maxAge = Output.ofNullable(maxAge);
             return this;
-        }
-        public URLMapPathMatcherRouteRuleRouteActionCorsPolicyArgs build() {
+        }        public URLMapPathMatcherRouteRuleRouteActionCorsPolicyArgs build() {
             return new URLMapPathMatcherRouteRuleRouteActionCorsPolicyArgs(allowCredentials, allowHeaders, allowMethods, allowOriginRegexes, allowOrigins, disabled, exposeHeaders, maxAge);
         }
     }

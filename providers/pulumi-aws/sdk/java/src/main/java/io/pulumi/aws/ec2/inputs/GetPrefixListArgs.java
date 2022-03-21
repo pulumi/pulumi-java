@@ -92,17 +92,17 @@ public final class GetPrefixListArgs extends io.pulumi.resources.InvokeArgs {
             this.filters = filters;
             return this;
         }
-
+        public Builder filters(GetPrefixListFilter... filters) {
+            return filters(List.of(filters));
+        }
         public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
-
         public Builder prefixListId(@Nullable String prefixListId) {
             this.prefixListId = prefixListId;
             return this;
-        }
-        public GetPrefixListArgs build() {
+        }        public GetPrefixListArgs build() {
             return new GetPrefixListArgs(filters, name, prefixListId);
         }
     }

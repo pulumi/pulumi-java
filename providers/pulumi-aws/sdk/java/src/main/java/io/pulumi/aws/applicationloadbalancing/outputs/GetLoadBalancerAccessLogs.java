@@ -62,17 +62,14 @@ public final class GetLoadBalancerAccessLogs {
             this.bucket = Objects.requireNonNull(bucket);
             return this;
         }
-
         public Builder enabled(Boolean enabled) {
             this.enabled = Objects.requireNonNull(enabled);
             return this;
         }
-
         public Builder prefix(String prefix) {
             this.prefix = Objects.requireNonNull(prefix);
             return this;
-        }
-        public GetLoadBalancerAccessLogs build() {
+        }        public GetLoadBalancerAccessLogs build() {
             return new GetLoadBalancerAccessLogs(bucket, enabled, prefix);
         }
     }

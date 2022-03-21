@@ -77,12 +77,10 @@ public final class HorizontalPodAutoscalerBehavior {
             this.scaleDown = scaleDown;
             return this;
         }
-
         public Builder scaleUp(@Nullable HPAScalingRules scaleUp) {
             this.scaleUp = scaleUp;
             return this;
-        }
-        public HorizontalPodAutoscalerBehavior build() {
+        }        public HorizontalPodAutoscalerBehavior build() {
             return new HorizontalPodAutoscalerBehavior(scaleDown, scaleUp);
         }
     }

@@ -104,22 +104,18 @@ public final class OSPolicyResourceRepositoryResourceResponse {
             this.apt = Objects.requireNonNull(apt);
             return this;
         }
-
         public Builder goo(OSPolicyResourceRepositoryResourceGooRepositoryResponse goo) {
             this.goo = Objects.requireNonNull(goo);
             return this;
         }
-
         public Builder yum(OSPolicyResourceRepositoryResourceYumRepositoryResponse yum) {
             this.yum = Objects.requireNonNull(yum);
             return this;
         }
-
         public Builder zypper(OSPolicyResourceRepositoryResourceZypperRepositoryResponse zypper) {
             this.zypper = Objects.requireNonNull(zypper);
             return this;
-        }
-        public OSPolicyResourceRepositoryResourceResponse build() {
+        }        public OSPolicyResourceRepositoryResourceResponse build() {
             return new OSPolicyResourceRepositoryResourceResponse(apt, goo, yum, zypper);
         }
     }

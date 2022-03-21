@@ -302,162 +302,136 @@ public final class InfrastructureConfigurationState extends io.pulumi.resources.
             this.arn = arn;
             return this;
         }
-
         public Builder arn(@Nullable String arn) {
             this.arn = Output.ofNullable(arn);
             return this;
         }
-
         public Builder dateCreated(@Nullable Output<String> dateCreated) {
             this.dateCreated = dateCreated;
             return this;
         }
-
         public Builder dateCreated(@Nullable String dateCreated) {
             this.dateCreated = Output.ofNullable(dateCreated);
             return this;
         }
-
         public Builder dateUpdated(@Nullable Output<String> dateUpdated) {
             this.dateUpdated = dateUpdated;
             return this;
         }
-
         public Builder dateUpdated(@Nullable String dateUpdated) {
             this.dateUpdated = Output.ofNullable(dateUpdated);
             return this;
         }
-
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder instanceProfileName(@Nullable Output<String> instanceProfileName) {
             this.instanceProfileName = instanceProfileName;
             return this;
         }
-
         public Builder instanceProfileName(@Nullable String instanceProfileName) {
             this.instanceProfileName = Output.ofNullable(instanceProfileName);
             return this;
         }
-
         public Builder instanceTypes(@Nullable Output<List<String>> instanceTypes) {
             this.instanceTypes = instanceTypes;
             return this;
         }
-
         public Builder instanceTypes(@Nullable List<String> instanceTypes) {
             this.instanceTypes = Output.ofNullable(instanceTypes);
             return this;
         }
-
+        public Builder instanceTypes(String... instanceTypes) {
+            return instanceTypes(List.of(instanceTypes));
+        }
         public Builder keyPair(@Nullable Output<String> keyPair) {
             this.keyPair = keyPair;
             return this;
         }
-
         public Builder keyPair(@Nullable String keyPair) {
             this.keyPair = Output.ofNullable(keyPair);
             return this;
         }
-
         public Builder logging(@Nullable Output<InfrastructureConfigurationLoggingGetArgs> logging) {
             this.logging = logging;
             return this;
         }
-
         public Builder logging(@Nullable InfrastructureConfigurationLoggingGetArgs logging) {
             this.logging = Output.ofNullable(logging);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder resourceTags(@Nullable Output<Map<String,String>> resourceTags) {
             this.resourceTags = resourceTags;
             return this;
         }
-
         public Builder resourceTags(@Nullable Map<String,String> resourceTags) {
             this.resourceTags = Output.ofNullable(resourceTags);
             return this;
         }
-
         public Builder securityGroupIds(@Nullable Output<List<String>> securityGroupIds) {
             this.securityGroupIds = securityGroupIds;
             return this;
         }
-
         public Builder securityGroupIds(@Nullable List<String> securityGroupIds) {
             this.securityGroupIds = Output.ofNullable(securityGroupIds);
             return this;
         }
-
+        public Builder securityGroupIds(String... securityGroupIds) {
+            return securityGroupIds(List.of(securityGroupIds));
+        }
         public Builder snsTopicArn(@Nullable Output<String> snsTopicArn) {
             this.snsTopicArn = snsTopicArn;
             return this;
         }
-
         public Builder snsTopicArn(@Nullable String snsTopicArn) {
             this.snsTopicArn = Output.ofNullable(snsTopicArn);
             return this;
         }
-
         public Builder subnetId(@Nullable Output<String> subnetId) {
             this.subnetId = subnetId;
             return this;
         }
-
         public Builder subnetId(@Nullable String subnetId) {
             this.subnetId = Output.ofNullable(subnetId);
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
             this.tagsAll = tagsAll;
             return this;
         }
-
         public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
             this.tagsAll = Output.ofNullable(tagsAll);
             return this;
         }
-
         public Builder terminateInstanceOnFailure(@Nullable Output<Boolean> terminateInstanceOnFailure) {
             this.terminateInstanceOnFailure = terminateInstanceOnFailure;
             return this;
         }
-
         public Builder terminateInstanceOnFailure(@Nullable Boolean terminateInstanceOnFailure) {
             this.terminateInstanceOnFailure = Output.ofNullable(terminateInstanceOnFailure);
             return this;
-        }
-        public InfrastructureConfigurationState build() {
+        }        public InfrastructureConfigurationState build() {
             return new InfrastructureConfigurationState(arn, dateCreated, dateUpdated, description, instanceProfileName, instanceTypes, keyPair, logging, name, resourceTags, securityGroupIds, snsTopicArn, subnetId, tags, tagsAll, terminateInstanceOnFailure);
         }
     }

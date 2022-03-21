@@ -52,8 +52,7 @@ public final class ConfigDemodulationConfig extends io.pulumi.resources.InvokeAr
         public Builder unvalidatedJSON(@Nullable String unvalidatedJSON) {
             this.unvalidatedJSON = unvalidatedJSON;
             return this;
-        }
-        public ConfigDemodulationConfig build() {
+        }        public ConfigDemodulationConfig build() {
             return new ConfigDemodulationConfig(unvalidatedJSON);
         }
     }

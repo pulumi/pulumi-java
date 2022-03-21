@@ -96,17 +96,14 @@ public final class AzureDatabricksDeltaLakeExportCommandResponse extends io.pulu
             this.dateFormat = dateFormat;
             return this;
         }
-
         public Builder timestampFormat(@Nullable Object timestampFormat) {
             this.timestampFormat = timestampFormat;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public AzureDatabricksDeltaLakeExportCommandResponse build() {
+        }        public AzureDatabricksDeltaLakeExportCommandResponse build() {
             return new AzureDatabricksDeltaLakeExportCommandResponse(dateFormat, timestampFormat, type);
         }
     }

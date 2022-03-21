@@ -175,42 +175,34 @@ public final class FactoryVSTSConfigurationResponse extends io.pulumi.resources.
             this.accountName = Objects.requireNonNull(accountName);
             return this;
         }
-
         public Builder collaborationBranch(String collaborationBranch) {
             this.collaborationBranch = Objects.requireNonNull(collaborationBranch);
             return this;
         }
-
         public Builder lastCommitId(@Nullable String lastCommitId) {
             this.lastCommitId = lastCommitId;
             return this;
         }
-
         public Builder projectName(String projectName) {
             this.projectName = Objects.requireNonNull(projectName);
             return this;
         }
-
         public Builder repositoryName(String repositoryName) {
             this.repositoryName = Objects.requireNonNull(repositoryName);
             return this;
         }
-
         public Builder rootFolder(String rootFolder) {
             this.rootFolder = Objects.requireNonNull(rootFolder);
             return this;
         }
-
         public Builder tenantId(@Nullable String tenantId) {
             this.tenantId = tenantId;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public FactoryVSTSConfigurationResponse build() {
+        }        public FactoryVSTSConfigurationResponse build() {
             return new FactoryVSTSConfigurationResponse(accountName, collaborationBranch, lastCommitId, projectName, repositoryName, rootFolder, tenantId, type);
         }
     }

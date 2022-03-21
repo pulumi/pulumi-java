@@ -186,92 +186,80 @@ public final class PathRecommendationArgs extends io.pulumi.resources.ResourceAr
             this.action = action;
             return this;
         }
-
         public Builder action(@Nullable String action) {
             this.action = Output.ofNullable(action);
             return this;
         }
-
         public Builder common(@Nullable Output<Boolean> common) {
             this.common = common;
             return this;
         }
-
         public Builder common(@Nullable Boolean common) {
             this.common = Output.ofNullable(common);
             return this;
         }
-
         public Builder configurationStatus(@Nullable Output<String> configurationStatus) {
             this.configurationStatus = configurationStatus;
             return this;
         }
-
         public Builder configurationStatus(@Nullable String configurationStatus) {
             this.configurationStatus = Output.ofNullable(configurationStatus);
             return this;
         }
-
         public Builder fileType(@Nullable Output<String> fileType) {
             this.fileType = fileType;
             return this;
         }
-
         public Builder fileType(@Nullable String fileType) {
             this.fileType = Output.ofNullable(fileType);
             return this;
         }
-
         public Builder path(@Nullable Output<String> path) {
             this.path = path;
             return this;
         }
-
         public Builder path(@Nullable String path) {
             this.path = Output.ofNullable(path);
             return this;
         }
-
         public Builder publisherInfo(@Nullable Output<PublisherInfoArgs> publisherInfo) {
             this.publisherInfo = publisherInfo;
             return this;
         }
-
         public Builder publisherInfo(@Nullable PublisherInfoArgs publisherInfo) {
             this.publisherInfo = Output.ofNullable(publisherInfo);
             return this;
         }
-
         public Builder type(@Nullable Output<String> type) {
             this.type = type;
             return this;
         }
-
         public Builder type(@Nullable String type) {
             this.type = Output.ofNullable(type);
             return this;
         }
-
         public Builder userSids(@Nullable Output<List<String>> userSids) {
             this.userSids = userSids;
             return this;
         }
-
         public Builder userSids(@Nullable List<String> userSids) {
             this.userSids = Output.ofNullable(userSids);
             return this;
         }
-
+        public Builder userSids(String... userSids) {
+            return userSids(List.of(userSids));
+        }
         public Builder usernames(@Nullable Output<List<UserRecommendationArgs>> usernames) {
             this.usernames = usernames;
             return this;
         }
-
         public Builder usernames(@Nullable List<UserRecommendationArgs> usernames) {
             this.usernames = Output.ofNullable(usernames);
             return this;
         }
-        public PathRecommendationArgs build() {
+        public Builder usernames(UserRecommendationArgs... usernames) {
+            return usernames(List.of(usernames));
+        }        public PathRecommendationArgs build() {
             return new PathRecommendationArgs(action, common, configurationStatus, fileType, path, publisherInfo, type, userSids, usernames);
         }
     }

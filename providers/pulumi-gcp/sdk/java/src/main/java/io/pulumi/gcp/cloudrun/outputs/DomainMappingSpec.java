@@ -100,17 +100,14 @@ public final class DomainMappingSpec {
             this.certificateMode = certificateMode;
             return this;
         }
-
         public Builder forceOverride(@Nullable Boolean forceOverride) {
             this.forceOverride = forceOverride;
             return this;
         }
-
         public Builder routeName(String routeName) {
             this.routeName = Objects.requireNonNull(routeName);
             return this;
-        }
-        public DomainMappingSpec build() {
+        }        public DomainMappingSpec build() {
             return new DomainMappingSpec(certificateMode, forceOverride, routeName);
         }
     }

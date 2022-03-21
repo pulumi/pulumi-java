@@ -53,7 +53,9 @@ public final class GetProfileSupportedOptimizationTypesResult {
             this.supportedOptimizationTypes = Objects.requireNonNull(supportedOptimizationTypes);
             return this;
         }
-        public GetProfileSupportedOptimizationTypesResult build() {
+        public Builder supportedOptimizationTypes(String... supportedOptimizationTypes) {
+            return supportedOptimizationTypes(List.of(supportedOptimizationTypes));
+        }        public GetProfileSupportedOptimizationTypesResult build() {
             return new GetProfileSupportedOptimizationTypesResult(supportedOptimizationTypes);
         }
     }

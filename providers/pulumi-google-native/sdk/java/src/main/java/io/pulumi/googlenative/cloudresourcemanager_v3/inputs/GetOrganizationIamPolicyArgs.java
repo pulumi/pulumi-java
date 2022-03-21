@@ -50,8 +50,7 @@ public final class GetOrganizationIamPolicyArgs extends io.pulumi.resources.Invo
         public Builder organizationId(String organizationId) {
             this.organizationId = Objects.requireNonNull(organizationId);
             return this;
-        }
-        public GetOrganizationIamPolicyArgs build() {
+        }        public GetOrganizationIamPolicyArgs build() {
             return new GetOrganizationIamPolicyArgs(organizationId);
         }
     }

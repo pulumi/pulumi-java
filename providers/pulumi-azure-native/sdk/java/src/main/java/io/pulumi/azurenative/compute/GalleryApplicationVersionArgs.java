@@ -156,72 +156,58 @@ public final class GalleryApplicationVersionArgs extends io.pulumi.resources.Res
             this.galleryApplicationName = Objects.requireNonNull(galleryApplicationName);
             return this;
         }
-
         public Builder galleryApplicationName(String galleryApplicationName) {
             this.galleryApplicationName = Output.of(Objects.requireNonNull(galleryApplicationName));
             return this;
         }
-
         public Builder galleryApplicationVersionName(@Nullable Output<String> galleryApplicationVersionName) {
             this.galleryApplicationVersionName = galleryApplicationVersionName;
             return this;
         }
-
         public Builder galleryApplicationVersionName(@Nullable String galleryApplicationVersionName) {
             this.galleryApplicationVersionName = Output.ofNullable(galleryApplicationVersionName);
             return this;
         }
-
         public Builder galleryName(Output<String> galleryName) {
             this.galleryName = Objects.requireNonNull(galleryName);
             return this;
         }
-
         public Builder galleryName(String galleryName) {
             this.galleryName = Output.of(Objects.requireNonNull(galleryName));
             return this;
         }
-
         public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder publishingProfile(Output<GalleryApplicationVersionPublishingProfileArgs> publishingProfile) {
             this.publishingProfile = Objects.requireNonNull(publishingProfile);
             return this;
         }
-
         public Builder publishingProfile(GalleryApplicationVersionPublishingProfileArgs publishingProfile) {
             this.publishingProfile = Output.of(Objects.requireNonNull(publishingProfile));
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
-        }
-        public GalleryApplicationVersionArgs build() {
+        }        public GalleryApplicationVersionArgs build() {
             return new GalleryApplicationVersionArgs(galleryApplicationName, galleryApplicationVersionName, galleryName, location, publishingProfile, resourceGroupName, tags);
         }
     }

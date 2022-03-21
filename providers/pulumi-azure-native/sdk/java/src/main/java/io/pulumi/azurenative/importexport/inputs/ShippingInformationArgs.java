@@ -174,82 +174,66 @@ public final class ShippingInformationArgs extends io.pulumi.resources.ResourceA
             this.city = city;
             return this;
         }
-
         public Builder city(@Nullable String city) {
             this.city = Output.ofNullable(city);
             return this;
         }
-
         public Builder countryOrRegion(@Nullable Output<String> countryOrRegion) {
             this.countryOrRegion = countryOrRegion;
             return this;
         }
-
         public Builder countryOrRegion(@Nullable String countryOrRegion) {
             this.countryOrRegion = Output.ofNullable(countryOrRegion);
             return this;
         }
-
         public Builder phone(@Nullable Output<String> phone) {
             this.phone = phone;
             return this;
         }
-
         public Builder phone(@Nullable String phone) {
             this.phone = Output.ofNullable(phone);
             return this;
         }
-
         public Builder postalCode(@Nullable Output<String> postalCode) {
             this.postalCode = postalCode;
             return this;
         }
-
         public Builder postalCode(@Nullable String postalCode) {
             this.postalCode = Output.ofNullable(postalCode);
             return this;
         }
-
         public Builder recipientName(@Nullable Output<String> recipientName) {
             this.recipientName = recipientName;
             return this;
         }
-
         public Builder recipientName(@Nullable String recipientName) {
             this.recipientName = Output.ofNullable(recipientName);
             return this;
         }
-
         public Builder stateOrProvince(@Nullable Output<String> stateOrProvince) {
             this.stateOrProvince = stateOrProvince;
             return this;
         }
-
         public Builder stateOrProvince(@Nullable String stateOrProvince) {
             this.stateOrProvince = Output.ofNullable(stateOrProvince);
             return this;
         }
-
         public Builder streetAddress1(@Nullable Output<String> streetAddress1) {
             this.streetAddress1 = streetAddress1;
             return this;
         }
-
         public Builder streetAddress1(@Nullable String streetAddress1) {
             this.streetAddress1 = Output.ofNullable(streetAddress1);
             return this;
         }
-
         public Builder streetAddress2(@Nullable Output<String> streetAddress2) {
             this.streetAddress2 = streetAddress2;
             return this;
         }
-
         public Builder streetAddress2(@Nullable String streetAddress2) {
             this.streetAddress2 = Output.ofNullable(streetAddress2);
             return this;
-        }
-        public ShippingInformationArgs build() {
+        }        public ShippingInformationArgs build() {
             return new ShippingInformationArgs(city, countryOrRegion, phone, postalCode, recipientName, stateOrProvince, streetAddress1, streetAddress2);
         }
     }

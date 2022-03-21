@@ -64,17 +64,17 @@ public final class GetResourcePolicySnapshotSchedulePolicySnapshotProperty {
             this.guestFlush = Objects.requireNonNull(guestFlush);
             return this;
         }
-
         public Builder labels(Map<String,String> labels) {
             this.labels = Objects.requireNonNull(labels);
             return this;
         }
-
         public Builder storageLocations(List<String> storageLocations) {
             this.storageLocations = Objects.requireNonNull(storageLocations);
             return this;
         }
-        public GetResourcePolicySnapshotSchedulePolicySnapshotProperty build() {
+        public Builder storageLocations(String... storageLocations) {
+            return storageLocations(List.of(storageLocations));
+        }        public GetResourcePolicySnapshotSchedulePolicySnapshotProperty build() {
             return new GetResourcePolicySnapshotSchedulePolicySnapshotProperty(guestFlush, labels, storageLocations);
         }
     }

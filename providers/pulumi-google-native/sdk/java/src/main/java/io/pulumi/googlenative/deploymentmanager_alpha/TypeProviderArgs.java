@@ -187,92 +187,83 @@ public final class TypeProviderArgs extends io.pulumi.resources.ResourceArgs {
             this.collectionOverrides = collectionOverrides;
             return this;
         }
-
         public Builder collectionOverrides(@Nullable List<CollectionOverrideArgs> collectionOverrides) {
             this.collectionOverrides = Output.ofNullable(collectionOverrides);
             return this;
         }
-
+        public Builder collectionOverrides(CollectionOverrideArgs... collectionOverrides) {
+            return collectionOverrides(List.of(collectionOverrides));
+        }
         public Builder credential(@Nullable Output<CredentialArgs> credential) {
             this.credential = credential;
             return this;
         }
-
         public Builder credential(@Nullable CredentialArgs credential) {
             this.credential = Output.ofNullable(credential);
             return this;
         }
-
         public Builder customCertificateAuthorityRoots(@Nullable Output<List<String>> customCertificateAuthorityRoots) {
             this.customCertificateAuthorityRoots = customCertificateAuthorityRoots;
             return this;
         }
-
         public Builder customCertificateAuthorityRoots(@Nullable List<String> customCertificateAuthorityRoots) {
             this.customCertificateAuthorityRoots = Output.ofNullable(customCertificateAuthorityRoots);
             return this;
         }
-
+        public Builder customCertificateAuthorityRoots(String... customCertificateAuthorityRoots) {
+            return customCertificateAuthorityRoots(List.of(customCertificateAuthorityRoots));
+        }
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder descriptorUrl(@Nullable Output<String> descriptorUrl) {
             this.descriptorUrl = descriptorUrl;
             return this;
         }
-
         public Builder descriptorUrl(@Nullable String descriptorUrl) {
             this.descriptorUrl = Output.ofNullable(descriptorUrl);
             return this;
         }
-
         public Builder labels(@Nullable Output<List<TypeProviderLabelEntryArgs>> labels) {
             this.labels = labels;
             return this;
         }
-
         public Builder labels(@Nullable List<TypeProviderLabelEntryArgs> labels) {
             this.labels = Output.ofNullable(labels);
             return this;
         }
-
+        public Builder labels(TypeProviderLabelEntryArgs... labels) {
+            return labels(List.of(labels));
+        }
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder options(@Nullable Output<OptionsArgs> options) {
             this.options = options;
             return this;
         }
-
         public Builder options(@Nullable OptionsArgs options) {
             this.options = Output.ofNullable(options);
             return this;
         }
-
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
-        }
-        public TypeProviderArgs build() {
+        }        public TypeProviderArgs build() {
             return new TypeProviderArgs(collectionOverrides, credential, customCertificateAuthorityRoots, description, descriptorUrl, labels, name, options, project);
         }
     }

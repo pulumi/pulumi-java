@@ -125,37 +125,30 @@ public final class GetEnvironmentConfigPrivateEnvironmentConfig extends io.pulum
             this.cloudComposerConnectionSubnetwork = Objects.requireNonNull(cloudComposerConnectionSubnetwork);
             return this;
         }
-
         public Builder cloudComposerNetworkIpv4CidrBlock(String cloudComposerNetworkIpv4CidrBlock) {
             this.cloudComposerNetworkIpv4CidrBlock = Objects.requireNonNull(cloudComposerNetworkIpv4CidrBlock);
             return this;
         }
-
         public Builder cloudSqlIpv4CidrBlock(String cloudSqlIpv4CidrBlock) {
             this.cloudSqlIpv4CidrBlock = Objects.requireNonNull(cloudSqlIpv4CidrBlock);
             return this;
         }
-
         public Builder enablePrivateEndpoint(Boolean enablePrivateEndpoint) {
             this.enablePrivateEndpoint = Objects.requireNonNull(enablePrivateEndpoint);
             return this;
         }
-
         public Builder enablePrivatelyUsedPublicIps(Boolean enablePrivatelyUsedPublicIps) {
             this.enablePrivatelyUsedPublicIps = Objects.requireNonNull(enablePrivatelyUsedPublicIps);
             return this;
         }
-
         public Builder masterIpv4CidrBlock(String masterIpv4CidrBlock) {
             this.masterIpv4CidrBlock = Objects.requireNonNull(masterIpv4CidrBlock);
             return this;
         }
-
         public Builder webServerIpv4CidrBlock(String webServerIpv4CidrBlock) {
             this.webServerIpv4CidrBlock = Objects.requireNonNull(webServerIpv4CidrBlock);
             return this;
-        }
-        public GetEnvironmentConfigPrivateEnvironmentConfig build() {
+        }        public GetEnvironmentConfigPrivateEnvironmentConfig build() {
             return new GetEnvironmentConfigPrivateEnvironmentConfig(cloudComposerConnectionSubnetwork, cloudComposerNetworkIpv4CidrBlock, cloudSqlIpv4CidrBlock, enablePrivateEndpoint, enablePrivatelyUsedPublicIps, masterIpv4CidrBlock, webServerIpv4CidrBlock);
         }
     }

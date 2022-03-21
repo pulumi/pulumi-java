@@ -87,17 +87,14 @@ public final class TriggerDestinationCloudRunService {
             this.path = path;
             return this;
         }
-
         public Builder region(@Nullable String region) {
             this.region = region;
             return this;
         }
-
         public Builder service(String service) {
             this.service = Objects.requireNonNull(service);
             return this;
-        }
-        public TriggerDestinationCloudRunService build() {
+        }        public TriggerDestinationCloudRunService build() {
             return new TriggerDestinationCloudRunService(path, region, service);
         }
     }

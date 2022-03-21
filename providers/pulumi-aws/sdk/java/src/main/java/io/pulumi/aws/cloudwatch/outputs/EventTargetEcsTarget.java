@@ -221,57 +221,49 @@ public final class EventTargetEcsTarget {
             this.enableEcsManagedTags = enableEcsManagedTags;
             return this;
         }
-
         public Builder enableExecuteCommand(@Nullable Boolean enableExecuteCommand) {
             this.enableExecuteCommand = enableExecuteCommand;
             return this;
         }
-
         public Builder group(@Nullable String group) {
             this.group = group;
             return this;
         }
-
         public Builder launchType(@Nullable String launchType) {
             this.launchType = launchType;
             return this;
         }
-
         public Builder networkConfiguration(@Nullable EventTargetEcsTargetNetworkConfiguration networkConfiguration) {
             this.networkConfiguration = networkConfiguration;
             return this;
         }
-
         public Builder placementConstraints(@Nullable List<EventTargetEcsTargetPlacementConstraint> placementConstraints) {
             this.placementConstraints = placementConstraints;
             return this;
         }
-
+        public Builder placementConstraints(EventTargetEcsTargetPlacementConstraint... placementConstraints) {
+            return placementConstraints(List.of(placementConstraints));
+        }
         public Builder platformVersion(@Nullable String platformVersion) {
             this.platformVersion = platformVersion;
             return this;
         }
-
         public Builder propagateTags(@Nullable String propagateTags) {
             this.propagateTags = propagateTags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder taskCount(@Nullable Integer taskCount) {
             this.taskCount = taskCount;
             return this;
         }
-
         public Builder taskDefinitionArn(String taskDefinitionArn) {
             this.taskDefinitionArn = Objects.requireNonNull(taskDefinitionArn);
             return this;
-        }
-        public EventTargetEcsTarget build() {
+        }        public EventTargetEcsTarget build() {
             return new EventTargetEcsTarget(enableEcsManagedTags, enableExecuteCommand, group, launchType, networkConfiguration, placementConstraints, platformVersion, propagateTags, tags, taskCount, taskDefinitionArn);
         }
     }

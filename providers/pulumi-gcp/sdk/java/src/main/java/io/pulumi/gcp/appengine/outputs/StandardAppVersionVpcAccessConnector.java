@@ -51,8 +51,7 @@ public final class StandardAppVersionVpcAccessConnector {
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
-        }
-        public StandardAppVersionVpcAccessConnector build() {
+        }        public StandardAppVersionVpcAccessConnector build() {
             return new StandardAppVersionVpcAccessConnector(name);
         }
     }

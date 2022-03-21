@@ -95,32 +95,35 @@ public final class GoogleCloudRetailV2betaRuleDoNotAssociateActionArgs extends i
             this.doNotAssociateTerms = doNotAssociateTerms;
             return this;
         }
-
         public Builder doNotAssociateTerms(@Nullable List<String> doNotAssociateTerms) {
             this.doNotAssociateTerms = Output.ofNullable(doNotAssociateTerms);
             return this;
         }
-
+        public Builder doNotAssociateTerms(String... doNotAssociateTerms) {
+            return doNotAssociateTerms(List.of(doNotAssociateTerms));
+        }
         public Builder queryTerms(@Nullable Output<List<String>> queryTerms) {
             this.queryTerms = queryTerms;
             return this;
         }
-
         public Builder queryTerms(@Nullable List<String> queryTerms) {
             this.queryTerms = Output.ofNullable(queryTerms);
             return this;
         }
-
+        public Builder queryTerms(String... queryTerms) {
+            return queryTerms(List.of(queryTerms));
+        }
         public Builder terms(@Nullable Output<List<String>> terms) {
             this.terms = terms;
             return this;
         }
-
         public Builder terms(@Nullable List<String> terms) {
             this.terms = Output.ofNullable(terms);
             return this;
         }
-        public GoogleCloudRetailV2betaRuleDoNotAssociateActionArgs build() {
+        public Builder terms(String... terms) {
+            return terms(List.of(terms));
+        }        public GoogleCloudRetailV2betaRuleDoNotAssociateActionArgs build() {
             return new GoogleCloudRetailV2betaRuleDoNotAssociateActionArgs(doNotAssociateTerms, queryTerms, terms);
         }
     }

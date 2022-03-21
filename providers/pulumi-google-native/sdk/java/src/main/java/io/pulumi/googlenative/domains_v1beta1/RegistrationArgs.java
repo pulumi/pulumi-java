@@ -219,112 +219,96 @@ public final class RegistrationArgs extends io.pulumi.resources.ResourceArgs {
             this.contactNotices = contactNotices;
             return this;
         }
-
         public Builder contactNotices(@Nullable List<RegistrationContactNoticesItem> contactNotices) {
             this.contactNotices = Output.ofNullable(contactNotices);
             return this;
         }
-
+        public Builder contactNotices(RegistrationContactNoticesItem... contactNotices) {
+            return contactNotices(List.of(contactNotices));
+        }
         public Builder contactSettings(Output<ContactSettingsArgs> contactSettings) {
             this.contactSettings = Objects.requireNonNull(contactSettings);
             return this;
         }
-
         public Builder contactSettings(ContactSettingsArgs contactSettings) {
             this.contactSettings = Output.of(Objects.requireNonNull(contactSettings));
             return this;
         }
-
         public Builder dnsSettings(@Nullable Output<DnsSettingsArgs> dnsSettings) {
             this.dnsSettings = dnsSettings;
             return this;
         }
-
         public Builder dnsSettings(@Nullable DnsSettingsArgs dnsSettings) {
             this.dnsSettings = Output.ofNullable(dnsSettings);
             return this;
         }
-
         public Builder domainName(Output<String> domainName) {
             this.domainName = Objects.requireNonNull(domainName);
             return this;
         }
-
         public Builder domainName(String domainName) {
             this.domainName = Output.of(Objects.requireNonNull(domainName));
             return this;
         }
-
         public Builder domainNotices(@Nullable Output<List<RegistrationDomainNoticesItem>> domainNotices) {
             this.domainNotices = domainNotices;
             return this;
         }
-
         public Builder domainNotices(@Nullable List<RegistrationDomainNoticesItem> domainNotices) {
             this.domainNotices = Output.ofNullable(domainNotices);
             return this;
         }
-
+        public Builder domainNotices(RegistrationDomainNoticesItem... domainNotices) {
+            return domainNotices(List.of(domainNotices));
+        }
         public Builder labels(@Nullable Output<Map<String,String>> labels) {
             this.labels = labels;
             return this;
         }
-
         public Builder labels(@Nullable Map<String,String> labels) {
             this.labels = Output.ofNullable(labels);
             return this;
         }
-
         public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder managementSettings(@Nullable Output<ManagementSettingsArgs> managementSettings) {
             this.managementSettings = managementSettings;
             return this;
         }
-
         public Builder managementSettings(@Nullable ManagementSettingsArgs managementSettings) {
             this.managementSettings = Output.ofNullable(managementSettings);
             return this;
         }
-
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
         }
-
         public Builder validateOnly(@Nullable Output<Boolean> validateOnly) {
             this.validateOnly = validateOnly;
             return this;
         }
-
         public Builder validateOnly(@Nullable Boolean validateOnly) {
             this.validateOnly = Output.ofNullable(validateOnly);
             return this;
         }
-
         public Builder yearlyPrice(Output<MoneyArgs> yearlyPrice) {
             this.yearlyPrice = Objects.requireNonNull(yearlyPrice);
             return this;
         }
-
         public Builder yearlyPrice(MoneyArgs yearlyPrice) {
             this.yearlyPrice = Output.of(Objects.requireNonNull(yearlyPrice));
             return this;
-        }
-        public RegistrationArgs build() {
+        }        public RegistrationArgs build() {
             return new RegistrationArgs(contactNotices, contactSettings, dnsSettings, domainName, domainNotices, labels, location, managementSettings, project, validateOnly, yearlyPrice);
         }
     }

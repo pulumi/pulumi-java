@@ -71,12 +71,10 @@ public final class FeatureGroupFeatureDefinition {
             this.featureName = featureName;
             return this;
         }
-
         public Builder featureType(@Nullable String featureType) {
             this.featureType = featureType;
             return this;
-        }
-        public FeatureGroupFeatureDefinition build() {
+        }        public FeatureGroupFeatureDefinition build() {
             return new FeatureGroupFeatureDefinition(featureName, featureType);
         }
     }

@@ -61,12 +61,10 @@ public final class VirtualNetworkPeeringPropertiesFormatDatabricksVirtualNetwork
             this.id = id;
             return this;
         }
-
         public Builder id(@Nullable String id) {
             this.id = Output.ofNullable(id);
             return this;
-        }
-        public VirtualNetworkPeeringPropertiesFormatDatabricksVirtualNetworkArgs build() {
+        }        public VirtualNetworkPeeringPropertiesFormatDatabricksVirtualNetworkArgs build() {
             return new VirtualNetworkPeeringPropertiesFormatDatabricksVirtualNetworkArgs(id);
         }
     }

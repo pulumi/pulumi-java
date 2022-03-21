@@ -70,12 +70,13 @@ public final class OidcResponse {
             this.allowedAudiences = Objects.requireNonNull(allowedAudiences);
             return this;
         }
-
+        public Builder allowedAudiences(String... allowedAudiences) {
+            return allowedAudiences(List.of(allowedAudiences));
+        }
         public Builder issuerUri(String issuerUri) {
             this.issuerUri = Objects.requireNonNull(issuerUri);
             return this;
-        }
-        public OidcResponse build() {
+        }        public OidcResponse build() {
             return new OidcResponse(allowedAudiences, issuerUri);
         }
     }

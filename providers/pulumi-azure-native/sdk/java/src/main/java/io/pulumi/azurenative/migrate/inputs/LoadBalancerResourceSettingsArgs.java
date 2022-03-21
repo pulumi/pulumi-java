@@ -147,62 +147,56 @@ public final class LoadBalancerResourceSettingsArgs extends io.pulumi.resources.
             this.backendAddressPools = backendAddressPools;
             return this;
         }
-
         public Builder backendAddressPools(@Nullable List<LBBackendAddressPoolResourceSettingsArgs> backendAddressPools) {
             this.backendAddressPools = Output.ofNullable(backendAddressPools);
             return this;
         }
-
+        public Builder backendAddressPools(LBBackendAddressPoolResourceSettingsArgs... backendAddressPools) {
+            return backendAddressPools(List.of(backendAddressPools));
+        }
         public Builder frontendIPConfigurations(@Nullable Output<List<LBFrontendIPConfigurationResourceSettingsArgs>> frontendIPConfigurations) {
             this.frontendIPConfigurations = frontendIPConfigurations;
             return this;
         }
-
         public Builder frontendIPConfigurations(@Nullable List<LBFrontendIPConfigurationResourceSettingsArgs> frontendIPConfigurations) {
             this.frontendIPConfigurations = Output.ofNullable(frontendIPConfigurations);
             return this;
         }
-
+        public Builder frontendIPConfigurations(LBFrontendIPConfigurationResourceSettingsArgs... frontendIPConfigurations) {
+            return frontendIPConfigurations(List.of(frontendIPConfigurations));
+        }
         public Builder resourceType(Output<String> resourceType) {
             this.resourceType = Objects.requireNonNull(resourceType);
             return this;
         }
-
         public Builder resourceType(String resourceType) {
             this.resourceType = Output.of(Objects.requireNonNull(resourceType));
             return this;
         }
-
         public Builder sku(@Nullable Output<String> sku) {
             this.sku = sku;
             return this;
         }
-
         public Builder sku(@Nullable String sku) {
             this.sku = Output.ofNullable(sku);
             return this;
         }
-
         public Builder targetResourceName(Output<String> targetResourceName) {
             this.targetResourceName = Objects.requireNonNull(targetResourceName);
             return this;
         }
-
         public Builder targetResourceName(String targetResourceName) {
             this.targetResourceName = Output.of(Objects.requireNonNull(targetResourceName));
             return this;
         }
-
         public Builder zones(@Nullable Output<String> zones) {
             this.zones = zones;
             return this;
         }
-
         public Builder zones(@Nullable String zones) {
             this.zones = Output.ofNullable(zones);
             return this;
-        }
-        public LoadBalancerResourceSettingsArgs build() {
+        }        public LoadBalancerResourceSettingsArgs build() {
             return new LoadBalancerResourceSettingsArgs(backendAddressPools, frontendIPConfigurations, resourceType, sku, targetResourceName, zones);
         }
     }

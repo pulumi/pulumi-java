@@ -89,17 +89,14 @@ public final class ScheduledActionTargetAction {
             this.pauseCluster = pauseCluster;
             return this;
         }
-
         public Builder resizeCluster(@Nullable ScheduledActionTargetActionResizeCluster resizeCluster) {
             this.resizeCluster = resizeCluster;
             return this;
         }
-
         public Builder resumeCluster(@Nullable ScheduledActionTargetActionResumeCluster resumeCluster) {
             this.resumeCluster = resumeCluster;
             return this;
-        }
-        public ScheduledActionTargetAction build() {
+        }        public ScheduledActionTargetAction build() {
             return new ScheduledActionTargetAction(pauseCluster, resizeCluster, resumeCluster);
         }
     }

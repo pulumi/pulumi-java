@@ -141,62 +141,50 @@ public final class ThingTypeState extends io.pulumi.resources.ResourceArgs {
             this.arn = arn;
             return this;
         }
-
         public Builder arn(@Nullable String arn) {
             this.arn = Output.ofNullable(arn);
             return this;
         }
-
         public Builder deprecated(@Nullable Output<Boolean> deprecated) {
             this.deprecated = deprecated;
             return this;
         }
-
         public Builder deprecated(@Nullable Boolean deprecated) {
             this.deprecated = Output.ofNullable(deprecated);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder properties(@Nullable Output<ThingTypePropertiesGetArgs> properties) {
             this.properties = properties;
             return this;
         }
-
         public Builder properties(@Nullable ThingTypePropertiesGetArgs properties) {
             this.properties = Output.ofNullable(properties);
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
             this.tagsAll = tagsAll;
             return this;
         }
-
         public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
             this.tagsAll = Output.ofNullable(tagsAll);
             return this;
-        }
-        public ThingTypeState build() {
+        }        public ThingTypeState build() {
             return new ThingTypeState(arn, deprecated, name, properties, tags, tagsAll);
         }
     }

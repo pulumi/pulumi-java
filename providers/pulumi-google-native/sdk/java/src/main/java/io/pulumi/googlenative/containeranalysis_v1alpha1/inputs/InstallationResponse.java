@@ -78,12 +78,13 @@ public final class InstallationResponse extends io.pulumi.resources.InvokeArgs {
             this.location = Objects.requireNonNull(location);
             return this;
         }
-
+        public Builder location(LocationResponse... location) {
+            return location(List.of(location));
+        }
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
-        }
-        public InstallationResponse build() {
+        }        public InstallationResponse build() {
             return new InstallationResponse(location, name);
         }
     }

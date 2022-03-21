@@ -159,72 +159,58 @@ public final class ManagedFieldsEntryArgs extends io.pulumi.resources.ResourceAr
             this.apiVersion = apiVersion;
             return this;
         }
-
         public Builder apiVersion(@Nullable String apiVersion) {
             this.apiVersion = Output.ofNullable(apiVersion);
             return this;
         }
-
         public Builder fieldsType(@Nullable Output<String> fieldsType) {
             this.fieldsType = fieldsType;
             return this;
         }
-
         public Builder fieldsType(@Nullable String fieldsType) {
             this.fieldsType = Output.ofNullable(fieldsType);
             return this;
         }
-
         public Builder fieldsV1(@Nullable Output<JsonElement> fieldsV1) {
             this.fieldsV1 = fieldsV1;
             return this;
         }
-
         public Builder fieldsV1(@Nullable JsonElement fieldsV1) {
             this.fieldsV1 = Output.ofNullable(fieldsV1);
             return this;
         }
-
         public Builder manager(@Nullable Output<String> manager) {
             this.manager = manager;
             return this;
         }
-
         public Builder manager(@Nullable String manager) {
             this.manager = Output.ofNullable(manager);
             return this;
         }
-
         public Builder operation(@Nullable Output<String> operation) {
             this.operation = operation;
             return this;
         }
-
         public Builder operation(@Nullable String operation) {
             this.operation = Output.ofNullable(operation);
             return this;
         }
-
         public Builder subresource(@Nullable Output<String> subresource) {
             this.subresource = subresource;
             return this;
         }
-
         public Builder subresource(@Nullable String subresource) {
             this.subresource = Output.ofNullable(subresource);
             return this;
         }
-
         public Builder time(@Nullable Output<String> time) {
             this.time = time;
             return this;
         }
-
         public Builder time(@Nullable String time) {
             this.time = Output.ofNullable(time);
             return this;
-        }
-        public ManagedFieldsEntryArgs build() {
+        }        public ManagedFieldsEntryArgs build() {
             return new ManagedFieldsEntryArgs(apiVersion, fieldsType, fieldsV1, manager, operation, subresource, time);
         }
     }

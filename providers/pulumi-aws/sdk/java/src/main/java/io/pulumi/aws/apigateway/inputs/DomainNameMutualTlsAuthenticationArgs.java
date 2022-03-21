@@ -75,22 +75,18 @@ public final class DomainNameMutualTlsAuthenticationArgs extends io.pulumi.resou
             this.truststoreUri = Objects.requireNonNull(truststoreUri);
             return this;
         }
-
         public Builder truststoreUri(String truststoreUri) {
             this.truststoreUri = Output.of(Objects.requireNonNull(truststoreUri));
             return this;
         }
-
         public Builder truststoreVersion(@Nullable Output<String> truststoreVersion) {
             this.truststoreVersion = truststoreVersion;
             return this;
         }
-
         public Builder truststoreVersion(@Nullable String truststoreVersion) {
             this.truststoreVersion = Output.ofNullable(truststoreVersion);
             return this;
-        }
-        public DomainNameMutualTlsAuthenticationArgs build() {
+        }        public DomainNameMutualTlsAuthenticationArgs build() {
             return new DomainNameMutualTlsAuthenticationArgs(truststoreUri, truststoreVersion);
         }
     }

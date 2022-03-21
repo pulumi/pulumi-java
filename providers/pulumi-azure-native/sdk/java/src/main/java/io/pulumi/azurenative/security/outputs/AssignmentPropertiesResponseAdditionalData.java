@@ -53,8 +53,7 @@ public final class AssignmentPropertiesResponseAdditionalData {
         public Builder exemptionCategory(@Nullable String exemptionCategory) {
             this.exemptionCategory = exemptionCategory;
             return this;
-        }
-        public AssignmentPropertiesResponseAdditionalData build() {
+        }        public AssignmentPropertiesResponseAdditionalData build() {
             return new AssignmentPropertiesResponseAdditionalData(exemptionCategory);
         }
     }

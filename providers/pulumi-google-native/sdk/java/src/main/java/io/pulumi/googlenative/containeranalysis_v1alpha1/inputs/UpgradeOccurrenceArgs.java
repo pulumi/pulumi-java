@@ -96,32 +96,26 @@ public final class UpgradeOccurrenceArgs extends io.pulumi.resources.ResourceArg
             this.distribution = distribution;
             return this;
         }
-
         public Builder distribution(@Nullable UpgradeDistributionArgs distribution) {
             this.distribution = Output.ofNullable(distribution);
             return this;
         }
-
         public Builder $package(@Nullable Output<String> $package) {
             this.$package = $package;
             return this;
         }
-
         public Builder $package(@Nullable String $package) {
             this.$package = Output.ofNullable($package);
             return this;
         }
-
         public Builder parsedVersion(@Nullable Output<VersionArgs> parsedVersion) {
             this.parsedVersion = parsedVersion;
             return this;
         }
-
         public Builder parsedVersion(@Nullable VersionArgs parsedVersion) {
             this.parsedVersion = Output.ofNullable(parsedVersion);
             return this;
-        }
-        public UpgradeOccurrenceArgs build() {
+        }        public UpgradeOccurrenceArgs build() {
             return new UpgradeOccurrenceArgs(distribution, $package, parsedVersion);
         }
     }

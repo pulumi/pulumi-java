@@ -54,7 +54,9 @@ public final class ListDatabaseAccountConnectionStringsResult {
             this.connectionStrings = connectionStrings;
             return this;
         }
-        public ListDatabaseAccountConnectionStringsResult build() {
+        public Builder connectionStrings(DatabaseAccountConnectionStringResponse... connectionStrings) {
+            return connectionStrings(List.of(connectionStrings));
+        }        public ListDatabaseAccountConnectionStringsResult build() {
             return new ListDatabaseAccountConnectionStringsResult(connectionStrings);
         }
     }

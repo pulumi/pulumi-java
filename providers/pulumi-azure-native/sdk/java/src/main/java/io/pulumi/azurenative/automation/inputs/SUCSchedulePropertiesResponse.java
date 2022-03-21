@@ -273,72 +273,58 @@ public final class SUCSchedulePropertiesResponse extends io.pulumi.resources.Inv
             this.advancedSchedule = advancedSchedule;
             return this;
         }
-
         public Builder creationTime(@Nullable String creationTime) {
             this.creationTime = creationTime;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
-
         public Builder expiryTime(@Nullable String expiryTime) {
             this.expiryTime = expiryTime;
             return this;
         }
-
         public Builder expiryTimeOffsetMinutes(@Nullable Double expiryTimeOffsetMinutes) {
             this.expiryTimeOffsetMinutes = expiryTimeOffsetMinutes;
             return this;
         }
-
         public Builder frequency(@Nullable String frequency) {
             this.frequency = frequency;
             return this;
         }
-
         public Builder interval(@Nullable Double interval) {
             this.interval = interval;
             return this;
         }
-
         public Builder isEnabled(@Nullable Boolean isEnabled) {
             this.isEnabled = isEnabled;
             return this;
         }
-
         public Builder lastModifiedTime(@Nullable String lastModifiedTime) {
             this.lastModifiedTime = lastModifiedTime;
             return this;
         }
-
         public Builder nextRun(@Nullable String nextRun) {
             this.nextRun = nextRun;
             return this;
         }
-
         public Builder nextRunOffsetMinutes(@Nullable Double nextRunOffsetMinutes) {
             this.nextRunOffsetMinutes = nextRunOffsetMinutes;
             return this;
         }
-
         public Builder startTime(@Nullable String startTime) {
             this.startTime = startTime;
             return this;
         }
-
         public Builder startTimeOffsetMinutes(Double startTimeOffsetMinutes) {
             this.startTimeOffsetMinutes = Objects.requireNonNull(startTimeOffsetMinutes);
             return this;
         }
-
         public Builder timeZone(@Nullable String timeZone) {
             this.timeZone = timeZone;
             return this;
-        }
-        public SUCSchedulePropertiesResponse build() {
+        }        public SUCSchedulePropertiesResponse build() {
             return new SUCSchedulePropertiesResponse(advancedSchedule, creationTime, description, expiryTime, expiryTimeOffsetMinutes, frequency, interval, isEnabled, lastModifiedTime, nextRun, nextRunOffsetMinutes, startTime, startTimeOffsetMinutes, timeZone);
         }
     }

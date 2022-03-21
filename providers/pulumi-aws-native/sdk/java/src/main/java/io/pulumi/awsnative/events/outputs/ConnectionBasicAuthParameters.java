@@ -53,12 +53,10 @@ public final class ConnectionBasicAuthParameters {
             this.password = Objects.requireNonNull(password);
             return this;
         }
-
         public Builder username(String username) {
             this.username = Objects.requireNonNull(username);
             return this;
-        }
-        public ConnectionBasicAuthParameters build() {
+        }        public ConnectionBasicAuthParameters build() {
             return new ConnectionBasicAuthParameters(password, username);
         }
     }

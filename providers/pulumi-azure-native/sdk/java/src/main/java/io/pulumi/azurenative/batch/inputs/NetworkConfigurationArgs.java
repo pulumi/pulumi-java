@@ -96,32 +96,26 @@ public final class NetworkConfigurationArgs extends io.pulumi.resources.Resource
             this.endpointConfiguration = endpointConfiguration;
             return this;
         }
-
         public Builder endpointConfiguration(@Nullable PoolEndpointConfigurationArgs endpointConfiguration) {
             this.endpointConfiguration = Output.ofNullable(endpointConfiguration);
             return this;
         }
-
         public Builder publicIPAddressConfiguration(@Nullable Output<PublicIPAddressConfigurationArgs> publicIPAddressConfiguration) {
             this.publicIPAddressConfiguration = publicIPAddressConfiguration;
             return this;
         }
-
         public Builder publicIPAddressConfiguration(@Nullable PublicIPAddressConfigurationArgs publicIPAddressConfiguration) {
             this.publicIPAddressConfiguration = Output.ofNullable(publicIPAddressConfiguration);
             return this;
         }
-
         public Builder subnetId(@Nullable Output<String> subnetId) {
             this.subnetId = subnetId;
             return this;
         }
-
         public Builder subnetId(@Nullable String subnetId) {
             this.subnetId = Output.ofNullable(subnetId);
             return this;
-        }
-        public NetworkConfigurationArgs build() {
+        }        public NetworkConfigurationArgs build() {
             return new NetworkConfigurationArgs(endpointConfiguration, publicIPAddressConfiguration, subnetId);
         }
     }

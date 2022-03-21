@@ -79,32 +79,26 @@ public final class InAppTemplateHeaderConfigArgs extends io.pulumi.resources.Res
             this.alignment = alignment;
             return this;
         }
-
         public Builder alignment(@Nullable InAppTemplateAlignment alignment) {
             this.alignment = Output.ofNullable(alignment);
             return this;
         }
-
         public Builder header(@Nullable Output<String> header) {
             this.header = header;
             return this;
         }
-
         public Builder header(@Nullable String header) {
             this.header = Output.ofNullable(header);
             return this;
         }
-
         public Builder textColor(@Nullable Output<String> textColor) {
             this.textColor = textColor;
             return this;
         }
-
         public Builder textColor(@Nullable String textColor) {
             this.textColor = Output.ofNullable(textColor);
             return this;
-        }
-        public InAppTemplateHeaderConfigArgs build() {
+        }        public InAppTemplateHeaderConfigArgs build() {
             return new InAppTemplateHeaderConfigArgs(alignment, header, textColor);
         }
     }

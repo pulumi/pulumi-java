@@ -54,8 +54,7 @@ public final class GetStreamArgs extends io.pulumi.resources.InvokeArgs {
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
-        }
-        public GetStreamArgs build() {
+        }        public GetStreamArgs build() {
             return new GetStreamArgs(name);
         }
     }

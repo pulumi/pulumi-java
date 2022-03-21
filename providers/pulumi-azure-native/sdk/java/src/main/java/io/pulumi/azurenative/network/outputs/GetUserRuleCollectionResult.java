@@ -186,47 +186,41 @@ public final class GetUserRuleCollectionResult {
             this.appliesToGroups = appliesToGroups;
             return this;
         }
-
+        public Builder appliesToGroups(NetworkManagerSecurityGroupItemResponse... appliesToGroups) {
+            return appliesToGroups(List.of(appliesToGroups));
+        }
         public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
-
         public Builder displayName(@Nullable String displayName) {
             this.displayName = displayName;
             return this;
         }
-
         public Builder etag(String etag) {
             this.etag = Objects.requireNonNull(etag);
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
-
         public Builder systemData(SystemDataResponse systemData) {
             this.systemData = Objects.requireNonNull(systemData);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public GetUserRuleCollectionResult build() {
+        }        public GetUserRuleCollectionResult build() {
             return new GetUserRuleCollectionResult(appliesToGroups, description, displayName, etag, id, name, provisioningState, systemData, type);
         }
     }

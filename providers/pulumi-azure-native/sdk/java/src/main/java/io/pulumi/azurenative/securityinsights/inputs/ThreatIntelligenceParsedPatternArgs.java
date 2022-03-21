@@ -80,22 +80,21 @@ public final class ThreatIntelligenceParsedPatternArgs extends io.pulumi.resourc
             this.patternTypeKey = patternTypeKey;
             return this;
         }
-
         public Builder patternTypeKey(@Nullable String patternTypeKey) {
             this.patternTypeKey = Output.ofNullable(patternTypeKey);
             return this;
         }
-
         public Builder patternTypeValues(@Nullable Output<List<ThreatIntelligenceParsedPatternTypeValueArgs>> patternTypeValues) {
             this.patternTypeValues = patternTypeValues;
             return this;
         }
-
         public Builder patternTypeValues(@Nullable List<ThreatIntelligenceParsedPatternTypeValueArgs> patternTypeValues) {
             this.patternTypeValues = Output.ofNullable(patternTypeValues);
             return this;
         }
-        public ThreatIntelligenceParsedPatternArgs build() {
+        public Builder patternTypeValues(ThreatIntelligenceParsedPatternTypeValueArgs... patternTypeValues) {
+            return patternTypeValues(List.of(patternTypeValues));
+        }        public ThreatIntelligenceParsedPatternArgs build() {
             return new ThreatIntelligenceParsedPatternArgs(patternTypeKey, patternTypeValues);
         }
     }

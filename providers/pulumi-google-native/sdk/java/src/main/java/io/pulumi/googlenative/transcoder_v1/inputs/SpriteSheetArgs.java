@@ -223,112 +223,90 @@ public final class SpriteSheetArgs extends io.pulumi.resources.ResourceArgs {
             this.columnCount = columnCount;
             return this;
         }
-
         public Builder columnCount(@Nullable Integer columnCount) {
             this.columnCount = Output.ofNullable(columnCount);
             return this;
         }
-
         public Builder endTimeOffset(@Nullable Output<String> endTimeOffset) {
             this.endTimeOffset = endTimeOffset;
             return this;
         }
-
         public Builder endTimeOffset(@Nullable String endTimeOffset) {
             this.endTimeOffset = Output.ofNullable(endTimeOffset);
             return this;
         }
-
         public Builder filePrefix(Output<String> filePrefix) {
             this.filePrefix = Objects.requireNonNull(filePrefix);
             return this;
         }
-
         public Builder filePrefix(String filePrefix) {
             this.filePrefix = Output.of(Objects.requireNonNull(filePrefix));
             return this;
         }
-
         public Builder format(@Nullable Output<String> format) {
             this.format = format;
             return this;
         }
-
         public Builder format(@Nullable String format) {
             this.format = Output.ofNullable(format);
             return this;
         }
-
         public Builder interval(@Nullable Output<String> interval) {
             this.interval = interval;
             return this;
         }
-
         public Builder interval(@Nullable String interval) {
             this.interval = Output.ofNullable(interval);
             return this;
         }
-
         public Builder quality(@Nullable Output<Integer> quality) {
             this.quality = quality;
             return this;
         }
-
         public Builder quality(@Nullable Integer quality) {
             this.quality = Output.ofNullable(quality);
             return this;
         }
-
         public Builder rowCount(@Nullable Output<Integer> rowCount) {
             this.rowCount = rowCount;
             return this;
         }
-
         public Builder rowCount(@Nullable Integer rowCount) {
             this.rowCount = Output.ofNullable(rowCount);
             return this;
         }
-
         public Builder spriteHeightPixels(Output<Integer> spriteHeightPixels) {
             this.spriteHeightPixels = Objects.requireNonNull(spriteHeightPixels);
             return this;
         }
-
         public Builder spriteHeightPixels(Integer spriteHeightPixels) {
             this.spriteHeightPixels = Output.of(Objects.requireNonNull(spriteHeightPixels));
             return this;
         }
-
         public Builder spriteWidthPixels(Output<Integer> spriteWidthPixels) {
             this.spriteWidthPixels = Objects.requireNonNull(spriteWidthPixels);
             return this;
         }
-
         public Builder spriteWidthPixels(Integer spriteWidthPixels) {
             this.spriteWidthPixels = Output.of(Objects.requireNonNull(spriteWidthPixels));
             return this;
         }
-
         public Builder startTimeOffset(@Nullable Output<String> startTimeOffset) {
             this.startTimeOffset = startTimeOffset;
             return this;
         }
-
         public Builder startTimeOffset(@Nullable String startTimeOffset) {
             this.startTimeOffset = Output.ofNullable(startTimeOffset);
             return this;
         }
-
         public Builder totalCount(@Nullable Output<Integer> totalCount) {
             this.totalCount = totalCount;
             return this;
         }
-
         public Builder totalCount(@Nullable Integer totalCount) {
             this.totalCount = Output.ofNullable(totalCount);
             return this;
-        }
-        public SpriteSheetArgs build() {
+        }        public SpriteSheetArgs build() {
             return new SpriteSheetArgs(columnCount, endTimeOffset, filePrefix, format, interval, quality, rowCount, spriteHeightPixels, spriteWidthPixels, startTimeOffset, totalCount);
         }
     }

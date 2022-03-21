@@ -56,12 +56,10 @@ public final class ProjectDataDeliveryObject {
             this.logGroup = logGroup;
             return this;
         }
-
         public Builder s3(@Nullable ProjectS3Destination s3) {
             this.s3 = s3;
             return this;
-        }
-        public ProjectDataDeliveryObject build() {
+        }        public ProjectDataDeliveryObject build() {
             return new ProjectDataDeliveryObject(logGroup, s3);
         }
     }

@@ -105,22 +105,21 @@ public final class LogRulesResponse {
             this.filteringTags = filteringTags;
             return this;
         }
-
+        public Builder filteringTags(FilteringTagResponse... filteringTags) {
+            return filteringTags(List.of(filteringTags));
+        }
         public Builder sendAadLogs(@Nullable Boolean sendAadLogs) {
             this.sendAadLogs = sendAadLogs;
             return this;
         }
-
         public Builder sendActivityLogs(@Nullable Boolean sendActivityLogs) {
             this.sendActivityLogs = sendActivityLogs;
             return this;
         }
-
         public Builder sendSubscriptionLogs(@Nullable Boolean sendSubscriptionLogs) {
             this.sendSubscriptionLogs = sendSubscriptionLogs;
             return this;
-        }
-        public LogRulesResponse build() {
+        }        public LogRulesResponse build() {
             return new LogRulesResponse(filteringTags, sendAadLogs, sendActivityLogs, sendSubscriptionLogs);
         }
     }

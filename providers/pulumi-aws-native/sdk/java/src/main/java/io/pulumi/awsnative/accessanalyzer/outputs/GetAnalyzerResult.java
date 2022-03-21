@@ -82,17 +82,20 @@ public final class GetAnalyzerResult {
             this.archiveRules = archiveRules;
             return this;
         }
-
+        public Builder archiveRules(AnalyzerArchiveRule... archiveRules) {
+            return archiveRules(List.of(archiveRules));
+        }
         public Builder arn(@Nullable String arn) {
             this.arn = arn;
             return this;
         }
-
         public Builder tags(@Nullable List<AnalyzerTag> tags) {
             this.tags = tags;
             return this;
         }
-        public GetAnalyzerResult build() {
+        public Builder tags(AnalyzerTag... tags) {
+            return tags(List.of(tags));
+        }        public GetAnalyzerResult build() {
             return new GetAnalyzerResult(archiveRules, arn, tags);
         }
     }

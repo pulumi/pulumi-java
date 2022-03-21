@@ -82,27 +82,25 @@ public final class ScheduledQueryMixedMeasureMapping {
             this.measureName = measureName;
             return this;
         }
-
         public Builder measureValueType(ScheduledQueryMixedMeasureMappingMeasureValueType measureValueType) {
             this.measureValueType = Objects.requireNonNull(measureValueType);
             return this;
         }
-
         public Builder multiMeasureAttributeMappings(@Nullable List<ScheduledQueryMultiMeasureAttributeMapping> multiMeasureAttributeMappings) {
             this.multiMeasureAttributeMappings = multiMeasureAttributeMappings;
             return this;
         }
-
+        public Builder multiMeasureAttributeMappings(ScheduledQueryMultiMeasureAttributeMapping... multiMeasureAttributeMappings) {
+            return multiMeasureAttributeMappings(List.of(multiMeasureAttributeMappings));
+        }
         public Builder sourceColumn(@Nullable String sourceColumn) {
             this.sourceColumn = sourceColumn;
             return this;
         }
-
         public Builder targetMeasureName(@Nullable String targetMeasureName) {
             this.targetMeasureName = targetMeasureName;
             return this;
-        }
-        public ScheduledQueryMixedMeasureMapping build() {
+        }        public ScheduledQueryMixedMeasureMapping build() {
             return new ScheduledQueryMixedMeasureMapping(measureName, measureValueType, multiMeasureAttributeMappings, sourceColumn, targetMeasureName);
         }
     }

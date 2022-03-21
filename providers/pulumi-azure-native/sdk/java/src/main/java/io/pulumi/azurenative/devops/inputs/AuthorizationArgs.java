@@ -81,22 +81,18 @@ public final class AuthorizationArgs extends io.pulumi.resources.ResourceArgs {
             this.authorizationType = Objects.requireNonNull(authorizationType);
             return this;
         }
-
         public Builder authorizationType(Either<String,AuthorizationType> authorizationType) {
             this.authorizationType = Output.of(Objects.requireNonNull(authorizationType));
             return this;
         }
-
         public Builder parameters(@Nullable Output<Map<String,String>> parameters) {
             this.parameters = parameters;
             return this;
         }
-
         public Builder parameters(@Nullable Map<String,String> parameters) {
             this.parameters = Output.ofNullable(parameters);
             return this;
-        }
-        public AuthorizationArgs build() {
+        }        public AuthorizationArgs build() {
             return new AuthorizationArgs(authorizationType, parameters);
         }
     }

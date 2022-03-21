@@ -103,27 +103,22 @@ public final class LaunchMetricDefinitionObject {
             this.entityIdKey = Objects.requireNonNull(entityIdKey);
             return this;
         }
-
         public Builder eventPattern(String eventPattern) {
             this.eventPattern = Objects.requireNonNull(eventPattern);
             return this;
         }
-
         public Builder metricName(String metricName) {
             this.metricName = Objects.requireNonNull(metricName);
             return this;
         }
-
         public Builder unitLabel(@Nullable String unitLabel) {
             this.unitLabel = unitLabel;
             return this;
         }
-
         public Builder valueKey(String valueKey) {
             this.valueKey = Objects.requireNonNull(valueKey);
             return this;
-        }
-        public LaunchMetricDefinitionObject build() {
+        }        public LaunchMetricDefinitionObject build() {
             return new LaunchMetricDefinitionObject(entityIdKey, eventPattern, metricName, unitLabel, valueKey);
         }
     }

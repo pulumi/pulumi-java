@@ -53,12 +53,10 @@ public final class DomainSubDomainSetting {
             this.branchName = Objects.requireNonNull(branchName);
             return this;
         }
-
         public Builder prefix(String prefix) {
             this.prefix = Objects.requireNonNull(prefix);
             return this;
-        }
-        public DomainSubDomainSetting build() {
+        }        public DomainSubDomainSetting build() {
             return new DomainSubDomainSetting(branchName, prefix);
         }
     }

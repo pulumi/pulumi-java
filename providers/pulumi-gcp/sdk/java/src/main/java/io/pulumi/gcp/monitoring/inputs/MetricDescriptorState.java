@@ -263,122 +263,104 @@ public final class MetricDescriptorState extends io.pulumi.resources.ResourceArg
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder displayName(@Nullable Output<String> displayName) {
             this.displayName = displayName;
             return this;
         }
-
         public Builder displayName(@Nullable String displayName) {
             this.displayName = Output.ofNullable(displayName);
             return this;
         }
-
         public Builder labels(@Nullable Output<List<MetricDescriptorLabelGetArgs>> labels) {
             this.labels = labels;
             return this;
         }
-
         public Builder labels(@Nullable List<MetricDescriptorLabelGetArgs> labels) {
             this.labels = Output.ofNullable(labels);
             return this;
         }
-
+        public Builder labels(MetricDescriptorLabelGetArgs... labels) {
+            return labels(List.of(labels));
+        }
         public Builder launchStage(@Nullable Output<String> launchStage) {
             this.launchStage = launchStage;
             return this;
         }
-
         public Builder launchStage(@Nullable String launchStage) {
             this.launchStage = Output.ofNullable(launchStage);
             return this;
         }
-
         public Builder metadata(@Nullable Output<MetricDescriptorMetadataGetArgs> metadata) {
             this.metadata = metadata;
             return this;
         }
-
         public Builder metadata(@Nullable MetricDescriptorMetadataGetArgs metadata) {
             this.metadata = Output.ofNullable(metadata);
             return this;
         }
-
         public Builder metricKind(@Nullable Output<String> metricKind) {
             this.metricKind = metricKind;
             return this;
         }
-
         public Builder metricKind(@Nullable String metricKind) {
             this.metricKind = Output.ofNullable(metricKind);
             return this;
         }
-
         public Builder monitoredResourceTypes(@Nullable Output<List<String>> monitoredResourceTypes) {
             this.monitoredResourceTypes = monitoredResourceTypes;
             return this;
         }
-
         public Builder monitoredResourceTypes(@Nullable List<String> monitoredResourceTypes) {
             this.monitoredResourceTypes = Output.ofNullable(monitoredResourceTypes);
             return this;
         }
-
+        public Builder monitoredResourceTypes(String... monitoredResourceTypes) {
+            return monitoredResourceTypes(List.of(monitoredResourceTypes));
+        }
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
         }
-
         public Builder type(@Nullable Output<String> type) {
             this.type = type;
             return this;
         }
-
         public Builder type(@Nullable String type) {
             this.type = Output.ofNullable(type);
             return this;
         }
-
         public Builder unit(@Nullable Output<String> unit) {
             this.unit = unit;
             return this;
         }
-
         public Builder unit(@Nullable String unit) {
             this.unit = Output.ofNullable(unit);
             return this;
         }
-
         public Builder valueType(@Nullable Output<String> valueType) {
             this.valueType = valueType;
             return this;
         }
-
         public Builder valueType(@Nullable String valueType) {
             this.valueType = Output.ofNullable(valueType);
             return this;
-        }
-        public MetricDescriptorState build() {
+        }        public MetricDescriptorState build() {
             return new MetricDescriptorState(description, displayName, labels, launchStage, metadata, metricKind, monitoredResourceTypes, name, project, type, unit, valueType);
         }
     }

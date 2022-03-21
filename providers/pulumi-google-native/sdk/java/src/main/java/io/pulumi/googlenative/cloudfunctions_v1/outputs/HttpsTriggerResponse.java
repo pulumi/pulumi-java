@@ -69,12 +69,10 @@ public final class HttpsTriggerResponse {
             this.securityLevel = Objects.requireNonNull(securityLevel);
             return this;
         }
-
         public Builder url(String url) {
             this.url = Objects.requireNonNull(url);
             return this;
-        }
-        public HttpsTriggerResponse build() {
+        }        public HttpsTriggerResponse build() {
             return new HttpsTriggerResponse(securityLevel, url);
         }
     }

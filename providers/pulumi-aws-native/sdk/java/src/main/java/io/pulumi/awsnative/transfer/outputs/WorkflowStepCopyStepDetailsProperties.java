@@ -81,17 +81,14 @@ public final class WorkflowStepCopyStepDetailsProperties {
             this.destinationFileLocation = destinationFileLocation;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
-
         public Builder overwriteExisting(@Nullable WorkflowStepCopyStepDetailsPropertiesOverwriteExisting overwriteExisting) {
             this.overwriteExisting = overwriteExisting;
             return this;
-        }
-        public WorkflowStepCopyStepDetailsProperties build() {
+        }        public WorkflowStepCopyStepDetailsProperties build() {
             return new WorkflowStepCopyStepDetailsProperties(destinationFileLocation, name, overwriteExisting);
         }
     }

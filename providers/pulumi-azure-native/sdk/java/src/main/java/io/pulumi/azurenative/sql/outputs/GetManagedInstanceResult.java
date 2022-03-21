@@ -513,147 +513,121 @@ public final class GetManagedInstanceResult {
             this.administratorLogin = administratorLogin;
             return this;
         }
-
         public Builder administrators(@Nullable ManagedInstanceExternalAdministratorResponse administrators) {
             this.administrators = administrators;
             return this;
         }
-
         public Builder collation(@Nullable String collation) {
             this.collation = collation;
             return this;
         }
-
         public Builder dnsZone(String dnsZone) {
             this.dnsZone = Objects.requireNonNull(dnsZone);
             return this;
         }
-
         public Builder fullyQualifiedDomainName(String fullyQualifiedDomainName) {
             this.fullyQualifiedDomainName = Objects.requireNonNull(fullyQualifiedDomainName);
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder identity(@Nullable ResourceIdentityResponse identity) {
             this.identity = identity;
             return this;
         }
-
         public Builder instancePoolId(@Nullable String instancePoolId) {
             this.instancePoolId = instancePoolId;
             return this;
         }
-
         public Builder keyId(@Nullable String keyId) {
             this.keyId = keyId;
             return this;
         }
-
         public Builder licenseType(@Nullable String licenseType) {
             this.licenseType = licenseType;
             return this;
         }
-
         public Builder location(String location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
-
         public Builder maintenanceConfigurationId(@Nullable String maintenanceConfigurationId) {
             this.maintenanceConfigurationId = maintenanceConfigurationId;
             return this;
         }
-
         public Builder minimalTlsVersion(@Nullable String minimalTlsVersion) {
             this.minimalTlsVersion = minimalTlsVersion;
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder primaryUserAssignedIdentityId(@Nullable String primaryUserAssignedIdentityId) {
             this.primaryUserAssignedIdentityId = primaryUserAssignedIdentityId;
             return this;
         }
-
         public Builder privateEndpointConnections(List<ManagedInstancePecPropertyResponse> privateEndpointConnections) {
             this.privateEndpointConnections = Objects.requireNonNull(privateEndpointConnections);
             return this;
         }
-
+        public Builder privateEndpointConnections(ManagedInstancePecPropertyResponse... privateEndpointConnections) {
+            return privateEndpointConnections(List.of(privateEndpointConnections));
+        }
         public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
-
         public Builder proxyOverride(@Nullable String proxyOverride) {
             this.proxyOverride = proxyOverride;
             return this;
         }
-
         public Builder publicDataEndpointEnabled(@Nullable Boolean publicDataEndpointEnabled) {
             this.publicDataEndpointEnabled = publicDataEndpointEnabled;
             return this;
         }
-
         public Builder sku(@Nullable SkuResponse sku) {
             this.sku = sku;
             return this;
         }
-
         public Builder state(String state) {
             this.state = Objects.requireNonNull(state);
             return this;
         }
-
         public Builder storageAccountType(@Nullable String storageAccountType) {
             this.storageAccountType = storageAccountType;
             return this;
         }
-
         public Builder storageSizeInGB(@Nullable Integer storageSizeInGB) {
             this.storageSizeInGB = storageSizeInGB;
             return this;
         }
-
         public Builder subnetId(@Nullable String subnetId) {
             this.subnetId = subnetId;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder timezoneId(@Nullable String timezoneId) {
             this.timezoneId = timezoneId;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder vCores(@Nullable Integer vCores) {
             this.vCores = vCores;
             return this;
         }
-
         public Builder zoneRedundant(@Nullable Boolean zoneRedundant) {
             this.zoneRedundant = zoneRedundant;
             return this;
-        }
-        public GetManagedInstanceResult build() {
+        }        public GetManagedInstanceResult build() {
             return new GetManagedInstanceResult(administratorLogin, administrators, collation, dnsZone, fullyQualifiedDomainName, id, identity, instancePoolId, keyId, licenseType, location, maintenanceConfigurationId, minimalTlsVersion, name, primaryUserAssignedIdentityId, privateEndpointConnections, provisioningState, proxyOverride, publicDataEndpointEnabled, sku, state, storageAccountType, storageSizeInGB, subnetId, tags, timezoneId, type, vCores, zoneRedundant);
         }
     }

@@ -105,22 +105,18 @@ public final class PSCredentialExecutionParameterResponse {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder password(@Nullable String password) {
             this.password = password;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder username(@Nullable String username) {
             this.username = username;
             return this;
-        }
-        public PSCredentialExecutionParameterResponse build() {
+        }        public PSCredentialExecutionParameterResponse build() {
             return new PSCredentialExecutionParameterResponse(name, password, type, username);
         }
     }

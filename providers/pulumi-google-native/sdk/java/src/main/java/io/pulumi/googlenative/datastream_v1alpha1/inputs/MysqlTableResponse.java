@@ -78,12 +78,13 @@ public final class MysqlTableResponse extends io.pulumi.resources.InvokeArgs {
             this.mysqlColumns = Objects.requireNonNull(mysqlColumns);
             return this;
         }
-
+        public Builder mysqlColumns(MysqlColumnResponse... mysqlColumns) {
+            return mysqlColumns(List.of(mysqlColumns));
+        }
         public Builder tableName(String tableName) {
             this.tableName = Objects.requireNonNull(tableName);
             return this;
-        }
-        public MysqlTableResponse build() {
+        }        public MysqlTableResponse build() {
             return new MysqlTableResponse(mysqlColumns, tableName);
         }
     }

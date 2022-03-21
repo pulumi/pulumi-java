@@ -50,8 +50,7 @@ public final class GetFunctionDeadLetterConfig extends io.pulumi.resources.Invok
         public Builder targetArn(String targetArn) {
             this.targetArn = Objects.requireNonNull(targetArn);
             return this;
-        }
-        public GetFunctionDeadLetterConfig build() {
+        }        public GetFunctionDeadLetterConfig build() {
             return new GetFunctionDeadLetterConfig(targetArn);
         }
     }

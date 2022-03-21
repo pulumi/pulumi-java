@@ -62,12 +62,13 @@ public final class BackendArgs extends io.pulumi.resources.ResourceArgs {
             this.rules = rules;
             return this;
         }
-
         public Builder rules(@Nullable List<BackendRuleArgs> rules) {
             this.rules = Output.ofNullable(rules);
             return this;
         }
-        public BackendArgs build() {
+        public Builder rules(BackendRuleArgs... rules) {
+            return rules(List.of(rules));
+        }        public BackendArgs build() {
             return new BackendArgs(rules);
         }
     }

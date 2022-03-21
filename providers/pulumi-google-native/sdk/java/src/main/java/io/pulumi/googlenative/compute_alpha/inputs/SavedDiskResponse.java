@@ -108,22 +108,18 @@ public final class SavedDiskResponse extends io.pulumi.resources.InvokeArgs {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
-
         public Builder sourceDisk(String sourceDisk) {
             this.sourceDisk = Objects.requireNonNull(sourceDisk);
             return this;
         }
-
         public Builder storageBytes(String storageBytes) {
             this.storageBytes = Objects.requireNonNull(storageBytes);
             return this;
         }
-
         public Builder storageBytesStatus(String storageBytesStatus) {
             this.storageBytesStatus = Objects.requireNonNull(storageBytesStatus);
             return this;
-        }
-        public SavedDiskResponse build() {
+        }        public SavedDiskResponse build() {
             return new SavedDiskResponse(kind, sourceDisk, storageBytes, storageBytesStatus);
         }
     }

@@ -71,12 +71,10 @@ public final class MetricStreamTag {
             this.key = Objects.requireNonNull(key);
             return this;
         }
-
         public Builder value(@Nullable String value) {
             this.value = value;
             return this;
-        }
-        public MetricStreamTag build() {
+        }        public MetricStreamTag build() {
             return new MetricStreamTag(key, value);
         }
     }

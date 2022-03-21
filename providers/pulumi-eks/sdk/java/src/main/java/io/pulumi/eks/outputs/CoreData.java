@@ -213,102 +213,94 @@ public final class CoreData {
             this.awsProvider = awsProvider;
             return this;
         }
-
         public Builder cluster(Cluster cluster) {
             this.cluster = Objects.requireNonNull(cluster);
             return this;
         }
-
         public Builder clusterSecurityGroup(SecurityGroup clusterSecurityGroup) {
             this.clusterSecurityGroup = Objects.requireNonNull(clusterSecurityGroup);
             return this;
         }
-
         public Builder eksNodeAccess(@Nullable ConfigMap eksNodeAccess) {
             this.eksNodeAccess = eksNodeAccess;
             return this;
         }
-
         public Builder encryptionConfig(@Nullable ClusterEncryptionConfig encryptionConfig) {
             this.encryptionConfig = encryptionConfig;
             return this;
         }
-
         public Builder endpoint(String endpoint) {
             this.endpoint = Objects.requireNonNull(endpoint);
             return this;
         }
-
         public Builder fargateProfile(@Nullable FargateProfile fargateProfile) {
             this.fargateProfile = fargateProfile;
             return this;
         }
-
         public Builder instanceRoles(List<Role> instanceRoles) {
             this.instanceRoles = Objects.requireNonNull(instanceRoles);
             return this;
         }
-
+        public Builder instanceRoles(Role... instanceRoles) {
+            return instanceRoles(List.of(instanceRoles));
+        }
         public Builder kubeconfig(@Nullable Object kubeconfig) {
             this.kubeconfig = kubeconfig;
             return this;
         }
-
         public Builder nodeGroupOptions(ClusterNodeGroupOptions nodeGroupOptions) {
             this.nodeGroupOptions = Objects.requireNonNull(nodeGroupOptions);
             return this;
         }
-
         public Builder nodeSecurityGroupTags(@Nullable Map<String,String> nodeSecurityGroupTags) {
             this.nodeSecurityGroupTags = nodeSecurityGroupTags;
             return this;
         }
-
         public Builder oidcProvider(@Nullable OpenIdConnectProvider oidcProvider) {
             this.oidcProvider = oidcProvider;
             return this;
         }
-
         public Builder privateSubnetIds(@Nullable List<String> privateSubnetIds) {
             this.privateSubnetIds = privateSubnetIds;
             return this;
         }
-
+        public Builder privateSubnetIds(String... privateSubnetIds) {
+            return privateSubnetIds(List.of(privateSubnetIds));
+        }
         public Builder provider(io.pulumi.kubernetes.Provider provider) {
             this.provider = Objects.requireNonNull(provider);
             return this;
         }
-
         public Builder publicSubnetIds(@Nullable List<String> publicSubnetIds) {
             this.publicSubnetIds = publicSubnetIds;
             return this;
         }
-
+        public Builder publicSubnetIds(String... publicSubnetIds) {
+            return publicSubnetIds(List.of(publicSubnetIds));
+        }
         public Builder storageClasses(@Nullable Map<String,StorageClass> storageClasses) {
             this.storageClasses = storageClasses;
             return this;
         }
-
         public Builder subnetIds(List<String> subnetIds) {
             this.subnetIds = Objects.requireNonNull(subnetIds);
             return this;
         }
-
+        public Builder subnetIds(String... subnetIds) {
+            return subnetIds(List.of(subnetIds));
+        }
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder vpcCni(@Nullable VpcCni vpcCni) {
             this.vpcCni = vpcCni;
             return this;
         }
-
         public Builder vpcId(String vpcId) {
             this.vpcId = Objects.requireNonNull(vpcId);
             return this;
-        }
-        public CoreData build() {
+        }        public CoreData build() {
             return new CoreData(awsProvider, cluster, clusterSecurityGroup, eksNodeAccess, encryptionConfig, endpoint, fargateProfile, instanceRoles, kubeconfig, nodeGroupOptions, nodeSecurityGroupTags, oidcProvider, privateSubnetIds, provider, publicSubnetIds, storageClasses, subnetIds, tags, vpcCni, vpcId);
         }
     }

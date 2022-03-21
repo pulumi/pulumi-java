@@ -393,212 +393,179 @@ public final class WorkerPoolArgs extends io.pulumi.resources.ResourceArgs {
             this.autoscalingSettings = autoscalingSettings;
             return this;
         }
-
         public Builder autoscalingSettings(@Nullable AutoscalingSettingsArgs autoscalingSettings) {
             this.autoscalingSettings = Output.ofNullable(autoscalingSettings);
             return this;
         }
-
         public Builder dataDisks(@Nullable Output<List<DiskArgs>> dataDisks) {
             this.dataDisks = dataDisks;
             return this;
         }
-
         public Builder dataDisks(@Nullable List<DiskArgs> dataDisks) {
             this.dataDisks = Output.ofNullable(dataDisks);
             return this;
         }
-
+        public Builder dataDisks(DiskArgs... dataDisks) {
+            return dataDisks(List.of(dataDisks));
+        }
         public Builder defaultPackageSet(@Nullable Output<WorkerPoolDefaultPackageSet> defaultPackageSet) {
             this.defaultPackageSet = defaultPackageSet;
             return this;
         }
-
         public Builder defaultPackageSet(@Nullable WorkerPoolDefaultPackageSet defaultPackageSet) {
             this.defaultPackageSet = Output.ofNullable(defaultPackageSet);
             return this;
         }
-
         public Builder diskSizeGb(@Nullable Output<Integer> diskSizeGb) {
             this.diskSizeGb = diskSizeGb;
             return this;
         }
-
         public Builder diskSizeGb(@Nullable Integer diskSizeGb) {
             this.diskSizeGb = Output.ofNullable(diskSizeGb);
             return this;
         }
-
         public Builder diskSourceImage(@Nullable Output<String> diskSourceImage) {
             this.diskSourceImage = diskSourceImage;
             return this;
         }
-
         public Builder diskSourceImage(@Nullable String diskSourceImage) {
             this.diskSourceImage = Output.ofNullable(diskSourceImage);
             return this;
         }
-
         public Builder diskType(@Nullable Output<String> diskType) {
             this.diskType = diskType;
             return this;
         }
-
         public Builder diskType(@Nullable String diskType) {
             this.diskType = Output.ofNullable(diskType);
             return this;
         }
-
         public Builder ipConfiguration(@Nullable Output<WorkerPoolIpConfiguration> ipConfiguration) {
             this.ipConfiguration = ipConfiguration;
             return this;
         }
-
         public Builder ipConfiguration(@Nullable WorkerPoolIpConfiguration ipConfiguration) {
             this.ipConfiguration = Output.ofNullable(ipConfiguration);
             return this;
         }
-
         public Builder kind(@Nullable Output<String> kind) {
             this.kind = kind;
             return this;
         }
-
         public Builder kind(@Nullable String kind) {
             this.kind = Output.ofNullable(kind);
             return this;
         }
-
         public Builder machineType(@Nullable Output<String> machineType) {
             this.machineType = machineType;
             return this;
         }
-
         public Builder machineType(@Nullable String machineType) {
             this.machineType = Output.ofNullable(machineType);
             return this;
         }
-
         public Builder metadata(@Nullable Output<Map<String,String>> metadata) {
             this.metadata = metadata;
             return this;
         }
-
         public Builder metadata(@Nullable Map<String,String> metadata) {
             this.metadata = Output.ofNullable(metadata);
             return this;
         }
-
         public Builder network(@Nullable Output<String> network) {
             this.network = network;
             return this;
         }
-
         public Builder network(@Nullable String network) {
             this.network = Output.ofNullable(network);
             return this;
         }
-
         public Builder numThreadsPerWorker(@Nullable Output<Integer> numThreadsPerWorker) {
             this.numThreadsPerWorker = numThreadsPerWorker;
             return this;
         }
-
         public Builder numThreadsPerWorker(@Nullable Integer numThreadsPerWorker) {
             this.numThreadsPerWorker = Output.ofNullable(numThreadsPerWorker);
             return this;
         }
-
         public Builder numWorkers(@Nullable Output<Integer> numWorkers) {
             this.numWorkers = numWorkers;
             return this;
         }
-
         public Builder numWorkers(@Nullable Integer numWorkers) {
             this.numWorkers = Output.ofNullable(numWorkers);
             return this;
         }
-
         public Builder onHostMaintenance(@Nullable Output<String> onHostMaintenance) {
             this.onHostMaintenance = onHostMaintenance;
             return this;
         }
-
         public Builder onHostMaintenance(@Nullable String onHostMaintenance) {
             this.onHostMaintenance = Output.ofNullable(onHostMaintenance);
             return this;
         }
-
         public Builder packages(@Nullable Output<List<PackageArgs>> packages) {
             this.packages = packages;
             return this;
         }
-
         public Builder packages(@Nullable List<PackageArgs> packages) {
             this.packages = Output.ofNullable(packages);
             return this;
         }
-
+        public Builder packages(PackageArgs... packages) {
+            return packages(List.of(packages));
+        }
         public Builder poolArgs(@Nullable Output<Map<String,String>> poolArgs) {
             this.poolArgs = poolArgs;
             return this;
         }
-
         public Builder poolArgs(@Nullable Map<String,String> poolArgs) {
             this.poolArgs = Output.ofNullable(poolArgs);
             return this;
         }
-
         public Builder sdkHarnessContainerImages(@Nullable Output<List<SdkHarnessContainerImageArgs>> sdkHarnessContainerImages) {
             this.sdkHarnessContainerImages = sdkHarnessContainerImages;
             return this;
         }
-
         public Builder sdkHarnessContainerImages(@Nullable List<SdkHarnessContainerImageArgs> sdkHarnessContainerImages) {
             this.sdkHarnessContainerImages = Output.ofNullable(sdkHarnessContainerImages);
             return this;
         }
-
+        public Builder sdkHarnessContainerImages(SdkHarnessContainerImageArgs... sdkHarnessContainerImages) {
+            return sdkHarnessContainerImages(List.of(sdkHarnessContainerImages));
+        }
         public Builder subnetwork(@Nullable Output<String> subnetwork) {
             this.subnetwork = subnetwork;
             return this;
         }
-
         public Builder subnetwork(@Nullable String subnetwork) {
             this.subnetwork = Output.ofNullable(subnetwork);
             return this;
         }
-
         public Builder taskrunnerSettings(@Nullable Output<TaskRunnerSettingsArgs> taskrunnerSettings) {
             this.taskrunnerSettings = taskrunnerSettings;
             return this;
         }
-
         public Builder taskrunnerSettings(@Nullable TaskRunnerSettingsArgs taskrunnerSettings) {
             this.taskrunnerSettings = Output.ofNullable(taskrunnerSettings);
             return this;
         }
-
         public Builder teardownPolicy(@Nullable Output<WorkerPoolTeardownPolicy> teardownPolicy) {
             this.teardownPolicy = teardownPolicy;
             return this;
         }
-
         public Builder teardownPolicy(@Nullable WorkerPoolTeardownPolicy teardownPolicy) {
             this.teardownPolicy = Output.ofNullable(teardownPolicy);
             return this;
         }
-
         public Builder zone(@Nullable Output<String> zone) {
             this.zone = zone;
             return this;
         }
-
         public Builder zone(@Nullable String zone) {
             this.zone = Output.ofNullable(zone);
             return this;
-        }
-        public WorkerPoolArgs build() {
+        }        public WorkerPoolArgs build() {
             return new WorkerPoolArgs(autoscalingSettings, dataDisks, defaultPackageSet, diskSizeGb, diskSourceImage, diskType, ipConfiguration, kind, machineType, metadata, network, numThreadsPerWorker, numWorkers, onHostMaintenance, packages, poolArgs, sdkHarnessContainerImages, subnetwork, taskrunnerSettings, teardownPolicy, zone);
         }
     }

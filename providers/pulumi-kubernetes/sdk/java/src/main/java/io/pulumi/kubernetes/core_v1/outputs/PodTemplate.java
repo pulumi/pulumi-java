@@ -105,22 +105,18 @@ public final class PodTemplate {
             this.apiVersion = apiVersion;
             return this;
         }
-
         public Builder kind(@Nullable String kind) {
             this.kind = kind;
             return this;
         }
-
         public Builder metadata(@Nullable ObjectMeta metadata) {
             this.metadata = metadata;
             return this;
         }
-
         public Builder template(@Nullable PodTemplateSpec template) {
             this.template = template;
             return this;
-        }
-        public PodTemplate build() {
+        }        public PodTemplate build() {
             return new PodTemplate(apiVersion, kind, metadata, template);
         }
     }

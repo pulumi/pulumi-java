@@ -58,8 +58,7 @@ public final class ResourcePolicyInstanceSchedulePolicyScheduleResponse extends 
         public Builder schedule(String schedule) {
             this.schedule = Objects.requireNonNull(schedule);
             return this;
-        }
-        public ResourcePolicyInstanceSchedulePolicyScheduleResponse build() {
+        }        public ResourcePolicyInstanceSchedulePolicyScheduleResponse build() {
             return new ResourcePolicyInstanceSchedulePolicyScheduleResponse(schedule);
         }
     }

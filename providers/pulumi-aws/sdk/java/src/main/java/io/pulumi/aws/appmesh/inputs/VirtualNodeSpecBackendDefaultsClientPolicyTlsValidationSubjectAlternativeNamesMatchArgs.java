@@ -57,12 +57,13 @@ public final class VirtualNodeSpecBackendDefaultsClientPolicyTlsValidationSubjec
             this.exacts = Objects.requireNonNull(exacts);
             return this;
         }
-
         public Builder exacts(List<String> exacts) {
             this.exacts = Output.of(Objects.requireNonNull(exacts));
             return this;
         }
-        public VirtualNodeSpecBackendDefaultsClientPolicyTlsValidationSubjectAlternativeNamesMatchArgs build() {
+        public Builder exacts(String... exacts) {
+            return exacts(List.of(exacts));
+        }        public VirtualNodeSpecBackendDefaultsClientPolicyTlsValidationSubjectAlternativeNamesMatchArgs build() {
             return new VirtualNodeSpecBackendDefaultsClientPolicyTlsValidationSubjectAlternativeNamesMatchArgs(exacts);
         }
     }

@@ -54,8 +54,7 @@ public final class GetDataCatalogEncryptionSettingsArgs extends io.pulumi.resour
         public Builder catalogId(String catalogId) {
             this.catalogId = Objects.requireNonNull(catalogId);
             return this;
-        }
-        public GetDataCatalogEncryptionSettingsArgs build() {
+        }        public GetDataCatalogEncryptionSettingsArgs build() {
             return new GetDataCatalogEncryptionSettingsArgs(catalogId);
         }
     }

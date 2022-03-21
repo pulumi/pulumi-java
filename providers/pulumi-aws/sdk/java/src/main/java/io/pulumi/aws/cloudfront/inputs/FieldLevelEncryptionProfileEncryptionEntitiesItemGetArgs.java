@@ -90,32 +90,26 @@ public final class FieldLevelEncryptionProfileEncryptionEntitiesItemGetArgs exte
             this.fieldPatterns = Objects.requireNonNull(fieldPatterns);
             return this;
         }
-
         public Builder fieldPatterns(FieldLevelEncryptionProfileEncryptionEntitiesItemFieldPatternsGetArgs fieldPatterns) {
             this.fieldPatterns = Output.of(Objects.requireNonNull(fieldPatterns));
             return this;
         }
-
         public Builder providerId(Output<String> providerId) {
             this.providerId = Objects.requireNonNull(providerId);
             return this;
         }
-
         public Builder providerId(String providerId) {
             this.providerId = Output.of(Objects.requireNonNull(providerId));
             return this;
         }
-
         public Builder publicKeyId(Output<String> publicKeyId) {
             this.publicKeyId = Objects.requireNonNull(publicKeyId);
             return this;
         }
-
         public Builder publicKeyId(String publicKeyId) {
             this.publicKeyId = Output.of(Objects.requireNonNull(publicKeyId));
             return this;
-        }
-        public FieldLevelEncryptionProfileEncryptionEntitiesItemGetArgs build() {
+        }        public FieldLevelEncryptionProfileEncryptionEntitiesItemGetArgs build() {
             return new FieldLevelEncryptionProfileEncryptionEntitiesItemGetArgs(fieldPatterns, providerId, publicKeyId);
         }
     }

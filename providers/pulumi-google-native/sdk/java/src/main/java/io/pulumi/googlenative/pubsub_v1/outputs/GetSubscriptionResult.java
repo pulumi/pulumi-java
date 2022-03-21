@@ -284,77 +284,62 @@ public final class GetSubscriptionResult {
             this.ackDeadlineSeconds = Objects.requireNonNull(ackDeadlineSeconds);
             return this;
         }
-
         public Builder deadLetterPolicy(DeadLetterPolicyResponse deadLetterPolicy) {
             this.deadLetterPolicy = Objects.requireNonNull(deadLetterPolicy);
             return this;
         }
-
         public Builder detached(Boolean detached) {
             this.detached = Objects.requireNonNull(detached);
             return this;
         }
-
         public Builder enableMessageOrdering(Boolean enableMessageOrdering) {
             this.enableMessageOrdering = Objects.requireNonNull(enableMessageOrdering);
             return this;
         }
-
         public Builder expirationPolicy(ExpirationPolicyResponse expirationPolicy) {
             this.expirationPolicy = Objects.requireNonNull(expirationPolicy);
             return this;
         }
-
         public Builder filter(String filter) {
             this.filter = Objects.requireNonNull(filter);
             return this;
         }
-
         public Builder labels(Map<String,String> labels) {
             this.labels = Objects.requireNonNull(labels);
             return this;
         }
-
         public Builder messageRetentionDuration(String messageRetentionDuration) {
             this.messageRetentionDuration = Objects.requireNonNull(messageRetentionDuration);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder pushConfig(PushConfigResponse pushConfig) {
             this.pushConfig = Objects.requireNonNull(pushConfig);
             return this;
         }
-
         public Builder retainAckedMessages(Boolean retainAckedMessages) {
             this.retainAckedMessages = Objects.requireNonNull(retainAckedMessages);
             return this;
         }
-
         public Builder retryPolicy(RetryPolicyResponse retryPolicy) {
             this.retryPolicy = Objects.requireNonNull(retryPolicy);
             return this;
         }
-
         public Builder state(String state) {
             this.state = Objects.requireNonNull(state);
             return this;
         }
-
         public Builder topic(String topic) {
             this.topic = Objects.requireNonNull(topic);
             return this;
         }
-
         public Builder topicMessageRetentionDuration(String topicMessageRetentionDuration) {
             this.topicMessageRetentionDuration = Objects.requireNonNull(topicMessageRetentionDuration);
             return this;
-        }
-        public GetSubscriptionResult build() {
+        }        public GetSubscriptionResult build() {
             return new GetSubscriptionResult(ackDeadlineSeconds, deadLetterPolicy, detached, enableMessageOrdering, expirationPolicy, filter, labels, messageRetentionDuration, name, pushConfig, retainAckedMessages, retryPolicy, state, topic, topicMessageRetentionDuration);
         }
     }

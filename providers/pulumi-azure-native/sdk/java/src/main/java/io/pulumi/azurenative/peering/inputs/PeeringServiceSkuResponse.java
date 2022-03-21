@@ -60,8 +60,7 @@ public final class PeeringServiceSkuResponse extends io.pulumi.resources.InvokeA
         public Builder name(@Nullable String name) {
             this.name = name;
             return this;
-        }
-        public PeeringServiceSkuResponse build() {
+        }        public PeeringServiceSkuResponse build() {
             return new PeeringServiceSkuResponse(name);
         }
     }

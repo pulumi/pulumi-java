@@ -91,32 +91,26 @@ public final class EnvGroupAttachmentState extends io.pulumi.resources.ResourceA
             this.envgroupId = envgroupId;
             return this;
         }
-
         public Builder envgroupId(@Nullable String envgroupId) {
             this.envgroupId = Output.ofNullable(envgroupId);
             return this;
         }
-
         public Builder environment(@Nullable Output<String> environment) {
             this.environment = environment;
             return this;
         }
-
         public Builder environment(@Nullable String environment) {
             this.environment = Output.ofNullable(environment);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
-        }
-        public EnvGroupAttachmentState build() {
+        }        public EnvGroupAttachmentState build() {
             return new EnvGroupAttachmentState(envgroupId, environment, name);
         }
     }

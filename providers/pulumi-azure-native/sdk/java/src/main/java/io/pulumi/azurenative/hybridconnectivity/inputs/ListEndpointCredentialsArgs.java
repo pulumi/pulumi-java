@@ -91,17 +91,14 @@ public final class ListEndpointCredentialsArgs extends io.pulumi.resources.Invok
             this.endpointName = Objects.requireNonNull(endpointName);
             return this;
         }
-
         public Builder expiresin(@Nullable Integer expiresin) {
             this.expiresin = expiresin;
             return this;
         }
-
         public Builder resourceUri(String resourceUri) {
             this.resourceUri = Objects.requireNonNull(resourceUri);
             return this;
-        }
-        public ListEndpointCredentialsArgs build() {
+        }        public ListEndpointCredentialsArgs build() {
             return new ListEndpointCredentialsArgs(endpointName, expiresin, resourceUri);
         }
     }

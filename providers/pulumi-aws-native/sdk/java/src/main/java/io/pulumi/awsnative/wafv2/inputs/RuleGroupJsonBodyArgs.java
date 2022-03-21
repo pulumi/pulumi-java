@@ -84,32 +84,26 @@ public final class RuleGroupJsonBodyArgs extends io.pulumi.resources.ResourceArg
             this.invalidFallbackBehavior = invalidFallbackBehavior;
             return this;
         }
-
         public Builder invalidFallbackBehavior(@Nullable RuleGroupBodyParsingFallbackBehavior invalidFallbackBehavior) {
             this.invalidFallbackBehavior = Output.ofNullable(invalidFallbackBehavior);
             return this;
         }
-
         public Builder matchPattern(Output<RuleGroupJsonMatchPatternArgs> matchPattern) {
             this.matchPattern = Objects.requireNonNull(matchPattern);
             return this;
         }
-
         public Builder matchPattern(RuleGroupJsonMatchPatternArgs matchPattern) {
             this.matchPattern = Output.of(Objects.requireNonNull(matchPattern));
             return this;
         }
-
         public Builder matchScope(Output<RuleGroupJsonMatchScope> matchScope) {
             this.matchScope = Objects.requireNonNull(matchScope);
             return this;
         }
-
         public Builder matchScope(RuleGroupJsonMatchScope matchScope) {
             this.matchScope = Output.of(Objects.requireNonNull(matchScope));
             return this;
-        }
-        public RuleGroupJsonBodyArgs build() {
+        }        public RuleGroupJsonBodyArgs build() {
             return new RuleGroupJsonBodyArgs(invalidFallbackBehavior, matchPattern, matchScope);
         }
     }

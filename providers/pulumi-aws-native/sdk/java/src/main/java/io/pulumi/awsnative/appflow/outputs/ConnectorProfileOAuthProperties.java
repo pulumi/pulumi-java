@@ -64,17 +64,17 @@ public final class ConnectorProfileOAuthProperties {
             this.authCodeUrl = authCodeUrl;
             return this;
         }
-
         public Builder oAuthScopes(@Nullable List<String> oAuthScopes) {
             this.oAuthScopes = oAuthScopes;
             return this;
         }
-
+        public Builder oAuthScopes(String... oAuthScopes) {
+            return oAuthScopes(List.of(oAuthScopes));
+        }
         public Builder tokenUrl(@Nullable String tokenUrl) {
             this.tokenUrl = tokenUrl;
             return this;
-        }
-        public ConnectorProfileOAuthProperties build() {
+        }        public ConnectorProfileOAuthProperties build() {
             return new ConnectorProfileOAuthProperties(authCodeUrl, oAuthScopes, tokenUrl);
         }
     }

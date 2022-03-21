@@ -115,42 +115,37 @@ public final class ApplicationJitAccessPolicyArgs extends io.pulumi.resources.Re
             this.jitAccessEnabled = Objects.requireNonNull(jitAccessEnabled);
             return this;
         }
-
         public Builder jitAccessEnabled(Boolean jitAccessEnabled) {
             this.jitAccessEnabled = Output.of(Objects.requireNonNull(jitAccessEnabled));
             return this;
         }
-
         public Builder jitApprovalMode(@Nullable Output<Either<String,JitApprovalMode>> jitApprovalMode) {
             this.jitApprovalMode = jitApprovalMode;
             return this;
         }
-
         public Builder jitApprovalMode(@Nullable Either<String,JitApprovalMode> jitApprovalMode) {
             this.jitApprovalMode = Output.ofNullable(jitApprovalMode);
             return this;
         }
-
         public Builder jitApprovers(@Nullable Output<List<JitApproverDefinitionArgs>> jitApprovers) {
             this.jitApprovers = jitApprovers;
             return this;
         }
-
         public Builder jitApprovers(@Nullable List<JitApproverDefinitionArgs> jitApprovers) {
             this.jitApprovers = Output.ofNullable(jitApprovers);
             return this;
         }
-
+        public Builder jitApprovers(JitApproverDefinitionArgs... jitApprovers) {
+            return jitApprovers(List.of(jitApprovers));
+        }
         public Builder maximumJitAccessDuration(@Nullable Output<String> maximumJitAccessDuration) {
             this.maximumJitAccessDuration = maximumJitAccessDuration;
             return this;
         }
-
         public Builder maximumJitAccessDuration(@Nullable String maximumJitAccessDuration) {
             this.maximumJitAccessDuration = Output.ofNullable(maximumJitAccessDuration);
             return this;
-        }
-        public ApplicationJitAccessPolicyArgs build() {
+        }        public ApplicationJitAccessPolicyArgs build() {
             return new ApplicationJitAccessPolicyArgs(jitAccessEnabled, jitApprovalMode, jitApprovers, maximumJitAccessDuration);
         }
     }

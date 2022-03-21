@@ -70,12 +70,13 @@ public final class GrafeasV1beta1IntotoDetailsResponse extends io.pulumi.resourc
             this.signatures = Objects.requireNonNull(signatures);
             return this;
         }
-
+        public Builder signatures(GrafeasV1beta1IntotoSignatureResponse... signatures) {
+            return signatures(List.of(signatures));
+        }
         public Builder signed(LinkResponse signed) {
             this.signed = Objects.requireNonNull(signed);
             return this;
-        }
-        public GrafeasV1beta1IntotoDetailsResponse build() {
+        }        public GrafeasV1beta1IntotoDetailsResponse build() {
             return new GrafeasV1beta1IntotoDetailsResponse(signatures, signed);
         }
     }

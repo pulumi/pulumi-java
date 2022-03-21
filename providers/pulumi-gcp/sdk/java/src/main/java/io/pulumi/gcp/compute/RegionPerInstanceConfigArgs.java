@@ -186,82 +186,66 @@ public final class RegionPerInstanceConfigArgs extends io.pulumi.resources.Resou
             this.minimalAction = minimalAction;
             return this;
         }
-
         public Builder minimalAction(@Nullable String minimalAction) {
             this.minimalAction = Output.ofNullable(minimalAction);
             return this;
         }
-
         public Builder mostDisruptiveAllowedAction(@Nullable Output<String> mostDisruptiveAllowedAction) {
             this.mostDisruptiveAllowedAction = mostDisruptiveAllowedAction;
             return this;
         }
-
         public Builder mostDisruptiveAllowedAction(@Nullable String mostDisruptiveAllowedAction) {
             this.mostDisruptiveAllowedAction = Output.ofNullable(mostDisruptiveAllowedAction);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder preservedState(@Nullable Output<RegionPerInstanceConfigPreservedStateArgs> preservedState) {
             this.preservedState = preservedState;
             return this;
         }
-
         public Builder preservedState(@Nullable RegionPerInstanceConfigPreservedStateArgs preservedState) {
             this.preservedState = Output.ofNullable(preservedState);
             return this;
         }
-
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
         }
-
         public Builder region(@Nullable Output<String> region) {
             this.region = region;
             return this;
         }
-
         public Builder region(@Nullable String region) {
             this.region = Output.ofNullable(region);
             return this;
         }
-
         public Builder regionInstanceGroupManager(Output<String> regionInstanceGroupManager) {
             this.regionInstanceGroupManager = Objects.requireNonNull(regionInstanceGroupManager);
             return this;
         }
-
         public Builder regionInstanceGroupManager(String regionInstanceGroupManager) {
             this.regionInstanceGroupManager = Output.of(Objects.requireNonNull(regionInstanceGroupManager));
             return this;
         }
-
         public Builder removeInstanceStateOnDestroy(@Nullable Output<Boolean> removeInstanceStateOnDestroy) {
             this.removeInstanceStateOnDestroy = removeInstanceStateOnDestroy;
             return this;
         }
-
         public Builder removeInstanceStateOnDestroy(@Nullable Boolean removeInstanceStateOnDestroy) {
             this.removeInstanceStateOnDestroy = Output.ofNullable(removeInstanceStateOnDestroy);
             return this;
-        }
-        public RegionPerInstanceConfigArgs build() {
+        }        public RegionPerInstanceConfigArgs build() {
             return new RegionPerInstanceConfigArgs(minimalAction, mostDisruptiveAllowedAction, name, preservedState, project, region, regionInstanceGroupManager, removeInstanceStateOnDestroy);
         }
     }

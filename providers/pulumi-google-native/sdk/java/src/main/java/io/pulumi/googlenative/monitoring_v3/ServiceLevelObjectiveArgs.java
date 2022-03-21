@@ -206,112 +206,90 @@ public final class ServiceLevelObjectiveArgs extends io.pulumi.resources.Resourc
             this.calendarPeriod = calendarPeriod;
             return this;
         }
-
         public Builder calendarPeriod(@Nullable ServiceLevelObjectiveCalendarPeriod calendarPeriod) {
             this.calendarPeriod = Output.ofNullable(calendarPeriod);
             return this;
         }
-
         public Builder displayName(@Nullable Output<String> displayName) {
             this.displayName = displayName;
             return this;
         }
-
         public Builder displayName(@Nullable String displayName) {
             this.displayName = Output.ofNullable(displayName);
             return this;
         }
-
         public Builder goal(@Nullable Output<Double> goal) {
             this.goal = goal;
             return this;
         }
-
         public Builder goal(@Nullable Double goal) {
             this.goal = Output.ofNullable(goal);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder rollingPeriod(@Nullable Output<String> rollingPeriod) {
             this.rollingPeriod = rollingPeriod;
             return this;
         }
-
         public Builder rollingPeriod(@Nullable String rollingPeriod) {
             this.rollingPeriod = Output.ofNullable(rollingPeriod);
             return this;
         }
-
         public Builder serviceId(Output<String> serviceId) {
             this.serviceId = Objects.requireNonNull(serviceId);
             return this;
         }
-
         public Builder serviceId(String serviceId) {
             this.serviceId = Output.of(Objects.requireNonNull(serviceId));
             return this;
         }
-
         public Builder serviceLevelIndicator(@Nullable Output<ServiceLevelIndicatorArgs> serviceLevelIndicator) {
             this.serviceLevelIndicator = serviceLevelIndicator;
             return this;
         }
-
         public Builder serviceLevelIndicator(@Nullable ServiceLevelIndicatorArgs serviceLevelIndicator) {
             this.serviceLevelIndicator = Output.ofNullable(serviceLevelIndicator);
             return this;
         }
-
         public Builder serviceLevelObjectiveId(@Nullable Output<String> serviceLevelObjectiveId) {
             this.serviceLevelObjectiveId = serviceLevelObjectiveId;
             return this;
         }
-
         public Builder serviceLevelObjectiveId(@Nullable String serviceLevelObjectiveId) {
             this.serviceLevelObjectiveId = Output.ofNullable(serviceLevelObjectiveId);
             return this;
         }
-
         public Builder userLabels(@Nullable Output<Map<String,String>> userLabels) {
             this.userLabels = userLabels;
             return this;
         }
-
         public Builder userLabels(@Nullable Map<String,String> userLabels) {
             this.userLabels = Output.ofNullable(userLabels);
             return this;
         }
-
         public Builder v3Id(Output<String> v3Id) {
             this.v3Id = Objects.requireNonNull(v3Id);
             return this;
         }
-
         public Builder v3Id(String v3Id) {
             this.v3Id = Output.of(Objects.requireNonNull(v3Id));
             return this;
         }
-
         public Builder v3Id1(Output<String> v3Id1) {
             this.v3Id1 = Objects.requireNonNull(v3Id1);
             return this;
         }
-
         public Builder v3Id1(String v3Id1) {
             this.v3Id1 = Output.of(Objects.requireNonNull(v3Id1));
             return this;
-        }
-        public ServiceLevelObjectiveArgs build() {
+        }        public ServiceLevelObjectiveArgs build() {
             return new ServiceLevelObjectiveArgs(calendarPeriod, displayName, goal, name, rollingPeriod, serviceId, serviceLevelIndicator, serviceLevelObjectiveId, userLabels, v3Id, v3Id1);
         }
     }

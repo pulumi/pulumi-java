@@ -119,27 +119,22 @@ public final class BaseImageTriggerResponse {
             this.baseImageTriggerType = Objects.requireNonNull(baseImageTriggerType);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder status(@Nullable String status) {
             this.status = status;
             return this;
         }
-
         public Builder updateTriggerEndpoint(@Nullable String updateTriggerEndpoint) {
             this.updateTriggerEndpoint = updateTriggerEndpoint;
             return this;
         }
-
         public Builder updateTriggerPayloadType(@Nullable String updateTriggerPayloadType) {
             this.updateTriggerPayloadType = updateTriggerPayloadType;
             return this;
-        }
-        public BaseImageTriggerResponse build() {
+        }        public BaseImageTriggerResponse build() {
             return new BaseImageTriggerResponse(baseImageTriggerType, name, status, updateTriggerEndpoint, updateTriggerPayloadType);
         }
     }

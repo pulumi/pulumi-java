@@ -56,12 +56,10 @@ public final class InstanceTemplateNetworkPerformanceConfigGetArgs extends io.pu
             this.totalEgressBandwidthTier = Objects.requireNonNull(totalEgressBandwidthTier);
             return this;
         }
-
         public Builder totalEgressBandwidthTier(String totalEgressBandwidthTier) {
             this.totalEgressBandwidthTier = Output.of(Objects.requireNonNull(totalEgressBandwidthTier));
             return this;
-        }
-        public InstanceTemplateNetworkPerformanceConfigGetArgs build() {
+        }        public InstanceTemplateNetworkPerformanceConfigGetArgs build() {
             return new InstanceTemplateNetworkPerformanceConfigGetArgs(totalEgressBandwidthTier);
         }
     }

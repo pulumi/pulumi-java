@@ -56,12 +56,10 @@ public final class OriginRequestPolicyHeadersConfig {
             this.headerBehavior = headerBehavior;
             return this;
         }
-
         public Builder headers(@Nullable OriginRequestPolicyHeadersConfigHeaders headers) {
             this.headers = headers;
             return this;
-        }
-        public OriginRequestPolicyHeadersConfig build() {
+        }        public OriginRequestPolicyHeadersConfig build() {
             return new OriginRequestPolicyHeadersConfig(headerBehavior, headers);
         }
     }

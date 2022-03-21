@@ -137,32 +137,26 @@ public final class ListSpacecraftAvailableContactsArgs extends io.pulumi.resourc
             this.contactProfile = Objects.requireNonNull(contactProfile);
             return this;
         }
-
         public Builder endTime(String endTime) {
             this.endTime = Objects.requireNonNull(endTime);
             return this;
         }
-
         public Builder groundStationName(String groundStationName) {
             this.groundStationName = Objects.requireNonNull(groundStationName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder spacecraftName(String spacecraftName) {
             this.spacecraftName = Objects.requireNonNull(spacecraftName);
             return this;
         }
-
         public Builder startTime(String startTime) {
             this.startTime = Objects.requireNonNull(startTime);
             return this;
-        }
-        public ListSpacecraftAvailableContactsArgs build() {
+        }        public ListSpacecraftAvailableContactsArgs build() {
             return new ListSpacecraftAvailableContactsArgs(contactProfile, endTime, groundStationName, resourceGroupName, spacecraftName, startTime);
         }
     }

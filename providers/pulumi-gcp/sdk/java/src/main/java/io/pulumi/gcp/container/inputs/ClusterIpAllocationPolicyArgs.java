@@ -119,42 +119,34 @@ public final class ClusterIpAllocationPolicyArgs extends io.pulumi.resources.Res
             this.clusterIpv4CidrBlock = clusterIpv4CidrBlock;
             return this;
         }
-
         public Builder clusterIpv4CidrBlock(@Nullable String clusterIpv4CidrBlock) {
             this.clusterIpv4CidrBlock = Output.ofNullable(clusterIpv4CidrBlock);
             return this;
         }
-
         public Builder clusterSecondaryRangeName(@Nullable Output<String> clusterSecondaryRangeName) {
             this.clusterSecondaryRangeName = clusterSecondaryRangeName;
             return this;
         }
-
         public Builder clusterSecondaryRangeName(@Nullable String clusterSecondaryRangeName) {
             this.clusterSecondaryRangeName = Output.ofNullable(clusterSecondaryRangeName);
             return this;
         }
-
         public Builder servicesIpv4CidrBlock(@Nullable Output<String> servicesIpv4CidrBlock) {
             this.servicesIpv4CidrBlock = servicesIpv4CidrBlock;
             return this;
         }
-
         public Builder servicesIpv4CidrBlock(@Nullable String servicesIpv4CidrBlock) {
             this.servicesIpv4CidrBlock = Output.ofNullable(servicesIpv4CidrBlock);
             return this;
         }
-
         public Builder servicesSecondaryRangeName(@Nullable Output<String> servicesSecondaryRangeName) {
             this.servicesSecondaryRangeName = servicesSecondaryRangeName;
             return this;
         }
-
         public Builder servicesSecondaryRangeName(@Nullable String servicesSecondaryRangeName) {
             this.servicesSecondaryRangeName = Output.ofNullable(servicesSecondaryRangeName);
             return this;
-        }
-        public ClusterIpAllocationPolicyArgs build() {
+        }        public ClusterIpAllocationPolicyArgs build() {
             return new ClusterIpAllocationPolicyArgs(clusterIpv4CidrBlock, clusterSecondaryRangeName, servicesIpv4CidrBlock, servicesSecondaryRangeName);
         }
     }

@@ -250,67 +250,60 @@ public final class GetScanConfigResult {
             this.authentication = Objects.requireNonNull(authentication);
             return this;
         }
-
         public Builder blacklistPatterns(List<String> blacklistPatterns) {
             this.blacklistPatterns = Objects.requireNonNull(blacklistPatterns);
             return this;
         }
-
+        public Builder blacklistPatterns(String... blacklistPatterns) {
+            return blacklistPatterns(List.of(blacklistPatterns));
+        }
         public Builder displayName(String displayName) {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
-
         public Builder exportToSecurityCommandCenter(String exportToSecurityCommandCenter) {
             this.exportToSecurityCommandCenter = Objects.requireNonNull(exportToSecurityCommandCenter);
             return this;
         }
-
         public Builder ignoreHttpStatusErrors(Boolean ignoreHttpStatusErrors) {
             this.ignoreHttpStatusErrors = Objects.requireNonNull(ignoreHttpStatusErrors);
             return this;
         }
-
         public Builder managedScan(Boolean managedScan) {
             this.managedScan = Objects.requireNonNull(managedScan);
             return this;
         }
-
         public Builder maxQps(Integer maxQps) {
             this.maxQps = Objects.requireNonNull(maxQps);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder riskLevel(String riskLevel) {
             this.riskLevel = Objects.requireNonNull(riskLevel);
             return this;
         }
-
         public Builder schedule(ScheduleResponse schedule) {
             this.schedule = Objects.requireNonNull(schedule);
             return this;
         }
-
         public Builder startingUrls(List<String> startingUrls) {
             this.startingUrls = Objects.requireNonNull(startingUrls);
             return this;
         }
-
+        public Builder startingUrls(String... startingUrls) {
+            return startingUrls(List.of(startingUrls));
+        }
         public Builder staticIpScan(Boolean staticIpScan) {
             this.staticIpScan = Objects.requireNonNull(staticIpScan);
             return this;
         }
-
         public Builder userAgent(String userAgent) {
             this.userAgent = Objects.requireNonNull(userAgent);
             return this;
-        }
-        public GetScanConfigResult build() {
+        }        public GetScanConfigResult build() {
             return new GetScanConfigResult(authentication, blacklistPatterns, displayName, exportToSecurityCommandCenter, ignoreHttpStatusErrors, managedScan, maxQps, name, riskLevel, schedule, startingUrls, staticIpScan, userAgent);
         }
     }

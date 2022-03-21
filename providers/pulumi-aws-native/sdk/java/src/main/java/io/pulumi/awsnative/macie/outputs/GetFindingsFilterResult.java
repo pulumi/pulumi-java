@@ -172,42 +172,37 @@ public final class GetFindingsFilterResult {
             this.action = action;
             return this;
         }
-
         public Builder arn(@Nullable String arn) {
             this.arn = arn;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
-
         public Builder findingCriteria(@Nullable FindingsFilterFindingCriteria findingCriteria) {
             this.findingCriteria = findingCriteria;
             return this;
         }
-
         public Builder findingsFilterListItems(@Nullable List<FindingsFilterListItem> findingsFilterListItems) {
             this.findingsFilterListItems = findingsFilterListItems;
             return this;
         }
-
+        public Builder findingsFilterListItems(FindingsFilterListItem... findingsFilterListItems) {
+            return findingsFilterListItems(List.of(findingsFilterListItems));
+        }
         public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
-
         public Builder position(@Nullable Integer position) {
             this.position = position;
             return this;
-        }
-        public GetFindingsFilterResult build() {
+        }        public GetFindingsFilterResult build() {
             return new GetFindingsFilterResult(action, arn, description, findingCriteria, findingsFilterListItems, id, name, position);
         }
     }

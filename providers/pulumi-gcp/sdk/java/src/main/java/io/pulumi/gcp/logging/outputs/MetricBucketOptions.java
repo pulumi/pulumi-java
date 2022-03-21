@@ -99,17 +99,14 @@ public final class MetricBucketOptions {
             this.explicitBuckets = explicitBuckets;
             return this;
         }
-
         public Builder exponentialBuckets(@Nullable MetricBucketOptionsExponentialBuckets exponentialBuckets) {
             this.exponentialBuckets = exponentialBuckets;
             return this;
         }
-
         public Builder linearBuckets(@Nullable MetricBucketOptionsLinearBuckets linearBuckets) {
             this.linearBuckets = linearBuckets;
             return this;
-        }
-        public MetricBucketOptions build() {
+        }        public MetricBucketOptions build() {
             return new MetricBucketOptions(explicitBuckets, exponentialBuckets, linearBuckets);
         }
     }

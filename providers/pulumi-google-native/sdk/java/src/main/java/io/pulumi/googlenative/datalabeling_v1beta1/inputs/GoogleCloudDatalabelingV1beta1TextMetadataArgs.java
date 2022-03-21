@@ -61,12 +61,10 @@ public final class GoogleCloudDatalabelingV1beta1TextMetadataArgs extends io.pul
             this.languageCode = languageCode;
             return this;
         }
-
         public Builder languageCode(@Nullable String languageCode) {
             this.languageCode = Output.ofNullable(languageCode);
             return this;
-        }
-        public GoogleCloudDatalabelingV1beta1TextMetadataArgs build() {
+        }        public GoogleCloudDatalabelingV1beta1TextMetadataArgs build() {
             return new GoogleCloudDatalabelingV1beta1TextMetadataArgs(languageCode);
         }
     }

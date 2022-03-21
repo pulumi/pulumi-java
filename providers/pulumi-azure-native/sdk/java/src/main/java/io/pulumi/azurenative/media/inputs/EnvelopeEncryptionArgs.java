@@ -114,42 +114,37 @@ public final class EnvelopeEncryptionArgs extends io.pulumi.resources.ResourceAr
             this.clearTracks = clearTracks;
             return this;
         }
-
         public Builder clearTracks(@Nullable List<TrackSelectionArgs> clearTracks) {
             this.clearTracks = Output.ofNullable(clearTracks);
             return this;
         }
-
+        public Builder clearTracks(TrackSelectionArgs... clearTracks) {
+            return clearTracks(List.of(clearTracks));
+        }
         public Builder contentKeys(@Nullable Output<StreamingPolicyContentKeysArgs> contentKeys) {
             this.contentKeys = contentKeys;
             return this;
         }
-
         public Builder contentKeys(@Nullable StreamingPolicyContentKeysArgs contentKeys) {
             this.contentKeys = Output.ofNullable(contentKeys);
             return this;
         }
-
         public Builder customKeyAcquisitionUrlTemplate(@Nullable Output<String> customKeyAcquisitionUrlTemplate) {
             this.customKeyAcquisitionUrlTemplate = customKeyAcquisitionUrlTemplate;
             return this;
         }
-
         public Builder customKeyAcquisitionUrlTemplate(@Nullable String customKeyAcquisitionUrlTemplate) {
             this.customKeyAcquisitionUrlTemplate = Output.ofNullable(customKeyAcquisitionUrlTemplate);
             return this;
         }
-
         public Builder enabledProtocols(@Nullable Output<EnabledProtocolsArgs> enabledProtocols) {
             this.enabledProtocols = enabledProtocols;
             return this;
         }
-
         public Builder enabledProtocols(@Nullable EnabledProtocolsArgs enabledProtocols) {
             this.enabledProtocols = Output.ofNullable(enabledProtocols);
             return this;
-        }
-        public EnvelopeEncryptionArgs build() {
+        }        public EnvelopeEncryptionArgs build() {
             return new EnvelopeEncryptionArgs(clearTracks, contentKeys, customKeyAcquisitionUrlTemplate, enabledProtocols);
         }
     }

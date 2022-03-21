@@ -114,42 +114,34 @@ public final class LogMetricTriggerArgs extends io.pulumi.resources.ResourceArgs
             this.metricColumn = metricColumn;
             return this;
         }
-
         public Builder metricColumn(@Nullable String metricColumn) {
             this.metricColumn = Output.ofNullable(metricColumn);
             return this;
         }
-
         public Builder metricTriggerType(@Nullable Output<Either<String,MetricTriggerType>> metricTriggerType) {
             this.metricTriggerType = metricTriggerType;
             return this;
         }
-
         public Builder metricTriggerType(@Nullable Either<String,MetricTriggerType> metricTriggerType) {
             this.metricTriggerType = Output.ofNullable(metricTriggerType);
             return this;
         }
-
         public Builder threshold(@Nullable Output<Double> threshold) {
             this.threshold = threshold;
             return this;
         }
-
         public Builder threshold(@Nullable Double threshold) {
             this.threshold = Output.ofNullable(threshold);
             return this;
         }
-
         public Builder thresholdOperator(@Nullable Output<Either<String,ConditionalOperator>> thresholdOperator) {
             this.thresholdOperator = thresholdOperator;
             return this;
         }
-
         public Builder thresholdOperator(@Nullable Either<String,ConditionalOperator> thresholdOperator) {
             this.thresholdOperator = Output.ofNullable(thresholdOperator);
             return this;
-        }
-        public LogMetricTriggerArgs build() {
+        }        public LogMetricTriggerArgs build() {
             return new LogMetricTriggerArgs(metricColumn, metricTriggerType, threshold, thresholdOperator);
         }
     }

@@ -170,42 +170,37 @@ public final class GetPeerAsnResult {
             this.errorMessage = Objects.requireNonNull(errorMessage);
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder peerAsn(@Nullable Integer peerAsn) {
             this.peerAsn = peerAsn;
             return this;
         }
-
         public Builder peerContactDetail(@Nullable List<ContactDetailResponse> peerContactDetail) {
             this.peerContactDetail = peerContactDetail;
             return this;
         }
-
+        public Builder peerContactDetail(ContactDetailResponse... peerContactDetail) {
+            return peerContactDetail(List.of(peerContactDetail));
+        }
         public Builder peerName(@Nullable String peerName) {
             this.peerName = peerName;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder validationState(@Nullable String validationState) {
             this.validationState = validationState;
             return this;
-        }
-        public GetPeerAsnResult build() {
+        }        public GetPeerAsnResult build() {
             return new GetPeerAsnResult(errorMessage, id, name, peerAsn, peerContactDetail, peerName, type, validationState);
         }
     }

@@ -120,27 +120,22 @@ public final class MarkdownPartMetadataResponseSettingsSettings {
             this.content = content;
             return this;
         }
-
         public Builder markdownSource(@Nullable Integer markdownSource) {
             this.markdownSource = markdownSource;
             return this;
         }
-
         public Builder markdownUri(@Nullable String markdownUri) {
             this.markdownUri = markdownUri;
             return this;
         }
-
         public Builder subtitle(@Nullable String subtitle) {
             this.subtitle = subtitle;
             return this;
         }
-
         public Builder title(@Nullable String title) {
             this.title = title;
             return this;
-        }
-        public MarkdownPartMetadataResponseSettingsSettings build() {
+        }        public MarkdownPartMetadataResponseSettingsSettings build() {
             return new MarkdownPartMetadataResponseSettingsSettings(content, markdownSource, markdownUri, subtitle, title);
         }
     }

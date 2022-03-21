@@ -104,22 +104,24 @@ public final class ScalingConfigResponse {
             this.fleetAutoscalerSpec = Objects.requireNonNull(fleetAutoscalerSpec);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder schedules(List<ScheduleResponse> schedules) {
             this.schedules = Objects.requireNonNull(schedules);
             return this;
         }
-
+        public Builder schedules(ScheduleResponse... schedules) {
+            return schedules(List.of(schedules));
+        }
         public Builder selectors(List<LabelSelectorResponse> selectors) {
             this.selectors = Objects.requireNonNull(selectors);
             return this;
         }
-        public ScalingConfigResponse build() {
+        public Builder selectors(LabelSelectorResponse... selectors) {
+            return selectors(List.of(selectors));
+        }        public ScalingConfigResponse build() {
             return new ScalingConfigResponse(fleetAutoscalerSpec, name, schedules, selectors);
         }
     }

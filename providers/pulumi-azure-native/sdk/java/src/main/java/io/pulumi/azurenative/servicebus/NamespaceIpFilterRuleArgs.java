@@ -140,62 +140,50 @@ public final class NamespaceIpFilterRuleArgs extends io.pulumi.resources.Resourc
             this.action = action;
             return this;
         }
-
         public Builder action(@Nullable Either<String,IPAction> action) {
             this.action = Output.ofNullable(action);
             return this;
         }
-
         public Builder filterName(@Nullable Output<String> filterName) {
             this.filterName = filterName;
             return this;
         }
-
         public Builder filterName(@Nullable String filterName) {
             this.filterName = Output.ofNullable(filterName);
             return this;
         }
-
         public Builder ipFilterRuleName(@Nullable Output<String> ipFilterRuleName) {
             this.ipFilterRuleName = ipFilterRuleName;
             return this;
         }
-
         public Builder ipFilterRuleName(@Nullable String ipFilterRuleName) {
             this.ipFilterRuleName = Output.ofNullable(ipFilterRuleName);
             return this;
         }
-
         public Builder ipMask(@Nullable Output<String> ipMask) {
             this.ipMask = ipMask;
             return this;
         }
-
         public Builder ipMask(@Nullable String ipMask) {
             this.ipMask = Output.ofNullable(ipMask);
             return this;
         }
-
         public Builder namespaceName(Output<String> namespaceName) {
             this.namespaceName = Objects.requireNonNull(namespaceName);
             return this;
         }
-
         public Builder namespaceName(String namespaceName) {
             this.namespaceName = Output.of(Objects.requireNonNull(namespaceName));
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
-        }
-        public NamespaceIpFilterRuleArgs build() {
+        }        public NamespaceIpFilterRuleArgs build() {
             return new NamespaceIpFilterRuleArgs(action, filterName, ipFilterRuleName, ipMask, namespaceName, resourceGroupName);
         }
     }

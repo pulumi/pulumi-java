@@ -81,17 +81,20 @@ public final class StackSetStackInstances {
             this.deploymentTargets = Objects.requireNonNull(deploymentTargets);
             return this;
         }
-
         public Builder parameterOverrides(@Nullable List<StackSetParameter> parameterOverrides) {
             this.parameterOverrides = parameterOverrides;
             return this;
         }
-
+        public Builder parameterOverrides(StackSetParameter... parameterOverrides) {
+            return parameterOverrides(List.of(parameterOverrides));
+        }
         public Builder regions(List<String> regions) {
             this.regions = Objects.requireNonNull(regions);
             return this;
         }
-        public StackSetStackInstances build() {
+        public Builder regions(String... regions) {
+            return regions(List.of(regions));
+        }        public StackSetStackInstances build() {
             return new StackSetStackInstances(deploymentTargets, parameterOverrides, regions);
         }
     }

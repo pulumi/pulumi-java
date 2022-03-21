@@ -186,47 +186,47 @@ public final class GetCapacityReservationGroupResult {
             this.capacityReservations = Objects.requireNonNull(capacityReservations);
             return this;
         }
-
+        public Builder capacityReservations(SubResourceReadOnlyResponse... capacityReservations) {
+            return capacityReservations(List.of(capacityReservations));
+        }
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder instanceView(CapacityReservationGroupInstanceViewResponse instanceView) {
             this.instanceView = Objects.requireNonNull(instanceView);
             return this;
         }
-
         public Builder location(String location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder virtualMachinesAssociated(List<SubResourceReadOnlyResponse> virtualMachinesAssociated) {
             this.virtualMachinesAssociated = Objects.requireNonNull(virtualMachinesAssociated);
             return this;
         }
-
+        public Builder virtualMachinesAssociated(SubResourceReadOnlyResponse... virtualMachinesAssociated) {
+            return virtualMachinesAssociated(List.of(virtualMachinesAssociated));
+        }
         public Builder zones(@Nullable List<String> zones) {
             this.zones = zones;
             return this;
         }
-        public GetCapacityReservationGroupResult build() {
+        public Builder zones(String... zones) {
+            return zones(List.of(zones));
+        }        public GetCapacityReservationGroupResult build() {
             return new GetCapacityReservationGroupResult(capacityReservations, id, instanceView, location, name, tags, type, virtualMachinesAssociated, zones);
         }
     }

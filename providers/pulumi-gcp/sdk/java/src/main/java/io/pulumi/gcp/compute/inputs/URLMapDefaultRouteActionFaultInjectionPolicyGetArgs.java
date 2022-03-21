@@ -77,22 +77,18 @@ public final class URLMapDefaultRouteActionFaultInjectionPolicyGetArgs extends i
             this.abort = abort;
             return this;
         }
-
         public Builder abort(@Nullable URLMapDefaultRouteActionFaultInjectionPolicyAbortGetArgs abort) {
             this.abort = Output.ofNullable(abort);
             return this;
         }
-
         public Builder delay(@Nullable Output<URLMapDefaultRouteActionFaultInjectionPolicyDelayGetArgs> delay) {
             this.delay = delay;
             return this;
         }
-
         public Builder delay(@Nullable URLMapDefaultRouteActionFaultInjectionPolicyDelayGetArgs delay) {
             this.delay = Output.ofNullable(delay);
             return this;
-        }
-        public URLMapDefaultRouteActionFaultInjectionPolicyGetArgs build() {
+        }        public URLMapDefaultRouteActionFaultInjectionPolicyGetArgs build() {
             return new URLMapDefaultRouteActionFaultInjectionPolicyGetArgs(abort, delay);
         }
     }

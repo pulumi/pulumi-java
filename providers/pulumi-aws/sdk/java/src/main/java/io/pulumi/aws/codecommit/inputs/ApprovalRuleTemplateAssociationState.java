@@ -74,22 +74,18 @@ public final class ApprovalRuleTemplateAssociationState extends io.pulumi.resour
             this.approvalRuleTemplateName = approvalRuleTemplateName;
             return this;
         }
-
         public Builder approvalRuleTemplateName(@Nullable String approvalRuleTemplateName) {
             this.approvalRuleTemplateName = Output.ofNullable(approvalRuleTemplateName);
             return this;
         }
-
         public Builder repositoryName(@Nullable Output<String> repositoryName) {
             this.repositoryName = repositoryName;
             return this;
         }
-
         public Builder repositoryName(@Nullable String repositoryName) {
             this.repositoryName = Output.ofNullable(repositoryName);
             return this;
-        }
-        public ApprovalRuleTemplateAssociationState build() {
+        }        public ApprovalRuleTemplateAssociationState build() {
             return new ApprovalRuleTemplateAssociationState(approvalRuleTemplateName, repositoryName);
         }
     }

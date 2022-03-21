@@ -70,12 +70,13 @@ public final class GoogleCloudDialogflowCxV3beta1TestConfigResponse {
             this.flow = Objects.requireNonNull(flow);
             return this;
         }
-
         public Builder trackingParameters(List<String> trackingParameters) {
             this.trackingParameters = Objects.requireNonNull(trackingParameters);
             return this;
         }
-        public GoogleCloudDialogflowCxV3beta1TestConfigResponse build() {
+        public Builder trackingParameters(String... trackingParameters) {
+            return trackingParameters(List.of(trackingParameters));
+        }        public GoogleCloudDialogflowCxV3beta1TestConfigResponse build() {
             return new GoogleCloudDialogflowCxV3beta1TestConfigResponse(flow, trackingParameters);
         }
     }

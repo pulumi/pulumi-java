@@ -156,37 +156,33 @@ public final class WorkflowTemplateJobPrestoJob {
             this.clientTags = clientTags;
             return this;
         }
-
+        public Builder clientTags(String... clientTags) {
+            return clientTags(List.of(clientTags));
+        }
         public Builder continueOnFailure(@Nullable Boolean continueOnFailure) {
             this.continueOnFailure = continueOnFailure;
             return this;
         }
-
         public Builder loggingConfig(@Nullable WorkflowTemplateJobPrestoJobLoggingConfig loggingConfig) {
             this.loggingConfig = loggingConfig;
             return this;
         }
-
         public Builder outputFormat(@Nullable String outputFormat) {
             this.outputFormat = outputFormat;
             return this;
         }
-
         public Builder properties(@Nullable Map<String,String> properties) {
             this.properties = properties;
             return this;
         }
-
         public Builder queryFileUri(@Nullable String queryFileUri) {
             this.queryFileUri = queryFileUri;
             return this;
         }
-
         public Builder queryList(@Nullable WorkflowTemplateJobPrestoJobQueryList queryList) {
             this.queryList = queryList;
             return this;
-        }
-        public WorkflowTemplateJobPrestoJob build() {
+        }        public WorkflowTemplateJobPrestoJob build() {
             return new WorkflowTemplateJobPrestoJob(clientTags, continueOnFailure, loggingConfig, outputFormat, properties, queryFileUri, queryList);
         }
     }

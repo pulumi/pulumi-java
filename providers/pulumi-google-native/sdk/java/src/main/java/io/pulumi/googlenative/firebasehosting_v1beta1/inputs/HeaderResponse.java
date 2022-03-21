@@ -93,17 +93,14 @@ public final class HeaderResponse extends io.pulumi.resources.InvokeArgs {
             this.glob = Objects.requireNonNull(glob);
             return this;
         }
-
         public Builder headers(Map<String,String> headers) {
             this.headers = Objects.requireNonNull(headers);
             return this;
         }
-
         public Builder regex(String regex) {
             this.regex = Objects.requireNonNull(regex);
             return this;
-        }
-        public HeaderResponse build() {
+        }        public HeaderResponse build() {
             return new HeaderResponse(glob, headers, regex);
         }
     }

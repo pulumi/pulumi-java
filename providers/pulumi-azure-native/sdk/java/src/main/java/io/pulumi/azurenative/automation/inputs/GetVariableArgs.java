@@ -88,17 +88,14 @@ public final class GetVariableArgs extends io.pulumi.resources.InvokeArgs {
             this.automationAccountName = Objects.requireNonNull(automationAccountName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder variableName(String variableName) {
             this.variableName = Objects.requireNonNull(variableName);
             return this;
-        }
-        public GetVariableArgs build() {
+        }        public GetVariableArgs build() {
             return new GetVariableArgs(automationAccountName, resourceGroupName, variableName);
         }
     }

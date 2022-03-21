@@ -139,32 +139,29 @@ public final class WorkflowTemplateJobHiveJob {
             this.continueOnFailure = continueOnFailure;
             return this;
         }
-
         public Builder jarFileUris(@Nullable List<String> jarFileUris) {
             this.jarFileUris = jarFileUris;
             return this;
         }
-
+        public Builder jarFileUris(String... jarFileUris) {
+            return jarFileUris(List.of(jarFileUris));
+        }
         public Builder properties(@Nullable Map<String,String> properties) {
             this.properties = properties;
             return this;
         }
-
         public Builder queryFileUri(@Nullable String queryFileUri) {
             this.queryFileUri = queryFileUri;
             return this;
         }
-
         public Builder queryList(@Nullable WorkflowTemplateJobHiveJobQueryList queryList) {
             this.queryList = queryList;
             return this;
         }
-
         public Builder scriptVariables(@Nullable Map<String,String> scriptVariables) {
             this.scriptVariables = scriptVariables;
             return this;
-        }
-        public WorkflowTemplateJobHiveJob build() {
+        }        public WorkflowTemplateJobHiveJob build() {
             return new WorkflowTemplateJobHiveJob(continueOnFailure, jarFileUris, properties, queryFileUri, queryList, scriptVariables);
         }
     }

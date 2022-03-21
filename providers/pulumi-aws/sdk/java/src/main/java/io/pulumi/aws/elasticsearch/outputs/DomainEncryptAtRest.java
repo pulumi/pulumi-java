@@ -72,12 +72,10 @@ public final class DomainEncryptAtRest {
             this.enabled = Objects.requireNonNull(enabled);
             return this;
         }
-
         public Builder kmsKeyId(@Nullable String kmsKeyId) {
             this.kmsKeyId = kmsKeyId;
             return this;
-        }
-        public DomainEncryptAtRest build() {
+        }        public DomainEncryptAtRest build() {
             return new DomainEncryptAtRest(enabled, kmsKeyId);
         }
     }

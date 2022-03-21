@@ -51,8 +51,7 @@ public final class ClusterOpenMonitoringPrometheusJmxExporter {
         public Builder enabledInBroker(Boolean enabledInBroker) {
             this.enabledInBroker = Objects.requireNonNull(enabledInBroker);
             return this;
-        }
-        public ClusterOpenMonitoringPrometheusJmxExporter build() {
+        }        public ClusterOpenMonitoringPrometheusJmxExporter build() {
             return new ClusterOpenMonitoringPrometheusJmxExporter(enabledInBroker);
         }
     }

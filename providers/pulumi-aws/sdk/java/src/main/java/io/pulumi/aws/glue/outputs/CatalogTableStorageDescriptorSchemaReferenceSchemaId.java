@@ -87,17 +87,14 @@ public final class CatalogTableStorageDescriptorSchemaReferenceSchemaId {
             this.registryName = registryName;
             return this;
         }
-
         public Builder schemaArn(@Nullable String schemaArn) {
             this.schemaArn = schemaArn;
             return this;
         }
-
         public Builder schemaName(@Nullable String schemaName) {
             this.schemaName = schemaName;
             return this;
-        }
-        public CatalogTableStorageDescriptorSchemaReferenceSchemaId build() {
+        }        public CatalogTableStorageDescriptorSchemaReferenceSchemaId build() {
             return new CatalogTableStorageDescriptorSchemaReferenceSchemaId(registryName, schemaArn, schemaName);
         }
     }

@@ -155,37 +155,36 @@ public final class CertificateAuthorityPolicyResponse {
             this.allowedCommonNames = Objects.requireNonNull(allowedCommonNames);
             return this;
         }
-
+        public Builder allowedCommonNames(String... allowedCommonNames) {
+            return allowedCommonNames(List.of(allowedCommonNames));
+        }
         public Builder allowedConfigList(AllowedConfigListResponse allowedConfigList) {
             this.allowedConfigList = Objects.requireNonNull(allowedConfigList);
             return this;
         }
-
         public Builder allowedIssuanceModes(IssuanceModesResponse allowedIssuanceModes) {
             this.allowedIssuanceModes = Objects.requireNonNull(allowedIssuanceModes);
             return this;
         }
-
         public Builder allowedLocationsAndOrganizations(List<SubjectResponse> allowedLocationsAndOrganizations) {
             this.allowedLocationsAndOrganizations = Objects.requireNonNull(allowedLocationsAndOrganizations);
             return this;
         }
-
+        public Builder allowedLocationsAndOrganizations(SubjectResponse... allowedLocationsAndOrganizations) {
+            return allowedLocationsAndOrganizations(List.of(allowedLocationsAndOrganizations));
+        }
         public Builder allowedSans(AllowedSubjectAltNamesResponse allowedSans) {
             this.allowedSans = Objects.requireNonNull(allowedSans);
             return this;
         }
-
         public Builder maximumLifetime(String maximumLifetime) {
             this.maximumLifetime = Objects.requireNonNull(maximumLifetime);
             return this;
         }
-
         public Builder overwriteConfigValues(ReusableConfigWrapperResponse overwriteConfigValues) {
             this.overwriteConfigValues = Objects.requireNonNull(overwriteConfigValues);
             return this;
-        }
-        public CertificateAuthorityPolicyResponse build() {
+        }        public CertificateAuthorityPolicyResponse build() {
             return new CertificateAuthorityPolicyResponse(allowedCommonNames, allowedConfigList, allowedIssuanceModes, allowedLocationsAndOrganizations, allowedSans, maximumLifetime, overwriteConfigValues);
         }
     }

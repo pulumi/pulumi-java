@@ -121,27 +121,22 @@ public final class GetDeploymentResult {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder properties(DeploymentResourcePropertiesResponse properties) {
             this.properties = Objects.requireNonNull(properties);
             return this;
         }
-
         public Builder sku(@Nullable SkuResponse sku) {
             this.sku = sku;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public GetDeploymentResult build() {
+        }        public GetDeploymentResult build() {
             return new GetDeploymentResult(id, name, properties, sku, type);
         }
     }

@@ -261,112 +261,93 @@ public final class FhirStoreState extends io.pulumi.resources.ResourceArgs {
             this.dataset = dataset;
             return this;
         }
-
         public Builder dataset(@Nullable String dataset) {
             this.dataset = Output.ofNullable(dataset);
             return this;
         }
-
         public Builder disableReferentialIntegrity(@Nullable Output<Boolean> disableReferentialIntegrity) {
             this.disableReferentialIntegrity = disableReferentialIntegrity;
             return this;
         }
-
         public Builder disableReferentialIntegrity(@Nullable Boolean disableReferentialIntegrity) {
             this.disableReferentialIntegrity = Output.ofNullable(disableReferentialIntegrity);
             return this;
         }
-
         public Builder disableResourceVersioning(@Nullable Output<Boolean> disableResourceVersioning) {
             this.disableResourceVersioning = disableResourceVersioning;
             return this;
         }
-
         public Builder disableResourceVersioning(@Nullable Boolean disableResourceVersioning) {
             this.disableResourceVersioning = Output.ofNullable(disableResourceVersioning);
             return this;
         }
-
         public Builder enableHistoryImport(@Nullable Output<Boolean> enableHistoryImport) {
             this.enableHistoryImport = enableHistoryImport;
             return this;
         }
-
         public Builder enableHistoryImport(@Nullable Boolean enableHistoryImport) {
             this.enableHistoryImport = Output.ofNullable(enableHistoryImport);
             return this;
         }
-
         public Builder enableUpdateCreate(@Nullable Output<Boolean> enableUpdateCreate) {
             this.enableUpdateCreate = enableUpdateCreate;
             return this;
         }
-
         public Builder enableUpdateCreate(@Nullable Boolean enableUpdateCreate) {
             this.enableUpdateCreate = Output.ofNullable(enableUpdateCreate);
             return this;
         }
-
         public Builder labels(@Nullable Output<Map<String,String>> labels) {
             this.labels = labels;
             return this;
         }
-
         public Builder labels(@Nullable Map<String,String> labels) {
             this.labels = Output.ofNullable(labels);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder notificationConfig(@Nullable Output<FhirStoreNotificationConfigGetArgs> notificationConfig) {
             this.notificationConfig = notificationConfig;
             return this;
         }
-
         public Builder notificationConfig(@Nullable FhirStoreNotificationConfigGetArgs notificationConfig) {
             this.notificationConfig = Output.ofNullable(notificationConfig);
             return this;
         }
-
         public Builder selfLink(@Nullable Output<String> selfLink) {
             this.selfLink = selfLink;
             return this;
         }
-
         public Builder selfLink(@Nullable String selfLink) {
             this.selfLink = Output.ofNullable(selfLink);
             return this;
         }
-
         public Builder streamConfigs(@Nullable Output<List<FhirStoreStreamConfigGetArgs>> streamConfigs) {
             this.streamConfigs = streamConfigs;
             return this;
         }
-
         public Builder streamConfigs(@Nullable List<FhirStoreStreamConfigGetArgs> streamConfigs) {
             this.streamConfigs = Output.ofNullable(streamConfigs);
             return this;
         }
-
+        public Builder streamConfigs(FhirStoreStreamConfigGetArgs... streamConfigs) {
+            return streamConfigs(List.of(streamConfigs));
+        }
         public Builder version(@Nullable Output<String> version) {
             this.version = version;
             return this;
         }
-
         public Builder version(@Nullable String version) {
             this.version = Output.ofNullable(version);
             return this;
-        }
-        public FhirStoreState build() {
+        }        public FhirStoreState build() {
             return new FhirStoreState(dataset, disableReferentialIntegrity, disableResourceVersioning, enableHistoryImport, enableUpdateCreate, labels, name, notificationConfig, selfLink, streamConfigs, version);
         }
     }

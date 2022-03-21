@@ -129,52 +129,45 @@ public final class FulfillmentArgs extends io.pulumi.resources.ResourceArgs {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
-
         public Builder displayName(String displayName) {
             this.displayName = Output.of(Objects.requireNonNull(displayName));
             return this;
         }
-
         public Builder enabled(@Nullable Output<Boolean> enabled) {
             this.enabled = enabled;
             return this;
         }
-
         public Builder enabled(@Nullable Boolean enabled) {
             this.enabled = Output.ofNullable(enabled);
             return this;
         }
-
         public Builder features(@Nullable Output<List<FulfillmentFeatureArgs>> features) {
             this.features = features;
             return this;
         }
-
         public Builder features(@Nullable List<FulfillmentFeatureArgs> features) {
             this.features = Output.ofNullable(features);
             return this;
         }
-
+        public Builder features(FulfillmentFeatureArgs... features) {
+            return features(List.of(features));
+        }
         public Builder genericWebService(@Nullable Output<FulfillmentGenericWebServiceArgs> genericWebService) {
             this.genericWebService = genericWebService;
             return this;
         }
-
         public Builder genericWebService(@Nullable FulfillmentGenericWebServiceArgs genericWebService) {
             this.genericWebService = Output.ofNullable(genericWebService);
             return this;
         }
-
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
-        }
-        public FulfillmentArgs build() {
+        }        public FulfillmentArgs build() {
             return new FulfillmentArgs(displayName, enabled, features, genericWebService, project);
         }
     }

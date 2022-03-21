@@ -81,27 +81,22 @@ public final class EC2FleetTargetCapacitySpecificationRequest {
             this.defaultTargetCapacityType = defaultTargetCapacityType;
             return this;
         }
-
         public Builder onDemandTargetCapacity(@Nullable Integer onDemandTargetCapacity) {
             this.onDemandTargetCapacity = onDemandTargetCapacity;
             return this;
         }
-
         public Builder spotTargetCapacity(@Nullable Integer spotTargetCapacity) {
             this.spotTargetCapacity = spotTargetCapacity;
             return this;
         }
-
         public Builder targetCapacityUnitType(@Nullable EC2FleetTargetCapacitySpecificationRequestTargetCapacityUnitType targetCapacityUnitType) {
             this.targetCapacityUnitType = targetCapacityUnitType;
             return this;
         }
-
         public Builder totalTargetCapacity(Integer totalTargetCapacity) {
             this.totalTargetCapacity = Objects.requireNonNull(totalTargetCapacity);
             return this;
-        }
-        public EC2FleetTargetCapacitySpecificationRequest build() {
+        }        public EC2FleetTargetCapacitySpecificationRequest build() {
             return new EC2FleetTargetCapacitySpecificationRequest(defaultTargetCapacityType, onDemandTargetCapacity, spotTargetCapacity, targetCapacityUnitType, totalTargetCapacity);
         }
     }

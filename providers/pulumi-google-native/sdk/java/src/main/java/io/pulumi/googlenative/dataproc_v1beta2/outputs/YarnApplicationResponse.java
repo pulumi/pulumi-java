@@ -102,22 +102,18 @@ public final class YarnApplicationResponse {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder progress(Double progress) {
             this.progress = Objects.requireNonNull(progress);
             return this;
         }
-
         public Builder state(String state) {
             this.state = Objects.requireNonNull(state);
             return this;
         }
-
         public Builder trackingUrl(String trackingUrl) {
             this.trackingUrl = Objects.requireNonNull(trackingUrl);
             return this;
-        }
-        public YarnApplicationResponse build() {
+        }        public YarnApplicationResponse build() {
             return new YarnApplicationResponse(name, progress, state, trackingUrl);
         }
     }

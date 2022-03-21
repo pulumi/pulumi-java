@@ -129,52 +129,42 @@ public final class NotificationSettingsArgs extends io.pulumi.resources.Resource
             this.emailRecipient = emailRecipient;
             return this;
         }
-
         public Builder emailRecipient(@Nullable String emailRecipient) {
             this.emailRecipient = Output.ofNullable(emailRecipient);
             return this;
         }
-
         public Builder notificationLocale(@Nullable Output<String> notificationLocale) {
             this.notificationLocale = notificationLocale;
             return this;
         }
-
         public Builder notificationLocale(@Nullable String notificationLocale) {
             this.notificationLocale = Output.ofNullable(notificationLocale);
             return this;
         }
-
         public Builder status(@Nullable Output<Either<String,EnableStatus>> status) {
             this.status = status;
             return this;
         }
-
         public Builder status(@Nullable Either<String,EnableStatus> status) {
             this.status = Output.ofNullable(status);
             return this;
         }
-
         public Builder timeInMinutes(@Nullable Output<Integer> timeInMinutes) {
             this.timeInMinutes = timeInMinutes;
             return this;
         }
-
         public Builder timeInMinutes(@Nullable Integer timeInMinutes) {
             this.timeInMinutes = Output.ofNullable(timeInMinutes);
             return this;
         }
-
         public Builder webhookUrl(@Nullable Output<String> webhookUrl) {
             this.webhookUrl = webhookUrl;
             return this;
         }
-
         public Builder webhookUrl(@Nullable String webhookUrl) {
             this.webhookUrl = Output.ofNullable(webhookUrl);
             return this;
-        }
-        public NotificationSettingsArgs build() {
+        }        public NotificationSettingsArgs build() {
             return new NotificationSettingsArgs(emailRecipient, notificationLocale, status, timeInMinutes, webhookUrl);
         }
     }

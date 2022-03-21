@@ -60,12 +60,10 @@ public final class EdifactMessageIdentifierArgs extends io.pulumi.resources.Reso
             this.messageId = Objects.requireNonNull(messageId);
             return this;
         }
-
         public Builder messageId(String messageId) {
             this.messageId = Output.of(Objects.requireNonNull(messageId));
             return this;
-        }
-        public EdifactMessageIdentifierArgs build() {
+        }        public EdifactMessageIdentifierArgs build() {
             return new EdifactMessageIdentifierArgs(messageId);
         }
     }

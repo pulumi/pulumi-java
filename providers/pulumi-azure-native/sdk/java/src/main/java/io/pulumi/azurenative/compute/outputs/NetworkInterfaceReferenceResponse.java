@@ -88,17 +88,14 @@ public final class NetworkInterfaceReferenceResponse {
             this.deleteOption = deleteOption;
             return this;
         }
-
         public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
-
         public Builder primary(@Nullable Boolean primary) {
             this.primary = primary;
             return this;
-        }
-        public NetworkInterfaceReferenceResponse build() {
+        }        public NetworkInterfaceReferenceResponse build() {
             return new NetworkInterfaceReferenceResponse(deleteOption, id, primary);
         }
     }

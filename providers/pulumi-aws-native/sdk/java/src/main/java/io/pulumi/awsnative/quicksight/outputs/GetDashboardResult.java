@@ -132,27 +132,28 @@ public final class GetDashboardResult {
             this.arn = arn;
             return this;
         }
-
         public Builder lastPublishedTime(@Nullable String lastPublishedTime) {
             this.lastPublishedTime = lastPublishedTime;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
-
         public Builder permissions(@Nullable List<DashboardResourcePermission> permissions) {
             this.permissions = permissions;
             return this;
         }
-
+        public Builder permissions(DashboardResourcePermission... permissions) {
+            return permissions(List.of(permissions));
+        }
         public Builder tags(@Nullable List<DashboardTag> tags) {
             this.tags = tags;
             return this;
         }
-        public GetDashboardResult build() {
+        public Builder tags(DashboardTag... tags) {
+            return tags(List.of(tags));
+        }        public GetDashboardResult build() {
             return new GetDashboardResult(arn, lastPublishedTime, name, permissions, tags);
         }
     }

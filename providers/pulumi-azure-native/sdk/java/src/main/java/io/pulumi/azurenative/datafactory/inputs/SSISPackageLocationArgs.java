@@ -214,102 +214,85 @@ public final class SSISPackageLocationArgs extends io.pulumi.resources.ResourceA
             this.accessCredential = accessCredential;
             return this;
         }
-
         public Builder accessCredential(@Nullable SSISAccessCredentialArgs accessCredential) {
             this.accessCredential = Output.ofNullable(accessCredential);
             return this;
         }
-
         public Builder childPackages(@Nullable Output<List<SSISChildPackageArgs>> childPackages) {
             this.childPackages = childPackages;
             return this;
         }
-
         public Builder childPackages(@Nullable List<SSISChildPackageArgs> childPackages) {
             this.childPackages = Output.ofNullable(childPackages);
             return this;
         }
-
+        public Builder childPackages(SSISChildPackageArgs... childPackages) {
+            return childPackages(List.of(childPackages));
+        }
         public Builder configurationAccessCredential(@Nullable Output<SSISAccessCredentialArgs> configurationAccessCredential) {
             this.configurationAccessCredential = configurationAccessCredential;
             return this;
         }
-
         public Builder configurationAccessCredential(@Nullable SSISAccessCredentialArgs configurationAccessCredential) {
             this.configurationAccessCredential = Output.ofNullable(configurationAccessCredential);
             return this;
         }
-
         public Builder configurationPath(@Nullable Output<Object> configurationPath) {
             this.configurationPath = configurationPath;
             return this;
         }
-
         public Builder configurationPath(@Nullable Object configurationPath) {
             this.configurationPath = Output.ofNullable(configurationPath);
             return this;
         }
-
         public Builder packageContent(@Nullable Output<Object> packageContent) {
             this.packageContent = packageContent;
             return this;
         }
-
         public Builder packageContent(@Nullable Object packageContent) {
             this.packageContent = Output.ofNullable(packageContent);
             return this;
         }
-
         public Builder packageLastModifiedDate(@Nullable Output<String> packageLastModifiedDate) {
             this.packageLastModifiedDate = packageLastModifiedDate;
             return this;
         }
-
         public Builder packageLastModifiedDate(@Nullable String packageLastModifiedDate) {
             this.packageLastModifiedDate = Output.ofNullable(packageLastModifiedDate);
             return this;
         }
-
         public Builder packageName(@Nullable Output<String> packageName) {
             this.packageName = packageName;
             return this;
         }
-
         public Builder packageName(@Nullable String packageName) {
             this.packageName = Output.ofNullable(packageName);
             return this;
         }
-
         public Builder packagePassword(@Nullable Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> packagePassword) {
             this.packagePassword = packagePassword;
             return this;
         }
-
         public Builder packagePassword(@Nullable Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs> packagePassword) {
             this.packagePassword = Output.ofNullable(packagePassword);
             return this;
         }
-
         public Builder packagePath(@Nullable Output<Object> packagePath) {
             this.packagePath = packagePath;
             return this;
         }
-
         public Builder packagePath(@Nullable Object packagePath) {
             this.packagePath = Output.ofNullable(packagePath);
             return this;
         }
-
         public Builder type(@Nullable Output<Either<String,SsisPackageLocationType>> type) {
             this.type = type;
             return this;
         }
-
         public Builder type(@Nullable Either<String,SsisPackageLocationType> type) {
             this.type = Output.ofNullable(type);
             return this;
-        }
-        public SSISPackageLocationArgs build() {
+        }        public SSISPackageLocationArgs build() {
             return new SSISPackageLocationArgs(accessCredential, childPackages, configurationAccessCredential, configurationPath, packageContent, packageLastModifiedDate, packageName, packagePassword, packagePath, type);
         }
     }

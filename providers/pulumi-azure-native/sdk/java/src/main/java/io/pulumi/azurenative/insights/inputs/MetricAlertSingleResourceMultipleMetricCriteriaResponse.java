@@ -81,12 +81,13 @@ public final class MetricAlertSingleResourceMultipleMetricCriteriaResponse exten
             this.allOf = allOf;
             return this;
         }
-
+        public Builder allOf(MetricCriteriaResponse... allOf) {
+            return allOf(List.of(allOf));
+        }
         public Builder odataType(String odataType) {
             this.odataType = Objects.requireNonNull(odataType);
             return this;
-        }
-        public MetricAlertSingleResourceMultipleMetricCriteriaResponse build() {
+        }        public MetricAlertSingleResourceMultipleMetricCriteriaResponse build() {
             return new MetricAlertSingleResourceMultipleMetricCriteriaResponse(allOf, odataType);
         }
     }

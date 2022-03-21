@@ -61,12 +61,10 @@ public final class GetOrganizationRootPolicyType {
             this.status = Objects.requireNonNull(status);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public GetOrganizationRootPolicyType build() {
+        }        public GetOrganizationRootPolicyType build() {
             return new GetOrganizationRootPolicyType(status, type);
         }
     }

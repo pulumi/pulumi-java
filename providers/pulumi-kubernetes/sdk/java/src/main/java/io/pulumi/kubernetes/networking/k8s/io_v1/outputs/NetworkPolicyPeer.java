@@ -96,17 +96,14 @@ public final class NetworkPolicyPeer {
             this.ipBlock = ipBlock;
             return this;
         }
-
         public Builder namespaceSelector(@Nullable LabelSelector namespaceSelector) {
             this.namespaceSelector = namespaceSelector;
             return this;
         }
-
         public Builder podSelector(@Nullable LabelSelector podSelector) {
             this.podSelector = podSelector;
             return this;
-        }
-        public NetworkPolicyPeer build() {
+        }        public NetworkPolicyPeer build() {
             return new NetworkPolicyPeer(ipBlock, namespaceSelector, podSelector);
         }
     }

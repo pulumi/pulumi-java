@@ -72,12 +72,10 @@ public final class MetricIdentifier {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder selector(@Nullable LabelSelector selector) {
             this.selector = selector;
             return this;
-        }
-        public MetricIdentifier build() {
+        }        public MetricIdentifier build() {
             return new MetricIdentifier(name, selector);
         }
     }

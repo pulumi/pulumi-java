@@ -126,27 +126,22 @@ public final class ExtensionResourcePlanResponse extends io.pulumi.resources.Inv
             this.name = name;
             return this;
         }
-
         public Builder product(@Nullable String product) {
             this.product = product;
             return this;
         }
-
         public Builder promotionCode(@Nullable String promotionCode) {
             this.promotionCode = promotionCode;
             return this;
         }
-
         public Builder publisher(@Nullable String publisher) {
             this.publisher = publisher;
             return this;
         }
-
         public Builder version(@Nullable String version) {
             this.version = version;
             return this;
-        }
-        public ExtensionResourcePlanResponse build() {
+        }        public ExtensionResourcePlanResponse build() {
             return new ExtensionResourcePlanResponse(name, product, promotionCode, publisher, version);
         }
     }

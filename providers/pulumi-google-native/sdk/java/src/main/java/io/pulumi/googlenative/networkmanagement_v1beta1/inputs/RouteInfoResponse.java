@@ -190,47 +190,41 @@ public final class RouteInfoResponse extends io.pulumi.resources.InvokeArgs {
             this.destIpRange = Objects.requireNonNull(destIpRange);
             return this;
         }
-
         public Builder displayName(String displayName) {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
-
         public Builder instanceTags(List<String> instanceTags) {
             this.instanceTags = Objects.requireNonNull(instanceTags);
             return this;
         }
-
+        public Builder instanceTags(String... instanceTags) {
+            return instanceTags(List.of(instanceTags));
+        }
         public Builder networkUri(String networkUri) {
             this.networkUri = Objects.requireNonNull(networkUri);
             return this;
         }
-
         public Builder nextHop(String nextHop) {
             this.nextHop = Objects.requireNonNull(nextHop);
             return this;
         }
-
         public Builder nextHopType(String nextHopType) {
             this.nextHopType = Objects.requireNonNull(nextHopType);
             return this;
         }
-
         public Builder priority(Integer priority) {
             this.priority = Objects.requireNonNull(priority);
             return this;
         }
-
         public Builder routeType(String routeType) {
             this.routeType = Objects.requireNonNull(routeType);
             return this;
         }
-
         public Builder uri(String uri) {
             this.uri = Objects.requireNonNull(uri);
             return this;
-        }
-        public RouteInfoResponse build() {
+        }        public RouteInfoResponse build() {
             return new RouteInfoResponse(destIpRange, displayName, instanceTags, networkUri, nextHop, nextHopType, priority, routeType, uri);
         }
     }

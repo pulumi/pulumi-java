@@ -53,8 +53,7 @@ public final class RuleManagementEventClaimsDataSourceResponse {
         public Builder emailAddress(@Nullable String emailAddress) {
             this.emailAddress = emailAddress;
             return this;
-        }
-        public RuleManagementEventClaimsDataSourceResponse build() {
+        }        public RuleManagementEventClaimsDataSourceResponse build() {
             return new RuleManagementEventClaimsDataSourceResponse(emailAddress);
         }
     }

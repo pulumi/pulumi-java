@@ -77,22 +77,18 @@ public final class DockerExecutorArgs extends io.pulumi.resources.ResourceArgs {
             this.cmd = Objects.requireNonNull(cmd);
             return this;
         }
-
         public Builder cmd(String cmd) {
             this.cmd = Output.of(Objects.requireNonNull(cmd));
             return this;
         }
-
         public Builder imageName(Output<String> imageName) {
             this.imageName = Objects.requireNonNull(imageName);
             return this;
         }
-
         public Builder imageName(String imageName) {
             this.imageName = Output.of(Objects.requireNonNull(imageName));
             return this;
-        }
-        public DockerExecutorArgs build() {
+        }        public DockerExecutorArgs build() {
             return new DockerExecutorArgs(cmd, imageName);
         }
     }

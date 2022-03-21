@@ -237,62 +237,56 @@ public final class GetAlertPolicyResult {
             this.alertStrategy = Objects.requireNonNull(alertStrategy);
             return this;
         }
-
         public Builder combiner(String combiner) {
             this.combiner = Objects.requireNonNull(combiner);
             return this;
         }
-
         public Builder conditions(List<ConditionResponse> conditions) {
             this.conditions = Objects.requireNonNull(conditions);
             return this;
         }
-
+        public Builder conditions(ConditionResponse... conditions) {
+            return conditions(List.of(conditions));
+        }
         public Builder creationRecord(MutationRecordResponse creationRecord) {
             this.creationRecord = Objects.requireNonNull(creationRecord);
             return this;
         }
-
         public Builder displayName(String displayName) {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
-
         public Builder documentation(DocumentationResponse documentation) {
             this.documentation = Objects.requireNonNull(documentation);
             return this;
         }
-
         public Builder enabled(Boolean enabled) {
             this.enabled = Objects.requireNonNull(enabled);
             return this;
         }
-
         public Builder mutationRecord(MutationRecordResponse mutationRecord) {
             this.mutationRecord = Objects.requireNonNull(mutationRecord);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder notificationChannels(List<String> notificationChannels) {
             this.notificationChannels = Objects.requireNonNull(notificationChannels);
             return this;
         }
-
+        public Builder notificationChannels(String... notificationChannels) {
+            return notificationChannels(List.of(notificationChannels));
+        }
         public Builder userLabels(Map<String,String> userLabels) {
             this.userLabels = Objects.requireNonNull(userLabels);
             return this;
         }
-
         public Builder validity(StatusResponse validity) {
             this.validity = Objects.requireNonNull(validity);
             return this;
-        }
-        public GetAlertPolicyResult build() {
+        }        public GetAlertPolicyResult build() {
             return new GetAlertPolicyResult(alertStrategy, combiner, conditions, creationRecord, displayName, documentation, enabled, mutationRecord, name, notificationChannels, userLabels, validity);
         }
     }

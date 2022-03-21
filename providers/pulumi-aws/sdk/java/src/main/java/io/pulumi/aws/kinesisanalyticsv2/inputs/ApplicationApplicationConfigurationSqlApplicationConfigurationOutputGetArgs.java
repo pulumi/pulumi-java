@@ -138,62 +138,50 @@ public final class ApplicationApplicationConfigurationSqlApplicationConfiguratio
             this.destinationSchema = Objects.requireNonNull(destinationSchema);
             return this;
         }
-
         public Builder destinationSchema(ApplicationApplicationConfigurationSqlApplicationConfigurationOutputDestinationSchemaGetArgs destinationSchema) {
             this.destinationSchema = Output.of(Objects.requireNonNull(destinationSchema));
             return this;
         }
-
         public Builder kinesisFirehoseOutput(@Nullable Output<ApplicationApplicationConfigurationSqlApplicationConfigurationOutputKinesisFirehoseOutputGetArgs> kinesisFirehoseOutput) {
             this.kinesisFirehoseOutput = kinesisFirehoseOutput;
             return this;
         }
-
         public Builder kinesisFirehoseOutput(@Nullable ApplicationApplicationConfigurationSqlApplicationConfigurationOutputKinesisFirehoseOutputGetArgs kinesisFirehoseOutput) {
             this.kinesisFirehoseOutput = Output.ofNullable(kinesisFirehoseOutput);
             return this;
         }
-
         public Builder kinesisStreamsOutput(@Nullable Output<ApplicationApplicationConfigurationSqlApplicationConfigurationOutputKinesisStreamsOutputGetArgs> kinesisStreamsOutput) {
             this.kinesisStreamsOutput = kinesisStreamsOutput;
             return this;
         }
-
         public Builder kinesisStreamsOutput(@Nullable ApplicationApplicationConfigurationSqlApplicationConfigurationOutputKinesisStreamsOutputGetArgs kinesisStreamsOutput) {
             this.kinesisStreamsOutput = Output.ofNullable(kinesisStreamsOutput);
             return this;
         }
-
         public Builder lambdaOutput(@Nullable Output<ApplicationApplicationConfigurationSqlApplicationConfigurationOutputLambdaOutputGetArgs> lambdaOutput) {
             this.lambdaOutput = lambdaOutput;
             return this;
         }
-
         public Builder lambdaOutput(@Nullable ApplicationApplicationConfigurationSqlApplicationConfigurationOutputLambdaOutputGetArgs lambdaOutput) {
             this.lambdaOutput = Output.ofNullable(lambdaOutput);
             return this;
         }
-
         public Builder name(Output<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
-
         public Builder outputId(@Nullable Output<String> outputId) {
             this.outputId = outputId;
             return this;
         }
-
         public Builder outputId(@Nullable String outputId) {
             this.outputId = Output.ofNullable(outputId);
             return this;
-        }
-        public ApplicationApplicationConfigurationSqlApplicationConfigurationOutputGetArgs build() {
+        }        public ApplicationApplicationConfigurationSqlApplicationConfigurationOutputGetArgs build() {
             return new ApplicationApplicationConfigurationSqlApplicationConfigurationOutputGetArgs(destinationSchema, kinesisFirehoseOutput, kinesisStreamsOutput, lambdaOutput, name, outputId);
         }
     }

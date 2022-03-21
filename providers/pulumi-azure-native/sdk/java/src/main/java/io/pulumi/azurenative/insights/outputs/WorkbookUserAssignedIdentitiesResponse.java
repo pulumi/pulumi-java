@@ -85,17 +85,14 @@ public final class WorkbookUserAssignedIdentitiesResponse {
             this.clientId = Objects.requireNonNull(clientId);
             return this;
         }
-
         public Builder principalId(String principalId) {
             this.principalId = Objects.requireNonNull(principalId);
             return this;
         }
-
         public Builder tenantId(String tenantId) {
             this.tenantId = Objects.requireNonNull(tenantId);
             return this;
-        }
-        public WorkbookUserAssignedIdentitiesResponse build() {
+        }        public WorkbookUserAssignedIdentitiesResponse build() {
             return new WorkbookUserAssignedIdentitiesResponse(clientId, principalId, tenantId);
         }
     }

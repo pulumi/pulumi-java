@@ -557,162 +557,136 @@ public final class GetFunctionResult {
             this.availableMemoryMb = Objects.requireNonNull(availableMemoryMb);
             return this;
         }
-
         public Builder buildEnvironmentVariables(Map<String,String> buildEnvironmentVariables) {
             this.buildEnvironmentVariables = Objects.requireNonNull(buildEnvironmentVariables);
             return this;
         }
-
         public Builder buildId(String buildId) {
             this.buildId = Objects.requireNonNull(buildId);
             return this;
         }
-
         public Builder buildName(String buildName) {
             this.buildName = Objects.requireNonNull(buildName);
             return this;
         }
-
         public Builder buildWorkerPool(String buildWorkerPool) {
             this.buildWorkerPool = Objects.requireNonNull(buildWorkerPool);
             return this;
         }
-
         public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
-
         public Builder dockerRepository(String dockerRepository) {
             this.dockerRepository = Objects.requireNonNull(dockerRepository);
             return this;
         }
-
         public Builder entryPoint(String entryPoint) {
             this.entryPoint = Objects.requireNonNull(entryPoint);
             return this;
         }
-
         public Builder environmentVariables(Map<String,String> environmentVariables) {
             this.environmentVariables = Objects.requireNonNull(environmentVariables);
             return this;
         }
-
         public Builder eventTrigger(EventTriggerResponse eventTrigger) {
             this.eventTrigger = Objects.requireNonNull(eventTrigger);
             return this;
         }
-
         public Builder httpsTrigger(HttpsTriggerResponse httpsTrigger) {
             this.httpsTrigger = Objects.requireNonNull(httpsTrigger);
             return this;
         }
-
         public Builder ingressSettings(String ingressSettings) {
             this.ingressSettings = Objects.requireNonNull(ingressSettings);
             return this;
         }
-
         public Builder kmsKeyName(String kmsKeyName) {
             this.kmsKeyName = Objects.requireNonNull(kmsKeyName);
             return this;
         }
-
         public Builder labels(Map<String,String> labels) {
             this.labels = Objects.requireNonNull(labels);
             return this;
         }
-
         public Builder maxInstances(Integer maxInstances) {
             this.maxInstances = Objects.requireNonNull(maxInstances);
             return this;
         }
-
         public Builder minInstances(Integer minInstances) {
             this.minInstances = Objects.requireNonNull(minInstances);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder network(String network) {
             this.network = Objects.requireNonNull(network);
             return this;
         }
-
         public Builder runtime(String runtime) {
             this.runtime = Objects.requireNonNull(runtime);
             return this;
         }
-
         public Builder secretEnvironmentVariables(List<SecretEnvVarResponse> secretEnvironmentVariables) {
             this.secretEnvironmentVariables = Objects.requireNonNull(secretEnvironmentVariables);
             return this;
         }
-
+        public Builder secretEnvironmentVariables(SecretEnvVarResponse... secretEnvironmentVariables) {
+            return secretEnvironmentVariables(List.of(secretEnvironmentVariables));
+        }
         public Builder secretVolumes(List<SecretVolumeResponse> secretVolumes) {
             this.secretVolumes = Objects.requireNonNull(secretVolumes);
             return this;
         }
-
+        public Builder secretVolumes(SecretVolumeResponse... secretVolumes) {
+            return secretVolumes(List.of(secretVolumes));
+        }
         public Builder serviceAccountEmail(String serviceAccountEmail) {
             this.serviceAccountEmail = Objects.requireNonNull(serviceAccountEmail);
             return this;
         }
-
         public Builder sourceArchiveUrl(String sourceArchiveUrl) {
             this.sourceArchiveUrl = Objects.requireNonNull(sourceArchiveUrl);
             return this;
         }
-
         public Builder sourceRepository(SourceRepositoryResponse sourceRepository) {
             this.sourceRepository = Objects.requireNonNull(sourceRepository);
             return this;
         }
-
         public Builder sourceToken(String sourceToken) {
             this.sourceToken = Objects.requireNonNull(sourceToken);
             return this;
         }
-
         public Builder sourceUploadUrl(String sourceUploadUrl) {
             this.sourceUploadUrl = Objects.requireNonNull(sourceUploadUrl);
             return this;
         }
-
         public Builder status(String status) {
             this.status = Objects.requireNonNull(status);
             return this;
         }
-
         public Builder timeout(String timeout) {
             this.timeout = Objects.requireNonNull(timeout);
             return this;
         }
-
         public Builder updateTime(String updateTime) {
             this.updateTime = Objects.requireNonNull(updateTime);
             return this;
         }
-
         public Builder versionId(String versionId) {
             this.versionId = Objects.requireNonNull(versionId);
             return this;
         }
-
         public Builder vpcConnector(String vpcConnector) {
             this.vpcConnector = Objects.requireNonNull(vpcConnector);
             return this;
         }
-
         public Builder vpcConnectorEgressSettings(String vpcConnectorEgressSettings) {
             this.vpcConnectorEgressSettings = Objects.requireNonNull(vpcConnectorEgressSettings);
             return this;
-        }
-        public GetFunctionResult build() {
+        }        public GetFunctionResult build() {
             return new GetFunctionResult(availableMemoryMb, buildEnvironmentVariables, buildId, buildName, buildWorkerPool, description, dockerRepository, entryPoint, environmentVariables, eventTrigger, httpsTrigger, ingressSettings, kmsKeyName, labels, maxInstances, minInstances, name, network, runtime, secretEnvironmentVariables, secretVolumes, serviceAccountEmail, sourceArchiveUrl, sourceRepository, sourceToken, sourceUploadUrl, status, timeout, updateTime, versionId, vpcConnector, vpcConnectorEgressSettings);
         }
     }

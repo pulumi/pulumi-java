@@ -75,12 +75,10 @@ public final class GetComputeEnvironmentArgs extends io.pulumi.resources.InvokeA
             this.computeEnvironmentName = Objects.requireNonNull(computeEnvironmentName);
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
-        }
-        public GetComputeEnvironmentArgs build() {
+        }        public GetComputeEnvironmentArgs build() {
             return new GetComputeEnvironmentArgs(computeEnvironmentName, tags);
         }
     }

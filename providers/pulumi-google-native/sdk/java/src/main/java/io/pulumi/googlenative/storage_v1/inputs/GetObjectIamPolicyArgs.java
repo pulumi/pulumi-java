@@ -102,27 +102,22 @@ public final class GetObjectIamPolicyArgs extends io.pulumi.resources.InvokeArgs
             this.bucket = Objects.requireNonNull(bucket);
             return this;
         }
-
         public Builder generation(@Nullable String generation) {
             this.generation = generation;
             return this;
         }
-
         public Builder object(String object) {
             this.object = Objects.requireNonNull(object);
             return this;
         }
-
         public Builder provisionalUserProject(@Nullable String provisionalUserProject) {
             this.provisionalUserProject = provisionalUserProject;
             return this;
         }
-
         public Builder userProject(@Nullable String userProject) {
             this.userProject = userProject;
             return this;
-        }
-        public GetObjectIamPolicyArgs build() {
+        }        public GetObjectIamPolicyArgs build() {
             return new GetObjectIamPolicyArgs(bucket, generation, object, provisionalUserProject, userProject);
         }
     }

@@ -62,12 +62,10 @@ public final class AssignmentGroupLabelArgs extends io.pulumi.resources.Resource
             this.labels = labels;
             return this;
         }
-
         public Builder labels(@Nullable Map<String,String> labels) {
             this.labels = Output.ofNullable(labels);
             return this;
-        }
-        public AssignmentGroupLabelArgs build() {
+        }        public AssignmentGroupLabelArgs build() {
             return new AssignmentGroupLabelArgs(labels);
         }
     }

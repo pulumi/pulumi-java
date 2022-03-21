@@ -55,12 +55,10 @@ public final class NetworkInsightsAnalysisAlternatePathHint {
             this.componentArn = componentArn;
             return this;
         }
-
         public Builder componentId(@Nullable String componentId) {
             this.componentId = componentId;
             return this;
-        }
-        public NetworkInsightsAnalysisAlternatePathHint build() {
+        }        public NetworkInsightsAnalysisAlternatePathHint build() {
             return new NetworkInsightsAnalysisAlternatePathHint(componentArn, componentId);
         }
     }

@@ -102,22 +102,30 @@ public final class RouterNatRuleActionResponse {
             this.sourceNatActiveIps = Objects.requireNonNull(sourceNatActiveIps);
             return this;
         }
-
+        public Builder sourceNatActiveIps(String... sourceNatActiveIps) {
+            return sourceNatActiveIps(List.of(sourceNatActiveIps));
+        }
         public Builder sourceNatActiveRanges(List<String> sourceNatActiveRanges) {
             this.sourceNatActiveRanges = Objects.requireNonNull(sourceNatActiveRanges);
             return this;
         }
-
+        public Builder sourceNatActiveRanges(String... sourceNatActiveRanges) {
+            return sourceNatActiveRanges(List.of(sourceNatActiveRanges));
+        }
         public Builder sourceNatDrainIps(List<String> sourceNatDrainIps) {
             this.sourceNatDrainIps = Objects.requireNonNull(sourceNatDrainIps);
             return this;
         }
-
+        public Builder sourceNatDrainIps(String... sourceNatDrainIps) {
+            return sourceNatDrainIps(List.of(sourceNatDrainIps));
+        }
         public Builder sourceNatDrainRanges(List<String> sourceNatDrainRanges) {
             this.sourceNatDrainRanges = Objects.requireNonNull(sourceNatDrainRanges);
             return this;
         }
-        public RouterNatRuleActionResponse build() {
+        public Builder sourceNatDrainRanges(String... sourceNatDrainRanges) {
+            return sourceNatDrainRanges(List.of(sourceNatDrainRanges));
+        }        public RouterNatRuleActionResponse build() {
             return new RouterNatRuleActionResponse(sourceNatActiveIps, sourceNatActiveRanges, sourceNatDrainIps, sourceNatDrainRanges);
         }
     }

@@ -162,72 +162,58 @@ public final class RuntimeSoftwareConfigGetArgs extends io.pulumi.resources.Reso
             this.customGpuDriverPath = customGpuDriverPath;
             return this;
         }
-
         public Builder customGpuDriverPath(@Nullable String customGpuDriverPath) {
             this.customGpuDriverPath = Output.ofNullable(customGpuDriverPath);
             return this;
         }
-
         public Builder enableHealthMonitoring(@Nullable Output<Boolean> enableHealthMonitoring) {
             this.enableHealthMonitoring = enableHealthMonitoring;
             return this;
         }
-
         public Builder enableHealthMonitoring(@Nullable Boolean enableHealthMonitoring) {
             this.enableHealthMonitoring = Output.ofNullable(enableHealthMonitoring);
             return this;
         }
-
         public Builder idleShutdown(@Nullable Output<Boolean> idleShutdown) {
             this.idleShutdown = idleShutdown;
             return this;
         }
-
         public Builder idleShutdown(@Nullable Boolean idleShutdown) {
             this.idleShutdown = Output.ofNullable(idleShutdown);
             return this;
         }
-
         public Builder idleShutdownTimeout(@Nullable Output<Integer> idleShutdownTimeout) {
             this.idleShutdownTimeout = idleShutdownTimeout;
             return this;
         }
-
         public Builder idleShutdownTimeout(@Nullable Integer idleShutdownTimeout) {
             this.idleShutdownTimeout = Output.ofNullable(idleShutdownTimeout);
             return this;
         }
-
         public Builder installGpuDriver(@Nullable Output<Boolean> installGpuDriver) {
             this.installGpuDriver = installGpuDriver;
             return this;
         }
-
         public Builder installGpuDriver(@Nullable Boolean installGpuDriver) {
             this.installGpuDriver = Output.ofNullable(installGpuDriver);
             return this;
         }
-
         public Builder notebookUpgradeSchedule(@Nullable Output<String> notebookUpgradeSchedule) {
             this.notebookUpgradeSchedule = notebookUpgradeSchedule;
             return this;
         }
-
         public Builder notebookUpgradeSchedule(@Nullable String notebookUpgradeSchedule) {
             this.notebookUpgradeSchedule = Output.ofNullable(notebookUpgradeSchedule);
             return this;
         }
-
         public Builder postStartupScript(@Nullable Output<String> postStartupScript) {
             this.postStartupScript = postStartupScript;
             return this;
         }
-
         public Builder postStartupScript(@Nullable String postStartupScript) {
             this.postStartupScript = Output.ofNullable(postStartupScript);
             return this;
-        }
-        public RuntimeSoftwareConfigGetArgs build() {
+        }        public RuntimeSoftwareConfigGetArgs build() {
             return new RuntimeSoftwareConfigGetArgs(customGpuDriverPath, enableHealthMonitoring, idleShutdown, idleShutdownTimeout, installGpuDriver, notebookUpgradeSchedule, postStartupScript);
         }
     }

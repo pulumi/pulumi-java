@@ -136,52 +136,42 @@ public final class OccurenceArgs extends io.pulumi.resources.ResourceArgs {
             this.attestation = Objects.requireNonNull(attestation);
             return this;
         }
-
         public Builder attestation(OccurenceAttestationArgs attestation) {
             this.attestation = Output.of(Objects.requireNonNull(attestation));
             return this;
         }
-
         public Builder noteName(Output<String> noteName) {
             this.noteName = Objects.requireNonNull(noteName);
             return this;
         }
-
         public Builder noteName(String noteName) {
             this.noteName = Output.of(Objects.requireNonNull(noteName));
             return this;
         }
-
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
         }
-
         public Builder remediation(@Nullable Output<String> remediation) {
             this.remediation = remediation;
             return this;
         }
-
         public Builder remediation(@Nullable String remediation) {
             this.remediation = Output.ofNullable(remediation);
             return this;
         }
-
         public Builder resourceUri(Output<String> resourceUri) {
             this.resourceUri = Objects.requireNonNull(resourceUri);
             return this;
         }
-
         public Builder resourceUri(String resourceUri) {
             this.resourceUri = Output.of(Objects.requireNonNull(resourceUri));
             return this;
-        }
-        public OccurenceArgs build() {
+        }        public OccurenceArgs build() {
             return new OccurenceArgs(attestation, noteName, project, remediation, resourceUri);
         }
     }

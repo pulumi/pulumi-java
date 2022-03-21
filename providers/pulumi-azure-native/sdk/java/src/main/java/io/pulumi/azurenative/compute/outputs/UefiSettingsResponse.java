@@ -71,12 +71,10 @@ public final class UefiSettingsResponse {
             this.secureBootEnabled = secureBootEnabled;
             return this;
         }
-
         public Builder vTpmEnabled(@Nullable Boolean vTpmEnabled) {
             this.vTpmEnabled = vTpmEnabled;
             return this;
-        }
-        public UefiSettingsResponse build() {
+        }        public UefiSettingsResponse build() {
             return new UefiSettingsResponse(secureBootEnabled, vTpmEnabled);
         }
     }

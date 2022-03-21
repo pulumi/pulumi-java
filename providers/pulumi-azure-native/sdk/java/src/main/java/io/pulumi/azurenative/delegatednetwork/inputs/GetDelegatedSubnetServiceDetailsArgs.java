@@ -72,12 +72,10 @@ public final class GetDelegatedSubnetServiceDetailsArgs extends io.pulumi.resour
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceName(String resourceName) {
             this.resourceName = Objects.requireNonNull(resourceName);
             return this;
-        }
-        public GetDelegatedSubnetServiceDetailsArgs build() {
+        }        public GetDelegatedSubnetServiceDetailsArgs build() {
             return new GetDelegatedSubnetServiceDetailsArgs(resourceGroupName, resourceName);
         }
     }

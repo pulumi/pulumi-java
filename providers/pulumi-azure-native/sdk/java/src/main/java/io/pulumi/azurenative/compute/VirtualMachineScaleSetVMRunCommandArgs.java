@@ -288,152 +288,128 @@ public final class VirtualMachineScaleSetVMRunCommandArgs extends io.pulumi.reso
             this.asyncExecution = asyncExecution;
             return this;
         }
-
         public Builder asyncExecution(@Nullable Boolean asyncExecution) {
             this.asyncExecution = Output.ofNullable(asyncExecution);
             return this;
         }
-
         public Builder errorBlobUri(@Nullable Output<String> errorBlobUri) {
             this.errorBlobUri = errorBlobUri;
             return this;
         }
-
         public Builder errorBlobUri(@Nullable String errorBlobUri) {
             this.errorBlobUri = Output.ofNullable(errorBlobUri);
             return this;
         }
-
         public Builder instanceId(Output<String> instanceId) {
             this.instanceId = Objects.requireNonNull(instanceId);
             return this;
         }
-
         public Builder instanceId(String instanceId) {
             this.instanceId = Output.of(Objects.requireNonNull(instanceId));
             return this;
         }
-
         public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder outputBlobUri(@Nullable Output<String> outputBlobUri) {
             this.outputBlobUri = outputBlobUri;
             return this;
         }
-
         public Builder outputBlobUri(@Nullable String outputBlobUri) {
             this.outputBlobUri = Output.ofNullable(outputBlobUri);
             return this;
         }
-
         public Builder parameters(@Nullable Output<List<RunCommandInputParameterArgs>> parameters) {
             this.parameters = parameters;
             return this;
         }
-
         public Builder parameters(@Nullable List<RunCommandInputParameterArgs> parameters) {
             this.parameters = Output.ofNullable(parameters);
             return this;
         }
-
+        public Builder parameters(RunCommandInputParameterArgs... parameters) {
+            return parameters(List.of(parameters));
+        }
         public Builder protectedParameters(@Nullable Output<List<RunCommandInputParameterArgs>> protectedParameters) {
             this.protectedParameters = protectedParameters;
             return this;
         }
-
         public Builder protectedParameters(@Nullable List<RunCommandInputParameterArgs> protectedParameters) {
             this.protectedParameters = Output.ofNullable(protectedParameters);
             return this;
         }
-
+        public Builder protectedParameters(RunCommandInputParameterArgs... protectedParameters) {
+            return protectedParameters(List.of(protectedParameters));
+        }
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder runAsPassword(@Nullable Output<String> runAsPassword) {
             this.runAsPassword = runAsPassword;
             return this;
         }
-
         public Builder runAsPassword(@Nullable String runAsPassword) {
             this.runAsPassword = Output.ofNullable(runAsPassword);
             return this;
         }
-
         public Builder runAsUser(@Nullable Output<String> runAsUser) {
             this.runAsUser = runAsUser;
             return this;
         }
-
         public Builder runAsUser(@Nullable String runAsUser) {
             this.runAsUser = Output.ofNullable(runAsUser);
             return this;
         }
-
         public Builder runCommandName(@Nullable Output<String> runCommandName) {
             this.runCommandName = runCommandName;
             return this;
         }
-
         public Builder runCommandName(@Nullable String runCommandName) {
             this.runCommandName = Output.ofNullable(runCommandName);
             return this;
         }
-
         public Builder source(@Nullable Output<VirtualMachineRunCommandScriptSourceArgs> source) {
             this.source = source;
             return this;
         }
-
         public Builder source(@Nullable VirtualMachineRunCommandScriptSourceArgs source) {
             this.source = Output.ofNullable(source);
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
         public Builder timeoutInSeconds(@Nullable Output<Integer> timeoutInSeconds) {
             this.timeoutInSeconds = timeoutInSeconds;
             return this;
         }
-
         public Builder timeoutInSeconds(@Nullable Integer timeoutInSeconds) {
             this.timeoutInSeconds = Output.ofNullable(timeoutInSeconds);
             return this;
         }
-
         public Builder vmScaleSetName(Output<String> vmScaleSetName) {
             this.vmScaleSetName = Objects.requireNonNull(vmScaleSetName);
             return this;
         }
-
         public Builder vmScaleSetName(String vmScaleSetName) {
             this.vmScaleSetName = Output.of(Objects.requireNonNull(vmScaleSetName));
             return this;
-        }
-        public VirtualMachineScaleSetVMRunCommandArgs build() {
+        }        public VirtualMachineScaleSetVMRunCommandArgs build() {
             return new VirtualMachineScaleSetVMRunCommandArgs(asyncExecution, errorBlobUri, instanceId, location, outputBlobUri, parameters, protectedParameters, resourceGroupName, runAsPassword, runAsUser, runCommandName, source, tags, timeoutInSeconds, vmScaleSetName);
         }
     }

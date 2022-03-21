@@ -88,17 +88,14 @@ public final class GetFactoryDataPlaneAccessResult {
             this.accessToken = accessToken;
             return this;
         }
-
         public Builder dataPlaneUrl(@Nullable String dataPlaneUrl) {
             this.dataPlaneUrl = dataPlaneUrl;
             return this;
         }
-
         public Builder policy(@Nullable UserAccessPolicyResponse policy) {
             this.policy = policy;
             return this;
-        }
-        public GetFactoryDataPlaneAccessResult build() {
+        }        public GetFactoryDataPlaneAccessResult build() {
             return new GetFactoryDataPlaneAccessResult(accessToken, dataPlaneUrl, policy);
         }
     }

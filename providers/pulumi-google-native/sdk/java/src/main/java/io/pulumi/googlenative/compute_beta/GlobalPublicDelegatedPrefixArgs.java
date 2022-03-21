@@ -165,82 +165,69 @@ public final class GlobalPublicDelegatedPrefixArgs extends io.pulumi.resources.R
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder ipCidrRange(@Nullable Output<String> ipCidrRange) {
             this.ipCidrRange = ipCidrRange;
             return this;
         }
-
         public Builder ipCidrRange(@Nullable String ipCidrRange) {
             this.ipCidrRange = Output.ofNullable(ipCidrRange);
             return this;
         }
-
         public Builder isLiveMigration(@Nullable Output<Boolean> isLiveMigration) {
             this.isLiveMigration = isLiveMigration;
             return this;
         }
-
         public Builder isLiveMigration(@Nullable Boolean isLiveMigration) {
             this.isLiveMigration = Output.ofNullable(isLiveMigration);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder parentPrefix(@Nullable Output<String> parentPrefix) {
             this.parentPrefix = parentPrefix;
             return this;
         }
-
         public Builder parentPrefix(@Nullable String parentPrefix) {
             this.parentPrefix = Output.ofNullable(parentPrefix);
             return this;
         }
-
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
         }
-
         public Builder publicDelegatedSubPrefixs(@Nullable Output<List<PublicDelegatedPrefixPublicDelegatedSubPrefixArgs>> publicDelegatedSubPrefixs) {
             this.publicDelegatedSubPrefixs = publicDelegatedSubPrefixs;
             return this;
         }
-
         public Builder publicDelegatedSubPrefixs(@Nullable List<PublicDelegatedPrefixPublicDelegatedSubPrefixArgs> publicDelegatedSubPrefixs) {
             this.publicDelegatedSubPrefixs = Output.ofNullable(publicDelegatedSubPrefixs);
             return this;
         }
-
+        public Builder publicDelegatedSubPrefixs(PublicDelegatedPrefixPublicDelegatedSubPrefixArgs... publicDelegatedSubPrefixs) {
+            return publicDelegatedSubPrefixs(List.of(publicDelegatedSubPrefixs));
+        }
         public Builder requestId(@Nullable Output<String> requestId) {
             this.requestId = requestId;
             return this;
         }
-
         public Builder requestId(@Nullable String requestId) {
             this.requestId = Output.ofNullable(requestId);
             return this;
-        }
-        public GlobalPublicDelegatedPrefixArgs build() {
+        }        public GlobalPublicDelegatedPrefixArgs build() {
             return new GlobalPublicDelegatedPrefixArgs(description, ipCidrRange, isLiveMigration, name, parentPrefix, project, publicDelegatedSubPrefixs, requestId);
         }
     }

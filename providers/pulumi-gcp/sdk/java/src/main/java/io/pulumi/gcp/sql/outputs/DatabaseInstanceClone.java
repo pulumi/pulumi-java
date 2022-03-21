@@ -71,12 +71,10 @@ public final class DatabaseInstanceClone {
             this.pointInTime = pointInTime;
             return this;
         }
-
         public Builder sourceInstanceName(String sourceInstanceName) {
             this.sourceInstanceName = Objects.requireNonNull(sourceInstanceName);
             return this;
-        }
-        public DatabaseInstanceClone build() {
+        }        public DatabaseInstanceClone build() {
             return new DatabaseInstanceClone(pointInTime, sourceInstanceName);
         }
     }

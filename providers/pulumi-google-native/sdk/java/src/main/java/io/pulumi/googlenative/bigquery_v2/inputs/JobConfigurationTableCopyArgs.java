@@ -174,82 +174,69 @@ public final class JobConfigurationTableCopyArgs extends io.pulumi.resources.Res
             this.createDisposition = createDisposition;
             return this;
         }
-
         public Builder createDisposition(@Nullable String createDisposition) {
             this.createDisposition = Output.ofNullable(createDisposition);
             return this;
         }
-
         public Builder destinationEncryptionConfiguration(@Nullable Output<EncryptionConfigurationArgs> destinationEncryptionConfiguration) {
             this.destinationEncryptionConfiguration = destinationEncryptionConfiguration;
             return this;
         }
-
         public Builder destinationEncryptionConfiguration(@Nullable EncryptionConfigurationArgs destinationEncryptionConfiguration) {
             this.destinationEncryptionConfiguration = Output.ofNullable(destinationEncryptionConfiguration);
             return this;
         }
-
         public Builder destinationExpirationTime(@Nullable Output<Object> destinationExpirationTime) {
             this.destinationExpirationTime = destinationExpirationTime;
             return this;
         }
-
         public Builder destinationExpirationTime(@Nullable Object destinationExpirationTime) {
             this.destinationExpirationTime = Output.ofNullable(destinationExpirationTime);
             return this;
         }
-
         public Builder destinationTable(@Nullable Output<TableReferenceArgs> destinationTable) {
             this.destinationTable = destinationTable;
             return this;
         }
-
         public Builder destinationTable(@Nullable TableReferenceArgs destinationTable) {
             this.destinationTable = Output.ofNullable(destinationTable);
             return this;
         }
-
         public Builder operationType(@Nullable Output<String> operationType) {
             this.operationType = operationType;
             return this;
         }
-
         public Builder operationType(@Nullable String operationType) {
             this.operationType = Output.ofNullable(operationType);
             return this;
         }
-
         public Builder sourceTable(@Nullable Output<TableReferenceArgs> sourceTable) {
             this.sourceTable = sourceTable;
             return this;
         }
-
         public Builder sourceTable(@Nullable TableReferenceArgs sourceTable) {
             this.sourceTable = Output.ofNullable(sourceTable);
             return this;
         }
-
         public Builder sourceTables(@Nullable Output<List<TableReferenceArgs>> sourceTables) {
             this.sourceTables = sourceTables;
             return this;
         }
-
         public Builder sourceTables(@Nullable List<TableReferenceArgs> sourceTables) {
             this.sourceTables = Output.ofNullable(sourceTables);
             return this;
         }
-
+        public Builder sourceTables(TableReferenceArgs... sourceTables) {
+            return sourceTables(List.of(sourceTables));
+        }
         public Builder writeDisposition(@Nullable Output<String> writeDisposition) {
             this.writeDisposition = writeDisposition;
             return this;
         }
-
         public Builder writeDisposition(@Nullable String writeDisposition) {
             this.writeDisposition = Output.ofNullable(writeDisposition);
             return this;
-        }
-        public JobConfigurationTableCopyArgs build() {
+        }        public JobConfigurationTableCopyArgs build() {
             return new JobConfigurationTableCopyArgs(createDisposition, destinationEncryptionConfiguration, destinationExpirationTime, destinationTable, operationType, sourceTable, sourceTables, writeDisposition);
         }
     }

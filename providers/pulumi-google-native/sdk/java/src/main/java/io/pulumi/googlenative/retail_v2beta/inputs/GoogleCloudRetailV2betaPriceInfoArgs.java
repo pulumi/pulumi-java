@@ -143,62 +143,50 @@ public final class GoogleCloudRetailV2betaPriceInfoArgs extends io.pulumi.resour
             this.cost = cost;
             return this;
         }
-
         public Builder cost(@Nullable Double cost) {
             this.cost = Output.ofNullable(cost);
             return this;
         }
-
         public Builder currencyCode(@Nullable Output<String> currencyCode) {
             this.currencyCode = currencyCode;
             return this;
         }
-
         public Builder currencyCode(@Nullable String currencyCode) {
             this.currencyCode = Output.ofNullable(currencyCode);
             return this;
         }
-
         public Builder originalPrice(@Nullable Output<Double> originalPrice) {
             this.originalPrice = originalPrice;
             return this;
         }
-
         public Builder originalPrice(@Nullable Double originalPrice) {
             this.originalPrice = Output.ofNullable(originalPrice);
             return this;
         }
-
         public Builder price(@Nullable Output<Double> price) {
             this.price = price;
             return this;
         }
-
         public Builder price(@Nullable Double price) {
             this.price = Output.ofNullable(price);
             return this;
         }
-
         public Builder priceEffectiveTime(@Nullable Output<String> priceEffectiveTime) {
             this.priceEffectiveTime = priceEffectiveTime;
             return this;
         }
-
         public Builder priceEffectiveTime(@Nullable String priceEffectiveTime) {
             this.priceEffectiveTime = Output.ofNullable(priceEffectiveTime);
             return this;
         }
-
         public Builder priceExpireTime(@Nullable Output<String> priceExpireTime) {
             this.priceExpireTime = priceExpireTime;
             return this;
         }
-
         public Builder priceExpireTime(@Nullable String priceExpireTime) {
             this.priceExpireTime = Output.ofNullable(priceExpireTime);
             return this;
-        }
-        public GoogleCloudRetailV2betaPriceInfoArgs build() {
+        }        public GoogleCloudRetailV2betaPriceInfoArgs build() {
             return new GoogleCloudRetailV2betaPriceInfoArgs(cost, currencyCode, originalPrice, price, priceEffectiveTime, priceExpireTime);
         }
     }

@@ -84,32 +84,26 @@ public final class BotFulfillmentCodeHookSettingArgs extends io.pulumi.resources
             this.enabled = Objects.requireNonNull(enabled);
             return this;
         }
-
         public Builder enabled(Boolean enabled) {
             this.enabled = Output.of(Objects.requireNonNull(enabled));
             return this;
         }
-
         public Builder fulfillmentUpdatesSpecification(@Nullable Output<BotFulfillmentUpdatesSpecificationArgs> fulfillmentUpdatesSpecification) {
             this.fulfillmentUpdatesSpecification = fulfillmentUpdatesSpecification;
             return this;
         }
-
         public Builder fulfillmentUpdatesSpecification(@Nullable BotFulfillmentUpdatesSpecificationArgs fulfillmentUpdatesSpecification) {
             this.fulfillmentUpdatesSpecification = Output.ofNullable(fulfillmentUpdatesSpecification);
             return this;
         }
-
         public Builder postFulfillmentStatusSpecification(@Nullable Output<BotPostFulfillmentStatusSpecificationArgs> postFulfillmentStatusSpecification) {
             this.postFulfillmentStatusSpecification = postFulfillmentStatusSpecification;
             return this;
         }
-
         public Builder postFulfillmentStatusSpecification(@Nullable BotPostFulfillmentStatusSpecificationArgs postFulfillmentStatusSpecification) {
             this.postFulfillmentStatusSpecification = Output.ofNullable(postFulfillmentStatusSpecification);
             return this;
-        }
-        public BotFulfillmentCodeHookSettingArgs build() {
+        }        public BotFulfillmentCodeHookSettingArgs build() {
             return new BotFulfillmentCodeHookSettingArgs(enabled, fulfillmentUpdatesSpecification, postFulfillmentStatusSpecification);
         }
     }

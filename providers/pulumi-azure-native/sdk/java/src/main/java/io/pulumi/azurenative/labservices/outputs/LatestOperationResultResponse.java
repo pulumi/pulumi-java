@@ -133,32 +133,26 @@ public final class LatestOperationResultResponse {
             this.errorCode = Objects.requireNonNull(errorCode);
             return this;
         }
-
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = Objects.requireNonNull(errorMessage);
             return this;
         }
-
         public Builder httpMethod(String httpMethod) {
             this.httpMethod = Objects.requireNonNull(httpMethod);
             return this;
         }
-
         public Builder operationUrl(String operationUrl) {
             this.operationUrl = Objects.requireNonNull(operationUrl);
             return this;
         }
-
         public Builder requestUri(String requestUri) {
             this.requestUri = Objects.requireNonNull(requestUri);
             return this;
         }
-
         public Builder status(String status) {
             this.status = Objects.requireNonNull(status);
             return this;
-        }
-        public LatestOperationResultResponse build() {
+        }        public LatestOperationResultResponse build() {
             return new LatestOperationResultResponse(errorCode, errorMessage, httpMethod, operationUrl, requestUri, status);
         }
     }

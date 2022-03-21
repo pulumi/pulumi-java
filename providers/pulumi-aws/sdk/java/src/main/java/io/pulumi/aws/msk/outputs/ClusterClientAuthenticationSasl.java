@@ -71,12 +71,10 @@ public final class ClusterClientAuthenticationSasl {
             this.iam = iam;
             return this;
         }
-
         public Builder scram(@Nullable Boolean scram) {
             this.scram = scram;
             return this;
-        }
-        public ClusterClientAuthenticationSasl build() {
+        }        public ClusterClientAuthenticationSasl build() {
             return new ClusterClientAuthenticationSasl(iam, scram);
         }
     }

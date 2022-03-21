@@ -88,17 +88,14 @@ public final class GetManagedDatabaseArgs extends io.pulumi.resources.InvokeArgs
             this.databaseName = Objects.requireNonNull(databaseName);
             return this;
         }
-
         public Builder managedInstanceName(String managedInstanceName) {
             this.managedInstanceName = Objects.requireNonNull(managedInstanceName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
-        }
-        public GetManagedDatabaseArgs build() {
+        }        public GetManagedDatabaseArgs build() {
             return new GetManagedDatabaseArgs(databaseName, managedInstanceName, resourceGroupName);
         }
     }

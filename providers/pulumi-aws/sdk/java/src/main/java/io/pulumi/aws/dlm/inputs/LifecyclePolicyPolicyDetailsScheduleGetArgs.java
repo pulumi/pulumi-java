@@ -144,62 +144,53 @@ public final class LifecyclePolicyPolicyDetailsScheduleGetArgs extends io.pulumi
             this.copyTags = copyTags;
             return this;
         }
-
         public Builder copyTags(@Nullable Boolean copyTags) {
             this.copyTags = Output.ofNullable(copyTags);
             return this;
         }
-
         public Builder createRule(Output<LifecyclePolicyPolicyDetailsScheduleCreateRuleGetArgs> createRule) {
             this.createRule = Objects.requireNonNull(createRule);
             return this;
         }
-
         public Builder createRule(LifecyclePolicyPolicyDetailsScheduleCreateRuleGetArgs createRule) {
             this.createRule = Output.of(Objects.requireNonNull(createRule));
             return this;
         }
-
         public Builder crossRegionCopyRules(@Nullable Output<List<LifecyclePolicyPolicyDetailsScheduleCrossRegionCopyRuleGetArgs>> crossRegionCopyRules) {
             this.crossRegionCopyRules = crossRegionCopyRules;
             return this;
         }
-
         public Builder crossRegionCopyRules(@Nullable List<LifecyclePolicyPolicyDetailsScheduleCrossRegionCopyRuleGetArgs> crossRegionCopyRules) {
             this.crossRegionCopyRules = Output.ofNullable(crossRegionCopyRules);
             return this;
         }
-
+        public Builder crossRegionCopyRules(LifecyclePolicyPolicyDetailsScheduleCrossRegionCopyRuleGetArgs... crossRegionCopyRules) {
+            return crossRegionCopyRules(List.of(crossRegionCopyRules));
+        }
         public Builder name(Output<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
-
         public Builder retainRule(Output<LifecyclePolicyPolicyDetailsScheduleRetainRuleGetArgs> retainRule) {
             this.retainRule = Objects.requireNonNull(retainRule);
             return this;
         }
-
         public Builder retainRule(LifecyclePolicyPolicyDetailsScheduleRetainRuleGetArgs retainRule) {
             this.retainRule = Output.of(Objects.requireNonNull(retainRule));
             return this;
         }
-
         public Builder tagsToAdd(@Nullable Output<Map<String,String>> tagsToAdd) {
             this.tagsToAdd = tagsToAdd;
             return this;
         }
-
         public Builder tagsToAdd(@Nullable Map<String,String> tagsToAdd) {
             this.tagsToAdd = Output.ofNullable(tagsToAdd);
             return this;
-        }
-        public LifecyclePolicyPolicyDetailsScheduleGetArgs build() {
+        }        public LifecyclePolicyPolicyDetailsScheduleGetArgs build() {
             return new LifecyclePolicyPolicyDetailsScheduleGetArgs(copyTags, createRule, crossRegionCopyRules, name, retainRule, tagsToAdd);
         }
     }

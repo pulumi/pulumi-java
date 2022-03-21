@@ -62,12 +62,13 @@ public final class GoogleCloudDialogflowCxV3FormArgs extends io.pulumi.resources
             this.parameters = parameters;
             return this;
         }
-
         public Builder parameters(@Nullable List<GoogleCloudDialogflowCxV3FormParameterArgs> parameters) {
             this.parameters = Output.ofNullable(parameters);
             return this;
         }
-        public GoogleCloudDialogflowCxV3FormArgs build() {
+        public Builder parameters(GoogleCloudDialogflowCxV3FormParameterArgs... parameters) {
+            return parameters(List.of(parameters));
+        }        public GoogleCloudDialogflowCxV3FormArgs build() {
             return new GoogleCloudDialogflowCxV3FormArgs(parameters);
         }
     }

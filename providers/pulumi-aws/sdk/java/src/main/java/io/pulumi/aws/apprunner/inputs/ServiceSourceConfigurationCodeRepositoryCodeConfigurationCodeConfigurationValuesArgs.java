@@ -123,52 +123,42 @@ public final class ServiceSourceConfigurationCodeRepositoryCodeConfigurationCode
             this.buildCommand = buildCommand;
             return this;
         }
-
         public Builder buildCommand(@Nullable String buildCommand) {
             this.buildCommand = Output.ofNullable(buildCommand);
             return this;
         }
-
         public Builder port(@Nullable Output<String> port) {
             this.port = port;
             return this;
         }
-
         public Builder port(@Nullable String port) {
             this.port = Output.ofNullable(port);
             return this;
         }
-
         public Builder runtime(Output<String> runtime) {
             this.runtime = Objects.requireNonNull(runtime);
             return this;
         }
-
         public Builder runtime(String runtime) {
             this.runtime = Output.of(Objects.requireNonNull(runtime));
             return this;
         }
-
         public Builder runtimeEnvironmentVariables(@Nullable Output<Map<String,String>> runtimeEnvironmentVariables) {
             this.runtimeEnvironmentVariables = runtimeEnvironmentVariables;
             return this;
         }
-
         public Builder runtimeEnvironmentVariables(@Nullable Map<String,String> runtimeEnvironmentVariables) {
             this.runtimeEnvironmentVariables = Output.ofNullable(runtimeEnvironmentVariables);
             return this;
         }
-
         public Builder startCommand(@Nullable Output<String> startCommand) {
             this.startCommand = startCommand;
             return this;
         }
-
         public Builder startCommand(@Nullable String startCommand) {
             this.startCommand = Output.ofNullable(startCommand);
             return this;
-        }
-        public ServiceSourceConfigurationCodeRepositoryCodeConfigurationCodeConfigurationValuesArgs build() {
+        }        public ServiceSourceConfigurationCodeRepositoryCodeConfigurationCodeConfigurationValuesArgs build() {
             return new ServiceSourceConfigurationCodeRepositoryCodeConfigurationCodeConfigurationValuesArgs(buildCommand, port, runtime, runtimeEnvironmentVariables, startCommand);
         }
     }

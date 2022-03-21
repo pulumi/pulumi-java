@@ -53,12 +53,10 @@ public final class StateMachineTracingConfigurationArgs extends io.pulumi.resour
             this.enabled = enabled;
             return this;
         }
-
         public Builder enabled(@Nullable Boolean enabled) {
             this.enabled = Output.ofNullable(enabled);
             return this;
-        }
-        public StateMachineTracingConfigurationArgs build() {
+        }        public StateMachineTracingConfigurationArgs build() {
             return new StateMachineTracingConfigurationArgs(enabled);
         }
     }

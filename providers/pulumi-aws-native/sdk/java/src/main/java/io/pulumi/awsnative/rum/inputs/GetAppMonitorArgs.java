@@ -54,8 +54,7 @@ public final class GetAppMonitorArgs extends io.pulumi.resources.InvokeArgs {
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
-        }
-        public GetAppMonitorArgs build() {
+        }        public GetAppMonitorArgs build() {
             return new GetAppMonitorArgs(name);
         }
     }

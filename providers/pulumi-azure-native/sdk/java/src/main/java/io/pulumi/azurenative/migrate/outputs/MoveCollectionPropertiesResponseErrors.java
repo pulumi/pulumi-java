@@ -53,8 +53,7 @@ public final class MoveCollectionPropertiesResponseErrors {
         public Builder properties(@Nullable MoveResourceErrorBodyResponse properties) {
             this.properties = properties;
             return this;
-        }
-        public MoveCollectionPropertiesResponseErrors build() {
+        }        public MoveCollectionPropertiesResponseErrors build() {
             return new MoveCollectionPropertiesResponseErrors(properties);
         }
     }

@@ -171,42 +171,34 @@ public final class DeploymentSpec {
             this.minReadySeconds = minReadySeconds;
             return this;
         }
-
         public Builder paused(@Nullable Boolean paused) {
             this.paused = paused;
             return this;
         }
-
         public Builder progressDeadlineSeconds(@Nullable Integer progressDeadlineSeconds) {
             this.progressDeadlineSeconds = progressDeadlineSeconds;
             return this;
         }
-
         public Builder replicas(@Nullable Integer replicas) {
             this.replicas = replicas;
             return this;
         }
-
         public Builder revisionHistoryLimit(@Nullable Integer revisionHistoryLimit) {
             this.revisionHistoryLimit = revisionHistoryLimit;
             return this;
         }
-
         public Builder selector(LabelSelector selector) {
             this.selector = Objects.requireNonNull(selector);
             return this;
         }
-
         public Builder strategy(@Nullable DeploymentStrategy strategy) {
             this.strategy = strategy;
             return this;
         }
-
         public Builder template(PodTemplateSpec template) {
             this.template = Objects.requireNonNull(template);
             return this;
-        }
-        public DeploymentSpec build() {
+        }        public DeploymentSpec build() {
             return new DeploymentSpec(minReadySeconds, paused, progressDeadlineSeconds, replicas, revisionHistoryLimit, selector, strategy, template);
         }
     }

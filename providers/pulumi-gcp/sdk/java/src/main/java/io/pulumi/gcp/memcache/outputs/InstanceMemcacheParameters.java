@@ -74,12 +74,10 @@ public final class InstanceMemcacheParameters {
             this.id = id;
             return this;
         }
-
         public Builder params(@Nullable Map<String,String> params) {
             this.params = params;
             return this;
-        }
-        public InstanceMemcacheParameters build() {
+        }        public InstanceMemcacheParameters build() {
             return new InstanceMemcacheParameters(id, params);
         }
     }

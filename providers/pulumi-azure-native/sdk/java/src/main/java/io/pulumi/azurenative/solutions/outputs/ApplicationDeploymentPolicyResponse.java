@@ -51,8 +51,7 @@ public final class ApplicationDeploymentPolicyResponse {
         public Builder deploymentMode(String deploymentMode) {
             this.deploymentMode = Objects.requireNonNull(deploymentMode);
             return this;
-        }
-        public ApplicationDeploymentPolicyResponse build() {
+        }        public ApplicationDeploymentPolicyResponse build() {
             return new ApplicationDeploymentPolicyResponse(deploymentMode);
         }
     }

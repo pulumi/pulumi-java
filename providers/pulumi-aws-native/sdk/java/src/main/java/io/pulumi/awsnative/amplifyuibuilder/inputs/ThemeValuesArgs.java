@@ -67,22 +67,18 @@ public final class ThemeValuesArgs extends io.pulumi.resources.ResourceArgs {
             this.key = key;
             return this;
         }
-
         public Builder key(@Nullable String key) {
             this.key = Output.ofNullable(key);
             return this;
         }
-
         public Builder value(@Nullable Output<ThemeValueArgs> value) {
             this.value = value;
             return this;
         }
-
         public Builder value(@Nullable ThemeValueArgs value) {
             this.value = Output.ofNullable(value);
             return this;
-        }
-        public ThemeValuesArgs build() {
+        }        public ThemeValuesArgs build() {
             return new ThemeValuesArgs(key, value);
         }
     }

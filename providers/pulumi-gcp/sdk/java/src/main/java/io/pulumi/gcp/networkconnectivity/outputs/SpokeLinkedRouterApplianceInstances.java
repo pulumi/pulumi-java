@@ -71,12 +71,13 @@ public final class SpokeLinkedRouterApplianceInstances {
             this.instances = Objects.requireNonNull(instances);
             return this;
         }
-
+        public Builder instances(SpokeLinkedRouterApplianceInstancesInstance... instances) {
+            return instances(List.of(instances));
+        }
         public Builder siteToSiteDataTransfer(Boolean siteToSiteDataTransfer) {
             this.siteToSiteDataTransfer = Objects.requireNonNull(siteToSiteDataTransfer);
             return this;
-        }
-        public SpokeLinkedRouterApplianceInstances build() {
+        }        public SpokeLinkedRouterApplianceInstances build() {
             return new SpokeLinkedRouterApplianceInstances(instances, siteToSiteDataTransfer);
         }
     }

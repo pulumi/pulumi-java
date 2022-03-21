@@ -72,12 +72,10 @@ public final class ListOrderDCAccessCodeArgs extends io.pulumi.resources.InvokeA
             this.deviceName = Objects.requireNonNull(deviceName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
-        }
-        public ListOrderDCAccessCodeArgs build() {
+        }        public ListOrderDCAccessCodeArgs build() {
             return new ListOrderDCAccessCodeArgs(deviceName, resourceGroupName);
         }
     }

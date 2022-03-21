@@ -72,12 +72,10 @@ public final class ProtectionStatusDetailsResponse {
             this.errorDetails = errorDetails;
             return this;
         }
-
         public Builder status(@Nullable String status) {
             this.status = status;
             return this;
-        }
-        public ProtectionStatusDetailsResponse build() {
+        }        public ProtectionStatusDetailsResponse build() {
             return new ProtectionStatusDetailsResponse(errorDetails, status);
         }
     }

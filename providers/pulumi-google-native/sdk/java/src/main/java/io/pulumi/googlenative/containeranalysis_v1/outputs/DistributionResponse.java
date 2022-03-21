@@ -134,32 +134,26 @@ public final class DistributionResponse {
             this.architecture = Objects.requireNonNull(architecture);
             return this;
         }
-
         public Builder cpeUri(String cpeUri) {
             this.cpeUri = Objects.requireNonNull(cpeUri);
             return this;
         }
-
         public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
-
         public Builder latestVersion(VersionResponse latestVersion) {
             this.latestVersion = Objects.requireNonNull(latestVersion);
             return this;
         }
-
         public Builder maintainer(String maintainer) {
             this.maintainer = Objects.requireNonNull(maintainer);
             return this;
         }
-
         public Builder url(String url) {
             this.url = Objects.requireNonNull(url);
             return this;
-        }
-        public DistributionResponse build() {
+        }        public DistributionResponse build() {
             return new DistributionResponse(architecture, cpeUri, description, latestVersion, maintainer, url);
         }
     }

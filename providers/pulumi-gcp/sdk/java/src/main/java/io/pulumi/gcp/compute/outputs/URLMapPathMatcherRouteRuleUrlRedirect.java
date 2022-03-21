@@ -180,32 +180,26 @@ public final class URLMapPathMatcherRouteRuleUrlRedirect {
             this.hostRedirect = hostRedirect;
             return this;
         }
-
         public Builder httpsRedirect(@Nullable Boolean httpsRedirect) {
             this.httpsRedirect = httpsRedirect;
             return this;
         }
-
         public Builder pathRedirect(@Nullable String pathRedirect) {
             this.pathRedirect = pathRedirect;
             return this;
         }
-
         public Builder prefixRedirect(@Nullable String prefixRedirect) {
             this.prefixRedirect = prefixRedirect;
             return this;
         }
-
         public Builder redirectResponseCode(@Nullable String redirectResponseCode) {
             this.redirectResponseCode = redirectResponseCode;
             return this;
         }
-
         public Builder stripQuery(@Nullable Boolean stripQuery) {
             this.stripQuery = stripQuery;
             return this;
-        }
-        public URLMapPathMatcherRouteRuleUrlRedirect build() {
+        }        public URLMapPathMatcherRouteRuleUrlRedirect build() {
             return new URLMapPathMatcherRouteRuleUrlRedirect(hostRedirect, httpsRedirect, pathRedirect, prefixRedirect, redirectResponseCode, stripQuery);
         }
     }

@@ -95,17 +95,14 @@ public final class StorageQueueEventSubscriptionDestinationResponse extends io.p
             this.endpointType = Objects.requireNonNull(endpointType);
             return this;
         }
-
         public Builder queueName(@Nullable String queueName) {
             this.queueName = queueName;
             return this;
         }
-
         public Builder resourceId(@Nullable String resourceId) {
             this.resourceId = resourceId;
             return this;
-        }
-        public StorageQueueEventSubscriptionDestinationResponse build() {
+        }        public StorageQueueEventSubscriptionDestinationResponse build() {
             return new StorageQueueEventSubscriptionDestinationResponse(endpointType, queueName, resourceId);
         }
     }

@@ -99,37 +99,39 @@ public final class GetListenerResult {
             this.alpnPolicy = alpnPolicy;
             return this;
         }
-
+        public Builder alpnPolicy(String... alpnPolicy) {
+            return alpnPolicy(List.of(alpnPolicy));
+        }
         public Builder certificates(@Nullable List<ListenerCertificate> certificates) {
             this.certificates = certificates;
             return this;
         }
-
+        public Builder certificates(ListenerCertificate... certificates) {
+            return certificates(List.of(certificates));
+        }
         public Builder defaultActions(@Nullable List<ListenerAction> defaultActions) {
             this.defaultActions = defaultActions;
             return this;
         }
-
+        public Builder defaultActions(ListenerAction... defaultActions) {
+            return defaultActions(List.of(defaultActions));
+        }
         public Builder listenerArn(@Nullable String listenerArn) {
             this.listenerArn = listenerArn;
             return this;
         }
-
         public Builder port(@Nullable Integer port) {
             this.port = port;
             return this;
         }
-
         public Builder protocol(@Nullable String protocol) {
             this.protocol = protocol;
             return this;
         }
-
         public Builder sslPolicy(@Nullable String sslPolicy) {
             this.sslPolicy = sslPolicy;
             return this;
-        }
-        public GetListenerResult build() {
+        }        public GetListenerResult build() {
             return new GetListenerResult(alpnPolicy, certificates, defaultActions, listenerArn, port, protocol, sslPolicy);
         }
     }

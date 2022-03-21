@@ -56,12 +56,10 @@ public final class GCPolicyMaxVersionGetArgs extends io.pulumi.resources.Resourc
             this.number = Objects.requireNonNull(number);
             return this;
         }
-
         public Builder number(Integer number) {
             this.number = Output.of(Objects.requireNonNull(number));
             return this;
-        }
-        public GCPolicyMaxVersionGetArgs build() {
+        }        public GCPolicyMaxVersionGetArgs build() {
             return new GCPolicyMaxVersionGetArgs(number);
         }
     }

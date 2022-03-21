@@ -165,47 +165,44 @@ public final class AnomalyDetectorMetricSet {
             this.dimensionList = dimensionList;
             return this;
         }
-
+        public Builder dimensionList(String... dimensionList) {
+            return dimensionList(List.of(dimensionList));
+        }
         public Builder metricList(List<AnomalyDetectorMetric> metricList) {
             this.metricList = Objects.requireNonNull(metricList);
             return this;
         }
-
+        public Builder metricList(AnomalyDetectorMetric... metricList) {
+            return metricList(List.of(metricList));
+        }
         public Builder metricSetDescription(@Nullable String metricSetDescription) {
             this.metricSetDescription = metricSetDescription;
             return this;
         }
-
         public Builder metricSetFrequency(@Nullable AnomalyDetectorMetricSetMetricSetFrequency metricSetFrequency) {
             this.metricSetFrequency = metricSetFrequency;
             return this;
         }
-
         public Builder metricSetName(String metricSetName) {
             this.metricSetName = Objects.requireNonNull(metricSetName);
             return this;
         }
-
         public Builder metricSource(AnomalyDetectorMetricSource metricSource) {
             this.metricSource = Objects.requireNonNull(metricSource);
             return this;
         }
-
         public Builder offset(@Nullable Integer offset) {
             this.offset = offset;
             return this;
         }
-
         public Builder timestampColumn(@Nullable AnomalyDetectorTimestampColumn timestampColumn) {
             this.timestampColumn = timestampColumn;
             return this;
         }
-
         public Builder timezone(@Nullable String timezone) {
             this.timezone = timezone;
             return this;
-        }
-        public AnomalyDetectorMetricSet build() {
+        }        public AnomalyDetectorMetricSet build() {
             return new AnomalyDetectorMetricSet(dimensionList, metricList, metricSetDescription, metricSetFrequency, metricSetName, metricSource, offset, timestampColumn, timezone);
         }
     }

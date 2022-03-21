@@ -174,82 +174,69 @@ public final class RateBasedRuleState extends io.pulumi.resources.ResourceArgs {
             this.arn = arn;
             return this;
         }
-
         public Builder arn(@Nullable String arn) {
             this.arn = Output.ofNullable(arn);
             return this;
         }
-
         public Builder metricName(@Nullable Output<String> metricName) {
             this.metricName = metricName;
             return this;
         }
-
         public Builder metricName(@Nullable String metricName) {
             this.metricName = Output.ofNullable(metricName);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder predicates(@Nullable Output<List<RateBasedRulePredicateGetArgs>> predicates) {
             this.predicates = predicates;
             return this;
         }
-
         public Builder predicates(@Nullable List<RateBasedRulePredicateGetArgs> predicates) {
             this.predicates = Output.ofNullable(predicates);
             return this;
         }
-
+        public Builder predicates(RateBasedRulePredicateGetArgs... predicates) {
+            return predicates(List.of(predicates));
+        }
         public Builder rateKey(@Nullable Output<String> rateKey) {
             this.rateKey = rateKey;
             return this;
         }
-
         public Builder rateKey(@Nullable String rateKey) {
             this.rateKey = Output.ofNullable(rateKey);
             return this;
         }
-
         public Builder rateLimit(@Nullable Output<Integer> rateLimit) {
             this.rateLimit = rateLimit;
             return this;
         }
-
         public Builder rateLimit(@Nullable Integer rateLimit) {
             this.rateLimit = Output.ofNullable(rateLimit);
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
             this.tagsAll = tagsAll;
             return this;
         }
-
         public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
             this.tagsAll = Output.ofNullable(tagsAll);
             return this;
-        }
-        public RateBasedRuleState build() {
+        }        public RateBasedRuleState build() {
             return new RateBasedRuleState(arn, metricName, name, predicates, rateKey, rateLimit, tags, tagsAll);
         }
     }

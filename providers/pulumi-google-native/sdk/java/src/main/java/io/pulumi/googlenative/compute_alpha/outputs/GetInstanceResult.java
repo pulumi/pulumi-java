@@ -860,262 +860,228 @@ public final class GetInstanceResult {
             this.advancedMachineFeatures = Objects.requireNonNull(advancedMachineFeatures);
             return this;
         }
-
         public Builder canIpForward(Boolean canIpForward) {
             this.canIpForward = Objects.requireNonNull(canIpForward);
             return this;
         }
-
         public Builder confidentialInstanceConfig(ConfidentialInstanceConfigResponse confidentialInstanceConfig) {
             this.confidentialInstanceConfig = Objects.requireNonNull(confidentialInstanceConfig);
             return this;
         }
-
         public Builder cpuPlatform(String cpuPlatform) {
             this.cpuPlatform = Objects.requireNonNull(cpuPlatform);
             return this;
         }
-
         public Builder creationTimestamp(String creationTimestamp) {
             this.creationTimestamp = Objects.requireNonNull(creationTimestamp);
             return this;
         }
-
         public Builder deletionProtection(Boolean deletionProtection) {
             this.deletionProtection = Objects.requireNonNull(deletionProtection);
             return this;
         }
-
         public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
-
         public Builder disks(List<AttachedDiskResponse> disks) {
             this.disks = Objects.requireNonNull(disks);
             return this;
         }
-
+        public Builder disks(AttachedDiskResponse... disks) {
+            return disks(List.of(disks));
+        }
         public Builder displayDevice(DisplayDeviceResponse displayDevice) {
             this.displayDevice = Objects.requireNonNull(displayDevice);
             return this;
         }
-
         public Builder eraseWindowsVssSignature(Boolean eraseWindowsVssSignature) {
             this.eraseWindowsVssSignature = Objects.requireNonNull(eraseWindowsVssSignature);
             return this;
         }
-
         public Builder fingerprint(String fingerprint) {
             this.fingerprint = Objects.requireNonNull(fingerprint);
             return this;
         }
-
         public Builder guestAccelerators(List<AcceleratorConfigResponse> guestAccelerators) {
             this.guestAccelerators = Objects.requireNonNull(guestAccelerators);
             return this;
         }
-
+        public Builder guestAccelerators(AcceleratorConfigResponse... guestAccelerators) {
+            return guestAccelerators(List.of(guestAccelerators));
+        }
         public Builder hostname(String hostname) {
             this.hostname = Objects.requireNonNull(hostname);
             return this;
         }
-
         public Builder instanceEncryptionKey(CustomerEncryptionKeyResponse instanceEncryptionKey) {
             this.instanceEncryptionKey = Objects.requireNonNull(instanceEncryptionKey);
             return this;
         }
-
         public Builder keyRevocationActionType(String keyRevocationActionType) {
             this.keyRevocationActionType = Objects.requireNonNull(keyRevocationActionType);
             return this;
         }
-
         public Builder kind(String kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
-
         public Builder labelFingerprint(String labelFingerprint) {
             this.labelFingerprint = Objects.requireNonNull(labelFingerprint);
             return this;
         }
-
         public Builder labels(Map<String,String> labels) {
             this.labels = Objects.requireNonNull(labels);
             return this;
         }
-
         public Builder lastStartTimestamp(String lastStartTimestamp) {
             this.lastStartTimestamp = Objects.requireNonNull(lastStartTimestamp);
             return this;
         }
-
         public Builder lastStopTimestamp(String lastStopTimestamp) {
             this.lastStopTimestamp = Objects.requireNonNull(lastStopTimestamp);
             return this;
         }
-
         public Builder lastSuspendedTimestamp(String lastSuspendedTimestamp) {
             this.lastSuspendedTimestamp = Objects.requireNonNull(lastSuspendedTimestamp);
             return this;
         }
-
         public Builder machineType(String machineType) {
             this.machineType = Objects.requireNonNull(machineType);
             return this;
         }
-
         public Builder metadata(MetadataResponse metadata) {
             this.metadata = Objects.requireNonNull(metadata);
             return this;
         }
-
         public Builder minCpuPlatform(String minCpuPlatform) {
             this.minCpuPlatform = Objects.requireNonNull(minCpuPlatform);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder networkInterfaces(List<NetworkInterfaceResponse> networkInterfaces) {
             this.networkInterfaces = Objects.requireNonNull(networkInterfaces);
             return this;
         }
-
+        public Builder networkInterfaces(NetworkInterfaceResponse... networkInterfaces) {
+            return networkInterfaces(List.of(networkInterfaces));
+        }
         public Builder networkPerformanceConfig(NetworkPerformanceConfigResponse networkPerformanceConfig) {
             this.networkPerformanceConfig = Objects.requireNonNull(networkPerformanceConfig);
             return this;
         }
-
         public Builder params(InstanceParamsResponse params) {
             this.params = Objects.requireNonNull(params);
             return this;
         }
-
         public Builder postKeyRevocationActionType(String postKeyRevocationActionType) {
             this.postKeyRevocationActionType = Objects.requireNonNull(postKeyRevocationActionType);
             return this;
         }
-
         public Builder preservedStateSizeGb(String preservedStateSizeGb) {
             this.preservedStateSizeGb = Objects.requireNonNull(preservedStateSizeGb);
             return this;
         }
-
         public Builder privateIpv6GoogleAccess(String privateIpv6GoogleAccess) {
             this.privateIpv6GoogleAccess = Objects.requireNonNull(privateIpv6GoogleAccess);
             return this;
         }
-
         public Builder reservationAffinity(ReservationAffinityResponse reservationAffinity) {
             this.reservationAffinity = Objects.requireNonNull(reservationAffinity);
             return this;
         }
-
         public Builder resourcePolicies(List<String> resourcePolicies) {
             this.resourcePolicies = Objects.requireNonNull(resourcePolicies);
             return this;
         }
-
+        public Builder resourcePolicies(String... resourcePolicies) {
+            return resourcePolicies(List.of(resourcePolicies));
+        }
         public Builder resourceStatus(ResourceStatusResponse resourceStatus) {
             this.resourceStatus = Objects.requireNonNull(resourceStatus);
             return this;
         }
-
         public Builder satisfiesPzs(Boolean satisfiesPzs) {
             this.satisfiesPzs = Objects.requireNonNull(satisfiesPzs);
             return this;
         }
-
         public Builder scheduling(SchedulingResponse scheduling) {
             this.scheduling = Objects.requireNonNull(scheduling);
             return this;
         }
-
         public Builder secureTags(List<String> secureTags) {
             this.secureTags = Objects.requireNonNull(secureTags);
             return this;
         }
-
+        public Builder secureTags(String... secureTags) {
+            return secureTags(List.of(secureTags));
+        }
         public Builder selfLink(String selfLink) {
             this.selfLink = Objects.requireNonNull(selfLink);
             return this;
         }
-
         public Builder selfLinkWithId(String selfLinkWithId) {
             this.selfLinkWithId = Objects.requireNonNull(selfLinkWithId);
             return this;
         }
-
         public Builder serviceAccounts(List<ServiceAccountResponse> serviceAccounts) {
             this.serviceAccounts = Objects.requireNonNull(serviceAccounts);
             return this;
         }
-
+        public Builder serviceAccounts(ServiceAccountResponse... serviceAccounts) {
+            return serviceAccounts(List.of(serviceAccounts));
+        }
         public Builder shieldedInstanceConfig(ShieldedInstanceConfigResponse shieldedInstanceConfig) {
             this.shieldedInstanceConfig = Objects.requireNonNull(shieldedInstanceConfig);
             return this;
         }
-
         public Builder shieldedInstanceIntegrityPolicy(ShieldedInstanceIntegrityPolicyResponse shieldedInstanceIntegrityPolicy) {
             this.shieldedInstanceIntegrityPolicy = Objects.requireNonNull(shieldedInstanceIntegrityPolicy);
             return this;
         }
-
         public Builder shieldedVmConfig(ShieldedVmConfigResponse shieldedVmConfig) {
             this.shieldedVmConfig = Objects.requireNonNull(shieldedVmConfig);
             return this;
         }
-
         public Builder shieldedVmIntegrityPolicy(ShieldedVmIntegrityPolicyResponse shieldedVmIntegrityPolicy) {
             this.shieldedVmIntegrityPolicy = Objects.requireNonNull(shieldedVmIntegrityPolicy);
             return this;
         }
-
         public Builder sourceMachineImage(String sourceMachineImage) {
             this.sourceMachineImage = Objects.requireNonNull(sourceMachineImage);
             return this;
         }
-
         public Builder sourceMachineImageEncryptionKey(CustomerEncryptionKeyResponse sourceMachineImageEncryptionKey) {
             this.sourceMachineImageEncryptionKey = Objects.requireNonNull(sourceMachineImageEncryptionKey);
             return this;
         }
-
         public Builder startRestricted(Boolean startRestricted) {
             this.startRestricted = Objects.requireNonNull(startRestricted);
             return this;
         }
-
         public Builder status(String status) {
             this.status = Objects.requireNonNull(status);
             return this;
         }
-
         public Builder statusMessage(String statusMessage) {
             this.statusMessage = Objects.requireNonNull(statusMessage);
             return this;
         }
-
         public Builder tags(TagsResponse tags) {
             this.tags = Objects.requireNonNull(tags);
             return this;
         }
-
         public Builder upcomingMaintenance(UpcomingMaintenanceResponse upcomingMaintenance) {
             this.upcomingMaintenance = Objects.requireNonNull(upcomingMaintenance);
             return this;
         }
-
         public Builder zone(String zone) {
             this.zone = Objects.requireNonNull(zone);
             return this;
-        }
-        public GetInstanceResult build() {
+        }        public GetInstanceResult build() {
             return new GetInstanceResult(advancedMachineFeatures, canIpForward, confidentialInstanceConfig, cpuPlatform, creationTimestamp, deletionProtection, description, disks, displayDevice, eraseWindowsVssSignature, fingerprint, guestAccelerators, hostname, instanceEncryptionKey, keyRevocationActionType, kind, labelFingerprint, labels, lastStartTimestamp, lastStopTimestamp, lastSuspendedTimestamp, machineType, metadata, minCpuPlatform, name, networkInterfaces, networkPerformanceConfig, params, postKeyRevocationActionType, preservedStateSizeGb, privateIpv6GoogleAccess, reservationAffinity, resourcePolicies, resourceStatus, satisfiesPzs, scheduling, secureTags, selfLink, selfLinkWithId, serviceAccounts, shieldedInstanceConfig, shieldedInstanceIntegrityPolicy, shieldedVmConfig, shieldedVmIntegrityPolicy, sourceMachineImage, sourceMachineImageEncryptionKey, startRestricted, status, statusMessage, tags, upcomingMaintenance, zone);
         }
     }

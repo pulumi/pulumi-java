@@ -64,17 +64,14 @@ public final class EntryBigqueryDateShardedSpec {
             this.dataset = dataset;
             return this;
         }
-
         public Builder shardCount(@Nullable Integer shardCount) {
             this.shardCount = shardCount;
             return this;
         }
-
         public Builder tablePrefix(@Nullable String tablePrefix) {
             this.tablePrefix = tablePrefix;
             return this;
-        }
-        public EntryBigqueryDateShardedSpec build() {
+        }        public EntryBigqueryDateShardedSpec build() {
             return new EntryBigqueryDateShardedSpec(dataset, shardCount, tablePrefix);
         }
     }

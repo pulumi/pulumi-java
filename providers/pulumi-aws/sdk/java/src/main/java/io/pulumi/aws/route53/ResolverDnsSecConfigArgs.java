@@ -56,12 +56,10 @@ public final class ResolverDnsSecConfigArgs extends io.pulumi.resources.Resource
             this.resourceId = Objects.requireNonNull(resourceId);
             return this;
         }
-
         public Builder resourceId(String resourceId) {
             this.resourceId = Output.of(Objects.requireNonNull(resourceId));
             return this;
-        }
-        public ResolverDnsSecConfigArgs build() {
+        }        public ResolverDnsSecConfigArgs build() {
             return new ResolverDnsSecConfigArgs(resourceId);
         }
     }

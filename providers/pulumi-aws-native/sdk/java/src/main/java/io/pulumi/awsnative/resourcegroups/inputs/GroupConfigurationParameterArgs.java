@@ -67,22 +67,21 @@ public final class GroupConfigurationParameterArgs extends io.pulumi.resources.R
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder values(@Nullable Output<List<String>> values) {
             this.values = values;
             return this;
         }
-
         public Builder values(@Nullable List<String> values) {
             this.values = Output.ofNullable(values);
             return this;
         }
-        public GroupConfigurationParameterArgs build() {
+        public Builder values(String... values) {
+            return values(List.of(values));
+        }        public GroupConfigurationParameterArgs build() {
             return new GroupConfigurationParameterArgs(name, values);
         }
     }

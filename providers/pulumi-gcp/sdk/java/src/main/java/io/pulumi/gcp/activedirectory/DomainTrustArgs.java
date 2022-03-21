@@ -177,82 +177,69 @@ public final class DomainTrustArgs extends io.pulumi.resources.ResourceArgs {
             this.domain = Objects.requireNonNull(domain);
             return this;
         }
-
         public Builder domain(String domain) {
             this.domain = Output.of(Objects.requireNonNull(domain));
             return this;
         }
-
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
         }
-
         public Builder selectiveAuthentication(@Nullable Output<Boolean> selectiveAuthentication) {
             this.selectiveAuthentication = selectiveAuthentication;
             return this;
         }
-
         public Builder selectiveAuthentication(@Nullable Boolean selectiveAuthentication) {
             this.selectiveAuthentication = Output.ofNullable(selectiveAuthentication);
             return this;
         }
-
         public Builder targetDnsIpAddresses(Output<List<String>> targetDnsIpAddresses) {
             this.targetDnsIpAddresses = Objects.requireNonNull(targetDnsIpAddresses);
             return this;
         }
-
         public Builder targetDnsIpAddresses(List<String> targetDnsIpAddresses) {
             this.targetDnsIpAddresses = Output.of(Objects.requireNonNull(targetDnsIpAddresses));
             return this;
         }
-
+        public Builder targetDnsIpAddresses(String... targetDnsIpAddresses) {
+            return targetDnsIpAddresses(List.of(targetDnsIpAddresses));
+        }
         public Builder targetDomainName(Output<String> targetDomainName) {
             this.targetDomainName = Objects.requireNonNull(targetDomainName);
             return this;
         }
-
         public Builder targetDomainName(String targetDomainName) {
             this.targetDomainName = Output.of(Objects.requireNonNull(targetDomainName));
             return this;
         }
-
         public Builder trustDirection(Output<String> trustDirection) {
             this.trustDirection = Objects.requireNonNull(trustDirection);
             return this;
         }
-
         public Builder trustDirection(String trustDirection) {
             this.trustDirection = Output.of(Objects.requireNonNull(trustDirection));
             return this;
         }
-
         public Builder trustHandshakeSecret(Output<String> trustHandshakeSecret) {
             this.trustHandshakeSecret = Objects.requireNonNull(trustHandshakeSecret);
             return this;
         }
-
         public Builder trustHandshakeSecret(String trustHandshakeSecret) {
             this.trustHandshakeSecret = Output.of(Objects.requireNonNull(trustHandshakeSecret));
             return this;
         }
-
         public Builder trustType(Output<String> trustType) {
             this.trustType = Objects.requireNonNull(trustType);
             return this;
         }
-
         public Builder trustType(String trustType) {
             this.trustType = Output.of(Objects.requireNonNull(trustType));
             return this;
-        }
-        public DomainTrustArgs build() {
+        }        public DomainTrustArgs build() {
             return new DomainTrustArgs(domain, project, selectiveAuthentication, targetDnsIpAddresses, targetDomainName, trustDirection, trustHandshakeSecret, trustType);
         }
     }

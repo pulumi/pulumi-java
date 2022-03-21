@@ -93,32 +93,29 @@ public final class FrameworkControlArgs extends io.pulumi.resources.ResourceArgs
             this.controlInputParameters = controlInputParameters;
             return this;
         }
-
         public Builder controlInputParameters(@Nullable List<FrameworkControlInputParameterArgs> controlInputParameters) {
             this.controlInputParameters = Output.ofNullable(controlInputParameters);
             return this;
         }
-
+        public Builder controlInputParameters(FrameworkControlInputParameterArgs... controlInputParameters) {
+            return controlInputParameters(List.of(controlInputParameters));
+        }
         public Builder controlName(Output<String> controlName) {
             this.controlName = Objects.requireNonNull(controlName);
             return this;
         }
-
         public Builder controlName(String controlName) {
             this.controlName = Output.of(Objects.requireNonNull(controlName));
             return this;
         }
-
         public Builder controlScope(@Nullable Output<FrameworkControlControlScopePropertiesArgs> controlScope) {
             this.controlScope = controlScope;
             return this;
         }
-
         public Builder controlScope(@Nullable FrameworkControlControlScopePropertiesArgs controlScope) {
             this.controlScope = Output.ofNullable(controlScope);
             return this;
-        }
-        public FrameworkControlArgs build() {
+        }        public FrameworkControlArgs build() {
             return new FrameworkControlArgs(controlInputParameters, controlName, controlScope);
         }
     }

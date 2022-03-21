@@ -53,12 +53,10 @@ public final class BranchEnvironmentVariable {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder value(String value) {
             this.value = Objects.requireNonNull(value);
             return this;
-        }
-        public BranchEnvironmentVariable build() {
+        }        public BranchEnvironmentVariable build() {
             return new BranchEnvironmentVariable(name, value);
         }
     }

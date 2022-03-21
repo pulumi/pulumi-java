@@ -89,17 +89,14 @@ public final class RoutingConfigurationResponse {
             this.associatedRouteTable = associatedRouteTable;
             return this;
         }
-
         public Builder propagatedRouteTables(@Nullable PropagatedRouteTableResponse propagatedRouteTables) {
             this.propagatedRouteTables = propagatedRouteTables;
             return this;
         }
-
         public Builder vnetRoutes(@Nullable VnetRouteResponse vnetRoutes) {
             this.vnetRoutes = vnetRoutes;
             return this;
-        }
-        public RoutingConfigurationResponse build() {
+        }        public RoutingConfigurationResponse build() {
             return new RoutingConfigurationResponse(associatedRouteTable, propagatedRouteTables, vnetRoutes);
         }
     }

@@ -56,12 +56,10 @@ public final class BucketVersioningArgs extends io.pulumi.resources.ResourceArgs
             this.enabled = Objects.requireNonNull(enabled);
             return this;
         }
-
         public Builder enabled(Boolean enabled) {
             this.enabled = Output.of(Objects.requireNonNull(enabled));
             return this;
-        }
-        public BucketVersioningArgs build() {
+        }        public BucketVersioningArgs build() {
             return new BucketVersioningArgs(enabled);
         }
     }

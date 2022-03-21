@@ -79,22 +79,18 @@ public final class TaskFilterRuleArgs extends io.pulumi.resources.ResourceArgs {
             this.filterType = filterType;
             return this;
         }
-
         public Builder filterType(@Nullable TaskFilterRuleFilterType filterType) {
             this.filterType = Output.ofNullable(filterType);
             return this;
         }
-
         public Builder value(@Nullable Output<String> value) {
             this.value = value;
             return this;
         }
-
         public Builder value(@Nullable String value) {
             this.value = Output.ofNullable(value);
             return this;
-        }
-        public TaskFilterRuleArgs build() {
+        }        public TaskFilterRuleArgs build() {
             return new TaskFilterRuleArgs(filterType, value);
         }
     }

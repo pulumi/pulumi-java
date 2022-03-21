@@ -341,182 +341,164 @@ public final class SecurityRuleArgs extends io.pulumi.resources.ResourceArgs {
             this.access = Objects.requireNonNull(access);
             return this;
         }
-
         public Builder access(Either<String,SecurityRuleAccess> access) {
             this.access = Output.of(Objects.requireNonNull(access));
             return this;
         }
-
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder destinationAddressPrefix(@Nullable Output<String> destinationAddressPrefix) {
             this.destinationAddressPrefix = destinationAddressPrefix;
             return this;
         }
-
         public Builder destinationAddressPrefix(@Nullable String destinationAddressPrefix) {
             this.destinationAddressPrefix = Output.ofNullable(destinationAddressPrefix);
             return this;
         }
-
         public Builder destinationAddressPrefixes(@Nullable Output<List<String>> destinationAddressPrefixes) {
             this.destinationAddressPrefixes = destinationAddressPrefixes;
             return this;
         }
-
         public Builder destinationAddressPrefixes(@Nullable List<String> destinationAddressPrefixes) {
             this.destinationAddressPrefixes = Output.ofNullable(destinationAddressPrefixes);
             return this;
         }
-
+        public Builder destinationAddressPrefixes(String... destinationAddressPrefixes) {
+            return destinationAddressPrefixes(List.of(destinationAddressPrefixes));
+        }
         public Builder destinationApplicationSecurityGroups(@Nullable Output<List<ApplicationSecurityGroupArgs>> destinationApplicationSecurityGroups) {
             this.destinationApplicationSecurityGroups = destinationApplicationSecurityGroups;
             return this;
         }
-
         public Builder destinationApplicationSecurityGroups(@Nullable List<ApplicationSecurityGroupArgs> destinationApplicationSecurityGroups) {
             this.destinationApplicationSecurityGroups = Output.ofNullable(destinationApplicationSecurityGroups);
             return this;
         }
-
+        public Builder destinationApplicationSecurityGroups(ApplicationSecurityGroupArgs... destinationApplicationSecurityGroups) {
+            return destinationApplicationSecurityGroups(List.of(destinationApplicationSecurityGroups));
+        }
         public Builder destinationPortRange(@Nullable Output<String> destinationPortRange) {
             this.destinationPortRange = destinationPortRange;
             return this;
         }
-
         public Builder destinationPortRange(@Nullable String destinationPortRange) {
             this.destinationPortRange = Output.ofNullable(destinationPortRange);
             return this;
         }
-
         public Builder destinationPortRanges(@Nullable Output<List<String>> destinationPortRanges) {
             this.destinationPortRanges = destinationPortRanges;
             return this;
         }
-
         public Builder destinationPortRanges(@Nullable List<String> destinationPortRanges) {
             this.destinationPortRanges = Output.ofNullable(destinationPortRanges);
             return this;
         }
-
+        public Builder destinationPortRanges(String... destinationPortRanges) {
+            return destinationPortRanges(List.of(destinationPortRanges));
+        }
         public Builder direction(Output<Either<String,SecurityRuleDirection>> direction) {
             this.direction = Objects.requireNonNull(direction);
             return this;
         }
-
         public Builder direction(Either<String,SecurityRuleDirection> direction) {
             this.direction = Output.of(Objects.requireNonNull(direction));
             return this;
         }
-
         public Builder id(@Nullable Output<String> id) {
             this.id = id;
             return this;
         }
-
         public Builder id(@Nullable String id) {
             this.id = Output.ofNullable(id);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder priority(@Nullable Output<Integer> priority) {
             this.priority = priority;
             return this;
         }
-
         public Builder priority(@Nullable Integer priority) {
             this.priority = Output.ofNullable(priority);
             return this;
         }
-
         public Builder protocol(Output<Either<String,SecurityRuleProtocol>> protocol) {
             this.protocol = Objects.requireNonNull(protocol);
             return this;
         }
-
         public Builder protocol(Either<String,SecurityRuleProtocol> protocol) {
             this.protocol = Output.of(Objects.requireNonNull(protocol));
             return this;
         }
-
         public Builder sourceAddressPrefix(@Nullable Output<String> sourceAddressPrefix) {
             this.sourceAddressPrefix = sourceAddressPrefix;
             return this;
         }
-
         public Builder sourceAddressPrefix(@Nullable String sourceAddressPrefix) {
             this.sourceAddressPrefix = Output.ofNullable(sourceAddressPrefix);
             return this;
         }
-
         public Builder sourceAddressPrefixes(@Nullable Output<List<String>> sourceAddressPrefixes) {
             this.sourceAddressPrefixes = sourceAddressPrefixes;
             return this;
         }
-
         public Builder sourceAddressPrefixes(@Nullable List<String> sourceAddressPrefixes) {
             this.sourceAddressPrefixes = Output.ofNullable(sourceAddressPrefixes);
             return this;
         }
-
+        public Builder sourceAddressPrefixes(String... sourceAddressPrefixes) {
+            return sourceAddressPrefixes(List.of(sourceAddressPrefixes));
+        }
         public Builder sourceApplicationSecurityGroups(@Nullable Output<List<ApplicationSecurityGroupArgs>> sourceApplicationSecurityGroups) {
             this.sourceApplicationSecurityGroups = sourceApplicationSecurityGroups;
             return this;
         }
-
         public Builder sourceApplicationSecurityGroups(@Nullable List<ApplicationSecurityGroupArgs> sourceApplicationSecurityGroups) {
             this.sourceApplicationSecurityGroups = Output.ofNullable(sourceApplicationSecurityGroups);
             return this;
         }
-
+        public Builder sourceApplicationSecurityGroups(ApplicationSecurityGroupArgs... sourceApplicationSecurityGroups) {
+            return sourceApplicationSecurityGroups(List.of(sourceApplicationSecurityGroups));
+        }
         public Builder sourcePortRange(@Nullable Output<String> sourcePortRange) {
             this.sourcePortRange = sourcePortRange;
             return this;
         }
-
         public Builder sourcePortRange(@Nullable String sourcePortRange) {
             this.sourcePortRange = Output.ofNullable(sourcePortRange);
             return this;
         }
-
         public Builder sourcePortRanges(@Nullable Output<List<String>> sourcePortRanges) {
             this.sourcePortRanges = sourcePortRanges;
             return this;
         }
-
         public Builder sourcePortRanges(@Nullable List<String> sourcePortRanges) {
             this.sourcePortRanges = Output.ofNullable(sourcePortRanges);
             return this;
         }
-
+        public Builder sourcePortRanges(String... sourcePortRanges) {
+            return sourcePortRanges(List.of(sourcePortRanges));
+        }
         public Builder type(@Nullable Output<String> type) {
             this.type = type;
             return this;
         }
-
         public Builder type(@Nullable String type) {
             this.type = Output.ofNullable(type);
             return this;
-        }
-        public SecurityRuleArgs build() {
+        }        public SecurityRuleArgs build() {
             return new SecurityRuleArgs(access, description, destinationAddressPrefix, destinationAddressPrefixes, destinationApplicationSecurityGroups, destinationPortRange, destinationPortRanges, direction, id, name, priority, protocol, sourceAddressPrefix, sourceAddressPrefixes, sourceApplicationSecurityGroups, sourcePortRange, sourcePortRanges, type);
         }
     }

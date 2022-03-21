@@ -127,27 +127,25 @@ public final class GuestOSCustomizationResponse extends io.pulumi.resources.Invo
             this.dnsServers = dnsServers;
             return this;
         }
-
+        public Builder dnsServers(String... dnsServers) {
+            return dnsServers(List.of(dnsServers));
+        }
         public Builder hostName(@Nullable String hostName) {
             this.hostName = hostName;
             return this;
         }
-
         public Builder password(@Nullable String password) {
             this.password = password;
             return this;
         }
-
         public Builder policyId(@Nullable String policyId) {
             this.policyId = policyId;
             return this;
         }
-
         public Builder username(@Nullable String username) {
             this.username = username;
             return this;
-        }
-        public GuestOSCustomizationResponse build() {
+        }        public GuestOSCustomizationResponse build() {
             return new GuestOSCustomizationResponse(dnsServers, hostName, password, policyId, username);
         }
     }

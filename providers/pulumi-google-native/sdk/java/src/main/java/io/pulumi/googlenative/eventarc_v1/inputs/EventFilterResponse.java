@@ -76,12 +76,10 @@ public final class EventFilterResponse extends io.pulumi.resources.InvokeArgs {
             this.attribute = Objects.requireNonNull(attribute);
             return this;
         }
-
         public Builder value(String value) {
             this.value = Objects.requireNonNull(value);
             return this;
-        }
-        public EventFilterResponse build() {
+        }        public EventFilterResponse build() {
             return new EventFilterResponse(attribute, value);
         }
     }

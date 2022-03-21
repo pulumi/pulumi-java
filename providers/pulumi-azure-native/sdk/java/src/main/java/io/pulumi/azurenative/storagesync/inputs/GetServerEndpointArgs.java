@@ -104,22 +104,18 @@ public final class GetServerEndpointArgs extends io.pulumi.resources.InvokeArgs 
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder serverEndpointName(String serverEndpointName) {
             this.serverEndpointName = Objects.requireNonNull(serverEndpointName);
             return this;
         }
-
         public Builder storageSyncServiceName(String storageSyncServiceName) {
             this.storageSyncServiceName = Objects.requireNonNull(storageSyncServiceName);
             return this;
         }
-
         public Builder syncGroupName(String syncGroupName) {
             this.syncGroupName = Objects.requireNonNull(syncGroupName);
             return this;
-        }
-        public GetServerEndpointArgs build() {
+        }        public GetServerEndpointArgs build() {
             return new GetServerEndpointArgs(resourceGroupName, serverEndpointName, storageSyncServiceName, syncGroupName);
         }
     }

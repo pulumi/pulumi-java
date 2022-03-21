@@ -90,22 +90,18 @@ public final class GetInstanceIamPolicyArgs extends io.pulumi.resources.InvokeAr
             this.optionsRequestedPolicyVersion = optionsRequestedPolicyVersion;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = project;
             return this;
         }
-
         public Builder resource(String resource) {
             this.resource = Objects.requireNonNull(resource);
             return this;
         }
-
         public Builder zone(String zone) {
             this.zone = Objects.requireNonNull(zone);
             return this;
-        }
-        public GetInstanceIamPolicyArgs build() {
+        }        public GetInstanceIamPolicyArgs build() {
             return new GetInstanceIamPolicyArgs(optionsRequestedPolicyVersion, project, resource, zone);
         }
     }

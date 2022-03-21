@@ -79,22 +79,18 @@ public final class SimulationApplicationSimulationSoftwareSuiteArgs extends io.p
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder name(SimulationApplicationSimulationSoftwareSuiteName name) {
             this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
-
         public Builder version(@Nullable Output<SimulationApplicationSimulationSoftwareSuiteVersion> version) {
             this.version = version;
             return this;
         }
-
         public Builder version(@Nullable SimulationApplicationSimulationSoftwareSuiteVersion version) {
             this.version = Output.ofNullable(version);
             return this;
-        }
-        public SimulationApplicationSimulationSoftwareSuiteArgs build() {
+        }        public SimulationApplicationSimulationSoftwareSuiteArgs build() {
             return new SimulationApplicationSimulationSoftwareSuiteArgs(name, version);
         }
     }

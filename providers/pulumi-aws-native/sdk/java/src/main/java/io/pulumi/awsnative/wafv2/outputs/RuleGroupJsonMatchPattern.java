@@ -65,12 +65,13 @@ public final class RuleGroupJsonMatchPattern {
             this.all = all;
             return this;
         }
-
         public Builder includedPaths(@Nullable List<String> includedPaths) {
             this.includedPaths = includedPaths;
             return this;
         }
-        public RuleGroupJsonMatchPattern build() {
+        public Builder includedPaths(String... includedPaths) {
+            return includedPaths(List.of(includedPaths));
+        }        public RuleGroupJsonMatchPattern build() {
             return new RuleGroupJsonMatchPattern(all, includedPaths);
         }
     }

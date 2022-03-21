@@ -70,12 +70,13 @@ public final class EventTargetRunCommandTarget {
             this.key = Objects.requireNonNull(key);
             return this;
         }
-
         public Builder values(List<String> values) {
             this.values = Objects.requireNonNull(values);
             return this;
         }
-        public EventTargetRunCommandTarget build() {
+        public Builder values(String... values) {
+            return values(List.of(values));
+        }        public EventTargetRunCommandTarget build() {
             return new EventTargetRunCommandTarget(key, values);
         }
     }

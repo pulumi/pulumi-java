@@ -61,12 +61,10 @@ public final class TrailInsightSelectorArgs extends io.pulumi.resources.Resource
             this.insightType = insightType;
             return this;
         }
-
         public Builder insightType(@Nullable String insightType) {
             this.insightType = Output.ofNullable(insightType);
             return this;
-        }
-        public TrailInsightSelectorArgs build() {
+        }        public TrailInsightSelectorArgs build() {
             return new TrailInsightSelectorArgs(insightType);
         }
     }

@@ -146,32 +146,29 @@ public final class DataTransferServiceResourcePropertiesResponse extends io.pulu
             this.creationTime = Objects.requireNonNull(creationTime);
             return this;
         }
-
         public Builder instanceCount(@Nullable Integer instanceCount) {
             this.instanceCount = instanceCount;
             return this;
         }
-
         public Builder instanceSize(@Nullable String instanceSize) {
             this.instanceSize = instanceSize;
             return this;
         }
-
         public Builder locations(List<DataTransferRegionalServiceResourceResponse> locations) {
             this.locations = Objects.requireNonNull(locations);
             return this;
         }
-
+        public Builder locations(DataTransferRegionalServiceResourceResponse... locations) {
+            return locations(List.of(locations));
+        }
         public Builder serviceType(String serviceType) {
             this.serviceType = Objects.requireNonNull(serviceType);
             return this;
         }
-
         public Builder status(String status) {
             this.status = Objects.requireNonNull(status);
             return this;
-        }
-        public DataTransferServiceResourcePropertiesResponse build() {
+        }        public DataTransferServiceResourcePropertiesResponse build() {
             return new DataTransferServiceResourcePropertiesResponse(creationTime, instanceCount, instanceSize, locations, serviceType, status);
         }
     }

@@ -66,22 +66,18 @@ public final class ResponseHeadersPolicyContentSecurityPolicyArgs extends io.pul
             this.contentSecurityPolicy = Objects.requireNonNull(contentSecurityPolicy);
             return this;
         }
-
         public Builder contentSecurityPolicy(String contentSecurityPolicy) {
             this.contentSecurityPolicy = Output.of(Objects.requireNonNull(contentSecurityPolicy));
             return this;
         }
-
         public Builder override(Output<Boolean> override) {
             this.override = Objects.requireNonNull(override);
             return this;
         }
-
         public Builder override(Boolean override) {
             this.override = Output.of(Objects.requireNonNull(override));
             return this;
-        }
-        public ResponseHeadersPolicyContentSecurityPolicyArgs build() {
+        }        public ResponseHeadersPolicyContentSecurityPolicyArgs build() {
             return new ResponseHeadersPolicyContentSecurityPolicyArgs(contentSecurityPolicy, override);
         }
     }

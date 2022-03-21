@@ -58,8 +58,7 @@ public final class EcKeyTypeResponse extends io.pulumi.resources.InvokeArgs {
         public Builder signatureAlgorithm(String signatureAlgorithm) {
             this.signatureAlgorithm = Objects.requireNonNull(signatureAlgorithm);
             return this;
-        }
-        public EcKeyTypeResponse build() {
+        }        public EcKeyTypeResponse build() {
             return new EcKeyTypeResponse(signatureAlgorithm);
         }
     }

@@ -94,42 +94,37 @@ public final class AssistantAssociationArgs extends io.pulumi.resources.Resource
             this.assistantId = Objects.requireNonNull(assistantId);
             return this;
         }
-
         public Builder assistantId(String assistantId) {
             this.assistantId = Output.of(Objects.requireNonNull(assistantId));
             return this;
         }
-
         public Builder association(Output<AssistantAssociationAssociationDataArgs> association) {
             this.association = Objects.requireNonNull(association);
             return this;
         }
-
         public Builder association(AssistantAssociationAssociationDataArgs association) {
             this.association = Output.of(Objects.requireNonNull(association));
             return this;
         }
-
         public Builder associationType(Output<AssistantAssociationAssociationType> associationType) {
             this.associationType = Objects.requireNonNull(associationType);
             return this;
         }
-
         public Builder associationType(AssistantAssociationAssociationType associationType) {
             this.associationType = Output.of(Objects.requireNonNull(associationType));
             return this;
         }
-
         public Builder tags(@Nullable Output<List<AssistantAssociationTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable List<AssistantAssociationTagArgs> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-        public AssistantAssociationArgs build() {
+        public Builder tags(AssistantAssociationTagArgs... tags) {
+            return tags(List.of(tags));
+        }        public AssistantAssociationArgs build() {
             return new AssistantAssociationArgs(assistantId, association, associationType, tags);
         }
     }

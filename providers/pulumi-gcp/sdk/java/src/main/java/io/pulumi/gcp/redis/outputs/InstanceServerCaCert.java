@@ -93,27 +93,22 @@ public final class InstanceServerCaCert {
             this.cert = cert;
             return this;
         }
-
         public Builder createTime(@Nullable String createTime) {
             this.createTime = createTime;
             return this;
         }
-
         public Builder expireTime(@Nullable String expireTime) {
             this.expireTime = expireTime;
             return this;
         }
-
         public Builder serialNumber(@Nullable String serialNumber) {
             this.serialNumber = serialNumber;
             return this;
         }
-
         public Builder sha1Fingerprint(@Nullable String sha1Fingerprint) {
             this.sha1Fingerprint = sha1Fingerprint;
             return this;
-        }
-        public InstanceServerCaCert build() {
+        }        public InstanceServerCaCert build() {
             return new InstanceServerCaCert(cert, createTime, expireTime, serialNumber, sha1Fingerprint);
         }
     }

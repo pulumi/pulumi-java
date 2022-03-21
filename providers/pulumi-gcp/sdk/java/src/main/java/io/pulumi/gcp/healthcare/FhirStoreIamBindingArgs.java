@@ -105,42 +105,37 @@ public final class FhirStoreIamBindingArgs extends io.pulumi.resources.ResourceA
             this.condition = condition;
             return this;
         }
-
         public Builder condition(@Nullable FhirStoreIamBindingConditionArgs condition) {
             this.condition = Output.ofNullable(condition);
             return this;
         }
-
         public Builder fhirStoreId(Output<String> fhirStoreId) {
             this.fhirStoreId = Objects.requireNonNull(fhirStoreId);
             return this;
         }
-
         public Builder fhirStoreId(String fhirStoreId) {
             this.fhirStoreId = Output.of(Objects.requireNonNull(fhirStoreId));
             return this;
         }
-
         public Builder members(Output<List<String>> members) {
             this.members = Objects.requireNonNull(members);
             return this;
         }
-
         public Builder members(List<String> members) {
             this.members = Output.of(Objects.requireNonNull(members));
             return this;
         }
-
+        public Builder members(String... members) {
+            return members(List.of(members));
+        }
         public Builder role(Output<String> role) {
             this.role = Objects.requireNonNull(role);
             return this;
         }
-
         public Builder role(String role) {
             this.role = Output.of(Objects.requireNonNull(role));
             return this;
-        }
-        public FhirStoreIamBindingArgs build() {
+        }        public FhirStoreIamBindingArgs build() {
             return new FhirStoreIamBindingArgs(condition, fhirStoreId, members, role);
         }
     }

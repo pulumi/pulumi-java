@@ -104,22 +104,21 @@ public final class ManagedClusterHTTPProxyConfigResponse {
             this.httpProxy = httpProxy;
             return this;
         }
-
         public Builder httpsProxy(@Nullable String httpsProxy) {
             this.httpsProxy = httpsProxy;
             return this;
         }
-
         public Builder noProxy(@Nullable List<String> noProxy) {
             this.noProxy = noProxy;
             return this;
         }
-
+        public Builder noProxy(String... noProxy) {
+            return noProxy(List.of(noProxy));
+        }
         public Builder trustedCa(@Nullable String trustedCa) {
             this.trustedCa = trustedCa;
             return this;
-        }
-        public ManagedClusterHTTPProxyConfigResponse build() {
+        }        public ManagedClusterHTTPProxyConfigResponse build() {
             return new ManagedClusterHTTPProxyConfigResponse(httpProxy, httpsProxy, noProxy, trustedCa);
         }
     }

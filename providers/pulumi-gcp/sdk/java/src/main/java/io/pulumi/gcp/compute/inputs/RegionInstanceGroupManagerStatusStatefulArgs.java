@@ -76,22 +76,21 @@ public final class RegionInstanceGroupManagerStatusStatefulArgs extends io.pulum
             this.hasStatefulConfig = hasStatefulConfig;
             return this;
         }
-
         public Builder hasStatefulConfig(@Nullable Boolean hasStatefulConfig) {
             this.hasStatefulConfig = Output.ofNullable(hasStatefulConfig);
             return this;
         }
-
         public Builder perInstanceConfigs(@Nullable Output<List<RegionInstanceGroupManagerStatusStatefulPerInstanceConfigArgs>> perInstanceConfigs) {
             this.perInstanceConfigs = perInstanceConfigs;
             return this;
         }
-
         public Builder perInstanceConfigs(@Nullable List<RegionInstanceGroupManagerStatusStatefulPerInstanceConfigArgs> perInstanceConfigs) {
             this.perInstanceConfigs = Output.ofNullable(perInstanceConfigs);
             return this;
         }
-        public RegionInstanceGroupManagerStatusStatefulArgs build() {
+        public Builder perInstanceConfigs(RegionInstanceGroupManagerStatusStatefulPerInstanceConfigArgs... perInstanceConfigs) {
+            return perInstanceConfigs(List.of(perInstanceConfigs));
+        }        public RegionInstanceGroupManagerStatusStatefulArgs build() {
             return new RegionInstanceGroupManagerStatusStatefulArgs(hasStatefulConfig, perInstanceConfigs);
         }
     }

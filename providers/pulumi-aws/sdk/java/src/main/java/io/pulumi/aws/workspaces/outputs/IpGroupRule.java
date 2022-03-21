@@ -71,12 +71,10 @@ public final class IpGroupRule {
             this.description = description;
             return this;
         }
-
         public Builder source(String source) {
             this.source = Objects.requireNonNull(source);
             return this;
-        }
-        public IpGroupRule build() {
+        }        public IpGroupRule build() {
             return new IpGroupRule(description, source);
         }
     }

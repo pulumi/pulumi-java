@@ -225,102 +225,82 @@ public final class DetectorModelDynamoDBArgs extends io.pulumi.resources.Resourc
             this.hashKeyField = Objects.requireNonNull(hashKeyField);
             return this;
         }
-
         public Builder hashKeyField(String hashKeyField) {
             this.hashKeyField = Output.of(Objects.requireNonNull(hashKeyField));
             return this;
         }
-
         public Builder hashKeyType(@Nullable Output<String> hashKeyType) {
             this.hashKeyType = hashKeyType;
             return this;
         }
-
         public Builder hashKeyType(@Nullable String hashKeyType) {
             this.hashKeyType = Output.ofNullable(hashKeyType);
             return this;
         }
-
         public Builder hashKeyValue(Output<String> hashKeyValue) {
             this.hashKeyValue = Objects.requireNonNull(hashKeyValue);
             return this;
         }
-
         public Builder hashKeyValue(String hashKeyValue) {
             this.hashKeyValue = Output.of(Objects.requireNonNull(hashKeyValue));
             return this;
         }
-
         public Builder operation(@Nullable Output<String> operation) {
             this.operation = operation;
             return this;
         }
-
         public Builder operation(@Nullable String operation) {
             this.operation = Output.ofNullable(operation);
             return this;
         }
-
         public Builder payload(@Nullable Output<DetectorModelPayloadArgs> payload) {
             this.payload = payload;
             return this;
         }
-
         public Builder payload(@Nullable DetectorModelPayloadArgs payload) {
             this.payload = Output.ofNullable(payload);
             return this;
         }
-
         public Builder payloadField(@Nullable Output<String> payloadField) {
             this.payloadField = payloadField;
             return this;
         }
-
         public Builder payloadField(@Nullable String payloadField) {
             this.payloadField = Output.ofNullable(payloadField);
             return this;
         }
-
         public Builder rangeKeyField(@Nullable Output<String> rangeKeyField) {
             this.rangeKeyField = rangeKeyField;
             return this;
         }
-
         public Builder rangeKeyField(@Nullable String rangeKeyField) {
             this.rangeKeyField = Output.ofNullable(rangeKeyField);
             return this;
         }
-
         public Builder rangeKeyType(@Nullable Output<String> rangeKeyType) {
             this.rangeKeyType = rangeKeyType;
             return this;
         }
-
         public Builder rangeKeyType(@Nullable String rangeKeyType) {
             this.rangeKeyType = Output.ofNullable(rangeKeyType);
             return this;
         }
-
         public Builder rangeKeyValue(@Nullable Output<String> rangeKeyValue) {
             this.rangeKeyValue = rangeKeyValue;
             return this;
         }
-
         public Builder rangeKeyValue(@Nullable String rangeKeyValue) {
             this.rangeKeyValue = Output.ofNullable(rangeKeyValue);
             return this;
         }
-
         public Builder tableName(Output<String> tableName) {
             this.tableName = Objects.requireNonNull(tableName);
             return this;
         }
-
         public Builder tableName(String tableName) {
             this.tableName = Output.of(Objects.requireNonNull(tableName));
             return this;
-        }
-        public DetectorModelDynamoDBArgs build() {
+        }        public DetectorModelDynamoDBArgs build() {
             return new DetectorModelDynamoDBArgs(hashKeyField, hashKeyType, hashKeyValue, operation, payload, payloadField, rangeKeyField, rangeKeyType, rangeKeyValue, tableName);
         }
     }

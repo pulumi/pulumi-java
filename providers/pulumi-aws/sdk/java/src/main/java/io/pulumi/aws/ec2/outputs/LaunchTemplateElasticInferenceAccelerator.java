@@ -51,8 +51,7 @@ public final class LaunchTemplateElasticInferenceAccelerator {
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public LaunchTemplateElasticInferenceAccelerator build() {
+        }        public LaunchTemplateElasticInferenceAccelerator build() {
             return new LaunchTemplateElasticInferenceAccelerator(type);
         }
     }

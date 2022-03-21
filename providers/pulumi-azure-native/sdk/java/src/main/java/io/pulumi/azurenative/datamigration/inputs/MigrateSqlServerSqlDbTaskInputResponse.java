@@ -115,22 +115,21 @@ public final class MigrateSqlServerSqlDbTaskInputResponse extends io.pulumi.reso
             this.selectedDatabases = Objects.requireNonNull(selectedDatabases);
             return this;
         }
-
+        public Builder selectedDatabases(MigrateSqlServerSqlDbDatabaseInputResponse... selectedDatabases) {
+            return selectedDatabases(List.of(selectedDatabases));
+        }
         public Builder sourceConnectionInfo(SqlConnectionInfoResponse sourceConnectionInfo) {
             this.sourceConnectionInfo = Objects.requireNonNull(sourceConnectionInfo);
             return this;
         }
-
         public Builder targetConnectionInfo(SqlConnectionInfoResponse targetConnectionInfo) {
             this.targetConnectionInfo = Objects.requireNonNull(targetConnectionInfo);
             return this;
         }
-
         public Builder validationOptions(@Nullable MigrationValidationOptionsResponse validationOptions) {
             this.validationOptions = validationOptions;
             return this;
-        }
-        public MigrateSqlServerSqlDbTaskInputResponse build() {
+        }        public MigrateSqlServerSqlDbTaskInputResponse build() {
             return new MigrateSqlServerSqlDbTaskInputResponse(selectedDatabases, sourceConnectionInfo, targetConnectionInfo, validationOptions);
         }
     }

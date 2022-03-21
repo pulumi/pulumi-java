@@ -64,12 +64,10 @@ public final class AppEnvironmentVariable extends io.pulumi.resources.InvokeArgs
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder value(String value) {
             this.value = Objects.requireNonNull(value);
             return this;
-        }
-        public AppEnvironmentVariable build() {
+        }        public AppEnvironmentVariable build() {
             return new AppEnvironmentVariable(name, value);
         }
     }

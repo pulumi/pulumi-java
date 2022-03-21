@@ -103,32 +103,26 @@ public final class GetAccountKeyResult {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder keyAlgorithm(String keyAlgorithm) {
             this.keyAlgorithm = Objects.requireNonNull(keyAlgorithm);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = project;
             return this;
         }
-
         public Builder publicKey(String publicKey) {
             this.publicKey = Objects.requireNonNull(publicKey);
             return this;
         }
-
         public Builder publicKeyType(@Nullable String publicKeyType) {
             this.publicKeyType = publicKeyType;
             return this;
-        }
-        public GetAccountKeyResult build() {
+        }        public GetAccountKeyResult build() {
             return new GetAccountKeyResult(id, keyAlgorithm, name, project, publicKey, publicKeyType);
         }
     }

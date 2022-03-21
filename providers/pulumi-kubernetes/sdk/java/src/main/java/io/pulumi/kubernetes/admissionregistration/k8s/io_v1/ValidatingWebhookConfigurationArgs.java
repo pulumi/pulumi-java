@@ -109,42 +109,37 @@ public final class ValidatingWebhookConfigurationArgs extends io.pulumi.resource
             this.apiVersion = apiVersion;
             return this;
         }
-
         public Builder apiVersion(@Nullable String apiVersion) {
             this.apiVersion = Output.ofNullable(apiVersion);
             return this;
         }
-
         public Builder kind(@Nullable Output<String> kind) {
             this.kind = kind;
             return this;
         }
-
         public Builder kind(@Nullable String kind) {
             this.kind = Output.ofNullable(kind);
             return this;
         }
-
         public Builder metadata(@Nullable Output<ObjectMetaArgs> metadata) {
             this.metadata = metadata;
             return this;
         }
-
         public Builder metadata(@Nullable ObjectMetaArgs metadata) {
             this.metadata = Output.ofNullable(metadata);
             return this;
         }
-
         public Builder webhooks(@Nullable Output<List<ValidatingWebhookArgs>> webhooks) {
             this.webhooks = webhooks;
             return this;
         }
-
         public Builder webhooks(@Nullable List<ValidatingWebhookArgs> webhooks) {
             this.webhooks = Output.ofNullable(webhooks);
             return this;
         }
-        public ValidatingWebhookConfigurationArgs build() {
+        public Builder webhooks(ValidatingWebhookArgs... webhooks) {
+            return webhooks(List.of(webhooks));
+        }        public ValidatingWebhookConfigurationArgs build() {
             return new ValidatingWebhookConfigurationArgs(apiVersion, kind, metadata, webhooks);
         }
     }

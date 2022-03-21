@@ -60,8 +60,7 @@ public final class BodyDiagnosticSettingsResponse extends io.pulumi.resources.In
         public Builder bytes(@Nullable Integer bytes) {
             this.bytes = bytes;
             return this;
-        }
-        public BodyDiagnosticSettingsResponse build() {
+        }        public BodyDiagnosticSettingsResponse build() {
             return new BodyDiagnosticSettingsResponse(bytes);
         }
     }

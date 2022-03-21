@@ -73,22 +73,18 @@ public final class DataSourceParametersS3ManifestFileLocationGetArgs extends io.
             this.bucket = Objects.requireNonNull(bucket);
             return this;
         }
-
         public Builder bucket(String bucket) {
             this.bucket = Output.of(Objects.requireNonNull(bucket));
             return this;
         }
-
         public Builder key(Output<String> key) {
             this.key = Objects.requireNonNull(key);
             return this;
         }
-
         public Builder key(String key) {
             this.key = Output.of(Objects.requireNonNull(key));
             return this;
-        }
-        public DataSourceParametersS3ManifestFileLocationGetArgs build() {
+        }        public DataSourceParametersS3ManifestFileLocationGetArgs build() {
             return new DataSourceParametersS3ManifestFileLocationGetArgs(bucket, key);
         }
     }

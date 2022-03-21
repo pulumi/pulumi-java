@@ -78,22 +78,18 @@ public final class AbsoluteDeleteOptionArgs extends io.pulumi.resources.Resource
             this.duration = Objects.requireNonNull(duration);
             return this;
         }
-
         public Builder duration(String duration) {
             this.duration = Output.of(Objects.requireNonNull(duration));
             return this;
         }
-
         public Builder objectType(Output<String> objectType) {
             this.objectType = Objects.requireNonNull(objectType);
             return this;
         }
-
         public Builder objectType(String objectType) {
             this.objectType = Output.of(Objects.requireNonNull(objectType));
             return this;
-        }
-        public AbsoluteDeleteOptionArgs build() {
+        }        public AbsoluteDeleteOptionArgs build() {
             return new AbsoluteDeleteOptionArgs(duration, objectType);
         }
     }

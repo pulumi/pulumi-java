@@ -78,22 +78,18 @@ public final class NormalizedCoordinateArgs extends io.pulumi.resources.Resource
             this.x = x;
             return this;
         }
-
         public Builder x(@Nullable Double x) {
             this.x = Output.ofNullable(x);
             return this;
         }
-
         public Builder y(@Nullable Output<Double> y) {
             this.y = y;
             return this;
         }
-
         public Builder y(@Nullable Double y) {
             this.y = Output.ofNullable(y);
             return this;
-        }
-        public NormalizedCoordinateArgs build() {
+        }        public NormalizedCoordinateArgs build() {
             return new NormalizedCoordinateArgs(x, y);
         }
     }

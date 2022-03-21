@@ -69,12 +69,10 @@ public final class BotIntent {
             this.intentName = Objects.requireNonNull(intentName);
             return this;
         }
-
         public Builder intentVersion(String intentVersion) {
             this.intentVersion = Objects.requireNonNull(intentVersion);
             return this;
-        }
-        public BotIntent build() {
+        }        public BotIntent build() {
             return new BotIntent(intentName, intentVersion);
         }
     }

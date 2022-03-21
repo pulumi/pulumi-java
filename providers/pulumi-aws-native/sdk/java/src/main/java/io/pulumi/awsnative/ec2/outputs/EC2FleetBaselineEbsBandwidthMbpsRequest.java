@@ -55,12 +55,10 @@ public final class EC2FleetBaselineEbsBandwidthMbpsRequest {
             this.max = max;
             return this;
         }
-
         public Builder min(@Nullable Integer min) {
             this.min = min;
             return this;
-        }
-        public EC2FleetBaselineEbsBandwidthMbpsRequest build() {
+        }        public EC2FleetBaselineEbsBandwidthMbpsRequest build() {
             return new EC2FleetBaselineEbsBandwidthMbpsRequest(max, min);
         }
     }

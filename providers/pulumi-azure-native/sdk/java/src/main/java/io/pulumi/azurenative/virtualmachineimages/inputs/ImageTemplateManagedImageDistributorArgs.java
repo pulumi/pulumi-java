@@ -128,52 +128,42 @@ public final class ImageTemplateManagedImageDistributorArgs extends io.pulumi.re
             this.artifactTags = artifactTags;
             return this;
         }
-
         public Builder artifactTags(@Nullable Map<String,String> artifactTags) {
             this.artifactTags = Output.ofNullable(artifactTags);
             return this;
         }
-
         public Builder imageId(Output<String> imageId) {
             this.imageId = Objects.requireNonNull(imageId);
             return this;
         }
-
         public Builder imageId(String imageId) {
             this.imageId = Output.of(Objects.requireNonNull(imageId));
             return this;
         }
-
         public Builder location(Output<String> location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
-
         public Builder location(String location) {
             this.location = Output.of(Objects.requireNonNull(location));
             return this;
         }
-
         public Builder runOutputName(Output<String> runOutputName) {
             this.runOutputName = Objects.requireNonNull(runOutputName);
             return this;
         }
-
         public Builder runOutputName(String runOutputName) {
             this.runOutputName = Output.of(Objects.requireNonNull(runOutputName));
             return this;
         }
-
         public Builder type(Output<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Output.of(Objects.requireNonNull(type));
             return this;
-        }
-        public ImageTemplateManagedImageDistributorArgs build() {
+        }        public ImageTemplateManagedImageDistributorArgs build() {
             return new ImageTemplateManagedImageDistributorArgs(artifactTags, imageId, location, runOutputName, type);
         }
     }

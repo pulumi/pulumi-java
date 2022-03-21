@@ -66,12 +66,10 @@ public final class GetWebAppArgs extends io.pulumi.resources.InvokeArgs {
             this.project = project;
             return this;
         }
-
         public Builder webAppId(String webAppId) {
             this.webAppId = Objects.requireNonNull(webAppId);
             return this;
-        }
-        public GetWebAppArgs build() {
+        }        public GetWebAppArgs build() {
             return new GetWebAppArgs(project, webAppId);
         }
     }

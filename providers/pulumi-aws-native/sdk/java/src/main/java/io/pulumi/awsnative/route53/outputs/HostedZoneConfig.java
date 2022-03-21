@@ -53,8 +53,7 @@ public final class HostedZoneConfig {
         public Builder comment(@Nullable String comment) {
             this.comment = comment;
             return this;
-        }
-        public HostedZoneConfig build() {
+        }        public HostedZoneConfig build() {
             return new HostedZoneConfig(comment);
         }
     }

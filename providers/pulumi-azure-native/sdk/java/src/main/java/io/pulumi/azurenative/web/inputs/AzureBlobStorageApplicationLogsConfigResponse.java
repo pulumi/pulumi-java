@@ -97,17 +97,14 @@ public final class AzureBlobStorageApplicationLogsConfigResponse extends io.pulu
             this.level = level;
             return this;
         }
-
         public Builder retentionInDays(@Nullable Integer retentionInDays) {
             this.retentionInDays = retentionInDays;
             return this;
         }
-
         public Builder sasUrl(@Nullable String sasUrl) {
             this.sasUrl = sasUrl;
             return this;
-        }
-        public AzureBlobStorageApplicationLogsConfigResponse build() {
+        }        public AzureBlobStorageApplicationLogsConfigResponse build() {
             return new AzureBlobStorageApplicationLogsConfigResponse(level, retentionInDays, sasUrl);
         }
     }

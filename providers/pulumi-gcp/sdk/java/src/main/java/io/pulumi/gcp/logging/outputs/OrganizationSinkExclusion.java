@@ -106,22 +106,18 @@ public final class OrganizationSinkExclusion {
             this.description = description;
             return this;
         }
-
         public Builder disabled(@Nullable Boolean disabled) {
             this.disabled = disabled;
             return this;
         }
-
         public Builder filter(String filter) {
             this.filter = Objects.requireNonNull(filter);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
-        }
-        public OrganizationSinkExclusion build() {
+        }        public OrganizationSinkExclusion build() {
             return new OrganizationSinkExclusion(description, disabled, filter, name);
         }
     }

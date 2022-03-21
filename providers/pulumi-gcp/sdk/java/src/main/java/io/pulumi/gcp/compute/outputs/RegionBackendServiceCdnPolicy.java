@@ -216,47 +216,41 @@ public final class RegionBackendServiceCdnPolicy {
             this.cacheKeyPolicy = cacheKeyPolicy;
             return this;
         }
-
         public Builder cacheMode(@Nullable String cacheMode) {
             this.cacheMode = cacheMode;
             return this;
         }
-
         public Builder clientTtl(@Nullable Integer clientTtl) {
             this.clientTtl = clientTtl;
             return this;
         }
-
         public Builder defaultTtl(@Nullable Integer defaultTtl) {
             this.defaultTtl = defaultTtl;
             return this;
         }
-
         public Builder maxTtl(@Nullable Integer maxTtl) {
             this.maxTtl = maxTtl;
             return this;
         }
-
         public Builder negativeCaching(@Nullable Boolean negativeCaching) {
             this.negativeCaching = negativeCaching;
             return this;
         }
-
         public Builder negativeCachingPolicies(@Nullable List<RegionBackendServiceCdnPolicyNegativeCachingPolicy> negativeCachingPolicies) {
             this.negativeCachingPolicies = negativeCachingPolicies;
             return this;
         }
-
+        public Builder negativeCachingPolicies(RegionBackendServiceCdnPolicyNegativeCachingPolicy... negativeCachingPolicies) {
+            return negativeCachingPolicies(List.of(negativeCachingPolicies));
+        }
         public Builder serveWhileStale(@Nullable Integer serveWhileStale) {
             this.serveWhileStale = serveWhileStale;
             return this;
         }
-
         public Builder signedUrlCacheMaxAgeSec(@Nullable Integer signedUrlCacheMaxAgeSec) {
             this.signedUrlCacheMaxAgeSec = signedUrlCacheMaxAgeSec;
             return this;
-        }
-        public RegionBackendServiceCdnPolicy build() {
+        }        public RegionBackendServiceCdnPolicy build() {
             return new RegionBackendServiceCdnPolicy(cacheKeyPolicy, cacheMode, clientTtl, defaultTtl, maxTtl, negativeCaching, negativeCachingPolicies, serveWhileStale, signedUrlCacheMaxAgeSec);
         }
     }

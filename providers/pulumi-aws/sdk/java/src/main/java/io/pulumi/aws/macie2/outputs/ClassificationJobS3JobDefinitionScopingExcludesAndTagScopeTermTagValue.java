@@ -63,12 +63,10 @@ public final class ClassificationJobS3JobDefinitionScopingExcludesAndTagScopeTer
             this.key = key;
             return this;
         }
-
         public Builder value(@Nullable String value) {
             this.value = value;
             return this;
-        }
-        public ClassificationJobS3JobDefinitionScopingExcludesAndTagScopeTermTagValue build() {
+        }        public ClassificationJobS3JobDefinitionScopingExcludesAndTagScopeTermTagValue build() {
             return new ClassificationJobS3JobDefinitionScopingExcludesAndTagScopeTermTagValue(key, value);
         }
     }

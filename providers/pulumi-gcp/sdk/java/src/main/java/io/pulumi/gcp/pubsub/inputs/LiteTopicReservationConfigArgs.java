@@ -57,12 +57,10 @@ public final class LiteTopicReservationConfigArgs extends io.pulumi.resources.Re
             this.throughputReservation = throughputReservation;
             return this;
         }
-
         public Builder throughputReservation(@Nullable String throughputReservation) {
             this.throughputReservation = Output.ofNullable(throughputReservation);
             return this;
-        }
-        public LiteTopicReservationConfigArgs build() {
+        }        public LiteTopicReservationConfigArgs build() {
             return new LiteTopicReservationConfigArgs(throughputReservation);
         }
     }

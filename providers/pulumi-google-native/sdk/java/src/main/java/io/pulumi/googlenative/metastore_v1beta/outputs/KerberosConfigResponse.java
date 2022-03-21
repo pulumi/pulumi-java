@@ -86,17 +86,14 @@ public final class KerberosConfigResponse {
             this.keytab = Objects.requireNonNull(keytab);
             return this;
         }
-
         public Builder krb5ConfigGcsUri(String krb5ConfigGcsUri) {
             this.krb5ConfigGcsUri = Objects.requireNonNull(krb5ConfigGcsUri);
             return this;
         }
-
         public Builder principal(String principal) {
             this.principal = Objects.requireNonNull(principal);
             return this;
-        }
-        public KerberosConfigResponse build() {
+        }        public KerberosConfigResponse build() {
             return new KerberosConfigResponse(keytab, krb5ConfigGcsUri, principal);
         }
     }

@@ -79,12 +79,10 @@ public final class LogLocationSettingsResponse extends io.pulumi.resources.Invok
             this.linkedServiceName = Objects.requireNonNull(linkedServiceName);
             return this;
         }
-
         public Builder path(@Nullable Object path) {
             this.path = path;
             return this;
-        }
-        public LogLocationSettingsResponse build() {
+        }        public LogLocationSettingsResponse build() {
             return new LogLocationSettingsResponse(linkedServiceName, path);
         }
     }

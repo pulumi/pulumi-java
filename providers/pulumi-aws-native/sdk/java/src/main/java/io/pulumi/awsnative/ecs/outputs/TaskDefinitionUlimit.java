@@ -62,17 +62,14 @@ public final class TaskDefinitionUlimit {
             this.hardLimit = Objects.requireNonNull(hardLimit);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder softLimit(Integer softLimit) {
             this.softLimit = Objects.requireNonNull(softLimit);
             return this;
-        }
-        public TaskDefinitionUlimit build() {
+        }        public TaskDefinitionUlimit build() {
             return new TaskDefinitionUlimit(hardLimit, name, softLimit);
         }
     }

@@ -78,22 +78,18 @@ public final class SiteAgentPropertiesArgs extends io.pulumi.resources.ResourceA
             this.keyVaultId = keyVaultId;
             return this;
         }
-
         public Builder keyVaultId(@Nullable String keyVaultId) {
             this.keyVaultId = Output.ofNullable(keyVaultId);
             return this;
         }
-
         public Builder keyVaultUri(@Nullable Output<String> keyVaultUri) {
             this.keyVaultUri = keyVaultUri;
             return this;
         }
-
         public Builder keyVaultUri(@Nullable String keyVaultUri) {
             this.keyVaultUri = Output.ofNullable(keyVaultUri);
             return this;
-        }
-        public SiteAgentPropertiesArgs build() {
+        }        public SiteAgentPropertiesArgs build() {
             return new SiteAgentPropertiesArgs(keyVaultId, keyVaultUri);
         }
     }

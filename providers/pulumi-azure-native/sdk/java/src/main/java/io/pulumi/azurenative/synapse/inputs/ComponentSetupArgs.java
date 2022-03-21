@@ -96,32 +96,26 @@ public final class ComponentSetupArgs extends io.pulumi.resources.ResourceArgs {
             this.componentName = Objects.requireNonNull(componentName);
             return this;
         }
-
         public Builder componentName(String componentName) {
             this.componentName = Output.of(Objects.requireNonNull(componentName));
             return this;
         }
-
         public Builder licenseKey(@Nullable Output<SecureStringArgs> licenseKey) {
             this.licenseKey = licenseKey;
             return this;
         }
-
         public Builder licenseKey(@Nullable SecureStringArgs licenseKey) {
             this.licenseKey = Output.ofNullable(licenseKey);
             return this;
         }
-
         public Builder type(Output<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Output.of(Objects.requireNonNull(type));
             return this;
-        }
-        public ComponentSetupArgs build() {
+        }        public ComponentSetupArgs build() {
             return new ComponentSetupArgs(componentName, licenseKey, type);
         }
     }

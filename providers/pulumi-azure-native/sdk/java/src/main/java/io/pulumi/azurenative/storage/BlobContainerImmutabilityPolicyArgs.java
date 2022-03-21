@@ -140,62 +140,50 @@ public final class BlobContainerImmutabilityPolicyArgs extends io.pulumi.resourc
             this.accountName = Objects.requireNonNull(accountName);
             return this;
         }
-
         public Builder accountName(String accountName) {
             this.accountName = Output.of(Objects.requireNonNull(accountName));
             return this;
         }
-
         public Builder allowProtectedAppendWrites(@Nullable Output<Boolean> allowProtectedAppendWrites) {
             this.allowProtectedAppendWrites = allowProtectedAppendWrites;
             return this;
         }
-
         public Builder allowProtectedAppendWrites(@Nullable Boolean allowProtectedAppendWrites) {
             this.allowProtectedAppendWrites = Output.ofNullable(allowProtectedAppendWrites);
             return this;
         }
-
         public Builder containerName(Output<String> containerName) {
             this.containerName = Objects.requireNonNull(containerName);
             return this;
         }
-
         public Builder containerName(String containerName) {
             this.containerName = Output.of(Objects.requireNonNull(containerName));
             return this;
         }
-
         public Builder immutabilityPeriodSinceCreationInDays(@Nullable Output<Integer> immutabilityPeriodSinceCreationInDays) {
             this.immutabilityPeriodSinceCreationInDays = immutabilityPeriodSinceCreationInDays;
             return this;
         }
-
         public Builder immutabilityPeriodSinceCreationInDays(@Nullable Integer immutabilityPeriodSinceCreationInDays) {
             this.immutabilityPeriodSinceCreationInDays = Output.ofNullable(immutabilityPeriodSinceCreationInDays);
             return this;
         }
-
         public Builder immutabilityPolicyName(@Nullable Output<String> immutabilityPolicyName) {
             this.immutabilityPolicyName = immutabilityPolicyName;
             return this;
         }
-
         public Builder immutabilityPolicyName(@Nullable String immutabilityPolicyName) {
             this.immutabilityPolicyName = Output.ofNullable(immutabilityPolicyName);
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
-        }
-        public BlobContainerImmutabilityPolicyArgs build() {
+        }        public BlobContainerImmutabilityPolicyArgs build() {
             return new BlobContainerImmutabilityPolicyArgs(accountName, allowProtectedAppendWrites, containerName, immutabilityPeriodSinceCreationInDays, immutabilityPolicyName, resourceGroupName);
         }
     }

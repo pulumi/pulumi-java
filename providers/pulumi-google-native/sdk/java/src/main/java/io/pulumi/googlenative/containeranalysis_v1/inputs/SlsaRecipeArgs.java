@@ -127,52 +127,42 @@ public final class SlsaRecipeArgs extends io.pulumi.resources.ResourceArgs {
             this.arguments = arguments;
             return this;
         }
-
         public Builder arguments(@Nullable Map<String,String> arguments) {
             this.arguments = Output.ofNullable(arguments);
             return this;
         }
-
         public Builder definedInMaterial(@Nullable Output<String> definedInMaterial) {
             this.definedInMaterial = definedInMaterial;
             return this;
         }
-
         public Builder definedInMaterial(@Nullable String definedInMaterial) {
             this.definedInMaterial = Output.ofNullable(definedInMaterial);
             return this;
         }
-
         public Builder entryPoint(@Nullable Output<String> entryPoint) {
             this.entryPoint = entryPoint;
             return this;
         }
-
         public Builder entryPoint(@Nullable String entryPoint) {
             this.entryPoint = Output.ofNullable(entryPoint);
             return this;
         }
-
         public Builder environment(@Nullable Output<Map<String,String>> environment) {
             this.environment = environment;
             return this;
         }
-
         public Builder environment(@Nullable Map<String,String> environment) {
             this.environment = Output.ofNullable(environment);
             return this;
         }
-
         public Builder type(@Nullable Output<String> type) {
             this.type = type;
             return this;
         }
-
         public Builder type(@Nullable String type) {
             this.type = Output.ofNullable(type);
             return this;
-        }
-        public SlsaRecipeArgs build() {
+        }        public SlsaRecipeArgs build() {
             return new SlsaRecipeArgs(arguments, definedInMaterial, entryPoint, environment, type);
         }
     }

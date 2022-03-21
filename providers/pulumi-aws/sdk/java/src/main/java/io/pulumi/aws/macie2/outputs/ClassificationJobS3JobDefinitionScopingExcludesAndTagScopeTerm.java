@@ -105,22 +105,21 @@ public final class ClassificationJobS3JobDefinitionScopingExcludesAndTagScopeTer
             this.comparator = comparator;
             return this;
         }
-
         public Builder key(@Nullable String key) {
             this.key = key;
             return this;
         }
-
         public Builder tagValues(@Nullable List<ClassificationJobS3JobDefinitionScopingExcludesAndTagScopeTermTagValue> tagValues) {
             this.tagValues = tagValues;
             return this;
         }
-
+        public Builder tagValues(ClassificationJobS3JobDefinitionScopingExcludesAndTagScopeTermTagValue... tagValues) {
+            return tagValues(List.of(tagValues));
+        }
         public Builder target(@Nullable String target) {
             this.target = target;
             return this;
-        }
-        public ClassificationJobS3JobDefinitionScopingExcludesAndTagScopeTerm build() {
+        }        public ClassificationJobS3JobDefinitionScopingExcludesAndTagScopeTerm build() {
             return new ClassificationJobS3JobDefinitionScopingExcludesAndTagScopeTerm(comparator, key, tagValues, target);
         }
     }

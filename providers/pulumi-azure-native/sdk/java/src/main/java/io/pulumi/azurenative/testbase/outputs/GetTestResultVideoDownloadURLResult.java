@@ -69,12 +69,10 @@ public final class GetTestResultVideoDownloadURLResult {
             this.downloadUrl = Objects.requireNonNull(downloadUrl);
             return this;
         }
-
         public Builder expirationTime(String expirationTime) {
             this.expirationTime = Objects.requireNonNull(expirationTime);
             return this;
-        }
-        public GetTestResultVideoDownloadURLResult build() {
+        }        public GetTestResultVideoDownloadURLResult build() {
             return new GetTestResultVideoDownloadURLResult(downloadUrl, expirationTime);
         }
     }

@@ -54,8 +54,7 @@ public final class GetFleetMetricArgs extends io.pulumi.resources.InvokeArgs {
         public Builder metricName(String metricName) {
             this.metricName = Objects.requireNonNull(metricName);
             return this;
-        }
-        public GetFleetMetricArgs build() {
+        }        public GetFleetMetricArgs build() {
             return new GetFleetMetricArgs(metricName);
         }
     }

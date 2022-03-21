@@ -93,32 +93,26 @@ public final class ServiceNetworkSettingsArgs extends io.pulumi.resources.Resour
             this.networkSettings = Objects.requireNonNull(networkSettings);
             return this;
         }
-
         public Builder networkSettings(ServiceNetworkSettingsNetworkSettingsArgs networkSettings) {
             this.networkSettings = Output.of(Objects.requireNonNull(networkSettings));
             return this;
         }
-
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
         }
-
         public Builder service(Output<String> service) {
             this.service = Objects.requireNonNull(service);
             return this;
         }
-
         public Builder service(String service) {
             this.service = Output.of(Objects.requireNonNull(service));
             return this;
-        }
-        public ServiceNetworkSettingsArgs build() {
+        }        public ServiceNetworkSettingsArgs build() {
             return new ServiceNetworkSettingsArgs(networkSettings, project, service);
         }
     }

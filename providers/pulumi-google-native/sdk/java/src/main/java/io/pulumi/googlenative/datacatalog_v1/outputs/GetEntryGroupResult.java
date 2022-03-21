@@ -102,22 +102,18 @@ public final class GetEntryGroupResult {
             this.dataCatalogTimestamps = Objects.requireNonNull(dataCatalogTimestamps);
             return this;
         }
-
         public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
-
         public Builder displayName(String displayName) {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
-        }
-        public GetEntryGroupResult build() {
+        }        public GetEntryGroupResult build() {
             return new GetEntryGroupResult(dataCatalogTimestamps, description, displayName, name);
         }
     }

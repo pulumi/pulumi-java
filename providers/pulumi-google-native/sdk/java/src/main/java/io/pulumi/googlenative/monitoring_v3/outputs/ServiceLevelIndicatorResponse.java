@@ -87,17 +87,14 @@ public final class ServiceLevelIndicatorResponse {
             this.basicSli = Objects.requireNonNull(basicSli);
             return this;
         }
-
         public Builder requestBased(RequestBasedSliResponse requestBased) {
             this.requestBased = Objects.requireNonNull(requestBased);
             return this;
         }
-
         public Builder windowsBased(WindowsBasedSliResponse windowsBased) {
             this.windowsBased = Objects.requireNonNull(windowsBased);
             return this;
-        }
-        public ServiceLevelIndicatorResponse build() {
+        }        public ServiceLevelIndicatorResponse build() {
             return new ServiceLevelIndicatorResponse(basicSli, requestBased, windowsBased);
         }
     }

@@ -52,12 +52,10 @@ public final class DatasetScheduleArgs extends io.pulumi.resources.ResourceArgs 
             this.scheduleExpression = Objects.requireNonNull(scheduleExpression);
             return this;
         }
-
         public Builder scheduleExpression(String scheduleExpression) {
             this.scheduleExpression = Output.of(Objects.requireNonNull(scheduleExpression));
             return this;
-        }
-        public DatasetScheduleArgs build() {
+        }        public DatasetScheduleArgs build() {
             return new DatasetScheduleArgs(scheduleExpression);
         }
     }

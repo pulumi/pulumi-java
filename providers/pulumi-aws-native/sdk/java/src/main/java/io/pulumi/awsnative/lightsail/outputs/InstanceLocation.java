@@ -71,12 +71,10 @@ public final class InstanceLocation {
             this.availabilityZone = availabilityZone;
             return this;
         }
-
         public Builder regionName(@Nullable String regionName) {
             this.regionName = regionName;
             return this;
-        }
-        public InstanceLocation build() {
+        }        public InstanceLocation build() {
             return new InstanceLocation(availabilityZone, regionName);
         }
     }

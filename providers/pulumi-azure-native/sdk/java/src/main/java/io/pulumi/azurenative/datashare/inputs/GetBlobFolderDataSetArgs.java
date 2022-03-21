@@ -104,22 +104,18 @@ public final class GetBlobFolderDataSetArgs extends io.pulumi.resources.InvokeAr
             this.accountName = Objects.requireNonNull(accountName);
             return this;
         }
-
         public Builder dataSetName(String dataSetName) {
             this.dataSetName = Objects.requireNonNull(dataSetName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder shareName(String shareName) {
             this.shareName = Objects.requireNonNull(shareName);
             return this;
-        }
-        public GetBlobFolderDataSetArgs build() {
+        }        public GetBlobFolderDataSetArgs build() {
             return new GetBlobFolderDataSetArgs(accountName, dataSetName, resourceGroupName, shareName);
         }
     }

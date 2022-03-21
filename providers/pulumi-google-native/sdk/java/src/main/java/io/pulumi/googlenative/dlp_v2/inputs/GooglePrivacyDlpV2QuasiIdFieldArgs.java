@@ -79,22 +79,18 @@ public final class GooglePrivacyDlpV2QuasiIdFieldArgs extends io.pulumi.resource
             this.customTag = customTag;
             return this;
         }
-
         public Builder customTag(@Nullable String customTag) {
             this.customTag = Output.ofNullable(customTag);
             return this;
         }
-
         public Builder field(@Nullable Output<GooglePrivacyDlpV2FieldIdArgs> field) {
             this.field = field;
             return this;
         }
-
         public Builder field(@Nullable GooglePrivacyDlpV2FieldIdArgs field) {
             this.field = Output.ofNullable(field);
             return this;
-        }
-        public GooglePrivacyDlpV2QuasiIdFieldArgs build() {
+        }        public GooglePrivacyDlpV2QuasiIdFieldArgs build() {
             return new GooglePrivacyDlpV2QuasiIdFieldArgs(customTag, field);
         }
     }

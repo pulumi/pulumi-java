@@ -161,32 +161,35 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionCdnPoli
             this.excludeHost = excludeHost;
             return this;
         }
-
         public Builder excludeQueryString(@Nullable Boolean excludeQueryString) {
             this.excludeQueryString = excludeQueryString;
             return this;
         }
-
         public Builder excludedQueryParameters(@Nullable List<String> excludedQueryParameters) {
             this.excludedQueryParameters = excludedQueryParameters;
             return this;
         }
-
+        public Builder excludedQueryParameters(String... excludedQueryParameters) {
+            return excludedQueryParameters(List.of(excludedQueryParameters));
+        }
         public Builder includeProtocol(@Nullable Boolean includeProtocol) {
             this.includeProtocol = includeProtocol;
             return this;
         }
-
         public Builder includedHeaderNames(@Nullable List<String> includedHeaderNames) {
             this.includedHeaderNames = includedHeaderNames;
             return this;
         }
-
+        public Builder includedHeaderNames(String... includedHeaderNames) {
+            return includedHeaderNames(List.of(includedHeaderNames));
+        }
         public Builder includedQueryParameters(@Nullable List<String> includedQueryParameters) {
             this.includedQueryParameters = includedQueryParameters;
             return this;
         }
-        public EdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionCdnPolicyCacheKeyPolicy build() {
+        public Builder includedQueryParameters(String... includedQueryParameters) {
+            return includedQueryParameters(List.of(includedQueryParameters));
+        }        public EdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionCdnPolicyCacheKeyPolicy build() {
             return new EdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionCdnPolicyCacheKeyPolicy(excludeHost, excludeQueryString, excludedQueryParameters, includeProtocol, includedHeaderNames, includedQueryParameters);
         }
     }

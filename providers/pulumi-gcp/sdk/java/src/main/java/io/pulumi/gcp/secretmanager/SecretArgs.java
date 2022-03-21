@@ -189,82 +189,69 @@ public final class SecretArgs extends io.pulumi.resources.ResourceArgs {
             this.expireTime = expireTime;
             return this;
         }
-
         public Builder expireTime(@Nullable String expireTime) {
             this.expireTime = Output.ofNullable(expireTime);
             return this;
         }
-
         public Builder labels(@Nullable Output<Map<String,String>> labels) {
             this.labels = labels;
             return this;
         }
-
         public Builder labels(@Nullable Map<String,String> labels) {
             this.labels = Output.ofNullable(labels);
             return this;
         }
-
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
         }
-
         public Builder replication(Output<SecretReplicationArgs> replication) {
             this.replication = Objects.requireNonNull(replication);
             return this;
         }
-
         public Builder replication(SecretReplicationArgs replication) {
             this.replication = Output.of(Objects.requireNonNull(replication));
             return this;
         }
-
         public Builder rotation(@Nullable Output<SecretRotationArgs> rotation) {
             this.rotation = rotation;
             return this;
         }
-
         public Builder rotation(@Nullable SecretRotationArgs rotation) {
             this.rotation = Output.ofNullable(rotation);
             return this;
         }
-
         public Builder secretId(Output<String> secretId) {
             this.secretId = Objects.requireNonNull(secretId);
             return this;
         }
-
         public Builder secretId(String secretId) {
             this.secretId = Output.of(Objects.requireNonNull(secretId));
             return this;
         }
-
         public Builder topics(@Nullable Output<List<SecretTopicArgs>> topics) {
             this.topics = topics;
             return this;
         }
-
         public Builder topics(@Nullable List<SecretTopicArgs> topics) {
             this.topics = Output.ofNullable(topics);
             return this;
         }
-
+        public Builder topics(SecretTopicArgs... topics) {
+            return topics(List.of(topics));
+        }
         public Builder ttl(@Nullable Output<String> ttl) {
             this.ttl = ttl;
             return this;
         }
-
         public Builder ttl(@Nullable String ttl) {
             this.ttl = Output.ofNullable(ttl);
             return this;
-        }
-        public SecretArgs build() {
+        }        public SecretArgs build() {
             return new SecretArgs(expireTime, labels, project, replication, rotation, secretId, topics, ttl);
         }
     }

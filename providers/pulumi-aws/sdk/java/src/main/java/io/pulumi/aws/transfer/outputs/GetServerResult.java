@@ -238,67 +238,57 @@ public final class GetServerResult {
             this.arn = Objects.requireNonNull(arn);
             return this;
         }
-
         public Builder certificate(String certificate) {
             this.certificate = Objects.requireNonNull(certificate);
             return this;
         }
-
         public Builder domain(String domain) {
             this.domain = Objects.requireNonNull(domain);
             return this;
         }
-
         public Builder endpoint(String endpoint) {
             this.endpoint = Objects.requireNonNull(endpoint);
             return this;
         }
-
         public Builder endpointType(String endpointType) {
             this.endpointType = Objects.requireNonNull(endpointType);
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder identityProviderType(String identityProviderType) {
             this.identityProviderType = Objects.requireNonNull(identityProviderType);
             return this;
         }
-
         public Builder invocationRole(String invocationRole) {
             this.invocationRole = Objects.requireNonNull(invocationRole);
             return this;
         }
-
         public Builder loggingRole(String loggingRole) {
             this.loggingRole = Objects.requireNonNull(loggingRole);
             return this;
         }
-
         public Builder protocols(List<String> protocols) {
             this.protocols = Objects.requireNonNull(protocols);
             return this;
         }
-
+        public Builder protocols(String... protocols) {
+            return protocols(List.of(protocols));
+        }
         public Builder securityPolicyName(String securityPolicyName) {
             this.securityPolicyName = Objects.requireNonNull(securityPolicyName);
             return this;
         }
-
         public Builder serverId(String serverId) {
             this.serverId = Objects.requireNonNull(serverId);
             return this;
         }
-
         public Builder url(String url) {
             this.url = Objects.requireNonNull(url);
             return this;
-        }
-        public GetServerResult build() {
+        }        public GetServerResult build() {
             return new GetServerResult(arn, certificate, domain, endpoint, endpointType, id, identityProviderType, invocationRole, loggingRole, protocols, securityPolicyName, serverId, url);
         }
     }

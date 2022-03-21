@@ -58,8 +58,7 @@ public final class ToolExitCodeResponse extends io.pulumi.resources.InvokeArgs {
         public Builder number(Integer number) {
             this.number = Objects.requireNonNull(number);
             return this;
-        }
-        public ToolExitCodeResponse build() {
+        }        public ToolExitCodeResponse build() {
             return new ToolExitCodeResponse(number);
         }
     }

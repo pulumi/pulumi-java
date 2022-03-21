@@ -78,12 +78,13 @@ public final class GetSubnetsArgs extends io.pulumi.resources.InvokeArgs {
             this.filters = filters;
             return this;
         }
-
+        public Builder filters(GetSubnetsFilter... filters) {
+            return filters(List.of(filters));
+        }
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
-        }
-        public GetSubnetsArgs build() {
+        }        public GetSubnetsArgs build() {
             return new GetSubnetsArgs(filters, tags);
         }
     }

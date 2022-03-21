@@ -132,37 +132,30 @@ public final class ContainerNetworkData {
             this.gateway = gateway;
             return this;
         }
-
         public Builder globalIpv6Address(@Nullable String globalIpv6Address) {
             this.globalIpv6Address = globalIpv6Address;
             return this;
         }
-
         public Builder globalIpv6PrefixLength(@Nullable Integer globalIpv6PrefixLength) {
             this.globalIpv6PrefixLength = globalIpv6PrefixLength;
             return this;
         }
-
         public Builder ipAddress(@Nullable String ipAddress) {
             this.ipAddress = ipAddress;
             return this;
         }
-
         public Builder ipPrefixLength(@Nullable Integer ipPrefixLength) {
             this.ipPrefixLength = ipPrefixLength;
             return this;
         }
-
         public Builder ipv6Gateway(@Nullable String ipv6Gateway) {
             this.ipv6Gateway = ipv6Gateway;
             return this;
         }
-
         public Builder networkName(@Nullable String networkName) {
             this.networkName = networkName;
             return this;
-        }
-        public ContainerNetworkData build() {
+        }        public ContainerNetworkData build() {
             return new ContainerNetworkData(gateway, globalIpv6Address, globalIpv6PrefixLength, ipAddress, ipPrefixLength, ipv6Gateway, networkName);
         }
     }

@@ -134,32 +134,26 @@ public final class GetPerfSampleSeriesResult {
             this.basicPerfSampleSeries = Objects.requireNonNull(basicPerfSampleSeries);
             return this;
         }
-
         public Builder executionId(String executionId) {
             this.executionId = Objects.requireNonNull(executionId);
             return this;
         }
-
         public Builder historyId(String historyId) {
             this.historyId = Objects.requireNonNull(historyId);
             return this;
         }
-
         public Builder project(String project) {
             this.project = Objects.requireNonNull(project);
             return this;
         }
-
         public Builder sampleSeriesId(String sampleSeriesId) {
             this.sampleSeriesId = Objects.requireNonNull(sampleSeriesId);
             return this;
         }
-
         public Builder stepId(String stepId) {
             this.stepId = Objects.requireNonNull(stepId);
             return this;
-        }
-        public GetPerfSampleSeriesResult build() {
+        }        public GetPerfSampleSeriesResult build() {
             return new GetPerfSampleSeriesResult(basicPerfSampleSeries, executionId, historyId, project, sampleSeriesId, stepId);
         }
     }

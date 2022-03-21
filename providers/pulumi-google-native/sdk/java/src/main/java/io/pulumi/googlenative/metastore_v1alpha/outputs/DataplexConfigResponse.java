@@ -52,8 +52,7 @@ public final class DataplexConfigResponse {
         public Builder lakeResources(Map<String,String> lakeResources) {
             this.lakeResources = Objects.requireNonNull(lakeResources);
             return this;
-        }
-        public DataplexConfigResponse build() {
+        }        public DataplexConfigResponse build() {
             return new DataplexConfigResponse(lakeResources);
         }
     }

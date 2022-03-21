@@ -109,22 +109,24 @@ public final class PatchDeploymentPatchConfigYum {
             this.excludes = excludes;
             return this;
         }
-
+        public Builder excludes(String... excludes) {
+            return excludes(List.of(excludes));
+        }
         public Builder exclusivePackages(@Nullable List<String> exclusivePackages) {
             this.exclusivePackages = exclusivePackages;
             return this;
         }
-
+        public Builder exclusivePackages(String... exclusivePackages) {
+            return exclusivePackages(List.of(exclusivePackages));
+        }
         public Builder minimal(@Nullable Boolean minimal) {
             this.minimal = minimal;
             return this;
         }
-
         public Builder security(@Nullable Boolean security) {
             this.security = security;
             return this;
-        }
-        public PatchDeploymentPatchConfigYum build() {
+        }        public PatchDeploymentPatchConfigYum build() {
             return new PatchDeploymentPatchConfigYum(excludes, exclusivePackages, minimal, security);
         }
     }

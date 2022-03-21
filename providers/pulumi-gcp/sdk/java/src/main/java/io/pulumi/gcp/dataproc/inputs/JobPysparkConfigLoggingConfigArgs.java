@@ -53,12 +53,10 @@ public final class JobPysparkConfigLoggingConfigArgs extends io.pulumi.resources
             this.driverLogLevels = Objects.requireNonNull(driverLogLevels);
             return this;
         }
-
         public Builder driverLogLevels(Map<String,String> driverLogLevels) {
             this.driverLogLevels = Output.of(Objects.requireNonNull(driverLogLevels));
             return this;
-        }
-        public JobPysparkConfigLoggingConfigArgs build() {
+        }        public JobPysparkConfigLoggingConfigArgs build() {
             return new JobPysparkConfigLoggingConfigArgs(driverLogLevels);
         }
     }

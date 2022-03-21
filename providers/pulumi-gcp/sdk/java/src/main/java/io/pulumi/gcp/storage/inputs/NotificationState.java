@@ -175,82 +175,69 @@ public final class NotificationState extends io.pulumi.resources.ResourceArgs {
             this.bucket = bucket;
             return this;
         }
-
         public Builder bucket(@Nullable String bucket) {
             this.bucket = Output.ofNullable(bucket);
             return this;
         }
-
         public Builder customAttributes(@Nullable Output<Map<String,String>> customAttributes) {
             this.customAttributes = customAttributes;
             return this;
         }
-
         public Builder customAttributes(@Nullable Map<String,String> customAttributes) {
             this.customAttributes = Output.ofNullable(customAttributes);
             return this;
         }
-
         public Builder eventTypes(@Nullable Output<List<String>> eventTypes) {
             this.eventTypes = eventTypes;
             return this;
         }
-
         public Builder eventTypes(@Nullable List<String> eventTypes) {
             this.eventTypes = Output.ofNullable(eventTypes);
             return this;
         }
-
+        public Builder eventTypes(String... eventTypes) {
+            return eventTypes(List.of(eventTypes));
+        }
         public Builder notificationId(@Nullable Output<String> notificationId) {
             this.notificationId = notificationId;
             return this;
         }
-
         public Builder notificationId(@Nullable String notificationId) {
             this.notificationId = Output.ofNullable(notificationId);
             return this;
         }
-
         public Builder objectNamePrefix(@Nullable Output<String> objectNamePrefix) {
             this.objectNamePrefix = objectNamePrefix;
             return this;
         }
-
         public Builder objectNamePrefix(@Nullable String objectNamePrefix) {
             this.objectNamePrefix = Output.ofNullable(objectNamePrefix);
             return this;
         }
-
         public Builder payloadFormat(@Nullable Output<String> payloadFormat) {
             this.payloadFormat = payloadFormat;
             return this;
         }
-
         public Builder payloadFormat(@Nullable String payloadFormat) {
             this.payloadFormat = Output.ofNullable(payloadFormat);
             return this;
         }
-
         public Builder selfLink(@Nullable Output<String> selfLink) {
             this.selfLink = selfLink;
             return this;
         }
-
         public Builder selfLink(@Nullable String selfLink) {
             this.selfLink = Output.ofNullable(selfLink);
             return this;
         }
-
         public Builder topic(@Nullable Output<String> topic) {
             this.topic = topic;
             return this;
         }
-
         public Builder topic(@Nullable String topic) {
             this.topic = Output.ofNullable(topic);
             return this;
-        }
-        public NotificationState build() {
+        }        public NotificationState build() {
             return new NotificationState(bucket, customAttributes, eventTypes, notificationId, objectNamePrefix, payloadFormat, selfLink, topic);
         }
     }

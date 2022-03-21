@@ -54,8 +54,7 @@ public final class BucketAccessControlTranslation extends io.pulumi.resources.In
         public Builder owner(String owner) {
             this.owner = Objects.requireNonNull(owner);
             return this;
-        }
-        public BucketAccessControlTranslation build() {
+        }        public BucketAccessControlTranslation build() {
             return new BucketAccessControlTranslation(owner);
         }
     }

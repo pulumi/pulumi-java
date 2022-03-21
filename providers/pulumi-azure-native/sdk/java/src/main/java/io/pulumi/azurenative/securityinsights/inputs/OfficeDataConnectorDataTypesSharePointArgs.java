@@ -63,12 +63,10 @@ public final class OfficeDataConnectorDataTypesSharePointArgs extends io.pulumi.
             this.state = state;
             return this;
         }
-
         public Builder state(@Nullable Either<String,DataTypeState> state) {
             this.state = Output.ofNullable(state);
             return this;
-        }
-        public OfficeDataConnectorDataTypesSharePointArgs build() {
+        }        public OfficeDataConnectorDataTypesSharePointArgs build() {
             return new OfficeDataConnectorDataTypesSharePointArgs(state);
         }
     }

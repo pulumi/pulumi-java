@@ -247,122 +247,98 @@ public final class DataDiskArgs extends io.pulumi.resources.ResourceArgs {
             this.caching = caching;
             return this;
         }
-
         public Builder caching(@Nullable CachingTypes caching) {
             this.caching = Output.ofNullable(caching);
             return this;
         }
-
         public Builder createOption(Output<Either<String,DiskCreateOptionTypes>> createOption) {
             this.createOption = Objects.requireNonNull(createOption);
             return this;
         }
-
         public Builder createOption(Either<String,DiskCreateOptionTypes> createOption) {
             this.createOption = Output.of(Objects.requireNonNull(createOption));
             return this;
         }
-
         public Builder deleteOption(@Nullable Output<Either<String,DiskDeleteOptionTypes>> deleteOption) {
             this.deleteOption = deleteOption;
             return this;
         }
-
         public Builder deleteOption(@Nullable Either<String,DiskDeleteOptionTypes> deleteOption) {
             this.deleteOption = Output.ofNullable(deleteOption);
             return this;
         }
-
         public Builder detachOption(@Nullable Output<Either<String,DiskDetachOptionTypes>> detachOption) {
             this.detachOption = detachOption;
             return this;
         }
-
         public Builder detachOption(@Nullable Either<String,DiskDetachOptionTypes> detachOption) {
             this.detachOption = Output.ofNullable(detachOption);
             return this;
         }
-
         public Builder diskSizeGB(@Nullable Output<Integer> diskSizeGB) {
             this.diskSizeGB = diskSizeGB;
             return this;
         }
-
         public Builder diskSizeGB(@Nullable Integer diskSizeGB) {
             this.diskSizeGB = Output.ofNullable(diskSizeGB);
             return this;
         }
-
         public Builder image(@Nullable Output<VirtualHardDiskArgs> image) {
             this.image = image;
             return this;
         }
-
         public Builder image(@Nullable VirtualHardDiskArgs image) {
             this.image = Output.ofNullable(image);
             return this;
         }
-
         public Builder lun(Output<Integer> lun) {
             this.lun = Objects.requireNonNull(lun);
             return this;
         }
-
         public Builder lun(Integer lun) {
             this.lun = Output.of(Objects.requireNonNull(lun));
             return this;
         }
-
         public Builder managedDisk(@Nullable Output<ManagedDiskParametersArgs> managedDisk) {
             this.managedDisk = managedDisk;
             return this;
         }
-
         public Builder managedDisk(@Nullable ManagedDiskParametersArgs managedDisk) {
             this.managedDisk = Output.ofNullable(managedDisk);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder toBeDetached(@Nullable Output<Boolean> toBeDetached) {
             this.toBeDetached = toBeDetached;
             return this;
         }
-
         public Builder toBeDetached(@Nullable Boolean toBeDetached) {
             this.toBeDetached = Output.ofNullable(toBeDetached);
             return this;
         }
-
         public Builder vhd(@Nullable Output<VirtualHardDiskArgs> vhd) {
             this.vhd = vhd;
             return this;
         }
-
         public Builder vhd(@Nullable VirtualHardDiskArgs vhd) {
             this.vhd = Output.ofNullable(vhd);
             return this;
         }
-
         public Builder writeAcceleratorEnabled(@Nullable Output<Boolean> writeAcceleratorEnabled) {
             this.writeAcceleratorEnabled = writeAcceleratorEnabled;
             return this;
         }
-
         public Builder writeAcceleratorEnabled(@Nullable Boolean writeAcceleratorEnabled) {
             this.writeAcceleratorEnabled = Output.ofNullable(writeAcceleratorEnabled);
             return this;
-        }
-        public DataDiskArgs build() {
+        }        public DataDiskArgs build() {
             return new DataDiskArgs(caching, createOption, deleteOption, detachOption, diskSizeGB, image, lun, managedDisk, name, toBeDetached, vhd, writeAcceleratorEnabled);
         }
     }

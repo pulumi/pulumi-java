@@ -62,12 +62,13 @@ public final class PrivateLinkServicePropertiesAutoApprovalArgs extends io.pulum
             this.subscriptions = subscriptions;
             return this;
         }
-
         public Builder subscriptions(@Nullable List<String> subscriptions) {
             this.subscriptions = Output.ofNullable(subscriptions);
             return this;
         }
-        public PrivateLinkServicePropertiesAutoApprovalArgs build() {
+        public Builder subscriptions(String... subscriptions) {
+            return subscriptions(List.of(subscriptions));
+        }        public PrivateLinkServicePropertiesAutoApprovalArgs build() {
             return new PrivateLinkServicePropertiesAutoApprovalArgs(subscriptions);
         }
     }

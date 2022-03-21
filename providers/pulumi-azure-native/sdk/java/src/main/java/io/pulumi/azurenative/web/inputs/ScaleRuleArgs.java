@@ -113,42 +113,34 @@ public final class ScaleRuleArgs extends io.pulumi.resources.ResourceArgs {
             this.azureQueue = azureQueue;
             return this;
         }
-
         public Builder azureQueue(@Nullable QueueScaleRuleArgs azureQueue) {
             this.azureQueue = Output.ofNullable(azureQueue);
             return this;
         }
-
         public Builder custom(@Nullable Output<CustomScaleRuleArgs> custom) {
             this.custom = custom;
             return this;
         }
-
         public Builder custom(@Nullable CustomScaleRuleArgs custom) {
             this.custom = Output.ofNullable(custom);
             return this;
         }
-
         public Builder http(@Nullable Output<HttpScaleRuleArgs> http) {
             this.http = http;
             return this;
         }
-
         public Builder http(@Nullable HttpScaleRuleArgs http) {
             this.http = Output.ofNullable(http);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
-        }
-        public ScaleRuleArgs build() {
+        }        public ScaleRuleArgs build() {
             return new ScaleRuleArgs(azureQueue, custom, http, name);
         }
     }

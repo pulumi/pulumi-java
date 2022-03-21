@@ -71,12 +71,10 @@ public final class AKSServiceResponseResponseDataCollection {
             this.eventHubEnabled = eventHubEnabled;
             return this;
         }
-
         public Builder storageEnabled(@Nullable Boolean storageEnabled) {
             this.storageEnabled = storageEnabled;
             return this;
-        }
-        public AKSServiceResponseResponseDataCollection build() {
+        }        public AKSServiceResponseResponseDataCollection build() {
             return new AKSServiceResponseResponseDataCollection(eventHubEnabled, storageEnabled);
         }
     }

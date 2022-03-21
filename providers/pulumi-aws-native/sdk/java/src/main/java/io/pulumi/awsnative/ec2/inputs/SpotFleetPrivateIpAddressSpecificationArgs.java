@@ -67,22 +67,18 @@ public final class SpotFleetPrivateIpAddressSpecificationArgs extends io.pulumi.
             this.primary = primary;
             return this;
         }
-
         public Builder primary(@Nullable Boolean primary) {
             this.primary = Output.ofNullable(primary);
             return this;
         }
-
         public Builder privateIpAddress(Output<String> privateIpAddress) {
             this.privateIpAddress = Objects.requireNonNull(privateIpAddress);
             return this;
         }
-
         public Builder privateIpAddress(String privateIpAddress) {
             this.privateIpAddress = Output.of(Objects.requireNonNull(privateIpAddress));
             return this;
-        }
-        public SpotFleetPrivateIpAddressSpecificationArgs build() {
+        }        public SpotFleetPrivateIpAddressSpecificationArgs build() {
             return new SpotFleetPrivateIpAddressSpecificationArgs(primary, privateIpAddress);
         }
     }

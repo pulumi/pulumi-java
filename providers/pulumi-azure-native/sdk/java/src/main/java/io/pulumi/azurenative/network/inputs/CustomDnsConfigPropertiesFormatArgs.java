@@ -79,22 +79,21 @@ public final class CustomDnsConfigPropertiesFormatArgs extends io.pulumi.resourc
             this.fqdn = fqdn;
             return this;
         }
-
         public Builder fqdn(@Nullable String fqdn) {
             this.fqdn = Output.ofNullable(fqdn);
             return this;
         }
-
         public Builder ipAddresses(@Nullable Output<List<String>> ipAddresses) {
             this.ipAddresses = ipAddresses;
             return this;
         }
-
         public Builder ipAddresses(@Nullable List<String> ipAddresses) {
             this.ipAddresses = Output.ofNullable(ipAddresses);
             return this;
         }
-        public CustomDnsConfigPropertiesFormatArgs build() {
+        public Builder ipAddresses(String... ipAddresses) {
+            return ipAddresses(List.of(ipAddresses));
+        }        public CustomDnsConfigPropertiesFormatArgs build() {
             return new CustomDnsConfigPropertiesFormatArgs(fqdn, ipAddresses);
         }
     }

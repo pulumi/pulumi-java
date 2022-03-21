@@ -161,72 +161,58 @@ public final class JobTargetArgs extends io.pulumi.resources.ResourceArgs {
             this.databaseName = databaseName;
             return this;
         }
-
         public Builder databaseName(@Nullable String databaseName) {
             this.databaseName = Output.ofNullable(databaseName);
             return this;
         }
-
         public Builder elasticPoolName(@Nullable Output<String> elasticPoolName) {
             this.elasticPoolName = elasticPoolName;
             return this;
         }
-
         public Builder elasticPoolName(@Nullable String elasticPoolName) {
             this.elasticPoolName = Output.ofNullable(elasticPoolName);
             return this;
         }
-
         public Builder membershipType(@Nullable Output<JobTargetGroupMembershipType> membershipType) {
             this.membershipType = membershipType;
             return this;
         }
-
         public Builder membershipType(@Nullable JobTargetGroupMembershipType membershipType) {
             this.membershipType = Output.ofNullable(membershipType);
             return this;
         }
-
         public Builder refreshCredential(@Nullable Output<String> refreshCredential) {
             this.refreshCredential = refreshCredential;
             return this;
         }
-
         public Builder refreshCredential(@Nullable String refreshCredential) {
             this.refreshCredential = Output.ofNullable(refreshCredential);
             return this;
         }
-
         public Builder serverName(@Nullable Output<String> serverName) {
             this.serverName = serverName;
             return this;
         }
-
         public Builder serverName(@Nullable String serverName) {
             this.serverName = Output.ofNullable(serverName);
             return this;
         }
-
         public Builder shardMapName(@Nullable Output<String> shardMapName) {
             this.shardMapName = shardMapName;
             return this;
         }
-
         public Builder shardMapName(@Nullable String shardMapName) {
             this.shardMapName = Output.ofNullable(shardMapName);
             return this;
         }
-
         public Builder type(Output<Either<String,JobTargetType>> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder type(Either<String,JobTargetType> type) {
             this.type = Output.of(Objects.requireNonNull(type));
             return this;
-        }
-        public JobTargetArgs build() {
+        }        public JobTargetArgs build() {
             return new JobTargetArgs(databaseName, elasticPoolName, membershipType, refreshCredential, serverName, shardMapName, type);
         }
     }

@@ -105,27 +105,22 @@ public final class CachePolicyParametersInCacheKeyAndForwardedToOrigin extends i
             this.cookiesConfig = Objects.requireNonNull(cookiesConfig);
             return this;
         }
-
         public Builder enableAcceptEncodingBrotli(@Nullable Boolean enableAcceptEncodingBrotli) {
             this.enableAcceptEncodingBrotli = enableAcceptEncodingBrotli;
             return this;
         }
-
         public Builder enableAcceptEncodingGzip(Boolean enableAcceptEncodingGzip) {
             this.enableAcceptEncodingGzip = Objects.requireNonNull(enableAcceptEncodingGzip);
             return this;
         }
-
         public Builder headersConfig(CachePolicyHeadersConfig headersConfig) {
             this.headersConfig = Objects.requireNonNull(headersConfig);
             return this;
         }
-
         public Builder queryStringsConfig(CachePolicyQueryStringsConfig queryStringsConfig) {
             this.queryStringsConfig = Objects.requireNonNull(queryStringsConfig);
             return this;
-        }
-        public CachePolicyParametersInCacheKeyAndForwardedToOrigin build() {
+        }        public CachePolicyParametersInCacheKeyAndForwardedToOrigin build() {
             return new CachePolicyParametersInCacheKeyAndForwardedToOrigin(cookiesConfig, enableAcceptEncodingBrotli, enableAcceptEncodingGzip, headersConfig, queryStringsConfig);
         }
     }

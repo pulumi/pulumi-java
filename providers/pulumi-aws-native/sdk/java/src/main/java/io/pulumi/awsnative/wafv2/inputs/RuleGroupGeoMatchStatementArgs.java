@@ -68,22 +68,21 @@ public final class RuleGroupGeoMatchStatementArgs extends io.pulumi.resources.Re
             this.countryCodes = countryCodes;
             return this;
         }
-
         public Builder countryCodes(@Nullable List<String> countryCodes) {
             this.countryCodes = Output.ofNullable(countryCodes);
             return this;
         }
-
+        public Builder countryCodes(String... countryCodes) {
+            return countryCodes(List.of(countryCodes));
+        }
         public Builder forwardedIPConfig(@Nullable Output<RuleGroupForwardedIPConfigurationArgs> forwardedIPConfig) {
             this.forwardedIPConfig = forwardedIPConfig;
             return this;
         }
-
         public Builder forwardedIPConfig(@Nullable RuleGroupForwardedIPConfigurationArgs forwardedIPConfig) {
             this.forwardedIPConfig = Output.ofNullable(forwardedIPConfig);
             return this;
-        }
-        public RuleGroupGeoMatchStatementArgs build() {
+        }        public RuleGroupGeoMatchStatementArgs build() {
             return new RuleGroupGeoMatchStatementArgs(countryCodes, forwardedIPConfig);
         }
     }

@@ -66,22 +66,18 @@ public final class TaskDefinitionContainerDependencyArgs extends io.pulumi.resou
             this.condition = condition;
             return this;
         }
-
         public Builder condition(@Nullable String condition) {
             this.condition = Output.ofNullable(condition);
             return this;
         }
-
         public Builder containerName(@Nullable Output<String> containerName) {
             this.containerName = containerName;
             return this;
         }
-
         public Builder containerName(@Nullable String containerName) {
             this.containerName = Output.ofNullable(containerName);
             return this;
-        }
-        public TaskDefinitionContainerDependencyArgs build() {
+        }        public TaskDefinitionContainerDependencyArgs build() {
             return new TaskDefinitionContainerDependencyArgs(condition, containerName);
         }
     }

@@ -145,62 +145,50 @@ public final class RuntimeClassArgs extends io.pulumi.resources.ResourceArgs {
             this.apiVersion = apiVersion;
             return this;
         }
-
         public Builder apiVersion(@Nullable String apiVersion) {
             this.apiVersion = Output.ofNullable(apiVersion);
             return this;
         }
-
         public Builder handler(Output<String> handler) {
             this.handler = Objects.requireNonNull(handler);
             return this;
         }
-
         public Builder handler(String handler) {
             this.handler = Output.of(Objects.requireNonNull(handler));
             return this;
         }
-
         public Builder kind(@Nullable Output<String> kind) {
             this.kind = kind;
             return this;
         }
-
         public Builder kind(@Nullable String kind) {
             this.kind = Output.ofNullable(kind);
             return this;
         }
-
         public Builder metadata(@Nullable Output<ObjectMetaArgs> metadata) {
             this.metadata = metadata;
             return this;
         }
-
         public Builder metadata(@Nullable ObjectMetaArgs metadata) {
             this.metadata = Output.ofNullable(metadata);
             return this;
         }
-
         public Builder overhead(@Nullable Output<OverheadArgs> overhead) {
             this.overhead = overhead;
             return this;
         }
-
         public Builder overhead(@Nullable OverheadArgs overhead) {
             this.overhead = Output.ofNullable(overhead);
             return this;
         }
-
         public Builder scheduling(@Nullable Output<SchedulingArgs> scheduling) {
             this.scheduling = scheduling;
             return this;
         }
-
         public Builder scheduling(@Nullable SchedulingArgs scheduling) {
             this.scheduling = Output.ofNullable(scheduling);
             return this;
-        }
-        public RuntimeClassArgs build() {
+        }        public RuntimeClassArgs build() {
             return new RuntimeClassArgs(apiVersion, handler, kind, metadata, overhead, scheduling);
         }
     }

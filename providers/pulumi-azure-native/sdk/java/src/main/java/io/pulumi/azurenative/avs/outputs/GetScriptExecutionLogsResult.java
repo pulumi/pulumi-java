@@ -333,92 +333,92 @@ public final class GetScriptExecutionLogsResult {
             this.errors = Objects.requireNonNull(errors);
             return this;
         }
-
+        public Builder errors(String... errors) {
+            return errors(List.of(errors));
+        }
         public Builder failureReason(@Nullable String failureReason) {
             this.failureReason = failureReason;
             return this;
         }
-
         public Builder finishedAt(String finishedAt) {
             this.finishedAt = Objects.requireNonNull(finishedAt);
             return this;
         }
-
         public Builder hiddenParameters(@Nullable List<Object> hiddenParameters) {
             this.hiddenParameters = hiddenParameters;
             return this;
         }
-
+        public Builder hiddenParameters(Object... hiddenParameters) {
+            return hiddenParameters(List.of(hiddenParameters));
+        }
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder information(List<String> information) {
             this.information = Objects.requireNonNull(information);
             return this;
         }
-
+        public Builder information(String... information) {
+            return information(List.of(information));
+        }
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder namedOutputs(@Nullable Map<String,Object> namedOutputs) {
             this.namedOutputs = namedOutputs;
             return this;
         }
-
         public Builder output(@Nullable List<String> output) {
             this.output = output;
             return this;
         }
-
+        public Builder output(String... output) {
+            return output(List.of(output));
+        }
         public Builder parameters(@Nullable List<Object> parameters) {
             this.parameters = parameters;
             return this;
         }
-
+        public Builder parameters(Object... parameters) {
+            return parameters(List.of(parameters));
+        }
         public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
-
         public Builder retention(@Nullable String retention) {
             this.retention = retention;
             return this;
         }
-
         public Builder scriptCmdletId(@Nullable String scriptCmdletId) {
             this.scriptCmdletId = scriptCmdletId;
             return this;
         }
-
         public Builder startedAt(String startedAt) {
             this.startedAt = Objects.requireNonNull(startedAt);
             return this;
         }
-
         public Builder submittedAt(String submittedAt) {
             this.submittedAt = Objects.requireNonNull(submittedAt);
             return this;
         }
-
         public Builder timeout(String timeout) {
             this.timeout = Objects.requireNonNull(timeout);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder warnings(List<String> warnings) {
             this.warnings = Objects.requireNonNull(warnings);
             return this;
         }
-        public GetScriptExecutionLogsResult build() {
+        public Builder warnings(String... warnings) {
+            return warnings(List.of(warnings));
+        }        public GetScriptExecutionLogsResult build() {
             return new GetScriptExecutionLogsResult(errors, failureReason, finishedAt, hiddenParameters, id, information, name, namedOutputs, output, parameters, provisioningState, retention, scriptCmdletId, startedAt, submittedAt, timeout, type, warnings);
         }
     }

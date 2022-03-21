@@ -62,12 +62,13 @@ public final class AddressSpaceArgs extends io.pulumi.resources.ResourceArgs {
             this.addressPrefixes = addressPrefixes;
             return this;
         }
-
         public Builder addressPrefixes(@Nullable List<String> addressPrefixes) {
             this.addressPrefixes = Output.ofNullable(addressPrefixes);
             return this;
         }
-        public AddressSpaceArgs build() {
+        public Builder addressPrefixes(String... addressPrefixes) {
+            return addressPrefixes(List.of(addressPrefixes));
+        }        public AddressSpaceArgs build() {
             return new AddressSpaceArgs(addressPrefixes);
         }
     }

@@ -86,17 +86,14 @@ public final class GetLaunchConfigurationMetadataOption {
             this.httpEndpoint = Objects.requireNonNull(httpEndpoint);
             return this;
         }
-
         public Builder httpPutResponseHopLimit(Integer httpPutResponseHopLimit) {
             this.httpPutResponseHopLimit = Objects.requireNonNull(httpPutResponseHopLimit);
             return this;
         }
-
         public Builder httpTokens(String httpTokens) {
             this.httpTokens = Objects.requireNonNull(httpTokens);
             return this;
-        }
-        public GetLaunchConfigurationMetadataOption build() {
+        }        public GetLaunchConfigurationMetadataOption build() {
             return new GetLaunchConfigurationMetadataOption(httpEndpoint, httpPutResponseHopLimit, httpTokens);
         }
     }

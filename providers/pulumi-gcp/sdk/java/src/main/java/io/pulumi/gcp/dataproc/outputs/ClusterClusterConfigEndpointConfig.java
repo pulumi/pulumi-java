@@ -67,12 +67,10 @@ public final class ClusterClusterConfigEndpointConfig {
             this.enableHttpPortAccess = Objects.requireNonNull(enableHttpPortAccess);
             return this;
         }
-
         public Builder httpPorts(@Nullable Map<String,Object> httpPorts) {
             this.httpPorts = httpPorts;
             return this;
-        }
-        public ClusterClusterConfigEndpointConfig build() {
+        }        public ClusterClusterConfigEndpointConfig build() {
             return new ClusterClusterConfigEndpointConfig(enableHttpPortAccess, httpPorts);
         }
     }

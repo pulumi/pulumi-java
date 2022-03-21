@@ -87,17 +87,14 @@ public final class UserPoolClientTokenValidityUnits {
             this.accessToken = accessToken;
             return this;
         }
-
         public Builder idToken(@Nullable String idToken) {
             this.idToken = idToken;
             return this;
         }
-
         public Builder refreshToken(@Nullable String refreshToken) {
             this.refreshToken = refreshToken;
             return this;
-        }
-        public UserPoolClientTokenValidityUnits build() {
+        }        public UserPoolClientTokenValidityUnits build() {
             return new UserPoolClientTokenValidityUnits(accessToken, idToken, refreshToken);
         }
     }

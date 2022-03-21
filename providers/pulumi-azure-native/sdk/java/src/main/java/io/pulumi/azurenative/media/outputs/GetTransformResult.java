@@ -170,42 +170,37 @@ public final class GetTransformResult {
             this.created = Objects.requireNonNull(created);
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder lastModified(String lastModified) {
             this.lastModified = Objects.requireNonNull(lastModified);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder outputs(List<TransformOutputResponse> outputs) {
             this.outputs = Objects.requireNonNull(outputs);
             return this;
         }
-
+        public Builder outputs(TransformOutputResponse... outputs) {
+            return outputs(List.of(outputs));
+        }
         public Builder systemData(SystemDataResponse systemData) {
             this.systemData = Objects.requireNonNull(systemData);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public GetTransformResult build() {
+        }        public GetTransformResult build() {
             return new GetTransformResult(created, description, id, lastModified, name, outputs, systemData, type);
         }
     }

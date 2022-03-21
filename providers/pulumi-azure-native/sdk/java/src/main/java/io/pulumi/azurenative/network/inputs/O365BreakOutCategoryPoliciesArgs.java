@@ -94,32 +94,26 @@ public final class O365BreakOutCategoryPoliciesArgs extends io.pulumi.resources.
             this.allow = allow;
             return this;
         }
-
         public Builder allow(@Nullable Boolean allow) {
             this.allow = Output.ofNullable(allow);
             return this;
         }
-
         public Builder $default(@Nullable Output<Boolean> $default) {
             this.$default = $default;
             return this;
         }
-
         public Builder $default(@Nullable Boolean $default) {
             this.$default = Output.ofNullable($default);
             return this;
         }
-
         public Builder optimize(@Nullable Output<Boolean> optimize) {
             this.optimize = optimize;
             return this;
         }
-
         public Builder optimize(@Nullable Boolean optimize) {
             this.optimize = Output.ofNullable(optimize);
             return this;
-        }
-        public O365BreakOutCategoryPoliciesArgs build() {
+        }        public O365BreakOutCategoryPoliciesArgs build() {
             return new O365BreakOutCategoryPoliciesArgs(allow, $default, optimize);
         }
     }

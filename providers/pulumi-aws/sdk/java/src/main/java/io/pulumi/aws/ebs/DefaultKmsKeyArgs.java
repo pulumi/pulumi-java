@@ -56,12 +56,10 @@ public final class DefaultKmsKeyArgs extends io.pulumi.resources.ResourceArgs {
             this.keyArn = Objects.requireNonNull(keyArn);
             return this;
         }
-
         public Builder keyArn(String keyArn) {
             this.keyArn = Output.of(Objects.requireNonNull(keyArn));
             return this;
-        }
-        public DefaultKmsKeyArgs build() {
+        }        public DefaultKmsKeyArgs build() {
             return new DefaultKmsKeyArgs(keyArn);
         }
     }

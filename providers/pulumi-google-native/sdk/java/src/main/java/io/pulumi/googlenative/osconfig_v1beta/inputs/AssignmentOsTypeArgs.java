@@ -94,32 +94,26 @@ public final class AssignmentOsTypeArgs extends io.pulumi.resources.ResourceArgs
             this.osArchitecture = osArchitecture;
             return this;
         }
-
         public Builder osArchitecture(@Nullable String osArchitecture) {
             this.osArchitecture = Output.ofNullable(osArchitecture);
             return this;
         }
-
         public Builder osShortName(@Nullable Output<String> osShortName) {
             this.osShortName = osShortName;
             return this;
         }
-
         public Builder osShortName(@Nullable String osShortName) {
             this.osShortName = Output.ofNullable(osShortName);
             return this;
         }
-
         public Builder osVersion(@Nullable Output<String> osVersion) {
             this.osVersion = osVersion;
             return this;
         }
-
         public Builder osVersion(@Nullable String osVersion) {
             this.osVersion = Output.ofNullable(osVersion);
             return this;
-        }
-        public AssignmentOsTypeArgs build() {
+        }        public AssignmentOsTypeArgs build() {
             return new AssignmentOsTypeArgs(osArchitecture, osShortName, osVersion);
         }
     }

@@ -61,12 +61,10 @@ public final class AzureResourceDetailsArgs extends io.pulumi.resources.Resource
             this.source = Objects.requireNonNull(source);
             return this;
         }
-
         public Builder source(String source) {
             this.source = Output.of(Objects.requireNonNull(source));
             return this;
-        }
-        public AzureResourceDetailsArgs build() {
+        }        public AzureResourceDetailsArgs build() {
             return new AzureResourceDetailsArgs(source);
         }
     }

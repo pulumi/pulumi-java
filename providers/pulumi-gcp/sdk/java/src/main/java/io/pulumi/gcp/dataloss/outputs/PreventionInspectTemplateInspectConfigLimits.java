@@ -90,17 +90,17 @@ public final class PreventionInspectTemplateInspectConfigLimits {
             this.maxFindingsPerInfoTypes = maxFindingsPerInfoTypes;
             return this;
         }
-
+        public Builder maxFindingsPerInfoTypes(PreventionInspectTemplateInspectConfigLimitsMaxFindingsPerInfoType... maxFindingsPerInfoTypes) {
+            return maxFindingsPerInfoTypes(List.of(maxFindingsPerInfoTypes));
+        }
         public Builder maxFindingsPerItem(Integer maxFindingsPerItem) {
             this.maxFindingsPerItem = Objects.requireNonNull(maxFindingsPerItem);
             return this;
         }
-
         public Builder maxFindingsPerRequest(Integer maxFindingsPerRequest) {
             this.maxFindingsPerRequest = Objects.requireNonNull(maxFindingsPerRequest);
             return this;
-        }
-        public PreventionInspectTemplateInspectConfigLimits build() {
+        }        public PreventionInspectTemplateInspectConfigLimits build() {
             return new PreventionInspectTemplateInspectConfigLimits(maxFindingsPerInfoTypes, maxFindingsPerItem, maxFindingsPerRequest);
         }
     }

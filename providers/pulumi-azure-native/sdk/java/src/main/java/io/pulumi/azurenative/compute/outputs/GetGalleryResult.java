@@ -186,47 +186,38 @@ public final class GetGalleryResult {
             this.description = description;
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder identifier(@Nullable GalleryIdentifierResponse identifier) {
             this.identifier = identifier;
             return this;
         }
-
         public Builder location(String location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
-
         public Builder sharingProfile(@Nullable SharingProfileResponse sharingProfile) {
             this.sharingProfile = sharingProfile;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public GetGalleryResult build() {
+        }        public GetGalleryResult build() {
             return new GetGalleryResult(description, id, identifier, location, name, provisioningState, sharingProfile, tags, type);
         }
     }

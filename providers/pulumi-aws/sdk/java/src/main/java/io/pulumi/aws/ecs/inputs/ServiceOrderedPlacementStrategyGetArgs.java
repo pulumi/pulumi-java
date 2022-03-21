@@ -77,22 +77,18 @@ public final class ServiceOrderedPlacementStrategyGetArgs extends io.pulumi.reso
             this.field = field;
             return this;
         }
-
         public Builder field(@Nullable String field) {
             this.field = Output.ofNullable(field);
             return this;
         }
-
         public Builder type(Output<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Output.of(Objects.requireNonNull(type));
             return this;
-        }
-        public ServiceOrderedPlacementStrategyGetArgs build() {
+        }        public ServiceOrderedPlacementStrategyGetArgs build() {
             return new ServiceOrderedPlacementStrategyGetArgs(field, type);
         }
     }

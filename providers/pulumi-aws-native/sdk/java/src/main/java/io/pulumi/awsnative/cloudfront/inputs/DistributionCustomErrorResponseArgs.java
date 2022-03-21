@@ -92,42 +92,34 @@ public final class DistributionCustomErrorResponseArgs extends io.pulumi.resourc
             this.errorCachingMinTTL = errorCachingMinTTL;
             return this;
         }
-
         public Builder errorCachingMinTTL(@Nullable Double errorCachingMinTTL) {
             this.errorCachingMinTTL = Output.ofNullable(errorCachingMinTTL);
             return this;
         }
-
         public Builder errorCode(Output<Integer> errorCode) {
             this.errorCode = Objects.requireNonNull(errorCode);
             return this;
         }
-
         public Builder errorCode(Integer errorCode) {
             this.errorCode = Output.of(Objects.requireNonNull(errorCode));
             return this;
         }
-
         public Builder responseCode(@Nullable Output<Integer> responseCode) {
             this.responseCode = responseCode;
             return this;
         }
-
         public Builder responseCode(@Nullable Integer responseCode) {
             this.responseCode = Output.ofNullable(responseCode);
             return this;
         }
-
         public Builder responsePagePath(@Nullable Output<String> responsePagePath) {
             this.responsePagePath = responsePagePath;
             return this;
         }
-
         public Builder responsePagePath(@Nullable String responsePagePath) {
             this.responsePagePath = Output.ofNullable(responsePagePath);
             return this;
-        }
-        public DistributionCustomErrorResponseArgs build() {
+        }        public DistributionCustomErrorResponseArgs build() {
             return new DistributionCustomErrorResponseArgs(errorCachingMinTTL, errorCode, responseCode, responsePagePath);
         }
     }

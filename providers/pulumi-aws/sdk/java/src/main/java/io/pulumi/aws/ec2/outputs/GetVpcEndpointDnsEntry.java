@@ -69,12 +69,10 @@ public final class GetVpcEndpointDnsEntry {
             this.dnsName = Objects.requireNonNull(dnsName);
             return this;
         }
-
         public Builder hostedZoneId(String hostedZoneId) {
             this.hostedZoneId = Objects.requireNonNull(hostedZoneId);
             return this;
-        }
-        public GetVpcEndpointDnsEntry build() {
+        }        public GetVpcEndpointDnsEntry build() {
             return new GetVpcEndpointDnsEntry(dnsName, hostedZoneId);
         }
     }

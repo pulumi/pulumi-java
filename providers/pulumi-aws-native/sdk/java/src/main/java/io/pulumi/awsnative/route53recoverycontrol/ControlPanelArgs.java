@@ -92,32 +92,29 @@ public final class ControlPanelArgs extends io.pulumi.resources.ResourceArgs {
             this.clusterArn = clusterArn;
             return this;
         }
-
         public Builder clusterArn(@Nullable String clusterArn) {
             this.clusterArn = Output.ofNullable(clusterArn);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder tags(@Nullable Output<List<ControlPanelTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable List<ControlPanelTagArgs> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-        public ControlPanelArgs build() {
+        public Builder tags(ControlPanelTagArgs... tags) {
+            return tags(List.of(tags));
+        }        public ControlPanelArgs build() {
             return new ControlPanelArgs(clusterArn, name, tags);
         }
     }

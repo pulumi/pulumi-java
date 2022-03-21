@@ -78,17 +78,14 @@ public final class GetRepoIamPolicyArgs extends io.pulumi.resources.InvokeArgs {
             this.optionsRequestedPolicyVersion = optionsRequestedPolicyVersion;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = project;
             return this;
         }
-
         public Builder repoId(String repoId) {
             this.repoId = Objects.requireNonNull(repoId);
             return this;
-        }
-        public GetRepoIamPolicyArgs build() {
+        }        public GetRepoIamPolicyArgs build() {
             return new GetRepoIamPolicyArgs(optionsRequestedPolicyVersion, project, repoId);
         }
     }

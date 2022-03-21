@@ -61,12 +61,10 @@ public final class ModelStateArgs extends io.pulumi.resources.ResourceArgs {
             this.published = published;
             return this;
         }
-
         public Builder published(@Nullable Boolean published) {
             this.published = Output.ofNullable(published);
             return this;
-        }
-        public ModelStateArgs build() {
+        }        public ModelStateArgs build() {
             return new ModelStateArgs(published);
         }
     }

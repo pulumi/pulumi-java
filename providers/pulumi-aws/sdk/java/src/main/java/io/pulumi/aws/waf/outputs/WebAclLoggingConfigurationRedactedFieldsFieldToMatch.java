@@ -71,12 +71,10 @@ public final class WebAclLoggingConfigurationRedactedFieldsFieldToMatch {
             this.data = data;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public WebAclLoggingConfigurationRedactedFieldsFieldToMatch build() {
+        }        public WebAclLoggingConfigurationRedactedFieldsFieldToMatch build() {
             return new WebAclLoggingConfigurationRedactedFieldsFieldToMatch(data, type);
         }
     }

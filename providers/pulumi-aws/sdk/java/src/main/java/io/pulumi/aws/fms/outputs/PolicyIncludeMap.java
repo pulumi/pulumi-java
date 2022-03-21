@@ -71,12 +71,16 @@ public final class PolicyIncludeMap {
             this.accounts = accounts;
             return this;
         }
-
+        public Builder accounts(String... accounts) {
+            return accounts(List.of(accounts));
+        }
         public Builder orgunits(@Nullable List<String> orgunits) {
             this.orgunits = orgunits;
             return this;
         }
-        public PolicyIncludeMap build() {
+        public Builder orgunits(String... orgunits) {
+            return orgunits(List.of(orgunits));
+        }        public PolicyIncludeMap build() {
             return new PolicyIncludeMap(accounts, orgunits);
         }
     }

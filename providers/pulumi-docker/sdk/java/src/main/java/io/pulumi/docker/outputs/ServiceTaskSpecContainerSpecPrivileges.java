@@ -56,12 +56,10 @@ public final class ServiceTaskSpecContainerSpecPrivileges {
             this.credentialSpec = credentialSpec;
             return this;
         }
-
         public Builder seLinuxContext(@Nullable ServiceTaskSpecContainerSpecPrivilegesSeLinuxContext seLinuxContext) {
             this.seLinuxContext = seLinuxContext;
             return this;
-        }
-        public ServiceTaskSpecContainerSpecPrivileges build() {
+        }        public ServiceTaskSpecContainerSpecPrivileges build() {
             return new ServiceTaskSpecContainerSpecPrivileges(credentialSpec, seLinuxContext);
         }
     }

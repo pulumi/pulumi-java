@@ -88,17 +88,14 @@ public final class ListWebAppConnectionStringsSlotArgs extends io.pulumi.resourc
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder slot(String slot) {
             this.slot = Objects.requireNonNull(slot);
             return this;
-        }
-        public ListWebAppConnectionStringsSlotArgs build() {
+        }        public ListWebAppConnectionStringsSlotArgs build() {
             return new ListWebAppConnectionStringsSlotArgs(name, resourceGroupName, slot);
         }
     }

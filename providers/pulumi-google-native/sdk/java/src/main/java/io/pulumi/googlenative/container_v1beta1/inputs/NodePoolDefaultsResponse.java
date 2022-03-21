@@ -58,8 +58,7 @@ public final class NodePoolDefaultsResponse extends io.pulumi.resources.InvokeAr
         public Builder nodeConfigDefaults(NodeConfigDefaultsResponse nodeConfigDefaults) {
             this.nodeConfigDefaults = Objects.requireNonNull(nodeConfigDefaults);
             return this;
-        }
-        public NodePoolDefaultsResponse build() {
+        }        public NodePoolDefaultsResponse build() {
             return new NodePoolDefaultsResponse(nodeConfigDefaults);
         }
     }

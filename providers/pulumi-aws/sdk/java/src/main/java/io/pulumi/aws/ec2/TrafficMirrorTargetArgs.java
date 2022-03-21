@@ -107,42 +107,34 @@ public final class TrafficMirrorTargetArgs extends io.pulumi.resources.ResourceA
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder networkInterfaceId(@Nullable Output<String> networkInterfaceId) {
             this.networkInterfaceId = networkInterfaceId;
             return this;
         }
-
         public Builder networkInterfaceId(@Nullable String networkInterfaceId) {
             this.networkInterfaceId = Output.ofNullable(networkInterfaceId);
             return this;
         }
-
         public Builder networkLoadBalancerArn(@Nullable Output<String> networkLoadBalancerArn) {
             this.networkLoadBalancerArn = networkLoadBalancerArn;
             return this;
         }
-
         public Builder networkLoadBalancerArn(@Nullable String networkLoadBalancerArn) {
             this.networkLoadBalancerArn = Output.ofNullable(networkLoadBalancerArn);
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
-        }
-        public TrafficMirrorTargetArgs build() {
+        }        public TrafficMirrorTargetArgs build() {
             return new TrafficMirrorTargetArgs(description, networkInterfaceId, networkLoadBalancerArn, tags);
         }
     }

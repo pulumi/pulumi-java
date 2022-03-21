@@ -105,22 +105,18 @@ public final class VirtualMachineIdentityResponse {
             this.principalId = Objects.requireNonNull(principalId);
             return this;
         }
-
         public Builder tenantId(String tenantId) {
             this.tenantId = Objects.requireNonNull(tenantId);
             return this;
         }
-
         public Builder type(@Nullable String type) {
             this.type = type;
             return this;
         }
-
         public Builder userAssignedIdentities(@Nullable Map<String,VirtualMachineIdentityResponseUserAssignedIdentities> userAssignedIdentities) {
             this.userAssignedIdentities = userAssignedIdentities;
             return this;
-        }
-        public VirtualMachineIdentityResponse build() {
+        }        public VirtualMachineIdentityResponse build() {
             return new VirtualMachineIdentityResponse(principalId, tenantId, type, userAssignedIdentities);
         }
     }

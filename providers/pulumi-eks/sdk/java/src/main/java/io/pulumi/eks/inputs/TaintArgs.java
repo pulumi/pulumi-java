@@ -77,22 +77,18 @@ public final class TaintArgs extends io.pulumi.resources.ResourceArgs {
             this.effect = Objects.requireNonNull(effect);
             return this;
         }
-
         public Builder effect(String effect) {
             this.effect = Output.of(Objects.requireNonNull(effect));
             return this;
         }
-
         public Builder value(Output<String> value) {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public Builder value(String value) {
             this.value = Output.of(Objects.requireNonNull(value));
             return this;
-        }
-        public TaintArgs build() {
+        }        public TaintArgs build() {
             return new TaintArgs(effect, value);
         }
     }

@@ -63,17 +63,14 @@ public final class NamespaceIamBindingCondition {
             this.description = description;
             return this;
         }
-
         public Builder expression(String expression) {
             this.expression = Objects.requireNonNull(expression);
             return this;
         }
-
         public Builder title(String title) {
             this.title = Objects.requireNonNull(title);
             return this;
-        }
-        public NamespaceIamBindingCondition build() {
+        }        public NamespaceIamBindingCondition build() {
             return new NamespaceIamBindingCondition(description, expression, title);
         }
     }

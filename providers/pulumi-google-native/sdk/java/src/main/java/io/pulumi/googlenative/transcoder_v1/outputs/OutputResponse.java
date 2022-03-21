@@ -51,8 +51,7 @@ public final class OutputResponse {
         public Builder uri(String uri) {
             this.uri = Objects.requireNonNull(uri);
             return this;
-        }
-        public OutputResponse build() {
+        }        public OutputResponse build() {
             return new OutputResponse(uri);
         }
     }

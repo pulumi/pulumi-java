@@ -88,17 +88,14 @@ public final class GetExpressRouteCircuitPeeringArgs extends io.pulumi.resources
             this.circuitName = Objects.requireNonNull(circuitName);
             return this;
         }
-
         public Builder peeringName(String peeringName) {
             this.peeringName = Objects.requireNonNull(peeringName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
-        }
-        public GetExpressRouteCircuitPeeringArgs build() {
+        }        public GetExpressRouteCircuitPeeringArgs build() {
             return new GetExpressRouteCircuitPeeringArgs(circuitName, peeringName, resourceGroupName);
         }
     }

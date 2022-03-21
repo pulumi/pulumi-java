@@ -50,8 +50,7 @@ public final class GetTransitGatewayArgs extends io.pulumi.resources.InvokeArgs 
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
-        }
-        public GetTransitGatewayArgs build() {
+        }        public GetTransitGatewayArgs build() {
             return new GetTransitGatewayArgs(id);
         }
     }

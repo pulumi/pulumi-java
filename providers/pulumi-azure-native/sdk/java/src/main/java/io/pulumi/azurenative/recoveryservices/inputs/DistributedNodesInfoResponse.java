@@ -96,17 +96,14 @@ public final class DistributedNodesInfoResponse extends io.pulumi.resources.Invo
             this.errorDetail = errorDetail;
             return this;
         }
-
         public Builder nodeName(@Nullable String nodeName) {
             this.nodeName = nodeName;
             return this;
         }
-
         public Builder status(@Nullable String status) {
             this.status = status;
             return this;
-        }
-        public DistributedNodesInfoResponse build() {
+        }        public DistributedNodesInfoResponse build() {
             return new DistributedNodesInfoResponse(errorDetail, nodeName, status);
         }
     }

@@ -77,22 +77,18 @@ public final class HttpHeaderMatchArgs extends io.pulumi.resources.ResourceArgs 
             this.headerName = Objects.requireNonNull(headerName);
             return this;
         }
-
         public Builder headerName(String headerName) {
             this.headerName = Output.of(Objects.requireNonNull(headerName));
             return this;
         }
-
         public Builder regexMatch(Output<String> regexMatch) {
             this.regexMatch = Objects.requireNonNull(regexMatch);
             return this;
         }
-
         public Builder regexMatch(String regexMatch) {
             this.regexMatch = Output.of(Objects.requireNonNull(regexMatch));
             return this;
-        }
-        public HttpHeaderMatchArgs build() {
+        }        public HttpHeaderMatchArgs build() {
             return new HttpHeaderMatchArgs(headerName, regexMatch);
         }
     }

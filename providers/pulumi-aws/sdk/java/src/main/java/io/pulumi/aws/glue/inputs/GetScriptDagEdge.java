@@ -90,17 +90,14 @@ public final class GetScriptDagEdge extends io.pulumi.resources.InvokeArgs {
             this.source = Objects.requireNonNull(source);
             return this;
         }
-
         public Builder target(String target) {
             this.target = Objects.requireNonNull(target);
             return this;
         }
-
         public Builder targetParameter(@Nullable String targetParameter) {
             this.targetParameter = targetParameter;
             return this;
-        }
-        public GetScriptDagEdge build() {
+        }        public GetScriptDagEdge build() {
             return new GetScriptDagEdge(source, target, targetParameter);
         }
     }

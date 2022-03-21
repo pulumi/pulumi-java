@@ -57,8 +57,7 @@ public final class TagsResponse extends io.pulumi.resources.InvokeArgs {
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
-        }
-        public TagsResponse build() {
+        }        public TagsResponse build() {
             return new TagsResponse(tags);
         }
     }

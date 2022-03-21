@@ -291,82 +291,84 @@ public final class GetDirectoryResult {
             this.alias = Objects.requireNonNull(alias);
             return this;
         }
-
         public Builder customerUserName(String customerUserName) {
             this.customerUserName = Objects.requireNonNull(customerUserName);
             return this;
         }
-
         public Builder directoryId(String directoryId) {
             this.directoryId = Objects.requireNonNull(directoryId);
             return this;
         }
-
         public Builder directoryName(String directoryName) {
             this.directoryName = Objects.requireNonNull(directoryName);
             return this;
         }
-
         public Builder directoryType(String directoryType) {
             this.directoryType = Objects.requireNonNull(directoryType);
             return this;
         }
-
         public Builder dnsIpAddresses(List<String> dnsIpAddresses) {
             this.dnsIpAddresses = Objects.requireNonNull(dnsIpAddresses);
             return this;
         }
-
+        public Builder dnsIpAddresses(String... dnsIpAddresses) {
+            return dnsIpAddresses(List.of(dnsIpAddresses));
+        }
         public Builder iamRoleId(String iamRoleId) {
             this.iamRoleId = Objects.requireNonNull(iamRoleId);
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder ipGroupIds(List<String> ipGroupIds) {
             this.ipGroupIds = Objects.requireNonNull(ipGroupIds);
             return this;
         }
-
+        public Builder ipGroupIds(String... ipGroupIds) {
+            return ipGroupIds(List.of(ipGroupIds));
+        }
         public Builder registrationCode(String registrationCode) {
             this.registrationCode = Objects.requireNonNull(registrationCode);
             return this;
         }
-
         public Builder selfServicePermissions(List<GetDirectorySelfServicePermission> selfServicePermissions) {
             this.selfServicePermissions = Objects.requireNonNull(selfServicePermissions);
             return this;
         }
-
+        public Builder selfServicePermissions(GetDirectorySelfServicePermission... selfServicePermissions) {
+            return selfServicePermissions(List.of(selfServicePermissions));
+        }
         public Builder subnetIds(List<String> subnetIds) {
             this.subnetIds = Objects.requireNonNull(subnetIds);
             return this;
         }
-
+        public Builder subnetIds(String... subnetIds) {
+            return subnetIds(List.of(subnetIds));
+        }
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder workspaceAccessProperties(List<GetDirectoryWorkspaceAccessProperty> workspaceAccessProperties) {
             this.workspaceAccessProperties = Objects.requireNonNull(workspaceAccessProperties);
             return this;
         }
-
+        public Builder workspaceAccessProperties(GetDirectoryWorkspaceAccessProperty... workspaceAccessProperties) {
+            return workspaceAccessProperties(List.of(workspaceAccessProperties));
+        }
         public Builder workspaceCreationProperties(List<GetDirectoryWorkspaceCreationProperty> workspaceCreationProperties) {
             this.workspaceCreationProperties = Objects.requireNonNull(workspaceCreationProperties);
             return this;
         }
-
+        public Builder workspaceCreationProperties(GetDirectoryWorkspaceCreationProperty... workspaceCreationProperties) {
+            return workspaceCreationProperties(List.of(workspaceCreationProperties));
+        }
         public Builder workspaceSecurityGroupId(String workspaceSecurityGroupId) {
             this.workspaceSecurityGroupId = Objects.requireNonNull(workspaceSecurityGroupId);
             return this;
-        }
-        public GetDirectoryResult build() {
+        }        public GetDirectoryResult build() {
             return new GetDirectoryResult(alias, customerUserName, directoryId, directoryName, directoryType, dnsIpAddresses, iamRoleId, id, ipGroupIds, registrationCode, selfServicePermissions, subnetIds, tags, workspaceAccessProperties, workspaceCreationProperties, workspaceSecurityGroupId);
         }
     }

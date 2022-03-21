@@ -132,72 +132,61 @@ public final class KnowledgeBaseArgs extends io.pulumi.resources.ResourceArgs {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder knowledgeBaseType(Output<KnowledgeBaseType> knowledgeBaseType) {
             this.knowledgeBaseType = Objects.requireNonNull(knowledgeBaseType);
             return this;
         }
-
         public Builder knowledgeBaseType(KnowledgeBaseType knowledgeBaseType) {
             this.knowledgeBaseType = Output.of(Objects.requireNonNull(knowledgeBaseType));
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder renderingConfiguration(@Nullable Output<KnowledgeBaseRenderingConfigurationArgs> renderingConfiguration) {
             this.renderingConfiguration = renderingConfiguration;
             return this;
         }
-
         public Builder renderingConfiguration(@Nullable KnowledgeBaseRenderingConfigurationArgs renderingConfiguration) {
             this.renderingConfiguration = Output.ofNullable(renderingConfiguration);
             return this;
         }
-
         public Builder serverSideEncryptionConfiguration(@Nullable Output<KnowledgeBaseServerSideEncryptionConfigurationArgs> serverSideEncryptionConfiguration) {
             this.serverSideEncryptionConfiguration = serverSideEncryptionConfiguration;
             return this;
         }
-
         public Builder serverSideEncryptionConfiguration(@Nullable KnowledgeBaseServerSideEncryptionConfigurationArgs serverSideEncryptionConfiguration) {
             this.serverSideEncryptionConfiguration = Output.ofNullable(serverSideEncryptionConfiguration);
             return this;
         }
-
         public Builder sourceConfiguration(@Nullable Output<KnowledgeBaseSourceConfigurationArgs> sourceConfiguration) {
             this.sourceConfiguration = sourceConfiguration;
             return this;
         }
-
         public Builder sourceConfiguration(@Nullable KnowledgeBaseSourceConfigurationArgs sourceConfiguration) {
             this.sourceConfiguration = Output.ofNullable(sourceConfiguration);
             return this;
         }
-
         public Builder tags(@Nullable Output<List<KnowledgeBaseTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable List<KnowledgeBaseTagArgs> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-        public KnowledgeBaseArgs build() {
+        public Builder tags(KnowledgeBaseTagArgs... tags) {
+            return tags(List.of(tags));
+        }        public KnowledgeBaseArgs build() {
             return new KnowledgeBaseArgs(description, knowledgeBaseType, name, renderingConfiguration, serverSideEncryptionConfiguration, sourceConfiguration, tags);
         }
     }

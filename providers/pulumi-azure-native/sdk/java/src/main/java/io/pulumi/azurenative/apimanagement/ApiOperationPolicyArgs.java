@@ -156,72 +156,58 @@ public final class ApiOperationPolicyArgs extends io.pulumi.resources.ResourceAr
             this.apiId = Objects.requireNonNull(apiId);
             return this;
         }
-
         public Builder apiId(String apiId) {
             this.apiId = Output.of(Objects.requireNonNull(apiId));
             return this;
         }
-
         public Builder format(@Nullable Output<Either<String,PolicyContentFormat>> format) {
             this.format = format;
             return this;
         }
-
         public Builder format(@Nullable Either<String,PolicyContentFormat> format) {
             this.format = Output.ofNullable(format);
             return this;
         }
-
         public Builder operationId(Output<String> operationId) {
             this.operationId = Objects.requireNonNull(operationId);
             return this;
         }
-
         public Builder operationId(String operationId) {
             this.operationId = Output.of(Objects.requireNonNull(operationId));
             return this;
         }
-
         public Builder policyId(@Nullable Output<String> policyId) {
             this.policyId = policyId;
             return this;
         }
-
         public Builder policyId(@Nullable String policyId) {
             this.policyId = Output.ofNullable(policyId);
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder serviceName(Output<String> serviceName) {
             this.serviceName = Objects.requireNonNull(serviceName);
             return this;
         }
-
         public Builder serviceName(String serviceName) {
             this.serviceName = Output.of(Objects.requireNonNull(serviceName));
             return this;
         }
-
         public Builder value(Output<String> value) {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public Builder value(String value) {
             this.value = Output.of(Objects.requireNonNull(value));
             return this;
-        }
-        public ApiOperationPolicyArgs build() {
+        }        public ApiOperationPolicyArgs build() {
             return new ApiOperationPolicyArgs(apiId, format, operationId, policyId, resourceGroupName, serviceName, value);
         }
     }

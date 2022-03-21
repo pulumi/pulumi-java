@@ -67,8 +67,7 @@ public final class NoteAttestationAuthority {
         public Builder hint(NoteAttestationAuthorityHint hint) {
             this.hint = Objects.requireNonNull(hint);
             return this;
-        }
-        public NoteAttestationAuthority build() {
+        }        public NoteAttestationAuthority build() {
             return new NoteAttestationAuthority(hint);
         }
     }

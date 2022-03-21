@@ -78,17 +78,14 @@ public final class GetBackendServiceIamPolicyArgs extends io.pulumi.resources.In
             this.optionsRequestedPolicyVersion = optionsRequestedPolicyVersion;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = project;
             return this;
         }
-
         public Builder resource(String resource) {
             this.resource = Objects.requireNonNull(resource);
             return this;
-        }
-        public GetBackendServiceIamPolicyArgs build() {
+        }        public GetBackendServiceIamPolicyArgs build() {
             return new GetBackendServiceIamPolicyArgs(optionsRequestedPolicyVersion, project, resource);
         }
     }

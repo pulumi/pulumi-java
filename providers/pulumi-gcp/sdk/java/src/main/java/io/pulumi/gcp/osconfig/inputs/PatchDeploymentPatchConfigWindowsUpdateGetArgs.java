@@ -93,32 +93,35 @@ public final class PatchDeploymentPatchConfigWindowsUpdateGetArgs extends io.pul
             this.classifications = classifications;
             return this;
         }
-
         public Builder classifications(@Nullable List<String> classifications) {
             this.classifications = Output.ofNullable(classifications);
             return this;
         }
-
+        public Builder classifications(String... classifications) {
+            return classifications(List.of(classifications));
+        }
         public Builder excludes(@Nullable Output<List<String>> excludes) {
             this.excludes = excludes;
             return this;
         }
-
         public Builder excludes(@Nullable List<String> excludes) {
             this.excludes = Output.ofNullable(excludes);
             return this;
         }
-
+        public Builder excludes(String... excludes) {
+            return excludes(List.of(excludes));
+        }
         public Builder exclusivePatches(@Nullable Output<List<String>> exclusivePatches) {
             this.exclusivePatches = exclusivePatches;
             return this;
         }
-
         public Builder exclusivePatches(@Nullable List<String> exclusivePatches) {
             this.exclusivePatches = Output.ofNullable(exclusivePatches);
             return this;
         }
-        public PatchDeploymentPatchConfigWindowsUpdateGetArgs build() {
+        public Builder exclusivePatches(String... exclusivePatches) {
+            return exclusivePatches(List.of(exclusivePatches));
+        }        public PatchDeploymentPatchConfigWindowsUpdateGetArgs build() {
             return new PatchDeploymentPatchConfigWindowsUpdateGetArgs(classifications, excludes, exclusivePatches);
         }
     }

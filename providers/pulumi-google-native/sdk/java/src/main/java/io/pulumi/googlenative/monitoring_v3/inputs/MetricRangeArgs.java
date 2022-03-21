@@ -79,22 +79,18 @@ public final class MetricRangeArgs extends io.pulumi.resources.ResourceArgs {
             this.range = range;
             return this;
         }
-
         public Builder range(@Nullable GoogleMonitoringV3RangeArgs range) {
             this.range = Output.ofNullable(range);
             return this;
         }
-
         public Builder timeSeries(@Nullable Output<String> timeSeries) {
             this.timeSeries = timeSeries;
             return this;
         }
-
         public Builder timeSeries(@Nullable String timeSeries) {
             this.timeSeries = Output.ofNullable(timeSeries);
             return this;
-        }
-        public MetricRangeArgs build() {
+        }        public MetricRangeArgs build() {
             return new MetricRangeArgs(range, timeSeries);
         }
     }

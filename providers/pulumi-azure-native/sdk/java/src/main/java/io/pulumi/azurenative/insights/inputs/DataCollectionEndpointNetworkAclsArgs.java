@@ -63,12 +63,10 @@ public final class DataCollectionEndpointNetworkAclsArgs extends io.pulumi.resou
             this.publicNetworkAccess = publicNetworkAccess;
             return this;
         }
-
         public Builder publicNetworkAccess(@Nullable Either<String,KnownPublicNetworkAccessOptions> publicNetworkAccess) {
             this.publicNetworkAccess = Output.ofNullable(publicNetworkAccess);
             return this;
-        }
-        public DataCollectionEndpointNetworkAclsArgs build() {
+        }        public DataCollectionEndpointNetworkAclsArgs build() {
             return new DataCollectionEndpointNetworkAclsArgs(publicNetworkAccess);
         }
     }

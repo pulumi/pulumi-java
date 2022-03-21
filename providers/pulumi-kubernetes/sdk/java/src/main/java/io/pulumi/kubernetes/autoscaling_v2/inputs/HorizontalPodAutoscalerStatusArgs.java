@@ -146,62 +146,56 @@ public final class HorizontalPodAutoscalerStatusArgs extends io.pulumi.resources
             this.conditions = conditions;
             return this;
         }
-
         public Builder conditions(@Nullable List<HorizontalPodAutoscalerConditionArgs> conditions) {
             this.conditions = Output.ofNullable(conditions);
             return this;
         }
-
+        public Builder conditions(HorizontalPodAutoscalerConditionArgs... conditions) {
+            return conditions(List.of(conditions));
+        }
         public Builder currentMetrics(@Nullable Output<List<MetricStatusArgs>> currentMetrics) {
             this.currentMetrics = currentMetrics;
             return this;
         }
-
         public Builder currentMetrics(@Nullable List<MetricStatusArgs> currentMetrics) {
             this.currentMetrics = Output.ofNullable(currentMetrics);
             return this;
         }
-
+        public Builder currentMetrics(MetricStatusArgs... currentMetrics) {
+            return currentMetrics(List.of(currentMetrics));
+        }
         public Builder currentReplicas(@Nullable Output<Integer> currentReplicas) {
             this.currentReplicas = currentReplicas;
             return this;
         }
-
         public Builder currentReplicas(@Nullable Integer currentReplicas) {
             this.currentReplicas = Output.ofNullable(currentReplicas);
             return this;
         }
-
         public Builder desiredReplicas(Output<Integer> desiredReplicas) {
             this.desiredReplicas = Objects.requireNonNull(desiredReplicas);
             return this;
         }
-
         public Builder desiredReplicas(Integer desiredReplicas) {
             this.desiredReplicas = Output.of(Objects.requireNonNull(desiredReplicas));
             return this;
         }
-
         public Builder lastScaleTime(@Nullable Output<String> lastScaleTime) {
             this.lastScaleTime = lastScaleTime;
             return this;
         }
-
         public Builder lastScaleTime(@Nullable String lastScaleTime) {
             this.lastScaleTime = Output.ofNullable(lastScaleTime);
             return this;
         }
-
         public Builder observedGeneration(@Nullable Output<Integer> observedGeneration) {
             this.observedGeneration = observedGeneration;
             return this;
         }
-
         public Builder observedGeneration(@Nullable Integer observedGeneration) {
             this.observedGeneration = Output.ofNullable(observedGeneration);
             return this;
-        }
-        public HorizontalPodAutoscalerStatusArgs build() {
+        }        public HorizontalPodAutoscalerStatusArgs build() {
             return new HorizontalPodAutoscalerStatusArgs(conditions, currentMetrics, currentReplicas, desiredReplicas, lastScaleTime, observedGeneration);
         }
     }

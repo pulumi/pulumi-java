@@ -56,12 +56,10 @@ public final class IndexValueImportanceItem {
             this.key = key;
             return this;
         }
-
         public Builder value(@Nullable Integer value) {
             this.value = value;
             return this;
-        }
-        public IndexValueImportanceItem build() {
+        }        public IndexValueImportanceItem build() {
             return new IndexValueImportanceItem(key, value);
         }
     }

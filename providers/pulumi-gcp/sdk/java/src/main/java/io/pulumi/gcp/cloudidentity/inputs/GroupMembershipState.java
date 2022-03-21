@@ -179,82 +179,69 @@ public final class GroupMembershipState extends io.pulumi.resources.ResourceArgs
             this.createTime = createTime;
             return this;
         }
-
         public Builder createTime(@Nullable String createTime) {
             this.createTime = Output.ofNullable(createTime);
             return this;
         }
-
         public Builder group(@Nullable Output<String> group) {
             this.group = group;
             return this;
         }
-
         public Builder group(@Nullable String group) {
             this.group = Output.ofNullable(group);
             return this;
         }
-
         public Builder memberKey(@Nullable Output<GroupMembershipMemberKeyGetArgs> memberKey) {
             this.memberKey = memberKey;
             return this;
         }
-
         public Builder memberKey(@Nullable GroupMembershipMemberKeyGetArgs memberKey) {
             this.memberKey = Output.ofNullable(memberKey);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder preferredMemberKey(@Nullable Output<GroupMembershipPreferredMemberKeyGetArgs> preferredMemberKey) {
             this.preferredMemberKey = preferredMemberKey;
             return this;
         }
-
         public Builder preferredMemberKey(@Nullable GroupMembershipPreferredMemberKeyGetArgs preferredMemberKey) {
             this.preferredMemberKey = Output.ofNullable(preferredMemberKey);
             return this;
         }
-
         public Builder roles(@Nullable Output<List<GroupMembershipRoleGetArgs>> roles) {
             this.roles = roles;
             return this;
         }
-
         public Builder roles(@Nullable List<GroupMembershipRoleGetArgs> roles) {
             this.roles = Output.ofNullable(roles);
             return this;
         }
-
+        public Builder roles(GroupMembershipRoleGetArgs... roles) {
+            return roles(List.of(roles));
+        }
         public Builder type(@Nullable Output<String> type) {
             this.type = type;
             return this;
         }
-
         public Builder type(@Nullable String type) {
             this.type = Output.ofNullable(type);
             return this;
         }
-
         public Builder updateTime(@Nullable Output<String> updateTime) {
             this.updateTime = updateTime;
             return this;
         }
-
         public Builder updateTime(@Nullable String updateTime) {
             this.updateTime = Output.ofNullable(updateTime);
             return this;
-        }
-        public GroupMembershipState build() {
+        }        public GroupMembershipState build() {
             return new GroupMembershipState(createTime, group, memberKey, name, preferredMemberKey, roles, type, updateTime);
         }
     }

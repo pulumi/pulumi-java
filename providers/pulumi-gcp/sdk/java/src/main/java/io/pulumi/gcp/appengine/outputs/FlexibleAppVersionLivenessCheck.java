@@ -154,37 +154,30 @@ public final class FlexibleAppVersionLivenessCheck {
             this.checkInterval = checkInterval;
             return this;
         }
-
         public Builder failureThreshold(@Nullable Double failureThreshold) {
             this.failureThreshold = failureThreshold;
             return this;
         }
-
         public Builder host(@Nullable String host) {
             this.host = host;
             return this;
         }
-
         public Builder initialDelay(@Nullable String initialDelay) {
             this.initialDelay = initialDelay;
             return this;
         }
-
         public Builder path(String path) {
             this.path = Objects.requireNonNull(path);
             return this;
         }
-
         public Builder successThreshold(@Nullable Double successThreshold) {
             this.successThreshold = successThreshold;
             return this;
         }
-
         public Builder timeout(@Nullable String timeout) {
             this.timeout = timeout;
             return this;
-        }
-        public FlexibleAppVersionLivenessCheck build() {
+        }        public FlexibleAppVersionLivenessCheck build() {
             return new FlexibleAppVersionLivenessCheck(checkInterval, failureThreshold, host, initialDelay, path, successThreshold, timeout);
         }
     }

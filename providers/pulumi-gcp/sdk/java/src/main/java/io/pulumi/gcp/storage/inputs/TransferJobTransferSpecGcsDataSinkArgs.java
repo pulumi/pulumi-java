@@ -74,22 +74,18 @@ public final class TransferJobTransferSpecGcsDataSinkArgs extends io.pulumi.reso
             this.bucketName = Objects.requireNonNull(bucketName);
             return this;
         }
-
         public Builder bucketName(String bucketName) {
             this.bucketName = Output.of(Objects.requireNonNull(bucketName));
             return this;
         }
-
         public Builder path(@Nullable Output<String> path) {
             this.path = path;
             return this;
         }
-
         public Builder path(@Nullable String path) {
             this.path = Output.ofNullable(path);
             return this;
-        }
-        public TransferJobTransferSpecGcsDataSinkArgs build() {
+        }        public TransferJobTransferSpecGcsDataSinkArgs build() {
             return new TransferJobTransferSpecGcsDataSinkArgs(bucketName, path);
         }
     }

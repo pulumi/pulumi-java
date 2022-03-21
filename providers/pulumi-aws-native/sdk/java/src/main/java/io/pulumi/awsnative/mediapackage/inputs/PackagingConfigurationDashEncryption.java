@@ -54,8 +54,7 @@ public final class PackagingConfigurationDashEncryption extends io.pulumi.resour
         public Builder spekeKeyProvider(PackagingConfigurationSpekeKeyProvider spekeKeyProvider) {
             this.spekeKeyProvider = Objects.requireNonNull(spekeKeyProvider);
             return this;
-        }
-        public PackagingConfigurationDashEncryption build() {
+        }        public PackagingConfigurationDashEncryption build() {
             return new PackagingConfigurationDashEncryption(spekeKeyProvider);
         }
     }

@@ -55,12 +55,13 @@ public final class CachePolicyCookiesConfig {
             this.cookieBehavior = Objects.requireNonNull(cookieBehavior);
             return this;
         }
-
         public Builder cookies(@Nullable List<String> cookies) {
             this.cookies = cookies;
             return this;
         }
-        public CachePolicyCookiesConfig build() {
+        public Builder cookies(String... cookies) {
+            return cookies(List.of(cookies));
+        }        public CachePolicyCookiesConfig build() {
             return new CachePolicyCookiesConfig(cookieBehavior, cookies);
         }
     }

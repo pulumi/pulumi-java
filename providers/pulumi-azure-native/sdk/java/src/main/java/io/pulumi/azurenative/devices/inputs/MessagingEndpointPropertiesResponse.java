@@ -95,17 +95,14 @@ public final class MessagingEndpointPropertiesResponse extends io.pulumi.resourc
             this.lockDurationAsIso8601 = lockDurationAsIso8601;
             return this;
         }
-
         public Builder maxDeliveryCount(@Nullable Integer maxDeliveryCount) {
             this.maxDeliveryCount = maxDeliveryCount;
             return this;
         }
-
         public Builder ttlAsIso8601(@Nullable String ttlAsIso8601) {
             this.ttlAsIso8601 = ttlAsIso8601;
             return this;
-        }
-        public MessagingEndpointPropertiesResponse build() {
+        }        public MessagingEndpointPropertiesResponse build() {
             return new MessagingEndpointPropertiesResponse(lockDurationAsIso8601, maxDeliveryCount, ttlAsIso8601);
         }
     }

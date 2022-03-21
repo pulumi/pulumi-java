@@ -72,12 +72,10 @@ public final class GetTransitGatewayRegistrationArgs extends io.pulumi.resources
             this.globalNetworkId = Objects.requireNonNull(globalNetworkId);
             return this;
         }
-
         public Builder transitGatewayArn(String transitGatewayArn) {
             this.transitGatewayArn = Objects.requireNonNull(transitGatewayArn);
             return this;
-        }
-        public GetTransitGatewayRegistrationArgs build() {
+        }        public GetTransitGatewayRegistrationArgs build() {
             return new GetTransitGatewayRegistrationArgs(globalNetworkId, transitGatewayArn);
         }
     }

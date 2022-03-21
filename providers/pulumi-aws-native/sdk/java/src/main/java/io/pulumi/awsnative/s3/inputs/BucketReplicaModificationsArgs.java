@@ -56,12 +56,10 @@ public final class BucketReplicaModificationsArgs extends io.pulumi.resources.Re
             this.status = Objects.requireNonNull(status);
             return this;
         }
-
         public Builder status(BucketReplicaModificationsStatus status) {
             this.status = Output.of(Objects.requireNonNull(status));
             return this;
-        }
-        public BucketReplicaModificationsArgs build() {
+        }        public BucketReplicaModificationsArgs build() {
             return new BucketReplicaModificationsArgs(status);
         }
     }

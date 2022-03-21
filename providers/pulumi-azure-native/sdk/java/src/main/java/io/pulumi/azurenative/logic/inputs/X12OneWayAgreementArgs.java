@@ -94,32 +94,26 @@ public final class X12OneWayAgreementArgs extends io.pulumi.resources.ResourceAr
             this.protocolSettings = Objects.requireNonNull(protocolSettings);
             return this;
         }
-
         public Builder protocolSettings(X12ProtocolSettingsArgs protocolSettings) {
             this.protocolSettings = Output.of(Objects.requireNonNull(protocolSettings));
             return this;
         }
-
         public Builder receiverBusinessIdentity(Output<BusinessIdentityArgs> receiverBusinessIdentity) {
             this.receiverBusinessIdentity = Objects.requireNonNull(receiverBusinessIdentity);
             return this;
         }
-
         public Builder receiverBusinessIdentity(BusinessIdentityArgs receiverBusinessIdentity) {
             this.receiverBusinessIdentity = Output.of(Objects.requireNonNull(receiverBusinessIdentity));
             return this;
         }
-
         public Builder senderBusinessIdentity(Output<BusinessIdentityArgs> senderBusinessIdentity) {
             this.senderBusinessIdentity = Objects.requireNonNull(senderBusinessIdentity);
             return this;
         }
-
         public Builder senderBusinessIdentity(BusinessIdentityArgs senderBusinessIdentity) {
             this.senderBusinessIdentity = Output.of(Objects.requireNonNull(senderBusinessIdentity));
             return this;
-        }
-        public X12OneWayAgreementArgs build() {
+        }        public X12OneWayAgreementArgs build() {
             return new X12OneWayAgreementArgs(protocolSettings, receiverBusinessIdentity, senderBusinessIdentity);
         }
     }

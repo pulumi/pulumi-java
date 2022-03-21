@@ -69,12 +69,10 @@ public final class ListNotebookWorkspaceConnectionInfoResult {
             this.authToken = Objects.requireNonNull(authToken);
             return this;
         }
-
         public Builder notebookServerEndpoint(String notebookServerEndpoint) {
             this.notebookServerEndpoint = Objects.requireNonNull(notebookServerEndpoint);
             return this;
-        }
-        public ListNotebookWorkspaceConnectionInfoResult build() {
+        }        public ListNotebookWorkspaceConnectionInfoResult build() {
             return new ListNotebookWorkspaceConnectionInfoResult(authToken, notebookServerEndpoint);
         }
     }

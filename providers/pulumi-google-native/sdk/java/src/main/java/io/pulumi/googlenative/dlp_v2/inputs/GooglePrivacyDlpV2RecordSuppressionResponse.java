@@ -58,8 +58,7 @@ public final class GooglePrivacyDlpV2RecordSuppressionResponse extends io.pulumi
         public Builder condition(GooglePrivacyDlpV2RecordConditionResponse condition) {
             this.condition = Objects.requireNonNull(condition);
             return this;
-        }
-        public GooglePrivacyDlpV2RecordSuppressionResponse build() {
+        }        public GooglePrivacyDlpV2RecordSuppressionResponse build() {
             return new GooglePrivacyDlpV2RecordSuppressionResponse(condition);
         }
     }

@@ -415,222 +415,190 @@ public final class BrokerState extends io.pulumi.resources.ResourceArgs {
             this.applyImmediately = applyImmediately;
             return this;
         }
-
         public Builder applyImmediately(@Nullable Boolean applyImmediately) {
             this.applyImmediately = Output.ofNullable(applyImmediately);
             return this;
         }
-
         public Builder arn(@Nullable Output<String> arn) {
             this.arn = arn;
             return this;
         }
-
         public Builder arn(@Nullable String arn) {
             this.arn = Output.ofNullable(arn);
             return this;
         }
-
         public Builder authenticationStrategy(@Nullable Output<String> authenticationStrategy) {
             this.authenticationStrategy = authenticationStrategy;
             return this;
         }
-
         public Builder authenticationStrategy(@Nullable String authenticationStrategy) {
             this.authenticationStrategy = Output.ofNullable(authenticationStrategy);
             return this;
         }
-
         public Builder autoMinorVersionUpgrade(@Nullable Output<Boolean> autoMinorVersionUpgrade) {
             this.autoMinorVersionUpgrade = autoMinorVersionUpgrade;
             return this;
         }
-
         public Builder autoMinorVersionUpgrade(@Nullable Boolean autoMinorVersionUpgrade) {
             this.autoMinorVersionUpgrade = Output.ofNullable(autoMinorVersionUpgrade);
             return this;
         }
-
         public Builder brokerName(@Nullable Output<String> brokerName) {
             this.brokerName = brokerName;
             return this;
         }
-
         public Builder brokerName(@Nullable String brokerName) {
             this.brokerName = Output.ofNullable(brokerName);
             return this;
         }
-
         public Builder configuration(@Nullable Output<BrokerConfigurationGetArgs> configuration) {
             this.configuration = configuration;
             return this;
         }
-
         public Builder configuration(@Nullable BrokerConfigurationGetArgs configuration) {
             this.configuration = Output.ofNullable(configuration);
             return this;
         }
-
         public Builder deploymentMode(@Nullable Output<String> deploymentMode) {
             this.deploymentMode = deploymentMode;
             return this;
         }
-
         public Builder deploymentMode(@Nullable String deploymentMode) {
             this.deploymentMode = Output.ofNullable(deploymentMode);
             return this;
         }
-
         public Builder encryptionOptions(@Nullable Output<BrokerEncryptionOptionsGetArgs> encryptionOptions) {
             this.encryptionOptions = encryptionOptions;
             return this;
         }
-
         public Builder encryptionOptions(@Nullable BrokerEncryptionOptionsGetArgs encryptionOptions) {
             this.encryptionOptions = Output.ofNullable(encryptionOptions);
             return this;
         }
-
         public Builder engineType(@Nullable Output<String> engineType) {
             this.engineType = engineType;
             return this;
         }
-
         public Builder engineType(@Nullable String engineType) {
             this.engineType = Output.ofNullable(engineType);
             return this;
         }
-
         public Builder engineVersion(@Nullable Output<String> engineVersion) {
             this.engineVersion = engineVersion;
             return this;
         }
-
         public Builder engineVersion(@Nullable String engineVersion) {
             this.engineVersion = Output.ofNullable(engineVersion);
             return this;
         }
-
         public Builder hostInstanceType(@Nullable Output<String> hostInstanceType) {
             this.hostInstanceType = hostInstanceType;
             return this;
         }
-
         public Builder hostInstanceType(@Nullable String hostInstanceType) {
             this.hostInstanceType = Output.ofNullable(hostInstanceType);
             return this;
         }
-
         public Builder instances(@Nullable Output<List<BrokerInstanceGetArgs>> instances) {
             this.instances = instances;
             return this;
         }
-
         public Builder instances(@Nullable List<BrokerInstanceGetArgs> instances) {
             this.instances = Output.ofNullable(instances);
             return this;
         }
-
+        public Builder instances(BrokerInstanceGetArgs... instances) {
+            return instances(List.of(instances));
+        }
         public Builder ldapServerMetadata(@Nullable Output<BrokerLdapServerMetadataGetArgs> ldapServerMetadata) {
             this.ldapServerMetadata = ldapServerMetadata;
             return this;
         }
-
         public Builder ldapServerMetadata(@Nullable BrokerLdapServerMetadataGetArgs ldapServerMetadata) {
             this.ldapServerMetadata = Output.ofNullable(ldapServerMetadata);
             return this;
         }
-
         public Builder logs(@Nullable Output<BrokerLogsGetArgs> logs) {
             this.logs = logs;
             return this;
         }
-
         public Builder logs(@Nullable BrokerLogsGetArgs logs) {
             this.logs = Output.ofNullable(logs);
             return this;
         }
-
         public Builder maintenanceWindowStartTime(@Nullable Output<BrokerMaintenanceWindowStartTimeGetArgs> maintenanceWindowStartTime) {
             this.maintenanceWindowStartTime = maintenanceWindowStartTime;
             return this;
         }
-
         public Builder maintenanceWindowStartTime(@Nullable BrokerMaintenanceWindowStartTimeGetArgs maintenanceWindowStartTime) {
             this.maintenanceWindowStartTime = Output.ofNullable(maintenanceWindowStartTime);
             return this;
         }
-
         public Builder publiclyAccessible(@Nullable Output<Boolean> publiclyAccessible) {
             this.publiclyAccessible = publiclyAccessible;
             return this;
         }
-
         public Builder publiclyAccessible(@Nullable Boolean publiclyAccessible) {
             this.publiclyAccessible = Output.ofNullable(publiclyAccessible);
             return this;
         }
-
         public Builder securityGroups(@Nullable Output<List<String>> securityGroups) {
             this.securityGroups = securityGroups;
             return this;
         }
-
         public Builder securityGroups(@Nullable List<String> securityGroups) {
             this.securityGroups = Output.ofNullable(securityGroups);
             return this;
         }
-
+        public Builder securityGroups(String... securityGroups) {
+            return securityGroups(List.of(securityGroups));
+        }
         public Builder storageType(@Nullable Output<String> storageType) {
             this.storageType = storageType;
             return this;
         }
-
         public Builder storageType(@Nullable String storageType) {
             this.storageType = Output.ofNullable(storageType);
             return this;
         }
-
         public Builder subnetIds(@Nullable Output<List<String>> subnetIds) {
             this.subnetIds = subnetIds;
             return this;
         }
-
         public Builder subnetIds(@Nullable List<String> subnetIds) {
             this.subnetIds = Output.ofNullable(subnetIds);
             return this;
         }
-
+        public Builder subnetIds(String... subnetIds) {
+            return subnetIds(List.of(subnetIds));
+        }
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
             this.tagsAll = tagsAll;
             return this;
         }
-
         public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
             this.tagsAll = Output.ofNullable(tagsAll);
             return this;
         }
-
         public Builder users(@Nullable Output<List<BrokerUserGetArgs>> users) {
             this.users = users;
             return this;
         }
-
         public Builder users(@Nullable List<BrokerUserGetArgs> users) {
             this.users = Output.ofNullable(users);
             return this;
         }
-        public BrokerState build() {
+        public Builder users(BrokerUserGetArgs... users) {
+            return users(List.of(users));
+        }        public BrokerState build() {
             return new BrokerState(applyImmediately, arn, authenticationStrategy, autoMinorVersionUpgrade, brokerName, configuration, deploymentMode, encryptionOptions, engineType, engineVersion, hostInstanceType, instances, ldapServerMetadata, logs, maintenanceWindowStartTime, publiclyAccessible, securityGroups, storageType, subnetIds, tags, tagsAll, users);
         }
     }

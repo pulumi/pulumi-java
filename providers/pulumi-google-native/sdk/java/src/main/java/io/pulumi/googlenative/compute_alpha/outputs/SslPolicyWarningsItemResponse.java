@@ -87,17 +87,17 @@ public final class SslPolicyWarningsItemResponse {
             this.code = Objects.requireNonNull(code);
             return this;
         }
-
         public Builder data(List<SslPolicyWarningsItemDataItemResponse> data) {
             this.data = Objects.requireNonNull(data);
             return this;
         }
-
+        public Builder data(SslPolicyWarningsItemDataItemResponse... data) {
+            return data(List.of(data));
+        }
         public Builder message(String message) {
             this.message = Objects.requireNonNull(message);
             return this;
-        }
-        public SslPolicyWarningsItemResponse build() {
+        }        public SslPolicyWarningsItemResponse build() {
             return new SslPolicyWarningsItemResponse(code, data, message);
         }
     }

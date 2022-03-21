@@ -98,32 +98,26 @@ public final class MonitorPropertiesArgs extends io.pulumi.resources.ResourceArg
             this.datadogOrganizationProperties = datadogOrganizationProperties;
             return this;
         }
-
         public Builder datadogOrganizationProperties(@Nullable DatadogOrganizationPropertiesArgs datadogOrganizationProperties) {
             this.datadogOrganizationProperties = Output.ofNullable(datadogOrganizationProperties);
             return this;
         }
-
         public Builder monitoringStatus(@Nullable Output<Either<String,MonitoringStatus>> monitoringStatus) {
             this.monitoringStatus = monitoringStatus;
             return this;
         }
-
         public Builder monitoringStatus(@Nullable Either<String,MonitoringStatus> monitoringStatus) {
             this.monitoringStatus = Output.ofNullable(monitoringStatus);
             return this;
         }
-
         public Builder userInfo(@Nullable Output<UserInfoArgs> userInfo) {
             this.userInfo = userInfo;
             return this;
         }
-
         public Builder userInfo(@Nullable UserInfoArgs userInfo) {
             this.userInfo = Output.ofNullable(userInfo);
             return this;
-        }
-        public MonitorPropertiesArgs build() {
+        }        public MonitorPropertiesArgs build() {
             return new MonitorPropertiesArgs(datadogOrganizationProperties, monitoringStatus, userInfo);
         }
     }

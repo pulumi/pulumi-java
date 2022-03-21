@@ -74,22 +74,21 @@ public final class VaultNotificationGetArgs extends io.pulumi.resources.Resource
             this.events = Objects.requireNonNull(events);
             return this;
         }
-
         public Builder events(List<String> events) {
             this.events = Output.of(Objects.requireNonNull(events));
             return this;
         }
-
+        public Builder events(String... events) {
+            return events(List.of(events));
+        }
         public Builder snsTopic(Output<String> snsTopic) {
             this.snsTopic = Objects.requireNonNull(snsTopic);
             return this;
         }
-
         public Builder snsTopic(String snsTopic) {
             this.snsTopic = Output.of(Objects.requireNonNull(snsTopic));
             return this;
-        }
-        public VaultNotificationGetArgs build() {
+        }        public VaultNotificationGetArgs build() {
             return new VaultNotificationGetArgs(events, snsTopic);
         }
     }

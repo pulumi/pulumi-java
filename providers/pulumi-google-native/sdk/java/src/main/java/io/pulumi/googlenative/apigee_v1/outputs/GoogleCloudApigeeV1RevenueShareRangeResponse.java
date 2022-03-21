@@ -86,17 +86,14 @@ public final class GoogleCloudApigeeV1RevenueShareRangeResponse {
             this.end = Objects.requireNonNull(end);
             return this;
         }
-
         public Builder sharePercentage(Double sharePercentage) {
             this.sharePercentage = Objects.requireNonNull(sharePercentage);
             return this;
         }
-
         public Builder start(String start) {
             this.start = Objects.requireNonNull(start);
             return this;
-        }
-        public GoogleCloudApigeeV1RevenueShareRangeResponse build() {
+        }        public GoogleCloudApigeeV1RevenueShareRangeResponse build() {
             return new GoogleCloudApigeeV1RevenueShareRangeResponse(end, sharePercentage, start);
         }
     }

@@ -69,12 +69,10 @@ public final class UserHomeDirectoryMapping {
             this.entry = Objects.requireNonNull(entry);
             return this;
         }
-
         public Builder target(String target) {
             this.target = Objects.requireNonNull(target);
             return this;
-        }
-        public UserHomeDirectoryMapping build() {
+        }        public UserHomeDirectoryMapping build() {
             return new UserHomeDirectoryMapping(entry, target);
         }
     }

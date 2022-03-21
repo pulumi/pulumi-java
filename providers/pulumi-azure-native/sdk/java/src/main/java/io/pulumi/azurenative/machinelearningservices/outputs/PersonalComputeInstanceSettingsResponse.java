@@ -53,8 +53,7 @@ public final class PersonalComputeInstanceSettingsResponse {
         public Builder assignedUser(@Nullable AssignedUserResponse assignedUser) {
             this.assignedUser = assignedUser;
             return this;
-        }
-        public PersonalComputeInstanceSettingsResponse build() {
+        }        public PersonalComputeInstanceSettingsResponse build() {
             return new PersonalComputeInstanceSettingsResponse(assignedUser);
         }
     }

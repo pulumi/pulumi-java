@@ -93,32 +93,26 @@ public final class LoggingConfigurationLoggingConfigurationLogDestinationConfigG
             this.logDestination = Objects.requireNonNull(logDestination);
             return this;
         }
-
         public Builder logDestination(Map<String,String> logDestination) {
             this.logDestination = Output.of(Objects.requireNonNull(logDestination));
             return this;
         }
-
         public Builder logDestinationType(Output<String> logDestinationType) {
             this.logDestinationType = Objects.requireNonNull(logDestinationType);
             return this;
         }
-
         public Builder logDestinationType(String logDestinationType) {
             this.logDestinationType = Output.of(Objects.requireNonNull(logDestinationType));
             return this;
         }
-
         public Builder logType(Output<String> logType) {
             this.logType = Objects.requireNonNull(logType);
             return this;
         }
-
         public Builder logType(String logType) {
             this.logType = Output.of(Objects.requireNonNull(logType));
             return this;
-        }
-        public LoggingConfigurationLoggingConfigurationLogDestinationConfigGetArgs build() {
+        }        public LoggingConfigurationLoggingConfigurationLogDestinationConfigGetArgs build() {
             return new LoggingConfigurationLoggingConfigurationLogDestinationConfigGetArgs(logDestination, logDestinationType, logType);
         }
     }

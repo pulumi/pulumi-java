@@ -88,17 +88,14 @@ public final class RestRequestResponse {
             this.authentication = Objects.requireNonNull(authentication);
             return this;
         }
-
         public Builder method(String method) {
             this.method = Objects.requireNonNull(method);
             return this;
         }
-
         public Builder uri(String uri) {
             this.uri = Objects.requireNonNull(uri);
             return this;
-        }
-        public RestRequestResponse build() {
+        }        public RestRequestResponse build() {
             return new RestRequestResponse(authentication, method, uri);
         }
     }

@@ -103,27 +103,25 @@ public final class GetCaCertsResult {
             this.activeVersion = Objects.requireNonNull(activeVersion);
             return this;
         }
-
         public Builder certs(List<GetCaCertsCert> certs) {
             this.certs = Objects.requireNonNull(certs);
             return this;
         }
-
+        public Builder certs(GetCaCertsCert... certs) {
+            return certs(List.of(certs));
+        }
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder instance(String instance) {
             this.instance = Objects.requireNonNull(instance);
             return this;
         }
-
         public Builder project(String project) {
             this.project = Objects.requireNonNull(project);
             return this;
-        }
-        public GetCaCertsResult build() {
+        }        public GetCaCertsResult build() {
             return new GetCaCertsResult(activeVersion, certs, id, instance, project);
         }
     }

@@ -116,22 +116,18 @@ public final class GuestPoliciesRecipeUpdateStepFileCopy {
             this.artifactId = Objects.requireNonNull(artifactId);
             return this;
         }
-
         public Builder destination(String destination) {
             this.destination = Objects.requireNonNull(destination);
             return this;
         }
-
         public Builder overwrite(@Nullable Boolean overwrite) {
             this.overwrite = overwrite;
             return this;
         }
-
         public Builder permissions(@Nullable String permissions) {
             this.permissions = permissions;
             return this;
-        }
-        public GuestPoliciesRecipeUpdateStepFileCopy build() {
+        }        public GuestPoliciesRecipeUpdateStepFileCopy build() {
             return new GuestPoliciesRecipeUpdateStepFileCopy(artifactId, destination, overwrite, permissions);
         }
     }

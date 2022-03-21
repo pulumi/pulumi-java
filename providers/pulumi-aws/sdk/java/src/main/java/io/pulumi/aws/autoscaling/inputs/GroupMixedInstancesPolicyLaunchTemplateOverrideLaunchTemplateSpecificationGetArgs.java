@@ -90,32 +90,26 @@ public final class GroupMixedInstancesPolicyLaunchTemplateOverrideLaunchTemplate
             this.launchTemplateId = launchTemplateId;
             return this;
         }
-
         public Builder launchTemplateId(@Nullable String launchTemplateId) {
             this.launchTemplateId = Output.ofNullable(launchTemplateId);
             return this;
         }
-
         public Builder launchTemplateName(@Nullable Output<String> launchTemplateName) {
             this.launchTemplateName = launchTemplateName;
             return this;
         }
-
         public Builder launchTemplateName(@Nullable String launchTemplateName) {
             this.launchTemplateName = Output.ofNullable(launchTemplateName);
             return this;
         }
-
         public Builder version(@Nullable Output<String> version) {
             this.version = version;
             return this;
         }
-
         public Builder version(@Nullable String version) {
             this.version = Output.ofNullable(version);
             return this;
-        }
-        public GroupMixedInstancesPolicyLaunchTemplateOverrideLaunchTemplateSpecificationGetArgs build() {
+        }        public GroupMixedInstancesPolicyLaunchTemplateOverrideLaunchTemplateSpecificationGetArgs build() {
             return new GroupMixedInstancesPolicyLaunchTemplateOverrideLaunchTemplateSpecificationGetArgs(launchTemplateId, launchTemplateName, version);
         }
     }

@@ -115,22 +115,21 @@ public final class TableLocalSecondaryIndex {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder nonKeyAttributes(@Nullable List<String> nonKeyAttributes) {
             this.nonKeyAttributes = nonKeyAttributes;
             return this;
         }
-
+        public Builder nonKeyAttributes(String... nonKeyAttributes) {
+            return nonKeyAttributes(List.of(nonKeyAttributes));
+        }
         public Builder projectionType(String projectionType) {
             this.projectionType = Objects.requireNonNull(projectionType);
             return this;
         }
-
         public Builder rangeKey(String rangeKey) {
             this.rangeKey = Objects.requireNonNull(rangeKey);
             return this;
-        }
-        public TableLocalSecondaryIndex build() {
+        }        public TableLocalSecondaryIndex build() {
             return new TableLocalSecondaryIndex(name, nonKeyAttributes, projectionType, rangeKey);
         }
     }

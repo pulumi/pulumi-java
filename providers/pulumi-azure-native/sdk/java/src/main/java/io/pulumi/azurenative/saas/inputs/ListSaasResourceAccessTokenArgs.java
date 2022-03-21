@@ -54,8 +54,7 @@ public final class ListSaasResourceAccessTokenArgs extends io.pulumi.resources.I
         public Builder resourceId(String resourceId) {
             this.resourceId = Objects.requireNonNull(resourceId);
             return this;
-        }
-        public ListSaasResourceAccessTokenArgs build() {
+        }        public ListSaasResourceAccessTokenArgs build() {
             return new ListSaasResourceAccessTokenArgs(resourceId);
         }
     }

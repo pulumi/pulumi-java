@@ -247,122 +247,101 @@ public final class EncodedTaskRunRequestArgs extends io.pulumi.resources.Resourc
             this.agentConfiguration = agentConfiguration;
             return this;
         }
-
         public Builder agentConfiguration(@Nullable AgentPropertiesArgs agentConfiguration) {
             this.agentConfiguration = Output.ofNullable(agentConfiguration);
             return this;
         }
-
         public Builder agentPoolName(@Nullable Output<String> agentPoolName) {
             this.agentPoolName = agentPoolName;
             return this;
         }
-
         public Builder agentPoolName(@Nullable String agentPoolName) {
             this.agentPoolName = Output.ofNullable(agentPoolName);
             return this;
         }
-
         public Builder credentials(@Nullable Output<CredentialsArgs> credentials) {
             this.credentials = credentials;
             return this;
         }
-
         public Builder credentials(@Nullable CredentialsArgs credentials) {
             this.credentials = Output.ofNullable(credentials);
             return this;
         }
-
         public Builder encodedTaskContent(Output<String> encodedTaskContent) {
             this.encodedTaskContent = Objects.requireNonNull(encodedTaskContent);
             return this;
         }
-
         public Builder encodedTaskContent(String encodedTaskContent) {
             this.encodedTaskContent = Output.of(Objects.requireNonNull(encodedTaskContent));
             return this;
         }
-
         public Builder encodedValuesContent(@Nullable Output<String> encodedValuesContent) {
             this.encodedValuesContent = encodedValuesContent;
             return this;
         }
-
         public Builder encodedValuesContent(@Nullable String encodedValuesContent) {
             this.encodedValuesContent = Output.ofNullable(encodedValuesContent);
             return this;
         }
-
         public Builder isArchiveEnabled(@Nullable Output<Boolean> isArchiveEnabled) {
             this.isArchiveEnabled = isArchiveEnabled;
             return this;
         }
-
         public Builder isArchiveEnabled(@Nullable Boolean isArchiveEnabled) {
             this.isArchiveEnabled = Output.ofNullable(isArchiveEnabled);
             return this;
         }
-
         public Builder logTemplate(@Nullable Output<String> logTemplate) {
             this.logTemplate = logTemplate;
             return this;
         }
-
         public Builder logTemplate(@Nullable String logTemplate) {
             this.logTemplate = Output.ofNullable(logTemplate);
             return this;
         }
-
         public Builder platform(Output<PlatformPropertiesArgs> platform) {
             this.platform = Objects.requireNonNull(platform);
             return this;
         }
-
         public Builder platform(PlatformPropertiesArgs platform) {
             this.platform = Output.of(Objects.requireNonNull(platform));
             return this;
         }
-
         public Builder sourceLocation(@Nullable Output<String> sourceLocation) {
             this.sourceLocation = sourceLocation;
             return this;
         }
-
         public Builder sourceLocation(@Nullable String sourceLocation) {
             this.sourceLocation = Output.ofNullable(sourceLocation);
             return this;
         }
-
         public Builder timeout(@Nullable Output<Integer> timeout) {
             this.timeout = timeout;
             return this;
         }
-
         public Builder timeout(@Nullable Integer timeout) {
             this.timeout = Output.ofNullable(timeout);
             return this;
         }
-
         public Builder type(Output<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Output.of(Objects.requireNonNull(type));
             return this;
         }
-
         public Builder values(@Nullable Output<List<SetValueArgs>> values) {
             this.values = values;
             return this;
         }
-
         public Builder values(@Nullable List<SetValueArgs> values) {
             this.values = Output.ofNullable(values);
             return this;
         }
-        public EncodedTaskRunRequestArgs build() {
+        public Builder values(SetValueArgs... values) {
+            return values(List.of(values));
+        }        public EncodedTaskRunRequestArgs build() {
             return new EncodedTaskRunRequestArgs(agentConfiguration, agentPoolName, credentials, encodedTaskContent, encodedValuesContent, isArchiveEnabled, logTemplate, platform, sourceLocation, timeout, type, values);
         }
     }

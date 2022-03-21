@@ -97,32 +97,26 @@ public final class SqlStorageUpdateSettingsArgs extends io.pulumi.resources.Reso
             this.diskConfigurationType = diskConfigurationType;
             return this;
         }
-
         public Builder diskConfigurationType(@Nullable Either<String,DiskConfigurationType> diskConfigurationType) {
             this.diskConfigurationType = Output.ofNullable(diskConfigurationType);
             return this;
         }
-
         public Builder diskCount(@Nullable Output<Integer> diskCount) {
             this.diskCount = diskCount;
             return this;
         }
-
         public Builder diskCount(@Nullable Integer diskCount) {
             this.diskCount = Output.ofNullable(diskCount);
             return this;
         }
-
         public Builder startingDeviceId(@Nullable Output<Integer> startingDeviceId) {
             this.startingDeviceId = startingDeviceId;
             return this;
         }
-
         public Builder startingDeviceId(@Nullable Integer startingDeviceId) {
             this.startingDeviceId = Output.ofNullable(startingDeviceId);
             return this;
-        }
-        public SqlStorageUpdateSettingsArgs build() {
+        }        public SqlStorageUpdateSettingsArgs build() {
             return new SqlStorageUpdateSettingsArgs(diskConfigurationType, diskCount, startingDeviceId);
         }
     }

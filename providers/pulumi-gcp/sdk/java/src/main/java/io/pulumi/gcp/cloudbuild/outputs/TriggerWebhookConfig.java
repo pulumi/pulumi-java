@@ -77,12 +77,10 @@ public final class TriggerWebhookConfig {
             this.secret = Objects.requireNonNull(secret);
             return this;
         }
-
         public Builder state(@Nullable String state) {
             this.state = state;
             return this;
-        }
-        public TriggerWebhookConfig build() {
+        }        public TriggerWebhookConfig build() {
             return new TriggerWebhookConfig(secret, state);
         }
     }

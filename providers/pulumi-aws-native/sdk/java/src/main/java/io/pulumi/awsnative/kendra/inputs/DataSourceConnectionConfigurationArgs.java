@@ -102,52 +102,42 @@ public final class DataSourceConnectionConfigurationArgs extends io.pulumi.resou
             this.databaseHost = Objects.requireNonNull(databaseHost);
             return this;
         }
-
         public Builder databaseHost(String databaseHost) {
             this.databaseHost = Output.of(Objects.requireNonNull(databaseHost));
             return this;
         }
-
         public Builder databaseName(Output<String> databaseName) {
             this.databaseName = Objects.requireNonNull(databaseName);
             return this;
         }
-
         public Builder databaseName(String databaseName) {
             this.databaseName = Output.of(Objects.requireNonNull(databaseName));
             return this;
         }
-
         public Builder databasePort(Output<Integer> databasePort) {
             this.databasePort = Objects.requireNonNull(databasePort);
             return this;
         }
-
         public Builder databasePort(Integer databasePort) {
             this.databasePort = Output.of(Objects.requireNonNull(databasePort));
             return this;
         }
-
         public Builder secretArn(Output<String> secretArn) {
             this.secretArn = Objects.requireNonNull(secretArn);
             return this;
         }
-
         public Builder secretArn(String secretArn) {
             this.secretArn = Output.of(Objects.requireNonNull(secretArn));
             return this;
         }
-
         public Builder tableName(Output<String> tableName) {
             this.tableName = Objects.requireNonNull(tableName);
             return this;
         }
-
         public Builder tableName(String tableName) {
             this.tableName = Output.of(Objects.requireNonNull(tableName));
             return this;
-        }
-        public DataSourceConnectionConfigurationArgs build() {
+        }        public DataSourceConnectionConfigurationArgs build() {
             return new DataSourceConnectionConfigurationArgs(databaseHost, databaseName, databasePort, secretArn, tableName);
         }
     }

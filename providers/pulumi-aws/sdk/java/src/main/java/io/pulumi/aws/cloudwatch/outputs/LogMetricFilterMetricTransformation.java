@@ -136,32 +136,26 @@ public final class LogMetricFilterMetricTransformation {
             this.defaultValue = defaultValue;
             return this;
         }
-
         public Builder dimensions(@Nullable Map<String,String> dimensions) {
             this.dimensions = dimensions;
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder namespace(String namespace) {
             this.namespace = Objects.requireNonNull(namespace);
             return this;
         }
-
         public Builder unit(@Nullable String unit) {
             this.unit = unit;
             return this;
         }
-
         public Builder value(String value) {
             this.value = Objects.requireNonNull(value);
             return this;
-        }
-        public LogMetricFilterMetricTransformation build() {
+        }        public LogMetricFilterMetricTransformation build() {
             return new LogMetricFilterMetricTransformation(defaultValue, dimensions, name, namespace, unit, value);
         }
     }

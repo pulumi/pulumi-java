@@ -89,17 +89,17 @@ public final class DetectorModelEvent {
             this.actions = actions;
             return this;
         }
-
+        public Builder actions(DetectorModelAction... actions) {
+            return actions(List.of(actions));
+        }
         public Builder condition(@Nullable String condition) {
             this.condition = condition;
             return this;
         }
-
         public Builder eventName(String eventName) {
             this.eventName = Objects.requireNonNull(eventName);
             return this;
-        }
-        public DetectorModelEvent build() {
+        }        public DetectorModelEvent build() {
             return new DetectorModelEvent(actions, condition, eventName);
         }
     }

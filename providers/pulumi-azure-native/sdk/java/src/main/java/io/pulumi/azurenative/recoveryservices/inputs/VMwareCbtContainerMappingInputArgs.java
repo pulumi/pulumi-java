@@ -159,72 +159,58 @@ public final class VMwareCbtContainerMappingInputArgs extends io.pulumi.resource
             this.instanceType = instanceType;
             return this;
         }
-
         public Builder instanceType(@Nullable String instanceType) {
             this.instanceType = Output.ofNullable(instanceType);
             return this;
         }
-
         public Builder keyVaultId(Output<String> keyVaultId) {
             this.keyVaultId = Objects.requireNonNull(keyVaultId);
             return this;
         }
-
         public Builder keyVaultId(String keyVaultId) {
             this.keyVaultId = Output.of(Objects.requireNonNull(keyVaultId));
             return this;
         }
-
         public Builder keyVaultUri(Output<String> keyVaultUri) {
             this.keyVaultUri = Objects.requireNonNull(keyVaultUri);
             return this;
         }
-
         public Builder keyVaultUri(String keyVaultUri) {
             this.keyVaultUri = Output.of(Objects.requireNonNull(keyVaultUri));
             return this;
         }
-
         public Builder serviceBusConnectionStringSecretName(Output<String> serviceBusConnectionStringSecretName) {
             this.serviceBusConnectionStringSecretName = Objects.requireNonNull(serviceBusConnectionStringSecretName);
             return this;
         }
-
         public Builder serviceBusConnectionStringSecretName(String serviceBusConnectionStringSecretName) {
             this.serviceBusConnectionStringSecretName = Output.of(Objects.requireNonNull(serviceBusConnectionStringSecretName));
             return this;
         }
-
         public Builder storageAccountId(Output<String> storageAccountId) {
             this.storageAccountId = Objects.requireNonNull(storageAccountId);
             return this;
         }
-
         public Builder storageAccountId(String storageAccountId) {
             this.storageAccountId = Output.of(Objects.requireNonNull(storageAccountId));
             return this;
         }
-
         public Builder storageAccountSasSecretName(Output<String> storageAccountSasSecretName) {
             this.storageAccountSasSecretName = Objects.requireNonNull(storageAccountSasSecretName);
             return this;
         }
-
         public Builder storageAccountSasSecretName(String storageAccountSasSecretName) {
             this.storageAccountSasSecretName = Output.of(Objects.requireNonNull(storageAccountSasSecretName));
             return this;
         }
-
         public Builder targetLocation(Output<String> targetLocation) {
             this.targetLocation = Objects.requireNonNull(targetLocation);
             return this;
         }
-
         public Builder targetLocation(String targetLocation) {
             this.targetLocation = Output.of(Objects.requireNonNull(targetLocation));
             return this;
-        }
-        public VMwareCbtContainerMappingInputArgs build() {
+        }        public VMwareCbtContainerMappingInputArgs build() {
             return new VMwareCbtContainerMappingInputArgs(instanceType, keyVaultId, keyVaultUri, serviceBusConnectionStringSecretName, storageAccountId, storageAccountSasSecretName, targetLocation);
         }
     }

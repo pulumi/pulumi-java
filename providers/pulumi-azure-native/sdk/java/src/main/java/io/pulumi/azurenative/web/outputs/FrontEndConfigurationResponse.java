@@ -45,8 +45,7 @@ public final class FrontEndConfigurationResponse {
         public Builder kind(@Nullable String kind) {
             this.kind = kind;
             return this;
-        }
-        public FrontEndConfigurationResponse build() {
+        }        public FrontEndConfigurationResponse build() {
             return new FrontEndConfigurationResponse(kind);
         }
     }

@@ -80,12 +80,16 @@ public final class ManagedRulesDefinitionResponse extends io.pulumi.resources.In
             this.exclusions = exclusions;
             return this;
         }
-
+        public Builder exclusions(OwaspCrsExclusionEntryResponse... exclusions) {
+            return exclusions(List.of(exclusions));
+        }
         public Builder managedRuleSets(List<ManagedRuleSetResponse> managedRuleSets) {
             this.managedRuleSets = Objects.requireNonNull(managedRuleSets);
             return this;
         }
-        public ManagedRulesDefinitionResponse build() {
+        public Builder managedRuleSets(ManagedRuleSetResponse... managedRuleSets) {
+            return managedRuleSets(List.of(managedRuleSets));
+        }        public ManagedRulesDefinitionResponse build() {
             return new ManagedRulesDefinitionResponse(exclusions, managedRuleSets);
         }
     }

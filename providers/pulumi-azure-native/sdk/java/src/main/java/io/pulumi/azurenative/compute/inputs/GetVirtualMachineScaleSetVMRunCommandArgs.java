@@ -122,27 +122,22 @@ public final class GetVirtualMachineScaleSetVMRunCommandArgs extends io.pulumi.r
             this.expand = expand;
             return this;
         }
-
         public Builder instanceId(String instanceId) {
             this.instanceId = Objects.requireNonNull(instanceId);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder runCommandName(String runCommandName) {
             this.runCommandName = Objects.requireNonNull(runCommandName);
             return this;
         }
-
         public Builder vmScaleSetName(String vmScaleSetName) {
             this.vmScaleSetName = Objects.requireNonNull(vmScaleSetName);
             return this;
-        }
-        public GetVirtualMachineScaleSetVMRunCommandArgs build() {
+        }        public GetVirtualMachineScaleSetVMRunCommandArgs build() {
             return new GetVirtualMachineScaleSetVMRunCommandArgs(expand, instanceId, resourceGroupName, runCommandName, vmScaleSetName);
         }
     }

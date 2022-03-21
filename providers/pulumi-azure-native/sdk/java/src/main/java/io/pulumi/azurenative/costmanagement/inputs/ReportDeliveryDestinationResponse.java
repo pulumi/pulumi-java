@@ -94,17 +94,14 @@ public final class ReportDeliveryDestinationResponse extends io.pulumi.resources
             this.container = Objects.requireNonNull(container);
             return this;
         }
-
         public Builder resourceId(String resourceId) {
             this.resourceId = Objects.requireNonNull(resourceId);
             return this;
         }
-
         public Builder rootFolderPath(@Nullable String rootFolderPath) {
             this.rootFolderPath = rootFolderPath;
             return this;
-        }
-        public ReportDeliveryDestinationResponse build() {
+        }        public ReportDeliveryDestinationResponse build() {
             return new ReportDeliveryDestinationResponse(container, resourceId, rootFolderPath);
         }
     }

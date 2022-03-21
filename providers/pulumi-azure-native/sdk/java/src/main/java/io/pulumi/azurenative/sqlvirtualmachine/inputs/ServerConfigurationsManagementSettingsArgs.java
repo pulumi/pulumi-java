@@ -113,42 +113,34 @@ public final class ServerConfigurationsManagementSettingsArgs extends io.pulumi.
             this.additionalFeaturesServerConfigurations = additionalFeaturesServerConfigurations;
             return this;
         }
-
         public Builder additionalFeaturesServerConfigurations(@Nullable AdditionalFeaturesServerConfigurationsArgs additionalFeaturesServerConfigurations) {
             this.additionalFeaturesServerConfigurations = Output.ofNullable(additionalFeaturesServerConfigurations);
             return this;
         }
-
         public Builder sqlConnectivityUpdateSettings(@Nullable Output<SqlConnectivityUpdateSettingsArgs> sqlConnectivityUpdateSettings) {
             this.sqlConnectivityUpdateSettings = sqlConnectivityUpdateSettings;
             return this;
         }
-
         public Builder sqlConnectivityUpdateSettings(@Nullable SqlConnectivityUpdateSettingsArgs sqlConnectivityUpdateSettings) {
             this.sqlConnectivityUpdateSettings = Output.ofNullable(sqlConnectivityUpdateSettings);
             return this;
         }
-
         public Builder sqlStorageUpdateSettings(@Nullable Output<SqlStorageUpdateSettingsArgs> sqlStorageUpdateSettings) {
             this.sqlStorageUpdateSettings = sqlStorageUpdateSettings;
             return this;
         }
-
         public Builder sqlStorageUpdateSettings(@Nullable SqlStorageUpdateSettingsArgs sqlStorageUpdateSettings) {
             this.sqlStorageUpdateSettings = Output.ofNullable(sqlStorageUpdateSettings);
             return this;
         }
-
         public Builder sqlWorkloadTypeUpdateSettings(@Nullable Output<SqlWorkloadTypeUpdateSettingsArgs> sqlWorkloadTypeUpdateSettings) {
             this.sqlWorkloadTypeUpdateSettings = sqlWorkloadTypeUpdateSettings;
             return this;
         }
-
         public Builder sqlWorkloadTypeUpdateSettings(@Nullable SqlWorkloadTypeUpdateSettingsArgs sqlWorkloadTypeUpdateSettings) {
             this.sqlWorkloadTypeUpdateSettings = Output.ofNullable(sqlWorkloadTypeUpdateSettings);
             return this;
-        }
-        public ServerConfigurationsManagementSettingsArgs build() {
+        }        public ServerConfigurationsManagementSettingsArgs build() {
             return new ServerConfigurationsManagementSettingsArgs(additionalFeaturesServerConfigurations, sqlConnectivityUpdateSettings, sqlStorageUpdateSettings, sqlWorkloadTypeUpdateSettings);
         }
     }

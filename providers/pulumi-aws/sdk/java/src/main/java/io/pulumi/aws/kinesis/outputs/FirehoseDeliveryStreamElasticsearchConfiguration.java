@@ -251,67 +251,54 @@ public final class FirehoseDeliveryStreamElasticsearchConfiguration {
             this.bufferingInterval = bufferingInterval;
             return this;
         }
-
         public Builder bufferingSize(@Nullable Integer bufferingSize) {
             this.bufferingSize = bufferingSize;
             return this;
         }
-
         public Builder cloudwatchLoggingOptions(@Nullable FirehoseDeliveryStreamElasticsearchConfigurationCloudwatchLoggingOptions cloudwatchLoggingOptions) {
             this.cloudwatchLoggingOptions = cloudwatchLoggingOptions;
             return this;
         }
-
         public Builder clusterEndpoint(@Nullable String clusterEndpoint) {
             this.clusterEndpoint = clusterEndpoint;
             return this;
         }
-
         public Builder domainArn(@Nullable String domainArn) {
             this.domainArn = domainArn;
             return this;
         }
-
         public Builder indexName(String indexName) {
             this.indexName = Objects.requireNonNull(indexName);
             return this;
         }
-
         public Builder indexRotationPeriod(@Nullable String indexRotationPeriod) {
             this.indexRotationPeriod = indexRotationPeriod;
             return this;
         }
-
         public Builder processingConfiguration(@Nullable FirehoseDeliveryStreamElasticsearchConfigurationProcessingConfiguration processingConfiguration) {
             this.processingConfiguration = processingConfiguration;
             return this;
         }
-
         public Builder retryDuration(@Nullable Integer retryDuration) {
             this.retryDuration = retryDuration;
             return this;
         }
-
         public Builder roleArn(String roleArn) {
             this.roleArn = Objects.requireNonNull(roleArn);
             return this;
         }
-
         public Builder s3BackupMode(@Nullable String s3BackupMode) {
             this.s3BackupMode = s3BackupMode;
             return this;
         }
-
         public Builder typeName(@Nullable String typeName) {
             this.typeName = typeName;
             return this;
         }
-
         public Builder vpcConfig(@Nullable FirehoseDeliveryStreamElasticsearchConfigurationVpcConfig vpcConfig) {
             this.vpcConfig = vpcConfig;
             return this;
-        }
-        public FirehoseDeliveryStreamElasticsearchConfiguration build() {
+        }        public FirehoseDeliveryStreamElasticsearchConfiguration build() {
             return new FirehoseDeliveryStreamElasticsearchConfiguration(bufferingInterval, bufferingSize, cloudwatchLoggingOptions, clusterEndpoint, domainArn, indexName, indexRotationPeriod, processingConfiguration, retryDuration, roleArn, s3BackupMode, typeName, vpcConfig);
         }
     }

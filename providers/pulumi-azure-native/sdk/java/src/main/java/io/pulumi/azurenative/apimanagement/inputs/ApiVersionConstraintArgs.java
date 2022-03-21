@@ -61,12 +61,10 @@ public final class ApiVersionConstraintArgs extends io.pulumi.resources.Resource
             this.minApiVersion = minApiVersion;
             return this;
         }
-
         public Builder minApiVersion(@Nullable String minApiVersion) {
             this.minApiVersion = Output.ofNullable(minApiVersion);
             return this;
-        }
-        public ApiVersionConstraintArgs build() {
+        }        public ApiVersionConstraintArgs build() {
             return new ApiVersionConstraintArgs(minApiVersion);
         }
     }

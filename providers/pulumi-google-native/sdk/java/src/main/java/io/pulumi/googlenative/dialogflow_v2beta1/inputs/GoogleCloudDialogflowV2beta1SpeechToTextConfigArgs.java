@@ -61,12 +61,10 @@ public final class GoogleCloudDialogflowV2beta1SpeechToTextConfigArgs extends io
             this.speechModelVariant = speechModelVariant;
             return this;
         }
-
         public Builder speechModelVariant(@Nullable GoogleCloudDialogflowV2beta1SpeechToTextConfigSpeechModelVariant speechModelVariant) {
             this.speechModelVariant = Output.ofNullable(speechModelVariant);
             return this;
-        }
-        public GoogleCloudDialogflowV2beta1SpeechToTextConfigArgs build() {
+        }        public GoogleCloudDialogflowV2beta1SpeechToTextConfigArgs build() {
             return new GoogleCloudDialogflowV2beta1SpeechToTextConfigArgs(speechModelVariant);
         }
     }

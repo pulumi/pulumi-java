@@ -122,27 +122,25 @@ public final class OsPolicyAssignmentOsPolicy {
             this.allowNoResourceGroupMatch = allowNoResourceGroupMatch;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder mode(String mode) {
             this.mode = Objects.requireNonNull(mode);
             return this;
         }
-
         public Builder resourceGroups(List<OsPolicyAssignmentOsPolicyResourceGroup> resourceGroups) {
             this.resourceGroups = Objects.requireNonNull(resourceGroups);
             return this;
         }
-        public OsPolicyAssignmentOsPolicy build() {
+        public Builder resourceGroups(OsPolicyAssignmentOsPolicyResourceGroup... resourceGroups) {
+            return resourceGroups(List.of(resourceGroups));
+        }        public OsPolicyAssignmentOsPolicy build() {
             return new OsPolicyAssignmentOsPolicy(allowNoResourceGroupMatch, description, id, mode, resourceGroups);
         }
     }

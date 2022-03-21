@@ -45,8 +45,7 @@ public final class AssistantServerSideEncryptionConfiguration {
         public Builder kmsKeyId(@Nullable String kmsKeyId) {
             this.kmsKeyId = kmsKeyId;
             return this;
-        }
-        public AssistantServerSideEncryptionConfiguration build() {
+        }        public AssistantServerSideEncryptionConfiguration build() {
             return new AssistantServerSideEncryptionConfiguration(kmsKeyId);
         }
     }

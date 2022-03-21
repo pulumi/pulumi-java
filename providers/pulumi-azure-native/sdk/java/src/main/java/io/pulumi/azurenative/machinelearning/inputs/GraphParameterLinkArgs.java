@@ -77,22 +77,18 @@ public final class GraphParameterLinkArgs extends io.pulumi.resources.ResourceAr
             this.nodeId = Objects.requireNonNull(nodeId);
             return this;
         }
-
         public Builder nodeId(String nodeId) {
             this.nodeId = Output.of(Objects.requireNonNull(nodeId));
             return this;
         }
-
         public Builder parameterKey(Output<String> parameterKey) {
             this.parameterKey = Objects.requireNonNull(parameterKey);
             return this;
         }
-
         public Builder parameterKey(String parameterKey) {
             this.parameterKey = Output.of(Objects.requireNonNull(parameterKey));
             return this;
-        }
-        public GraphParameterLinkArgs build() {
+        }        public GraphParameterLinkArgs build() {
             return new GraphParameterLinkArgs(nodeId, parameterKey);
         }
     }

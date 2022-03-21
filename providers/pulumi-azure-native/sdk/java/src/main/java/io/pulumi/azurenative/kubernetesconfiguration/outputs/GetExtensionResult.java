@@ -335,92 +335,77 @@ public final class GetExtensionResult {
             this.autoUpgradeMinorVersion = autoUpgradeMinorVersion;
             return this;
         }
-
         public Builder configurationProtectedSettings(@Nullable Map<String,String> configurationProtectedSettings) {
             this.configurationProtectedSettings = configurationProtectedSettings;
             return this;
         }
-
         public Builder configurationSettings(@Nullable Map<String,String> configurationSettings) {
             this.configurationSettings = configurationSettings;
             return this;
         }
-
         public Builder creationTime(String creationTime) {
             this.creationTime = Objects.requireNonNull(creationTime);
             return this;
         }
-
         public Builder errorInfo(ErrorDefinitionResponse errorInfo) {
             this.errorInfo = Objects.requireNonNull(errorInfo);
             return this;
         }
-
         public Builder extensionType(@Nullable String extensionType) {
             this.extensionType = extensionType;
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder identity(@Nullable ConfigurationIdentityResponse identity) {
             this.identity = identity;
             return this;
         }
-
         public Builder installState(String installState) {
             this.installState = Objects.requireNonNull(installState);
             return this;
         }
-
         public Builder lastModifiedTime(String lastModifiedTime) {
             this.lastModifiedTime = Objects.requireNonNull(lastModifiedTime);
             return this;
         }
-
         public Builder lastStatusTime(String lastStatusTime) {
             this.lastStatusTime = Objects.requireNonNull(lastStatusTime);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder releaseTrain(@Nullable String releaseTrain) {
             this.releaseTrain = releaseTrain;
             return this;
         }
-
         public Builder scope(@Nullable ScopeResponse scope) {
             this.scope = scope;
             return this;
         }
-
         public Builder statuses(@Nullable List<ExtensionStatusResponse> statuses) {
             this.statuses = statuses;
             return this;
         }
-
+        public Builder statuses(ExtensionStatusResponse... statuses) {
+            return statuses(List.of(statuses));
+        }
         public Builder systemData(@Nullable SystemDataResponse systemData) {
             this.systemData = systemData;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder version(@Nullable String version) {
             this.version = version;
             return this;
-        }
-        public GetExtensionResult build() {
+        }        public GetExtensionResult build() {
             return new GetExtensionResult(autoUpgradeMinorVersion, configurationProtectedSettings, configurationSettings, creationTime, errorInfo, extensionType, id, identity, installState, lastModifiedTime, lastStatusTime, name, releaseTrain, scope, statuses, systemData, type, version);
         }
     }

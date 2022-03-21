@@ -53,8 +53,7 @@ public final class GetDocumentationVersionResult {
         public Builder description(@Nullable String description) {
             this.description = description;
             return this;
-        }
-        public GetDocumentationVersionResult build() {
+        }        public GetDocumentationVersionResult build() {
             return new GetDocumentationVersionResult(description);
         }
     }

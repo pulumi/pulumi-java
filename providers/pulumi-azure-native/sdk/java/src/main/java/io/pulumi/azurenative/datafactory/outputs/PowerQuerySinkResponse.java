@@ -154,37 +154,30 @@ public final class PowerQuerySinkResponse {
             this.dataset = dataset;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
-
         public Builder flowlet(@Nullable DataFlowReferenceResponse flowlet) {
             this.flowlet = flowlet;
             return this;
         }
-
         public Builder linkedService(@Nullable LinkedServiceReferenceResponse linkedService) {
             this.linkedService = linkedService;
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder schemaLinkedService(@Nullable LinkedServiceReferenceResponse schemaLinkedService) {
             this.schemaLinkedService = schemaLinkedService;
             return this;
         }
-
         public Builder script(@Nullable String script) {
             this.script = script;
             return this;
-        }
-        public PowerQuerySinkResponse build() {
+        }        public PowerQuerySinkResponse build() {
             return new PowerQuerySinkResponse(dataset, description, flowlet, linkedService, name, schemaLinkedService, script);
         }
     }

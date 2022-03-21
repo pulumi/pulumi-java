@@ -96,17 +96,14 @@ public final class ConnectionMonitorTcpConfigurationResponse extends io.pulumi.r
             this.destinationPortBehavior = destinationPortBehavior;
             return this;
         }
-
         public Builder disableTraceRoute(@Nullable Boolean disableTraceRoute) {
             this.disableTraceRoute = disableTraceRoute;
             return this;
         }
-
         public Builder port(@Nullable Integer port) {
             this.port = port;
             return this;
-        }
-        public ConnectionMonitorTcpConfigurationResponse build() {
+        }        public ConnectionMonitorTcpConfigurationResponse build() {
             return new ConnectionMonitorTcpConfigurationResponse(destinationPortBehavior, disableTraceRoute, port);
         }
     }

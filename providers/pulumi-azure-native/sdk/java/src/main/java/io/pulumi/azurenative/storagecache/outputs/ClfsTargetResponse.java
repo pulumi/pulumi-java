@@ -53,8 +53,7 @@ public final class ClfsTargetResponse {
         public Builder target(@Nullable String target) {
             this.target = target;
             return this;
-        }
-        public ClfsTargetResponse build() {
+        }        public ClfsTargetResponse build() {
             return new ClfsTargetResponse(target);
         }
     }

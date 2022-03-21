@@ -135,32 +135,26 @@ public final class ApplicationAppSource {
             this.password = password;
             return this;
         }
-
         public Builder revision(@Nullable String revision) {
             this.revision = revision;
             return this;
         }
-
         public Builder sshKey(@Nullable String sshKey) {
             this.sshKey = sshKey;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder url(@Nullable String url) {
             this.url = url;
             return this;
         }
-
         public Builder username(@Nullable String username) {
             this.username = username;
             return this;
-        }
-        public ApplicationAppSource build() {
+        }        public ApplicationAppSource build() {
             return new ApplicationAppSource(password, revision, sshKey, type, url, username);
         }
     }

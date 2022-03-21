@@ -73,22 +73,18 @@ public final class HoursOfOperationConfigStartTimeArgs extends io.pulumi.resourc
             this.hours = Objects.requireNonNull(hours);
             return this;
         }
-
         public Builder hours(Integer hours) {
             this.hours = Output.of(Objects.requireNonNull(hours));
             return this;
         }
-
         public Builder minutes(Output<Integer> minutes) {
             this.minutes = Objects.requireNonNull(minutes);
             return this;
         }
-
         public Builder minutes(Integer minutes) {
             this.minutes = Output.of(Objects.requireNonNull(minutes));
             return this;
-        }
-        public HoursOfOperationConfigStartTimeArgs build() {
+        }        public HoursOfOperationConfigStartTimeArgs build() {
             return new HoursOfOperationConfigStartTimeArgs(hours, minutes);
         }
     }

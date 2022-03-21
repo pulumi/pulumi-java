@@ -145,62 +145,53 @@ public final class DomainMappingState extends io.pulumi.resources.ResourceArgs {
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder metadata(@Nullable Output<DomainMappingMetadataGetArgs> metadata) {
             this.metadata = metadata;
             return this;
         }
-
         public Builder metadata(@Nullable DomainMappingMetadataGetArgs metadata) {
             this.metadata = Output.ofNullable(metadata);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
         }
-
         public Builder spec(@Nullable Output<DomainMappingSpecGetArgs> spec) {
             this.spec = spec;
             return this;
         }
-
         public Builder spec(@Nullable DomainMappingSpecGetArgs spec) {
             this.spec = Output.ofNullable(spec);
             return this;
         }
-
         public Builder statuses(@Nullable Output<List<DomainMappingStatusGetArgs>> statuses) {
             this.statuses = statuses;
             return this;
         }
-
         public Builder statuses(@Nullable List<DomainMappingStatusGetArgs> statuses) {
             this.statuses = Output.ofNullable(statuses);
             return this;
         }
-        public DomainMappingState build() {
+        public Builder statuses(DomainMappingStatusGetArgs... statuses) {
+            return statuses(List.of(statuses));
+        }        public DomainMappingState build() {
             return new DomainMappingState(location, metadata, name, project, spec, statuses);
         }
     }

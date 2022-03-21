@@ -74,12 +74,10 @@ public final class AppProfileSingleClusterRouting {
             this.allowTransactionalWrites = allowTransactionalWrites;
             return this;
         }
-
         public Builder clusterId(String clusterId) {
             this.clusterId = Objects.requireNonNull(clusterId);
             return this;
-        }
-        public AppProfileSingleClusterRouting build() {
+        }        public AppProfileSingleClusterRouting build() {
             return new AppProfileSingleClusterRouting(allowTransactionalWrites, clusterId);
         }
     }

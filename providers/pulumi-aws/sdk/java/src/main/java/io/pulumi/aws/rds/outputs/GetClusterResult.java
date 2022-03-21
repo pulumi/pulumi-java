@@ -281,147 +281,133 @@ public final class GetClusterResult {
             this.arn = Objects.requireNonNull(arn);
             return this;
         }
-
         public Builder availabilityZones(List<String> availabilityZones) {
             this.availabilityZones = Objects.requireNonNull(availabilityZones);
             return this;
         }
-
+        public Builder availabilityZones(String... availabilityZones) {
+            return availabilityZones(List.of(availabilityZones));
+        }
         public Builder backtrackWindow(Integer backtrackWindow) {
             this.backtrackWindow = Objects.requireNonNull(backtrackWindow);
             return this;
         }
-
         public Builder backupRetentionPeriod(Integer backupRetentionPeriod) {
             this.backupRetentionPeriod = Objects.requireNonNull(backupRetentionPeriod);
             return this;
         }
-
         public Builder clusterIdentifier(String clusterIdentifier) {
             this.clusterIdentifier = Objects.requireNonNull(clusterIdentifier);
             return this;
         }
-
         public Builder clusterMembers(List<String> clusterMembers) {
             this.clusterMembers = Objects.requireNonNull(clusterMembers);
             return this;
         }
-
+        public Builder clusterMembers(String... clusterMembers) {
+            return clusterMembers(List.of(clusterMembers));
+        }
         public Builder clusterResourceId(String clusterResourceId) {
             this.clusterResourceId = Objects.requireNonNull(clusterResourceId);
             return this;
         }
-
         public Builder databaseName(String databaseName) {
             this.databaseName = Objects.requireNonNull(databaseName);
             return this;
         }
-
         public Builder dbClusterParameterGroupName(String dbClusterParameterGroupName) {
             this.dbClusterParameterGroupName = Objects.requireNonNull(dbClusterParameterGroupName);
             return this;
         }
-
         public Builder dbSubnetGroupName(String dbSubnetGroupName) {
             this.dbSubnetGroupName = Objects.requireNonNull(dbSubnetGroupName);
             return this;
         }
-
         public Builder enabledCloudwatchLogsExports(List<String> enabledCloudwatchLogsExports) {
             this.enabledCloudwatchLogsExports = Objects.requireNonNull(enabledCloudwatchLogsExports);
             return this;
         }
-
+        public Builder enabledCloudwatchLogsExports(String... enabledCloudwatchLogsExports) {
+            return enabledCloudwatchLogsExports(List.of(enabledCloudwatchLogsExports));
+        }
         public Builder endpoint(String endpoint) {
             this.endpoint = Objects.requireNonNull(endpoint);
             return this;
         }
-
         public Builder engine(String engine) {
             this.engine = Objects.requireNonNull(engine);
             return this;
         }
-
         public Builder engineVersion(String engineVersion) {
             this.engineVersion = Objects.requireNonNull(engineVersion);
             return this;
         }
-
         public Builder finalSnapshotIdentifier(String finalSnapshotIdentifier) {
             this.finalSnapshotIdentifier = Objects.requireNonNull(finalSnapshotIdentifier);
             return this;
         }
-
         public Builder hostedZoneId(String hostedZoneId) {
             this.hostedZoneId = Objects.requireNonNull(hostedZoneId);
             return this;
         }
-
         public Builder iamDatabaseAuthenticationEnabled(Boolean iamDatabaseAuthenticationEnabled) {
             this.iamDatabaseAuthenticationEnabled = Objects.requireNonNull(iamDatabaseAuthenticationEnabled);
             return this;
         }
-
         public Builder iamRoles(List<String> iamRoles) {
             this.iamRoles = Objects.requireNonNull(iamRoles);
             return this;
         }
-
+        public Builder iamRoles(String... iamRoles) {
+            return iamRoles(List.of(iamRoles));
+        }
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder kmsKeyId(String kmsKeyId) {
             this.kmsKeyId = Objects.requireNonNull(kmsKeyId);
             return this;
         }
-
         public Builder masterUsername(String masterUsername) {
             this.masterUsername = Objects.requireNonNull(masterUsername);
             return this;
         }
-
         public Builder port(Integer port) {
             this.port = Objects.requireNonNull(port);
             return this;
         }
-
         public Builder preferredBackupWindow(String preferredBackupWindow) {
             this.preferredBackupWindow = Objects.requireNonNull(preferredBackupWindow);
             return this;
         }
-
         public Builder preferredMaintenanceWindow(String preferredMaintenanceWindow) {
             this.preferredMaintenanceWindow = Objects.requireNonNull(preferredMaintenanceWindow);
             return this;
         }
-
         public Builder readerEndpoint(String readerEndpoint) {
             this.readerEndpoint = Objects.requireNonNull(readerEndpoint);
             return this;
         }
-
         public Builder replicationSourceIdentifier(String replicationSourceIdentifier) {
             this.replicationSourceIdentifier = Objects.requireNonNull(replicationSourceIdentifier);
             return this;
         }
-
         public Builder storageEncrypted(Boolean storageEncrypted) {
             this.storageEncrypted = Objects.requireNonNull(storageEncrypted);
             return this;
         }
-
         public Builder tags(Map<String,String> tags) {
             this.tags = Objects.requireNonNull(tags);
             return this;
         }
-
         public Builder vpcSecurityGroupIds(List<String> vpcSecurityGroupIds) {
             this.vpcSecurityGroupIds = Objects.requireNonNull(vpcSecurityGroupIds);
             return this;
         }
-        public GetClusterResult build() {
+        public Builder vpcSecurityGroupIds(String... vpcSecurityGroupIds) {
+            return vpcSecurityGroupIds(List.of(vpcSecurityGroupIds));
+        }        public GetClusterResult build() {
             return new GetClusterResult(arn, availabilityZones, backtrackWindow, backupRetentionPeriod, clusterIdentifier, clusterMembers, clusterResourceId, databaseName, dbClusterParameterGroupName, dbSubnetGroupName, enabledCloudwatchLogsExports, endpoint, engine, engineVersion, finalSnapshotIdentifier, hostedZoneId, iamDatabaseAuthenticationEnabled, iamRoles, id, kmsKeyId, masterUsername, port, preferredBackupWindow, preferredMaintenanceWindow, readerEndpoint, replicationSourceIdentifier, storageEncrypted, tags, vpcSecurityGroupIds);
         }
     }

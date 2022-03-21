@@ -76,12 +76,10 @@ public final class GoogleCloudRetailV2betaPriceInfoPriceRangeResponse extends io
             this.originalPrice = Objects.requireNonNull(originalPrice);
             return this;
         }
-
         public Builder price(GoogleCloudRetailV2betaIntervalResponse price) {
             this.price = Objects.requireNonNull(price);
             return this;
-        }
-        public GoogleCloudRetailV2betaPriceInfoPriceRangeResponse build() {
+        }        public GoogleCloudRetailV2betaPriceInfoPriceRangeResponse build() {
             return new GoogleCloudRetailV2betaPriceInfoPriceRangeResponse(originalPrice, price);
         }
     }

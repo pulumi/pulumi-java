@@ -156,37 +156,30 @@ public final class FlexibleAppVersionReadinessCheck {
             this.appStartTimeout = appStartTimeout;
             return this;
         }
-
         public Builder checkInterval(@Nullable String checkInterval) {
             this.checkInterval = checkInterval;
             return this;
         }
-
         public Builder failureThreshold(@Nullable Double failureThreshold) {
             this.failureThreshold = failureThreshold;
             return this;
         }
-
         public Builder host(@Nullable String host) {
             this.host = host;
             return this;
         }
-
         public Builder path(String path) {
             this.path = Objects.requireNonNull(path);
             return this;
         }
-
         public Builder successThreshold(@Nullable Double successThreshold) {
             this.successThreshold = successThreshold;
             return this;
         }
-
         public Builder timeout(@Nullable String timeout) {
             this.timeout = timeout;
             return this;
-        }
-        public FlexibleAppVersionReadinessCheck build() {
+        }        public FlexibleAppVersionReadinessCheck build() {
             return new FlexibleAppVersionReadinessCheck(appStartTimeout, checkInterval, failureThreshold, host, path, successThreshold, timeout);
         }
     }

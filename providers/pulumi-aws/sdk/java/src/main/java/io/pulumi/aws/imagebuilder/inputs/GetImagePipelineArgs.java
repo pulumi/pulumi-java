@@ -75,12 +75,10 @@ public final class GetImagePipelineArgs extends io.pulumi.resources.InvokeArgs {
             this.arn = Objects.requireNonNull(arn);
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
-        }
-        public GetImagePipelineArgs build() {
+        }        public GetImagePipelineArgs build() {
             return new GetImagePipelineArgs(arn, tags);
         }
     }

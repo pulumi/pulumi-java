@@ -113,42 +113,34 @@ public final class OSPolicyResourceFileArgs extends io.pulumi.resources.Resource
             this.allowInsecure = allowInsecure;
             return this;
         }
-
         public Builder allowInsecure(@Nullable Boolean allowInsecure) {
             this.allowInsecure = Output.ofNullable(allowInsecure);
             return this;
         }
-
         public Builder gcs(@Nullable Output<OSPolicyResourceFileGcsArgs> gcs) {
             this.gcs = gcs;
             return this;
         }
-
         public Builder gcs(@Nullable OSPolicyResourceFileGcsArgs gcs) {
             this.gcs = Output.ofNullable(gcs);
             return this;
         }
-
         public Builder localPath(@Nullable Output<String> localPath) {
             this.localPath = localPath;
             return this;
         }
-
         public Builder localPath(@Nullable String localPath) {
             this.localPath = Output.ofNullable(localPath);
             return this;
         }
-
         public Builder remote(@Nullable Output<OSPolicyResourceFileRemoteArgs> remote) {
             this.remote = remote;
             return this;
         }
-
         public Builder remote(@Nullable OSPolicyResourceFileRemoteArgs remote) {
             this.remote = Output.ofNullable(remote);
             return this;
-        }
-        public OSPolicyResourceFileArgs build() {
+        }        public OSPolicyResourceFileArgs build() {
             return new OSPolicyResourceFileArgs(allowInsecure, gcs, localPath, remote);
         }
     }

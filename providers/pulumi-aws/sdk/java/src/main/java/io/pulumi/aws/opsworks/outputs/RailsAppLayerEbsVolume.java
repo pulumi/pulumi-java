@@ -145,37 +145,30 @@ public final class RailsAppLayerEbsVolume {
             this.encrypted = encrypted;
             return this;
         }
-
         public Builder iops(@Nullable Integer iops) {
             this.iops = iops;
             return this;
         }
-
         public Builder mountPoint(String mountPoint) {
             this.mountPoint = Objects.requireNonNull(mountPoint);
             return this;
         }
-
         public Builder numberOfDisks(Integer numberOfDisks) {
             this.numberOfDisks = Objects.requireNonNull(numberOfDisks);
             return this;
         }
-
         public Builder raidLevel(@Nullable String raidLevel) {
             this.raidLevel = raidLevel;
             return this;
         }
-
         public Builder size(Integer size) {
             this.size = Objects.requireNonNull(size);
             return this;
         }
-
         public Builder type(@Nullable String type) {
             this.type = type;
             return this;
-        }
-        public RailsAppLayerEbsVolume build() {
+        }        public RailsAppLayerEbsVolume build() {
             return new RailsAppLayerEbsVolume(encrypted, iops, mountPoint, numberOfDisks, raidLevel, size, type);
         }
     }

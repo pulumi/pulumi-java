@@ -114,42 +114,34 @@ public final class ConnectToSourceSqlServerTaskInputArgs extends io.pulumi.resou
             this.checkPermissionsGroup = checkPermissionsGroup;
             return this;
         }
-
         public Builder checkPermissionsGroup(@Nullable Either<String,ServerLevelPermissionsGroup> checkPermissionsGroup) {
             this.checkPermissionsGroup = Output.ofNullable(checkPermissionsGroup);
             return this;
         }
-
         public Builder collectAgentJobs(@Nullable Output<Boolean> collectAgentJobs) {
             this.collectAgentJobs = collectAgentJobs;
             return this;
         }
-
         public Builder collectAgentJobs(@Nullable Boolean collectAgentJobs) {
             this.collectAgentJobs = Output.ofNullable(collectAgentJobs);
             return this;
         }
-
         public Builder collectLogins(@Nullable Output<Boolean> collectLogins) {
             this.collectLogins = collectLogins;
             return this;
         }
-
         public Builder collectLogins(@Nullable Boolean collectLogins) {
             this.collectLogins = Output.ofNullable(collectLogins);
             return this;
         }
-
         public Builder sourceConnectionInfo(Output<SqlConnectionInfoArgs> sourceConnectionInfo) {
             this.sourceConnectionInfo = Objects.requireNonNull(sourceConnectionInfo);
             return this;
         }
-
         public Builder sourceConnectionInfo(SqlConnectionInfoArgs sourceConnectionInfo) {
             this.sourceConnectionInfo = Output.of(Objects.requireNonNull(sourceConnectionInfo));
             return this;
-        }
-        public ConnectToSourceSqlServerTaskInputArgs build() {
+        }        public ConnectToSourceSqlServerTaskInputArgs build() {
             return new ConnectToSourceSqlServerTaskInputArgs(checkPermissionsGroup, collectAgentJobs, collectLogins, sourceConnectionInfo);
         }
     }

@@ -193,52 +193,48 @@ public final class GetVpcAttachmentResult {
             this.applianceModeSupport = Objects.requireNonNull(applianceModeSupport);
             return this;
         }
-
         public Builder dnsSupport(String dnsSupport) {
             this.dnsSupport = Objects.requireNonNull(dnsSupport);
             return this;
         }
-
         public Builder filters(@Nullable List<GetVpcAttachmentFilter> filters) {
             this.filters = filters;
             return this;
         }
-
+        public Builder filters(GetVpcAttachmentFilter... filters) {
+            return filters(List.of(filters));
+        }
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder ipv6Support(String ipv6Support) {
             this.ipv6Support = Objects.requireNonNull(ipv6Support);
             return this;
         }
-
         public Builder subnetIds(List<String> subnetIds) {
             this.subnetIds = Objects.requireNonNull(subnetIds);
             return this;
         }
-
+        public Builder subnetIds(String... subnetIds) {
+            return subnetIds(List.of(subnetIds));
+        }
         public Builder tags(Map<String,String> tags) {
             this.tags = Objects.requireNonNull(tags);
             return this;
         }
-
         public Builder transitGatewayId(String transitGatewayId) {
             this.transitGatewayId = Objects.requireNonNull(transitGatewayId);
             return this;
         }
-
         public Builder vpcId(String vpcId) {
             this.vpcId = Objects.requireNonNull(vpcId);
             return this;
         }
-
         public Builder vpcOwnerId(String vpcOwnerId) {
             this.vpcOwnerId = Objects.requireNonNull(vpcOwnerId);
             return this;
-        }
-        public GetVpcAttachmentResult build() {
+        }        public GetVpcAttachmentResult build() {
             return new GetVpcAttachmentResult(applianceModeSupport, dnsSupport, filters, id, ipv6Support, subnetIds, tags, transitGatewayId, vpcId, vpcOwnerId);
         }
     }

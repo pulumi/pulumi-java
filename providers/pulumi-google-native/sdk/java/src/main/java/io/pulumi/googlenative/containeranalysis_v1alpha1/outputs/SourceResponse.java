@@ -138,32 +138,29 @@ public final class SourceResponse {
             this.additionalContexts = Objects.requireNonNull(additionalContexts);
             return this;
         }
-
+        public Builder additionalContexts(GoogleDevtoolsContaineranalysisV1alpha1SourceContextResponse... additionalContexts) {
+            return additionalContexts(List.of(additionalContexts));
+        }
         public Builder artifactStorageSource(StorageSourceResponse artifactStorageSource) {
             this.artifactStorageSource = Objects.requireNonNull(artifactStorageSource);
             return this;
         }
-
         public Builder context(GoogleDevtoolsContaineranalysisV1alpha1SourceContextResponse context) {
             this.context = Objects.requireNonNull(context);
             return this;
         }
-
         public Builder fileHashes(Map<String,String> fileHashes) {
             this.fileHashes = Objects.requireNonNull(fileHashes);
             return this;
         }
-
         public Builder repoSource(RepoSourceResponse repoSource) {
             this.repoSource = Objects.requireNonNull(repoSource);
             return this;
         }
-
         public Builder storageSource(StorageSourceResponse storageSource) {
             this.storageSource = Objects.requireNonNull(storageSource);
             return this;
-        }
-        public SourceResponse build() {
+        }        public SourceResponse build() {
             return new SourceResponse(additionalContexts, artifactStorageSource, context, fileHashes, repoSource, storageSource);
         }
     }

@@ -240,152 +240,122 @@ public final class FlowSourceConnectorPropertiesArgs extends io.pulumi.resources
             this.amplitude = amplitude;
             return this;
         }
-
         public Builder amplitude(@Nullable FlowAmplitudeSourcePropertiesArgs amplitude) {
             this.amplitude = Output.ofNullable(amplitude);
             return this;
         }
-
         public Builder datadog(@Nullable Output<FlowDatadogSourcePropertiesArgs> datadog) {
             this.datadog = datadog;
             return this;
         }
-
         public Builder datadog(@Nullable FlowDatadogSourcePropertiesArgs datadog) {
             this.datadog = Output.ofNullable(datadog);
             return this;
         }
-
         public Builder dynatrace(@Nullable Output<FlowDynatraceSourcePropertiesArgs> dynatrace) {
             this.dynatrace = dynatrace;
             return this;
         }
-
         public Builder dynatrace(@Nullable FlowDynatraceSourcePropertiesArgs dynatrace) {
             this.dynatrace = Output.ofNullable(dynatrace);
             return this;
         }
-
         public Builder googleAnalytics(@Nullable Output<FlowGoogleAnalyticsSourcePropertiesArgs> googleAnalytics) {
             this.googleAnalytics = googleAnalytics;
             return this;
         }
-
         public Builder googleAnalytics(@Nullable FlowGoogleAnalyticsSourcePropertiesArgs googleAnalytics) {
             this.googleAnalytics = Output.ofNullable(googleAnalytics);
             return this;
         }
-
         public Builder inforNexus(@Nullable Output<FlowInforNexusSourcePropertiesArgs> inforNexus) {
             this.inforNexus = inforNexus;
             return this;
         }
-
         public Builder inforNexus(@Nullable FlowInforNexusSourcePropertiesArgs inforNexus) {
             this.inforNexus = Output.ofNullable(inforNexus);
             return this;
         }
-
         public Builder marketo(@Nullable Output<FlowMarketoSourcePropertiesArgs> marketo) {
             this.marketo = marketo;
             return this;
         }
-
         public Builder marketo(@Nullable FlowMarketoSourcePropertiesArgs marketo) {
             this.marketo = Output.ofNullable(marketo);
             return this;
         }
-
         public Builder s3(@Nullable Output<FlowS3SourcePropertiesArgs> s3) {
             this.s3 = s3;
             return this;
         }
-
         public Builder s3(@Nullable FlowS3SourcePropertiesArgs s3) {
             this.s3 = Output.ofNullable(s3);
             return this;
         }
-
         public Builder sAPOData(@Nullable Output<FlowSAPODataSourcePropertiesArgs> sAPOData) {
             this.sAPOData = sAPOData;
             return this;
         }
-
         public Builder sAPOData(@Nullable FlowSAPODataSourcePropertiesArgs sAPOData) {
             this.sAPOData = Output.ofNullable(sAPOData);
             return this;
         }
-
         public Builder salesforce(@Nullable Output<FlowSalesforceSourcePropertiesArgs> salesforce) {
             this.salesforce = salesforce;
             return this;
         }
-
         public Builder salesforce(@Nullable FlowSalesforceSourcePropertiesArgs salesforce) {
             this.salesforce = Output.ofNullable(salesforce);
             return this;
         }
-
         public Builder serviceNow(@Nullable Output<FlowServiceNowSourcePropertiesArgs> serviceNow) {
             this.serviceNow = serviceNow;
             return this;
         }
-
         public Builder serviceNow(@Nullable FlowServiceNowSourcePropertiesArgs serviceNow) {
             this.serviceNow = Output.ofNullable(serviceNow);
             return this;
         }
-
         public Builder singular(@Nullable Output<FlowSingularSourcePropertiesArgs> singular) {
             this.singular = singular;
             return this;
         }
-
         public Builder singular(@Nullable FlowSingularSourcePropertiesArgs singular) {
             this.singular = Output.ofNullable(singular);
             return this;
         }
-
         public Builder slack(@Nullable Output<FlowSlackSourcePropertiesArgs> slack) {
             this.slack = slack;
             return this;
         }
-
         public Builder slack(@Nullable FlowSlackSourcePropertiesArgs slack) {
             this.slack = Output.ofNullable(slack);
             return this;
         }
-
         public Builder trendmicro(@Nullable Output<FlowTrendmicroSourcePropertiesArgs> trendmicro) {
             this.trendmicro = trendmicro;
             return this;
         }
-
         public Builder trendmicro(@Nullable FlowTrendmicroSourcePropertiesArgs trendmicro) {
             this.trendmicro = Output.ofNullable(trendmicro);
             return this;
         }
-
         public Builder veeva(@Nullable Output<FlowVeevaSourcePropertiesArgs> veeva) {
             this.veeva = veeva;
             return this;
         }
-
         public Builder veeva(@Nullable FlowVeevaSourcePropertiesArgs veeva) {
             this.veeva = Output.ofNullable(veeva);
             return this;
         }
-
         public Builder zendesk(@Nullable Output<FlowZendeskSourcePropertiesArgs> zendesk) {
             this.zendesk = zendesk;
             return this;
         }
-
         public Builder zendesk(@Nullable FlowZendeskSourcePropertiesArgs zendesk) {
             this.zendesk = Output.ofNullable(zendesk);
             return this;
-        }
-        public FlowSourceConnectorPropertiesArgs build() {
+        }        public FlowSourceConnectorPropertiesArgs build() {
             return new FlowSourceConnectorPropertiesArgs(amplitude, datadog, dynatrace, googleAnalytics, inforNexus, marketo, s3, sAPOData, salesforce, serviceNow, singular, slack, trendmicro, veeva, zendesk);
         }
     }

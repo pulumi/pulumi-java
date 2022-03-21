@@ -98,42 +98,34 @@ public final class ThemeConfigurationArgs extends io.pulumi.resources.ResourceAr
             this.dataColorPalette = dataColorPalette;
             return this;
         }
-
         public Builder dataColorPalette(@Nullable ThemeDataColorPaletteArgs dataColorPalette) {
             this.dataColorPalette = Output.ofNullable(dataColorPalette);
             return this;
         }
-
         public Builder sheet(@Nullable Output<ThemeSheetStyleArgs> sheet) {
             this.sheet = sheet;
             return this;
         }
-
         public Builder sheet(@Nullable ThemeSheetStyleArgs sheet) {
             this.sheet = Output.ofNullable(sheet);
             return this;
         }
-
         public Builder typography(@Nullable Output<ThemeTypographyArgs> typography) {
             this.typography = typography;
             return this;
         }
-
         public Builder typography(@Nullable ThemeTypographyArgs typography) {
             this.typography = Output.ofNullable(typography);
             return this;
         }
-
         public Builder uIColorPalette(@Nullable Output<ThemeUIColorPaletteArgs> uIColorPalette) {
             this.uIColorPalette = uIColorPalette;
             return this;
         }
-
         public Builder uIColorPalette(@Nullable ThemeUIColorPaletteArgs uIColorPalette) {
             this.uIColorPalette = Output.ofNullable(uIColorPalette);
             return this;
-        }
-        public ThemeConfigurationArgs build() {
+        }        public ThemeConfigurationArgs build() {
             return new ThemeConfigurationArgs(dataColorPalette, sheet, typography, uIColorPalette);
         }
     }

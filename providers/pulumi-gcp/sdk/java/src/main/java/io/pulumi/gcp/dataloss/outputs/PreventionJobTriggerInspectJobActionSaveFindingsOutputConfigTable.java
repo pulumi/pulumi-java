@@ -89,17 +89,14 @@ public final class PreventionJobTriggerInspectJobActionSaveFindingsOutputConfigT
             this.datasetId = Objects.requireNonNull(datasetId);
             return this;
         }
-
         public Builder projectId(String projectId) {
             this.projectId = Objects.requireNonNull(projectId);
             return this;
         }
-
         public Builder tableId(@Nullable String tableId) {
             this.tableId = tableId;
             return this;
-        }
-        public PreventionJobTriggerInspectJobActionSaveFindingsOutputConfigTable build() {
+        }        public PreventionJobTriggerInspectJobActionSaveFindingsOutputConfigTable build() {
             return new PreventionJobTriggerInspectJobActionSaveFindingsOutputConfigTable(datasetId, projectId, tableId);
         }
     }

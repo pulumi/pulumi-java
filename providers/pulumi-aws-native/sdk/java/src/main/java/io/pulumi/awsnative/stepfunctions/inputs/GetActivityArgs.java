@@ -50,8 +50,7 @@ public final class GetActivityArgs extends io.pulumi.resources.InvokeArgs {
         public Builder arn(String arn) {
             this.arn = Objects.requireNonNull(arn);
             return this;
-        }
-        public GetActivityArgs build() {
+        }        public GetActivityArgs build() {
             return new GetActivityArgs(arn);
         }
     }

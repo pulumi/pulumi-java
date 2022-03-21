@@ -53,12 +53,10 @@ public final class EntryBigqueryTableSpecViewSpecArgs extends io.pulumi.resource
             this.viewQuery = viewQuery;
             return this;
         }
-
         public Builder viewQuery(@Nullable String viewQuery) {
             this.viewQuery = Output.ofNullable(viewQuery);
             return this;
-        }
-        public EntryBigqueryTableSpecViewSpecArgs build() {
+        }        public EntryBigqueryTableSpecViewSpecArgs build() {
             return new EntryBigqueryTableSpecViewSpecArgs(viewQuery);
         }
     }

@@ -94,17 +94,17 @@ public final class ValidateSyncMigrationInputSqlServerTaskOutputResponse extends
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder validationErrors(List<ReportableExceptionResponse> validationErrors) {
             this.validationErrors = Objects.requireNonNull(validationErrors);
             return this;
         }
-        public ValidateSyncMigrationInputSqlServerTaskOutputResponse build() {
+        public Builder validationErrors(ReportableExceptionResponse... validationErrors) {
+            return validationErrors(List.of(validationErrors));
+        }        public ValidateSyncMigrationInputSqlServerTaskOutputResponse build() {
             return new ValidateSyncMigrationInputSqlServerTaskOutputResponse(id, name, validationErrors);
         }
     }

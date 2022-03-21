@@ -118,27 +118,22 @@ public final class GetStudyResult {
             this.createTime = Objects.requireNonNull(createTime);
             return this;
         }
-
         public Builder inactiveReason(String inactiveReason) {
             this.inactiveReason = Objects.requireNonNull(inactiveReason);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder state(String state) {
             this.state = Objects.requireNonNull(state);
             return this;
         }
-
         public Builder studyConfig(GoogleCloudMlV1__StudyConfigResponse studyConfig) {
             this.studyConfig = Objects.requireNonNull(studyConfig);
             return this;
-        }
-        public GetStudyResult build() {
+        }        public GetStudyResult build() {
             return new GetStudyResult(createTime, inactiveReason, name, state, studyConfig);
         }
     }

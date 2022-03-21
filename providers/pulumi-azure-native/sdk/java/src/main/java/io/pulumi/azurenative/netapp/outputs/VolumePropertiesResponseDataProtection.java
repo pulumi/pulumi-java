@@ -89,17 +89,14 @@ public final class VolumePropertiesResponseDataProtection {
             this.backup = backup;
             return this;
         }
-
         public Builder replication(@Nullable ReplicationObjectResponse replication) {
             this.replication = replication;
             return this;
         }
-
         public Builder snapshot(@Nullable VolumeSnapshotPropertiesResponse snapshot) {
             this.snapshot = snapshot;
             return this;
-        }
-        public VolumePropertiesResponseDataProtection build() {
+        }        public VolumePropertiesResponseDataProtection build() {
             return new VolumePropertiesResponseDataProtection(backup, replication, snapshot);
         }
     }

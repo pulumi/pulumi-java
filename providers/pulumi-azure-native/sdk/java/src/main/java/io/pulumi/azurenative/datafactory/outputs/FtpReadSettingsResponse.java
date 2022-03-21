@@ -235,62 +235,50 @@ public final class FtpReadSettingsResponse {
             this.deleteFilesAfterCompletion = deleteFilesAfterCompletion;
             return this;
         }
-
         public Builder disableChunking(@Nullable Object disableChunking) {
             this.disableChunking = disableChunking;
             return this;
         }
-
         public Builder disableMetricsCollection(@Nullable Object disableMetricsCollection) {
             this.disableMetricsCollection = disableMetricsCollection;
             return this;
         }
-
         public Builder enablePartitionDiscovery(@Nullable Boolean enablePartitionDiscovery) {
             this.enablePartitionDiscovery = enablePartitionDiscovery;
             return this;
         }
-
         public Builder fileListPath(@Nullable Object fileListPath) {
             this.fileListPath = fileListPath;
             return this;
         }
-
         public Builder maxConcurrentConnections(@Nullable Object maxConcurrentConnections) {
             this.maxConcurrentConnections = maxConcurrentConnections;
             return this;
         }
-
         public Builder partitionRootPath(@Nullable Object partitionRootPath) {
             this.partitionRootPath = partitionRootPath;
             return this;
         }
-
         public Builder recursive(@Nullable Object recursive) {
             this.recursive = recursive;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder useBinaryTransfer(@Nullable Boolean useBinaryTransfer) {
             this.useBinaryTransfer = useBinaryTransfer;
             return this;
         }
-
         public Builder wildcardFileName(@Nullable Object wildcardFileName) {
             this.wildcardFileName = wildcardFileName;
             return this;
         }
-
         public Builder wildcardFolderPath(@Nullable Object wildcardFolderPath) {
             this.wildcardFolderPath = wildcardFolderPath;
             return this;
-        }
-        public FtpReadSettingsResponse build() {
+        }        public FtpReadSettingsResponse build() {
             return new FtpReadSettingsResponse(deleteFilesAfterCompletion, disableChunking, disableMetricsCollection, enablePartitionDiscovery, fileListPath, maxConcurrentConnections, partitionRootPath, recursive, type, useBinaryTransfer, wildcardFileName, wildcardFolderPath);
         }
     }

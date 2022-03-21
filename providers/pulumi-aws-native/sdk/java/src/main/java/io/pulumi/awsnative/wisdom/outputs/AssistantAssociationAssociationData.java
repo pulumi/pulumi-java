@@ -43,8 +43,7 @@ public final class AssistantAssociationAssociationData {
         public Builder knowledgeBaseId(String knowledgeBaseId) {
             this.knowledgeBaseId = Objects.requireNonNull(knowledgeBaseId);
             return this;
-        }
-        public AssistantAssociationAssociationData build() {
+        }        public AssistantAssociationAssociationData build() {
             return new AssistantAssociationAssociationData(knowledgeBaseId);
         }
     }

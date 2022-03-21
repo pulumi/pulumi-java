@@ -52,7 +52,9 @@ public final class InstanceAccessControlAttributeConfigurationAccessControlAttri
             this.source = Objects.requireNonNull(source);
             return this;
         }
-        public InstanceAccessControlAttributeConfigurationAccessControlAttributeValue build() {
+        public Builder source(String... source) {
+            return source(List.of(source));
+        }        public InstanceAccessControlAttributeConfigurationAccessControlAttributeValue build() {
             return new InstanceAccessControlAttributeConfigurationAccessControlAttributeValue(source);
         }
     }

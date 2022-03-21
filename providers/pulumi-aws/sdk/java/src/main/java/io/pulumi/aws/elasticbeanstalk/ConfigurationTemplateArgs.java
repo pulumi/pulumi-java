@@ -143,62 +143,53 @@ public final class ConfigurationTemplateArgs extends io.pulumi.resources.Resourc
             this.application = Objects.requireNonNull(application);
             return this;
         }
-
         public Builder application(String application) {
             this.application = Output.of(Objects.requireNonNull(application));
             return this;
         }
-
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder environmentId(@Nullable Output<String> environmentId) {
             this.environmentId = environmentId;
             return this;
         }
-
         public Builder environmentId(@Nullable String environmentId) {
             this.environmentId = Output.ofNullable(environmentId);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder settings(@Nullable Output<List<ConfigurationTemplateSettingArgs>> settings) {
             this.settings = settings;
             return this;
         }
-
         public Builder settings(@Nullable List<ConfigurationTemplateSettingArgs> settings) {
             this.settings = Output.ofNullable(settings);
             return this;
         }
-
+        public Builder settings(ConfigurationTemplateSettingArgs... settings) {
+            return settings(List.of(settings));
+        }
         public Builder solutionStackName(@Nullable Output<String> solutionStackName) {
             this.solutionStackName = solutionStackName;
             return this;
         }
-
         public Builder solutionStackName(@Nullable String solutionStackName) {
             this.solutionStackName = Output.ofNullable(solutionStackName);
             return this;
-        }
-        public ConfigurationTemplateArgs build() {
+        }        public ConfigurationTemplateArgs build() {
             return new ConfigurationTemplateArgs(application, description, environmentId, name, settings, solutionStackName);
         }
     }

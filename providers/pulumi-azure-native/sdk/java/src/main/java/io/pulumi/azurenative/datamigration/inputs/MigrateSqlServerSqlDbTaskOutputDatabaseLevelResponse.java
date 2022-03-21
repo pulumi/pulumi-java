@@ -306,82 +306,69 @@ public final class MigrateSqlServerSqlDbTaskOutputDatabaseLevelResponse extends 
             this.databaseName = Objects.requireNonNull(databaseName);
             return this;
         }
-
         public Builder endedOn(String endedOn) {
             this.endedOn = Objects.requireNonNull(endedOn);
             return this;
         }
-
         public Builder errorCount(Double errorCount) {
             this.errorCount = Objects.requireNonNull(errorCount);
             return this;
         }
-
         public Builder errorPrefix(String errorPrefix) {
             this.errorPrefix = Objects.requireNonNull(errorPrefix);
             return this;
         }
-
         public Builder exceptionsAndWarnings(List<ReportableExceptionResponse> exceptionsAndWarnings) {
             this.exceptionsAndWarnings = Objects.requireNonNull(exceptionsAndWarnings);
             return this;
         }
-
+        public Builder exceptionsAndWarnings(ReportableExceptionResponse... exceptionsAndWarnings) {
+            return exceptionsAndWarnings(List.of(exceptionsAndWarnings));
+        }
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder message(String message) {
             this.message = Objects.requireNonNull(message);
             return this;
         }
-
         public Builder numberOfObjects(Double numberOfObjects) {
             this.numberOfObjects = Objects.requireNonNull(numberOfObjects);
             return this;
         }
-
         public Builder numberOfObjectsCompleted(Double numberOfObjectsCompleted) {
             this.numberOfObjectsCompleted = Objects.requireNonNull(numberOfObjectsCompleted);
             return this;
         }
-
         public Builder objectSummary(Map<String,DataItemMigrationSummaryResultResponse> objectSummary) {
             this.objectSummary = Objects.requireNonNull(objectSummary);
             return this;
         }
-
         public Builder resultPrefix(String resultPrefix) {
             this.resultPrefix = Objects.requireNonNull(resultPrefix);
             return this;
         }
-
         public Builder resultType(String resultType) {
             this.resultType = Objects.requireNonNull(resultType);
             return this;
         }
-
         public Builder stage(String stage) {
             this.stage = Objects.requireNonNull(stage);
             return this;
         }
-
         public Builder startedOn(String startedOn) {
             this.startedOn = Objects.requireNonNull(startedOn);
             return this;
         }
-
         public Builder state(String state) {
             this.state = Objects.requireNonNull(state);
             return this;
         }
-
         public Builder statusMessage(String statusMessage) {
             this.statusMessage = Objects.requireNonNull(statusMessage);
             return this;
-        }
-        public MigrateSqlServerSqlDbTaskOutputDatabaseLevelResponse build() {
+        }        public MigrateSqlServerSqlDbTaskOutputDatabaseLevelResponse build() {
             return new MigrateSqlServerSqlDbTaskOutputDatabaseLevelResponse(databaseName, endedOn, errorCount, errorPrefix, exceptionsAndWarnings, id, message, numberOfObjects, numberOfObjectsCompleted, objectSummary, resultPrefix, resultType, stage, startedOn, state, statusMessage);
         }
     }

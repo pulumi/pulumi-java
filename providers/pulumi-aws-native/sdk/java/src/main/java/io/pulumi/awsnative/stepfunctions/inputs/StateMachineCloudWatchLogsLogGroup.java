@@ -52,8 +52,7 @@ public final class StateMachineCloudWatchLogsLogGroup extends io.pulumi.resource
         public Builder logGroupArn(@Nullable String logGroupArn) {
             this.logGroupArn = logGroupArn;
             return this;
-        }
-        public StateMachineCloudWatchLogsLogGroup build() {
+        }        public StateMachineCloudWatchLogsLogGroup build() {
             return new StateMachineCloudWatchLogsLogGroup(logGroupArn);
         }
     }

@@ -129,52 +129,45 @@ public final class TemplateContentsArgs extends io.pulumi.resources.ResourceArgs
             this.imports = imports;
             return this;
         }
-
         public Builder imports(@Nullable List<ImportFileArgs> imports) {
             this.imports = Output.ofNullable(imports);
             return this;
         }
-
+        public Builder imports(ImportFileArgs... imports) {
+            return imports(List.of(imports));
+        }
         public Builder interpreter(@Nullable Output<TemplateContentsInterpreter> interpreter) {
             this.interpreter = interpreter;
             return this;
         }
-
         public Builder interpreter(@Nullable TemplateContentsInterpreter interpreter) {
             this.interpreter = Output.ofNullable(interpreter);
             return this;
         }
-
         public Builder mainTemplate(@Nullable Output<String> mainTemplate) {
             this.mainTemplate = mainTemplate;
             return this;
         }
-
         public Builder mainTemplate(@Nullable String mainTemplate) {
             this.mainTemplate = Output.ofNullable(mainTemplate);
             return this;
         }
-
         public Builder schema(@Nullable Output<String> schema) {
             this.schema = schema;
             return this;
         }
-
         public Builder schema(@Nullable String schema) {
             this.schema = Output.ofNullable(schema);
             return this;
         }
-
         public Builder template(@Nullable Output<String> template) {
             this.template = template;
             return this;
         }
-
         public Builder template(@Nullable String template) {
             this.template = Output.ofNullable(template);
             return this;
-        }
-        public TemplateContentsArgs build() {
+        }        public TemplateContentsArgs build() {
             return new TemplateContentsArgs(imports, interpreter, mainTemplate, schema, template);
         }
     }

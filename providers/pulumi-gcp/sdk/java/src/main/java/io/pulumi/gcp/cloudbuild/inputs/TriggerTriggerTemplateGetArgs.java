@@ -168,72 +168,58 @@ public final class TriggerTriggerTemplateGetArgs extends io.pulumi.resources.Res
             this.branchName = branchName;
             return this;
         }
-
         public Builder branchName(@Nullable String branchName) {
             this.branchName = Output.ofNullable(branchName);
             return this;
         }
-
         public Builder commitSha(@Nullable Output<String> commitSha) {
             this.commitSha = commitSha;
             return this;
         }
-
         public Builder commitSha(@Nullable String commitSha) {
             this.commitSha = Output.ofNullable(commitSha);
             return this;
         }
-
         public Builder dir(@Nullable Output<String> dir) {
             this.dir = dir;
             return this;
         }
-
         public Builder dir(@Nullable String dir) {
             this.dir = Output.ofNullable(dir);
             return this;
         }
-
         public Builder invertRegex(@Nullable Output<Boolean> invertRegex) {
             this.invertRegex = invertRegex;
             return this;
         }
-
         public Builder invertRegex(@Nullable Boolean invertRegex) {
             this.invertRegex = Output.ofNullable(invertRegex);
             return this;
         }
-
         public Builder projectId(@Nullable Output<String> projectId) {
             this.projectId = projectId;
             return this;
         }
-
         public Builder projectId(@Nullable String projectId) {
             this.projectId = Output.ofNullable(projectId);
             return this;
         }
-
         public Builder repoName(@Nullable Output<String> repoName) {
             this.repoName = repoName;
             return this;
         }
-
         public Builder repoName(@Nullable String repoName) {
             this.repoName = Output.ofNullable(repoName);
             return this;
         }
-
         public Builder tagName(@Nullable Output<String> tagName) {
             this.tagName = tagName;
             return this;
         }
-
         public Builder tagName(@Nullable String tagName) {
             this.tagName = Output.ofNullable(tagName);
             return this;
-        }
-        public TriggerTriggerTemplateGetArgs build() {
+        }        public TriggerTriggerTemplateGetArgs build() {
             return new TriggerTriggerTemplateGetArgs(branchName, commitSha, dir, invertRegex, projectId, repoName, tagName);
         }
     }

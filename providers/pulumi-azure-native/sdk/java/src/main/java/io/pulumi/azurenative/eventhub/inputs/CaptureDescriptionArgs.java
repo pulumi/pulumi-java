@@ -145,62 +145,50 @@ public final class CaptureDescriptionArgs extends io.pulumi.resources.ResourceAr
             this.destination = destination;
             return this;
         }
-
         public Builder destination(@Nullable DestinationArgs destination) {
             this.destination = Output.ofNullable(destination);
             return this;
         }
-
         public Builder enabled(@Nullable Output<Boolean> enabled) {
             this.enabled = enabled;
             return this;
         }
-
         public Builder enabled(@Nullable Boolean enabled) {
             this.enabled = Output.ofNullable(enabled);
             return this;
         }
-
         public Builder encoding(@Nullable Output<EncodingCaptureDescription> encoding) {
             this.encoding = encoding;
             return this;
         }
-
         public Builder encoding(@Nullable EncodingCaptureDescription encoding) {
             this.encoding = Output.ofNullable(encoding);
             return this;
         }
-
         public Builder intervalInSeconds(@Nullable Output<Integer> intervalInSeconds) {
             this.intervalInSeconds = intervalInSeconds;
             return this;
         }
-
         public Builder intervalInSeconds(@Nullable Integer intervalInSeconds) {
             this.intervalInSeconds = Output.ofNullable(intervalInSeconds);
             return this;
         }
-
         public Builder sizeLimitInBytes(@Nullable Output<Integer> sizeLimitInBytes) {
             this.sizeLimitInBytes = sizeLimitInBytes;
             return this;
         }
-
         public Builder sizeLimitInBytes(@Nullable Integer sizeLimitInBytes) {
             this.sizeLimitInBytes = Output.ofNullable(sizeLimitInBytes);
             return this;
         }
-
         public Builder skipEmptyArchives(@Nullable Output<Boolean> skipEmptyArchives) {
             this.skipEmptyArchives = skipEmptyArchives;
             return this;
         }
-
         public Builder skipEmptyArchives(@Nullable Boolean skipEmptyArchives) {
             this.skipEmptyArchives = Output.ofNullable(skipEmptyArchives);
             return this;
-        }
-        public CaptureDescriptionArgs build() {
+        }        public CaptureDescriptionArgs build() {
             return new CaptureDescriptionArgs(destination, enabled, encoding, intervalInSeconds, sizeLimitInBytes, skipEmptyArchives);
         }
     }

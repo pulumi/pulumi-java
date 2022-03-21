@@ -63,12 +63,10 @@ public final class TIDataConnectorDataTypesIndicatorsArgs extends io.pulumi.reso
             this.state = state;
             return this;
         }
-
         public Builder state(@Nullable Either<String,DataTypeState> state) {
             this.state = Output.ofNullable(state);
             return this;
-        }
-        public TIDataConnectorDataTypesIndicatorsArgs build() {
+        }        public TIDataConnectorDataTypesIndicatorsArgs build() {
             return new TIDataConnectorDataTypesIndicatorsArgs(state);
         }
     }

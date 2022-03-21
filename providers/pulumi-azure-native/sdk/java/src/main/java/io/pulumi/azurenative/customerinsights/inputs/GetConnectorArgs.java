@@ -88,17 +88,14 @@ public final class GetConnectorArgs extends io.pulumi.resources.InvokeArgs {
             this.connectorName = Objects.requireNonNull(connectorName);
             return this;
         }
-
         public Builder hubName(String hubName) {
             this.hubName = Objects.requireNonNull(hubName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
-        }
-        public GetConnectorArgs build() {
+        }        public GetConnectorArgs build() {
             return new GetConnectorArgs(connectorName, hubName, resourceGroupName);
         }
     }

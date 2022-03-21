@@ -94,32 +94,26 @@ public final class RangePartitioningRangeArgs extends io.pulumi.resources.Resour
             this.end = end;
             return this;
         }
-
         public Builder end(@Nullable String end) {
             this.end = Output.ofNullable(end);
             return this;
         }
-
         public Builder interval(@Nullable Output<String> interval) {
             this.interval = interval;
             return this;
         }
-
         public Builder interval(@Nullable String interval) {
             this.interval = Output.ofNullable(interval);
             return this;
         }
-
         public Builder start(@Nullable Output<String> start) {
             this.start = start;
             return this;
         }
-
         public Builder start(@Nullable String start) {
             this.start = Output.ofNullable(start);
             return this;
-        }
-        public RangePartitioningRangeArgs build() {
+        }        public RangePartitioningRangeArgs build() {
             return new RangePartitioningRangeArgs(end, interval, start);
         }
     }

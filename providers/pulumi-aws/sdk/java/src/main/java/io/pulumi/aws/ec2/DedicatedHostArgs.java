@@ -139,62 +139,50 @@ public final class DedicatedHostArgs extends io.pulumi.resources.ResourceArgs {
             this.autoPlacement = autoPlacement;
             return this;
         }
-
         public Builder autoPlacement(@Nullable String autoPlacement) {
             this.autoPlacement = Output.ofNullable(autoPlacement);
             return this;
         }
-
         public Builder availabilityZone(Output<String> availabilityZone) {
             this.availabilityZone = Objects.requireNonNull(availabilityZone);
             return this;
         }
-
         public Builder availabilityZone(String availabilityZone) {
             this.availabilityZone = Output.of(Objects.requireNonNull(availabilityZone));
             return this;
         }
-
         public Builder hostRecovery(@Nullable Output<String> hostRecovery) {
             this.hostRecovery = hostRecovery;
             return this;
         }
-
         public Builder hostRecovery(@Nullable String hostRecovery) {
             this.hostRecovery = Output.ofNullable(hostRecovery);
             return this;
         }
-
         public Builder instanceFamily(@Nullable Output<String> instanceFamily) {
             this.instanceFamily = instanceFamily;
             return this;
         }
-
         public Builder instanceFamily(@Nullable String instanceFamily) {
             this.instanceFamily = Output.ofNullable(instanceFamily);
             return this;
         }
-
         public Builder instanceType(@Nullable Output<String> instanceType) {
             this.instanceType = instanceType;
             return this;
         }
-
         public Builder instanceType(@Nullable String instanceType) {
             this.instanceType = Output.ofNullable(instanceType);
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
-        }
-        public DedicatedHostArgs build() {
+        }        public DedicatedHostArgs build() {
             return new DedicatedHostArgs(autoPlacement, availabilityZone, hostRecovery, instanceFamily, instanceType, tags);
         }
     }

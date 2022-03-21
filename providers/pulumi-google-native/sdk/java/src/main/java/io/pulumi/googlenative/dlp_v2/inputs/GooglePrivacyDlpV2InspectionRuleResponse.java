@@ -77,12 +77,10 @@ public final class GooglePrivacyDlpV2InspectionRuleResponse extends io.pulumi.re
             this.exclusionRule = Objects.requireNonNull(exclusionRule);
             return this;
         }
-
         public Builder hotwordRule(GooglePrivacyDlpV2HotwordRuleResponse hotwordRule) {
             this.hotwordRule = Objects.requireNonNull(hotwordRule);
             return this;
-        }
-        public GooglePrivacyDlpV2InspectionRuleResponse build() {
+        }        public GooglePrivacyDlpV2InspectionRuleResponse build() {
             return new GooglePrivacyDlpV2InspectionRuleResponse(exclusionRule, hotwordRule);
         }
     }

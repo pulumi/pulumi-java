@@ -50,8 +50,7 @@ public final class GetStateMachineArgs extends io.pulumi.resources.InvokeArgs {
         public Builder arn(String arn) {
             this.arn = Objects.requireNonNull(arn);
             return this;
-        }
-        public GetStateMachineArgs build() {
+        }        public GetStateMachineArgs build() {
             return new GetStateMachineArgs(arn);
         }
     }

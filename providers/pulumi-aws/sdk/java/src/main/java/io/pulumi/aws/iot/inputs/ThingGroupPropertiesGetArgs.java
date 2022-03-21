@@ -75,22 +75,18 @@ public final class ThingGroupPropertiesGetArgs extends io.pulumi.resources.Resou
             this.attributePayload = attributePayload;
             return this;
         }
-
         public Builder attributePayload(@Nullable ThingGroupPropertiesAttributePayloadGetArgs attributePayload) {
             this.attributePayload = Output.ofNullable(attributePayload);
             return this;
         }
-
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
-        }
-        public ThingGroupPropertiesGetArgs build() {
+        }        public ThingGroupPropertiesGetArgs build() {
             return new ThingGroupPropertiesGetArgs(attributePayload, description);
         }
     }

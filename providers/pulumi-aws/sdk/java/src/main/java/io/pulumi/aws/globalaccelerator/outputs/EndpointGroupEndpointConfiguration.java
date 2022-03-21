@@ -91,17 +91,14 @@ public final class EndpointGroupEndpointConfiguration {
             this.clientIpPreservationEnabled = clientIpPreservationEnabled;
             return this;
         }
-
         public Builder endpointId(@Nullable String endpointId) {
             this.endpointId = endpointId;
             return this;
         }
-
         public Builder weight(@Nullable Integer weight) {
             this.weight = weight;
             return this;
-        }
-        public EndpointGroupEndpointConfiguration build() {
+        }        public EndpointGroupEndpointConfiguration build() {
             return new EndpointGroupEndpointConfiguration(clientIpPreservationEnabled, endpointId, weight);
         }
     }

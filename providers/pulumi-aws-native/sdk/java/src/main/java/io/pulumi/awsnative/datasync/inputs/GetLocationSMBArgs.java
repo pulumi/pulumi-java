@@ -54,8 +54,7 @@ public final class GetLocationSMBArgs extends io.pulumi.resources.InvokeArgs {
         public Builder locationArn(String locationArn) {
             this.locationArn = Objects.requireNonNull(locationArn);
             return this;
-        }
-        public GetLocationSMBArgs build() {
+        }        public GetLocationSMBArgs build() {
             return new GetLocationSMBArgs(locationArn);
         }
     }

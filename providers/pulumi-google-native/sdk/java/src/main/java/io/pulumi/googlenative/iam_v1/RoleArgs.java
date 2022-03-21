@@ -185,92 +185,77 @@ public final class RoleArgs extends io.pulumi.resources.ResourceArgs {
             this.deleted = deleted;
             return this;
         }
-
         public Builder deleted(@Nullable Boolean deleted) {
             this.deleted = Output.ofNullable(deleted);
             return this;
         }
-
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder etag(@Nullable Output<String> etag) {
             this.etag = etag;
             return this;
         }
-
         public Builder etag(@Nullable String etag) {
             this.etag = Output.ofNullable(etag);
             return this;
         }
-
         public Builder includedPermissions(@Nullable Output<List<String>> includedPermissions) {
             this.includedPermissions = includedPermissions;
             return this;
         }
-
         public Builder includedPermissions(@Nullable List<String> includedPermissions) {
             this.includedPermissions = Output.ofNullable(includedPermissions);
             return this;
         }
-
+        public Builder includedPermissions(String... includedPermissions) {
+            return includedPermissions(List.of(includedPermissions));
+        }
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
         }
-
         public Builder roleId(@Nullable Output<String> roleId) {
             this.roleId = roleId;
             return this;
         }
-
         public Builder roleId(@Nullable String roleId) {
             this.roleId = Output.ofNullable(roleId);
             return this;
         }
-
         public Builder stage(@Nullable Output<RoleStage> stage) {
             this.stage = stage;
             return this;
         }
-
         public Builder stage(@Nullable RoleStage stage) {
             this.stage = Output.ofNullable(stage);
             return this;
         }
-
         public Builder title(@Nullable Output<String> title) {
             this.title = title;
             return this;
         }
-
         public Builder title(@Nullable String title) {
             this.title = Output.ofNullable(title);
             return this;
-        }
-        public RoleArgs build() {
+        }        public RoleArgs build() {
             return new RoleArgs(deleted, description, etag, includedPermissions, name, project, roleId, stage, title);
         }
     }

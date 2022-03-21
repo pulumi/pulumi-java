@@ -109,42 +109,40 @@ public final class ManagedClusterPodIdentityProfileArgs extends io.pulumi.resour
             this.allowNetworkPluginKubenet = allowNetworkPluginKubenet;
             return this;
         }
-
         public Builder allowNetworkPluginKubenet(@Nullable Boolean allowNetworkPluginKubenet) {
             this.allowNetworkPluginKubenet = Output.ofNullable(allowNetworkPluginKubenet);
             return this;
         }
-
         public Builder enabled(@Nullable Output<Boolean> enabled) {
             this.enabled = enabled;
             return this;
         }
-
         public Builder enabled(@Nullable Boolean enabled) {
             this.enabled = Output.ofNullable(enabled);
             return this;
         }
-
         public Builder userAssignedIdentities(@Nullable Output<List<ManagedClusterPodIdentityArgs>> userAssignedIdentities) {
             this.userAssignedIdentities = userAssignedIdentities;
             return this;
         }
-
         public Builder userAssignedIdentities(@Nullable List<ManagedClusterPodIdentityArgs> userAssignedIdentities) {
             this.userAssignedIdentities = Output.ofNullable(userAssignedIdentities);
             return this;
         }
-
+        public Builder userAssignedIdentities(ManagedClusterPodIdentityArgs... userAssignedIdentities) {
+            return userAssignedIdentities(List.of(userAssignedIdentities));
+        }
         public Builder userAssignedIdentityExceptions(@Nullable Output<List<ManagedClusterPodIdentityExceptionArgs>> userAssignedIdentityExceptions) {
             this.userAssignedIdentityExceptions = userAssignedIdentityExceptions;
             return this;
         }
-
         public Builder userAssignedIdentityExceptions(@Nullable List<ManagedClusterPodIdentityExceptionArgs> userAssignedIdentityExceptions) {
             this.userAssignedIdentityExceptions = Output.ofNullable(userAssignedIdentityExceptions);
             return this;
         }
-        public ManagedClusterPodIdentityProfileArgs build() {
+        public Builder userAssignedIdentityExceptions(ManagedClusterPodIdentityExceptionArgs... userAssignedIdentityExceptions) {
+            return userAssignedIdentityExceptions(List.of(userAssignedIdentityExceptions));
+        }        public ManagedClusterPodIdentityProfileArgs build() {
             return new ManagedClusterPodIdentityProfileArgs(allowNetworkPluginKubenet, enabled, userAssignedIdentities, userAssignedIdentityExceptions);
         }
     }

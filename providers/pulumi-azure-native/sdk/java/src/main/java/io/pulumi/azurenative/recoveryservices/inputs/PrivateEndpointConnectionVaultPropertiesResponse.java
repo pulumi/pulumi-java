@@ -77,12 +77,10 @@ public final class PrivateEndpointConnectionVaultPropertiesResponse extends io.p
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder properties(VaultPrivateEndpointConnectionResponse properties) {
             this.properties = Objects.requireNonNull(properties);
             return this;
-        }
-        public PrivateEndpointConnectionVaultPropertiesResponse build() {
+        }        public PrivateEndpointConnectionVaultPropertiesResponse build() {
             return new PrivateEndpointConnectionVaultPropertiesResponse(id, properties);
         }
     }

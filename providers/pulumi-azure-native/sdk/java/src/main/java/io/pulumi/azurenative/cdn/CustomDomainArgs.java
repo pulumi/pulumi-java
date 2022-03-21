@@ -122,52 +122,42 @@ public final class CustomDomainArgs extends io.pulumi.resources.ResourceArgs {
             this.customDomainName = customDomainName;
             return this;
         }
-
         public Builder customDomainName(@Nullable String customDomainName) {
             this.customDomainName = Output.ofNullable(customDomainName);
             return this;
         }
-
         public Builder endpointName(Output<String> endpointName) {
             this.endpointName = Objects.requireNonNull(endpointName);
             return this;
         }
-
         public Builder endpointName(String endpointName) {
             this.endpointName = Output.of(Objects.requireNonNull(endpointName));
             return this;
         }
-
         public Builder hostName(Output<String> hostName) {
             this.hostName = Objects.requireNonNull(hostName);
             return this;
         }
-
         public Builder hostName(String hostName) {
             this.hostName = Output.of(Objects.requireNonNull(hostName));
             return this;
         }
-
         public Builder profileName(Output<String> profileName) {
             this.profileName = Objects.requireNonNull(profileName);
             return this;
         }
-
         public Builder profileName(String profileName) {
             this.profileName = Output.of(Objects.requireNonNull(profileName));
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
-        }
-        public CustomDomainArgs build() {
+        }        public CustomDomainArgs build() {
             return new CustomDomainArgs(customDomainName, endpointName, hostName, profileName, resourceGroupName);
         }
     }

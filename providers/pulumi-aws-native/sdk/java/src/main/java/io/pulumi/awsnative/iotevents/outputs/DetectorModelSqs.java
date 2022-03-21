@@ -81,17 +81,14 @@ public final class DetectorModelSqs {
             this.payload = payload;
             return this;
         }
-
         public Builder queueUrl(String queueUrl) {
             this.queueUrl = Objects.requireNonNull(queueUrl);
             return this;
         }
-
         public Builder useBase64(@Nullable Boolean useBase64) {
             this.useBase64 = useBase64;
             return this;
-        }
-        public DetectorModelSqs build() {
+        }        public DetectorModelSqs build() {
             return new DetectorModelSqs(payload, queueUrl, useBase64);
         }
     }

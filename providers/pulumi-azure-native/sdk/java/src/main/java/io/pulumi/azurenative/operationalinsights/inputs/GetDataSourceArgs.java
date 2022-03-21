@@ -88,17 +88,14 @@ public final class GetDataSourceArgs extends io.pulumi.resources.InvokeArgs {
             this.dataSourceName = Objects.requireNonNull(dataSourceName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder workspaceName(String workspaceName) {
             this.workspaceName = Objects.requireNonNull(workspaceName);
             return this;
-        }
-        public GetDataSourceArgs build() {
+        }        public GetDataSourceArgs build() {
             return new GetDataSourceArgs(dataSourceName, resourceGroupName, workspaceName);
         }
     }

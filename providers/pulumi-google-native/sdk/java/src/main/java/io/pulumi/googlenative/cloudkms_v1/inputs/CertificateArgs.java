@@ -60,12 +60,10 @@ public final class CertificateArgs extends io.pulumi.resources.ResourceArgs {
             this.rawDer = Objects.requireNonNull(rawDer);
             return this;
         }
-
         public Builder rawDer(String rawDer) {
             this.rawDer = Output.of(Objects.requireNonNull(rawDer));
             return this;
-        }
-        public CertificateArgs build() {
+        }        public CertificateArgs build() {
             return new CertificateArgs(rawDer);
         }
     }

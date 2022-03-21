@@ -57,12 +57,10 @@ public final class NfsLocationMountOptionsArgs extends io.pulumi.resources.Resou
             this.version = version;
             return this;
         }
-
         public Builder version(@Nullable String version) {
             this.version = Output.ofNullable(version);
             return this;
-        }
-        public NfsLocationMountOptionsArgs build() {
+        }        public NfsLocationMountOptionsArgs build() {
             return new NfsLocationMountOptionsArgs(version);
         }
     }

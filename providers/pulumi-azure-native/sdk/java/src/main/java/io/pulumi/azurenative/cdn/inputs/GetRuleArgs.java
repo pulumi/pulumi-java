@@ -104,22 +104,18 @@ public final class GetRuleArgs extends io.pulumi.resources.InvokeArgs {
             this.profileName = Objects.requireNonNull(profileName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder ruleName(String ruleName) {
             this.ruleName = Objects.requireNonNull(ruleName);
             return this;
         }
-
         public Builder ruleSetName(String ruleSetName) {
             this.ruleSetName = Objects.requireNonNull(ruleSetName);
             return this;
-        }
-        public GetRuleArgs build() {
+        }        public GetRuleArgs build() {
             return new GetRuleArgs(profileName, resourceGroupName, ruleName, ruleSetName);
         }
     }

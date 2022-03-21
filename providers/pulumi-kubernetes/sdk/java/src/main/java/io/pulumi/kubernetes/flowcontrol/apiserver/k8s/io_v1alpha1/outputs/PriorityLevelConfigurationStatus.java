@@ -54,7 +54,9 @@ public final class PriorityLevelConfigurationStatus {
             this.conditions = conditions;
             return this;
         }
-        public PriorityLevelConfigurationStatus build() {
+        public Builder conditions(PriorityLevelConfigurationCondition... conditions) {
+            return conditions(List.of(conditions));
+        }        public PriorityLevelConfigurationStatus build() {
             return new PriorityLevelConfigurationStatus(conditions);
         }
     }

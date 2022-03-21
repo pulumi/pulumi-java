@@ -56,12 +56,10 @@ public final class ClusterCoreInstanceFleetLaunchSpecificationsOnDemandSpecifica
             this.allocationStrategy = Objects.requireNonNull(allocationStrategy);
             return this;
         }
-
         public Builder allocationStrategy(String allocationStrategy) {
             this.allocationStrategy = Output.of(Objects.requireNonNull(allocationStrategy));
             return this;
-        }
-        public ClusterCoreInstanceFleetLaunchSpecificationsOnDemandSpecificationGetArgs build() {
+        }        public ClusterCoreInstanceFleetLaunchSpecificationsOnDemandSpecificationGetArgs build() {
             return new ClusterCoreInstanceFleetLaunchSpecificationsOnDemandSpecificationGetArgs(allocationStrategy);
         }
     }

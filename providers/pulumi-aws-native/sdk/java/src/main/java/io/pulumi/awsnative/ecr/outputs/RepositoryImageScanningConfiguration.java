@@ -45,8 +45,7 @@ public final class RepositoryImageScanningConfiguration {
         public Builder scanOnPush(@Nullable Boolean scanOnPush) {
             this.scanOnPush = scanOnPush;
             return this;
-        }
-        public RepositoryImageScanningConfiguration build() {
+        }        public RepositoryImageScanningConfiguration build() {
             return new RepositoryImageScanningConfiguration(scanOnPush);
         }
     }

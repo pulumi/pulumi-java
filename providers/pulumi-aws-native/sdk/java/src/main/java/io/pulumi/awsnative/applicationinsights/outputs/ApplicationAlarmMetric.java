@@ -51,8 +51,7 @@ public final class ApplicationAlarmMetric {
         public Builder alarmMetricName(String alarmMetricName) {
             this.alarmMetricName = Objects.requireNonNull(alarmMetricName);
             return this;
-        }
-        public ApplicationAlarmMetric build() {
+        }        public ApplicationAlarmMetric build() {
             return new ApplicationAlarmMetric(alarmMetricName);
         }
     }

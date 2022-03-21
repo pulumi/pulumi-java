@@ -106,22 +106,18 @@ public final class FileServerWriteSettingsResponse {
             this.copyBehavior = copyBehavior;
             return this;
         }
-
         public Builder disableMetricsCollection(@Nullable Object disableMetricsCollection) {
             this.disableMetricsCollection = disableMetricsCollection;
             return this;
         }
-
         public Builder maxConcurrentConnections(@Nullable Object maxConcurrentConnections) {
             this.maxConcurrentConnections = maxConcurrentConnections;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public FileServerWriteSettingsResponse build() {
+        }        public FileServerWriteSettingsResponse build() {
             return new FileServerWriteSettingsResponse(copyBehavior, disableMetricsCollection, maxConcurrentConnections, type);
         }
     }

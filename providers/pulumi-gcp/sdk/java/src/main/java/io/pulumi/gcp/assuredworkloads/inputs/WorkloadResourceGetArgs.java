@@ -75,22 +75,18 @@ public final class WorkloadResourceGetArgs extends io.pulumi.resources.ResourceA
             this.resourceId = resourceId;
             return this;
         }
-
         public Builder resourceId(@Nullable Integer resourceId) {
             this.resourceId = Output.ofNullable(resourceId);
             return this;
         }
-
         public Builder resourceType(@Nullable Output<String> resourceType) {
             this.resourceType = resourceType;
             return this;
         }
-
         public Builder resourceType(@Nullable String resourceType) {
             this.resourceType = Output.ofNullable(resourceType);
             return this;
-        }
-        public WorkloadResourceGetArgs build() {
+        }        public WorkloadResourceGetArgs build() {
             return new WorkloadResourceGetArgs(resourceId, resourceType);
         }
     }

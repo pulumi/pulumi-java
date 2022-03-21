@@ -53,8 +53,7 @@ public final class GetKeySigningKeyResult {
         public Builder status(@Nullable KeySigningKeyStatus status) {
             this.status = status;
             return this;
-        }
-        public GetKeySigningKeyResult build() {
+        }        public GetKeySigningKeyResult build() {
             return new GetKeySigningKeyResult(status);
         }
     }

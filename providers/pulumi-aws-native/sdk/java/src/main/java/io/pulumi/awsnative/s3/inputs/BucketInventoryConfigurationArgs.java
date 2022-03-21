@@ -156,72 +156,61 @@ public final class BucketInventoryConfigurationArgs extends io.pulumi.resources.
             this.destination = Objects.requireNonNull(destination);
             return this;
         }
-
         public Builder destination(BucketDestinationArgs destination) {
             this.destination = Output.of(Objects.requireNonNull(destination));
             return this;
         }
-
         public Builder enabled(Output<Boolean> enabled) {
             this.enabled = Objects.requireNonNull(enabled);
             return this;
         }
-
         public Builder enabled(Boolean enabled) {
             this.enabled = Output.of(Objects.requireNonNull(enabled));
             return this;
         }
-
         public Builder id(Output<String> id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder id(String id) {
             this.id = Output.of(Objects.requireNonNull(id));
             return this;
         }
-
         public Builder includedObjectVersions(Output<BucketInventoryConfigurationIncludedObjectVersions> includedObjectVersions) {
             this.includedObjectVersions = Objects.requireNonNull(includedObjectVersions);
             return this;
         }
-
         public Builder includedObjectVersions(BucketInventoryConfigurationIncludedObjectVersions includedObjectVersions) {
             this.includedObjectVersions = Output.of(Objects.requireNonNull(includedObjectVersions));
             return this;
         }
-
         public Builder optionalFields(@Nullable Output<List<BucketInventoryConfigurationOptionalFieldsItem>> optionalFields) {
             this.optionalFields = optionalFields;
             return this;
         }
-
         public Builder optionalFields(@Nullable List<BucketInventoryConfigurationOptionalFieldsItem> optionalFields) {
             this.optionalFields = Output.ofNullable(optionalFields);
             return this;
         }
-
+        public Builder optionalFields(BucketInventoryConfigurationOptionalFieldsItem... optionalFields) {
+            return optionalFields(List.of(optionalFields));
+        }
         public Builder prefix(@Nullable Output<String> prefix) {
             this.prefix = prefix;
             return this;
         }
-
         public Builder prefix(@Nullable String prefix) {
             this.prefix = Output.ofNullable(prefix);
             return this;
         }
-
         public Builder scheduleFrequency(Output<BucketInventoryConfigurationScheduleFrequency> scheduleFrequency) {
             this.scheduleFrequency = Objects.requireNonNull(scheduleFrequency);
             return this;
         }
-
         public Builder scheduleFrequency(BucketInventoryConfigurationScheduleFrequency scheduleFrequency) {
             this.scheduleFrequency = Output.of(Objects.requireNonNull(scheduleFrequency));
             return this;
-        }
-        public BucketInventoryConfigurationArgs build() {
+        }        public BucketInventoryConfigurationArgs build() {
             return new BucketInventoryConfigurationArgs(destination, enabled, id, includedObjectVersions, optionalFields, prefix, scheduleFrequency);
         }
     }

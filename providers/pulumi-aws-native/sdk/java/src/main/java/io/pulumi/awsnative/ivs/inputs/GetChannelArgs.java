@@ -54,8 +54,7 @@ public final class GetChannelArgs extends io.pulumi.resources.InvokeArgs {
         public Builder arn(String arn) {
             this.arn = Objects.requireNonNull(arn);
             return this;
-        }
-        public GetChannelArgs build() {
+        }        public GetChannelArgs build() {
             return new GetChannelArgs(arn);
         }
     }

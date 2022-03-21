@@ -165,37 +165,30 @@ public final class ScalingPlanScalingInstructionTargetTrackingConfiguration {
             this.customizedScalingMetricSpecification = customizedScalingMetricSpecification;
             return this;
         }
-
         public Builder disableScaleIn(@Nullable Boolean disableScaleIn) {
             this.disableScaleIn = disableScaleIn;
             return this;
         }
-
         public Builder estimatedInstanceWarmup(@Nullable Integer estimatedInstanceWarmup) {
             this.estimatedInstanceWarmup = estimatedInstanceWarmup;
             return this;
         }
-
         public Builder predefinedScalingMetricSpecification(@Nullable ScalingPlanScalingInstructionTargetTrackingConfigurationPredefinedScalingMetricSpecification predefinedScalingMetricSpecification) {
             this.predefinedScalingMetricSpecification = predefinedScalingMetricSpecification;
             return this;
         }
-
         public Builder scaleInCooldown(@Nullable Integer scaleInCooldown) {
             this.scaleInCooldown = scaleInCooldown;
             return this;
         }
-
         public Builder scaleOutCooldown(@Nullable Integer scaleOutCooldown) {
             this.scaleOutCooldown = scaleOutCooldown;
             return this;
         }
-
         public Builder targetValue(Double targetValue) {
             this.targetValue = Objects.requireNonNull(targetValue);
             return this;
-        }
-        public ScalingPlanScalingInstructionTargetTrackingConfiguration build() {
+        }        public ScalingPlanScalingInstructionTargetTrackingConfiguration build() {
             return new ScalingPlanScalingInstructionTargetTrackingConfiguration(customizedScalingMetricSpecification, disableScaleIn, estimatedInstanceWarmup, predefinedScalingMetricSpecification, scaleInCooldown, scaleOutCooldown, targetValue);
         }
     }

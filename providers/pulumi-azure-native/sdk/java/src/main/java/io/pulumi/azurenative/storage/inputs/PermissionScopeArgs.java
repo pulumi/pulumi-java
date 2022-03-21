@@ -89,32 +89,26 @@ public final class PermissionScopeArgs extends io.pulumi.resources.ResourceArgs 
             this.permissions = Objects.requireNonNull(permissions);
             return this;
         }
-
         public Builder permissions(String permissions) {
             this.permissions = Output.of(Objects.requireNonNull(permissions));
             return this;
         }
-
         public Builder resourceName(Output<String> resourceName) {
             this.resourceName = Objects.requireNonNull(resourceName);
             return this;
         }
-
         public Builder resourceName(String resourceName) {
             this.resourceName = Output.of(Objects.requireNonNull(resourceName));
             return this;
         }
-
         public Builder service(Output<String> service) {
             this.service = Objects.requireNonNull(service);
             return this;
         }
-
         public Builder service(String service) {
             this.service = Output.of(Objects.requireNonNull(service));
             return this;
-        }
-        public PermissionScopeArgs build() {
+        }        public PermissionScopeArgs build() {
             return new PermissionScopeArgs(permissions, resourceName, service);
         }
     }

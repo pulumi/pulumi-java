@@ -78,12 +78,13 @@ public final class MediaGraphPemCertificateListResponse extends io.pulumi.resour
             this.certificates = Objects.requireNonNull(certificates);
             return this;
         }
-
+        public Builder certificates(String... certificates) {
+            return certificates(List.of(certificates));
+        }
         public Builder odataType(String odataType) {
             this.odataType = Objects.requireNonNull(odataType);
             return this;
-        }
-        public MediaGraphPemCertificateListResponse build() {
+        }        public MediaGraphPemCertificateListResponse build() {
             return new MediaGraphPemCertificateListResponse(certificates, odataType);
         }
     }

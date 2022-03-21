@@ -69,12 +69,10 @@ public final class RouteSpecGrpcRouteMatchMetadataMatchRange {
             this.end = Objects.requireNonNull(end);
             return this;
         }
-
         public Builder start(Integer start) {
             this.start = Objects.requireNonNull(start);
             return this;
-        }
-        public RouteSpecGrpcRouteMatchMetadataMatchRange build() {
+        }        public RouteSpecGrpcRouteMatchMetadataMatchRange build() {
             return new RouteSpecGrpcRouteMatchMetadataMatchRange(end, start);
         }
     }

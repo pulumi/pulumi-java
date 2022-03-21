@@ -105,27 +105,22 @@ public final class UserAccountResponse {
             this.elevationLevel = elevationLevel;
             return this;
         }
-
         public Builder linuxUserConfiguration(@Nullable LinuxUserConfigurationResponse linuxUserConfiguration) {
             this.linuxUserConfiguration = linuxUserConfiguration;
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder password(String password) {
             this.password = Objects.requireNonNull(password);
             return this;
         }
-
         public Builder windowsUserConfiguration(@Nullable WindowsUserConfigurationResponse windowsUserConfiguration) {
             this.windowsUserConfiguration = windowsUserConfiguration;
             return this;
-        }
-        public UserAccountResponse build() {
+        }        public UserAccountResponse build() {
             return new UserAccountResponse(elevationLevel, linuxUserConfiguration, name, password, windowsUserConfiguration);
         }
     }

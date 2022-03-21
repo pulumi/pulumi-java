@@ -65,22 +65,18 @@ public final class SpotFleetRequestLaunchSpecificationEphemeralBlockDeviceArgs e
             this.deviceName = Objects.requireNonNull(deviceName);
             return this;
         }
-
         public Builder deviceName(String deviceName) {
             this.deviceName = Output.of(Objects.requireNonNull(deviceName));
             return this;
         }
-
         public Builder virtualName(Output<String> virtualName) {
             this.virtualName = Objects.requireNonNull(virtualName);
             return this;
         }
-
         public Builder virtualName(String virtualName) {
             this.virtualName = Output.of(Objects.requireNonNull(virtualName));
             return this;
-        }
-        public SpotFleetRequestLaunchSpecificationEphemeralBlockDeviceArgs build() {
+        }        public SpotFleetRequestLaunchSpecificationEphemeralBlockDeviceArgs build() {
             return new SpotFleetRequestLaunchSpecificationEphemeralBlockDeviceArgs(deviceName, virtualName);
         }
     }

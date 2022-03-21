@@ -135,32 +135,26 @@ public final class GetBlobInventoryPolicyResult {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder lastModifiedTime(String lastModifiedTime) {
             this.lastModifiedTime = Objects.requireNonNull(lastModifiedTime);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder policy(BlobInventoryPolicySchemaResponse policy) {
             this.policy = Objects.requireNonNull(policy);
             return this;
         }
-
         public Builder systemData(SystemDataResponse systemData) {
             this.systemData = Objects.requireNonNull(systemData);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public GetBlobInventoryPolicyResult build() {
+        }        public GetBlobInventoryPolicyResult build() {
             return new GetBlobInventoryPolicyResult(id, lastModifiedTime, name, policy, systemData, type);
         }
     }

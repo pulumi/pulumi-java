@@ -208,102 +208,94 @@ public final class DBProxyArgs extends io.pulumi.resources.ResourceArgs {
             this.auth = Objects.requireNonNull(auth);
             return this;
         }
-
         public Builder auth(List<DBProxyAuthFormatArgs> auth) {
             this.auth = Output.of(Objects.requireNonNull(auth));
             return this;
         }
-
+        public Builder auth(DBProxyAuthFormatArgs... auth) {
+            return auth(List.of(auth));
+        }
         public Builder dBProxyName(@Nullable Output<String> dBProxyName) {
             this.dBProxyName = dBProxyName;
             return this;
         }
-
         public Builder dBProxyName(@Nullable String dBProxyName) {
             this.dBProxyName = Output.ofNullable(dBProxyName);
             return this;
         }
-
         public Builder debugLogging(@Nullable Output<Boolean> debugLogging) {
             this.debugLogging = debugLogging;
             return this;
         }
-
         public Builder debugLogging(@Nullable Boolean debugLogging) {
             this.debugLogging = Output.ofNullable(debugLogging);
             return this;
         }
-
         public Builder engineFamily(Output<DBProxyEngineFamily> engineFamily) {
             this.engineFamily = Objects.requireNonNull(engineFamily);
             return this;
         }
-
         public Builder engineFamily(DBProxyEngineFamily engineFamily) {
             this.engineFamily = Output.of(Objects.requireNonNull(engineFamily));
             return this;
         }
-
         public Builder idleClientTimeout(@Nullable Output<Integer> idleClientTimeout) {
             this.idleClientTimeout = idleClientTimeout;
             return this;
         }
-
         public Builder idleClientTimeout(@Nullable Integer idleClientTimeout) {
             this.idleClientTimeout = Output.ofNullable(idleClientTimeout);
             return this;
         }
-
         public Builder requireTLS(@Nullable Output<Boolean> requireTLS) {
             this.requireTLS = requireTLS;
             return this;
         }
-
         public Builder requireTLS(@Nullable Boolean requireTLS) {
             this.requireTLS = Output.ofNullable(requireTLS);
             return this;
         }
-
         public Builder roleArn(Output<String> roleArn) {
             this.roleArn = Objects.requireNonNull(roleArn);
             return this;
         }
-
         public Builder roleArn(String roleArn) {
             this.roleArn = Output.of(Objects.requireNonNull(roleArn));
             return this;
         }
-
         public Builder tags(@Nullable Output<List<DBProxyTagFormatArgs>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable List<DBProxyTagFormatArgs> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
+        public Builder tags(DBProxyTagFormatArgs... tags) {
+            return tags(List.of(tags));
+        }
         public Builder vpcSecurityGroupIds(@Nullable Output<List<String>> vpcSecurityGroupIds) {
             this.vpcSecurityGroupIds = vpcSecurityGroupIds;
             return this;
         }
-
         public Builder vpcSecurityGroupIds(@Nullable List<String> vpcSecurityGroupIds) {
             this.vpcSecurityGroupIds = Output.ofNullable(vpcSecurityGroupIds);
             return this;
         }
-
+        public Builder vpcSecurityGroupIds(String... vpcSecurityGroupIds) {
+            return vpcSecurityGroupIds(List.of(vpcSecurityGroupIds));
+        }
         public Builder vpcSubnetIds(Output<List<String>> vpcSubnetIds) {
             this.vpcSubnetIds = Objects.requireNonNull(vpcSubnetIds);
             return this;
         }
-
         public Builder vpcSubnetIds(List<String> vpcSubnetIds) {
             this.vpcSubnetIds = Output.of(Objects.requireNonNull(vpcSubnetIds));
             return this;
         }
-        public DBProxyArgs build() {
+        public Builder vpcSubnetIds(String... vpcSubnetIds) {
+            return vpcSubnetIds(List.of(vpcSubnetIds));
+        }        public DBProxyArgs build() {
             return new DBProxyArgs(auth, dBProxyName, debugLogging, engineFamily, idleClientTimeout, requireTLS, roleArn, tags, vpcSecurityGroupIds, vpcSubnetIds);
         }
     }

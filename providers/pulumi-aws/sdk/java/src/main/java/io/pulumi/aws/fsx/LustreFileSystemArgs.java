@@ -366,202 +366,165 @@ public final class LustreFileSystemArgs extends io.pulumi.resources.ResourceArgs
             this.autoImportPolicy = autoImportPolicy;
             return this;
         }
-
         public Builder autoImportPolicy(@Nullable String autoImportPolicy) {
             this.autoImportPolicy = Output.ofNullable(autoImportPolicy);
             return this;
         }
-
         public Builder automaticBackupRetentionDays(@Nullable Output<Integer> automaticBackupRetentionDays) {
             this.automaticBackupRetentionDays = automaticBackupRetentionDays;
             return this;
         }
-
         public Builder automaticBackupRetentionDays(@Nullable Integer automaticBackupRetentionDays) {
             this.automaticBackupRetentionDays = Output.ofNullable(automaticBackupRetentionDays);
             return this;
         }
-
         public Builder backupId(@Nullable Output<String> backupId) {
             this.backupId = backupId;
             return this;
         }
-
         public Builder backupId(@Nullable String backupId) {
             this.backupId = Output.ofNullable(backupId);
             return this;
         }
-
         public Builder copyTagsToBackups(@Nullable Output<Boolean> copyTagsToBackups) {
             this.copyTagsToBackups = copyTagsToBackups;
             return this;
         }
-
         public Builder copyTagsToBackups(@Nullable Boolean copyTagsToBackups) {
             this.copyTagsToBackups = Output.ofNullable(copyTagsToBackups);
             return this;
         }
-
         public Builder dailyAutomaticBackupStartTime(@Nullable Output<String> dailyAutomaticBackupStartTime) {
             this.dailyAutomaticBackupStartTime = dailyAutomaticBackupStartTime;
             return this;
         }
-
         public Builder dailyAutomaticBackupStartTime(@Nullable String dailyAutomaticBackupStartTime) {
             this.dailyAutomaticBackupStartTime = Output.ofNullable(dailyAutomaticBackupStartTime);
             return this;
         }
-
         public Builder dataCompressionType(@Nullable Output<String> dataCompressionType) {
             this.dataCompressionType = dataCompressionType;
             return this;
         }
-
         public Builder dataCompressionType(@Nullable String dataCompressionType) {
             this.dataCompressionType = Output.ofNullable(dataCompressionType);
             return this;
         }
-
         public Builder deploymentType(@Nullable Output<String> deploymentType) {
             this.deploymentType = deploymentType;
             return this;
         }
-
         public Builder deploymentType(@Nullable String deploymentType) {
             this.deploymentType = Output.ofNullable(deploymentType);
             return this;
         }
-
         public Builder driveCacheType(@Nullable Output<String> driveCacheType) {
             this.driveCacheType = driveCacheType;
             return this;
         }
-
         public Builder driveCacheType(@Nullable String driveCacheType) {
             this.driveCacheType = Output.ofNullable(driveCacheType);
             return this;
         }
-
         public Builder exportPath(@Nullable Output<String> exportPath) {
             this.exportPath = exportPath;
             return this;
         }
-
         public Builder exportPath(@Nullable String exportPath) {
             this.exportPath = Output.ofNullable(exportPath);
             return this;
         }
-
         public Builder fileSystemTypeVersion(@Nullable Output<String> fileSystemTypeVersion) {
             this.fileSystemTypeVersion = fileSystemTypeVersion;
             return this;
         }
-
         public Builder fileSystemTypeVersion(@Nullable String fileSystemTypeVersion) {
             this.fileSystemTypeVersion = Output.ofNullable(fileSystemTypeVersion);
             return this;
         }
-
         public Builder importPath(@Nullable Output<String> importPath) {
             this.importPath = importPath;
             return this;
         }
-
         public Builder importPath(@Nullable String importPath) {
             this.importPath = Output.ofNullable(importPath);
             return this;
         }
-
         public Builder importedFileChunkSize(@Nullable Output<Integer> importedFileChunkSize) {
             this.importedFileChunkSize = importedFileChunkSize;
             return this;
         }
-
         public Builder importedFileChunkSize(@Nullable Integer importedFileChunkSize) {
             this.importedFileChunkSize = Output.ofNullable(importedFileChunkSize);
             return this;
         }
-
         public Builder kmsKeyId(@Nullable Output<String> kmsKeyId) {
             this.kmsKeyId = kmsKeyId;
             return this;
         }
-
         public Builder kmsKeyId(@Nullable String kmsKeyId) {
             this.kmsKeyId = Output.ofNullable(kmsKeyId);
             return this;
         }
-
         public Builder perUnitStorageThroughput(@Nullable Output<Integer> perUnitStorageThroughput) {
             this.perUnitStorageThroughput = perUnitStorageThroughput;
             return this;
         }
-
         public Builder perUnitStorageThroughput(@Nullable Integer perUnitStorageThroughput) {
             this.perUnitStorageThroughput = Output.ofNullable(perUnitStorageThroughput);
             return this;
         }
-
         public Builder securityGroupIds(@Nullable Output<List<String>> securityGroupIds) {
             this.securityGroupIds = securityGroupIds;
             return this;
         }
-
         public Builder securityGroupIds(@Nullable List<String> securityGroupIds) {
             this.securityGroupIds = Output.ofNullable(securityGroupIds);
             return this;
         }
-
+        public Builder securityGroupIds(String... securityGroupIds) {
+            return securityGroupIds(List.of(securityGroupIds));
+        }
         public Builder storageCapacity(@Nullable Output<Integer> storageCapacity) {
             this.storageCapacity = storageCapacity;
             return this;
         }
-
         public Builder storageCapacity(@Nullable Integer storageCapacity) {
             this.storageCapacity = Output.ofNullable(storageCapacity);
             return this;
         }
-
         public Builder storageType(@Nullable Output<String> storageType) {
             this.storageType = storageType;
             return this;
         }
-
         public Builder storageType(@Nullable String storageType) {
             this.storageType = Output.ofNullable(storageType);
             return this;
         }
-
         public Builder subnetIds(Output<String> subnetIds) {
             this.subnetIds = Objects.requireNonNull(subnetIds);
             return this;
         }
-
         public Builder subnetIds(String subnetIds) {
             this.subnetIds = Output.of(Objects.requireNonNull(subnetIds));
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
         public Builder weeklyMaintenanceStartTime(@Nullable Output<String> weeklyMaintenanceStartTime) {
             this.weeklyMaintenanceStartTime = weeklyMaintenanceStartTime;
             return this;
         }
-
         public Builder weeklyMaintenanceStartTime(@Nullable String weeklyMaintenanceStartTime) {
             this.weeklyMaintenanceStartTime = Output.ofNullable(weeklyMaintenanceStartTime);
             return this;
-        }
-        public LustreFileSystemArgs build() {
+        }        public LustreFileSystemArgs build() {
             return new LustreFileSystemArgs(autoImportPolicy, automaticBackupRetentionDays, backupId, copyTagsToBackups, dailyAutomaticBackupStartTime, dataCompressionType, deploymentType, driveCacheType, exportPath, fileSystemTypeVersion, importPath, importedFileChunkSize, kmsKeyId, perUnitStorageThroughput, securityGroupIds, storageCapacity, storageType, subnetIds, tags, weeklyMaintenanceStartTime);
         }
     }

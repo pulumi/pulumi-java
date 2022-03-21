@@ -159,37 +159,30 @@ public final class DatabaseFileInfoResponse extends io.pulumi.resources.InvokeAr
             this.databaseName = databaseName;
             return this;
         }
-
         public Builder fileType(@Nullable String fileType) {
             this.fileType = fileType;
             return this;
         }
-
         public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
-
         public Builder logicalName(@Nullable String logicalName) {
             this.logicalName = logicalName;
             return this;
         }
-
         public Builder physicalFullName(@Nullable String physicalFullName) {
             this.physicalFullName = physicalFullName;
             return this;
         }
-
         public Builder restoreFullName(@Nullable String restoreFullName) {
             this.restoreFullName = restoreFullName;
             return this;
         }
-
         public Builder sizeMB(@Nullable Double sizeMB) {
             this.sizeMB = sizeMB;
             return this;
-        }
-        public DatabaseFileInfoResponse build() {
+        }        public DatabaseFileInfoResponse build() {
             return new DatabaseFileInfoResponse(databaseName, fileType, id, logicalName, physicalFullName, restoreFullName, sizeMB);
         }
     }

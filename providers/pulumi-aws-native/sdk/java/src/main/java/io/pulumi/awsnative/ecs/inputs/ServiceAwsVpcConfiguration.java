@@ -80,17 +80,20 @@ public final class ServiceAwsVpcConfiguration extends io.pulumi.resources.Invoke
             this.assignPublicIp = assignPublicIp;
             return this;
         }
-
         public Builder securityGroups(@Nullable List<String> securityGroups) {
             this.securityGroups = securityGroups;
             return this;
         }
-
+        public Builder securityGroups(String... securityGroups) {
+            return securityGroups(List.of(securityGroups));
+        }
         public Builder subnets(@Nullable List<String> subnets) {
             this.subnets = subnets;
             return this;
         }
-        public ServiceAwsVpcConfiguration build() {
+        public Builder subnets(String... subnets) {
+            return subnets(List.of(subnets));
+        }        public ServiceAwsVpcConfiguration build() {
             return new ServiceAwsVpcConfiguration(assignPublicIp, securityGroups, subnets);
         }
     }

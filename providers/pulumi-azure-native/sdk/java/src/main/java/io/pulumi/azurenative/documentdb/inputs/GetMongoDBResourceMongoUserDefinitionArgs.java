@@ -88,17 +88,14 @@ public final class GetMongoDBResourceMongoUserDefinitionArgs extends io.pulumi.r
             this.accountName = Objects.requireNonNull(accountName);
             return this;
         }
-
         public Builder mongoUserDefinitionId(String mongoUserDefinitionId) {
             this.mongoUserDefinitionId = Objects.requireNonNull(mongoUserDefinitionId);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
-        }
-        public GetMongoDBResourceMongoUserDefinitionArgs build() {
+        }        public GetMongoDBResourceMongoUserDefinitionArgs build() {
             return new GetMongoDBResourceMongoUserDefinitionArgs(accountName, mongoUserDefinitionId, resourceGroupName);
         }
     }

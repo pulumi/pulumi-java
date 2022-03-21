@@ -144,62 +144,50 @@ public final class ArmRollingUpgradeMonitoringPolicyArgs extends io.pulumi.resou
             this.failureAction = failureAction;
             return this;
         }
-
         public Builder failureAction(@Nullable Either<String,ArmUpgradeFailureAction> failureAction) {
             this.failureAction = Output.ofNullable(failureAction);
             return this;
         }
-
         public Builder healthCheckRetryTimeout(@Nullable Output<String> healthCheckRetryTimeout) {
             this.healthCheckRetryTimeout = healthCheckRetryTimeout;
             return this;
         }
-
         public Builder healthCheckRetryTimeout(@Nullable String healthCheckRetryTimeout) {
             this.healthCheckRetryTimeout = Output.ofNullable(healthCheckRetryTimeout);
             return this;
         }
-
         public Builder healthCheckStableDuration(@Nullable Output<String> healthCheckStableDuration) {
             this.healthCheckStableDuration = healthCheckStableDuration;
             return this;
         }
-
         public Builder healthCheckStableDuration(@Nullable String healthCheckStableDuration) {
             this.healthCheckStableDuration = Output.ofNullable(healthCheckStableDuration);
             return this;
         }
-
         public Builder healthCheckWaitDuration(@Nullable Output<String> healthCheckWaitDuration) {
             this.healthCheckWaitDuration = healthCheckWaitDuration;
             return this;
         }
-
         public Builder healthCheckWaitDuration(@Nullable String healthCheckWaitDuration) {
             this.healthCheckWaitDuration = Output.ofNullable(healthCheckWaitDuration);
             return this;
         }
-
         public Builder upgradeDomainTimeout(@Nullable Output<String> upgradeDomainTimeout) {
             this.upgradeDomainTimeout = upgradeDomainTimeout;
             return this;
         }
-
         public Builder upgradeDomainTimeout(@Nullable String upgradeDomainTimeout) {
             this.upgradeDomainTimeout = Output.ofNullable(upgradeDomainTimeout);
             return this;
         }
-
         public Builder upgradeTimeout(@Nullable Output<String> upgradeTimeout) {
             this.upgradeTimeout = upgradeTimeout;
             return this;
         }
-
         public Builder upgradeTimeout(@Nullable String upgradeTimeout) {
             this.upgradeTimeout = Output.ofNullable(upgradeTimeout);
             return this;
-        }
-        public ArmRollingUpgradeMonitoringPolicyArgs build() {
+        }        public ArmRollingUpgradeMonitoringPolicyArgs build() {
             return new ArmRollingUpgradeMonitoringPolicyArgs(failureAction, healthCheckRetryTimeout, healthCheckStableDuration, healthCheckWaitDuration, upgradeDomainTimeout, upgradeTimeout);
         }
     }

@@ -92,17 +92,14 @@ public final class CompletenessResponse extends io.pulumi.resources.InvokeArgs {
             this.arguments = Objects.requireNonNull(arguments);
             return this;
         }
-
         public Builder environment(Boolean environment) {
             this.environment = Objects.requireNonNull(environment);
             return this;
         }
-
         public Builder materials(Boolean materials) {
             this.materials = Objects.requireNonNull(materials);
             return this;
-        }
-        public CompletenessResponse build() {
+        }        public CompletenessResponse build() {
             return new CompletenessResponse(arguments, environment, materials);
         }
     }

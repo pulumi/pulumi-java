@@ -223,112 +223,93 @@ public final class CustomLocationArgs extends io.pulumi.resources.ResourceArgs {
             this.authentication = authentication;
             return this;
         }
-
         public Builder authentication(@Nullable CustomLocationPropertiesAuthenticationArgs authentication) {
             this.authentication = Output.ofNullable(authentication);
             return this;
         }
-
         public Builder clusterExtensionIds(@Nullable Output<List<String>> clusterExtensionIds) {
             this.clusterExtensionIds = clusterExtensionIds;
             return this;
         }
-
         public Builder clusterExtensionIds(@Nullable List<String> clusterExtensionIds) {
             this.clusterExtensionIds = Output.ofNullable(clusterExtensionIds);
             return this;
         }
-
+        public Builder clusterExtensionIds(String... clusterExtensionIds) {
+            return clusterExtensionIds(List.of(clusterExtensionIds));
+        }
         public Builder displayName(@Nullable Output<String> displayName) {
             this.displayName = displayName;
             return this;
         }
-
         public Builder displayName(@Nullable String displayName) {
             this.displayName = Output.ofNullable(displayName);
             return this;
         }
-
         public Builder hostResourceId(@Nullable Output<String> hostResourceId) {
             this.hostResourceId = hostResourceId;
             return this;
         }
-
         public Builder hostResourceId(@Nullable String hostResourceId) {
             this.hostResourceId = Output.ofNullable(hostResourceId);
             return this;
         }
-
         public Builder hostType(@Nullable Output<Either<String,HostType>> hostType) {
             this.hostType = hostType;
             return this;
         }
-
         public Builder hostType(@Nullable Either<String,HostType> hostType) {
             this.hostType = Output.ofNullable(hostType);
             return this;
         }
-
         public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder namespace(@Nullable Output<String> namespace) {
             this.namespace = namespace;
             return this;
         }
-
         public Builder namespace(@Nullable String namespace) {
             this.namespace = Output.ofNullable(namespace);
             return this;
         }
-
         public Builder provisioningState(@Nullable Output<String> provisioningState) {
             this.provisioningState = provisioningState;
             return this;
         }
-
         public Builder provisioningState(@Nullable String provisioningState) {
             this.provisioningState = Output.ofNullable(provisioningState);
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder resourceName(@Nullable Output<String> resourceName) {
             this.resourceName = resourceName;
             return this;
         }
-
         public Builder resourceName(@Nullable String resourceName) {
             this.resourceName = Output.ofNullable(resourceName);
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
-        }
-        public CustomLocationArgs build() {
+        }        public CustomLocationArgs build() {
             return new CustomLocationArgs(authentication, clusterExtensionIds, displayName, hostResourceId, hostType, location, namespace, provisioningState, resourceGroupName, resourceName, tags);
         }
     }

@@ -75,22 +75,18 @@ public final class DetectorModelIotEventsArgs extends io.pulumi.resources.Resour
             this.inputName = Objects.requireNonNull(inputName);
             return this;
         }
-
         public Builder inputName(String inputName) {
             this.inputName = Output.of(Objects.requireNonNull(inputName));
             return this;
         }
-
         public Builder payload(@Nullable Output<DetectorModelPayloadArgs> payload) {
             this.payload = payload;
             return this;
         }
-
         public Builder payload(@Nullable DetectorModelPayloadArgs payload) {
             this.payload = Output.ofNullable(payload);
             return this;
-        }
-        public DetectorModelIotEventsArgs build() {
+        }        public DetectorModelIotEventsArgs build() {
             return new DetectorModelIotEventsArgs(inputName, payload);
         }
     }

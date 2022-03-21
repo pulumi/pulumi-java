@@ -272,142 +272,129 @@ public final class PatchBaselineState extends io.pulumi.resources.ResourceArgs {
             this.approvalRules = approvalRules;
             return this;
         }
-
         public Builder approvalRules(@Nullable List<PatchBaselineApprovalRuleGetArgs> approvalRules) {
             this.approvalRules = Output.ofNullable(approvalRules);
             return this;
         }
-
+        public Builder approvalRules(PatchBaselineApprovalRuleGetArgs... approvalRules) {
+            return approvalRules(List.of(approvalRules));
+        }
         public Builder approvedPatches(@Nullable Output<List<String>> approvedPatches) {
             this.approvedPatches = approvedPatches;
             return this;
         }
-
         public Builder approvedPatches(@Nullable List<String> approvedPatches) {
             this.approvedPatches = Output.ofNullable(approvedPatches);
             return this;
         }
-
+        public Builder approvedPatches(String... approvedPatches) {
+            return approvedPatches(List.of(approvedPatches));
+        }
         public Builder approvedPatchesComplianceLevel(@Nullable Output<String> approvedPatchesComplianceLevel) {
             this.approvedPatchesComplianceLevel = approvedPatchesComplianceLevel;
             return this;
         }
-
         public Builder approvedPatchesComplianceLevel(@Nullable String approvedPatchesComplianceLevel) {
             this.approvedPatchesComplianceLevel = Output.ofNullable(approvedPatchesComplianceLevel);
             return this;
         }
-
         public Builder approvedPatchesEnableNonSecurity(@Nullable Output<Boolean> approvedPatchesEnableNonSecurity) {
             this.approvedPatchesEnableNonSecurity = approvedPatchesEnableNonSecurity;
             return this;
         }
-
         public Builder approvedPatchesEnableNonSecurity(@Nullable Boolean approvedPatchesEnableNonSecurity) {
             this.approvedPatchesEnableNonSecurity = Output.ofNullable(approvedPatchesEnableNonSecurity);
             return this;
         }
-
         public Builder arn(@Nullable Output<String> arn) {
             this.arn = arn;
             return this;
         }
-
         public Builder arn(@Nullable String arn) {
             this.arn = Output.ofNullable(arn);
             return this;
         }
-
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder globalFilters(@Nullable Output<List<PatchBaselineGlobalFilterGetArgs>> globalFilters) {
             this.globalFilters = globalFilters;
             return this;
         }
-
         public Builder globalFilters(@Nullable List<PatchBaselineGlobalFilterGetArgs> globalFilters) {
             this.globalFilters = Output.ofNullable(globalFilters);
             return this;
         }
-
+        public Builder globalFilters(PatchBaselineGlobalFilterGetArgs... globalFilters) {
+            return globalFilters(List.of(globalFilters));
+        }
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder operatingSystem(@Nullable Output<String> operatingSystem) {
             this.operatingSystem = operatingSystem;
             return this;
         }
-
         public Builder operatingSystem(@Nullable String operatingSystem) {
             this.operatingSystem = Output.ofNullable(operatingSystem);
             return this;
         }
-
         public Builder rejectedPatches(@Nullable Output<List<String>> rejectedPatches) {
             this.rejectedPatches = rejectedPatches;
             return this;
         }
-
         public Builder rejectedPatches(@Nullable List<String> rejectedPatches) {
             this.rejectedPatches = Output.ofNullable(rejectedPatches);
             return this;
         }
-
+        public Builder rejectedPatches(String... rejectedPatches) {
+            return rejectedPatches(List.of(rejectedPatches));
+        }
         public Builder rejectedPatchesAction(@Nullable Output<String> rejectedPatchesAction) {
             this.rejectedPatchesAction = rejectedPatchesAction;
             return this;
         }
-
         public Builder rejectedPatchesAction(@Nullable String rejectedPatchesAction) {
             this.rejectedPatchesAction = Output.ofNullable(rejectedPatchesAction);
             return this;
         }
-
         public Builder sources(@Nullable Output<List<PatchBaselineSourceGetArgs>> sources) {
             this.sources = sources;
             return this;
         }
-
         public Builder sources(@Nullable List<PatchBaselineSourceGetArgs> sources) {
             this.sources = Output.ofNullable(sources);
             return this;
         }
-
+        public Builder sources(PatchBaselineSourceGetArgs... sources) {
+            return sources(List.of(sources));
+        }
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
             this.tagsAll = tagsAll;
             return this;
         }
-
         public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
             this.tagsAll = Output.ofNullable(tagsAll);
             return this;
-        }
-        public PatchBaselineState build() {
+        }        public PatchBaselineState build() {
             return new PatchBaselineState(approvalRules, approvedPatches, approvedPatchesComplianceLevel, approvedPatchesEnableNonSecurity, arn, description, globalFilters, name, operatingSystem, rejectedPatches, rejectedPatchesAction, sources, tags, tagsAll);
         }
     }

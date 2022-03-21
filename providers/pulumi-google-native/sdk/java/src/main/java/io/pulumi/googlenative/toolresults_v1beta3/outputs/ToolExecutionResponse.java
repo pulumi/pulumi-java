@@ -105,22 +105,27 @@ public final class ToolExecutionResponse {
             this.commandLineArguments = Objects.requireNonNull(commandLineArguments);
             return this;
         }
-
+        public Builder commandLineArguments(String... commandLineArguments) {
+            return commandLineArguments(List.of(commandLineArguments));
+        }
         public Builder exitCode(ToolExitCodeResponse exitCode) {
             this.exitCode = Objects.requireNonNull(exitCode);
             return this;
         }
-
         public Builder toolLogs(List<FileReferenceResponse> toolLogs) {
             this.toolLogs = Objects.requireNonNull(toolLogs);
             return this;
         }
-
+        public Builder toolLogs(FileReferenceResponse... toolLogs) {
+            return toolLogs(List.of(toolLogs));
+        }
         public Builder toolOutputs(List<ToolOutputReferenceResponse> toolOutputs) {
             this.toolOutputs = Objects.requireNonNull(toolOutputs);
             return this;
         }
-        public ToolExecutionResponse build() {
+        public Builder toolOutputs(ToolOutputReferenceResponse... toolOutputs) {
+            return toolOutputs(List.of(toolOutputs));
+        }        public ToolExecutionResponse build() {
             return new ToolExecutionResponse(commandLineArguments, exitCode, toolLogs, toolOutputs);
         }
     }

@@ -76,12 +76,10 @@ public final class LocationEFSTag extends io.pulumi.resources.InvokeArgs {
             this.key = Objects.requireNonNull(key);
             return this;
         }
-
         public Builder value(String value) {
             this.value = Objects.requireNonNull(value);
             return this;
-        }
-        public LocationEFSTag build() {
+        }        public LocationEFSTag build() {
             return new LocationEFSTag(key, value);
         }
     }

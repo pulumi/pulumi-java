@@ -123,52 +123,42 @@ public final class BuildServiceBuilderArgs extends io.pulumi.resources.ResourceA
             this.buildServiceName = Objects.requireNonNull(buildServiceName);
             return this;
         }
-
         public Builder buildServiceName(String buildServiceName) {
             this.buildServiceName = Output.of(Objects.requireNonNull(buildServiceName));
             return this;
         }
-
         public Builder builderName(@Nullable Output<String> builderName) {
             this.builderName = builderName;
             return this;
         }
-
         public Builder builderName(@Nullable String builderName) {
             this.builderName = Output.ofNullable(builderName);
             return this;
         }
-
         public Builder properties(@Nullable Output<BuilderPropertiesArgs> properties) {
             this.properties = properties;
             return this;
         }
-
         public Builder properties(@Nullable BuilderPropertiesArgs properties) {
             this.properties = Output.ofNullable(properties);
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder serviceName(Output<String> serviceName) {
             this.serviceName = Objects.requireNonNull(serviceName);
             return this;
         }
-
         public Builder serviceName(String serviceName) {
             this.serviceName = Output.of(Objects.requireNonNull(serviceName));
             return this;
-        }
-        public BuildServiceBuilderArgs build() {
+        }        public BuildServiceBuilderArgs build() {
             return new BuildServiceBuilderArgs(buildServiceName, builderName, properties, resourceGroupName, serviceName);
         }
     }

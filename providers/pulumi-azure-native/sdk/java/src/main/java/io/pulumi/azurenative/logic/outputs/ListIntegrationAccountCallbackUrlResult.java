@@ -53,8 +53,7 @@ public final class ListIntegrationAccountCallbackUrlResult {
         public Builder value(@Nullable String value) {
             this.value = value;
             return this;
-        }
-        public ListIntegrationAccountCallbackUrlResult build() {
+        }        public ListIntegrationAccountCallbackUrlResult build() {
             return new ListIntegrationAccountCallbackUrlResult(value);
         }
     }

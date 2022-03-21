@@ -82,22 +82,21 @@ public final class BotStillWaitingResponseSpecification {
             this.allowInterrupt = allowInterrupt;
             return this;
         }
-
         public Builder frequencyInSeconds(Integer frequencyInSeconds) {
             this.frequencyInSeconds = Objects.requireNonNull(frequencyInSeconds);
             return this;
         }
-
         public Builder messageGroupsList(List<BotMessageGroup> messageGroupsList) {
             this.messageGroupsList = Objects.requireNonNull(messageGroupsList);
             return this;
         }
-
+        public Builder messageGroupsList(BotMessageGroup... messageGroupsList) {
+            return messageGroupsList(List.of(messageGroupsList));
+        }
         public Builder timeoutInSeconds(Integer timeoutInSeconds) {
             this.timeoutInSeconds = Objects.requireNonNull(timeoutInSeconds);
             return this;
-        }
-        public BotStillWaitingResponseSpecification build() {
+        }        public BotStillWaitingResponseSpecification build() {
             return new BotStillWaitingResponseSpecification(allowInterrupt, frequencyInSeconds, messageGroupsList, timeoutInSeconds);
         }
     }

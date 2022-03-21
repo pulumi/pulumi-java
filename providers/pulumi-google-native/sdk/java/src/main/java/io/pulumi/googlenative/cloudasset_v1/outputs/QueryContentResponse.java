@@ -51,8 +51,7 @@ public final class QueryContentResponse {
         public Builder iamPolicyAnalysisQuery(IamPolicyAnalysisQueryResponse iamPolicyAnalysisQuery) {
             this.iamPolicyAnalysisQuery = Objects.requireNonNull(iamPolicyAnalysisQuery);
             return this;
-        }
-        public QueryContentResponse build() {
+        }        public QueryContentResponse build() {
             return new QueryContentResponse(iamPolicyAnalysisQuery);
         }
     }

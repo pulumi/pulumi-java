@@ -93,17 +93,14 @@ public final class GoogleCloudDialogflowCxV3beta1NluSettingsResponse extends io.
             this.classificationThreshold = Objects.requireNonNull(classificationThreshold);
             return this;
         }
-
         public Builder modelTrainingMode(String modelTrainingMode) {
             this.modelTrainingMode = Objects.requireNonNull(modelTrainingMode);
             return this;
         }
-
         public Builder modelType(String modelType) {
             this.modelType = Objects.requireNonNull(modelType);
             return this;
-        }
-        public GoogleCloudDialogflowCxV3beta1NluSettingsResponse build() {
+        }        public GoogleCloudDialogflowCxV3beta1NluSettingsResponse build() {
             return new GoogleCloudDialogflowCxV3beta1NluSettingsResponse(classificationThreshold, modelTrainingMode, modelType);
         }
     }

@@ -74,12 +74,10 @@ public final class DeviceFleetEdgeOutputConfig extends io.pulumi.resources.Invok
             this.kmsKeyId = kmsKeyId;
             return this;
         }
-
         public Builder s3OutputLocation(String s3OutputLocation) {
             this.s3OutputLocation = Objects.requireNonNull(s3OutputLocation);
             return this;
-        }
-        public DeviceFleetEdgeOutputConfig build() {
+        }        public DeviceFleetEdgeOutputConfig build() {
             return new DeviceFleetEdgeOutputConfig(kmsKeyId, s3OutputLocation);
         }
     }

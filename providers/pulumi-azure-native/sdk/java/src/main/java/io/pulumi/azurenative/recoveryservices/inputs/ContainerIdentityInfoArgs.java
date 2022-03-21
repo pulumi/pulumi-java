@@ -110,42 +110,34 @@ public final class ContainerIdentityInfoArgs extends io.pulumi.resources.Resourc
             this.aadTenantId = aadTenantId;
             return this;
         }
-
         public Builder aadTenantId(@Nullable String aadTenantId) {
             this.aadTenantId = Output.ofNullable(aadTenantId);
             return this;
         }
-
         public Builder audience(@Nullable Output<String> audience) {
             this.audience = audience;
             return this;
         }
-
         public Builder audience(@Nullable String audience) {
             this.audience = Output.ofNullable(audience);
             return this;
         }
-
         public Builder servicePrincipalClientId(@Nullable Output<String> servicePrincipalClientId) {
             this.servicePrincipalClientId = servicePrincipalClientId;
             return this;
         }
-
         public Builder servicePrincipalClientId(@Nullable String servicePrincipalClientId) {
             this.servicePrincipalClientId = Output.ofNullable(servicePrincipalClientId);
             return this;
         }
-
         public Builder uniqueName(@Nullable Output<String> uniqueName) {
             this.uniqueName = uniqueName;
             return this;
         }
-
         public Builder uniqueName(@Nullable String uniqueName) {
             this.uniqueName = Output.ofNullable(uniqueName);
             return this;
-        }
-        public ContainerIdentityInfoArgs build() {
+        }        public ContainerIdentityInfoArgs build() {
             return new ContainerIdentityInfoArgs(aadTenantId, audience, servicePrincipalClientId, uniqueName);
         }
     }

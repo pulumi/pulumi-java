@@ -90,32 +90,26 @@ public final class TagTagGetArgs extends io.pulumi.resources.ResourceArgs {
             this.key = Objects.requireNonNull(key);
             return this;
         }
-
         public Builder key(String key) {
             this.key = Output.of(Objects.requireNonNull(key));
             return this;
         }
-
         public Builder propagateAtLaunch(Output<Boolean> propagateAtLaunch) {
             this.propagateAtLaunch = Objects.requireNonNull(propagateAtLaunch);
             return this;
         }
-
         public Builder propagateAtLaunch(Boolean propagateAtLaunch) {
             this.propagateAtLaunch = Output.of(Objects.requireNonNull(propagateAtLaunch));
             return this;
         }
-
         public Builder value(Output<String> value) {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public Builder value(String value) {
             this.value = Output.of(Objects.requireNonNull(value));
             return this;
-        }
-        public TagTagGetArgs build() {
+        }        public TagTagGetArgs build() {
             return new TagTagGetArgs(key, propagateAtLaunch, value);
         }
     }

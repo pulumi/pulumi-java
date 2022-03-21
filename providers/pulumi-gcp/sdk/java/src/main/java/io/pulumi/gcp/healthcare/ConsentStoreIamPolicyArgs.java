@@ -92,32 +92,26 @@ public final class ConsentStoreIamPolicyArgs extends io.pulumi.resources.Resourc
             this.consentStoreId = Objects.requireNonNull(consentStoreId);
             return this;
         }
-
         public Builder consentStoreId(String consentStoreId) {
             this.consentStoreId = Output.of(Objects.requireNonNull(consentStoreId));
             return this;
         }
-
         public Builder dataset(Output<String> dataset) {
             this.dataset = Objects.requireNonNull(dataset);
             return this;
         }
-
         public Builder dataset(String dataset) {
             this.dataset = Output.of(Objects.requireNonNull(dataset));
             return this;
         }
-
         public Builder policyData(Output<String> policyData) {
             this.policyData = Objects.requireNonNull(policyData);
             return this;
         }
-
         public Builder policyData(String policyData) {
             this.policyData = Output.of(Objects.requireNonNull(policyData));
             return this;
-        }
-        public ConsentStoreIamPolicyArgs build() {
+        }        public ConsentStoreIamPolicyArgs build() {
             return new ConsentStoreIamPolicyArgs(consentStoreId, dataset, policyData);
         }
     }

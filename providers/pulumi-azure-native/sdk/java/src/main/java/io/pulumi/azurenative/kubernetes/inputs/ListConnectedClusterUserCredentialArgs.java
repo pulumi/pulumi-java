@@ -107,22 +107,18 @@ public final class ListConnectedClusterUserCredentialArgs extends io.pulumi.reso
             this.authenticationMethod = Objects.requireNonNull(authenticationMethod);
             return this;
         }
-
         public Builder clientProxy(Boolean clientProxy) {
             this.clientProxy = Objects.requireNonNull(clientProxy);
             return this;
         }
-
         public Builder clusterName(String clusterName) {
             this.clusterName = Objects.requireNonNull(clusterName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
-        }
-        public ListConnectedClusterUserCredentialArgs build() {
+        }        public ListConnectedClusterUserCredentialArgs build() {
             return new ListConnectedClusterUserCredentialArgs(authenticationMethod, clientProxy, clusterName, resourceGroupName);
         }
     }

@@ -96,32 +96,26 @@ public final class DomainIdentityState extends io.pulumi.resources.ResourceArgs 
             this.arn = arn;
             return this;
         }
-
         public Builder arn(@Nullable String arn) {
             this.arn = Output.ofNullable(arn);
             return this;
         }
-
         public Builder domain(@Nullable Output<String> domain) {
             this.domain = domain;
             return this;
         }
-
         public Builder domain(@Nullable String domain) {
             this.domain = Output.ofNullable(domain);
             return this;
         }
-
         public Builder verificationToken(@Nullable Output<String> verificationToken) {
             this.verificationToken = verificationToken;
             return this;
         }
-
         public Builder verificationToken(@Nullable String verificationToken) {
             this.verificationToken = Output.ofNullable(verificationToken);
             return this;
-        }
-        public DomainIdentityState build() {
+        }        public DomainIdentityState build() {
             return new DomainIdentityState(arn, domain, verificationToken);
         }
     }

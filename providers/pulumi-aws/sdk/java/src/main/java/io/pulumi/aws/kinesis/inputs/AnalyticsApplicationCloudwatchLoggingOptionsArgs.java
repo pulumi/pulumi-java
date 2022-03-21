@@ -90,32 +90,26 @@ public final class AnalyticsApplicationCloudwatchLoggingOptionsArgs extends io.p
             this.id = id;
             return this;
         }
-
         public Builder id(@Nullable String id) {
             this.id = Output.ofNullable(id);
             return this;
         }
-
         public Builder logStreamArn(Output<String> logStreamArn) {
             this.logStreamArn = Objects.requireNonNull(logStreamArn);
             return this;
         }
-
         public Builder logStreamArn(String logStreamArn) {
             this.logStreamArn = Output.of(Objects.requireNonNull(logStreamArn));
             return this;
         }
-
         public Builder roleArn(Output<String> roleArn) {
             this.roleArn = Objects.requireNonNull(roleArn);
             return this;
         }
-
         public Builder roleArn(String roleArn) {
             this.roleArn = Output.of(Objects.requireNonNull(roleArn));
             return this;
-        }
-        public AnalyticsApplicationCloudwatchLoggingOptionsArgs build() {
+        }        public AnalyticsApplicationCloudwatchLoggingOptionsArgs build() {
             return new AnalyticsApplicationCloudwatchLoggingOptionsArgs(id, logStreamArn, roleArn);
         }
     }

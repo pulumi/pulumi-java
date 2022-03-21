@@ -58,8 +58,7 @@ public final class AppEngineResponse extends io.pulumi.resources.InvokeArgs {
         public Builder moduleId(String moduleId) {
             this.moduleId = Objects.requireNonNull(moduleId);
             return this;
-        }
-        public AppEngineResponse build() {
+        }        public AppEngineResponse build() {
             return new AppEngineResponse(moduleId);
         }
     }

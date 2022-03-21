@@ -78,22 +78,18 @@ public final class GoogleCloudBillingBudgetsV1beta1CustomPeriodArgs extends io.p
             this.endDate = endDate;
             return this;
         }
-
         public Builder endDate(@Nullable GoogleTypeDateArgs endDate) {
             this.endDate = Output.ofNullable(endDate);
             return this;
         }
-
         public Builder startDate(Output<GoogleTypeDateArgs> startDate) {
             this.startDate = Objects.requireNonNull(startDate);
             return this;
         }
-
         public Builder startDate(GoogleTypeDateArgs startDate) {
             this.startDate = Output.of(Objects.requireNonNull(startDate));
             return this;
-        }
-        public GoogleCloudBillingBudgetsV1beta1CustomPeriodArgs build() {
+        }        public GoogleCloudBillingBudgetsV1beta1CustomPeriodArgs build() {
             return new GoogleCloudBillingBudgetsV1beta1CustomPeriodArgs(endDate, startDate);
         }
     }

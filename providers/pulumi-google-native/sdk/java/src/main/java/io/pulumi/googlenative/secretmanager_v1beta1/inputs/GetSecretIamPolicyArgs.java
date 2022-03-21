@@ -78,17 +78,14 @@ public final class GetSecretIamPolicyArgs extends io.pulumi.resources.InvokeArgs
             this.optionsRequestedPolicyVersion = optionsRequestedPolicyVersion;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = project;
             return this;
         }
-
         public Builder secretId(String secretId) {
             this.secretId = Objects.requireNonNull(secretId);
             return this;
-        }
-        public GetSecretIamPolicyArgs build() {
+        }        public GetSecretIamPolicyArgs build() {
             return new GetSecretIamPolicyArgs(optionsRequestedPolicyVersion, project, secretId);
         }
     }

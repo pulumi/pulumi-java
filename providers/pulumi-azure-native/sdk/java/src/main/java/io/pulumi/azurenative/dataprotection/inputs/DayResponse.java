@@ -79,12 +79,10 @@ public final class DayResponse extends io.pulumi.resources.InvokeArgs {
             this.date = date;
             return this;
         }
-
         public Builder isLast(@Nullable Boolean isLast) {
             this.isLast = isLast;
             return this;
-        }
-        public DayResponse build() {
+        }        public DayResponse build() {
             return new DayResponse(date, isLast);
         }
     }

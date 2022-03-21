@@ -54,8 +54,7 @@ public final class GetReportPlanArgs extends io.pulumi.resources.InvokeArgs {
         public Builder reportPlanArn(String reportPlanArn) {
             this.reportPlanArn = Objects.requireNonNull(reportPlanArn);
             return this;
-        }
-        public GetReportPlanArgs build() {
+        }        public GetReportPlanArgs build() {
             return new GetReportPlanArgs(reportPlanArn);
         }
     }

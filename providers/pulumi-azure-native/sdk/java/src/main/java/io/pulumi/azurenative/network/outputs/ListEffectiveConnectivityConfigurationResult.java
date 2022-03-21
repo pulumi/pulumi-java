@@ -73,12 +73,13 @@ public final class ListEffectiveConnectivityConfigurationResult {
             this.skipToken = skipToken;
             return this;
         }
-
         public Builder value(@Nullable List<EffectiveConnectivityConfigurationResponse> value) {
             this.value = value;
             return this;
         }
-        public ListEffectiveConnectivityConfigurationResult build() {
+        public Builder value(EffectiveConnectivityConfigurationResponse... value) {
+            return value(List.of(value));
+        }        public ListEffectiveConnectivityConfigurationResult build() {
             return new ListEffectiveConnectivityConfigurationResult(skipToken, value);
         }
     }

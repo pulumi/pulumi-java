@@ -160,82 +160,66 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
             this.databaseId = databaseId;
             return this;
         }
-
         public Builder databaseId(@Nullable String databaseId) {
             this.databaseId = Output.ofNullable(databaseId);
             return this;
         }
-
         public Builder databaseUrl(@Nullable Output<String> databaseUrl) {
             this.databaseUrl = databaseUrl;
             return this;
         }
-
         public Builder databaseUrl(@Nullable String databaseUrl) {
             this.databaseUrl = Output.ofNullable(databaseUrl);
             return this;
         }
-
         public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
         }
-
         public Builder state(@Nullable Output<InstanceState> state) {
             this.state = state;
             return this;
         }
-
         public Builder state(@Nullable InstanceState state) {
             this.state = Output.ofNullable(state);
             return this;
         }
-
         public Builder type(@Nullable Output<InstanceType> type) {
             this.type = type;
             return this;
         }
-
         public Builder type(@Nullable InstanceType type) {
             this.type = Output.ofNullable(type);
             return this;
         }
-
         public Builder validateOnly(@Nullable Output<String> validateOnly) {
             this.validateOnly = validateOnly;
             return this;
         }
-
         public Builder validateOnly(@Nullable String validateOnly) {
             this.validateOnly = Output.ofNullable(validateOnly);
             return this;
-        }
-        public InstanceArgs build() {
+        }        public InstanceArgs build() {
             return new InstanceArgs(databaseId, databaseUrl, location, name, project, state, type, validateOnly);
         }
     }

@@ -75,22 +75,18 @@ public final class RangePartitioningArgs extends io.pulumi.resources.ResourceArg
             this.field = field;
             return this;
         }
-
         public Builder field(@Nullable String field) {
             this.field = Output.ofNullable(field);
             return this;
         }
-
         public Builder range(@Nullable Output<RangePartitioningRangeArgs> range) {
             this.range = range;
             return this;
         }
-
         public Builder range(@Nullable RangePartitioningRangeArgs range) {
             this.range = Output.ofNullable(range);
             return this;
-        }
-        public RangePartitioningArgs build() {
+        }        public RangePartitioningArgs build() {
             return new RangePartitioningArgs(field, range);
         }
     }

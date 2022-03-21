@@ -87,17 +87,14 @@ public final class ListAuthorizationServerSecretsResult {
             this.clientSecret = clientSecret;
             return this;
         }
-
         public Builder resourceOwnerPassword(@Nullable String resourceOwnerPassword) {
             this.resourceOwnerPassword = resourceOwnerPassword;
             return this;
         }
-
         public Builder resourceOwnerUsername(@Nullable String resourceOwnerUsername) {
             this.resourceOwnerUsername = resourceOwnerUsername;
             return this;
-        }
-        public ListAuthorizationServerSecretsResult build() {
+        }        public ListAuthorizationServerSecretsResult build() {
             return new ListAuthorizationServerSecretsResult(clientSecret, resourceOwnerPassword, resourceOwnerUsername);
         }
     }

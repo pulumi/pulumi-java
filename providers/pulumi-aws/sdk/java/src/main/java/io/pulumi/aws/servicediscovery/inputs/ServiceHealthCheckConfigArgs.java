@@ -91,32 +91,26 @@ public final class ServiceHealthCheckConfigArgs extends io.pulumi.resources.Reso
             this.failureThreshold = failureThreshold;
             return this;
         }
-
         public Builder failureThreshold(@Nullable Integer failureThreshold) {
             this.failureThreshold = Output.ofNullable(failureThreshold);
             return this;
         }
-
         public Builder resourcePath(@Nullable Output<String> resourcePath) {
             this.resourcePath = resourcePath;
             return this;
         }
-
         public Builder resourcePath(@Nullable String resourcePath) {
             this.resourcePath = Output.ofNullable(resourcePath);
             return this;
         }
-
         public Builder type(@Nullable Output<String> type) {
             this.type = type;
             return this;
         }
-
         public Builder type(@Nullable String type) {
             this.type = Output.ofNullable(type);
             return this;
-        }
-        public ServiceHealthCheckConfigArgs build() {
+        }        public ServiceHealthCheckConfigArgs build() {
             return new ServiceHealthCheckConfigArgs(failureThreshold, resourcePath, type);
         }
     }

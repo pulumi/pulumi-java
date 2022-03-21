@@ -74,22 +74,18 @@ public final class ApplicationApplicationConfigurationRunConfigurationApplicatio
             this.applicationRestoreType = applicationRestoreType;
             return this;
         }
-
         public Builder applicationRestoreType(@Nullable String applicationRestoreType) {
             this.applicationRestoreType = Output.ofNullable(applicationRestoreType);
             return this;
         }
-
         public Builder snapshotName(@Nullable Output<String> snapshotName) {
             this.snapshotName = snapshotName;
             return this;
         }
-
         public Builder snapshotName(@Nullable String snapshotName) {
             this.snapshotName = Output.ofNullable(snapshotName);
             return this;
-        }
-        public ApplicationApplicationConfigurationRunConfigurationApplicationRestoreConfigurationGetArgs build() {
+        }        public ApplicationApplicationConfigurationRunConfigurationApplicationRestoreConfigurationGetArgs build() {
             return new ApplicationApplicationConfigurationRunConfigurationApplicationRestoreConfigurationGetArgs(applicationRestoreType, snapshotName);
         }
     }

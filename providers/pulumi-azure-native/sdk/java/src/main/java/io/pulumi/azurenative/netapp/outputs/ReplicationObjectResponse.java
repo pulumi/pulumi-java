@@ -119,27 +119,22 @@ public final class ReplicationObjectResponse {
             this.endpointType = endpointType;
             return this;
         }
-
         public Builder remoteVolumeRegion(@Nullable String remoteVolumeRegion) {
             this.remoteVolumeRegion = remoteVolumeRegion;
             return this;
         }
-
         public Builder remoteVolumeResourceId(String remoteVolumeResourceId) {
             this.remoteVolumeResourceId = Objects.requireNonNull(remoteVolumeResourceId);
             return this;
         }
-
         public Builder replicationId(@Nullable String replicationId) {
             this.replicationId = replicationId;
             return this;
         }
-
         public Builder replicationSchedule(String replicationSchedule) {
             this.replicationSchedule = Objects.requireNonNull(replicationSchedule);
             return this;
-        }
-        public ReplicationObjectResponse build() {
+        }        public ReplicationObjectResponse build() {
             return new ReplicationObjectResponse(endpointType, remoteVolumeRegion, remoteVolumeResourceId, replicationId, replicationSchedule);
         }
     }

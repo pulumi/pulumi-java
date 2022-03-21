@@ -272,77 +272,65 @@ public final class GetComponentResult {
             this.arn = Objects.requireNonNull(arn);
             return this;
         }
-
         public Builder changeDescription(String changeDescription) {
             this.changeDescription = Objects.requireNonNull(changeDescription);
             return this;
         }
-
         public Builder data(String data) {
             this.data = Objects.requireNonNull(data);
             return this;
         }
-
         public Builder dateCreated(String dateCreated) {
             this.dateCreated = Objects.requireNonNull(dateCreated);
             return this;
         }
-
         public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
-
         public Builder encrypted(Boolean encrypted) {
             this.encrypted = Objects.requireNonNull(encrypted);
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder kmsKeyId(String kmsKeyId) {
             this.kmsKeyId = Objects.requireNonNull(kmsKeyId);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder owner(String owner) {
             this.owner = Objects.requireNonNull(owner);
             return this;
         }
-
         public Builder platform(String platform) {
             this.platform = Objects.requireNonNull(platform);
             return this;
         }
-
         public Builder supportedOsVersions(List<String> supportedOsVersions) {
             this.supportedOsVersions = Objects.requireNonNull(supportedOsVersions);
             return this;
         }
-
+        public Builder supportedOsVersions(String... supportedOsVersions) {
+            return supportedOsVersions(List.of(supportedOsVersions));
+        }
         public Builder tags(Map<String,String> tags) {
             this.tags = Objects.requireNonNull(tags);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder version(String version) {
             this.version = Objects.requireNonNull(version);
             return this;
-        }
-        public GetComponentResult build() {
+        }        public GetComponentResult build() {
             return new GetComponentResult(arn, changeDescription, data, dateCreated, description, encrypted, id, kmsKeyId, name, owner, platform, supportedOsVersions, tags, type, version);
         }
     }

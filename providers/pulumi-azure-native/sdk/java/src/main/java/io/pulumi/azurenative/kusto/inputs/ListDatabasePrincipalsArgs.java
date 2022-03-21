@@ -88,17 +88,14 @@ public final class ListDatabasePrincipalsArgs extends io.pulumi.resources.Invoke
             this.clusterName = Objects.requireNonNull(clusterName);
             return this;
         }
-
         public Builder databaseName(String databaseName) {
             this.databaseName = Objects.requireNonNull(databaseName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
-        }
-        public ListDatabasePrincipalsArgs build() {
+        }        public ListDatabasePrincipalsArgs build() {
             return new ListDatabasePrincipalsArgs(clusterName, databaseName, resourceGroupName);
         }
     }

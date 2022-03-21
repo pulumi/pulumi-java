@@ -61,12 +61,10 @@ public final class QueryContentArgs extends io.pulumi.resources.ResourceArgs {
             this.iamPolicyAnalysisQuery = iamPolicyAnalysisQuery;
             return this;
         }
-
         public Builder iamPolicyAnalysisQuery(@Nullable IamPolicyAnalysisQueryArgs iamPolicyAnalysisQuery) {
             this.iamPolicyAnalysisQuery = Output.ofNullable(iamPolicyAnalysisQuery);
             return this;
-        }
-        public QueryContentArgs build() {
+        }        public QueryContentArgs build() {
             return new QueryContentArgs(iamPolicyAnalysisQuery);
         }
     }

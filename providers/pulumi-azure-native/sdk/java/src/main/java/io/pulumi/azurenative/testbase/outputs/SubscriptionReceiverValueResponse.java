@@ -87,17 +87,14 @@ public final class SubscriptionReceiverValueResponse {
             this.role = role;
             return this;
         }
-
         public Builder subscriptionId(@Nullable String subscriptionId) {
             this.subscriptionId = subscriptionId;
             return this;
         }
-
         public Builder subscriptionName(@Nullable String subscriptionName) {
             this.subscriptionName = subscriptionName;
             return this;
-        }
-        public SubscriptionReceiverValueResponse build() {
+        }        public SubscriptionReceiverValueResponse build() {
             return new SubscriptionReceiverValueResponse(role, subscriptionId, subscriptionName);
         }
     }

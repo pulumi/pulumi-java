@@ -73,12 +73,13 @@ public final class RuleGroupRuleStatementAndStatementStatementXssMatchStatement 
             this.fieldToMatch = fieldToMatch;
             return this;
         }
-
         public Builder textTransformations(List<RuleGroupRuleStatementAndStatementStatementXssMatchStatementTextTransformation> textTransformations) {
             this.textTransformations = Objects.requireNonNull(textTransformations);
             return this;
         }
-        public RuleGroupRuleStatementAndStatementStatementXssMatchStatement build() {
+        public Builder textTransformations(RuleGroupRuleStatementAndStatementStatementXssMatchStatementTextTransformation... textTransformations) {
+            return textTransformations(List.of(textTransformations));
+        }        public RuleGroupRuleStatementAndStatementStatementXssMatchStatement build() {
             return new RuleGroupRuleStatementAndStatementStatementXssMatchStatement(fieldToMatch, textTransformations);
         }
     }

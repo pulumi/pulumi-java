@@ -79,22 +79,18 @@ public final class ApkArgs extends io.pulumi.resources.ResourceArgs {
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable FileReferenceArgs location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder packageName(@Nullable Output<String> packageName) {
             this.packageName = packageName;
             return this;
         }
-
         public Builder packageName(@Nullable String packageName) {
             this.packageName = Output.ofNullable(packageName);
             return this;
-        }
-        public ApkArgs build() {
+        }        public ApkArgs build() {
             return new ApkArgs(location, packageName);
         }
     }

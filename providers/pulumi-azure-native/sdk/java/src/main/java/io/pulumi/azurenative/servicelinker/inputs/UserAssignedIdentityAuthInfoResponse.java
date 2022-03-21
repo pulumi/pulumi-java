@@ -93,17 +93,14 @@ public final class UserAssignedIdentityAuthInfoResponse extends io.pulumi.resour
             this.authType = Objects.requireNonNull(authType);
             return this;
         }
-
         public Builder clientId(String clientId) {
             this.clientId = Objects.requireNonNull(clientId);
             return this;
         }
-
         public Builder subscriptionId(String subscriptionId) {
             this.subscriptionId = Objects.requireNonNull(subscriptionId);
             return this;
-        }
-        public UserAssignedIdentityAuthInfoResponse build() {
+        }        public UserAssignedIdentityAuthInfoResponse build() {
             return new UserAssignedIdentityAuthInfoResponse(authType, clientId, subscriptionId);
         }
     }

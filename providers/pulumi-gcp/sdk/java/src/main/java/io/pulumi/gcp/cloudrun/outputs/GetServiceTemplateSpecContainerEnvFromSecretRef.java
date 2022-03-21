@@ -55,12 +55,13 @@ public final class GetServiceTemplateSpecContainerEnvFromSecretRef {
             this.localObjectReferences = Objects.requireNonNull(localObjectReferences);
             return this;
         }
-
+        public Builder localObjectReferences(GetServiceTemplateSpecContainerEnvFromSecretRefLocalObjectReference... localObjectReferences) {
+            return localObjectReferences(List.of(localObjectReferences));
+        }
         public Builder optional(Boolean optional) {
             this.optional = Objects.requireNonNull(optional);
             return this;
-        }
-        public GetServiceTemplateSpecContainerEnvFromSecretRef build() {
+        }        public GetServiceTemplateSpecContainerEnvFromSecretRef build() {
             return new GetServiceTemplateSpecContainerEnvFromSecretRef(localObjectReferences, optional);
         }
     }

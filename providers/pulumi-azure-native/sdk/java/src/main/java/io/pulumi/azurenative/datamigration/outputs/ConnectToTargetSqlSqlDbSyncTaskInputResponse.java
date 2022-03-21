@@ -69,12 +69,10 @@ public final class ConnectToTargetSqlSqlDbSyncTaskInputResponse {
             this.sourceConnectionInfo = Objects.requireNonNull(sourceConnectionInfo);
             return this;
         }
-
         public Builder targetConnectionInfo(SqlConnectionInfoResponse targetConnectionInfo) {
             this.targetConnectionInfo = Objects.requireNonNull(targetConnectionInfo);
             return this;
-        }
-        public ConnectToTargetSqlSqlDbSyncTaskInputResponse build() {
+        }        public ConnectToTargetSqlSqlDbSyncTaskInputResponse build() {
             return new ConnectToTargetSqlSqlDbSyncTaskInputResponse(sourceConnectionInfo, targetConnectionInfo);
         }
     }

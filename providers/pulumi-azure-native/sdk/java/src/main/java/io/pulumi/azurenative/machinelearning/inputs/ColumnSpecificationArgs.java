@@ -132,52 +132,45 @@ public final class ColumnSpecificationArgs extends io.pulumi.resources.ResourceA
             this.$enum = $enum;
             return this;
         }
-
         public Builder $enum(@Nullable List<Object> $enum) {
             this.$enum = Output.ofNullable($enum);
             return this;
         }
-
+        public Builder $enum(Object... $enum) {
+            return $enum(List.of($enum));
+        }
         public Builder format(@Nullable Output<Either<String,ColumnFormat>> format) {
             this.format = format;
             return this;
         }
-
         public Builder format(@Nullable Either<String,ColumnFormat> format) {
             this.format = Output.ofNullable(format);
             return this;
         }
-
         public Builder type(Output<Either<String,ColumnType>> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder type(Either<String,ColumnType> type) {
             this.type = Output.of(Objects.requireNonNull(type));
             return this;
         }
-
         public Builder xMsIsnullable(@Nullable Output<Boolean> xMsIsnullable) {
             this.xMsIsnullable = xMsIsnullable;
             return this;
         }
-
         public Builder xMsIsnullable(@Nullable Boolean xMsIsnullable) {
             this.xMsIsnullable = Output.ofNullable(xMsIsnullable);
             return this;
         }
-
         public Builder xMsIsordered(@Nullable Output<Boolean> xMsIsordered) {
             this.xMsIsordered = xMsIsordered;
             return this;
         }
-
         public Builder xMsIsordered(@Nullable Boolean xMsIsordered) {
             this.xMsIsordered = Output.ofNullable(xMsIsordered);
             return this;
-        }
-        public ColumnSpecificationArgs build() {
+        }        public ColumnSpecificationArgs build() {
             return new ColumnSpecificationArgs($enum, format, type, xMsIsnullable, xMsIsordered);
         }
     }

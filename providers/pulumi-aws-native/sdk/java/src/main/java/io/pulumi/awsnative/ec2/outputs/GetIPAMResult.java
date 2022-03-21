@@ -163,42 +163,40 @@ public final class GetIPAMResult {
             this.arn = arn;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
-
         public Builder ipamId(@Nullable String ipamId) {
             this.ipamId = ipamId;
             return this;
         }
-
         public Builder operatingRegions(@Nullable List<IPAMIpamOperatingRegion> operatingRegions) {
             this.operatingRegions = operatingRegions;
             return this;
         }
-
+        public Builder operatingRegions(IPAMIpamOperatingRegion... operatingRegions) {
+            return operatingRegions(List.of(operatingRegions));
+        }
         public Builder privateDefaultScopeId(@Nullable String privateDefaultScopeId) {
             this.privateDefaultScopeId = privateDefaultScopeId;
             return this;
         }
-
         public Builder publicDefaultScopeId(@Nullable String publicDefaultScopeId) {
             this.publicDefaultScopeId = publicDefaultScopeId;
             return this;
         }
-
         public Builder scopeCount(@Nullable Integer scopeCount) {
             this.scopeCount = scopeCount;
             return this;
         }
-
         public Builder tags(@Nullable List<IPAMTag> tags) {
             this.tags = tags;
             return this;
         }
-        public GetIPAMResult build() {
+        public Builder tags(IPAMTag... tags) {
+            return tags(List.of(tags));
+        }        public GetIPAMResult build() {
             return new GetIPAMResult(arn, description, ipamId, operatingRegions, privateDefaultScopeId, publicDefaultScopeId, scopeCount, tags);
         }
     }

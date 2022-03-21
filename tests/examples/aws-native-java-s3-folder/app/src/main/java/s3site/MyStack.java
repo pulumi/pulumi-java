@@ -7,17 +7,13 @@ import java.nio.file.Paths;
 import java.util.stream.Collectors;
 
 import io.pulumi.Stack;
-import io.pulumi.aws.s3.BucketObject;
-import io.pulumi.aws.s3.BucketObjectArgs;
-import io.pulumi.aws.s3.BucketPolicy;
-import io.pulumi.aws.s3.BucketPolicyArgs;
+import io.pulumi.aws.s3.*;
 import io.pulumi.awsnative.s3.Bucket;
 import io.pulumi.awsnative.s3.BucketArgs;
 import io.pulumi.awsnative.s3.inputs.BucketWebsiteConfigurationArgs;
 import io.pulumi.core.Asset.FileAsset;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
-import io.pulumi.resources.CustomResourceOptions;
 
 public final class MyStack extends Stack {
 
@@ -54,9 +50,9 @@ public final class MyStack extends Stack {
                 BucketPolicyArgs.builder().bucket(siteBucket.getId())
                         .policy(siteBucket.getArn()
                                 .applyValue(bucketArn ->
-                                            "{\"Version\":\"2012-10-17\",\"Statement\":[{\"Effect\":\"Allow\",\"Principal\":\"*\",\"Action\":[\"s3:GetObject\"],\"Resource\":[\"" +
-                                            bucketArn +
-                                            "/*\"]}]}")
+                                    "{\"Version\":\"2012-10-17\",\"Statement\":[{\"Effect\":\"Allow\",\"Principal\":\"*\",\"Action\":[\"s3:GetObject\"],\"Resource\":[\"" +
+                                    bucketArn +
+                                    "/*\"]}]}")
                         ).build());
 
         this.bucketName = siteBucket.getBucketName();

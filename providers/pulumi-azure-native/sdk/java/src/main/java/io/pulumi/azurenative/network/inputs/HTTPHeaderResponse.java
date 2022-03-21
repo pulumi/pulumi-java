@@ -78,12 +78,10 @@ public final class HTTPHeaderResponse extends io.pulumi.resources.InvokeArgs {
             this.name = name;
             return this;
         }
-
         public Builder value(@Nullable String value) {
             this.value = value;
             return this;
-        }
-        public HTTPHeaderResponse build() {
+        }        public HTTPHeaderResponse build() {
             return new HTTPHeaderResponse(name, value);
         }
     }

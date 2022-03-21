@@ -72,12 +72,10 @@ public final class GetProfileArgs extends io.pulumi.resources.InvokeArgs {
             this.profileName = Objects.requireNonNull(profileName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
-        }
-        public GetProfileArgs build() {
+        }        public GetProfileArgs build() {
             return new GetProfileArgs(profileName, resourceGroupName);
         }
     }

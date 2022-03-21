@@ -79,22 +79,18 @@ public final class HubIPAddressesArgs extends io.pulumi.resources.ResourceArgs {
             this.privateIPAddress = privateIPAddress;
             return this;
         }
-
         public Builder privateIPAddress(@Nullable String privateIPAddress) {
             this.privateIPAddress = Output.ofNullable(privateIPAddress);
             return this;
         }
-
         public Builder publicIPs(@Nullable Output<HubPublicIPAddressesArgs> publicIPs) {
             this.publicIPs = publicIPs;
             return this;
         }
-
         public Builder publicIPs(@Nullable HubPublicIPAddressesArgs publicIPs) {
             this.publicIPs = Output.ofNullable(publicIPs);
             return this;
-        }
-        public HubIPAddressesArgs build() {
+        }        public HubIPAddressesArgs build() {
             return new HubIPAddressesArgs(privateIPAddress, publicIPs);
         }
     }

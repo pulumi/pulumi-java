@@ -117,27 +117,22 @@ public final class DeploymentInstanceResponse {
             this.discoveryStatus = Objects.requireNonNull(discoveryStatus);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder reason(String reason) {
             this.reason = Objects.requireNonNull(reason);
             return this;
         }
-
         public Builder startTime(String startTime) {
             this.startTime = Objects.requireNonNull(startTime);
             return this;
         }
-
         public Builder status(String status) {
             this.status = Objects.requireNonNull(status);
             return this;
-        }
-        public DeploymentInstanceResponse build() {
+        }        public DeploymentInstanceResponse build() {
             return new DeploymentInstanceResponse(discoveryStatus, name, reason, startTime, status);
         }
     }

@@ -80,22 +80,21 @@ public final class ManagedRuleGroupOverrideArgs extends io.pulumi.resources.Reso
             this.ruleGroupName = Objects.requireNonNull(ruleGroupName);
             return this;
         }
-
         public Builder ruleGroupName(String ruleGroupName) {
             this.ruleGroupName = Output.of(Objects.requireNonNull(ruleGroupName));
             return this;
         }
-
         public Builder rules(@Nullable Output<List<ManagedRuleOverrideArgs>> rules) {
             this.rules = rules;
             return this;
         }
-
         public Builder rules(@Nullable List<ManagedRuleOverrideArgs> rules) {
             this.rules = Output.ofNullable(rules);
             return this;
         }
-        public ManagedRuleGroupOverrideArgs build() {
+        public Builder rules(ManagedRuleOverrideArgs... rules) {
+            return rules(List.of(rules));
+        }        public ManagedRuleGroupOverrideArgs build() {
             return new ManagedRuleGroupOverrideArgs(ruleGroupName, rules);
         }
     }

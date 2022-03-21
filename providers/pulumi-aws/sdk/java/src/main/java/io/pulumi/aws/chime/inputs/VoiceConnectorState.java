@@ -107,42 +107,34 @@ public final class VoiceConnectorState extends io.pulumi.resources.ResourceArgs 
             this.awsRegion = awsRegion;
             return this;
         }
-
         public Builder awsRegion(@Nullable String awsRegion) {
             this.awsRegion = Output.ofNullable(awsRegion);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder outboundHostName(@Nullable Output<String> outboundHostName) {
             this.outboundHostName = outboundHostName;
             return this;
         }
-
         public Builder outboundHostName(@Nullable String outboundHostName) {
             this.outboundHostName = Output.ofNullable(outboundHostName);
             return this;
         }
-
         public Builder requireEncryption(@Nullable Output<Boolean> requireEncryption) {
             this.requireEncryption = requireEncryption;
             return this;
         }
-
         public Builder requireEncryption(@Nullable Boolean requireEncryption) {
             this.requireEncryption = Output.ofNullable(requireEncryption);
             return this;
-        }
-        public VoiceConnectorState build() {
+        }        public VoiceConnectorState build() {
             return new VoiceConnectorState(awsRegion, name, outboundHostName, requireEncryption);
         }
     }

@@ -134,62 +134,50 @@ public final class ResiliencyPolicyArgs extends io.pulumi.resources.ResourceArgs
             this.dataLocationConstraint = dataLocationConstraint;
             return this;
         }
-
         public Builder dataLocationConstraint(@Nullable ResiliencyPolicyDataLocationConstraint dataLocationConstraint) {
             this.dataLocationConstraint = Output.ofNullable(dataLocationConstraint);
             return this;
         }
-
         public Builder policy(Output<ResiliencyPolicyPolicyMapArgs> policy) {
             this.policy = Objects.requireNonNull(policy);
             return this;
         }
-
         public Builder policy(ResiliencyPolicyPolicyMapArgs policy) {
             this.policy = Output.of(Objects.requireNonNull(policy));
             return this;
         }
-
         public Builder policyDescription(@Nullable Output<String> policyDescription) {
             this.policyDescription = policyDescription;
             return this;
         }
-
         public Builder policyDescription(@Nullable String policyDescription) {
             this.policyDescription = Output.ofNullable(policyDescription);
             return this;
         }
-
         public Builder policyName(Output<String> policyName) {
             this.policyName = Objects.requireNonNull(policyName);
             return this;
         }
-
         public Builder policyName(String policyName) {
             this.policyName = Output.of(Objects.requireNonNull(policyName));
             return this;
         }
-
         public Builder tags(@Nullable Output<ResiliencyPolicyTagMapArgs> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable ResiliencyPolicyTagMapArgs tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
         public Builder tier(Output<ResiliencyPolicyTier> tier) {
             this.tier = Objects.requireNonNull(tier);
             return this;
         }
-
         public Builder tier(ResiliencyPolicyTier tier) {
             this.tier = Output.of(Objects.requireNonNull(tier));
             return this;
-        }
-        public ResiliencyPolicyArgs build() {
+        }        public ResiliencyPolicyArgs build() {
             return new ResiliencyPolicyArgs(dataLocationConstraint, policy, policyDescription, policyName, tags, tier);
         }
     }

@@ -75,22 +75,18 @@ public final class FunctionEventInvokeConfigDestinationConfigArgs extends io.pul
             this.onFailure = onFailure;
             return this;
         }
-
         public Builder onFailure(@Nullable FunctionEventInvokeConfigDestinationConfigOnFailureArgs onFailure) {
             this.onFailure = Output.ofNullable(onFailure);
             return this;
         }
-
         public Builder onSuccess(@Nullable Output<FunctionEventInvokeConfigDestinationConfigOnSuccessArgs> onSuccess) {
             this.onSuccess = onSuccess;
             return this;
         }
-
         public Builder onSuccess(@Nullable FunctionEventInvokeConfigDestinationConfigOnSuccessArgs onSuccess) {
             this.onSuccess = Output.ofNullable(onSuccess);
             return this;
-        }
-        public FunctionEventInvokeConfigDestinationConfigArgs build() {
+        }        public FunctionEventInvokeConfigDestinationConfigArgs build() {
             return new FunctionEventInvokeConfigDestinationConfigArgs(onFailure, onSuccess);
         }
     }

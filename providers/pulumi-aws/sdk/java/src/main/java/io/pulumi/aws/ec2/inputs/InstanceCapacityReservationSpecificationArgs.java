@@ -75,22 +75,18 @@ public final class InstanceCapacityReservationSpecificationArgs extends io.pulum
             this.capacityReservationPreference = capacityReservationPreference;
             return this;
         }
-
         public Builder capacityReservationPreference(@Nullable String capacityReservationPreference) {
             this.capacityReservationPreference = Output.ofNullable(capacityReservationPreference);
             return this;
         }
-
         public Builder capacityReservationTarget(@Nullable Output<InstanceCapacityReservationSpecificationCapacityReservationTargetArgs> capacityReservationTarget) {
             this.capacityReservationTarget = capacityReservationTarget;
             return this;
         }
-
         public Builder capacityReservationTarget(@Nullable InstanceCapacityReservationSpecificationCapacityReservationTargetArgs capacityReservationTarget) {
             this.capacityReservationTarget = Output.ofNullable(capacityReservationTarget);
             return this;
-        }
-        public InstanceCapacityReservationSpecificationArgs build() {
+        }        public InstanceCapacityReservationSpecificationArgs build() {
             return new InstanceCapacityReservationSpecificationArgs(capacityReservationPreference, capacityReservationTarget);
         }
     }

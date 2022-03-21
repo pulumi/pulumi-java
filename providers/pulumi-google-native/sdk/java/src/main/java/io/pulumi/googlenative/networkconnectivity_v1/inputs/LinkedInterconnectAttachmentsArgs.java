@@ -80,22 +80,21 @@ public final class LinkedInterconnectAttachmentsArgs extends io.pulumi.resources
             this.siteToSiteDataTransfer = siteToSiteDataTransfer;
             return this;
         }
-
         public Builder siteToSiteDataTransfer(@Nullable Boolean siteToSiteDataTransfer) {
             this.siteToSiteDataTransfer = Output.ofNullable(siteToSiteDataTransfer);
             return this;
         }
-
         public Builder uris(@Nullable Output<List<String>> uris) {
             this.uris = uris;
             return this;
         }
-
         public Builder uris(@Nullable List<String> uris) {
             this.uris = Output.ofNullable(uris);
             return this;
         }
-        public LinkedInterconnectAttachmentsArgs build() {
+        public Builder uris(String... uris) {
+            return uris(List.of(uris));
+        }        public LinkedInterconnectAttachmentsArgs build() {
             return new LinkedInterconnectAttachmentsArgs(siteToSiteDataTransfer, uris);
         }
     }

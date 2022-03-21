@@ -310,87 +310,70 @@ public final class GetRolloutResult {
             this.annotations = Objects.requireNonNull(annotations);
             return this;
         }
-
         public Builder approvalState(String approvalState) {
             this.approvalState = Objects.requireNonNull(approvalState);
             return this;
         }
-
         public Builder approveTime(String approveTime) {
             this.approveTime = Objects.requireNonNull(approveTime);
             return this;
         }
-
         public Builder createTime(String createTime) {
             this.createTime = Objects.requireNonNull(createTime);
             return this;
         }
-
         public Builder deployEndTime(String deployEndTime) {
             this.deployEndTime = Objects.requireNonNull(deployEndTime);
             return this;
         }
-
         public Builder deployFailureCause(String deployFailureCause) {
             this.deployFailureCause = Objects.requireNonNull(deployFailureCause);
             return this;
         }
-
         public Builder deployStartTime(String deployStartTime) {
             this.deployStartTime = Objects.requireNonNull(deployStartTime);
             return this;
         }
-
         public Builder deployingBuild(String deployingBuild) {
             this.deployingBuild = Objects.requireNonNull(deployingBuild);
             return this;
         }
-
         public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
-
         public Builder enqueueTime(String enqueueTime) {
             this.enqueueTime = Objects.requireNonNull(enqueueTime);
             return this;
         }
-
         public Builder etag(String etag) {
             this.etag = Objects.requireNonNull(etag);
             return this;
         }
-
         public Builder failureReason(String failureReason) {
             this.failureReason = Objects.requireNonNull(failureReason);
             return this;
         }
-
         public Builder labels(Map<String,String> labels) {
             this.labels = Objects.requireNonNull(labels);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder state(String state) {
             this.state = Objects.requireNonNull(state);
             return this;
         }
-
         public Builder targetId(String targetId) {
             this.targetId = Objects.requireNonNull(targetId);
             return this;
         }
-
         public Builder uid(String uid) {
             this.uid = Objects.requireNonNull(uid);
             return this;
-        }
-        public GetRolloutResult build() {
+        }        public GetRolloutResult build() {
             return new GetRolloutResult(annotations, approvalState, approveTime, createTime, deployEndTime, deployFailureCause, deployStartTime, deployingBuild, description, enqueueTime, etag, failureReason, labels, name, state, targetId, uid);
         }
     }

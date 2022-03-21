@@ -110,42 +110,34 @@ public final class SubscriptionFeatureRegistrationPropertiesArgs extends io.pulu
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder metadata(@Nullable Output<Map<String,String>> metadata) {
             this.metadata = metadata;
             return this;
         }
-
         public Builder metadata(@Nullable Map<String,String> metadata) {
             this.metadata = Output.ofNullable(metadata);
             return this;
         }
-
         public Builder shouldFeatureDisplayInPortal(@Nullable Output<Boolean> shouldFeatureDisplayInPortal) {
             this.shouldFeatureDisplayInPortal = shouldFeatureDisplayInPortal;
             return this;
         }
-
         public Builder shouldFeatureDisplayInPortal(@Nullable Boolean shouldFeatureDisplayInPortal) {
             this.shouldFeatureDisplayInPortal = Output.ofNullable(shouldFeatureDisplayInPortal);
             return this;
         }
-
         public Builder state(@Nullable Output<Either<String,SubscriptionFeatureRegistrationState>> state) {
             this.state = state;
             return this;
         }
-
         public Builder state(@Nullable Either<String,SubscriptionFeatureRegistrationState> state) {
             this.state = Output.ofNullable(state);
             return this;
-        }
-        public SubscriptionFeatureRegistrationPropertiesArgs build() {
+        }        public SubscriptionFeatureRegistrationPropertiesArgs build() {
             return new SubscriptionFeatureRegistrationPropertiesArgs(description, metadata, shouldFeatureDisplayInPortal, state);
         }
     }

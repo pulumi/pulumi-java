@@ -74,22 +74,18 @@ public final class ResponseHeadersPolicySecurityHeadersConfigFrameOptionsArgs ex
             this.frameOption = Objects.requireNonNull(frameOption);
             return this;
         }
-
         public Builder frameOption(String frameOption) {
             this.frameOption = Output.of(Objects.requireNonNull(frameOption));
             return this;
         }
-
         public Builder override(Output<Boolean> override) {
             this.override = Objects.requireNonNull(override);
             return this;
         }
-
         public Builder override(Boolean override) {
             this.override = Output.of(Objects.requireNonNull(override));
             return this;
-        }
-        public ResponseHeadersPolicySecurityHeadersConfigFrameOptionsArgs build() {
+        }        public ResponseHeadersPolicySecurityHeadersConfigFrameOptionsArgs build() {
             return new ResponseHeadersPolicySecurityHeadersConfigFrameOptionsArgs(frameOption, override);
         }
     }

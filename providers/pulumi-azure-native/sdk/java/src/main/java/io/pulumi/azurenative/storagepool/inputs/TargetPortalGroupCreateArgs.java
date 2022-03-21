@@ -96,32 +96,32 @@ public final class TargetPortalGroupCreateArgs extends io.pulumi.resources.Resou
             this.acls = Objects.requireNonNull(acls);
             return this;
         }
-
         public Builder acls(List<AclArgs> acls) {
             this.acls = Output.of(Objects.requireNonNull(acls));
             return this;
         }
-
+        public Builder acls(AclArgs... acls) {
+            return acls(List.of(acls));
+        }
         public Builder attributes(Output<AttributesArgs> attributes) {
             this.attributes = Objects.requireNonNull(attributes);
             return this;
         }
-
         public Builder attributes(AttributesArgs attributes) {
             this.attributes = Output.of(Objects.requireNonNull(attributes));
             return this;
         }
-
         public Builder luns(Output<List<IscsiLunArgs>> luns) {
             this.luns = Objects.requireNonNull(luns);
             return this;
         }
-
         public Builder luns(List<IscsiLunArgs> luns) {
             this.luns = Output.of(Objects.requireNonNull(luns));
             return this;
         }
-        public TargetPortalGroupCreateArgs build() {
+        public Builder luns(IscsiLunArgs... luns) {
+            return luns(List.of(luns));
+        }        public TargetPortalGroupCreateArgs build() {
             return new TargetPortalGroupCreateArgs(acls, attributes, luns);
         }
     }

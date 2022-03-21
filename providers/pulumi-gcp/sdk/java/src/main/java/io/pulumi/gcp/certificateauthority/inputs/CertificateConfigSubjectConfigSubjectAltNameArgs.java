@@ -107,42 +107,46 @@ public final class CertificateConfigSubjectConfigSubjectAltNameArgs extends io.p
             this.dnsNames = dnsNames;
             return this;
         }
-
         public Builder dnsNames(@Nullable List<String> dnsNames) {
             this.dnsNames = Output.ofNullable(dnsNames);
             return this;
         }
-
+        public Builder dnsNames(String... dnsNames) {
+            return dnsNames(List.of(dnsNames));
+        }
         public Builder emailAddresses(@Nullable Output<List<String>> emailAddresses) {
             this.emailAddresses = emailAddresses;
             return this;
         }
-
         public Builder emailAddresses(@Nullable List<String> emailAddresses) {
             this.emailAddresses = Output.ofNullable(emailAddresses);
             return this;
         }
-
+        public Builder emailAddresses(String... emailAddresses) {
+            return emailAddresses(List.of(emailAddresses));
+        }
         public Builder ipAddresses(@Nullable Output<List<String>> ipAddresses) {
             this.ipAddresses = ipAddresses;
             return this;
         }
-
         public Builder ipAddresses(@Nullable List<String> ipAddresses) {
             this.ipAddresses = Output.ofNullable(ipAddresses);
             return this;
         }
-
+        public Builder ipAddresses(String... ipAddresses) {
+            return ipAddresses(List.of(ipAddresses));
+        }
         public Builder uris(@Nullable Output<List<String>> uris) {
             this.uris = uris;
             return this;
         }
-
         public Builder uris(@Nullable List<String> uris) {
             this.uris = Output.ofNullable(uris);
             return this;
         }
-        public CertificateConfigSubjectConfigSubjectAltNameArgs build() {
+        public Builder uris(String... uris) {
+            return uris(List.of(uris));
+        }        public CertificateConfigSubjectConfigSubjectAltNameArgs build() {
             return new CertificateConfigSubjectConfigSubjectAltNameArgs(dnsNames, emailAddresses, ipAddresses, uris);
         }
     }

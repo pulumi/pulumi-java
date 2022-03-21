@@ -88,17 +88,14 @@ public final class GetRelationshipArgs extends io.pulumi.resources.InvokeArgs {
             this.hubName = Objects.requireNonNull(hubName);
             return this;
         }
-
         public Builder relationshipName(String relationshipName) {
             this.relationshipName = Objects.requireNonNull(relationshipName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
-        }
-        public GetRelationshipArgs build() {
+        }        public GetRelationshipArgs build() {
             return new GetRelationshipArgs(hubName, relationshipName, resourceGroupName);
         }
     }

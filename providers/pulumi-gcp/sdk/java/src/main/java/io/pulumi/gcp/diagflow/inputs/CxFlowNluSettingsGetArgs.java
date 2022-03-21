@@ -98,32 +98,26 @@ public final class CxFlowNluSettingsGetArgs extends io.pulumi.resources.Resource
             this.classificationThreshold = classificationThreshold;
             return this;
         }
-
         public Builder classificationThreshold(@Nullable Double classificationThreshold) {
             this.classificationThreshold = Output.ofNullable(classificationThreshold);
             return this;
         }
-
         public Builder modelTrainingMode(@Nullable Output<String> modelTrainingMode) {
             this.modelTrainingMode = modelTrainingMode;
             return this;
         }
-
         public Builder modelTrainingMode(@Nullable String modelTrainingMode) {
             this.modelTrainingMode = Output.ofNullable(modelTrainingMode);
             return this;
         }
-
         public Builder modelType(@Nullable Output<String> modelType) {
             this.modelType = modelType;
             return this;
         }
-
         public Builder modelType(@Nullable String modelType) {
             this.modelType = Output.ofNullable(modelType);
             return this;
-        }
-        public CxFlowNluSettingsGetArgs build() {
+        }        public CxFlowNluSettingsGetArgs build() {
             return new CxFlowNluSettingsGetArgs(classificationThreshold, modelTrainingMode, modelType);
         }
     }

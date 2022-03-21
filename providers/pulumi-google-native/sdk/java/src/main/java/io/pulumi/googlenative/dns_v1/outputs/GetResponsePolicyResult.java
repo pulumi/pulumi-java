@@ -95,22 +95,21 @@ public final class GetResponsePolicyResult {
             this.description = Objects.requireNonNull(description);
             return this;
         }
-
         public Builder kind(String kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
-
         public Builder networks(List<ResponsePolicyNetworkResponse> networks) {
             this.networks = Objects.requireNonNull(networks);
             return this;
         }
-
+        public Builder networks(ResponsePolicyNetworkResponse... networks) {
+            return networks(List.of(networks));
+        }
         public Builder responsePolicyName(String responsePolicyName) {
             this.responsePolicyName = Objects.requireNonNull(responsePolicyName);
             return this;
-        }
-        public GetResponsePolicyResult build() {
+        }        public GetResponsePolicyResult build() {
             return new GetResponsePolicyResult(description, kind, networks, responsePolicyName);
         }
     }

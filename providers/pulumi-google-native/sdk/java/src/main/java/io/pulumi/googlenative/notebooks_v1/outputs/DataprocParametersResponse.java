@@ -51,8 +51,7 @@ public final class DataprocParametersResponse {
         public Builder cluster(String cluster) {
             this.cluster = Objects.requireNonNull(cluster);
             return this;
-        }
-        public DataprocParametersResponse build() {
+        }        public DataprocParametersResponse build() {
             return new DataprocParametersResponse(cluster);
         }
     }

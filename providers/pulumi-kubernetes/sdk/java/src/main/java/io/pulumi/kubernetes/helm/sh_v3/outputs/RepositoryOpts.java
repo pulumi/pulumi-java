@@ -135,32 +135,26 @@ public final class RepositoryOpts {
             this.caFile = caFile;
             return this;
         }
-
         public Builder certFile(@Nullable String certFile) {
             this.certFile = certFile;
             return this;
         }
-
         public Builder keyFile(@Nullable String keyFile) {
             this.keyFile = keyFile;
             return this;
         }
-
         public Builder password(@Nullable String password) {
             this.password = password;
             return this;
         }
-
         public Builder repo(@Nullable String repo) {
             this.repo = repo;
             return this;
         }
-
         public Builder username(@Nullable String username) {
             this.username = username;
             return this;
-        }
-        public RepositoryOpts build() {
+        }        public RepositoryOpts build() {
             return new RepositoryOpts(caFile, certFile, keyFile, password, repo, username);
         }
     }

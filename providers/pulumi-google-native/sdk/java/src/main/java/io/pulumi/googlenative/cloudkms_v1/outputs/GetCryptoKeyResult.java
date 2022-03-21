@@ -217,57 +217,46 @@ public final class GetCryptoKeyResult {
             this.createTime = Objects.requireNonNull(createTime);
             return this;
         }
-
         public Builder cryptoKeyBackend(String cryptoKeyBackend) {
             this.cryptoKeyBackend = Objects.requireNonNull(cryptoKeyBackend);
             return this;
         }
-
         public Builder destroyScheduledDuration(String destroyScheduledDuration) {
             this.destroyScheduledDuration = Objects.requireNonNull(destroyScheduledDuration);
             return this;
         }
-
         public Builder importOnly(Boolean importOnly) {
             this.importOnly = Objects.requireNonNull(importOnly);
             return this;
         }
-
         public Builder labels(Map<String,String> labels) {
             this.labels = Objects.requireNonNull(labels);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder nextRotationTime(String nextRotationTime) {
             this.nextRotationTime = Objects.requireNonNull(nextRotationTime);
             return this;
         }
-
         public Builder primary(CryptoKeyVersionResponse primary) {
             this.primary = Objects.requireNonNull(primary);
             return this;
         }
-
         public Builder purpose(String purpose) {
             this.purpose = Objects.requireNonNull(purpose);
             return this;
         }
-
         public Builder rotationPeriod(String rotationPeriod) {
             this.rotationPeriod = Objects.requireNonNull(rotationPeriod);
             return this;
         }
-
         public Builder versionTemplate(CryptoKeyVersionTemplateResponse versionTemplate) {
             this.versionTemplate = Objects.requireNonNull(versionTemplate);
             return this;
-        }
-        public GetCryptoKeyResult build() {
+        }        public GetCryptoKeyResult build() {
             return new GetCryptoKeyResult(createTime, cryptoKeyBackend, destroyScheduledDuration, importOnly, labels, name, nextRotationTime, primary, purpose, rotationPeriod, versionTemplate);
         }
     }

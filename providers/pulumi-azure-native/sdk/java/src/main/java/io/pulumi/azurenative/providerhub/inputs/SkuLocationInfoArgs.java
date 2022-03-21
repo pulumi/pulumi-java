@@ -104,52 +104,51 @@ public final class SkuLocationInfoArgs extends io.pulumi.resources.ResourceArgs 
             this.extendedLocations = extendedLocations;
             return this;
         }
-
         public Builder extendedLocations(@Nullable List<String> extendedLocations) {
             this.extendedLocations = Output.ofNullable(extendedLocations);
             return this;
         }
-
+        public Builder extendedLocations(String... extendedLocations) {
+            return extendedLocations(List.of(extendedLocations));
+        }
         public Builder location(Output<String> location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
-
         public Builder location(String location) {
             this.location = Output.of(Objects.requireNonNull(location));
             return this;
         }
-
         public Builder type(@Nullable Output<String> type) {
             this.type = type;
             return this;
         }
-
         public Builder type(@Nullable String type) {
             this.type = Output.ofNullable(type);
             return this;
         }
-
         public Builder zoneDetails(@Nullable Output<List<SkuZoneDetailArgs>> zoneDetails) {
             this.zoneDetails = zoneDetails;
             return this;
         }
-
         public Builder zoneDetails(@Nullable List<SkuZoneDetailArgs> zoneDetails) {
             this.zoneDetails = Output.ofNullable(zoneDetails);
             return this;
         }
-
+        public Builder zoneDetails(SkuZoneDetailArgs... zoneDetails) {
+            return zoneDetails(List.of(zoneDetails));
+        }
         public Builder zones(@Nullable Output<List<String>> zones) {
             this.zones = zones;
             return this;
         }
-
         public Builder zones(@Nullable List<String> zones) {
             this.zones = Output.ofNullable(zones);
             return this;
         }
-        public SkuLocationInfoArgs build() {
+        public Builder zones(String... zones) {
+            return zones(List.of(zones));
+        }        public SkuLocationInfoArgs build() {
             return new SkuLocationInfoArgs(extendedLocations, location, type, zoneDetails, zones);
         }
     }

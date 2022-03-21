@@ -76,22 +76,18 @@ public final class BackendBucketCdnPolicyNegativeCachingPolicyGetArgs extends io
             this.code = code;
             return this;
         }
-
         public Builder code(@Nullable Integer code) {
             this.code = Output.ofNullable(code);
             return this;
         }
-
         public Builder ttl(@Nullable Output<Integer> ttl) {
             this.ttl = ttl;
             return this;
         }
-
         public Builder ttl(@Nullable Integer ttl) {
             this.ttl = Output.ofNullable(ttl);
             return this;
-        }
-        public BackendBucketCdnPolicyNegativeCachingPolicyGetArgs build() {
+        }        public BackendBucketCdnPolicyNegativeCachingPolicyGetArgs build() {
             return new BackendBucketCdnPolicyNegativeCachingPolicyGetArgs(code, ttl);
         }
     }

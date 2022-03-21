@@ -284,77 +284,68 @@ public final class GetPrivateStoreCollectionOfferResult {
             this.createdAt = Objects.requireNonNull(createdAt);
             return this;
         }
-
         public Builder eTag(@Nullable String eTag) {
             this.eTag = eTag;
             return this;
         }
-
         public Builder iconFileUris(@Nullable Map<String,String> iconFileUris) {
             this.iconFileUris = iconFileUris;
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder modifiedAt(String modifiedAt) {
             this.modifiedAt = Objects.requireNonNull(modifiedAt);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder offerDisplayName(String offerDisplayName) {
             this.offerDisplayName = Objects.requireNonNull(offerDisplayName);
             return this;
         }
-
         public Builder plans(@Nullable List<PlanResponse> plans) {
             this.plans = plans;
             return this;
         }
-
+        public Builder plans(PlanResponse... plans) {
+            return plans(List.of(plans));
+        }
         public Builder privateStoreId(String privateStoreId) {
             this.privateStoreId = Objects.requireNonNull(privateStoreId);
             return this;
         }
-
         public Builder publisherDisplayName(String publisherDisplayName) {
             this.publisherDisplayName = Objects.requireNonNull(publisherDisplayName);
             return this;
         }
-
         public Builder specificPlanIdsLimitation(@Nullable List<String> specificPlanIdsLimitation) {
             this.specificPlanIdsLimitation = specificPlanIdsLimitation;
             return this;
         }
-
+        public Builder specificPlanIdsLimitation(String... specificPlanIdsLimitation) {
+            return specificPlanIdsLimitation(List.of(specificPlanIdsLimitation));
+        }
         public Builder systemData(SystemDataResponse systemData) {
             this.systemData = Objects.requireNonNull(systemData);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder uniqueOfferId(String uniqueOfferId) {
             this.uniqueOfferId = Objects.requireNonNull(uniqueOfferId);
             return this;
         }
-
         public Builder updateSuppressedDueIdempotence(@Nullable Boolean updateSuppressedDueIdempotence) {
             this.updateSuppressedDueIdempotence = updateSuppressedDueIdempotence;
             return this;
-        }
-        public GetPrivateStoreCollectionOfferResult build() {
+        }        public GetPrivateStoreCollectionOfferResult build() {
             return new GetPrivateStoreCollectionOfferResult(createdAt, eTag, iconFileUris, id, modifiedAt, name, offerDisplayName, plans, privateStoreId, publisherDisplayName, specificPlanIdsLimitation, systemData, type, uniqueOfferId, updateSuppressedDueIdempotence);
         }
     }

@@ -86,17 +86,20 @@ public final class ApplicationInfoResponse {
             this.emails = Objects.requireNonNull(emails);
             return this;
         }
-
+        public Builder emails(String... emails) {
+            return emails(List.of(emails));
+        }
         public Builder instruction(String instruction) {
             this.instruction = Objects.requireNonNull(instruction);
             return this;
         }
-
         public Builder uris(List<String> uris) {
             this.uris = Objects.requireNonNull(uris);
             return this;
         }
-        public ApplicationInfoResponse build() {
+        public Builder uris(String... uris) {
+            return uris(List.of(uris));
+        }        public ApplicationInfoResponse build() {
             return new ApplicationInfoResponse(emails, instruction, uris);
         }
     }

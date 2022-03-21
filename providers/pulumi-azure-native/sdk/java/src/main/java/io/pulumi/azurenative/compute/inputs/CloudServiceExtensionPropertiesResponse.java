@@ -209,52 +209,45 @@ public final class CloudServiceExtensionPropertiesResponse extends io.pulumi.res
             this.autoUpgradeMinorVersion = autoUpgradeMinorVersion;
             return this;
         }
-
         public Builder forceUpdateTag(@Nullable String forceUpdateTag) {
             this.forceUpdateTag = forceUpdateTag;
             return this;
         }
-
         public Builder protectedSettings(@Nullable String protectedSettings) {
             this.protectedSettings = protectedSettings;
             return this;
         }
-
         public Builder protectedSettingsFromKeyVault(@Nullable CloudServiceVaultAndSecretReferenceResponse protectedSettingsFromKeyVault) {
             this.protectedSettingsFromKeyVault = protectedSettingsFromKeyVault;
             return this;
         }
-
         public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
-
         public Builder publisher(@Nullable String publisher) {
             this.publisher = publisher;
             return this;
         }
-
         public Builder rolesAppliedTo(@Nullable List<String> rolesAppliedTo) {
             this.rolesAppliedTo = rolesAppliedTo;
             return this;
         }
-
+        public Builder rolesAppliedTo(String... rolesAppliedTo) {
+            return rolesAppliedTo(List.of(rolesAppliedTo));
+        }
         public Builder settings(@Nullable String settings) {
             this.settings = settings;
             return this;
         }
-
         public Builder type(@Nullable String type) {
             this.type = type;
             return this;
         }
-
         public Builder typeHandlerVersion(@Nullable String typeHandlerVersion) {
             this.typeHandlerVersion = typeHandlerVersion;
             return this;
-        }
-        public CloudServiceExtensionPropertiesResponse build() {
+        }        public CloudServiceExtensionPropertiesResponse build() {
             return new CloudServiceExtensionPropertiesResponse(autoUpgradeMinorVersion, forceUpdateTag, protectedSettings, protectedSettingsFromKeyVault, provisioningState, publisher, rolesAppliedTo, settings, type, typeHandlerVersion);
         }
     }

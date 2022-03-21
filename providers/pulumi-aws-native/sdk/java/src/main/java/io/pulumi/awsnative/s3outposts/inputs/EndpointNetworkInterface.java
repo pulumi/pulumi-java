@@ -54,8 +54,7 @@ public final class EndpointNetworkInterface extends io.pulumi.resources.InvokeAr
         public Builder networkInterfaceId(String networkInterfaceId) {
             this.networkInterfaceId = Objects.requireNonNull(networkInterfaceId);
             return this;
-        }
-        public EndpointNetworkInterface build() {
+        }        public EndpointNetworkInterface build() {
             return new EndpointNetworkInterface(networkInterfaceId);
         }
     }

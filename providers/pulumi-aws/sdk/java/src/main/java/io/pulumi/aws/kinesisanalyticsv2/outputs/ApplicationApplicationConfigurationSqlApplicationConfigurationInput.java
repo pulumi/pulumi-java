@@ -176,47 +176,44 @@ public final class ApplicationApplicationConfigurationSqlApplicationConfiguratio
             this.inAppStreamNames = inAppStreamNames;
             return this;
         }
-
+        public Builder inAppStreamNames(String... inAppStreamNames) {
+            return inAppStreamNames(List.of(inAppStreamNames));
+        }
         public Builder inputId(@Nullable String inputId) {
             this.inputId = inputId;
             return this;
         }
-
         public Builder inputParallelism(@Nullable ApplicationApplicationConfigurationSqlApplicationConfigurationInputInputParallelism inputParallelism) {
             this.inputParallelism = inputParallelism;
             return this;
         }
-
         public Builder inputProcessingConfiguration(@Nullable ApplicationApplicationConfigurationSqlApplicationConfigurationInputInputProcessingConfiguration inputProcessingConfiguration) {
             this.inputProcessingConfiguration = inputProcessingConfiguration;
             return this;
         }
-
         public Builder inputSchema(ApplicationApplicationConfigurationSqlApplicationConfigurationInputInputSchema inputSchema) {
             this.inputSchema = Objects.requireNonNull(inputSchema);
             return this;
         }
-
         public Builder inputStartingPositionConfigurations(@Nullable List<ApplicationApplicationConfigurationSqlApplicationConfigurationInputInputStartingPositionConfiguration> inputStartingPositionConfigurations) {
             this.inputStartingPositionConfigurations = inputStartingPositionConfigurations;
             return this;
         }
-
+        public Builder inputStartingPositionConfigurations(ApplicationApplicationConfigurationSqlApplicationConfigurationInputInputStartingPositionConfiguration... inputStartingPositionConfigurations) {
+            return inputStartingPositionConfigurations(List.of(inputStartingPositionConfigurations));
+        }
         public Builder kinesisFirehoseInput(@Nullable ApplicationApplicationConfigurationSqlApplicationConfigurationInputKinesisFirehoseInput kinesisFirehoseInput) {
             this.kinesisFirehoseInput = kinesisFirehoseInput;
             return this;
         }
-
         public Builder kinesisStreamsInput(@Nullable ApplicationApplicationConfigurationSqlApplicationConfigurationInputKinesisStreamsInput kinesisStreamsInput) {
             this.kinesisStreamsInput = kinesisStreamsInput;
             return this;
         }
-
         public Builder namePrefix(String namePrefix) {
             this.namePrefix = Objects.requireNonNull(namePrefix);
             return this;
-        }
-        public ApplicationApplicationConfigurationSqlApplicationConfigurationInput build() {
+        }        public ApplicationApplicationConfigurationSqlApplicationConfigurationInput build() {
             return new ApplicationApplicationConfigurationSqlApplicationConfigurationInput(inAppStreamNames, inputId, inputParallelism, inputProcessingConfiguration, inputSchema, inputStartingPositionConfigurations, kinesisFirehoseInput, kinesisStreamsInput, namePrefix);
         }
     }

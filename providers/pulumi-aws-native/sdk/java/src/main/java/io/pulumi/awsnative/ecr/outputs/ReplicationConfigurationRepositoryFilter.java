@@ -54,12 +54,10 @@ public final class ReplicationConfigurationRepositoryFilter {
             this.filter = Objects.requireNonNull(filter);
             return this;
         }
-
         public Builder filterType(ReplicationConfigurationFilterType filterType) {
             this.filterType = Objects.requireNonNull(filterType);
             return this;
-        }
-        public ReplicationConfigurationRepositoryFilter build() {
+        }        public ReplicationConfigurationRepositoryFilter build() {
             return new ReplicationConfigurationRepositoryFilter(filter, filterType);
         }
     }

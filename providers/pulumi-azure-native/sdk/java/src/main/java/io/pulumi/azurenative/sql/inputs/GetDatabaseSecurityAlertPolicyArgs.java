@@ -104,22 +104,18 @@ public final class GetDatabaseSecurityAlertPolicyArgs extends io.pulumi.resource
             this.databaseName = Objects.requireNonNull(databaseName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder securityAlertPolicyName(String securityAlertPolicyName) {
             this.securityAlertPolicyName = Objects.requireNonNull(securityAlertPolicyName);
             return this;
         }
-
         public Builder serverName(String serverName) {
             this.serverName = Objects.requireNonNull(serverName);
             return this;
-        }
-        public GetDatabaseSecurityAlertPolicyArgs build() {
+        }        public GetDatabaseSecurityAlertPolicyArgs build() {
             return new GetDatabaseSecurityAlertPolicyArgs(databaseName, resourceGroupName, securityAlertPolicyName, serverName);
         }
     }

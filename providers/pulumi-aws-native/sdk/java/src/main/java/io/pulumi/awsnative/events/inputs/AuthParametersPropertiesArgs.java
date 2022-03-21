@@ -93,42 +93,34 @@ public final class AuthParametersPropertiesArgs extends io.pulumi.resources.Reso
             this.apiKeyAuthParameters = apiKeyAuthParameters;
             return this;
         }
-
         public Builder apiKeyAuthParameters(@Nullable ConnectionApiKeyAuthParametersArgs apiKeyAuthParameters) {
             this.apiKeyAuthParameters = Output.ofNullable(apiKeyAuthParameters);
             return this;
         }
-
         public Builder basicAuthParameters(@Nullable Output<ConnectionBasicAuthParametersArgs> basicAuthParameters) {
             this.basicAuthParameters = basicAuthParameters;
             return this;
         }
-
         public Builder basicAuthParameters(@Nullable ConnectionBasicAuthParametersArgs basicAuthParameters) {
             this.basicAuthParameters = Output.ofNullable(basicAuthParameters);
             return this;
         }
-
         public Builder invocationHttpParameters(@Nullable Output<ConnectionHttpParametersArgs> invocationHttpParameters) {
             this.invocationHttpParameters = invocationHttpParameters;
             return this;
         }
-
         public Builder invocationHttpParameters(@Nullable ConnectionHttpParametersArgs invocationHttpParameters) {
             this.invocationHttpParameters = Output.ofNullable(invocationHttpParameters);
             return this;
         }
-
         public Builder oAuthParameters(@Nullable Output<ConnectionOAuthParametersArgs> oAuthParameters) {
             this.oAuthParameters = oAuthParameters;
             return this;
         }
-
         public Builder oAuthParameters(@Nullable ConnectionOAuthParametersArgs oAuthParameters) {
             this.oAuthParameters = Output.ofNullable(oAuthParameters);
             return this;
-        }
-        public AuthParametersPropertiesArgs build() {
+        }        public AuthParametersPropertiesArgs build() {
             return new AuthParametersPropertiesArgs(apiKeyAuthParameters, basicAuthParameters, invocationHttpParameters, oAuthParameters);
         }
     }

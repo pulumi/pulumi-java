@@ -90,17 +90,14 @@ public final class InferenceContainerPropertiesResponse extends io.pulumi.resour
             this.livenessRoute = livenessRoute;
             return this;
         }
-
         public Builder readinessRoute(@Nullable RouteResponse readinessRoute) {
             this.readinessRoute = readinessRoute;
             return this;
         }
-
         public Builder scoringRoute(@Nullable RouteResponse scoringRoute) {
             this.scoringRoute = scoringRoute;
             return this;
-        }
-        public InferenceContainerPropertiesResponse build() {
+        }        public InferenceContainerPropertiesResponse build() {
             return new InferenceContainerPropertiesResponse(livenessRoute, readinessRoute, scoringRoute);
         }
     }

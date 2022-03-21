@@ -87,17 +87,14 @@ public final class CurrentJobDetailsResponse {
             this.jobId = jobId;
             return this;
         }
-
         public Builder jobName(@Nullable String jobName) {
             this.jobName = jobName;
             return this;
         }
-
         public Builder startTime(@Nullable String startTime) {
             this.startTime = startTime;
             return this;
-        }
-        public CurrentJobDetailsResponse build() {
+        }        public CurrentJobDetailsResponse build() {
             return new CurrentJobDetailsResponse(jobId, jobName, startTime);
         }
     }

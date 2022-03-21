@@ -53,12 +53,10 @@ public final class DataSourceS3Path {
             this.bucket = Objects.requireNonNull(bucket);
             return this;
         }
-
         public Builder key(String key) {
             this.key = Objects.requireNonNull(key);
             return this;
-        }
-        public DataSourceS3Path build() {
+        }        public DataSourceS3Path build() {
             return new DataSourceS3Path(bucket, key);
         }
     }

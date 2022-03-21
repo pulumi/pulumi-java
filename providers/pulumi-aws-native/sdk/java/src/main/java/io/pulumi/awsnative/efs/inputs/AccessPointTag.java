@@ -66,12 +66,10 @@ public final class AccessPointTag extends io.pulumi.resources.InvokeArgs {
             this.key = key;
             return this;
         }
-
         public Builder value(@Nullable String value) {
             this.value = value;
             return this;
-        }
-        public AccessPointTag build() {
+        }        public AccessPointTag build() {
             return new AccessPointTag(key, value);
         }
     }

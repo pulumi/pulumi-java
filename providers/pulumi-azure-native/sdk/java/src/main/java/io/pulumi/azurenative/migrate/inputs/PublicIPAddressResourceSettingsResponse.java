@@ -159,37 +159,30 @@ public final class PublicIPAddressResourceSettingsResponse extends io.pulumi.res
             this.domainNameLabel = domainNameLabel;
             return this;
         }
-
         public Builder fqdn(@Nullable String fqdn) {
             this.fqdn = fqdn;
             return this;
         }
-
         public Builder publicIpAllocationMethod(@Nullable String publicIpAllocationMethod) {
             this.publicIpAllocationMethod = publicIpAllocationMethod;
             return this;
         }
-
         public Builder resourceType(String resourceType) {
             this.resourceType = Objects.requireNonNull(resourceType);
             return this;
         }
-
         public Builder sku(@Nullable String sku) {
             this.sku = sku;
             return this;
         }
-
         public Builder targetResourceName(String targetResourceName) {
             this.targetResourceName = Objects.requireNonNull(targetResourceName);
             return this;
         }
-
         public Builder zones(@Nullable String zones) {
             this.zones = zones;
             return this;
-        }
-        public PublicIPAddressResourceSettingsResponse build() {
+        }        public PublicIPAddressResourceSettingsResponse build() {
             return new PublicIPAddressResourceSettingsResponse(domainNameLabel, fqdn, publicIpAllocationMethod, resourceType, sku, targetResourceName, zones);
         }
     }

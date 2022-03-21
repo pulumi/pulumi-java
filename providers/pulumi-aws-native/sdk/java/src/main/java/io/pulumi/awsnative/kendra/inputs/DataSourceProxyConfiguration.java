@@ -79,17 +79,14 @@ public final class DataSourceProxyConfiguration extends io.pulumi.resources.Invo
             this.credentials = credentials;
             return this;
         }
-
         public Builder host(String host) {
             this.host = Objects.requireNonNull(host);
             return this;
         }
-
         public Builder port(Integer port) {
             this.port = Objects.requireNonNull(port);
             return this;
-        }
-        public DataSourceProxyConfiguration build() {
+        }        public DataSourceProxyConfiguration build() {
             return new DataSourceProxyConfiguration(credentials, host, port);
         }
     }

@@ -143,32 +143,29 @@ public final class DistributionOriginCustomOriginConfig {
             this.httpPort = Objects.requireNonNull(httpPort);
             return this;
         }
-
         public Builder httpsPort(Integer httpsPort) {
             this.httpsPort = Objects.requireNonNull(httpsPort);
             return this;
         }
-
         public Builder originKeepaliveTimeout(@Nullable Integer originKeepaliveTimeout) {
             this.originKeepaliveTimeout = originKeepaliveTimeout;
             return this;
         }
-
         public Builder originProtocolPolicy(String originProtocolPolicy) {
             this.originProtocolPolicy = Objects.requireNonNull(originProtocolPolicy);
             return this;
         }
-
         public Builder originReadTimeout(@Nullable Integer originReadTimeout) {
             this.originReadTimeout = originReadTimeout;
             return this;
         }
-
         public Builder originSslProtocols(List<String> originSslProtocols) {
             this.originSslProtocols = Objects.requireNonNull(originSslProtocols);
             return this;
         }
-        public DistributionOriginCustomOriginConfig build() {
+        public Builder originSslProtocols(String... originSslProtocols) {
+            return originSslProtocols(List.of(originSslProtocols));
+        }        public DistributionOriginCustomOriginConfig build() {
             return new DistributionOriginCustomOriginConfig(httpPort, httpsPort, originKeepaliveTimeout, originProtocolPolicy, originReadTimeout, originSslProtocols);
         }
     }

@@ -79,32 +79,26 @@ public final class DeliveryStreamOpenXJsonSerDeArgs extends io.pulumi.resources.
             this.caseInsensitive = caseInsensitive;
             return this;
         }
-
         public Builder caseInsensitive(@Nullable Boolean caseInsensitive) {
             this.caseInsensitive = Output.ofNullable(caseInsensitive);
             return this;
         }
-
         public Builder columnToJsonKeyMappings(@Nullable Output<Object> columnToJsonKeyMappings) {
             this.columnToJsonKeyMappings = columnToJsonKeyMappings;
             return this;
         }
-
         public Builder columnToJsonKeyMappings(@Nullable Object columnToJsonKeyMappings) {
             this.columnToJsonKeyMappings = Output.ofNullable(columnToJsonKeyMappings);
             return this;
         }
-
         public Builder convertDotsInJsonKeysToUnderscores(@Nullable Output<Boolean> convertDotsInJsonKeysToUnderscores) {
             this.convertDotsInJsonKeysToUnderscores = convertDotsInJsonKeysToUnderscores;
             return this;
         }
-
         public Builder convertDotsInJsonKeysToUnderscores(@Nullable Boolean convertDotsInJsonKeysToUnderscores) {
             this.convertDotsInJsonKeysToUnderscores = Output.ofNullable(convertDotsInJsonKeysToUnderscores);
             return this;
-        }
-        public DeliveryStreamOpenXJsonSerDeArgs build() {
+        }        public DeliveryStreamOpenXJsonSerDeArgs build() {
             return new DeliveryStreamOpenXJsonSerDeArgs(caseInsensitive, columnToJsonKeyMappings, convertDotsInJsonKeysToUnderscores);
         }
     }

@@ -107,42 +107,34 @@ public final class PrivateEndpointArgs extends io.pulumi.resources.ResourceArgs 
             this.clusterName = Objects.requireNonNull(clusterName);
             return this;
         }
-
         public Builder clusterName(String clusterName) {
             this.clusterName = Output.of(Objects.requireNonNull(clusterName));
             return this;
         }
-
         public Builder privateEndpointName(@Nullable Output<String> privateEndpointName) {
             this.privateEndpointName = privateEndpointName;
             return this;
         }
-
         public Builder privateEndpointName(@Nullable String privateEndpointName) {
             this.privateEndpointName = Output.ofNullable(privateEndpointName);
             return this;
         }
-
         public Builder properties(@Nullable Output<PrivateEndpointPropertiesArgs> properties) {
             this.properties = properties;
             return this;
         }
-
         public Builder properties(@Nullable PrivateEndpointPropertiesArgs properties) {
             this.properties = Output.ofNullable(properties);
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
-        }
-        public PrivateEndpointArgs build() {
+        }        public PrivateEndpointArgs build() {
             return new PrivateEndpointArgs(clusterName, privateEndpointName, properties, resourceGroupName);
         }
     }

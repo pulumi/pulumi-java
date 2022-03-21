@@ -124,42 +124,37 @@ public final class EndpointsArgs extends io.pulumi.resources.ResourceArgs {
             this.apiVersion = apiVersion;
             return this;
         }
-
         public Builder apiVersion(@Nullable String apiVersion) {
             this.apiVersion = Output.ofNullable(apiVersion);
             return this;
         }
-
         public Builder kind(@Nullable Output<String> kind) {
             this.kind = kind;
             return this;
         }
-
         public Builder kind(@Nullable String kind) {
             this.kind = Output.ofNullable(kind);
             return this;
         }
-
         public Builder metadata(@Nullable Output<ObjectMetaArgs> metadata) {
             this.metadata = metadata;
             return this;
         }
-
         public Builder metadata(@Nullable ObjectMetaArgs metadata) {
             this.metadata = Output.ofNullable(metadata);
             return this;
         }
-
         public Builder subsets(@Nullable Output<List<EndpointSubsetArgs>> subsets) {
             this.subsets = subsets;
             return this;
         }
-
         public Builder subsets(@Nullable List<EndpointSubsetArgs> subsets) {
             this.subsets = Output.ofNullable(subsets);
             return this;
         }
-        public EndpointsArgs build() {
+        public Builder subsets(EndpointSubsetArgs... subsets) {
+            return subsets(List.of(subsets));
+        }        public EndpointsArgs build() {
             return new EndpointsArgs(apiVersion, kind, metadata, subsets);
         }
     }

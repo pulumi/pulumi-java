@@ -74,22 +74,18 @@ public final class EndpointConfigurationAsyncInferenceConfigOutputConfigNotifica
             this.errorTopic = errorTopic;
             return this;
         }
-
         public Builder errorTopic(@Nullable String errorTopic) {
             this.errorTopic = Output.ofNullable(errorTopic);
             return this;
         }
-
         public Builder successTopic(@Nullable Output<String> successTopic) {
             this.successTopic = successTopic;
             return this;
         }
-
         public Builder successTopic(@Nullable String successTopic) {
             this.successTopic = Output.ofNullable(successTopic);
             return this;
-        }
-        public EndpointConfigurationAsyncInferenceConfigOutputConfigNotificationConfigGetArgs build() {
+        }        public EndpointConfigurationAsyncInferenceConfigOutputConfigNotificationConfigGetArgs build() {
             return new EndpointConfigurationAsyncInferenceConfigOutputConfigNotificationConfigGetArgs(errorTopic, successTopic);
         }
     }

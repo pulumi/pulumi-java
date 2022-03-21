@@ -103,22 +103,18 @@ public final class TaskContainerSettingsResponse extends io.pulumi.resources.Inv
             this.containerRunOptions = containerRunOptions;
             return this;
         }
-
         public Builder imageName(String imageName) {
             this.imageName = Objects.requireNonNull(imageName);
             return this;
         }
-
         public Builder registry(@Nullable ContainerRegistryResponse registry) {
             this.registry = registry;
             return this;
         }
-
         public Builder workingDirectory(@Nullable String workingDirectory) {
             this.workingDirectory = workingDirectory;
             return this;
-        }
-        public TaskContainerSettingsResponse build() {
+        }        public TaskContainerSettingsResponse build() {
             return new TaskContainerSettingsResponse(containerRunOptions, imageName, registry, workingDirectory);
         }
     }

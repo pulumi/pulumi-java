@@ -111,22 +111,30 @@ public final class DistributionConfigurationDistributionAmiDistributionConfigura
             this.organizationArns = organizationArns;
             return this;
         }
-
+        public Builder organizationArns(String... organizationArns) {
+            return organizationArns(List.of(organizationArns));
+        }
         public Builder organizationalUnitArns(@Nullable List<String> organizationalUnitArns) {
             this.organizationalUnitArns = organizationalUnitArns;
             return this;
         }
-
+        public Builder organizationalUnitArns(String... organizationalUnitArns) {
+            return organizationalUnitArns(List.of(organizationalUnitArns));
+        }
         public Builder userGroups(@Nullable List<String> userGroups) {
             this.userGroups = userGroups;
             return this;
         }
-
+        public Builder userGroups(String... userGroups) {
+            return userGroups(List.of(userGroups));
+        }
         public Builder userIds(@Nullable List<String> userIds) {
             this.userIds = userIds;
             return this;
         }
-        public DistributionConfigurationDistributionAmiDistributionConfigurationPropertiesLaunchPermissionConfigurationProperties build() {
+        public Builder userIds(String... userIds) {
+            return userIds(List.of(userIds));
+        }        public DistributionConfigurationDistributionAmiDistributionConfigurationPropertiesLaunchPermissionConfigurationProperties build() {
             return new DistributionConfigurationDistributionAmiDistributionConfigurationPropertiesLaunchPermissionConfigurationProperties(organizationArns, organizationalUnitArns, userGroups, userIds);
         }
     }

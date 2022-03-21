@@ -102,22 +102,21 @@ public final class ManagedIntegrationRuntimeErrorResponse {
             this.code = Objects.requireNonNull(code);
             return this;
         }
-
         public Builder message(String message) {
             this.message = Objects.requireNonNull(message);
             return this;
         }
-
         public Builder parameters(List<String> parameters) {
             this.parameters = Objects.requireNonNull(parameters);
             return this;
         }
-
+        public Builder parameters(String... parameters) {
+            return parameters(List.of(parameters));
+        }
         public Builder time(String time) {
             this.time = Objects.requireNonNull(time);
             return this;
-        }
-        public ManagedIntegrationRuntimeErrorResponse build() {
+        }        public ManagedIntegrationRuntimeErrorResponse build() {
             return new ManagedIntegrationRuntimeErrorResponse(code, message, parameters, time);
         }
     }

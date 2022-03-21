@@ -122,27 +122,22 @@ public final class LaunchTemplateInstanceMarketOptionsSpotOptions {
             this.blockDurationMinutes = blockDurationMinutes;
             return this;
         }
-
         public Builder instanceInterruptionBehavior(@Nullable String instanceInterruptionBehavior) {
             this.instanceInterruptionBehavior = instanceInterruptionBehavior;
             return this;
         }
-
         public Builder maxPrice(@Nullable String maxPrice) {
             this.maxPrice = maxPrice;
             return this;
         }
-
         public Builder spotInstanceType(@Nullable String spotInstanceType) {
             this.spotInstanceType = spotInstanceType;
             return this;
         }
-
         public Builder validUntil(@Nullable String validUntil) {
             this.validUntil = validUntil;
             return this;
-        }
-        public LaunchTemplateInstanceMarketOptionsSpotOptions build() {
+        }        public LaunchTemplateInstanceMarketOptionsSpotOptions build() {
             return new LaunchTemplateInstanceMarketOptionsSpotOptions(blockDurationMinutes, instanceInterruptionBehavior, maxPrice, spotInstanceType, validUntil);
         }
     }

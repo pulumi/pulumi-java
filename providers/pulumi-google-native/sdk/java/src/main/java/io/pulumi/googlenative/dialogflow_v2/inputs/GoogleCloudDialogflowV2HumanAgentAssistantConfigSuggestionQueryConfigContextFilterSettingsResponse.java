@@ -92,17 +92,14 @@ public final class GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionQue
             this.dropHandoffMessages = Objects.requireNonNull(dropHandoffMessages);
             return this;
         }
-
         public Builder dropIvrMessages(Boolean dropIvrMessages) {
             this.dropIvrMessages = Objects.requireNonNull(dropIvrMessages);
             return this;
         }
-
         public Builder dropVirtualAgentMessages(Boolean dropVirtualAgentMessages) {
             this.dropVirtualAgentMessages = Objects.requireNonNull(dropVirtualAgentMessages);
             return this;
-        }
-        public GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionQueryConfigContextFilterSettingsResponse build() {
+        }        public GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionQueryConfigContextFilterSettingsResponse build() {
             return new GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionQueryConfigContextFilterSettingsResponse(dropHandoffMessages, dropIvrMessages, dropVirtualAgentMessages);
         }
     }

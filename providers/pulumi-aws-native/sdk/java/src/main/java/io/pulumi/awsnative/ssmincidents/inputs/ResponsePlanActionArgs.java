@@ -57,12 +57,10 @@ public final class ResponsePlanActionArgs extends io.pulumi.resources.ResourceAr
             this.ssmAutomation = ssmAutomation;
             return this;
         }
-
         public Builder ssmAutomation(@Nullable ResponsePlanSsmAutomationArgs ssmAutomation) {
             this.ssmAutomation = Output.ofNullable(ssmAutomation);
             return this;
-        }
-        public ResponsePlanActionArgs build() {
+        }        public ResponsePlanActionArgs build() {
             return new ResponsePlanActionArgs(ssmAutomation);
         }
     }

@@ -89,17 +89,17 @@ public final class GetPlaybackKeyPairResult {
             this.arn = arn;
             return this;
         }
-
         public Builder fingerprint(@Nullable String fingerprint) {
             this.fingerprint = fingerprint;
             return this;
         }
-
         public Builder tags(@Nullable List<PlaybackKeyPairTag> tags) {
             this.tags = tags;
             return this;
         }
-        public GetPlaybackKeyPairResult build() {
+        public Builder tags(PlaybackKeyPairTag... tags) {
+            return tags(List.of(tags));
+        }        public GetPlaybackKeyPairResult build() {
             return new GetPlaybackKeyPairResult(arn, fingerprint, tags);
         }
     }

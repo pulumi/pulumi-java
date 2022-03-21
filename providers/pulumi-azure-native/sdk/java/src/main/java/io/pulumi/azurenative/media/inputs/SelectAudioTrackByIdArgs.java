@@ -98,32 +98,26 @@ public final class SelectAudioTrackByIdArgs extends io.pulumi.resources.Resource
             this.channelMapping = channelMapping;
             return this;
         }
-
         public Builder channelMapping(@Nullable Either<String,ChannelMapping> channelMapping) {
             this.channelMapping = Output.ofNullable(channelMapping);
             return this;
         }
-
         public Builder odataType(Output<String> odataType) {
             this.odataType = Objects.requireNonNull(odataType);
             return this;
         }
-
         public Builder odataType(String odataType) {
             this.odataType = Output.of(Objects.requireNonNull(odataType));
             return this;
         }
-
         public Builder trackId(Output<Double> trackId) {
             this.trackId = Objects.requireNonNull(trackId);
             return this;
         }
-
         public Builder trackId(Double trackId) {
             this.trackId = Output.of(Objects.requireNonNull(trackId));
             return this;
-        }
-        public SelectAudioTrackByIdArgs build() {
+        }        public SelectAudioTrackByIdArgs build() {
             return new SelectAudioTrackByIdArgs(channelMapping, odataType, trackId);
         }
     }

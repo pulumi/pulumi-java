@@ -140,62 +140,53 @@ public final class ClassifierCsvClassifierArgs extends io.pulumi.resources.Resou
             this.allowSingleColumn = allowSingleColumn;
             return this;
         }
-
         public Builder allowSingleColumn(@Nullable Boolean allowSingleColumn) {
             this.allowSingleColumn = Output.ofNullable(allowSingleColumn);
             return this;
         }
-
         public Builder containsHeader(@Nullable Output<String> containsHeader) {
             this.containsHeader = containsHeader;
             return this;
         }
-
         public Builder containsHeader(@Nullable String containsHeader) {
             this.containsHeader = Output.ofNullable(containsHeader);
             return this;
         }
-
         public Builder delimiter(@Nullable Output<String> delimiter) {
             this.delimiter = delimiter;
             return this;
         }
-
         public Builder delimiter(@Nullable String delimiter) {
             this.delimiter = Output.ofNullable(delimiter);
             return this;
         }
-
         public Builder disableValueTrimming(@Nullable Output<Boolean> disableValueTrimming) {
             this.disableValueTrimming = disableValueTrimming;
             return this;
         }
-
         public Builder disableValueTrimming(@Nullable Boolean disableValueTrimming) {
             this.disableValueTrimming = Output.ofNullable(disableValueTrimming);
             return this;
         }
-
         public Builder headers(@Nullable Output<List<String>> headers) {
             this.headers = headers;
             return this;
         }
-
         public Builder headers(@Nullable List<String> headers) {
             this.headers = Output.ofNullable(headers);
             return this;
         }
-
+        public Builder headers(String... headers) {
+            return headers(List.of(headers));
+        }
         public Builder quoteSymbol(@Nullable Output<String> quoteSymbol) {
             this.quoteSymbol = quoteSymbol;
             return this;
         }
-
         public Builder quoteSymbol(@Nullable String quoteSymbol) {
             this.quoteSymbol = Output.ofNullable(quoteSymbol);
             return this;
-        }
-        public ClassifierCsvClassifierArgs build() {
+        }        public ClassifierCsvClassifierArgs build() {
             return new ClassifierCsvClassifierArgs(allowSingleColumn, containsHeader, delimiter, disableValueTrimming, headers, quoteSymbol);
         }
     }

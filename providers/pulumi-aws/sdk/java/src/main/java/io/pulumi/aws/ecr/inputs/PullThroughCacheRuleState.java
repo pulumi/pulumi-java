@@ -90,32 +90,26 @@ public final class PullThroughCacheRuleState extends io.pulumi.resources.Resourc
             this.ecrRepositoryPrefix = ecrRepositoryPrefix;
             return this;
         }
-
         public Builder ecrRepositoryPrefix(@Nullable String ecrRepositoryPrefix) {
             this.ecrRepositoryPrefix = Output.ofNullable(ecrRepositoryPrefix);
             return this;
         }
-
         public Builder registryId(@Nullable Output<String> registryId) {
             this.registryId = registryId;
             return this;
         }
-
         public Builder registryId(@Nullable String registryId) {
             this.registryId = Output.ofNullable(registryId);
             return this;
         }
-
         public Builder upstreamRegistryUrl(@Nullable Output<String> upstreamRegistryUrl) {
             this.upstreamRegistryUrl = upstreamRegistryUrl;
             return this;
         }
-
         public Builder upstreamRegistryUrl(@Nullable String upstreamRegistryUrl) {
             this.upstreamRegistryUrl = Output.ofNullable(upstreamRegistryUrl);
             return this;
-        }
-        public PullThroughCacheRuleState build() {
+        }        public PullThroughCacheRuleState build() {
             return new PullThroughCacheRuleState(ecrRepositoryPrefix, registryId, upstreamRegistryUrl);
         }
     }

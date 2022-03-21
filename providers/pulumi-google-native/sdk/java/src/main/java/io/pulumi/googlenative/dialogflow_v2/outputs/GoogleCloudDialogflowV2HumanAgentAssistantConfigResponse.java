@@ -103,22 +103,18 @@ public final class GoogleCloudDialogflowV2HumanAgentAssistantConfigResponse {
             this.endUserSuggestionConfig = Objects.requireNonNull(endUserSuggestionConfig);
             return this;
         }
-
         public Builder humanAgentSuggestionConfig(GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionConfigResponse humanAgentSuggestionConfig) {
             this.humanAgentSuggestionConfig = Objects.requireNonNull(humanAgentSuggestionConfig);
             return this;
         }
-
         public Builder messageAnalysisConfig(GoogleCloudDialogflowV2HumanAgentAssistantConfigMessageAnalysisConfigResponse messageAnalysisConfig) {
             this.messageAnalysisConfig = Objects.requireNonNull(messageAnalysisConfig);
             return this;
         }
-
         public Builder notificationConfig(GoogleCloudDialogflowV2NotificationConfigResponse notificationConfig) {
             this.notificationConfig = Objects.requireNonNull(notificationConfig);
             return this;
-        }
-        public GoogleCloudDialogflowV2HumanAgentAssistantConfigResponse build() {
+        }        public GoogleCloudDialogflowV2HumanAgentAssistantConfigResponse build() {
             return new GoogleCloudDialogflowV2HumanAgentAssistantConfigResponse(endUserSuggestionConfig, humanAgentSuggestionConfig, messageAnalysisConfig, notificationConfig);
         }
     }

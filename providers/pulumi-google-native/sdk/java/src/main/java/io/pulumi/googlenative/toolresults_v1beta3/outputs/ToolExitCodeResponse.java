@@ -51,8 +51,7 @@ public final class ToolExitCodeResponse {
         public Builder number(Integer number) {
             this.number = Objects.requireNonNull(number);
             return this;
-        }
-        public ToolExitCodeResponse build() {
+        }        public ToolExitCodeResponse build() {
             return new ToolExitCodeResponse(number);
         }
     }

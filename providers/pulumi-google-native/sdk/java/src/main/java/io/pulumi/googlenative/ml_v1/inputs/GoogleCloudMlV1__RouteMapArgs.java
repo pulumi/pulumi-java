@@ -78,22 +78,18 @@ public final class GoogleCloudMlV1__RouteMapArgs extends io.pulumi.resources.Res
             this.health = health;
             return this;
         }
-
         public Builder health(@Nullable String health) {
             this.health = Output.ofNullable(health);
             return this;
         }
-
         public Builder predict(@Nullable Output<String> predict) {
             this.predict = predict;
             return this;
         }
-
         public Builder predict(@Nullable String predict) {
             this.predict = Output.ofNullable(predict);
             return this;
-        }
-        public GoogleCloudMlV1__RouteMapArgs build() {
+        }        public GoogleCloudMlV1__RouteMapArgs build() {
             return new GoogleCloudMlV1__RouteMapArgs(health, predict);
         }
     }

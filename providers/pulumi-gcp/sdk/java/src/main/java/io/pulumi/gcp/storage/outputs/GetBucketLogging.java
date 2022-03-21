@@ -53,12 +53,10 @@ public final class GetBucketLogging {
             this.logBucket = Objects.requireNonNull(logBucket);
             return this;
         }
-
         public Builder logObjectPrefix(String logObjectPrefix) {
             this.logObjectPrefix = Objects.requireNonNull(logObjectPrefix);
             return this;
-        }
-        public GetBucketLogging build() {
+        }        public GetBucketLogging build() {
             return new GetBucketLogging(logBucket, logObjectPrefix);
         }
     }

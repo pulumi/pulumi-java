@@ -63,12 +63,10 @@ public final class PropertiesLockboxArgs extends io.pulumi.resources.ResourceArg
             this.state = state;
             return this;
         }
-
         public Builder state(@Nullable Either<String,State> state) {
             this.state = Output.ofNullable(state);
             return this;
-        }
-        public PropertiesLockboxArgs build() {
+        }        public PropertiesLockboxArgs build() {
             return new PropertiesLockboxArgs(state);
         }
     }

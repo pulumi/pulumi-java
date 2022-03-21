@@ -52,8 +52,7 @@ public final class GlobalTablePointInTimeRecoverySpecification extends io.pulumi
         public Builder pointInTimeRecoveryEnabled(@Nullable Boolean pointInTimeRecoveryEnabled) {
             this.pointInTimeRecoveryEnabled = pointInTimeRecoveryEnabled;
             return this;
-        }
-        public GlobalTablePointInTimeRecoverySpecification build() {
+        }        public GlobalTablePointInTimeRecoverySpecification build() {
             return new GlobalTablePointInTimeRecoverySpecification(pointInTimeRecoveryEnabled);
         }
     }

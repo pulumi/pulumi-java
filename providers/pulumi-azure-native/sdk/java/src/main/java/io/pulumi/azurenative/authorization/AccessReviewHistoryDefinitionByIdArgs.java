@@ -209,102 +209,91 @@ public final class AccessReviewHistoryDefinitionByIdArgs extends io.pulumi.resou
             this.decisions = decisions;
             return this;
         }
-
         public Builder decisions(@Nullable List<Either<String,AccessReviewResult>> decisions) {
             this.decisions = Output.ofNullable(decisions);
             return this;
         }
-
+        public Builder decisions(Either<String,AccessReviewResult>... decisions) {
+            return decisions(List.of(decisions));
+        }
         public Builder displayName(@Nullable Output<String> displayName) {
             this.displayName = displayName;
             return this;
         }
-
         public Builder displayName(@Nullable String displayName) {
             this.displayName = Output.ofNullable(displayName);
             return this;
         }
-
         public Builder endDate(@Nullable Output<String> endDate) {
             this.endDate = endDate;
             return this;
         }
-
         public Builder endDate(@Nullable String endDate) {
             this.endDate = Output.ofNullable(endDate);
             return this;
         }
-
         public Builder historyDefinitionId(@Nullable Output<String> historyDefinitionId) {
             this.historyDefinitionId = historyDefinitionId;
             return this;
         }
-
         public Builder historyDefinitionId(@Nullable String historyDefinitionId) {
             this.historyDefinitionId = Output.ofNullable(historyDefinitionId);
             return this;
         }
-
         public Builder instances(@Nullable Output<List<AccessReviewHistoryInstanceArgs>> instances) {
             this.instances = instances;
             return this;
         }
-
         public Builder instances(@Nullable List<AccessReviewHistoryInstanceArgs> instances) {
             this.instances = Output.ofNullable(instances);
             return this;
         }
-
+        public Builder instances(AccessReviewHistoryInstanceArgs... instances) {
+            return instances(List.of(instances));
+        }
         public Builder interval(@Nullable Output<Integer> interval) {
             this.interval = interval;
             return this;
         }
-
         public Builder interval(@Nullable Integer interval) {
             this.interval = Output.ofNullable(interval);
             return this;
         }
-
         public Builder numberOfOccurrences(@Nullable Output<Integer> numberOfOccurrences) {
             this.numberOfOccurrences = numberOfOccurrences;
             return this;
         }
-
         public Builder numberOfOccurrences(@Nullable Integer numberOfOccurrences) {
             this.numberOfOccurrences = Output.ofNullable(numberOfOccurrences);
             return this;
         }
-
         public Builder scopes(@Nullable Output<List<AccessReviewScopeArgs>> scopes) {
             this.scopes = scopes;
             return this;
         }
-
         public Builder scopes(@Nullable List<AccessReviewScopeArgs> scopes) {
             this.scopes = Output.ofNullable(scopes);
             return this;
         }
-
+        public Builder scopes(AccessReviewScopeArgs... scopes) {
+            return scopes(List.of(scopes));
+        }
         public Builder startDate(@Nullable Output<String> startDate) {
             this.startDate = startDate;
             return this;
         }
-
         public Builder startDate(@Nullable String startDate) {
             this.startDate = Output.ofNullable(startDate);
             return this;
         }
-
         public Builder type(@Nullable Output<Either<String,AccessReviewRecurrenceRangeType>> type) {
             this.type = type;
             return this;
         }
-
         public Builder type(@Nullable Either<String,AccessReviewRecurrenceRangeType> type) {
             this.type = Output.ofNullable(type);
             return this;
-        }
-        public AccessReviewHistoryDefinitionByIdArgs build() {
+        }        public AccessReviewHistoryDefinitionByIdArgs build() {
             return new AccessReviewHistoryDefinitionByIdArgs(decisions, displayName, endDate, historyDefinitionId, instances, interval, numberOfOccurrences, scopes, startDate, type);
         }
     }

@@ -63,17 +63,14 @@ public final class ListenerRuleFixedResponseConfig {
             this.contentType = contentType;
             return this;
         }
-
         public Builder messageBody(@Nullable String messageBody) {
             this.messageBody = messageBody;
             return this;
         }
-
         public Builder statusCode(String statusCode) {
             this.statusCode = Objects.requireNonNull(statusCode);
             return this;
-        }
-        public ListenerRuleFixedResponseConfig build() {
+        }        public ListenerRuleFixedResponseConfig build() {
             return new ListenerRuleFixedResponseConfig(contentType, messageBody, statusCode);
         }
     }

@@ -93,42 +93,40 @@ public final class DistributionForwardedValuesArgs extends io.pulumi.resources.R
             this.cookies = cookies;
             return this;
         }
-
         public Builder cookies(@Nullable DistributionCookiesArgs cookies) {
             this.cookies = Output.ofNullable(cookies);
             return this;
         }
-
         public Builder headers(@Nullable Output<List<String>> headers) {
             this.headers = headers;
             return this;
         }
-
         public Builder headers(@Nullable List<String> headers) {
             this.headers = Output.ofNullable(headers);
             return this;
         }
-
+        public Builder headers(String... headers) {
+            return headers(List.of(headers));
+        }
         public Builder queryString(Output<Boolean> queryString) {
             this.queryString = Objects.requireNonNull(queryString);
             return this;
         }
-
         public Builder queryString(Boolean queryString) {
             this.queryString = Output.of(Objects.requireNonNull(queryString));
             return this;
         }
-
         public Builder queryStringCacheKeys(@Nullable Output<List<String>> queryStringCacheKeys) {
             this.queryStringCacheKeys = queryStringCacheKeys;
             return this;
         }
-
         public Builder queryStringCacheKeys(@Nullable List<String> queryStringCacheKeys) {
             this.queryStringCacheKeys = Output.ofNullable(queryStringCacheKeys);
             return this;
         }
-        public DistributionForwardedValuesArgs build() {
+        public Builder queryStringCacheKeys(String... queryStringCacheKeys) {
+            return queryStringCacheKeys(List.of(queryStringCacheKeys));
+        }        public DistributionForwardedValuesArgs build() {
             return new DistributionForwardedValuesArgs(cookies, headers, queryString, queryStringCacheKeys);
         }
     }

@@ -55,8 +55,7 @@ public final class RegionHealthCheckLogConfig {
         public Builder enable(@Nullable Boolean enable) {
             this.enable = enable;
             return this;
-        }
-        public RegionHealthCheckLogConfig build() {
+        }        public RegionHealthCheckLogConfig build() {
             return new RegionHealthCheckLogConfig(enable);
         }
     }

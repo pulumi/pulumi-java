@@ -139,62 +139,50 @@ public final class DeliveryChannelArgs extends io.pulumi.resources.ResourceArgs 
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder s3BucketName(Output<String> s3BucketName) {
             this.s3BucketName = Objects.requireNonNull(s3BucketName);
             return this;
         }
-
         public Builder s3BucketName(String s3BucketName) {
             this.s3BucketName = Output.of(Objects.requireNonNull(s3BucketName));
             return this;
         }
-
         public Builder s3KeyPrefix(@Nullable Output<String> s3KeyPrefix) {
             this.s3KeyPrefix = s3KeyPrefix;
             return this;
         }
-
         public Builder s3KeyPrefix(@Nullable String s3KeyPrefix) {
             this.s3KeyPrefix = Output.ofNullable(s3KeyPrefix);
             return this;
         }
-
         public Builder s3KmsKeyArn(@Nullable Output<String> s3KmsKeyArn) {
             this.s3KmsKeyArn = s3KmsKeyArn;
             return this;
         }
-
         public Builder s3KmsKeyArn(@Nullable String s3KmsKeyArn) {
             this.s3KmsKeyArn = Output.ofNullable(s3KmsKeyArn);
             return this;
         }
-
         public Builder snapshotDeliveryProperties(@Nullable Output<DeliveryChannelSnapshotDeliveryPropertiesArgs> snapshotDeliveryProperties) {
             this.snapshotDeliveryProperties = snapshotDeliveryProperties;
             return this;
         }
-
         public Builder snapshotDeliveryProperties(@Nullable DeliveryChannelSnapshotDeliveryPropertiesArgs snapshotDeliveryProperties) {
             this.snapshotDeliveryProperties = Output.ofNullable(snapshotDeliveryProperties);
             return this;
         }
-
         public Builder snsTopicArn(@Nullable Output<String> snsTopicArn) {
             this.snsTopicArn = snsTopicArn;
             return this;
         }
-
         public Builder snsTopicArn(@Nullable String snsTopicArn) {
             this.snsTopicArn = Output.ofNullable(snsTopicArn);
             return this;
-        }
-        public DeliveryChannelArgs build() {
+        }        public DeliveryChannelArgs build() {
             return new DeliveryChannelArgs(name, s3BucketName, s3KeyPrefix, s3KmsKeyArn, snapshotDeliveryProperties, snsTopicArn);
         }
     }

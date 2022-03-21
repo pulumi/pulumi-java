@@ -45,7 +45,9 @@ public final class MangedSslCertificateManaged {
             this.domains = Objects.requireNonNull(domains);
             return this;
         }
-        public MangedSslCertificateManaged build() {
+        public Builder domains(String... domains) {
+            return domains(List.of(domains));
+        }        public MangedSslCertificateManaged build() {
             return new MangedSslCertificateManaged(domains);
         }
     }

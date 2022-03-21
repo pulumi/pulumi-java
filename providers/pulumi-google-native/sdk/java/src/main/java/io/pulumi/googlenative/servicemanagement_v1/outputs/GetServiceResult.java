@@ -69,12 +69,10 @@ public final class GetServiceResult {
             this.producerProjectId = Objects.requireNonNull(producerProjectId);
             return this;
         }
-
         public Builder serviceName(String serviceName) {
             this.serviceName = Objects.requireNonNull(serviceName);
             return this;
-        }
-        public GetServiceResult build() {
+        }        public GetServiceResult build() {
             return new GetServiceResult(producerProjectId, serviceName);
         }
     }

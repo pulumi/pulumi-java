@@ -126,27 +126,22 @@ public final class LoadBalancerListener {
             this.instancePort = Objects.requireNonNull(instancePort);
             return this;
         }
-
         public Builder instanceProtocol(String instanceProtocol) {
             this.instanceProtocol = Objects.requireNonNull(instanceProtocol);
             return this;
         }
-
         public Builder lbPort(Integer lbPort) {
             this.lbPort = Objects.requireNonNull(lbPort);
             return this;
         }
-
         public Builder lbProtocol(String lbProtocol) {
             this.lbProtocol = Objects.requireNonNull(lbProtocol);
             return this;
         }
-
         public Builder sslCertificateId(@Nullable String sslCertificateId) {
             this.sslCertificateId = sslCertificateId;
             return this;
-        }
-        public LoadBalancerListener build() {
+        }        public LoadBalancerListener build() {
             return new LoadBalancerListener(instancePort, instanceProtocol, lbPort, lbProtocol, sslCertificateId);
         }
     }

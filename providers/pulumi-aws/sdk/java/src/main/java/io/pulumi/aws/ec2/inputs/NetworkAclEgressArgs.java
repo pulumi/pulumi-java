@@ -189,92 +189,74 @@ public final class NetworkAclEgressArgs extends io.pulumi.resources.ResourceArgs
             this.action = Objects.requireNonNull(action);
             return this;
         }
-
         public Builder action(String action) {
             this.action = Output.of(Objects.requireNonNull(action));
             return this;
         }
-
         public Builder cidrBlock(@Nullable Output<String> cidrBlock) {
             this.cidrBlock = cidrBlock;
             return this;
         }
-
         public Builder cidrBlock(@Nullable String cidrBlock) {
             this.cidrBlock = Output.ofNullable(cidrBlock);
             return this;
         }
-
         public Builder fromPort(Output<Integer> fromPort) {
             this.fromPort = Objects.requireNonNull(fromPort);
             return this;
         }
-
         public Builder fromPort(Integer fromPort) {
             this.fromPort = Output.of(Objects.requireNonNull(fromPort));
             return this;
         }
-
         public Builder icmpCode(@Nullable Output<Integer> icmpCode) {
             this.icmpCode = icmpCode;
             return this;
         }
-
         public Builder icmpCode(@Nullable Integer icmpCode) {
             this.icmpCode = Output.ofNullable(icmpCode);
             return this;
         }
-
         public Builder icmpType(@Nullable Output<Integer> icmpType) {
             this.icmpType = icmpType;
             return this;
         }
-
         public Builder icmpType(@Nullable Integer icmpType) {
             this.icmpType = Output.ofNullable(icmpType);
             return this;
         }
-
         public Builder ipv6CidrBlock(@Nullable Output<String> ipv6CidrBlock) {
             this.ipv6CidrBlock = ipv6CidrBlock;
             return this;
         }
-
         public Builder ipv6CidrBlock(@Nullable String ipv6CidrBlock) {
             this.ipv6CidrBlock = Output.ofNullable(ipv6CidrBlock);
             return this;
         }
-
         public Builder protocol(Output<String> protocol) {
             this.protocol = Objects.requireNonNull(protocol);
             return this;
         }
-
         public Builder protocol(String protocol) {
             this.protocol = Output.of(Objects.requireNonNull(protocol));
             return this;
         }
-
         public Builder ruleNo(Output<Integer> ruleNo) {
             this.ruleNo = Objects.requireNonNull(ruleNo);
             return this;
         }
-
         public Builder ruleNo(Integer ruleNo) {
             this.ruleNo = Output.of(Objects.requireNonNull(ruleNo));
             return this;
         }
-
         public Builder toPort(Output<Integer> toPort) {
             this.toPort = Objects.requireNonNull(toPort);
             return this;
         }
-
         public Builder toPort(Integer toPort) {
             this.toPort = Output.of(Objects.requireNonNull(toPort));
             return this;
-        }
-        public NetworkAclEgressArgs build() {
+        }        public NetworkAclEgressArgs build() {
             return new NetworkAclEgressArgs(action, cidrBlock, fromPort, icmpCode, icmpType, ipv6CidrBlock, protocol, ruleNo, toPort);
         }
     }

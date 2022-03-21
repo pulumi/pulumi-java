@@ -97,32 +97,26 @@ public final class CreateProtectionContainerMappingInputPropertiesArgs extends i
             this.policyId = policyId;
             return this;
         }
-
         public Builder policyId(@Nullable String policyId) {
             this.policyId = Output.ofNullable(policyId);
             return this;
         }
-
         public Builder providerSpecificInput(@Nullable Output<Either<A2AContainerMappingInputArgs,VMwareCbtContainerMappingInputArgs>> providerSpecificInput) {
             this.providerSpecificInput = providerSpecificInput;
             return this;
         }
-
         public Builder providerSpecificInput(@Nullable Either<A2AContainerMappingInputArgs,VMwareCbtContainerMappingInputArgs> providerSpecificInput) {
             this.providerSpecificInput = Output.ofNullable(providerSpecificInput);
             return this;
         }
-
         public Builder targetProtectionContainerId(@Nullable Output<String> targetProtectionContainerId) {
             this.targetProtectionContainerId = targetProtectionContainerId;
             return this;
         }
-
         public Builder targetProtectionContainerId(@Nullable String targetProtectionContainerId) {
             this.targetProtectionContainerId = Output.ofNullable(targetProtectionContainerId);
             return this;
-        }
-        public CreateProtectionContainerMappingInputPropertiesArgs build() {
+        }        public CreateProtectionContainerMappingInputPropertiesArgs build() {
             return new CreateProtectionContainerMappingInputPropertiesArgs(policyId, providerSpecificInput, targetProtectionContainerId);
         }
     }

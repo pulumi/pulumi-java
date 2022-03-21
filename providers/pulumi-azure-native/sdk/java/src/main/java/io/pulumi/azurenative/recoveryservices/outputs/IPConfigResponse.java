@@ -88,17 +88,17 @@ public final class IPConfigResponse {
             this.lBBackendAddressPoolIds = lBBackendAddressPoolIds;
             return this;
         }
-
+        public Builder lBBackendAddressPoolIds(String... lBBackendAddressPoolIds) {
+            return lBBackendAddressPoolIds(List.of(lBBackendAddressPoolIds));
+        }
         public Builder publicIpAddressId(@Nullable String publicIpAddressId) {
             this.publicIpAddressId = publicIpAddressId;
             return this;
         }
-
         public Builder staticIPAddress(@Nullable String staticIPAddress) {
             this.staticIPAddress = staticIPAddress;
             return this;
-        }
-        public IPConfigResponse build() {
+        }        public IPConfigResponse build() {
             return new IPConfigResponse(lBBackendAddressPoolIds, publicIpAddressId, staticIPAddress);
         }
     }

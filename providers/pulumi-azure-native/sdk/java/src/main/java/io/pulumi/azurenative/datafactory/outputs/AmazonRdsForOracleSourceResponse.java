@@ -203,52 +203,42 @@ public final class AmazonRdsForOracleSourceResponse {
             this.additionalColumns = additionalColumns;
             return this;
         }
-
         public Builder disableMetricsCollection(@Nullable Object disableMetricsCollection) {
             this.disableMetricsCollection = disableMetricsCollection;
             return this;
         }
-
         public Builder maxConcurrentConnections(@Nullable Object maxConcurrentConnections) {
             this.maxConcurrentConnections = maxConcurrentConnections;
             return this;
         }
-
         public Builder oracleReaderQuery(@Nullable Object oracleReaderQuery) {
             this.oracleReaderQuery = oracleReaderQuery;
             return this;
         }
-
         public Builder partitionOption(@Nullable Object partitionOption) {
             this.partitionOption = partitionOption;
             return this;
         }
-
         public Builder partitionSettings(@Nullable AmazonRdsForOraclePartitionSettingsResponse partitionSettings) {
             this.partitionSettings = partitionSettings;
             return this;
         }
-
         public Builder queryTimeout(@Nullable Object queryTimeout) {
             this.queryTimeout = queryTimeout;
             return this;
         }
-
         public Builder sourceRetryCount(@Nullable Object sourceRetryCount) {
             this.sourceRetryCount = sourceRetryCount;
             return this;
         }
-
         public Builder sourceRetryWait(@Nullable Object sourceRetryWait) {
             this.sourceRetryWait = sourceRetryWait;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public AmazonRdsForOracleSourceResponse build() {
+        }        public AmazonRdsForOracleSourceResponse build() {
             return new AmazonRdsForOracleSourceResponse(additionalColumns, disableMetricsCollection, maxConcurrentConnections, oracleReaderQuery, partitionOption, partitionSettings, queryTimeout, sourceRetryCount, sourceRetryWait, type);
         }
     }

@@ -56,12 +56,10 @@ public final class RecipeParametersInputProperties {
             this.dataCatalogInputDefinition = dataCatalogInputDefinition;
             return this;
         }
-
         public Builder s3InputDefinition(@Nullable RecipeS3Location s3InputDefinition) {
             this.s3InputDefinition = s3InputDefinition;
             return this;
-        }
-        public RecipeParametersInputProperties build() {
+        }        public RecipeParametersInputProperties build() {
             return new RecipeParametersInputProperties(dataCatalogInputDefinition, s3InputDefinition);
         }
     }

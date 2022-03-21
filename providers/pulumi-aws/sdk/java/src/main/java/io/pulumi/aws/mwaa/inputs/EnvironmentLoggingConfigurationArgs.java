@@ -126,52 +126,42 @@ public final class EnvironmentLoggingConfigurationArgs extends io.pulumi.resourc
             this.dagProcessingLogs = dagProcessingLogs;
             return this;
         }
-
         public Builder dagProcessingLogs(@Nullable EnvironmentLoggingConfigurationDagProcessingLogsArgs dagProcessingLogs) {
             this.dagProcessingLogs = Output.ofNullable(dagProcessingLogs);
             return this;
         }
-
         public Builder schedulerLogs(@Nullable Output<EnvironmentLoggingConfigurationSchedulerLogsArgs> schedulerLogs) {
             this.schedulerLogs = schedulerLogs;
             return this;
         }
-
         public Builder schedulerLogs(@Nullable EnvironmentLoggingConfigurationSchedulerLogsArgs schedulerLogs) {
             this.schedulerLogs = Output.ofNullable(schedulerLogs);
             return this;
         }
-
         public Builder taskLogs(@Nullable Output<EnvironmentLoggingConfigurationTaskLogsArgs> taskLogs) {
             this.taskLogs = taskLogs;
             return this;
         }
-
         public Builder taskLogs(@Nullable EnvironmentLoggingConfigurationTaskLogsArgs taskLogs) {
             this.taskLogs = Output.ofNullable(taskLogs);
             return this;
         }
-
         public Builder webserverLogs(@Nullable Output<EnvironmentLoggingConfigurationWebserverLogsArgs> webserverLogs) {
             this.webserverLogs = webserverLogs;
             return this;
         }
-
         public Builder webserverLogs(@Nullable EnvironmentLoggingConfigurationWebserverLogsArgs webserverLogs) {
             this.webserverLogs = Output.ofNullable(webserverLogs);
             return this;
         }
-
         public Builder workerLogs(@Nullable Output<EnvironmentLoggingConfigurationWorkerLogsArgs> workerLogs) {
             this.workerLogs = workerLogs;
             return this;
         }
-
         public Builder workerLogs(@Nullable EnvironmentLoggingConfigurationWorkerLogsArgs workerLogs) {
             this.workerLogs = Output.ofNullable(workerLogs);
             return this;
-        }
-        public EnvironmentLoggingConfigurationArgs build() {
+        }        public EnvironmentLoggingConfigurationArgs build() {
             return new EnvironmentLoggingConfigurationArgs(dagProcessingLogs, schedulerLogs, taskLogs, webserverLogs, workerLogs);
         }
     }

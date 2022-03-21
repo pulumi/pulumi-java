@@ -143,62 +143,50 @@ public final class InternalCheckerArgs extends io.pulumi.resources.ResourceArgs 
             this.displayName = displayName;
             return this;
         }
-
         public Builder displayName(@Nullable String displayName) {
             this.displayName = Output.ofNullable(displayName);
             return this;
         }
-
         public Builder gcpZone(@Nullable Output<String> gcpZone) {
             this.gcpZone = gcpZone;
             return this;
         }
-
         public Builder gcpZone(@Nullable String gcpZone) {
             this.gcpZone = Output.ofNullable(gcpZone);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder network(@Nullable Output<String> network) {
             this.network = network;
             return this;
         }
-
         public Builder network(@Nullable String network) {
             this.network = Output.ofNullable(network);
             return this;
         }
-
         public Builder peerProjectId(@Nullable Output<String> peerProjectId) {
             this.peerProjectId = peerProjectId;
             return this;
         }
-
         public Builder peerProjectId(@Nullable String peerProjectId) {
             this.peerProjectId = Output.ofNullable(peerProjectId);
             return this;
         }
-
         public Builder state(@Nullable Output<InternalCheckerState> state) {
             this.state = state;
             return this;
         }
-
         public Builder state(@Nullable InternalCheckerState state) {
             this.state = Output.ofNullable(state);
             return this;
-        }
-        public InternalCheckerArgs build() {
+        }        public InternalCheckerArgs build() {
             return new InternalCheckerArgs(displayName, gcpZone, name, network, peerProjectId, state);
         }
     }

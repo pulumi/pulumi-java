@@ -91,32 +91,26 @@ public final class ServiceIdentityState extends io.pulumi.resources.ResourceArgs
             this.email = email;
             return this;
         }
-
         public Builder email(@Nullable String email) {
             this.email = Output.ofNullable(email);
             return this;
         }
-
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
         }
-
         public Builder service(@Nullable Output<String> service) {
             this.service = service;
             return this;
         }
-
         public Builder service(@Nullable String service) {
             this.service = Output.ofNullable(service);
             return this;
-        }
-        public ServiceIdentityState build() {
+        }        public ServiceIdentityState build() {
             return new ServiceIdentityState(email, project, service);
         }
     }

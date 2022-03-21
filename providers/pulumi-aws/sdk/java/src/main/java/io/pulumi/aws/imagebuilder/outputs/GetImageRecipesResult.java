@@ -105,27 +105,31 @@ public final class GetImageRecipesResult {
             this.arns = Objects.requireNonNull(arns);
             return this;
         }
-
+        public Builder arns(String... arns) {
+            return arns(List.of(arns));
+        }
         public Builder filters(@Nullable List<GetImageRecipesFilter> filters) {
             this.filters = filters;
             return this;
         }
-
+        public Builder filters(GetImageRecipesFilter... filters) {
+            return filters(List.of(filters));
+        }
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder names(List<String> names) {
             this.names = Objects.requireNonNull(names);
             return this;
         }
-
+        public Builder names(String... names) {
+            return names(List.of(names));
+        }
         public Builder owner(@Nullable String owner) {
             this.owner = owner;
             return this;
-        }
-        public GetImageRecipesResult build() {
+        }        public GetImageRecipesResult build() {
             return new GetImageRecipesResult(arns, filters, id, names, owner);
         }
     }

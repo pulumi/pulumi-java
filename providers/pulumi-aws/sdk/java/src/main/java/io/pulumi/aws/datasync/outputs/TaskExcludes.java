@@ -71,12 +71,10 @@ public final class TaskExcludes {
             this.filterType = filterType;
             return this;
         }
-
         public Builder value(@Nullable String value) {
             this.value = value;
             return this;
-        }
-        public TaskExcludes build() {
+        }        public TaskExcludes build() {
             return new TaskExcludes(filterType, value);
         }
     }

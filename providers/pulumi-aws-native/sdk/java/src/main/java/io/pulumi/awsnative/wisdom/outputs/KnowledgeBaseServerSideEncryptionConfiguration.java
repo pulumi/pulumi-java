@@ -45,8 +45,7 @@ public final class KnowledgeBaseServerSideEncryptionConfiguration {
         public Builder kmsKeyId(@Nullable String kmsKeyId) {
             this.kmsKeyId = kmsKeyId;
             return this;
-        }
-        public KnowledgeBaseServerSideEncryptionConfiguration build() {
+        }        public KnowledgeBaseServerSideEncryptionConfiguration build() {
             return new KnowledgeBaseServerSideEncryptionConfiguration(kmsKeyId);
         }
     }

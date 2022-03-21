@@ -240,122 +240,98 @@ public final class BlobServicePropertiesArgs extends io.pulumi.resources.Resourc
             this.accountName = Objects.requireNonNull(accountName);
             return this;
         }
-
         public Builder accountName(String accountName) {
             this.accountName = Output.of(Objects.requireNonNull(accountName));
             return this;
         }
-
         public Builder automaticSnapshotPolicyEnabled(@Nullable Output<Boolean> automaticSnapshotPolicyEnabled) {
             this.automaticSnapshotPolicyEnabled = automaticSnapshotPolicyEnabled;
             return this;
         }
-
         public Builder automaticSnapshotPolicyEnabled(@Nullable Boolean automaticSnapshotPolicyEnabled) {
             this.automaticSnapshotPolicyEnabled = Output.ofNullable(automaticSnapshotPolicyEnabled);
             return this;
         }
-
         public Builder blobServicesName(@Nullable Output<String> blobServicesName) {
             this.blobServicesName = blobServicesName;
             return this;
         }
-
         public Builder blobServicesName(@Nullable String blobServicesName) {
             this.blobServicesName = Output.ofNullable(blobServicesName);
             return this;
         }
-
         public Builder changeFeed(@Nullable Output<ChangeFeedArgs> changeFeed) {
             this.changeFeed = changeFeed;
             return this;
         }
-
         public Builder changeFeed(@Nullable ChangeFeedArgs changeFeed) {
             this.changeFeed = Output.ofNullable(changeFeed);
             return this;
         }
-
         public Builder containerDeleteRetentionPolicy(@Nullable Output<DeleteRetentionPolicyArgs> containerDeleteRetentionPolicy) {
             this.containerDeleteRetentionPolicy = containerDeleteRetentionPolicy;
             return this;
         }
-
         public Builder containerDeleteRetentionPolicy(@Nullable DeleteRetentionPolicyArgs containerDeleteRetentionPolicy) {
             this.containerDeleteRetentionPolicy = Output.ofNullable(containerDeleteRetentionPolicy);
             return this;
         }
-
         public Builder cors(@Nullable Output<CorsRulesArgs> cors) {
             this.cors = cors;
             return this;
         }
-
         public Builder cors(@Nullable CorsRulesArgs cors) {
             this.cors = Output.ofNullable(cors);
             return this;
         }
-
         public Builder defaultServiceVersion(@Nullable Output<String> defaultServiceVersion) {
             this.defaultServiceVersion = defaultServiceVersion;
             return this;
         }
-
         public Builder defaultServiceVersion(@Nullable String defaultServiceVersion) {
             this.defaultServiceVersion = Output.ofNullable(defaultServiceVersion);
             return this;
         }
-
         public Builder deleteRetentionPolicy(@Nullable Output<DeleteRetentionPolicyArgs> deleteRetentionPolicy) {
             this.deleteRetentionPolicy = deleteRetentionPolicy;
             return this;
         }
-
         public Builder deleteRetentionPolicy(@Nullable DeleteRetentionPolicyArgs deleteRetentionPolicy) {
             this.deleteRetentionPolicy = Output.ofNullable(deleteRetentionPolicy);
             return this;
         }
-
         public Builder isVersioningEnabled(@Nullable Output<Boolean> isVersioningEnabled) {
             this.isVersioningEnabled = isVersioningEnabled;
             return this;
         }
-
         public Builder isVersioningEnabled(@Nullable Boolean isVersioningEnabled) {
             this.isVersioningEnabled = Output.ofNullable(isVersioningEnabled);
             return this;
         }
-
         public Builder lastAccessTimeTrackingPolicy(@Nullable Output<LastAccessTimeTrackingPolicyArgs> lastAccessTimeTrackingPolicy) {
             this.lastAccessTimeTrackingPolicy = lastAccessTimeTrackingPolicy;
             return this;
         }
-
         public Builder lastAccessTimeTrackingPolicy(@Nullable LastAccessTimeTrackingPolicyArgs lastAccessTimeTrackingPolicy) {
             this.lastAccessTimeTrackingPolicy = Output.ofNullable(lastAccessTimeTrackingPolicy);
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder restorePolicy(@Nullable Output<RestorePolicyPropertiesArgs> restorePolicy) {
             this.restorePolicy = restorePolicy;
             return this;
         }
-
         public Builder restorePolicy(@Nullable RestorePolicyPropertiesArgs restorePolicy) {
             this.restorePolicy = Output.ofNullable(restorePolicy);
             return this;
-        }
-        public BlobServicePropertiesArgs build() {
+        }        public BlobServicePropertiesArgs build() {
             return new BlobServicePropertiesArgs(accountName, automaticSnapshotPolicyEnabled, blobServicesName, changeFeed, containerDeleteRetentionPolicy, cors, defaultServiceVersion, deleteRetentionPolicy, isVersioningEnabled, lastAccessTimeTrackingPolicy, resourceGroupName, restorePolicy);
         }
     }

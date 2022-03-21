@@ -169,37 +169,30 @@ public final class StandardAppVersionHandler {
             this.authFailAction = authFailAction;
             return this;
         }
-
         public Builder login(@Nullable String login) {
             this.login = login;
             return this;
         }
-
         public Builder redirectHttpResponseCode(@Nullable String redirectHttpResponseCode) {
             this.redirectHttpResponseCode = redirectHttpResponseCode;
             return this;
         }
-
         public Builder script(@Nullable StandardAppVersionHandlerScript script) {
             this.script = script;
             return this;
         }
-
         public Builder securityLevel(@Nullable String securityLevel) {
             this.securityLevel = securityLevel;
             return this;
         }
-
         public Builder staticFiles(@Nullable StandardAppVersionHandlerStaticFiles staticFiles) {
             this.staticFiles = staticFiles;
             return this;
         }
-
         public Builder urlRegex(@Nullable String urlRegex) {
             this.urlRegex = urlRegex;
             return this;
-        }
-        public StandardAppVersionHandler build() {
+        }        public StandardAppVersionHandler build() {
             return new StandardAppVersionHandler(authFailAction, login, redirectHttpResponseCode, script, securityLevel, staticFiles, urlRegex);
         }
     }

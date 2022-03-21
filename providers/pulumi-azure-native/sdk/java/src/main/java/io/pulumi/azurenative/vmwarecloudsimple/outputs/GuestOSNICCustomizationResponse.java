@@ -152,37 +152,36 @@ public final class GuestOSNICCustomizationResponse {
             this.allocation = allocation;
             return this;
         }
-
         public Builder dnsServers(@Nullable List<String> dnsServers) {
             this.dnsServers = dnsServers;
             return this;
         }
-
+        public Builder dnsServers(String... dnsServers) {
+            return dnsServers(List.of(dnsServers));
+        }
         public Builder gateway(@Nullable List<String> gateway) {
             this.gateway = gateway;
             return this;
         }
-
+        public Builder gateway(String... gateway) {
+            return gateway(List.of(gateway));
+        }
         public Builder ipAddress(@Nullable String ipAddress) {
             this.ipAddress = ipAddress;
             return this;
         }
-
         public Builder mask(@Nullable String mask) {
             this.mask = mask;
             return this;
         }
-
         public Builder primaryWinsServer(@Nullable String primaryWinsServer) {
             this.primaryWinsServer = primaryWinsServer;
             return this;
         }
-
         public Builder secondaryWinsServer(@Nullable String secondaryWinsServer) {
             this.secondaryWinsServer = secondaryWinsServer;
             return this;
-        }
-        public GuestOSNICCustomizationResponse build() {
+        }        public GuestOSNICCustomizationResponse build() {
             return new GuestOSNICCustomizationResponse(allocation, dnsServers, gateway, ipAddress, mask, primaryWinsServer, secondaryWinsServer);
         }
     }

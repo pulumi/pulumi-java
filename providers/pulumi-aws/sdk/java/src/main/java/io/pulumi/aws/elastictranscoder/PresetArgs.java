@@ -205,102 +205,85 @@ public final class PresetArgs extends io.pulumi.resources.ResourceArgs {
             this.audio = audio;
             return this;
         }
-
         public Builder audio(@Nullable PresetAudioArgs audio) {
             this.audio = Output.ofNullable(audio);
             return this;
         }
-
         public Builder audioCodecOptions(@Nullable Output<PresetAudioCodecOptionsArgs> audioCodecOptions) {
             this.audioCodecOptions = audioCodecOptions;
             return this;
         }
-
         public Builder audioCodecOptions(@Nullable PresetAudioCodecOptionsArgs audioCodecOptions) {
             this.audioCodecOptions = Output.ofNullable(audioCodecOptions);
             return this;
         }
-
         public Builder container(Output<String> container) {
             this.container = Objects.requireNonNull(container);
             return this;
         }
-
         public Builder container(String container) {
             this.container = Output.of(Objects.requireNonNull(container));
             return this;
         }
-
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder thumbnails(@Nullable Output<PresetThumbnailsArgs> thumbnails) {
             this.thumbnails = thumbnails;
             return this;
         }
-
         public Builder thumbnails(@Nullable PresetThumbnailsArgs thumbnails) {
             this.thumbnails = Output.ofNullable(thumbnails);
             return this;
         }
-
         public Builder type(@Nullable Output<String> type) {
             this.type = type;
             return this;
         }
-
         public Builder type(@Nullable String type) {
             this.type = Output.ofNullable(type);
             return this;
         }
-
         public Builder video(@Nullable Output<PresetVideoArgs> video) {
             this.video = video;
             return this;
         }
-
         public Builder video(@Nullable PresetVideoArgs video) {
             this.video = Output.ofNullable(video);
             return this;
         }
-
         public Builder videoCodecOptions(@Nullable Output<Map<String,String>> videoCodecOptions) {
             this.videoCodecOptions = videoCodecOptions;
             return this;
         }
-
         public Builder videoCodecOptions(@Nullable Map<String,String> videoCodecOptions) {
             this.videoCodecOptions = Output.ofNullable(videoCodecOptions);
             return this;
         }
-
         public Builder videoWatermarks(@Nullable Output<List<PresetVideoWatermarkArgs>> videoWatermarks) {
             this.videoWatermarks = videoWatermarks;
             return this;
         }
-
         public Builder videoWatermarks(@Nullable List<PresetVideoWatermarkArgs> videoWatermarks) {
             this.videoWatermarks = Output.ofNullable(videoWatermarks);
             return this;
         }
-        public PresetArgs build() {
+        public Builder videoWatermarks(PresetVideoWatermarkArgs... videoWatermarks) {
+            return videoWatermarks(List.of(videoWatermarks));
+        }        public PresetArgs build() {
             return new PresetArgs(audio, audioCodecOptions, container, description, name, thumbnails, type, video, videoCodecOptions, videoWatermarks);
         }
     }

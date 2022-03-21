@@ -140,32 +140,29 @@ public final class GetOrderableDbInstanceArgs extends io.pulumi.resources.Invoke
             this.engine = engine;
             return this;
         }
-
         public Builder engineVersion(@Nullable String engineVersion) {
             this.engineVersion = engineVersion;
             return this;
         }
-
         public Builder instanceClass(@Nullable String instanceClass) {
             this.instanceClass = instanceClass;
             return this;
         }
-
         public Builder licenseModel(@Nullable String licenseModel) {
             this.licenseModel = licenseModel;
             return this;
         }
-
         public Builder preferredInstanceClasses(@Nullable List<String> preferredInstanceClasses) {
             this.preferredInstanceClasses = preferredInstanceClasses;
             return this;
         }
-
+        public Builder preferredInstanceClasses(String... preferredInstanceClasses) {
+            return preferredInstanceClasses(List.of(preferredInstanceClasses));
+        }
         public Builder vpc(@Nullable Boolean vpc) {
             this.vpc = vpc;
             return this;
-        }
-        public GetOrderableDbInstanceArgs build() {
+        }        public GetOrderableDbInstanceArgs build() {
             return new GetOrderableDbInstanceArgs(engine, engineVersion, instanceClass, licenseModel, preferredInstanceClasses, vpc);
         }
     }

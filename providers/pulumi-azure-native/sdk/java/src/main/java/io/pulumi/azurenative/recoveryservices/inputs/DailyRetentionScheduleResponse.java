@@ -80,12 +80,13 @@ public final class DailyRetentionScheduleResponse extends io.pulumi.resources.In
             this.retentionDuration = retentionDuration;
             return this;
         }
-
         public Builder retentionTimes(@Nullable List<String> retentionTimes) {
             this.retentionTimes = retentionTimes;
             return this;
         }
-        public DailyRetentionScheduleResponse build() {
+        public Builder retentionTimes(String... retentionTimes) {
+            return retentionTimes(List.of(retentionTimes));
+        }        public DailyRetentionScheduleResponse build() {
             return new DailyRetentionScheduleResponse(retentionDuration, retentionTimes);
         }
     }

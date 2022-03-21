@@ -88,17 +88,14 @@ public final class GetReplicationArgs extends io.pulumi.resources.InvokeArgs {
             this.registryName = Objects.requireNonNull(registryName);
             return this;
         }
-
         public Builder replicationName(String replicationName) {
             this.replicationName = Objects.requireNonNull(replicationName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
-        }
-        public GetReplicationArgs build() {
+        }        public GetReplicationArgs build() {
             return new GetReplicationArgs(registryName, replicationName, resourceGroupName);
         }
     }

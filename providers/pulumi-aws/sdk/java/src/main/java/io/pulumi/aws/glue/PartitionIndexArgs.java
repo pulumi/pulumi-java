@@ -107,42 +107,34 @@ public final class PartitionIndexArgs extends io.pulumi.resources.ResourceArgs {
             this.catalogId = catalogId;
             return this;
         }
-
         public Builder catalogId(@Nullable String catalogId) {
             this.catalogId = Output.ofNullable(catalogId);
             return this;
         }
-
         public Builder databaseName(Output<String> databaseName) {
             this.databaseName = Objects.requireNonNull(databaseName);
             return this;
         }
-
         public Builder databaseName(String databaseName) {
             this.databaseName = Output.of(Objects.requireNonNull(databaseName));
             return this;
         }
-
         public Builder partitionIndex(Output<PartitionIndexPartitionIndexArgs> partitionIndex) {
             this.partitionIndex = Objects.requireNonNull(partitionIndex);
             return this;
         }
-
         public Builder partitionIndex(PartitionIndexPartitionIndexArgs partitionIndex) {
             this.partitionIndex = Output.of(Objects.requireNonNull(partitionIndex));
             return this;
         }
-
         public Builder tableName(Output<String> tableName) {
             this.tableName = Objects.requireNonNull(tableName);
             return this;
         }
-
         public Builder tableName(String tableName) {
             this.tableName = Output.of(Objects.requireNonNull(tableName));
             return this;
-        }
-        public PartitionIndexArgs build() {
+        }        public PartitionIndexArgs build() {
             return new PartitionIndexArgs(catalogId, databaseName, partitionIndex, tableName);
         }
     }

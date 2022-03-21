@@ -108,52 +108,48 @@ public final class NotificationRegistrationPropertiesArgs extends io.pulumi.reso
             this.includedEvents = includedEvents;
             return this;
         }
-
         public Builder includedEvents(@Nullable List<String> includedEvents) {
             this.includedEvents = Output.ofNullable(includedEvents);
             return this;
         }
-
+        public Builder includedEvents(String... includedEvents) {
+            return includedEvents(List.of(includedEvents));
+        }
         public Builder messageScope(@Nullable Output<Either<String,MessageScope>> messageScope) {
             this.messageScope = messageScope;
             return this;
         }
-
         public Builder messageScope(@Nullable Either<String,MessageScope> messageScope) {
             this.messageScope = Output.ofNullable(messageScope);
             return this;
         }
-
         public Builder notificationEndpoints(@Nullable Output<List<NotificationEndpointArgs>> notificationEndpoints) {
             this.notificationEndpoints = notificationEndpoints;
             return this;
         }
-
         public Builder notificationEndpoints(@Nullable List<NotificationEndpointArgs> notificationEndpoints) {
             this.notificationEndpoints = Output.ofNullable(notificationEndpoints);
             return this;
         }
-
+        public Builder notificationEndpoints(NotificationEndpointArgs... notificationEndpoints) {
+            return notificationEndpoints(List.of(notificationEndpoints));
+        }
         public Builder notificationMode(@Nullable Output<Either<String,NotificationMode>> notificationMode) {
             this.notificationMode = notificationMode;
             return this;
         }
-
         public Builder notificationMode(@Nullable Either<String,NotificationMode> notificationMode) {
             this.notificationMode = Output.ofNullable(notificationMode);
             return this;
         }
-
         public Builder provisioningState(@Nullable Output<Either<String,ProvisioningState>> provisioningState) {
             this.provisioningState = provisioningState;
             return this;
         }
-
         public Builder provisioningState(@Nullable Either<String,ProvisioningState> provisioningState) {
             this.provisioningState = Output.ofNullable(provisioningState);
             return this;
-        }
-        public NotificationRegistrationPropertiesArgs build() {
+        }        public NotificationRegistrationPropertiesArgs build() {
             return new NotificationRegistrationPropertiesArgs(includedEvents, messageScope, notificationEndpoints, notificationMode, provisioningState);
         }
     }

@@ -77,22 +77,18 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageLinkOutSuggestionArg
             this.destinationName = Objects.requireNonNull(destinationName);
             return this;
         }
-
         public Builder destinationName(String destinationName) {
             this.destinationName = Output.of(Objects.requireNonNull(destinationName));
             return this;
         }
-
         public Builder uri(Output<String> uri) {
             this.uri = Objects.requireNonNull(uri);
             return this;
         }
-
         public Builder uri(String uri) {
             this.uri = Output.of(Objects.requireNonNull(uri));
             return this;
-        }
-        public GoogleCloudDialogflowV2beta1IntentMessageLinkOutSuggestionArgs build() {
+        }        public GoogleCloudDialogflowV2beta1IntentMessageLinkOutSuggestionArgs build() {
             return new GoogleCloudDialogflowV2beta1IntentMessageLinkOutSuggestionArgs(destinationName, uri);
         }
     }

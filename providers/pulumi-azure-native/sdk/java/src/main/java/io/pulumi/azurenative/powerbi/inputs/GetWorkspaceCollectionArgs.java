@@ -72,12 +72,10 @@ public final class GetWorkspaceCollectionArgs extends io.pulumi.resources.Invoke
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder workspaceCollectionName(String workspaceCollectionName) {
             this.workspaceCollectionName = Objects.requireNonNull(workspaceCollectionName);
             return this;
-        }
-        public GetWorkspaceCollectionArgs build() {
+        }        public GetWorkspaceCollectionArgs build() {
             return new GetWorkspaceCollectionArgs(resourceGroupName, workspaceCollectionName);
         }
     }

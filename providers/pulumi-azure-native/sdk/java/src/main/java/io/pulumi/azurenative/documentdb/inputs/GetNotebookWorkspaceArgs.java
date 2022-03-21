@@ -88,17 +88,14 @@ public final class GetNotebookWorkspaceArgs extends io.pulumi.resources.InvokeAr
             this.accountName = Objects.requireNonNull(accountName);
             return this;
         }
-
         public Builder notebookWorkspaceName(String notebookWorkspaceName) {
             this.notebookWorkspaceName = Objects.requireNonNull(notebookWorkspaceName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
-        }
-        public GetNotebookWorkspaceArgs build() {
+        }        public GetNotebookWorkspaceArgs build() {
             return new GetNotebookWorkspaceArgs(accountName, notebookWorkspaceName, resourceGroupName);
         }
     }

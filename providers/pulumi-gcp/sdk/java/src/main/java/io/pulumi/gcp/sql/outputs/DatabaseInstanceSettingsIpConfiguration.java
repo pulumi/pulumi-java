@@ -126,27 +126,25 @@ public final class DatabaseInstanceSettingsIpConfiguration {
             this.allocatedIpRange = allocatedIpRange;
             return this;
         }
-
         public Builder authorizedNetworks(@Nullable List<DatabaseInstanceSettingsIpConfigurationAuthorizedNetwork> authorizedNetworks) {
             this.authorizedNetworks = authorizedNetworks;
             return this;
         }
-
+        public Builder authorizedNetworks(DatabaseInstanceSettingsIpConfigurationAuthorizedNetwork... authorizedNetworks) {
+            return authorizedNetworks(List.of(authorizedNetworks));
+        }
         public Builder ipv4Enabled(@Nullable Boolean ipv4Enabled) {
             this.ipv4Enabled = ipv4Enabled;
             return this;
         }
-
         public Builder privateNetwork(@Nullable String privateNetwork) {
             this.privateNetwork = privateNetwork;
             return this;
         }
-
         public Builder requireSsl(@Nullable Boolean requireSsl) {
             this.requireSsl = requireSsl;
             return this;
-        }
-        public DatabaseInstanceSettingsIpConfiguration build() {
+        }        public DatabaseInstanceSettingsIpConfiguration build() {
             return new DatabaseInstanceSettingsIpConfiguration(allocatedIpRange, authorizedNetworks, ipv4Enabled, privateNetwork, requireSsl);
         }
     }

@@ -111,22 +111,18 @@ public final class MachineExtensionPropertiesResponseInstanceView extends io.pul
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder status(@Nullable MachineExtensionInstanceViewResponseStatus status) {
             this.status = status;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder typeHandlerVersion(String typeHandlerVersion) {
             this.typeHandlerVersion = Objects.requireNonNull(typeHandlerVersion);
             return this;
-        }
-        public MachineExtensionPropertiesResponseInstanceView build() {
+        }        public MachineExtensionPropertiesResponseInstanceView build() {
             return new MachineExtensionPropertiesResponseInstanceView(name, status, type, typeHandlerVersion);
         }
     }

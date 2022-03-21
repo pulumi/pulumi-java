@@ -89,17 +89,23 @@ public final class PolicyRulesWithSubjects {
             this.nonResourceRules = nonResourceRules;
             return this;
         }
-
+        public Builder nonResourceRules(NonResourcePolicyRule... nonResourceRules) {
+            return nonResourceRules(List.of(nonResourceRules));
+        }
         public Builder resourceRules(@Nullable List<ResourcePolicyRule> resourceRules) {
             this.resourceRules = resourceRules;
             return this;
         }
-
+        public Builder resourceRules(ResourcePolicyRule... resourceRules) {
+            return resourceRules(List.of(resourceRules));
+        }
         public Builder subjects(List<Subject> subjects) {
             this.subjects = Objects.requireNonNull(subjects);
             return this;
         }
-        public PolicyRulesWithSubjects build() {
+        public Builder subjects(Subject... subjects) {
+            return subjects(List.of(subjects));
+        }        public PolicyRulesWithSubjects build() {
             return new PolicyRulesWithSubjects(nonResourceRules, resourceRules, subjects);
         }
     }

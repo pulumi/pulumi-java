@@ -75,12 +75,13 @@ public final class ListActiveSecurityUserRuleResult {
             this.skipToken = skipToken;
             return this;
         }
-
         public Builder value(@Nullable List<Either<ActiveDefaultSecurityUserRuleResponse,ActiveSecurityUserRuleResponse>> value) {
             this.value = value;
             return this;
         }
-        public ListActiveSecurityUserRuleResult build() {
+        public Builder value(Either<ActiveDefaultSecurityUserRuleResponse,ActiveSecurityUserRuleResponse>... value) {
+            return value(List.of(value));
+        }        public ListActiveSecurityUserRuleResult build() {
             return new ListActiveSecurityUserRuleResult(skipToken, value);
         }
     }

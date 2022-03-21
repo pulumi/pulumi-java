@@ -55,12 +55,10 @@ public final class ResourceProviderManifestPropertiesRequestHeaderOptionsArgs ex
             this.optInHeaders = optInHeaders;
             return this;
         }
-
         public Builder optInHeaders(@Nullable Either<String,OptInHeaderType> optInHeaders) {
             this.optInHeaders = Output.ofNullable(optInHeaders);
             return this;
-        }
-        public ResourceProviderManifestPropertiesRequestHeaderOptionsArgs build() {
+        }        public ResourceProviderManifestPropertiesRequestHeaderOptionsArgs build() {
             return new ResourceProviderManifestPropertiesRequestHeaderOptionsArgs(optInHeaders);
         }
     }

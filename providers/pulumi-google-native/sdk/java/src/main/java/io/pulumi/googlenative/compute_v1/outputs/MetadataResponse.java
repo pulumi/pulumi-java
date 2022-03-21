@@ -87,17 +87,17 @@ public final class MetadataResponse {
             this.fingerprint = Objects.requireNonNull(fingerprint);
             return this;
         }
-
         public Builder items(List<MetadataItemsItemResponse> items) {
             this.items = Objects.requireNonNull(items);
             return this;
         }
-
+        public Builder items(MetadataItemsItemResponse... items) {
+            return items(List.of(items));
+        }
         public Builder kind(String kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
-        }
-        public MetadataResponse build() {
+        }        public MetadataResponse build() {
             return new MetadataResponse(fingerprint, items, kind);
         }
     }

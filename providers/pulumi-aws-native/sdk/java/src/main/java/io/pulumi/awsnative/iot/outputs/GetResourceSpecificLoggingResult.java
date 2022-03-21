@@ -72,12 +72,10 @@ public final class GetResourceSpecificLoggingResult {
             this.logLevel = logLevel;
             return this;
         }
-
         public Builder targetId(@Nullable String targetId) {
             this.targetId = targetId;
             return this;
-        }
-        public GetResourceSpecificLoggingResult build() {
+        }        public GetResourceSpecificLoggingResult build() {
             return new GetResourceSpecificLoggingResult(logLevel, targetId);
         }
     }

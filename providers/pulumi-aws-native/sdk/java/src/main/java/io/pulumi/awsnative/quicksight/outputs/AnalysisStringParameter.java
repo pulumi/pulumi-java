@@ -70,12 +70,13 @@ public final class AnalysisStringParameter {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder values(List<String> values) {
             this.values = Objects.requireNonNull(values);
             return this;
         }
-        public AnalysisStringParameter build() {
+        public Builder values(String... values) {
+            return values(List.of(values));
+        }        public AnalysisStringParameter build() {
             return new AnalysisStringParameter(name, values);
         }
     }

@@ -135,32 +135,26 @@ public final class SharedPrivateLinkResourcePropertiesResponse {
             this.groupId = groupId;
             return this;
         }
-
         public Builder privateLinkResourceId(@Nullable String privateLinkResourceId) {
             this.privateLinkResourceId = privateLinkResourceId;
             return this;
         }
-
         public Builder provisioningState(@Nullable String provisioningState) {
             this.provisioningState = provisioningState;
             return this;
         }
-
         public Builder requestMessage(@Nullable String requestMessage) {
             this.requestMessage = requestMessage;
             return this;
         }
-
         public Builder resourceRegion(@Nullable String resourceRegion) {
             this.resourceRegion = resourceRegion;
             return this;
         }
-
         public Builder status(@Nullable String status) {
             this.status = status;
             return this;
-        }
-        public SharedPrivateLinkResourcePropertiesResponse build() {
+        }        public SharedPrivateLinkResourcePropertiesResponse build() {
             return new SharedPrivateLinkResourcePropertiesResponse(groupId, privateLinkResourceId, provisioningState, requestMessage, resourceRegion, status);
         }
     }

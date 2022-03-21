@@ -77,12 +77,10 @@ public final class ErrorAdditionalInfoResponse extends io.pulumi.resources.Invok
             this.info = Objects.requireNonNull(info);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public ErrorAdditionalInfoResponse build() {
+        }        public ErrorAdditionalInfoResponse build() {
             return new ErrorAdditionalInfoResponse(info, type);
         }
     }

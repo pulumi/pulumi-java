@@ -304,57 +304,52 @@ public final class MutatingWebhook {
             this.admissionReviewVersions = admissionReviewVersions;
             return this;
         }
-
+        public Builder admissionReviewVersions(String... admissionReviewVersions) {
+            return admissionReviewVersions(List.of(admissionReviewVersions));
+        }
         public Builder clientConfig(WebhookClientConfig clientConfig) {
             this.clientConfig = Objects.requireNonNull(clientConfig);
             return this;
         }
-
         public Builder failurePolicy(@Nullable String failurePolicy) {
             this.failurePolicy = failurePolicy;
             return this;
         }
-
         public Builder matchPolicy(@Nullable String matchPolicy) {
             this.matchPolicy = matchPolicy;
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder namespaceSelector(@Nullable LabelSelector namespaceSelector) {
             this.namespaceSelector = namespaceSelector;
             return this;
         }
-
         public Builder objectSelector(@Nullable LabelSelector objectSelector) {
             this.objectSelector = objectSelector;
             return this;
         }
-
         public Builder reinvocationPolicy(@Nullable String reinvocationPolicy) {
             this.reinvocationPolicy = reinvocationPolicy;
             return this;
         }
-
         public Builder rules(@Nullable List<RuleWithOperations> rules) {
             this.rules = rules;
             return this;
         }
-
+        public Builder rules(RuleWithOperations... rules) {
+            return rules(List.of(rules));
+        }
         public Builder sideEffects(@Nullable String sideEffects) {
             this.sideEffects = sideEffects;
             return this;
         }
-
         public Builder timeoutSeconds(@Nullable Integer timeoutSeconds) {
             this.timeoutSeconds = timeoutSeconds;
             return this;
-        }
-        public MutatingWebhook build() {
+        }        public MutatingWebhook build() {
             return new MutatingWebhook(admissionReviewVersions, clientConfig, failurePolicy, matchPolicy, name, namespaceSelector, objectSelector, reinvocationPolicy, rules, sideEffects, timeoutSeconds);
         }
     }

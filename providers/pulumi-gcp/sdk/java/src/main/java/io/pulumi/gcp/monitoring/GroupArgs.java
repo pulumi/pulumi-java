@@ -130,52 +130,42 @@ public final class GroupArgs extends io.pulumi.resources.ResourceArgs {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
-
         public Builder displayName(String displayName) {
             this.displayName = Output.of(Objects.requireNonNull(displayName));
             return this;
         }
-
         public Builder filter(Output<String> filter) {
             this.filter = Objects.requireNonNull(filter);
             return this;
         }
-
         public Builder filter(String filter) {
             this.filter = Output.of(Objects.requireNonNull(filter));
             return this;
         }
-
         public Builder isCluster(@Nullable Output<Boolean> isCluster) {
             this.isCluster = isCluster;
             return this;
         }
-
         public Builder isCluster(@Nullable Boolean isCluster) {
             this.isCluster = Output.ofNullable(isCluster);
             return this;
         }
-
         public Builder parentName(@Nullable Output<String> parentName) {
             this.parentName = parentName;
             return this;
         }
-
         public Builder parentName(@Nullable String parentName) {
             this.parentName = Output.ofNullable(parentName);
             return this;
         }
-
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
-        }
-        public GroupArgs build() {
+        }        public GroupArgs build() {
             return new GroupArgs(displayName, filter, isCluster, parentName, project);
         }
     }

@@ -57,12 +57,10 @@ public final class ServiceTemplateSpecContainerEnvValueFromArgs extends io.pulum
             this.secretKeyRef = Objects.requireNonNull(secretKeyRef);
             return this;
         }
-
         public Builder secretKeyRef(ServiceTemplateSpecContainerEnvValueFromSecretKeyRefArgs secretKeyRef) {
             this.secretKeyRef = Output.of(Objects.requireNonNull(secretKeyRef));
             return this;
-        }
-        public ServiceTemplateSpecContainerEnvValueFromArgs build() {
+        }        public ServiceTemplateSpecContainerEnvValueFromArgs build() {
             return new ServiceTemplateSpecContainerEnvValueFromArgs(secretKeyRef);
         }
     }

@@ -79,22 +79,21 @@ public final class SecuritySettingsArgs extends io.pulumi.resources.ResourceArgs
             this.clientTlsPolicy = clientTlsPolicy;
             return this;
         }
-
         public Builder clientTlsPolicy(@Nullable String clientTlsPolicy) {
             this.clientTlsPolicy = Output.ofNullable(clientTlsPolicy);
             return this;
         }
-
         public Builder subjectAltNames(@Nullable Output<List<String>> subjectAltNames) {
             this.subjectAltNames = subjectAltNames;
             return this;
         }
-
         public Builder subjectAltNames(@Nullable List<String> subjectAltNames) {
             this.subjectAltNames = Output.ofNullable(subjectAltNames);
             return this;
         }
-        public SecuritySettingsArgs build() {
+        public Builder subjectAltNames(String... subjectAltNames) {
+            return subjectAltNames(List.of(subjectAltNames));
+        }        public SecuritySettingsArgs build() {
             return new SecuritySettingsArgs(clientTlsPolicy, subjectAltNames);
         }
     }

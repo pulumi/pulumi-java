@@ -193,92 +193,74 @@ public final class ClusterUpgradePolicyArgs extends io.pulumi.resources.Resource
             this.deltaHealthPolicy = deltaHealthPolicy;
             return this;
         }
-
         public Builder deltaHealthPolicy(@Nullable ClusterUpgradeDeltaHealthPolicyArgs deltaHealthPolicy) {
             this.deltaHealthPolicy = Output.ofNullable(deltaHealthPolicy);
             return this;
         }
-
         public Builder forceRestart(@Nullable Output<Boolean> forceRestart) {
             this.forceRestart = forceRestart;
             return this;
         }
-
         public Builder forceRestart(@Nullable Boolean forceRestart) {
             this.forceRestart = Output.ofNullable(forceRestart);
             return this;
         }
-
         public Builder healthCheckRetryTimeout(Output<String> healthCheckRetryTimeout) {
             this.healthCheckRetryTimeout = Objects.requireNonNull(healthCheckRetryTimeout);
             return this;
         }
-
         public Builder healthCheckRetryTimeout(String healthCheckRetryTimeout) {
             this.healthCheckRetryTimeout = Output.of(Objects.requireNonNull(healthCheckRetryTimeout));
             return this;
         }
-
         public Builder healthCheckStableDuration(Output<String> healthCheckStableDuration) {
             this.healthCheckStableDuration = Objects.requireNonNull(healthCheckStableDuration);
             return this;
         }
-
         public Builder healthCheckStableDuration(String healthCheckStableDuration) {
             this.healthCheckStableDuration = Output.of(Objects.requireNonNull(healthCheckStableDuration));
             return this;
         }
-
         public Builder healthCheckWaitDuration(Output<String> healthCheckWaitDuration) {
             this.healthCheckWaitDuration = Objects.requireNonNull(healthCheckWaitDuration);
             return this;
         }
-
         public Builder healthCheckWaitDuration(String healthCheckWaitDuration) {
             this.healthCheckWaitDuration = Output.of(Objects.requireNonNull(healthCheckWaitDuration));
             return this;
         }
-
         public Builder healthPolicy(Output<ClusterHealthPolicyArgs> healthPolicy) {
             this.healthPolicy = Objects.requireNonNull(healthPolicy);
             return this;
         }
-
         public Builder healthPolicy(ClusterHealthPolicyArgs healthPolicy) {
             this.healthPolicy = Output.of(Objects.requireNonNull(healthPolicy));
             return this;
         }
-
         public Builder upgradeDomainTimeout(Output<String> upgradeDomainTimeout) {
             this.upgradeDomainTimeout = Objects.requireNonNull(upgradeDomainTimeout);
             return this;
         }
-
         public Builder upgradeDomainTimeout(String upgradeDomainTimeout) {
             this.upgradeDomainTimeout = Output.of(Objects.requireNonNull(upgradeDomainTimeout));
             return this;
         }
-
         public Builder upgradeReplicaSetCheckTimeout(Output<String> upgradeReplicaSetCheckTimeout) {
             this.upgradeReplicaSetCheckTimeout = Objects.requireNonNull(upgradeReplicaSetCheckTimeout);
             return this;
         }
-
         public Builder upgradeReplicaSetCheckTimeout(String upgradeReplicaSetCheckTimeout) {
             this.upgradeReplicaSetCheckTimeout = Output.of(Objects.requireNonNull(upgradeReplicaSetCheckTimeout));
             return this;
         }
-
         public Builder upgradeTimeout(Output<String> upgradeTimeout) {
             this.upgradeTimeout = Objects.requireNonNull(upgradeTimeout);
             return this;
         }
-
         public Builder upgradeTimeout(String upgradeTimeout) {
             this.upgradeTimeout = Output.of(Objects.requireNonNull(upgradeTimeout));
             return this;
-        }
-        public ClusterUpgradePolicyArgs build() {
+        }        public ClusterUpgradePolicyArgs build() {
             return new ClusterUpgradePolicyArgs(deltaHealthPolicy, forceRestart, healthCheckRetryTimeout, healthCheckStableDuration, healthCheckWaitDuration, healthPolicy, upgradeDomainTimeout, upgradeReplicaSetCheckTimeout, upgradeTimeout);
         }
     }

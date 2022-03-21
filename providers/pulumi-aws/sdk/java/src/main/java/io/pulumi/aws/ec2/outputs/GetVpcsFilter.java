@@ -74,12 +74,13 @@ public final class GetVpcsFilter {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder values(List<String> values) {
             this.values = Objects.requireNonNull(values);
             return this;
         }
-        public GetVpcsFilter build() {
+        public Builder values(String... values) {
+            return values(List.of(values));
+        }        public GetVpcsFilter build() {
             return new GetVpcsFilter(name, values);
         }
     }

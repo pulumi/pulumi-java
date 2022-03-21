@@ -94,22 +94,18 @@ public final class TimePartitioningResponse {
             this.expirationMs = Objects.requireNonNull(expirationMs);
             return this;
         }
-
         public Builder field(String field) {
             this.field = Objects.requireNonNull(field);
             return this;
         }
-
         public Builder requirePartitionFilter(Boolean requirePartitionFilter) {
             this.requirePartitionFilter = Objects.requireNonNull(requirePartitionFilter);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public TimePartitioningResponse build() {
+        }        public TimePartitioningResponse build() {
             return new TimePartitioningResponse(expirationMs, field, requirePartitionFilter, type);
         }
     }

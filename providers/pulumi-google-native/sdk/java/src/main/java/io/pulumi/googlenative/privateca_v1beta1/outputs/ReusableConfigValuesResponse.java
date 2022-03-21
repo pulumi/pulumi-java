@@ -122,27 +122,31 @@ public final class ReusableConfigValuesResponse {
             this.additionalExtensions = Objects.requireNonNull(additionalExtensions);
             return this;
         }
-
+        public Builder additionalExtensions(X509ExtensionResponse... additionalExtensions) {
+            return additionalExtensions(List.of(additionalExtensions));
+        }
         public Builder aiaOcspServers(List<String> aiaOcspServers) {
             this.aiaOcspServers = Objects.requireNonNull(aiaOcspServers);
             return this;
         }
-
+        public Builder aiaOcspServers(String... aiaOcspServers) {
+            return aiaOcspServers(List.of(aiaOcspServers));
+        }
         public Builder caOptions(CaOptionsResponse caOptions) {
             this.caOptions = Objects.requireNonNull(caOptions);
             return this;
         }
-
         public Builder keyUsage(KeyUsageResponse keyUsage) {
             this.keyUsage = Objects.requireNonNull(keyUsage);
             return this;
         }
-
         public Builder policyIds(List<ObjectIdResponse> policyIds) {
             this.policyIds = Objects.requireNonNull(policyIds);
             return this;
         }
-        public ReusableConfigValuesResponse build() {
+        public Builder policyIds(ObjectIdResponse... policyIds) {
+            return policyIds(List.of(policyIds));
+        }        public ReusableConfigValuesResponse build() {
             return new ReusableConfigValuesResponse(additionalExtensions, aiaOcspServers, caOptions, keyUsage, policyIds);
         }
     }

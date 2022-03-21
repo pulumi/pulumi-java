@@ -112,42 +112,34 @@ public final class SitePropertiesArgs extends io.pulumi.resources.ResourceArgs {
             this.agentDetails = agentDetails;
             return this;
         }
-
         public Builder agentDetails(@Nullable SiteAgentPropertiesArgs agentDetails) {
             this.agentDetails = Output.ofNullable(agentDetails);
             return this;
         }
-
         public Builder applianceName(@Nullable Output<String> applianceName) {
             this.applianceName = applianceName;
             return this;
         }
-
         public Builder applianceName(@Nullable String applianceName) {
             this.applianceName = Output.ofNullable(applianceName);
             return this;
         }
-
         public Builder discoverySolutionId(@Nullable Output<String> discoverySolutionId) {
             this.discoverySolutionId = discoverySolutionId;
             return this;
         }
-
         public Builder discoverySolutionId(@Nullable String discoverySolutionId) {
             this.discoverySolutionId = Output.ofNullable(discoverySolutionId);
             return this;
         }
-
         public Builder servicePrincipalIdentityDetails(@Nullable Output<SiteSpnPropertiesArgs> servicePrincipalIdentityDetails) {
             this.servicePrincipalIdentityDetails = servicePrincipalIdentityDetails;
             return this;
         }
-
         public Builder servicePrincipalIdentityDetails(@Nullable SiteSpnPropertiesArgs servicePrincipalIdentityDetails) {
             this.servicePrincipalIdentityDetails = Output.ofNullable(servicePrincipalIdentityDetails);
             return this;
-        }
-        public SitePropertiesArgs build() {
+        }        public SitePropertiesArgs build() {
             return new SitePropertiesArgs(agentDetails, applianceName, discoverySolutionId, servicePrincipalIdentityDetails);
         }
     }

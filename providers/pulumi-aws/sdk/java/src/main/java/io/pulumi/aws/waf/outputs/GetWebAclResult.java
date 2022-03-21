@@ -61,12 +61,10 @@ public final class GetWebAclResult {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
-        }
-        public GetWebAclResult build() {
+        }        public GetWebAclResult build() {
             return new GetWebAclResult(id, name);
         }
     }

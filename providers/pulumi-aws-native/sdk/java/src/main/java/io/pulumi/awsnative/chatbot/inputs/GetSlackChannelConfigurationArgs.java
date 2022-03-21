@@ -54,8 +54,7 @@ public final class GetSlackChannelConfigurationArgs extends io.pulumi.resources.
         public Builder arn(String arn) {
             this.arn = Objects.requireNonNull(arn);
             return this;
-        }
-        public GetSlackChannelConfigurationArgs build() {
+        }        public GetSlackChannelConfigurationArgs build() {
             return new GetSlackChannelConfigurationArgs(arn);
         }
     }

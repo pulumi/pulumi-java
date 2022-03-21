@@ -1012,552 +1012,451 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
             this.allocatedStorage = allocatedStorage;
             return this;
         }
-
         public Builder allocatedStorage(@Nullable Integer allocatedStorage) {
             this.allocatedStorage = Output.ofNullable(allocatedStorage);
             return this;
         }
-
         public Builder allowMajorVersionUpgrade(@Nullable Output<Boolean> allowMajorVersionUpgrade) {
             this.allowMajorVersionUpgrade = allowMajorVersionUpgrade;
             return this;
         }
-
         public Builder allowMajorVersionUpgrade(@Nullable Boolean allowMajorVersionUpgrade) {
             this.allowMajorVersionUpgrade = Output.ofNullable(allowMajorVersionUpgrade);
             return this;
         }
-
         public Builder applyImmediately(@Nullable Output<Boolean> applyImmediately) {
             this.applyImmediately = applyImmediately;
             return this;
         }
-
         public Builder applyImmediately(@Nullable Boolean applyImmediately) {
             this.applyImmediately = Output.ofNullable(applyImmediately);
             return this;
         }
-
         public Builder autoMinorVersionUpgrade(@Nullable Output<Boolean> autoMinorVersionUpgrade) {
             this.autoMinorVersionUpgrade = autoMinorVersionUpgrade;
             return this;
         }
-
         public Builder autoMinorVersionUpgrade(@Nullable Boolean autoMinorVersionUpgrade) {
             this.autoMinorVersionUpgrade = Output.ofNullable(autoMinorVersionUpgrade);
             return this;
         }
-
         public Builder availabilityZone(@Nullable Output<String> availabilityZone) {
             this.availabilityZone = availabilityZone;
             return this;
         }
-
         public Builder availabilityZone(@Nullable String availabilityZone) {
             this.availabilityZone = Output.ofNullable(availabilityZone);
             return this;
         }
-
         public Builder backupRetentionPeriod(@Nullable Output<Integer> backupRetentionPeriod) {
             this.backupRetentionPeriod = backupRetentionPeriod;
             return this;
         }
-
         public Builder backupRetentionPeriod(@Nullable Integer backupRetentionPeriod) {
             this.backupRetentionPeriod = Output.ofNullable(backupRetentionPeriod);
             return this;
         }
-
         public Builder backupWindow(@Nullable Output<String> backupWindow) {
             this.backupWindow = backupWindow;
             return this;
         }
-
         public Builder backupWindow(@Nullable String backupWindow) {
             this.backupWindow = Output.ofNullable(backupWindow);
             return this;
         }
-
         public Builder caCertIdentifier(@Nullable Output<String> caCertIdentifier) {
             this.caCertIdentifier = caCertIdentifier;
             return this;
         }
-
         public Builder caCertIdentifier(@Nullable String caCertIdentifier) {
             this.caCertIdentifier = Output.ofNullable(caCertIdentifier);
             return this;
         }
-
         public Builder characterSetName(@Nullable Output<String> characterSetName) {
             this.characterSetName = characterSetName;
             return this;
         }
-
         public Builder characterSetName(@Nullable String characterSetName) {
             this.characterSetName = Output.ofNullable(characterSetName);
             return this;
         }
-
         public Builder copyTagsToSnapshot(@Nullable Output<Boolean> copyTagsToSnapshot) {
             this.copyTagsToSnapshot = copyTagsToSnapshot;
             return this;
         }
-
         public Builder copyTagsToSnapshot(@Nullable Boolean copyTagsToSnapshot) {
             this.copyTagsToSnapshot = Output.ofNullable(copyTagsToSnapshot);
             return this;
         }
-
         public Builder customerOwnedIpEnabled(@Nullable Output<Boolean> customerOwnedIpEnabled) {
             this.customerOwnedIpEnabled = customerOwnedIpEnabled;
             return this;
         }
-
         public Builder customerOwnedIpEnabled(@Nullable Boolean customerOwnedIpEnabled) {
             this.customerOwnedIpEnabled = Output.ofNullable(customerOwnedIpEnabled);
             return this;
         }
-
         public Builder dbSubnetGroupName(@Nullable Output<String> dbSubnetGroupName) {
             this.dbSubnetGroupName = dbSubnetGroupName;
             return this;
         }
-
         public Builder dbSubnetGroupName(@Nullable String dbSubnetGroupName) {
             this.dbSubnetGroupName = Output.ofNullable(dbSubnetGroupName);
             return this;
         }
-
         public Builder deleteAutomatedBackups(@Nullable Output<Boolean> deleteAutomatedBackups) {
             this.deleteAutomatedBackups = deleteAutomatedBackups;
             return this;
         }
-
         public Builder deleteAutomatedBackups(@Nullable Boolean deleteAutomatedBackups) {
             this.deleteAutomatedBackups = Output.ofNullable(deleteAutomatedBackups);
             return this;
         }
-
         public Builder deletionProtection(@Nullable Output<Boolean> deletionProtection) {
             this.deletionProtection = deletionProtection;
             return this;
         }
-
         public Builder deletionProtection(@Nullable Boolean deletionProtection) {
             this.deletionProtection = Output.ofNullable(deletionProtection);
             return this;
         }
-
         public Builder domain(@Nullable Output<String> domain) {
             this.domain = domain;
             return this;
         }
-
         public Builder domain(@Nullable String domain) {
             this.domain = Output.ofNullable(domain);
             return this;
         }
-
         public Builder domainIamRoleName(@Nullable Output<String> domainIamRoleName) {
             this.domainIamRoleName = domainIamRoleName;
             return this;
         }
-
         public Builder domainIamRoleName(@Nullable String domainIamRoleName) {
             this.domainIamRoleName = Output.ofNullable(domainIamRoleName);
             return this;
         }
-
         public Builder enabledCloudwatchLogsExports(@Nullable Output<List<String>> enabledCloudwatchLogsExports) {
             this.enabledCloudwatchLogsExports = enabledCloudwatchLogsExports;
             return this;
         }
-
         public Builder enabledCloudwatchLogsExports(@Nullable List<String> enabledCloudwatchLogsExports) {
             this.enabledCloudwatchLogsExports = Output.ofNullable(enabledCloudwatchLogsExports);
             return this;
         }
-
+        public Builder enabledCloudwatchLogsExports(String... enabledCloudwatchLogsExports) {
+            return enabledCloudwatchLogsExports(List.of(enabledCloudwatchLogsExports));
+        }
         public Builder engine(@Nullable Output<String> engine) {
             this.engine = engine;
             return this;
         }
-
         public Builder engine(@Nullable String engine) {
             this.engine = Output.ofNullable(engine);
             return this;
         }
-
         public Builder engineVersion(@Nullable Output<String> engineVersion) {
             this.engineVersion = engineVersion;
             return this;
         }
-
         public Builder engineVersion(@Nullable String engineVersion) {
             this.engineVersion = Output.ofNullable(engineVersion);
             return this;
         }
-
         public Builder finalSnapshotIdentifier(@Nullable Output<String> finalSnapshotIdentifier) {
             this.finalSnapshotIdentifier = finalSnapshotIdentifier;
             return this;
         }
-
         public Builder finalSnapshotIdentifier(@Nullable String finalSnapshotIdentifier) {
             this.finalSnapshotIdentifier = Output.ofNullable(finalSnapshotIdentifier);
             return this;
         }
-
         public Builder iamDatabaseAuthenticationEnabled(@Nullable Output<Boolean> iamDatabaseAuthenticationEnabled) {
             this.iamDatabaseAuthenticationEnabled = iamDatabaseAuthenticationEnabled;
             return this;
         }
-
         public Builder iamDatabaseAuthenticationEnabled(@Nullable Boolean iamDatabaseAuthenticationEnabled) {
             this.iamDatabaseAuthenticationEnabled = Output.ofNullable(iamDatabaseAuthenticationEnabled);
             return this;
         }
-
         public Builder identifier(@Nullable Output<String> identifier) {
             this.identifier = identifier;
             return this;
         }
-
         public Builder identifier(@Nullable String identifier) {
             this.identifier = Output.ofNullable(identifier);
             return this;
         }
-
         public Builder identifierPrefix(@Nullable Output<String> identifierPrefix) {
             this.identifierPrefix = identifierPrefix;
             return this;
         }
-
         public Builder identifierPrefix(@Nullable String identifierPrefix) {
             this.identifierPrefix = Output.ofNullable(identifierPrefix);
             return this;
         }
-
         public Builder instanceClass(Output<Either<String,InstanceType>> instanceClass) {
             this.instanceClass = Objects.requireNonNull(instanceClass);
             return this;
         }
-
         public Builder instanceClass(Either<String,InstanceType> instanceClass) {
             this.instanceClass = Output.of(Objects.requireNonNull(instanceClass));
             return this;
         }
-
         public Builder iops(@Nullable Output<Integer> iops) {
             this.iops = iops;
             return this;
         }
-
         public Builder iops(@Nullable Integer iops) {
             this.iops = Output.ofNullable(iops);
             return this;
         }
-
         public Builder kmsKeyId(@Nullable Output<String> kmsKeyId) {
             this.kmsKeyId = kmsKeyId;
             return this;
         }
-
         public Builder kmsKeyId(@Nullable String kmsKeyId) {
             this.kmsKeyId = Output.ofNullable(kmsKeyId);
             return this;
         }
-
         public Builder licenseModel(@Nullable Output<String> licenseModel) {
             this.licenseModel = licenseModel;
             return this;
         }
-
         public Builder licenseModel(@Nullable String licenseModel) {
             this.licenseModel = Output.ofNullable(licenseModel);
             return this;
         }
-
         public Builder maintenanceWindow(@Nullable Output<String> maintenanceWindow) {
             this.maintenanceWindow = maintenanceWindow;
             return this;
         }
-
         public Builder maintenanceWindow(@Nullable String maintenanceWindow) {
             this.maintenanceWindow = Output.ofNullable(maintenanceWindow);
             return this;
         }
-
         public Builder maxAllocatedStorage(@Nullable Output<Integer> maxAllocatedStorage) {
             this.maxAllocatedStorage = maxAllocatedStorage;
             return this;
         }
-
         public Builder maxAllocatedStorage(@Nullable Integer maxAllocatedStorage) {
             this.maxAllocatedStorage = Output.ofNullable(maxAllocatedStorage);
             return this;
         }
-
         public Builder monitoringInterval(@Nullable Output<Integer> monitoringInterval) {
             this.monitoringInterval = monitoringInterval;
             return this;
         }
-
         public Builder monitoringInterval(@Nullable Integer monitoringInterval) {
             this.monitoringInterval = Output.ofNullable(monitoringInterval);
             return this;
         }
-
         public Builder monitoringRoleArn(@Nullable Output<String> monitoringRoleArn) {
             this.monitoringRoleArn = monitoringRoleArn;
             return this;
         }
-
         public Builder monitoringRoleArn(@Nullable String monitoringRoleArn) {
             this.monitoringRoleArn = Output.ofNullable(monitoringRoleArn);
             return this;
         }
-
         public Builder multiAz(@Nullable Output<Boolean> multiAz) {
             this.multiAz = multiAz;
             return this;
         }
-
         public Builder multiAz(@Nullable Boolean multiAz) {
             this.multiAz = Output.ofNullable(multiAz);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder ncharCharacterSetName(@Nullable Output<String> ncharCharacterSetName) {
             this.ncharCharacterSetName = ncharCharacterSetName;
             return this;
         }
-
         public Builder ncharCharacterSetName(@Nullable String ncharCharacterSetName) {
             this.ncharCharacterSetName = Output.ofNullable(ncharCharacterSetName);
             return this;
         }
-
         public Builder optionGroupName(@Nullable Output<String> optionGroupName) {
             this.optionGroupName = optionGroupName;
             return this;
         }
-
         public Builder optionGroupName(@Nullable String optionGroupName) {
             this.optionGroupName = Output.ofNullable(optionGroupName);
             return this;
         }
-
         public Builder parameterGroupName(@Nullable Output<String> parameterGroupName) {
             this.parameterGroupName = parameterGroupName;
             return this;
         }
-
         public Builder parameterGroupName(@Nullable String parameterGroupName) {
             this.parameterGroupName = Output.ofNullable(parameterGroupName);
             return this;
         }
-
         public Builder password(@Nullable Output<String> password) {
             this.password = password;
             return this;
         }
-
         public Builder password(@Nullable String password) {
             this.password = Output.ofNullable(password);
             return this;
         }
-
         public Builder performanceInsightsEnabled(@Nullable Output<Boolean> performanceInsightsEnabled) {
             this.performanceInsightsEnabled = performanceInsightsEnabled;
             return this;
         }
-
         public Builder performanceInsightsEnabled(@Nullable Boolean performanceInsightsEnabled) {
             this.performanceInsightsEnabled = Output.ofNullable(performanceInsightsEnabled);
             return this;
         }
-
         public Builder performanceInsightsKmsKeyId(@Nullable Output<String> performanceInsightsKmsKeyId) {
             this.performanceInsightsKmsKeyId = performanceInsightsKmsKeyId;
             return this;
         }
-
         public Builder performanceInsightsKmsKeyId(@Nullable String performanceInsightsKmsKeyId) {
             this.performanceInsightsKmsKeyId = Output.ofNullable(performanceInsightsKmsKeyId);
             return this;
         }
-
         public Builder performanceInsightsRetentionPeriod(@Nullable Output<Integer> performanceInsightsRetentionPeriod) {
             this.performanceInsightsRetentionPeriod = performanceInsightsRetentionPeriod;
             return this;
         }
-
         public Builder performanceInsightsRetentionPeriod(@Nullable Integer performanceInsightsRetentionPeriod) {
             this.performanceInsightsRetentionPeriod = Output.ofNullable(performanceInsightsRetentionPeriod);
             return this;
         }
-
         public Builder port(@Nullable Output<Integer> port) {
             this.port = port;
             return this;
         }
-
         public Builder port(@Nullable Integer port) {
             this.port = Output.ofNullable(port);
             return this;
         }
-
         public Builder publiclyAccessible(@Nullable Output<Boolean> publiclyAccessible) {
             this.publiclyAccessible = publiclyAccessible;
             return this;
         }
-
         public Builder publiclyAccessible(@Nullable Boolean publiclyAccessible) {
             this.publiclyAccessible = Output.ofNullable(publiclyAccessible);
             return this;
         }
-
         public Builder replicaMode(@Nullable Output<String> replicaMode) {
             this.replicaMode = replicaMode;
             return this;
         }
-
         public Builder replicaMode(@Nullable String replicaMode) {
             this.replicaMode = Output.ofNullable(replicaMode);
             return this;
         }
-
         public Builder replicateSourceDb(@Nullable Output<String> replicateSourceDb) {
             this.replicateSourceDb = replicateSourceDb;
             return this;
         }
-
         public Builder replicateSourceDb(@Nullable String replicateSourceDb) {
             this.replicateSourceDb = Output.ofNullable(replicateSourceDb);
             return this;
         }
-
         public Builder restoreToPointInTime(@Nullable Output<InstanceRestoreToPointInTimeArgs> restoreToPointInTime) {
             this.restoreToPointInTime = restoreToPointInTime;
             return this;
         }
-
         public Builder restoreToPointInTime(@Nullable InstanceRestoreToPointInTimeArgs restoreToPointInTime) {
             this.restoreToPointInTime = Output.ofNullable(restoreToPointInTime);
             return this;
         }
-
         public Builder s3Import(@Nullable Output<InstanceS3ImportArgs> s3Import) {
             this.s3Import = s3Import;
             return this;
         }
-
         public Builder s3Import(@Nullable InstanceS3ImportArgs s3Import) {
             this.s3Import = Output.ofNullable(s3Import);
             return this;
         }
-
         public Builder securityGroupNames(@Nullable Output<List<String>> securityGroupNames) {
             this.securityGroupNames = securityGroupNames;
             return this;
         }
-
         public Builder securityGroupNames(@Nullable List<String> securityGroupNames) {
             this.securityGroupNames = Output.ofNullable(securityGroupNames);
             return this;
         }
-
+        public Builder securityGroupNames(String... securityGroupNames) {
+            return securityGroupNames(List.of(securityGroupNames));
+        }
         public Builder skipFinalSnapshot(@Nullable Output<Boolean> skipFinalSnapshot) {
             this.skipFinalSnapshot = skipFinalSnapshot;
             return this;
         }
-
         public Builder skipFinalSnapshot(@Nullable Boolean skipFinalSnapshot) {
             this.skipFinalSnapshot = Output.ofNullable(skipFinalSnapshot);
             return this;
         }
-
         public Builder snapshotIdentifier(@Nullable Output<String> snapshotIdentifier) {
             this.snapshotIdentifier = snapshotIdentifier;
             return this;
         }
-
         public Builder snapshotIdentifier(@Nullable String snapshotIdentifier) {
             this.snapshotIdentifier = Output.ofNullable(snapshotIdentifier);
             return this;
         }
-
         public Builder storageEncrypted(@Nullable Output<Boolean> storageEncrypted) {
             this.storageEncrypted = storageEncrypted;
             return this;
         }
-
         public Builder storageEncrypted(@Nullable Boolean storageEncrypted) {
             this.storageEncrypted = Output.ofNullable(storageEncrypted);
             return this;
         }
-
         public Builder storageType(@Nullable Output<Either<String,StorageType>> storageType) {
             this.storageType = storageType;
             return this;
         }
-
         public Builder storageType(@Nullable Either<String,StorageType> storageType) {
             this.storageType = Output.ofNullable(storageType);
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
         public Builder timezone(@Nullable Output<String> timezone) {
             this.timezone = timezone;
             return this;
         }
-
         public Builder timezone(@Nullable String timezone) {
             this.timezone = Output.ofNullable(timezone);
             return this;
         }
-
         public Builder username(@Nullable Output<String> username) {
             this.username = username;
             return this;
         }
-
         public Builder username(@Nullable String username) {
             this.username = Output.ofNullable(username);
             return this;
         }
-
         public Builder vpcSecurityGroupIds(@Nullable Output<List<String>> vpcSecurityGroupIds) {
             this.vpcSecurityGroupIds = vpcSecurityGroupIds;
             return this;
         }
-
         public Builder vpcSecurityGroupIds(@Nullable List<String> vpcSecurityGroupIds) {
             this.vpcSecurityGroupIds = Output.ofNullable(vpcSecurityGroupIds);
             return this;
         }
-        public InstanceArgs build() {
+        public Builder vpcSecurityGroupIds(String... vpcSecurityGroupIds) {
+            return vpcSecurityGroupIds(List.of(vpcSecurityGroupIds));
+        }        public InstanceArgs build() {
             return new InstanceArgs(allocatedStorage, allowMajorVersionUpgrade, applyImmediately, autoMinorVersionUpgrade, availabilityZone, backupRetentionPeriod, backupWindow, caCertIdentifier, characterSetName, copyTagsToSnapshot, customerOwnedIpEnabled, dbSubnetGroupName, deleteAutomatedBackups, deletionProtection, domain, domainIamRoleName, enabledCloudwatchLogsExports, engine, engineVersion, finalSnapshotIdentifier, iamDatabaseAuthenticationEnabled, identifier, identifierPrefix, instanceClass, iops, kmsKeyId, licenseModel, maintenanceWindow, maxAllocatedStorage, monitoringInterval, monitoringRoleArn, multiAz, name, ncharCharacterSetName, optionGroupName, parameterGroupName, password, performanceInsightsEnabled, performanceInsightsKmsKeyId, performanceInsightsRetentionPeriod, port, publiclyAccessible, replicaMode, replicateSourceDb, restoreToPointInTime, s3Import, securityGroupNames, skipFinalSnapshot, snapshotIdentifier, storageEncrypted, storageType, tags, timezone, username, vpcSecurityGroupIds);
         }
     }

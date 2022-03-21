@@ -74,22 +74,18 @@ public final class RuleGroupRuleGroupRuleVariablesPortSetGetArgs extends io.pulu
             this.key = Objects.requireNonNull(key);
             return this;
         }
-
         public Builder key(String key) {
             this.key = Output.of(Objects.requireNonNull(key));
             return this;
         }
-
         public Builder portSet(Output<RuleGroupRuleGroupRuleVariablesPortSetPortSetGetArgs> portSet) {
             this.portSet = Objects.requireNonNull(portSet);
             return this;
         }
-
         public Builder portSet(RuleGroupRuleGroupRuleVariablesPortSetPortSetGetArgs portSet) {
             this.portSet = Output.of(Objects.requireNonNull(portSet));
             return this;
-        }
-        public RuleGroupRuleGroupRuleVariablesPortSetGetArgs build() {
+        }        public RuleGroupRuleGroupRuleVariablesPortSetGetArgs build() {
             return new RuleGroupRuleGroupRuleVariablesPortSetGetArgs(key, portSet);
         }
     }

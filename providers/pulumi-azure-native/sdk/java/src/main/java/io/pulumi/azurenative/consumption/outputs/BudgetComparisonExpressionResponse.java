@@ -86,17 +86,17 @@ public final class BudgetComparisonExpressionResponse {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder operator(String operator) {
             this.operator = Objects.requireNonNull(operator);
             return this;
         }
-
         public Builder values(List<String> values) {
             this.values = Objects.requireNonNull(values);
             return this;
         }
-        public BudgetComparisonExpressionResponse build() {
+        public Builder values(String... values) {
+            return values(List.of(values));
+        }        public BudgetComparisonExpressionResponse build() {
             return new BudgetComparisonExpressionResponse(name, operator, values);
         }
     }

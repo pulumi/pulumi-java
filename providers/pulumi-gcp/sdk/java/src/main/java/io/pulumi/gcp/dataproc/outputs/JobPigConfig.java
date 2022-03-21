@@ -151,37 +151,36 @@ public final class JobPigConfig {
             this.continueOnFailure = continueOnFailure;
             return this;
         }
-
         public Builder jarFileUris(@Nullable List<String> jarFileUris) {
             this.jarFileUris = jarFileUris;
             return this;
         }
-
+        public Builder jarFileUris(String... jarFileUris) {
+            return jarFileUris(List.of(jarFileUris));
+        }
         public Builder loggingConfig(@Nullable JobPigConfigLoggingConfig loggingConfig) {
             this.loggingConfig = loggingConfig;
             return this;
         }
-
         public Builder properties(@Nullable Map<String,String> properties) {
             this.properties = properties;
             return this;
         }
-
         public Builder queryFileUri(@Nullable String queryFileUri) {
             this.queryFileUri = queryFileUri;
             return this;
         }
-
         public Builder queryLists(@Nullable List<String> queryLists) {
             this.queryLists = queryLists;
             return this;
         }
-
+        public Builder queryLists(String... queryLists) {
+            return queryLists(List.of(queryLists));
+        }
         public Builder scriptVariables(@Nullable Map<String,String> scriptVariables) {
             this.scriptVariables = scriptVariables;
             return this;
-        }
-        public JobPigConfig build() {
+        }        public JobPigConfig build() {
             return new JobPigConfig(continueOnFailure, jarFileUris, loggingConfig, properties, queryFileUri, queryLists, scriptVariables);
         }
     }

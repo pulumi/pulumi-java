@@ -62,12 +62,13 @@ public final class DynamicGroupMetadataArgs extends io.pulumi.resources.Resource
             this.queries = queries;
             return this;
         }
-
         public Builder queries(@Nullable List<DynamicGroupQueryArgs> queries) {
             this.queries = Output.ofNullable(queries);
             return this;
         }
-        public DynamicGroupMetadataArgs build() {
+        public Builder queries(DynamicGroupQueryArgs... queries) {
+            return queries(List.of(queries));
+        }        public DynamicGroupMetadataArgs build() {
             return new DynamicGroupMetadataArgs(queries);
         }
     }

@@ -92,42 +92,34 @@ public final class DomainEBSOptionsArgs extends io.pulumi.resources.ResourceArgs
             this.eBSEnabled = eBSEnabled;
             return this;
         }
-
         public Builder eBSEnabled(@Nullable Boolean eBSEnabled) {
             this.eBSEnabled = Output.ofNullable(eBSEnabled);
             return this;
         }
-
         public Builder iops(@Nullable Output<Integer> iops) {
             this.iops = iops;
             return this;
         }
-
         public Builder iops(@Nullable Integer iops) {
             this.iops = Output.ofNullable(iops);
             return this;
         }
-
         public Builder volumeSize(@Nullable Output<Integer> volumeSize) {
             this.volumeSize = volumeSize;
             return this;
         }
-
         public Builder volumeSize(@Nullable Integer volumeSize) {
             this.volumeSize = Output.ofNullable(volumeSize);
             return this;
         }
-
         public Builder volumeType(@Nullable Output<String> volumeType) {
             this.volumeType = volumeType;
             return this;
         }
-
         public Builder volumeType(@Nullable String volumeType) {
             this.volumeType = Output.ofNullable(volumeType);
             return this;
-        }
-        public DomainEBSOptionsArgs build() {
+        }        public DomainEBSOptionsArgs build() {
             return new DomainEBSOptionsArgs(eBSEnabled, iops, volumeSize, volumeType);
         }
     }

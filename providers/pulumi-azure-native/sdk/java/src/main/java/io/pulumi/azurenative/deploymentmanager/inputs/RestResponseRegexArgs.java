@@ -80,22 +80,21 @@ public final class RestResponseRegexArgs extends io.pulumi.resources.ResourceArg
             this.matchQuantifier = matchQuantifier;
             return this;
         }
-
         public Builder matchQuantifier(@Nullable RestMatchQuantifier matchQuantifier) {
             this.matchQuantifier = Output.ofNullable(matchQuantifier);
             return this;
         }
-
         public Builder matches(@Nullable Output<List<String>> matches) {
             this.matches = matches;
             return this;
         }
-
         public Builder matches(@Nullable List<String> matches) {
             this.matches = Output.ofNullable(matches);
             return this;
         }
-        public RestResponseRegexArgs build() {
+        public Builder matches(String... matches) {
+            return matches(List.of(matches));
+        }        public RestResponseRegexArgs build() {
             return new RestResponseRegexArgs(matchQuantifier, matches);
         }
     }

@@ -61,12 +61,10 @@ public final class AdditionalCapabilitiesArgs extends io.pulumi.resources.Resour
             this.ultraSSDEnabled = ultraSSDEnabled;
             return this;
         }
-
         public Builder ultraSSDEnabled(@Nullable Boolean ultraSSDEnabled) {
             this.ultraSSDEnabled = Output.ofNullable(ultraSSDEnabled);
             return this;
-        }
-        public AdditionalCapabilitiesArgs build() {
+        }        public AdditionalCapabilitiesArgs build() {
             return new AdditionalCapabilitiesArgs(ultraSSDEnabled);
         }
     }

@@ -70,12 +70,10 @@ public final class RouteSpecGrpcRouteRetryPolicyPerRetryTimeout {
             this.unit = Objects.requireNonNull(unit);
             return this;
         }
-
         public Builder value(Integer value) {
             this.value = Objects.requireNonNull(value);
             return this;
-        }
-        public RouteSpecGrpcRouteRetryPolicyPerRetryTimeout build() {
+        }        public RouteSpecGrpcRouteRetryPolicyPerRetryTimeout build() {
             return new RouteSpecGrpcRouteRetryPolicyPerRetryTimeout(unit, value);
         }
     }

@@ -80,12 +80,13 @@ public final class ManagedRuleGroupOverrideResponse extends io.pulumi.resources.
             this.ruleGroupName = Objects.requireNonNull(ruleGroupName);
             return this;
         }
-
         public Builder rules(@Nullable List<ManagedRuleOverrideResponse> rules) {
             this.rules = rules;
             return this;
         }
-        public ManagedRuleGroupOverrideResponse build() {
+        public Builder rules(ManagedRuleOverrideResponse... rules) {
+            return rules(List.of(rules));
+        }        public ManagedRuleGroupOverrideResponse build() {
             return new ManagedRuleGroupOverrideResponse(ruleGroupName, rules);
         }
     }

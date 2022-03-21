@@ -43,8 +43,7 @@ public final class DataQualityJobDefinitionDataQualityJobInput {
         public Builder endpointInput(DataQualityJobDefinitionEndpointInput endpointInput) {
             this.endpointInput = Objects.requireNonNull(endpointInput);
             return this;
-        }
-        public DataQualityJobDefinitionDataQualityJobInput build() {
+        }        public DataQualityJobDefinitionDataQualityJobInput build() {
             return new DataQualityJobDefinitionDataQualityJobInput(endpointInput);
         }
     }

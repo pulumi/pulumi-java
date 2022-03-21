@@ -50,8 +50,7 @@ public final class GetScheduledQueryArgs extends io.pulumi.resources.InvokeArgs 
         public Builder arn(String arn) {
             this.arn = Objects.requireNonNull(arn);
             return this;
-        }
-        public GetScheduledQueryArgs build() {
+        }        public GetScheduledQueryArgs build() {
             return new GetScheduledQueryArgs(arn);
         }
     }

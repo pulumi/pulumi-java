@@ -95,32 +95,26 @@ public final class DataQualityJobDefinitionS3OutputArgs extends io.pulumi.resour
             this.localPath = Objects.requireNonNull(localPath);
             return this;
         }
-
         public Builder localPath(String localPath) {
             this.localPath = Output.of(Objects.requireNonNull(localPath));
             return this;
         }
-
         public Builder s3UploadMode(@Nullable Output<DataQualityJobDefinitionS3OutputS3UploadMode> s3UploadMode) {
             this.s3UploadMode = s3UploadMode;
             return this;
         }
-
         public Builder s3UploadMode(@Nullable DataQualityJobDefinitionS3OutputS3UploadMode s3UploadMode) {
             this.s3UploadMode = Output.ofNullable(s3UploadMode);
             return this;
         }
-
         public Builder s3Uri(Output<String> s3Uri) {
             this.s3Uri = Objects.requireNonNull(s3Uri);
             return this;
         }
-
         public Builder s3Uri(String s3Uri) {
             this.s3Uri = Output.of(Objects.requireNonNull(s3Uri));
             return this;
-        }
-        public DataQualityJobDefinitionS3OutputArgs build() {
+        }        public DataQualityJobDefinitionS3OutputArgs build() {
             return new DataQualityJobDefinitionS3OutputArgs(localPath, s3UploadMode, s3Uri);
         }
     }

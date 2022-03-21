@@ -60,8 +60,7 @@ public final class PrivateEndpointConnectionPropertiesResponsePrivateEndpoint ex
         public Builder id(@Nullable String id) {
             this.id = id;
             return this;
-        }
-        public PrivateEndpointConnectionPropertiesResponsePrivateEndpoint build() {
+        }        public PrivateEndpointConnectionPropertiesResponsePrivateEndpoint build() {
             return new PrivateEndpointConnectionPropertiesResponsePrivateEndpoint(id);
         }
     }

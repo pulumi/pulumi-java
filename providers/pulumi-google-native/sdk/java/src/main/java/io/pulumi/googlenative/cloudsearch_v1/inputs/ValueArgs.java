@@ -121,62 +121,50 @@ public final class ValueArgs extends io.pulumi.resources.ResourceArgs {
             this.booleanValue = booleanValue;
             return this;
         }
-
         public Builder booleanValue(@Nullable Boolean booleanValue) {
             this.booleanValue = Output.ofNullable(booleanValue);
             return this;
         }
-
         public Builder dateValue(@Nullable Output<DateArgs> dateValue) {
             this.dateValue = dateValue;
             return this;
         }
-
         public Builder dateValue(@Nullable DateArgs dateValue) {
             this.dateValue = Output.ofNullable(dateValue);
             return this;
         }
-
         public Builder doubleValue(@Nullable Output<Double> doubleValue) {
             this.doubleValue = doubleValue;
             return this;
         }
-
         public Builder doubleValue(@Nullable Double doubleValue) {
             this.doubleValue = Output.ofNullable(doubleValue);
             return this;
         }
-
         public Builder integerValue(@Nullable Output<String> integerValue) {
             this.integerValue = integerValue;
             return this;
         }
-
         public Builder integerValue(@Nullable String integerValue) {
             this.integerValue = Output.ofNullable(integerValue);
             return this;
         }
-
         public Builder stringValue(@Nullable Output<String> stringValue) {
             this.stringValue = stringValue;
             return this;
         }
-
         public Builder stringValue(@Nullable String stringValue) {
             this.stringValue = Output.ofNullable(stringValue);
             return this;
         }
-
         public Builder timestampValue(@Nullable Output<String> timestampValue) {
             this.timestampValue = timestampValue;
             return this;
         }
-
         public Builder timestampValue(@Nullable String timestampValue) {
             this.timestampValue = Output.ofNullable(timestampValue);
             return this;
-        }
-        public ValueArgs build() {
+        }        public ValueArgs build() {
             return new ValueArgs(booleanValue, dateValue, doubleValue, integerValue, stringValue, timestampValue);
         }
     }

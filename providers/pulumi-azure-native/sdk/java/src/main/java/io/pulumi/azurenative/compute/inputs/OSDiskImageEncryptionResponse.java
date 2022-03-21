@@ -60,8 +60,7 @@ public final class OSDiskImageEncryptionResponse extends io.pulumi.resources.Inv
         public Builder diskEncryptionSetId(@Nullable String diskEncryptionSetId) {
             this.diskEncryptionSetId = diskEncryptionSetId;
             return this;
-        }
-        public OSDiskImageEncryptionResponse build() {
+        }        public OSDiskImageEncryptionResponse build() {
             return new OSDiskImageEncryptionResponse(diskEncryptionSetId);
         }
     }

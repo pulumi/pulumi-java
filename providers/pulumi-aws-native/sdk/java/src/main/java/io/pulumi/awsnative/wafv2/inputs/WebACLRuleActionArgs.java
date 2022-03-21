@@ -97,42 +97,34 @@ public final class WebACLRuleActionArgs extends io.pulumi.resources.ResourceArgs
             this.allow = allow;
             return this;
         }
-
         public Builder allow(@Nullable WebACLAllowActionArgs allow) {
             this.allow = Output.ofNullable(allow);
             return this;
         }
-
         public Builder block(@Nullable Output<WebACLBlockActionArgs> block) {
             this.block = block;
             return this;
         }
-
         public Builder block(@Nullable WebACLBlockActionArgs block) {
             this.block = Output.ofNullable(block);
             return this;
         }
-
         public Builder captcha(@Nullable Output<WebACLCaptchaActionArgs> captcha) {
             this.captcha = captcha;
             return this;
         }
-
         public Builder captcha(@Nullable WebACLCaptchaActionArgs captcha) {
             this.captcha = Output.ofNullable(captcha);
             return this;
         }
-
         public Builder count(@Nullable Output<WebACLCountActionArgs> count) {
             this.count = count;
             return this;
         }
-
         public Builder count(@Nullable WebACLCountActionArgs count) {
             this.count = Output.ofNullable(count);
             return this;
-        }
-        public WebACLRuleActionArgs build() {
+        }        public WebACLRuleActionArgs build() {
             return new WebACLRuleActionArgs(allow, block, captcha, count);
         }
     }

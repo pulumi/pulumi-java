@@ -61,8 +61,7 @@ public final class DestinationsSpecResponseAzureMonitorMetrics extends io.pulumi
         public Builder name(@Nullable String name) {
             this.name = name;
             return this;
-        }
-        public DestinationsSpecResponseAzureMonitorMetrics build() {
+        }        public DestinationsSpecResponseAzureMonitorMetrics build() {
             return new DestinationsSpecResponseAzureMonitorMetrics(name);
         }
     }

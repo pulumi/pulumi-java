@@ -107,42 +107,37 @@ public final class ConfigurationArgs extends io.pulumi.resources.ResourceArgs {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder kafkaVersions(@Nullable Output<List<String>> kafkaVersions) {
             this.kafkaVersions = kafkaVersions;
             return this;
         }
-
         public Builder kafkaVersions(@Nullable List<String> kafkaVersions) {
             this.kafkaVersions = Output.ofNullable(kafkaVersions);
             return this;
         }
-
+        public Builder kafkaVersions(String... kafkaVersions) {
+            return kafkaVersions(List.of(kafkaVersions));
+        }
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder serverProperties(Output<String> serverProperties) {
             this.serverProperties = Objects.requireNonNull(serverProperties);
             return this;
         }
-
         public Builder serverProperties(String serverProperties) {
             this.serverProperties = Output.of(Objects.requireNonNull(serverProperties));
             return this;
-        }
-        public ConfigurationArgs build() {
+        }        public ConfigurationArgs build() {
             return new ConfigurationArgs(description, kafkaVersions, name, serverProperties);
         }
     }

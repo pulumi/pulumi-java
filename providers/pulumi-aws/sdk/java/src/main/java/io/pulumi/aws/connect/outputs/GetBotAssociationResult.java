@@ -70,17 +70,14 @@ public final class GetBotAssociationResult {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder instanceId(String instanceId) {
             this.instanceId = Objects.requireNonNull(instanceId);
             return this;
         }
-
         public Builder lexBot(GetBotAssociationLexBot lexBot) {
             this.lexBot = Objects.requireNonNull(lexBot);
             return this;
-        }
-        public GetBotAssociationResult build() {
+        }        public GetBotAssociationResult build() {
             return new GetBotAssociationResult(id, instanceId, lexBot);
         }
     }

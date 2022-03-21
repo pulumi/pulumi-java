@@ -140,62 +140,56 @@ public final class ProxyEndpointArgs extends io.pulumi.resources.ResourceArgs {
             this.dbProxyEndpointName = Objects.requireNonNull(dbProxyEndpointName);
             return this;
         }
-
         public Builder dbProxyEndpointName(String dbProxyEndpointName) {
             this.dbProxyEndpointName = Output.of(Objects.requireNonNull(dbProxyEndpointName));
             return this;
         }
-
         public Builder dbProxyName(Output<String> dbProxyName) {
             this.dbProxyName = Objects.requireNonNull(dbProxyName);
             return this;
         }
-
         public Builder dbProxyName(String dbProxyName) {
             this.dbProxyName = Output.of(Objects.requireNonNull(dbProxyName));
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
         public Builder targetRole(@Nullable Output<String> targetRole) {
             this.targetRole = targetRole;
             return this;
         }
-
         public Builder targetRole(@Nullable String targetRole) {
             this.targetRole = Output.ofNullable(targetRole);
             return this;
         }
-
         public Builder vpcSecurityGroupIds(@Nullable Output<List<String>> vpcSecurityGroupIds) {
             this.vpcSecurityGroupIds = vpcSecurityGroupIds;
             return this;
         }
-
         public Builder vpcSecurityGroupIds(@Nullable List<String> vpcSecurityGroupIds) {
             this.vpcSecurityGroupIds = Output.ofNullable(vpcSecurityGroupIds);
             return this;
         }
-
+        public Builder vpcSecurityGroupIds(String... vpcSecurityGroupIds) {
+            return vpcSecurityGroupIds(List.of(vpcSecurityGroupIds));
+        }
         public Builder vpcSubnetIds(Output<List<String>> vpcSubnetIds) {
             this.vpcSubnetIds = Objects.requireNonNull(vpcSubnetIds);
             return this;
         }
-
         public Builder vpcSubnetIds(List<String> vpcSubnetIds) {
             this.vpcSubnetIds = Output.of(Objects.requireNonNull(vpcSubnetIds));
             return this;
         }
-        public ProxyEndpointArgs build() {
+        public Builder vpcSubnetIds(String... vpcSubnetIds) {
+            return vpcSubnetIds(List.of(vpcSubnetIds));
+        }        public ProxyEndpointArgs build() {
             return new ProxyEndpointArgs(dbProxyEndpointName, dbProxyName, tags, targetRole, vpcSecurityGroupIds, vpcSubnetIds);
         }
     }

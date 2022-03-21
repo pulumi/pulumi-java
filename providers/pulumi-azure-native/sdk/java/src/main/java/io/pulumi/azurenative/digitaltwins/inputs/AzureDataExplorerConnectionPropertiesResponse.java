@@ -207,52 +207,42 @@ public final class AzureDataExplorerConnectionPropertiesResponse extends io.pulu
             this.adxDatabaseName = Objects.requireNonNull(adxDatabaseName);
             return this;
         }
-
         public Builder adxEndpointUri(String adxEndpointUri) {
             this.adxEndpointUri = Objects.requireNonNull(adxEndpointUri);
             return this;
         }
-
         public Builder adxResourceId(String adxResourceId) {
             this.adxResourceId = Objects.requireNonNull(adxResourceId);
             return this;
         }
-
         public Builder adxTableName(@Nullable String adxTableName) {
             this.adxTableName = adxTableName;
             return this;
         }
-
         public Builder connectionType(String connectionType) {
             this.connectionType = Objects.requireNonNull(connectionType);
             return this;
         }
-
         public Builder eventHubConsumerGroup(@Nullable String eventHubConsumerGroup) {
             this.eventHubConsumerGroup = eventHubConsumerGroup;
             return this;
         }
-
         public Builder eventHubEndpointUri(String eventHubEndpointUri) {
             this.eventHubEndpointUri = Objects.requireNonNull(eventHubEndpointUri);
             return this;
         }
-
         public Builder eventHubEntityPath(String eventHubEntityPath) {
             this.eventHubEntityPath = Objects.requireNonNull(eventHubEntityPath);
             return this;
         }
-
         public Builder eventHubNamespaceResourceId(String eventHubNamespaceResourceId) {
             this.eventHubNamespaceResourceId = Objects.requireNonNull(eventHubNamespaceResourceId);
             return this;
         }
-
         public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
-        }
-        public AzureDataExplorerConnectionPropertiesResponse build() {
+        }        public AzureDataExplorerConnectionPropertiesResponse build() {
             return new AzureDataExplorerConnectionPropertiesResponse(adxDatabaseName, adxEndpointUri, adxResourceId, adxTableName, connectionType, eventHubConsumerGroup, eventHubEndpointUri, eventHubEntityPath, eventHubNamespaceResourceId, provisioningState);
         }
     }

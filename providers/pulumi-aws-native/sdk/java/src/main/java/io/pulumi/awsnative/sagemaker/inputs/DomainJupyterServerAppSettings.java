@@ -56,8 +56,7 @@ public final class DomainJupyterServerAppSettings extends io.pulumi.resources.In
         public Builder defaultResourceSpec(@Nullable DomainResourceSpec defaultResourceSpec) {
             this.defaultResourceSpec = defaultResourceSpec;
             return this;
-        }
-        public DomainJupyterServerAppSettings build() {
+        }        public DomainJupyterServerAppSettings build() {
             return new DomainJupyterServerAppSettings(defaultResourceSpec);
         }
     }

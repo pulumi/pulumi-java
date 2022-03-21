@@ -77,12 +77,13 @@ public final class GetIntegrationRuntimeObjectMetadatumResult {
             this.nextLink = nextLink;
             return this;
         }
-
         public Builder value(@Nullable List<Object> value) {
             this.value = value;
             return this;
         }
-        public GetIntegrationRuntimeObjectMetadatumResult build() {
+        public Builder value(Object... value) {
+            return value(List.of(value));
+        }        public GetIntegrationRuntimeObjectMetadatumResult build() {
             return new GetIntegrationRuntimeObjectMetadatumResult(nextLink, value);
         }
     }

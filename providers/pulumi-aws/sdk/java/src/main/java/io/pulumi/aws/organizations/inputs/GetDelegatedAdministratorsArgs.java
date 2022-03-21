@@ -56,8 +56,7 @@ public final class GetDelegatedAdministratorsArgs extends io.pulumi.resources.In
         public Builder servicePrincipal(@Nullable String servicePrincipal) {
             this.servicePrincipal = servicePrincipal;
             return this;
-        }
-        public GetDelegatedAdministratorsArgs build() {
+        }        public GetDelegatedAdministratorsArgs build() {
             return new GetDelegatedAdministratorsArgs(servicePrincipal);
         }
     }

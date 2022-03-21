@@ -77,17 +77,14 @@ public final class GetUserPoolSigningCertificateResult {
             this.certificate = Objects.requireNonNull(certificate);
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder userPoolId(String userPoolId) {
             this.userPoolId = Objects.requireNonNull(userPoolId);
             return this;
-        }
-        public GetUserPoolSigningCertificateResult build() {
+        }        public GetUserPoolSigningCertificateResult build() {
             return new GetUserPoolSigningCertificateResult(certificate, id, userPoolId);
         }
     }

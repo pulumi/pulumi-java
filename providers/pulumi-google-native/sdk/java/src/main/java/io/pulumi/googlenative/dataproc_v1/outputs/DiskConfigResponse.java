@@ -102,22 +102,18 @@ public final class DiskConfigResponse {
             this.bootDiskSizeGb = Objects.requireNonNull(bootDiskSizeGb);
             return this;
         }
-
         public Builder bootDiskType(String bootDiskType) {
             this.bootDiskType = Objects.requireNonNull(bootDiskType);
             return this;
         }
-
         public Builder localSsdInterface(String localSsdInterface) {
             this.localSsdInterface = Objects.requireNonNull(localSsdInterface);
             return this;
         }
-
         public Builder numLocalSsds(Integer numLocalSsds) {
             this.numLocalSsds = Objects.requireNonNull(numLocalSsds);
             return this;
-        }
-        public DiskConfigResponse build() {
+        }        public DiskConfigResponse build() {
             return new DiskConfigResponse(bootDiskSizeGb, bootDiskType, localSsdInterface, numLocalSsds);
         }
     }

@@ -267,77 +267,68 @@ public final class GetNodeTemplateResult {
             this.accelerators = Objects.requireNonNull(accelerators);
             return this;
         }
-
+        public Builder accelerators(AcceleratorConfigResponse... accelerators) {
+            return accelerators(List.of(accelerators));
+        }
         public Builder cpuOvercommitType(String cpuOvercommitType) {
             this.cpuOvercommitType = Objects.requireNonNull(cpuOvercommitType);
             return this;
         }
-
         public Builder creationTimestamp(String creationTimestamp) {
             this.creationTimestamp = Objects.requireNonNull(creationTimestamp);
             return this;
         }
-
         public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
-
         public Builder disks(List<LocalDiskResponse> disks) {
             this.disks = Objects.requireNonNull(disks);
             return this;
         }
-
+        public Builder disks(LocalDiskResponse... disks) {
+            return disks(List.of(disks));
+        }
         public Builder kind(String kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder nodeAffinityLabels(Map<String,String> nodeAffinityLabels) {
             this.nodeAffinityLabels = Objects.requireNonNull(nodeAffinityLabels);
             return this;
         }
-
         public Builder nodeType(String nodeType) {
             this.nodeType = Objects.requireNonNull(nodeType);
             return this;
         }
-
         public Builder nodeTypeFlexibility(NodeTemplateNodeTypeFlexibilityResponse nodeTypeFlexibility) {
             this.nodeTypeFlexibility = Objects.requireNonNull(nodeTypeFlexibility);
             return this;
         }
-
         public Builder region(String region) {
             this.region = Objects.requireNonNull(region);
             return this;
         }
-
         public Builder selfLink(String selfLink) {
             this.selfLink = Objects.requireNonNull(selfLink);
             return this;
         }
-
         public Builder serverBinding(ServerBindingResponse serverBinding) {
             this.serverBinding = Objects.requireNonNull(serverBinding);
             return this;
         }
-
         public Builder status(String status) {
             this.status = Objects.requireNonNull(status);
             return this;
         }
-
         public Builder statusMessage(String statusMessage) {
             this.statusMessage = Objects.requireNonNull(statusMessage);
             return this;
-        }
-        public GetNodeTemplateResult build() {
+        }        public GetNodeTemplateResult build() {
             return new GetNodeTemplateResult(accelerators, cpuOvercommitType, creationTimestamp, description, disks, kind, name, nodeAffinityLabels, nodeType, nodeTypeFlexibility, region, selfLink, serverBinding, status, statusMessage);
         }
     }

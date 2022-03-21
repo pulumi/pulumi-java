@@ -94,17 +94,14 @@ public final class FirewallRuleResponse extends io.pulumi.resources.InvokeArgs {
             this.endIpAddress = endIpAddress;
             return this;
         }
-
         public Builder ruleName(@Nullable String ruleName) {
             this.ruleName = ruleName;
             return this;
         }
-
         public Builder startIpAddress(@Nullable String startIpAddress) {
             this.startIpAddress = startIpAddress;
             return this;
-        }
-        public FirewallRuleResponse build() {
+        }        public FirewallRuleResponse build() {
             return new FirewallRuleResponse(endIpAddress, ruleName, startIpAddress);
         }
     }

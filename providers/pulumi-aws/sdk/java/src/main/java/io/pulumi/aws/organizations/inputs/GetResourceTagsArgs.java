@@ -75,12 +75,10 @@ public final class GetResourceTagsArgs extends io.pulumi.resources.InvokeArgs {
             this.resourceId = Objects.requireNonNull(resourceId);
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
-        }
-        public GetResourceTagsArgs build() {
+        }        public GetResourceTagsArgs build() {
             return new GetResourceTagsArgs(resourceId, tags);
         }
     }

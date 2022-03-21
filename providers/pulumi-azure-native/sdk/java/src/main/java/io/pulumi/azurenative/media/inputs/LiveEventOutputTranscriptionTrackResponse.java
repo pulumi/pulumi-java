@@ -58,8 +58,7 @@ public final class LiveEventOutputTranscriptionTrackResponse extends io.pulumi.r
         public Builder trackName(String trackName) {
             this.trackName = Objects.requireNonNull(trackName);
             return this;
-        }
-        public LiveEventOutputTranscriptionTrackResponse build() {
+        }        public LiveEventOutputTranscriptionTrackResponse build() {
             return new LiveEventOutputTranscriptionTrackResponse(trackName);
         }
     }

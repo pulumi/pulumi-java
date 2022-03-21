@@ -55,8 +55,7 @@ public final class AiDatasetEncryptionSpec {
         public Builder kmsKeyName(@Nullable String kmsKeyName) {
             this.kmsKeyName = kmsKeyName;
             return this;
-        }
-        public AiDatasetEncryptionSpec build() {
+        }        public AiDatasetEncryptionSpec build() {
             return new AiDatasetEncryptionSpec(kmsKeyName);
         }
     }

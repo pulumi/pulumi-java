@@ -76,17 +76,14 @@ public final class GetKeystoreArgs extends io.pulumi.resources.InvokeArgs {
             this.environmentId = Objects.requireNonNull(environmentId);
             return this;
         }
-
         public Builder keystoreId(String keystoreId) {
             this.keystoreId = Objects.requireNonNull(keystoreId);
             return this;
         }
-
         public Builder organizationId(String organizationId) {
             this.organizationId = Objects.requireNonNull(organizationId);
             return this;
-        }
-        public GetKeystoreArgs build() {
+        }        public GetKeystoreArgs build() {
             return new GetKeystoreArgs(environmentId, keystoreId, organizationId);
         }
     }

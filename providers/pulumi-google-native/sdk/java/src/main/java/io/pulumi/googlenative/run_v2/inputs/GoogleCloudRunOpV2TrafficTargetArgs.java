@@ -112,42 +112,34 @@ public final class GoogleCloudRunOpV2TrafficTargetArgs extends io.pulumi.resourc
             this.percent = percent;
             return this;
         }
-
         public Builder percent(@Nullable Integer percent) {
             this.percent = Output.ofNullable(percent);
             return this;
         }
-
         public Builder revision(@Nullable Output<String> revision) {
             this.revision = revision;
             return this;
         }
-
         public Builder revision(@Nullable String revision) {
             this.revision = Output.ofNullable(revision);
             return this;
         }
-
         public Builder tag(@Nullable Output<String> tag) {
             this.tag = tag;
             return this;
         }
-
         public Builder tag(@Nullable String tag) {
             this.tag = Output.ofNullable(tag);
             return this;
         }
-
         public Builder type(@Nullable Output<GoogleCloudRunOpV2TrafficTargetType> type) {
             this.type = type;
             return this;
         }
-
         public Builder type(@Nullable GoogleCloudRunOpV2TrafficTargetType type) {
             this.type = Output.ofNullable(type);
             return this;
-        }
-        public GoogleCloudRunOpV2TrafficTargetArgs build() {
+        }        public GoogleCloudRunOpV2TrafficTargetArgs build() {
             return new GoogleCloudRunOpV2TrafficTargetArgs(percent, revision, tag, type);
         }
     }

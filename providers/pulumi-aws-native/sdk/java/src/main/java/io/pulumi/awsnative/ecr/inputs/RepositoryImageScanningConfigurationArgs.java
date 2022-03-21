@@ -57,12 +57,10 @@ public final class RepositoryImageScanningConfigurationArgs extends io.pulumi.re
             this.scanOnPush = scanOnPush;
             return this;
         }
-
         public Builder scanOnPush(@Nullable Boolean scanOnPush) {
             this.scanOnPush = Output.ofNullable(scanOnPush);
             return this;
-        }
-        public RepositoryImageScanningConfigurationArgs build() {
+        }        public RepositoryImageScanningConfigurationArgs build() {
             return new RepositoryImageScanningConfigurationArgs(scanOnPush);
         }
     }

@@ -58,8 +58,7 @@ public final class LogConfigDataAccessOptionsResponse extends io.pulumi.resource
         public Builder logMode(String logMode) {
             this.logMode = Objects.requireNonNull(logMode);
             return this;
-        }
-        public LogConfigDataAccessOptionsResponse build() {
+        }        public LogConfigDataAccessOptionsResponse build() {
             return new LogConfigDataAccessOptionsResponse(logMode);
         }
     }

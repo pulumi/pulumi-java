@@ -69,12 +69,10 @@ public final class DiskSecretResponse {
             this.bitLockerKey = Objects.requireNonNull(bitLockerKey);
             return this;
         }
-
         public Builder diskSerialNumber(String diskSerialNumber) {
             this.diskSerialNumber = Objects.requireNonNull(diskSerialNumber);
             return this;
-        }
-        public DiskSecretResponse build() {
+        }        public DiskSecretResponse build() {
             return new DiskSecretResponse(bitLockerKey, diskSerialNumber);
         }
     }

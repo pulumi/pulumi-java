@@ -86,17 +86,17 @@ public final class GetSchedulingPolicyFairSharePolicy extends io.pulumi.resource
             this.computeReservation = Objects.requireNonNull(computeReservation);
             return this;
         }
-
         public Builder shareDecaySeconds(Integer shareDecaySeconds) {
             this.shareDecaySeconds = Objects.requireNonNull(shareDecaySeconds);
             return this;
         }
-
         public Builder shareDistributions(List<GetSchedulingPolicyFairSharePolicyShareDistribution> shareDistributions) {
             this.shareDistributions = Objects.requireNonNull(shareDistributions);
             return this;
         }
-        public GetSchedulingPolicyFairSharePolicy build() {
+        public Builder shareDistributions(GetSchedulingPolicyFairSharePolicyShareDistribution... shareDistributions) {
+            return shareDistributions(List.of(shareDistributions));
+        }        public GetSchedulingPolicyFairSharePolicy build() {
             return new GetSchedulingPolicyFairSharePolicy(computeReservation, shareDecaySeconds, shareDistributions);
         }
     }

@@ -85,27 +85,22 @@ public final class GetClientResult {
             this.brand = Objects.requireNonNull(brand);
             return this;
         }
-
         public Builder clientId(String clientId) {
             this.clientId = Objects.requireNonNull(clientId);
             return this;
         }
-
         public Builder displayName(String displayName) {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder secret(String secret) {
             this.secret = Objects.requireNonNull(secret);
             return this;
-        }
-        public GetClientResult build() {
+        }        public GetClientResult build() {
             return new GetClientResult(brand, clientId, displayName, id, secret);
         }
     }

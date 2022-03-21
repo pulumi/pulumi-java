@@ -56,12 +56,10 @@ public final class InventoryDestinationArgs extends io.pulumi.resources.Resource
             this.bucket = Objects.requireNonNull(bucket);
             return this;
         }
-
         public Builder bucket(InventoryDestinationBucketArgs bucket) {
             this.bucket = Output.of(Objects.requireNonNull(bucket));
             return this;
-        }
-        public InventoryDestinationArgs build() {
+        }        public InventoryDestinationArgs build() {
             return new InventoryDestinationArgs(bucket);
         }
     }

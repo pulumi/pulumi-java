@@ -43,8 +43,7 @@ public final class BotSampleUtterance {
         public Builder utterance(String utterance) {
             this.utterance = Objects.requireNonNull(utterance);
             return this;
-        }
-        public BotSampleUtterance build() {
+        }        public BotSampleUtterance build() {
             return new BotSampleUtterance(utterance);
         }
     }

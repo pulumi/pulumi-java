@@ -53,7 +53,9 @@ public final class WorkflowTemplateParameterValidationValues {
             this.values = Objects.requireNonNull(values);
             return this;
         }
-        public WorkflowTemplateParameterValidationValues build() {
+        public Builder values(String... values) {
+            return values(List.of(values));
+        }        public WorkflowTemplateParameterValidationValues build() {
             return new WorkflowTemplateParameterValidationValues(values);
         }
     }

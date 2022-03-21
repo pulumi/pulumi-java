@@ -70,12 +70,13 @@ public final class ManagedZoneForwardingConfigResponse extends io.pulumi.resourc
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
-
         public Builder targetNameServers(List<ManagedZoneForwardingConfigNameServerTargetResponse> targetNameServers) {
             this.targetNameServers = Objects.requireNonNull(targetNameServers);
             return this;
         }
-        public ManagedZoneForwardingConfigResponse build() {
+        public Builder targetNameServers(ManagedZoneForwardingConfigNameServerTargetResponse... targetNameServers) {
+            return targetNameServers(List.of(targetNameServers));
+        }        public ManagedZoneForwardingConfigResponse build() {
             return new ManagedZoneForwardingConfigResponse(kind, targetNameServers);
         }
     }

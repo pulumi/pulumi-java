@@ -102,27 +102,22 @@ public final class GetMigratingVmArgs extends io.pulumi.resources.InvokeArgs {
             this.location = Objects.requireNonNull(location);
             return this;
         }
-
         public Builder migratingVmId(String migratingVmId) {
             this.migratingVmId = Objects.requireNonNull(migratingVmId);
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = project;
             return this;
         }
-
         public Builder sourceId(String sourceId) {
             this.sourceId = Objects.requireNonNull(sourceId);
             return this;
         }
-
         public Builder view(@Nullable String view) {
             this.view = view;
             return this;
-        }
-        public GetMigratingVmArgs build() {
+        }        public GetMigratingVmArgs build() {
             return new GetMigratingVmArgs(location, migratingVmId, project, sourceId, view);
         }
     }

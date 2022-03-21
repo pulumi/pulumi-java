@@ -215,62 +215,59 @@ public final class GetDataSourceResult {
             this.alternateDataSourceParameters = alternateDataSourceParameters;
             return this;
         }
-
+        public Builder alternateDataSourceParameters(DataSourceParameters... alternateDataSourceParameters) {
+            return alternateDataSourceParameters(List.of(alternateDataSourceParameters));
+        }
         public Builder arn(@Nullable String arn) {
             this.arn = arn;
             return this;
         }
-
         public Builder createdTime(@Nullable String createdTime) {
             this.createdTime = createdTime;
             return this;
         }
-
         public Builder dataSourceParameters(@Nullable DataSourceParameters dataSourceParameters) {
             this.dataSourceParameters = dataSourceParameters;
             return this;
         }
-
         public Builder errorInfo(@Nullable DataSourceErrorInfo errorInfo) {
             this.errorInfo = errorInfo;
             return this;
         }
-
         public Builder lastUpdatedTime(@Nullable String lastUpdatedTime) {
             this.lastUpdatedTime = lastUpdatedTime;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
-
         public Builder permissions(@Nullable List<DataSourceResourcePermission> permissions) {
             this.permissions = permissions;
             return this;
         }
-
+        public Builder permissions(DataSourceResourcePermission... permissions) {
+            return permissions(List.of(permissions));
+        }
         public Builder sslProperties(@Nullable DataSourceSslProperties sslProperties) {
             this.sslProperties = sslProperties;
             return this;
         }
-
         public Builder status(@Nullable DataSourceResourceStatus status) {
             this.status = status;
             return this;
         }
-
         public Builder tags(@Nullable List<DataSourceTag> tags) {
             this.tags = tags;
             return this;
         }
-
+        public Builder tags(DataSourceTag... tags) {
+            return tags(List.of(tags));
+        }
         public Builder vpcConnectionProperties(@Nullable DataSourceVpcConnectionProperties vpcConnectionProperties) {
             this.vpcConnectionProperties = vpcConnectionProperties;
             return this;
-        }
-        public GetDataSourceResult build() {
+        }        public GetDataSourceResult build() {
             return new GetDataSourceResult(alternateDataSourceParameters, arn, createdTime, dataSourceParameters, errorInfo, lastUpdatedTime, name, permissions, sslProperties, status, tags, vpcConnectionProperties);
         }
     }

@@ -138,32 +138,29 @@ public final class StatusDetails {
             this.causes = causes;
             return this;
         }
-
+        public Builder causes(StatusCause... causes) {
+            return causes(List.of(causes));
+        }
         public Builder group(@Nullable String group) {
             this.group = group;
             return this;
         }
-
         public Builder kind(@Nullable String kind) {
             this.kind = kind;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
-
         public Builder retryAfterSeconds(@Nullable Integer retryAfterSeconds) {
             this.retryAfterSeconds = retryAfterSeconds;
             return this;
         }
-
         public Builder uid(@Nullable String uid) {
             this.uid = uid;
             return this;
-        }
-        public StatusDetails build() {
+        }        public StatusDetails build() {
             return new StatusDetails(causes, group, kind, name, retryAfterSeconds, uid);
         }
     }

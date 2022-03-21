@@ -103,22 +103,18 @@ public final class OutputDataBindingResponse {
             this.datastoreId = datastoreId;
             return this;
         }
-
         public Builder mode(@Nullable String mode) {
             this.mode = mode;
             return this;
         }
-
         public Builder pathOnCompute(@Nullable String pathOnCompute) {
             this.pathOnCompute = pathOnCompute;
             return this;
         }
-
         public Builder pathOnDatastore(@Nullable String pathOnDatastore) {
             this.pathOnDatastore = pathOnDatastore;
             return this;
-        }
-        public OutputDataBindingResponse build() {
+        }        public OutputDataBindingResponse build() {
             return new OutputDataBindingResponse(datastoreId, mode, pathOnCompute, pathOnDatastore);
         }
     }

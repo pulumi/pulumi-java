@@ -70,12 +70,10 @@ public final class ChannelCredentialsResponse {
             this.certificates = Objects.requireNonNull(certificates);
             return this;
         }
-
         public Builder channelCredentialType(String channelCredentialType) {
             this.channelCredentialType = Objects.requireNonNull(channelCredentialType);
             return this;
-        }
-        public ChannelCredentialsResponse build() {
+        }        public ChannelCredentialsResponse build() {
             return new ChannelCredentialsResponse(certificates, channelCredentialType);
         }
     }

@@ -178,82 +178,69 @@ public final class DomainArgs extends io.pulumi.resources.ResourceArgs {
             this.domainName = domainName;
             return this;
         }
-
         public Builder domainName(@Nullable String domainName) {
             this.domainName = Output.ofNullable(domainName);
             return this;
         }
-
         public Builder inboundIpRules(@Nullable Output<List<InboundIpRuleArgs>> inboundIpRules) {
             this.inboundIpRules = inboundIpRules;
             return this;
         }
-
         public Builder inboundIpRules(@Nullable List<InboundIpRuleArgs> inboundIpRules) {
             this.inboundIpRules = Output.ofNullable(inboundIpRules);
             return this;
         }
-
+        public Builder inboundIpRules(InboundIpRuleArgs... inboundIpRules) {
+            return inboundIpRules(List.of(inboundIpRules));
+        }
         public Builder inputSchema(@Nullable Output<Either<String,InputSchema>> inputSchema) {
             this.inputSchema = inputSchema;
             return this;
         }
-
         public Builder inputSchema(@Nullable Either<String,InputSchema> inputSchema) {
             this.inputSchema = Output.ofNullable(inputSchema);
             return this;
         }
-
         public Builder inputSchemaMapping(@Nullable Output<JsonInputSchemaMappingArgs> inputSchemaMapping) {
             this.inputSchemaMapping = inputSchemaMapping;
             return this;
         }
-
         public Builder inputSchemaMapping(@Nullable JsonInputSchemaMappingArgs inputSchemaMapping) {
             this.inputSchemaMapping = Output.ofNullable(inputSchemaMapping);
             return this;
         }
-
         public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder publicNetworkAccess(@Nullable Output<Either<String,PublicNetworkAccess>> publicNetworkAccess) {
             this.publicNetworkAccess = publicNetworkAccess;
             return this;
         }
-
         public Builder publicNetworkAccess(@Nullable Either<String,PublicNetworkAccess> publicNetworkAccess) {
             this.publicNetworkAccess = Output.ofNullable(publicNetworkAccess);
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
-        }
-        public DomainArgs build() {
+        }        public DomainArgs build() {
             return new DomainArgs(domainName, inboundIpRules, inputSchema, inputSchemaMapping, location, publicNetworkAccess, resourceGroupName, tags);
         }
     }

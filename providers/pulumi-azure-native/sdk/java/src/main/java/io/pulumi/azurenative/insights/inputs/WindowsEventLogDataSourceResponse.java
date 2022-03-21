@@ -98,17 +98,20 @@ public final class WindowsEventLogDataSourceResponse extends io.pulumi.resources
             this.name = name;
             return this;
         }
-
         public Builder streams(@Nullable List<String> streams) {
             this.streams = streams;
             return this;
         }
-
+        public Builder streams(String... streams) {
+            return streams(List.of(streams));
+        }
         public Builder xPathQueries(@Nullable List<String> xPathQueries) {
             this.xPathQueries = xPathQueries;
             return this;
         }
-        public WindowsEventLogDataSourceResponse build() {
+        public Builder xPathQueries(String... xPathQueries) {
+            return xPathQueries(List.of(xPathQueries));
+        }        public WindowsEventLogDataSourceResponse build() {
             return new WindowsEventLogDataSourceResponse(name, streams, xPathQueries);
         }
     }

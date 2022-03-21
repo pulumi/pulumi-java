@@ -54,8 +54,7 @@ public final class GetSiteArgs extends io.pulumi.resources.InvokeArgs {
         public Builder scope(String scope) {
             this.scope = Objects.requireNonNull(scope);
             return this;
-        }
-        public GetSiteArgs build() {
+        }        public GetSiteArgs build() {
             return new GetSiteArgs(scope);
         }
     }

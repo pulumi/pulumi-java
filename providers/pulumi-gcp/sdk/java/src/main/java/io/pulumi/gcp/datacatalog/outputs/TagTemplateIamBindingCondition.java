@@ -63,17 +63,14 @@ public final class TagTemplateIamBindingCondition {
             this.description = description;
             return this;
         }
-
         public Builder expression(String expression) {
             this.expression = Objects.requireNonNull(expression);
             return this;
         }
-
         public Builder title(String title) {
             this.title = Objects.requireNonNull(title);
             return this;
-        }
-        public TagTemplateIamBindingCondition build() {
+        }        public TagTemplateIamBindingCondition build() {
             return new TagTemplateIamBindingCondition(description, expression, title);
         }
     }

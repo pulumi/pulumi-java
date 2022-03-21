@@ -268,72 +268,58 @@ public final class GetDataCollectionEndpointResult {
             this.configurationAccess = configurationAccess;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
-
         public Builder etag(String etag) {
             this.etag = Objects.requireNonNull(etag);
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder immutableId(@Nullable String immutableId) {
             this.immutableId = immutableId;
             return this;
         }
-
         public Builder kind(@Nullable String kind) {
             this.kind = kind;
             return this;
         }
-
         public Builder location(String location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
-
         public Builder logsIngestion(@Nullable DataCollectionEndpointResponseLogsIngestion logsIngestion) {
             this.logsIngestion = logsIngestion;
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder networkAcls(@Nullable DataCollectionEndpointResponseNetworkAcls networkAcls) {
             this.networkAcls = networkAcls;
             return this;
         }
-
         public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
-
         public Builder systemData(DataCollectionEndpointResourceResponseSystemData systemData) {
             this.systemData = Objects.requireNonNull(systemData);
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public GetDataCollectionEndpointResult build() {
+        }        public GetDataCollectionEndpointResult build() {
             return new GetDataCollectionEndpointResult(configurationAccess, description, etag, id, immutableId, kind, location, logsIngestion, name, networkAcls, provisioningState, systemData, tags, type);
         }
     }

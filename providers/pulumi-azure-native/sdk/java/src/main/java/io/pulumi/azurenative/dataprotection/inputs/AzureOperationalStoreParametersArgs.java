@@ -97,32 +97,26 @@ public final class AzureOperationalStoreParametersArgs extends io.pulumi.resourc
             this.dataStoreType = Objects.requireNonNull(dataStoreType);
             return this;
         }
-
         public Builder dataStoreType(Either<String,DataStoreTypes> dataStoreType) {
             this.dataStoreType = Output.of(Objects.requireNonNull(dataStoreType));
             return this;
         }
-
         public Builder objectType(Output<String> objectType) {
             this.objectType = Objects.requireNonNull(objectType);
             return this;
         }
-
         public Builder objectType(String objectType) {
             this.objectType = Output.of(Objects.requireNonNull(objectType));
             return this;
         }
-
         public Builder resourceGroupId(@Nullable Output<String> resourceGroupId) {
             this.resourceGroupId = resourceGroupId;
             return this;
         }
-
         public Builder resourceGroupId(@Nullable String resourceGroupId) {
             this.resourceGroupId = Output.ofNullable(resourceGroupId);
             return this;
-        }
-        public AzureOperationalStoreParametersArgs build() {
+        }        public AzureOperationalStoreParametersArgs build() {
             return new AzureOperationalStoreParametersArgs(dataStoreType, objectType, resourceGroupId);
         }
     }

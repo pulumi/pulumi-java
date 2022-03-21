@@ -136,32 +136,26 @@ public final class ScriptStatusResponse {
             this.containerInstanceId = Objects.requireNonNull(containerInstanceId);
             return this;
         }
-
         public Builder endTime(String endTime) {
             this.endTime = Objects.requireNonNull(endTime);
             return this;
         }
-
         public Builder error(@Nullable ErrorResponseResponse error) {
             this.error = error;
             return this;
         }
-
         public Builder expirationTime(String expirationTime) {
             this.expirationTime = Objects.requireNonNull(expirationTime);
             return this;
         }
-
         public Builder startTime(String startTime) {
             this.startTime = Objects.requireNonNull(startTime);
             return this;
         }
-
         public Builder storageAccountId(String storageAccountId) {
             this.storageAccountId = Objects.requireNonNull(storageAccountId);
             return this;
-        }
-        public ScriptStatusResponse build() {
+        }        public ScriptStatusResponse build() {
             return new ScriptStatusResponse(containerInstanceId, endTime, error, expirationTime, startTime, storageAccountId);
         }
     }

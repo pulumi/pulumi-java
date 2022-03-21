@@ -133,62 +133,53 @@ public final class DatabaseArgs extends io.pulumi.resources.ResourceArgs {
             this.createStatement = Objects.requireNonNull(createStatement);
             return this;
         }
-
         public Builder createStatement(String createStatement) {
             this.createStatement = Output.of(Objects.requireNonNull(createStatement));
             return this;
         }
-
         public Builder databaseDialect(@Nullable Output<DatabaseDatabaseDialect> databaseDialect) {
             this.databaseDialect = databaseDialect;
             return this;
         }
-
         public Builder databaseDialect(@Nullable DatabaseDatabaseDialect databaseDialect) {
             this.databaseDialect = Output.ofNullable(databaseDialect);
             return this;
         }
-
         public Builder encryptionConfig(@Nullable Output<EncryptionConfigArgs> encryptionConfig) {
             this.encryptionConfig = encryptionConfig;
             return this;
         }
-
         public Builder encryptionConfig(@Nullable EncryptionConfigArgs encryptionConfig) {
             this.encryptionConfig = Output.ofNullable(encryptionConfig);
             return this;
         }
-
         public Builder extraStatements(@Nullable Output<List<String>> extraStatements) {
             this.extraStatements = extraStatements;
             return this;
         }
-
         public Builder extraStatements(@Nullable List<String> extraStatements) {
             this.extraStatements = Output.ofNullable(extraStatements);
             return this;
         }
-
+        public Builder extraStatements(String... extraStatements) {
+            return extraStatements(List.of(extraStatements));
+        }
         public Builder instanceId(Output<String> instanceId) {
             this.instanceId = Objects.requireNonNull(instanceId);
             return this;
         }
-
         public Builder instanceId(String instanceId) {
             this.instanceId = Output.of(Objects.requireNonNull(instanceId));
             return this;
         }
-
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
-        }
-        public DatabaseArgs build() {
+        }        public DatabaseArgs build() {
             return new DatabaseArgs(createStatement, databaseDialect, encryptionConfig, extraStatements, instanceId, project);
         }
     }

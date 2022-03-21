@@ -69,12 +69,10 @@ public final class PublicKeyResponse {
             this.key = Objects.requireNonNull(key);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public PublicKeyResponse build() {
+        }        public PublicKeyResponse build() {
             return new PublicKeyResponse(key, type);
         }
     }

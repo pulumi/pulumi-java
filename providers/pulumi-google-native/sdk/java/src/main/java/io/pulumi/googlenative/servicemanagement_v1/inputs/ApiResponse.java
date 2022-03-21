@@ -161,37 +161,39 @@ public final class ApiResponse extends io.pulumi.resources.InvokeArgs {
             this.methods = Objects.requireNonNull(methods);
             return this;
         }
-
+        public Builder methods(MethodResponse... methods) {
+            return methods(List.of(methods));
+        }
         public Builder mixins(List<MixinResponse> mixins) {
             this.mixins = Objects.requireNonNull(mixins);
             return this;
         }
-
+        public Builder mixins(MixinResponse... mixins) {
+            return mixins(List.of(mixins));
+        }
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder options(List<OptionResponse> options) {
             this.options = Objects.requireNonNull(options);
             return this;
         }
-
+        public Builder options(OptionResponse... options) {
+            return options(List.of(options));
+        }
         public Builder sourceContext(SourceContextResponse sourceContext) {
             this.sourceContext = Objects.requireNonNull(sourceContext);
             return this;
         }
-
         public Builder syntax(String syntax) {
             this.syntax = Objects.requireNonNull(syntax);
             return this;
         }
-
         public Builder version(String version) {
             this.version = Objects.requireNonNull(version);
             return this;
-        }
-        public ApiResponse build() {
+        }        public ApiResponse build() {
             return new ApiResponse(methods, mixins, name, options, sourceContext, syntax, version);
         }
     }

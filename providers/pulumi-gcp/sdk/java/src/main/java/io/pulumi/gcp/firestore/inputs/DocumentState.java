@@ -188,92 +188,74 @@ public final class DocumentState extends io.pulumi.resources.ResourceArgs {
             this.collection = collection;
             return this;
         }
-
         public Builder collection(@Nullable String collection) {
             this.collection = Output.ofNullable(collection);
             return this;
         }
-
         public Builder createTime(@Nullable Output<String> createTime) {
             this.createTime = createTime;
             return this;
         }
-
         public Builder createTime(@Nullable String createTime) {
             this.createTime = Output.ofNullable(createTime);
             return this;
         }
-
         public Builder database(@Nullable Output<String> database) {
             this.database = database;
             return this;
         }
-
         public Builder database(@Nullable String database) {
             this.database = Output.ofNullable(database);
             return this;
         }
-
         public Builder documentId(@Nullable Output<String> documentId) {
             this.documentId = documentId;
             return this;
         }
-
         public Builder documentId(@Nullable String documentId) {
             this.documentId = Output.ofNullable(documentId);
             return this;
         }
-
         public Builder fields(@Nullable Output<String> fields) {
             this.fields = fields;
             return this;
         }
-
         public Builder fields(@Nullable String fields) {
             this.fields = Output.ofNullable(fields);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder path(@Nullable Output<String> path) {
             this.path = path;
             return this;
         }
-
         public Builder path(@Nullable String path) {
             this.path = Output.ofNullable(path);
             return this;
         }
-
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
         }
-
         public Builder updateTime(@Nullable Output<String> updateTime) {
             this.updateTime = updateTime;
             return this;
         }
-
         public Builder updateTime(@Nullable String updateTime) {
             this.updateTime = Output.ofNullable(updateTime);
             return this;
-        }
-        public DocumentState build() {
+        }        public DocumentState build() {
             return new DocumentState(collection, createTime, database, documentId, fields, name, path, project, updateTime);
         }
     }

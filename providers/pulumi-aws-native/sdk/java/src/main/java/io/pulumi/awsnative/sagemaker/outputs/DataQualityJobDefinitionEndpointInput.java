@@ -97,22 +97,18 @@ public final class DataQualityJobDefinitionEndpointInput {
             this.endpointName = Objects.requireNonNull(endpointName);
             return this;
         }
-
         public Builder localPath(String localPath) {
             this.localPath = Objects.requireNonNull(localPath);
             return this;
         }
-
         public Builder s3DataDistributionType(@Nullable DataQualityJobDefinitionEndpointInputS3DataDistributionType s3DataDistributionType) {
             this.s3DataDistributionType = s3DataDistributionType;
             return this;
         }
-
         public Builder s3InputMode(@Nullable DataQualityJobDefinitionEndpointInputS3InputMode s3InputMode) {
             this.s3InputMode = s3InputMode;
             return this;
-        }
-        public DataQualityJobDefinitionEndpointInput build() {
+        }        public DataQualityJobDefinitionEndpointInput build() {
             return new DataQualityJobDefinitionEndpointInput(endpointName, localPath, s3DataDistributionType, s3InputMode);
         }
     }

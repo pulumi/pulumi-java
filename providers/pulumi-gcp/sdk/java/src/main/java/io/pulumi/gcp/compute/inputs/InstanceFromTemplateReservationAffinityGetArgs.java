@@ -67,22 +67,18 @@ public final class InstanceFromTemplateReservationAffinityGetArgs extends io.pul
             this.specificReservation = specificReservation;
             return this;
         }
-
         public Builder specificReservation(@Nullable InstanceFromTemplateReservationAffinitySpecificReservationGetArgs specificReservation) {
             this.specificReservation = Output.ofNullable(specificReservation);
             return this;
         }
-
         public Builder type(Output<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Output.of(Objects.requireNonNull(type));
             return this;
-        }
-        public InstanceFromTemplateReservationAffinityGetArgs build() {
+        }        public InstanceFromTemplateReservationAffinityGetArgs build() {
             return new InstanceFromTemplateReservationAffinityGetArgs(specificReservation, type);
         }
     }

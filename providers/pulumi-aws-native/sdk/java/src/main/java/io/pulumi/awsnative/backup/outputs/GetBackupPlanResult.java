@@ -81,27 +81,22 @@ public final class GetBackupPlanResult {
             this.backupPlan = backupPlan;
             return this;
         }
-
         public Builder backupPlanArn(@Nullable String backupPlanArn) {
             this.backupPlanArn = backupPlanArn;
             return this;
         }
-
         public Builder backupPlanId(@Nullable String backupPlanId) {
             this.backupPlanId = backupPlanId;
             return this;
         }
-
         public Builder backupPlanTags(@Nullable Object backupPlanTags) {
             this.backupPlanTags = backupPlanTags;
             return this;
         }
-
         public Builder versionId(@Nullable String versionId) {
             this.versionId = versionId;
             return this;
-        }
-        public GetBackupPlanResult build() {
+        }        public GetBackupPlanResult build() {
             return new GetBackupPlanResult(backupPlan, backupPlanArn, backupPlanId, backupPlanTags, versionId);
         }
     }

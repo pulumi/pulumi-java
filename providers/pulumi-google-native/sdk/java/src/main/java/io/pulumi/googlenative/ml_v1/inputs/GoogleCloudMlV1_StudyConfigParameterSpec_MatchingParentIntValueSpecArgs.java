@@ -62,12 +62,13 @@ public final class GoogleCloudMlV1_StudyConfigParameterSpec_MatchingParentIntVal
             this.values = values;
             return this;
         }
-
         public Builder values(@Nullable List<String> values) {
             this.values = Output.ofNullable(values);
             return this;
         }
-        public GoogleCloudMlV1_StudyConfigParameterSpec_MatchingParentIntValueSpecArgs build() {
+        public Builder values(String... values) {
+            return values(List.of(values));
+        }        public GoogleCloudMlV1_StudyConfigParameterSpec_MatchingParentIntValueSpecArgs build() {
             return new GoogleCloudMlV1_StudyConfigParameterSpec_MatchingParentIntValueSpecArgs(values);
         }
     }

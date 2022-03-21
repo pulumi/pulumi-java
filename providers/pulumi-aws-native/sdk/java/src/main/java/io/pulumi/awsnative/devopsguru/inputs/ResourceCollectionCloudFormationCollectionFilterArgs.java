@@ -62,12 +62,13 @@ public final class ResourceCollectionCloudFormationCollectionFilterArgs extends 
             this.stackNames = stackNames;
             return this;
         }
-
         public Builder stackNames(@Nullable List<String> stackNames) {
             this.stackNames = Output.ofNullable(stackNames);
             return this;
         }
-        public ResourceCollectionCloudFormationCollectionFilterArgs build() {
+        public Builder stackNames(String... stackNames) {
+            return stackNames(List.of(stackNames));
+        }        public ResourceCollectionCloudFormationCollectionFilterArgs build() {
             return new ResourceCollectionCloudFormationCollectionFilterArgs(stackNames);
         }
     }

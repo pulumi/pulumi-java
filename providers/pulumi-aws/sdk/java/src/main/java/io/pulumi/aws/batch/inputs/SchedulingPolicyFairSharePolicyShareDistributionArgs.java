@@ -75,22 +75,18 @@ public final class SchedulingPolicyFairSharePolicyShareDistributionArgs extends 
             this.shareIdentifier = Objects.requireNonNull(shareIdentifier);
             return this;
         }
-
         public Builder shareIdentifier(String shareIdentifier) {
             this.shareIdentifier = Output.of(Objects.requireNonNull(shareIdentifier));
             return this;
         }
-
         public Builder weightFactor(@Nullable Output<Double> weightFactor) {
             this.weightFactor = weightFactor;
             return this;
         }
-
         public Builder weightFactor(@Nullable Double weightFactor) {
             this.weightFactor = Output.ofNullable(weightFactor);
             return this;
-        }
-        public SchedulingPolicyFairSharePolicyShareDistributionArgs build() {
+        }        public SchedulingPolicyFairSharePolicyShareDistributionArgs build() {
             return new SchedulingPolicyFairSharePolicyShareDistributionArgs(shareIdentifier, weightFactor);
         }
     }

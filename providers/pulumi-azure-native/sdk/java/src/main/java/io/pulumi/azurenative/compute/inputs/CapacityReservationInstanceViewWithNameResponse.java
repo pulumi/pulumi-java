@@ -97,17 +97,17 @@ public final class CapacityReservationInstanceViewWithNameResponse extends io.pu
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder statuses(@Nullable List<InstanceViewStatusResponse> statuses) {
             this.statuses = statuses;
             return this;
         }
-
+        public Builder statuses(InstanceViewStatusResponse... statuses) {
+            return statuses(List.of(statuses));
+        }
         public Builder utilizationInfo(@Nullable CapacityReservationUtilizationResponse utilizationInfo) {
             this.utilizationInfo = utilizationInfo;
             return this;
-        }
-        public CapacityReservationInstanceViewWithNameResponse build() {
+        }        public CapacityReservationInstanceViewWithNameResponse build() {
             return new CapacityReservationInstanceViewWithNameResponse(name, statuses, utilizationInfo);
         }
     }

@@ -87,17 +87,14 @@ public final class ObjectMetricSource {
             this.describedObject = Objects.requireNonNull(describedObject);
             return this;
         }
-
         public Builder metric(MetricIdentifier metric) {
             this.metric = Objects.requireNonNull(metric);
             return this;
         }
-
         public Builder target(MetricTarget target) {
             this.target = Objects.requireNonNull(target);
             return this;
-        }
-        public ObjectMetricSource build() {
+        }        public ObjectMetricSource build() {
             return new ObjectMetricSource(describedObject, metric, target);
         }
     }

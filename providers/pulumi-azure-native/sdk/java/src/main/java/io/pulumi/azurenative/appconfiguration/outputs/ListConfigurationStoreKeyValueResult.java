@@ -175,42 +175,34 @@ public final class ListConfigurationStoreKeyValueResult {
             this.contentType = Objects.requireNonNull(contentType);
             return this;
         }
-
         public Builder eTag(String eTag) {
             this.eTag = Objects.requireNonNull(eTag);
             return this;
         }
-
         public Builder key(String key) {
             this.key = Objects.requireNonNull(key);
             return this;
         }
-
         public Builder label(String label) {
             this.label = Objects.requireNonNull(label);
             return this;
         }
-
         public Builder lastModified(String lastModified) {
             this.lastModified = Objects.requireNonNull(lastModified);
             return this;
         }
-
         public Builder locked(Boolean locked) {
             this.locked = Objects.requireNonNull(locked);
             return this;
         }
-
         public Builder tags(Map<String,String> tags) {
             this.tags = Objects.requireNonNull(tags);
             return this;
         }
-
         public Builder value(String value) {
             this.value = Objects.requireNonNull(value);
             return this;
-        }
-        public ListConfigurationStoreKeyValueResult build() {
+        }        public ListConfigurationStoreKeyValueResult build() {
             return new ListConfigurationStoreKeyValueResult(contentType, eTag, key, label, lastModified, locked, tags, value);
         }
     }

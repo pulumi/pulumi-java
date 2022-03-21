@@ -119,27 +119,22 @@ public final class CustomResourceDefinitionCondition {
             this.lastTransitionTime = lastTransitionTime;
             return this;
         }
-
         public Builder message(@Nullable String message) {
             this.message = message;
             return this;
         }
-
         public Builder reason(@Nullable String reason) {
             this.reason = reason;
             return this;
         }
-
         public Builder status(String status) {
             this.status = Objects.requireNonNull(status);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public CustomResourceDefinitionCondition build() {
+        }        public CustomResourceDefinitionCondition build() {
             return new CustomResourceDefinitionCondition(lastTransitionTime, message, reason, status, type);
         }
     }

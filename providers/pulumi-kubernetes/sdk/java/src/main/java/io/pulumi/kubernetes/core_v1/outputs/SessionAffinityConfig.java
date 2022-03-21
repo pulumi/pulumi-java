@@ -53,8 +53,7 @@ public final class SessionAffinityConfig {
         public Builder clientIP(@Nullable ClientIPConfig clientIP) {
             this.clientIP = clientIP;
             return this;
-        }
-        public SessionAffinityConfig build() {
+        }        public SessionAffinityConfig build() {
             return new SessionAffinityConfig(clientIP);
         }
     }

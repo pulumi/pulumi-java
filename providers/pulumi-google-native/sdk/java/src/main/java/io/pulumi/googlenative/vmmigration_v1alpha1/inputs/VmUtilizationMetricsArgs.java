@@ -303,162 +303,130 @@ public final class VmUtilizationMetricsArgs extends io.pulumi.resources.Resource
             this.cpuAverage = cpuAverage;
             return this;
         }
-
         public Builder cpuAverage(@Nullable Integer cpuAverage) {
             this.cpuAverage = Output.ofNullable(cpuAverage);
             return this;
         }
-
         public Builder cpuAveragePercent(@Nullable Output<Integer> cpuAveragePercent) {
             this.cpuAveragePercent = cpuAveragePercent;
             return this;
         }
-
         public Builder cpuAveragePercent(@Nullable Integer cpuAveragePercent) {
             this.cpuAveragePercent = Output.ofNullable(cpuAveragePercent);
             return this;
         }
-
         public Builder cpuMax(@Nullable Output<Integer> cpuMax) {
             this.cpuMax = cpuMax;
             return this;
         }
-
         public Builder cpuMax(@Nullable Integer cpuMax) {
             this.cpuMax = Output.ofNullable(cpuMax);
             return this;
         }
-
         public Builder cpuMaxPercent(@Nullable Output<Integer> cpuMaxPercent) {
             this.cpuMaxPercent = cpuMaxPercent;
             return this;
         }
-
         public Builder cpuMaxPercent(@Nullable Integer cpuMaxPercent) {
             this.cpuMaxPercent = Output.ofNullable(cpuMaxPercent);
             return this;
         }
-
         public Builder diskIoRateAverage(@Nullable Output<String> diskIoRateAverage) {
             this.diskIoRateAverage = diskIoRateAverage;
             return this;
         }
-
         public Builder diskIoRateAverage(@Nullable String diskIoRateAverage) {
             this.diskIoRateAverage = Output.ofNullable(diskIoRateAverage);
             return this;
         }
-
         public Builder diskIoRateAverageKbps(@Nullable Output<String> diskIoRateAverageKbps) {
             this.diskIoRateAverageKbps = diskIoRateAverageKbps;
             return this;
         }
-
         public Builder diskIoRateAverageKbps(@Nullable String diskIoRateAverageKbps) {
             this.diskIoRateAverageKbps = Output.ofNullable(diskIoRateAverageKbps);
             return this;
         }
-
         public Builder diskIoRateMax(@Nullable Output<String> diskIoRateMax) {
             this.diskIoRateMax = diskIoRateMax;
             return this;
         }
-
         public Builder diskIoRateMax(@Nullable String diskIoRateMax) {
             this.diskIoRateMax = Output.ofNullable(diskIoRateMax);
             return this;
         }
-
         public Builder diskIoRateMaxKbps(@Nullable Output<String> diskIoRateMaxKbps) {
             this.diskIoRateMaxKbps = diskIoRateMaxKbps;
             return this;
         }
-
         public Builder diskIoRateMaxKbps(@Nullable String diskIoRateMaxKbps) {
             this.diskIoRateMaxKbps = Output.ofNullable(diskIoRateMaxKbps);
             return this;
         }
-
         public Builder memoryAverage(@Nullable Output<Integer> memoryAverage) {
             this.memoryAverage = memoryAverage;
             return this;
         }
-
         public Builder memoryAverage(@Nullable Integer memoryAverage) {
             this.memoryAverage = Output.ofNullable(memoryAverage);
             return this;
         }
-
         public Builder memoryAveragePercent(@Nullable Output<Integer> memoryAveragePercent) {
             this.memoryAveragePercent = memoryAveragePercent;
             return this;
         }
-
         public Builder memoryAveragePercent(@Nullable Integer memoryAveragePercent) {
             this.memoryAveragePercent = Output.ofNullable(memoryAveragePercent);
             return this;
         }
-
         public Builder memoryMax(@Nullable Output<Integer> memoryMax) {
             this.memoryMax = memoryMax;
             return this;
         }
-
         public Builder memoryMax(@Nullable Integer memoryMax) {
             this.memoryMax = Output.ofNullable(memoryMax);
             return this;
         }
-
         public Builder memoryMaxPercent(@Nullable Output<Integer> memoryMaxPercent) {
             this.memoryMaxPercent = memoryMaxPercent;
             return this;
         }
-
         public Builder memoryMaxPercent(@Nullable Integer memoryMaxPercent) {
             this.memoryMaxPercent = Output.ofNullable(memoryMaxPercent);
             return this;
         }
-
         public Builder networkThroughputAverage(@Nullable Output<String> networkThroughputAverage) {
             this.networkThroughputAverage = networkThroughputAverage;
             return this;
         }
-
         public Builder networkThroughputAverage(@Nullable String networkThroughputAverage) {
             this.networkThroughputAverage = Output.ofNullable(networkThroughputAverage);
             return this;
         }
-
         public Builder networkThroughputAverageKbps(@Nullable Output<String> networkThroughputAverageKbps) {
             this.networkThroughputAverageKbps = networkThroughputAverageKbps;
             return this;
         }
-
         public Builder networkThroughputAverageKbps(@Nullable String networkThroughputAverageKbps) {
             this.networkThroughputAverageKbps = Output.ofNullable(networkThroughputAverageKbps);
             return this;
         }
-
         public Builder networkThroughputMax(@Nullable Output<String> networkThroughputMax) {
             this.networkThroughputMax = networkThroughputMax;
             return this;
         }
-
         public Builder networkThroughputMax(@Nullable String networkThroughputMax) {
             this.networkThroughputMax = Output.ofNullable(networkThroughputMax);
             return this;
         }
-
         public Builder networkThroughputMaxKbps(@Nullable Output<String> networkThroughputMaxKbps) {
             this.networkThroughputMaxKbps = networkThroughputMaxKbps;
             return this;
         }
-
         public Builder networkThroughputMaxKbps(@Nullable String networkThroughputMaxKbps) {
             this.networkThroughputMaxKbps = Output.ofNullable(networkThroughputMaxKbps);
             return this;
-        }
-        public VmUtilizationMetricsArgs build() {
+        }        public VmUtilizationMetricsArgs build() {
             return new VmUtilizationMetricsArgs(cpuAverage, cpuAveragePercent, cpuMax, cpuMaxPercent, diskIoRateAverage, diskIoRateAverageKbps, diskIoRateMax, diskIoRateMaxKbps, memoryAverage, memoryAveragePercent, memoryMax, memoryMaxPercent, networkThroughputAverage, networkThroughputAverageKbps, networkThroughputMax, networkThroughputMaxKbps);
         }
     }

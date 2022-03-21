@@ -79,12 +79,10 @@ public final class HealthAlertActionResponse extends io.pulumi.resources.InvokeA
             this.actionGroupId = actionGroupId;
             return this;
         }
-
         public Builder webHookProperties(@Nullable Map<String,String> webHookProperties) {
             this.webHookProperties = webHookProperties;
             return this;
-        }
-        public HealthAlertActionResponse build() {
+        }        public HealthAlertActionResponse build() {
             return new HealthAlertActionResponse(actionGroupId, webHookProperties);
         }
     }

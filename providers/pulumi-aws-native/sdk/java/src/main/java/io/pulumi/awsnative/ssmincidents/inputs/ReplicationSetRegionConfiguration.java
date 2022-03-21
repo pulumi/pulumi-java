@@ -54,8 +54,7 @@ public final class ReplicationSetRegionConfiguration extends io.pulumi.resources
         public Builder sseKmsKeyId(String sseKmsKeyId) {
             this.sseKmsKeyId = Objects.requireNonNull(sseKmsKeyId);
             return this;
-        }
-        public ReplicationSetRegionConfiguration build() {
+        }        public ReplicationSetRegionConfiguration build() {
             return new ReplicationSetRegionConfiguration(sseKmsKeyId);
         }
     }

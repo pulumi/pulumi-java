@@ -102,12 +102,10 @@ public final class SubscriptionDeadLetterPolicy {
             this.deadLetterTopic = deadLetterTopic;
             return this;
         }
-
         public Builder maxDeliveryAttempts(@Nullable Integer maxDeliveryAttempts) {
             this.maxDeliveryAttempts = maxDeliveryAttempts;
             return this;
-        }
-        public SubscriptionDeadLetterPolicy build() {
+        }        public SubscriptionDeadLetterPolicy build() {
             return new SubscriptionDeadLetterPolicy(deadLetterTopic, maxDeliveryAttempts);
         }
     }

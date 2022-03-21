@@ -54,12 +54,10 @@ public final class FilterStringFilter {
             this.comparison = Objects.requireNonNull(comparison);
             return this;
         }
-
         public Builder value(String value) {
             this.value = Objects.requireNonNull(value);
             return this;
-        }
-        public FilterStringFilter build() {
+        }        public FilterStringFilter build() {
             return new FilterStringFilter(comparison, value);
         }
     }

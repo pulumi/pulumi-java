@@ -45,8 +45,7 @@ public final class RuleGroupRuleActionCaptchaProperties {
         public Builder customRequestHandling(@Nullable RuleGroupCustomRequestHandling customRequestHandling) {
             this.customRequestHandling = customRequestHandling;
             return this;
-        }
-        public RuleGroupRuleActionCaptchaProperties build() {
+        }        public RuleGroupRuleActionCaptchaProperties build() {
             return new RuleGroupRuleActionCaptchaProperties(customRequestHandling);
         }
     }

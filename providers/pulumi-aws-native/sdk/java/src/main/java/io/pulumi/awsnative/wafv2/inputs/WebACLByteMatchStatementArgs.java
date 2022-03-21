@@ -110,52 +110,45 @@ public final class WebACLByteMatchStatementArgs extends io.pulumi.resources.Reso
             this.fieldToMatch = Objects.requireNonNull(fieldToMatch);
             return this;
         }
-
         public Builder fieldToMatch(WebACLFieldToMatchArgs fieldToMatch) {
             this.fieldToMatch = Output.of(Objects.requireNonNull(fieldToMatch));
             return this;
         }
-
         public Builder positionalConstraint(Output<WebACLPositionalConstraint> positionalConstraint) {
             this.positionalConstraint = Objects.requireNonNull(positionalConstraint);
             return this;
         }
-
         public Builder positionalConstraint(WebACLPositionalConstraint positionalConstraint) {
             this.positionalConstraint = Output.of(Objects.requireNonNull(positionalConstraint));
             return this;
         }
-
         public Builder searchString(@Nullable Output<String> searchString) {
             this.searchString = searchString;
             return this;
         }
-
         public Builder searchString(@Nullable String searchString) {
             this.searchString = Output.ofNullable(searchString);
             return this;
         }
-
         public Builder searchStringBase64(@Nullable Output<String> searchStringBase64) {
             this.searchStringBase64 = searchStringBase64;
             return this;
         }
-
         public Builder searchStringBase64(@Nullable String searchStringBase64) {
             this.searchStringBase64 = Output.ofNullable(searchStringBase64);
             return this;
         }
-
         public Builder textTransformations(Output<List<WebACLTextTransformationArgs>> textTransformations) {
             this.textTransformations = Objects.requireNonNull(textTransformations);
             return this;
         }
-
         public Builder textTransformations(List<WebACLTextTransformationArgs> textTransformations) {
             this.textTransformations = Output.of(Objects.requireNonNull(textTransformations));
             return this;
         }
-        public WebACLByteMatchStatementArgs build() {
+        public Builder textTransformations(WebACLTextTransformationArgs... textTransformations) {
+            return textTransformations(List.of(textTransformations));
+        }        public WebACLByteMatchStatementArgs build() {
             return new WebACLByteMatchStatementArgs(fieldToMatch, positionalConstraint, searchString, searchStringBase64, textTransformations);
         }
     }

@@ -76,17 +76,14 @@ public final class GetCanaryEvaluationArgs extends io.pulumi.resources.InvokeArg
             this.canaryevaluationId = Objects.requireNonNull(canaryevaluationId);
             return this;
         }
-
         public Builder instanceId(String instanceId) {
             this.instanceId = Objects.requireNonNull(instanceId);
             return this;
         }
-
         public Builder organizationId(String organizationId) {
             this.organizationId = Objects.requireNonNull(organizationId);
             return this;
-        }
-        public GetCanaryEvaluationArgs build() {
+        }        public GetCanaryEvaluationArgs build() {
             return new GetCanaryEvaluationArgs(canaryevaluationId, instanceId, organizationId);
         }
     }

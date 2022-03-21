@@ -70,12 +70,10 @@ public final class MonthlyScheduleResponse {
             this.monthDay = Objects.requireNonNull(monthDay);
             return this;
         }
-
         public Builder weekDayOfMonth(WeekDayOfMonthResponse weekDayOfMonth) {
             this.weekDayOfMonth = Objects.requireNonNull(weekDayOfMonth);
             return this;
-        }
-        public MonthlyScheduleResponse build() {
+        }        public MonthlyScheduleResponse build() {
             return new MonthlyScheduleResponse(monthDay, weekDayOfMonth);
         }
     }

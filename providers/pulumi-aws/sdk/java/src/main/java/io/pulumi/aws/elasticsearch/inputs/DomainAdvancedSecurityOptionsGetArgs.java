@@ -91,32 +91,26 @@ public final class DomainAdvancedSecurityOptionsGetArgs extends io.pulumi.resour
             this.enabled = Objects.requireNonNull(enabled);
             return this;
         }
-
         public Builder enabled(Boolean enabled) {
             this.enabled = Output.of(Objects.requireNonNull(enabled));
             return this;
         }
-
         public Builder internalUserDatabaseEnabled(@Nullable Output<Boolean> internalUserDatabaseEnabled) {
             this.internalUserDatabaseEnabled = internalUserDatabaseEnabled;
             return this;
         }
-
         public Builder internalUserDatabaseEnabled(@Nullable Boolean internalUserDatabaseEnabled) {
             this.internalUserDatabaseEnabled = Output.ofNullable(internalUserDatabaseEnabled);
             return this;
         }
-
         public Builder masterUserOptions(@Nullable Output<DomainAdvancedSecurityOptionsMasterUserOptionsGetArgs> masterUserOptions) {
             this.masterUserOptions = masterUserOptions;
             return this;
         }
-
         public Builder masterUserOptions(@Nullable DomainAdvancedSecurityOptionsMasterUserOptionsGetArgs masterUserOptions) {
             this.masterUserOptions = Output.ofNullable(masterUserOptions);
             return this;
-        }
-        public DomainAdvancedSecurityOptionsGetArgs build() {
+        }        public DomainAdvancedSecurityOptionsGetArgs build() {
             return new DomainAdvancedSecurityOptionsGetArgs(enabled, internalUserDatabaseEnabled, masterUserOptions);
         }
     }

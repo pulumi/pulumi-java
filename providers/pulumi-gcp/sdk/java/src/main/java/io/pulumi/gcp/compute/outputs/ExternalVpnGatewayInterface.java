@@ -86,12 +86,10 @@ public final class ExternalVpnGatewayInterface {
             this.id = id;
             return this;
         }
-
         public Builder ipAddress(@Nullable String ipAddress) {
             this.ipAddress = ipAddress;
             return this;
-        }
-        public ExternalVpnGatewayInterface build() {
+        }        public ExternalVpnGatewayInterface build() {
             return new ExternalVpnGatewayInterface(id, ipAddress);
         }
     }

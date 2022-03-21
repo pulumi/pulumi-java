@@ -240,77 +240,62 @@ public final class FlowSourceConnectorProperties extends io.pulumi.resources.Inv
             this.amplitude = amplitude;
             return this;
         }
-
         public Builder datadog(@Nullable FlowDatadogSourceProperties datadog) {
             this.datadog = datadog;
             return this;
         }
-
         public Builder dynatrace(@Nullable FlowDynatraceSourceProperties dynatrace) {
             this.dynatrace = dynatrace;
             return this;
         }
-
         public Builder googleAnalytics(@Nullable FlowGoogleAnalyticsSourceProperties googleAnalytics) {
             this.googleAnalytics = googleAnalytics;
             return this;
         }
-
         public Builder inforNexus(@Nullable FlowInforNexusSourceProperties inforNexus) {
             this.inforNexus = inforNexus;
             return this;
         }
-
         public Builder marketo(@Nullable FlowMarketoSourceProperties marketo) {
             this.marketo = marketo;
             return this;
         }
-
         public Builder s3(@Nullable FlowS3SourceProperties s3) {
             this.s3 = s3;
             return this;
         }
-
         public Builder sAPOData(@Nullable FlowSAPODataSourceProperties sAPOData) {
             this.sAPOData = sAPOData;
             return this;
         }
-
         public Builder salesforce(@Nullable FlowSalesforceSourceProperties salesforce) {
             this.salesforce = salesforce;
             return this;
         }
-
         public Builder serviceNow(@Nullable FlowServiceNowSourceProperties serviceNow) {
             this.serviceNow = serviceNow;
             return this;
         }
-
         public Builder singular(@Nullable FlowSingularSourceProperties singular) {
             this.singular = singular;
             return this;
         }
-
         public Builder slack(@Nullable FlowSlackSourceProperties slack) {
             this.slack = slack;
             return this;
         }
-
         public Builder trendmicro(@Nullable FlowTrendmicroSourceProperties trendmicro) {
             this.trendmicro = trendmicro;
             return this;
         }
-
         public Builder veeva(@Nullable FlowVeevaSourceProperties veeva) {
             this.veeva = veeva;
             return this;
         }
-
         public Builder zendesk(@Nullable FlowZendeskSourceProperties zendesk) {
             this.zendesk = zendesk;
             return this;
-        }
-        public FlowSourceConnectorProperties build() {
+        }        public FlowSourceConnectorProperties build() {
             return new FlowSourceConnectorProperties(amplitude, datadog, dynatrace, googleAnalytics, inforNexus, marketo, s3, sAPOData, salesforce, serviceNow, singular, slack, trendmicro, veeva, zendesk);
         }
     }

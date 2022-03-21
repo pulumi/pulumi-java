@@ -87,17 +87,14 @@ public final class SourceResponse {
             this.repoSource = Objects.requireNonNull(repoSource);
             return this;
         }
-
         public Builder storageSource(StorageSourceResponse storageSource) {
             this.storageSource = Objects.requireNonNull(storageSource);
             return this;
         }
-
         public Builder storageSourceManifest(StorageSourceManifestResponse storageSourceManifest) {
             this.storageSourceManifest = Objects.requireNonNull(storageSourceManifest);
             return this;
-        }
-        public SourceResponse build() {
+        }        public SourceResponse build() {
             return new SourceResponse(repoSource, storageSource, storageSourceManifest);
         }
     }

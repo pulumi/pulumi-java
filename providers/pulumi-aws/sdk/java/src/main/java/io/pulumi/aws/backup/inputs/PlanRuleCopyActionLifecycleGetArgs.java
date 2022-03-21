@@ -74,22 +74,18 @@ public final class PlanRuleCopyActionLifecycleGetArgs extends io.pulumi.resource
             this.coldStorageAfter = coldStorageAfter;
             return this;
         }
-
         public Builder coldStorageAfter(@Nullable Integer coldStorageAfter) {
             this.coldStorageAfter = Output.ofNullable(coldStorageAfter);
             return this;
         }
-
         public Builder deleteAfter(@Nullable Output<Integer> deleteAfter) {
             this.deleteAfter = deleteAfter;
             return this;
         }
-
         public Builder deleteAfter(@Nullable Integer deleteAfter) {
             this.deleteAfter = Output.ofNullable(deleteAfter);
             return this;
-        }
-        public PlanRuleCopyActionLifecycleGetArgs build() {
+        }        public PlanRuleCopyActionLifecycleGetArgs build() {
             return new PlanRuleCopyActionLifecycleGetArgs(coldStorageAfter, deleteAfter);
         }
     }

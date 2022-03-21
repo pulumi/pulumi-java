@@ -57,12 +57,10 @@ public final class WebAclRuleActionCountArgs extends io.pulumi.resources.Resourc
             this.customRequestHandling = customRequestHandling;
             return this;
         }
-
         public Builder customRequestHandling(@Nullable WebAclRuleActionCountCustomRequestHandlingArgs customRequestHandling) {
             this.customRequestHandling = Output.ofNullable(customRequestHandling);
             return this;
-        }
-        public WebAclRuleActionCountArgs build() {
+        }        public WebAclRuleActionCountArgs build() {
             return new WebAclRuleActionCountArgs(customRequestHandling);
         }
     }

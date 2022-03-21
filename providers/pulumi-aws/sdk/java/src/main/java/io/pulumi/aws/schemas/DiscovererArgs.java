@@ -91,32 +91,26 @@ public final class DiscovererArgs extends io.pulumi.resources.ResourceArgs {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder sourceArn(Output<String> sourceArn) {
             this.sourceArn = Objects.requireNonNull(sourceArn);
             return this;
         }
-
         public Builder sourceArn(String sourceArn) {
             this.sourceArn = Output.of(Objects.requireNonNull(sourceArn));
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
-        }
-        public DiscovererArgs build() {
+        }        public DiscovererArgs build() {
             return new DiscovererArgs(description, sourceArn, tags);
         }
     }

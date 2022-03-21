@@ -96,32 +96,29 @@ public final class ManagedRuleSetArgs extends io.pulumi.resources.ResourceArgs {
             this.ruleGroupOverrides = ruleGroupOverrides;
             return this;
         }
-
         public Builder ruleGroupOverrides(@Nullable List<ManagedRuleGroupOverrideArgs> ruleGroupOverrides) {
             this.ruleGroupOverrides = Output.ofNullable(ruleGroupOverrides);
             return this;
         }
-
+        public Builder ruleGroupOverrides(ManagedRuleGroupOverrideArgs... ruleGroupOverrides) {
+            return ruleGroupOverrides(List.of(ruleGroupOverrides));
+        }
         public Builder ruleSetType(Output<String> ruleSetType) {
             this.ruleSetType = Objects.requireNonNull(ruleSetType);
             return this;
         }
-
         public Builder ruleSetType(String ruleSetType) {
             this.ruleSetType = Output.of(Objects.requireNonNull(ruleSetType));
             return this;
         }
-
         public Builder ruleSetVersion(Output<String> ruleSetVersion) {
             this.ruleSetVersion = Objects.requireNonNull(ruleSetVersion);
             return this;
         }
-
         public Builder ruleSetVersion(String ruleSetVersion) {
             this.ruleSetVersion = Output.of(Objects.requireNonNull(ruleSetVersion));
             return this;
-        }
-        public ManagedRuleSetArgs build() {
+        }        public ManagedRuleSetArgs build() {
             return new ManagedRuleSetArgs(ruleGroupOverrides, ruleSetType, ruleSetVersion);
         }
     }

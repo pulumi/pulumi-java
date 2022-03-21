@@ -139,32 +139,26 @@ public final class GetFactoryGitHubAccessTokenArgs extends io.pulumi.resources.I
             this.factoryName = Objects.requireNonNull(factoryName);
             return this;
         }
-
         public Builder gitHubAccessCode(String gitHubAccessCode) {
             this.gitHubAccessCode = Objects.requireNonNull(gitHubAccessCode);
             return this;
         }
-
         public Builder gitHubAccessTokenBaseUrl(String gitHubAccessTokenBaseUrl) {
             this.gitHubAccessTokenBaseUrl = Objects.requireNonNull(gitHubAccessTokenBaseUrl);
             return this;
         }
-
         public Builder gitHubClientId(@Nullable String gitHubClientId) {
             this.gitHubClientId = gitHubClientId;
             return this;
         }
-
         public Builder gitHubClientSecret(@Nullable GitHubClientSecret gitHubClientSecret) {
             this.gitHubClientSecret = gitHubClientSecret;
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
-        }
-        public GetFactoryGitHubAccessTokenArgs build() {
+        }        public GetFactoryGitHubAccessTokenArgs build() {
             return new GetFactoryGitHubAccessTokenArgs(factoryName, gitHubAccessCode, gitHubAccessTokenBaseUrl, gitHubClientId, gitHubClientSecret, resourceGroupName);
         }
     }

@@ -297,152 +297,137 @@ public final class HDInsightHiveActivityArgs extends io.pulumi.resources.Resourc
             this.arguments = arguments;
             return this;
         }
-
         public Builder arguments(@Nullable List<Object> arguments) {
             this.arguments = Output.ofNullable(arguments);
             return this;
         }
-
+        public Builder arguments(Object... arguments) {
+            return arguments(List.of(arguments));
+        }
         public Builder defines(@Nullable Output<Map<String,Object>> defines) {
             this.defines = defines;
             return this;
         }
-
         public Builder defines(@Nullable Map<String,Object> defines) {
             this.defines = Output.ofNullable(defines);
             return this;
         }
-
         public Builder dependsOn(@Nullable Output<List<ActivityDependencyArgs>> dependsOn) {
             this.dependsOn = dependsOn;
             return this;
         }
-
         public Builder dependsOn(@Nullable List<ActivityDependencyArgs> dependsOn) {
             this.dependsOn = Output.ofNullable(dependsOn);
             return this;
         }
-
+        public Builder dependsOn(ActivityDependencyArgs... dependsOn) {
+            return dependsOn(List.of(dependsOn));
+        }
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder getDebugInfo(@Nullable Output<Either<String,HDInsightActivityDebugInfoOption>> getDebugInfo) {
             this.getDebugInfo = getDebugInfo;
             return this;
         }
-
         public Builder getDebugInfo(@Nullable Either<String,HDInsightActivityDebugInfoOption> getDebugInfo) {
             this.getDebugInfo = Output.ofNullable(getDebugInfo);
             return this;
         }
-
         public Builder linkedServiceName(@Nullable Output<LinkedServiceReferenceArgs> linkedServiceName) {
             this.linkedServiceName = linkedServiceName;
             return this;
         }
-
         public Builder linkedServiceName(@Nullable LinkedServiceReferenceArgs linkedServiceName) {
             this.linkedServiceName = Output.ofNullable(linkedServiceName);
             return this;
         }
-
         public Builder name(Output<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
-
         public Builder policy(@Nullable Output<ActivityPolicyArgs> policy) {
             this.policy = policy;
             return this;
         }
-
         public Builder policy(@Nullable ActivityPolicyArgs policy) {
             this.policy = Output.ofNullable(policy);
             return this;
         }
-
         public Builder queryTimeout(@Nullable Output<Integer> queryTimeout) {
             this.queryTimeout = queryTimeout;
             return this;
         }
-
         public Builder queryTimeout(@Nullable Integer queryTimeout) {
             this.queryTimeout = Output.ofNullable(queryTimeout);
             return this;
         }
-
         public Builder scriptLinkedService(@Nullable Output<LinkedServiceReferenceArgs> scriptLinkedService) {
             this.scriptLinkedService = scriptLinkedService;
             return this;
         }
-
         public Builder scriptLinkedService(@Nullable LinkedServiceReferenceArgs scriptLinkedService) {
             this.scriptLinkedService = Output.ofNullable(scriptLinkedService);
             return this;
         }
-
         public Builder scriptPath(@Nullable Output<Object> scriptPath) {
             this.scriptPath = scriptPath;
             return this;
         }
-
         public Builder scriptPath(@Nullable Object scriptPath) {
             this.scriptPath = Output.ofNullable(scriptPath);
             return this;
         }
-
         public Builder storageLinkedServices(@Nullable Output<List<LinkedServiceReferenceArgs>> storageLinkedServices) {
             this.storageLinkedServices = storageLinkedServices;
             return this;
         }
-
         public Builder storageLinkedServices(@Nullable List<LinkedServiceReferenceArgs> storageLinkedServices) {
             this.storageLinkedServices = Output.ofNullable(storageLinkedServices);
             return this;
         }
-
+        public Builder storageLinkedServices(LinkedServiceReferenceArgs... storageLinkedServices) {
+            return storageLinkedServices(List.of(storageLinkedServices));
+        }
         public Builder type(Output<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Output.of(Objects.requireNonNull(type));
             return this;
         }
-
         public Builder userProperties(@Nullable Output<List<UserPropertyArgs>> userProperties) {
             this.userProperties = userProperties;
             return this;
         }
-
         public Builder userProperties(@Nullable List<UserPropertyArgs> userProperties) {
             this.userProperties = Output.ofNullable(userProperties);
             return this;
         }
-
+        public Builder userProperties(UserPropertyArgs... userProperties) {
+            return userProperties(List.of(userProperties));
+        }
         public Builder variables(@Nullable Output<List<Object>> variables) {
             this.variables = variables;
             return this;
         }
-
         public Builder variables(@Nullable List<Object> variables) {
             this.variables = Output.ofNullable(variables);
             return this;
         }
-        public HDInsightHiveActivityArgs build() {
+        public Builder variables(Object... variables) {
+            return variables(List.of(variables));
+        }        public HDInsightHiveActivityArgs build() {
             return new HDInsightHiveActivityArgs(arguments, defines, dependsOn, description, getDebugInfo, linkedServiceName, name, policy, queryTimeout, scriptLinkedService, scriptPath, storageLinkedServices, type, userProperties, variables);
         }
     }

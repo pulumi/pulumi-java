@@ -139,62 +139,50 @@ public final class LayerVersionPermissionArgs extends io.pulumi.resources.Resour
             this.action = Objects.requireNonNull(action);
             return this;
         }
-
         public Builder action(String action) {
             this.action = Output.of(Objects.requireNonNull(action));
             return this;
         }
-
         public Builder layerName(Output<String> layerName) {
             this.layerName = Objects.requireNonNull(layerName);
             return this;
         }
-
         public Builder layerName(String layerName) {
             this.layerName = Output.of(Objects.requireNonNull(layerName));
             return this;
         }
-
         public Builder organizationId(@Nullable Output<String> organizationId) {
             this.organizationId = organizationId;
             return this;
         }
-
         public Builder organizationId(@Nullable String organizationId) {
             this.organizationId = Output.ofNullable(organizationId);
             return this;
         }
-
         public Builder principal(Output<String> principal) {
             this.principal = Objects.requireNonNull(principal);
             return this;
         }
-
         public Builder principal(String principal) {
             this.principal = Output.of(Objects.requireNonNull(principal));
             return this;
         }
-
         public Builder statementId(Output<String> statementId) {
             this.statementId = Objects.requireNonNull(statementId);
             return this;
         }
-
         public Builder statementId(String statementId) {
             this.statementId = Output.of(Objects.requireNonNull(statementId));
             return this;
         }
-
         public Builder versionNumber(Output<Integer> versionNumber) {
             this.versionNumber = Objects.requireNonNull(versionNumber);
             return this;
         }
-
         public Builder versionNumber(Integer versionNumber) {
             this.versionNumber = Output.of(Objects.requireNonNull(versionNumber));
             return this;
-        }
-        public LayerVersionPermissionArgs build() {
+        }        public LayerVersionPermissionArgs build() {
             return new LayerVersionPermissionArgs(action, layerName, organizationId, principal, statementId, versionNumber);
         }
     }

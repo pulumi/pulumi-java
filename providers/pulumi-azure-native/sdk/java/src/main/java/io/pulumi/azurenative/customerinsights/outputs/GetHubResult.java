@@ -202,52 +202,42 @@ public final class GetHubResult {
             this.apiEndpoint = Objects.requireNonNull(apiEndpoint);
             return this;
         }
-
         public Builder hubBillingInfo(@Nullable HubBillingInfoFormatResponse hubBillingInfo) {
             this.hubBillingInfo = hubBillingInfo;
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = location;
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tenantFeatures(@Nullable Integer tenantFeatures) {
             this.tenantFeatures = tenantFeatures;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder webEndpoint(String webEndpoint) {
             this.webEndpoint = Objects.requireNonNull(webEndpoint);
             return this;
-        }
-        public GetHubResult build() {
+        }        public GetHubResult build() {
             return new GetHubResult(apiEndpoint, hubBillingInfo, id, location, name, provisioningState, tags, tenantFeatures, type, webEndpoint);
         }
     }

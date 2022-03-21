@@ -141,32 +141,29 @@ public final class MigrateSqlServerSqlMISyncTaskInputResponse {
             this.azureApp = Objects.requireNonNull(azureApp);
             return this;
         }
-
         public Builder backupFileShare(@Nullable FileShareResponse backupFileShare) {
             this.backupFileShare = backupFileShare;
             return this;
         }
-
         public Builder selectedDatabases(List<MigrateSqlServerSqlMIDatabaseInputResponse> selectedDatabases) {
             this.selectedDatabases = Objects.requireNonNull(selectedDatabases);
             return this;
         }
-
+        public Builder selectedDatabases(MigrateSqlServerSqlMIDatabaseInputResponse... selectedDatabases) {
+            return selectedDatabases(List.of(selectedDatabases));
+        }
         public Builder sourceConnectionInfo(SqlConnectionInfoResponse sourceConnectionInfo) {
             this.sourceConnectionInfo = Objects.requireNonNull(sourceConnectionInfo);
             return this;
         }
-
         public Builder storageResourceId(String storageResourceId) {
             this.storageResourceId = Objects.requireNonNull(storageResourceId);
             return this;
         }
-
         public Builder targetConnectionInfo(MiSqlConnectionInfoResponse targetConnectionInfo) {
             this.targetConnectionInfo = Objects.requireNonNull(targetConnectionInfo);
             return this;
-        }
-        public MigrateSqlServerSqlMISyncTaskInputResponse build() {
+        }        public MigrateSqlServerSqlMISyncTaskInputResponse build() {
             return new MigrateSqlServerSqlMISyncTaskInputResponse(azureApp, backupFileShare, selectedDatabases, sourceConnectionInfo, storageResourceId, targetConnectionInfo);
         }
     }

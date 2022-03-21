@@ -156,72 +156,67 @@ public final class GetAppResult {
             this.appId = appId;
             return this;
         }
-
         public Builder appName(@Nullable String appName) {
             this.appName = appName;
             return this;
         }
-
         public Builder arn(@Nullable String arn) {
             this.arn = arn;
             return this;
         }
-
         public Builder buildSpec(@Nullable String buildSpec) {
             this.buildSpec = buildSpec;
             return this;
         }
-
         public Builder customHeaders(@Nullable String customHeaders) {
             this.customHeaders = customHeaders;
             return this;
         }
-
         public Builder customRules(@Nullable List<AppCustomRule> customRules) {
             this.customRules = customRules;
             return this;
         }
-
+        public Builder customRules(AppCustomRule... customRules) {
+            return customRules(List.of(customRules));
+        }
         public Builder defaultDomain(@Nullable String defaultDomain) {
             this.defaultDomain = defaultDomain;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
-
         public Builder enableBranchAutoDeletion(@Nullable Boolean enableBranchAutoDeletion) {
             this.enableBranchAutoDeletion = enableBranchAutoDeletion;
             return this;
         }
-
         public Builder environmentVariables(@Nullable List<AppEnvironmentVariable> environmentVariables) {
             this.environmentVariables = environmentVariables;
             return this;
         }
-
+        public Builder environmentVariables(AppEnvironmentVariable... environmentVariables) {
+            return environmentVariables(List.of(environmentVariables));
+        }
         public Builder iAMServiceRole(@Nullable String iAMServiceRole) {
             this.iAMServiceRole = iAMServiceRole;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
-
         public Builder repository(@Nullable String repository) {
             this.repository = repository;
             return this;
         }
-
         public Builder tags(@Nullable List<AppTag> tags) {
             this.tags = tags;
             return this;
         }
-        public GetAppResult build() {
+        public Builder tags(AppTag... tags) {
+            return tags(List.of(tags));
+        }        public GetAppResult build() {
             return new GetAppResult(appId, appName, arn, buildSpec, customHeaders, customRules, defaultDomain, description, enableBranchAutoDeletion, environmentVariables, iAMServiceRole, name, repository, tags);
         }
     }

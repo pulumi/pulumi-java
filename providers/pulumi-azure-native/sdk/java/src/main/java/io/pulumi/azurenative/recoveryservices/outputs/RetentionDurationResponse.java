@@ -74,12 +74,10 @@ public final class RetentionDurationResponse {
             this.count = count;
             return this;
         }
-
         public Builder durationType(@Nullable String durationType) {
             this.durationType = durationType;
             return this;
-        }
-        public RetentionDurationResponse build() {
+        }        public RetentionDurationResponse build() {
             return new RetentionDurationResponse(count, durationType);
         }
     }

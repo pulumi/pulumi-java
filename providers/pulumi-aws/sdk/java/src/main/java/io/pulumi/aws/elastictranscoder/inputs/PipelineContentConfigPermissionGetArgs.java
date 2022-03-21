@@ -91,32 +91,29 @@ public final class PipelineContentConfigPermissionGetArgs extends io.pulumi.reso
             this.accesses = accesses;
             return this;
         }
-
         public Builder accesses(@Nullable List<String> accesses) {
             this.accesses = Output.ofNullable(accesses);
             return this;
         }
-
+        public Builder accesses(String... accesses) {
+            return accesses(List.of(accesses));
+        }
         public Builder grantee(@Nullable Output<String> grantee) {
             this.grantee = grantee;
             return this;
         }
-
         public Builder grantee(@Nullable String grantee) {
             this.grantee = Output.ofNullable(grantee);
             return this;
         }
-
         public Builder granteeType(@Nullable Output<String> granteeType) {
             this.granteeType = granteeType;
             return this;
         }
-
         public Builder granteeType(@Nullable String granteeType) {
             this.granteeType = Output.ofNullable(granteeType);
             return this;
-        }
-        public PipelineContentConfigPermissionGetArgs build() {
+        }        public PipelineContentConfigPermissionGetArgs build() {
             return new PipelineContentConfigPermissionGetArgs(accesses, grantee, granteeType);
         }
     }

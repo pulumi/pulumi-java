@@ -57,12 +57,10 @@ public final class ApplicationApplicationConfigurationRunConfigurationFlinkRunCo
             this.allowNonRestoredState = allowNonRestoredState;
             return this;
         }
-
         public Builder allowNonRestoredState(@Nullable Boolean allowNonRestoredState) {
             this.allowNonRestoredState = Output.ofNullable(allowNonRestoredState);
             return this;
-        }
-        public ApplicationApplicationConfigurationRunConfigurationFlinkRunConfigurationGetArgs build() {
+        }        public ApplicationApplicationConfigurationRunConfigurationFlinkRunConfigurationGetArgs build() {
             return new ApplicationApplicationConfigurationRunConfigurationFlinkRunConfigurationGetArgs(allowNonRestoredState);
         }
     }

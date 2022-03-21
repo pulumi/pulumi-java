@@ -105,37 +105,33 @@ public final class GetLocalGatewayRouteTableResult {
             this.filters = filters;
             return this;
         }
-
+        public Builder filters(GetLocalGatewayRouteTableFilter... filters) {
+            return filters(List.of(filters));
+        }
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder localGatewayId(String localGatewayId) {
             this.localGatewayId = Objects.requireNonNull(localGatewayId);
             return this;
         }
-
         public Builder localGatewayRouteTableId(String localGatewayRouteTableId) {
             this.localGatewayRouteTableId = Objects.requireNonNull(localGatewayRouteTableId);
             return this;
         }
-
         public Builder outpostArn(String outpostArn) {
             this.outpostArn = Objects.requireNonNull(outpostArn);
             return this;
         }
-
         public Builder state(String state) {
             this.state = Objects.requireNonNull(state);
             return this;
         }
-
         public Builder tags(Map<String,String> tags) {
             this.tags = Objects.requireNonNull(tags);
             return this;
-        }
-        public GetLocalGatewayRouteTableResult build() {
+        }        public GetLocalGatewayRouteTableResult build() {
             return new GetLocalGatewayRouteTableResult(filters, id, localGatewayId, localGatewayRouteTableId, outpostArn, state, tags);
         }
     }

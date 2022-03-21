@@ -68,12 +68,13 @@ public final class DataSourceSalesforceStandardObjectAttachmentConfiguration ext
             this.documentTitleFieldName = documentTitleFieldName;
             return this;
         }
-
         public Builder fieldMappings(@Nullable List<DataSourceToIndexFieldMapping> fieldMappings) {
             this.fieldMappings = fieldMappings;
             return this;
         }
-        public DataSourceSalesforceStandardObjectAttachmentConfiguration build() {
+        public Builder fieldMappings(DataSourceToIndexFieldMapping... fieldMappings) {
+            return fieldMappings(List.of(fieldMappings));
+        }        public DataSourceSalesforceStandardObjectAttachmentConfiguration build() {
             return new DataSourceSalesforceStandardObjectAttachmentConfiguration(documentTitleFieldName, fieldMappings);
         }
     }

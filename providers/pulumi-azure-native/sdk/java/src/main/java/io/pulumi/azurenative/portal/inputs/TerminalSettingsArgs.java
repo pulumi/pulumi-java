@@ -81,22 +81,18 @@ public final class TerminalSettingsArgs extends io.pulumi.resources.ResourceArgs
             this.fontSize = fontSize;
             return this;
         }
-
         public Builder fontSize(@Nullable Either<String,FontSize> fontSize) {
             this.fontSize = Output.ofNullable(fontSize);
             return this;
         }
-
         public Builder fontStyle(@Nullable Output<Either<String,FontStyle>> fontStyle) {
             this.fontStyle = fontStyle;
             return this;
         }
-
         public Builder fontStyle(@Nullable Either<String,FontStyle> fontStyle) {
             this.fontStyle = Output.ofNullable(fontStyle);
             return this;
-        }
-        public TerminalSettingsArgs build() {
+        }        public TerminalSettingsArgs build() {
             return new TerminalSettingsArgs(fontSize, fontStyle);
         }
     }

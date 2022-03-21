@@ -123,52 +123,42 @@ public final class DedicatedCloudServiceArgs extends io.pulumi.resources.Resourc
             this.dedicatedCloudServiceName = dedicatedCloudServiceName;
             return this;
         }
-
         public Builder dedicatedCloudServiceName(@Nullable String dedicatedCloudServiceName) {
             this.dedicatedCloudServiceName = Output.ofNullable(dedicatedCloudServiceName);
             return this;
         }
-
         public Builder gatewaySubnet(Output<String> gatewaySubnet) {
             this.gatewaySubnet = Objects.requireNonNull(gatewaySubnet);
             return this;
         }
-
         public Builder gatewaySubnet(String gatewaySubnet) {
             this.gatewaySubnet = Output.of(Objects.requireNonNull(gatewaySubnet));
             return this;
         }
-
         public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
-        }
-        public DedicatedCloudServiceArgs build() {
+        }        public DedicatedCloudServiceArgs build() {
             return new DedicatedCloudServiceArgs(dedicatedCloudServiceName, gatewaySubnet, location, resourceGroupName, tags);
         }
     }

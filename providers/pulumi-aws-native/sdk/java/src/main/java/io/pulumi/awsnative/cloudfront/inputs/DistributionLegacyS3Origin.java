@@ -66,12 +66,10 @@ public final class DistributionLegacyS3Origin extends io.pulumi.resources.Invoke
             this.dNSName = Objects.requireNonNull(dNSName);
             return this;
         }
-
         public Builder originAccessIdentity(@Nullable String originAccessIdentity) {
             this.originAccessIdentity = originAccessIdentity;
             return this;
-        }
-        public DistributionLegacyS3Origin build() {
+        }        public DistributionLegacyS3Origin build() {
             return new DistributionLegacyS3Origin(dNSName, originAccessIdentity);
         }
     }

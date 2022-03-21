@@ -76,12 +76,10 @@ public final class MyWorkbookUserAssignedIdentitiesResponse extends io.pulumi.re
             this.principalId = Objects.requireNonNull(principalId);
             return this;
         }
-
         public Builder tenantId(String tenantId) {
             this.tenantId = Objects.requireNonNull(tenantId);
             return this;
-        }
-        public MyWorkbookUserAssignedIdentitiesResponse build() {
+        }        public MyWorkbookUserAssignedIdentitiesResponse build() {
             return new MyWorkbookUserAssignedIdentitiesResponse(principalId, tenantId);
         }
     }

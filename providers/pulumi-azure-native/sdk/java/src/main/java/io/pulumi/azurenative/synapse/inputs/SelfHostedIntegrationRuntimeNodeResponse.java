@@ -335,92 +335,74 @@ public final class SelfHostedIntegrationRuntimeNodeResponse extends io.pulumi.re
             this.capabilities = Objects.requireNonNull(capabilities);
             return this;
         }
-
         public Builder concurrentJobsLimit(Integer concurrentJobsLimit) {
             this.concurrentJobsLimit = Objects.requireNonNull(concurrentJobsLimit);
             return this;
         }
-
         public Builder expiryTime(String expiryTime) {
             this.expiryTime = Objects.requireNonNull(expiryTime);
             return this;
         }
-
         public Builder hostServiceUri(String hostServiceUri) {
             this.hostServiceUri = Objects.requireNonNull(hostServiceUri);
             return this;
         }
-
         public Builder isActiveDispatcher(Boolean isActiveDispatcher) {
             this.isActiveDispatcher = Objects.requireNonNull(isActiveDispatcher);
             return this;
         }
-
         public Builder lastConnectTime(String lastConnectTime) {
             this.lastConnectTime = Objects.requireNonNull(lastConnectTime);
             return this;
         }
-
         public Builder lastEndUpdateTime(String lastEndUpdateTime) {
             this.lastEndUpdateTime = Objects.requireNonNull(lastEndUpdateTime);
             return this;
         }
-
         public Builder lastStartTime(String lastStartTime) {
             this.lastStartTime = Objects.requireNonNull(lastStartTime);
             return this;
         }
-
         public Builder lastStartUpdateTime(String lastStartUpdateTime) {
             this.lastStartUpdateTime = Objects.requireNonNull(lastStartUpdateTime);
             return this;
         }
-
         public Builder lastStopTime(String lastStopTime) {
             this.lastStopTime = Objects.requireNonNull(lastStopTime);
             return this;
         }
-
         public Builder lastUpdateResult(String lastUpdateResult) {
             this.lastUpdateResult = Objects.requireNonNull(lastUpdateResult);
             return this;
         }
-
         public Builder machineName(String machineName) {
             this.machineName = Objects.requireNonNull(machineName);
             return this;
         }
-
         public Builder maxConcurrentJobs(Integer maxConcurrentJobs) {
             this.maxConcurrentJobs = Objects.requireNonNull(maxConcurrentJobs);
             return this;
         }
-
         public Builder nodeName(String nodeName) {
             this.nodeName = Objects.requireNonNull(nodeName);
             return this;
         }
-
         public Builder registerTime(String registerTime) {
             this.registerTime = Objects.requireNonNull(registerTime);
             return this;
         }
-
         public Builder status(String status) {
             this.status = Objects.requireNonNull(status);
             return this;
         }
-
         public Builder version(String version) {
             this.version = Objects.requireNonNull(version);
             return this;
         }
-
         public Builder versionStatus(String versionStatus) {
             this.versionStatus = Objects.requireNonNull(versionStatus);
             return this;
-        }
-        public SelfHostedIntegrationRuntimeNodeResponse build() {
+        }        public SelfHostedIntegrationRuntimeNodeResponse build() {
             return new SelfHostedIntegrationRuntimeNodeResponse(capabilities, concurrentJobsLimit, expiryTime, hostServiceUri, isActiveDispatcher, lastConnectTime, lastEndUpdateTime, lastStartTime, lastStartUpdateTime, lastStopTime, lastUpdateResult, machineName, maxConcurrentJobs, nodeName, registerTime, status, version, versionStatus);
         }
     }

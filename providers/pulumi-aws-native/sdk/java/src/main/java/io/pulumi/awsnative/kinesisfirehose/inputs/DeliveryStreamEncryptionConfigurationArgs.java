@@ -67,22 +67,18 @@ public final class DeliveryStreamEncryptionConfigurationArgs extends io.pulumi.r
             this.kMSEncryptionConfig = kMSEncryptionConfig;
             return this;
         }
-
         public Builder kMSEncryptionConfig(@Nullable DeliveryStreamKMSEncryptionConfigArgs kMSEncryptionConfig) {
             this.kMSEncryptionConfig = Output.ofNullable(kMSEncryptionConfig);
             return this;
         }
-
         public Builder noEncryptionConfig(@Nullable Output<DeliveryStreamEncryptionConfigurationNoEncryptionConfig> noEncryptionConfig) {
             this.noEncryptionConfig = noEncryptionConfig;
             return this;
         }
-
         public Builder noEncryptionConfig(@Nullable DeliveryStreamEncryptionConfigurationNoEncryptionConfig noEncryptionConfig) {
             this.noEncryptionConfig = Output.ofNullable(noEncryptionConfig);
             return this;
-        }
-        public DeliveryStreamEncryptionConfigurationArgs build() {
+        }        public DeliveryStreamEncryptionConfigurationArgs build() {
             return new DeliveryStreamEncryptionConfigurationArgs(kMSEncryptionConfig, noEncryptionConfig);
         }
     }

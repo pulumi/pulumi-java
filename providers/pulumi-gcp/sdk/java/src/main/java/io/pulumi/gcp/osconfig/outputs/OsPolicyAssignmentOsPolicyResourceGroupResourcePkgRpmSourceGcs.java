@@ -88,17 +88,14 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourcePkgRpmSourceGc
             this.bucket = Objects.requireNonNull(bucket);
             return this;
         }
-
         public Builder generation(@Nullable Integer generation) {
             this.generation = generation;
             return this;
         }
-
         public Builder object(String object) {
             this.object = Objects.requireNonNull(object);
             return this;
-        }
-        public OsPolicyAssignmentOsPolicyResourceGroupResourcePkgRpmSourceGcs build() {
+        }        public OsPolicyAssignmentOsPolicyResourceGroupResourcePkgRpmSourceGcs build() {
             return new OsPolicyAssignmentOsPolicyResourceGroupResourcePkgRpmSourceGcs(bucket, generation, object);
         }
     }

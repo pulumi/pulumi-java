@@ -150,62 +150,56 @@ public final class PersistentVolumeClaimStatusArgs extends io.pulumi.resources.R
             this.accessModes = accessModes;
             return this;
         }
-
         public Builder accessModes(@Nullable List<String> accessModes) {
             this.accessModes = Output.ofNullable(accessModes);
             return this;
         }
-
+        public Builder accessModes(String... accessModes) {
+            return accessModes(List.of(accessModes));
+        }
         public Builder allocatedResources(@Nullable Output<Map<String,String>> allocatedResources) {
             this.allocatedResources = allocatedResources;
             return this;
         }
-
         public Builder allocatedResources(@Nullable Map<String,String> allocatedResources) {
             this.allocatedResources = Output.ofNullable(allocatedResources);
             return this;
         }
-
         public Builder capacity(@Nullable Output<Map<String,String>> capacity) {
             this.capacity = capacity;
             return this;
         }
-
         public Builder capacity(@Nullable Map<String,String> capacity) {
             this.capacity = Output.ofNullable(capacity);
             return this;
         }
-
         public Builder conditions(@Nullable Output<List<PersistentVolumeClaimConditionArgs>> conditions) {
             this.conditions = conditions;
             return this;
         }
-
         public Builder conditions(@Nullable List<PersistentVolumeClaimConditionArgs> conditions) {
             this.conditions = Output.ofNullable(conditions);
             return this;
         }
-
+        public Builder conditions(PersistentVolumeClaimConditionArgs... conditions) {
+            return conditions(List.of(conditions));
+        }
         public Builder phase(@Nullable Output<String> phase) {
             this.phase = phase;
             return this;
         }
-
         public Builder phase(@Nullable String phase) {
             this.phase = Output.ofNullable(phase);
             return this;
         }
-
         public Builder resizeStatus(@Nullable Output<String> resizeStatus) {
             this.resizeStatus = resizeStatus;
             return this;
         }
-
         public Builder resizeStatus(@Nullable String resizeStatus) {
             this.resizeStatus = Output.ofNullable(resizeStatus);
             return this;
-        }
-        public PersistentVolumeClaimStatusArgs build() {
+        }        public PersistentVolumeClaimStatusArgs build() {
             return new PersistentVolumeClaimStatusArgs(accessModes, allocatedResources, capacity, conditions, phase, resizeStatus);
         }
     }

@@ -150,72 +150,61 @@ public final class TableArgs extends io.pulumi.resources.ResourceArgs {
             this.columnFamilies = columnFamilies;
             return this;
         }
-
         public Builder columnFamilies(@Nullable Map<String,String> columnFamilies) {
             this.columnFamilies = Output.ofNullable(columnFamilies);
             return this;
         }
-
         public Builder granularity(@Nullable Output<TableGranularity> granularity) {
             this.granularity = granularity;
             return this;
         }
-
         public Builder granularity(@Nullable TableGranularity granularity) {
             this.granularity = Output.ofNullable(granularity);
             return this;
         }
-
         public Builder initialSplits(@Nullable Output<List<SplitArgs>> initialSplits) {
             this.initialSplits = initialSplits;
             return this;
         }
-
         public Builder initialSplits(@Nullable List<SplitArgs> initialSplits) {
             this.initialSplits = Output.ofNullable(initialSplits);
             return this;
         }
-
+        public Builder initialSplits(SplitArgs... initialSplits) {
+            return initialSplits(List.of(initialSplits));
+        }
         public Builder instanceId(Output<String> instanceId) {
             this.instanceId = Objects.requireNonNull(instanceId);
             return this;
         }
-
         public Builder instanceId(String instanceId) {
             this.instanceId = Output.of(Objects.requireNonNull(instanceId));
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
         }
-
         public Builder tableId(Output<String> tableId) {
             this.tableId = Objects.requireNonNull(tableId);
             return this;
         }
-
         public Builder tableId(String tableId) {
             this.tableId = Output.of(Objects.requireNonNull(tableId));
             return this;
-        }
-        public TableArgs build() {
+        }        public TableArgs build() {
             return new TableArgs(columnFamilies, granularity, initialSplits, instanceId, name, project, tableId);
         }
     }

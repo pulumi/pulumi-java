@@ -65,17 +65,14 @@ public final class ComponentVersionLambdaDeviceMount {
             this.addGroupOwner = addGroupOwner;
             return this;
         }
-
         public Builder path(@Nullable String path) {
             this.path = path;
             return this;
         }
-
         public Builder permission(@Nullable ComponentVersionLambdaFilesystemPermission permission) {
             this.permission = permission;
             return this;
-        }
-        public ComponentVersionLambdaDeviceMount build() {
+        }        public ComponentVersionLambdaDeviceMount build() {
             return new ComponentVersionLambdaDeviceMount(addGroupOwner, path, permission);
         }
     }

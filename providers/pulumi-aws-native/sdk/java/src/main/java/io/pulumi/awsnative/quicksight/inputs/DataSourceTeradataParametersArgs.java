@@ -94,32 +94,26 @@ public final class DataSourceTeradataParametersArgs extends io.pulumi.resources.
             this.database = Objects.requireNonNull(database);
             return this;
         }
-
         public Builder database(String database) {
             this.database = Output.of(Objects.requireNonNull(database));
             return this;
         }
-
         public Builder host(Output<String> host) {
             this.host = Objects.requireNonNull(host);
             return this;
         }
-
         public Builder host(String host) {
             this.host = Output.of(Objects.requireNonNull(host));
             return this;
         }
-
         public Builder port(Output<Double> port) {
             this.port = Objects.requireNonNull(port);
             return this;
         }
-
         public Builder port(Double port) {
             this.port = Output.of(Objects.requireNonNull(port));
             return this;
-        }
-        public DataSourceTeradataParametersArgs build() {
+        }        public DataSourceTeradataParametersArgs build() {
             return new DataSourceTeradataParametersArgs(database, host, port);
         }
     }

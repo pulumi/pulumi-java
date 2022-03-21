@@ -72,12 +72,10 @@ public final class GetVirtualNetworkGatewayVpnclientIpsecParametersArgs extends 
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder virtualNetworkGatewayName(String virtualNetworkGatewayName) {
             this.virtualNetworkGatewayName = Objects.requireNonNull(virtualNetworkGatewayName);
             return this;
-        }
-        public GetVirtualNetworkGatewayVpnclientIpsecParametersArgs build() {
+        }        public GetVirtualNetworkGatewayVpnclientIpsecParametersArgs build() {
             return new GetVirtualNetworkGatewayVpnclientIpsecParametersArgs(resourceGroupName, virtualNetworkGatewayName);
         }
     }

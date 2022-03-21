@@ -124,27 +124,25 @@ public final class BotSlotValueElicitationSetting {
             this.defaultValueSpecification = defaultValueSpecification;
             return this;
         }
-
         public Builder promptSpecification(@Nullable BotPromptSpecification promptSpecification) {
             this.promptSpecification = promptSpecification;
             return this;
         }
-
         public Builder sampleUtterances(@Nullable List<BotSampleUtterance> sampleUtterances) {
             this.sampleUtterances = sampleUtterances;
             return this;
         }
-
+        public Builder sampleUtterances(BotSampleUtterance... sampleUtterances) {
+            return sampleUtterances(List.of(sampleUtterances));
+        }
         public Builder slotConstraint(BotSlotConstraint slotConstraint) {
             this.slotConstraint = Objects.requireNonNull(slotConstraint);
             return this;
         }
-
         public Builder waitAndContinueSpecification(@Nullable BotWaitAndContinueSpecification waitAndContinueSpecification) {
             this.waitAndContinueSpecification = waitAndContinueSpecification;
             return this;
-        }
-        public BotSlotValueElicitationSetting build() {
+        }        public BotSlotValueElicitationSetting build() {
             return new BotSlotValueElicitationSetting(defaultValueSpecification, promptSpecification, sampleUtterances, slotConstraint, waitAndContinueSpecification);
         }
     }

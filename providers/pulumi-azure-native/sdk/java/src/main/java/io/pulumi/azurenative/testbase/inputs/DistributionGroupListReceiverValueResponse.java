@@ -62,7 +62,9 @@ public final class DistributionGroupListReceiverValueResponse extends io.pulumi.
             this.distributionGroups = distributionGroups;
             return this;
         }
-        public DistributionGroupListReceiverValueResponse build() {
+        public Builder distributionGroups(String... distributionGroups) {
+            return distributionGroups(List.of(distributionGroups));
+        }        public DistributionGroupListReceiverValueResponse build() {
             return new DistributionGroupListReceiverValueResponse(distributionGroups);
         }
     }

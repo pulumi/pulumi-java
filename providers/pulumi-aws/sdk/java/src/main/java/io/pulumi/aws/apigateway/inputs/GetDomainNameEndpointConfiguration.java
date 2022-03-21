@@ -56,7 +56,9 @@ public final class GetDomainNameEndpointConfiguration extends io.pulumi.resource
             this.types = Objects.requireNonNull(types);
             return this;
         }
-        public GetDomainNameEndpointConfiguration build() {
+        public Builder types(String... types) {
+            return types(List.of(types));
+        }        public GetDomainNameEndpointConfiguration build() {
             return new GetDomainNameEndpointConfiguration(types);
         }
     }

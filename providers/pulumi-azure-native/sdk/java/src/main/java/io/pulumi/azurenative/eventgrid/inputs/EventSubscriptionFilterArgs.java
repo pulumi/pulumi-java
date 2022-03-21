@@ -145,52 +145,48 @@ public final class EventSubscriptionFilterArgs extends io.pulumi.resources.Resou
             this.advancedFilters = advancedFilters;
             return this;
         }
-
         public Builder advancedFilters(@Nullable List<Object> advancedFilters) {
             this.advancedFilters = Output.ofNullable(advancedFilters);
             return this;
         }
-
+        public Builder advancedFilters(Object... advancedFilters) {
+            return advancedFilters(List.of(advancedFilters));
+        }
         public Builder includedEventTypes(@Nullable Output<List<String>> includedEventTypes) {
             this.includedEventTypes = includedEventTypes;
             return this;
         }
-
         public Builder includedEventTypes(@Nullable List<String> includedEventTypes) {
             this.includedEventTypes = Output.ofNullable(includedEventTypes);
             return this;
         }
-
+        public Builder includedEventTypes(String... includedEventTypes) {
+            return includedEventTypes(List.of(includedEventTypes));
+        }
         public Builder isSubjectCaseSensitive(@Nullable Output<Boolean> isSubjectCaseSensitive) {
             this.isSubjectCaseSensitive = isSubjectCaseSensitive;
             return this;
         }
-
         public Builder isSubjectCaseSensitive(@Nullable Boolean isSubjectCaseSensitive) {
             this.isSubjectCaseSensitive = Output.ofNullable(isSubjectCaseSensitive);
             return this;
         }
-
         public Builder subjectBeginsWith(@Nullable Output<String> subjectBeginsWith) {
             this.subjectBeginsWith = subjectBeginsWith;
             return this;
         }
-
         public Builder subjectBeginsWith(@Nullable String subjectBeginsWith) {
             this.subjectBeginsWith = Output.ofNullable(subjectBeginsWith);
             return this;
         }
-
         public Builder subjectEndsWith(@Nullable Output<String> subjectEndsWith) {
             this.subjectEndsWith = subjectEndsWith;
             return this;
         }
-
         public Builder subjectEndsWith(@Nullable String subjectEndsWith) {
             this.subjectEndsWith = Output.ofNullable(subjectEndsWith);
             return this;
-        }
-        public EventSubscriptionFilterArgs build() {
+        }        public EventSubscriptionFilterArgs build() {
             return new EventSubscriptionFilterArgs(advancedFilters, includedEventTypes, isSubjectCaseSensitive, subjectBeginsWith, subjectEndsWith);
         }
     }

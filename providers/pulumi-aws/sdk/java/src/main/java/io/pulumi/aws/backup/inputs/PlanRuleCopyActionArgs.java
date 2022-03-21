@@ -75,22 +75,18 @@ public final class PlanRuleCopyActionArgs extends io.pulumi.resources.ResourceAr
             this.destinationVaultArn = Objects.requireNonNull(destinationVaultArn);
             return this;
         }
-
         public Builder destinationVaultArn(String destinationVaultArn) {
             this.destinationVaultArn = Output.of(Objects.requireNonNull(destinationVaultArn));
             return this;
         }
-
         public Builder lifecycle(@Nullable Output<PlanRuleCopyActionLifecycleArgs> lifecycle) {
             this.lifecycle = lifecycle;
             return this;
         }
-
         public Builder lifecycle(@Nullable PlanRuleCopyActionLifecycleArgs lifecycle) {
             this.lifecycle = Output.ofNullable(lifecycle);
             return this;
-        }
-        public PlanRuleCopyActionArgs build() {
+        }        public PlanRuleCopyActionArgs build() {
             return new PlanRuleCopyActionArgs(destinationVaultArn, lifecycle);
         }
     }

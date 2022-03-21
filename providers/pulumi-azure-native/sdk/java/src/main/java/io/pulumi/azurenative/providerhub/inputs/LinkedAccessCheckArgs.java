@@ -102,52 +102,42 @@ public final class LinkedAccessCheckArgs extends io.pulumi.resources.ResourceArg
             this.actionName = actionName;
             return this;
         }
-
         public Builder actionName(@Nullable String actionName) {
             this.actionName = Output.ofNullable(actionName);
             return this;
         }
-
         public Builder linkedAction(@Nullable Output<String> linkedAction) {
             this.linkedAction = linkedAction;
             return this;
         }
-
         public Builder linkedAction(@Nullable String linkedAction) {
             this.linkedAction = Output.ofNullable(linkedAction);
             return this;
         }
-
         public Builder linkedActionVerb(@Nullable Output<String> linkedActionVerb) {
             this.linkedActionVerb = linkedActionVerb;
             return this;
         }
-
         public Builder linkedActionVerb(@Nullable String linkedActionVerb) {
             this.linkedActionVerb = Output.ofNullable(linkedActionVerb);
             return this;
         }
-
         public Builder linkedProperty(@Nullable Output<String> linkedProperty) {
             this.linkedProperty = linkedProperty;
             return this;
         }
-
         public Builder linkedProperty(@Nullable String linkedProperty) {
             this.linkedProperty = Output.ofNullable(linkedProperty);
             return this;
         }
-
         public Builder linkedType(@Nullable Output<String> linkedType) {
             this.linkedType = linkedType;
             return this;
         }
-
         public Builder linkedType(@Nullable String linkedType) {
             this.linkedType = Output.ofNullable(linkedType);
             return this;
-        }
-        public LinkedAccessCheckArgs build() {
+        }        public LinkedAccessCheckArgs build() {
             return new LinkedAccessCheckArgs(actionName, linkedAction, linkedActionVerb, linkedProperty, linkedType);
         }
     }

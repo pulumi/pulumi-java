@@ -94,17 +94,14 @@ public final class BlobInventoryPolicyRuleResponse extends io.pulumi.resources.I
             this.definition = Objects.requireNonNull(definition);
             return this;
         }
-
         public Builder enabled(Boolean enabled) {
             this.enabled = Objects.requireNonNull(enabled);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
-        }
-        public BlobInventoryPolicyRuleResponse build() {
+        }        public BlobInventoryPolicyRuleResponse build() {
             return new BlobInventoryPolicyRuleResponse(definition, enabled, name);
         }
     }

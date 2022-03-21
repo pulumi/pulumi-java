@@ -138,37 +138,30 @@ public final class GetWorkspaceCollectionResult {
             this.id = id;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = location;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
-
         public Builder properties(Object properties) {
             this.properties = Objects.requireNonNull(properties);
             return this;
         }
-
         public Builder sku(@Nullable AzureSkuResponse sku) {
             this.sku = sku;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder type(@Nullable String type) {
             this.type = type;
             return this;
-        }
-        public GetWorkspaceCollectionResult build() {
+        }        public GetWorkspaceCollectionResult build() {
             return new GetWorkspaceCollectionResult(id, location, name, properties, sku, tags, type);
         }
     }

@@ -86,17 +86,14 @@ public final class ClusterStep {
             this.actionOnFailure = Objects.requireNonNull(actionOnFailure);
             return this;
         }
-
         public Builder hadoopJarStep(ClusterStepHadoopJarStep hadoopJarStep) {
             this.hadoopJarStep = Objects.requireNonNull(hadoopJarStep);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
-        }
-        public ClusterStep build() {
+        }        public ClusterStep build() {
             return new ClusterStep(actionOnFailure, hadoopJarStep, name);
         }
     }

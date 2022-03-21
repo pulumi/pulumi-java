@@ -139,62 +139,53 @@ public final class VpcEndpointConnectionNotificationState extends io.pulumi.reso
             this.connectionEvents = connectionEvents;
             return this;
         }
-
         public Builder connectionEvents(@Nullable List<String> connectionEvents) {
             this.connectionEvents = Output.ofNullable(connectionEvents);
             return this;
         }
-
+        public Builder connectionEvents(String... connectionEvents) {
+            return connectionEvents(List.of(connectionEvents));
+        }
         public Builder connectionNotificationArn(@Nullable Output<String> connectionNotificationArn) {
             this.connectionNotificationArn = connectionNotificationArn;
             return this;
         }
-
         public Builder connectionNotificationArn(@Nullable String connectionNotificationArn) {
             this.connectionNotificationArn = Output.ofNullable(connectionNotificationArn);
             return this;
         }
-
         public Builder notificationType(@Nullable Output<String> notificationType) {
             this.notificationType = notificationType;
             return this;
         }
-
         public Builder notificationType(@Nullable String notificationType) {
             this.notificationType = Output.ofNullable(notificationType);
             return this;
         }
-
         public Builder state(@Nullable Output<String> state) {
             this.state = state;
             return this;
         }
-
         public Builder state(@Nullable String state) {
             this.state = Output.ofNullable(state);
             return this;
         }
-
         public Builder vpcEndpointId(@Nullable Output<String> vpcEndpointId) {
             this.vpcEndpointId = vpcEndpointId;
             return this;
         }
-
         public Builder vpcEndpointId(@Nullable String vpcEndpointId) {
             this.vpcEndpointId = Output.ofNullable(vpcEndpointId);
             return this;
         }
-
         public Builder vpcEndpointServiceId(@Nullable Output<String> vpcEndpointServiceId) {
             this.vpcEndpointServiceId = vpcEndpointServiceId;
             return this;
         }
-
         public Builder vpcEndpointServiceId(@Nullable String vpcEndpointServiceId) {
             this.vpcEndpointServiceId = Output.ofNullable(vpcEndpointServiceId);
             return this;
-        }
-        public VpcEndpointConnectionNotificationState build() {
+        }        public VpcEndpointConnectionNotificationState build() {
             return new VpcEndpointConnectionNotificationState(connectionEvents, connectionNotificationArn, notificationType, state, vpcEndpointId, vpcEndpointServiceId);
         }
     }

@@ -78,17 +78,14 @@ public final class GetInstanceGroupArgs extends io.pulumi.resources.InvokeArgs {
             this.instanceGroup = Objects.requireNonNull(instanceGroup);
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = project;
             return this;
         }
-
         public Builder zone(String zone) {
             this.zone = Objects.requireNonNull(zone);
             return this;
-        }
-        public GetInstanceGroupArgs build() {
+        }        public GetInstanceGroupArgs build() {
             return new GetInstanceGroupArgs(instanceGroup, project, zone);
         }
     }

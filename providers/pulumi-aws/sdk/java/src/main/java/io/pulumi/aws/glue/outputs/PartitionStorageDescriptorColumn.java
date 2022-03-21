@@ -87,17 +87,14 @@ public final class PartitionStorageDescriptorColumn {
             this.comment = comment;
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder type(@Nullable String type) {
             this.type = type;
             return this;
-        }
-        public PartitionStorageDescriptorColumn build() {
+        }        public PartitionStorageDescriptorColumn build() {
             return new PartitionStorageDescriptorColumn(comment, name, type);
         }
     }

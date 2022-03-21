@@ -213,112 +213,93 @@ public final class DeviceArgs extends io.pulumi.resources.ResourceArgs {
             this.blocked = blocked;
             return this;
         }
-
         public Builder blocked(@Nullable Boolean blocked) {
             this.blocked = Output.ofNullable(blocked);
             return this;
         }
-
         public Builder config(@Nullable Output<DeviceConfigArgs> config) {
             this.config = config;
             return this;
         }
-
         public Builder config(@Nullable DeviceConfigArgs config) {
             this.config = Output.ofNullable(config);
             return this;
         }
-
         public Builder credentials(@Nullable Output<List<DeviceCredentialArgs>> credentials) {
             this.credentials = credentials;
             return this;
         }
-
         public Builder credentials(@Nullable List<DeviceCredentialArgs> credentials) {
             this.credentials = Output.ofNullable(credentials);
             return this;
         }
-
+        public Builder credentials(DeviceCredentialArgs... credentials) {
+            return credentials(List.of(credentials));
+        }
         public Builder gatewayConfig(@Nullable Output<GatewayConfigArgs> gatewayConfig) {
             this.gatewayConfig = gatewayConfig;
             return this;
         }
-
         public Builder gatewayConfig(@Nullable GatewayConfigArgs gatewayConfig) {
             this.gatewayConfig = Output.ofNullable(gatewayConfig);
             return this;
         }
-
         public Builder id(@Nullable Output<String> id) {
             this.id = id;
             return this;
         }
-
         public Builder id(@Nullable String id) {
             this.id = Output.ofNullable(id);
             return this;
         }
-
         public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder logLevel(@Nullable Output<DeviceLogLevel> logLevel) {
             this.logLevel = logLevel;
             return this;
         }
-
         public Builder logLevel(@Nullable DeviceLogLevel logLevel) {
             this.logLevel = Output.ofNullable(logLevel);
             return this;
         }
-
         public Builder metadata(@Nullable Output<Map<String,String>> metadata) {
             this.metadata = metadata;
             return this;
         }
-
         public Builder metadata(@Nullable Map<String,String> metadata) {
             this.metadata = Output.ofNullable(metadata);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
         }
-
         public Builder registryId(Output<String> registryId) {
             this.registryId = Objects.requireNonNull(registryId);
             return this;
         }
-
         public Builder registryId(String registryId) {
             this.registryId = Output.of(Objects.requireNonNull(registryId));
             return this;
-        }
-        public DeviceArgs build() {
+        }        public DeviceArgs build() {
             return new DeviceArgs(blocked, config, credentials, gatewayConfig, id, location, logLevel, metadata, name, project, registryId);
         }
     }

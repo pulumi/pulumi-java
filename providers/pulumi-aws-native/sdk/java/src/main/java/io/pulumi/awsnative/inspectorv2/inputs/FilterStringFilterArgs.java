@@ -66,22 +66,18 @@ public final class FilterStringFilterArgs extends io.pulumi.resources.ResourceAr
             this.comparison = Objects.requireNonNull(comparison);
             return this;
         }
-
         public Builder comparison(FilterStringComparison comparison) {
             this.comparison = Output.of(Objects.requireNonNull(comparison));
             return this;
         }
-
         public Builder value(Output<String> value) {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public Builder value(String value) {
             this.value = Output.of(Objects.requireNonNull(value));
             return this;
-        }
-        public FilterStringFilterArgs build() {
+        }        public FilterStringFilterArgs build() {
             return new FilterStringFilterArgs(comparison, value);
         }
     }

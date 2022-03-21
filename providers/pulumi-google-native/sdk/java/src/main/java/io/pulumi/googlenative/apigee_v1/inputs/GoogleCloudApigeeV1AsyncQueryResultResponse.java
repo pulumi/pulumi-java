@@ -72,12 +72,10 @@ public final class GoogleCloudApigeeV1AsyncQueryResultResponse extends io.pulumi
             this.expires = Objects.requireNonNull(expires);
             return this;
         }
-
         public Builder self(String self) {
             this.self = Objects.requireNonNull(self);
             return this;
-        }
-        public GoogleCloudApigeeV1AsyncQueryResultResponse build() {
+        }        public GoogleCloudApigeeV1AsyncQueryResultResponse build() {
             return new GoogleCloudApigeeV1AsyncQueryResultResponse(expires, self);
         }
     }

@@ -69,12 +69,10 @@ public final class CompositeTypeLabelEntryResponse {
             this.key = Objects.requireNonNull(key);
             return this;
         }
-
         public Builder value(String value) {
             this.value = Objects.requireNonNull(value);
             return this;
-        }
-        public CompositeTypeLabelEntryResponse build() {
+        }        public CompositeTypeLabelEntryResponse build() {
             return new CompositeTypeLabelEntryResponse(key, value);
         }
     }

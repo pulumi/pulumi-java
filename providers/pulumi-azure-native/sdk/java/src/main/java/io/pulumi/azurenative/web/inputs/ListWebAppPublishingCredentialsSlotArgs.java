@@ -88,17 +88,14 @@ public final class ListWebAppPublishingCredentialsSlotArgs extends io.pulumi.res
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder slot(String slot) {
             this.slot = Objects.requireNonNull(slot);
             return this;
-        }
-        public ListWebAppPublishingCredentialsSlotArgs build() {
+        }        public ListWebAppPublishingCredentialsSlotArgs build() {
             return new ListWebAppPublishingCredentialsSlotArgs(name, resourceGroupName, slot);
         }
     }

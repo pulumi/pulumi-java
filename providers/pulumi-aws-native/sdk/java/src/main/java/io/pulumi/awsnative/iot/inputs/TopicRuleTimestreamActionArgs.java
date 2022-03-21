@@ -118,62 +118,53 @@ public final class TopicRuleTimestreamActionArgs extends io.pulumi.resources.Res
             this.batchMode = batchMode;
             return this;
         }
-
         public Builder batchMode(@Nullable Boolean batchMode) {
             this.batchMode = Output.ofNullable(batchMode);
             return this;
         }
-
         public Builder databaseName(Output<String> databaseName) {
             this.databaseName = Objects.requireNonNull(databaseName);
             return this;
         }
-
         public Builder databaseName(String databaseName) {
             this.databaseName = Output.of(Objects.requireNonNull(databaseName));
             return this;
         }
-
         public Builder dimensions(Output<List<TopicRuleTimestreamDimensionArgs>> dimensions) {
             this.dimensions = Objects.requireNonNull(dimensions);
             return this;
         }
-
         public Builder dimensions(List<TopicRuleTimestreamDimensionArgs> dimensions) {
             this.dimensions = Output.of(Objects.requireNonNull(dimensions));
             return this;
         }
-
+        public Builder dimensions(TopicRuleTimestreamDimensionArgs... dimensions) {
+            return dimensions(List.of(dimensions));
+        }
         public Builder roleArn(Output<String> roleArn) {
             this.roleArn = Objects.requireNonNull(roleArn);
             return this;
         }
-
         public Builder roleArn(String roleArn) {
             this.roleArn = Output.of(Objects.requireNonNull(roleArn));
             return this;
         }
-
         public Builder tableName(Output<String> tableName) {
             this.tableName = Objects.requireNonNull(tableName);
             return this;
         }
-
         public Builder tableName(String tableName) {
             this.tableName = Output.of(Objects.requireNonNull(tableName));
             return this;
         }
-
         public Builder timestamp(@Nullable Output<TopicRuleTimestreamTimestampArgs> timestamp) {
             this.timestamp = timestamp;
             return this;
         }
-
         public Builder timestamp(@Nullable TopicRuleTimestreamTimestampArgs timestamp) {
             this.timestamp = Output.ofNullable(timestamp);
             return this;
-        }
-        public TopicRuleTimestreamActionArgs build() {
+        }        public TopicRuleTimestreamActionArgs build() {
             return new TopicRuleTimestreamActionArgs(batchMode, databaseName, dimensions, roleArn, tableName, timestamp);
         }
     }

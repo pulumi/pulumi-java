@@ -66,22 +66,18 @@ public final class StackAccessEndpointArgs extends io.pulumi.resources.ResourceA
             this.endpointType = Objects.requireNonNull(endpointType);
             return this;
         }
-
         public Builder endpointType(String endpointType) {
             this.endpointType = Output.of(Objects.requireNonNull(endpointType));
             return this;
         }
-
         public Builder vpceId(@Nullable Output<String> vpceId) {
             this.vpceId = vpceId;
             return this;
         }
-
         public Builder vpceId(@Nullable String vpceId) {
             this.vpceId = Output.ofNullable(vpceId);
             return this;
-        }
-        public StackAccessEndpointArgs build() {
+        }        public StackAccessEndpointArgs build() {
             return new StackAccessEndpointArgs(endpointType, vpceId);
         }
     }

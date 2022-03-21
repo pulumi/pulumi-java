@@ -200,52 +200,45 @@ public final class GetBitbucketServerConfigResult {
             this.apiKey = Objects.requireNonNull(apiKey);
             return this;
         }
-
         public Builder connectedRepositories(List<BitbucketServerRepositoryIdResponse> connectedRepositories) {
             this.connectedRepositories = Objects.requireNonNull(connectedRepositories);
             return this;
         }
-
+        public Builder connectedRepositories(BitbucketServerRepositoryIdResponse... connectedRepositories) {
+            return connectedRepositories(List.of(connectedRepositories));
+        }
         public Builder createTime(String createTime) {
             this.createTime = Objects.requireNonNull(createTime);
             return this;
         }
-
         public Builder hostUri(String hostUri) {
             this.hostUri = Objects.requireNonNull(hostUri);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder peeredNetwork(String peeredNetwork) {
             this.peeredNetwork = Objects.requireNonNull(peeredNetwork);
             return this;
         }
-
         public Builder secrets(BitbucketServerSecretsResponse secrets) {
             this.secrets = Objects.requireNonNull(secrets);
             return this;
         }
-
         public Builder sslCa(String sslCa) {
             this.sslCa = Objects.requireNonNull(sslCa);
             return this;
         }
-
         public Builder username(String username) {
             this.username = Objects.requireNonNull(username);
             return this;
         }
-
         public Builder webhookKey(String webhookKey) {
             this.webhookKey = Objects.requireNonNull(webhookKey);
             return this;
-        }
-        public GetBitbucketServerConfigResult build() {
+        }        public GetBitbucketServerConfigResult build() {
             return new GetBitbucketServerConfigResult(apiKey, connectedRepositories, createTime, hostUri, name, peeredNetwork, secrets, sslCa, username, webhookKey);
         }
     }

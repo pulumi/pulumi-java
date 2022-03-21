@@ -62,7 +62,9 @@ public final class ActionListResponse extends io.pulumi.resources.InvokeArgs {
             this.actionGroups = actionGroups;
             return this;
         }
-        public ActionListResponse build() {
+        public Builder actionGroups(ActionGroupResponse... actionGroups) {
+            return actionGroups(List.of(actionGroups));
+        }        public ActionListResponse build() {
             return new ActionListResponse(actionGroups);
         }
     }

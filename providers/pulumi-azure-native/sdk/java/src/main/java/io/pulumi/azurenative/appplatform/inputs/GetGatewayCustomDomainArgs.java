@@ -104,22 +104,18 @@ public final class GetGatewayCustomDomainArgs extends io.pulumi.resources.Invoke
             this.domainName = Objects.requireNonNull(domainName);
             return this;
         }
-
         public Builder gatewayName(String gatewayName) {
             this.gatewayName = Objects.requireNonNull(gatewayName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder serviceName(String serviceName) {
             this.serviceName = Objects.requireNonNull(serviceName);
             return this;
-        }
-        public GetGatewayCustomDomainArgs build() {
+        }        public GetGatewayCustomDomainArgs build() {
             return new GetGatewayCustomDomainArgs(domainName, gatewayName, resourceGroupName, serviceName);
         }
     }

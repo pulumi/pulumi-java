@@ -64,12 +64,10 @@ public final class DeliveryStreamHttpEndpointCommonAttribute extends io.pulumi.r
             this.attributeName = Objects.requireNonNull(attributeName);
             return this;
         }
-
         public Builder attributeValue(String attributeValue) {
             this.attributeValue = Objects.requireNonNull(attributeValue);
             return this;
-        }
-        public DeliveryStreamHttpEndpointCommonAttribute build() {
+        }        public DeliveryStreamHttpEndpointCommonAttribute build() {
             return new DeliveryStreamHttpEndpointCommonAttribute(attributeName, attributeValue);
         }
     }

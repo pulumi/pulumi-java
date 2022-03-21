@@ -94,32 +94,26 @@ public final class SchemaVersionSchemaArgs extends io.pulumi.resources.ResourceA
             this.registryName = registryName;
             return this;
         }
-
         public Builder registryName(@Nullable String registryName) {
             this.registryName = Output.ofNullable(registryName);
             return this;
         }
-
         public Builder schemaArn(@Nullable Output<String> schemaArn) {
             this.schemaArn = schemaArn;
             return this;
         }
-
         public Builder schemaArn(@Nullable String schemaArn) {
             this.schemaArn = Output.ofNullable(schemaArn);
             return this;
         }
-
         public Builder schemaName(@Nullable Output<String> schemaName) {
             this.schemaName = schemaName;
             return this;
         }
-
         public Builder schemaName(@Nullable String schemaName) {
             this.schemaName = Output.ofNullable(schemaName);
             return this;
-        }
-        public SchemaVersionSchemaArgs build() {
+        }        public SchemaVersionSchemaArgs build() {
             return new SchemaVersionSchemaArgs(registryName, schemaArn, schemaName);
         }
     }

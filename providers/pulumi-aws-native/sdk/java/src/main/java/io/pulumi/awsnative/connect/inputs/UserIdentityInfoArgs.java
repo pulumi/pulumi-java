@@ -82,32 +82,26 @@ public final class UserIdentityInfoArgs extends io.pulumi.resources.ResourceArgs
             this.email = email;
             return this;
         }
-
         public Builder email(@Nullable String email) {
             this.email = Output.ofNullable(email);
             return this;
         }
-
         public Builder firstName(@Nullable Output<String> firstName) {
             this.firstName = firstName;
             return this;
         }
-
         public Builder firstName(@Nullable String firstName) {
             this.firstName = Output.ofNullable(firstName);
             return this;
         }
-
         public Builder lastName(@Nullable Output<String> lastName) {
             this.lastName = lastName;
             return this;
         }
-
         public Builder lastName(@Nullable String lastName) {
             this.lastName = Output.ofNullable(lastName);
             return this;
-        }
-        public UserIdentityInfoArgs build() {
+        }        public UserIdentityInfoArgs build() {
             return new UserIdentityInfoArgs(email, firstName, lastName);
         }
     }

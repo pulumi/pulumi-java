@@ -56,12 +56,10 @@ public final class InsightFiltersNetworkSourceIpv4Args extends io.pulumi.resourc
             this.cidr = Objects.requireNonNull(cidr);
             return this;
         }
-
         public Builder cidr(String cidr) {
             this.cidr = Output.of(Objects.requireNonNull(cidr));
             return this;
-        }
-        public InsightFiltersNetworkSourceIpv4Args build() {
+        }        public InsightFiltersNetworkSourceIpv4Args build() {
             return new InsightFiltersNetworkSourceIpv4Args(cidr);
         }
     }

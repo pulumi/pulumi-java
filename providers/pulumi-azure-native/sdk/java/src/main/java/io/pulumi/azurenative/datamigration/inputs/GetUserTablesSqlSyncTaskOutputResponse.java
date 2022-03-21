@@ -112,22 +112,21 @@ public final class GetUserTablesSqlSyncTaskOutputResponse extends io.pulumi.reso
             this.databasesToSourceTables = Objects.requireNonNull(databasesToSourceTables);
             return this;
         }
-
         public Builder databasesToTargetTables(Map<String,List<DatabaseTableResponse>> databasesToTargetTables) {
             this.databasesToTargetTables = Objects.requireNonNull(databasesToTargetTables);
             return this;
         }
-
         public Builder tableValidationErrors(Map<String,List<String>> tableValidationErrors) {
             this.tableValidationErrors = Objects.requireNonNull(tableValidationErrors);
             return this;
         }
-
         public Builder validationErrors(List<ReportableExceptionResponse> validationErrors) {
             this.validationErrors = Objects.requireNonNull(validationErrors);
             return this;
         }
-        public GetUserTablesSqlSyncTaskOutputResponse build() {
+        public Builder validationErrors(ReportableExceptionResponse... validationErrors) {
+            return validationErrors(List.of(validationErrors));
+        }        public GetUserTablesSqlSyncTaskOutputResponse build() {
             return new GetUserTablesSqlSyncTaskOutputResponse(databasesToSourceTables, databasesToTargetTables, tableValidationErrors, validationErrors);
         }
     }

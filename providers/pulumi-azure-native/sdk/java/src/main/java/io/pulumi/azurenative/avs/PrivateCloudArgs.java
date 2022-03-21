@@ -225,112 +225,93 @@ public final class PrivateCloudArgs extends io.pulumi.resources.ResourceArgs {
             this.identitySources = identitySources;
             return this;
         }
-
         public Builder identitySources(@Nullable List<IdentitySourceArgs> identitySources) {
             this.identitySources = Output.ofNullable(identitySources);
             return this;
         }
-
+        public Builder identitySources(IdentitySourceArgs... identitySources) {
+            return identitySources(List.of(identitySources));
+        }
         public Builder internet(@Nullable Output<Either<String,InternetEnum>> internet) {
             this.internet = internet;
             return this;
         }
-
         public Builder internet(@Nullable Either<String,InternetEnum> internet) {
             this.internet = Output.ofNullable(internet);
             return this;
         }
-
         public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder managementCluster(Output<ManagementClusterArgs> managementCluster) {
             this.managementCluster = Objects.requireNonNull(managementCluster);
             return this;
         }
-
         public Builder managementCluster(ManagementClusterArgs managementCluster) {
             this.managementCluster = Output.of(Objects.requireNonNull(managementCluster));
             return this;
         }
-
         public Builder networkBlock(Output<String> networkBlock) {
             this.networkBlock = Objects.requireNonNull(networkBlock);
             return this;
         }
-
         public Builder networkBlock(String networkBlock) {
             this.networkBlock = Output.of(Objects.requireNonNull(networkBlock));
             return this;
         }
-
         public Builder nsxtPassword(@Nullable Output<String> nsxtPassword) {
             this.nsxtPassword = nsxtPassword;
             return this;
         }
-
         public Builder nsxtPassword(@Nullable String nsxtPassword) {
             this.nsxtPassword = Output.ofNullable(nsxtPassword);
             return this;
         }
-
         public Builder privateCloudName(@Nullable Output<String> privateCloudName) {
             this.privateCloudName = privateCloudName;
             return this;
         }
-
         public Builder privateCloudName(@Nullable String privateCloudName) {
             this.privateCloudName = Output.ofNullable(privateCloudName);
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder sku(Output<SkuArgs> sku) {
             this.sku = Objects.requireNonNull(sku);
             return this;
         }
-
         public Builder sku(SkuArgs sku) {
             this.sku = Output.of(Objects.requireNonNull(sku));
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
         public Builder vcenterPassword(@Nullable Output<String> vcenterPassword) {
             this.vcenterPassword = vcenterPassword;
             return this;
         }
-
         public Builder vcenterPassword(@Nullable String vcenterPassword) {
             this.vcenterPassword = Output.ofNullable(vcenterPassword);
             return this;
-        }
-        public PrivateCloudArgs build() {
+        }        public PrivateCloudArgs build() {
             return new PrivateCloudArgs(identitySources, internet, location, managementCluster, networkBlock, nsxtPassword, privateCloudName, resourceGroupName, sku, tags, vcenterPassword);
         }
     }

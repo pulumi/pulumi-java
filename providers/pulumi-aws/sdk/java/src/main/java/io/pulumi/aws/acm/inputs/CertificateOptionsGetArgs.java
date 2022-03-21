@@ -57,12 +57,10 @@ public final class CertificateOptionsGetArgs extends io.pulumi.resources.Resourc
             this.certificateTransparencyLoggingPreference = certificateTransparencyLoggingPreference;
             return this;
         }
-
         public Builder certificateTransparencyLoggingPreference(@Nullable String certificateTransparencyLoggingPreference) {
             this.certificateTransparencyLoggingPreference = Output.ofNullable(certificateTransparencyLoggingPreference);
             return this;
-        }
-        public CertificateOptionsGetArgs build() {
+        }        public CertificateOptionsGetArgs build() {
             return new CertificateOptionsGetArgs(certificateTransparencyLoggingPreference);
         }
     }

@@ -128,52 +128,42 @@ public final class MonthlyScheduleArgs extends io.pulumi.resources.ResourceArgs 
             this.daysOfMonth = daysOfMonth;
             return this;
         }
-
         public Builder daysOfMonth(@Nullable String daysOfMonth) {
             this.daysOfMonth = Output.ofNullable(daysOfMonth);
             return this;
         }
-
         public Builder hour(@Nullable Output<Integer> hour) {
             this.hour = hour;
             return this;
         }
-
         public Builder hour(@Nullable Integer hour) {
             this.hour = Output.ofNullable(hour);
             return this;
         }
-
         public Builder minute(@Nullable Output<Integer> minute) {
             this.minute = minute;
             return this;
         }
-
         public Builder minute(@Nullable Integer minute) {
             this.minute = Output.ofNullable(minute);
             return this;
         }
-
         public Builder snapshotsToKeep(@Nullable Output<Integer> snapshotsToKeep) {
             this.snapshotsToKeep = snapshotsToKeep;
             return this;
         }
-
         public Builder snapshotsToKeep(@Nullable Integer snapshotsToKeep) {
             this.snapshotsToKeep = Output.ofNullable(snapshotsToKeep);
             return this;
         }
-
         public Builder usedBytes(@Nullable Output<Double> usedBytes) {
             this.usedBytes = usedBytes;
             return this;
         }
-
         public Builder usedBytes(@Nullable Double usedBytes) {
             this.usedBytes = Output.ofNullable(usedBytes);
             return this;
-        }
-        public MonthlyScheduleArgs build() {
+        }        public MonthlyScheduleArgs build() {
             return new MonthlyScheduleArgs(daysOfMonth, hour, minute, snapshotsToKeep, usedBytes);
         }
     }

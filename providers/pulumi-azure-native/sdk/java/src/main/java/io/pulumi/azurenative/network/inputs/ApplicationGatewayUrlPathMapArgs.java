@@ -161,72 +161,61 @@ public final class ApplicationGatewayUrlPathMapArgs extends io.pulumi.resources.
             this.defaultBackendAddressPool = defaultBackendAddressPool;
             return this;
         }
-
         public Builder defaultBackendAddressPool(@Nullable SubResourceArgs defaultBackendAddressPool) {
             this.defaultBackendAddressPool = Output.ofNullable(defaultBackendAddressPool);
             return this;
         }
-
         public Builder defaultBackendHttpSettings(@Nullable Output<SubResourceArgs> defaultBackendHttpSettings) {
             this.defaultBackendHttpSettings = defaultBackendHttpSettings;
             return this;
         }
-
         public Builder defaultBackendHttpSettings(@Nullable SubResourceArgs defaultBackendHttpSettings) {
             this.defaultBackendHttpSettings = Output.ofNullable(defaultBackendHttpSettings);
             return this;
         }
-
         public Builder defaultRedirectConfiguration(@Nullable Output<SubResourceArgs> defaultRedirectConfiguration) {
             this.defaultRedirectConfiguration = defaultRedirectConfiguration;
             return this;
         }
-
         public Builder defaultRedirectConfiguration(@Nullable SubResourceArgs defaultRedirectConfiguration) {
             this.defaultRedirectConfiguration = Output.ofNullable(defaultRedirectConfiguration);
             return this;
         }
-
         public Builder defaultRewriteRuleSet(@Nullable Output<SubResourceArgs> defaultRewriteRuleSet) {
             this.defaultRewriteRuleSet = defaultRewriteRuleSet;
             return this;
         }
-
         public Builder defaultRewriteRuleSet(@Nullable SubResourceArgs defaultRewriteRuleSet) {
             this.defaultRewriteRuleSet = Output.ofNullable(defaultRewriteRuleSet);
             return this;
         }
-
         public Builder id(@Nullable Output<String> id) {
             this.id = id;
             return this;
         }
-
         public Builder id(@Nullable String id) {
             this.id = Output.ofNullable(id);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder pathRules(@Nullable Output<List<ApplicationGatewayPathRuleArgs>> pathRules) {
             this.pathRules = pathRules;
             return this;
         }
-
         public Builder pathRules(@Nullable List<ApplicationGatewayPathRuleArgs> pathRules) {
             this.pathRules = Output.ofNullable(pathRules);
             return this;
         }
-        public ApplicationGatewayUrlPathMapArgs build() {
+        public Builder pathRules(ApplicationGatewayPathRuleArgs... pathRules) {
+            return pathRules(List.of(pathRules));
+        }        public ApplicationGatewayUrlPathMapArgs build() {
             return new ApplicationGatewayUrlPathMapArgs(defaultBackendAddressPool, defaultBackendHttpSettings, defaultRedirectConfiguration, defaultRewriteRuleSet, id, name, pathRules);
         }
     }

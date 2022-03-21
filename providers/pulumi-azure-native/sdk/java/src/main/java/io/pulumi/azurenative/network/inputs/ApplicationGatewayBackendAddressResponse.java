@@ -78,12 +78,10 @@ public final class ApplicationGatewayBackendAddressResponse extends io.pulumi.re
             this.fqdn = fqdn;
             return this;
         }
-
         public Builder ipAddress(@Nullable String ipAddress) {
             this.ipAddress = ipAddress;
             return this;
-        }
-        public ApplicationGatewayBackendAddressResponse build() {
+        }        public ApplicationGatewayBackendAddressResponse build() {
             return new ApplicationGatewayBackendAddressResponse(fqdn, ipAddress);
         }
     }

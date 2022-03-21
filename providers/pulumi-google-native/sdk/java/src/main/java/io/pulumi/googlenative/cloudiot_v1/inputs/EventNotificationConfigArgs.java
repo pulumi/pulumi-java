@@ -78,22 +78,18 @@ public final class EventNotificationConfigArgs extends io.pulumi.resources.Resou
             this.pubsubTopicName = pubsubTopicName;
             return this;
         }
-
         public Builder pubsubTopicName(@Nullable String pubsubTopicName) {
             this.pubsubTopicName = Output.ofNullable(pubsubTopicName);
             return this;
         }
-
         public Builder subfolderMatches(@Nullable Output<String> subfolderMatches) {
             this.subfolderMatches = subfolderMatches;
             return this;
         }
-
         public Builder subfolderMatches(@Nullable String subfolderMatches) {
             this.subfolderMatches = Output.ofNullable(subfolderMatches);
             return this;
-        }
-        public EventNotificationConfigArgs build() {
+        }        public EventNotificationConfigArgs build() {
             return new EventNotificationConfigArgs(pubsubTopicName, subfolderMatches);
         }
     }

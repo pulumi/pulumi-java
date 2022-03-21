@@ -69,12 +69,10 @@ public final class RuleGroupRuleStatementAndStatementStatementNotStatementStatem
             this.key = Objects.requireNonNull(key);
             return this;
         }
-
         public Builder scope(String scope) {
             this.scope = Objects.requireNonNull(scope);
             return this;
-        }
-        public RuleGroupRuleStatementAndStatementStatementNotStatementStatementLabelMatchStatement build() {
+        }        public RuleGroupRuleStatementAndStatementStatementNotStatementStatementLabelMatchStatement build() {
             return new RuleGroupRuleStatementAndStatementStatementNotStatementStatementLabelMatchStatement(key, scope);
         }
     }

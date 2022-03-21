@@ -75,22 +75,18 @@ public final class VirtualNodeSpecListenerTlsValidationArgs extends io.pulumi.re
             this.subjectAlternativeNames = subjectAlternativeNames;
             return this;
         }
-
         public Builder subjectAlternativeNames(@Nullable VirtualNodeSpecListenerTlsValidationSubjectAlternativeNamesArgs subjectAlternativeNames) {
             this.subjectAlternativeNames = Output.ofNullable(subjectAlternativeNames);
             return this;
         }
-
         public Builder trust(Output<VirtualNodeSpecListenerTlsValidationTrustArgs> trust) {
             this.trust = Objects.requireNonNull(trust);
             return this;
         }
-
         public Builder trust(VirtualNodeSpecListenerTlsValidationTrustArgs trust) {
             this.trust = Output.of(Objects.requireNonNull(trust));
             return this;
-        }
-        public VirtualNodeSpecListenerTlsValidationArgs build() {
+        }        public VirtualNodeSpecListenerTlsValidationArgs build() {
             return new VirtualNodeSpecListenerTlsValidationArgs(subjectAlternativeNames, trust);
         }
     }

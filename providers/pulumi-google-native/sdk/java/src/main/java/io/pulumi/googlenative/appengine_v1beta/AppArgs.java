@@ -220,112 +220,93 @@ public final class AppArgs extends io.pulumi.resources.ResourceArgs {
             this.authDomain = authDomain;
             return this;
         }
-
         public Builder authDomain(@Nullable String authDomain) {
             this.authDomain = Output.ofNullable(authDomain);
             return this;
         }
-
         public Builder databaseType(@Nullable Output<AppDatabaseType> databaseType) {
             this.databaseType = databaseType;
             return this;
         }
-
         public Builder databaseType(@Nullable AppDatabaseType databaseType) {
             this.databaseType = Output.ofNullable(databaseType);
             return this;
         }
-
         public Builder defaultCookieExpiration(@Nullable Output<String> defaultCookieExpiration) {
             this.defaultCookieExpiration = defaultCookieExpiration;
             return this;
         }
-
         public Builder defaultCookieExpiration(@Nullable String defaultCookieExpiration) {
             this.defaultCookieExpiration = Output.ofNullable(defaultCookieExpiration);
             return this;
         }
-
         public Builder dispatchRules(@Nullable Output<List<UrlDispatchRuleArgs>> dispatchRules) {
             this.dispatchRules = dispatchRules;
             return this;
         }
-
         public Builder dispatchRules(@Nullable List<UrlDispatchRuleArgs> dispatchRules) {
             this.dispatchRules = Output.ofNullable(dispatchRules);
             return this;
         }
-
+        public Builder dispatchRules(UrlDispatchRuleArgs... dispatchRules) {
+            return dispatchRules(List.of(dispatchRules));
+        }
         public Builder featureSettings(@Nullable Output<FeatureSettingsArgs> featureSettings) {
             this.featureSettings = featureSettings;
             return this;
         }
-
         public Builder featureSettings(@Nullable FeatureSettingsArgs featureSettings) {
             this.featureSettings = Output.ofNullable(featureSettings);
             return this;
         }
-
         public Builder gcrDomain(@Nullable Output<String> gcrDomain) {
             this.gcrDomain = gcrDomain;
             return this;
         }
-
         public Builder gcrDomain(@Nullable String gcrDomain) {
             this.gcrDomain = Output.ofNullable(gcrDomain);
             return this;
         }
-
         public Builder iap(@Nullable Output<IdentityAwareProxyArgs> iap) {
             this.iap = iap;
             return this;
         }
-
         public Builder iap(@Nullable IdentityAwareProxyArgs iap) {
             this.iap = Output.ofNullable(iap);
             return this;
         }
-
         public Builder id(@Nullable Output<String> id) {
             this.id = id;
             return this;
         }
-
         public Builder id(@Nullable String id) {
             this.id = Output.ofNullable(id);
             return this;
         }
-
         public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder serviceAccount(@Nullable Output<String> serviceAccount) {
             this.serviceAccount = serviceAccount;
             return this;
         }
-
         public Builder serviceAccount(@Nullable String serviceAccount) {
             this.serviceAccount = Output.ofNullable(serviceAccount);
             return this;
         }
-
         public Builder servingStatus(@Nullable Output<AppServingStatus> servingStatus) {
             this.servingStatus = servingStatus;
             return this;
         }
-
         public Builder servingStatus(@Nullable AppServingStatus servingStatus) {
             this.servingStatus = Output.ofNullable(servingStatus);
             return this;
-        }
-        public AppArgs build() {
+        }        public AppArgs build() {
             return new AppArgs(authDomain, databaseType, defaultCookieExpiration, dispatchRules, featureSettings, gcrDomain, iap, id, location, serviceAccount, servingStatus);
         }
     }

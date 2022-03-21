@@ -277,142 +277,132 @@ public final class PrivateRecordSetArgs extends io.pulumi.resources.ResourceArgs
             this.aRecords = aRecords;
             return this;
         }
-
         public Builder aRecords(@Nullable List<ARecordArgs> aRecords) {
             this.aRecords = Output.ofNullable(aRecords);
             return this;
         }
-
+        public Builder aRecords(ARecordArgs... aRecords) {
+            return aRecords(List.of(aRecords));
+        }
         public Builder aaaaRecords(@Nullable Output<List<AaaaRecordArgs>> aaaaRecords) {
             this.aaaaRecords = aaaaRecords;
             return this;
         }
-
         public Builder aaaaRecords(@Nullable List<AaaaRecordArgs> aaaaRecords) {
             this.aaaaRecords = Output.ofNullable(aaaaRecords);
             return this;
         }
-
+        public Builder aaaaRecords(AaaaRecordArgs... aaaaRecords) {
+            return aaaaRecords(List.of(aaaaRecords));
+        }
         public Builder cnameRecord(@Nullable Output<CnameRecordArgs> cnameRecord) {
             this.cnameRecord = cnameRecord;
             return this;
         }
-
         public Builder cnameRecord(@Nullable CnameRecordArgs cnameRecord) {
             this.cnameRecord = Output.ofNullable(cnameRecord);
             return this;
         }
-
         public Builder metadata(@Nullable Output<Map<String,String>> metadata) {
             this.metadata = metadata;
             return this;
         }
-
         public Builder metadata(@Nullable Map<String,String> metadata) {
             this.metadata = Output.ofNullable(metadata);
             return this;
         }
-
         public Builder mxRecords(@Nullable Output<List<MxRecordArgs>> mxRecords) {
             this.mxRecords = mxRecords;
             return this;
         }
-
         public Builder mxRecords(@Nullable List<MxRecordArgs> mxRecords) {
             this.mxRecords = Output.ofNullable(mxRecords);
             return this;
         }
-
+        public Builder mxRecords(MxRecordArgs... mxRecords) {
+            return mxRecords(List.of(mxRecords));
+        }
         public Builder privateZoneName(Output<String> privateZoneName) {
             this.privateZoneName = Objects.requireNonNull(privateZoneName);
             return this;
         }
-
         public Builder privateZoneName(String privateZoneName) {
             this.privateZoneName = Output.of(Objects.requireNonNull(privateZoneName));
             return this;
         }
-
         public Builder ptrRecords(@Nullable Output<List<PtrRecordArgs>> ptrRecords) {
             this.ptrRecords = ptrRecords;
             return this;
         }
-
         public Builder ptrRecords(@Nullable List<PtrRecordArgs> ptrRecords) {
             this.ptrRecords = Output.ofNullable(ptrRecords);
             return this;
         }
-
+        public Builder ptrRecords(PtrRecordArgs... ptrRecords) {
+            return ptrRecords(List.of(ptrRecords));
+        }
         public Builder recordType(Output<String> recordType) {
             this.recordType = Objects.requireNonNull(recordType);
             return this;
         }
-
         public Builder recordType(String recordType) {
             this.recordType = Output.of(Objects.requireNonNull(recordType));
             return this;
         }
-
         public Builder relativeRecordSetName(@Nullable Output<String> relativeRecordSetName) {
             this.relativeRecordSetName = relativeRecordSetName;
             return this;
         }
-
         public Builder relativeRecordSetName(@Nullable String relativeRecordSetName) {
             this.relativeRecordSetName = Output.ofNullable(relativeRecordSetName);
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder soaRecord(@Nullable Output<SoaRecordArgs> soaRecord) {
             this.soaRecord = soaRecord;
             return this;
         }
-
         public Builder soaRecord(@Nullable SoaRecordArgs soaRecord) {
             this.soaRecord = Output.ofNullable(soaRecord);
             return this;
         }
-
         public Builder srvRecords(@Nullable Output<List<SrvRecordArgs>> srvRecords) {
             this.srvRecords = srvRecords;
             return this;
         }
-
         public Builder srvRecords(@Nullable List<SrvRecordArgs> srvRecords) {
             this.srvRecords = Output.ofNullable(srvRecords);
             return this;
         }
-
+        public Builder srvRecords(SrvRecordArgs... srvRecords) {
+            return srvRecords(List.of(srvRecords));
+        }
         public Builder ttl(@Nullable Output<Double> ttl) {
             this.ttl = ttl;
             return this;
         }
-
         public Builder ttl(@Nullable Double ttl) {
             this.ttl = Output.ofNullable(ttl);
             return this;
         }
-
         public Builder txtRecords(@Nullable Output<List<TxtRecordArgs>> txtRecords) {
             this.txtRecords = txtRecords;
             return this;
         }
-
         public Builder txtRecords(@Nullable List<TxtRecordArgs> txtRecords) {
             this.txtRecords = Output.ofNullable(txtRecords);
             return this;
         }
-        public PrivateRecordSetArgs build() {
+        public Builder txtRecords(TxtRecordArgs... txtRecords) {
+            return txtRecords(List.of(txtRecords));
+        }        public PrivateRecordSetArgs build() {
             return new PrivateRecordSetArgs(aRecords, aaaaRecords, cnameRecord, metadata, mxRecords, privateZoneName, ptrRecords, recordType, relativeRecordSetName, resourceGroupName, soaRecord, srvRecords, ttl, txtRecords);
         }
     }

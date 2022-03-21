@@ -58,8 +58,7 @@ public final class HintResponse extends io.pulumi.resources.InvokeArgs {
         public Builder humanReadableName(String humanReadableName) {
             this.humanReadableName = Objects.requireNonNull(humanReadableName);
             return this;
-        }
-        public HintResponse build() {
+        }        public HintResponse build() {
             return new HintResponse(humanReadableName);
         }
     }

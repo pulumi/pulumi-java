@@ -175,82 +175,66 @@ public final class LoggerArgs extends io.pulumi.resources.ResourceArgs {
             this.credentials = credentials;
             return this;
         }
-
         public Builder credentials(@Nullable Map<String,String> credentials) {
             this.credentials = Output.ofNullable(credentials);
             return this;
         }
-
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder isBuffered(@Nullable Output<Boolean> isBuffered) {
             this.isBuffered = isBuffered;
             return this;
         }
-
         public Builder isBuffered(@Nullable Boolean isBuffered) {
             this.isBuffered = Output.ofNullable(isBuffered);
             return this;
         }
-
         public Builder loggerId(@Nullable Output<String> loggerId) {
             this.loggerId = loggerId;
             return this;
         }
-
         public Builder loggerId(@Nullable String loggerId) {
             this.loggerId = Output.ofNullable(loggerId);
             return this;
         }
-
         public Builder loggerType(Output<Either<String,LoggerType>> loggerType) {
             this.loggerType = Objects.requireNonNull(loggerType);
             return this;
         }
-
         public Builder loggerType(Either<String,LoggerType> loggerType) {
             this.loggerType = Output.of(Objects.requireNonNull(loggerType));
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder resourceId(@Nullable Output<String> resourceId) {
             this.resourceId = resourceId;
             return this;
         }
-
         public Builder resourceId(@Nullable String resourceId) {
             this.resourceId = Output.ofNullable(resourceId);
             return this;
         }
-
         public Builder serviceName(Output<String> serviceName) {
             this.serviceName = Objects.requireNonNull(serviceName);
             return this;
         }
-
         public Builder serviceName(String serviceName) {
             this.serviceName = Output.of(Objects.requireNonNull(serviceName));
             return this;
-        }
-        public LoggerArgs build() {
+        }        public LoggerArgs build() {
             return new LoggerArgs(credentials, description, isBuffered, loggerId, loggerType, resourceGroupName, resourceId, serviceName);
         }
     }

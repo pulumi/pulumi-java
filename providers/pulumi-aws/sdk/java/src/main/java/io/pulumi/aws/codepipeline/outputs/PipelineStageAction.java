@@ -234,62 +234,56 @@ public final class PipelineStageAction {
             this.category = Objects.requireNonNull(category);
             return this;
         }
-
         public Builder configuration(@Nullable Map<String,String> configuration) {
             this.configuration = configuration;
             return this;
         }
-
         public Builder inputArtifacts(@Nullable List<String> inputArtifacts) {
             this.inputArtifacts = inputArtifacts;
             return this;
         }
-
+        public Builder inputArtifacts(String... inputArtifacts) {
+            return inputArtifacts(List.of(inputArtifacts));
+        }
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder namespace(@Nullable String namespace) {
             this.namespace = namespace;
             return this;
         }
-
         public Builder outputArtifacts(@Nullable List<String> outputArtifacts) {
             this.outputArtifacts = outputArtifacts;
             return this;
         }
-
+        public Builder outputArtifacts(String... outputArtifacts) {
+            return outputArtifacts(List.of(outputArtifacts));
+        }
         public Builder owner(String owner) {
             this.owner = Objects.requireNonNull(owner);
             return this;
         }
-
         public Builder provider(String provider) {
             this.provider = Objects.requireNonNull(provider);
             return this;
         }
-
         public Builder region(@Nullable String region) {
             this.region = region;
             return this;
         }
-
         public Builder roleArn(@Nullable String roleArn) {
             this.roleArn = roleArn;
             return this;
         }
-
         public Builder runOrder(@Nullable Integer runOrder) {
             this.runOrder = runOrder;
             return this;
         }
-
         public Builder version(String version) {
             this.version = Objects.requireNonNull(version);
             return this;
-        }
-        public PipelineStageAction build() {
+        }        public PipelineStageAction build() {
             return new PipelineStageAction(category, configuration, inputArtifacts, name, namespace, outputArtifacts, owner, provider, region, roleArn, runOrder, version);
         }
     }

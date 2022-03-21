@@ -72,12 +72,10 @@ public final class ListNotebookKeysArgs extends io.pulumi.resources.InvokeArgs {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder workspaceName(String workspaceName) {
             this.workspaceName = Objects.requireNonNull(workspaceName);
             return this;
-        }
-        public ListNotebookKeysArgs build() {
+        }        public ListNotebookKeysArgs build() {
             return new ListNotebookKeysArgs(resourceGroupName, workspaceName);
         }
     }

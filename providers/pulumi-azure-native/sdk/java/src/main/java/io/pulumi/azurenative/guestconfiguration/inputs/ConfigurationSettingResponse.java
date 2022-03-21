@@ -144,32 +144,26 @@ public final class ConfigurationSettingResponse extends io.pulumi.resources.Invo
             this.actionAfterReboot = actionAfterReboot;
             return this;
         }
-
         public Builder allowModuleOverwrite(@Nullable Boolean allowModuleOverwrite) {
             this.allowModuleOverwrite = allowModuleOverwrite;
             return this;
         }
-
         public Builder configurationMode(@Nullable String configurationMode) {
             this.configurationMode = configurationMode;
             return this;
         }
-
         public Builder configurationModeFrequencyMins(@Nullable Double configurationModeFrequencyMins) {
             this.configurationModeFrequencyMins = configurationModeFrequencyMins;
             return this;
         }
-
         public Builder rebootIfNeeded(@Nullable Boolean rebootIfNeeded) {
             this.rebootIfNeeded = rebootIfNeeded;
             return this;
         }
-
         public Builder refreshFrequencyMins(@Nullable Double refreshFrequencyMins) {
             this.refreshFrequencyMins = refreshFrequencyMins;
             return this;
-        }
-        public ConfigurationSettingResponse build() {
+        }        public ConfigurationSettingResponse build() {
             return new ConfigurationSettingResponse(actionAfterReboot, allowModuleOverwrite, configurationMode, configurationModeFrequencyMins, rebootIfNeeded, refreshFrequencyMins);
         }
     }

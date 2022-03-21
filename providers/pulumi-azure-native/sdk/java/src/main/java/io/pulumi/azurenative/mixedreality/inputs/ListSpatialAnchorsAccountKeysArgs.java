@@ -72,12 +72,10 @@ public final class ListSpatialAnchorsAccountKeysArgs extends io.pulumi.resources
             this.accountName = Objects.requireNonNull(accountName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
-        }
-        public ListSpatialAnchorsAccountKeysArgs build() {
+        }        public ListSpatialAnchorsAccountKeysArgs build() {
             return new ListSpatialAnchorsAccountKeysArgs(accountName, resourceGroupName);
         }
     }

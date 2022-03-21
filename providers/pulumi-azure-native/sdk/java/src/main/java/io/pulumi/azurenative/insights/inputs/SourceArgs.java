@@ -113,42 +113,37 @@ public final class SourceArgs extends io.pulumi.resources.ResourceArgs {
             this.authorizedResources = authorizedResources;
             return this;
         }
-
         public Builder authorizedResources(@Nullable List<String> authorizedResources) {
             this.authorizedResources = Output.ofNullable(authorizedResources);
             return this;
         }
-
+        public Builder authorizedResources(String... authorizedResources) {
+            return authorizedResources(List.of(authorizedResources));
+        }
         public Builder dataSourceId(Output<String> dataSourceId) {
             this.dataSourceId = Objects.requireNonNull(dataSourceId);
             return this;
         }
-
         public Builder dataSourceId(String dataSourceId) {
             this.dataSourceId = Output.of(Objects.requireNonNull(dataSourceId));
             return this;
         }
-
         public Builder query(@Nullable Output<String> query) {
             this.query = query;
             return this;
         }
-
         public Builder query(@Nullable String query) {
             this.query = Output.ofNullable(query);
             return this;
         }
-
         public Builder queryType(@Nullable Output<Either<String,QueryType>> queryType) {
             this.queryType = queryType;
             return this;
         }
-
         public Builder queryType(@Nullable Either<String,QueryType> queryType) {
             this.queryType = Output.ofNullable(queryType);
             return this;
-        }
-        public SourceArgs build() {
+        }        public SourceArgs build() {
             return new SourceArgs(authorizedResources, dataSourceId, query, queryType);
         }
     }

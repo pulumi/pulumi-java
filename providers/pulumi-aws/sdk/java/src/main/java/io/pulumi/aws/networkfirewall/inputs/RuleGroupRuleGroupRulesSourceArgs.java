@@ -110,42 +110,37 @@ public final class RuleGroupRuleGroupRulesSourceArgs extends io.pulumi.resources
             this.rulesSourceList = rulesSourceList;
             return this;
         }
-
         public Builder rulesSourceList(@Nullable RuleGroupRuleGroupRulesSourceRulesSourceListArgs rulesSourceList) {
             this.rulesSourceList = Output.ofNullable(rulesSourceList);
             return this;
         }
-
         public Builder rulesString(@Nullable Output<String> rulesString) {
             this.rulesString = rulesString;
             return this;
         }
-
         public Builder rulesString(@Nullable String rulesString) {
             this.rulesString = Output.ofNullable(rulesString);
             return this;
         }
-
         public Builder statefulRules(@Nullable Output<List<RuleGroupRuleGroupRulesSourceStatefulRuleArgs>> statefulRules) {
             this.statefulRules = statefulRules;
             return this;
         }
-
         public Builder statefulRules(@Nullable List<RuleGroupRuleGroupRulesSourceStatefulRuleArgs> statefulRules) {
             this.statefulRules = Output.ofNullable(statefulRules);
             return this;
         }
-
+        public Builder statefulRules(RuleGroupRuleGroupRulesSourceStatefulRuleArgs... statefulRules) {
+            return statefulRules(List.of(statefulRules));
+        }
         public Builder statelessRulesAndCustomActions(@Nullable Output<RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsArgs> statelessRulesAndCustomActions) {
             this.statelessRulesAndCustomActions = statelessRulesAndCustomActions;
             return this;
         }
-
         public Builder statelessRulesAndCustomActions(@Nullable RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsArgs statelessRulesAndCustomActions) {
             this.statelessRulesAndCustomActions = Output.ofNullable(statelessRulesAndCustomActions);
             return this;
-        }
-        public RuleGroupRuleGroupRulesSourceArgs build() {
+        }        public RuleGroupRuleGroupRulesSourceArgs build() {
             return new RuleGroupRuleGroupRulesSourceArgs(rulesSourceList, rulesString, statefulRules, statelessRulesAndCustomActions);
         }
     }

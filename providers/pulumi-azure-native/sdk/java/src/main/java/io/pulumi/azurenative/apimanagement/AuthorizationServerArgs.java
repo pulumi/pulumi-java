@@ -354,192 +354,169 @@ public final class AuthorizationServerArgs extends io.pulumi.resources.ResourceA
             this.authorizationEndpoint = Objects.requireNonNull(authorizationEndpoint);
             return this;
         }
-
         public Builder authorizationEndpoint(String authorizationEndpoint) {
             this.authorizationEndpoint = Output.of(Objects.requireNonNull(authorizationEndpoint));
             return this;
         }
-
         public Builder authorizationMethods(@Nullable Output<List<AuthorizationMethod>> authorizationMethods) {
             this.authorizationMethods = authorizationMethods;
             return this;
         }
-
         public Builder authorizationMethods(@Nullable List<AuthorizationMethod> authorizationMethods) {
             this.authorizationMethods = Output.ofNullable(authorizationMethods);
             return this;
         }
-
+        public Builder authorizationMethods(AuthorizationMethod... authorizationMethods) {
+            return authorizationMethods(List.of(authorizationMethods));
+        }
         public Builder authsid(@Nullable Output<String> authsid) {
             this.authsid = authsid;
             return this;
         }
-
         public Builder authsid(@Nullable String authsid) {
             this.authsid = Output.ofNullable(authsid);
             return this;
         }
-
         public Builder bearerTokenSendingMethods(@Nullable Output<List<Either<String,BearerTokenSendingMethod>>> bearerTokenSendingMethods) {
             this.bearerTokenSendingMethods = bearerTokenSendingMethods;
             return this;
         }
-
         public Builder bearerTokenSendingMethods(@Nullable List<Either<String,BearerTokenSendingMethod>> bearerTokenSendingMethods) {
             this.bearerTokenSendingMethods = Output.ofNullable(bearerTokenSendingMethods);
             return this;
         }
-
+        public Builder bearerTokenSendingMethods(Either<String,BearerTokenSendingMethod>... bearerTokenSendingMethods) {
+            return bearerTokenSendingMethods(List.of(bearerTokenSendingMethods));
+        }
         public Builder clientAuthenticationMethod(@Nullable Output<List<Either<String,ClientAuthenticationMethod>>> clientAuthenticationMethod) {
             this.clientAuthenticationMethod = clientAuthenticationMethod;
             return this;
         }
-
         public Builder clientAuthenticationMethod(@Nullable List<Either<String,ClientAuthenticationMethod>> clientAuthenticationMethod) {
             this.clientAuthenticationMethod = Output.ofNullable(clientAuthenticationMethod);
             return this;
         }
-
+        public Builder clientAuthenticationMethod(Either<String,ClientAuthenticationMethod>... clientAuthenticationMethod) {
+            return clientAuthenticationMethod(List.of(clientAuthenticationMethod));
+        }
         public Builder clientId(Output<String> clientId) {
             this.clientId = Objects.requireNonNull(clientId);
             return this;
         }
-
         public Builder clientId(String clientId) {
             this.clientId = Output.of(Objects.requireNonNull(clientId));
             return this;
         }
-
         public Builder clientRegistrationEndpoint(Output<String> clientRegistrationEndpoint) {
             this.clientRegistrationEndpoint = Objects.requireNonNull(clientRegistrationEndpoint);
             return this;
         }
-
         public Builder clientRegistrationEndpoint(String clientRegistrationEndpoint) {
             this.clientRegistrationEndpoint = Output.of(Objects.requireNonNull(clientRegistrationEndpoint));
             return this;
         }
-
         public Builder clientSecret(@Nullable Output<String> clientSecret) {
             this.clientSecret = clientSecret;
             return this;
         }
-
         public Builder clientSecret(@Nullable String clientSecret) {
             this.clientSecret = Output.ofNullable(clientSecret);
             return this;
         }
-
         public Builder defaultScope(@Nullable Output<String> defaultScope) {
             this.defaultScope = defaultScope;
             return this;
         }
-
         public Builder defaultScope(@Nullable String defaultScope) {
             this.defaultScope = Output.ofNullable(defaultScope);
             return this;
         }
-
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder displayName(Output<String> displayName) {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
-
         public Builder displayName(String displayName) {
             this.displayName = Output.of(Objects.requireNonNull(displayName));
             return this;
         }
-
         public Builder grantTypes(Output<List<Either<String,GrantType>>> grantTypes) {
             this.grantTypes = Objects.requireNonNull(grantTypes);
             return this;
         }
-
         public Builder grantTypes(List<Either<String,GrantType>> grantTypes) {
             this.grantTypes = Output.of(Objects.requireNonNull(grantTypes));
             return this;
         }
-
+        public Builder grantTypes(Either<String,GrantType>... grantTypes) {
+            return grantTypes(List.of(grantTypes));
+        }
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder resourceOwnerPassword(@Nullable Output<String> resourceOwnerPassword) {
             this.resourceOwnerPassword = resourceOwnerPassword;
             return this;
         }
-
         public Builder resourceOwnerPassword(@Nullable String resourceOwnerPassword) {
             this.resourceOwnerPassword = Output.ofNullable(resourceOwnerPassword);
             return this;
         }
-
         public Builder resourceOwnerUsername(@Nullable Output<String> resourceOwnerUsername) {
             this.resourceOwnerUsername = resourceOwnerUsername;
             return this;
         }
-
         public Builder resourceOwnerUsername(@Nullable String resourceOwnerUsername) {
             this.resourceOwnerUsername = Output.ofNullable(resourceOwnerUsername);
             return this;
         }
-
         public Builder serviceName(Output<String> serviceName) {
             this.serviceName = Objects.requireNonNull(serviceName);
             return this;
         }
-
         public Builder serviceName(String serviceName) {
             this.serviceName = Output.of(Objects.requireNonNull(serviceName));
             return this;
         }
-
         public Builder supportState(@Nullable Output<Boolean> supportState) {
             this.supportState = supportState;
             return this;
         }
-
         public Builder supportState(@Nullable Boolean supportState) {
             this.supportState = Output.ofNullable(supportState);
             return this;
         }
-
         public Builder tokenBodyParameters(@Nullable Output<List<TokenBodyParameterContractArgs>> tokenBodyParameters) {
             this.tokenBodyParameters = tokenBodyParameters;
             return this;
         }
-
         public Builder tokenBodyParameters(@Nullable List<TokenBodyParameterContractArgs> tokenBodyParameters) {
             this.tokenBodyParameters = Output.ofNullable(tokenBodyParameters);
             return this;
         }
-
+        public Builder tokenBodyParameters(TokenBodyParameterContractArgs... tokenBodyParameters) {
+            return tokenBodyParameters(List.of(tokenBodyParameters));
+        }
         public Builder tokenEndpoint(@Nullable Output<String> tokenEndpoint) {
             this.tokenEndpoint = tokenEndpoint;
             return this;
         }
-
         public Builder tokenEndpoint(@Nullable String tokenEndpoint) {
             this.tokenEndpoint = Output.ofNullable(tokenEndpoint);
             return this;
-        }
-        public AuthorizationServerArgs build() {
+        }        public AuthorizationServerArgs build() {
             return new AuthorizationServerArgs(authorizationEndpoint, authorizationMethods, authsid, bearerTokenSendingMethods, clientAuthenticationMethod, clientId, clientRegistrationEndpoint, clientSecret, defaultScope, description, displayName, grantTypes, resourceGroupName, resourceOwnerPassword, resourceOwnerUsername, serviceName, supportState, tokenBodyParameters, tokenEndpoint);
         }
     }

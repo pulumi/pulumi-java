@@ -79,32 +79,26 @@ public final class BranchBasicAuthConfigArgs extends io.pulumi.resources.Resourc
             this.enableBasicAuth = enableBasicAuth;
             return this;
         }
-
         public Builder enableBasicAuth(@Nullable Boolean enableBasicAuth) {
             this.enableBasicAuth = Output.ofNullable(enableBasicAuth);
             return this;
         }
-
         public Builder password(Output<String> password) {
             this.password = Objects.requireNonNull(password);
             return this;
         }
-
         public Builder password(String password) {
             this.password = Output.of(Objects.requireNonNull(password));
             return this;
         }
-
         public Builder username(Output<String> username) {
             this.username = Objects.requireNonNull(username);
             return this;
         }
-
         public Builder username(String username) {
             this.username = Output.of(Objects.requireNonNull(username));
             return this;
-        }
-        public BranchBasicAuthConfigArgs build() {
+        }        public BranchBasicAuthConfigArgs build() {
             return new BranchBasicAuthConfigArgs(enableBasicAuth, password, username);
         }
     }

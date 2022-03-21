@@ -56,12 +56,10 @@ public final class ClusterAuthenticatorGroupsConfigGetArgs extends io.pulumi.res
             this.securityGroup = Objects.requireNonNull(securityGroup);
             return this;
         }
-
         public Builder securityGroup(String securityGroup) {
             this.securityGroup = Output.of(Objects.requireNonNull(securityGroup));
             return this;
-        }
-        public ClusterAuthenticatorGroupsConfigGetArgs build() {
+        }        public ClusterAuthenticatorGroupsConfigGetArgs build() {
             return new ClusterAuthenticatorGroupsConfigGetArgs(securityGroup);
         }
     }

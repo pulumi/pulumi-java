@@ -88,17 +88,14 @@ public final class GetPython2PackageArgs extends io.pulumi.resources.InvokeArgs 
             this.automationAccountName = Objects.requireNonNull(automationAccountName);
             return this;
         }
-
         public Builder packageName(String packageName) {
             this.packageName = Objects.requireNonNull(packageName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
-        }
-        public GetPython2PackageArgs build() {
+        }        public GetPython2PackageArgs build() {
             return new GetPython2PackageArgs(automationAccountName, packageName, resourceGroupName);
         }
     }

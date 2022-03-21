@@ -90,22 +90,18 @@ public final class GetInstantSnapshotIamPolicyArgs extends io.pulumi.resources.I
             this.optionsRequestedPolicyVersion = optionsRequestedPolicyVersion;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = project;
             return this;
         }
-
         public Builder resource(String resource) {
             this.resource = Objects.requireNonNull(resource);
             return this;
         }
-
         public Builder zone(String zone) {
             this.zone = Objects.requireNonNull(zone);
             return this;
-        }
-        public GetInstantSnapshotIamPolicyArgs build() {
+        }        public GetInstantSnapshotIamPolicyArgs build() {
             return new GetInstantSnapshotIamPolicyArgs(optionsRequestedPolicyVersion, project, resource, zone);
         }
     }

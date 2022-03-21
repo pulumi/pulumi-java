@@ -526,292 +526,240 @@ public final class ManagedClusterArgs extends io.pulumi.resources.ResourceArgs {
             this.aadProfile = aadProfile;
             return this;
         }
-
         public Builder aadProfile(@Nullable ManagedClusterAADProfileArgs aadProfile) {
             this.aadProfile = Output.ofNullable(aadProfile);
             return this;
         }
-
         public Builder addonProfiles(@Nullable Output<Map<String,ManagedClusterAddonProfileArgs>> addonProfiles) {
             this.addonProfiles = addonProfiles;
             return this;
         }
-
         public Builder addonProfiles(@Nullable Map<String,ManagedClusterAddonProfileArgs> addonProfiles) {
             this.addonProfiles = Output.ofNullable(addonProfiles);
             return this;
         }
-
         public Builder agentPoolProfiles(@Nullable Output<List<ManagedClusterAgentPoolProfileArgs>> agentPoolProfiles) {
             this.agentPoolProfiles = agentPoolProfiles;
             return this;
         }
-
         public Builder agentPoolProfiles(@Nullable List<ManagedClusterAgentPoolProfileArgs> agentPoolProfiles) {
             this.agentPoolProfiles = Output.ofNullable(agentPoolProfiles);
             return this;
         }
-
+        public Builder agentPoolProfiles(ManagedClusterAgentPoolProfileArgs... agentPoolProfiles) {
+            return agentPoolProfiles(List.of(agentPoolProfiles));
+        }
         public Builder apiServerAccessProfile(@Nullable Output<ManagedClusterAPIServerAccessProfileArgs> apiServerAccessProfile) {
             this.apiServerAccessProfile = apiServerAccessProfile;
             return this;
         }
-
         public Builder apiServerAccessProfile(@Nullable ManagedClusterAPIServerAccessProfileArgs apiServerAccessProfile) {
             this.apiServerAccessProfile = Output.ofNullable(apiServerAccessProfile);
             return this;
         }
-
         public Builder autoScalerProfile(@Nullable Output<ManagedClusterPropertiesAutoScalerProfileArgs> autoScalerProfile) {
             this.autoScalerProfile = autoScalerProfile;
             return this;
         }
-
         public Builder autoScalerProfile(@Nullable ManagedClusterPropertiesAutoScalerProfileArgs autoScalerProfile) {
             this.autoScalerProfile = Output.ofNullable(autoScalerProfile);
             return this;
         }
-
         public Builder autoUpgradeProfile(@Nullable Output<ManagedClusterAutoUpgradeProfileArgs> autoUpgradeProfile) {
             this.autoUpgradeProfile = autoUpgradeProfile;
             return this;
         }
-
         public Builder autoUpgradeProfile(@Nullable ManagedClusterAutoUpgradeProfileArgs autoUpgradeProfile) {
             this.autoUpgradeProfile = Output.ofNullable(autoUpgradeProfile);
             return this;
         }
-
         public Builder disableLocalAccounts(@Nullable Output<Boolean> disableLocalAccounts) {
             this.disableLocalAccounts = disableLocalAccounts;
             return this;
         }
-
         public Builder disableLocalAccounts(@Nullable Boolean disableLocalAccounts) {
             this.disableLocalAccounts = Output.ofNullable(disableLocalAccounts);
             return this;
         }
-
         public Builder diskEncryptionSetID(@Nullable Output<String> diskEncryptionSetID) {
             this.diskEncryptionSetID = diskEncryptionSetID;
             return this;
         }
-
         public Builder diskEncryptionSetID(@Nullable String diskEncryptionSetID) {
             this.diskEncryptionSetID = Output.ofNullable(diskEncryptionSetID);
             return this;
         }
-
         public Builder dnsPrefix(@Nullable Output<String> dnsPrefix) {
             this.dnsPrefix = dnsPrefix;
             return this;
         }
-
         public Builder dnsPrefix(@Nullable String dnsPrefix) {
             this.dnsPrefix = Output.ofNullable(dnsPrefix);
             return this;
         }
-
         public Builder enablePodSecurityPolicy(@Nullable Output<Boolean> enablePodSecurityPolicy) {
             this.enablePodSecurityPolicy = enablePodSecurityPolicy;
             return this;
         }
-
         public Builder enablePodSecurityPolicy(@Nullable Boolean enablePodSecurityPolicy) {
             this.enablePodSecurityPolicy = Output.ofNullable(enablePodSecurityPolicy);
             return this;
         }
-
         public Builder enableRBAC(@Nullable Output<Boolean> enableRBAC) {
             this.enableRBAC = enableRBAC;
             return this;
         }
-
         public Builder enableRBAC(@Nullable Boolean enableRBAC) {
             this.enableRBAC = Output.ofNullable(enableRBAC);
             return this;
         }
-
         public Builder extendedLocation(@Nullable Output<ExtendedLocationArgs> extendedLocation) {
             this.extendedLocation = extendedLocation;
             return this;
         }
-
         public Builder extendedLocation(@Nullable ExtendedLocationArgs extendedLocation) {
             this.extendedLocation = Output.ofNullable(extendedLocation);
             return this;
         }
-
         public Builder fqdnSubdomain(@Nullable Output<String> fqdnSubdomain) {
             this.fqdnSubdomain = fqdnSubdomain;
             return this;
         }
-
         public Builder fqdnSubdomain(@Nullable String fqdnSubdomain) {
             this.fqdnSubdomain = Output.ofNullable(fqdnSubdomain);
             return this;
         }
-
         public Builder httpProxyConfig(@Nullable Output<ManagedClusterHTTPProxyConfigArgs> httpProxyConfig) {
             this.httpProxyConfig = httpProxyConfig;
             return this;
         }
-
         public Builder httpProxyConfig(@Nullable ManagedClusterHTTPProxyConfigArgs httpProxyConfig) {
             this.httpProxyConfig = Output.ofNullable(httpProxyConfig);
             return this;
         }
-
         public Builder identity(@Nullable Output<ManagedClusterIdentityArgs> identity) {
             this.identity = identity;
             return this;
         }
-
         public Builder identity(@Nullable ManagedClusterIdentityArgs identity) {
             this.identity = Output.ofNullable(identity);
             return this;
         }
-
         public Builder identityProfile(@Nullable Output<Map<String,ManagedClusterPropertiesIdentityProfileArgs>> identityProfile) {
             this.identityProfile = identityProfile;
             return this;
         }
-
         public Builder identityProfile(@Nullable Map<String,ManagedClusterPropertiesIdentityProfileArgs> identityProfile) {
             this.identityProfile = Output.ofNullable(identityProfile);
             return this;
         }
-
         public Builder kubernetesVersion(@Nullable Output<String> kubernetesVersion) {
             this.kubernetesVersion = kubernetesVersion;
             return this;
         }
-
         public Builder kubernetesVersion(@Nullable String kubernetesVersion) {
             this.kubernetesVersion = Output.ofNullable(kubernetesVersion);
             return this;
         }
-
         public Builder linuxProfile(@Nullable Output<ContainerServiceLinuxProfileArgs> linuxProfile) {
             this.linuxProfile = linuxProfile;
             return this;
         }
-
         public Builder linuxProfile(@Nullable ContainerServiceLinuxProfileArgs linuxProfile) {
             this.linuxProfile = Output.ofNullable(linuxProfile);
             return this;
         }
-
         public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder networkProfile(@Nullable Output<ContainerServiceNetworkProfileArgs> networkProfile) {
             this.networkProfile = networkProfile;
             return this;
         }
-
         public Builder networkProfile(@Nullable ContainerServiceNetworkProfileArgs networkProfile) {
             this.networkProfile = Output.ofNullable(networkProfile);
             return this;
         }
-
         public Builder nodeResourceGroup(@Nullable Output<String> nodeResourceGroup) {
             this.nodeResourceGroup = nodeResourceGroup;
             return this;
         }
-
         public Builder nodeResourceGroup(@Nullable String nodeResourceGroup) {
             this.nodeResourceGroup = Output.ofNullable(nodeResourceGroup);
             return this;
         }
-
         public Builder podIdentityProfile(@Nullable Output<ManagedClusterPodIdentityProfileArgs> podIdentityProfile) {
             this.podIdentityProfile = podIdentityProfile;
             return this;
         }
-
         public Builder podIdentityProfile(@Nullable ManagedClusterPodIdentityProfileArgs podIdentityProfile) {
             this.podIdentityProfile = Output.ofNullable(podIdentityProfile);
             return this;
         }
-
         public Builder privateLinkResources(@Nullable Output<List<PrivateLinkResourceArgs>> privateLinkResources) {
             this.privateLinkResources = privateLinkResources;
             return this;
         }
-
         public Builder privateLinkResources(@Nullable List<PrivateLinkResourceArgs> privateLinkResources) {
             this.privateLinkResources = Output.ofNullable(privateLinkResources);
             return this;
         }
-
+        public Builder privateLinkResources(PrivateLinkResourceArgs... privateLinkResources) {
+            return privateLinkResources(List.of(privateLinkResources));
+        }
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder resourceName(@Nullable Output<String> resourceName) {
             this.resourceName = resourceName;
             return this;
         }
-
         public Builder resourceName(@Nullable String resourceName) {
             this.resourceName = Output.ofNullable(resourceName);
             return this;
         }
-
         public Builder servicePrincipalProfile(@Nullable Output<ManagedClusterServicePrincipalProfileArgs> servicePrincipalProfile) {
             this.servicePrincipalProfile = servicePrincipalProfile;
             return this;
         }
-
         public Builder servicePrincipalProfile(@Nullable ManagedClusterServicePrincipalProfileArgs servicePrincipalProfile) {
             this.servicePrincipalProfile = Output.ofNullable(servicePrincipalProfile);
             return this;
         }
-
         public Builder sku(@Nullable Output<ManagedClusterSKUArgs> sku) {
             this.sku = sku;
             return this;
         }
-
         public Builder sku(@Nullable ManagedClusterSKUArgs sku) {
             this.sku = Output.ofNullable(sku);
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
         public Builder windowsProfile(@Nullable Output<ManagedClusterWindowsProfileArgs> windowsProfile) {
             this.windowsProfile = windowsProfile;
             return this;
         }
-
         public Builder windowsProfile(@Nullable ManagedClusterWindowsProfileArgs windowsProfile) {
             this.windowsProfile = Output.ofNullable(windowsProfile);
             return this;
-        }
-        public ManagedClusterArgs build() {
+        }        public ManagedClusterArgs build() {
             return new ManagedClusterArgs(aadProfile, addonProfiles, agentPoolProfiles, apiServerAccessProfile, autoScalerProfile, autoUpgradeProfile, disableLocalAccounts, diskEncryptionSetID, dnsPrefix, enablePodSecurityPolicy, enableRBAC, extendedLocation, fqdnSubdomain, httpProxyConfig, identity, identityProfile, kubernetesVersion, linuxProfile, location, networkProfile, nodeResourceGroup, podIdentityProfile, privateLinkResources, resourceGroupName, resourceName, servicePrincipalProfile, sku, tags, windowsProfile);
         }
     }

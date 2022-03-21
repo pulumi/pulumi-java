@@ -88,17 +88,14 @@ public final class ListTenantAccessSecretsArgs extends io.pulumi.resources.Invok
             this.accessName = Objects.requireNonNull(accessName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder serviceName(String serviceName) {
             this.serviceName = Objects.requireNonNull(serviceName);
             return this;
-        }
-        public ListTenantAccessSecretsArgs build() {
+        }        public ListTenantAccessSecretsArgs build() {
             return new ListTenantAccessSecretsArgs(accessName, resourceGroupName, serviceName);
         }
     }

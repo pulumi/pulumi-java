@@ -118,27 +118,22 @@ public final class ResourcePolicyInstanceSchedulePolicyResponse {
             this.expirationTime = Objects.requireNonNull(expirationTime);
             return this;
         }
-
         public Builder startTime(String startTime) {
             this.startTime = Objects.requireNonNull(startTime);
             return this;
         }
-
         public Builder timeZone(String timeZone) {
             this.timeZone = Objects.requireNonNull(timeZone);
             return this;
         }
-
         public Builder vmStartSchedule(ResourcePolicyInstanceSchedulePolicyScheduleResponse vmStartSchedule) {
             this.vmStartSchedule = Objects.requireNonNull(vmStartSchedule);
             return this;
         }
-
         public Builder vmStopSchedule(ResourcePolicyInstanceSchedulePolicyScheduleResponse vmStopSchedule) {
             this.vmStopSchedule = Objects.requireNonNull(vmStopSchedule);
             return this;
-        }
-        public ResourcePolicyInstanceSchedulePolicyResponse build() {
+        }        public ResourcePolicyInstanceSchedulePolicyResponse build() {
             return new ResourcePolicyInstanceSchedulePolicyResponse(expirationTime, startTime, timeZone, vmStartSchedule, vmStopSchedule);
         }
     }

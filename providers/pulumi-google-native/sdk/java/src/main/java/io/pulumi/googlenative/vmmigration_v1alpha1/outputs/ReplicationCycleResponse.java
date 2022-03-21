@@ -136,32 +136,29 @@ public final class ReplicationCycleResponse {
             this.endTime = Objects.requireNonNull(endTime);
             return this;
         }
-
         public Builder progress(Integer progress) {
             this.progress = Objects.requireNonNull(progress);
             return this;
         }
-
         public Builder progressPercent(Integer progressPercent) {
             this.progressPercent = Objects.requireNonNull(progressPercent);
             return this;
         }
-
         public Builder startTime(String startTime) {
             this.startTime = Objects.requireNonNull(startTime);
             return this;
         }
-
         public Builder steps(List<CycleStepResponse> steps) {
             this.steps = Objects.requireNonNull(steps);
             return this;
         }
-
+        public Builder steps(CycleStepResponse... steps) {
+            return steps(List.of(steps));
+        }
         public Builder totalPauseDuration(String totalPauseDuration) {
             this.totalPauseDuration = Objects.requireNonNull(totalPauseDuration);
             return this;
-        }
-        public ReplicationCycleResponse build() {
+        }        public ReplicationCycleResponse build() {
             return new ReplicationCycleResponse(endTime, progress, progressPercent, startTime, steps, totalPauseDuration);
         }
     }

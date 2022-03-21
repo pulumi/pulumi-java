@@ -79,17 +79,17 @@ public final class GetDataCatalogEncryptionSettingsResult {
             this.catalogId = Objects.requireNonNull(catalogId);
             return this;
         }
-
         public Builder dataCatalogEncryptionSettings(List<GetDataCatalogEncryptionSettingsDataCatalogEncryptionSetting> dataCatalogEncryptionSettings) {
             this.dataCatalogEncryptionSettings = Objects.requireNonNull(dataCatalogEncryptionSettings);
             return this;
         }
-
+        public Builder dataCatalogEncryptionSettings(GetDataCatalogEncryptionSettingsDataCatalogEncryptionSetting... dataCatalogEncryptionSettings) {
+            return dataCatalogEncryptionSettings(List.of(dataCatalogEncryptionSettings));
+        }
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
-        }
-        public GetDataCatalogEncryptionSettingsResult build() {
+        }        public GetDataCatalogEncryptionSettingsResult build() {
             return new GetDataCatalogEncryptionSettingsResult(catalogId, dataCatalogEncryptionSettings, id);
         }
     }

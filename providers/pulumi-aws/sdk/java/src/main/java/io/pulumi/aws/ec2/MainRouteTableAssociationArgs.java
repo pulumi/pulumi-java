@@ -74,22 +74,18 @@ public final class MainRouteTableAssociationArgs extends io.pulumi.resources.Res
             this.routeTableId = Objects.requireNonNull(routeTableId);
             return this;
         }
-
         public Builder routeTableId(String routeTableId) {
             this.routeTableId = Output.of(Objects.requireNonNull(routeTableId));
             return this;
         }
-
         public Builder vpcId(Output<String> vpcId) {
             this.vpcId = Objects.requireNonNull(vpcId);
             return this;
         }
-
         public Builder vpcId(String vpcId) {
             this.vpcId = Output.of(Objects.requireNonNull(vpcId));
             return this;
-        }
-        public MainRouteTableAssociationArgs build() {
+        }        public MainRouteTableAssociationArgs build() {
             return new MainRouteTableAssociationArgs(routeTableId, vpcId);
         }
     }

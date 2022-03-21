@@ -69,12 +69,10 @@ public final class RuleGroupRuleActionBlockCustomResponseResponseHeader {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder value(String value) {
             this.value = Objects.requireNonNull(value);
             return this;
-        }
-        public RuleGroupRuleActionBlockCustomResponseResponseHeader build() {
+        }        public RuleGroupRuleActionBlockCustomResponseResponseHeader build() {
             return new RuleGroupRuleActionBlockCustomResponseResponseHeader(name, value);
         }
     }

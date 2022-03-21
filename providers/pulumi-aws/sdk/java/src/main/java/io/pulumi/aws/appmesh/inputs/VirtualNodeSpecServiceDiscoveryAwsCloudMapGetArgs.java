@@ -92,32 +92,26 @@ public final class VirtualNodeSpecServiceDiscoveryAwsCloudMapGetArgs extends io.
             this.attributes = attributes;
             return this;
         }
-
         public Builder attributes(@Nullable Map<String,String> attributes) {
             this.attributes = Output.ofNullable(attributes);
             return this;
         }
-
         public Builder namespaceName(Output<String> namespaceName) {
             this.namespaceName = Objects.requireNonNull(namespaceName);
             return this;
         }
-
         public Builder namespaceName(String namespaceName) {
             this.namespaceName = Output.of(Objects.requireNonNull(namespaceName));
             return this;
         }
-
         public Builder serviceName(Output<String> serviceName) {
             this.serviceName = Objects.requireNonNull(serviceName);
             return this;
         }
-
         public Builder serviceName(String serviceName) {
             this.serviceName = Output.of(Objects.requireNonNull(serviceName));
             return this;
-        }
-        public VirtualNodeSpecServiceDiscoveryAwsCloudMapGetArgs build() {
+        }        public VirtualNodeSpecServiceDiscoveryAwsCloudMapGetArgs build() {
             return new VirtualNodeSpecServiceDiscoveryAwsCloudMapGetArgs(attributes, namespaceName, serviceName);
         }
     }

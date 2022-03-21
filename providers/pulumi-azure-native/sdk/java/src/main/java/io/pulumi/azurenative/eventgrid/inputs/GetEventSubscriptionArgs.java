@@ -72,12 +72,10 @@ public final class GetEventSubscriptionArgs extends io.pulumi.resources.InvokeAr
             this.eventSubscriptionName = Objects.requireNonNull(eventSubscriptionName);
             return this;
         }
-
         public Builder scope(String scope) {
             this.scope = Objects.requireNonNull(scope);
             return this;
-        }
-        public GetEventSubscriptionArgs build() {
+        }        public GetEventSubscriptionArgs build() {
             return new GetEventSubscriptionArgs(eventSubscriptionName, scope);
         }
     }

@@ -89,17 +89,14 @@ public final class MonitoringTagRulesPropertiesResponse {
             this.logRules = logRules;
             return this;
         }
-
         public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
-
         public Builder systemData(SystemDataResponse systemData) {
             this.systemData = Objects.requireNonNull(systemData);
             return this;
-        }
-        public MonitoringTagRulesPropertiesResponse build() {
+        }        public MonitoringTagRulesPropertiesResponse build() {
             return new MonitoringTagRulesPropertiesResponse(logRules, provisioningState, systemData);
         }
     }

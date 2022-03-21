@@ -128,52 +128,42 @@ public final class PacketCaptureFilterArgs extends io.pulumi.resources.ResourceA
             this.localIPAddress = localIPAddress;
             return this;
         }
-
         public Builder localIPAddress(@Nullable String localIPAddress) {
             this.localIPAddress = Output.ofNullable(localIPAddress);
             return this;
         }
-
         public Builder localPort(@Nullable Output<String> localPort) {
             this.localPort = localPort;
             return this;
         }
-
         public Builder localPort(@Nullable String localPort) {
             this.localPort = Output.ofNullable(localPort);
             return this;
         }
-
         public Builder protocol(@Nullable Output<Either<String,PcProtocol>> protocol) {
             this.protocol = protocol;
             return this;
         }
-
         public Builder protocol(@Nullable Either<String,PcProtocol> protocol) {
             this.protocol = Output.ofNullable(protocol);
             return this;
         }
-
         public Builder remoteIPAddress(@Nullable Output<String> remoteIPAddress) {
             this.remoteIPAddress = remoteIPAddress;
             return this;
         }
-
         public Builder remoteIPAddress(@Nullable String remoteIPAddress) {
             this.remoteIPAddress = Output.ofNullable(remoteIPAddress);
             return this;
         }
-
         public Builder remotePort(@Nullable Output<String> remotePort) {
             this.remotePort = remotePort;
             return this;
         }
-
         public Builder remotePort(@Nullable String remotePort) {
             this.remotePort = Output.ofNullable(remotePort);
             return this;
-        }
-        public PacketCaptureFilterArgs build() {
+        }        public PacketCaptureFilterArgs build() {
             return new PacketCaptureFilterArgs(localIPAddress, localPort, protocol, remoteIPAddress, remotePort);
         }
     }

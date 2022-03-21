@@ -426,232 +426,186 @@ public final class ClusterInstanceArgs extends io.pulumi.resources.ResourceArgs 
             this.applyImmediately = applyImmediately;
             return this;
         }
-
         public Builder applyImmediately(@Nullable Boolean applyImmediately) {
             this.applyImmediately = Output.ofNullable(applyImmediately);
             return this;
         }
-
         public Builder autoMinorVersionUpgrade(@Nullable Output<Boolean> autoMinorVersionUpgrade) {
             this.autoMinorVersionUpgrade = autoMinorVersionUpgrade;
             return this;
         }
-
         public Builder autoMinorVersionUpgrade(@Nullable Boolean autoMinorVersionUpgrade) {
             this.autoMinorVersionUpgrade = Output.ofNullable(autoMinorVersionUpgrade);
             return this;
         }
-
         public Builder availabilityZone(@Nullable Output<String> availabilityZone) {
             this.availabilityZone = availabilityZone;
             return this;
         }
-
         public Builder availabilityZone(@Nullable String availabilityZone) {
             this.availabilityZone = Output.ofNullable(availabilityZone);
             return this;
         }
-
         public Builder caCertIdentifier(@Nullable Output<String> caCertIdentifier) {
             this.caCertIdentifier = caCertIdentifier;
             return this;
         }
-
         public Builder caCertIdentifier(@Nullable String caCertIdentifier) {
             this.caCertIdentifier = Output.ofNullable(caCertIdentifier);
             return this;
         }
-
         public Builder clusterIdentifier(Output<String> clusterIdentifier) {
             this.clusterIdentifier = Objects.requireNonNull(clusterIdentifier);
             return this;
         }
-
         public Builder clusterIdentifier(String clusterIdentifier) {
             this.clusterIdentifier = Output.of(Objects.requireNonNull(clusterIdentifier));
             return this;
         }
-
         public Builder copyTagsToSnapshot(@Nullable Output<Boolean> copyTagsToSnapshot) {
             this.copyTagsToSnapshot = copyTagsToSnapshot;
             return this;
         }
-
         public Builder copyTagsToSnapshot(@Nullable Boolean copyTagsToSnapshot) {
             this.copyTagsToSnapshot = Output.ofNullable(copyTagsToSnapshot);
             return this;
         }
-
         public Builder dbParameterGroupName(@Nullable Output<String> dbParameterGroupName) {
             this.dbParameterGroupName = dbParameterGroupName;
             return this;
         }
-
         public Builder dbParameterGroupName(@Nullable String dbParameterGroupName) {
             this.dbParameterGroupName = Output.ofNullable(dbParameterGroupName);
             return this;
         }
-
         public Builder dbSubnetGroupName(@Nullable Output<String> dbSubnetGroupName) {
             this.dbSubnetGroupName = dbSubnetGroupName;
             return this;
         }
-
         public Builder dbSubnetGroupName(@Nullable String dbSubnetGroupName) {
             this.dbSubnetGroupName = Output.ofNullable(dbSubnetGroupName);
             return this;
         }
-
         public Builder engine(@Nullable Output<String> engine) {
             this.engine = engine;
             return this;
         }
-
         public Builder engine(@Nullable String engine) {
             this.engine = Output.ofNullable(engine);
             return this;
         }
-
         public Builder engineVersion(@Nullable Output<String> engineVersion) {
             this.engineVersion = engineVersion;
             return this;
         }
-
         public Builder engineVersion(@Nullable String engineVersion) {
             this.engineVersion = Output.ofNullable(engineVersion);
             return this;
         }
-
         public Builder identifier(@Nullable Output<String> identifier) {
             this.identifier = identifier;
             return this;
         }
-
         public Builder identifier(@Nullable String identifier) {
             this.identifier = Output.ofNullable(identifier);
             return this;
         }
-
         public Builder identifierPrefix(@Nullable Output<String> identifierPrefix) {
             this.identifierPrefix = identifierPrefix;
             return this;
         }
-
         public Builder identifierPrefix(@Nullable String identifierPrefix) {
             this.identifierPrefix = Output.ofNullable(identifierPrefix);
             return this;
         }
-
         public Builder instanceClass(Output<Either<String,InstanceType>> instanceClass) {
             this.instanceClass = Objects.requireNonNull(instanceClass);
             return this;
         }
-
         public Builder instanceClass(Either<String,InstanceType> instanceClass) {
             this.instanceClass = Output.of(Objects.requireNonNull(instanceClass));
             return this;
         }
-
         public Builder monitoringInterval(@Nullable Output<Integer> monitoringInterval) {
             this.monitoringInterval = monitoringInterval;
             return this;
         }
-
         public Builder monitoringInterval(@Nullable Integer monitoringInterval) {
             this.monitoringInterval = Output.ofNullable(monitoringInterval);
             return this;
         }
-
         public Builder monitoringRoleArn(@Nullable Output<String> monitoringRoleArn) {
             this.monitoringRoleArn = monitoringRoleArn;
             return this;
         }
-
         public Builder monitoringRoleArn(@Nullable String monitoringRoleArn) {
             this.monitoringRoleArn = Output.ofNullable(monitoringRoleArn);
             return this;
         }
-
         public Builder performanceInsightsEnabled(@Nullable Output<Boolean> performanceInsightsEnabled) {
             this.performanceInsightsEnabled = performanceInsightsEnabled;
             return this;
         }
-
         public Builder performanceInsightsEnabled(@Nullable Boolean performanceInsightsEnabled) {
             this.performanceInsightsEnabled = Output.ofNullable(performanceInsightsEnabled);
             return this;
         }
-
         public Builder performanceInsightsKmsKeyId(@Nullable Output<String> performanceInsightsKmsKeyId) {
             this.performanceInsightsKmsKeyId = performanceInsightsKmsKeyId;
             return this;
         }
-
         public Builder performanceInsightsKmsKeyId(@Nullable String performanceInsightsKmsKeyId) {
             this.performanceInsightsKmsKeyId = Output.ofNullable(performanceInsightsKmsKeyId);
             return this;
         }
-
         public Builder performanceInsightsRetentionPeriod(@Nullable Output<Integer> performanceInsightsRetentionPeriod) {
             this.performanceInsightsRetentionPeriod = performanceInsightsRetentionPeriod;
             return this;
         }
-
         public Builder performanceInsightsRetentionPeriod(@Nullable Integer performanceInsightsRetentionPeriod) {
             this.performanceInsightsRetentionPeriod = Output.ofNullable(performanceInsightsRetentionPeriod);
             return this;
         }
-
         public Builder preferredBackupWindow(@Nullable Output<String> preferredBackupWindow) {
             this.preferredBackupWindow = preferredBackupWindow;
             return this;
         }
-
         public Builder preferredBackupWindow(@Nullable String preferredBackupWindow) {
             this.preferredBackupWindow = Output.ofNullable(preferredBackupWindow);
             return this;
         }
-
         public Builder preferredMaintenanceWindow(@Nullable Output<String> preferredMaintenanceWindow) {
             this.preferredMaintenanceWindow = preferredMaintenanceWindow;
             return this;
         }
-
         public Builder preferredMaintenanceWindow(@Nullable String preferredMaintenanceWindow) {
             this.preferredMaintenanceWindow = Output.ofNullable(preferredMaintenanceWindow);
             return this;
         }
-
         public Builder promotionTier(@Nullable Output<Integer> promotionTier) {
             this.promotionTier = promotionTier;
             return this;
         }
-
         public Builder promotionTier(@Nullable Integer promotionTier) {
             this.promotionTier = Output.ofNullable(promotionTier);
             return this;
         }
-
         public Builder publiclyAccessible(@Nullable Output<Boolean> publiclyAccessible) {
             this.publiclyAccessible = publiclyAccessible;
             return this;
         }
-
         public Builder publiclyAccessible(@Nullable Boolean publiclyAccessible) {
             this.publiclyAccessible = Output.ofNullable(publiclyAccessible);
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
-        }
-        public ClusterInstanceArgs build() {
+        }        public ClusterInstanceArgs build() {
             return new ClusterInstanceArgs(applyImmediately, autoMinorVersionUpgrade, availabilityZone, caCertIdentifier, clusterIdentifier, copyTagsToSnapshot, dbParameterGroupName, dbSubnetGroupName, engine, engineVersion, identifier, identifierPrefix, instanceClass, monitoringInterval, monitoringRoleArn, performanceInsightsEnabled, performanceInsightsKmsKeyId, performanceInsightsRetentionPeriod, preferredBackupWindow, preferredMaintenanceWindow, promotionTier, publiclyAccessible, tags);
         }
     }

@@ -188,92 +188,74 @@ public final class VirtualWanArgs extends io.pulumi.resources.ResourceArgs {
             this.allowBranchToBranchTraffic = allowBranchToBranchTraffic;
             return this;
         }
-
         public Builder allowBranchToBranchTraffic(@Nullable Boolean allowBranchToBranchTraffic) {
             this.allowBranchToBranchTraffic = Output.ofNullable(allowBranchToBranchTraffic);
             return this;
         }
-
         public Builder allowVnetToVnetTraffic(@Nullable Output<Boolean> allowVnetToVnetTraffic) {
             this.allowVnetToVnetTraffic = allowVnetToVnetTraffic;
             return this;
         }
-
         public Builder allowVnetToVnetTraffic(@Nullable Boolean allowVnetToVnetTraffic) {
             this.allowVnetToVnetTraffic = Output.ofNullable(allowVnetToVnetTraffic);
             return this;
         }
-
         public Builder disableVpnEncryption(@Nullable Output<Boolean> disableVpnEncryption) {
             this.disableVpnEncryption = disableVpnEncryption;
             return this;
         }
-
         public Builder disableVpnEncryption(@Nullable Boolean disableVpnEncryption) {
             this.disableVpnEncryption = Output.ofNullable(disableVpnEncryption);
             return this;
         }
-
         public Builder id(@Nullable Output<String> id) {
             this.id = id;
             return this;
         }
-
         public Builder id(@Nullable String id) {
             this.id = Output.ofNullable(id);
             return this;
         }
-
         public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
         public Builder type(@Nullable Output<String> type) {
             this.type = type;
             return this;
         }
-
         public Builder type(@Nullable String type) {
             this.type = Output.ofNullable(type);
             return this;
         }
-
         public Builder virtualWANName(@Nullable Output<String> virtualWANName) {
             this.virtualWANName = virtualWANName;
             return this;
         }
-
         public Builder virtualWANName(@Nullable String virtualWANName) {
             this.virtualWANName = Output.ofNullable(virtualWANName);
             return this;
-        }
-        public VirtualWanArgs build() {
+        }        public VirtualWanArgs build() {
             return new VirtualWanArgs(allowBranchToBranchTraffic, allowVnetToVnetTraffic, disableVpnEncryption, id, location, resourceGroupName, tags, type, virtualWANName);
         }
     }

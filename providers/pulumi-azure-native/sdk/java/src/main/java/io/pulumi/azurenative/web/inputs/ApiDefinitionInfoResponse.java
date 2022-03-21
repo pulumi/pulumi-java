@@ -60,8 +60,7 @@ public final class ApiDefinitionInfoResponse extends io.pulumi.resources.InvokeA
         public Builder url(@Nullable String url) {
             this.url = url;
             return this;
-        }
-        public ApiDefinitionInfoResponse build() {
+        }        public ApiDefinitionInfoResponse build() {
             return new ApiDefinitionInfoResponse(url);
         }
     }

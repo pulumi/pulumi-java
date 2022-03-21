@@ -72,12 +72,10 @@ public final class CachePolicyParametersInCacheKeyAndForwardedToOriginHeadersCon
             this.headerBehavior = headerBehavior;
             return this;
         }
-
         public Builder headers(@Nullable CachePolicyParametersInCacheKeyAndForwardedToOriginHeadersConfigHeaders headers) {
             this.headers = headers;
             return this;
-        }
-        public CachePolicyParametersInCacheKeyAndForwardedToOriginHeadersConfig build() {
+        }        public CachePolicyParametersInCacheKeyAndForwardedToOriginHeadersConfig build() {
             return new CachePolicyParametersInCacheKeyAndForwardedToOriginHeadersConfig(headerBehavior, headers);
         }
     }

@@ -143,62 +143,50 @@ public final class ReportByDepartmentArgs extends io.pulumi.resources.ResourceAr
             this.definition = Objects.requireNonNull(definition);
             return this;
         }
-
         public Builder definition(ReportDefinitionArgs definition) {
             this.definition = Output.of(Objects.requireNonNull(definition));
             return this;
         }
-
         public Builder deliveryInfo(Output<ReportDeliveryInfoArgs> deliveryInfo) {
             this.deliveryInfo = Objects.requireNonNull(deliveryInfo);
             return this;
         }
-
         public Builder deliveryInfo(ReportDeliveryInfoArgs deliveryInfo) {
             this.deliveryInfo = Output.of(Objects.requireNonNull(deliveryInfo));
             return this;
         }
-
         public Builder departmentId(Output<String> departmentId) {
             this.departmentId = Objects.requireNonNull(departmentId);
             return this;
         }
-
         public Builder departmentId(String departmentId) {
             this.departmentId = Output.of(Objects.requireNonNull(departmentId));
             return this;
         }
-
         public Builder format(@Nullable Output<Either<String,FormatType>> format) {
             this.format = format;
             return this;
         }
-
         public Builder format(@Nullable Either<String,FormatType> format) {
             this.format = Output.ofNullable(format);
             return this;
         }
-
         public Builder reportName(@Nullable Output<String> reportName) {
             this.reportName = reportName;
             return this;
         }
-
         public Builder reportName(@Nullable String reportName) {
             this.reportName = Output.ofNullable(reportName);
             return this;
         }
-
         public Builder schedule(@Nullable Output<ReportScheduleArgs> schedule) {
             this.schedule = schedule;
             return this;
         }
-
         public Builder schedule(@Nullable ReportScheduleArgs schedule) {
             this.schedule = Output.ofNullable(schedule);
             return this;
-        }
-        public ReportByDepartmentArgs build() {
+        }        public ReportByDepartmentArgs build() {
             return new ReportByDepartmentArgs(definition, deliveryInfo, departmentId, format, reportName, schedule);
         }
     }

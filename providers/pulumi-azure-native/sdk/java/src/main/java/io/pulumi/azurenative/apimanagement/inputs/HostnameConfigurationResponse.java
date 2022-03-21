@@ -192,47 +192,38 @@ public final class HostnameConfigurationResponse extends io.pulumi.resources.Inv
             this.certificate = certificate;
             return this;
         }
-
         public Builder certificatePassword(@Nullable String certificatePassword) {
             this.certificatePassword = certificatePassword;
             return this;
         }
-
         public Builder defaultSslBinding(@Nullable Boolean defaultSslBinding) {
             this.defaultSslBinding = defaultSslBinding;
             return this;
         }
-
         public Builder encodedCertificate(@Nullable String encodedCertificate) {
             this.encodedCertificate = encodedCertificate;
             return this;
         }
-
         public Builder hostName(String hostName) {
             this.hostName = Objects.requireNonNull(hostName);
             return this;
         }
-
         public Builder identityClientId(@Nullable String identityClientId) {
             this.identityClientId = identityClientId;
             return this;
         }
-
         public Builder keyVaultId(@Nullable String keyVaultId) {
             this.keyVaultId = keyVaultId;
             return this;
         }
-
         public Builder negotiateClientCertificate(@Nullable Boolean negotiateClientCertificate) {
             this.negotiateClientCertificate = negotiateClientCertificate;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public HostnameConfigurationResponse build() {
+        }        public HostnameConfigurationResponse build() {
             return new HostnameConfigurationResponse(certificate, certificatePassword, defaultSslBinding, encodedCertificate, hostName, identityClientId, keyVaultId, negotiateClientCertificate, type);
         }
     }

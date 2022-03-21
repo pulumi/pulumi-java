@@ -75,22 +75,18 @@ public final class ManagedZoneCloudLoggingConfigArgs extends io.pulumi.resources
             this.enableLogging = enableLogging;
             return this;
         }
-
         public Builder enableLogging(@Nullable Boolean enableLogging) {
             this.enableLogging = Output.ofNullable(enableLogging);
             return this;
         }
-
         public Builder kind(@Nullable Output<String> kind) {
             this.kind = kind;
             return this;
         }
-
         public Builder kind(@Nullable String kind) {
             this.kind = Output.ofNullable(kind);
             return this;
-        }
-        public ManagedZoneCloudLoggingConfigArgs build() {
+        }        public ManagedZoneCloudLoggingConfigArgs build() {
             return new ManagedZoneCloudLoggingConfigArgs(enableLogging, kind);
         }
     }

@@ -53,7 +53,9 @@ public final class WorkflowTemplateParameterValidationRegex {
             this.regexes = Objects.requireNonNull(regexes);
             return this;
         }
-        public WorkflowTemplateParameterValidationRegex build() {
+        public Builder regexes(String... regexes) {
+            return regexes(List.of(regexes));
+        }        public WorkflowTemplateParameterValidationRegex build() {
             return new WorkflowTemplateParameterValidationRegex(regexes);
         }
     }

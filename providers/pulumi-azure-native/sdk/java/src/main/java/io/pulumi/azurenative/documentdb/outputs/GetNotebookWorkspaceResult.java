@@ -117,27 +117,22 @@ public final class GetNotebookWorkspaceResult {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder notebookServerEndpoint(String notebookServerEndpoint) {
             this.notebookServerEndpoint = Objects.requireNonNull(notebookServerEndpoint);
             return this;
         }
-
         public Builder status(String status) {
             this.status = Objects.requireNonNull(status);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public GetNotebookWorkspaceResult build() {
+        }        public GetNotebookWorkspaceResult build() {
             return new GetNotebookWorkspaceResult(id, name, notebookServerEndpoint, status, type);
         }
     }

@@ -95,32 +95,26 @@ public final class RelationshipLinkFieldMappingArgs extends io.pulumi.resources.
             this.interactionFieldName = Objects.requireNonNull(interactionFieldName);
             return this;
         }
-
         public Builder interactionFieldName(String interactionFieldName) {
             this.interactionFieldName = Output.of(Objects.requireNonNull(interactionFieldName));
             return this;
         }
-
         public Builder linkType(@Nullable Output<LinkTypes> linkType) {
             this.linkType = linkType;
             return this;
         }
-
         public Builder linkType(@Nullable LinkTypes linkType) {
             this.linkType = Output.ofNullable(linkType);
             return this;
         }
-
         public Builder relationshipFieldName(Output<String> relationshipFieldName) {
             this.relationshipFieldName = Objects.requireNonNull(relationshipFieldName);
             return this;
         }
-
         public Builder relationshipFieldName(String relationshipFieldName) {
             this.relationshipFieldName = Output.of(Objects.requireNonNull(relationshipFieldName));
             return this;
-        }
-        public RelationshipLinkFieldMappingArgs build() {
+        }        public RelationshipLinkFieldMappingArgs build() {
             return new RelationshipLinkFieldMappingArgs(interactionFieldName, linkType, relationshipFieldName);
         }
     }

@@ -54,8 +54,7 @@ public final class GetAliasArgs extends io.pulumi.resources.InvokeArgs {
         public Builder aliasId(String aliasId) {
             this.aliasId = Objects.requireNonNull(aliasId);
             return this;
-        }
-        public GetAliasArgs build() {
+        }        public GetAliasArgs build() {
             return new GetAliasArgs(aliasId);
         }
     }

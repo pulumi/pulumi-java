@@ -312,212 +312,170 @@ public final class IoMAMPolicyByNameArgs extends io.pulumi.resources.ResourceArg
             this.accessRecheckOfflineTimeout = accessRecheckOfflineTimeout;
             return this;
         }
-
         public Builder accessRecheckOfflineTimeout(@Nullable String accessRecheckOfflineTimeout) {
             this.accessRecheckOfflineTimeout = Output.ofNullable(accessRecheckOfflineTimeout);
             return this;
         }
-
         public Builder accessRecheckOnlineTimeout(@Nullable Output<String> accessRecheckOnlineTimeout) {
             this.accessRecheckOnlineTimeout = accessRecheckOnlineTimeout;
             return this;
         }
-
         public Builder accessRecheckOnlineTimeout(@Nullable String accessRecheckOnlineTimeout) {
             this.accessRecheckOnlineTimeout = Output.ofNullable(accessRecheckOnlineTimeout);
             return this;
         }
-
         public Builder appSharingFromLevel(@Nullable Output<String> appSharingFromLevel) {
             this.appSharingFromLevel = appSharingFromLevel;
             return this;
         }
-
         public Builder appSharingFromLevel(@Nullable String appSharingFromLevel) {
             this.appSharingFromLevel = Output.ofNullable(appSharingFromLevel);
             return this;
         }
-
         public Builder appSharingToLevel(@Nullable Output<String> appSharingToLevel) {
             this.appSharingToLevel = appSharingToLevel;
             return this;
         }
-
         public Builder appSharingToLevel(@Nullable String appSharingToLevel) {
             this.appSharingToLevel = Output.ofNullable(appSharingToLevel);
             return this;
         }
-
         public Builder authentication(@Nullable Output<String> authentication) {
             this.authentication = authentication;
             return this;
         }
-
         public Builder authentication(@Nullable String authentication) {
             this.authentication = Output.ofNullable(authentication);
             return this;
         }
-
         public Builder clipboardSharingLevel(@Nullable Output<String> clipboardSharingLevel) {
             this.clipboardSharingLevel = clipboardSharingLevel;
             return this;
         }
-
         public Builder clipboardSharingLevel(@Nullable String clipboardSharingLevel) {
             this.clipboardSharingLevel = Output.ofNullable(clipboardSharingLevel);
             return this;
         }
-
         public Builder dataBackup(@Nullable Output<String> dataBackup) {
             this.dataBackup = dataBackup;
             return this;
         }
-
         public Builder dataBackup(@Nullable String dataBackup) {
             this.dataBackup = Output.ofNullable(dataBackup);
             return this;
         }
-
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder deviceCompliance(@Nullable Output<String> deviceCompliance) {
             this.deviceCompliance = deviceCompliance;
             return this;
         }
-
         public Builder deviceCompliance(@Nullable String deviceCompliance) {
             this.deviceCompliance = Output.ofNullable(deviceCompliance);
             return this;
         }
-
         public Builder fileEncryptionLevel(@Nullable Output<String> fileEncryptionLevel) {
             this.fileEncryptionLevel = fileEncryptionLevel;
             return this;
         }
-
         public Builder fileEncryptionLevel(@Nullable String fileEncryptionLevel) {
             this.fileEncryptionLevel = Output.ofNullable(fileEncryptionLevel);
             return this;
         }
-
         public Builder fileSharingSaveAs(@Nullable Output<String> fileSharingSaveAs) {
             this.fileSharingSaveAs = fileSharingSaveAs;
             return this;
         }
-
         public Builder fileSharingSaveAs(@Nullable String fileSharingSaveAs) {
             this.fileSharingSaveAs = Output.ofNullable(fileSharingSaveAs);
             return this;
         }
-
         public Builder friendlyName(Output<String> friendlyName) {
             this.friendlyName = Objects.requireNonNull(friendlyName);
             return this;
         }
-
         public Builder friendlyName(String friendlyName) {
             this.friendlyName = Output.of(Objects.requireNonNull(friendlyName));
             return this;
         }
-
         public Builder hostName(Output<String> hostName) {
             this.hostName = Objects.requireNonNull(hostName);
             return this;
         }
-
         public Builder hostName(String hostName) {
             this.hostName = Output.of(Objects.requireNonNull(hostName));
             return this;
         }
-
         public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder managedBrowser(@Nullable Output<String> managedBrowser) {
             this.managedBrowser = managedBrowser;
             return this;
         }
-
         public Builder managedBrowser(@Nullable String managedBrowser) {
             this.managedBrowser = Output.ofNullable(managedBrowser);
             return this;
         }
-
         public Builder offlineWipeTimeout(@Nullable Output<String> offlineWipeTimeout) {
             this.offlineWipeTimeout = offlineWipeTimeout;
             return this;
         }
-
         public Builder offlineWipeTimeout(@Nullable String offlineWipeTimeout) {
             this.offlineWipeTimeout = Output.ofNullable(offlineWipeTimeout);
             return this;
         }
-
         public Builder pin(@Nullable Output<String> pin) {
             this.pin = pin;
             return this;
         }
-
         public Builder pin(@Nullable String pin) {
             this.pin = Output.ofNullable(pin);
             return this;
         }
-
         public Builder pinNumRetry(@Nullable Output<Integer> pinNumRetry) {
             this.pinNumRetry = pinNumRetry;
             return this;
         }
-
         public Builder pinNumRetry(@Nullable Integer pinNumRetry) {
             this.pinNumRetry = Output.ofNullable(pinNumRetry);
             return this;
         }
-
         public Builder policyName(@Nullable Output<String> policyName) {
             this.policyName = policyName;
             return this;
         }
-
         public Builder policyName(@Nullable String policyName) {
             this.policyName = Output.ofNullable(policyName);
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
         public Builder touchId(@Nullable Output<String> touchId) {
             this.touchId = touchId;
             return this;
         }
-
         public Builder touchId(@Nullable String touchId) {
             this.touchId = Output.ofNullable(touchId);
             return this;
-        }
-        public IoMAMPolicyByNameArgs build() {
+        }        public IoMAMPolicyByNameArgs build() {
             return new IoMAMPolicyByNameArgs(accessRecheckOfflineTimeout, accessRecheckOnlineTimeout, appSharingFromLevel, appSharingToLevel, authentication, clipboardSharingLevel, dataBackup, description, deviceCompliance, fileEncryptionLevel, fileSharingSaveAs, friendlyName, hostName, location, managedBrowser, offlineWipeTimeout, pin, pinNumRetry, policyName, tags, touchId);
         }
     }

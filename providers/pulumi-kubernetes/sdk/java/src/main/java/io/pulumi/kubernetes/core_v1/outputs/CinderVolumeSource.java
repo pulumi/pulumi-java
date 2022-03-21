@@ -105,22 +105,18 @@ public final class CinderVolumeSource {
             this.fsType = fsType;
             return this;
         }
-
         public Builder readOnly(@Nullable Boolean readOnly) {
             this.readOnly = readOnly;
             return this;
         }
-
         public Builder secretRef(@Nullable LocalObjectReference secretRef) {
             this.secretRef = secretRef;
             return this;
         }
-
         public Builder volumeID(String volumeID) {
             this.volumeID = Objects.requireNonNull(volumeID);
             return this;
-        }
-        public CinderVolumeSource build() {
+        }        public CinderVolumeSource build() {
             return new CinderVolumeSource(fsType, readOnly, secretRef, volumeID);
         }
     }

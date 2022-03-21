@@ -92,17 +92,14 @@ public final class StorageSourceResponse extends io.pulumi.resources.InvokeArgs 
             this.bucket = Objects.requireNonNull(bucket);
             return this;
         }
-
         public Builder generation(String generation) {
             this.generation = Objects.requireNonNull(generation);
             return this;
         }
-
         public Builder object(String object) {
             this.object = Objects.requireNonNull(object);
             return this;
-        }
-        public StorageSourceResponse build() {
+        }        public StorageSourceResponse build() {
             return new StorageSourceResponse(bucket, generation, object);
         }
     }

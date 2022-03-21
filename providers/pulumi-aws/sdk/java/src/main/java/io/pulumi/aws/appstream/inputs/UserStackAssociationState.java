@@ -107,42 +107,34 @@ public final class UserStackAssociationState extends io.pulumi.resources.Resourc
             this.authenticationType = authenticationType;
             return this;
         }
-
         public Builder authenticationType(@Nullable String authenticationType) {
             this.authenticationType = Output.ofNullable(authenticationType);
             return this;
         }
-
         public Builder sendEmailNotification(@Nullable Output<Boolean> sendEmailNotification) {
             this.sendEmailNotification = sendEmailNotification;
             return this;
         }
-
         public Builder sendEmailNotification(@Nullable Boolean sendEmailNotification) {
             this.sendEmailNotification = Output.ofNullable(sendEmailNotification);
             return this;
         }
-
         public Builder stackName(@Nullable Output<String> stackName) {
             this.stackName = stackName;
             return this;
         }
-
         public Builder stackName(@Nullable String stackName) {
             this.stackName = Output.ofNullable(stackName);
             return this;
         }
-
         public Builder userName(@Nullable Output<String> userName) {
             this.userName = userName;
             return this;
         }
-
         public Builder userName(@Nullable String userName) {
             this.userName = Output.ofNullable(userName);
             return this;
-        }
-        public UserStackAssociationState build() {
+        }        public UserStackAssociationState build() {
             return new UserStackAssociationState(authenticationType, sendEmailNotification, stackName, userName);
         }
     }

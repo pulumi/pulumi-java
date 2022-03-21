@@ -122,27 +122,22 @@ public final class MySqlConnectionInfoResponse {
             this.password = password;
             return this;
         }
-
         public Builder port(Integer port) {
             this.port = Objects.requireNonNull(port);
             return this;
         }
-
         public Builder serverName(String serverName) {
             this.serverName = Objects.requireNonNull(serverName);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder userName(@Nullable String userName) {
             this.userName = userName;
             return this;
-        }
-        public MySqlConnectionInfoResponse build() {
+        }        public MySqlConnectionInfoResponse build() {
             return new MySqlConnectionInfoResponse(password, port, serverName, type, userName);
         }
     }

@@ -159,72 +159,58 @@ public final class PublicIPAddressResourceSettingsArgs extends io.pulumi.resourc
             this.domainNameLabel = domainNameLabel;
             return this;
         }
-
         public Builder domainNameLabel(@Nullable String domainNameLabel) {
             this.domainNameLabel = Output.ofNullable(domainNameLabel);
             return this;
         }
-
         public Builder fqdn(@Nullable Output<String> fqdn) {
             this.fqdn = fqdn;
             return this;
         }
-
         public Builder fqdn(@Nullable String fqdn) {
             this.fqdn = Output.ofNullable(fqdn);
             return this;
         }
-
         public Builder publicIpAllocationMethod(@Nullable Output<String> publicIpAllocationMethod) {
             this.publicIpAllocationMethod = publicIpAllocationMethod;
             return this;
         }
-
         public Builder publicIpAllocationMethod(@Nullable String publicIpAllocationMethod) {
             this.publicIpAllocationMethod = Output.ofNullable(publicIpAllocationMethod);
             return this;
         }
-
         public Builder resourceType(Output<String> resourceType) {
             this.resourceType = Objects.requireNonNull(resourceType);
             return this;
         }
-
         public Builder resourceType(String resourceType) {
             this.resourceType = Output.of(Objects.requireNonNull(resourceType));
             return this;
         }
-
         public Builder sku(@Nullable Output<String> sku) {
             this.sku = sku;
             return this;
         }
-
         public Builder sku(@Nullable String sku) {
             this.sku = Output.ofNullable(sku);
             return this;
         }
-
         public Builder targetResourceName(Output<String> targetResourceName) {
             this.targetResourceName = Objects.requireNonNull(targetResourceName);
             return this;
         }
-
         public Builder targetResourceName(String targetResourceName) {
             this.targetResourceName = Output.of(Objects.requireNonNull(targetResourceName));
             return this;
         }
-
         public Builder zones(@Nullable Output<String> zones) {
             this.zones = zones;
             return this;
         }
-
         public Builder zones(@Nullable String zones) {
             this.zones = Output.ofNullable(zones);
             return this;
-        }
-        public PublicIPAddressResourceSettingsArgs build() {
+        }        public PublicIPAddressResourceSettingsArgs build() {
             return new PublicIPAddressResourceSettingsArgs(domainNameLabel, fqdn, publicIpAllocationMethod, resourceType, sku, targetResourceName, zones);
         }
     }

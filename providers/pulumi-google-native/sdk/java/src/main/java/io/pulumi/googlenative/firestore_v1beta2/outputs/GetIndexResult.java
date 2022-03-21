@@ -103,22 +103,21 @@ public final class GetIndexResult {
             this.fields = Objects.requireNonNull(fields);
             return this;
         }
-
+        public Builder fields(GoogleFirestoreAdminV1beta2IndexFieldResponse... fields) {
+            return fields(List.of(fields));
+        }
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder queryScope(String queryScope) {
             this.queryScope = Objects.requireNonNull(queryScope);
             return this;
         }
-
         public Builder state(String state) {
             this.state = Objects.requireNonNull(state);
             return this;
-        }
-        public GetIndexResult build() {
+        }        public GetIndexResult build() {
             return new GetIndexResult(fields, name, queryScope, state);
         }
     }

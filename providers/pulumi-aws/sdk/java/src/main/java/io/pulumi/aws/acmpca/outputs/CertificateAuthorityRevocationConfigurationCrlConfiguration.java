@@ -121,27 +121,22 @@ public final class CertificateAuthorityRevocationConfigurationCrlConfiguration {
             this.customCname = customCname;
             return this;
         }
-
         public Builder enabled(@Nullable Boolean enabled) {
             this.enabled = enabled;
             return this;
         }
-
         public Builder expirationInDays(Integer expirationInDays) {
             this.expirationInDays = Objects.requireNonNull(expirationInDays);
             return this;
         }
-
         public Builder s3BucketName(@Nullable String s3BucketName) {
             this.s3BucketName = s3BucketName;
             return this;
         }
-
         public Builder s3ObjectAcl(@Nullable String s3ObjectAcl) {
             this.s3ObjectAcl = s3ObjectAcl;
             return this;
-        }
-        public CertificateAuthorityRevocationConfigurationCrlConfiguration build() {
+        }        public CertificateAuthorityRevocationConfigurationCrlConfiguration build() {
             return new CertificateAuthorityRevocationConfigurationCrlConfiguration(customCname, enabled, expirationInDays, s3BucketName, s3ObjectAcl);
         }
     }

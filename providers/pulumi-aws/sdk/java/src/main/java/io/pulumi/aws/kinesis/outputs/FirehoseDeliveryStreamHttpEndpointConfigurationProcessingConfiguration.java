@@ -73,12 +73,13 @@ public final class FirehoseDeliveryStreamHttpEndpointConfigurationProcessingConf
             this.enabled = enabled;
             return this;
         }
-
         public Builder processors(@Nullable List<FirehoseDeliveryStreamHttpEndpointConfigurationProcessingConfigurationProcessor> processors) {
             this.processors = processors;
             return this;
         }
-        public FirehoseDeliveryStreamHttpEndpointConfigurationProcessingConfiguration build() {
+        public Builder processors(FirehoseDeliveryStreamHttpEndpointConfigurationProcessingConfigurationProcessor... processors) {
+            return processors(List.of(processors));
+        }        public FirehoseDeliveryStreamHttpEndpointConfigurationProcessingConfiguration build() {
             return new FirehoseDeliveryStreamHttpEndpointConfigurationProcessingConfiguration(enabled, processors);
         }
     }

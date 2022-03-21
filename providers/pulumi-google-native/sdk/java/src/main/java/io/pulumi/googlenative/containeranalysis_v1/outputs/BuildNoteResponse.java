@@ -51,8 +51,7 @@ public final class BuildNoteResponse {
         public Builder builderVersion(String builderVersion) {
             this.builderVersion = Objects.requireNonNull(builderVersion);
             return this;
-        }
-        public BuildNoteResponse build() {
+        }        public BuildNoteResponse build() {
             return new BuildNoteResponse(builderVersion);
         }
     }

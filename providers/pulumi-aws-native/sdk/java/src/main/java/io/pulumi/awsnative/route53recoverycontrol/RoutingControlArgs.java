@@ -90,32 +90,26 @@ public final class RoutingControlArgs extends io.pulumi.resources.ResourceArgs {
             this.clusterArn = clusterArn;
             return this;
         }
-
         public Builder clusterArn(@Nullable String clusterArn) {
             this.clusterArn = Output.ofNullable(clusterArn);
             return this;
         }
-
         public Builder controlPanelArn(@Nullable Output<String> controlPanelArn) {
             this.controlPanelArn = controlPanelArn;
             return this;
         }
-
         public Builder controlPanelArn(@Nullable String controlPanelArn) {
             this.controlPanelArn = Output.ofNullable(controlPanelArn);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
-        }
-        public RoutingControlArgs build() {
+        }        public RoutingControlArgs build() {
             return new RoutingControlArgs(clusterArn, controlPanelArn, name);
         }
     }

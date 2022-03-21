@@ -222,57 +222,49 @@ public final class TrustResponse extends io.pulumi.resources.InvokeArgs {
             this.createTime = Objects.requireNonNull(createTime);
             return this;
         }
-
         public Builder lastKnownTrustConnectedHeartbeatTime(String lastKnownTrustConnectedHeartbeatTime) {
             this.lastKnownTrustConnectedHeartbeatTime = Objects.requireNonNull(lastKnownTrustConnectedHeartbeatTime);
             return this;
         }
-
         public Builder selectiveAuthentication(Boolean selectiveAuthentication) {
             this.selectiveAuthentication = Objects.requireNonNull(selectiveAuthentication);
             return this;
         }
-
         public Builder state(String state) {
             this.state = Objects.requireNonNull(state);
             return this;
         }
-
         public Builder stateDescription(String stateDescription) {
             this.stateDescription = Objects.requireNonNull(stateDescription);
             return this;
         }
-
         public Builder targetDnsIpAddresses(List<String> targetDnsIpAddresses) {
             this.targetDnsIpAddresses = Objects.requireNonNull(targetDnsIpAddresses);
             return this;
         }
-
+        public Builder targetDnsIpAddresses(String... targetDnsIpAddresses) {
+            return targetDnsIpAddresses(List.of(targetDnsIpAddresses));
+        }
         public Builder targetDomainName(String targetDomainName) {
             this.targetDomainName = Objects.requireNonNull(targetDomainName);
             return this;
         }
-
         public Builder trustDirection(String trustDirection) {
             this.trustDirection = Objects.requireNonNull(trustDirection);
             return this;
         }
-
         public Builder trustHandshakeSecret(String trustHandshakeSecret) {
             this.trustHandshakeSecret = Objects.requireNonNull(trustHandshakeSecret);
             return this;
         }
-
         public Builder trustType(String trustType) {
             this.trustType = Objects.requireNonNull(trustType);
             return this;
         }
-
         public Builder updateTime(String updateTime) {
             this.updateTime = Objects.requireNonNull(updateTime);
             return this;
-        }
-        public TrustResponse build() {
+        }        public TrustResponse build() {
             return new TrustResponse(createTime, lastKnownTrustConnectedHeartbeatTime, selectiveAuthentication, state, stateDescription, targetDnsIpAddresses, targetDomainName, trustDirection, trustHandshakeSecret, trustType, updateTime);
         }
     }

@@ -56,12 +56,10 @@ public final class EventIntegrationEventFilterArgs extends io.pulumi.resources.R
             this.source = Objects.requireNonNull(source);
             return this;
         }
-
         public Builder source(String source) {
             this.source = Output.of(Objects.requireNonNull(source));
             return this;
-        }
-        public EventIntegrationEventFilterArgs build() {
+        }        public EventIntegrationEventFilterArgs build() {
             return new EventIntegrationEventFilterArgs(source);
         }
     }

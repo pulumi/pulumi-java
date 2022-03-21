@@ -113,42 +113,37 @@ public final class SourceArgs extends io.pulumi.resources.ResourceArgs {
             this.additionalContexts = additionalContexts;
             return this;
         }
-
         public Builder additionalContexts(@Nullable List<SourceContextArgs> additionalContexts) {
             this.additionalContexts = Output.ofNullable(additionalContexts);
             return this;
         }
-
+        public Builder additionalContexts(SourceContextArgs... additionalContexts) {
+            return additionalContexts(List.of(additionalContexts));
+        }
         public Builder artifactStorageSourceUri(@Nullable Output<String> artifactStorageSourceUri) {
             this.artifactStorageSourceUri = artifactStorageSourceUri;
             return this;
         }
-
         public Builder artifactStorageSourceUri(@Nullable String artifactStorageSourceUri) {
             this.artifactStorageSourceUri = Output.ofNullable(artifactStorageSourceUri);
             return this;
         }
-
         public Builder context(@Nullable Output<SourceContextArgs> context) {
             this.context = context;
             return this;
         }
-
         public Builder context(@Nullable SourceContextArgs context) {
             this.context = Output.ofNullable(context);
             return this;
         }
-
         public Builder fileHashes(@Nullable Output<Map<String,String>> fileHashes) {
             this.fileHashes = fileHashes;
             return this;
         }
-
         public Builder fileHashes(@Nullable Map<String,String> fileHashes) {
             this.fileHashes = Output.ofNullable(fileHashes);
             return this;
-        }
-        public SourceArgs build() {
+        }        public SourceArgs build() {
             return new SourceArgs(additionalContexts, artifactStorageSourceUri, context, fileHashes);
         }
     }

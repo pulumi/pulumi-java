@@ -219,57 +219,49 @@ public final class GetDatabaseResult {
             this.clientProtocol = clientProtocol;
             return this;
         }
-
         public Builder clusteringPolicy(@Nullable String clusteringPolicy) {
             this.clusteringPolicy = clusteringPolicy;
             return this;
         }
-
         public Builder evictionPolicy(@Nullable String evictionPolicy) {
             this.evictionPolicy = evictionPolicy;
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder modules(@Nullable List<ModuleResponse> modules) {
             this.modules = modules;
             return this;
         }
-
+        public Builder modules(ModuleResponse... modules) {
+            return modules(List.of(modules));
+        }
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder persistence(@Nullable PersistenceResponse persistence) {
             this.persistence = persistence;
             return this;
         }
-
         public Builder port(@Nullable Integer port) {
             this.port = port;
             return this;
         }
-
         public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
-
         public Builder resourceState(String resourceState) {
             this.resourceState = Objects.requireNonNull(resourceState);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public GetDatabaseResult build() {
+        }        public GetDatabaseResult build() {
             return new GetDatabaseResult(clientProtocol, clusteringPolicy, evictionPolicy, id, modules, name, persistence, port, provisioningState, resourceState, type);
         }
     }

@@ -111,42 +111,34 @@ public final class VolumeMountArgs extends io.pulumi.resources.ResourceArgs {
             this.mountPath = mountPath;
             return this;
         }
-
         public Builder mountPath(@Nullable String mountPath) {
             this.mountPath = Output.ofNullable(mountPath);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder readOnly(@Nullable Output<Boolean> readOnly) {
             this.readOnly = readOnly;
             return this;
         }
-
         public Builder readOnly(@Nullable Boolean readOnly) {
             this.readOnly = Output.ofNullable(readOnly);
             return this;
         }
-
         public Builder subPath(@Nullable Output<String> subPath) {
             this.subPath = subPath;
             return this;
         }
-
         public Builder subPath(@Nullable String subPath) {
             this.subPath = Output.ofNullable(subPath);
             return this;
-        }
-        public VolumeMountArgs build() {
+        }        public VolumeMountArgs build() {
             return new VolumeMountArgs(mountPath, name, readOnly, subPath);
         }
     }

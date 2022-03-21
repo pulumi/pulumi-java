@@ -144,32 +144,26 @@ public final class ImageTemplatePlatformImageSourceResponse extends io.pulumi.re
             this.offer = offer;
             return this;
         }
-
         public Builder planInfo(@Nullable PlatformImagePurchasePlanResponse planInfo) {
             this.planInfo = planInfo;
             return this;
         }
-
         public Builder publisher(@Nullable String publisher) {
             this.publisher = publisher;
             return this;
         }
-
         public Builder sku(@Nullable String sku) {
             this.sku = sku;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder version(@Nullable String version) {
             this.version = version;
             return this;
-        }
-        public ImageTemplatePlatformImageSourceResponse build() {
+        }        public ImageTemplatePlatformImageSourceResponse build() {
             return new ImageTemplatePlatformImageSourceResponse(offer, planInfo, publisher, sku, type, version);
         }
     }

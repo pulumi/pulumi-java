@@ -45,8 +45,7 @@ public final class TopicRuleDestinationHttpUrlDestinationSummary {
         public Builder confirmationUrl(@Nullable String confirmationUrl) {
             this.confirmationUrl = confirmationUrl;
             return this;
-        }
-        public TopicRuleDestinationHttpUrlDestinationSummary build() {
+        }        public TopicRuleDestinationHttpUrlDestinationSummary build() {
             return new TopicRuleDestinationHttpUrlDestinationSummary(confirmationUrl);
         }
     }

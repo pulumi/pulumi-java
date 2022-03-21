@@ -104,22 +104,18 @@ public final class GetTemplateResult {
             this.metadata = Objects.requireNonNull(metadata);
             return this;
         }
-
         public Builder runtimeMetadata(RuntimeMetadataResponse runtimeMetadata) {
             this.runtimeMetadata = Objects.requireNonNull(runtimeMetadata);
             return this;
         }
-
         public Builder status(StatusResponse status) {
             this.status = Objects.requireNonNull(status);
             return this;
         }
-
         public Builder templateType(String templateType) {
             this.templateType = Objects.requireNonNull(templateType);
             return this;
-        }
-        public GetTemplateResult build() {
+        }        public GetTemplateResult build() {
             return new GetTemplateResult(metadata, runtimeMetadata, status, templateType);
         }
     }

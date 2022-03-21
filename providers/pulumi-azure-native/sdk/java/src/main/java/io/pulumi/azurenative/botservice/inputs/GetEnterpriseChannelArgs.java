@@ -72,12 +72,10 @@ public final class GetEnterpriseChannelArgs extends io.pulumi.resources.InvokeAr
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceName(String resourceName) {
             this.resourceName = Objects.requireNonNull(resourceName);
             return this;
-        }
-        public GetEnterpriseChannelArgs build() {
+        }        public GetEnterpriseChannelArgs build() {
             return new GetEnterpriseChannelArgs(resourceGroupName, resourceName);
         }
     }

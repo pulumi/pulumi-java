@@ -304,82 +304,69 @@ public final class GoogleCloudDatapipelinesV1RuntimeEnvironmentResponse extends 
             this.additionalExperiments = Objects.requireNonNull(additionalExperiments);
             return this;
         }
-
+        public Builder additionalExperiments(String... additionalExperiments) {
+            return additionalExperiments(List.of(additionalExperiments));
+        }
         public Builder additionalUserLabels(Map<String,String> additionalUserLabels) {
             this.additionalUserLabels = Objects.requireNonNull(additionalUserLabels);
             return this;
         }
-
         public Builder bypassTempDirValidation(Boolean bypassTempDirValidation) {
             this.bypassTempDirValidation = Objects.requireNonNull(bypassTempDirValidation);
             return this;
         }
-
         public Builder enableStreamingEngine(Boolean enableStreamingEngine) {
             this.enableStreamingEngine = Objects.requireNonNull(enableStreamingEngine);
             return this;
         }
-
         public Builder ipConfiguration(String ipConfiguration) {
             this.ipConfiguration = Objects.requireNonNull(ipConfiguration);
             return this;
         }
-
         public Builder kmsKeyName(String kmsKeyName) {
             this.kmsKeyName = Objects.requireNonNull(kmsKeyName);
             return this;
         }
-
         public Builder machineType(String machineType) {
             this.machineType = Objects.requireNonNull(machineType);
             return this;
         }
-
         public Builder maxWorkers(Integer maxWorkers) {
             this.maxWorkers = Objects.requireNonNull(maxWorkers);
             return this;
         }
-
         public Builder network(String network) {
             this.network = Objects.requireNonNull(network);
             return this;
         }
-
         public Builder numWorkers(Integer numWorkers) {
             this.numWorkers = Objects.requireNonNull(numWorkers);
             return this;
         }
-
         public Builder serviceAccountEmail(String serviceAccountEmail) {
             this.serviceAccountEmail = Objects.requireNonNull(serviceAccountEmail);
             return this;
         }
-
         public Builder subnetwork(String subnetwork) {
             this.subnetwork = Objects.requireNonNull(subnetwork);
             return this;
         }
-
         public Builder tempLocation(String tempLocation) {
             this.tempLocation = Objects.requireNonNull(tempLocation);
             return this;
         }
-
         public Builder workerRegion(String workerRegion) {
             this.workerRegion = Objects.requireNonNull(workerRegion);
             return this;
         }
-
         public Builder workerZone(String workerZone) {
             this.workerZone = Objects.requireNonNull(workerZone);
             return this;
         }
-
         public Builder zone(String zone) {
             this.zone = Objects.requireNonNull(zone);
             return this;
-        }
-        public GoogleCloudDatapipelinesV1RuntimeEnvironmentResponse build() {
+        }        public GoogleCloudDatapipelinesV1RuntimeEnvironmentResponse build() {
             return new GoogleCloudDatapipelinesV1RuntimeEnvironmentResponse(additionalExperiments, additionalUserLabels, bypassTempDirValidation, enableStreamingEngine, ipConfiguration, kmsKeyName, machineType, maxWorkers, network, numWorkers, serviceAccountEmail, subnetwork, tempLocation, workerRegion, workerZone, zone);
         }
     }

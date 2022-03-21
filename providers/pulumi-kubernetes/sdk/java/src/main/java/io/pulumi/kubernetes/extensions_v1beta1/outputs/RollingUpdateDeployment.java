@@ -73,12 +73,10 @@ public final class RollingUpdateDeployment {
             this.maxSurge = maxSurge;
             return this;
         }
-
         public Builder maxUnavailable(@Nullable Either<Integer,String> maxUnavailable) {
             this.maxUnavailable = maxUnavailable;
             return this;
-        }
-        public RollingUpdateDeployment build() {
+        }        public RollingUpdateDeployment build() {
             return new RollingUpdateDeployment(maxSurge, maxUnavailable);
         }
     }

@@ -343,102 +343,88 @@ public final class GetScalingPlanResult {
             this.description = description;
             return this;
         }
-
         public Builder etag(String etag) {
             this.etag = Objects.requireNonNull(etag);
             return this;
         }
-
         public Builder exclusionTag(@Nullable String exclusionTag) {
             this.exclusionTag = exclusionTag;
             return this;
         }
-
         public Builder friendlyName(@Nullable String friendlyName) {
             this.friendlyName = friendlyName;
             return this;
         }
-
         public Builder hostPoolReferences(@Nullable List<ScalingHostPoolReferenceResponse> hostPoolReferences) {
             this.hostPoolReferences = hostPoolReferences;
             return this;
         }
-
+        public Builder hostPoolReferences(ScalingHostPoolReferenceResponse... hostPoolReferences) {
+            return hostPoolReferences(List.of(hostPoolReferences));
+        }
         public Builder hostPoolType(@Nullable String hostPoolType) {
             this.hostPoolType = hostPoolType;
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder identity(@Nullable ResourceModelWithAllowedPropertySetResponseIdentity identity) {
             this.identity = identity;
             return this;
         }
-
         public Builder kind(@Nullable String kind) {
             this.kind = kind;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = location;
             return this;
         }
-
         public Builder managedBy(@Nullable String managedBy) {
             this.managedBy = managedBy;
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder objectId(String objectId) {
             this.objectId = Objects.requireNonNull(objectId);
             return this;
         }
-
         public Builder plan(@Nullable ResourceModelWithAllowedPropertySetResponsePlan plan) {
             this.plan = plan;
             return this;
         }
-
         public Builder ring(@Nullable Integer ring) {
             this.ring = ring;
             return this;
         }
-
         public Builder schedules(@Nullable List<ScalingScheduleResponse> schedules) {
             this.schedules = schedules;
             return this;
         }
-
+        public Builder schedules(ScalingScheduleResponse... schedules) {
+            return schedules(List.of(schedules));
+        }
         public Builder sku(@Nullable ResourceModelWithAllowedPropertySetResponseSku sku) {
             this.sku = sku;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder timeZone(@Nullable String timeZone) {
             this.timeZone = timeZone;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public GetScalingPlanResult build() {
+        }        public GetScalingPlanResult build() {
             return new GetScalingPlanResult(description, etag, exclusionTag, friendlyName, hostPoolReferences, hostPoolType, id, identity, kind, location, managedBy, name, objectId, plan, ring, schedules, sku, tags, timeZone, type);
         }
     }

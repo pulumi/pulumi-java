@@ -103,22 +103,18 @@ public final class PipelineNotifications {
             this.completed = completed;
             return this;
         }
-
         public Builder error(@Nullable String error) {
             this.error = error;
             return this;
         }
-
         public Builder progressing(@Nullable String progressing) {
             this.progressing = progressing;
             return this;
         }
-
         public Builder warning(@Nullable String warning) {
             this.warning = warning;
             return this;
-        }
-        public PipelineNotifications build() {
+        }        public PipelineNotifications build() {
             return new PipelineNotifications(completed, error, progressing, warning);
         }
     }

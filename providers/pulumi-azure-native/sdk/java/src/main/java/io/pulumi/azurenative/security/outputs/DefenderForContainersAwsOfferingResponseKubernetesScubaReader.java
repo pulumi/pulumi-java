@@ -53,8 +53,7 @@ public final class DefenderForContainersAwsOfferingResponseKubernetesScubaReader
         public Builder cloudRoleArn(@Nullable String cloudRoleArn) {
             this.cloudRoleArn = cloudRoleArn;
             return this;
-        }
-        public DefenderForContainersAwsOfferingResponseKubernetesScubaReader build() {
+        }        public DefenderForContainersAwsOfferingResponseKubernetesScubaReader build() {
             return new DefenderForContainersAwsOfferingResponseKubernetesScubaReader(cloudRoleArn);
         }
     }

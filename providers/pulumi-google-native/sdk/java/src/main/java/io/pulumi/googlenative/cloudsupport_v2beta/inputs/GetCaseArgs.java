@@ -76,17 +76,14 @@ public final class GetCaseArgs extends io.pulumi.resources.InvokeArgs {
             this.caseId = Objects.requireNonNull(caseId);
             return this;
         }
-
         public Builder v2betaId1(String v2betaId1) {
             this.v2betaId1 = Objects.requireNonNull(v2betaId1);
             return this;
         }
-
         public Builder v2betumId(String v2betumId) {
             this.v2betumId = Objects.requireNonNull(v2betumId);
             return this;
-        }
-        public GetCaseArgs build() {
+        }        public GetCaseArgs build() {
             return new GetCaseArgs(caseId, v2betaId1, v2betumId);
         }
     }

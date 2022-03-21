@@ -143,62 +143,50 @@ public final class OrganizationPolicyArgs extends io.pulumi.resources.ResourceAr
             this.booleanPolicy = booleanPolicy;
             return this;
         }
-
         public Builder booleanPolicy(@Nullable OrganizationPolicyBooleanPolicyArgs booleanPolicy) {
             this.booleanPolicy = Output.ofNullable(booleanPolicy);
             return this;
         }
-
         public Builder constraint(Output<String> constraint) {
             this.constraint = Objects.requireNonNull(constraint);
             return this;
         }
-
         public Builder constraint(String constraint) {
             this.constraint = Output.of(Objects.requireNonNull(constraint));
             return this;
         }
-
         public Builder folder(Output<String> folder) {
             this.folder = Objects.requireNonNull(folder);
             return this;
         }
-
         public Builder folder(String folder) {
             this.folder = Output.of(Objects.requireNonNull(folder));
             return this;
         }
-
         public Builder listPolicy(@Nullable Output<OrganizationPolicyListPolicyArgs> listPolicy) {
             this.listPolicy = listPolicy;
             return this;
         }
-
         public Builder listPolicy(@Nullable OrganizationPolicyListPolicyArgs listPolicy) {
             this.listPolicy = Output.ofNullable(listPolicy);
             return this;
         }
-
         public Builder restorePolicy(@Nullable Output<OrganizationPolicyRestorePolicyArgs> restorePolicy) {
             this.restorePolicy = restorePolicy;
             return this;
         }
-
         public Builder restorePolicy(@Nullable OrganizationPolicyRestorePolicyArgs restorePolicy) {
             this.restorePolicy = Output.ofNullable(restorePolicy);
             return this;
         }
-
         public Builder version(@Nullable Output<Integer> version) {
             this.version = version;
             return this;
         }
-
         public Builder version(@Nullable Integer version) {
             this.version = Output.ofNullable(version);
             return this;
-        }
-        public OrganizationPolicyArgs build() {
+        }        public OrganizationPolicyArgs build() {
             return new OrganizationPolicyArgs(booleanPolicy, constraint, folder, listPolicy, restorePolicy, version);
         }
     }

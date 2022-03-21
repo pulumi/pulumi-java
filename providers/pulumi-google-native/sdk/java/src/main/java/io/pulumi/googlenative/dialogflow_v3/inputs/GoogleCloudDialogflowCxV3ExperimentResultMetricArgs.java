@@ -129,52 +129,42 @@ public final class GoogleCloudDialogflowCxV3ExperimentResultMetricArgs extends i
             this.confidenceInterval = confidenceInterval;
             return this;
         }
-
         public Builder confidenceInterval(@Nullable GoogleCloudDialogflowCxV3ExperimentResultConfidenceIntervalArgs confidenceInterval) {
             this.confidenceInterval = Output.ofNullable(confidenceInterval);
             return this;
         }
-
         public Builder count(@Nullable Output<Double> count) {
             this.count = count;
             return this;
         }
-
         public Builder count(@Nullable Double count) {
             this.count = Output.ofNullable(count);
             return this;
         }
-
         public Builder countType(@Nullable Output<GoogleCloudDialogflowCxV3ExperimentResultMetricCountType> countType) {
             this.countType = countType;
             return this;
         }
-
         public Builder countType(@Nullable GoogleCloudDialogflowCxV3ExperimentResultMetricCountType countType) {
             this.countType = Output.ofNullable(countType);
             return this;
         }
-
         public Builder ratio(@Nullable Output<Double> ratio) {
             this.ratio = ratio;
             return this;
         }
-
         public Builder ratio(@Nullable Double ratio) {
             this.ratio = Output.ofNullable(ratio);
             return this;
         }
-
         public Builder type(@Nullable Output<GoogleCloudDialogflowCxV3ExperimentResultMetricType> type) {
             this.type = type;
             return this;
         }
-
         public Builder type(@Nullable GoogleCloudDialogflowCxV3ExperimentResultMetricType type) {
             this.type = Output.ofNullable(type);
             return this;
-        }
-        public GoogleCloudDialogflowCxV3ExperimentResultMetricArgs build() {
+        }        public GoogleCloudDialogflowCxV3ExperimentResultMetricArgs build() {
             return new GoogleCloudDialogflowCxV3ExperimentResultMetricArgs(confidenceInterval, count, countType, ratio, type);
         }
     }

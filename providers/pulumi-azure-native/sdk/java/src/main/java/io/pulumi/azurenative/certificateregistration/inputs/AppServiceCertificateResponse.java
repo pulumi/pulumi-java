@@ -94,17 +94,14 @@ public final class AppServiceCertificateResponse extends io.pulumi.resources.Inv
             this.keyVaultId = keyVaultId;
             return this;
         }
-
         public Builder keyVaultSecretName(@Nullable String keyVaultSecretName) {
             this.keyVaultSecretName = keyVaultSecretName;
             return this;
         }
-
         public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
-        }
-        public AppServiceCertificateResponse build() {
+        }        public AppServiceCertificateResponse build() {
             return new AppServiceCertificateResponse(keyVaultId, keyVaultSecretName, provisioningState);
         }
     }

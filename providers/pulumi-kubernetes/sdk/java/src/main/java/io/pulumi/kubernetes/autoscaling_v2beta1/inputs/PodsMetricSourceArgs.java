@@ -95,32 +95,26 @@ public final class PodsMetricSourceArgs extends io.pulumi.resources.ResourceArgs
             this.metricName = Objects.requireNonNull(metricName);
             return this;
         }
-
         public Builder metricName(String metricName) {
             this.metricName = Output.of(Objects.requireNonNull(metricName));
             return this;
         }
-
         public Builder selector(@Nullable Output<LabelSelectorArgs> selector) {
             this.selector = selector;
             return this;
         }
-
         public Builder selector(@Nullable LabelSelectorArgs selector) {
             this.selector = Output.ofNullable(selector);
             return this;
         }
-
         public Builder targetAverageValue(Output<String> targetAverageValue) {
             this.targetAverageValue = Objects.requireNonNull(targetAverageValue);
             return this;
         }
-
         public Builder targetAverageValue(String targetAverageValue) {
             this.targetAverageValue = Output.of(Objects.requireNonNull(targetAverageValue));
             return this;
-        }
-        public PodsMetricSourceArgs build() {
+        }        public PodsMetricSourceArgs build() {
             return new PodsMetricSourceArgs(metricName, selector, targetAverageValue);
         }
     }

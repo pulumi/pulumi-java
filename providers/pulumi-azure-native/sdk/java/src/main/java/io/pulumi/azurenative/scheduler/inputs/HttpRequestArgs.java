@@ -127,52 +127,42 @@ public final class HttpRequestArgs extends io.pulumi.resources.ResourceArgs {
             this.authentication = authentication;
             return this;
         }
-
         public Builder authentication(@Nullable Object authentication) {
             this.authentication = Output.ofNullable(authentication);
             return this;
         }
-
         public Builder body(@Nullable Output<String> body) {
             this.body = body;
             return this;
         }
-
         public Builder body(@Nullable String body) {
             this.body = Output.ofNullable(body);
             return this;
         }
-
         public Builder headers(@Nullable Output<Map<String,String>> headers) {
             this.headers = headers;
             return this;
         }
-
         public Builder headers(@Nullable Map<String,String> headers) {
             this.headers = Output.ofNullable(headers);
             return this;
         }
-
         public Builder method(@Nullable Output<String> method) {
             this.method = method;
             return this;
         }
-
         public Builder method(@Nullable String method) {
             this.method = Output.ofNullable(method);
             return this;
         }
-
         public Builder uri(@Nullable Output<String> uri) {
             this.uri = uri;
             return this;
         }
-
         public Builder uri(@Nullable String uri) {
             this.uri = Output.ofNullable(uri);
             return this;
-        }
-        public HttpRequestArgs build() {
+        }        public HttpRequestArgs build() {
             return new HttpRequestArgs(authentication, body, headers, method, uri);
         }
     }

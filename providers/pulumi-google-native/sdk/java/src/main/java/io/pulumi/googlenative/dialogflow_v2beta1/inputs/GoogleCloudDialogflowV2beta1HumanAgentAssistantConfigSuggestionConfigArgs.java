@@ -80,22 +80,21 @@ public final class GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggesti
             this.featureConfigs = featureConfigs;
             return this;
         }
-
         public Builder featureConfigs(@Nullable List<GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggestionFeatureConfigArgs> featureConfigs) {
             this.featureConfigs = Output.ofNullable(featureConfigs);
             return this;
         }
-
+        public Builder featureConfigs(GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggestionFeatureConfigArgs... featureConfigs) {
+            return featureConfigs(List.of(featureConfigs));
+        }
         public Builder groupSuggestionResponses(@Nullable Output<Boolean> groupSuggestionResponses) {
             this.groupSuggestionResponses = groupSuggestionResponses;
             return this;
         }
-
         public Builder groupSuggestionResponses(@Nullable Boolean groupSuggestionResponses) {
             this.groupSuggestionResponses = Output.ofNullable(groupSuggestionResponses);
             return this;
-        }
-        public GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggestionConfigArgs build() {
+        }        public GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggestionConfigArgs build() {
             return new GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggestionConfigArgs(featureConfigs, groupSuggestionResponses);
         }
     }

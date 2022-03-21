@@ -71,12 +71,10 @@ public final class SubscriptionKeyParameterNamesContractResponse {
             this.header = header;
             return this;
         }
-
         public Builder query(@Nullable String query) {
             this.query = query;
             return this;
-        }
-        public SubscriptionKeyParameterNamesContractResponse build() {
+        }        public SubscriptionKeyParameterNamesContractResponse build() {
             return new SubscriptionKeyParameterNamesContractResponse(header, query);
         }
     }

@@ -158,37 +158,30 @@ public final class ConditionsResponse extends io.pulumi.resources.InvokeArgs {
             this.alertContext = alertContext;
             return this;
         }
-
         public Builder alertRuleId(@Nullable ConditionResponse alertRuleId) {
             this.alertRuleId = alertRuleId;
             return this;
         }
-
         public Builder description(@Nullable ConditionResponse description) {
             this.description = description;
             return this;
         }
-
         public Builder monitorCondition(@Nullable ConditionResponse monitorCondition) {
             this.monitorCondition = monitorCondition;
             return this;
         }
-
         public Builder monitorService(@Nullable ConditionResponse monitorService) {
             this.monitorService = monitorService;
             return this;
         }
-
         public Builder severity(@Nullable ConditionResponse severity) {
             this.severity = severity;
             return this;
         }
-
         public Builder targetResourceType(@Nullable ConditionResponse targetResourceType) {
             this.targetResourceType = targetResourceType;
             return this;
-        }
-        public ConditionsResponse build() {
+        }        public ConditionsResponse build() {
             return new ConditionsResponse(alertContext, alertRuleId, description, monitorCondition, monitorService, severity, targetResourceType);
         }
     }

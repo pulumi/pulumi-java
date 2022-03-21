@@ -123,52 +123,42 @@ public final class ResponseState extends io.pulumi.resources.ResourceArgs {
             this.responseParameters = responseParameters;
             return this;
         }
-
         public Builder responseParameters(@Nullable Map<String,String> responseParameters) {
             this.responseParameters = Output.ofNullable(responseParameters);
             return this;
         }
-
         public Builder responseTemplates(@Nullable Output<Map<String,String>> responseTemplates) {
             this.responseTemplates = responseTemplates;
             return this;
         }
-
         public Builder responseTemplates(@Nullable Map<String,String> responseTemplates) {
             this.responseTemplates = Output.ofNullable(responseTemplates);
             return this;
         }
-
         public Builder responseType(@Nullable Output<String> responseType) {
             this.responseType = responseType;
             return this;
         }
-
         public Builder responseType(@Nullable String responseType) {
             this.responseType = Output.ofNullable(responseType);
             return this;
         }
-
         public Builder restApiId(@Nullable Output<String> restApiId) {
             this.restApiId = restApiId;
             return this;
         }
-
         public Builder restApiId(@Nullable String restApiId) {
             this.restApiId = Output.ofNullable(restApiId);
             return this;
         }
-
         public Builder statusCode(@Nullable Output<String> statusCode) {
             this.statusCode = statusCode;
             return this;
         }
-
         public Builder statusCode(@Nullable String statusCode) {
             this.statusCode = Output.ofNullable(statusCode);
             return this;
-        }
-        public ResponseState build() {
+        }        public ResponseState build() {
             return new ResponseState(responseParameters, responseTemplates, responseType, restApiId, statusCode);
         }
     }

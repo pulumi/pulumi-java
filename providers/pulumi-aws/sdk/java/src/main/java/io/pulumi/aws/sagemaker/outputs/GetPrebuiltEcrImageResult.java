@@ -119,37 +119,30 @@ public final class GetPrebuiltEcrImageResult {
             this.dnsSuffix = dnsSuffix;
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder imageTag(@Nullable String imageTag) {
             this.imageTag = imageTag;
             return this;
         }
-
         public Builder region(@Nullable String region) {
             this.region = region;
             return this;
         }
-
         public Builder registryId(String registryId) {
             this.registryId = Objects.requireNonNull(registryId);
             return this;
         }
-
         public Builder registryPath(String registryPath) {
             this.registryPath = Objects.requireNonNull(registryPath);
             return this;
         }
-
         public Builder repositoryName(String repositoryName) {
             this.repositoryName = Objects.requireNonNull(repositoryName);
             return this;
-        }
-        public GetPrebuiltEcrImageResult build() {
+        }        public GetPrebuiltEcrImageResult build() {
             return new GetPrebuiltEcrImageResult(dnsSuffix, id, imageTag, region, registryId, registryPath, repositoryName);
         }
     }

@@ -140,62 +140,53 @@ public final class IpSetArgs extends io.pulumi.resources.ResourceArgs {
             this.addresses = addresses;
             return this;
         }
-
         public Builder addresses(@Nullable List<String> addresses) {
             this.addresses = Output.ofNullable(addresses);
             return this;
         }
-
+        public Builder addresses(String... addresses) {
+            return addresses(List.of(addresses));
+        }
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder ipAddressVersion(Output<String> ipAddressVersion) {
             this.ipAddressVersion = Objects.requireNonNull(ipAddressVersion);
             return this;
         }
-
         public Builder ipAddressVersion(String ipAddressVersion) {
             this.ipAddressVersion = Output.of(Objects.requireNonNull(ipAddressVersion));
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder scope(Output<String> scope) {
             this.scope = Objects.requireNonNull(scope);
             return this;
         }
-
         public Builder scope(String scope) {
             this.scope = Output.of(Objects.requireNonNull(scope));
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
-        }
-        public IpSetArgs build() {
+        }        public IpSetArgs build() {
             return new IpSetArgs(addresses, description, ipAddressVersion, name, scope, tags);
         }
     }

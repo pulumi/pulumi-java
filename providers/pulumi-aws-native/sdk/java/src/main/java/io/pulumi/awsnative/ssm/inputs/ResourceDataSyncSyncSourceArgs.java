@@ -93,42 +93,37 @@ public final class ResourceDataSyncSyncSourceArgs extends io.pulumi.resources.Re
             this.awsOrganizationsSource = awsOrganizationsSource;
             return this;
         }
-
         public Builder awsOrganizationsSource(@Nullable ResourceDataSyncAwsOrganizationsSourceArgs awsOrganizationsSource) {
             this.awsOrganizationsSource = Output.ofNullable(awsOrganizationsSource);
             return this;
         }
-
         public Builder includeFutureRegions(@Nullable Output<Boolean> includeFutureRegions) {
             this.includeFutureRegions = includeFutureRegions;
             return this;
         }
-
         public Builder includeFutureRegions(@Nullable Boolean includeFutureRegions) {
             this.includeFutureRegions = Output.ofNullable(includeFutureRegions);
             return this;
         }
-
         public Builder sourceRegions(Output<List<String>> sourceRegions) {
             this.sourceRegions = Objects.requireNonNull(sourceRegions);
             return this;
         }
-
         public Builder sourceRegions(List<String> sourceRegions) {
             this.sourceRegions = Output.of(Objects.requireNonNull(sourceRegions));
             return this;
         }
-
+        public Builder sourceRegions(String... sourceRegions) {
+            return sourceRegions(List.of(sourceRegions));
+        }
         public Builder sourceType(Output<String> sourceType) {
             this.sourceType = Objects.requireNonNull(sourceType);
             return this;
         }
-
         public Builder sourceType(String sourceType) {
             this.sourceType = Output.of(Objects.requireNonNull(sourceType));
             return this;
-        }
-        public ResourceDataSyncSyncSourceArgs build() {
+        }        public ResourceDataSyncSyncSourceArgs build() {
             return new ResourceDataSyncSyncSourceArgs(awsOrganizationsSource, includeFutureRegions, sourceRegions, sourceType);
         }
     }

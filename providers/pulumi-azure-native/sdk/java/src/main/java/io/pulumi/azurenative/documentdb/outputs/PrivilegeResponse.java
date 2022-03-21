@@ -73,12 +73,13 @@ public final class PrivilegeResponse {
             this.actions = actions;
             return this;
         }
-
+        public Builder actions(String... actions) {
+            return actions(List.of(actions));
+        }
         public Builder resource(@Nullable PrivilegeResponseResource resource) {
             this.resource = resource;
             return this;
-        }
-        public PrivilegeResponse build() {
+        }        public PrivilegeResponse build() {
             return new PrivilegeResponse(actions, resource);
         }
     }

@@ -60,12 +60,10 @@ public final class NsgReferenceArgs extends io.pulumi.resources.ResourceArgs {
             this.sourceArmResourceId = Objects.requireNonNull(sourceArmResourceId);
             return this;
         }
-
         public Builder sourceArmResourceId(String sourceArmResourceId) {
             this.sourceArmResourceId = Output.of(Objects.requireNonNull(sourceArmResourceId));
             return this;
-        }
-        public NsgReferenceArgs build() {
+        }        public NsgReferenceArgs build() {
             return new NsgReferenceArgs(sourceArmResourceId);
         }
     }

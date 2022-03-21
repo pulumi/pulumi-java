@@ -155,72 +155,58 @@ public final class CsvOptionsArgs extends io.pulumi.resources.ResourceArgs {
             this.allowJaggedRows = allowJaggedRows;
             return this;
         }
-
         public Builder allowJaggedRows(@Nullable Boolean allowJaggedRows) {
             this.allowJaggedRows = Output.ofNullable(allowJaggedRows);
             return this;
         }
-
         public Builder allowQuotedNewlines(@Nullable Output<Boolean> allowQuotedNewlines) {
             this.allowQuotedNewlines = allowQuotedNewlines;
             return this;
         }
-
         public Builder allowQuotedNewlines(@Nullable Boolean allowQuotedNewlines) {
             this.allowQuotedNewlines = Output.ofNullable(allowQuotedNewlines);
             return this;
         }
-
         public Builder encoding(@Nullable Output<String> encoding) {
             this.encoding = encoding;
             return this;
         }
-
         public Builder encoding(@Nullable String encoding) {
             this.encoding = Output.ofNullable(encoding);
             return this;
         }
-
         public Builder fieldDelimiter(@Nullable Output<String> fieldDelimiter) {
             this.fieldDelimiter = fieldDelimiter;
             return this;
         }
-
         public Builder fieldDelimiter(@Nullable String fieldDelimiter) {
             this.fieldDelimiter = Output.ofNullable(fieldDelimiter);
             return this;
         }
-
         public Builder nullMarker(@Nullable Output<String> nullMarker) {
             this.nullMarker = nullMarker;
             return this;
         }
-
         public Builder nullMarker(@Nullable String nullMarker) {
             this.nullMarker = Output.ofNullable(nullMarker);
             return this;
         }
-
         public Builder quote(@Nullable Output<String> quote) {
             this.quote = quote;
             return this;
         }
-
         public Builder quote(@Nullable String quote) {
             this.quote = Output.ofNullable(quote);
             return this;
         }
-
         public Builder skipLeadingRows(@Nullable Output<String> skipLeadingRows) {
             this.skipLeadingRows = skipLeadingRows;
             return this;
         }
-
         public Builder skipLeadingRows(@Nullable String skipLeadingRows) {
             this.skipLeadingRows = Output.ofNullable(skipLeadingRows);
             return this;
-        }
-        public CsvOptionsArgs build() {
+        }        public CsvOptionsArgs build() {
             return new CsvOptionsArgs(allowJaggedRows, allowQuotedNewlines, encoding, fieldDelimiter, nullMarker, quote, skipLeadingRows);
         }
     }

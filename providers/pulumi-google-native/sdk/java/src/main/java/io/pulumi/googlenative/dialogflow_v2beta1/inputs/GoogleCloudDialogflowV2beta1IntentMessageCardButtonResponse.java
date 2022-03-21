@@ -76,12 +76,10 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageCardButtonResponse e
             this.postback = Objects.requireNonNull(postback);
             return this;
         }
-
         public Builder text(String text) {
             this.text = Objects.requireNonNull(text);
             return this;
-        }
-        public GoogleCloudDialogflowV2beta1IntentMessageCardButtonResponse build() {
+        }        public GoogleCloudDialogflowV2beta1IntentMessageCardButtonResponse build() {
             return new GoogleCloudDialogflowV2beta1IntentMessageCardButtonResponse(postback, text);
         }
     }

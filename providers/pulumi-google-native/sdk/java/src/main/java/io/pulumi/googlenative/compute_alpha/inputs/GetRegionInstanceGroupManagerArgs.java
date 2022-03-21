@@ -78,17 +78,14 @@ public final class GetRegionInstanceGroupManagerArgs extends io.pulumi.resources
             this.instanceGroupManager = Objects.requireNonNull(instanceGroupManager);
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = project;
             return this;
         }
-
         public Builder region(String region) {
             this.region = Objects.requireNonNull(region);
             return this;
-        }
-        public GetRegionInstanceGroupManagerArgs build() {
+        }        public GetRegionInstanceGroupManagerArgs build() {
             return new GetRegionInstanceGroupManagerArgs(instanceGroupManager, project, region);
         }
     }

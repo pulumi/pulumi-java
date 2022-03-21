@@ -96,17 +96,14 @@ public final class ApplicationLogsConfigResponse extends io.pulumi.resources.Inv
             this.azureBlobStorage = azureBlobStorage;
             return this;
         }
-
         public Builder azureTableStorage(@Nullable AzureTableStorageApplicationLogsConfigResponse azureTableStorage) {
             this.azureTableStorage = azureTableStorage;
             return this;
         }
-
         public Builder fileSystem(@Nullable FileSystemApplicationLogsConfigResponse fileSystem) {
             this.fileSystem = fileSystem;
             return this;
-        }
-        public ApplicationLogsConfigResponse build() {
+        }        public ApplicationLogsConfigResponse build() {
             return new ApplicationLogsConfigResponse(azureBlobStorage, azureTableStorage, fileSystem);
         }
     }

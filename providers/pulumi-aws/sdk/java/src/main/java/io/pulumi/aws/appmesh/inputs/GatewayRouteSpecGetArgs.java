@@ -92,32 +92,26 @@ public final class GatewayRouteSpecGetArgs extends io.pulumi.resources.ResourceA
             this.grpcRoute = grpcRoute;
             return this;
         }
-
         public Builder grpcRoute(@Nullable GatewayRouteSpecGrpcRouteGetArgs grpcRoute) {
             this.grpcRoute = Output.ofNullable(grpcRoute);
             return this;
         }
-
         public Builder http2Route(@Nullable Output<GatewayRouteSpecHttp2RouteGetArgs> http2Route) {
             this.http2Route = http2Route;
             return this;
         }
-
         public Builder http2Route(@Nullable GatewayRouteSpecHttp2RouteGetArgs http2Route) {
             this.http2Route = Output.ofNullable(http2Route);
             return this;
         }
-
         public Builder httpRoute(@Nullable Output<GatewayRouteSpecHttpRouteGetArgs> httpRoute) {
             this.httpRoute = httpRoute;
             return this;
         }
-
         public Builder httpRoute(@Nullable GatewayRouteSpecHttpRouteGetArgs httpRoute) {
             this.httpRoute = Output.ofNullable(httpRoute);
             return this;
-        }
-        public GatewayRouteSpecGetArgs build() {
+        }        public GatewayRouteSpecGetArgs build() {
             return new GatewayRouteSpecGetArgs(grpcRoute, http2Route, httpRoute);
         }
     }

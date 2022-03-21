@@ -54,8 +54,7 @@ public final class GetUserPoolSigningCertificateArgs extends io.pulumi.resources
         public Builder userPoolId(String userPoolId) {
             this.userPoolId = Objects.requireNonNull(userPoolId);
             return this;
-        }
-        public GetUserPoolSigningCertificateArgs build() {
+        }        public GetUserPoolSigningCertificateArgs build() {
             return new GetUserPoolSigningCertificateArgs(userPoolId);
         }
     }

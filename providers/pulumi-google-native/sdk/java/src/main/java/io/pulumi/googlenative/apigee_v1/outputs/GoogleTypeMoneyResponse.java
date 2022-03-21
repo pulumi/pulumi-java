@@ -86,17 +86,14 @@ public final class GoogleTypeMoneyResponse {
             this.currencyCode = Objects.requireNonNull(currencyCode);
             return this;
         }
-
         public Builder nanos(Integer nanos) {
             this.nanos = Objects.requireNonNull(nanos);
             return this;
         }
-
         public Builder units(String units) {
             this.units = Objects.requireNonNull(units);
             return this;
-        }
-        public GoogleTypeMoneyResponse build() {
+        }        public GoogleTypeMoneyResponse build() {
             return new GoogleTypeMoneyResponse(currencyCode, nanos, units);
         }
     }

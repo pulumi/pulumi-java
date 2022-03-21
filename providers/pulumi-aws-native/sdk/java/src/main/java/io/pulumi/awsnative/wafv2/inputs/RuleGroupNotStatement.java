@@ -50,8 +50,7 @@ public final class RuleGroupNotStatement extends io.pulumi.resources.InvokeArgs 
         public Builder statement(RuleGroupStatement statement) {
             this.statement = Objects.requireNonNull(statement);
             return this;
-        }
-        public RuleGroupNotStatement build() {
+        }        public RuleGroupNotStatement build() {
             return new RuleGroupNotStatement(statement);
         }
     }

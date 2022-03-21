@@ -77,12 +77,10 @@ public final class ComputeResourceResponse extends io.pulumi.resources.InvokeArg
             this.memoryInGB = Objects.requireNonNull(memoryInGB);
             return this;
         }
-
         public Builder processorCount(Integer processorCount) {
             this.processorCount = Objects.requireNonNull(processorCount);
             return this;
-        }
-        public ComputeResourceResponse build() {
+        }        public ComputeResourceResponse build() {
             return new ComputeResourceResponse(memoryInGB, processorCount);
         }
     }

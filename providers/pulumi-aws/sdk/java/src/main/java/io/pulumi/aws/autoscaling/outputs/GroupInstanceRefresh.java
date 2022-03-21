@@ -89,17 +89,17 @@ public final class GroupInstanceRefresh {
             this.preferences = preferences;
             return this;
         }
-
         public Builder strategy(String strategy) {
             this.strategy = Objects.requireNonNull(strategy);
             return this;
         }
-
         public Builder triggers(@Nullable List<String> triggers) {
             this.triggers = triggers;
             return this;
         }
-        public GroupInstanceRefresh build() {
+        public Builder triggers(String... triggers) {
+            return triggers(List.of(triggers));
+        }        public GroupInstanceRefresh build() {
             return new GroupInstanceRefresh(preferences, strategy, triggers);
         }
     }

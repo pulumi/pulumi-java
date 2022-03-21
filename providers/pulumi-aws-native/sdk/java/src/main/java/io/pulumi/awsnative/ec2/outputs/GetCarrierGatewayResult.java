@@ -105,22 +105,21 @@ public final class GetCarrierGatewayResult {
             this.carrierGatewayId = carrierGatewayId;
             return this;
         }
-
         public Builder ownerId(@Nullable String ownerId) {
             this.ownerId = ownerId;
             return this;
         }
-
         public Builder state(@Nullable String state) {
             this.state = state;
             return this;
         }
-
         public Builder tags(@Nullable List<CarrierGatewayTag> tags) {
             this.tags = tags;
             return this;
         }
-        public GetCarrierGatewayResult build() {
+        public Builder tags(CarrierGatewayTag... tags) {
+            return tags(List.of(tags));
+        }        public GetCarrierGatewayResult build() {
             return new GetCarrierGatewayResult(carrierGatewayId, ownerId, state, tags);
         }
     }

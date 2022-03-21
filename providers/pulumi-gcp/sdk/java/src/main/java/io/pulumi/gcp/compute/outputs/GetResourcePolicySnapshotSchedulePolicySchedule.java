@@ -64,17 +64,23 @@ public final class GetResourcePolicySnapshotSchedulePolicySchedule {
             this.dailySchedules = Objects.requireNonNull(dailySchedules);
             return this;
         }
-
+        public Builder dailySchedules(GetResourcePolicySnapshotSchedulePolicyScheduleDailySchedule... dailySchedules) {
+            return dailySchedules(List.of(dailySchedules));
+        }
         public Builder hourlySchedules(List<GetResourcePolicySnapshotSchedulePolicyScheduleHourlySchedule> hourlySchedules) {
             this.hourlySchedules = Objects.requireNonNull(hourlySchedules);
             return this;
         }
-
+        public Builder hourlySchedules(GetResourcePolicySnapshotSchedulePolicyScheduleHourlySchedule... hourlySchedules) {
+            return hourlySchedules(List.of(hourlySchedules));
+        }
         public Builder weeklySchedules(List<GetResourcePolicySnapshotSchedulePolicyScheduleWeeklySchedule> weeklySchedules) {
             this.weeklySchedules = Objects.requireNonNull(weeklySchedules);
             return this;
         }
-        public GetResourcePolicySnapshotSchedulePolicySchedule build() {
+        public Builder weeklySchedules(GetResourcePolicySnapshotSchedulePolicyScheduleWeeklySchedule... weeklySchedules) {
+            return weeklySchedules(List.of(weeklySchedules));
+        }        public GetResourcePolicySnapshotSchedulePolicySchedule build() {
             return new GetResourcePolicySnapshotSchedulePolicySchedule(dailySchedules, hourlySchedules, weeklySchedules);
         }
     }

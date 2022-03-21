@@ -56,12 +56,10 @@ public final class AwsClusterControlPlaneDatabaseEncryptionArgs extends io.pulum
             this.kmsKeyArn = Objects.requireNonNull(kmsKeyArn);
             return this;
         }
-
         public Builder kmsKeyArn(String kmsKeyArn) {
             this.kmsKeyArn = Output.of(Objects.requireNonNull(kmsKeyArn));
             return this;
-        }
-        public AwsClusterControlPlaneDatabaseEncryptionArgs build() {
+        }        public AwsClusterControlPlaneDatabaseEncryptionArgs build() {
             return new AwsClusterControlPlaneDatabaseEncryptionArgs(kmsKeyArn);
         }
     }

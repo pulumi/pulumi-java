@@ -109,42 +109,37 @@ public final class BucketArgs extends io.pulumi.resources.ResourceArgs {
             this.bucketName = bucketName;
             return this;
         }
-
         public Builder bucketName(@Nullable String bucketName) {
             this.bucketName = Output.ofNullable(bucketName);
             return this;
         }
-
         public Builder lifecycleConfiguration(@Nullable Output<BucketLifecycleConfigurationArgs> lifecycleConfiguration) {
             this.lifecycleConfiguration = lifecycleConfiguration;
             return this;
         }
-
         public Builder lifecycleConfiguration(@Nullable BucketLifecycleConfigurationArgs lifecycleConfiguration) {
             this.lifecycleConfiguration = Output.ofNullable(lifecycleConfiguration);
             return this;
         }
-
         public Builder outpostId(Output<String> outpostId) {
             this.outpostId = Objects.requireNonNull(outpostId);
             return this;
         }
-
         public Builder outpostId(String outpostId) {
             this.outpostId = Output.of(Objects.requireNonNull(outpostId));
             return this;
         }
-
         public Builder tags(@Nullable Output<List<BucketTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable List<BucketTagArgs> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-        public BucketArgs build() {
+        public Builder tags(BucketTagArgs... tags) {
+            return tags(List.of(tags));
+        }        public BucketArgs build() {
             return new BucketArgs(bucketName, lifecycleConfiguration, outpostId, tags);
         }
     }

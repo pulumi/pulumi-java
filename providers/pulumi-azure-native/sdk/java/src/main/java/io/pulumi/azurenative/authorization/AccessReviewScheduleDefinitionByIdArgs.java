@@ -386,212 +386,179 @@ public final class AccessReviewScheduleDefinitionByIdArgs extends io.pulumi.reso
             this.autoApplyDecisionsEnabled = autoApplyDecisionsEnabled;
             return this;
         }
-
         public Builder autoApplyDecisionsEnabled(@Nullable Boolean autoApplyDecisionsEnabled) {
             this.autoApplyDecisionsEnabled = Output.ofNullable(autoApplyDecisionsEnabled);
             return this;
         }
-
         public Builder backupReviewers(@Nullable Output<List<AccessReviewReviewerArgs>> backupReviewers) {
             this.backupReviewers = backupReviewers;
             return this;
         }
-
         public Builder backupReviewers(@Nullable List<AccessReviewReviewerArgs> backupReviewers) {
             this.backupReviewers = Output.ofNullable(backupReviewers);
             return this;
         }
-
+        public Builder backupReviewers(AccessReviewReviewerArgs... backupReviewers) {
+            return backupReviewers(List.of(backupReviewers));
+        }
         public Builder defaultDecision(@Nullable Output<Either<String,DefaultDecisionType>> defaultDecision) {
             this.defaultDecision = defaultDecision;
             return this;
         }
-
         public Builder defaultDecision(@Nullable Either<String,DefaultDecisionType> defaultDecision) {
             this.defaultDecision = Output.ofNullable(defaultDecision);
             return this;
         }
-
         public Builder defaultDecisionEnabled(@Nullable Output<Boolean> defaultDecisionEnabled) {
             this.defaultDecisionEnabled = defaultDecisionEnabled;
             return this;
         }
-
         public Builder defaultDecisionEnabled(@Nullable Boolean defaultDecisionEnabled) {
             this.defaultDecisionEnabled = Output.ofNullable(defaultDecisionEnabled);
             return this;
         }
-
         public Builder descriptionForAdmins(@Nullable Output<String> descriptionForAdmins) {
             this.descriptionForAdmins = descriptionForAdmins;
             return this;
         }
-
         public Builder descriptionForAdmins(@Nullable String descriptionForAdmins) {
             this.descriptionForAdmins = Output.ofNullable(descriptionForAdmins);
             return this;
         }
-
         public Builder descriptionForReviewers(@Nullable Output<String> descriptionForReviewers) {
             this.descriptionForReviewers = descriptionForReviewers;
             return this;
         }
-
         public Builder descriptionForReviewers(@Nullable String descriptionForReviewers) {
             this.descriptionForReviewers = Output.ofNullable(descriptionForReviewers);
             return this;
         }
-
         public Builder displayName(@Nullable Output<String> displayName) {
             this.displayName = displayName;
             return this;
         }
-
         public Builder displayName(@Nullable String displayName) {
             this.displayName = Output.ofNullable(displayName);
             return this;
         }
-
         public Builder endDate(@Nullable Output<String> endDate) {
             this.endDate = endDate;
             return this;
         }
-
         public Builder endDate(@Nullable String endDate) {
             this.endDate = Output.ofNullable(endDate);
             return this;
         }
-
         public Builder inactiveDuration(@Nullable Output<String> inactiveDuration) {
             this.inactiveDuration = inactiveDuration;
             return this;
         }
-
         public Builder inactiveDuration(@Nullable String inactiveDuration) {
             this.inactiveDuration = Output.ofNullable(inactiveDuration);
             return this;
         }
-
         public Builder instanceDurationInDays(@Nullable Output<Integer> instanceDurationInDays) {
             this.instanceDurationInDays = instanceDurationInDays;
             return this;
         }
-
         public Builder instanceDurationInDays(@Nullable Integer instanceDurationInDays) {
             this.instanceDurationInDays = Output.ofNullable(instanceDurationInDays);
             return this;
         }
-
         public Builder instances(@Nullable Output<List<AccessReviewInstanceArgs>> instances) {
             this.instances = instances;
             return this;
         }
-
         public Builder instances(@Nullable List<AccessReviewInstanceArgs> instances) {
             this.instances = Output.ofNullable(instances);
             return this;
         }
-
+        public Builder instances(AccessReviewInstanceArgs... instances) {
+            return instances(List.of(instances));
+        }
         public Builder interval(@Nullable Output<Integer> interval) {
             this.interval = interval;
             return this;
         }
-
         public Builder interval(@Nullable Integer interval) {
             this.interval = Output.ofNullable(interval);
             return this;
         }
-
         public Builder justificationRequiredOnApproval(@Nullable Output<Boolean> justificationRequiredOnApproval) {
             this.justificationRequiredOnApproval = justificationRequiredOnApproval;
             return this;
         }
-
         public Builder justificationRequiredOnApproval(@Nullable Boolean justificationRequiredOnApproval) {
             this.justificationRequiredOnApproval = Output.ofNullable(justificationRequiredOnApproval);
             return this;
         }
-
         public Builder mailNotificationsEnabled(@Nullable Output<Boolean> mailNotificationsEnabled) {
             this.mailNotificationsEnabled = mailNotificationsEnabled;
             return this;
         }
-
         public Builder mailNotificationsEnabled(@Nullable Boolean mailNotificationsEnabled) {
             this.mailNotificationsEnabled = Output.ofNullable(mailNotificationsEnabled);
             return this;
         }
-
         public Builder numberOfOccurrences(@Nullable Output<Integer> numberOfOccurrences) {
             this.numberOfOccurrences = numberOfOccurrences;
             return this;
         }
-
         public Builder numberOfOccurrences(@Nullable Integer numberOfOccurrences) {
             this.numberOfOccurrences = Output.ofNullable(numberOfOccurrences);
             return this;
         }
-
         public Builder recommendationsEnabled(@Nullable Output<Boolean> recommendationsEnabled) {
             this.recommendationsEnabled = recommendationsEnabled;
             return this;
         }
-
         public Builder recommendationsEnabled(@Nullable Boolean recommendationsEnabled) {
             this.recommendationsEnabled = Output.ofNullable(recommendationsEnabled);
             return this;
         }
-
         public Builder reminderNotificationsEnabled(@Nullable Output<Boolean> reminderNotificationsEnabled) {
             this.reminderNotificationsEnabled = reminderNotificationsEnabled;
             return this;
         }
-
         public Builder reminderNotificationsEnabled(@Nullable Boolean reminderNotificationsEnabled) {
             this.reminderNotificationsEnabled = Output.ofNullable(reminderNotificationsEnabled);
             return this;
         }
-
         public Builder reviewers(@Nullable Output<List<AccessReviewReviewerArgs>> reviewers) {
             this.reviewers = reviewers;
             return this;
         }
-
         public Builder reviewers(@Nullable List<AccessReviewReviewerArgs> reviewers) {
             this.reviewers = Output.ofNullable(reviewers);
             return this;
         }
-
+        public Builder reviewers(AccessReviewReviewerArgs... reviewers) {
+            return reviewers(List.of(reviewers));
+        }
         public Builder scheduleDefinitionId(@Nullable Output<String> scheduleDefinitionId) {
             this.scheduleDefinitionId = scheduleDefinitionId;
             return this;
         }
-
         public Builder scheduleDefinitionId(@Nullable String scheduleDefinitionId) {
             this.scheduleDefinitionId = Output.ofNullable(scheduleDefinitionId);
             return this;
         }
-
         public Builder startDate(@Nullable Output<String> startDate) {
             this.startDate = startDate;
             return this;
         }
-
         public Builder startDate(@Nullable String startDate) {
             this.startDate = Output.ofNullable(startDate);
             return this;
         }
-
         public Builder type(@Nullable Output<Either<String,AccessReviewRecurrenceRangeType>> type) {
             this.type = type;
             return this;
         }
-
         public Builder type(@Nullable Either<String,AccessReviewRecurrenceRangeType> type) {
             this.type = Output.ofNullable(type);
             return this;
-        }
-        public AccessReviewScheduleDefinitionByIdArgs build() {
+        }        public AccessReviewScheduleDefinitionByIdArgs build() {
             return new AccessReviewScheduleDefinitionByIdArgs(autoApplyDecisionsEnabled, backupReviewers, defaultDecision, defaultDecisionEnabled, descriptionForAdmins, descriptionForReviewers, displayName, endDate, inactiveDuration, instanceDurationInDays, instances, interval, justificationRequiredOnApproval, mailNotificationsEnabled, numberOfOccurrences, recommendationsEnabled, reminderNotificationsEnabled, reviewers, scheduleDefinitionId, startDate, type);
         }
     }

@@ -152,42 +152,34 @@ public final class GetStudioResult {
             this.adminRoleArn = adminRoleArn;
             return this;
         }
-
         public Builder displayName(@Nullable String displayName) {
             this.displayName = displayName;
             return this;
         }
-
         public Builder homeRegion(@Nullable String homeRegion) {
             this.homeRegion = homeRegion;
             return this;
         }
-
         public Builder ssoClientId(@Nullable String ssoClientId) {
             this.ssoClientId = ssoClientId;
             return this;
         }
-
         public Builder studioEncryptionConfiguration(@Nullable StudioEncryptionConfiguration studioEncryptionConfiguration) {
             this.studioEncryptionConfiguration = studioEncryptionConfiguration;
             return this;
         }
-
         public Builder studioId(@Nullable String studioId) {
             this.studioId = studioId;
             return this;
         }
-
         public Builder studioUrl(@Nullable String studioUrl) {
             this.studioUrl = studioUrl;
             return this;
         }
-
         public Builder userRoleArn(@Nullable String userRoleArn) {
             this.userRoleArn = userRoleArn;
             return this;
-        }
-        public GetStudioResult build() {
+        }        public GetStudioResult build() {
             return new GetStudioResult(adminRoleArn, displayName, homeRegion, ssoClientId, studioEncryptionConfiguration, studioId, studioUrl, userRoleArn);
         }
     }

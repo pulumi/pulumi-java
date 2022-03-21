@@ -80,22 +80,18 @@ public final class SimpleRetentionPolicyArgs extends io.pulumi.resources.Resourc
             this.retentionDuration = retentionDuration;
             return this;
         }
-
         public Builder retentionDuration(@Nullable RetentionDurationArgs retentionDuration) {
             this.retentionDuration = Output.ofNullable(retentionDuration);
             return this;
         }
-
         public Builder retentionPolicyType(Output<String> retentionPolicyType) {
             this.retentionPolicyType = Objects.requireNonNull(retentionPolicyType);
             return this;
         }
-
         public Builder retentionPolicyType(String retentionPolicyType) {
             this.retentionPolicyType = Output.of(Objects.requireNonNull(retentionPolicyType));
             return this;
-        }
-        public SimpleRetentionPolicyArgs build() {
+        }        public SimpleRetentionPolicyArgs build() {
             return new SimpleRetentionPolicyArgs(retentionDuration, retentionPolicyType);
         }
     }

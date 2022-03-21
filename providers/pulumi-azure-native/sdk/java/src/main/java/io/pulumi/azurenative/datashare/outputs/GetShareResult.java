@@ -216,57 +216,46 @@ public final class GetShareResult {
             this.createdAt = Objects.requireNonNull(createdAt);
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
-
         public Builder shareKind(@Nullable String shareKind) {
             this.shareKind = shareKind;
             return this;
         }
-
         public Builder systemData(SystemDataResponse systemData) {
             this.systemData = Objects.requireNonNull(systemData);
             return this;
         }
-
         public Builder terms(@Nullable String terms) {
             this.terms = terms;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder userEmail(String userEmail) {
             this.userEmail = Objects.requireNonNull(userEmail);
             return this;
         }
-
         public Builder userName(String userName) {
             this.userName = Objects.requireNonNull(userName);
             return this;
-        }
-        public GetShareResult build() {
+        }        public GetShareResult build() {
             return new GetShareResult(createdAt, description, id, name, provisioningState, shareKind, systemData, terms, type, userEmail, userName);
         }
     }

@@ -69,12 +69,10 @@ public final class IosXcTestResponse {
             this.bundleId = Objects.requireNonNull(bundleId);
             return this;
         }
-
         public Builder xcodeVersion(String xcodeVersion) {
             this.xcodeVersion = Objects.requireNonNull(xcodeVersion);
             return this;
-        }
-        public IosXcTestResponse build() {
+        }        public IosXcTestResponse build() {
             return new IosXcTestResponse(bundleId, xcodeVersion);
         }
     }

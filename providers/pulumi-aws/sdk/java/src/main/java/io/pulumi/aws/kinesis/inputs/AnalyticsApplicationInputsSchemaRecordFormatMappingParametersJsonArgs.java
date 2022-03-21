@@ -56,12 +56,10 @@ public final class AnalyticsApplicationInputsSchemaRecordFormatMappingParameters
             this.recordRowPath = Objects.requireNonNull(recordRowPath);
             return this;
         }
-
         public Builder recordRowPath(String recordRowPath) {
             this.recordRowPath = Output.of(Objects.requireNonNull(recordRowPath));
             return this;
-        }
-        public AnalyticsApplicationInputsSchemaRecordFormatMappingParametersJsonArgs build() {
+        }        public AnalyticsApplicationInputsSchemaRecordFormatMappingParametersJsonArgs build() {
             return new AnalyticsApplicationInputsSchemaRecordFormatMappingParametersJsonArgs(recordRowPath);
         }
     }

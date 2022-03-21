@@ -76,12 +76,10 @@ public final class WarningResponse extends io.pulumi.resources.InvokeArgs {
             this.priority = Objects.requireNonNull(priority);
             return this;
         }
-
         public Builder text(String text) {
             this.text = Objects.requireNonNull(text);
             return this;
-        }
-        public WarningResponse build() {
+        }        public WarningResponse build() {
             return new WarningResponse(priority, text);
         }
     }

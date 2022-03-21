@@ -111,22 +111,18 @@ public final class BillingMeterDetailsResponse extends io.pulumi.resources.Invok
             this.frequency = Objects.requireNonNull(frequency);
             return this;
         }
-
         public Builder meterDetails(Either<Pav2MeterDetailsResponse,PurchaseMeterDetailsResponse> meterDetails) {
             this.meterDetails = Objects.requireNonNull(meterDetails);
             return this;
         }
-
         public Builder meteringType(String meteringType) {
             this.meteringType = Objects.requireNonNull(meteringType);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
-        }
-        public BillingMeterDetailsResponse build() {
+        }        public BillingMeterDetailsResponse build() {
             return new BillingMeterDetailsResponse(frequency, meterDetails, meteringType, name);
         }
     }

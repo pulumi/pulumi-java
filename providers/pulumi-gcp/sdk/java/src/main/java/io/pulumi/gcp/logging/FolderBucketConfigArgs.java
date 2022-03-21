@@ -123,52 +123,42 @@ public final class FolderBucketConfigArgs extends io.pulumi.resources.ResourceAr
             this.bucketId = Objects.requireNonNull(bucketId);
             return this;
         }
-
         public Builder bucketId(String bucketId) {
             this.bucketId = Output.of(Objects.requireNonNull(bucketId));
             return this;
         }
-
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder folder(Output<String> folder) {
             this.folder = Objects.requireNonNull(folder);
             return this;
         }
-
         public Builder folder(String folder) {
             this.folder = Output.of(Objects.requireNonNull(folder));
             return this;
         }
-
         public Builder location(Output<String> location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
-
         public Builder location(String location) {
             this.location = Output.of(Objects.requireNonNull(location));
             return this;
         }
-
         public Builder retentionDays(@Nullable Output<Integer> retentionDays) {
             this.retentionDays = retentionDays;
             return this;
         }
-
         public Builder retentionDays(@Nullable Integer retentionDays) {
             this.retentionDays = Output.ofNullable(retentionDays);
             return this;
-        }
-        public FolderBucketConfigArgs build() {
+        }        public FolderBucketConfigArgs build() {
             return new FolderBucketConfigArgs(bucketId, description, folder, location, retentionDays);
         }
     }

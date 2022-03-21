@@ -61,12 +61,10 @@ public final class LBBackendAddressPoolResourceSettingsArgs extends io.pulumi.re
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
-        }
-        public LBBackendAddressPoolResourceSettingsArgs build() {
+        }        public LBBackendAddressPoolResourceSettingsArgs build() {
             return new LBBackendAddressPoolResourceSettingsArgs(name);
         }
     }

@@ -240,62 +240,50 @@ public final class CacheUsernameDownloadSettingsResponse extends io.pulumi.resou
             this.autoDownloadCertificate = autoDownloadCertificate;
             return this;
         }
-
         public Builder caCertificateURI(@Nullable String caCertificateURI) {
             this.caCertificateURI = caCertificateURI;
             return this;
         }
-
         public Builder credentials(@Nullable CacheUsernameDownloadSettingsResponseCredentials credentials) {
             this.credentials = credentials;
             return this;
         }
-
         public Builder encryptLdapConnection(@Nullable Boolean encryptLdapConnection) {
             this.encryptLdapConnection = encryptLdapConnection;
             return this;
         }
-
         public Builder extendedGroups(@Nullable Boolean extendedGroups) {
             this.extendedGroups = extendedGroups;
             return this;
         }
-
         public Builder groupFileURI(@Nullable String groupFileURI) {
             this.groupFileURI = groupFileURI;
             return this;
         }
-
         public Builder ldapBaseDN(@Nullable String ldapBaseDN) {
             this.ldapBaseDN = ldapBaseDN;
             return this;
         }
-
         public Builder ldapServer(@Nullable String ldapServer) {
             this.ldapServer = ldapServer;
             return this;
         }
-
         public Builder requireValidCertificate(@Nullable Boolean requireValidCertificate) {
             this.requireValidCertificate = requireValidCertificate;
             return this;
         }
-
         public Builder userFileURI(@Nullable String userFileURI) {
             this.userFileURI = userFileURI;
             return this;
         }
-
         public Builder usernameDownloaded(String usernameDownloaded) {
             this.usernameDownloaded = Objects.requireNonNull(usernameDownloaded);
             return this;
         }
-
         public Builder usernameSource(@Nullable String usernameSource) {
             this.usernameSource = usernameSource;
             return this;
-        }
-        public CacheUsernameDownloadSettingsResponse build() {
+        }        public CacheUsernameDownloadSettingsResponse build() {
             return new CacheUsernameDownloadSettingsResponse(autoDownloadCertificate, caCertificateURI, credentials, encryptLdapConnection, extendedGroups, groupFileURI, ldapBaseDN, ldapServer, requireValidCertificate, userFileURI, usernameDownloaded, usernameSource);
         }
     }

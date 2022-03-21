@@ -73,12 +73,13 @@ public final class ListMonitorUserRolesResult {
             this.nextLink = nextLink;
             return this;
         }
-
         public Builder value(@Nullable List<UserRoleResponseResponse> value) {
             this.value = value;
             return this;
         }
-        public ListMonitorUserRolesResult build() {
+        public Builder value(UserRoleResponseResponse... value) {
+            return value(List.of(value));
+        }        public ListMonitorUserRolesResult build() {
             return new ListMonitorUserRolesResult(nextLink, value);
         }
     }

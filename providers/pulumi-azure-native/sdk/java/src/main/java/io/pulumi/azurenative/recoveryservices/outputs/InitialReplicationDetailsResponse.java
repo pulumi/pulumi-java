@@ -71,12 +71,10 @@ public final class InitialReplicationDetailsResponse {
             this.initialReplicationProgressPercentage = initialReplicationProgressPercentage;
             return this;
         }
-
         public Builder initialReplicationType(@Nullable String initialReplicationType) {
             this.initialReplicationType = initialReplicationType;
             return this;
-        }
-        public InitialReplicationDetailsResponse build() {
+        }        public InitialReplicationDetailsResponse build() {
             return new InitialReplicationDetailsResponse(initialReplicationProgressPercentage, initialReplicationType);
         }
     }

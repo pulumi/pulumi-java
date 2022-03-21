@@ -60,8 +60,7 @@ public final class ResourceReference extends io.pulumi.resources.InvokeArgs {
         public Builder id(@Nullable String id) {
             this.id = id;
             return this;
-        }
-        public ResourceReference build() {
+        }        public ResourceReference build() {
             return new ResourceReference(id);
         }
     }

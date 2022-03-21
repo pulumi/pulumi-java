@@ -69,12 +69,10 @@ public final class BuildArtifactResponse {
             this.image = Objects.requireNonNull(image);
             return this;
         }
-
         public Builder tag(String tag) {
             this.tag = Objects.requireNonNull(tag);
             return this;
-        }
-        public BuildArtifactResponse build() {
+        }        public BuildArtifactResponse build() {
             return new BuildArtifactResponse(image, tag);
         }
     }

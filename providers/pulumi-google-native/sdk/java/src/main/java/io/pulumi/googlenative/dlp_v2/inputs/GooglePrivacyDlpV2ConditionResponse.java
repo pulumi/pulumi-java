@@ -94,17 +94,14 @@ public final class GooglePrivacyDlpV2ConditionResponse extends io.pulumi.resourc
             this.field = Objects.requireNonNull(field);
             return this;
         }
-
         public Builder operator(String operator) {
             this.operator = Objects.requireNonNull(operator);
             return this;
         }
-
         public Builder value(GooglePrivacyDlpV2ValueResponse value) {
             this.value = Objects.requireNonNull(value);
             return this;
-        }
-        public GooglePrivacyDlpV2ConditionResponse build() {
+        }        public GooglePrivacyDlpV2ConditionResponse build() {
             return new GooglePrivacyDlpV2ConditionResponse(field, operator, value);
         }
     }

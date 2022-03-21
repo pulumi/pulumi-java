@@ -76,22 +76,21 @@ public final class InstanceNetworkingArgs extends io.pulumi.resources.ResourceAr
             this.monthlyTransfer = monthlyTransfer;
             return this;
         }
-
         public Builder monthlyTransfer(@Nullable InstanceMonthlyTransferArgs monthlyTransfer) {
             this.monthlyTransfer = Output.ofNullable(monthlyTransfer);
             return this;
         }
-
         public Builder ports(Output<List<InstancePortArgs>> ports) {
             this.ports = Objects.requireNonNull(ports);
             return this;
         }
-
         public Builder ports(List<InstancePortArgs> ports) {
             this.ports = Output.of(Objects.requireNonNull(ports));
             return this;
         }
-        public InstanceNetworkingArgs build() {
+        public Builder ports(InstancePortArgs... ports) {
+            return ports(List.of(ports));
+        }        public InstanceNetworkingArgs build() {
             return new InstanceNetworkingArgs(monthlyTransfer, ports);
         }
     }

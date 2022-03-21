@@ -80,22 +80,21 @@ public final class ModelBiasJobDefinitionMonitoringOutputConfigArgs extends io.p
             this.kmsKeyId = kmsKeyId;
             return this;
         }
-
         public Builder kmsKeyId(@Nullable String kmsKeyId) {
             this.kmsKeyId = Output.ofNullable(kmsKeyId);
             return this;
         }
-
         public Builder monitoringOutputs(Output<List<ModelBiasJobDefinitionMonitoringOutputArgs>> monitoringOutputs) {
             this.monitoringOutputs = Objects.requireNonNull(monitoringOutputs);
             return this;
         }
-
         public Builder monitoringOutputs(List<ModelBiasJobDefinitionMonitoringOutputArgs> monitoringOutputs) {
             this.monitoringOutputs = Output.of(Objects.requireNonNull(monitoringOutputs));
             return this;
         }
-        public ModelBiasJobDefinitionMonitoringOutputConfigArgs build() {
+        public Builder monitoringOutputs(ModelBiasJobDefinitionMonitoringOutputArgs... monitoringOutputs) {
+            return monitoringOutputs(List.of(monitoringOutputs));
+        }        public ModelBiasJobDefinitionMonitoringOutputConfigArgs build() {
             return new ModelBiasJobDefinitionMonitoringOutputConfigArgs(kmsKeyId, monitoringOutputs);
         }
     }

@@ -114,42 +114,37 @@ public final class PreferencesArgs extends io.pulumi.resources.ResourceArgs {
             this.encryptionPreferences = encryptionPreferences;
             return this;
         }
-
         public Builder encryptionPreferences(@Nullable EncryptionPreferencesArgs encryptionPreferences) {
             this.encryptionPreferences = Output.ofNullable(encryptionPreferences);
             return this;
         }
-
         public Builder managementResourcePreferences(@Nullable Output<ManagementResourcePreferencesArgs> managementResourcePreferences) {
             this.managementResourcePreferences = managementResourcePreferences;
             return this;
         }
-
         public Builder managementResourcePreferences(@Nullable ManagementResourcePreferencesArgs managementResourcePreferences) {
             this.managementResourcePreferences = Output.ofNullable(managementResourcePreferences);
             return this;
         }
-
         public Builder notificationPreferences(@Nullable Output<List<NotificationPreferenceArgs>> notificationPreferences) {
             this.notificationPreferences = notificationPreferences;
             return this;
         }
-
         public Builder notificationPreferences(@Nullable List<NotificationPreferenceArgs> notificationPreferences) {
             this.notificationPreferences = Output.ofNullable(notificationPreferences);
             return this;
         }
-
+        public Builder notificationPreferences(NotificationPreferenceArgs... notificationPreferences) {
+            return notificationPreferences(List.of(notificationPreferences));
+        }
         public Builder transportPreferences(@Nullable Output<TransportPreferencesArgs> transportPreferences) {
             this.transportPreferences = transportPreferences;
             return this;
         }
-
         public Builder transportPreferences(@Nullable TransportPreferencesArgs transportPreferences) {
             this.transportPreferences = Output.ofNullable(transportPreferences);
             return this;
-        }
-        public PreferencesArgs build() {
+        }        public PreferencesArgs build() {
             return new PreferencesArgs(encryptionPreferences, managementResourcePreferences, notificationPreferences, transportPreferences);
         }
     }

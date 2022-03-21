@@ -92,32 +92,26 @@ public final class OriginEndpointCmafEncryptionArgs extends io.pulumi.resources.
             this.constantInitializationVector = constantInitializationVector;
             return this;
         }
-
         public Builder constantInitializationVector(@Nullable String constantInitializationVector) {
             this.constantInitializationVector = Output.ofNullable(constantInitializationVector);
             return this;
         }
-
         public Builder keyRotationIntervalSeconds(@Nullable Output<Integer> keyRotationIntervalSeconds) {
             this.keyRotationIntervalSeconds = keyRotationIntervalSeconds;
             return this;
         }
-
         public Builder keyRotationIntervalSeconds(@Nullable Integer keyRotationIntervalSeconds) {
             this.keyRotationIntervalSeconds = Output.ofNullable(keyRotationIntervalSeconds);
             return this;
         }
-
         public Builder spekeKeyProvider(Output<OriginEndpointSpekeKeyProviderArgs> spekeKeyProvider) {
             this.spekeKeyProvider = Objects.requireNonNull(spekeKeyProvider);
             return this;
         }
-
         public Builder spekeKeyProvider(OriginEndpointSpekeKeyProviderArgs spekeKeyProvider) {
             this.spekeKeyProvider = Output.of(Objects.requireNonNull(spekeKeyProvider));
             return this;
-        }
-        public OriginEndpointCmafEncryptionArgs build() {
+        }        public OriginEndpointCmafEncryptionArgs build() {
             return new OriginEndpointCmafEncryptionArgs(constantInitializationVector, keyRotationIntervalSeconds, spekeKeyProvider);
         }
     }

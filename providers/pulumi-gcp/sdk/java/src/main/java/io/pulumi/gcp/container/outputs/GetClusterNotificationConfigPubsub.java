@@ -54,12 +54,10 @@ public final class GetClusterNotificationConfigPubsub {
             this.enabled = Objects.requireNonNull(enabled);
             return this;
         }
-
         public Builder topic(String topic) {
             this.topic = Objects.requireNonNull(topic);
             return this;
-        }
-        public GetClusterNotificationConfigPubsub build() {
+        }        public GetClusterNotificationConfigPubsub build() {
             return new GetClusterNotificationConfigPubsub(enabled, topic);
         }
     }

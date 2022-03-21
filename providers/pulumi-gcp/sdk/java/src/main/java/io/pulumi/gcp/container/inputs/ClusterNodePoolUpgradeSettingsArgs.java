@@ -65,22 +65,18 @@ public final class ClusterNodePoolUpgradeSettingsArgs extends io.pulumi.resource
             this.maxSurge = Objects.requireNonNull(maxSurge);
             return this;
         }
-
         public Builder maxSurge(Integer maxSurge) {
             this.maxSurge = Output.of(Objects.requireNonNull(maxSurge));
             return this;
         }
-
         public Builder maxUnavailable(Output<Integer> maxUnavailable) {
             this.maxUnavailable = Objects.requireNonNull(maxUnavailable);
             return this;
         }
-
         public Builder maxUnavailable(Integer maxUnavailable) {
             this.maxUnavailable = Output.of(Objects.requireNonNull(maxUnavailable));
             return this;
-        }
-        public ClusterNodePoolUpgradeSettingsArgs build() {
+        }        public ClusterNodePoolUpgradeSettingsArgs build() {
             return new ClusterNodePoolUpgradeSettingsArgs(maxSurge, maxUnavailable);
         }
     }

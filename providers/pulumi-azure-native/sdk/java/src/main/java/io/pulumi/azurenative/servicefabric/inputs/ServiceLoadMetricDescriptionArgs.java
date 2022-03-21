@@ -129,52 +129,42 @@ public final class ServiceLoadMetricDescriptionArgs extends io.pulumi.resources.
             this.defaultLoad = defaultLoad;
             return this;
         }
-
         public Builder defaultLoad(@Nullable Integer defaultLoad) {
             this.defaultLoad = Output.ofNullable(defaultLoad);
             return this;
         }
-
         public Builder name(Output<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
-
         public Builder primaryDefaultLoad(@Nullable Output<Integer> primaryDefaultLoad) {
             this.primaryDefaultLoad = primaryDefaultLoad;
             return this;
         }
-
         public Builder primaryDefaultLoad(@Nullable Integer primaryDefaultLoad) {
             this.primaryDefaultLoad = Output.ofNullable(primaryDefaultLoad);
             return this;
         }
-
         public Builder secondaryDefaultLoad(@Nullable Output<Integer> secondaryDefaultLoad) {
             this.secondaryDefaultLoad = secondaryDefaultLoad;
             return this;
         }
-
         public Builder secondaryDefaultLoad(@Nullable Integer secondaryDefaultLoad) {
             this.secondaryDefaultLoad = Output.ofNullable(secondaryDefaultLoad);
             return this;
         }
-
         public Builder weight(@Nullable Output<Either<String,ServiceLoadMetricWeight>> weight) {
             this.weight = weight;
             return this;
         }
-
         public Builder weight(@Nullable Either<String,ServiceLoadMetricWeight> weight) {
             this.weight = Output.ofNullable(weight);
             return this;
-        }
-        public ServiceLoadMetricDescriptionArgs build() {
+        }        public ServiceLoadMetricDescriptionArgs build() {
             return new ServiceLoadMetricDescriptionArgs(defaultLoad, name, primaryDefaultLoad, secondaryDefaultLoad, weight);
         }
     }

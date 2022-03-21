@@ -51,8 +51,7 @@ public final class VirtualNodeSpecBackendDefaultsClientPolicyTlsValidationTrustF
         public Builder certificateChain(String certificateChain) {
             this.certificateChain = Objects.requireNonNull(certificateChain);
             return this;
-        }
-        public VirtualNodeSpecBackendDefaultsClientPolicyTlsValidationTrustFile build() {
+        }        public VirtualNodeSpecBackendDefaultsClientPolicyTlsValidationTrustFile build() {
             return new VirtualNodeSpecBackendDefaultsClientPolicyTlsValidationTrustFile(certificateChain);
         }
     }

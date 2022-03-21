@@ -124,52 +124,42 @@ public final class ConfigurationProfilePreferenceArgs extends io.pulumi.resource
             this.configurationProfilePreferenceName = configurationProfilePreferenceName;
             return this;
         }
-
         public Builder configurationProfilePreferenceName(@Nullable String configurationProfilePreferenceName) {
             this.configurationProfilePreferenceName = Output.ofNullable(configurationProfilePreferenceName);
             return this;
         }
-
         public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder properties(@Nullable Output<ConfigurationProfilePreferencePropertiesArgs> properties) {
             this.properties = properties;
             return this;
         }
-
         public Builder properties(@Nullable ConfigurationProfilePreferencePropertiesArgs properties) {
             this.properties = Output.ofNullable(properties);
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
-        }
-        public ConfigurationProfilePreferenceArgs build() {
+        }        public ConfigurationProfilePreferenceArgs build() {
             return new ConfigurationProfilePreferenceArgs(configurationProfilePreferenceName, location, properties, resourceGroupName, tags);
         }
     }

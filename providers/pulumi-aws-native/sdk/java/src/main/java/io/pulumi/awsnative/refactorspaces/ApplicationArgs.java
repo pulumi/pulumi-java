@@ -122,62 +122,53 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
             this.apiGatewayProxy = apiGatewayProxy;
             return this;
         }
-
         public Builder apiGatewayProxy(@Nullable ApplicationApiGatewayProxyInputArgs apiGatewayProxy) {
             this.apiGatewayProxy = Output.ofNullable(apiGatewayProxy);
             return this;
         }
-
         public Builder environmentIdentifier(@Nullable Output<String> environmentIdentifier) {
             this.environmentIdentifier = environmentIdentifier;
             return this;
         }
-
         public Builder environmentIdentifier(@Nullable String environmentIdentifier) {
             this.environmentIdentifier = Output.ofNullable(environmentIdentifier);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder proxyType(@Nullable Output<ApplicationProxyType> proxyType) {
             this.proxyType = proxyType;
             return this;
         }
-
         public Builder proxyType(@Nullable ApplicationProxyType proxyType) {
             this.proxyType = Output.ofNullable(proxyType);
             return this;
         }
-
         public Builder tags(@Nullable Output<List<ApplicationTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable List<ApplicationTagArgs> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
+        public Builder tags(ApplicationTagArgs... tags) {
+            return tags(List.of(tags));
+        }
         public Builder vpcId(@Nullable Output<String> vpcId) {
             this.vpcId = vpcId;
             return this;
         }
-
         public Builder vpcId(@Nullable String vpcId) {
             this.vpcId = Output.ofNullable(vpcId);
             return this;
-        }
-        public ApplicationArgs build() {
+        }        public ApplicationArgs build() {
             return new ApplicationArgs(apiGatewayProxy, environmentIdentifier, name, proxyType, tags, vpcId);
         }
     }

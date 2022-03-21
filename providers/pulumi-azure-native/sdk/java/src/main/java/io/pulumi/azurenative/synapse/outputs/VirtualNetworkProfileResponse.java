@@ -53,8 +53,7 @@ public final class VirtualNetworkProfileResponse {
         public Builder computeSubnetId(@Nullable String computeSubnetId) {
             this.computeSubnetId = computeSubnetId;
             return this;
-        }
-        public VirtualNetworkProfileResponse build() {
+        }        public VirtualNetworkProfileResponse build() {
             return new VirtualNetworkProfileResponse(computeSubnetId);
         }
     }

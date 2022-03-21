@@ -52,12 +52,10 @@ public final class NotificationChannelArgs extends io.pulumi.resources.ResourceA
             this.config = Objects.requireNonNull(config);
             return this;
         }
-
         public Builder config(NotificationChannelConfigArgs config) {
             this.config = Output.of(Objects.requireNonNull(config));
             return this;
-        }
-        public NotificationChannelArgs build() {
+        }        public NotificationChannelArgs build() {
             return new NotificationChannelArgs(config);
         }
     }

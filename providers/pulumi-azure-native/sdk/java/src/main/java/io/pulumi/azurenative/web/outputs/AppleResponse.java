@@ -89,17 +89,14 @@ public final class AppleResponse {
             this.enabled = enabled;
             return this;
         }
-
         public Builder login(@Nullable LoginScopesResponse login) {
             this.login = login;
             return this;
         }
-
         public Builder registration(@Nullable AppleRegistrationResponse registration) {
             this.registration = registration;
             return this;
-        }
-        public AppleResponse build() {
+        }        public AppleResponse build() {
             return new AppleResponse(enabled, login, registration);
         }
     }

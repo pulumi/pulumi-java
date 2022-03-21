@@ -140,32 +140,26 @@ public final class X509CertificateDetailsResponse extends io.pulumi.resources.In
             this.expiryTime = Objects.requireNonNull(expiryTime);
             return this;
         }
-
         public Builder issuer(String issuer) {
             this.issuer = Objects.requireNonNull(issuer);
             return this;
         }
-
         public Builder publicKeyType(String publicKeyType) {
             this.publicKeyType = Objects.requireNonNull(publicKeyType);
             return this;
         }
-
         public Builder signatureAlgorithm(String signatureAlgorithm) {
             this.signatureAlgorithm = Objects.requireNonNull(signatureAlgorithm);
             return this;
         }
-
         public Builder startTime(String startTime) {
             this.startTime = Objects.requireNonNull(startTime);
             return this;
         }
-
         public Builder subject(String subject) {
             this.subject = Objects.requireNonNull(subject);
             return this;
-        }
-        public X509CertificateDetailsResponse build() {
+        }        public X509CertificateDetailsResponse build() {
             return new X509CertificateDetailsResponse(expiryTime, issuer, publicKeyType, signatureAlgorithm, startTime, subject);
         }
     }

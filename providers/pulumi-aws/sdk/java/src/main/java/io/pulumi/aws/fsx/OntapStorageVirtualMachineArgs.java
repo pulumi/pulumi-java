@@ -136,62 +136,50 @@ public final class OntapStorageVirtualMachineArgs extends io.pulumi.resources.Re
             this.activeDirectoryConfiguration = activeDirectoryConfiguration;
             return this;
         }
-
         public Builder activeDirectoryConfiguration(@Nullable OntapStorageVirtualMachineActiveDirectoryConfigurationArgs activeDirectoryConfiguration) {
             this.activeDirectoryConfiguration = Output.ofNullable(activeDirectoryConfiguration);
             return this;
         }
-
         public Builder fileSystemId(Output<String> fileSystemId) {
             this.fileSystemId = Objects.requireNonNull(fileSystemId);
             return this;
         }
-
         public Builder fileSystemId(String fileSystemId) {
             this.fileSystemId = Output.of(Objects.requireNonNull(fileSystemId));
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder rootVolumeSecurityStyle(@Nullable Output<String> rootVolumeSecurityStyle) {
             this.rootVolumeSecurityStyle = rootVolumeSecurityStyle;
             return this;
         }
-
         public Builder rootVolumeSecurityStyle(@Nullable String rootVolumeSecurityStyle) {
             this.rootVolumeSecurityStyle = Output.ofNullable(rootVolumeSecurityStyle);
             return this;
         }
-
         public Builder svmAdminPassword(@Nullable Output<String> svmAdminPassword) {
             this.svmAdminPassword = svmAdminPassword;
             return this;
         }
-
         public Builder svmAdminPassword(@Nullable String svmAdminPassword) {
             this.svmAdminPassword = Output.ofNullable(svmAdminPassword);
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
-        }
-        public OntapStorageVirtualMachineArgs build() {
+        }        public OntapStorageVirtualMachineArgs build() {
             return new OntapStorageVirtualMachineArgs(activeDirectoryConfiguration, fileSystemId, name, rootVolumeSecurityStyle, svmAdminPassword, tags);
         }
     }

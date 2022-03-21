@@ -74,22 +74,18 @@ public final class ScalingPlanScalingInstructionTargetTrackingConfigurationPrede
             this.predefinedScalingMetricType = Objects.requireNonNull(predefinedScalingMetricType);
             return this;
         }
-
         public Builder predefinedScalingMetricType(String predefinedScalingMetricType) {
             this.predefinedScalingMetricType = Output.of(Objects.requireNonNull(predefinedScalingMetricType));
             return this;
         }
-
         public Builder resourceLabel(@Nullable Output<String> resourceLabel) {
             this.resourceLabel = resourceLabel;
             return this;
         }
-
         public Builder resourceLabel(@Nullable String resourceLabel) {
             this.resourceLabel = Output.ofNullable(resourceLabel);
             return this;
-        }
-        public ScalingPlanScalingInstructionTargetTrackingConfigurationPredefinedScalingMetricSpecificationGetArgs build() {
+        }        public ScalingPlanScalingInstructionTargetTrackingConfigurationPredefinedScalingMetricSpecificationGetArgs build() {
             return new ScalingPlanScalingInstructionTargetTrackingConfigurationPredefinedScalingMetricSpecificationGetArgs(predefinedScalingMetricType, resourceLabel);
         }
     }

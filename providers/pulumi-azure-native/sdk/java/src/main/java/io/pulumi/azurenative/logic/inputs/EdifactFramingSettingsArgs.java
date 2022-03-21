@@ -227,112 +227,90 @@ public final class EdifactFramingSettingsArgs extends io.pulumi.resources.Resour
             this.characterEncoding = characterEncoding;
             return this;
         }
-
         public Builder characterEncoding(@Nullable String characterEncoding) {
             this.characterEncoding = Output.ofNullable(characterEncoding);
             return this;
         }
-
         public Builder characterSet(Output<Either<String,EdifactCharacterSet>> characterSet) {
             this.characterSet = Objects.requireNonNull(characterSet);
             return this;
         }
-
         public Builder characterSet(Either<String,EdifactCharacterSet> characterSet) {
             this.characterSet = Output.of(Objects.requireNonNull(characterSet));
             return this;
         }
-
         public Builder componentSeparator(Output<Integer> componentSeparator) {
             this.componentSeparator = Objects.requireNonNull(componentSeparator);
             return this;
         }
-
         public Builder componentSeparator(Integer componentSeparator) {
             this.componentSeparator = Output.of(Objects.requireNonNull(componentSeparator));
             return this;
         }
-
         public Builder dataElementSeparator(Output<Integer> dataElementSeparator) {
             this.dataElementSeparator = Objects.requireNonNull(dataElementSeparator);
             return this;
         }
-
         public Builder dataElementSeparator(Integer dataElementSeparator) {
             this.dataElementSeparator = Output.of(Objects.requireNonNull(dataElementSeparator));
             return this;
         }
-
         public Builder decimalPointIndicator(Output<EdifactDecimalIndicator> decimalPointIndicator) {
             this.decimalPointIndicator = Objects.requireNonNull(decimalPointIndicator);
             return this;
         }
-
         public Builder decimalPointIndicator(EdifactDecimalIndicator decimalPointIndicator) {
             this.decimalPointIndicator = Output.of(Objects.requireNonNull(decimalPointIndicator));
             return this;
         }
-
         public Builder protocolVersion(Output<Integer> protocolVersion) {
             this.protocolVersion = Objects.requireNonNull(protocolVersion);
             return this;
         }
-
         public Builder protocolVersion(Integer protocolVersion) {
             this.protocolVersion = Output.of(Objects.requireNonNull(protocolVersion));
             return this;
         }
-
         public Builder releaseIndicator(Output<Integer> releaseIndicator) {
             this.releaseIndicator = Objects.requireNonNull(releaseIndicator);
             return this;
         }
-
         public Builder releaseIndicator(Integer releaseIndicator) {
             this.releaseIndicator = Output.of(Objects.requireNonNull(releaseIndicator));
             return this;
         }
-
         public Builder repetitionSeparator(Output<Integer> repetitionSeparator) {
             this.repetitionSeparator = Objects.requireNonNull(repetitionSeparator);
             return this;
         }
-
         public Builder repetitionSeparator(Integer repetitionSeparator) {
             this.repetitionSeparator = Output.of(Objects.requireNonNull(repetitionSeparator));
             return this;
         }
-
         public Builder segmentTerminator(Output<Integer> segmentTerminator) {
             this.segmentTerminator = Objects.requireNonNull(segmentTerminator);
             return this;
         }
-
         public Builder segmentTerminator(Integer segmentTerminator) {
             this.segmentTerminator = Output.of(Objects.requireNonNull(segmentTerminator));
             return this;
         }
-
         public Builder segmentTerminatorSuffix(Output<SegmentTerminatorSuffix> segmentTerminatorSuffix) {
             this.segmentTerminatorSuffix = Objects.requireNonNull(segmentTerminatorSuffix);
             return this;
         }
-
         public Builder segmentTerminatorSuffix(SegmentTerminatorSuffix segmentTerminatorSuffix) {
             this.segmentTerminatorSuffix = Output.of(Objects.requireNonNull(segmentTerminatorSuffix));
             return this;
         }
-
         public Builder serviceCodeListDirectoryVersion(@Nullable Output<String> serviceCodeListDirectoryVersion) {
             this.serviceCodeListDirectoryVersion = serviceCodeListDirectoryVersion;
             return this;
         }
-
         public Builder serviceCodeListDirectoryVersion(@Nullable String serviceCodeListDirectoryVersion) {
             this.serviceCodeListDirectoryVersion = Output.ofNullable(serviceCodeListDirectoryVersion);
             return this;
-        }
-        public EdifactFramingSettingsArgs build() {
+        }        public EdifactFramingSettingsArgs build() {
             return new EdifactFramingSettingsArgs(characterEncoding, characterSet, componentSeparator, dataElementSeparator, decimalPointIndicator, protocolVersion, releaseIndicator, repetitionSeparator, segmentTerminator, segmentTerminatorSuffix, serviceCodeListDirectoryVersion);
         }
     }

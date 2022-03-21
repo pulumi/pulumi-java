@@ -76,12 +76,10 @@ public final class ManagedGroupConfigResponse extends io.pulumi.resources.Invoke
             this.instanceGroupManagerName = Objects.requireNonNull(instanceGroupManagerName);
             return this;
         }
-
         public Builder instanceTemplateName(String instanceTemplateName) {
             this.instanceTemplateName = Objects.requireNonNull(instanceTemplateName);
             return this;
-        }
-        public ManagedGroupConfigResponse build() {
+        }        public ManagedGroupConfigResponse build() {
             return new ManagedGroupConfigResponse(instanceGroupManagerName, instanceTemplateName);
         }
     }

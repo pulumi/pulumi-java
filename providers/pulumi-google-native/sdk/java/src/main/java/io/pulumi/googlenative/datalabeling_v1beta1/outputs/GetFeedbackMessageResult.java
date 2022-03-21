@@ -119,32 +119,26 @@ public final class GetFeedbackMessageResult {
             this.body = Objects.requireNonNull(body);
             return this;
         }
-
         public Builder createTime(String createTime) {
             this.createTime = Objects.requireNonNull(createTime);
             return this;
         }
-
         public Builder image(String image) {
             this.image = Objects.requireNonNull(image);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder operatorFeedbackMetadata(GoogleCloudDatalabelingV1beta1OperatorFeedbackMetadataResponse operatorFeedbackMetadata) {
             this.operatorFeedbackMetadata = Objects.requireNonNull(operatorFeedbackMetadata);
             return this;
         }
-
         public Builder requesterFeedbackMetadata(GoogleCloudDatalabelingV1beta1RequesterFeedbackMetadataResponse requesterFeedbackMetadata) {
             this.requesterFeedbackMetadata = Objects.requireNonNull(requesterFeedbackMetadata);
             return this;
-        }
-        public GetFeedbackMessageResult build() {
+        }        public GetFeedbackMessageResult build() {
             return new GetFeedbackMessageResult(body, createTime, image, name, operatorFeedbackMetadata, requesterFeedbackMetadata);
         }
     }

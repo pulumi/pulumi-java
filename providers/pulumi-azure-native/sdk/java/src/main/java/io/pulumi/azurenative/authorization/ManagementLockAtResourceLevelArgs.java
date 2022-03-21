@@ -190,92 +190,77 @@ public final class ManagementLockAtResourceLevelArgs extends io.pulumi.resources
             this.level = Objects.requireNonNull(level);
             return this;
         }
-
         public Builder level(Either<String,LockLevel> level) {
             this.level = Output.of(Objects.requireNonNull(level));
             return this;
         }
-
         public Builder lockName(@Nullable Output<String> lockName) {
             this.lockName = lockName;
             return this;
         }
-
         public Builder lockName(@Nullable String lockName) {
             this.lockName = Output.ofNullable(lockName);
             return this;
         }
-
         public Builder notes(@Nullable Output<String> notes) {
             this.notes = notes;
             return this;
         }
-
         public Builder notes(@Nullable String notes) {
             this.notes = Output.ofNullable(notes);
             return this;
         }
-
         public Builder owners(@Nullable Output<List<ManagementLockOwnerArgs>> owners) {
             this.owners = owners;
             return this;
         }
-
         public Builder owners(@Nullable List<ManagementLockOwnerArgs> owners) {
             this.owners = Output.ofNullable(owners);
             return this;
         }
-
+        public Builder owners(ManagementLockOwnerArgs... owners) {
+            return owners(List.of(owners));
+        }
         public Builder parentResourcePath(Output<String> parentResourcePath) {
             this.parentResourcePath = Objects.requireNonNull(parentResourcePath);
             return this;
         }
-
         public Builder parentResourcePath(String parentResourcePath) {
             this.parentResourcePath = Output.of(Objects.requireNonNull(parentResourcePath));
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder resourceName(Output<String> resourceName) {
             this.resourceName = Objects.requireNonNull(resourceName);
             return this;
         }
-
         public Builder resourceName(String resourceName) {
             this.resourceName = Output.of(Objects.requireNonNull(resourceName));
             return this;
         }
-
         public Builder resourceProviderNamespace(Output<String> resourceProviderNamespace) {
             this.resourceProviderNamespace = Objects.requireNonNull(resourceProviderNamespace);
             return this;
         }
-
         public Builder resourceProviderNamespace(String resourceProviderNamespace) {
             this.resourceProviderNamespace = Output.of(Objects.requireNonNull(resourceProviderNamespace));
             return this;
         }
-
         public Builder resourceType(Output<String> resourceType) {
             this.resourceType = Objects.requireNonNull(resourceType);
             return this;
         }
-
         public Builder resourceType(String resourceType) {
             this.resourceType = Output.of(Objects.requireNonNull(resourceType));
             return this;
-        }
-        public ManagementLockAtResourceLevelArgs build() {
+        }        public ManagementLockAtResourceLevelArgs build() {
             return new ManagementLockAtResourceLevelArgs(level, lockName, notes, owners, parentResourcePath, resourceGroupName, resourceName, resourceProviderNamespace, resourceType);
         }
     }

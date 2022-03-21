@@ -70,12 +70,10 @@ public final class ClusterConfigurationInfo {
             this.arn = Objects.requireNonNull(arn);
             return this;
         }
-
         public Builder revision(Integer revision) {
             this.revision = Objects.requireNonNull(revision);
             return this;
-        }
-        public ClusterConfigurationInfo build() {
+        }        public ClusterConfigurationInfo build() {
             return new ClusterConfigurationInfo(arn, revision);
         }
     }

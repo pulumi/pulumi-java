@@ -120,52 +120,42 @@ public final class FhirStoreIamMemberState extends io.pulumi.resources.ResourceA
             this.condition = condition;
             return this;
         }
-
         public Builder condition(@Nullable FhirStoreIamMemberConditionGetArgs condition) {
             this.condition = Output.ofNullable(condition);
             return this;
         }
-
         public Builder etag(@Nullable Output<String> etag) {
             this.etag = etag;
             return this;
         }
-
         public Builder etag(@Nullable String etag) {
             this.etag = Output.ofNullable(etag);
             return this;
         }
-
         public Builder fhirStoreId(@Nullable Output<String> fhirStoreId) {
             this.fhirStoreId = fhirStoreId;
             return this;
         }
-
         public Builder fhirStoreId(@Nullable String fhirStoreId) {
             this.fhirStoreId = Output.ofNullable(fhirStoreId);
             return this;
         }
-
         public Builder member(@Nullable Output<String> member) {
             this.member = member;
             return this;
         }
-
         public Builder member(@Nullable String member) {
             this.member = Output.ofNullable(member);
             return this;
         }
-
         public Builder role(@Nullable Output<String> role) {
             this.role = role;
             return this;
         }
-
         public Builder role(@Nullable String role) {
             this.role = Output.ofNullable(role);
             return this;
-        }
-        public FhirStoreIamMemberState build() {
+        }        public FhirStoreIamMemberState build() {
             return new FhirStoreIamMemberState(condition, etag, fhirStoreId, member, role);
         }
     }

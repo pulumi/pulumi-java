@@ -61,12 +61,10 @@ public final class CreationDataArgs extends io.pulumi.resources.ResourceArgs {
             this.sourceResourceId = sourceResourceId;
             return this;
         }
-
         public Builder sourceResourceId(@Nullable String sourceResourceId) {
             this.sourceResourceId = Output.ofNullable(sourceResourceId);
             return this;
-        }
-        public CreationDataArgs build() {
+        }        public CreationDataArgs build() {
             return new CreationDataArgs(sourceResourceId);
         }
     }

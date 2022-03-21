@@ -144,32 +144,26 @@ public final class ServersSolutionSummaryResponse extends io.pulumi.resources.In
             this.assessedCount = assessedCount;
             return this;
         }
-
         public Builder discoveredCount(@Nullable Integer discoveredCount) {
             this.discoveredCount = discoveredCount;
             return this;
         }
-
         public Builder instanceType(String instanceType) {
             this.instanceType = Objects.requireNonNull(instanceType);
             return this;
         }
-
         public Builder migratedCount(@Nullable Integer migratedCount) {
             this.migratedCount = migratedCount;
             return this;
         }
-
         public Builder replicatingCount(@Nullable Integer replicatingCount) {
             this.replicatingCount = replicatingCount;
             return this;
         }
-
         public Builder testMigratedCount(@Nullable Integer testMigratedCount) {
             this.testMigratedCount = testMigratedCount;
             return this;
-        }
-        public ServersSolutionSummaryResponse build() {
+        }        public ServersSolutionSummaryResponse build() {
             return new ServersSolutionSummaryResponse(assessedCount, discoveredCount, instanceType, migratedCount, replicatingCount, testMigratedCount);
         }
     }

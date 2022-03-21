@@ -104,22 +104,18 @@ public final class GetTopicResult {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder partitionConfig(PartitionConfigResponse partitionConfig) {
             this.partitionConfig = Objects.requireNonNull(partitionConfig);
             return this;
         }
-
         public Builder reservationConfig(ReservationConfigResponse reservationConfig) {
             this.reservationConfig = Objects.requireNonNull(reservationConfig);
             return this;
         }
-
         public Builder retentionConfig(RetentionConfigResponse retentionConfig) {
             this.retentionConfig = Objects.requireNonNull(retentionConfig);
             return this;
-        }
-        public GetTopicResult build() {
+        }        public GetTopicResult build() {
             return new GetTopicResult(name, partitionConfig, reservationConfig, retentionConfig);
         }
     }

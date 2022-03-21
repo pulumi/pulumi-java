@@ -72,12 +72,10 @@ public final class ListStaticSiteAppSettingsArgs extends io.pulumi.resources.Inv
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
-        }
-        public ListStaticSiteAppSettingsArgs build() {
+        }        public ListStaticSiteAppSettingsArgs build() {
             return new ListStaticSiteAppSettingsArgs(name, resourceGroupName);
         }
     }

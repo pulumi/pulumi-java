@@ -80,22 +80,18 @@ public final class MigrateSqlServerSqlDbTaskPropertiesArgs extends io.pulumi.res
             this.input = input;
             return this;
         }
-
         public Builder input(@Nullable MigrateSqlServerSqlDbTaskInputArgs input) {
             this.input = Output.ofNullable(input);
             return this;
         }
-
         public Builder taskType(Output<String> taskType) {
             this.taskType = Objects.requireNonNull(taskType);
             return this;
         }
-
         public Builder taskType(String taskType) {
             this.taskType = Output.of(Objects.requireNonNull(taskType));
             return this;
-        }
-        public MigrateSqlServerSqlDbTaskPropertiesArgs build() {
+        }        public MigrateSqlServerSqlDbTaskPropertiesArgs build() {
             return new MigrateSqlServerSqlDbTaskPropertiesArgs(input, taskType);
         }
     }

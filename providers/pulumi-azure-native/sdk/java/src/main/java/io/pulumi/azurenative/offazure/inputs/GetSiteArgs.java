@@ -72,12 +72,10 @@ public final class GetSiteArgs extends io.pulumi.resources.InvokeArgs {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder siteName(String siteName) {
             this.siteName = Objects.requireNonNull(siteName);
             return this;
-        }
-        public GetSiteArgs build() {
+        }        public GetSiteArgs build() {
             return new GetSiteArgs(resourceGroupName, siteName);
         }
     }

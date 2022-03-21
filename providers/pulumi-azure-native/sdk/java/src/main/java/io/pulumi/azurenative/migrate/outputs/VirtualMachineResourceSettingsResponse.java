@@ -121,27 +121,22 @@ public final class VirtualMachineResourceSettingsResponse {
             this.resourceType = Objects.requireNonNull(resourceType);
             return this;
         }
-
         public Builder targetAvailabilitySetId(@Nullable String targetAvailabilitySetId) {
             this.targetAvailabilitySetId = targetAvailabilitySetId;
             return this;
         }
-
         public Builder targetAvailabilityZone(@Nullable String targetAvailabilityZone) {
             this.targetAvailabilityZone = targetAvailabilityZone;
             return this;
         }
-
         public Builder targetResourceName(String targetResourceName) {
             this.targetResourceName = Objects.requireNonNull(targetResourceName);
             return this;
         }
-
         public Builder targetVmSize(@Nullable String targetVmSize) {
             this.targetVmSize = targetVmSize;
             return this;
-        }
-        public VirtualMachineResourceSettingsResponse build() {
+        }        public VirtualMachineResourceSettingsResponse build() {
             return new VirtualMachineResourceSettingsResponse(resourceType, targetAvailabilitySetId, targetAvailabilityZone, targetResourceName, targetVmSize);
         }
     }

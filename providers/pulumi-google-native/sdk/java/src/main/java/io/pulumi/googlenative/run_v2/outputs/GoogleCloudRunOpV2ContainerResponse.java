@@ -170,42 +170,49 @@ public final class GoogleCloudRunOpV2ContainerResponse {
             this.args = Objects.requireNonNull(args);
             return this;
         }
-
+        public Builder args(String... args) {
+            return args(List.of(args));
+        }
         public Builder command(List<String> command) {
             this.command = Objects.requireNonNull(command);
             return this;
         }
-
+        public Builder command(String... command) {
+            return command(List.of(command));
+        }
         public Builder env(List<GoogleCloudRunOpV2EnvVarResponse> env) {
             this.env = Objects.requireNonNull(env);
             return this;
         }
-
+        public Builder env(GoogleCloudRunOpV2EnvVarResponse... env) {
+            return env(List.of(env));
+        }
         public Builder image(String image) {
             this.image = Objects.requireNonNull(image);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder ports(List<GoogleCloudRunOpV2ContainerPortResponse> ports) {
             this.ports = Objects.requireNonNull(ports);
             return this;
         }
-
+        public Builder ports(GoogleCloudRunOpV2ContainerPortResponse... ports) {
+            return ports(List.of(ports));
+        }
         public Builder resources(GoogleCloudRunOpV2ResourceRequirementsResponse resources) {
             this.resources = Objects.requireNonNull(resources);
             return this;
         }
-
         public Builder volumeMounts(List<GoogleCloudRunOpV2VolumeMountResponse> volumeMounts) {
             this.volumeMounts = Objects.requireNonNull(volumeMounts);
             return this;
         }
-        public GoogleCloudRunOpV2ContainerResponse build() {
+        public Builder volumeMounts(GoogleCloudRunOpV2VolumeMountResponse... volumeMounts) {
+            return volumeMounts(List.of(volumeMounts));
+        }        public GoogleCloudRunOpV2ContainerResponse build() {
             return new GoogleCloudRunOpV2ContainerResponse(args, command, env, image, name, ports, resources, volumeMounts);
         }
     }

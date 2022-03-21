@@ -106,22 +106,27 @@ public final class NetworkPolicySpec {
             this.egress = egress;
             return this;
         }
-
+        public Builder egress(NetworkPolicyEgressRule... egress) {
+            return egress(List.of(egress));
+        }
         public Builder ingress(@Nullable List<NetworkPolicyIngressRule> ingress) {
             this.ingress = ingress;
             return this;
         }
-
+        public Builder ingress(NetworkPolicyIngressRule... ingress) {
+            return ingress(List.of(ingress));
+        }
         public Builder podSelector(LabelSelector podSelector) {
             this.podSelector = Objects.requireNonNull(podSelector);
             return this;
         }
-
         public Builder policyTypes(@Nullable List<String> policyTypes) {
             this.policyTypes = policyTypes;
             return this;
         }
-        public NetworkPolicySpec build() {
+        public Builder policyTypes(String... policyTypes) {
+            return policyTypes(List.of(policyTypes));
+        }        public NetworkPolicySpec build() {
             return new NetworkPolicySpec(egress, ingress, podSelector, policyTypes);
         }
     }

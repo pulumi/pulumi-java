@@ -111,22 +111,18 @@ public final class EmailReceiverResponse extends io.pulumi.resources.InvokeArgs 
             this.emailAddress = Objects.requireNonNull(emailAddress);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder status(String status) {
             this.status = Objects.requireNonNull(status);
             return this;
         }
-
         public Builder useCommonAlertSchema(@Nullable Boolean useCommonAlertSchema) {
             this.useCommonAlertSchema = useCommonAlertSchema;
             return this;
-        }
-        public EmailReceiverResponse build() {
+        }        public EmailReceiverResponse build() {
             return new EmailReceiverResponse(emailAddress, name, status, useCommonAlertSchema);
         }
     }

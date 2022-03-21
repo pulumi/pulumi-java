@@ -79,22 +79,18 @@ public final class MetricAlertActionArgs extends io.pulumi.resources.ResourceArg
             this.actionGroupId = actionGroupId;
             return this;
         }
-
         public Builder actionGroupId(@Nullable String actionGroupId) {
             this.actionGroupId = Output.ofNullable(actionGroupId);
             return this;
         }
-
         public Builder webHookProperties(@Nullable Output<Map<String,String>> webHookProperties) {
             this.webHookProperties = webHookProperties;
             return this;
         }
-
         public Builder webHookProperties(@Nullable Map<String,String> webHookProperties) {
             this.webHookProperties = Output.ofNullable(webHookProperties);
             return this;
-        }
-        public MetricAlertActionArgs build() {
+        }        public MetricAlertActionArgs build() {
             return new MetricAlertActionArgs(actionGroupId, webHookProperties);
         }
     }

@@ -123,52 +123,42 @@ public final class ReceiptRuleS3ActionArgs extends io.pulumi.resources.ResourceA
             this.bucketName = Objects.requireNonNull(bucketName);
             return this;
         }
-
         public Builder bucketName(String bucketName) {
             this.bucketName = Output.of(Objects.requireNonNull(bucketName));
             return this;
         }
-
         public Builder kmsKeyArn(@Nullable Output<String> kmsKeyArn) {
             this.kmsKeyArn = kmsKeyArn;
             return this;
         }
-
         public Builder kmsKeyArn(@Nullable String kmsKeyArn) {
             this.kmsKeyArn = Output.ofNullable(kmsKeyArn);
             return this;
         }
-
         public Builder objectKeyPrefix(@Nullable Output<String> objectKeyPrefix) {
             this.objectKeyPrefix = objectKeyPrefix;
             return this;
         }
-
         public Builder objectKeyPrefix(@Nullable String objectKeyPrefix) {
             this.objectKeyPrefix = Output.ofNullable(objectKeyPrefix);
             return this;
         }
-
         public Builder position(Output<Integer> position) {
             this.position = Objects.requireNonNull(position);
             return this;
         }
-
         public Builder position(Integer position) {
             this.position = Output.of(Objects.requireNonNull(position));
             return this;
         }
-
         public Builder topicArn(@Nullable Output<String> topicArn) {
             this.topicArn = topicArn;
             return this;
         }
-
         public Builder topicArn(@Nullable String topicArn) {
             this.topicArn = Output.ofNullable(topicArn);
             return this;
-        }
-        public ReceiptRuleS3ActionArgs build() {
+        }        public ReceiptRuleS3ActionArgs build() {
             return new ReceiptRuleS3ActionArgs(bucketName, kmsKeyArn, objectKeyPrefix, position, topicArn);
         }
     }

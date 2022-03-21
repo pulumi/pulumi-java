@@ -71,12 +71,10 @@ public final class PhotonPersistentDiskVolumeSource {
             this.fsType = fsType;
             return this;
         }
-
         public Builder pdID(String pdID) {
             this.pdID = Objects.requireNonNull(pdID);
             return this;
-        }
-        public PhotonPersistentDiskVolumeSource build() {
+        }        public PhotonPersistentDiskVolumeSource build() {
             return new PhotonPersistentDiskVolumeSource(fsType, pdID);
         }
     }

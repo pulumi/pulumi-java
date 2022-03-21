@@ -51,8 +51,7 @@ public final class PodSecurityPolicyConfigResponse {
         public Builder enabled(Boolean enabled) {
             this.enabled = Objects.requireNonNull(enabled);
             return this;
-        }
-        public PodSecurityPolicyConfigResponse build() {
+        }        public PodSecurityPolicyConfigResponse build() {
             return new PodSecurityPolicyConfigResponse(enabled);
         }
     }

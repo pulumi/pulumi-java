@@ -158,82 +158,66 @@ public final class CaPoolArgs extends io.pulumi.resources.ResourceArgs {
             this.caPoolId = Objects.requireNonNull(caPoolId);
             return this;
         }
-
         public Builder caPoolId(String caPoolId) {
             this.caPoolId = Output.of(Objects.requireNonNull(caPoolId));
             return this;
         }
-
         public Builder issuancePolicy(@Nullable Output<IssuancePolicyArgs> issuancePolicy) {
             this.issuancePolicy = issuancePolicy;
             return this;
         }
-
         public Builder issuancePolicy(@Nullable IssuancePolicyArgs issuancePolicy) {
             this.issuancePolicy = Output.ofNullable(issuancePolicy);
             return this;
         }
-
         public Builder labels(@Nullable Output<Map<String,String>> labels) {
             this.labels = labels;
             return this;
         }
-
         public Builder labels(@Nullable Map<String,String> labels) {
             this.labels = Output.ofNullable(labels);
             return this;
         }
-
         public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
         }
-
         public Builder publishingOptions(@Nullable Output<PublishingOptionsArgs> publishingOptions) {
             this.publishingOptions = publishingOptions;
             return this;
         }
-
         public Builder publishingOptions(@Nullable PublishingOptionsArgs publishingOptions) {
             this.publishingOptions = Output.ofNullable(publishingOptions);
             return this;
         }
-
         public Builder requestId(@Nullable Output<String> requestId) {
             this.requestId = requestId;
             return this;
         }
-
         public Builder requestId(@Nullable String requestId) {
             this.requestId = Output.ofNullable(requestId);
             return this;
         }
-
         public Builder tier(Output<CaPoolTier> tier) {
             this.tier = Objects.requireNonNull(tier);
             return this;
         }
-
         public Builder tier(CaPoolTier tier) {
             this.tier = Output.of(Objects.requireNonNull(tier));
             return this;
-        }
-        public CaPoolArgs build() {
+        }        public CaPoolArgs build() {
             return new CaPoolArgs(caPoolId, issuancePolicy, labels, location, project, publishingOptions, requestId, tier);
         }
     }

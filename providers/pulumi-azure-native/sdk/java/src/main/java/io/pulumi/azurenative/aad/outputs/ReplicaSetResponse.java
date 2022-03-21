@@ -202,52 +202,51 @@ public final class ReplicaSetResponse {
             this.domainControllerIpAddress = Objects.requireNonNull(domainControllerIpAddress);
             return this;
         }
-
+        public Builder domainControllerIpAddress(String... domainControllerIpAddress) {
+            return domainControllerIpAddress(List.of(domainControllerIpAddress));
+        }
         public Builder externalAccessIpAddress(String externalAccessIpAddress) {
             this.externalAccessIpAddress = Objects.requireNonNull(externalAccessIpAddress);
             return this;
         }
-
         public Builder healthAlerts(List<HealthAlertResponse> healthAlerts) {
             this.healthAlerts = Objects.requireNonNull(healthAlerts);
             return this;
         }
-
+        public Builder healthAlerts(HealthAlertResponse... healthAlerts) {
+            return healthAlerts(List.of(healthAlerts));
+        }
         public Builder healthLastEvaluated(String healthLastEvaluated) {
             this.healthLastEvaluated = Objects.requireNonNull(healthLastEvaluated);
             return this;
         }
-
         public Builder healthMonitors(List<HealthMonitorResponse> healthMonitors) {
             this.healthMonitors = Objects.requireNonNull(healthMonitors);
             return this;
         }
-
+        public Builder healthMonitors(HealthMonitorResponse... healthMonitors) {
+            return healthMonitors(List.of(healthMonitors));
+        }
         public Builder location(@Nullable String location) {
             this.location = location;
             return this;
         }
-
         public Builder replicaSetId(String replicaSetId) {
             this.replicaSetId = Objects.requireNonNull(replicaSetId);
             return this;
         }
-
         public Builder serviceStatus(String serviceStatus) {
             this.serviceStatus = Objects.requireNonNull(serviceStatus);
             return this;
         }
-
         public Builder subnetId(@Nullable String subnetId) {
             this.subnetId = subnetId;
             return this;
         }
-
         public Builder vnetSiteId(String vnetSiteId) {
             this.vnetSiteId = Objects.requireNonNull(vnetSiteId);
             return this;
-        }
-        public ReplicaSetResponse build() {
+        }        public ReplicaSetResponse build() {
             return new ReplicaSetResponse(domainControllerIpAddress, externalAccessIpAddress, healthAlerts, healthLastEvaluated, healthMonitors, location, replicaSetId, serviceStatus, subnetId, vnetSiteId);
         }
     }

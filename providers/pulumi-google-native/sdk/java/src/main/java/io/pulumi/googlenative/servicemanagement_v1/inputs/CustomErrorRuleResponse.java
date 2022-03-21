@@ -77,12 +77,10 @@ public final class CustomErrorRuleResponse extends io.pulumi.resources.InvokeArg
             this.isErrorType = Objects.requireNonNull(isErrorType);
             return this;
         }
-
         public Builder selector(String selector) {
             this.selector = Objects.requireNonNull(selector);
             return this;
-        }
-        public CustomErrorRuleResponse build() {
+        }        public CustomErrorRuleResponse build() {
             return new CustomErrorRuleResponse(isErrorType, selector);
         }
     }

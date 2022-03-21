@@ -112,42 +112,37 @@ public final class LogRulesArgs extends io.pulumi.resources.ResourceArgs {
             this.filteringTags = filteringTags;
             return this;
         }
-
         public Builder filteringTags(@Nullable List<FilteringTagArgs> filteringTags) {
             this.filteringTags = Output.ofNullable(filteringTags);
             return this;
         }
-
+        public Builder filteringTags(FilteringTagArgs... filteringTags) {
+            return filteringTags(List.of(filteringTags));
+        }
         public Builder sendAadLogs(@Nullable Output<Boolean> sendAadLogs) {
             this.sendAadLogs = sendAadLogs;
             return this;
         }
-
         public Builder sendAadLogs(@Nullable Boolean sendAadLogs) {
             this.sendAadLogs = Output.ofNullable(sendAadLogs);
             return this;
         }
-
         public Builder sendActivityLogs(@Nullable Output<Boolean> sendActivityLogs) {
             this.sendActivityLogs = sendActivityLogs;
             return this;
         }
-
         public Builder sendActivityLogs(@Nullable Boolean sendActivityLogs) {
             this.sendActivityLogs = Output.ofNullable(sendActivityLogs);
             return this;
         }
-
         public Builder sendSubscriptionLogs(@Nullable Output<Boolean> sendSubscriptionLogs) {
             this.sendSubscriptionLogs = sendSubscriptionLogs;
             return this;
         }
-
         public Builder sendSubscriptionLogs(@Nullable Boolean sendSubscriptionLogs) {
             this.sendSubscriptionLogs = Output.ofNullable(sendSubscriptionLogs);
             return this;
-        }
-        public LogRulesArgs build() {
+        }        public LogRulesArgs build() {
             return new LogRulesArgs(filteringTags, sendAadLogs, sendActivityLogs, sendSubscriptionLogs);
         }
     }

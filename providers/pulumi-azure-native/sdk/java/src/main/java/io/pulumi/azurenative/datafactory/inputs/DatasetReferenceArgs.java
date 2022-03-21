@@ -96,32 +96,26 @@ public final class DatasetReferenceArgs extends io.pulumi.resources.ResourceArgs
             this.parameters = parameters;
             return this;
         }
-
         public Builder parameters(@Nullable Map<String,Object> parameters) {
             this.parameters = Output.ofNullable(parameters);
             return this;
         }
-
         public Builder referenceName(Output<String> referenceName) {
             this.referenceName = Objects.requireNonNull(referenceName);
             return this;
         }
-
         public Builder referenceName(String referenceName) {
             this.referenceName = Output.of(Objects.requireNonNull(referenceName));
             return this;
         }
-
         public Builder type(Output<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Output.of(Objects.requireNonNull(type));
             return this;
-        }
-        public DatasetReferenceArgs build() {
+        }        public DatasetReferenceArgs build() {
             return new DatasetReferenceArgs(parameters, referenceName, type);
         }
     }

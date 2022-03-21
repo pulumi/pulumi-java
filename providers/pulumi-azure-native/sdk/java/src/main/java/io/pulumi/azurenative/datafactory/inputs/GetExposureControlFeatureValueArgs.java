@@ -90,17 +90,14 @@ public final class GetExposureControlFeatureValueArgs extends io.pulumi.resource
             this.featureName = featureName;
             return this;
         }
-
         public Builder featureType(@Nullable String featureType) {
             this.featureType = featureType;
             return this;
         }
-
         public Builder locationId(String locationId) {
             this.locationId = Objects.requireNonNull(locationId);
             return this;
-        }
-        public GetExposureControlFeatureValueArgs build() {
+        }        public GetExposureControlFeatureValueArgs build() {
             return new GetExposureControlFeatureValueArgs(featureName, featureType, locationId);
         }
     }

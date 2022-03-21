@@ -66,12 +66,10 @@ public final class GetContactArgs extends io.pulumi.resources.InvokeArgs {
             this.contactId = Objects.requireNonNull(contactId);
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = project;
             return this;
-        }
-        public GetContactArgs build() {
+        }        public GetContactArgs build() {
             return new GetContactArgs(contactId, project);
         }
     }

@@ -136,32 +136,29 @@ public final class GetCustomerEventResult {
             this.eventName = Objects.requireNonNull(eventName);
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder receivers(List<NotificationEventReceiverResponse> receivers) {
             this.receivers = Objects.requireNonNull(receivers);
             return this;
         }
-
+        public Builder receivers(NotificationEventReceiverResponse... receivers) {
+            return receivers(List.of(receivers));
+        }
         public Builder systemData(SystemDataResponse systemData) {
             this.systemData = Objects.requireNonNull(systemData);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public GetCustomerEventResult build() {
+        }        public GetCustomerEventResult build() {
             return new GetCustomerEventResult(eventName, id, name, receivers, systemData, type);
         }
     }

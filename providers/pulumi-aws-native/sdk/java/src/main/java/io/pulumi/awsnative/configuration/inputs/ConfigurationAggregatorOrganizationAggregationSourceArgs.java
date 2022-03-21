@@ -80,32 +80,29 @@ public final class ConfigurationAggregatorOrganizationAggregationSourceArgs exte
             this.allAwsRegions = allAwsRegions;
             return this;
         }
-
         public Builder allAwsRegions(@Nullable Boolean allAwsRegions) {
             this.allAwsRegions = Output.ofNullable(allAwsRegions);
             return this;
         }
-
         public Builder awsRegions(@Nullable Output<List<String>> awsRegions) {
             this.awsRegions = awsRegions;
             return this;
         }
-
         public Builder awsRegions(@Nullable List<String> awsRegions) {
             this.awsRegions = Output.ofNullable(awsRegions);
             return this;
         }
-
+        public Builder awsRegions(String... awsRegions) {
+            return awsRegions(List.of(awsRegions));
+        }
         public Builder roleArn(Output<String> roleArn) {
             this.roleArn = Objects.requireNonNull(roleArn);
             return this;
         }
-
         public Builder roleArn(String roleArn) {
             this.roleArn = Output.of(Objects.requireNonNull(roleArn));
             return this;
-        }
-        public ConfigurationAggregatorOrganizationAggregationSourceArgs build() {
+        }        public ConfigurationAggregatorOrganizationAggregationSourceArgs build() {
             return new ConfigurationAggregatorOrganizationAggregationSourceArgs(allAwsRegions, awsRegions, roleArn);
         }
     }

@@ -78,12 +78,10 @@ public final class EndpointPropertiesResponseCustomHeaders extends io.pulumi.res
             this.name = name;
             return this;
         }
-
         public Builder value(@Nullable String value) {
             this.value = value;
             return this;
-        }
-        public EndpointPropertiesResponseCustomHeaders build() {
+        }        public EndpointPropertiesResponseCustomHeaders build() {
             return new EndpointPropertiesResponseCustomHeaders(name, value);
         }
     }

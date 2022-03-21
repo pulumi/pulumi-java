@@ -95,32 +95,26 @@ public final class VMwareV2FabricCreationInputArgs extends io.pulumi.resources.R
             this.instanceType = instanceType;
             return this;
         }
-
         public Builder instanceType(@Nullable String instanceType) {
             this.instanceType = Output.ofNullable(instanceType);
             return this;
         }
-
         public Builder migrationSolutionId(Output<String> migrationSolutionId) {
             this.migrationSolutionId = Objects.requireNonNull(migrationSolutionId);
             return this;
         }
-
         public Builder migrationSolutionId(String migrationSolutionId) {
             this.migrationSolutionId = Output.of(Objects.requireNonNull(migrationSolutionId));
             return this;
         }
-
         public Builder vmwareSiteId(Output<String> vmwareSiteId) {
             this.vmwareSiteId = Objects.requireNonNull(vmwareSiteId);
             return this;
         }
-
         public Builder vmwareSiteId(String vmwareSiteId) {
             this.vmwareSiteId = Output.of(Objects.requireNonNull(vmwareSiteId));
             return this;
-        }
-        public VMwareV2FabricCreationInputArgs build() {
+        }        public VMwareV2FabricCreationInputArgs build() {
             return new VMwareV2FabricCreationInputArgs(instanceType, migrationSolutionId, vmwareSiteId);
         }
     }

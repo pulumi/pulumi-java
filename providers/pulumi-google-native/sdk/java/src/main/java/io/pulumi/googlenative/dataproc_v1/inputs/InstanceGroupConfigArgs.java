@@ -163,72 +163,61 @@ public final class InstanceGroupConfigArgs extends io.pulumi.resources.ResourceA
             this.accelerators = accelerators;
             return this;
         }
-
         public Builder accelerators(@Nullable List<AcceleratorConfigArgs> accelerators) {
             this.accelerators = Output.ofNullable(accelerators);
             return this;
         }
-
+        public Builder accelerators(AcceleratorConfigArgs... accelerators) {
+            return accelerators(List.of(accelerators));
+        }
         public Builder diskConfig(@Nullable Output<DiskConfigArgs> diskConfig) {
             this.diskConfig = diskConfig;
             return this;
         }
-
         public Builder diskConfig(@Nullable DiskConfigArgs diskConfig) {
             this.diskConfig = Output.ofNullable(diskConfig);
             return this;
         }
-
         public Builder imageUri(@Nullable Output<String> imageUri) {
             this.imageUri = imageUri;
             return this;
         }
-
         public Builder imageUri(@Nullable String imageUri) {
             this.imageUri = Output.ofNullable(imageUri);
             return this;
         }
-
         public Builder machineTypeUri(@Nullable Output<String> machineTypeUri) {
             this.machineTypeUri = machineTypeUri;
             return this;
         }
-
         public Builder machineTypeUri(@Nullable String machineTypeUri) {
             this.machineTypeUri = Output.ofNullable(machineTypeUri);
             return this;
         }
-
         public Builder minCpuPlatform(@Nullable Output<String> minCpuPlatform) {
             this.minCpuPlatform = minCpuPlatform;
             return this;
         }
-
         public Builder minCpuPlatform(@Nullable String minCpuPlatform) {
             this.minCpuPlatform = Output.ofNullable(minCpuPlatform);
             return this;
         }
-
         public Builder numInstances(@Nullable Output<Integer> numInstances) {
             this.numInstances = numInstances;
             return this;
         }
-
         public Builder numInstances(@Nullable Integer numInstances) {
             this.numInstances = Output.ofNullable(numInstances);
             return this;
         }
-
         public Builder preemptibility(@Nullable Output<InstanceGroupConfigPreemptibility> preemptibility) {
             this.preemptibility = preemptibility;
             return this;
         }
-
         public Builder preemptibility(@Nullable InstanceGroupConfigPreemptibility preemptibility) {
             this.preemptibility = Output.ofNullable(preemptibility);
             return this;
-        }
-        public InstanceGroupConfigArgs build() {
+        }        public InstanceGroupConfigArgs build() {
             return new InstanceGroupConfigArgs(accelerators, diskConfig, imageUri, machineTypeUri, minCpuPlatform, numInstances, preemptibility);
         }
     }

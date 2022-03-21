@@ -73,22 +73,18 @@ public final class DelegatedAdministratorArgs extends io.pulumi.resources.Resour
             this.accountId = Objects.requireNonNull(accountId);
             return this;
         }
-
         public Builder accountId(String accountId) {
             this.accountId = Output.of(Objects.requireNonNull(accountId));
             return this;
         }
-
         public Builder servicePrincipal(Output<String> servicePrincipal) {
             this.servicePrincipal = Objects.requireNonNull(servicePrincipal);
             return this;
         }
-
         public Builder servicePrincipal(String servicePrincipal) {
             this.servicePrincipal = Output.of(Objects.requireNonNull(servicePrincipal));
             return this;
-        }
-        public DelegatedAdministratorArgs build() {
+        }        public DelegatedAdministratorArgs build() {
             return new DelegatedAdministratorArgs(accountId, servicePrincipal);
         }
     }

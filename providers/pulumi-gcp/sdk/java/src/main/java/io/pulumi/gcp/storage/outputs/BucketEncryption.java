@@ -43,8 +43,7 @@ public final class BucketEncryption {
         public Builder defaultKmsKeyName(String defaultKmsKeyName) {
             this.defaultKmsKeyName = Objects.requireNonNull(defaultKmsKeyName);
             return this;
-        }
-        public BucketEncryption build() {
+        }        public BucketEncryption build() {
             return new BucketEncryption(defaultKmsKeyName);
         }
     }

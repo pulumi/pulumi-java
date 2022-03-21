@@ -87,17 +87,14 @@ public final class ClusterVersionDetailsResponse {
             this.codeVersion = codeVersion;
             return this;
         }
-
         public Builder environment(@Nullable String environment) {
             this.environment = environment;
             return this;
         }
-
         public Builder supportExpiryUtc(@Nullable String supportExpiryUtc) {
             this.supportExpiryUtc = supportExpiryUtc;
             return this;
-        }
-        public ClusterVersionDetailsResponse build() {
+        }        public ClusterVersionDetailsResponse build() {
             return new ClusterVersionDetailsResponse(codeVersion, environment, supportExpiryUtc);
         }
     }

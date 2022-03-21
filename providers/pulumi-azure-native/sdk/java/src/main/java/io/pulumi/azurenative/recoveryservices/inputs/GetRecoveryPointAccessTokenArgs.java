@@ -204,52 +204,42 @@ public final class GetRecoveryPointAccessTokenArgs extends io.pulumi.resources.I
             this.containerName = Objects.requireNonNull(containerName);
             return this;
         }
-
         public Builder eTag(@Nullable String eTag) {
             this.eTag = eTag;
             return this;
         }
-
         public Builder fabricName(String fabricName) {
             this.fabricName = Objects.requireNonNull(fabricName);
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = location;
             return this;
         }
-
         public Builder properties(@Nullable AADProperties properties) {
             this.properties = properties;
             return this;
         }
-
         public Builder protectedItemName(String protectedItemName) {
             this.protectedItemName = Objects.requireNonNull(protectedItemName);
             return this;
         }
-
         public Builder recoveryPointId(String recoveryPointId) {
             this.recoveryPointId = Objects.requireNonNull(recoveryPointId);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder vaultName(String vaultName) {
             this.vaultName = Objects.requireNonNull(vaultName);
             return this;
-        }
-        public GetRecoveryPointAccessTokenArgs build() {
+        }        public GetRecoveryPointAccessTokenArgs build() {
             return new GetRecoveryPointAccessTokenArgs(containerName, eTag, fabricName, location, properties, protectedItemName, recoveryPointId, resourceGroupName, tags, vaultName);
         }
     }

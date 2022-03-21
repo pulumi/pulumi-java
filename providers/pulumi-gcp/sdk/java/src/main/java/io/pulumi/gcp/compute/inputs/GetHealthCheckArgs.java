@@ -75,12 +75,10 @@ public final class GetHealthCheckArgs extends io.pulumi.resources.InvokeArgs {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = project;
             return this;
-        }
-        public GetHealthCheckArgs build() {
+        }        public GetHealthCheckArgs build() {
             return new GetHealthCheckArgs(name, project);
         }
     }

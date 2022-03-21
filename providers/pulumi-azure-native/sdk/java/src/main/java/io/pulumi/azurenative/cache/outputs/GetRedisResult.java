@@ -449,127 +449,114 @@ public final class GetRedisResult {
             this.accessKeys = Objects.requireNonNull(accessKeys);
             return this;
         }
-
         public Builder enableNonSslPort(@Nullable Boolean enableNonSslPort) {
             this.enableNonSslPort = enableNonSslPort;
             return this;
         }
-
         public Builder hostName(String hostName) {
             this.hostName = Objects.requireNonNull(hostName);
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder instances(List<RedisInstanceDetailsResponse> instances) {
             this.instances = Objects.requireNonNull(instances);
             return this;
         }
-
+        public Builder instances(RedisInstanceDetailsResponse... instances) {
+            return instances(List.of(instances));
+        }
         public Builder linkedServers(List<RedisLinkedServerResponse> linkedServers) {
             this.linkedServers = Objects.requireNonNull(linkedServers);
             return this;
         }
-
+        public Builder linkedServers(RedisLinkedServerResponse... linkedServers) {
+            return linkedServers(List.of(linkedServers));
+        }
         public Builder location(String location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
-
         public Builder minimumTlsVersion(@Nullable String minimumTlsVersion) {
             this.minimumTlsVersion = minimumTlsVersion;
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder port(Integer port) {
             this.port = Objects.requireNonNull(port);
             return this;
         }
-
         public Builder privateEndpointConnections(List<PrivateEndpointConnectionResponse> privateEndpointConnections) {
             this.privateEndpointConnections = Objects.requireNonNull(privateEndpointConnections);
             return this;
         }
-
+        public Builder privateEndpointConnections(PrivateEndpointConnectionResponse... privateEndpointConnections) {
+            return privateEndpointConnections(List.of(privateEndpointConnections));
+        }
         public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
-
         public Builder publicNetworkAccess(@Nullable String publicNetworkAccess) {
             this.publicNetworkAccess = publicNetworkAccess;
             return this;
         }
-
         public Builder redisConfiguration(@Nullable RedisCommonPropertiesResponseRedisConfiguration redisConfiguration) {
             this.redisConfiguration = redisConfiguration;
             return this;
         }
-
         public Builder redisVersion(String redisVersion) {
             this.redisVersion = Objects.requireNonNull(redisVersion);
             return this;
         }
-
         public Builder replicasPerMaster(@Nullable Integer replicasPerMaster) {
             this.replicasPerMaster = replicasPerMaster;
             return this;
         }
-
         public Builder shardCount(@Nullable Integer shardCount) {
             this.shardCount = shardCount;
             return this;
         }
-
         public Builder sku(SkuResponse sku) {
             this.sku = Objects.requireNonNull(sku);
             return this;
         }
-
         public Builder sslPort(Integer sslPort) {
             this.sslPort = Objects.requireNonNull(sslPort);
             return this;
         }
-
         public Builder staticIP(@Nullable String staticIP) {
             this.staticIP = staticIP;
             return this;
         }
-
         public Builder subnetId(@Nullable String subnetId) {
             this.subnetId = subnetId;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tenantSettings(@Nullable Map<String,String> tenantSettings) {
             this.tenantSettings = tenantSettings;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder zones(@Nullable List<String> zones) {
             this.zones = zones;
             return this;
         }
-        public GetRedisResult build() {
+        public Builder zones(String... zones) {
+            return zones(List.of(zones));
+        }        public GetRedisResult build() {
             return new GetRedisResult(accessKeys, enableNonSslPort, hostName, id, instances, linkedServers, location, minimumTlsVersion, name, port, privateEndpointConnections, provisioningState, publicNetworkAccess, redisConfiguration, redisVersion, replicasPerMaster, shardCount, sku, sslPort, staticIP, subnetId, tags, tenantSettings, type, zones);
         }
     }

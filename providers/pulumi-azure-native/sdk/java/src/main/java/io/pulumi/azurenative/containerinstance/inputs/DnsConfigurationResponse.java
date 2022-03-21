@@ -95,17 +95,17 @@ public final class DnsConfigurationResponse extends io.pulumi.resources.InvokeAr
             this.nameServers = Objects.requireNonNull(nameServers);
             return this;
         }
-
+        public Builder nameServers(String... nameServers) {
+            return nameServers(List.of(nameServers));
+        }
         public Builder options(@Nullable String options) {
             this.options = options;
             return this;
         }
-
         public Builder searchDomains(@Nullable String searchDomains) {
             this.searchDomains = searchDomains;
             return this;
-        }
-        public DnsConfigurationResponse build() {
+        }        public DnsConfigurationResponse build() {
             return new DnsConfigurationResponse(nameServers, options, searchDomains);
         }
     }

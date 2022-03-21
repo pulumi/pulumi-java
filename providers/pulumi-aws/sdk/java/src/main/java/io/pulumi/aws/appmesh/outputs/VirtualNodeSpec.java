@@ -124,27 +124,25 @@ public final class VirtualNodeSpec {
             this.backendDefaults = backendDefaults;
             return this;
         }
-
         public Builder backends(@Nullable List<VirtualNodeSpecBackend> backends) {
             this.backends = backends;
             return this;
         }
-
+        public Builder backends(VirtualNodeSpecBackend... backends) {
+            return backends(List.of(backends));
+        }
         public Builder listener(@Nullable VirtualNodeSpecListener listener) {
             this.listener = listener;
             return this;
         }
-
         public Builder logging(@Nullable VirtualNodeSpecLogging logging) {
             this.logging = logging;
             return this;
         }
-
         public Builder serviceDiscovery(@Nullable VirtualNodeSpecServiceDiscovery serviceDiscovery) {
             this.serviceDiscovery = serviceDiscovery;
             return this;
-        }
-        public VirtualNodeSpec build() {
+        }        public VirtualNodeSpec build() {
             return new VirtualNodeSpec(backendDefaults, backends, listener, logging, serviceDiscovery);
         }
     }

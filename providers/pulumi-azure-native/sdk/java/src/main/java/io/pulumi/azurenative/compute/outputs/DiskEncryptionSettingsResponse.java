@@ -89,17 +89,14 @@ public final class DiskEncryptionSettingsResponse {
             this.diskEncryptionKey = diskEncryptionKey;
             return this;
         }
-
         public Builder enabled(@Nullable Boolean enabled) {
             this.enabled = enabled;
             return this;
         }
-
         public Builder keyEncryptionKey(@Nullable KeyVaultKeyReferenceResponse keyEncryptionKey) {
             this.keyEncryptionKey = keyEncryptionKey;
             return this;
-        }
-        public DiskEncryptionSettingsResponse build() {
+        }        public DiskEncryptionSettingsResponse build() {
             return new DiskEncryptionSettingsResponse(diskEncryptionKey, enabled, keyEncryptionKey);
         }
     }

@@ -57,12 +57,13 @@ public final class AllowedConfigListArgs extends io.pulumi.resources.ResourceArg
             this.allowedConfigValues = Objects.requireNonNull(allowedConfigValues);
             return this;
         }
-
         public Builder allowedConfigValues(List<ReusableConfigWrapperArgs> allowedConfigValues) {
             this.allowedConfigValues = Output.of(Objects.requireNonNull(allowedConfigValues));
             return this;
         }
-        public AllowedConfigListArgs build() {
+        public Builder allowedConfigValues(ReusableConfigWrapperArgs... allowedConfigValues) {
+            return allowedConfigValues(List.of(allowedConfigValues));
+        }        public AllowedConfigListArgs build() {
             return new AllowedConfigListArgs(allowedConfigValues);
         }
     }

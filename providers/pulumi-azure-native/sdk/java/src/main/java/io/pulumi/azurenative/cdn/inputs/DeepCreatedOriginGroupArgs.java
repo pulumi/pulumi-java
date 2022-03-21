@@ -131,52 +131,45 @@ public final class DeepCreatedOriginGroupArgs extends io.pulumi.resources.Resour
             this.healthProbeSettings = healthProbeSettings;
             return this;
         }
-
         public Builder healthProbeSettings(@Nullable HealthProbeParametersArgs healthProbeSettings) {
             this.healthProbeSettings = Output.ofNullable(healthProbeSettings);
             return this;
         }
-
         public Builder name(Output<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
-
         public Builder origins(Output<List<ResourceReferenceArgs>> origins) {
             this.origins = Objects.requireNonNull(origins);
             return this;
         }
-
         public Builder origins(List<ResourceReferenceArgs> origins) {
             this.origins = Output.of(Objects.requireNonNull(origins));
             return this;
         }
-
+        public Builder origins(ResourceReferenceArgs... origins) {
+            return origins(List.of(origins));
+        }
         public Builder responseBasedOriginErrorDetectionSettings(@Nullable Output<ResponseBasedOriginErrorDetectionParametersArgs> responseBasedOriginErrorDetectionSettings) {
             this.responseBasedOriginErrorDetectionSettings = responseBasedOriginErrorDetectionSettings;
             return this;
         }
-
         public Builder responseBasedOriginErrorDetectionSettings(@Nullable ResponseBasedOriginErrorDetectionParametersArgs responseBasedOriginErrorDetectionSettings) {
             this.responseBasedOriginErrorDetectionSettings = Output.ofNullable(responseBasedOriginErrorDetectionSettings);
             return this;
         }
-
         public Builder trafficRestorationTimeToHealedOrNewEndpointsInMinutes(@Nullable Output<Integer> trafficRestorationTimeToHealedOrNewEndpointsInMinutes) {
             this.trafficRestorationTimeToHealedOrNewEndpointsInMinutes = trafficRestorationTimeToHealedOrNewEndpointsInMinutes;
             return this;
         }
-
         public Builder trafficRestorationTimeToHealedOrNewEndpointsInMinutes(@Nullable Integer trafficRestorationTimeToHealedOrNewEndpointsInMinutes) {
             this.trafficRestorationTimeToHealedOrNewEndpointsInMinutes = Output.ofNullable(trafficRestorationTimeToHealedOrNewEndpointsInMinutes);
             return this;
-        }
-        public DeepCreatedOriginGroupArgs build() {
+        }        public DeepCreatedOriginGroupArgs build() {
             return new DeepCreatedOriginGroupArgs(healthProbeSettings, name, origins, responseBasedOriginErrorDetectionSettings, trafficRestorationTimeToHealedOrNewEndpointsInMinutes);
         }
     }

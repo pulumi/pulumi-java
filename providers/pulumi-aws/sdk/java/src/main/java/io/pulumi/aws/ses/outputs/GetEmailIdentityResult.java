@@ -85,17 +85,14 @@ public final class GetEmailIdentityResult {
             this.arn = Objects.requireNonNull(arn);
             return this;
         }
-
         public Builder email(String email) {
             this.email = Objects.requireNonNull(email);
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
-        }
-        public GetEmailIdentityResult build() {
+        }        public GetEmailIdentityResult build() {
             return new GetEmailIdentityResult(arn, email, id);
         }
     }

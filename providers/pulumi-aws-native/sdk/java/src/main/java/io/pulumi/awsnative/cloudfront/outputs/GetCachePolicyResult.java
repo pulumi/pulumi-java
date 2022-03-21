@@ -64,17 +64,14 @@ public final class GetCachePolicyResult {
             this.cachePolicyConfig = cachePolicyConfig;
             return this;
         }
-
         public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
-
         public Builder lastModifiedTime(@Nullable String lastModifiedTime) {
             this.lastModifiedTime = lastModifiedTime;
             return this;
-        }
-        public GetCachePolicyResult build() {
+        }        public GetCachePolicyResult build() {
             return new GetCachePolicyResult(cachePolicyConfig, id, lastModifiedTime);
         }
     }

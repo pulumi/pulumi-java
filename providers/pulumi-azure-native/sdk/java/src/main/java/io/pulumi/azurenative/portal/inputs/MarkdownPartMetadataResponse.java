@@ -98,17 +98,17 @@ public final class MarkdownPartMetadataResponse extends io.pulumi.resources.Invo
             this.inputs = inputs;
             return this;
         }
-
+        public Builder inputs(Object... inputs) {
+            return inputs(List.of(inputs));
+        }
         public Builder settings(@Nullable MarkdownPartMetadataResponseSettings settings) {
             this.settings = settings;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public MarkdownPartMetadataResponse build() {
+        }        public MarkdownPartMetadataResponse build() {
             return new MarkdownPartMetadataResponse(inputs, settings, type);
         }
     }

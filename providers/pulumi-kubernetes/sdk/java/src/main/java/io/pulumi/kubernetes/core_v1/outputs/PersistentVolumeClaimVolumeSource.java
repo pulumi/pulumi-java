@@ -72,12 +72,10 @@ public final class PersistentVolumeClaimVolumeSource {
             this.claimName = Objects.requireNonNull(claimName);
             return this;
         }
-
         public Builder readOnly(@Nullable Boolean readOnly) {
             this.readOnly = readOnly;
             return this;
-        }
-        public PersistentVolumeClaimVolumeSource build() {
+        }        public PersistentVolumeClaimVolumeSource build() {
             return new PersistentVolumeClaimVolumeSource(claimName, readOnly);
         }
     }

@@ -126,27 +126,31 @@ public final class TransformSummaryResponse extends io.pulumi.resources.InvokeAr
             this.displayData = Objects.requireNonNull(displayData);
             return this;
         }
-
+        public Builder displayData(DisplayDataResponse... displayData) {
+            return displayData(List.of(displayData));
+        }
         public Builder inputCollectionName(List<String> inputCollectionName) {
             this.inputCollectionName = Objects.requireNonNull(inputCollectionName);
             return this;
         }
-
+        public Builder inputCollectionName(String... inputCollectionName) {
+            return inputCollectionName(List.of(inputCollectionName));
+        }
         public Builder kind(String kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder outputCollectionName(List<String> outputCollectionName) {
             this.outputCollectionName = Objects.requireNonNull(outputCollectionName);
             return this;
         }
-        public TransformSummaryResponse build() {
+        public Builder outputCollectionName(String... outputCollectionName) {
+            return outputCollectionName(List.of(outputCollectionName));
+        }        public TransformSummaryResponse build() {
             return new TransformSummaryResponse(displayData, inputCollectionName, kind, name, outputCollectionName);
         }
     }

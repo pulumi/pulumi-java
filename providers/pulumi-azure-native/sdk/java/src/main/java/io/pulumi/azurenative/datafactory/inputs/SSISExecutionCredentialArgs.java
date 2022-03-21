@@ -94,32 +94,26 @@ public final class SSISExecutionCredentialArgs extends io.pulumi.resources.Resou
             this.domain = Objects.requireNonNull(domain);
             return this;
         }
-
         public Builder domain(Object domain) {
             this.domain = Output.of(Objects.requireNonNull(domain));
             return this;
         }
-
         public Builder password(Output<SecureStringArgs> password) {
             this.password = Objects.requireNonNull(password);
             return this;
         }
-
         public Builder password(SecureStringArgs password) {
             this.password = Output.of(Objects.requireNonNull(password));
             return this;
         }
-
         public Builder userName(Output<Object> userName) {
             this.userName = Objects.requireNonNull(userName);
             return this;
         }
-
         public Builder userName(Object userName) {
             this.userName = Output.of(Objects.requireNonNull(userName));
             return this;
-        }
-        public SSISExecutionCredentialArgs build() {
+        }        public SSISExecutionCredentialArgs build() {
             return new SSISExecutionCredentialArgs(domain, password, userName);
         }
     }

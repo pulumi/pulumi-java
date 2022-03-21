@@ -78,22 +78,18 @@ public final class PrincipalsArgs extends io.pulumi.resources.ResourceArgs {
             this.objectId = objectId;
             return this;
         }
-
         public Builder objectId(@Nullable String objectId) {
             this.objectId = Output.ofNullable(objectId);
             return this;
         }
-
         public Builder upn(@Nullable Output<String> upn) {
             this.upn = upn;
             return this;
         }
-
         public Builder upn(@Nullable String upn) {
             this.upn = Output.ofNullable(upn);
             return this;
-        }
-        public PrincipalsArgs build() {
+        }        public PrincipalsArgs build() {
             return new PrincipalsArgs(objectId, upn);
         }
     }

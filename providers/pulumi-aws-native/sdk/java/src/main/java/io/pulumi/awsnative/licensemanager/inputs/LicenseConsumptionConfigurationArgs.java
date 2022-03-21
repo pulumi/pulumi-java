@@ -80,32 +80,26 @@ public final class LicenseConsumptionConfigurationArgs extends io.pulumi.resourc
             this.borrowConfiguration = borrowConfiguration;
             return this;
         }
-
         public Builder borrowConfiguration(@Nullable LicenseBorrowConfigurationArgs borrowConfiguration) {
             this.borrowConfiguration = Output.ofNullable(borrowConfiguration);
             return this;
         }
-
         public Builder provisionalConfiguration(@Nullable Output<LicenseProvisionalConfigurationArgs> provisionalConfiguration) {
             this.provisionalConfiguration = provisionalConfiguration;
             return this;
         }
-
         public Builder provisionalConfiguration(@Nullable LicenseProvisionalConfigurationArgs provisionalConfiguration) {
             this.provisionalConfiguration = Output.ofNullable(provisionalConfiguration);
             return this;
         }
-
         public Builder renewType(@Nullable Output<String> renewType) {
             this.renewType = renewType;
             return this;
         }
-
         public Builder renewType(@Nullable String renewType) {
             this.renewType = Output.ofNullable(renewType);
             return this;
-        }
-        public LicenseConsumptionConfigurationArgs build() {
+        }        public LicenseConsumptionConfigurationArgs build() {
             return new LicenseConsumptionConfigurationArgs(borrowConfiguration, provisionalConfiguration, renewType);
         }
     }

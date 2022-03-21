@@ -71,12 +71,10 @@ public final class ConnectionMonitorEndpointFilterItemResponse {
             this.address = address;
             return this;
         }
-
         public Builder type(@Nullable String type) {
             this.type = type;
             return this;
-        }
-        public ConnectionMonitorEndpointFilterItemResponse build() {
+        }        public ConnectionMonitorEndpointFilterItemResponse build() {
             return new ConnectionMonitorEndpointFilterItemResponse(address, type);
         }
     }

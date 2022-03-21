@@ -130,42 +130,40 @@ public final class StandardEncoderPresetArgs extends io.pulumi.resources.Resourc
             this.codecs = Objects.requireNonNull(codecs);
             return this;
         }
-
         public Builder codecs(List<Object> codecs) {
             this.codecs = Output.of(Objects.requireNonNull(codecs));
             return this;
         }
-
+        public Builder codecs(Object... codecs) {
+            return codecs(List.of(codecs));
+        }
         public Builder filters(@Nullable Output<FiltersArgs> filters) {
             this.filters = filters;
             return this;
         }
-
         public Builder filters(@Nullable FiltersArgs filters) {
             this.filters = Output.ofNullable(filters);
             return this;
         }
-
         public Builder formats(Output<List<Object>> formats) {
             this.formats = Objects.requireNonNull(formats);
             return this;
         }
-
         public Builder formats(List<Object> formats) {
             this.formats = Output.of(Objects.requireNonNull(formats));
             return this;
         }
-
+        public Builder formats(Object... formats) {
+            return formats(List.of(formats));
+        }
         public Builder odataType(Output<String> odataType) {
             this.odataType = Objects.requireNonNull(odataType);
             return this;
         }
-
         public Builder odataType(String odataType) {
             this.odataType = Output.of(Objects.requireNonNull(odataType));
             return this;
-        }
-        public StandardEncoderPresetArgs build() {
+        }        public StandardEncoderPresetArgs build() {
             return new StandardEncoderPresetArgs(codecs, filters, formats, odataType);
         }
     }

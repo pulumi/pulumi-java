@@ -60,12 +60,10 @@ public final class ApplicationNotificationEndpointArgs extends io.pulumi.resourc
             this.uri = Objects.requireNonNull(uri);
             return this;
         }
-
         public Builder uri(String uri) {
             this.uri = Output.of(Objects.requireNonNull(uri));
             return this;
-        }
-        public ApplicationNotificationEndpointArgs build() {
+        }        public ApplicationNotificationEndpointArgs build() {
             return new ApplicationNotificationEndpointArgs(uri);
         }
     }

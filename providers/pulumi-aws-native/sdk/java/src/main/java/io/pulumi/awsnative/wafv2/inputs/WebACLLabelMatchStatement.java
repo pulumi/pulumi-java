@@ -65,12 +65,10 @@ public final class WebACLLabelMatchStatement extends io.pulumi.resources.InvokeA
             this.key = Objects.requireNonNull(key);
             return this;
         }
-
         public Builder scope(WebACLLabelMatchScope scope) {
             this.scope = Objects.requireNonNull(scope);
             return this;
-        }
-        public WebACLLabelMatchStatement build() {
+        }        public WebACLLabelMatchStatement build() {
             return new WebACLLabelMatchStatement(key, scope);
         }
     }

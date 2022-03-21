@@ -297,152 +297,140 @@ public final class SubnetArgs extends io.pulumi.resources.ResourceArgs {
             this.addressPrefix = addressPrefix;
             return this;
         }
-
         public Builder addressPrefix(@Nullable String addressPrefix) {
             this.addressPrefix = Output.ofNullable(addressPrefix);
             return this;
         }
-
         public Builder addressPrefixes(@Nullable Output<List<String>> addressPrefixes) {
             this.addressPrefixes = addressPrefixes;
             return this;
         }
-
         public Builder addressPrefixes(@Nullable List<String> addressPrefixes) {
             this.addressPrefixes = Output.ofNullable(addressPrefixes);
             return this;
         }
-
+        public Builder addressPrefixes(String... addressPrefixes) {
+            return addressPrefixes(List.of(addressPrefixes));
+        }
         public Builder applicationGatewayIpConfigurations(@Nullable Output<List<ApplicationGatewayIPConfigurationArgs>> applicationGatewayIpConfigurations) {
             this.applicationGatewayIpConfigurations = applicationGatewayIpConfigurations;
             return this;
         }
-
         public Builder applicationGatewayIpConfigurations(@Nullable List<ApplicationGatewayIPConfigurationArgs> applicationGatewayIpConfigurations) {
             this.applicationGatewayIpConfigurations = Output.ofNullable(applicationGatewayIpConfigurations);
             return this;
         }
-
+        public Builder applicationGatewayIpConfigurations(ApplicationGatewayIPConfigurationArgs... applicationGatewayIpConfigurations) {
+            return applicationGatewayIpConfigurations(List.of(applicationGatewayIpConfigurations));
+        }
         public Builder delegations(@Nullable Output<List<DelegationArgs>> delegations) {
             this.delegations = delegations;
             return this;
         }
-
         public Builder delegations(@Nullable List<DelegationArgs> delegations) {
             this.delegations = Output.ofNullable(delegations);
             return this;
         }
-
+        public Builder delegations(DelegationArgs... delegations) {
+            return delegations(List.of(delegations));
+        }
         public Builder id(@Nullable Output<String> id) {
             this.id = id;
             return this;
         }
-
         public Builder id(@Nullable String id) {
             this.id = Output.ofNullable(id);
             return this;
         }
-
         public Builder ipAllocations(@Nullable Output<List<SubResourceArgs>> ipAllocations) {
             this.ipAllocations = ipAllocations;
             return this;
         }
-
         public Builder ipAllocations(@Nullable List<SubResourceArgs> ipAllocations) {
             this.ipAllocations = Output.ofNullable(ipAllocations);
             return this;
         }
-
+        public Builder ipAllocations(SubResourceArgs... ipAllocations) {
+            return ipAllocations(List.of(ipAllocations));
+        }
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder natGateway(@Nullable Output<SubResourceArgs> natGateway) {
             this.natGateway = natGateway;
             return this;
         }
-
         public Builder natGateway(@Nullable SubResourceArgs natGateway) {
             this.natGateway = Output.ofNullable(natGateway);
             return this;
         }
-
         public Builder networkSecurityGroup(@Nullable Output<NetworkSecurityGroupArgs> networkSecurityGroup) {
             this.networkSecurityGroup = networkSecurityGroup;
             return this;
         }
-
         public Builder networkSecurityGroup(@Nullable NetworkSecurityGroupArgs networkSecurityGroup) {
             this.networkSecurityGroup = Output.ofNullable(networkSecurityGroup);
             return this;
         }
-
         public Builder privateEndpointNetworkPolicies(@Nullable Output<Either<String,VirtualNetworkPrivateEndpointNetworkPolicies>> privateEndpointNetworkPolicies) {
             this.privateEndpointNetworkPolicies = privateEndpointNetworkPolicies;
             return this;
         }
-
         public Builder privateEndpointNetworkPolicies(@Nullable Either<String,VirtualNetworkPrivateEndpointNetworkPolicies> privateEndpointNetworkPolicies) {
             this.privateEndpointNetworkPolicies = Output.ofNullable(privateEndpointNetworkPolicies);
             return this;
         }
-
         public Builder privateLinkServiceNetworkPolicies(@Nullable Output<Either<String,VirtualNetworkPrivateLinkServiceNetworkPolicies>> privateLinkServiceNetworkPolicies) {
             this.privateLinkServiceNetworkPolicies = privateLinkServiceNetworkPolicies;
             return this;
         }
-
         public Builder privateLinkServiceNetworkPolicies(@Nullable Either<String,VirtualNetworkPrivateLinkServiceNetworkPolicies> privateLinkServiceNetworkPolicies) {
             this.privateLinkServiceNetworkPolicies = Output.ofNullable(privateLinkServiceNetworkPolicies);
             return this;
         }
-
         public Builder routeTable(@Nullable Output<RouteTableArgs> routeTable) {
             this.routeTable = routeTable;
             return this;
         }
-
         public Builder routeTable(@Nullable RouteTableArgs routeTable) {
             this.routeTable = Output.ofNullable(routeTable);
             return this;
         }
-
         public Builder serviceEndpointPolicies(@Nullable Output<List<ServiceEndpointPolicyArgs>> serviceEndpointPolicies) {
             this.serviceEndpointPolicies = serviceEndpointPolicies;
             return this;
         }
-
         public Builder serviceEndpointPolicies(@Nullable List<ServiceEndpointPolicyArgs> serviceEndpointPolicies) {
             this.serviceEndpointPolicies = Output.ofNullable(serviceEndpointPolicies);
             return this;
         }
-
+        public Builder serviceEndpointPolicies(ServiceEndpointPolicyArgs... serviceEndpointPolicies) {
+            return serviceEndpointPolicies(List.of(serviceEndpointPolicies));
+        }
         public Builder serviceEndpoints(@Nullable Output<List<ServiceEndpointPropertiesFormatArgs>> serviceEndpoints) {
             this.serviceEndpoints = serviceEndpoints;
             return this;
         }
-
         public Builder serviceEndpoints(@Nullable List<ServiceEndpointPropertiesFormatArgs> serviceEndpoints) {
             this.serviceEndpoints = Output.ofNullable(serviceEndpoints);
             return this;
         }
-
+        public Builder serviceEndpoints(ServiceEndpointPropertiesFormatArgs... serviceEndpoints) {
+            return serviceEndpoints(List.of(serviceEndpoints));
+        }
         public Builder type(@Nullable Output<String> type) {
             this.type = type;
             return this;
         }
-
         public Builder type(@Nullable String type) {
             this.type = Output.ofNullable(type);
             return this;
-        }
-        public SubnetArgs build() {
+        }        public SubnetArgs build() {
             return new SubnetArgs(addressPrefix, addressPrefixes, applicationGatewayIpConfigurations, delegations, id, ipAllocations, name, natGateway, networkSecurityGroup, privateEndpointNetworkPolicies, privateLinkServiceNetworkPolicies, routeTable, serviceEndpointPolicies, serviceEndpoints, type);
         }
     }

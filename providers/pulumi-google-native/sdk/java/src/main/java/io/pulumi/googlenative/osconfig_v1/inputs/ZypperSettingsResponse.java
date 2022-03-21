@@ -142,32 +142,38 @@ public final class ZypperSettingsResponse extends io.pulumi.resources.InvokeArgs
             this.categories = Objects.requireNonNull(categories);
             return this;
         }
-
+        public Builder categories(String... categories) {
+            return categories(List.of(categories));
+        }
         public Builder excludes(List<String> excludes) {
             this.excludes = Objects.requireNonNull(excludes);
             return this;
         }
-
+        public Builder excludes(String... excludes) {
+            return excludes(List.of(excludes));
+        }
         public Builder exclusivePatches(List<String> exclusivePatches) {
             this.exclusivePatches = Objects.requireNonNull(exclusivePatches);
             return this;
         }
-
+        public Builder exclusivePatches(String... exclusivePatches) {
+            return exclusivePatches(List.of(exclusivePatches));
+        }
         public Builder severities(List<String> severities) {
             this.severities = Objects.requireNonNull(severities);
             return this;
         }
-
+        public Builder severities(String... severities) {
+            return severities(List.of(severities));
+        }
         public Builder withOptional(Boolean withOptional) {
             this.withOptional = Objects.requireNonNull(withOptional);
             return this;
         }
-
         public Builder withUpdate(Boolean withUpdate) {
             this.withUpdate = Objects.requireNonNull(withUpdate);
             return this;
-        }
-        public ZypperSettingsResponse build() {
+        }        public ZypperSettingsResponse build() {
             return new ZypperSettingsResponse(categories, excludes, exclusivePatches, severities, withOptional, withUpdate);
         }
     }

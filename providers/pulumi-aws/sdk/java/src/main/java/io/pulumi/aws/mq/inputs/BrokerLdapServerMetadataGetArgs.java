@@ -220,112 +220,93 @@ public final class BrokerLdapServerMetadataGetArgs extends io.pulumi.resources.R
             this.hosts = hosts;
             return this;
         }
-
         public Builder hosts(@Nullable List<String> hosts) {
             this.hosts = Output.ofNullable(hosts);
             return this;
         }
-
+        public Builder hosts(String... hosts) {
+            return hosts(List.of(hosts));
+        }
         public Builder roleBase(@Nullable Output<String> roleBase) {
             this.roleBase = roleBase;
             return this;
         }
-
         public Builder roleBase(@Nullable String roleBase) {
             this.roleBase = Output.ofNullable(roleBase);
             return this;
         }
-
         public Builder roleName(@Nullable Output<String> roleName) {
             this.roleName = roleName;
             return this;
         }
-
         public Builder roleName(@Nullable String roleName) {
             this.roleName = Output.ofNullable(roleName);
             return this;
         }
-
         public Builder roleSearchMatching(@Nullable Output<String> roleSearchMatching) {
             this.roleSearchMatching = roleSearchMatching;
             return this;
         }
-
         public Builder roleSearchMatching(@Nullable String roleSearchMatching) {
             this.roleSearchMatching = Output.ofNullable(roleSearchMatching);
             return this;
         }
-
         public Builder roleSearchSubtree(@Nullable Output<Boolean> roleSearchSubtree) {
             this.roleSearchSubtree = roleSearchSubtree;
             return this;
         }
-
         public Builder roleSearchSubtree(@Nullable Boolean roleSearchSubtree) {
             this.roleSearchSubtree = Output.ofNullable(roleSearchSubtree);
             return this;
         }
-
         public Builder serviceAccountPassword(@Nullable Output<String> serviceAccountPassword) {
             this.serviceAccountPassword = serviceAccountPassword;
             return this;
         }
-
         public Builder serviceAccountPassword(@Nullable String serviceAccountPassword) {
             this.serviceAccountPassword = Output.ofNullable(serviceAccountPassword);
             return this;
         }
-
         public Builder serviceAccountUsername(@Nullable Output<String> serviceAccountUsername) {
             this.serviceAccountUsername = serviceAccountUsername;
             return this;
         }
-
         public Builder serviceAccountUsername(@Nullable String serviceAccountUsername) {
             this.serviceAccountUsername = Output.ofNullable(serviceAccountUsername);
             return this;
         }
-
         public Builder userBase(@Nullable Output<String> userBase) {
             this.userBase = userBase;
             return this;
         }
-
         public Builder userBase(@Nullable String userBase) {
             this.userBase = Output.ofNullable(userBase);
             return this;
         }
-
         public Builder userRoleName(@Nullable Output<String> userRoleName) {
             this.userRoleName = userRoleName;
             return this;
         }
-
         public Builder userRoleName(@Nullable String userRoleName) {
             this.userRoleName = Output.ofNullable(userRoleName);
             return this;
         }
-
         public Builder userSearchMatching(@Nullable Output<String> userSearchMatching) {
             this.userSearchMatching = userSearchMatching;
             return this;
         }
-
         public Builder userSearchMatching(@Nullable String userSearchMatching) {
             this.userSearchMatching = Output.ofNullable(userSearchMatching);
             return this;
         }
-
         public Builder userSearchSubtree(@Nullable Output<Boolean> userSearchSubtree) {
             this.userSearchSubtree = userSearchSubtree;
             return this;
         }
-
         public Builder userSearchSubtree(@Nullable Boolean userSearchSubtree) {
             this.userSearchSubtree = Output.ofNullable(userSearchSubtree);
             return this;
-        }
-        public BrokerLdapServerMetadataGetArgs build() {
+        }        public BrokerLdapServerMetadataGetArgs build() {
             return new BrokerLdapServerMetadataGetArgs(hosts, roleBase, roleName, roleSearchMatching, roleSearchSubtree, serviceAccountPassword, serviceAccountUsername, userBase, userRoleName, userSearchMatching, userSearchSubtree);
         }
     }

@@ -72,12 +72,10 @@ public final class DataSourceHttpConfig {
             this.authorizationConfig = authorizationConfig;
             return this;
         }
-
         public Builder endpoint(String endpoint) {
             this.endpoint = Objects.requireNonNull(endpoint);
             return this;
-        }
-        public DataSourceHttpConfig build() {
+        }        public DataSourceHttpConfig build() {
             return new DataSourceHttpConfig(authorizationConfig, endpoint);
         }
     }

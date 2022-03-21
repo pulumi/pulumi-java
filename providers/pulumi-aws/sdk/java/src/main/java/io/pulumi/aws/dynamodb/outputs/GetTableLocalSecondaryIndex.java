@@ -78,22 +78,21 @@ public final class GetTableLocalSecondaryIndex {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder nonKeyAttributes(List<String> nonKeyAttributes) {
             this.nonKeyAttributes = Objects.requireNonNull(nonKeyAttributes);
             return this;
         }
-
+        public Builder nonKeyAttributes(String... nonKeyAttributes) {
+            return nonKeyAttributes(List.of(nonKeyAttributes));
+        }
         public Builder projectionType(String projectionType) {
             this.projectionType = Objects.requireNonNull(projectionType);
             return this;
         }
-
         public Builder rangeKey(String rangeKey) {
             this.rangeKey = Objects.requireNonNull(rangeKey);
             return this;
-        }
-        public GetTableLocalSecondaryIndex build() {
+        }        public GetTableLocalSecondaryIndex build() {
             return new GetTableLocalSecondaryIndex(name, nonKeyAttributes, projectionType, rangeKey);
         }
     }

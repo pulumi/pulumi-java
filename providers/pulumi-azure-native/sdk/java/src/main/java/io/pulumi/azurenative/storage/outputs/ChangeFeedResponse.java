@@ -72,12 +72,10 @@ public final class ChangeFeedResponse {
             this.enabled = enabled;
             return this;
         }
-
         public Builder retentionInDays(@Nullable Integer retentionInDays) {
             this.retentionInDays = retentionInDays;
             return this;
-        }
-        public ChangeFeedResponse build() {
+        }        public ChangeFeedResponse build() {
             return new ChangeFeedResponse(enabled, retentionInDays);
         }
     }

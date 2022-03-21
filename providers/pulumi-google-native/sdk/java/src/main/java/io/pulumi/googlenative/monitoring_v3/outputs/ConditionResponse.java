@@ -137,32 +137,26 @@ public final class ConditionResponse {
             this.conditionAbsent = Objects.requireNonNull(conditionAbsent);
             return this;
         }
-
         public Builder conditionMatchedLog(LogMatchResponse conditionMatchedLog) {
             this.conditionMatchedLog = Objects.requireNonNull(conditionMatchedLog);
             return this;
         }
-
         public Builder conditionMonitoringQueryLanguage(MonitoringQueryLanguageConditionResponse conditionMonitoringQueryLanguage) {
             this.conditionMonitoringQueryLanguage = Objects.requireNonNull(conditionMonitoringQueryLanguage);
             return this;
         }
-
         public Builder conditionThreshold(MetricThresholdResponse conditionThreshold) {
             this.conditionThreshold = Objects.requireNonNull(conditionThreshold);
             return this;
         }
-
         public Builder displayName(String displayName) {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
-        }
-        public ConditionResponse build() {
+        }        public ConditionResponse build() {
             return new ConditionResponse(conditionAbsent, conditionMatchedLog, conditionMonitoringQueryLanguage, conditionThreshold, displayName, name);
         }
     }

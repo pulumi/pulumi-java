@@ -139,62 +139,50 @@ public final class AssignmentArgs extends io.pulumi.resources.ResourceArgs {
             this.instanceArn = Objects.requireNonNull(instanceArn);
             return this;
         }
-
         public Builder instanceArn(String instanceArn) {
             this.instanceArn = Output.of(Objects.requireNonNull(instanceArn));
             return this;
         }
-
         public Builder permissionSetArn(Output<String> permissionSetArn) {
             this.permissionSetArn = Objects.requireNonNull(permissionSetArn);
             return this;
         }
-
         public Builder permissionSetArn(String permissionSetArn) {
             this.permissionSetArn = Output.of(Objects.requireNonNull(permissionSetArn));
             return this;
         }
-
         public Builder principalId(Output<String> principalId) {
             this.principalId = Objects.requireNonNull(principalId);
             return this;
         }
-
         public Builder principalId(String principalId) {
             this.principalId = Output.of(Objects.requireNonNull(principalId));
             return this;
         }
-
         public Builder principalType(Output<AssignmentPrincipalType> principalType) {
             this.principalType = Objects.requireNonNull(principalType);
             return this;
         }
-
         public Builder principalType(AssignmentPrincipalType principalType) {
             this.principalType = Output.of(Objects.requireNonNull(principalType));
             return this;
         }
-
         public Builder targetId(Output<String> targetId) {
             this.targetId = Objects.requireNonNull(targetId);
             return this;
         }
-
         public Builder targetId(String targetId) {
             this.targetId = Output.of(Objects.requireNonNull(targetId));
             return this;
         }
-
         public Builder targetType(Output<AssignmentTargetType> targetType) {
             this.targetType = Objects.requireNonNull(targetType);
             return this;
         }
-
         public Builder targetType(AssignmentTargetType targetType) {
             this.targetType = Output.of(Objects.requireNonNull(targetType));
             return this;
-        }
-        public AssignmentArgs build() {
+        }        public AssignmentArgs build() {
             return new AssignmentArgs(instanceArn, permissionSetArn, principalId, principalType, targetId, targetType);
         }
     }

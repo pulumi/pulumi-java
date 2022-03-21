@@ -53,8 +53,7 @@ public final class DataSourceAthenaParameters {
         public Builder workGroup(@Nullable String workGroup) {
             this.workGroup = workGroup;
             return this;
-        }
-        public DataSourceAthenaParameters build() {
+        }        public DataSourceAthenaParameters build() {
             return new DataSourceAthenaParameters(workGroup);
         }
     }

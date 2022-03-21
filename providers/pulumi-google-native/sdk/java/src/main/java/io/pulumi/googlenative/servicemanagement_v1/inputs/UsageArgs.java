@@ -96,32 +96,32 @@ public final class UsageArgs extends io.pulumi.resources.ResourceArgs {
             this.producerNotificationChannel = producerNotificationChannel;
             return this;
         }
-
         public Builder producerNotificationChannel(@Nullable String producerNotificationChannel) {
             this.producerNotificationChannel = Output.ofNullable(producerNotificationChannel);
             return this;
         }
-
         public Builder requirements(@Nullable Output<List<String>> requirements) {
             this.requirements = requirements;
             return this;
         }
-
         public Builder requirements(@Nullable List<String> requirements) {
             this.requirements = Output.ofNullable(requirements);
             return this;
         }
-
+        public Builder requirements(String... requirements) {
+            return requirements(List.of(requirements));
+        }
         public Builder rules(@Nullable Output<List<UsageRuleArgs>> rules) {
             this.rules = rules;
             return this;
         }
-
         public Builder rules(@Nullable List<UsageRuleArgs> rules) {
             this.rules = Output.ofNullable(rules);
             return this;
         }
-        public UsageArgs build() {
+        public Builder rules(UsageRuleArgs... rules) {
+            return rules(List.of(rules));
+        }        public UsageArgs build() {
             return new UsageArgs(producerNotificationChannel, requirements, rules);
         }
     }

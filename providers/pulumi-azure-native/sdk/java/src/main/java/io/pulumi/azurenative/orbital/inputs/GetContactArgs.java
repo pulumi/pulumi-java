@@ -88,17 +88,14 @@ public final class GetContactArgs extends io.pulumi.resources.InvokeArgs {
             this.contactName = Objects.requireNonNull(contactName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder spacecraftName(String spacecraftName) {
             this.spacecraftName = Objects.requireNonNull(spacecraftName);
             return this;
-        }
-        public GetContactArgs build() {
+        }        public GetContactArgs build() {
             return new GetContactArgs(contactName, resourceGroupName, spacecraftName);
         }
     }

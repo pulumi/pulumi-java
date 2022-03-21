@@ -53,12 +53,13 @@ public final class SpotFleetTargetGroupsConfigArgs extends io.pulumi.resources.R
             this.targetGroups = Objects.requireNonNull(targetGroups);
             return this;
         }
-
         public Builder targetGroups(List<SpotFleetTargetGroupArgs> targetGroups) {
             this.targetGroups = Output.of(Objects.requireNonNull(targetGroups));
             return this;
         }
-        public SpotFleetTargetGroupsConfigArgs build() {
+        public Builder targetGroups(SpotFleetTargetGroupArgs... targetGroups) {
+            return targetGroups(List.of(targetGroups));
+        }        public SpotFleetTargetGroupsConfigArgs build() {
             return new SpotFleetTargetGroupsConfigArgs(targetGroups);
         }
     }

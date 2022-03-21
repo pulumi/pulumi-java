@@ -57,12 +57,10 @@ public final class DashboardExportToCSVOptionArgs extends io.pulumi.resources.Re
             this.availabilityStatus = availabilityStatus;
             return this;
         }
-
         public Builder availabilityStatus(@Nullable DashboardBehavior availabilityStatus) {
             this.availabilityStatus = Output.ofNullable(availabilityStatus);
             return this;
-        }
-        public DashboardExportToCSVOptionArgs build() {
+        }        public DashboardExportToCSVOptionArgs build() {
             return new DashboardExportToCSVOptionArgs(availabilityStatus);
         }
     }

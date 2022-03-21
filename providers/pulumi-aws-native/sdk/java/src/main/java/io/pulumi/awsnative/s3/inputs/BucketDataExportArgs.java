@@ -74,22 +74,18 @@ public final class BucketDataExportArgs extends io.pulumi.resources.ResourceArgs
             this.destination = Objects.requireNonNull(destination);
             return this;
         }
-
         public Builder destination(BucketDestinationArgs destination) {
             this.destination = Output.of(Objects.requireNonNull(destination));
             return this;
         }
-
         public Builder outputSchemaVersion(Output<String> outputSchemaVersion) {
             this.outputSchemaVersion = Objects.requireNonNull(outputSchemaVersion);
             return this;
         }
-
         public Builder outputSchemaVersion(String outputSchemaVersion) {
             this.outputSchemaVersion = Output.of(Objects.requireNonNull(outputSchemaVersion));
             return this;
-        }
-        public BucketDataExportArgs build() {
+        }        public BucketDataExportArgs build() {
             return new BucketDataExportArgs(destination, outputSchemaVersion);
         }
     }

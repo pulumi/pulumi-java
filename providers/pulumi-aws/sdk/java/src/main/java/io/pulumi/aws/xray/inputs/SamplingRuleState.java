@@ -285,152 +285,122 @@ public final class SamplingRuleState extends io.pulumi.resources.ResourceArgs {
             this.arn = arn;
             return this;
         }
-
         public Builder arn(@Nullable String arn) {
             this.arn = Output.ofNullable(arn);
             return this;
         }
-
         public Builder attributes(@Nullable Output<Map<String,String>> attributes) {
             this.attributes = attributes;
             return this;
         }
-
         public Builder attributes(@Nullable Map<String,String> attributes) {
             this.attributes = Output.ofNullable(attributes);
             return this;
         }
-
         public Builder fixedRate(@Nullable Output<Double> fixedRate) {
             this.fixedRate = fixedRate;
             return this;
         }
-
         public Builder fixedRate(@Nullable Double fixedRate) {
             this.fixedRate = Output.ofNullable(fixedRate);
             return this;
         }
-
         public Builder host(@Nullable Output<String> host) {
             this.host = host;
             return this;
         }
-
         public Builder host(@Nullable String host) {
             this.host = Output.ofNullable(host);
             return this;
         }
-
         public Builder httpMethod(@Nullable Output<String> httpMethod) {
             this.httpMethod = httpMethod;
             return this;
         }
-
         public Builder httpMethod(@Nullable String httpMethod) {
             this.httpMethod = Output.ofNullable(httpMethod);
             return this;
         }
-
         public Builder priority(@Nullable Output<Integer> priority) {
             this.priority = priority;
             return this;
         }
-
         public Builder priority(@Nullable Integer priority) {
             this.priority = Output.ofNullable(priority);
             return this;
         }
-
         public Builder reservoirSize(@Nullable Output<Integer> reservoirSize) {
             this.reservoirSize = reservoirSize;
             return this;
         }
-
         public Builder reservoirSize(@Nullable Integer reservoirSize) {
             this.reservoirSize = Output.ofNullable(reservoirSize);
             return this;
         }
-
         public Builder resourceArn(@Nullable Output<String> resourceArn) {
             this.resourceArn = resourceArn;
             return this;
         }
-
         public Builder resourceArn(@Nullable String resourceArn) {
             this.resourceArn = Output.ofNullable(resourceArn);
             return this;
         }
-
         public Builder ruleName(@Nullable Output<String> ruleName) {
             this.ruleName = ruleName;
             return this;
         }
-
         public Builder ruleName(@Nullable String ruleName) {
             this.ruleName = Output.ofNullable(ruleName);
             return this;
         }
-
         public Builder serviceName(@Nullable Output<String> serviceName) {
             this.serviceName = serviceName;
             return this;
         }
-
         public Builder serviceName(@Nullable String serviceName) {
             this.serviceName = Output.ofNullable(serviceName);
             return this;
         }
-
         public Builder serviceType(@Nullable Output<String> serviceType) {
             this.serviceType = serviceType;
             return this;
         }
-
         public Builder serviceType(@Nullable String serviceType) {
             this.serviceType = Output.ofNullable(serviceType);
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
             this.tagsAll = tagsAll;
             return this;
         }
-
         public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
             this.tagsAll = Output.ofNullable(tagsAll);
             return this;
         }
-
         public Builder urlPath(@Nullable Output<String> urlPath) {
             this.urlPath = urlPath;
             return this;
         }
-
         public Builder urlPath(@Nullable String urlPath) {
             this.urlPath = Output.ofNullable(urlPath);
             return this;
         }
-
         public Builder version(@Nullable Output<Integer> version) {
             this.version = version;
             return this;
         }
-
         public Builder version(@Nullable Integer version) {
             this.version = Output.ofNullable(version);
             return this;
-        }
-        public SamplingRuleState build() {
+        }        public SamplingRuleState build() {
             return new SamplingRuleState(arn, attributes, fixedRate, host, httpMethod, priority, reservoirSize, resourceArn, ruleName, serviceName, serviceType, tags, tagsAll, urlPath, version);
         }
     }

@@ -503,152 +503,131 @@ public final class GetFunctionResult {
             this.architectures = Objects.requireNonNull(architectures);
             return this;
         }
-
+        public Builder architectures(String... architectures) {
+            return architectures(List.of(architectures));
+        }
         public Builder arn(String arn) {
             this.arn = Objects.requireNonNull(arn);
             return this;
         }
-
         public Builder codeSigningConfigArn(String codeSigningConfigArn) {
             this.codeSigningConfigArn = Objects.requireNonNull(codeSigningConfigArn);
             return this;
         }
-
         public Builder deadLetterConfig(GetFunctionDeadLetterConfig deadLetterConfig) {
             this.deadLetterConfig = Objects.requireNonNull(deadLetterConfig);
             return this;
         }
-
         public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
-
         public Builder environment(GetFunctionEnvironment environment) {
             this.environment = Objects.requireNonNull(environment);
             return this;
         }
-
         public Builder fileSystemConfigs(List<GetFunctionFileSystemConfig> fileSystemConfigs) {
             this.fileSystemConfigs = Objects.requireNonNull(fileSystemConfigs);
             return this;
         }
-
+        public Builder fileSystemConfigs(GetFunctionFileSystemConfig... fileSystemConfigs) {
+            return fileSystemConfigs(List.of(fileSystemConfigs));
+        }
         public Builder functionName(String functionName) {
             this.functionName = Objects.requireNonNull(functionName);
             return this;
         }
-
         public Builder handler(String handler) {
             this.handler = Objects.requireNonNull(handler);
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder imageUri(String imageUri) {
             this.imageUri = Objects.requireNonNull(imageUri);
             return this;
         }
-
         public Builder invokeArn(String invokeArn) {
             this.invokeArn = Objects.requireNonNull(invokeArn);
             return this;
         }
-
         public Builder kmsKeyArn(String kmsKeyArn) {
             this.kmsKeyArn = Objects.requireNonNull(kmsKeyArn);
             return this;
         }
-
         public Builder lastModified(String lastModified) {
             this.lastModified = Objects.requireNonNull(lastModified);
             return this;
         }
-
         public Builder layers(List<String> layers) {
             this.layers = Objects.requireNonNull(layers);
             return this;
         }
-
+        public Builder layers(String... layers) {
+            return layers(List.of(layers));
+        }
         public Builder memorySize(Integer memorySize) {
             this.memorySize = Objects.requireNonNull(memorySize);
             return this;
         }
-
         public Builder qualifiedArn(String qualifiedArn) {
             this.qualifiedArn = Objects.requireNonNull(qualifiedArn);
             return this;
         }
-
         public Builder qualifier(@Nullable String qualifier) {
             this.qualifier = qualifier;
             return this;
         }
-
         public Builder reservedConcurrentExecutions(Integer reservedConcurrentExecutions) {
             this.reservedConcurrentExecutions = Objects.requireNonNull(reservedConcurrentExecutions);
             return this;
         }
-
         public Builder role(String role) {
             this.role = Objects.requireNonNull(role);
             return this;
         }
-
         public Builder runtime(String runtime) {
             this.runtime = Objects.requireNonNull(runtime);
             return this;
         }
-
         public Builder signingJobArn(String signingJobArn) {
             this.signingJobArn = Objects.requireNonNull(signingJobArn);
             return this;
         }
-
         public Builder signingProfileVersionArn(String signingProfileVersionArn) {
             this.signingProfileVersionArn = Objects.requireNonNull(signingProfileVersionArn);
             return this;
         }
-
         public Builder sourceCodeHash(String sourceCodeHash) {
             this.sourceCodeHash = Objects.requireNonNull(sourceCodeHash);
             return this;
         }
-
         public Builder sourceCodeSize(Integer sourceCodeSize) {
             this.sourceCodeSize = Objects.requireNonNull(sourceCodeSize);
             return this;
         }
-
         public Builder tags(Map<String,String> tags) {
             this.tags = Objects.requireNonNull(tags);
             return this;
         }
-
         public Builder timeout(Integer timeout) {
             this.timeout = Objects.requireNonNull(timeout);
             return this;
         }
-
         public Builder tracingConfig(GetFunctionTracingConfig tracingConfig) {
             this.tracingConfig = Objects.requireNonNull(tracingConfig);
             return this;
         }
-
         public Builder version(String version) {
             this.version = Objects.requireNonNull(version);
             return this;
         }
-
         public Builder vpcConfig(GetFunctionVpcConfig vpcConfig) {
             this.vpcConfig = Objects.requireNonNull(vpcConfig);
             return this;
-        }
-        public GetFunctionResult build() {
+        }        public GetFunctionResult build() {
             return new GetFunctionResult(architectures, arn, codeSigningConfigArn, deadLetterConfig, description, environment, fileSystemConfigs, functionName, handler, id, imageUri, invokeArn, kmsKeyArn, lastModified, layers, memorySize, qualifiedArn, qualifier, reservedConcurrentExecutions, role, runtime, signingJobArn, signingProfileVersionArn, sourceCodeHash, sourceCodeSize, tags, timeout, tracingConfig, version, vpcConfig);
         }
     }

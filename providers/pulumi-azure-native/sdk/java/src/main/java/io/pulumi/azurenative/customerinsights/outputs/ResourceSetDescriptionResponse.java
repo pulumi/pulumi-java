@@ -71,12 +71,16 @@ public final class ResourceSetDescriptionResponse {
             this.elements = elements;
             return this;
         }
-
+        public Builder elements(String... elements) {
+            return elements(List.of(elements));
+        }
         public Builder exceptions(@Nullable List<String> exceptions) {
             this.exceptions = exceptions;
             return this;
         }
-        public ResourceSetDescriptionResponse build() {
+        public Builder exceptions(String... exceptions) {
+            return exceptions(List.of(exceptions));
+        }        public ResourceSetDescriptionResponse build() {
             return new ResourceSetDescriptionResponse(elements, exceptions);
         }
     }

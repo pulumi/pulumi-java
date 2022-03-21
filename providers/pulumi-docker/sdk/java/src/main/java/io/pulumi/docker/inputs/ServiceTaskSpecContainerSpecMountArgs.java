@@ -130,72 +130,58 @@ public final class ServiceTaskSpecContainerSpecMountArgs extends io.pulumi.resou
             this.bindOptions = bindOptions;
             return this;
         }
-
         public Builder bindOptions(@Nullable ServiceTaskSpecContainerSpecMountBindOptionsArgs bindOptions) {
             this.bindOptions = Output.ofNullable(bindOptions);
             return this;
         }
-
         public Builder readOnly(@Nullable Output<Boolean> readOnly) {
             this.readOnly = readOnly;
             return this;
         }
-
         public Builder readOnly(@Nullable Boolean readOnly) {
             this.readOnly = Output.ofNullable(readOnly);
             return this;
         }
-
         public Builder source(@Nullable Output<String> source) {
             this.source = source;
             return this;
         }
-
         public Builder source(@Nullable String source) {
             this.source = Output.ofNullable(source);
             return this;
         }
-
         public Builder target(Output<String> target) {
             this.target = Objects.requireNonNull(target);
             return this;
         }
-
         public Builder target(String target) {
             this.target = Output.of(Objects.requireNonNull(target));
             return this;
         }
-
         public Builder tmpfsOptions(@Nullable Output<ServiceTaskSpecContainerSpecMountTmpfsOptionsArgs> tmpfsOptions) {
             this.tmpfsOptions = tmpfsOptions;
             return this;
         }
-
         public Builder tmpfsOptions(@Nullable ServiceTaskSpecContainerSpecMountTmpfsOptionsArgs tmpfsOptions) {
             this.tmpfsOptions = Output.ofNullable(tmpfsOptions);
             return this;
         }
-
         public Builder type(Output<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Output.of(Objects.requireNonNull(type));
             return this;
         }
-
         public Builder volumeOptions(@Nullable Output<ServiceTaskSpecContainerSpecMountVolumeOptionsArgs> volumeOptions) {
             this.volumeOptions = volumeOptions;
             return this;
         }
-
         public Builder volumeOptions(@Nullable ServiceTaskSpecContainerSpecMountVolumeOptionsArgs volumeOptions) {
             this.volumeOptions = Output.ofNullable(volumeOptions);
             return this;
-        }
-        public ServiceTaskSpecContainerSpecMountArgs build() {
+        }        public ServiceTaskSpecContainerSpecMountArgs build() {
             return new ServiceTaskSpecContainerSpecMountArgs(bindOptions, readOnly, source, target, tmpfsOptions, type, volumeOptions);
         }
     }

@@ -145,62 +145,50 @@ public final class OriginAccessIdentityState extends io.pulumi.resources.Resourc
             this.callerReference = callerReference;
             return this;
         }
-
         public Builder callerReference(@Nullable String callerReference) {
             this.callerReference = Output.ofNullable(callerReference);
             return this;
         }
-
         public Builder cloudfrontAccessIdentityPath(@Nullable Output<String> cloudfrontAccessIdentityPath) {
             this.cloudfrontAccessIdentityPath = cloudfrontAccessIdentityPath;
             return this;
         }
-
         public Builder cloudfrontAccessIdentityPath(@Nullable String cloudfrontAccessIdentityPath) {
             this.cloudfrontAccessIdentityPath = Output.ofNullable(cloudfrontAccessIdentityPath);
             return this;
         }
-
         public Builder comment(@Nullable Output<String> comment) {
             this.comment = comment;
             return this;
         }
-
         public Builder comment(@Nullable String comment) {
             this.comment = Output.ofNullable(comment);
             return this;
         }
-
         public Builder etag(@Nullable Output<String> etag) {
             this.etag = etag;
             return this;
         }
-
         public Builder etag(@Nullable String etag) {
             this.etag = Output.ofNullable(etag);
             return this;
         }
-
         public Builder iamArn(@Nullable Output<String> iamArn) {
             this.iamArn = iamArn;
             return this;
         }
-
         public Builder iamArn(@Nullable String iamArn) {
             this.iamArn = Output.ofNullable(iamArn);
             return this;
         }
-
         public Builder s3CanonicalUserId(@Nullable Output<String> s3CanonicalUserId) {
             this.s3CanonicalUserId = s3CanonicalUserId;
             return this;
         }
-
         public Builder s3CanonicalUserId(@Nullable String s3CanonicalUserId) {
             this.s3CanonicalUserId = Output.ofNullable(s3CanonicalUserId);
             return this;
-        }
-        public OriginAccessIdentityState build() {
+        }        public OriginAccessIdentityState build() {
             return new OriginAccessIdentityState(callerReference, cloudfrontAccessIdentityPath, comment, etag, iamArn, s3CanonicalUserId);
         }
     }

@@ -62,12 +62,13 @@ public final class CloudAuditLoggingFeatureSpecArgs extends io.pulumi.resources.
             this.allowlistedServiceAccounts = allowlistedServiceAccounts;
             return this;
         }
-
         public Builder allowlistedServiceAccounts(@Nullable List<String> allowlistedServiceAccounts) {
             this.allowlistedServiceAccounts = Output.ofNullable(allowlistedServiceAccounts);
             return this;
         }
-        public CloudAuditLoggingFeatureSpecArgs build() {
+        public Builder allowlistedServiceAccounts(String... allowlistedServiceAccounts) {
+            return allowlistedServiceAccounts(List.of(allowlistedServiceAccounts));
+        }        public CloudAuditLoggingFeatureSpecArgs build() {
             return new CloudAuditLoggingFeatureSpecArgs(allowlistedServiceAccounts);
         }
     }

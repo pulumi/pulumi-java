@@ -77,17 +77,14 @@ public final class ResponseHeadersPolicyCustomHeader extends io.pulumi.resources
             this.header = Objects.requireNonNull(header);
             return this;
         }
-
         public Builder override(Boolean override) {
             this.override = Objects.requireNonNull(override);
             return this;
         }
-
         public Builder value(String value) {
             this.value = Objects.requireNonNull(value);
             return this;
-        }
-        public ResponseHeadersPolicyCustomHeader build() {
+        }        public ResponseHeadersPolicyCustomHeader build() {
             return new ResponseHeadersPolicyCustomHeader(header, override, value);
         }
     }

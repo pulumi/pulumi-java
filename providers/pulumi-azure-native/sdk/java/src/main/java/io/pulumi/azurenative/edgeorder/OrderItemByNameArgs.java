@@ -157,72 +157,58 @@ public final class OrderItemByNameArgs extends io.pulumi.resources.ResourceArgs 
             this.addressDetails = Objects.requireNonNull(addressDetails);
             return this;
         }
-
         public Builder addressDetails(AddressDetailsArgs addressDetails) {
             this.addressDetails = Output.of(Objects.requireNonNull(addressDetails));
             return this;
         }
-
         public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder orderId(Output<String> orderId) {
             this.orderId = Objects.requireNonNull(orderId);
             return this;
         }
-
         public Builder orderId(String orderId) {
             this.orderId = Output.of(Objects.requireNonNull(orderId));
             return this;
         }
-
         public Builder orderItemDetails(Output<OrderItemDetailsArgs> orderItemDetails) {
             this.orderItemDetails = Objects.requireNonNull(orderItemDetails);
             return this;
         }
-
         public Builder orderItemDetails(OrderItemDetailsArgs orderItemDetails) {
             this.orderItemDetails = Output.of(Objects.requireNonNull(orderItemDetails));
             return this;
         }
-
         public Builder orderItemName(@Nullable Output<String> orderItemName) {
             this.orderItemName = orderItemName;
             return this;
         }
-
         public Builder orderItemName(@Nullable String orderItemName) {
             this.orderItemName = Output.ofNullable(orderItemName);
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
-        }
-        public OrderItemByNameArgs build() {
+        }        public OrderItemByNameArgs build() {
             return new OrderItemByNameArgs(addressDetails, location, orderId, orderItemDetails, orderItemName, resourceGroupName, tags);
         }
     }

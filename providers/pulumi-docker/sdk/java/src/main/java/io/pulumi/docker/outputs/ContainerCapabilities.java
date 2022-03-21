@@ -55,12 +55,16 @@ public final class ContainerCapabilities {
             this.adds = adds;
             return this;
         }
-
+        public Builder adds(String... adds) {
+            return adds(List.of(adds));
+        }
         public Builder drops(@Nullable List<String> drops) {
             this.drops = drops;
             return this;
         }
-        public ContainerCapabilities build() {
+        public Builder drops(String... drops) {
+            return drops(List.of(drops));
+        }        public ContainerCapabilities build() {
             return new ContainerCapabilities(adds, drops);
         }
     }

@@ -65,12 +65,13 @@ public final class GetGraphResult {
             this.arn = arn;
             return this;
         }
-
         public Builder tags(@Nullable List<GraphTag> tags) {
             this.tags = tags;
             return this;
         }
-        public GetGraphResult build() {
+        public Builder tags(GraphTag... tags) {
+            return tags(List.of(tags));
+        }        public GetGraphResult build() {
             return new GetGraphResult(arn, tags);
         }
     }

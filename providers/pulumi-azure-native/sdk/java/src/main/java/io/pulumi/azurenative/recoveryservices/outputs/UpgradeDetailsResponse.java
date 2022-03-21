@@ -181,47 +181,38 @@ public final class UpgradeDetailsResponse {
             this.endTimeUtc = Objects.requireNonNull(endTimeUtc);
             return this;
         }
-
         public Builder lastUpdatedTimeUtc(String lastUpdatedTimeUtc) {
             this.lastUpdatedTimeUtc = Objects.requireNonNull(lastUpdatedTimeUtc);
             return this;
         }
-
         public Builder message(String message) {
             this.message = Objects.requireNonNull(message);
             return this;
         }
-
         public Builder operationId(String operationId) {
             this.operationId = Objects.requireNonNull(operationId);
             return this;
         }
-
         public Builder previousResourceId(String previousResourceId) {
             this.previousResourceId = Objects.requireNonNull(previousResourceId);
             return this;
         }
-
         public Builder startTimeUtc(String startTimeUtc) {
             this.startTimeUtc = Objects.requireNonNull(startTimeUtc);
             return this;
         }
-
         public Builder status(String status) {
             this.status = Objects.requireNonNull(status);
             return this;
         }
-
         public Builder triggerType(String triggerType) {
             this.triggerType = Objects.requireNonNull(triggerType);
             return this;
         }
-
         public Builder upgradedResourceId(String upgradedResourceId) {
             this.upgradedResourceId = Objects.requireNonNull(upgradedResourceId);
             return this;
-        }
-        public UpgradeDetailsResponse build() {
+        }        public UpgradeDetailsResponse build() {
             return new UpgradeDetailsResponse(endTimeUtc, lastUpdatedTimeUtc, message, operationId, previousResourceId, startTimeUtc, status, triggerType, upgradedResourceId);
         }
     }

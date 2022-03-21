@@ -114,42 +114,34 @@ public final class PersistenceArgs extends io.pulumi.resources.ResourceArgs {
             this.aofEnabled = aofEnabled;
             return this;
         }
-
         public Builder aofEnabled(@Nullable Boolean aofEnabled) {
             this.aofEnabled = Output.ofNullable(aofEnabled);
             return this;
         }
-
         public Builder aofFrequency(@Nullable Output<Either<String,AofFrequency>> aofFrequency) {
             this.aofFrequency = aofFrequency;
             return this;
         }
-
         public Builder aofFrequency(@Nullable Either<String,AofFrequency> aofFrequency) {
             this.aofFrequency = Output.ofNullable(aofFrequency);
             return this;
         }
-
         public Builder rdbEnabled(@Nullable Output<Boolean> rdbEnabled) {
             this.rdbEnabled = rdbEnabled;
             return this;
         }
-
         public Builder rdbEnabled(@Nullable Boolean rdbEnabled) {
             this.rdbEnabled = Output.ofNullable(rdbEnabled);
             return this;
         }
-
         public Builder rdbFrequency(@Nullable Output<Either<String,RdbFrequency>> rdbFrequency) {
             this.rdbFrequency = rdbFrequency;
             return this;
         }
-
         public Builder rdbFrequency(@Nullable Either<String,RdbFrequency> rdbFrequency) {
             this.rdbFrequency = Output.ofNullable(rdbFrequency);
             return this;
-        }
-        public PersistenceArgs build() {
+        }        public PersistenceArgs build() {
             return new PersistenceArgs(aofEnabled, aofFrequency, rdbEnabled, rdbFrequency);
         }
     }

@@ -55,12 +55,10 @@ public final class InstantRPAdditionalDetailsResponse {
             this.azureBackupRGNamePrefix = azureBackupRGNamePrefix;
             return this;
         }
-
         public Builder azureBackupRGNameSuffix(@Nullable String azureBackupRGNameSuffix) {
             this.azureBackupRGNameSuffix = azureBackupRGNameSuffix;
             return this;
-        }
-        public InstantRPAdditionalDetailsResponse build() {
+        }        public InstantRPAdditionalDetailsResponse build() {
             return new InstantRPAdditionalDetailsResponse(azureBackupRGNamePrefix, azureBackupRGNameSuffix);
         }
     }

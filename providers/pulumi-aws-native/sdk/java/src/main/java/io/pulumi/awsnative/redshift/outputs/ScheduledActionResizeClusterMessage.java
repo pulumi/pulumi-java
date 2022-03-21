@@ -81,27 +81,22 @@ public final class ScheduledActionResizeClusterMessage {
             this.classic = classic;
             return this;
         }
-
         public Builder clusterIdentifier(String clusterIdentifier) {
             this.clusterIdentifier = Objects.requireNonNull(clusterIdentifier);
             return this;
         }
-
         public Builder clusterType(@Nullable String clusterType) {
             this.clusterType = clusterType;
             return this;
         }
-
         public Builder nodeType(@Nullable String nodeType) {
             this.nodeType = nodeType;
             return this;
         }
-
         public Builder numberOfNodes(@Nullable Integer numberOfNodes) {
             this.numberOfNodes = numberOfNodes;
             return this;
-        }
-        public ScheduledActionResizeClusterMessage build() {
+        }        public ScheduledActionResizeClusterMessage build() {
             return new ScheduledActionResizeClusterMessage(classic, clusterIdentifier, clusterType, nodeType, numberOfNodes);
         }
     }

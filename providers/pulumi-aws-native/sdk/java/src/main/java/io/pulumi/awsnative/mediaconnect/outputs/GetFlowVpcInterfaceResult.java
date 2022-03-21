@@ -104,22 +104,24 @@ public final class GetFlowVpcInterfaceResult {
             this.networkInterfaceIds = networkInterfaceIds;
             return this;
         }
-
+        public Builder networkInterfaceIds(String... networkInterfaceIds) {
+            return networkInterfaceIds(List.of(networkInterfaceIds));
+        }
         public Builder roleArn(@Nullable String roleArn) {
             this.roleArn = roleArn;
             return this;
         }
-
         public Builder securityGroupIds(@Nullable List<String> securityGroupIds) {
             this.securityGroupIds = securityGroupIds;
             return this;
         }
-
+        public Builder securityGroupIds(String... securityGroupIds) {
+            return securityGroupIds(List.of(securityGroupIds));
+        }
         public Builder subnetId(@Nullable String subnetId) {
             this.subnetId = subnetId;
             return this;
-        }
-        public GetFlowVpcInterfaceResult build() {
+        }        public GetFlowVpcInterfaceResult build() {
             return new GetFlowVpcInterfaceResult(networkInterfaceIds, roleArn, securityGroupIds, subnetId);
         }
     }

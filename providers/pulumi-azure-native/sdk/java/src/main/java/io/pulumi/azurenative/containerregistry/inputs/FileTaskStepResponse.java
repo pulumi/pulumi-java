@@ -162,37 +162,36 @@ public final class FileTaskStepResponse extends io.pulumi.resources.InvokeArgs {
             this.baseImageDependencies = Objects.requireNonNull(baseImageDependencies);
             return this;
         }
-
+        public Builder baseImageDependencies(BaseImageDependencyResponse... baseImageDependencies) {
+            return baseImageDependencies(List.of(baseImageDependencies));
+        }
         public Builder contextAccessToken(@Nullable String contextAccessToken) {
             this.contextAccessToken = contextAccessToken;
             return this;
         }
-
         public Builder contextPath(@Nullable String contextPath) {
             this.contextPath = contextPath;
             return this;
         }
-
         public Builder taskFilePath(String taskFilePath) {
             this.taskFilePath = Objects.requireNonNull(taskFilePath);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder values(@Nullable List<SetValueResponse> values) {
             this.values = values;
             return this;
         }
-
+        public Builder values(SetValueResponse... values) {
+            return values(List.of(values));
+        }
         public Builder valuesFilePath(@Nullable String valuesFilePath) {
             this.valuesFilePath = valuesFilePath;
             return this;
-        }
-        public FileTaskStepResponse build() {
+        }        public FileTaskStepResponse build() {
             return new FileTaskStepResponse(baseImageDependencies, contextAccessToken, contextPath, taskFilePath, type, values, valuesFilePath);
         }
     }

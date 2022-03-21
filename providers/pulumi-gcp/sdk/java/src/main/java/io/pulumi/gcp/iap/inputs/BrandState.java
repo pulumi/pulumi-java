@@ -129,52 +129,42 @@ public final class BrandState extends io.pulumi.resources.ResourceArgs {
             this.applicationTitle = applicationTitle;
             return this;
         }
-
         public Builder applicationTitle(@Nullable String applicationTitle) {
             this.applicationTitle = Output.ofNullable(applicationTitle);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder orgInternalOnly(@Nullable Output<Boolean> orgInternalOnly) {
             this.orgInternalOnly = orgInternalOnly;
             return this;
         }
-
         public Builder orgInternalOnly(@Nullable Boolean orgInternalOnly) {
             this.orgInternalOnly = Output.ofNullable(orgInternalOnly);
             return this;
         }
-
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
         }
-
         public Builder supportEmail(@Nullable Output<String> supportEmail) {
             this.supportEmail = supportEmail;
             return this;
         }
-
         public Builder supportEmail(@Nullable String supportEmail) {
             this.supportEmail = Output.ofNullable(supportEmail);
             return this;
-        }
-        public BrandState build() {
+        }        public BrandState build() {
             return new BrandState(applicationTitle, name, orgInternalOnly, project, supportEmail);
         }
     }

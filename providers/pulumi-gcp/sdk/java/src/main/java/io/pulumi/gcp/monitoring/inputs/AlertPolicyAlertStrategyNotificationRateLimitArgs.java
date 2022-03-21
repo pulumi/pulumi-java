@@ -57,12 +57,10 @@ public final class AlertPolicyAlertStrategyNotificationRateLimitArgs extends io.
             this.period = period;
             return this;
         }
-
         public Builder period(@Nullable String period) {
             this.period = Output.ofNullable(period);
             return this;
-        }
-        public AlertPolicyAlertStrategyNotificationRateLimitArgs build() {
+        }        public AlertPolicyAlertStrategyNotificationRateLimitArgs build() {
             return new AlertPolicyAlertStrategyNotificationRateLimitArgs(period);
         }
     }

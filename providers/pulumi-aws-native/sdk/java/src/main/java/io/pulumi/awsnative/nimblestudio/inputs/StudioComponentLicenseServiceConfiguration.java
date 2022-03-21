@@ -60,8 +60,7 @@ public final class StudioComponentLicenseServiceConfiguration extends io.pulumi.
         public Builder endpoint(@Nullable String endpoint) {
             this.endpoint = endpoint;
             return this;
-        }
-        public StudioComponentLicenseServiceConfiguration build() {
+        }        public StudioComponentLicenseServiceConfiguration build() {
             return new StudioComponentLicenseServiceConfiguration(endpoint);
         }
     }

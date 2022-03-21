@@ -74,22 +74,18 @@ public final class BudgetResourceAssociationState extends io.pulumi.resources.Re
             this.budgetName = budgetName;
             return this;
         }
-
         public Builder budgetName(@Nullable String budgetName) {
             this.budgetName = Output.ofNullable(budgetName);
             return this;
         }
-
         public Builder resourceId(@Nullable Output<String> resourceId) {
             this.resourceId = resourceId;
             return this;
         }
-
         public Builder resourceId(@Nullable String resourceId) {
             this.resourceId = Output.ofNullable(resourceId);
             return this;
-        }
-        public BudgetResourceAssociationState build() {
+        }        public BudgetResourceAssociationState build() {
             return new BudgetResourceAssociationState(budgetName, resourceId);
         }
     }

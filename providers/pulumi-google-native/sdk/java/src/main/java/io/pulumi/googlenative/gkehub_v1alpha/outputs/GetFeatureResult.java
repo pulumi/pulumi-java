@@ -201,52 +201,42 @@ public final class GetFeatureResult {
             this.createTime = Objects.requireNonNull(createTime);
             return this;
         }
-
         public Builder deleteTime(String deleteTime) {
             this.deleteTime = Objects.requireNonNull(deleteTime);
             return this;
         }
-
         public Builder labels(Map<String,String> labels) {
             this.labels = Objects.requireNonNull(labels);
             return this;
         }
-
         public Builder membershipSpecs(Map<String,String> membershipSpecs) {
             this.membershipSpecs = Objects.requireNonNull(membershipSpecs);
             return this;
         }
-
         public Builder membershipStates(Map<String,String> membershipStates) {
             this.membershipStates = Objects.requireNonNull(membershipStates);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder resourceState(FeatureResourceStateResponse resourceState) {
             this.resourceState = Objects.requireNonNull(resourceState);
             return this;
         }
-
         public Builder spec(CommonFeatureSpecResponse spec) {
             this.spec = Objects.requireNonNull(spec);
             return this;
         }
-
         public Builder state(CommonFeatureStateResponse state) {
             this.state = Objects.requireNonNull(state);
             return this;
         }
-
         public Builder updateTime(String updateTime) {
             this.updateTime = Objects.requireNonNull(updateTime);
             return this;
-        }
-        public GetFeatureResult build() {
+        }        public GetFeatureResult build() {
             return new GetFeatureResult(createTime, deleteTime, labels, membershipSpecs, membershipStates, name, resourceState, spec, state, updateTime);
         }
     }

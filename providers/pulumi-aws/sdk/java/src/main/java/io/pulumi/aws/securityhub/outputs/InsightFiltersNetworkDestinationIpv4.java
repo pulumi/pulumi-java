@@ -51,8 +51,7 @@ public final class InsightFiltersNetworkDestinationIpv4 {
         public Builder cidr(String cidr) {
             this.cidr = Objects.requireNonNull(cidr);
             return this;
-        }
-        public InsightFiltersNetworkDestinationIpv4 build() {
+        }        public InsightFiltersNetworkDestinationIpv4 build() {
             return new InsightFiltersNetworkDestinationIpv4(cidr);
         }
     }

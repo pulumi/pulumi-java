@@ -93,17 +93,14 @@ public final class AzureSqlProtectionPolicyResponse {
             this.backupManagementType = Objects.requireNonNull(backupManagementType);
             return this;
         }
-
         public Builder protectedItemsCount(@Nullable Integer protectedItemsCount) {
             this.protectedItemsCount = protectedItemsCount;
             return this;
         }
-
         public Builder retentionPolicy(@Nullable Either<LongTermRetentionPolicyResponse,SimpleRetentionPolicyResponse> retentionPolicy) {
             this.retentionPolicy = retentionPolicy;
             return this;
-        }
-        public AzureSqlProtectionPolicyResponse build() {
+        }        public AzureSqlProtectionPolicyResponse build() {
             return new AzureSqlProtectionPolicyResponse(backupManagementType, protectedItemsCount, retentionPolicy);
         }
     }

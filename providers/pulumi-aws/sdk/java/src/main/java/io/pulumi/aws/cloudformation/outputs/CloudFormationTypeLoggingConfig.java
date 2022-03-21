@@ -69,12 +69,10 @@ public final class CloudFormationTypeLoggingConfig {
             this.logGroupName = Objects.requireNonNull(logGroupName);
             return this;
         }
-
         public Builder logRoleArn(String logRoleArn) {
             this.logRoleArn = Objects.requireNonNull(logRoleArn);
             return this;
-        }
-        public CloudFormationTypeLoggingConfig build() {
+        }        public CloudFormationTypeLoggingConfig build() {
             return new CloudFormationTypeLoggingConfig(logGroupName, logRoleArn);
         }
     }

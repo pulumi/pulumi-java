@@ -203,102 +203,82 @@ public final class ServiceLinkedRoleState extends io.pulumi.resources.ResourceAr
             this.arn = arn;
             return this;
         }
-
         public Builder arn(@Nullable String arn) {
             this.arn = Output.ofNullable(arn);
             return this;
         }
-
         public Builder awsServiceName(@Nullable Output<String> awsServiceName) {
             this.awsServiceName = awsServiceName;
             return this;
         }
-
         public Builder awsServiceName(@Nullable String awsServiceName) {
             this.awsServiceName = Output.ofNullable(awsServiceName);
             return this;
         }
-
         public Builder createDate(@Nullable Output<String> createDate) {
             this.createDate = createDate;
             return this;
         }
-
         public Builder createDate(@Nullable String createDate) {
             this.createDate = Output.ofNullable(createDate);
             return this;
         }
-
         public Builder customSuffix(@Nullable Output<String> customSuffix) {
             this.customSuffix = customSuffix;
             return this;
         }
-
         public Builder customSuffix(@Nullable String customSuffix) {
             this.customSuffix = Output.ofNullable(customSuffix);
             return this;
         }
-
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder path(@Nullable Output<String> path) {
             this.path = path;
             return this;
         }
-
         public Builder path(@Nullable String path) {
             this.path = Output.ofNullable(path);
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
             this.tagsAll = tagsAll;
             return this;
         }
-
         public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
             this.tagsAll = Output.ofNullable(tagsAll);
             return this;
         }
-
         public Builder uniqueId(@Nullable Output<String> uniqueId) {
             this.uniqueId = uniqueId;
             return this;
         }
-
         public Builder uniqueId(@Nullable String uniqueId) {
             this.uniqueId = Output.ofNullable(uniqueId);
             return this;
-        }
-        public ServiceLinkedRoleState build() {
+        }        public ServiceLinkedRoleState build() {
             return new ServiceLinkedRoleState(arn, awsServiceName, createDate, customSuffix, description, name, path, tags, tagsAll, uniqueId);
         }
     }

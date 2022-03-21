@@ -67,12 +67,10 @@ public final class AppLogsConfigurationResponse extends io.pulumi.resources.Invo
             this.destination = destination;
             return this;
         }
-
         public Builder logAnalyticsConfiguration(@Nullable LogAnalyticsConfigurationResponse logAnalyticsConfiguration) {
             this.logAnalyticsConfiguration = logAnalyticsConfiguration;
             return this;
-        }
-        public AppLogsConfigurationResponse build() {
+        }        public AppLogsConfigurationResponse build() {
             return new AppLogsConfigurationResponse(destination, logAnalyticsConfiguration);
         }
     }

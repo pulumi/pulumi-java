@@ -53,12 +53,13 @@ public final class InstanceAccessControlAttributeConfigurationAccessControlAttri
             this.source = Objects.requireNonNull(source);
             return this;
         }
-
         public Builder source(List<String> source) {
             this.source = Output.of(Objects.requireNonNull(source));
             return this;
         }
-        public InstanceAccessControlAttributeConfigurationAccessControlAttributeValueArgs build() {
+        public Builder source(String... source) {
+            return source(List.of(source));
+        }        public InstanceAccessControlAttributeConfigurationAccessControlAttributeValueArgs build() {
             return new InstanceAccessControlAttributeConfigurationAccessControlAttributeValueArgs(source);
         }
     }

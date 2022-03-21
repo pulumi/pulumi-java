@@ -107,32 +107,26 @@ public final class OutputArgs extends io.pulumi.resources.ResourceArgs {
             this.datasource = datasource;
             return this;
         }
-
         public Builder datasource(@Nullable Object datasource) {
             this.datasource = Output.ofNullable(datasource);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder serialization(@Nullable Output<Object> serialization) {
             this.serialization = serialization;
             return this;
         }
-
         public Builder serialization(@Nullable Object serialization) {
             this.serialization = Output.ofNullable(serialization);
             return this;
-        }
-        public OutputArgs build() {
+        }        public OutputArgs build() {
             return new OutputArgs(datasource, name, serialization);
         }
     }

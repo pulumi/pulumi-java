@@ -152,37 +152,30 @@ public final class GetManagementGroupNetworkManagerConnectionResult {
             this.description = description;
             return this;
         }
-
         public Builder etag(String etag) {
             this.etag = Objects.requireNonNull(etag);
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder networkManagerId(@Nullable String networkManagerId) {
             this.networkManagerId = networkManagerId;
             return this;
         }
-
         public Builder systemData(SystemDataResponse systemData) {
             this.systemData = Objects.requireNonNull(systemData);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public GetManagementGroupNetworkManagerConnectionResult build() {
+        }        public GetManagementGroupNetworkManagerConnectionResult build() {
             return new GetManagementGroupNetworkManagerConnectionResult(description, etag, id, name, networkManagerId, systemData, type);
         }
     }

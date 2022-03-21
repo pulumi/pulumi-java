@@ -112,42 +112,34 @@ public final class MigrateSqlServerSqlDbDatabaseInputArgs extends io.pulumi.reso
             this.makeSourceDbReadOnly = makeSourceDbReadOnly;
             return this;
         }
-
         public Builder makeSourceDbReadOnly(@Nullable Boolean makeSourceDbReadOnly) {
             this.makeSourceDbReadOnly = Output.ofNullable(makeSourceDbReadOnly);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder tableMap(@Nullable Output<Map<String,String>> tableMap) {
             this.tableMap = tableMap;
             return this;
         }
-
         public Builder tableMap(@Nullable Map<String,String> tableMap) {
             this.tableMap = Output.ofNullable(tableMap);
             return this;
         }
-
         public Builder targetDatabaseName(@Nullable Output<String> targetDatabaseName) {
             this.targetDatabaseName = targetDatabaseName;
             return this;
         }
-
         public Builder targetDatabaseName(@Nullable String targetDatabaseName) {
             this.targetDatabaseName = Output.ofNullable(targetDatabaseName);
             return this;
-        }
-        public MigrateSqlServerSqlDbDatabaseInputArgs build() {
+        }        public MigrateSqlServerSqlDbDatabaseInputArgs build() {
             return new MigrateSqlServerSqlDbDatabaseInputArgs(makeSourceDbReadOnly, name, tableMap, targetDatabaseName);
         }
     }

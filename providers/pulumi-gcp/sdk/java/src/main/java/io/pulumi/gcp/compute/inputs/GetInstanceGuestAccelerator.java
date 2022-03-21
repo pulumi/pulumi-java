@@ -73,12 +73,10 @@ public final class GetInstanceGuestAccelerator extends io.pulumi.resources.Invok
             this.count = Objects.requireNonNull(count);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public GetInstanceGuestAccelerator build() {
+        }        public GetInstanceGuestAccelerator build() {
             return new GetInstanceGuestAccelerator(count, type);
         }
     }

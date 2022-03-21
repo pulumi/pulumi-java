@@ -75,22 +75,18 @@ public final class DomainEncryptAtRestGetArgs extends io.pulumi.resources.Resour
             this.enabled = Objects.requireNonNull(enabled);
             return this;
         }
-
         public Builder enabled(Boolean enabled) {
             this.enabled = Output.of(Objects.requireNonNull(enabled));
             return this;
         }
-
         public Builder kmsKeyId(@Nullable Output<String> kmsKeyId) {
             this.kmsKeyId = kmsKeyId;
             return this;
         }
-
         public Builder kmsKeyId(@Nullable String kmsKeyId) {
             this.kmsKeyId = Output.ofNullable(kmsKeyId);
             return this;
-        }
-        public DomainEncryptAtRestGetArgs build() {
+        }        public DomainEncryptAtRestGetArgs build() {
             return new DomainEncryptAtRestGetArgs(enabled, kmsKeyId);
         }
     }

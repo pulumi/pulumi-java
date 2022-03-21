@@ -71,12 +71,13 @@ public final class RestApiEndpointConfiguration {
             this.types = Objects.requireNonNull(types);
             return this;
         }
-
         public Builder vpcEndpointIds(@Nullable List<String> vpcEndpointIds) {
             this.vpcEndpointIds = vpcEndpointIds;
             return this;
         }
-        public RestApiEndpointConfiguration build() {
+        public Builder vpcEndpointIds(String... vpcEndpointIds) {
+            return vpcEndpointIds(List.of(vpcEndpointIds));
+        }        public RestApiEndpointConfiguration build() {
             return new RestApiEndpointConfiguration(types, vpcEndpointIds);
         }
     }

@@ -216,57 +216,46 @@ public final class GetEndpointPolicyResult {
             this.authorizationPolicy = Objects.requireNonNull(authorizationPolicy);
             return this;
         }
-
         public Builder clientTlsPolicy(String clientTlsPolicy) {
             this.clientTlsPolicy = Objects.requireNonNull(clientTlsPolicy);
             return this;
         }
-
         public Builder createTime(String createTime) {
             this.createTime = Objects.requireNonNull(createTime);
             return this;
         }
-
         public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
-
         public Builder endpointMatcher(EndpointMatcherResponse endpointMatcher) {
             this.endpointMatcher = Objects.requireNonNull(endpointMatcher);
             return this;
         }
-
         public Builder labels(Map<String,String> labels) {
             this.labels = Objects.requireNonNull(labels);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder serverTlsPolicy(String serverTlsPolicy) {
             this.serverTlsPolicy = Objects.requireNonNull(serverTlsPolicy);
             return this;
         }
-
         public Builder trafficPortSelector(TrafficPortSelectorResponse trafficPortSelector) {
             this.trafficPortSelector = Objects.requireNonNull(trafficPortSelector);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder updateTime(String updateTime) {
             this.updateTime = Objects.requireNonNull(updateTime);
             return this;
-        }
-        public GetEndpointPolicyResult build() {
+        }        public GetEndpointPolicyResult build() {
             return new GetEndpointPolicyResult(authorizationPolicy, clientTlsPolicy, createTime, description, endpointMatcher, labels, name, serverTlsPolicy, trafficPortSelector, type, updateTime);
         }
     }

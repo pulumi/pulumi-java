@@ -140,72 +140,58 @@ public final class CapacityCommitmentArgs extends io.pulumi.resources.ResourceAr
             this.capacityCommitmentId = capacityCommitmentId;
             return this;
         }
-
         public Builder capacityCommitmentId(@Nullable String capacityCommitmentId) {
             this.capacityCommitmentId = Output.ofNullable(capacityCommitmentId);
             return this;
         }
-
         public Builder enforceSingleAdminProjectPerOrg(@Nullable Output<String> enforceSingleAdminProjectPerOrg) {
             this.enforceSingleAdminProjectPerOrg = enforceSingleAdminProjectPerOrg;
             return this;
         }
-
         public Builder enforceSingleAdminProjectPerOrg(@Nullable String enforceSingleAdminProjectPerOrg) {
             this.enforceSingleAdminProjectPerOrg = Output.ofNullable(enforceSingleAdminProjectPerOrg);
             return this;
         }
-
         public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder plan(@Nullable Output<CapacityCommitmentPlan> plan) {
             this.plan = plan;
             return this;
         }
-
         public Builder plan(@Nullable CapacityCommitmentPlan plan) {
             this.plan = Output.ofNullable(plan);
             return this;
         }
-
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
         }
-
         public Builder renewalPlan(@Nullable Output<CapacityCommitmentRenewalPlan> renewalPlan) {
             this.renewalPlan = renewalPlan;
             return this;
         }
-
         public Builder renewalPlan(@Nullable CapacityCommitmentRenewalPlan renewalPlan) {
             this.renewalPlan = Output.ofNullable(renewalPlan);
             return this;
         }
-
         public Builder slotCount(@Nullable Output<String> slotCount) {
             this.slotCount = slotCount;
             return this;
         }
-
         public Builder slotCount(@Nullable String slotCount) {
             this.slotCount = Output.ofNullable(slotCount);
             return this;
-        }
-        public CapacityCommitmentArgs build() {
+        }        public CapacityCommitmentArgs build() {
             return new CapacityCommitmentArgs(capacityCommitmentId, enforceSingleAdminProjectPerOrg, location, plan, project, renewalPlan, slotCount);
         }
     }

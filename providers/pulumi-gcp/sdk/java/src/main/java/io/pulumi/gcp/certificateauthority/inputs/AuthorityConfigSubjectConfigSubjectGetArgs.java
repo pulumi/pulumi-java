@@ -170,82 +170,66 @@ public final class AuthorityConfigSubjectConfigSubjectGetArgs extends io.pulumi.
             this.commonName = Objects.requireNonNull(commonName);
             return this;
         }
-
         public Builder commonName(String commonName) {
             this.commonName = Output.of(Objects.requireNonNull(commonName));
             return this;
         }
-
         public Builder countryCode(@Nullable Output<String> countryCode) {
             this.countryCode = countryCode;
             return this;
         }
-
         public Builder countryCode(@Nullable String countryCode) {
             this.countryCode = Output.ofNullable(countryCode);
             return this;
         }
-
         public Builder locality(@Nullable Output<String> locality) {
             this.locality = locality;
             return this;
         }
-
         public Builder locality(@Nullable String locality) {
             this.locality = Output.ofNullable(locality);
             return this;
         }
-
         public Builder organization(Output<String> organization) {
             this.organization = Objects.requireNonNull(organization);
             return this;
         }
-
         public Builder organization(String organization) {
             this.organization = Output.of(Objects.requireNonNull(organization));
             return this;
         }
-
         public Builder organizationalUnit(@Nullable Output<String> organizationalUnit) {
             this.organizationalUnit = organizationalUnit;
             return this;
         }
-
         public Builder organizationalUnit(@Nullable String organizationalUnit) {
             this.organizationalUnit = Output.ofNullable(organizationalUnit);
             return this;
         }
-
         public Builder postalCode(@Nullable Output<String> postalCode) {
             this.postalCode = postalCode;
             return this;
         }
-
         public Builder postalCode(@Nullable String postalCode) {
             this.postalCode = Output.ofNullable(postalCode);
             return this;
         }
-
         public Builder province(@Nullable Output<String> province) {
             this.province = province;
             return this;
         }
-
         public Builder province(@Nullable String province) {
             this.province = Output.ofNullable(province);
             return this;
         }
-
         public Builder streetAddress(@Nullable Output<String> streetAddress) {
             this.streetAddress = streetAddress;
             return this;
         }
-
         public Builder streetAddress(@Nullable String streetAddress) {
             this.streetAddress = Output.ofNullable(streetAddress);
             return this;
-        }
-        public AuthorityConfigSubjectConfigSubjectGetArgs build() {
+        }        public AuthorityConfigSubjectConfigSubjectGetArgs build() {
             return new AuthorityConfigSubjectConfigSubjectGetArgs(commonName, countryCode, locality, organization, organizationalUnit, postalCode, province, streetAddress);
         }
     }

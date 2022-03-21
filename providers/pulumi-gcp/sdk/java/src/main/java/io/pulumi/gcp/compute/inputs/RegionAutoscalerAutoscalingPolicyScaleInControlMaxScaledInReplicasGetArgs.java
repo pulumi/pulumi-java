@@ -76,22 +76,18 @@ public final class RegionAutoscalerAutoscalingPolicyScaleInControlMaxScaledInRep
             this.fixed = fixed;
             return this;
         }
-
         public Builder fixed(@Nullable Integer fixed) {
             this.fixed = Output.ofNullable(fixed);
             return this;
         }
-
         public Builder percent(@Nullable Output<Integer> percent) {
             this.percent = percent;
             return this;
         }
-
         public Builder percent(@Nullable Integer percent) {
             this.percent = Output.ofNullable(percent);
             return this;
-        }
-        public RegionAutoscalerAutoscalingPolicyScaleInControlMaxScaledInReplicasGetArgs build() {
+        }        public RegionAutoscalerAutoscalingPolicyScaleInControlMaxScaledInReplicasGetArgs build() {
             return new RegionAutoscalerAutoscalingPolicyScaleInControlMaxScaledInReplicasGetArgs(fixed, percent);
         }
     }

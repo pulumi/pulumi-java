@@ -107,42 +107,34 @@ public final class PrivateLinkScopeArgs extends io.pulumi.resources.ResourceArgs
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder scopeName(@Nullable Output<String> scopeName) {
             this.scopeName = scopeName;
             return this;
         }
-
         public Builder scopeName(@Nullable String scopeName) {
             this.scopeName = Output.ofNullable(scopeName);
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
-        }
-        public PrivateLinkScopeArgs build() {
+        }        public PrivateLinkScopeArgs build() {
             return new PrivateLinkScopeArgs(location, resourceGroupName, scopeName, tags);
         }
     }

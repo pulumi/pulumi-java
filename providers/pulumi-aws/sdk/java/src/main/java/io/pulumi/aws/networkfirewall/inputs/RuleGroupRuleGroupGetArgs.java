@@ -92,32 +92,26 @@ public final class RuleGroupRuleGroupGetArgs extends io.pulumi.resources.Resourc
             this.ruleVariables = ruleVariables;
             return this;
         }
-
         public Builder ruleVariables(@Nullable RuleGroupRuleGroupRuleVariablesGetArgs ruleVariables) {
             this.ruleVariables = Output.ofNullable(ruleVariables);
             return this;
         }
-
         public Builder rulesSource(Output<RuleGroupRuleGroupRulesSourceGetArgs> rulesSource) {
             this.rulesSource = Objects.requireNonNull(rulesSource);
             return this;
         }
-
         public Builder rulesSource(RuleGroupRuleGroupRulesSourceGetArgs rulesSource) {
             this.rulesSource = Output.of(Objects.requireNonNull(rulesSource));
             return this;
         }
-
         public Builder statefulRuleOptions(@Nullable Output<RuleGroupRuleGroupStatefulRuleOptionsGetArgs> statefulRuleOptions) {
             this.statefulRuleOptions = statefulRuleOptions;
             return this;
         }
-
         public Builder statefulRuleOptions(@Nullable RuleGroupRuleGroupStatefulRuleOptionsGetArgs statefulRuleOptions) {
             this.statefulRuleOptions = Output.ofNullable(statefulRuleOptions);
             return this;
-        }
-        public RuleGroupRuleGroupGetArgs build() {
+        }        public RuleGroupRuleGroupGetArgs build() {
             return new RuleGroupRuleGroupGetArgs(ruleVariables, rulesSource, statefulRuleOptions);
         }
     }

@@ -70,12 +70,10 @@ public final class KeyVaultAndSecretReferenceResponse {
             this.secretUrl = Objects.requireNonNull(secretUrl);
             return this;
         }
-
         public Builder sourceVault(SourceVaultResponse sourceVault) {
             this.sourceVault = Objects.requireNonNull(sourceVault);
             return this;
-        }
-        public KeyVaultAndSecretReferenceResponse build() {
+        }        public KeyVaultAndSecretReferenceResponse build() {
             return new KeyVaultAndSecretReferenceResponse(secretUrl, sourceVault);
         }
     }

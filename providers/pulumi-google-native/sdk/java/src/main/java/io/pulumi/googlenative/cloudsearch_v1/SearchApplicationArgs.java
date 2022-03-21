@@ -210,102 +210,91 @@ public final class SearchApplicationArgs extends io.pulumi.resources.ResourceArg
             this.dataSourceRestrictions = dataSourceRestrictions;
             return this;
         }
-
         public Builder dataSourceRestrictions(@Nullable List<DataSourceRestrictionArgs> dataSourceRestrictions) {
             this.dataSourceRestrictions = Output.ofNullable(dataSourceRestrictions);
             return this;
         }
-
+        public Builder dataSourceRestrictions(DataSourceRestrictionArgs... dataSourceRestrictions) {
+            return dataSourceRestrictions(List.of(dataSourceRestrictions));
+        }
         public Builder defaultFacetOptions(@Nullable Output<List<FacetOptionsArgs>> defaultFacetOptions) {
             this.defaultFacetOptions = defaultFacetOptions;
             return this;
         }
-
         public Builder defaultFacetOptions(@Nullable List<FacetOptionsArgs> defaultFacetOptions) {
             this.defaultFacetOptions = Output.ofNullable(defaultFacetOptions);
             return this;
         }
-
+        public Builder defaultFacetOptions(FacetOptionsArgs... defaultFacetOptions) {
+            return defaultFacetOptions(List.of(defaultFacetOptions));
+        }
         public Builder defaultSortOptions(@Nullable Output<SortOptionsArgs> defaultSortOptions) {
             this.defaultSortOptions = defaultSortOptions;
             return this;
         }
-
         public Builder defaultSortOptions(@Nullable SortOptionsArgs defaultSortOptions) {
             this.defaultSortOptions = Output.ofNullable(defaultSortOptions);
             return this;
         }
-
         public Builder displayName(@Nullable Output<String> displayName) {
             this.displayName = displayName;
             return this;
         }
-
         public Builder displayName(@Nullable String displayName) {
             this.displayName = Output.ofNullable(displayName);
             return this;
         }
-
         public Builder enableAuditLog(@Nullable Output<Boolean> enableAuditLog) {
             this.enableAuditLog = enableAuditLog;
             return this;
         }
-
         public Builder enableAuditLog(@Nullable Boolean enableAuditLog) {
             this.enableAuditLog = Output.ofNullable(enableAuditLog);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder queryInterpretationConfig(@Nullable Output<QueryInterpretationConfigArgs> queryInterpretationConfig) {
             this.queryInterpretationConfig = queryInterpretationConfig;
             return this;
         }
-
         public Builder queryInterpretationConfig(@Nullable QueryInterpretationConfigArgs queryInterpretationConfig) {
             this.queryInterpretationConfig = Output.ofNullable(queryInterpretationConfig);
             return this;
         }
-
         public Builder returnResultThumbnailUrls(@Nullable Output<Boolean> returnResultThumbnailUrls) {
             this.returnResultThumbnailUrls = returnResultThumbnailUrls;
             return this;
         }
-
         public Builder returnResultThumbnailUrls(@Nullable Boolean returnResultThumbnailUrls) {
             this.returnResultThumbnailUrls = Output.ofNullable(returnResultThumbnailUrls);
             return this;
         }
-
         public Builder scoringConfig(@Nullable Output<ScoringConfigArgs> scoringConfig) {
             this.scoringConfig = scoringConfig;
             return this;
         }
-
         public Builder scoringConfig(@Nullable ScoringConfigArgs scoringConfig) {
             this.scoringConfig = Output.ofNullable(scoringConfig);
             return this;
         }
-
         public Builder sourceConfig(@Nullable Output<List<SourceConfigArgs>> sourceConfig) {
             this.sourceConfig = sourceConfig;
             return this;
         }
-
         public Builder sourceConfig(@Nullable List<SourceConfigArgs> sourceConfig) {
             this.sourceConfig = Output.ofNullable(sourceConfig);
             return this;
         }
-        public SearchApplicationArgs build() {
+        public Builder sourceConfig(SourceConfigArgs... sourceConfig) {
+            return sourceConfig(List.of(sourceConfig));
+        }        public SearchApplicationArgs build() {
             return new SearchApplicationArgs(dataSourceRestrictions, defaultFacetOptions, defaultSortOptions, displayName, enableAuditLog, name, queryInterpretationConfig, returnResultThumbnailUrls, scoringConfig, sourceConfig);
         }
     }

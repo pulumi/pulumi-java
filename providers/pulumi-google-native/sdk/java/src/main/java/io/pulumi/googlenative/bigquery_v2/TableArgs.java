@@ -318,172 +318,138 @@ public final class TableArgs extends io.pulumi.resources.ResourceArgs {
             this.clustering = clustering;
             return this;
         }
-
         public Builder clustering(@Nullable ClusteringArgs clustering) {
             this.clustering = Output.ofNullable(clustering);
             return this;
         }
-
         public Builder datasetId(Output<String> datasetId) {
             this.datasetId = Objects.requireNonNull(datasetId);
             return this;
         }
-
         public Builder datasetId(String datasetId) {
             this.datasetId = Output.of(Objects.requireNonNull(datasetId));
             return this;
         }
-
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder encryptionConfiguration(@Nullable Output<EncryptionConfigurationArgs> encryptionConfiguration) {
             this.encryptionConfiguration = encryptionConfiguration;
             return this;
         }
-
         public Builder encryptionConfiguration(@Nullable EncryptionConfigurationArgs encryptionConfiguration) {
             this.encryptionConfiguration = Output.ofNullable(encryptionConfiguration);
             return this;
         }
-
         public Builder expirationTime(@Nullable Output<String> expirationTime) {
             this.expirationTime = expirationTime;
             return this;
         }
-
         public Builder expirationTime(@Nullable String expirationTime) {
             this.expirationTime = Output.ofNullable(expirationTime);
             return this;
         }
-
         public Builder externalDataConfiguration(@Nullable Output<ExternalDataConfigurationArgs> externalDataConfiguration) {
             this.externalDataConfiguration = externalDataConfiguration;
             return this;
         }
-
         public Builder externalDataConfiguration(@Nullable ExternalDataConfigurationArgs externalDataConfiguration) {
             this.externalDataConfiguration = Output.ofNullable(externalDataConfiguration);
             return this;
         }
-
         public Builder friendlyName(@Nullable Output<String> friendlyName) {
             this.friendlyName = friendlyName;
             return this;
         }
-
         public Builder friendlyName(@Nullable String friendlyName) {
             this.friendlyName = Output.ofNullable(friendlyName);
             return this;
         }
-
         public Builder labels(@Nullable Output<Map<String,String>> labels) {
             this.labels = labels;
             return this;
         }
-
         public Builder labels(@Nullable Map<String,String> labels) {
             this.labels = Output.ofNullable(labels);
             return this;
         }
-
         public Builder materializedView(@Nullable Output<MaterializedViewDefinitionArgs> materializedView) {
             this.materializedView = materializedView;
             return this;
         }
-
         public Builder materializedView(@Nullable MaterializedViewDefinitionArgs materializedView) {
             this.materializedView = Output.ofNullable(materializedView);
             return this;
         }
-
         public Builder model(@Nullable Output<ModelDefinitionArgs> model) {
             this.model = model;
             return this;
         }
-
         public Builder model(@Nullable ModelDefinitionArgs model) {
             this.model = Output.ofNullable(model);
             return this;
         }
-
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
         }
-
         public Builder rangePartitioning(@Nullable Output<RangePartitioningArgs> rangePartitioning) {
             this.rangePartitioning = rangePartitioning;
             return this;
         }
-
         public Builder rangePartitioning(@Nullable RangePartitioningArgs rangePartitioning) {
             this.rangePartitioning = Output.ofNullable(rangePartitioning);
             return this;
         }
-
         public Builder requirePartitionFilter(@Nullable Output<Boolean> requirePartitionFilter) {
             this.requirePartitionFilter = requirePartitionFilter;
             return this;
         }
-
         public Builder requirePartitionFilter(@Nullable Boolean requirePartitionFilter) {
             this.requirePartitionFilter = Output.ofNullable(requirePartitionFilter);
             return this;
         }
-
         public Builder schema(@Nullable Output<TableSchemaArgs> schema) {
             this.schema = schema;
             return this;
         }
-
         public Builder schema(@Nullable TableSchemaArgs schema) {
             this.schema = Output.ofNullable(schema);
             return this;
         }
-
         public Builder tableReference(@Nullable Output<TableReferenceArgs> tableReference) {
             this.tableReference = tableReference;
             return this;
         }
-
         public Builder tableReference(@Nullable TableReferenceArgs tableReference) {
             this.tableReference = Output.ofNullable(tableReference);
             return this;
         }
-
         public Builder timePartitioning(@Nullable Output<TimePartitioningArgs> timePartitioning) {
             this.timePartitioning = timePartitioning;
             return this;
         }
-
         public Builder timePartitioning(@Nullable TimePartitioningArgs timePartitioning) {
             this.timePartitioning = Output.ofNullable(timePartitioning);
             return this;
         }
-
         public Builder view(@Nullable Output<ViewDefinitionArgs> view) {
             this.view = view;
             return this;
         }
-
         public Builder view(@Nullable ViewDefinitionArgs view) {
             this.view = Output.ofNullable(view);
             return this;
-        }
-        public TableArgs build() {
+        }        public TableArgs build() {
             return new TableArgs(clustering, datasetId, description, encryptionConfiguration, expirationTime, externalDataConfiguration, friendlyName, labels, materializedView, model, project, rangePartitioning, requirePartitionFilter, schema, tableReference, timePartitioning, view);
         }
     }

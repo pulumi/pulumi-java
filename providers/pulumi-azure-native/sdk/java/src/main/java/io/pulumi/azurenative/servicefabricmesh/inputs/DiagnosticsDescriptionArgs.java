@@ -97,32 +97,32 @@ public final class DiagnosticsDescriptionArgs extends io.pulumi.resources.Resour
             this.defaultSinkRefs = defaultSinkRefs;
             return this;
         }
-
         public Builder defaultSinkRefs(@Nullable List<String> defaultSinkRefs) {
             this.defaultSinkRefs = Output.ofNullable(defaultSinkRefs);
             return this;
         }
-
+        public Builder defaultSinkRefs(String... defaultSinkRefs) {
+            return defaultSinkRefs(List.of(defaultSinkRefs));
+        }
         public Builder enabled(@Nullable Output<Boolean> enabled) {
             this.enabled = enabled;
             return this;
         }
-
         public Builder enabled(@Nullable Boolean enabled) {
             this.enabled = Output.ofNullable(enabled);
             return this;
         }
-
         public Builder sinks(@Nullable Output<List<AzureInternalMonitoringPipelineSinkDescriptionArgs>> sinks) {
             this.sinks = sinks;
             return this;
         }
-
         public Builder sinks(@Nullable List<AzureInternalMonitoringPipelineSinkDescriptionArgs> sinks) {
             this.sinks = Output.ofNullable(sinks);
             return this;
         }
-        public DiagnosticsDescriptionArgs build() {
+        public Builder sinks(AzureInternalMonitoringPipelineSinkDescriptionArgs... sinks) {
+            return sinks(List.of(sinks));
+        }        public DiagnosticsDescriptionArgs build() {
             return new DiagnosticsDescriptionArgs(defaultSinkRefs, enabled, sinks);
         }
     }

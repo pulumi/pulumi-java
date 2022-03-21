@@ -79,22 +79,18 @@ public final class HybridConnectionEventSubscriptionDestinationArgs extends io.p
             this.endpointType = Objects.requireNonNull(endpointType);
             return this;
         }
-
         public Builder endpointType(String endpointType) {
             this.endpointType = Output.of(Objects.requireNonNull(endpointType));
             return this;
         }
-
         public Builder resourceId(@Nullable Output<String> resourceId) {
             this.resourceId = resourceId;
             return this;
         }
-
         public Builder resourceId(@Nullable String resourceId) {
             this.resourceId = Output.ofNullable(resourceId);
             return this;
-        }
-        public HybridConnectionEventSubscriptionDestinationArgs build() {
+        }        public HybridConnectionEventSubscriptionDestinationArgs build() {
             return new HybridConnectionEventSubscriptionDestinationArgs(endpointType, resourceId);
         }
     }

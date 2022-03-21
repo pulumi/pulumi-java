@@ -78,22 +78,18 @@ public final class TlsValidationOptionsArgs extends io.pulumi.resources.Resource
             this.ignoreHostname = ignoreHostname;
             return this;
         }
-
         public Builder ignoreHostname(@Nullable String ignoreHostname) {
             this.ignoreHostname = Output.ofNullable(ignoreHostname);
             return this;
         }
-
         public Builder ignoreSignature(@Nullable Output<String> ignoreSignature) {
             this.ignoreSignature = ignoreSignature;
             return this;
         }
-
         public Builder ignoreSignature(@Nullable String ignoreSignature) {
             this.ignoreSignature = Output.ofNullable(ignoreSignature);
             return this;
-        }
-        public TlsValidationOptionsArgs build() {
+        }        public TlsValidationOptionsArgs build() {
             return new TlsValidationOptionsArgs(ignoreHostname, ignoreSignature);
         }
     }

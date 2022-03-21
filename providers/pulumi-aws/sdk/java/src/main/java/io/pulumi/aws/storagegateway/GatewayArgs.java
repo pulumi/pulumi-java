@@ -302,162 +302,130 @@ public final class GatewayArgs extends io.pulumi.resources.ResourceArgs {
             this.activationKey = activationKey;
             return this;
         }
-
         public Builder activationKey(@Nullable String activationKey) {
             this.activationKey = Output.ofNullable(activationKey);
             return this;
         }
-
         public Builder averageDownloadRateLimitInBitsPerSec(@Nullable Output<Integer> averageDownloadRateLimitInBitsPerSec) {
             this.averageDownloadRateLimitInBitsPerSec = averageDownloadRateLimitInBitsPerSec;
             return this;
         }
-
         public Builder averageDownloadRateLimitInBitsPerSec(@Nullable Integer averageDownloadRateLimitInBitsPerSec) {
             this.averageDownloadRateLimitInBitsPerSec = Output.ofNullable(averageDownloadRateLimitInBitsPerSec);
             return this;
         }
-
         public Builder averageUploadRateLimitInBitsPerSec(@Nullable Output<Integer> averageUploadRateLimitInBitsPerSec) {
             this.averageUploadRateLimitInBitsPerSec = averageUploadRateLimitInBitsPerSec;
             return this;
         }
-
         public Builder averageUploadRateLimitInBitsPerSec(@Nullable Integer averageUploadRateLimitInBitsPerSec) {
             this.averageUploadRateLimitInBitsPerSec = Output.ofNullable(averageUploadRateLimitInBitsPerSec);
             return this;
         }
-
         public Builder cloudwatchLogGroupArn(@Nullable Output<String> cloudwatchLogGroupArn) {
             this.cloudwatchLogGroupArn = cloudwatchLogGroupArn;
             return this;
         }
-
         public Builder cloudwatchLogGroupArn(@Nullable String cloudwatchLogGroupArn) {
             this.cloudwatchLogGroupArn = Output.ofNullable(cloudwatchLogGroupArn);
             return this;
         }
-
         public Builder gatewayIpAddress(@Nullable Output<String> gatewayIpAddress) {
             this.gatewayIpAddress = gatewayIpAddress;
             return this;
         }
-
         public Builder gatewayIpAddress(@Nullable String gatewayIpAddress) {
             this.gatewayIpAddress = Output.ofNullable(gatewayIpAddress);
             return this;
         }
-
         public Builder gatewayName(Output<String> gatewayName) {
             this.gatewayName = Objects.requireNonNull(gatewayName);
             return this;
         }
-
         public Builder gatewayName(String gatewayName) {
             this.gatewayName = Output.of(Objects.requireNonNull(gatewayName));
             return this;
         }
-
         public Builder gatewayTimezone(Output<String> gatewayTimezone) {
             this.gatewayTimezone = Objects.requireNonNull(gatewayTimezone);
             return this;
         }
-
         public Builder gatewayTimezone(String gatewayTimezone) {
             this.gatewayTimezone = Output.of(Objects.requireNonNull(gatewayTimezone));
             return this;
         }
-
         public Builder gatewayType(@Nullable Output<String> gatewayType) {
             this.gatewayType = gatewayType;
             return this;
         }
-
         public Builder gatewayType(@Nullable String gatewayType) {
             this.gatewayType = Output.ofNullable(gatewayType);
             return this;
         }
-
         public Builder gatewayVpcEndpoint(@Nullable Output<String> gatewayVpcEndpoint) {
             this.gatewayVpcEndpoint = gatewayVpcEndpoint;
             return this;
         }
-
         public Builder gatewayVpcEndpoint(@Nullable String gatewayVpcEndpoint) {
             this.gatewayVpcEndpoint = Output.ofNullable(gatewayVpcEndpoint);
             return this;
         }
-
         public Builder mediumChangerType(@Nullable Output<String> mediumChangerType) {
             this.mediumChangerType = mediumChangerType;
             return this;
         }
-
         public Builder mediumChangerType(@Nullable String mediumChangerType) {
             this.mediumChangerType = Output.ofNullable(mediumChangerType);
             return this;
         }
-
         public Builder smbActiveDirectorySettings(@Nullable Output<GatewaySmbActiveDirectorySettingsArgs> smbActiveDirectorySettings) {
             this.smbActiveDirectorySettings = smbActiveDirectorySettings;
             return this;
         }
-
         public Builder smbActiveDirectorySettings(@Nullable GatewaySmbActiveDirectorySettingsArgs smbActiveDirectorySettings) {
             this.smbActiveDirectorySettings = Output.ofNullable(smbActiveDirectorySettings);
             return this;
         }
-
         public Builder smbFileShareVisibility(@Nullable Output<Boolean> smbFileShareVisibility) {
             this.smbFileShareVisibility = smbFileShareVisibility;
             return this;
         }
-
         public Builder smbFileShareVisibility(@Nullable Boolean smbFileShareVisibility) {
             this.smbFileShareVisibility = Output.ofNullable(smbFileShareVisibility);
             return this;
         }
-
         public Builder smbGuestPassword(@Nullable Output<String> smbGuestPassword) {
             this.smbGuestPassword = smbGuestPassword;
             return this;
         }
-
         public Builder smbGuestPassword(@Nullable String smbGuestPassword) {
             this.smbGuestPassword = Output.ofNullable(smbGuestPassword);
             return this;
         }
-
         public Builder smbSecurityStrategy(@Nullable Output<String> smbSecurityStrategy) {
             this.smbSecurityStrategy = smbSecurityStrategy;
             return this;
         }
-
         public Builder smbSecurityStrategy(@Nullable String smbSecurityStrategy) {
             this.smbSecurityStrategy = Output.ofNullable(smbSecurityStrategy);
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
         public Builder tapeDriveType(@Nullable Output<String> tapeDriveType) {
             this.tapeDriveType = tapeDriveType;
             return this;
         }
-
         public Builder tapeDriveType(@Nullable String tapeDriveType) {
             this.tapeDriveType = Output.ofNullable(tapeDriveType);
             return this;
-        }
-        public GatewayArgs build() {
+        }        public GatewayArgs build() {
             return new GatewayArgs(activationKey, averageDownloadRateLimitInBitsPerSec, averageUploadRateLimitInBitsPerSec, cloudwatchLogGroupArn, gatewayIpAddress, gatewayName, gatewayTimezone, gatewayType, gatewayVpcEndpoint, mediumChangerType, smbActiveDirectorySettings, smbFileShareVisibility, smbGuestPassword, smbSecurityStrategy, tags, tapeDriveType);
         }
     }

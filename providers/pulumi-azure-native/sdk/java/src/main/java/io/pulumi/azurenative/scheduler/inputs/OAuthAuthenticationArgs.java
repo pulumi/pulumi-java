@@ -123,52 +123,42 @@ public final class OAuthAuthenticationArgs extends io.pulumi.resources.ResourceA
             this.audience = audience;
             return this;
         }
-
         public Builder audience(@Nullable String audience) {
             this.audience = Output.ofNullable(audience);
             return this;
         }
-
         public Builder clientId(@Nullable Output<String> clientId) {
             this.clientId = clientId;
             return this;
         }
-
         public Builder clientId(@Nullable String clientId) {
             this.clientId = Output.ofNullable(clientId);
             return this;
         }
-
         public Builder secret(@Nullable Output<String> secret) {
             this.secret = secret;
             return this;
         }
-
         public Builder secret(@Nullable String secret) {
             this.secret = Output.ofNullable(secret);
             return this;
         }
-
         public Builder tenant(@Nullable Output<String> tenant) {
             this.tenant = tenant;
             return this;
         }
-
         public Builder tenant(@Nullable String tenant) {
             this.tenant = Output.ofNullable(tenant);
             return this;
         }
-
         public Builder type(Output<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Output.of(Objects.requireNonNull(type));
             return this;
-        }
-        public OAuthAuthenticationArgs build() {
+        }        public OAuthAuthenticationArgs build() {
             return new OAuthAuthenticationArgs(audience, clientId, secret, tenant, type);
         }
     }

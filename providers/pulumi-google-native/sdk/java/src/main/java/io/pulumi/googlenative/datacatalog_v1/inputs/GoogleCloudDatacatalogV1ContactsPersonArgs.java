@@ -78,22 +78,18 @@ public final class GoogleCloudDatacatalogV1ContactsPersonArgs extends io.pulumi.
             this.designation = designation;
             return this;
         }
-
         public Builder designation(@Nullable String designation) {
             this.designation = Output.ofNullable(designation);
             return this;
         }
-
         public Builder email(@Nullable Output<String> email) {
             this.email = email;
             return this;
         }
-
         public Builder email(@Nullable String email) {
             this.email = Output.ofNullable(email);
             return this;
-        }
-        public GoogleCloudDatacatalogV1ContactsPersonArgs build() {
+        }        public GoogleCloudDatacatalogV1ContactsPersonArgs build() {
             return new GoogleCloudDatacatalogV1ContactsPersonArgs(designation, email);
         }
     }

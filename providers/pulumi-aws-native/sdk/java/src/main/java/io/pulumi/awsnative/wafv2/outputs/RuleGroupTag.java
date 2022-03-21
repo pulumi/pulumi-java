@@ -55,12 +55,10 @@ public final class RuleGroupTag {
             this.key = key;
             return this;
         }
-
         public Builder value(@Nullable String value) {
             this.value = value;
             return this;
-        }
-        public RuleGroupTag build() {
+        }        public RuleGroupTag build() {
             return new RuleGroupTag(key, value);
         }
     }

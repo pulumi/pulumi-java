@@ -135,32 +135,35 @@ public final class ConnectToTargetSqlMITaskOutputResponse {
             this.agentJobs = Objects.requireNonNull(agentJobs);
             return this;
         }
-
+        public Builder agentJobs(String... agentJobs) {
+            return agentJobs(List.of(agentJobs));
+        }
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder logins(List<String> logins) {
             this.logins = Objects.requireNonNull(logins);
             return this;
         }
-
+        public Builder logins(String... logins) {
+            return logins(List.of(logins));
+        }
         public Builder targetServerBrandVersion(String targetServerBrandVersion) {
             this.targetServerBrandVersion = Objects.requireNonNull(targetServerBrandVersion);
             return this;
         }
-
         public Builder targetServerVersion(String targetServerVersion) {
             this.targetServerVersion = Objects.requireNonNull(targetServerVersion);
             return this;
         }
-
         public Builder validationErrors(List<ReportableExceptionResponse> validationErrors) {
             this.validationErrors = Objects.requireNonNull(validationErrors);
             return this;
         }
-        public ConnectToTargetSqlMITaskOutputResponse build() {
+        public Builder validationErrors(ReportableExceptionResponse... validationErrors) {
+            return validationErrors(List.of(validationErrors));
+        }        public ConnectToTargetSqlMITaskOutputResponse build() {
             return new ConnectToTargetSqlMITaskOutputResponse(agentJobs, id, logins, targetServerBrandVersion, targetServerVersion, validationErrors);
         }
     }

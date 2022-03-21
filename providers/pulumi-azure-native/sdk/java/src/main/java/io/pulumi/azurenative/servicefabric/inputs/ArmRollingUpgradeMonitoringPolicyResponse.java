@@ -142,32 +142,26 @@ public final class ArmRollingUpgradeMonitoringPolicyResponse extends io.pulumi.r
             this.failureAction = failureAction;
             return this;
         }
-
         public Builder healthCheckRetryTimeout(@Nullable String healthCheckRetryTimeout) {
             this.healthCheckRetryTimeout = healthCheckRetryTimeout;
             return this;
         }
-
         public Builder healthCheckStableDuration(@Nullable String healthCheckStableDuration) {
             this.healthCheckStableDuration = healthCheckStableDuration;
             return this;
         }
-
         public Builder healthCheckWaitDuration(@Nullable String healthCheckWaitDuration) {
             this.healthCheckWaitDuration = healthCheckWaitDuration;
             return this;
         }
-
         public Builder upgradeDomainTimeout(@Nullable String upgradeDomainTimeout) {
             this.upgradeDomainTimeout = upgradeDomainTimeout;
             return this;
         }
-
         public Builder upgradeTimeout(@Nullable String upgradeTimeout) {
             this.upgradeTimeout = upgradeTimeout;
             return this;
-        }
-        public ArmRollingUpgradeMonitoringPolicyResponse build() {
+        }        public ArmRollingUpgradeMonitoringPolicyResponse build() {
             return new ArmRollingUpgradeMonitoringPolicyResponse(failureAction, healthCheckRetryTimeout, healthCheckStableDuration, healthCheckWaitDuration, upgradeDomainTimeout, upgradeTimeout);
         }
     }

@@ -46,7 +46,9 @@ public final class FeatureState {
             this.states = states;
             return this;
         }
-        public FeatureState build() {
+        public Builder states(FeatureStateState... states) {
+            return states(List.of(states));
+        }        public FeatureState build() {
             return new FeatureState(states);
         }
     }

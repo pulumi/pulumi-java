@@ -108,42 +108,34 @@ public final class RuntimeIamPolicyArgs extends io.pulumi.resources.ResourceArgs
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder policyData(Output<String> policyData) {
             this.policyData = Objects.requireNonNull(policyData);
             return this;
         }
-
         public Builder policyData(String policyData) {
             this.policyData = Output.of(Objects.requireNonNull(policyData));
             return this;
         }
-
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
         }
-
         public Builder runtimeName(Output<String> runtimeName) {
             this.runtimeName = Objects.requireNonNull(runtimeName);
             return this;
         }
-
         public Builder runtimeName(String runtimeName) {
             this.runtimeName = Output.of(Objects.requireNonNull(runtimeName));
             return this;
-        }
-        public RuntimeIamPolicyArgs build() {
+        }        public RuntimeIamPolicyArgs build() {
             return new RuntimeIamPolicyArgs(location, policyData, project, runtimeName);
         }
     }

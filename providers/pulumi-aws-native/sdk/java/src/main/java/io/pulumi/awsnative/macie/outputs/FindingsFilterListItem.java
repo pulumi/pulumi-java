@@ -55,12 +55,10 @@ public final class FindingsFilterListItem {
             this.id = id;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = name;
             return this;
-        }
-        public FindingsFilterListItem build() {
+        }        public FindingsFilterListItem build() {
             return new FindingsFilterListItem(id, name);
         }
     }

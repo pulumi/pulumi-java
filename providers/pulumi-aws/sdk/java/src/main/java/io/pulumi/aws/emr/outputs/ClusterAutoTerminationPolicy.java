@@ -53,8 +53,7 @@ public final class ClusterAutoTerminationPolicy {
         public Builder idleTimeout(@Nullable Integer idleTimeout) {
             this.idleTimeout = idleTimeout;
             return this;
-        }
-        public ClusterAutoTerminationPolicy build() {
+        }        public ClusterAutoTerminationPolicy build() {
             return new ClusterAutoTerminationPolicy(idleTimeout);
         }
     }

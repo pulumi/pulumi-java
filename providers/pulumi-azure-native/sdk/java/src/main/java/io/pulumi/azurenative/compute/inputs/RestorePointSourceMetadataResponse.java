@@ -179,42 +179,34 @@ public final class RestorePointSourceMetadataResponse extends io.pulumi.resource
             this.diagnosticsProfile = diagnosticsProfile;
             return this;
         }
-
         public Builder hardwareProfile(@Nullable HardwareProfileResponse hardwareProfile) {
             this.hardwareProfile = hardwareProfile;
             return this;
         }
-
         public Builder licenseType(@Nullable String licenseType) {
             this.licenseType = licenseType;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = location;
             return this;
         }
-
         public Builder osProfile(@Nullable OSProfileResponse osProfile) {
             this.osProfile = osProfile;
             return this;
         }
-
         public Builder securityProfile(@Nullable SecurityProfileResponse securityProfile) {
             this.securityProfile = securityProfile;
             return this;
         }
-
         public Builder storageProfile(@Nullable RestorePointSourceVMStorageProfileResponse storageProfile) {
             this.storageProfile = storageProfile;
             return this;
         }
-
         public Builder vmId(@Nullable String vmId) {
             this.vmId = vmId;
             return this;
-        }
-        public RestorePointSourceMetadataResponse build() {
+        }        public RestorePointSourceMetadataResponse build() {
             return new RestorePointSourceMetadataResponse(diagnosticsProfile, hardwareProfile, licenseType, location, osProfile, securityProfile, storageProfile, vmId);
         }
     }

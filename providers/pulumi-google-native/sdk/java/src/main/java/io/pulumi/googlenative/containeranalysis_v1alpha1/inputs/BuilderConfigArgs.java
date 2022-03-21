@@ -53,12 +53,10 @@ public final class BuilderConfigArgs extends io.pulumi.resources.ResourceArgs {
             this.id = id;
             return this;
         }
-
         public Builder id(@Nullable String id) {
             this.id = Output.ofNullable(id);
             return this;
-        }
-        public BuilderConfigArgs build() {
+        }        public BuilderConfigArgs build() {
             return new BuilderConfigArgs(id);
         }
     }

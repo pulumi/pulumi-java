@@ -187,92 +187,74 @@ public final class PermissionSetState extends io.pulumi.resources.ResourceArgs {
             this.arn = arn;
             return this;
         }
-
         public Builder arn(@Nullable String arn) {
             this.arn = Output.ofNullable(arn);
             return this;
         }
-
         public Builder createdDate(@Nullable Output<String> createdDate) {
             this.createdDate = createdDate;
             return this;
         }
-
         public Builder createdDate(@Nullable String createdDate) {
             this.createdDate = Output.ofNullable(createdDate);
             return this;
         }
-
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder instanceArn(@Nullable Output<String> instanceArn) {
             this.instanceArn = instanceArn;
             return this;
         }
-
         public Builder instanceArn(@Nullable String instanceArn) {
             this.instanceArn = Output.ofNullable(instanceArn);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder relayState(@Nullable Output<String> relayState) {
             this.relayState = relayState;
             return this;
         }
-
         public Builder relayState(@Nullable String relayState) {
             this.relayState = Output.ofNullable(relayState);
             return this;
         }
-
         public Builder sessionDuration(@Nullable Output<String> sessionDuration) {
             this.sessionDuration = sessionDuration;
             return this;
         }
-
         public Builder sessionDuration(@Nullable String sessionDuration) {
             this.sessionDuration = Output.ofNullable(sessionDuration);
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
             this.tagsAll = tagsAll;
             return this;
         }
-
         public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
             this.tagsAll = Output.ofNullable(tagsAll);
             return this;
-        }
-        public PermissionSetState build() {
+        }        public PermissionSetState build() {
             return new PermissionSetState(arn, createdDate, description, instanceArn, name, relayState, sessionDuration, tags, tagsAll);
         }
     }

@@ -92,17 +92,14 @@ public final class ConnectionStatePropertiesResponse extends io.pulumi.resources
             this.actionsRequired = Objects.requireNonNull(actionsRequired);
             return this;
         }
-
         public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
-
         public Builder status(String status) {
             this.status = Objects.requireNonNull(status);
             return this;
-        }
-        public ConnectionStatePropertiesResponse build() {
+        }        public ConnectionStatePropertiesResponse build() {
             return new ConnectionStatePropertiesResponse(actionsRequired, description, status);
         }
     }

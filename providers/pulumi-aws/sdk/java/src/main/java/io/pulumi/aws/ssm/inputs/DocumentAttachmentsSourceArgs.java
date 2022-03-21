@@ -91,32 +91,29 @@ public final class DocumentAttachmentsSourceArgs extends io.pulumi.resources.Res
             this.key = Objects.requireNonNull(key);
             return this;
         }
-
         public Builder key(String key) {
             this.key = Output.of(Objects.requireNonNull(key));
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder values(Output<List<String>> values) {
             this.values = Objects.requireNonNull(values);
             return this;
         }
-
         public Builder values(List<String> values) {
             this.values = Output.of(Objects.requireNonNull(values));
             return this;
         }
-        public DocumentAttachmentsSourceArgs build() {
+        public Builder values(String... values) {
+            return values(List.of(values));
+        }        public DocumentAttachmentsSourceArgs build() {
             return new DocumentAttachmentsSourceArgs(key, name, values);
         }
     }

@@ -91,17 +91,14 @@ public final class JobQueryScriptOptions {
             this.keyResultStatement = keyResultStatement;
             return this;
         }
-
         public Builder statementByteBudget(@Nullable String statementByteBudget) {
             this.statementByteBudget = statementByteBudget;
             return this;
         }
-
         public Builder statementTimeoutMs(@Nullable String statementTimeoutMs) {
             this.statementTimeoutMs = statementTimeoutMs;
             return this;
-        }
-        public JobQueryScriptOptions build() {
+        }        public JobQueryScriptOptions build() {
             return new JobQueryScriptOptions(keyResultStatement, statementByteBudget, statementTimeoutMs);
         }
     }

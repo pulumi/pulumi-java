@@ -193,47 +193,44 @@ public final class LedgerPropertiesResponse extends io.pulumi.resources.InvokeAr
             this.aadBasedSecurityPrincipals = aadBasedSecurityPrincipals;
             return this;
         }
-
+        public Builder aadBasedSecurityPrincipals(AADBasedSecurityPrincipalResponse... aadBasedSecurityPrincipals) {
+            return aadBasedSecurityPrincipals(List.of(aadBasedSecurityPrincipals));
+        }
         public Builder certBasedSecurityPrincipals(@Nullable List<CertBasedSecurityPrincipalResponse> certBasedSecurityPrincipals) {
             this.certBasedSecurityPrincipals = certBasedSecurityPrincipals;
             return this;
         }
-
+        public Builder certBasedSecurityPrincipals(CertBasedSecurityPrincipalResponse... certBasedSecurityPrincipals) {
+            return certBasedSecurityPrincipals(List.of(certBasedSecurityPrincipals));
+        }
         public Builder identityServiceUri(String identityServiceUri) {
             this.identityServiceUri = Objects.requireNonNull(identityServiceUri);
             return this;
         }
-
         public Builder ledgerInternalNamespace(String ledgerInternalNamespace) {
             this.ledgerInternalNamespace = Objects.requireNonNull(ledgerInternalNamespace);
             return this;
         }
-
         public Builder ledgerName(String ledgerName) {
             this.ledgerName = Objects.requireNonNull(ledgerName);
             return this;
         }
-
         public Builder ledgerStorageAccount(@Nullable String ledgerStorageAccount) {
             this.ledgerStorageAccount = ledgerStorageAccount;
             return this;
         }
-
         public Builder ledgerType(@Nullable String ledgerType) {
             this.ledgerType = ledgerType;
             return this;
         }
-
         public Builder ledgerUri(String ledgerUri) {
             this.ledgerUri = Objects.requireNonNull(ledgerUri);
             return this;
         }
-
         public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
-        }
-        public LedgerPropertiesResponse build() {
+        }        public LedgerPropertiesResponse build() {
             return new LedgerPropertiesResponse(aadBasedSecurityPrincipals, certBasedSecurityPrincipals, identityServiceUri, ledgerInternalNamespace, ledgerName, ledgerStorageAccount, ledgerType, ledgerUri, provisioningState);
         }
     }

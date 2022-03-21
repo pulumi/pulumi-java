@@ -79,22 +79,18 @@ public final class NetworkResourcePropertiesArgs extends io.pulumi.resources.Res
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder kind(Output<String> kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
-
         public Builder kind(String kind) {
             this.kind = Output.of(Objects.requireNonNull(kind));
             return this;
-        }
-        public NetworkResourcePropertiesArgs build() {
+        }        public NetworkResourcePropertiesArgs build() {
             return new NetworkResourcePropertiesArgs(description, kind);
         }
     }

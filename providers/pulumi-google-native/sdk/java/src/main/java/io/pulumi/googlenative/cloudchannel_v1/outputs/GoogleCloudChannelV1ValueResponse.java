@@ -120,27 +120,22 @@ public final class GoogleCloudChannelV1ValueResponse {
             this.boolValue = Objects.requireNonNull(boolValue);
             return this;
         }
-
         public Builder doubleValue(Double doubleValue) {
             this.doubleValue = Objects.requireNonNull(doubleValue);
             return this;
         }
-
         public Builder int64Value(String int64Value) {
             this.int64Value = Objects.requireNonNull(int64Value);
             return this;
         }
-
         public Builder protoValue(Map<String,String> protoValue) {
             this.protoValue = Objects.requireNonNull(protoValue);
             return this;
         }
-
         public Builder stringValue(String stringValue) {
             this.stringValue = Objects.requireNonNull(stringValue);
             return this;
-        }
-        public GoogleCloudChannelV1ValueResponse build() {
+        }        public GoogleCloudChannelV1ValueResponse build() {
             return new GoogleCloudChannelV1ValueResponse(boolValue, doubleValue, int64Value, protoValue, stringValue);
         }
     }

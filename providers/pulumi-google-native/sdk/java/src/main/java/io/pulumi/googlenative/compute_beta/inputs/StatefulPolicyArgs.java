@@ -53,12 +53,10 @@ public final class StatefulPolicyArgs extends io.pulumi.resources.ResourceArgs {
             this.preservedState = preservedState;
             return this;
         }
-
         public Builder preservedState(@Nullable StatefulPolicyPreservedStateArgs preservedState) {
             this.preservedState = Output.ofNullable(preservedState);
             return this;
-        }
-        public StatefulPolicyArgs build() {
+        }        public StatefulPolicyArgs build() {
             return new StatefulPolicyArgs(preservedState);
         }
     }

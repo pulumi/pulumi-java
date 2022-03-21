@@ -56,12 +56,10 @@ public final class ParallelismConfigurationPropertiesArgs extends io.pulumi.reso
             this.maxParallelExecutionSteps = Objects.requireNonNull(maxParallelExecutionSteps);
             return this;
         }
-
         public Builder maxParallelExecutionSteps(Integer maxParallelExecutionSteps) {
             this.maxParallelExecutionSteps = Output.of(Objects.requireNonNull(maxParallelExecutionSteps));
             return this;
-        }
-        public ParallelismConfigurationPropertiesArgs build() {
+        }        public ParallelismConfigurationPropertiesArgs build() {
             return new ParallelismConfigurationPropertiesArgs(maxParallelExecutionSteps);
         }
     }

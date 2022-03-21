@@ -202,52 +202,42 @@ public final class GetVendorSkusResult {
             this.deploymentMode = deploymentMode;
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder managedApplicationParameters(@Nullable Object managedApplicationParameters) {
             this.managedApplicationParameters = managedApplicationParameters;
             return this;
         }
-
         public Builder managedApplicationTemplate(@Nullable Object managedApplicationTemplate) {
             this.managedApplicationTemplate = managedApplicationTemplate;
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder networkFunctionTemplate(@Nullable NetworkFunctionTemplateResponse networkFunctionTemplate) {
             this.networkFunctionTemplate = networkFunctionTemplate;
             return this;
         }
-
         public Builder preview(@Nullable Boolean preview) {
             this.preview = preview;
             return this;
         }
-
         public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
-
         public Builder skuType(@Nullable String skuType) {
             this.skuType = skuType;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public GetVendorSkusResult build() {
+        }        public GetVendorSkusResult build() {
             return new GetVendorSkusResult(deploymentMode, id, managedApplicationParameters, managedApplicationTemplate, name, networkFunctionTemplate, preview, provisioningState, skuType, type);
         }
     }

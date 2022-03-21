@@ -124,27 +124,22 @@ public final class AuthorizationProfileResponse extends io.pulumi.resources.Invo
             this.approvedTime = Objects.requireNonNull(approvedTime);
             return this;
         }
-
         public Builder approver(String approver) {
             this.approver = Objects.requireNonNull(approver);
             return this;
         }
-
         public Builder requestedTime(String requestedTime) {
             this.requestedTime = Objects.requireNonNull(requestedTime);
             return this;
         }
-
         public Builder requester(String requester) {
             this.requester = Objects.requireNonNull(requester);
             return this;
         }
-
         public Builder requesterObjectId(String requesterObjectId) {
             this.requesterObjectId = Objects.requireNonNull(requesterObjectId);
             return this;
-        }
-        public AuthorizationProfileResponse build() {
+        }        public AuthorizationProfileResponse build() {
             return new AuthorizationProfileResponse(approvedTime, approver, requestedTime, requester, requesterObjectId);
         }
     }

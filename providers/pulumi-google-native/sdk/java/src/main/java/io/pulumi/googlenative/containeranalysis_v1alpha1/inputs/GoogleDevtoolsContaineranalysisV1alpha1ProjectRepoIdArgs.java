@@ -78,22 +78,18 @@ public final class GoogleDevtoolsContaineranalysisV1alpha1ProjectRepoIdArgs exte
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
         }
-
         public Builder repoName(@Nullable Output<String> repoName) {
             this.repoName = repoName;
             return this;
         }
-
         public Builder repoName(@Nullable String repoName) {
             this.repoName = Output.ofNullable(repoName);
             return this;
-        }
-        public GoogleDevtoolsContaineranalysisV1alpha1ProjectRepoIdArgs build() {
+        }        public GoogleDevtoolsContaineranalysisV1alpha1ProjectRepoIdArgs build() {
             return new GoogleDevtoolsContaineranalysisV1alpha1ProjectRepoIdArgs(project, repoName);
         }
     }

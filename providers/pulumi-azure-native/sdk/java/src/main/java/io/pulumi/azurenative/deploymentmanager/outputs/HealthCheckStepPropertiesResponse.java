@@ -72,12 +72,10 @@ public final class HealthCheckStepPropertiesResponse {
             this.attributes = Objects.requireNonNull(attributes);
             return this;
         }
-
         public Builder stepType(String stepType) {
             this.stepType = Objects.requireNonNull(stepType);
             return this;
-        }
-        public HealthCheckStepPropertiesResponse build() {
+        }        public HealthCheckStepPropertiesResponse build() {
             return new HealthCheckStepPropertiesResponse(attributes, stepType);
         }
     }

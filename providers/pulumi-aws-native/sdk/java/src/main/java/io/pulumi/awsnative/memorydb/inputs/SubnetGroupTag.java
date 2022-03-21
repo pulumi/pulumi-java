@@ -76,12 +76,10 @@ public final class SubnetGroupTag extends io.pulumi.resources.InvokeArgs {
             this.key = Objects.requireNonNull(key);
             return this;
         }
-
         public Builder value(String value) {
             this.value = Objects.requireNonNull(value);
             return this;
-        }
-        public SubnetGroupTag build() {
+        }        public SubnetGroupTag build() {
             return new SubnetGroupTag(key, value);
         }
     }

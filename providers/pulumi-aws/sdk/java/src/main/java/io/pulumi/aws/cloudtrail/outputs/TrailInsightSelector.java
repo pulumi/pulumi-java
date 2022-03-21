@@ -51,8 +51,7 @@ public final class TrailInsightSelector {
         public Builder insightType(String insightType) {
             this.insightType = Objects.requireNonNull(insightType);
             return this;
-        }
-        public TrailInsightSelector build() {
+        }        public TrailInsightSelector build() {
             return new TrailInsightSelector(insightType);
         }
     }

@@ -136,32 +136,29 @@ public final class GetMembershipResult {
             this.createTime = Objects.requireNonNull(createTime);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder preferredMemberKey(EntityKeyResponse preferredMemberKey) {
             this.preferredMemberKey = Objects.requireNonNull(preferredMemberKey);
             return this;
         }
-
         public Builder roles(List<MembershipRoleResponse> roles) {
             this.roles = Objects.requireNonNull(roles);
             return this;
         }
-
+        public Builder roles(MembershipRoleResponse... roles) {
+            return roles(List.of(roles));
+        }
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder updateTime(String updateTime) {
             this.updateTime = Objects.requireNonNull(updateTime);
             return this;
-        }
-        public GetMembershipResult build() {
+        }        public GetMembershipResult build() {
             return new GetMembershipResult(createTime, name, preferredMemberKey, roles, type, updateTime);
         }
     }

@@ -87,17 +87,17 @@ public final class CompensationInfoResponse {
             this.annualizedBaseCompensationRange = Objects.requireNonNull(annualizedBaseCompensationRange);
             return this;
         }
-
         public Builder annualizedTotalCompensationRange(CompensationRangeResponse annualizedTotalCompensationRange) {
             this.annualizedTotalCompensationRange = Objects.requireNonNull(annualizedTotalCompensationRange);
             return this;
         }
-
         public Builder entries(List<CompensationEntryResponse> entries) {
             this.entries = Objects.requireNonNull(entries);
             return this;
         }
-        public CompensationInfoResponse build() {
+        public Builder entries(CompensationEntryResponse... entries) {
+            return entries(List.of(entries));
+        }        public CompensationInfoResponse build() {
             return new CompensationInfoResponse(annualizedBaseCompensationRange, annualizedTotalCompensationRange, entries);
         }
     }

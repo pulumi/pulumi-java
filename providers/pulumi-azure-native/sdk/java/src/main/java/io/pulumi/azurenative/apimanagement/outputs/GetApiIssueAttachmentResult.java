@@ -133,32 +133,26 @@ public final class GetApiIssueAttachmentResult {
             this.content = Objects.requireNonNull(content);
             return this;
         }
-
         public Builder contentFormat(String contentFormat) {
             this.contentFormat = Objects.requireNonNull(contentFormat);
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder title(String title) {
             this.title = Objects.requireNonNull(title);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public GetApiIssueAttachmentResult build() {
+        }        public GetApiIssueAttachmentResult build() {
             return new GetApiIssueAttachmentResult(content, contentFormat, id, name, title, type);
         }
     }

@@ -140,62 +140,50 @@ public final class SecretVersionState extends io.pulumi.resources.ResourceArgs {
             this.createTime = createTime;
             return this;
         }
-
         public Builder createTime(@Nullable String createTime) {
             this.createTime = Output.ofNullable(createTime);
             return this;
         }
-
         public Builder destroyTime(@Nullable Output<String> destroyTime) {
             this.destroyTime = destroyTime;
             return this;
         }
-
         public Builder destroyTime(@Nullable String destroyTime) {
             this.destroyTime = Output.ofNullable(destroyTime);
             return this;
         }
-
         public Builder enabled(@Nullable Output<Boolean> enabled) {
             this.enabled = enabled;
             return this;
         }
-
         public Builder enabled(@Nullable Boolean enabled) {
             this.enabled = Output.ofNullable(enabled);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder secret(@Nullable Output<String> secret) {
             this.secret = secret;
             return this;
         }
-
         public Builder secret(@Nullable String secret) {
             this.secret = Output.ofNullable(secret);
             return this;
         }
-
         public Builder secretData(@Nullable Output<String> secretData) {
             this.secretData = secretData;
             return this;
         }
-
         public Builder secretData(@Nullable String secretData) {
             this.secretData = Output.ofNullable(secretData);
             return this;
-        }
-        public SecretVersionState build() {
+        }        public SecretVersionState build() {
             return new SecretVersionState(createTime, destroyTime, enabled, name, secret, secretData);
         }
     }

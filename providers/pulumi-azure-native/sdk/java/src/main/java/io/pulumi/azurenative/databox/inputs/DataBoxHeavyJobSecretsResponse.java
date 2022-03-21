@@ -113,22 +113,21 @@ public final class DataBoxHeavyJobSecretsResponse extends io.pulumi.resources.In
             this.cabinetPodSecrets = Objects.requireNonNull(cabinetPodSecrets);
             return this;
         }
-
+        public Builder cabinetPodSecrets(DataBoxHeavySecretResponse... cabinetPodSecrets) {
+            return cabinetPodSecrets(List.of(cabinetPodSecrets));
+        }
         public Builder dcAccessSecurityCode(DcAccessSecurityCodeResponse dcAccessSecurityCode) {
             this.dcAccessSecurityCode = Objects.requireNonNull(dcAccessSecurityCode);
             return this;
         }
-
         public Builder error(CloudErrorResponse error) {
             this.error = Objects.requireNonNull(error);
             return this;
         }
-
         public Builder jobSecretsType(String jobSecretsType) {
             this.jobSecretsType = Objects.requireNonNull(jobSecretsType);
             return this;
-        }
-        public DataBoxHeavyJobSecretsResponse build() {
+        }        public DataBoxHeavyJobSecretsResponse build() {
             return new DataBoxHeavyJobSecretsResponse(cabinetPodSecrets, dcAccessSecurityCode, error, jobSecretsType);
         }
     }

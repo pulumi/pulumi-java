@@ -57,12 +57,10 @@ public final class ClusterAddonsConfigKalmConfigGetArgs extends io.pulumi.resour
             this.enabled = Objects.requireNonNull(enabled);
             return this;
         }
-
         public Builder enabled(Boolean enabled) {
             this.enabled = Output.of(Objects.requireNonNull(enabled));
             return this;
-        }
-        public ClusterAddonsConfigKalmConfigGetArgs build() {
+        }        public ClusterAddonsConfigKalmConfigGetArgs build() {
             return new ClusterAddonsConfigKalmConfigGetArgs(enabled);
         }
     }

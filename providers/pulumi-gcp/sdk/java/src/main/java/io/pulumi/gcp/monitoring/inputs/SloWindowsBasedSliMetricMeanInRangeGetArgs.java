@@ -86,22 +86,18 @@ public final class SloWindowsBasedSliMetricMeanInRangeGetArgs extends io.pulumi.
             this.range = Objects.requireNonNull(range);
             return this;
         }
-
         public Builder range(SloWindowsBasedSliMetricMeanInRangeRangeGetArgs range) {
             this.range = Output.of(Objects.requireNonNull(range));
             return this;
         }
-
         public Builder timeSeries(Output<String> timeSeries) {
             this.timeSeries = Objects.requireNonNull(timeSeries);
             return this;
         }
-
         public Builder timeSeries(String timeSeries) {
             this.timeSeries = Output.of(Objects.requireNonNull(timeSeries));
             return this;
-        }
-        public SloWindowsBasedSliMetricMeanInRangeGetArgs build() {
+        }        public SloWindowsBasedSliMetricMeanInRangeGetArgs build() {
             return new SloWindowsBasedSliMetricMeanInRangeGetArgs(range, timeSeries);
         }
     }

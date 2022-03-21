@@ -96,32 +96,26 @@ public final class CloudRepoSourceContextArgs extends io.pulumi.resources.Resour
             this.aliasContext = aliasContext;
             return this;
         }
-
         public Builder aliasContext(@Nullable AliasContextArgs aliasContext) {
             this.aliasContext = Output.ofNullable(aliasContext);
             return this;
         }
-
         public Builder repoId(@Nullable Output<RepoIdArgs> repoId) {
             this.repoId = repoId;
             return this;
         }
-
         public Builder repoId(@Nullable RepoIdArgs repoId) {
             this.repoId = Output.ofNullable(repoId);
             return this;
         }
-
         public Builder revisionId(@Nullable Output<String> revisionId) {
             this.revisionId = revisionId;
             return this;
         }
-
         public Builder revisionId(@Nullable String revisionId) {
             this.revisionId = Output.ofNullable(revisionId);
             return this;
-        }
-        public CloudRepoSourceContextArgs build() {
+        }        public CloudRepoSourceContextArgs build() {
             return new CloudRepoSourceContextArgs(aliasContext, repoId, revisionId);
         }
     }

@@ -107,42 +107,34 @@ public final class TimeSeriesDatabaseConnectionArgs extends io.pulumi.resources.
             this.properties = properties;
             return this;
         }
-
         public Builder properties(@Nullable AzureDataExplorerConnectionPropertiesArgs properties) {
             this.properties = Output.ofNullable(properties);
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder resourceName(Output<String> resourceName) {
             this.resourceName = Objects.requireNonNull(resourceName);
             return this;
         }
-
         public Builder resourceName(String resourceName) {
             this.resourceName = Output.of(Objects.requireNonNull(resourceName));
             return this;
         }
-
         public Builder timeSeriesDatabaseConnectionName(@Nullable Output<String> timeSeriesDatabaseConnectionName) {
             this.timeSeriesDatabaseConnectionName = timeSeriesDatabaseConnectionName;
             return this;
         }
-
         public Builder timeSeriesDatabaseConnectionName(@Nullable String timeSeriesDatabaseConnectionName) {
             this.timeSeriesDatabaseConnectionName = Output.ofNullable(timeSeriesDatabaseConnectionName);
             return this;
-        }
-        public TimeSeriesDatabaseConnectionArgs build() {
+        }        public TimeSeriesDatabaseConnectionArgs build() {
             return new TimeSeriesDatabaseConnectionArgs(properties, resourceGroupName, resourceName, timeSeriesDatabaseConnectionName);
         }
     }

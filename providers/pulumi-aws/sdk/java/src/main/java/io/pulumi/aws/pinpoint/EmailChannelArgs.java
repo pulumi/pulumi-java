@@ -139,62 +139,50 @@ public final class EmailChannelArgs extends io.pulumi.resources.ResourceArgs {
             this.applicationId = Objects.requireNonNull(applicationId);
             return this;
         }
-
         public Builder applicationId(String applicationId) {
             this.applicationId = Output.of(Objects.requireNonNull(applicationId));
             return this;
         }
-
         public Builder configurationSet(@Nullable Output<String> configurationSet) {
             this.configurationSet = configurationSet;
             return this;
         }
-
         public Builder configurationSet(@Nullable String configurationSet) {
             this.configurationSet = Output.ofNullable(configurationSet);
             return this;
         }
-
         public Builder enabled(@Nullable Output<Boolean> enabled) {
             this.enabled = enabled;
             return this;
         }
-
         public Builder enabled(@Nullable Boolean enabled) {
             this.enabled = Output.ofNullable(enabled);
             return this;
         }
-
         public Builder fromAddress(Output<String> fromAddress) {
             this.fromAddress = Objects.requireNonNull(fromAddress);
             return this;
         }
-
         public Builder fromAddress(String fromAddress) {
             this.fromAddress = Output.of(Objects.requireNonNull(fromAddress));
             return this;
         }
-
         public Builder identity(Output<String> identity) {
             this.identity = Objects.requireNonNull(identity);
             return this;
         }
-
         public Builder identity(String identity) {
             this.identity = Output.of(Objects.requireNonNull(identity));
             return this;
         }
-
         public Builder roleArn(@Nullable Output<String> roleArn) {
             this.roleArn = roleArn;
             return this;
         }
-
         public Builder roleArn(@Nullable String roleArn) {
             this.roleArn = Output.ofNullable(roleArn);
             return this;
-        }
-        public EmailChannelArgs build() {
+        }        public EmailChannelArgs build() {
             return new EmailChannelArgs(applicationId, configurationSet, enabled, fromAddress, identity, roleArn);
         }
     }

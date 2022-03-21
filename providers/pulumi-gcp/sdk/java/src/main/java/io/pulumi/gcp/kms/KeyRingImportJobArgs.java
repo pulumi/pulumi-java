@@ -109,42 +109,34 @@ public final class KeyRingImportJobArgs extends io.pulumi.resources.ResourceArgs
             this.importJobId = Objects.requireNonNull(importJobId);
             return this;
         }
-
         public Builder importJobId(String importJobId) {
             this.importJobId = Output.of(Objects.requireNonNull(importJobId));
             return this;
         }
-
         public Builder importMethod(Output<String> importMethod) {
             this.importMethod = Objects.requireNonNull(importMethod);
             return this;
         }
-
         public Builder importMethod(String importMethod) {
             this.importMethod = Output.of(Objects.requireNonNull(importMethod));
             return this;
         }
-
         public Builder keyRing(Output<String> keyRing) {
             this.keyRing = Objects.requireNonNull(keyRing);
             return this;
         }
-
         public Builder keyRing(String keyRing) {
             this.keyRing = Output.of(Objects.requireNonNull(keyRing));
             return this;
         }
-
         public Builder protectionLevel(Output<String> protectionLevel) {
             this.protectionLevel = Objects.requireNonNull(protectionLevel);
             return this;
         }
-
         public Builder protectionLevel(String protectionLevel) {
             this.protectionLevel = Output.of(Objects.requireNonNull(protectionLevel));
             return this;
-        }
-        public KeyRingImportJobArgs build() {
+        }        public KeyRingImportJobArgs build() {
             return new KeyRingImportJobArgs(importJobId, importMethod, keyRing, protectionLevel);
         }
     }

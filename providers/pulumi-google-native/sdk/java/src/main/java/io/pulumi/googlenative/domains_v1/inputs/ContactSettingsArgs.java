@@ -110,42 +110,34 @@ public final class ContactSettingsArgs extends io.pulumi.resources.ResourceArgs 
             this.adminContact = Objects.requireNonNull(adminContact);
             return this;
         }
-
         public Builder adminContact(ContactArgs adminContact) {
             this.adminContact = Output.of(Objects.requireNonNull(adminContact));
             return this;
         }
-
         public Builder privacy(Output<ContactSettingsPrivacy> privacy) {
             this.privacy = Objects.requireNonNull(privacy);
             return this;
         }
-
         public Builder privacy(ContactSettingsPrivacy privacy) {
             this.privacy = Output.of(Objects.requireNonNull(privacy));
             return this;
         }
-
         public Builder registrantContact(Output<ContactArgs> registrantContact) {
             this.registrantContact = Objects.requireNonNull(registrantContact);
             return this;
         }
-
         public Builder registrantContact(ContactArgs registrantContact) {
             this.registrantContact = Output.of(Objects.requireNonNull(registrantContact));
             return this;
         }
-
         public Builder technicalContact(Output<ContactArgs> technicalContact) {
             this.technicalContact = Objects.requireNonNull(technicalContact);
             return this;
         }
-
         public Builder technicalContact(ContactArgs technicalContact) {
             this.technicalContact = Output.of(Objects.requireNonNull(technicalContact));
             return this;
-        }
-        public ContactSettingsArgs build() {
+        }        public ContactSettingsArgs build() {
             return new ContactSettingsArgs(adminContact, privacy, registrantContact, technicalContact);
         }
     }

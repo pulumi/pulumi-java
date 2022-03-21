@@ -79,12 +79,10 @@ public final class CencDrmConfigurationResponse extends io.pulumi.resources.Invo
             this.playReady = playReady;
             return this;
         }
-
         public Builder widevine(@Nullable StreamingPolicyWidevineConfigurationResponse widevine) {
             this.widevine = widevine;
             return this;
-        }
-        public CencDrmConfigurationResponse build() {
+        }        public CencDrmConfigurationResponse build() {
             return new CencDrmConfigurationResponse(playReady, widevine);
         }
     }

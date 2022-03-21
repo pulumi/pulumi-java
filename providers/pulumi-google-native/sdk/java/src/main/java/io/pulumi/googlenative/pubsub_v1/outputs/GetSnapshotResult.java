@@ -102,22 +102,18 @@ public final class GetSnapshotResult {
             this.expireTime = Objects.requireNonNull(expireTime);
             return this;
         }
-
         public Builder labels(Map<String,String> labels) {
             this.labels = Objects.requireNonNull(labels);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder topic(String topic) {
             this.topic = Objects.requireNonNull(topic);
             return this;
-        }
-        public GetSnapshotResult build() {
+        }        public GetSnapshotResult build() {
             return new GetSnapshotResult(expireTime, labels, name, topic);
         }
     }

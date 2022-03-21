@@ -62,12 +62,13 @@ public final class VirtualMachineScaleSetNetworkConfigurationDnsSettingsArgs ext
             this.dnsServers = dnsServers;
             return this;
         }
-
         public Builder dnsServers(@Nullable List<String> dnsServers) {
             this.dnsServers = Output.ofNullable(dnsServers);
             return this;
         }
-        public VirtualMachineScaleSetNetworkConfigurationDnsSettingsArgs build() {
+        public Builder dnsServers(String... dnsServers) {
+            return dnsServers(List.of(dnsServers));
+        }        public VirtualMachineScaleSetNetworkConfigurationDnsSettingsArgs build() {
             return new VirtualMachineScaleSetNetworkConfigurationDnsSettingsArgs(dnsServers);
         }
     }

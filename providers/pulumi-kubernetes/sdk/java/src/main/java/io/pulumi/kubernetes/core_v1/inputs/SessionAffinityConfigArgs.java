@@ -61,12 +61,10 @@ public final class SessionAffinityConfigArgs extends io.pulumi.resources.Resourc
             this.clientIP = clientIP;
             return this;
         }
-
         public Builder clientIP(@Nullable ClientIPConfigArgs clientIP) {
             this.clientIP = Output.ofNullable(clientIP);
             return this;
-        }
-        public SessionAffinityConfigArgs build() {
+        }        public SessionAffinityConfigArgs build() {
             return new SessionAffinityConfigArgs(clientIP);
         }
     }

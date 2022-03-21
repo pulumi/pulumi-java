@@ -120,27 +120,34 @@ public final class PatchInstanceFilterResponse {
             this.all = Objects.requireNonNull(all);
             return this;
         }
-
         public Builder groupLabels(List<PatchInstanceFilterGroupLabelResponse> groupLabels) {
             this.groupLabels = Objects.requireNonNull(groupLabels);
             return this;
         }
-
+        public Builder groupLabels(PatchInstanceFilterGroupLabelResponse... groupLabels) {
+            return groupLabels(List.of(groupLabels));
+        }
         public Builder instanceNamePrefixes(List<String> instanceNamePrefixes) {
             this.instanceNamePrefixes = Objects.requireNonNull(instanceNamePrefixes);
             return this;
         }
-
+        public Builder instanceNamePrefixes(String... instanceNamePrefixes) {
+            return instanceNamePrefixes(List.of(instanceNamePrefixes));
+        }
         public Builder instances(List<String> instances) {
             this.instances = Objects.requireNonNull(instances);
             return this;
         }
-
+        public Builder instances(String... instances) {
+            return instances(List.of(instances));
+        }
         public Builder zones(List<String> zones) {
             this.zones = Objects.requireNonNull(zones);
             return this;
         }
-        public PatchInstanceFilterResponse build() {
+        public Builder zones(String... zones) {
+            return zones(List.of(zones));
+        }        public PatchInstanceFilterResponse build() {
             return new PatchInstanceFilterResponse(all, groupLabels, instanceNamePrefixes, instances, zones);
         }
     }

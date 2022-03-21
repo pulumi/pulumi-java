@@ -76,12 +76,10 @@ public final class AuthRequirementResponse extends io.pulumi.resources.InvokeArg
             this.audiences = Objects.requireNonNull(audiences);
             return this;
         }
-
         public Builder providerId(String providerId) {
             this.providerId = Objects.requireNonNull(providerId);
             return this;
-        }
-        public AuthRequirementResponse build() {
+        }        public AuthRequirementResponse build() {
             return new AuthRequirementResponse(audiences, providerId);
         }
     }

@@ -75,22 +75,18 @@ public final class GeoMatchSetGeoMatchConstraintArgs extends io.pulumi.resources
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Output.of(Objects.requireNonNull(type));
             return this;
         }
-
         public Builder value(Output<String> value) {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public Builder value(String value) {
             this.value = Output.of(Objects.requireNonNull(value));
             return this;
-        }
-        public GeoMatchSetGeoMatchConstraintArgs build() {
+        }        public GeoMatchSetGeoMatchConstraintArgs build() {
             return new GeoMatchSetGeoMatchConstraintArgs(type, value);
         }
     }

@@ -108,42 +108,34 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
             this.deploymentConfig = deploymentConfig;
             return this;
         }
-
         public Builder deploymentConfig(@Nullable EndpointDeploymentConfigArgs deploymentConfig) {
             this.deploymentConfig = Output.ofNullable(deploymentConfig);
             return this;
         }
-
         public Builder endpointConfigName(Output<String> endpointConfigName) {
             this.endpointConfigName = Objects.requireNonNull(endpointConfigName);
             return this;
         }
-
         public Builder endpointConfigName(String endpointConfigName) {
             this.endpointConfigName = Output.of(Objects.requireNonNull(endpointConfigName));
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
-        }
-        public EndpointArgs build() {
+        }        public EndpointArgs build() {
             return new EndpointArgs(deploymentConfig, endpointConfigName, name, tags);
         }
     }

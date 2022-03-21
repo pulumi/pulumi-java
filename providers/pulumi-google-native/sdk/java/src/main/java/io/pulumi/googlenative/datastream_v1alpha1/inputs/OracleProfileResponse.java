@@ -142,32 +142,26 @@ public final class OracleProfileResponse extends io.pulumi.resources.InvokeArgs 
             this.connectionAttributes = Objects.requireNonNull(connectionAttributes);
             return this;
         }
-
         public Builder databaseService(String databaseService) {
             this.databaseService = Objects.requireNonNull(databaseService);
             return this;
         }
-
         public Builder hostname(String hostname) {
             this.hostname = Objects.requireNonNull(hostname);
             return this;
         }
-
         public Builder password(String password) {
             this.password = Objects.requireNonNull(password);
             return this;
         }
-
         public Builder port(Integer port) {
             this.port = Objects.requireNonNull(port);
             return this;
         }
-
         public Builder username(String username) {
             this.username = Objects.requireNonNull(username);
             return this;
-        }
-        public OracleProfileResponse build() {
+        }        public OracleProfileResponse build() {
             return new OracleProfileResponse(connectionAttributes, databaseService, hostname, password, port, username);
         }
     }

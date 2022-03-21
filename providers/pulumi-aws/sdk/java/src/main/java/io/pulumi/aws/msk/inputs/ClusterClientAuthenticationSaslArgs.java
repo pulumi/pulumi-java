@@ -74,22 +74,18 @@ public final class ClusterClientAuthenticationSaslArgs extends io.pulumi.resourc
             this.iam = iam;
             return this;
         }
-
         public Builder iam(@Nullable Boolean iam) {
             this.iam = Output.ofNullable(iam);
             return this;
         }
-
         public Builder scram(@Nullable Output<Boolean> scram) {
             this.scram = scram;
             return this;
         }
-
         public Builder scram(@Nullable Boolean scram) {
             this.scram = Output.ofNullable(scram);
             return this;
-        }
-        public ClusterClientAuthenticationSaslArgs build() {
+        }        public ClusterClientAuthenticationSaslArgs build() {
             return new ClusterClientAuthenticationSaslArgs(iam, scram);
         }
     }

@@ -65,12 +65,13 @@ public final class CustomLayerCloudwatchConfiguration {
             this.enabled = enabled;
             return this;
         }
-
         public Builder logStreams(@Nullable List<CustomLayerCloudwatchConfigurationLogStream> logStreams) {
             this.logStreams = logStreams;
             return this;
         }
-        public CustomLayerCloudwatchConfiguration build() {
+        public Builder logStreams(CustomLayerCloudwatchConfigurationLogStream... logStreams) {
+            return logStreams(List.of(logStreams));
+        }        public CustomLayerCloudwatchConfiguration build() {
             return new CustomLayerCloudwatchConfiguration(enabled, logStreams);
         }
     }

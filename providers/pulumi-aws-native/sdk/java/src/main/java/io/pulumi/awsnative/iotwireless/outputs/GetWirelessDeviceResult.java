@@ -219,57 +219,49 @@ public final class GetWirelessDeviceResult {
             this.arn = arn;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
-
         public Builder destinationName(@Nullable String destinationName) {
             this.destinationName = destinationName;
             return this;
         }
-
         public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
-
         public Builder lastUplinkReceivedAt(@Nullable String lastUplinkReceivedAt) {
             this.lastUplinkReceivedAt = lastUplinkReceivedAt;
             return this;
         }
-
         public Builder loRaWAN(@Nullable WirelessDeviceLoRaWANDevice loRaWAN) {
             this.loRaWAN = loRaWAN;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
-
         public Builder tags(@Nullable List<WirelessDeviceTag> tags) {
             this.tags = tags;
             return this;
         }
-
+        public Builder tags(WirelessDeviceTag... tags) {
+            return tags(List.of(tags));
+        }
         public Builder thingArn(@Nullable String thingArn) {
             this.thingArn = thingArn;
             return this;
         }
-
         public Builder thingName(@Nullable String thingName) {
             this.thingName = thingName;
             return this;
         }
-
         public Builder type(@Nullable WirelessDeviceType type) {
             this.type = type;
             return this;
-        }
-        public GetWirelessDeviceResult build() {
+        }        public GetWirelessDeviceResult build() {
             return new GetWirelessDeviceResult(arn, description, destinationName, id, lastUplinkReceivedAt, loRaWAN, name, tags, thingArn, thingName, type);
         }
     }

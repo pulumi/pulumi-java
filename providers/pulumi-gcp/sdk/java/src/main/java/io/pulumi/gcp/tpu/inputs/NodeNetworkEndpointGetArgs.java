@@ -67,22 +67,18 @@ public final class NodeNetworkEndpointGetArgs extends io.pulumi.resources.Resour
             this.ipAddress = ipAddress;
             return this;
         }
-
         public Builder ipAddress(@Nullable String ipAddress) {
             this.ipAddress = Output.ofNullable(ipAddress);
             return this;
         }
-
         public Builder port(@Nullable Output<Integer> port) {
             this.port = port;
             return this;
         }
-
         public Builder port(@Nullable Integer port) {
             this.port = Output.ofNullable(port);
             return this;
-        }
-        public NodeNetworkEndpointGetArgs build() {
+        }        public NodeNetworkEndpointGetArgs build() {
             return new NodeNetworkEndpointGetArgs(ipAddress, port);
         }
     }

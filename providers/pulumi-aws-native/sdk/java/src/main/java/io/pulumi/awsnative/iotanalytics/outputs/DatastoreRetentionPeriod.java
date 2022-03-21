@@ -56,12 +56,10 @@ public final class DatastoreRetentionPeriod {
             this.numberOfDays = numberOfDays;
             return this;
         }
-
         public Builder unlimited(@Nullable Boolean unlimited) {
             this.unlimited = unlimited;
             return this;
-        }
-        public DatastoreRetentionPeriod build() {
+        }        public DatastoreRetentionPeriod build() {
             return new DatastoreRetentionPeriod(numberOfDays, unlimited);
         }
     }

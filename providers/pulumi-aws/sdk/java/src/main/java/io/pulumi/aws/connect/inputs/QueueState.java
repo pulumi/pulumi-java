@@ -238,122 +238,101 @@ public final class QueueState extends io.pulumi.resources.ResourceArgs {
             this.arn = arn;
             return this;
         }
-
         public Builder arn(@Nullable String arn) {
             this.arn = Output.ofNullable(arn);
             return this;
         }
-
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder hoursOfOperationId(@Nullable Output<String> hoursOfOperationId) {
             this.hoursOfOperationId = hoursOfOperationId;
             return this;
         }
-
         public Builder hoursOfOperationId(@Nullable String hoursOfOperationId) {
             this.hoursOfOperationId = Output.ofNullable(hoursOfOperationId);
             return this;
         }
-
         public Builder instanceId(@Nullable Output<String> instanceId) {
             this.instanceId = instanceId;
             return this;
         }
-
         public Builder instanceId(@Nullable String instanceId) {
             this.instanceId = Output.ofNullable(instanceId);
             return this;
         }
-
         public Builder maxContacts(@Nullable Output<Integer> maxContacts) {
             this.maxContacts = maxContacts;
             return this;
         }
-
         public Builder maxContacts(@Nullable Integer maxContacts) {
             this.maxContacts = Output.ofNullable(maxContacts);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder outboundCallerConfig(@Nullable Output<QueueOutboundCallerConfigGetArgs> outboundCallerConfig) {
             this.outboundCallerConfig = outboundCallerConfig;
             return this;
         }
-
         public Builder outboundCallerConfig(@Nullable QueueOutboundCallerConfigGetArgs outboundCallerConfig) {
             this.outboundCallerConfig = Output.ofNullable(outboundCallerConfig);
             return this;
         }
-
         public Builder queueId(@Nullable Output<String> queueId) {
             this.queueId = queueId;
             return this;
         }
-
         public Builder queueId(@Nullable String queueId) {
             this.queueId = Output.ofNullable(queueId);
             return this;
         }
-
         public Builder quickConnectIds(@Nullable Output<List<String>> quickConnectIds) {
             this.quickConnectIds = quickConnectIds;
             return this;
         }
-
         public Builder quickConnectIds(@Nullable List<String> quickConnectIds) {
             this.quickConnectIds = Output.ofNullable(quickConnectIds);
             return this;
         }
-
+        public Builder quickConnectIds(String... quickConnectIds) {
+            return quickConnectIds(List.of(quickConnectIds));
+        }
         public Builder status(@Nullable Output<String> status) {
             this.status = status;
             return this;
         }
-
         public Builder status(@Nullable String status) {
             this.status = Output.ofNullable(status);
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
             this.tagsAll = tagsAll;
             return this;
         }
-
         public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
             this.tagsAll = Output.ofNullable(tagsAll);
             return this;
-        }
-        public QueueState build() {
+        }        public QueueState build() {
             return new QueueState(arn, description, hoursOfOperationId, instanceId, maxContacts, name, outboundCallerConfig, queueId, quickConnectIds, status, tags, tagsAll);
         }
     }

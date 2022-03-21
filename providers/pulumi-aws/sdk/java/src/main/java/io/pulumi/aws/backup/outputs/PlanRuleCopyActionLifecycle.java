@@ -71,12 +71,10 @@ public final class PlanRuleCopyActionLifecycle {
             this.coldStorageAfter = coldStorageAfter;
             return this;
         }
-
         public Builder deleteAfter(@Nullable Integer deleteAfter) {
             this.deleteAfter = deleteAfter;
             return this;
-        }
-        public PlanRuleCopyActionLifecycle build() {
+        }        public PlanRuleCopyActionLifecycle build() {
             return new PlanRuleCopyActionLifecycle(coldStorageAfter, deleteAfter);
         }
     }

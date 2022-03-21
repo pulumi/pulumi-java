@@ -70,12 +70,13 @@ public final class LogsPanelResponse {
             this.filter = Objects.requireNonNull(filter);
             return this;
         }
-
         public Builder resourceNames(List<String> resourceNames) {
             this.resourceNames = Objects.requireNonNull(resourceNames);
             return this;
         }
-        public LogsPanelResponse build() {
+        public Builder resourceNames(String... resourceNames) {
+            return resourceNames(List.of(resourceNames));
+        }        public LogsPanelResponse build() {
             return new LogsPanelResponse(filter, resourceNames);
         }
     }

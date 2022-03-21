@@ -53,7 +53,9 @@ public final class GetMeshSpec {
             this.egressFilters = Objects.requireNonNull(egressFilters);
             return this;
         }
-        public GetMeshSpec build() {
+        public Builder egressFilters(GetMeshSpecEgressFilter... egressFilters) {
+            return egressFilters(List.of(egressFilters));
+        }        public GetMeshSpec build() {
             return new GetMeshSpec(egressFilters);
         }
     }

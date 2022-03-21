@@ -238,122 +238,98 @@ public final class SubscriptionArgs extends io.pulumi.resources.ResourceArgs {
             this.allowTracing = allowTracing;
             return this;
         }
-
         public Builder allowTracing(@Nullable Boolean allowTracing) {
             this.allowTracing = Output.ofNullable(allowTracing);
             return this;
         }
-
         public Builder appType(@Nullable Output<String> appType) {
             this.appType = appType;
             return this;
         }
-
         public Builder appType(@Nullable String appType) {
             this.appType = Output.ofNullable(appType);
             return this;
         }
-
         public Builder displayName(Output<String> displayName) {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
-
         public Builder displayName(String displayName) {
             this.displayName = Output.of(Objects.requireNonNull(displayName));
             return this;
         }
-
         public Builder notify(@Nullable Output<Boolean> notify) {
             this.notify = notify;
             return this;
         }
-
         public Builder notify(@Nullable Boolean notify) {
             this.notify = Output.ofNullable(notify);
             return this;
         }
-
         public Builder ownerId(@Nullable Output<String> ownerId) {
             this.ownerId = ownerId;
             return this;
         }
-
         public Builder ownerId(@Nullable String ownerId) {
             this.ownerId = Output.ofNullable(ownerId);
             return this;
         }
-
         public Builder primaryKey(@Nullable Output<String> primaryKey) {
             this.primaryKey = primaryKey;
             return this;
         }
-
         public Builder primaryKey(@Nullable String primaryKey) {
             this.primaryKey = Output.ofNullable(primaryKey);
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder scope(Output<String> scope) {
             this.scope = Objects.requireNonNull(scope);
             return this;
         }
-
         public Builder scope(String scope) {
             this.scope = Output.of(Objects.requireNonNull(scope));
             return this;
         }
-
         public Builder secondaryKey(@Nullable Output<String> secondaryKey) {
             this.secondaryKey = secondaryKey;
             return this;
         }
-
         public Builder secondaryKey(@Nullable String secondaryKey) {
             this.secondaryKey = Output.ofNullable(secondaryKey);
             return this;
         }
-
         public Builder serviceName(Output<String> serviceName) {
             this.serviceName = Objects.requireNonNull(serviceName);
             return this;
         }
-
         public Builder serviceName(String serviceName) {
             this.serviceName = Output.of(Objects.requireNonNull(serviceName));
             return this;
         }
-
         public Builder sid(@Nullable Output<String> sid) {
             this.sid = sid;
             return this;
         }
-
         public Builder sid(@Nullable String sid) {
             this.sid = Output.ofNullable(sid);
             return this;
         }
-
         public Builder state(@Nullable Output<SubscriptionState> state) {
             this.state = state;
             return this;
         }
-
         public Builder state(@Nullable SubscriptionState state) {
             this.state = Output.ofNullable(state);
             return this;
-        }
-        public SubscriptionArgs build() {
+        }        public SubscriptionArgs build() {
             return new SubscriptionArgs(allowTracing, appType, displayName, notify, ownerId, primaryKey, resourceGroupName, scope, secondaryKey, serviceName, sid, state);
         }
     }

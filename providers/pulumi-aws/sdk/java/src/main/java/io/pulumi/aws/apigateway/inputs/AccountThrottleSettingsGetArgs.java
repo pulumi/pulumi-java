@@ -75,22 +75,18 @@ public final class AccountThrottleSettingsGetArgs extends io.pulumi.resources.Re
             this.burstLimit = burstLimit;
             return this;
         }
-
         public Builder burstLimit(@Nullable Integer burstLimit) {
             this.burstLimit = Output.ofNullable(burstLimit);
             return this;
         }
-
         public Builder rateLimit(@Nullable Output<Double> rateLimit) {
             this.rateLimit = rateLimit;
             return this;
         }
-
         public Builder rateLimit(@Nullable Double rateLimit) {
             this.rateLimit = Output.ofNullable(rateLimit);
             return this;
-        }
-        public AccountThrottleSettingsGetArgs build() {
+        }        public AccountThrottleSettingsGetArgs build() {
             return new AccountThrottleSettingsGetArgs(burstLimit, rateLimit);
         }
     }

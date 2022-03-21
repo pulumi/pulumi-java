@@ -231,112 +231,108 @@ public final class GetBrokerResult {
             this.arn = Objects.requireNonNull(arn);
             return this;
         }
-
         public Builder authenticationStrategy(String authenticationStrategy) {
             this.authenticationStrategy = Objects.requireNonNull(authenticationStrategy);
             return this;
         }
-
         public Builder autoMinorVersionUpgrade(Boolean autoMinorVersionUpgrade) {
             this.autoMinorVersionUpgrade = Objects.requireNonNull(autoMinorVersionUpgrade);
             return this;
         }
-
         public Builder brokerId(String brokerId) {
             this.brokerId = Objects.requireNonNull(brokerId);
             return this;
         }
-
         public Builder brokerName(String brokerName) {
             this.brokerName = Objects.requireNonNull(brokerName);
             return this;
         }
-
         public Builder configuration(GetBrokerConfiguration configuration) {
             this.configuration = Objects.requireNonNull(configuration);
             return this;
         }
-
         public Builder deploymentMode(String deploymentMode) {
             this.deploymentMode = Objects.requireNonNull(deploymentMode);
             return this;
         }
-
         public Builder encryptionOptions(List<GetBrokerEncryptionOption> encryptionOptions) {
             this.encryptionOptions = Objects.requireNonNull(encryptionOptions);
             return this;
         }
-
+        public Builder encryptionOptions(GetBrokerEncryptionOption... encryptionOptions) {
+            return encryptionOptions(List.of(encryptionOptions));
+        }
         public Builder engineType(String engineType) {
             this.engineType = Objects.requireNonNull(engineType);
             return this;
         }
-
         public Builder engineVersion(String engineVersion) {
             this.engineVersion = Objects.requireNonNull(engineVersion);
             return this;
         }
-
         public Builder hostInstanceType(String hostInstanceType) {
             this.hostInstanceType = Objects.requireNonNull(hostInstanceType);
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder instances(List<GetBrokerInstance> instances) {
             this.instances = Objects.requireNonNull(instances);
             return this;
         }
-
+        public Builder instances(GetBrokerInstance... instances) {
+            return instances(List.of(instances));
+        }
         public Builder ldapServerMetadatas(List<GetBrokerLdapServerMetadata> ldapServerMetadatas) {
             this.ldapServerMetadatas = Objects.requireNonNull(ldapServerMetadatas);
             return this;
         }
-
+        public Builder ldapServerMetadatas(GetBrokerLdapServerMetadata... ldapServerMetadatas) {
+            return ldapServerMetadatas(List.of(ldapServerMetadatas));
+        }
         public Builder logs(GetBrokerLogs logs) {
             this.logs = Objects.requireNonNull(logs);
             return this;
         }
-
         public Builder maintenanceWindowStartTime(GetBrokerMaintenanceWindowStartTime maintenanceWindowStartTime) {
             this.maintenanceWindowStartTime = Objects.requireNonNull(maintenanceWindowStartTime);
             return this;
         }
-
         public Builder publiclyAccessible(Boolean publiclyAccessible) {
             this.publiclyAccessible = Objects.requireNonNull(publiclyAccessible);
             return this;
         }
-
         public Builder securityGroups(List<String> securityGroups) {
             this.securityGroups = Objects.requireNonNull(securityGroups);
             return this;
         }
-
+        public Builder securityGroups(String... securityGroups) {
+            return securityGroups(List.of(securityGroups));
+        }
         public Builder storageType(String storageType) {
             this.storageType = Objects.requireNonNull(storageType);
             return this;
         }
-
         public Builder subnetIds(List<String> subnetIds) {
             this.subnetIds = Objects.requireNonNull(subnetIds);
             return this;
         }
-
+        public Builder subnetIds(String... subnetIds) {
+            return subnetIds(List.of(subnetIds));
+        }
         public Builder tags(Map<String,String> tags) {
             this.tags = Objects.requireNonNull(tags);
             return this;
         }
-
         public Builder users(List<GetBrokerUser> users) {
             this.users = Objects.requireNonNull(users);
             return this;
         }
-        public GetBrokerResult build() {
+        public Builder users(GetBrokerUser... users) {
+            return users(List.of(users));
+        }        public GetBrokerResult build() {
             return new GetBrokerResult(arn, authenticationStrategy, autoMinorVersionUpgrade, brokerId, brokerName, configuration, deploymentMode, encryptionOptions, engineType, engineVersion, hostInstanceType, id, instances, ldapServerMetadatas, logs, maintenanceWindowStartTime, publiclyAccessible, securityGroups, storageType, subnetIds, tags, users);
         }
     }

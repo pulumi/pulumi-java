@@ -79,32 +79,35 @@ public final class ConnectionHttpParametersArgs extends io.pulumi.resources.Reso
             this.bodyParameters = bodyParameters;
             return this;
         }
-
         public Builder bodyParameters(@Nullable List<ConnectionParameterArgs> bodyParameters) {
             this.bodyParameters = Output.ofNullable(bodyParameters);
             return this;
         }
-
+        public Builder bodyParameters(ConnectionParameterArgs... bodyParameters) {
+            return bodyParameters(List.of(bodyParameters));
+        }
         public Builder headerParameters(@Nullable Output<List<ConnectionParameterArgs>> headerParameters) {
             this.headerParameters = headerParameters;
             return this;
         }
-
         public Builder headerParameters(@Nullable List<ConnectionParameterArgs> headerParameters) {
             this.headerParameters = Output.ofNullable(headerParameters);
             return this;
         }
-
+        public Builder headerParameters(ConnectionParameterArgs... headerParameters) {
+            return headerParameters(List.of(headerParameters));
+        }
         public Builder queryStringParameters(@Nullable Output<List<ConnectionParameterArgs>> queryStringParameters) {
             this.queryStringParameters = queryStringParameters;
             return this;
         }
-
         public Builder queryStringParameters(@Nullable List<ConnectionParameterArgs> queryStringParameters) {
             this.queryStringParameters = Output.ofNullable(queryStringParameters);
             return this;
         }
-        public ConnectionHttpParametersArgs build() {
+        public Builder queryStringParameters(ConnectionParameterArgs... queryStringParameters) {
+            return queryStringParameters(List.of(queryStringParameters));
+        }        public ConnectionHttpParametersArgs build() {
             return new ConnectionHttpParametersArgs(bodyParameters, headerParameters, queryStringParameters);
         }
     }

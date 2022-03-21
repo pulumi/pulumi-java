@@ -129,52 +129,42 @@ public final class GoogleCloudDatapipelinesV1LaunchTemplateParametersArgs extend
             this.environment = environment;
             return this;
         }
-
         public Builder environment(@Nullable GoogleCloudDatapipelinesV1RuntimeEnvironmentArgs environment) {
             this.environment = Output.ofNullable(environment);
             return this;
         }
-
         public Builder jobName(Output<String> jobName) {
             this.jobName = Objects.requireNonNull(jobName);
             return this;
         }
-
         public Builder jobName(String jobName) {
             this.jobName = Output.of(Objects.requireNonNull(jobName));
             return this;
         }
-
         public Builder parameters(@Nullable Output<Map<String,String>> parameters) {
             this.parameters = parameters;
             return this;
         }
-
         public Builder parameters(@Nullable Map<String,String> parameters) {
             this.parameters = Output.ofNullable(parameters);
             return this;
         }
-
         public Builder transformNameMapping(@Nullable Output<Map<String,String>> transformNameMapping) {
             this.transformNameMapping = transformNameMapping;
             return this;
         }
-
         public Builder transformNameMapping(@Nullable Map<String,String> transformNameMapping) {
             this.transformNameMapping = Output.ofNullable(transformNameMapping);
             return this;
         }
-
         public Builder update(@Nullable Output<Boolean> update) {
             this.update = update;
             return this;
         }
-
         public Builder update(@Nullable Boolean update) {
             this.update = Output.ofNullable(update);
             return this;
-        }
-        public GoogleCloudDatapipelinesV1LaunchTemplateParametersArgs build() {
+        }        public GoogleCloudDatapipelinesV1LaunchTemplateParametersArgs build() {
             return new GoogleCloudDatapipelinesV1LaunchTemplateParametersArgs(environment, jobName, parameters, transformNameMapping, update);
         }
     }

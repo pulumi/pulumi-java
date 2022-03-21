@@ -74,22 +74,18 @@ public final class ResourcePolicyState extends io.pulumi.resources.ResourceArgs 
             this.policy = policy;
             return this;
         }
-
         public Builder policy(@Nullable String policy) {
             this.policy = Output.ofNullable(policy);
             return this;
         }
-
         public Builder resourceArn(@Nullable Output<String> resourceArn) {
             this.resourceArn = resourceArn;
             return this;
         }
-
         public Builder resourceArn(@Nullable String resourceArn) {
             this.resourceArn = Output.ofNullable(resourceArn);
             return this;
-        }
-        public ResourcePolicyState build() {
+        }        public ResourcePolicyState build() {
             return new ResourcePolicyState(policy, resourceArn);
         }
     }

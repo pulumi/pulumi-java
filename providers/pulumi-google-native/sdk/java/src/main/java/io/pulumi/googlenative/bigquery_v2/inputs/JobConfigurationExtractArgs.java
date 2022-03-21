@@ -190,92 +190,77 @@ public final class JobConfigurationExtractArgs extends io.pulumi.resources.Resou
             this.compression = compression;
             return this;
         }
-
         public Builder compression(@Nullable String compression) {
             this.compression = Output.ofNullable(compression);
             return this;
         }
-
         public Builder destinationFormat(@Nullable Output<String> destinationFormat) {
             this.destinationFormat = destinationFormat;
             return this;
         }
-
         public Builder destinationFormat(@Nullable String destinationFormat) {
             this.destinationFormat = Output.ofNullable(destinationFormat);
             return this;
         }
-
         public Builder destinationUri(@Nullable Output<String> destinationUri) {
             this.destinationUri = destinationUri;
             return this;
         }
-
         public Builder destinationUri(@Nullable String destinationUri) {
             this.destinationUri = Output.ofNullable(destinationUri);
             return this;
         }
-
         public Builder destinationUris(@Nullable Output<List<String>> destinationUris) {
             this.destinationUris = destinationUris;
             return this;
         }
-
         public Builder destinationUris(@Nullable List<String> destinationUris) {
             this.destinationUris = Output.ofNullable(destinationUris);
             return this;
         }
-
+        public Builder destinationUris(String... destinationUris) {
+            return destinationUris(List.of(destinationUris));
+        }
         public Builder fieldDelimiter(@Nullable Output<String> fieldDelimiter) {
             this.fieldDelimiter = fieldDelimiter;
             return this;
         }
-
         public Builder fieldDelimiter(@Nullable String fieldDelimiter) {
             this.fieldDelimiter = Output.ofNullable(fieldDelimiter);
             return this;
         }
-
         public Builder printHeader(@Nullable Output<Boolean> printHeader) {
             this.printHeader = printHeader;
             return this;
         }
-
         public Builder printHeader(@Nullable Boolean printHeader) {
             this.printHeader = Output.ofNullable(printHeader);
             return this;
         }
-
         public Builder sourceModel(@Nullable Output<ModelReferenceArgs> sourceModel) {
             this.sourceModel = sourceModel;
             return this;
         }
-
         public Builder sourceModel(@Nullable ModelReferenceArgs sourceModel) {
             this.sourceModel = Output.ofNullable(sourceModel);
             return this;
         }
-
         public Builder sourceTable(@Nullable Output<TableReferenceArgs> sourceTable) {
             this.sourceTable = sourceTable;
             return this;
         }
-
         public Builder sourceTable(@Nullable TableReferenceArgs sourceTable) {
             this.sourceTable = Output.ofNullable(sourceTable);
             return this;
         }
-
         public Builder useAvroLogicalTypes(@Nullable Output<Boolean> useAvroLogicalTypes) {
             this.useAvroLogicalTypes = useAvroLogicalTypes;
             return this;
         }
-
         public Builder useAvroLogicalTypes(@Nullable Boolean useAvroLogicalTypes) {
             this.useAvroLogicalTypes = Output.ofNullable(useAvroLogicalTypes);
             return this;
-        }
-        public JobConfigurationExtractArgs build() {
+        }        public JobConfigurationExtractArgs build() {
             return new JobConfigurationExtractArgs(compression, destinationFormat, destinationUri, destinationUris, fieldDelimiter, printHeader, sourceModel, sourceTable, useAvroLogicalTypes);
         }
     }

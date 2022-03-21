@@ -52,12 +52,10 @@ public final class EnvironmentConfigWebServerConfigArgs extends io.pulumi.resour
             this.machineType = Objects.requireNonNull(machineType);
             return this;
         }
-
         public Builder machineType(String machineType) {
             this.machineType = Output.of(Objects.requireNonNull(machineType));
             return this;
-        }
-        public EnvironmentConfigWebServerConfigArgs build() {
+        }        public EnvironmentConfigWebServerConfigArgs build() {
             return new EnvironmentConfigWebServerConfigArgs(machineType);
         }
     }
