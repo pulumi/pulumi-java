@@ -900,7 +900,6 @@ func (pt *plainType) genNormalInputType(ctx *classFileContext) error {
 
 			if !propertyTypeUnwrapped.Equal(propertyType) {
 				// add overloaded setter
-
 				builderSetters = append(builderSetters, builderSetterTemplateContext{
 					SetterName:   setterName,
 					PropertyType: propertyTypeUnwrapped.ToCode(ctx.imports),
