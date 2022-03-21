@@ -19,10 +19,11 @@ public abstract class DeploymentInstanceHolder {
      * @throws IllegalStateException if called before 'run' was called
      */
     public static DeploymentInstance getInstance() {
-        if (instance.get() == null) {
+        var i = instance.get();
+        if (i == null) {
             throw new IllegalStateException("Trying to acquire Deployment#instance before 'run' was called.");
         }
-        return instance.get();
+        return i;
     }
 
     @InternalUse
@@ -36,10 +37,9 @@ public abstract class DeploymentInstanceHolder {
      */
     @InternalUse
     static void setInstance(@Nullable DeploymentInstance newInstance) {
-        if (instance.get() != null) {
+        if (!instance.compareAndSet(null, newInstance)) {
             throw new IllegalStateException("Deployment#instance should only be set once at the beginning of a 'run' call.");
         }
-        instance.set(newInstance);
     }
 
     @InternalUse
