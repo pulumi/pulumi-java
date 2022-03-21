@@ -88,17 +88,14 @@ public final class MetricValueStatus {
             this.averageUtilization = averageUtilization;
             return this;
         }
-
         public Builder averageValue(@Nullable String averageValue) {
             this.averageValue = averageValue;
             return this;
         }
-
         public Builder value(@Nullable String value) {
             this.value = value;
             return this;
-        }
-        public MetricValueStatus build() {
+        }        public MetricValueStatus build() {
             return new MetricValueStatus(averageUtilization, averageValue, value);
         }
     }

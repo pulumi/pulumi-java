@@ -99,32 +99,29 @@ public final class ConfigMapProjectionArgs extends io.pulumi.resources.ResourceA
             this.items = items;
             return this;
         }
-
         public Builder items(@Nullable List<KeyToPathArgs> items) {
             this.items = Output.ofNullable(items);
             return this;
         }
-
+        public Builder items(KeyToPathArgs... items) {
+            return items(List.of(items));
+        }
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder optional(@Nullable Output<Boolean> optional) {
             this.optional = optional;
             return this;
         }
-
         public Builder optional(@Nullable Boolean optional) {
             this.optional = Output.ofNullable(optional);
             return this;
-        }
-        public ConfigMapProjectionArgs build() {
+        }        public ConfigMapProjectionArgs build() {
             return new ConfigMapProjectionArgs(items, name, optional);
         }
     }

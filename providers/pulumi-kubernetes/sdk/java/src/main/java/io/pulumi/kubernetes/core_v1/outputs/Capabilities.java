@@ -71,12 +71,16 @@ public final class Capabilities {
             this.add = add;
             return this;
         }
-
+        public Builder add(String... add) {
+            return add(List.of(add));
+        }
         public Builder drop(@Nullable List<String> drop) {
             this.drop = drop;
             return this;
         }
-        public Capabilities build() {
+        public Builder drop(String... drop) {
+            return drop(List.of(drop));
+        }        public Capabilities build() {
             return new Capabilities(add, drop);
         }
     }

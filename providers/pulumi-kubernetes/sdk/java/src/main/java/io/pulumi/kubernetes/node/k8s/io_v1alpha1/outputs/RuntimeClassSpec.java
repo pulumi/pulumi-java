@@ -89,17 +89,14 @@ public final class RuntimeClassSpec {
             this.overhead = overhead;
             return this;
         }
-
         public Builder runtimeHandler(String runtimeHandler) {
             this.runtimeHandler = Objects.requireNonNull(runtimeHandler);
             return this;
         }
-
         public Builder scheduling(@Nullable Scheduling scheduling) {
             this.scheduling = scheduling;
             return this;
-        }
-        public RuntimeClassSpec build() {
+        }        public RuntimeClassSpec build() {
             return new RuntimeClassSpec(overhead, runtimeHandler, scheduling);
         }
     }

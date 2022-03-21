@@ -86,17 +86,14 @@ public final class ContainerResourceMetricStatus {
             this.container = Objects.requireNonNull(container);
             return this;
         }
-
         public Builder current(MetricValueStatus current) {
             this.current = Objects.requireNonNull(current);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
-        }
-        public ContainerResourceMetricStatus build() {
+        }        public ContainerResourceMetricStatus build() {
             return new ContainerResourceMetricStatus(container, current, name);
         }
     }

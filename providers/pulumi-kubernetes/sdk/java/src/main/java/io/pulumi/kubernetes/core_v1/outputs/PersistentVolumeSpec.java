@@ -555,152 +555,128 @@ public final class PersistentVolumeSpec {
             this.accessModes = accessModes;
             return this;
         }
-
+        public Builder accessModes(String... accessModes) {
+            return accessModes(List.of(accessModes));
+        }
         public Builder awsElasticBlockStore(@Nullable AWSElasticBlockStoreVolumeSource awsElasticBlockStore) {
             this.awsElasticBlockStore = awsElasticBlockStore;
             return this;
         }
-
         public Builder azureDisk(@Nullable AzureDiskVolumeSource azureDisk) {
             this.azureDisk = azureDisk;
             return this;
         }
-
         public Builder azureFile(@Nullable AzureFilePersistentVolumeSource azureFile) {
             this.azureFile = azureFile;
             return this;
         }
-
         public Builder capacity(@Nullable Map<String,String> capacity) {
             this.capacity = capacity;
             return this;
         }
-
         public Builder cephfs(@Nullable CephFSPersistentVolumeSource cephfs) {
             this.cephfs = cephfs;
             return this;
         }
-
         public Builder cinder(@Nullable CinderPersistentVolumeSource cinder) {
             this.cinder = cinder;
             return this;
         }
-
         public Builder claimRef(@Nullable ObjectReference claimRef) {
             this.claimRef = claimRef;
             return this;
         }
-
         public Builder csi(@Nullable CSIPersistentVolumeSource csi) {
             this.csi = csi;
             return this;
         }
-
         public Builder fc(@Nullable FCVolumeSource fc) {
             this.fc = fc;
             return this;
         }
-
         public Builder flexVolume(@Nullable FlexPersistentVolumeSource flexVolume) {
             this.flexVolume = flexVolume;
             return this;
         }
-
         public Builder flocker(@Nullable FlockerVolumeSource flocker) {
             this.flocker = flocker;
             return this;
         }
-
         public Builder gcePersistentDisk(@Nullable GCEPersistentDiskVolumeSource gcePersistentDisk) {
             this.gcePersistentDisk = gcePersistentDisk;
             return this;
         }
-
         public Builder glusterfs(@Nullable GlusterfsPersistentVolumeSource glusterfs) {
             this.glusterfs = glusterfs;
             return this;
         }
-
         public Builder hostPath(@Nullable HostPathVolumeSource hostPath) {
             this.hostPath = hostPath;
             return this;
         }
-
         public Builder iscsi(@Nullable ISCSIPersistentVolumeSource iscsi) {
             this.iscsi = iscsi;
             return this;
         }
-
         public Builder local(@Nullable LocalVolumeSource local) {
             this.local = local;
             return this;
         }
-
         public Builder mountOptions(@Nullable List<String> mountOptions) {
             this.mountOptions = mountOptions;
             return this;
         }
-
+        public Builder mountOptions(String... mountOptions) {
+            return mountOptions(List.of(mountOptions));
+        }
         public Builder nfs(@Nullable NFSVolumeSource nfs) {
             this.nfs = nfs;
             return this;
         }
-
         public Builder nodeAffinity(@Nullable VolumeNodeAffinity nodeAffinity) {
             this.nodeAffinity = nodeAffinity;
             return this;
         }
-
         public Builder persistentVolumeReclaimPolicy(@Nullable String persistentVolumeReclaimPolicy) {
             this.persistentVolumeReclaimPolicy = persistentVolumeReclaimPolicy;
             return this;
         }
-
         public Builder photonPersistentDisk(@Nullable PhotonPersistentDiskVolumeSource photonPersistentDisk) {
             this.photonPersistentDisk = photonPersistentDisk;
             return this;
         }
-
         public Builder portworxVolume(@Nullable PortworxVolumeSource portworxVolume) {
             this.portworxVolume = portworxVolume;
             return this;
         }
-
         public Builder quobyte(@Nullable QuobyteVolumeSource quobyte) {
             this.quobyte = quobyte;
             return this;
         }
-
         public Builder rbd(@Nullable RBDPersistentVolumeSource rbd) {
             this.rbd = rbd;
             return this;
         }
-
         public Builder scaleIO(@Nullable ScaleIOPersistentVolumeSource scaleIO) {
             this.scaleIO = scaleIO;
             return this;
         }
-
         public Builder storageClassName(@Nullable String storageClassName) {
             this.storageClassName = storageClassName;
             return this;
         }
-
         public Builder storageos(@Nullable StorageOSPersistentVolumeSource storageos) {
             this.storageos = storageos;
             return this;
         }
-
         public Builder volumeMode(@Nullable String volumeMode) {
             this.volumeMode = volumeMode;
             return this;
         }
-
         public Builder vsphereVolume(@Nullable VsphereVirtualDiskVolumeSource vsphereVolume) {
             this.vsphereVolume = vsphereVolume;
             return this;
-        }
-        public PersistentVolumeSpec build() {
+        }        public PersistentVolumeSpec build() {
             return new PersistentVolumeSpec(accessModes, awsElasticBlockStore, azureDisk, azureFile, capacity, cephfs, cinder, claimRef, csi, fc, flexVolume, flocker, gcePersistentDisk, glusterfs, hostPath, iscsi, local, mountOptions, nfs, nodeAffinity, persistentVolumeReclaimPolicy, photonPersistentDisk, portworxVolume, quobyte, rbd, scaleIO, storageClassName, storageos, volumeMode, vsphereVolume);
         }
     }

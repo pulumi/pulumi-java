@@ -72,12 +72,10 @@ public final class CustomResourceSubresources {
             this.scale = scale;
             return this;
         }
-
         public Builder status(@Nullable JsonElement status) {
             this.status = status;
             return this;
-        }
-        public CustomResourceSubresources build() {
+        }        public CustomResourceSubresources build() {
             return new CustomResourceSubresources(scale, status);
         }
     }

@@ -95,32 +95,26 @@ public final class NFSVolumeSourceArgs extends io.pulumi.resources.ResourceArgs 
             this.path = Objects.requireNonNull(path);
             return this;
         }
-
         public Builder path(String path) {
             this.path = Output.of(Objects.requireNonNull(path));
             return this;
         }
-
         public Builder readOnly(@Nullable Output<Boolean> readOnly) {
             this.readOnly = readOnly;
             return this;
         }
-
         public Builder readOnly(@Nullable Boolean readOnly) {
             this.readOnly = Output.ofNullable(readOnly);
             return this;
         }
-
         public Builder server(Output<String> server) {
             this.server = Objects.requireNonNull(server);
             return this;
         }
-
         public Builder server(String server) {
             this.server = Output.of(Objects.requireNonNull(server));
             return this;
-        }
-        public NFSVolumeSourceArgs build() {
+        }        public NFSVolumeSourceArgs build() {
             return new NFSVolumeSourceArgs(path, readOnly, server);
         }
     }

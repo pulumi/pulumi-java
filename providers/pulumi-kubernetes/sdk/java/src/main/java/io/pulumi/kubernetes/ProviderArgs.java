@@ -236,112 +236,90 @@ public final class ProviderArgs extends io.pulumi.resources.ResourceArgs {
             this.cluster = cluster;
             return this;
         }
-
         public Builder cluster(@Nullable String cluster) {
             this.cluster = Output.ofNullable(cluster);
             return this;
         }
-
         public Builder context(@Nullable Output<String> context) {
             this.context = context;
             return this;
         }
-
         public Builder context(@Nullable String context) {
             this.context = Output.ofNullable(context);
             return this;
         }
-
         public Builder enableDryRun(@Nullable Output<Boolean> enableDryRun) {
             this.enableDryRun = enableDryRun;
             return this;
         }
-
         public Builder enableDryRun(@Nullable Boolean enableDryRun) {
             this.enableDryRun = Output.ofNullable(enableDryRun);
             return this;
         }
-
         public Builder enableReplaceCRD(@Nullable Output<Boolean> enableReplaceCRD) {
             this.enableReplaceCRD = enableReplaceCRD;
             return this;
         }
-
         public Builder enableReplaceCRD(@Nullable Boolean enableReplaceCRD) {
             this.enableReplaceCRD = Output.ofNullable(enableReplaceCRD);
             return this;
         }
-
         public Builder helmReleaseSettings(@Nullable Output<HelmReleaseSettingsArgs> helmReleaseSettings) {
             this.helmReleaseSettings = helmReleaseSettings;
             return this;
         }
-
         public Builder helmReleaseSettings(@Nullable HelmReleaseSettingsArgs helmReleaseSettings) {
             this.helmReleaseSettings = Output.ofNullable(helmReleaseSettings);
             return this;
         }
-
         public Builder kubeClientSettings(@Nullable Output<KubeClientSettingsArgs> kubeClientSettings) {
             this.kubeClientSettings = kubeClientSettings;
             return this;
         }
-
         public Builder kubeClientSettings(@Nullable KubeClientSettingsArgs kubeClientSettings) {
             this.kubeClientSettings = Output.ofNullable(kubeClientSettings);
             return this;
         }
-
         public Builder kubeconfig(@Nullable Output<String> kubeconfig) {
             this.kubeconfig = kubeconfig;
             return this;
         }
-
         public Builder kubeconfig(@Nullable String kubeconfig) {
             this.kubeconfig = Output.ofNullable(kubeconfig);
             return this;
         }
-
         public Builder namespace(@Nullable Output<String> namespace) {
             this.namespace = namespace;
             return this;
         }
-
         public Builder namespace(@Nullable String namespace) {
             this.namespace = Output.ofNullable(namespace);
             return this;
         }
-
         public Builder renderYamlToDirectory(@Nullable Output<String> renderYamlToDirectory) {
             this.renderYamlToDirectory = renderYamlToDirectory;
             return this;
         }
-
         public Builder renderYamlToDirectory(@Nullable String renderYamlToDirectory) {
             this.renderYamlToDirectory = Output.ofNullable(renderYamlToDirectory);
             return this;
         }
-
         public Builder suppressDeprecationWarnings(@Nullable Output<Boolean> suppressDeprecationWarnings) {
             this.suppressDeprecationWarnings = suppressDeprecationWarnings;
             return this;
         }
-
         public Builder suppressDeprecationWarnings(@Nullable Boolean suppressDeprecationWarnings) {
             this.suppressDeprecationWarnings = Output.ofNullable(suppressDeprecationWarnings);
             return this;
         }
-
         public Builder suppressHelmHookWarnings(@Nullable Output<Boolean> suppressHelmHookWarnings) {
             this.suppressHelmHookWarnings = suppressHelmHookWarnings;
             return this;
         }
-
         public Builder suppressHelmHookWarnings(@Nullable Boolean suppressHelmHookWarnings) {
             this.suppressHelmHookWarnings = Output.ofNullable(suppressHelmHookWarnings);
             return this;
-        }
-        public ProviderArgs build() {
+        }        public ProviderArgs build() {
             return new ProviderArgs(cluster, context, enableDryRun, enableReplaceCRD, helmReleaseSettings, kubeClientSettings, kubeconfig, namespace, renderYamlToDirectory, suppressDeprecationWarnings, suppressHelmHookWarnings);
         }
     }

@@ -79,22 +79,18 @@ public final class PriorityLevelConfigurationSpecArgs extends io.pulumi.resource
             this.limited = limited;
             return this;
         }
-
         public Builder limited(@Nullable LimitedPriorityLevelConfigurationArgs limited) {
             this.limited = Output.ofNullable(limited);
             return this;
         }
-
         public Builder type(Output<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Output.of(Objects.requireNonNull(type));
             return this;
-        }
-        public PriorityLevelConfigurationSpecArgs build() {
+        }        public PriorityLevelConfigurationSpecArgs build() {
             return new PriorityLevelConfigurationSpecArgs(limited, type);
         }
     }

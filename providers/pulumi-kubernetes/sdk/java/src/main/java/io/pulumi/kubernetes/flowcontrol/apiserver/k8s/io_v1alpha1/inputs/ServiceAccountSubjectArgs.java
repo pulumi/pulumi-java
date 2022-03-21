@@ -77,22 +77,18 @@ public final class ServiceAccountSubjectArgs extends io.pulumi.resources.Resourc
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
-
         public Builder namespace(Output<String> namespace) {
             this.namespace = Objects.requireNonNull(namespace);
             return this;
         }
-
         public Builder namespace(String namespace) {
             this.namespace = Output.of(Objects.requireNonNull(namespace));
             return this;
-        }
-        public ServiceAccountSubjectArgs build() {
+        }        public ServiceAccountSubjectArgs build() {
             return new ServiceAccountSubjectArgs(name, namespace);
         }
     }

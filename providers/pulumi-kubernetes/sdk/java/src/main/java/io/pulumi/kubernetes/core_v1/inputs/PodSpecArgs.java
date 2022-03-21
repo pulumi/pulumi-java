@@ -653,362 +653,317 @@ public final class PodSpecArgs extends io.pulumi.resources.ResourceArgs {
             this.activeDeadlineSeconds = activeDeadlineSeconds;
             return this;
         }
-
         public Builder activeDeadlineSeconds(@Nullable Integer activeDeadlineSeconds) {
             this.activeDeadlineSeconds = Output.ofNullable(activeDeadlineSeconds);
             return this;
         }
-
         public Builder affinity(@Nullable Output<AffinityArgs> affinity) {
             this.affinity = affinity;
             return this;
         }
-
         public Builder affinity(@Nullable AffinityArgs affinity) {
             this.affinity = Output.ofNullable(affinity);
             return this;
         }
-
         public Builder automountServiceAccountToken(@Nullable Output<Boolean> automountServiceAccountToken) {
             this.automountServiceAccountToken = automountServiceAccountToken;
             return this;
         }
-
         public Builder automountServiceAccountToken(@Nullable Boolean automountServiceAccountToken) {
             this.automountServiceAccountToken = Output.ofNullable(automountServiceAccountToken);
             return this;
         }
-
         public Builder containers(Output<List<ContainerArgs>> containers) {
             this.containers = Objects.requireNonNull(containers);
             return this;
         }
-
         public Builder containers(List<ContainerArgs> containers) {
             this.containers = Output.of(Objects.requireNonNull(containers));
             return this;
         }
-
+        public Builder containers(ContainerArgs... containers) {
+            return containers(List.of(containers));
+        }
         public Builder dnsConfig(@Nullable Output<PodDNSConfigArgs> dnsConfig) {
             this.dnsConfig = dnsConfig;
             return this;
         }
-
         public Builder dnsConfig(@Nullable PodDNSConfigArgs dnsConfig) {
             this.dnsConfig = Output.ofNullable(dnsConfig);
             return this;
         }
-
         public Builder dnsPolicy(@Nullable Output<String> dnsPolicy) {
             this.dnsPolicy = dnsPolicy;
             return this;
         }
-
         public Builder dnsPolicy(@Nullable String dnsPolicy) {
             this.dnsPolicy = Output.ofNullable(dnsPolicy);
             return this;
         }
-
         public Builder enableServiceLinks(@Nullable Output<Boolean> enableServiceLinks) {
             this.enableServiceLinks = enableServiceLinks;
             return this;
         }
-
         public Builder enableServiceLinks(@Nullable Boolean enableServiceLinks) {
             this.enableServiceLinks = Output.ofNullable(enableServiceLinks);
             return this;
         }
-
         public Builder ephemeralContainers(@Nullable Output<List<EphemeralContainerArgs>> ephemeralContainers) {
             this.ephemeralContainers = ephemeralContainers;
             return this;
         }
-
         public Builder ephemeralContainers(@Nullable List<EphemeralContainerArgs> ephemeralContainers) {
             this.ephemeralContainers = Output.ofNullable(ephemeralContainers);
             return this;
         }
-
+        public Builder ephemeralContainers(EphemeralContainerArgs... ephemeralContainers) {
+            return ephemeralContainers(List.of(ephemeralContainers));
+        }
         public Builder hostAliases(@Nullable Output<List<HostAliasArgs>> hostAliases) {
             this.hostAliases = hostAliases;
             return this;
         }
-
         public Builder hostAliases(@Nullable List<HostAliasArgs> hostAliases) {
             this.hostAliases = Output.ofNullable(hostAliases);
             return this;
         }
-
+        public Builder hostAliases(HostAliasArgs... hostAliases) {
+            return hostAliases(List.of(hostAliases));
+        }
         public Builder hostIPC(@Nullable Output<Boolean> hostIPC) {
             this.hostIPC = hostIPC;
             return this;
         }
-
         public Builder hostIPC(@Nullable Boolean hostIPC) {
             this.hostIPC = Output.ofNullable(hostIPC);
             return this;
         }
-
         public Builder hostNetwork(@Nullable Output<Boolean> hostNetwork) {
             this.hostNetwork = hostNetwork;
             return this;
         }
-
         public Builder hostNetwork(@Nullable Boolean hostNetwork) {
             this.hostNetwork = Output.ofNullable(hostNetwork);
             return this;
         }
-
         public Builder hostPID(@Nullable Output<Boolean> hostPID) {
             this.hostPID = hostPID;
             return this;
         }
-
         public Builder hostPID(@Nullable Boolean hostPID) {
             this.hostPID = Output.ofNullable(hostPID);
             return this;
         }
-
         public Builder hostname(@Nullable Output<String> hostname) {
             this.hostname = hostname;
             return this;
         }
-
         public Builder hostname(@Nullable String hostname) {
             this.hostname = Output.ofNullable(hostname);
             return this;
         }
-
         public Builder imagePullSecrets(@Nullable Output<List<LocalObjectReferenceArgs>> imagePullSecrets) {
             this.imagePullSecrets = imagePullSecrets;
             return this;
         }
-
         public Builder imagePullSecrets(@Nullable List<LocalObjectReferenceArgs> imagePullSecrets) {
             this.imagePullSecrets = Output.ofNullable(imagePullSecrets);
             return this;
         }
-
+        public Builder imagePullSecrets(LocalObjectReferenceArgs... imagePullSecrets) {
+            return imagePullSecrets(List.of(imagePullSecrets));
+        }
         public Builder initContainers(@Nullable Output<List<ContainerArgs>> initContainers) {
             this.initContainers = initContainers;
             return this;
         }
-
         public Builder initContainers(@Nullable List<ContainerArgs> initContainers) {
             this.initContainers = Output.ofNullable(initContainers);
             return this;
         }
-
+        public Builder initContainers(ContainerArgs... initContainers) {
+            return initContainers(List.of(initContainers));
+        }
         public Builder nodeName(@Nullable Output<String> nodeName) {
             this.nodeName = nodeName;
             return this;
         }
-
         public Builder nodeName(@Nullable String nodeName) {
             this.nodeName = Output.ofNullable(nodeName);
             return this;
         }
-
         public Builder nodeSelector(@Nullable Output<Map<String,String>> nodeSelector) {
             this.nodeSelector = nodeSelector;
             return this;
         }
-
         public Builder nodeSelector(@Nullable Map<String,String> nodeSelector) {
             this.nodeSelector = Output.ofNullable(nodeSelector);
             return this;
         }
-
         public Builder os(@Nullable Output<PodOSArgs> os) {
             this.os = os;
             return this;
         }
-
         public Builder os(@Nullable PodOSArgs os) {
             this.os = Output.ofNullable(os);
             return this;
         }
-
         public Builder overhead(@Nullable Output<Map<String,String>> overhead) {
             this.overhead = overhead;
             return this;
         }
-
         public Builder overhead(@Nullable Map<String,String> overhead) {
             this.overhead = Output.ofNullable(overhead);
             return this;
         }
-
         public Builder preemptionPolicy(@Nullable Output<String> preemptionPolicy) {
             this.preemptionPolicy = preemptionPolicy;
             return this;
         }
-
         public Builder preemptionPolicy(@Nullable String preemptionPolicy) {
             this.preemptionPolicy = Output.ofNullable(preemptionPolicy);
             return this;
         }
-
         public Builder priority(@Nullable Output<Integer> priority) {
             this.priority = priority;
             return this;
         }
-
         public Builder priority(@Nullable Integer priority) {
             this.priority = Output.ofNullable(priority);
             return this;
         }
-
         public Builder priorityClassName(@Nullable Output<String> priorityClassName) {
             this.priorityClassName = priorityClassName;
             return this;
         }
-
         public Builder priorityClassName(@Nullable String priorityClassName) {
             this.priorityClassName = Output.ofNullable(priorityClassName);
             return this;
         }
-
         public Builder readinessGates(@Nullable Output<List<PodReadinessGateArgs>> readinessGates) {
             this.readinessGates = readinessGates;
             return this;
         }
-
         public Builder readinessGates(@Nullable List<PodReadinessGateArgs> readinessGates) {
             this.readinessGates = Output.ofNullable(readinessGates);
             return this;
         }
-
+        public Builder readinessGates(PodReadinessGateArgs... readinessGates) {
+            return readinessGates(List.of(readinessGates));
+        }
         public Builder restartPolicy(@Nullable Output<String> restartPolicy) {
             this.restartPolicy = restartPolicy;
             return this;
         }
-
         public Builder restartPolicy(@Nullable String restartPolicy) {
             this.restartPolicy = Output.ofNullable(restartPolicy);
             return this;
         }
-
         public Builder runtimeClassName(@Nullable Output<String> runtimeClassName) {
             this.runtimeClassName = runtimeClassName;
             return this;
         }
-
         public Builder runtimeClassName(@Nullable String runtimeClassName) {
             this.runtimeClassName = Output.ofNullable(runtimeClassName);
             return this;
         }
-
         public Builder schedulerName(@Nullable Output<String> schedulerName) {
             this.schedulerName = schedulerName;
             return this;
         }
-
         public Builder schedulerName(@Nullable String schedulerName) {
             this.schedulerName = Output.ofNullable(schedulerName);
             return this;
         }
-
         public Builder securityContext(@Nullable Output<PodSecurityContextArgs> securityContext) {
             this.securityContext = securityContext;
             return this;
         }
-
         public Builder securityContext(@Nullable PodSecurityContextArgs securityContext) {
             this.securityContext = Output.ofNullable(securityContext);
             return this;
         }
-
         public Builder serviceAccount(@Nullable Output<String> serviceAccount) {
             this.serviceAccount = serviceAccount;
             return this;
         }
-
         public Builder serviceAccount(@Nullable String serviceAccount) {
             this.serviceAccount = Output.ofNullable(serviceAccount);
             return this;
         }
-
         public Builder serviceAccountName(@Nullable Output<String> serviceAccountName) {
             this.serviceAccountName = serviceAccountName;
             return this;
         }
-
         public Builder serviceAccountName(@Nullable String serviceAccountName) {
             this.serviceAccountName = Output.ofNullable(serviceAccountName);
             return this;
         }
-
         public Builder setHostnameAsFQDN(@Nullable Output<Boolean> setHostnameAsFQDN) {
             this.setHostnameAsFQDN = setHostnameAsFQDN;
             return this;
         }
-
         public Builder setHostnameAsFQDN(@Nullable Boolean setHostnameAsFQDN) {
             this.setHostnameAsFQDN = Output.ofNullable(setHostnameAsFQDN);
             return this;
         }
-
         public Builder shareProcessNamespace(@Nullable Output<Boolean> shareProcessNamespace) {
             this.shareProcessNamespace = shareProcessNamespace;
             return this;
         }
-
         public Builder shareProcessNamespace(@Nullable Boolean shareProcessNamespace) {
             this.shareProcessNamespace = Output.ofNullable(shareProcessNamespace);
             return this;
         }
-
         public Builder subdomain(@Nullable Output<String> subdomain) {
             this.subdomain = subdomain;
             return this;
         }
-
         public Builder subdomain(@Nullable String subdomain) {
             this.subdomain = Output.ofNullable(subdomain);
             return this;
         }
-
         public Builder terminationGracePeriodSeconds(@Nullable Output<Integer> terminationGracePeriodSeconds) {
             this.terminationGracePeriodSeconds = terminationGracePeriodSeconds;
             return this;
         }
-
         public Builder terminationGracePeriodSeconds(@Nullable Integer terminationGracePeriodSeconds) {
             this.terminationGracePeriodSeconds = Output.ofNullable(terminationGracePeriodSeconds);
             return this;
         }
-
         public Builder tolerations(@Nullable Output<List<TolerationArgs>> tolerations) {
             this.tolerations = tolerations;
             return this;
         }
-
         public Builder tolerations(@Nullable List<TolerationArgs> tolerations) {
             this.tolerations = Output.ofNullable(tolerations);
             return this;
         }
-
+        public Builder tolerations(TolerationArgs... tolerations) {
+            return tolerations(List.of(tolerations));
+        }
         public Builder topologySpreadConstraints(@Nullable Output<List<TopologySpreadConstraintArgs>> topologySpreadConstraints) {
             this.topologySpreadConstraints = topologySpreadConstraints;
             return this;
         }
-
         public Builder topologySpreadConstraints(@Nullable List<TopologySpreadConstraintArgs> topologySpreadConstraints) {
             this.topologySpreadConstraints = Output.ofNullable(topologySpreadConstraints);
             return this;
         }
-
+        public Builder topologySpreadConstraints(TopologySpreadConstraintArgs... topologySpreadConstraints) {
+            return topologySpreadConstraints(List.of(topologySpreadConstraints));
+        }
         public Builder volumes(@Nullable Output<List<VolumeArgs>> volumes) {
             this.volumes = volumes;
             return this;
         }
-
         public Builder volumes(@Nullable List<VolumeArgs> volumes) {
             this.volumes = Output.ofNullable(volumes);
             return this;
         }
-        public PodSpecArgs build() {
+        public Builder volumes(VolumeArgs... volumes) {
+            return volumes(List.of(volumes));
+        }        public PodSpecArgs build() {
             return new PodSpecArgs(activeDeadlineSeconds, affinity, automountServiceAccountToken, containers, dnsConfig, dnsPolicy, enableServiceLinks, ephemeralContainers, hostAliases, hostIPC, hostNetwork, hostPID, hostname, imagePullSecrets, initContainers, nodeName, nodeSelector, os, overhead, preemptionPolicy, priority, priorityClassName, readinessGates, restartPolicy, runtimeClassName, schedulerName, securityContext, serviceAccount, serviceAccountName, setHostnameAsFQDN, shareProcessNamespace, subdomain, terminationGracePeriodSeconds, tolerations, topologySpreadConstraints, volumes);
         }
     }

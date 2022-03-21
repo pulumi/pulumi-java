@@ -105,22 +105,21 @@ public final class PodAffinityTerm {
             this.labelSelector = labelSelector;
             return this;
         }
-
         public Builder namespaceSelector(@Nullable LabelSelector namespaceSelector) {
             this.namespaceSelector = namespaceSelector;
             return this;
         }
-
         public Builder namespaces(@Nullable List<String> namespaces) {
             this.namespaces = namespaces;
             return this;
         }
-
+        public Builder namespaces(String... namespaces) {
+            return namespaces(List.of(namespaces));
+        }
         public Builder topologyKey(String topologyKey) {
             this.topologyKey = Objects.requireNonNull(topologyKey);
             return this;
-        }
-        public PodAffinityTerm build() {
+        }        public PodAffinityTerm build() {
             return new PodAffinityTerm(labelSelector, namespaceSelector, namespaces, topologyKey);
         }
     }

@@ -197,52 +197,42 @@ public final class NodeSystemInfo {
             this.architecture = Objects.requireNonNull(architecture);
             return this;
         }
-
         public Builder bootID(String bootID) {
             this.bootID = Objects.requireNonNull(bootID);
             return this;
         }
-
         public Builder containerRuntimeVersion(String containerRuntimeVersion) {
             this.containerRuntimeVersion = Objects.requireNonNull(containerRuntimeVersion);
             return this;
         }
-
         public Builder kernelVersion(String kernelVersion) {
             this.kernelVersion = Objects.requireNonNull(kernelVersion);
             return this;
         }
-
         public Builder kubeProxyVersion(String kubeProxyVersion) {
             this.kubeProxyVersion = Objects.requireNonNull(kubeProxyVersion);
             return this;
         }
-
         public Builder kubeletVersion(String kubeletVersion) {
             this.kubeletVersion = Objects.requireNonNull(kubeletVersion);
             return this;
         }
-
         public Builder machineID(String machineID) {
             this.machineID = Objects.requireNonNull(machineID);
             return this;
         }
-
         public Builder operatingSystem(String operatingSystem) {
             this.operatingSystem = Objects.requireNonNull(operatingSystem);
             return this;
         }
-
         public Builder osImage(String osImage) {
             this.osImage = Objects.requireNonNull(osImage);
             return this;
         }
-
         public Builder systemUUID(String systemUUID) {
             this.systemUUID = Objects.requireNonNull(systemUUID);
             return this;
-        }
-        public NodeSystemInfo build() {
+        }        public NodeSystemInfo build() {
             return new NodeSystemInfo(architecture, bootID, containerRuntimeVersion, kernelVersion, kubeProxyVersion, kubeletVersion, machineID, operatingSystem, osImage, systemUUID);
         }
     }

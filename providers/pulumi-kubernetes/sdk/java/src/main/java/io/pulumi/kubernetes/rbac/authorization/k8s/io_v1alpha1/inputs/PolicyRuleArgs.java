@@ -127,52 +127,57 @@ public final class PolicyRuleArgs extends io.pulumi.resources.ResourceArgs {
             this.apiGroups = apiGroups;
             return this;
         }
-
         public Builder apiGroups(@Nullable List<String> apiGroups) {
             this.apiGroups = Output.ofNullable(apiGroups);
             return this;
         }
-
+        public Builder apiGroups(String... apiGroups) {
+            return apiGroups(List.of(apiGroups));
+        }
         public Builder nonResourceURLs(@Nullable Output<List<String>> nonResourceURLs) {
             this.nonResourceURLs = nonResourceURLs;
             return this;
         }
-
         public Builder nonResourceURLs(@Nullable List<String> nonResourceURLs) {
             this.nonResourceURLs = Output.ofNullable(nonResourceURLs);
             return this;
         }
-
+        public Builder nonResourceURLs(String... nonResourceURLs) {
+            return nonResourceURLs(List.of(nonResourceURLs));
+        }
         public Builder resourceNames(@Nullable Output<List<String>> resourceNames) {
             this.resourceNames = resourceNames;
             return this;
         }
-
         public Builder resourceNames(@Nullable List<String> resourceNames) {
             this.resourceNames = Output.ofNullable(resourceNames);
             return this;
         }
-
+        public Builder resourceNames(String... resourceNames) {
+            return resourceNames(List.of(resourceNames));
+        }
         public Builder resources(@Nullable Output<List<String>> resources) {
             this.resources = resources;
             return this;
         }
-
         public Builder resources(@Nullable List<String> resources) {
             this.resources = Output.ofNullable(resources);
             return this;
         }
-
+        public Builder resources(String... resources) {
+            return resources(List.of(resources));
+        }
         public Builder verbs(Output<List<String>> verbs) {
             this.verbs = Objects.requireNonNull(verbs);
             return this;
         }
-
         public Builder verbs(List<String> verbs) {
             this.verbs = Output.of(Objects.requireNonNull(verbs));
             return this;
         }
-        public PolicyRuleArgs build() {
+        public Builder verbs(String... verbs) {
+            return verbs(List.of(verbs));
+        }        public PolicyRuleArgs build() {
             return new PolicyRuleArgs(apiGroups, nonResourceURLs, resourceNames, resources, verbs);
         }
     }

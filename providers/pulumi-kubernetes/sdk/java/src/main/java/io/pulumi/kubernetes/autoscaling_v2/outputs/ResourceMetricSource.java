@@ -70,12 +70,10 @@ public final class ResourceMetricSource {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder target(MetricTarget target) {
             this.target = Objects.requireNonNull(target);
             return this;
-        }
-        public ResourceMetricSource build() {
+        }        public ResourceMetricSource build() {
             return new ResourceMetricSource(name, target);
         }
     }

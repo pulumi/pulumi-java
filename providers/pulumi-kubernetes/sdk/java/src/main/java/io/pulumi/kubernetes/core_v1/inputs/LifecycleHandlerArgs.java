@@ -96,32 +96,26 @@ public final class LifecycleHandlerArgs extends io.pulumi.resources.ResourceArgs
             this.exec = exec;
             return this;
         }
-
         public Builder exec(@Nullable ExecActionArgs exec) {
             this.exec = Output.ofNullable(exec);
             return this;
         }
-
         public Builder httpGet(@Nullable Output<HTTPGetActionArgs> httpGet) {
             this.httpGet = httpGet;
             return this;
         }
-
         public Builder httpGet(@Nullable HTTPGetActionArgs httpGet) {
             this.httpGet = Output.ofNullable(httpGet);
             return this;
         }
-
         public Builder tcpSocket(@Nullable Output<TCPSocketActionArgs> tcpSocket) {
             this.tcpSocket = tcpSocket;
             return this;
         }
-
         public Builder tcpSocket(@Nullable TCPSocketActionArgs tcpSocket) {
             this.tcpSocket = Output.ofNullable(tcpSocket);
             return this;
-        }
-        public LifecycleHandlerArgs build() {
+        }        public LifecycleHandlerArgs build() {
             return new LifecycleHandlerArgs(exec, httpGet, tcpSocket);
         }
     }

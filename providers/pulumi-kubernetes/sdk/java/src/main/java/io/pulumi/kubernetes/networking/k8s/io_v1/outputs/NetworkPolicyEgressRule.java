@@ -72,12 +72,16 @@ public final class NetworkPolicyEgressRule {
             this.ports = ports;
             return this;
         }
-
+        public Builder ports(NetworkPolicyPort... ports) {
+            return ports(List.of(ports));
+        }
         public Builder to(@Nullable List<NetworkPolicyPeer> to) {
             this.to = to;
             return this;
         }
-        public NetworkPolicyEgressRule build() {
+        public Builder to(NetworkPolicyPeer... to) {
+            return to(List.of(to));
+        }        public NetworkPolicyEgressRule build() {
             return new NetworkPolicyEgressRule(ports, to);
         }
     }

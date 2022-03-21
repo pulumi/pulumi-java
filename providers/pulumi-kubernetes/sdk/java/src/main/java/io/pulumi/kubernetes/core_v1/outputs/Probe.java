@@ -203,52 +203,42 @@ public final class Probe {
             this.exec = exec;
             return this;
         }
-
         public Builder failureThreshold(@Nullable Integer failureThreshold) {
             this.failureThreshold = failureThreshold;
             return this;
         }
-
         public Builder grpc(@Nullable GRPCAction grpc) {
             this.grpc = grpc;
             return this;
         }
-
         public Builder httpGet(@Nullable HTTPGetAction httpGet) {
             this.httpGet = httpGet;
             return this;
         }
-
         public Builder initialDelaySeconds(@Nullable Integer initialDelaySeconds) {
             this.initialDelaySeconds = initialDelaySeconds;
             return this;
         }
-
         public Builder periodSeconds(@Nullable Integer periodSeconds) {
             this.periodSeconds = periodSeconds;
             return this;
         }
-
         public Builder successThreshold(@Nullable Integer successThreshold) {
             this.successThreshold = successThreshold;
             return this;
         }
-
         public Builder tcpSocket(@Nullable TCPSocketAction tcpSocket) {
             this.tcpSocket = tcpSocket;
             return this;
         }
-
         public Builder terminationGracePeriodSeconds(@Nullable Integer terminationGracePeriodSeconds) {
             this.terminationGracePeriodSeconds = terminationGracePeriodSeconds;
             return this;
         }
-
         public Builder timeoutSeconds(@Nullable Integer timeoutSeconds) {
             this.timeoutSeconds = timeoutSeconds;
             return this;
-        }
-        public Probe build() {
+        }        public Probe build() {
             return new Probe(exec, failureThreshold, grpc, httpGet, initialDelaySeconds, periodSeconds, successThreshold, tcpSocket, terminationGracePeriodSeconds, timeoutSeconds);
         }
     }

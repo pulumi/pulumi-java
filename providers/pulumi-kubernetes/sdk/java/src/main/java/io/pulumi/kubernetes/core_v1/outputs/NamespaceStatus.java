@@ -81,12 +81,13 @@ public final class NamespaceStatus {
             this.conditions = conditions;
             return this;
         }
-
+        public Builder conditions(NamespaceCondition... conditions) {
+            return conditions(List.of(conditions));
+        }
         public Builder phase(@Nullable String phase) {
             this.phase = phase;
             return this;
-        }
-        public NamespaceStatus build() {
+        }        public NamespaceStatus build() {
             return new NamespaceStatus(conditions, phase);
         }
     }

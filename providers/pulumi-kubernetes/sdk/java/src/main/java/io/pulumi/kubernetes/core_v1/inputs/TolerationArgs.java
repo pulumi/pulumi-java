@@ -136,52 +136,42 @@ public final class TolerationArgs extends io.pulumi.resources.ResourceArgs {
             this.effect = effect;
             return this;
         }
-
         public Builder effect(@Nullable String effect) {
             this.effect = Output.ofNullable(effect);
             return this;
         }
-
         public Builder key(@Nullable Output<String> key) {
             this.key = key;
             return this;
         }
-
         public Builder key(@Nullable String key) {
             this.key = Output.ofNullable(key);
             return this;
         }
-
         public Builder operator(@Nullable Output<String> operator) {
             this.operator = operator;
             return this;
         }
-
         public Builder operator(@Nullable String operator) {
             this.operator = Output.ofNullable(operator);
             return this;
         }
-
         public Builder tolerationSeconds(@Nullable Output<Integer> tolerationSeconds) {
             this.tolerationSeconds = tolerationSeconds;
             return this;
         }
-
         public Builder tolerationSeconds(@Nullable Integer tolerationSeconds) {
             this.tolerationSeconds = Output.ofNullable(tolerationSeconds);
             return this;
         }
-
         public Builder value(@Nullable Output<String> value) {
             this.value = value;
             return this;
         }
-
         public Builder value(@Nullable String value) {
             this.value = Output.ofNullable(value);
             return this;
-        }
-        public TolerationArgs build() {
+        }        public TolerationArgs build() {
             return new TolerationArgs(effect, key, operator, tolerationSeconds, value);
         }
     }

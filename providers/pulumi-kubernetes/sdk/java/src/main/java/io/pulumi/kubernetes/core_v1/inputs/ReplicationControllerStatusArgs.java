@@ -144,62 +144,53 @@ public final class ReplicationControllerStatusArgs extends io.pulumi.resources.R
             this.availableReplicas = availableReplicas;
             return this;
         }
-
         public Builder availableReplicas(@Nullable Integer availableReplicas) {
             this.availableReplicas = Output.ofNullable(availableReplicas);
             return this;
         }
-
         public Builder conditions(@Nullable Output<List<ReplicationControllerConditionArgs>> conditions) {
             this.conditions = conditions;
             return this;
         }
-
         public Builder conditions(@Nullable List<ReplicationControllerConditionArgs> conditions) {
             this.conditions = Output.ofNullable(conditions);
             return this;
         }
-
+        public Builder conditions(ReplicationControllerConditionArgs... conditions) {
+            return conditions(List.of(conditions));
+        }
         public Builder fullyLabeledReplicas(@Nullable Output<Integer> fullyLabeledReplicas) {
             this.fullyLabeledReplicas = fullyLabeledReplicas;
             return this;
         }
-
         public Builder fullyLabeledReplicas(@Nullable Integer fullyLabeledReplicas) {
             this.fullyLabeledReplicas = Output.ofNullable(fullyLabeledReplicas);
             return this;
         }
-
         public Builder observedGeneration(@Nullable Output<Integer> observedGeneration) {
             this.observedGeneration = observedGeneration;
             return this;
         }
-
         public Builder observedGeneration(@Nullable Integer observedGeneration) {
             this.observedGeneration = Output.ofNullable(observedGeneration);
             return this;
         }
-
         public Builder readyReplicas(@Nullable Output<Integer> readyReplicas) {
             this.readyReplicas = readyReplicas;
             return this;
         }
-
         public Builder readyReplicas(@Nullable Integer readyReplicas) {
             this.readyReplicas = Output.ofNullable(readyReplicas);
             return this;
         }
-
         public Builder replicas(Output<Integer> replicas) {
             this.replicas = Objects.requireNonNull(replicas);
             return this;
         }
-
         public Builder replicas(Integer replicas) {
             this.replicas = Output.of(Objects.requireNonNull(replicas));
             return this;
-        }
-        public ReplicationControllerStatusArgs build() {
+        }        public ReplicationControllerStatusArgs build() {
             return new ReplicationControllerStatusArgs(availableReplicas, conditions, fullyLabeledReplicas, observedGeneration, readyReplicas, replicas);
         }
     }

@@ -71,12 +71,16 @@ public final class UncountedTerminatedPods {
             this.failed = failed;
             return this;
         }
-
+        public Builder failed(String... failed) {
+            return failed(List.of(failed));
+        }
         public Builder succeeded(@Nullable List<String> succeeded) {
             this.succeeded = succeeded;
             return this;
         }
-        public UncountedTerminatedPods build() {
+        public Builder succeeded(String... succeeded) {
+            return succeeded(List.of(succeeded));
+        }        public UncountedTerminatedPods build() {
             return new UncountedTerminatedPods(failed, succeeded);
         }
     }

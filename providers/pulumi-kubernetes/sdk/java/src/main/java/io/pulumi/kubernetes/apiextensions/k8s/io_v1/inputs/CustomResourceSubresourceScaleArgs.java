@@ -94,32 +94,26 @@ public final class CustomResourceSubresourceScaleArgs extends io.pulumi.resource
             this.labelSelectorPath = labelSelectorPath;
             return this;
         }
-
         public Builder labelSelectorPath(@Nullable String labelSelectorPath) {
             this.labelSelectorPath = Output.ofNullable(labelSelectorPath);
             return this;
         }
-
         public Builder specReplicasPath(Output<String> specReplicasPath) {
             this.specReplicasPath = Objects.requireNonNull(specReplicasPath);
             return this;
         }
-
         public Builder specReplicasPath(String specReplicasPath) {
             this.specReplicasPath = Output.of(Objects.requireNonNull(specReplicasPath));
             return this;
         }
-
         public Builder statusReplicasPath(Output<String> statusReplicasPath) {
             this.statusReplicasPath = Objects.requireNonNull(statusReplicasPath);
             return this;
         }
-
         public Builder statusReplicasPath(String statusReplicasPath) {
             this.statusReplicasPath = Output.of(Objects.requireNonNull(statusReplicasPath));
             return this;
-        }
-        public CustomResourceSubresourceScaleArgs build() {
+        }        public CustomResourceSubresourceScaleArgs build() {
             return new CustomResourceSubresourceScaleArgs(labelSelectorPath, specReplicasPath, statusReplicasPath);
         }
     }

@@ -90,17 +90,17 @@ public final class HPAScalingRules {
             this.policies = policies;
             return this;
         }
-
+        public Builder policies(HPAScalingPolicy... policies) {
+            return policies(List.of(policies));
+        }
         public Builder selectPolicy(@Nullable String selectPolicy) {
             this.selectPolicy = selectPolicy;
             return this;
         }
-
         public Builder stabilizationWindowSeconds(@Nullable Integer stabilizationWindowSeconds) {
             this.stabilizationWindowSeconds = stabilizationWindowSeconds;
             return this;
-        }
-        public HPAScalingRules build() {
+        }        public HPAScalingRules build() {
             return new HPAScalingRules(policies, selectPolicy, stabilizationWindowSeconds);
         }
     }

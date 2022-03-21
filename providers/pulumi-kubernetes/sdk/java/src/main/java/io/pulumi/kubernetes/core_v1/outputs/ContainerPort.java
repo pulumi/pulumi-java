@@ -130,27 +130,22 @@ public final class ContainerPort {
             this.containerPort = Objects.requireNonNull(containerPort);
             return this;
         }
-
         public Builder hostIP(@Nullable String hostIP) {
             this.hostIP = hostIP;
             return this;
         }
-
         public Builder hostPort(@Nullable Integer hostPort) {
             this.hostPort = hostPort;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
-
         public Builder protocol(@Nullable String protocol) {
             this.protocol = protocol;
             return this;
-        }
-        public ContainerPort build() {
+        }        public ContainerPort build() {
             return new ContainerPort(containerPort, hostIP, hostPort, name, protocol);
         }
     }

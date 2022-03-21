@@ -158,72 +158,58 @@ public final class ResourceAttributesArgs extends io.pulumi.resources.ResourceAr
             this.group = group;
             return this;
         }
-
         public Builder group(@Nullable String group) {
             this.group = Output.ofNullable(group);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder namespace(@Nullable Output<String> namespace) {
             this.namespace = namespace;
             return this;
         }
-
         public Builder namespace(@Nullable String namespace) {
             this.namespace = Output.ofNullable(namespace);
             return this;
         }
-
         public Builder resource(@Nullable Output<String> resource) {
             this.resource = resource;
             return this;
         }
-
         public Builder resource(@Nullable String resource) {
             this.resource = Output.ofNullable(resource);
             return this;
         }
-
         public Builder subresource(@Nullable Output<String> subresource) {
             this.subresource = subresource;
             return this;
         }
-
         public Builder subresource(@Nullable String subresource) {
             this.subresource = Output.ofNullable(subresource);
             return this;
         }
-
         public Builder verb(@Nullable Output<String> verb) {
             this.verb = verb;
             return this;
         }
-
         public Builder verb(@Nullable String verb) {
             this.verb = Output.ofNullable(verb);
             return this;
         }
-
         public Builder version(@Nullable Output<String> version) {
             this.version = version;
             return this;
         }
-
         public Builder version(@Nullable String version) {
             this.version = Output.ofNullable(version);
             return this;
-        }
-        public ResourceAttributesArgs build() {
+        }        public ResourceAttributesArgs build() {
             return new ResourceAttributesArgs(group, name, namespace, resource, subresource, verb, version);
         }
     }

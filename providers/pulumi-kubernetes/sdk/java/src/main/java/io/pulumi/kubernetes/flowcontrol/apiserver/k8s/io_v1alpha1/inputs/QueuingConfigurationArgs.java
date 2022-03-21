@@ -94,32 +94,26 @@ public final class QueuingConfigurationArgs extends io.pulumi.resources.Resource
             this.handSize = handSize;
             return this;
         }
-
         public Builder handSize(@Nullable Integer handSize) {
             this.handSize = Output.ofNullable(handSize);
             return this;
         }
-
         public Builder queueLengthLimit(@Nullable Output<Integer> queueLengthLimit) {
             this.queueLengthLimit = queueLengthLimit;
             return this;
         }
-
         public Builder queueLengthLimit(@Nullable Integer queueLengthLimit) {
             this.queueLengthLimit = Output.ofNullable(queueLengthLimit);
             return this;
         }
-
         public Builder queues(@Nullable Output<Integer> queues) {
             this.queues = queues;
             return this;
         }
-
         public Builder queues(@Nullable Integer queues) {
             this.queues = Output.ofNullable(queues);
             return this;
-        }
-        public QueuingConfigurationArgs build() {
+        }        public QueuingConfigurationArgs build() {
             return new QueuingConfigurationArgs(handSize, queueLengthLimit, queues);
         }
     }

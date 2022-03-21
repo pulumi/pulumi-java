@@ -316,87 +316,70 @@ public final class Event {
             this.action = action;
             return this;
         }
-
         public Builder apiVersion(@Nullable String apiVersion) {
             this.apiVersion = apiVersion;
             return this;
         }
-
         public Builder count(@Nullable Integer count) {
             this.count = count;
             return this;
         }
-
         public Builder eventTime(@Nullable String eventTime) {
             this.eventTime = eventTime;
             return this;
         }
-
         public Builder firstTimestamp(@Nullable String firstTimestamp) {
             this.firstTimestamp = firstTimestamp;
             return this;
         }
-
         public Builder involvedObject(ObjectReference involvedObject) {
             this.involvedObject = Objects.requireNonNull(involvedObject);
             return this;
         }
-
         public Builder kind(@Nullable String kind) {
             this.kind = kind;
             return this;
         }
-
         public Builder lastTimestamp(@Nullable String lastTimestamp) {
             this.lastTimestamp = lastTimestamp;
             return this;
         }
-
         public Builder message(@Nullable String message) {
             this.message = message;
             return this;
         }
-
         public Builder metadata(ObjectMeta metadata) {
             this.metadata = Objects.requireNonNull(metadata);
             return this;
         }
-
         public Builder reason(@Nullable String reason) {
             this.reason = reason;
             return this;
         }
-
         public Builder related(@Nullable ObjectReference related) {
             this.related = related;
             return this;
         }
-
         public Builder reportingComponent(@Nullable String reportingComponent) {
             this.reportingComponent = reportingComponent;
             return this;
         }
-
         public Builder reportingInstance(@Nullable String reportingInstance) {
             this.reportingInstance = reportingInstance;
             return this;
         }
-
         public Builder series(@Nullable EventSeries series) {
             this.series = series;
             return this;
         }
-
         public Builder source(@Nullable EventSource source) {
             this.source = source;
             return this;
         }
-
         public Builder type(@Nullable String type) {
             this.type = type;
             return this;
-        }
-        public Event build() {
+        }        public Event build() {
             return new Event(action, apiVersion, count, eventTime, firstTimestamp, involvedObject, kind, lastTimestamp, message, metadata, reason, related, reportingComponent, reportingInstance, series, source, type);
         }
     }

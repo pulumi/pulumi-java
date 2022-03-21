@@ -143,62 +143,50 @@ public final class CustomResourceColumnDefinitionArgs extends io.pulumi.resource
             this.JSONPath = Objects.requireNonNull(JSONPath);
             return this;
         }
-
         public Builder jSONPath(String JSONPath) {
             this.JSONPath = Output.of(Objects.requireNonNull(JSONPath));
             return this;
         }
-
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder format(@Nullable Output<String> format) {
             this.format = format;
             return this;
         }
-
         public Builder format(@Nullable String format) {
             this.format = Output.ofNullable(format);
             return this;
         }
-
         public Builder name(Output<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
-
         public Builder priority(@Nullable Output<Integer> priority) {
             this.priority = priority;
             return this;
         }
-
         public Builder priority(@Nullable Integer priority) {
             this.priority = Output.ofNullable(priority);
             return this;
         }
-
         public Builder type(Output<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Output.of(Objects.requireNonNull(type));
             return this;
-        }
-        public CustomResourceColumnDefinitionArgs build() {
+        }        public CustomResourceColumnDefinitionArgs build() {
             return new CustomResourceColumnDefinitionArgs(JSONPath, description, format, name, priority, type);
         }
     }

@@ -139,32 +139,32 @@ public final class HorizontalPodAutoscalerStatus {
             this.conditions = conditions;
             return this;
         }
-
+        public Builder conditions(HorizontalPodAutoscalerCondition... conditions) {
+            return conditions(List.of(conditions));
+        }
         public Builder currentMetrics(@Nullable List<MetricStatus> currentMetrics) {
             this.currentMetrics = currentMetrics;
             return this;
         }
-
+        public Builder currentMetrics(MetricStatus... currentMetrics) {
+            return currentMetrics(List.of(currentMetrics));
+        }
         public Builder currentReplicas(Integer currentReplicas) {
             this.currentReplicas = Objects.requireNonNull(currentReplicas);
             return this;
         }
-
         public Builder desiredReplicas(Integer desiredReplicas) {
             this.desiredReplicas = Objects.requireNonNull(desiredReplicas);
             return this;
         }
-
         public Builder lastScaleTime(@Nullable String lastScaleTime) {
             this.lastScaleTime = lastScaleTime;
             return this;
         }
-
         public Builder observedGeneration(@Nullable Integer observedGeneration) {
             this.observedGeneration = observedGeneration;
             return this;
-        }
-        public HorizontalPodAutoscalerStatus build() {
+        }        public HorizontalPodAutoscalerStatus build() {
             return new HorizontalPodAutoscalerStatus(conditions, currentMetrics, currentReplicas, desiredReplicas, lastScaleTime, observedGeneration);
         }
     }

@@ -71,12 +71,10 @@ public final class StatefulSetPersistentVolumeClaimRetentionPolicy {
             this.whenDeleted = whenDeleted;
             return this;
         }
-
         public Builder whenScaled(@Nullable String whenScaled) {
             this.whenScaled = whenScaled;
             return this;
-        }
-        public StatefulSetPersistentVolumeClaimRetentionPolicy build() {
+        }        public StatefulSetPersistentVolumeClaimRetentionPolicy build() {
             return new StatefulSetPersistentVolumeClaimRetentionPolicy(whenDeleted, whenScaled);
         }
     }

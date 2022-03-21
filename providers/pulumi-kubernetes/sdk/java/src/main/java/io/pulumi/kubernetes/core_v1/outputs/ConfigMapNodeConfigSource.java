@@ -119,27 +119,22 @@ public final class ConfigMapNodeConfigSource {
             this.kubeletConfigKey = Objects.requireNonNull(kubeletConfigKey);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder namespace(String namespace) {
             this.namespace = Objects.requireNonNull(namespace);
             return this;
         }
-
         public Builder resourceVersion(@Nullable String resourceVersion) {
             this.resourceVersion = resourceVersion;
             return this;
         }
-
         public Builder uid(@Nullable String uid) {
             this.uid = uid;
             return this;
-        }
-        public ConfigMapNodeConfigSource build() {
+        }        public ConfigMapNodeConfigSource build() {
             return new ConfigMapNodeConfigSource(kubeletConfigKey, name, namespace, resourceVersion, uid);
         }
     }

@@ -112,42 +112,37 @@ public final class CSINodeDriverArgs extends io.pulumi.resources.ResourceArgs {
             this.allocatable = allocatable;
             return this;
         }
-
         public Builder allocatable(@Nullable VolumeNodeResourcesArgs allocatable) {
             this.allocatable = Output.ofNullable(allocatable);
             return this;
         }
-
         public Builder name(Output<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
-
         public Builder nodeID(Output<String> nodeID) {
             this.nodeID = Objects.requireNonNull(nodeID);
             return this;
         }
-
         public Builder nodeID(String nodeID) {
             this.nodeID = Output.of(Objects.requireNonNull(nodeID));
             return this;
         }
-
         public Builder topologyKeys(@Nullable Output<List<String>> topologyKeys) {
             this.topologyKeys = topologyKeys;
             return this;
         }
-
         public Builder topologyKeys(@Nullable List<String> topologyKeys) {
             this.topologyKeys = Output.ofNullable(topologyKeys);
             return this;
         }
-        public CSINodeDriverArgs build() {
+        public Builder topologyKeys(String... topologyKeys) {
+            return topologyKeys(List.of(topologyKeys));
+        }        public CSINodeDriverArgs build() {
             return new CSINodeDriverArgs(allocatable, name, nodeID, topologyKeys);
         }
     }

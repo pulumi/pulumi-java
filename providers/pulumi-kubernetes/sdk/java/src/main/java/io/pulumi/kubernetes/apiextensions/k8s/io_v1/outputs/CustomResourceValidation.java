@@ -53,8 +53,7 @@ public final class CustomResourceValidation {
         public Builder openAPIV3Schema(@Nullable JSONSchemaProps openAPIV3Schema) {
             this.openAPIV3Schema = openAPIV3Schema;
             return this;
-        }
-        public CustomResourceValidation build() {
+        }        public CustomResourceValidation build() {
             return new CustomResourceValidation(openAPIV3Schema);
         }
     }

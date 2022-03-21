@@ -73,12 +73,13 @@ public final class ProjectedVolumeSource {
             this.defaultMode = defaultMode;
             return this;
         }
-
         public Builder sources(List<VolumeProjection> sources) {
             this.sources = Objects.requireNonNull(sources);
             return this;
         }
-        public ProjectedVolumeSource build() {
+        public Builder sources(VolumeProjection... sources) {
+            return sources(List.of(sources));
+        }        public ProjectedVolumeSource build() {
             return new ProjectedVolumeSource(defaultMode, sources);
         }
     }

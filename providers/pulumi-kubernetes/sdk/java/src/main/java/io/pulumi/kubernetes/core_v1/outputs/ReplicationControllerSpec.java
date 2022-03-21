@@ -106,22 +106,18 @@ public final class ReplicationControllerSpec {
             this.minReadySeconds = minReadySeconds;
             return this;
         }
-
         public Builder replicas(@Nullable Integer replicas) {
             this.replicas = replicas;
             return this;
         }
-
         public Builder selector(@Nullable Map<String,String> selector) {
             this.selector = selector;
             return this;
         }
-
         public Builder template(@Nullable PodTemplateSpec template) {
             this.template = template;
             return this;
-        }
-        public ReplicationControllerSpec build() {
+        }        public ReplicationControllerSpec build() {
             return new ReplicationControllerSpec(minReadySeconds, replicas, selector, template);
         }
     }

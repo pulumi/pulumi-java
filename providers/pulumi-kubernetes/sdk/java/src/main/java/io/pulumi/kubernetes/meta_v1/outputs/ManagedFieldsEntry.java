@@ -152,37 +152,30 @@ public final class ManagedFieldsEntry {
             this.apiVersion = apiVersion;
             return this;
         }
-
         public Builder fieldsType(@Nullable String fieldsType) {
             this.fieldsType = fieldsType;
             return this;
         }
-
         public Builder fieldsV1(@Nullable JsonElement fieldsV1) {
             this.fieldsV1 = fieldsV1;
             return this;
         }
-
         public Builder manager(@Nullable String manager) {
             this.manager = manager;
             return this;
         }
-
         public Builder operation(@Nullable String operation) {
             this.operation = operation;
             return this;
         }
-
         public Builder subresource(@Nullable String subresource) {
             this.subresource = subresource;
             return this;
         }
-
         public Builder time(@Nullable String time) {
             this.time = time;
             return this;
-        }
-        public ManagedFieldsEntry build() {
+        }        public ManagedFieldsEntry build() {
             return new ManagedFieldsEntry(apiVersion, fieldsType, fieldsV1, manager, operation, subresource, time);
         }
     }

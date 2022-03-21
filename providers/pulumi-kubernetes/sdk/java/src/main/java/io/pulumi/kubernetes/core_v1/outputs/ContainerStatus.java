@@ -186,47 +186,38 @@ public final class ContainerStatus {
             this.containerID = containerID;
             return this;
         }
-
         public Builder image(String image) {
             this.image = Objects.requireNonNull(image);
             return this;
         }
-
         public Builder imageID(String imageID) {
             this.imageID = Objects.requireNonNull(imageID);
             return this;
         }
-
         public Builder lastState(@Nullable ContainerState lastState) {
             this.lastState = lastState;
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder ready(Boolean ready) {
             this.ready = Objects.requireNonNull(ready);
             return this;
         }
-
         public Builder restartCount(Integer restartCount) {
             this.restartCount = Objects.requireNonNull(restartCount);
             return this;
         }
-
         public Builder started(@Nullable Boolean started) {
             this.started = started;
             return this;
         }
-
         public Builder state(@Nullable ContainerState state) {
             this.state = state;
             return this;
-        }
-        public ContainerStatus build() {
+        }        public ContainerStatus build() {
             return new ContainerStatus(containerID, image, imageID, lastState, name, ready, restartCount, started, state);
         }
     }

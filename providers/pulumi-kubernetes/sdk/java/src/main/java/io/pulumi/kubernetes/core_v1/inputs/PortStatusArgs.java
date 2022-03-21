@@ -99,32 +99,26 @@ public final class PortStatusArgs extends io.pulumi.resources.ResourceArgs {
             this.error = error;
             return this;
         }
-
         public Builder error(@Nullable String error) {
             this.error = Output.ofNullable(error);
             return this;
         }
-
         public Builder port(Output<Integer> port) {
             this.port = Objects.requireNonNull(port);
             return this;
         }
-
         public Builder port(Integer port) {
             this.port = Output.of(Objects.requireNonNull(port));
             return this;
         }
-
         public Builder protocol(Output<String> protocol) {
             this.protocol = Objects.requireNonNull(protocol);
             return this;
         }
-
         public Builder protocol(String protocol) {
             this.protocol = Output.of(Objects.requireNonNull(protocol));
             return this;
-        }
-        public PortStatusArgs build() {
+        }        public PortStatusArgs build() {
             return new PortStatusArgs(error, port, protocol);
         }
     }

@@ -79,22 +79,18 @@ public final class SELinuxStrategyOptionsArgs extends io.pulumi.resources.Resour
             this.rule = Objects.requireNonNull(rule);
             return this;
         }
-
         public Builder rule(String rule) {
             this.rule = Output.of(Objects.requireNonNull(rule));
             return this;
         }
-
         public Builder seLinuxOptions(@Nullable Output<SELinuxOptionsArgs> seLinuxOptions) {
             this.seLinuxOptions = seLinuxOptions;
             return this;
         }
-
         public Builder seLinuxOptions(@Nullable SELinuxOptionsArgs seLinuxOptions) {
             this.seLinuxOptions = Output.ofNullable(seLinuxOptions);
             return this;
-        }
-        public SELinuxStrategyOptionsArgs build() {
+        }        public SELinuxStrategyOptionsArgs build() {
             return new SELinuxStrategyOptionsArgs(rule, seLinuxOptions);
         }
     }

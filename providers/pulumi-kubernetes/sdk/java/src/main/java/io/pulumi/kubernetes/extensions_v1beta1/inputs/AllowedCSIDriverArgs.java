@@ -60,12 +60,10 @@ public final class AllowedCSIDriverArgs extends io.pulumi.resources.ResourceArgs
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Output.of(Objects.requireNonNull(name));
             return this;
-        }
-        public AllowedCSIDriverArgs build() {
+        }        public AllowedCSIDriverArgs build() {
             return new AllowedCSIDriverArgs(name);
         }
     }

@@ -234,57 +234,61 @@ public final class NodeStatus {
             this.addresses = addresses;
             return this;
         }
-
+        public Builder addresses(NodeAddress... addresses) {
+            return addresses(List.of(addresses));
+        }
         public Builder allocatable(@Nullable Map<String,String> allocatable) {
             this.allocatable = allocatable;
             return this;
         }
-
         public Builder capacity(@Nullable Map<String,String> capacity) {
             this.capacity = capacity;
             return this;
         }
-
         public Builder conditions(@Nullable List<NodeCondition> conditions) {
             this.conditions = conditions;
             return this;
         }
-
+        public Builder conditions(NodeCondition... conditions) {
+            return conditions(List.of(conditions));
+        }
         public Builder config(@Nullable NodeConfigStatus config) {
             this.config = config;
             return this;
         }
-
         public Builder daemonEndpoints(@Nullable NodeDaemonEndpoints daemonEndpoints) {
             this.daemonEndpoints = daemonEndpoints;
             return this;
         }
-
         public Builder images(@Nullable List<ContainerImage> images) {
             this.images = images;
             return this;
         }
-
+        public Builder images(ContainerImage... images) {
+            return images(List.of(images));
+        }
         public Builder nodeInfo(@Nullable NodeSystemInfo nodeInfo) {
             this.nodeInfo = nodeInfo;
             return this;
         }
-
         public Builder phase(@Nullable String phase) {
             this.phase = phase;
             return this;
         }
-
         public Builder volumesAttached(@Nullable List<AttachedVolume> volumesAttached) {
             this.volumesAttached = volumesAttached;
             return this;
         }
-
+        public Builder volumesAttached(AttachedVolume... volumesAttached) {
+            return volumesAttached(List.of(volumesAttached));
+        }
         public Builder volumesInUse(@Nullable List<String> volumesInUse) {
             this.volumesInUse = volumesInUse;
             return this;
         }
-        public NodeStatus build() {
+        public Builder volumesInUse(String... volumesInUse) {
+            return volumesInUse(List.of(volumesInUse));
+        }        public NodeStatus build() {
             return new NodeStatus(addresses, allocatable, capacity, conditions, config, daemonEndpoints, images, nodeInfo, phase, volumesAttached, volumesInUse);
         }
     }

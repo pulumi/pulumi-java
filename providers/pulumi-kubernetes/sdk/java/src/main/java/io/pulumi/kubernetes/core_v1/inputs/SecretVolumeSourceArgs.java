@@ -116,42 +116,37 @@ public final class SecretVolumeSourceArgs extends io.pulumi.resources.ResourceAr
             this.defaultMode = defaultMode;
             return this;
         }
-
         public Builder defaultMode(@Nullable Integer defaultMode) {
             this.defaultMode = Output.ofNullable(defaultMode);
             return this;
         }
-
         public Builder items(@Nullable Output<List<KeyToPathArgs>> items) {
             this.items = items;
             return this;
         }
-
         public Builder items(@Nullable List<KeyToPathArgs> items) {
             this.items = Output.ofNullable(items);
             return this;
         }
-
+        public Builder items(KeyToPathArgs... items) {
+            return items(List.of(items));
+        }
         public Builder optional(@Nullable Output<Boolean> optional) {
             this.optional = optional;
             return this;
         }
-
         public Builder optional(@Nullable Boolean optional) {
             this.optional = Output.ofNullable(optional);
             return this;
         }
-
         public Builder secretName(@Nullable Output<String> secretName) {
             this.secretName = secretName;
             return this;
         }
-
         public Builder secretName(@Nullable String secretName) {
             this.secretName = Output.ofNullable(secretName);
             return this;
-        }
-        public SecretVolumeSourceArgs build() {
+        }        public SecretVolumeSourceArgs build() {
             return new SecretVolumeSourceArgs(defaultMode, items, optional, secretName);
         }
     }

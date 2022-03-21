@@ -70,12 +70,10 @@ public final class WeightedPodAffinityTerm {
             this.podAffinityTerm = Objects.requireNonNull(podAffinityTerm);
             return this;
         }
-
         public Builder weight(Integer weight) {
             this.weight = Objects.requireNonNull(weight);
             return this;
-        }
-        public WeightedPodAffinityTerm build() {
+        }        public WeightedPodAffinityTerm build() {
             return new WeightedPodAffinityTerm(podAffinityTerm, weight);
         }
     }

@@ -111,42 +111,34 @@ public final class EndpointAddressArgs extends io.pulumi.resources.ResourceArgs 
             this.hostname = hostname;
             return this;
         }
-
         public Builder hostname(@Nullable String hostname) {
             this.hostname = Output.ofNullable(hostname);
             return this;
         }
-
         public Builder ip(Output<String> ip) {
             this.ip = Objects.requireNonNull(ip);
             return this;
         }
-
         public Builder ip(String ip) {
             this.ip = Output.of(Objects.requireNonNull(ip));
             return this;
         }
-
         public Builder nodeName(@Nullable Output<String> nodeName) {
             this.nodeName = nodeName;
             return this;
         }
-
         public Builder nodeName(@Nullable String nodeName) {
             this.nodeName = Output.ofNullable(nodeName);
             return this;
         }
-
         public Builder targetRef(@Nullable Output<ObjectReferenceArgs> targetRef) {
             this.targetRef = targetRef;
             return this;
         }
-
         public Builder targetRef(@Nullable ObjectReferenceArgs targetRef) {
             this.targetRef = Output.ofNullable(targetRef);
             return this;
-        }
-        public EndpointAddressArgs build() {
+        }        public EndpointAddressArgs build() {
             return new EndpointAddressArgs(hostname, ip, nodeName, targetRef);
         }
     }

@@ -109,42 +109,37 @@ public final class PodDisruptionBudgetListArgs extends io.pulumi.resources.Resou
             this.apiVersion = apiVersion;
             return this;
         }
-
         public Builder apiVersion(@Nullable String apiVersion) {
             this.apiVersion = Output.ofNullable(apiVersion);
             return this;
         }
-
         public Builder items(Output<List<PodDisruptionBudgetArgs>> items) {
             this.items = Objects.requireNonNull(items);
             return this;
         }
-
         public Builder items(List<PodDisruptionBudgetArgs> items) {
             this.items = Output.of(Objects.requireNonNull(items));
             return this;
         }
-
+        public Builder items(PodDisruptionBudgetArgs... items) {
+            return items(List.of(items));
+        }
         public Builder kind(@Nullable Output<String> kind) {
             this.kind = kind;
             return this;
         }
-
         public Builder kind(@Nullable String kind) {
             this.kind = Output.ofNullable(kind);
             return this;
         }
-
         public Builder metadata(@Nullable Output<ListMetaArgs> metadata) {
             this.metadata = metadata;
             return this;
         }
-
         public Builder metadata(@Nullable ListMetaArgs metadata) {
             this.metadata = Output.ofNullable(metadata);
             return this;
-        }
-        public PodDisruptionBudgetListArgs build() {
+        }        public PodDisruptionBudgetListArgs build() {
             return new PodDisruptionBudgetListArgs(apiVersion, items, kind, metadata);
         }
     }

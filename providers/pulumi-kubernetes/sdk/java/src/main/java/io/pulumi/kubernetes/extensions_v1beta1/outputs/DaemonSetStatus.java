@@ -201,52 +201,45 @@ public final class DaemonSetStatus {
             this.collisionCount = collisionCount;
             return this;
         }
-
         public Builder conditions(@Nullable List<DaemonSetCondition> conditions) {
             this.conditions = conditions;
             return this;
         }
-
+        public Builder conditions(DaemonSetCondition... conditions) {
+            return conditions(List.of(conditions));
+        }
         public Builder currentNumberScheduled(Integer currentNumberScheduled) {
             this.currentNumberScheduled = Objects.requireNonNull(currentNumberScheduled);
             return this;
         }
-
         public Builder desiredNumberScheduled(Integer desiredNumberScheduled) {
             this.desiredNumberScheduled = Objects.requireNonNull(desiredNumberScheduled);
             return this;
         }
-
         public Builder numberAvailable(@Nullable Integer numberAvailable) {
             this.numberAvailable = numberAvailable;
             return this;
         }
-
         public Builder numberMisscheduled(Integer numberMisscheduled) {
             this.numberMisscheduled = Objects.requireNonNull(numberMisscheduled);
             return this;
         }
-
         public Builder numberReady(Integer numberReady) {
             this.numberReady = Objects.requireNonNull(numberReady);
             return this;
         }
-
         public Builder numberUnavailable(@Nullable Integer numberUnavailable) {
             this.numberUnavailable = numberUnavailable;
             return this;
         }
-
         public Builder observedGeneration(@Nullable Integer observedGeneration) {
             this.observedGeneration = observedGeneration;
             return this;
         }
-
         public Builder updatedNumberScheduled(@Nullable Integer updatedNumberScheduled) {
             this.updatedNumberScheduled = updatedNumberScheduled;
             return this;
-        }
-        public DaemonSetStatus build() {
+        }        public DaemonSetStatus build() {
             return new DaemonSetStatus(collisionCount, conditions, currentNumberScheduled, desiredNumberScheduled, numberAvailable, numberMisscheduled, numberReady, numberUnavailable, observedGeneration, updatedNumberScheduled);
         }
     }

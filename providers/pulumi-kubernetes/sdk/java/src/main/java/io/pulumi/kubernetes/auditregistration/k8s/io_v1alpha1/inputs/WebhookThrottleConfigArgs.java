@@ -78,22 +78,18 @@ public final class WebhookThrottleConfigArgs extends io.pulumi.resources.Resourc
             this.burst = burst;
             return this;
         }
-
         public Builder burst(@Nullable Integer burst) {
             this.burst = Output.ofNullable(burst);
             return this;
         }
-
         public Builder qps(@Nullable Output<Integer> qps) {
             this.qps = qps;
             return this;
         }
-
         public Builder qps(@Nullable Integer qps) {
             this.qps = Output.ofNullable(qps);
             return this;
-        }
-        public WebhookThrottleConfigArgs build() {
+        }        public WebhookThrottleConfigArgs build() {
             return new WebhookThrottleConfigArgs(burst, qps);
         }
     }

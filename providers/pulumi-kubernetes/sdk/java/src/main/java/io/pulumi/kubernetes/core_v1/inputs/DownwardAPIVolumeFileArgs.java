@@ -113,42 +113,34 @@ public final class DownwardAPIVolumeFileArgs extends io.pulumi.resources.Resourc
             this.fieldRef = fieldRef;
             return this;
         }
-
         public Builder fieldRef(@Nullable ObjectFieldSelectorArgs fieldRef) {
             this.fieldRef = Output.ofNullable(fieldRef);
             return this;
         }
-
         public Builder mode(@Nullable Output<Integer> mode) {
             this.mode = mode;
             return this;
         }
-
         public Builder mode(@Nullable Integer mode) {
             this.mode = Output.ofNullable(mode);
             return this;
         }
-
         public Builder path(Output<String> path) {
             this.path = Objects.requireNonNull(path);
             return this;
         }
-
         public Builder path(String path) {
             this.path = Output.of(Objects.requireNonNull(path));
             return this;
         }
-
         public Builder resourceFieldRef(@Nullable Output<ResourceFieldSelectorArgs> resourceFieldRef) {
             this.resourceFieldRef = resourceFieldRef;
             return this;
         }
-
         public Builder resourceFieldRef(@Nullable ResourceFieldSelectorArgs resourceFieldRef) {
             this.resourceFieldRef = Output.ofNullable(resourceFieldRef);
             return this;
-        }
-        public DownwardAPIVolumeFileArgs build() {
+        }        public DownwardAPIVolumeFileArgs build() {
             return new DownwardAPIVolumeFileArgs(fieldRef, mode, path, resourceFieldRef);
         }
     }

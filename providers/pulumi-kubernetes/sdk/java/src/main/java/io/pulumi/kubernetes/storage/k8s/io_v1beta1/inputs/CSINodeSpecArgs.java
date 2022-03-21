@@ -61,12 +61,13 @@ public final class CSINodeSpecArgs extends io.pulumi.resources.ResourceArgs {
             this.drivers = Objects.requireNonNull(drivers);
             return this;
         }
-
         public Builder drivers(List<CSINodeDriverArgs> drivers) {
             this.drivers = Output.of(Objects.requireNonNull(drivers));
             return this;
         }
-        public CSINodeSpecArgs build() {
+        public Builder drivers(CSINodeDriverArgs... drivers) {
+            return drivers(List.of(drivers));
+        }        public CSINodeSpecArgs build() {
             return new CSINodeSpecArgs(drivers);
         }
     }

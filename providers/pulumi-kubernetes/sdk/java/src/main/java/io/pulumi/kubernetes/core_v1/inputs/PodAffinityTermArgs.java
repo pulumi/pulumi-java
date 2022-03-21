@@ -112,42 +112,37 @@ public final class PodAffinityTermArgs extends io.pulumi.resources.ResourceArgs 
             this.labelSelector = labelSelector;
             return this;
         }
-
         public Builder labelSelector(@Nullable LabelSelectorArgs labelSelector) {
             this.labelSelector = Output.ofNullable(labelSelector);
             return this;
         }
-
         public Builder namespaceSelector(@Nullable Output<LabelSelectorArgs> namespaceSelector) {
             this.namespaceSelector = namespaceSelector;
             return this;
         }
-
         public Builder namespaceSelector(@Nullable LabelSelectorArgs namespaceSelector) {
             this.namespaceSelector = Output.ofNullable(namespaceSelector);
             return this;
         }
-
         public Builder namespaces(@Nullable Output<List<String>> namespaces) {
             this.namespaces = namespaces;
             return this;
         }
-
         public Builder namespaces(@Nullable List<String> namespaces) {
             this.namespaces = Output.ofNullable(namespaces);
             return this;
         }
-
+        public Builder namespaces(String... namespaces) {
+            return namespaces(List.of(namespaces));
+        }
         public Builder topologyKey(Output<String> topologyKey) {
             this.topologyKey = Objects.requireNonNull(topologyKey);
             return this;
         }
-
         public Builder topologyKey(String topologyKey) {
             this.topologyKey = Output.of(Objects.requireNonNull(topologyKey));
             return this;
-        }
-        public PodAffinityTermArgs build() {
+        }        public PodAffinityTermArgs build() {
             return new PodAffinityTermArgs(labelSelector, namespaceSelector, namespaces, topologyKey);
         }
     }

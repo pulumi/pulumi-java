@@ -80,22 +80,18 @@ public final class CustomResourceConversionArgs extends io.pulumi.resources.Reso
             this.strategy = Objects.requireNonNull(strategy);
             return this;
         }
-
         public Builder strategy(String strategy) {
             this.strategy = Output.of(Objects.requireNonNull(strategy));
             return this;
         }
-
         public Builder webhook(@Nullable Output<WebhookConversionArgs> webhook) {
             this.webhook = webhook;
             return this;
         }
-
         public Builder webhook(@Nullable WebhookConversionArgs webhook) {
             this.webhook = Output.ofNullable(webhook);
             return this;
-        }
-        public CustomResourceConversionArgs build() {
+        }        public CustomResourceConversionArgs build() {
             return new CustomResourceConversionArgs(strategy, webhook);
         }
     }

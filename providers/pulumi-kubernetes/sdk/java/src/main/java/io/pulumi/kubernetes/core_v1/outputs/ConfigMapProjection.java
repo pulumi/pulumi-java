@@ -90,17 +90,17 @@ public final class ConfigMapProjection {
             this.items = items;
             return this;
         }
-
+        public Builder items(KeyToPath... items) {
+            return items(List.of(items));
+        }
         public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
-
         public Builder optional(@Nullable Boolean optional) {
             this.optional = optional;
             return this;
-        }
-        public ConfigMapProjection build() {
+        }        public ConfigMapProjection build() {
             return new ConfigMapProjection(items, name, optional);
         }
     }

@@ -73,12 +73,13 @@ public final class Scheduling {
             this.nodeSelector = nodeSelector;
             return this;
         }
-
         public Builder tolerations(@Nullable List<Toleration> tolerations) {
             this.tolerations = tolerations;
             return this;
         }
-        public Scheduling build() {
+        public Builder tolerations(Toleration... tolerations) {
+            return tolerations(List.of(tolerations));
+        }        public Scheduling build() {
             return new Scheduling(nodeSelector, tolerations);
         }
     }

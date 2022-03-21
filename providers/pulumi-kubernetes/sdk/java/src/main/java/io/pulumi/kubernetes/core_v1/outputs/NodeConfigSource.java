@@ -53,8 +53,7 @@ public final class NodeConfigSource {
         public Builder configMap(@Nullable ConfigMapNodeConfigSource configMap) {
             this.configMap = configMap;
             return this;
-        }
-        public NodeConfigSource build() {
+        }        public NodeConfigSource build() {
             return new NodeConfigSource(configMap);
         }
     }

@@ -73,12 +73,13 @@ public final class ContainerImage {
             this.names = Objects.requireNonNull(names);
             return this;
         }
-
+        public Builder names(String... names) {
+            return names(List.of(names));
+        }
         public Builder sizeBytes(@Nullable Integer sizeBytes) {
             this.sizeBytes = sizeBytes;
             return this;
-        }
-        public ContainerImage build() {
+        }        public ContainerImage build() {
             return new ContainerImage(names, sizeBytes);
         }
     }

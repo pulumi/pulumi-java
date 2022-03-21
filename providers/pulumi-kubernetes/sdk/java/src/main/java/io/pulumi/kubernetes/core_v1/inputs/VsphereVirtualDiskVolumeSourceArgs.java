@@ -110,42 +110,34 @@ public final class VsphereVirtualDiskVolumeSourceArgs extends io.pulumi.resource
             this.fsType = fsType;
             return this;
         }
-
         public Builder fsType(@Nullable String fsType) {
             this.fsType = Output.ofNullable(fsType);
             return this;
         }
-
         public Builder storagePolicyID(@Nullable Output<String> storagePolicyID) {
             this.storagePolicyID = storagePolicyID;
             return this;
         }
-
         public Builder storagePolicyID(@Nullable String storagePolicyID) {
             this.storagePolicyID = Output.ofNullable(storagePolicyID);
             return this;
         }
-
         public Builder storagePolicyName(@Nullable Output<String> storagePolicyName) {
             this.storagePolicyName = storagePolicyName;
             return this;
         }
-
         public Builder storagePolicyName(@Nullable String storagePolicyName) {
             this.storagePolicyName = Output.ofNullable(storagePolicyName);
             return this;
         }
-
         public Builder volumePath(Output<String> volumePath) {
             this.volumePath = Objects.requireNonNull(volumePath);
             return this;
         }
-
         public Builder volumePath(String volumePath) {
             this.volumePath = Output.of(Objects.requireNonNull(volumePath));
             return this;
-        }
-        public VsphereVirtualDiskVolumeSourceArgs build() {
+        }        public VsphereVirtualDiskVolumeSourceArgs build() {
             return new VsphereVirtualDiskVolumeSourceArgs(fsType, storagePolicyID, storagePolicyName, volumePath);
         }
     }

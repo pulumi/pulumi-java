@@ -54,7 +54,9 @@ public final class ExecAction {
             this.command = command;
             return this;
         }
-        public ExecAction build() {
+        public Builder command(String... command) {
+            return command(List.of(command));
+        }        public ExecAction build() {
             return new ExecAction(command);
         }
     }

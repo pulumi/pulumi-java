@@ -72,12 +72,10 @@ public final class IngressServiceBackend {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder port(@Nullable ServiceBackendPort port) {
             this.port = port;
             return this;
-        }
-        public IngressServiceBackend build() {
+        }        public IngressServiceBackend build() {
             return new IngressServiceBackend(name, port);
         }
     }

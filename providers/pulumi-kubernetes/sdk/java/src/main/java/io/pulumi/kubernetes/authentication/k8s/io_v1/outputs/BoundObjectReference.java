@@ -103,22 +103,18 @@ public final class BoundObjectReference {
             this.apiVersion = apiVersion;
             return this;
         }
-
         public Builder kind(@Nullable String kind) {
             this.kind = kind;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
-
         public Builder uid(@Nullable String uid) {
             this.uid = uid;
             return this;
-        }
-        public BoundObjectReference build() {
+        }        public BoundObjectReference build() {
             return new BoundObjectReference(apiVersion, kind, name, uid);
         }
     }

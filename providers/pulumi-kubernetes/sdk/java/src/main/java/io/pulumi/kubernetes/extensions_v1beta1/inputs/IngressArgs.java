@@ -143,52 +143,42 @@ public final class IngressArgs extends io.pulumi.resources.ResourceArgs {
             this.apiVersion = apiVersion;
             return this;
         }
-
         public Builder apiVersion(@Nullable String apiVersion) {
             this.apiVersion = Output.ofNullable(apiVersion);
             return this;
         }
-
         public Builder kind(@Nullable Output<String> kind) {
             this.kind = kind;
             return this;
         }
-
         public Builder kind(@Nullable String kind) {
             this.kind = Output.ofNullable(kind);
             return this;
         }
-
         public Builder metadata(@Nullable Output<ObjectMetaArgs> metadata) {
             this.metadata = metadata;
             return this;
         }
-
         public Builder metadata(@Nullable ObjectMetaArgs metadata) {
             this.metadata = Output.ofNullable(metadata);
             return this;
         }
-
         public Builder spec(@Nullable Output<IngressSpecArgs> spec) {
             this.spec = spec;
             return this;
         }
-
         public Builder spec(@Nullable IngressSpecArgs spec) {
             this.spec = Output.ofNullable(spec);
             return this;
         }
-
         public Builder status(@Nullable Output<IngressStatusArgs> status) {
             this.status = status;
             return this;
         }
-
         public Builder status(@Nullable IngressStatusArgs status) {
             this.status = Output.ofNullable(status);
             return this;
-        }
-        public IngressArgs build() {
+        }        public IngressArgs build() {
             return new IngressArgs(apiVersion, kind, metadata, spec, status);
         }
     }

@@ -60,12 +60,10 @@ public final class FlowDistinguisherMethodArgs extends io.pulumi.resources.Resou
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Output.of(Objects.requireNonNull(type));
             return this;
-        }
-        public FlowDistinguisherMethodArgs build() {
+        }        public FlowDistinguisherMethodArgs build() {
             return new FlowDistinguisherMethodArgs(type);
         }
     }

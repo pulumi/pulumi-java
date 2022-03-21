@@ -172,42 +172,37 @@ public final class CustomResourceDefinitionVersion {
             this.additionalPrinterColumns = additionalPrinterColumns;
             return this;
         }
-
+        public Builder additionalPrinterColumns(CustomResourceColumnDefinition... additionalPrinterColumns) {
+            return additionalPrinterColumns(List.of(additionalPrinterColumns));
+        }
         public Builder deprecated(@Nullable Boolean deprecated) {
             this.deprecated = deprecated;
             return this;
         }
-
         public Builder deprecationWarning(@Nullable String deprecationWarning) {
             this.deprecationWarning = deprecationWarning;
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder schema(@Nullable CustomResourceValidation schema) {
             this.schema = schema;
             return this;
         }
-
         public Builder served(Boolean served) {
             this.served = Objects.requireNonNull(served);
             return this;
         }
-
         public Builder storage(Boolean storage) {
             this.storage = Objects.requireNonNull(storage);
             return this;
         }
-
         public Builder subresources(@Nullable CustomResourceSubresources subresources) {
             this.subresources = subresources;
             return this;
-        }
-        public CustomResourceDefinitionVersion build() {
+        }        public CustomResourceDefinitionVersion build() {
             return new CustomResourceDefinitionVersion(additionalPrinterColumns, deprecated, deprecationWarning, name, schema, served, storage, subresources);
         }
     }

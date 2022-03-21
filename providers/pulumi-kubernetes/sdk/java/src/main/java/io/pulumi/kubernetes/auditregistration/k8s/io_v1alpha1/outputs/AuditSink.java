@@ -97,22 +97,18 @@ public final class AuditSink {
             this.apiVersion = apiVersion;
             return this;
         }
-
         public Builder kind(@Nullable String kind) {
             this.kind = kind;
             return this;
         }
-
         public Builder metadata(@Nullable ObjectMeta metadata) {
             this.metadata = metadata;
             return this;
         }
-
         public Builder spec(@Nullable AuditSinkSpec spec) {
             this.spec = spec;
             return this;
-        }
-        public AuditSink build() {
+        }        public AuditSink build() {
             return new AuditSink(apiVersion, kind, metadata, spec);
         }
     }

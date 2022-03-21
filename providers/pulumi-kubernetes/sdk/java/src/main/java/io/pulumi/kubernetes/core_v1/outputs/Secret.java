@@ -154,37 +154,30 @@ public final class Secret {
             this.apiVersion = apiVersion;
             return this;
         }
-
         public Builder data(@Nullable Map<String,String> data) {
             this.data = data;
             return this;
         }
-
         public Builder immutable(@Nullable Boolean immutable) {
             this.immutable = immutable;
             return this;
         }
-
         public Builder kind(@Nullable String kind) {
             this.kind = kind;
             return this;
         }
-
         public Builder metadata(@Nullable ObjectMeta metadata) {
             this.metadata = metadata;
             return this;
         }
-
         public Builder stringData(@Nullable Map<String,String> stringData) {
             this.stringData = stringData;
             return this;
         }
-
         public Builder type(@Nullable String type) {
             this.type = type;
             return this;
-        }
-        public Secret build() {
+        }        public Secret build() {
             return new Secret(apiVersion, data, immutable, kind, metadata, stringData, type);
         }
     }

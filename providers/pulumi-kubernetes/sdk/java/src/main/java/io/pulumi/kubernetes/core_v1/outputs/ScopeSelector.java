@@ -54,7 +54,9 @@ public final class ScopeSelector {
             this.matchExpressions = matchExpressions;
             return this;
         }
-        public ScopeSelector build() {
+        public Builder matchExpressions(ScopedResourceSelectorRequirement... matchExpressions) {
+            return matchExpressions(List.of(matchExpressions));
+        }        public ScopeSelector build() {
             return new ScopeSelector(matchExpressions);
         }
     }

@@ -83,12 +83,10 @@ public final class NodeAddress {
             this.address = Objects.requireNonNull(address);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public NodeAddress build() {
+        }        public NodeAddress build() {
             return new NodeAddress(address, type);
         }
     }

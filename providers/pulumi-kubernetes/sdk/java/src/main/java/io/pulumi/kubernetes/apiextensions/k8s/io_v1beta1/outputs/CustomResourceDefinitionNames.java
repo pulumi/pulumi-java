@@ -136,32 +136,32 @@ public final class CustomResourceDefinitionNames {
             this.categories = categories;
             return this;
         }
-
+        public Builder categories(String... categories) {
+            return categories(List.of(categories));
+        }
         public Builder kind(String kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
-
         public Builder listKind(@Nullable String listKind) {
             this.listKind = listKind;
             return this;
         }
-
         public Builder plural(String plural) {
             this.plural = Objects.requireNonNull(plural);
             return this;
         }
-
         public Builder shortNames(@Nullable List<String> shortNames) {
             this.shortNames = shortNames;
             return this;
         }
-
+        public Builder shortNames(String... shortNames) {
+            return shortNames(List.of(shortNames));
+        }
         public Builder singular(@Nullable String singular) {
             this.singular = singular;
             return this;
-        }
-        public CustomResourceDefinitionNames build() {
+        }        public CustomResourceDefinitionNames build() {
             return new CustomResourceDefinitionNames(categories, kind, listKind, plural, shortNames, singular);
         }
     }

@@ -108,22 +108,18 @@ public final class ListMeta {
             this.$continue = $continue;
             return this;
         }
-
         public Builder remainingItemCount(@Nullable Integer remainingItemCount) {
             this.remainingItemCount = remainingItemCount;
             return this;
         }
-
         public Builder resourceVersion(@Nullable String resourceVersion) {
             this.resourceVersion = resourceVersion;
             return this;
         }
-
         public Builder selfLink(@Nullable String selfLink) {
             this.selfLink = selfLink;
             return this;
-        }
-        public ListMeta build() {
+        }        public ListMeta build() {
             return new ListMeta($continue, remainingItemCount, resourceVersion, selfLink);
         }
     }

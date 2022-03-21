@@ -71,12 +71,16 @@ public final class NonResourceRule {
             this.nonResourceURLs = nonResourceURLs;
             return this;
         }
-
+        public Builder nonResourceURLs(String... nonResourceURLs) {
+            return nonResourceURLs(List.of(nonResourceURLs));
+        }
         public Builder verbs(List<String> verbs) {
             this.verbs = Objects.requireNonNull(verbs);
             return this;
         }
-        public NonResourceRule build() {
+        public Builder verbs(String... verbs) {
+            return verbs(List.of(verbs));
+        }        public NonResourceRule build() {
             return new NonResourceRule(nonResourceURLs, verbs);
         }
     }

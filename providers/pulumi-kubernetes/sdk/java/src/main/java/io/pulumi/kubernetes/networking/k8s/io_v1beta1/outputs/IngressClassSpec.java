@@ -72,12 +72,10 @@ public final class IngressClassSpec {
             this.controller = controller;
             return this;
         }
-
         public Builder parameters(@Nullable TypedLocalObjectReference parameters) {
             this.parameters = parameters;
             return this;
-        }
-        public IngressClassSpec build() {
+        }        public IngressClassSpec build() {
             return new IngressClassSpec(controller, parameters);
         }
     }

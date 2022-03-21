@@ -129,52 +129,48 @@ public final class FCVolumeSourceArgs extends io.pulumi.resources.ResourceArgs {
             this.fsType = fsType;
             return this;
         }
-
         public Builder fsType(@Nullable String fsType) {
             this.fsType = Output.ofNullable(fsType);
             return this;
         }
-
         public Builder lun(@Nullable Output<Integer> lun) {
             this.lun = lun;
             return this;
         }
-
         public Builder lun(@Nullable Integer lun) {
             this.lun = Output.ofNullable(lun);
             return this;
         }
-
         public Builder readOnly(@Nullable Output<Boolean> readOnly) {
             this.readOnly = readOnly;
             return this;
         }
-
         public Builder readOnly(@Nullable Boolean readOnly) {
             this.readOnly = Output.ofNullable(readOnly);
             return this;
         }
-
         public Builder targetWWNs(@Nullable Output<List<String>> targetWWNs) {
             this.targetWWNs = targetWWNs;
             return this;
         }
-
         public Builder targetWWNs(@Nullable List<String> targetWWNs) {
             this.targetWWNs = Output.ofNullable(targetWWNs);
             return this;
         }
-
+        public Builder targetWWNs(String... targetWWNs) {
+            return targetWWNs(List.of(targetWWNs));
+        }
         public Builder wwids(@Nullable Output<List<String>> wwids) {
             this.wwids = wwids;
             return this;
         }
-
         public Builder wwids(@Nullable List<String> wwids) {
             this.wwids = Output.ofNullable(wwids);
             return this;
         }
-        public FCVolumeSourceArgs build() {
+        public Builder wwids(String... wwids) {
+            return wwids(List.of(wwids));
+        }        public FCVolumeSourceArgs build() {
             return new FCVolumeSourceArgs(fsType, lun, readOnly, targetWWNs, wwids);
         }
     }

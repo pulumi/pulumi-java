@@ -131,27 +131,25 @@ public final class HTTPGetAction {
             this.host = host;
             return this;
         }
-
         public Builder httpHeaders(@Nullable List<HTTPHeader> httpHeaders) {
             this.httpHeaders = httpHeaders;
             return this;
         }
-
+        public Builder httpHeaders(HTTPHeader... httpHeaders) {
+            return httpHeaders(List.of(httpHeaders));
+        }
         public Builder path(@Nullable String path) {
             this.path = path;
             return this;
         }
-
         public Builder port(Either<Integer,String> port) {
             this.port = Objects.requireNonNull(port);
             return this;
         }
-
         public Builder scheme(@Nullable String scheme) {
             this.scheme = scheme;
             return this;
-        }
-        public HTTPGetAction build() {
+        }        public HTTPGetAction build() {
             return new HTTPGetAction(host, httpHeaders, path, port, scheme);
         }
     }

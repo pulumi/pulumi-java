@@ -154,37 +154,30 @@ public final class CronJobSpec {
             this.concurrencyPolicy = concurrencyPolicy;
             return this;
         }
-
         public Builder failedJobsHistoryLimit(@Nullable Integer failedJobsHistoryLimit) {
             this.failedJobsHistoryLimit = failedJobsHistoryLimit;
             return this;
         }
-
         public Builder jobTemplate(JobTemplateSpec jobTemplate) {
             this.jobTemplate = Objects.requireNonNull(jobTemplate);
             return this;
         }
-
         public Builder schedule(String schedule) {
             this.schedule = Objects.requireNonNull(schedule);
             return this;
         }
-
         public Builder startingDeadlineSeconds(@Nullable Integer startingDeadlineSeconds) {
             this.startingDeadlineSeconds = startingDeadlineSeconds;
             return this;
         }
-
         public Builder successfulJobsHistoryLimit(@Nullable Integer successfulJobsHistoryLimit) {
             this.successfulJobsHistoryLimit = successfulJobsHistoryLimit;
             return this;
         }
-
         public Builder suspend(@Nullable Boolean suspend) {
             this.suspend = suspend;
             return this;
-        }
-        public CronJobSpec build() {
+        }        public CronJobSpec build() {
             return new CronJobSpec(concurrencyPolicy, failedJobsHistoryLimit, jobTemplate, schedule, startingDeadlineSeconds, successfulJobsHistoryLimit, suspend);
         }
     }

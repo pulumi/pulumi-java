@@ -112,42 +112,34 @@ public final class CinderVolumeSourceArgs extends io.pulumi.resources.ResourceAr
             this.fsType = fsType;
             return this;
         }
-
         public Builder fsType(@Nullable String fsType) {
             this.fsType = Output.ofNullable(fsType);
             return this;
         }
-
         public Builder readOnly(@Nullable Output<Boolean> readOnly) {
             this.readOnly = readOnly;
             return this;
         }
-
         public Builder readOnly(@Nullable Boolean readOnly) {
             this.readOnly = Output.ofNullable(readOnly);
             return this;
         }
-
         public Builder secretRef(@Nullable Output<LocalObjectReferenceArgs> secretRef) {
             this.secretRef = secretRef;
             return this;
         }
-
         public Builder secretRef(@Nullable LocalObjectReferenceArgs secretRef) {
             this.secretRef = Output.ofNullable(secretRef);
             return this;
         }
-
         public Builder volumeID(Output<String> volumeID) {
             this.volumeID = Objects.requireNonNull(volumeID);
             return this;
         }
-
         public Builder volumeID(String volumeID) {
             this.volumeID = Output.of(Objects.requireNonNull(volumeID));
             return this;
-        }
-        public CinderVolumeSourceArgs build() {
+        }        public CinderVolumeSourceArgs build() {
             return new CinderVolumeSourceArgs(fsType, readOnly, secretRef, volumeID);
         }
     }

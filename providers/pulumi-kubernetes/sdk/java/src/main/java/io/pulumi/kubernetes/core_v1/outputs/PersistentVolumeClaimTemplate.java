@@ -72,12 +72,10 @@ public final class PersistentVolumeClaimTemplate {
             this.metadata = metadata;
             return this;
         }
-
         public Builder spec(PersistentVolumeClaimSpec spec) {
             this.spec = Objects.requireNonNull(spec);
             return this;
-        }
-        public PersistentVolumeClaimTemplate build() {
+        }        public PersistentVolumeClaimTemplate build() {
             return new PersistentVolumeClaimTemplate(metadata, spec);
         }
     }

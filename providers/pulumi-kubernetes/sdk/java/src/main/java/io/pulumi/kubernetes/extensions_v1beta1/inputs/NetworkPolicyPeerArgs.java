@@ -99,32 +99,26 @@ public final class NetworkPolicyPeerArgs extends io.pulumi.resources.ResourceArg
             this.ipBlock = ipBlock;
             return this;
         }
-
         public Builder ipBlock(@Nullable IPBlockArgs ipBlock) {
             this.ipBlock = Output.ofNullable(ipBlock);
             return this;
         }
-
         public Builder namespaceSelector(@Nullable Output<LabelSelectorArgs> namespaceSelector) {
             this.namespaceSelector = namespaceSelector;
             return this;
         }
-
         public Builder namespaceSelector(@Nullable LabelSelectorArgs namespaceSelector) {
             this.namespaceSelector = Output.ofNullable(namespaceSelector);
             return this;
         }
-
         public Builder podSelector(@Nullable Output<LabelSelectorArgs> podSelector) {
             this.podSelector = podSelector;
             return this;
         }
-
         public Builder podSelector(@Nullable LabelSelectorArgs podSelector) {
             this.podSelector = Output.ofNullable(podSelector);
             return this;
-        }
-        public NetworkPolicyPeerArgs build() {
+        }        public NetworkPolicyPeerArgs build() {
             return new NetworkPolicyPeerArgs(ipBlock, namespaceSelector, podSelector);
         }
     }

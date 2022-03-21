@@ -69,12 +69,10 @@ public final class Sysctl {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder value(String value) {
             this.value = Objects.requireNonNull(value);
             return this;
-        }
-        public Sysctl build() {
+        }        public Sysctl build() {
             return new Sysctl(name, value);
         }
     }
