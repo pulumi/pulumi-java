@@ -25,8 +25,6 @@ type typeDetails struct {
 	plainType  bool
 }
 
-const ListTypeName = "java.util.List"
-
 func packageName(packages map[string]string, name string) string {
 	if pkg, ok := packages[name]; ok {
 		return pkg
@@ -59,6 +57,18 @@ func (mod *modContext) propertyName(p *schema.Property) string {
 		return n
 	}
 	return p.Name
+}
+
+func getListType(ctx *classFileContext, propertyType TypeShape) string {
+	if propertyType.Type.String() == "java.util.List" {
+		for _, a := range propertyType.Parameters {
+			if strings.HasPrefix(a.Type.String(), "java.util.") {
+				continue
+			}
+			return a.ToCode(ctx.imports)
+		}
+	}
+	return ""
 }
 
 func (mod *modContext) details(t *schema.ObjectType) *typeDetails {
@@ -628,15 +638,6 @@ func (pt *plainType) genJumboInputType(ctx *classFileContext) error {
 			false,               // outer optional
 			false,               // inputless overload
 		)
-		listNestedType := ""
-		if propertyType.Type.String() == ListTypeName {
-			for _, a := range propertyType.Parameters {
-				if strings.HasPrefix(a.Type.String(), "java.util.") {
-					continue
-				}
-				listNestedType = a.ToCode(ctx.imports)
-			}
-		}
 
 		// add field
 		builderFields = append(builderFields, builderFieldTemplateContext{
@@ -661,7 +662,7 @@ func (pt *plainType) genJumboInputType(ctx *classFileContext) error {
 			PropertyType: propertyType.ToCode(ctx.imports),
 			PropertyName: propertyName.String(),
 			Assignment:   assignment(propertyName),
-			ListType:     listNestedType,
+			ListType:     getListType(ctx, propertyType),
 		})
 
 		if isInputType(prop.Type) { // we have a wrapped field so we add an unwrapped helper setter
@@ -693,22 +694,13 @@ func (pt *plainType) genJumboInputType(ctx *classFileContext) error {
 
 			if !propertyTypeUnwrapped.Equal(propertyType) {
 				// add overloaded setter
-				listNestedType := ""
-				if propertyTypeUnwrapped.Type.String() == ListTypeName {
-					for _, a := range propertyTypeUnwrapped.Parameters {
-						if strings.HasPrefix(a.Type.String(), "java.util.") {
-							continue
-						}
-						listNestedType = a.ToCode(ctx.imports)
-					}
-				}
 
 				builderSetters = append(builderSetters, builderSetterTemplateContext{
 					SetterName:   setterName,
 					PropertyType: propertyTypeUnwrapped.ToCode(ctx.imports),
 					PropertyName: propertyName.String(),
 					Assignment:   assignmentUnwrapped(propertyName),
-					ListType:     listNestedType,
+					ListType:     getListType(ctx, propertyTypeUnwrapped),
 				})
 			}
 		}
@@ -852,15 +844,6 @@ func (pt *plainType) genNormalInputType(ctx *classFileContext) error {
 			false,               // outer optional
 			false,               // inputless overload
 		)
-		listNestedType := ""
-		if propertyType.Type.String() == ListTypeName {
-			for _, a := range propertyType.Parameters {
-				if strings.HasPrefix(a.Type.String(), "java.util.") {
-					continue
-				}
-				listNestedType = a.ToCode(ctx.imports)
-			}
-		}
 
 		// add field
 		builderFields = append(builderFields, builderFieldTemplateContext{
@@ -885,7 +868,7 @@ func (pt *plainType) genNormalInputType(ctx *classFileContext) error {
 			PropertyType: propertyType.ToCode(ctx.imports),
 			PropertyName: propertyName.String(),
 			Assignment:   assignment(propertyName),
-			ListType:     listNestedType,
+			ListType:     getListType(ctx, propertyType),
 		})
 
 		if isInputType(prop.Type) { // we have a wrapped field so we add an unwrapped helper setter
@@ -917,22 +900,13 @@ func (pt *plainType) genNormalInputType(ctx *classFileContext) error {
 
 			if !propertyTypeUnwrapped.Equal(propertyType) {
 				// add overloaded setter
-				listNestedType := ""
-				if propertyTypeUnwrapped.Type.String() == ListTypeName {
-					for _, a := range propertyTypeUnwrapped.Parameters {
-						if strings.HasPrefix(a.Type.String(), "java.util.") {
-							continue
-						}
-						listNestedType = a.ToCode(ctx.imports)
-					}
-				}
 
 				builderSetters = append(builderSetters, builderSetterTemplateContext{
 					SetterName:   setterName,
 					PropertyType: propertyTypeUnwrapped.ToCode(ctx.imports),
 					PropertyName: propertyName.String(),
 					Assignment:   assignmentUnwrapped(propertyName),
-					ListType:     listNestedType,
+					ListType:     getListType(ctx, propertyTypeUnwrapped),
 				})
 			}
 		}
@@ -1121,15 +1095,6 @@ func (pt *plainType) genJumboOutputType(ctx *classFileContext) error {
 			false, // outer optional
 			false, // inputless overload
 		)
-		listNestedType := ""
-		if propertyType.Type.String() == ListTypeName {
-			for _, a := range propertyType.Parameters {
-				if strings.HasPrefix(a.Type.String(), "java.util.") {
-					continue
-				}
-				listNestedType = a.ToCode(ctx.imports)
-			}
-		}
 
 		// add field
 		builderFields = append(builderFields, builderFieldTemplateContext{
@@ -1151,7 +1116,7 @@ func (pt *plainType) genJumboOutputType(ctx *classFileContext) error {
 			PropertyType: propertyType.ToCode(ctx.imports),
 			PropertyName: propertyName.String(),
 			Assignment:   assignment(propertyName),
-			ListType:     listNestedType,
+			ListType:     getListType(ctx, propertyType),
 		})
 	}
 
@@ -1358,16 +1323,6 @@ func (pt *plainType) genNormalOutputType(ctx *classFileContext) error {
 			false, // inputless overload
 		)
 
-		listNestedType := ""
-		if propertyType.Type.String() == ListTypeName {
-			for _, a := range propertyType.Parameters {
-				if strings.HasPrefix(a.Type.String(), "java.util.") {
-					continue
-				}
-				listNestedType = a.ToCode(ctx.imports)
-			}
-		}
-
 		// add field
 		builderFields = append(builderFields, builderFieldTemplateContext{
 			FieldType: propertyType.ToCode(ctx.imports),
@@ -1388,7 +1343,7 @@ func (pt *plainType) genNormalOutputType(ctx *classFileContext) error {
 			PropertyType: propertyType.ToCode(ctx.imports),
 			PropertyName: propertyName.String(),
 			Assignment:   assignment(propertyName),
-			ListType:     listNestedType,
+			ListType:     getListType(ctx, propertyType),
 		})
 	}
 
