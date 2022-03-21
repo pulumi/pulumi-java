@@ -115,62 +115,50 @@ public final class ServiceRollbackConfigArgs extends io.pulumi.resources.Resourc
             this.delay = delay;
             return this;
         }
-
         public Builder delay(@Nullable String delay) {
             this.delay = Output.ofNullable(delay);
             return this;
         }
-
         public Builder failureAction(@Nullable Output<String> failureAction) {
             this.failureAction = failureAction;
             return this;
         }
-
         public Builder failureAction(@Nullable String failureAction) {
             this.failureAction = Output.ofNullable(failureAction);
             return this;
         }
-
         public Builder maxFailureRatio(@Nullable Output<String> maxFailureRatio) {
             this.maxFailureRatio = maxFailureRatio;
             return this;
         }
-
         public Builder maxFailureRatio(@Nullable String maxFailureRatio) {
             this.maxFailureRatio = Output.ofNullable(maxFailureRatio);
             return this;
         }
-
         public Builder monitor(@Nullable Output<String> monitor) {
             this.monitor = monitor;
             return this;
         }
-
         public Builder monitor(@Nullable String monitor) {
             this.monitor = Output.ofNullable(monitor);
             return this;
         }
-
         public Builder order(@Nullable Output<String> order) {
             this.order = order;
             return this;
         }
-
         public Builder order(@Nullable String order) {
             this.order = Output.ofNullable(order);
             return this;
         }
-
         public Builder parallelism(@Nullable Output<Integer> parallelism) {
             this.parallelism = parallelism;
             return this;
         }
-
         public Builder parallelism(@Nullable Integer parallelism) {
             this.parallelism = Output.ofNullable(parallelism);
             return this;
-        }
-        public ServiceRollbackConfigArgs build() {
+        }        public ServiceRollbackConfigArgs build() {
             return new ServiceRollbackConfigArgs(delay, failureAction, maxFailureRatio, monitor, order, parallelism);
         }
     }

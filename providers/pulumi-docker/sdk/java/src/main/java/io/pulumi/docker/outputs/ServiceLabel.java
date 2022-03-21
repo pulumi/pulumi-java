@@ -53,12 +53,10 @@ public final class ServiceLabel {
             this.label = Objects.requireNonNull(label);
             return this;
         }
-
         public Builder value(String value) {
             this.value = Objects.requireNonNull(value);
             return this;
-        }
-        public ServiceLabel build() {
+        }        public ServiceLabel build() {
             return new ServiceLabel(label, value);
         }
     }

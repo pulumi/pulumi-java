@@ -98,37 +98,33 @@ public final class GetNetworkResult {
             this.driver = Objects.requireNonNull(driver);
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder internal(Boolean internal) {
             this.internal = Objects.requireNonNull(internal);
             return this;
         }
-
         public Builder ipamConfigs(List<GetNetworkIpamConfig> ipamConfigs) {
             this.ipamConfigs = Objects.requireNonNull(ipamConfigs);
             return this;
         }
-
+        public Builder ipamConfigs(GetNetworkIpamConfig... ipamConfigs) {
+            return ipamConfigs(List.of(ipamConfigs));
+        }
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder options(Map<String,Object> options) {
             this.options = Objects.requireNonNull(options);
             return this;
         }
-
         public Builder scope(String scope) {
             this.scope = Objects.requireNonNull(scope);
             return this;
-        }
-        public GetNetworkResult build() {
+        }        public GetNetworkResult build() {
             return new GetNetworkResult(driver, id, internal, ipamConfigs, name, options, scope);
         }
     }

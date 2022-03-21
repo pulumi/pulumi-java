@@ -110,42 +110,37 @@ public final class VolumeArgs extends io.pulumi.resources.ResourceArgs {
             this.driver = driver;
             return this;
         }
-
         public Builder driver(@Nullable String driver) {
             this.driver = Output.ofNullable(driver);
             return this;
         }
-
         public Builder driverOpts(@Nullable Output<Map<String,Object>> driverOpts) {
             this.driverOpts = driverOpts;
             return this;
         }
-
         public Builder driverOpts(@Nullable Map<String,Object> driverOpts) {
             this.driverOpts = Output.ofNullable(driverOpts);
             return this;
         }
-
         public Builder labels(@Nullable Output<List<VolumeLabelArgs>> labels) {
             this.labels = labels;
             return this;
         }
-
         public Builder labels(@Nullable List<VolumeLabelArgs> labels) {
             this.labels = Output.ofNullable(labels);
             return this;
         }
-
+        public Builder labels(VolumeLabelArgs... labels) {
+            return labels(List.of(labels));
+        }
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
-        }
-        public VolumeArgs build() {
+        }        public VolumeArgs build() {
             return new VolumeArgs(driver, driverOpts, labels, name);
         }
     }

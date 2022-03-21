@@ -73,22 +73,18 @@ public final class GetNetworkIpamConfig {
             this.auxAddress = auxAddress;
             return this;
         }
-
         public Builder gateway(@Nullable String gateway) {
             this.gateway = gateway;
             return this;
         }
-
         public Builder ipRange(@Nullable String ipRange) {
             this.ipRange = ipRange;
             return this;
         }
-
         public Builder subnet(@Nullable String subnet) {
             this.subnet = subnet;
             return this;
-        }
-        public GetNetworkIpamConfig build() {
+        }        public GetNetworkIpamConfig build() {
             return new GetNetworkIpamConfig(auxAddress, gateway, ipRange, subnet);
         }
     }

@@ -53,12 +53,10 @@ public final class ServiceTaskSpecContainerSpecHost {
             this.host = Objects.requireNonNull(host);
             return this;
         }
-
         public Builder ip(String ip) {
             this.ip = Objects.requireNonNull(ip);
             return this;
-        }
-        public ServiceTaskSpecContainerSpecHost build() {
+        }        public ServiceTaskSpecContainerSpecHost build() {
             return new ServiceTaskSpecContainerSpecHost(host, ip);
         }
     }

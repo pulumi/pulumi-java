@@ -56,12 +56,10 @@ public final class ServiceTaskSpecResources {
             this.limits = limits;
             return this;
         }
-
         public Builder reservation(@Nullable ServiceTaskSpecResourcesReservation reservation) {
             this.reservation = reservation;
             return this;
-        }
-        public ServiceTaskSpecResources build() {
+        }        public ServiceTaskSpecResources build() {
             return new ServiceTaskSpecResources(limits, reservation);
         }
     }

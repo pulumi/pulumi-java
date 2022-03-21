@@ -55,12 +55,10 @@ public final class ServiceTaskSpecResourcesLimits {
             this.memoryBytes = memoryBytes;
             return this;
         }
-
         public Builder nanoCpus(@Nullable Integer nanoCpus) {
             this.nanoCpus = nanoCpus;
             return this;
-        }
-        public ServiceTaskSpecResourcesLimits build() {
+        }        public ServiceTaskSpecResourcesLimits build() {
             return new ServiceTaskSpecResourcesLimits(memoryBytes, nanoCpus);
         }
     }

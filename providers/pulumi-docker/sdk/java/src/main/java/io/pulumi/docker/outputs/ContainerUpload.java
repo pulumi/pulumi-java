@@ -88,32 +88,26 @@ public final class ContainerUpload {
             this.content = content;
             return this;
         }
-
         public Builder contentBase64(@Nullable String contentBase64) {
             this.contentBase64 = contentBase64;
             return this;
         }
-
         public Builder executable(@Nullable Boolean executable) {
             this.executable = executable;
             return this;
         }
-
         public Builder file(String file) {
             this.file = Objects.requireNonNull(file);
             return this;
         }
-
         public Builder source(@Nullable String source) {
             this.source = source;
             return this;
         }
-
         public Builder sourceHash(@Nullable String sourceHash) {
             this.sourceHash = sourceHash;
             return this;
-        }
-        public ContainerUpload build() {
+        }        public ContainerUpload build() {
             return new ContainerUpload(content, contentBase64, executable, file, source, sourceHash);
         }
     }

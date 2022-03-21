@@ -81,27 +81,25 @@ public final class ServiceTaskSpecContainerSpecHealthcheck {
             this.interval = interval;
             return this;
         }
-
         public Builder retries(@Nullable Integer retries) {
             this.retries = retries;
             return this;
         }
-
         public Builder startPeriod(@Nullable String startPeriod) {
             this.startPeriod = startPeriod;
             return this;
         }
-
         public Builder tests(List<String> tests) {
             this.tests = Objects.requireNonNull(tests);
             return this;
         }
-
+        public Builder tests(String... tests) {
+            return tests(List.of(tests));
+        }
         public Builder timeout(@Nullable String timeout) {
             this.timeout = timeout;
             return this;
-        }
-        public ServiceTaskSpecContainerSpecHealthcheck build() {
+        }        public ServiceTaskSpecContainerSpecHealthcheck build() {
             return new ServiceTaskSpecContainerSpecHealthcheck(interval, retries, startPeriod, tests, timeout);
         }
     }

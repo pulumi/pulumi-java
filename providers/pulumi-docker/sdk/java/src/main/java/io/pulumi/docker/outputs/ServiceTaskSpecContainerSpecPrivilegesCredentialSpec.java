@@ -55,12 +55,10 @@ public final class ServiceTaskSpecContainerSpecPrivilegesCredentialSpec {
             this.file = file;
             return this;
         }
-
         public Builder registry(@Nullable String registry) {
             this.registry = registry;
             return this;
-        }
-        public ServiceTaskSpecContainerSpecPrivilegesCredentialSpec build() {
+        }        public ServiceTaskSpecContainerSpecPrivilegesCredentialSpec build() {
             return new ServiceTaskSpecContainerSpecPrivilegesCredentialSpec(file, registry);
         }
     }

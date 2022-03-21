@@ -148,72 +148,58 @@ public final class ContainerNetworkDataGetArgs extends io.pulumi.resources.Resou
             this.gateway = gateway;
             return this;
         }
-
         public Builder gateway(@Nullable String gateway) {
             this.gateway = Output.ofNullable(gateway);
             return this;
         }
-
         public Builder globalIpv6Address(@Nullable Output<String> globalIpv6Address) {
             this.globalIpv6Address = globalIpv6Address;
             return this;
         }
-
         public Builder globalIpv6Address(@Nullable String globalIpv6Address) {
             this.globalIpv6Address = Output.ofNullable(globalIpv6Address);
             return this;
         }
-
         public Builder globalIpv6PrefixLength(@Nullable Output<Integer> globalIpv6PrefixLength) {
             this.globalIpv6PrefixLength = globalIpv6PrefixLength;
             return this;
         }
-
         public Builder globalIpv6PrefixLength(@Nullable Integer globalIpv6PrefixLength) {
             this.globalIpv6PrefixLength = Output.ofNullable(globalIpv6PrefixLength);
             return this;
         }
-
         public Builder ipAddress(@Nullable Output<String> ipAddress) {
             this.ipAddress = ipAddress;
             return this;
         }
-
         public Builder ipAddress(@Nullable String ipAddress) {
             this.ipAddress = Output.ofNullable(ipAddress);
             return this;
         }
-
         public Builder ipPrefixLength(@Nullable Output<Integer> ipPrefixLength) {
             this.ipPrefixLength = ipPrefixLength;
             return this;
         }
-
         public Builder ipPrefixLength(@Nullable Integer ipPrefixLength) {
             this.ipPrefixLength = Output.ofNullable(ipPrefixLength);
             return this;
         }
-
         public Builder ipv6Gateway(@Nullable Output<String> ipv6Gateway) {
             this.ipv6Gateway = ipv6Gateway;
             return this;
         }
-
         public Builder ipv6Gateway(@Nullable String ipv6Gateway) {
             this.ipv6Gateway = Output.ofNullable(ipv6Gateway);
             return this;
         }
-
         public Builder networkName(@Nullable Output<String> networkName) {
             this.networkName = networkName;
             return this;
         }
-
         public Builder networkName(@Nullable String networkName) {
             this.networkName = Output.ofNullable(networkName);
             return this;
-        }
-        public ContainerNetworkDataGetArgs build() {
+        }        public ContainerNetworkDataGetArgs build() {
             return new ContainerNetworkDataGetArgs(gateway, globalIpv6Address, globalIpv6PrefixLength, ipAddress, ipPrefixLength, ipv6Gateway, networkName);
         }
     }

@@ -53,12 +53,10 @@ public final class ServiceTaskSpecPlacementPlatform {
             this.architecture = Objects.requireNonNull(architecture);
             return this;
         }
-
         public Builder os(String os) {
             this.os = Objects.requireNonNull(os);
             return this;
-        }
-        public ServiceTaskSpecPlacementPlatform build() {
+        }        public ServiceTaskSpecPlacementPlatform build() {
             return new ServiceTaskSpecPlacementPlatform(architecture, os);
         }
     }

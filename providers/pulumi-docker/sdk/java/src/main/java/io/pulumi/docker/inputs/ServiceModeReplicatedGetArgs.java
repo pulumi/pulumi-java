@@ -53,12 +53,10 @@ public final class ServiceModeReplicatedGetArgs extends io.pulumi.resources.Reso
             this.replicas = replicas;
             return this;
         }
-
         public Builder replicas(@Nullable Integer replicas) {
             this.replicas = Output.ofNullable(replicas);
             return this;
-        }
-        public ServiceModeReplicatedGetArgs build() {
+        }        public ServiceModeReplicatedGetArgs build() {
             return new ServiceModeReplicatedGetArgs(replicas);
         }
     }

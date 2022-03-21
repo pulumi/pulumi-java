@@ -56,12 +56,10 @@ public final class ServiceMode {
             this.global = global;
             return this;
         }
-
         public Builder replicated(@Nullable ServiceModeReplicated replicated) {
             this.replicated = replicated;
             return this;
-        }
-        public ServiceMode build() {
+        }        public ServiceMode build() {
             return new ServiceMode(global, replicated);
         }
     }
