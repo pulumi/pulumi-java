@@ -9,6 +9,7 @@ import (
 	"fmt"
 	"os"
 	"os/exec"
+	"path"
 	"strings"
 	"syscall"
 
@@ -105,12 +106,72 @@ func (host *jvmLanguageHost) GetRequiredPlugins(
 	ctx context.Context,
 	req *pulumirpc.GetRequiredPluginsRequest) (*pulumirpc.GetRequiredPluginsResponse, error) {
 
+	var err error
 	logging.V(5).Infof("GetRequiredPlugins: %v", req.GetProgram())
 
-	// TODO
-	plugins := []*pulumirpc.PluginDependency{}
+	project := "gradle"
 
-	// TODO
+	var plugins []*pulumirpc.PluginDependency = nil
+
+	getPluginsGradle := func(req *pulumirpc.GetRequiredPluginsRequest) ([]*pulumirpc.PluginDependency, error) {
+		plugins := []*pulumirpc.PluginDependency{}
+		buildFilePath := path.Join(req.GetPwd(), "app/build.gradle")
+		f, err := os.ReadFile(buildFilePath)
+
+		if err != nil {
+			return plugins, err
+		}
+
+		for _, s := range strings.Split(string(f), "\n") {
+			// i.e. s := `     implementation 'io.pulumi:aws:4.37.3'`
+			elem := strings.Trim(s, " ")
+			elems := strings.Split(elem, " ")
+			if len(elems) < 2 {
+				continue
+			}
+
+			key, value := elems[0], elems[1]
+			if key != "implementation" {
+				continue
+			}
+			//i.e value = "io.pulumi:aws:4.37.3"
+			tuple := strings.Split(strings.Trim(value, "'\""), ":")
+			var ns string
+			var name string
+			var version string
+			switch len(tuple) {
+			case 3:
+				version = tuple[2]
+				fallthrough
+			case 2:
+				name = tuple[1]
+				fallthrough
+			case 1:
+				ns = tuple[0]
+			}
+			if ns != "io.pulumi" {
+				continue
+			}
+			plugins = append(plugins, &pulumirpc.PluginDependency{
+				Name:    name,
+				Kind:    "resource",
+				Version: version,
+			})
+		}
+		return plugins, nil
+	}
+
+	switch project {
+	case "gradle":
+		plugins, err = getPluginsGradle(req)
+		if err != nil {
+			return nil, err
+		}
+	case "maven":
+	case "ant":
+	default:
+	}
+
 	return &pulumirpc.GetRequiredPluginsResponse{Plugins: plugins}, nil
 }
 
